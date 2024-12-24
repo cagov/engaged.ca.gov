@@ -1,0 +1,20 @@
+{
+  "name": "engaged.ca.gov",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "The Engaged California website",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "format": "npx @biomejs/biome format --write",
+    "lint": "npx @biomejs/biome lint --write",
+    "check": "npx @biomejs/biome check --write"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@biomejs/biome": "^1.9.4",
+    "chalk": "^5.3.0",
+    "esbuild": "^0.24.0",
+    "lightningcss": "^1.28.2"
+  }
+}

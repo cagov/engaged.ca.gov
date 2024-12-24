@@ -1,0 +1,39 @@
+/* -----------------------------------------
+   PASOROBLES
+----------------------------------------- */
+:root {
+  --color-p1: #fbad23;
+  --color-p1-dark: #fba60f;
+  --color-p1-darker: #f69f04;
+  --color-p1-darkest: #d38804;
+  --color-p1-light: #fcbd4f;
+  --color-p1-lighter: #fdce7b;
+  --color-p1-lightest: #fddea7;
+  --color-p2: #691808;
+  --color-p2-dark: #561407;
+  --color-p2-darker: #481005;
+  --color-p2-darkest: #270903;
+  --color-p2-light: #874639;
+  --color-p2-lighter: #a5746b;
+  --color-p2-lightest: #c3a39c;
+  --color-p3: #313131;
+  --color-p3-dark: #272727;
+  --color-p3-darker: #1f1f1f;
+  --color-p3-darkest: #0d0d0d;
+  --color-p3-light: #5a5a5a;
+  --color-p3-lighter: #838383;
+  --color-p3-lightest: #adadad;
+  --color-s1: #f5f5f5;
+  --color-s1-darker: #ededed;
+  --color-s1-lighter: #fafafa;
+  --color-s2: #ccc;
+  --color-s2-dark: #bababa;
+  --color-s2-darker: #a8a8a8;
+  --color-s3: #e6dcdc;
+  --color-s3-dark: #d7c7c7;
+  --color-s3-light: #f0eaea;
+  --color-s3-lighter: #f5f1f1;
+  --sub-nav-bg: var(--color-s1);
+  --mobile-drawer: var(--color-p3);
+  --mobile-drawer-active: var(--color-p3-light);
+}

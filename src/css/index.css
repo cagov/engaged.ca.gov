@@ -1,0 +1,18 @@
+* {
+  font-family:
+    Noto Sans, 
+    system-ui, 
+    -apple-system, 
+    "Roboto",
+		"Helvetica Neue", 
+    sans-serif !important;
+}
+
+engdem-form-field {
+  display: block;
+  margin-block: 1rem;
+}
+
+footer .cagov-logo svg {
+  height: 1.7rem;
+}

@@ -1,0 +1,39 @@
+/* -----------------------------------------
+   ORANGE COUNTY
+----------------------------------------- */
+:root {
+  --color-p1: #fbad23;
+  --color-p1-dark: #fba60f;
+  --color-p1-darker: #f69f04;
+  --color-p1-darkest: #d38804;
+  --color-p1-light: #fcbd4f;
+  --color-p1-lighter: #fdce7b;
+  --color-p1-lightest: #fddea7;
+  --color-p2: #a15801;
+  --color-p2-dark: #8d4d01;
+  --color-p2-darker: #7e4501;
+  --color-p2-darkest: #5a3101;
+  --color-p2-light: #b47934;
+  --color-p2-lighter: #c79b67;
+  --color-p2-lightest: #d9bc99;
+  --color-p3: #483723;
+  --color-p3-dark: #3a2d1c;
+  --color-p3-darker: #302517;
+  --color-p3-darkest: #18120c;
+  --color-p3-light: #6d5f4f;
+  --color-p3-lighter: #91877b;
+  --color-p3-lightest: #b6afa7;
+  --color-s1: #fbf0e7;
+  --color-s1-darker: #f9e8da;
+  --color-s1-lighter: #fdf8f3;
+  --color-s2: #f6e7cc;
+  --color-s2-dark: #f1d9ae;
+  --color-s2-darker: #ebca8f;
+  --color-s3: #f7d7a6;
+  --color-s3-dark: #f4c885;
+  --color-s3-light: #fae7ca;
+  --color-s3-lighter: #fcefdb;
+  --sub-nav-bg: var(--color-s1-lighter);
+  --mobile-drawer: var(--color-p3);
+  --mobile-drawer-active: var(--color-p3-light);
+}
