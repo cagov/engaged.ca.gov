@@ -3,11 +3,10 @@ on:
   push:
     branches:
       - main
-
   workflow_dispatch:
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Cancel previous builds
@@ -26,11 +25,9 @@ jobs:
       - name: Build site
         run: |
           mkdir _dist
+          npm install
           npm run build
 
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy site to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
