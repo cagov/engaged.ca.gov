@@ -1,3 +1,12 @@
+:root {
+  --white: #FFFFFF;
+  --blue: #5489A3;
+  --orange: #E79450;
+  --navy: #1C2745;
+  --off-white: #FFF4EB;
+}
+
+/* Swap global font on all elements. State Template stuff. */
 * {
   font-family:
     Noto Sans, 
@@ -8,11 +17,394 @@
     sans-serif !important;
 }
 
-engdem-form-field {
+/* Custom element tags without JS shall default to the following. */
+:where(:not(:defined)){
   display: block;
-  margin-block: 1rem;
+}
+
+
+/* 
+ * Tip-top statewide header. 
+ */
+
+.utility-header {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.utility-header svg path.cls-1 {
+  fill: var(--white);
+}
+
+
+/*
+ * Sitewide styles 
+ */
+
+a {
+  color: #1F3B83;
+}
+
+a[data-appearance="button"], button, input[type="submit"] {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-decoration: none !important;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* data-theme="orange" */
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"] {
+  color: var(--navy);
+  background: var(--orange);
+}
+
+/* data-theme="off-white" */
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"] {
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+
+h1 {
+  font-size: 2.9375rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%; /* 3.525rem */
+  letter-spacing: -0.05875rem;
+}
+
+h2 {
+  font-size: 2.3125rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 100%; /* 2.3125rem */
+  letter-spacing: -0.04625rem;
+}
+
+p {
+  font-size: 1.4375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4375rem; /* 169.565% */
+}
+
+section {
+  padding-block: 4.8rem;
+}
+
+section h1 {
+  margin-block: 0 1.8rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section h2 {
+  margin-block: 0 1.8rem;
+  color: #0F152F;
+}
+
+/* 
+ * Homepage styles
+ */
+
+section#hero {
+  color: var(--off-white);
+  background-color: var(--navy);
+}
+
+section#about {
+  color: #444;
+  background: var(--off-white);
+}
+
+/* Using a class here to play nicely with State Template .container. */
+.banner-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+engca-banner-content {
+  min-width: 300px;
+  max-width: 44.875rem;
+}
+
+/* Adjust margin for any content before the button. */
+engca-banner-content:has(a[data-appearance="button"]) > :not(a[data-appearance="button"]):last-of-type {
+  margin-block-end: 1.8rem;
+}
+
+section#how-it-works h2 {
+  margin-block-end: 3.6rem;
+}
+
+section#how-it-works img {
+  width: 100%;
+}
+
+section#sign-up {
+  color: var(--white);
+  background-color: var(--navy);
+}
+
+section#sign-up h2 {
+  color: var(--white);
+}
+
+.form-flex {
+  max-width: 40rem;
+}
+
+.form-flex, .form-flex > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1.8rem;
+}
+
+.form-flex > form, engca-form-field {
+  width: 100%;
+}
+
+.form-flex > * {
+  margin-block: 0;
+}
+
+.form-flex > p:last-child {
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem; /* 185.714% */
+}
+
+.form-flex a {
+  color: #6FD0FB
+}
+
+section#partners {
+  color: #444;
+  background: var(--off-white);
+}
+
+section#partners p {
+  max-width: 45rem;
+  margin-block-end: 5.4rem;
+}
+
+engca-partner-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 6.7rem;
+  row-gap: 3.6rem;
+}
+
+engca-partner-flex > :is(img, span) {
+  max-width: 25rem;
+  max-height: 4rem;
+}
+
+engca-partner-flex > img {
+  mix-blend-mode: multiply;
+}
+
+engca-partner-flex > span {
+  padding: 1.25rem;
+  background: #DDD;
+}
+
+aside.site-footer {
+  background-color: var(--navy);
+}
+
+aside.site-footer .brd-highlight {
+  border-bottom-color: var(--orange);
 }
 
 footer .cagov-logo svg {
+  background-color: #FAFAFA;
   height: 1.7rem;
+}
+
+/*
+ * How it works image
+ */
+
+.hiw {
+  --grid-gap: 4rem;
+  
+  /* CSS reset  */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ 
+  
+  /* Nicer type rendering for letters on dark backgrounds */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Basic list item layout */
+
+.hiw li {
+  background: var(--navy);
+  color: var(--off-white);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-radius: 4rem;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+/*  Icons */
+
+.hiw svg {
+  position: absolute;
+  width: 2em;
+  top: -0.125em;
+  left: -0.125em;
+  rotate: -3.5deg;
+}
+
+/*  CSS arrows */
+
+.hiw-arrow {
+   --radius: 3rem;
+   --width: 0.25rem;
+  
+   --arrow-spacing-on-mobile: 1rem;
+   display: block;
+   position: absolute;
+   border-bottom: var(--width) solid var(--blue);
+   rotate: 90deg;
+   transform-origin: 0 50%;
+   top: calc(100% + var(--arrow-spacing-on-mobile));
+   left: 50%;
+   width: calc( var(--grid-gap) - var(--arrow-spacing-on-mobile) * 2);
+   height: 0.25rem;
+}
+
+/*  Adding the arrowhead */
+.hiw-arrow::before,
+.hiw-arrow::after {
+  position: absolute;
+  content: "";
+  width: var(--width);
+  height: 1.5rem;
+  border-radius: 3px;
+  right: calc(var(--width) * -2);
+  display: block;
+  background: var(--blue);
+  translate: calc(var(--width) * -1) calc(var(--width) / 2);
+}
+
+.hiw-arrow::before {
+  bottom: 0;
+  transform-origin: 100% 100%;
+  rotate: -45deg;
+}
+
+.hiw-arrow::after {
+  top: 100%;
+  transform-origin: 100% 0%;
+  rotate: 45deg;
+}
+
+/* Two-column grid layout for mid-sized screens */
+
+@media screen and (min-width: 40rem) {
+
+  /*  Reset the margin between list items,
+      since the grid is now handling spacing */
+  .hiw li {
+    margin-bottom: 0;
+  }
+  
+  /* Basic list items  */
+  
+  .hiw {
+    --grid-gap: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  .hiw-step-2 {
+    grid-row: 2;
+    grid-column: 2
+  }
+
+  .hiw-step-3 {
+    grid-row: 3;
+  }
+
+  .hiw-step-4 {
+    grid-row: 4;
+    grid-column: 2;
+  }
+  
+  /*  Add a curved edge to the arrow
+      (This is just a rectangle with borders on 2 sides)
+  */
+  
+  .hiw-arrow {
+     border-left: var(--width) solid var(--blue);
+     border-bottom-left-radius: var(--radius);
+     top: calc(100% + var(--grid-gap));
+     left: 50%;
+     width: 50%;
+     height: 50%;
+     rotate: unset;
+
+  }
+  
+  /*  Flip the arrow connecting steps 2 and 3 */
+  .hiw-step-2 .hiw-arrow {
+    transform: scaleX(-1);
+    transform-origin: 0 0;
+  }
+}
+
+
+/* Multi-column grid layout for larger screens */
+
+@media screen and (min-width: 60rem) {
+  .hiw {
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .hiw-step-2 {
+    grid-column-start: 2;
+    grid-row: 2;
+  }
+
+  .hiw-step-3 {
+    grid-column-start: 3;
+    grid-row: 1;
+  }
+
+  .hiw-step-4 {
+    grid-column-start: 4;
+    grid-row: 2;
+  }
+  
+  /* Reposition and flip the arrow between steps 2 and 3  */
+  
+  .hiw-step-2 .hiw-arrow {
+    top: calc(var(--grid-gap) * -1);
+    transform: scaleY(-1);
+    transform-origin: 0 0;
+  }
 }
