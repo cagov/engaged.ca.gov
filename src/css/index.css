@@ -8,8 +8,9 @@
 
 /* Swap global font on all elements. State Template stuff. */
 * {
+:not(h1, h2) {
   font-family:
-    Noto Sans, 
+    "Noto Sans", 
     system-ui, 
     -apple-system, 
     "Roboto",
@@ -67,10 +68,13 @@ a[data-appearance="button"], button, input[type="submit"] {
   border: 2px solid var(--navy);
 }
 
+h1, h2 {
+  font-family: "Noto Sans Display";
+  font-weight: 900;
+}
+
 h1 {
   font-size: 2.9375rem;
-  font-style: normal;
-  font-weight: 900;
   line-height: 120%; /* 3.525rem */
   letter-spacing: -0.05875rem;
 }
@@ -78,7 +82,6 @@ h1 {
 h2 {
   font-size: 2.3125rem;
   font-style: normal;
-  font-weight: 900;
   line-height: 100%; /* 2.3125rem */
   letter-spacing: -0.04625rem;
 }
