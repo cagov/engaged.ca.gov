@@ -335,7 +335,7 @@ footer .cagov-logo svg {
 
 /* Two-column grid layout for mid-sized screens */
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 576px) {
 
   /*  Reset the margin between list items,
       since the grid is now handling spacing */
@@ -392,7 +392,7 @@ footer .cagov-logo svg {
 
 /* Multi-column grid layout for larger screens */
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 992px) {
   .hiw {
      grid-template-columns: repeat(4, 1fr);
      grid-template-rows: repeat(2, 1fr);
