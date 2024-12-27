@@ -4,6 +4,8 @@
   --orange: #E79450;
   --navy: #1C2745;
   --off-white: #FFF4EB;
+  --mobile-drawer: var(--navy);
+  --mobile-drawer-active: var(--blue);
 }
 
 /* Swap global font on all elements. State Template stuff. */
@@ -143,10 +145,6 @@ section#how-it-works h2 {
   margin-block-end: 3.6rem;
 }
 
-section#how-it-works img {
-  width: 100%;
-}
-
 section#sign-up {
   color: var(--white);
   background: url("/public/images/bubble-cluster-1.svg") 115% -40% no-repeat,
@@ -240,6 +238,7 @@ aside.site-footer .brd-highlight {
 
 footer .cagov-logo svg {
   background-color: #FAFAFA;
+  fill: var(--navy);
   height: 1.7rem;
 }
 
