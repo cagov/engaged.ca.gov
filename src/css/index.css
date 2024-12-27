@@ -141,10 +141,6 @@ section#how-it-works h2 {
   margin-block-end: 3.6rem;
 }
 
-section#how-it-works img {
-  width: 100%;
-}
-
 section#sign-up {
   color: var(--white);
   background-color: var(--navy);
@@ -268,7 +264,7 @@ footer .cagov-logo svg {
 
 /*  Icons */
 
-.hiw svg {
+.hiw img {
   position: absolute;
   width: 2em;
   top: -0.125em;
