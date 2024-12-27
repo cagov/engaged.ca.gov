@@ -150,7 +150,17 @@ section#how-it-works img {
 
 section#sign-up {
   color: var(--white);
-  background-color: var(--navy);
+  background: url("/public/images/bubble-cluster-1.svg") 115% -40% no-repeat,
+              url("/public/images/bubble-cluster-2.svg") -15% 160% no-repeat,
+              var(--navy);
+
+  background-size: 33%;
+}
+
+@media screen and (min-width: 1120px) {
+  section#sign-up {
+    background-size: 30%;
+  }
 }
 
 section#sign-up h2 {
