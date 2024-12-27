@@ -250,6 +250,7 @@ footer .cagov-logo svg {
 
 .hiw {
   --grid-gap: 4rem;
+  text-wrap: balance;
   
   /* CSS reset  */
   list-style: none;
@@ -281,30 +282,35 @@ footer .cagov-logo svg {
 
 /*  Icons */
 
-.hiw svg {
+.hiw img {
   position: absolute;
-  width: 2em;
-  top: -0.125em;
-  left: -0.125em;
-  rotate: -3.5deg;
+  inline-size: 3em;
+  aspect-ratio: 1 / 1;
+  top: -0.75em;
+  left: -0.75em;
+  rotate: -5deg;
+}
+
+.hiw li:nth-child(even) svg {
+  rotate: 5deg;
 }
 
 /*  CSS arrows */
 
 .hiw-arrow {
    --radius: 3rem;
-   --width: 0.25rem;
+   --arrow-stroke-width: 0.25rem;
   
    --arrow-spacing-on-mobile: 1rem;
    display: block;
    position: absolute;
-   border-bottom: var(--width) solid var(--blue);
+   border-bottom: var(--arrow-stroke-width) solid var(--blue);
    rotate: 90deg;
    transform-origin: 0 50%;
    top: calc(100% + var(--arrow-spacing-on-mobile));
    left: 50%;
-   width: calc( var(--grid-gap) - var(--arrow-spacing-on-mobile) * 2);
-   height: 0.25rem;
+   width: calc( var(--grid-gap) - var(--arrow-spacing-on-mobile) * 2 - var(--arrow-stroke-width));
+   height: var(--arrow-stroke-width);
 }
 
 /*  Adding the arrowhead */
@@ -312,13 +318,13 @@ footer .cagov-logo svg {
 .hiw-arrow::after {
   position: absolute;
   content: "";
-  width: var(--width);
+  width: var(--arrow-stroke-width);
   height: 1.5rem;
   border-radius: 3px;
-  right: calc(var(--width) * -2);
+  right: calc(var(--arrow-stroke-width) * -2);
   display: block;
   background: var(--blue);
-  translate: calc(var(--width) * -1) calc(var(--width) / 2);
+  translate: calc(var(--arrow-stroke-width) * -1) calc(var(--arrow-stroke-width) / 2);
 }
 
 .hiw-arrow::before {
@@ -372,7 +378,7 @@ footer .cagov-logo svg {
   */
   
   .hiw-arrow {
-     border-left: var(--width) solid var(--blue);
+     border-left: var(--arrow-stroke-width) solid var(--blue);
      border-bottom-left-radius: var(--radius);
      top: calc(100% + var(--grid-gap));
      left: 50%;
