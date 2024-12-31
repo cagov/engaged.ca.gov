@@ -1,0 +1,45 @@
+/* About page styles */
+
+section#about-page-heading {
+  text-align: center;
+  color: var(--off-white);
+  background-color: var(--navy);
+}
+
+section#about-page-heading h1 {
+  margin: 0;
+}
+
+section#about-page-shaded {
+  background-color: #F6F7FA;
+}
+
+.about-section-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  max-width: 47rem;
+
+}
+
+engca-icon-heading {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+engca-icon-heading h2 {
+  margin-block-end: 0;
+  color: #1E1E1E;
+  font-size: 2.125rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 100%; /* 2.125rem */
+  letter-spacing: -0.0425rem;
+}
+
+engca-icon-heading svg {
+  width: 4rem;
+  height: 4rem;
+}
