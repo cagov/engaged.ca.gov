@@ -1,0 +1,109 @@
+:root {
+  --white: #FFFFFF;
+  --blue: #5489A3;
+  --orange: #E79450;
+  --navy: #1C2745;
+  --off-white: #FFF4EB;
+  --mobile-drawer: var(--navy);
+  --mobile-drawer-active: var(--blue);
+}
+
+/* Swap global font on all elements. State Template stuff. */
+:not(h1, h2) {
+  font-family:
+    "Noto Sans", 
+    system-ui, 
+    -apple-system, 
+    "Roboto",
+		"Helvetica Neue", 
+    sans-serif !important;
+}
+
+/* Custom element tags without JS shall default to the following. */
+:where(:not(:defined)){
+  display: block;
+}
+
+
+/* 
+ * Tip-top statewide header. 
+ */
+
+.utility-header {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.utility-header svg path.cls-1 {
+  fill: var(--white);
+}
+
+
+/*
+ * Sitewide styles 
+ */
+
+a {
+  color: #1F3B83;
+}
+
+a[data-appearance="button"], button, input[type="submit"] {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-decoration: none !important;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* data-theme="orange" */
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"] {
+  color: var(--navy);
+  background: var(--orange);
+}
+
+/* data-theme="off-white" */
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"] {
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+
+h1, h2 {
+  font-family: "Noto Sans Display", sans-serif;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2.9375rem;
+  line-height: 120%; /* 3.525rem */
+  letter-spacing: -0.05875rem;
+}
+
+h2 {
+  font-size: 2.3125rem;
+  font-style: normal;
+  line-height: 100%; /* 2.3125rem */
+  letter-spacing: -0.04625rem;
+}
+
+section p, section li {
+  font-size: 1.4375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4375rem; /* 169.565% */
+}
+
+section {
+  padding-block: 4.8rem;
+}
+
+section h1 {
+  margin-block: 0 1.8rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section h2 {
+  margin-block: 0 1.8rem;
+  color: #0F152F;
+}
