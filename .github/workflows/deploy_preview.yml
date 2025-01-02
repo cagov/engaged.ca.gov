@@ -81,5 +81,5 @@ jobs:
         uses: mshick/add-pr-comment@v2.8.2
         with:
           message: |
-            Preview site available at [${{ env.URLSAFE_BRANCH_NAME }}.d2r0lnj7pany8j.cloudfront.net](https://${{ env.URLSAFE_BRANCH_NAME }}.d2r0lnj7pany8j.cloudfront.net/).
+            Preview site available at [${{ env.URLSAFE_BRANCH_NAME }}.pr.engaged.ca.gov](https://${{ env.URLSAFE_BRANCH_NAME }}.pr.engaged.ca.gov/).
           allow-repeats: false
