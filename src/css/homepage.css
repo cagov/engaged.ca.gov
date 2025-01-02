@@ -99,8 +99,8 @@ engca-partner-flex > img {
 }
 
 engca-partner-flex > span {
-  padding: 1.25rem;
-  background: #DDD;
+  font-size: 2rem;
+  color: #514943;
 }
 
 aside.site-footer {
