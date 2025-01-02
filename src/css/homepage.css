@@ -26,6 +26,27 @@ engca-banner-content {
   max-width: 44.875rem;
 }
 
+/* Handling banner images on smaller screens */
+
+.banner-flex img {
+  object-fit: cover;
+  object-position: center top;
+  inline-size: 100%;
+}
+
+#hero,
+#about {
+  padding-block-end: 0;
+}
+
+#hero img {
+  block-size: 50vw;
+}
+
+#about img {
+  block-size: 72vw;
+}
+
 /* Adjust margin for any content before the button. */
 engca-banner-content:has(a[data-appearance="button"]) > :not(a[data-appearance="button"]):last-of-type {
   margin-block-end: 1.8rem;
@@ -87,6 +108,7 @@ engca-partner-flex {
   flex-wrap: wrap;
   column-gap: 6.7rem;
   row-gap: 3.6rem;
+  align-items: center;
 }
 
 engca-partner-flex > :is(img, span) {
@@ -216,6 +238,22 @@ footer .cagov-logo svg {
 
 @media screen and (min-width: 576px) {
 
+  #hero img,
+  #about img {
+    object-fit: none;
+    object-position: 140% top;
+    overflow-x: visible;
+    margin-top: -3rem;
+  }
+
+  #hero img {
+    block-size: 28vw;
+  }
+
+  #about img {
+    block-size: 40vw;
+  }
+
   /*  Reset the margin between list items,
       since the grid is now handling spacing */
   .hiw li {
@@ -268,10 +306,44 @@ footer .cagov-logo svg {
   }
 }
 
+@media screen and (min-width: 768px) {
+
+  #hero img,
+  #about img {
+    margin-top: -6rem;
+  }
+
+
+  #hero img {
+    block-size: 25vw;
+  }
+
+  #about img {
+    block-size: 28vw;
+  }
+}
 
 /* Multi-column grid layout for larger screens */
 
 @media screen and (min-width: 992px) {
+
+  .banner-flex {
+    padding-block-end: 4.8rem;
+    position: relative;
+  }
+
+  #hero img,
+  #about img {
+    position: absolute;
+    object-fit: none;
+    right: -10vw;
+    top: -20%;
+    margin-top: 0;
+    inline-size: unset;
+    block-size: unset;
+    overflow: visible;
+  }
+
   .hiw {
      grid-template-columns: repeat(4, 1fr);
      grid-template-rows: repeat(2, 1fr);
@@ -298,6 +370,13 @@ footer .cagov-logo svg {
     top: calc(var(--grid-gap) * -1);
     transform: scaleY(-1);
     transform-origin: 0 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #hero img,
+  #about img {
+    position: static;
   }
 }
 
