@@ -3,6 +3,7 @@ import { Features as lcssFeatures, bundle as lcssBundle } from "lightningcss";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import chalk from "chalk";
+import markdownIt from "markdown-it";
 
 /**
  * Log an output from a build process in the 11ty style.
@@ -57,6 +58,12 @@ async function buildJS() {
   });
 }
 
+const markdownEngine = markdownIt({
+  html: true,
+  breaks: false,
+  linkify: true,
+});
+
 let firstBuild = true;
 
 export default async function (eleventyConfig) {
@@ -77,6 +84,17 @@ export default async function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addFilter("findByUrl", (collection, url) => {
+    const page = collection.find(item => item?.url === url);
+    return page;
+  });
+
+  eleventyConfig.addFilter("getSnippet", (collection, fileSlug) => {
+    const page = collection.find(item => item?.page?.fileSlug === fileSlug);
+    const htmlContent = markdownEngine.render(page.page.rawInput);
+    return Object.assign(page, { htmlContent });
+  });
+
   eleventyConfig.addGlobalData("layout", "layout");
 
   eleventyConfig.addPassthroughCopy({
@@ -85,6 +103,8 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src");
   eleventyConfig.addWatchTarget("./site");
+
+  eleventyConfig.setLibrary("md", markdownEngine);
 
   return {
     htmlTemplateEngine: "njk",

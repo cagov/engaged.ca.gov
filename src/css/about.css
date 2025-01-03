@@ -10,7 +10,7 @@ section#about-page-heading h1 {
   margin: 0;
 }
 
-section#about-page-shaded {
+section.about-page-shaded {
   background-color: #F6F7FA;
 }
 
