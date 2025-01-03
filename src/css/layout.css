@@ -8,6 +8,10 @@
   --mobile-drawer-active: var(--blue);
 }
 
+html {
+  scroll-padding-top: 8.5rem;
+}
+
 /* Swap global font on all elements. State Template stuff. */
 :not(h1, h2) {
   font-family:

@@ -1,126 +1,42 @@
-<engca-about-page>
-  <section id="about-page-heading">
-    <div class="container">
-      <h1>About the program</h1>
-    </div>
-  </section>
-  <section>
-    <div class="container about-section-flex">
-      <engca-icon-heading>
-        <img src="/public/images/sticker-about-megaphone.svg" aria-hidden="true">
-        <h2>We need your voice</h2>
-      </engca-icon-heading>
-      <engca-section-content>
-        <p>
-          In California, we know a strong democracy takes work. We build it through practices that spark conversation and solve
-          problems.
-        </p>
-        <p>
-          With this initiative, the state intends to:
-        </p>
-        <ul>
-          <li>
-            empower Californians to have two-way, honest, respectful discussions on important topics,
-          </li>
-          <li>
-            let them be heard by government, and
-          </li>
-          <li>
-            make better policy.
-          </li>
-        </ul>
-        <p>
-          <strong>Engage California</strong>
-          focuses on meaningful conversations with the people of our state. We use the latest technology to include everyone. We
-          value accountability, transparency, ethics, and facts.
-        </p>
-        <p>
-          What you think then influences how government acts on problems.
-        </p>
-      </engca-section-content>
-    </div>
-  </section>
-  <section id="about-page-shaded">
-    <div class="container about-section-flex">
-      <engca-icon-heading>
-        <img src="/public/images/sticker-about-mic.svg" aria-hidden="true">
-        <h2>You get the mic</h2>
-      </engca-icon-heading>
-      <engca-section-content>
-        <p>
-          We know you have a busy life. You may not have time to go to a public meeting, send an email, or make a phone
-          call.
-        </p>
-        <p>
-          But your voice could be the one that sparks a change.
-        </p>
-        <p>
-          We want to invite you to a better conversation. A conversation where many voices can find common ground. You may be
-          surprised at how many people feel the way you do.
-        </p>
-        <p>
-          We can do so much more when we find a way forward together.
-        </p>
-      </engca-section-content>
-    </div>
-  </section>
-  <section>
-    <div class="container about-section-flex">
-      <engca-icon-heading>
-        <img src="/public/images/sticker-about-convo.svg" aria-hidden="true">
-        <h2>The process</h2>
-      </engca-icon-heading>
-      <engca-section-content>
-        <p>
-          Once we go live:
-        </p>
-        <ul>
-          <li>
-            We will open a topic to discuss
-          </li>
-          <li>
-            Participants will get an invitation to join
-          </li>
-          <li>
-            You will come together in a virtual space with others to discuss the topic over a set period of time
-          </li>
-          <li>
-            We will protect your privacy, and reveal no names
-          </li>
-          <li>
-            We will share key findings with leaders in state government - and you
-          </li>
-        </ul>
-        <p>
-          The first conversations will launch in early 2025.
-        </p>
-      </engca-section-content>
-    </div>
-  </section>
-  <section id="about-page-shaded">
-    <div class="container about-section-flex">
-      <engca-icon-heading>
-        <img src="/public/images/sticker-about-stars.svg" aria-hidden="true">
-        <h2>What you can learn</h2>
-      </engca-icon-heading>
-      <engca-section-content>
-        <ul>
-          <li>
-            What thousands of other Californians think about important issues
-          </li>
-          <li>
-            What's happening in our state
-          </li>
-          <li>
-            The power of your own voice
-          </li>
-        </ul>
-      </engca-section-content>
-    </div>
-  </section>
-  <section id="sign-up">
-    <div class="container form-flex">
-      {% include "form.njk" %}
-    </div>
-  </section>
-</engca-about-page>
+---
+title: About the program
+tags:
+  - pages
+---
+<section id="about-page-heading">
+  <div class="container">
+    <h1>{{ title }}</h1>
+  </div>
+</section>
+
+{%- macro section(snippet, shaded=false) %}
+<section {% if shaded -%}class="about-page-shaded"{%- endif -%}>
+  <div class="container about-section-flex">
+    <engca-icon-heading>
+      <img src="{{ snippet.data.icon }}" aria-hidden="true">
+      <h2>{{ snippet.data.title }}</h2>
+    </engca-icon-heading>
+    <engca-section-content>
+      {{ snippet.htmlContent | safe }}
+    </engca-section-content>
+  </div>
+</section>
+{% endmacro -%}
+
+{% set weNeedYourVoice = collections.snippets | getSnippet("about_we-need-your-voice") %}
+{{ section(weNeedYourVoice, shaded = false) }}
+
+{% set youGetTheMic = collections.snippets | getSnippet("about_you-get-the-mic") %}
+{{ section(youGetTheMic, shaded = true) }}
+
+{% set theProcess = collections.snippets | getSnippet("about_process") %}
+{{ section(theProcess, shaded = false) }}
+
+{% set whatYouCanLearn = collections.snippets | getSnippet("about_what-you-can-learn") %}
+{{ section(whatYouCanLearn, shaded = true) }}
+
+<section id="sign-up">
+  <div class="container form-flex">
+    {% include "form.njk" %}
+  </div>
+</section>
