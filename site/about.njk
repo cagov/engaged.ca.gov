@@ -23,16 +23,16 @@ tags:
 </section>
 {% endmacro -%}
 
-{% set weNeedYourVoice = collections.snippets | getSnippet("about-page-we-need-your-voice") %}
+{% set weNeedYourVoice = collections.snippets | getSnippet("about_we-need-your-voice") %}
 {{ section(weNeedYourVoice, shaded = false) }}
 
-{% set youGetTheMic = collections.snippets | getSnippet("about-page-you-get-the-mic") %}
+{% set youGetTheMic = collections.snippets | getSnippet("about_you-get-the-mic") %}
 {{ section(youGetTheMic, shaded = true) }}
 
-{% set theProcess = collections.snippets | getSnippet("about-page-process") %}
+{% set theProcess = collections.snippets | getSnippet("about_process") %}
 {{ section(theProcess, shaded = false) }}
 
-{% set whatYouCanLearn = collections.snippets | getSnippet("about-page-what-you-can-learn") %}
+{% set whatYouCanLearn = collections.snippets | getSnippet("about_what-you-can-learn") %}
 {{ section(whatYouCanLearn, shaded = true) }}
 
 <section id="sign-up">
