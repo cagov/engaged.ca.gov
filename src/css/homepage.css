@@ -112,12 +112,11 @@ engca-partner-flex {
 }
 
 engca-partner-flex > :is(img, span) {
-  max-width: 25rem;
-  max-height: 4rem;
+  height: 4rem;
 }
 
 engca-partner-flex > img {
-  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
 }
 
 engca-partner-flex > span {
