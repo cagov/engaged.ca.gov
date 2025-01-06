@@ -13,6 +13,6 @@ With this initiative, the state intends to:
 * let them be heard by government, and
 * make better policy.
 
-**Engage California** focuses on meaningful conversations with the people of our state. We use the latest technology to include everyone. We value accountability, transparency, ethics, and facts.
+**Engaged California** focuses on meaningful conversations with the people of our state. We use the latest technology to include everyone. We value accountability, transparency, ethics, and facts.
 
 What you think then influences how government acts on problems.

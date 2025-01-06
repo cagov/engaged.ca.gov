@@ -13,7 +13,7 @@ html {
 }
 
 /* Swap global font on all elements. State Template stuff. */
-:not(h1, h2) {
+:not(h1, h2, .display-text) {
   font-family:
     "Noto Sans", 
     system-ui, 
@@ -65,6 +65,16 @@ a[data-appearance="button"], button, input[type="submit"] {
 :is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"] {
   color: var(--navy);
   background: var(--orange);
+  border: none;
+}
+
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"]:focus,
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"]:hover {
+  background: #E4863A;
+}
+
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"]:active {
+  background: #E17923;
 }
 
 /* data-theme="off-white" */
@@ -73,30 +83,39 @@ a[data-appearance="button"], button, input[type="submit"] {
   border: 2px solid var(--navy);
 }
 
-h1, h2 {
+h1, h2, .display-text {
   font-family: "Noto Sans Display", sans-serif;
   font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 120%;
 }
 
 h1 {
-  font-size: 2.9375rem;
-  line-height: 120%; /* 3.525rem */
-  letter-spacing: -0.05875rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 2.3125rem;
-  font-style: normal;
-  line-height: 100%; /* 2.3125rem */
-  letter-spacing: -0.04625rem;
+  font-size: 1.25rem;
 }
 
 section p, section li {
-  font-size: 1.4375rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.4375rem; /* 169.565% */
+  line-height: 1.7;
 }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.9375rem;
+  }
+
+  h2 {
+    font-size: 2.3125rem;
+  }
+
+  section p, section li {
+    font-size: 1.4375rem;
+  }
+}
+
 
 section {
   padding-block: 4.8rem;
