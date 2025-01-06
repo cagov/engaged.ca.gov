@@ -72,27 +72,36 @@ a[data-appearance="button"], button, input[type="submit"] {
 h1, h2, .display-text {
   font-family: "Noto Sans Display", sans-serif;
   font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 120%;
 }
 
 h1 {
-  font-size: 2.9375rem;
-  line-height: 120%; /* 3.525rem */
-  letter-spacing: -0.05875rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 2.3125rem;
-  font-style: normal;
-  line-height: 100%; /* 2.3125rem */
-  letter-spacing: -0.04625rem;
+  font-size: 1.25rem;
 }
 
 section p, section li {
-  font-size: 1.4375rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.4375rem; /* 169.565% */
+  line-height: 1.7;
 }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.9375rem;
+  }
+
+  h2 {
+    font-size: 2.3125rem;
+  }
+
+  section p, section li {
+    font-size: 1.4375rem;
+  }
+}
+
 
 section {
   padding-block: 4.8rem;
