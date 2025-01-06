@@ -21,7 +21,7 @@ engca-join-convo-form, engca-form-field {
 
 .form-flex > p:last-child {
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   font-style: normal;
   font-weight: 400;
   line-height: 1.625rem; /* 185.714% */
@@ -35,8 +35,9 @@ engca-form-error {
   background: #F1464E;
   color: #fff;
   border-radius: 3px;
-  margin-block: 0.5rem;
-  padding: 0.5rem;
+  margin-block: 0.5em;
+  padding: 0.5em;
+  font-size: 0.875em;
 }
 
 input[type="email"][aria-invalid="true"] {
