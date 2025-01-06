@@ -182,7 +182,7 @@ footer .cagov-logo svg {
   inline-size: 3em;
   aspect-ratio: 1 / 1;
   top: -0.75em;
-  left: -0.75em;
+  left: 0;
   rotate: -5deg;
 }
 
@@ -268,6 +268,10 @@ footer .cagov-logo svg {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: var(--grid-gap);
+  }
+
+  .hiw img {
+    left: -0.75em;
   }
 
   .hiw-step-2 {
