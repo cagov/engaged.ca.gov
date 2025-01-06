@@ -61,6 +61,16 @@ a[data-appearance="button"], button, input[type="submit"] {
 :is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"] {
   color: var(--navy);
   background: var(--orange);
+  border: none;
+}
+
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"]:focus,
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"]:hover {
+  background: #E4863A;
+}
+
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"]:active {
+  background: #E17923;
 }
 
 /* data-theme="off-white" */
