@@ -2,7 +2,6 @@
   max-width: 40rem;
 }
 
-
 .form-flex, engca-join-convo-form > form {
   display: flex;
   flex-direction: column;
@@ -22,7 +21,7 @@ engca-join-convo-form, engca-form-field {
 
 .form-flex > p:last-child {
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   font-style: normal;
   font-weight: 400;
   line-height: 1.625rem; /* 185.714% */
@@ -32,19 +31,21 @@ engca-join-convo-form, engca-form-field {
   color: #6FD0FB
 }
 
-engca-form-error p { 
-  background-color: lightpink;
-  color: black;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  padding: .5rem;
-  margin-block: .25rem 0;
-}
-
-engca-form-error span#emailError {
-  color: maroon;
+engca-form-error {
+  background: #F1464E;
+  color: #fff;
+  border-radius: 3px;
+  margin-block: 0.5em;
+  padding: 0.5em;
+  font-size: 0.875em;
 }
 
 input[type="email"][aria-invalid="true"] {
-  border: 5px solid pink;
+  box-shadow: inset 0 0 3px rgb(241 70 78 / 0.5);
+  color: #F1464E;
+  border-color: currentColor;
+}
+
+input[type="email"][aria-invalid="true"]:focus {
+  outline-color: currentColor !important;
 }
