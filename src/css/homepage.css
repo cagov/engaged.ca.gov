@@ -155,6 +155,7 @@ footer .cagov-logo svg {
   text-align: center;
   position: relative;
   margin-bottom: 4rem;
+  line-height: 1.275;
 }
 
 /*  Icons */
@@ -163,7 +164,7 @@ footer .cagov-logo svg {
   position: absolute;
   inline-size: 3em;
   aspect-ratio: 1 / 1;
-  top: -0.75em;
+  top: -1.5em;
   left: 0;
   rotate: -5deg;
 }
@@ -188,6 +189,7 @@ footer .cagov-logo svg {
    left: 50%;
    width: calc( var(--grid-gap) - var(--arrow-spacing-on-mobile) * 2 - var(--arrow-stroke-width));
    height: var(--arrow-stroke-width);
+   border-radius: 3px;
 }
 
 /*  Adding the arrowhead */
@@ -236,6 +238,7 @@ footer .cagov-logo svg {
   }
 
   .hiw img {
+    top: -0.75em;
     left: -0.75em;
   }
 
