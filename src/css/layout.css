@@ -28,6 +28,12 @@ html {
   display: block;
 }
 
+@media (max-width: 1200px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
 
 /* 
  * Tip-top statewide header. 
@@ -91,11 +97,11 @@ h1, h2, .display-text {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2.027rem;
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.602rem;
 }
 
 section p, section li {
