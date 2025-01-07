@@ -2,14 +2,20 @@
  * Homepage styles
  */
 
-section#hero {
+#hero {
   color: var(--off-white);
-  background-color: var(--navy);
+  background: url("/public/images/hero-bubbles-cropped.svg") bottom right / 30vw no-repeat, var(--navy);
 }
 
-section#about {
+#about {
   color: #444;
-  background: var(--off-white);
+  background: url("/public/images/about-bubbles-cropped.svg") bottom right / 25vw no-repeat, var(--off-white);
+}
+
+@media (min-width: 1200px) {
+  #hero, #about {
+    background-image: unset;
+  }
 }
 
 /* Using a class here to play nicely with State Template .container. */

@@ -28,6 +28,12 @@ html {
   display: block;
 }
 
+@media (max-width: 1200px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
 
 /* 
  * Tip-top statewide header. 
