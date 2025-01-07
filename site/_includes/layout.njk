@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Engaged California | {{ title }}</title>
+    <title>{{ title }} | Engaged California</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if doNotIndex %}
+      <!-- Uncomment at launch -->
+      <!-- <meta name="robots" content="noindex, nofollow"> -->
+    {% endif %}
+
+
+    <!-- Delete this robots directive at launch -->
     <meta name="robots" content="noindex, nofollow">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+    <meta name="author" content="Office of Data and Innovation - State of California"/>
+    {% if description %}
+      <meta name="description" content="{{ description }}"/>
+    {% endif %}
+    {% if keywords | length %}
+      <meta name="keywords" content="{{ keywords | join(", ") }}"/>
+    {% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link rel="preconnect" href="https://www.google-analytics.com/"/>

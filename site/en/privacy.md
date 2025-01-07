@@ -1,5 +1,9 @@
 ---
 title: Privacy policy
+description: The State of California is committed to promoting and protecting the privacy rights of individuals.
+keywords:
+  - personal information
+  - privacy law
 layout: page
 tags:
   - pages
