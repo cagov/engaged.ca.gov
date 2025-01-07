@@ -85,12 +85,12 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("findByUrl", (collection, url) => {
-    const page = collection.find(item => item?.url === url);
+    const page = collection.find((item) => item?.url === url);
     return page;
   });
 
   eleventyConfig.addFilter("getSnippet", (collection, fileSlug) => {
-    const page = collection.find(item => item?.page?.fileSlug === fileSlug);
+    const page = collection.find((item) => item?.page?.fileSlug === fileSlug);
     const htmlContent = markdownEngine.render(page.page.rawInput);
     return Object.assign(page, { htmlContent });
   });
@@ -114,6 +114,7 @@ export default async function (eleventyConfig) {
       input: "site",
       includes: "_includes",
       output: "_dist",
+      data: "_data",
     },
   };
 }
