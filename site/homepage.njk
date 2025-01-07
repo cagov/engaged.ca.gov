@@ -5,11 +5,10 @@ permalink: /
 <section id="hero">
   <div class="container banner-flex">
     <engca-banner-content>
-      <h1>
-        Tell your government how you feel about pressing issues
-      </h1>
+      {% set hero = collections.snippets | getSnippet("homepage_hero") %}
+      {{ hero.htmlContent | safe }}
       <a href="#sign-up" data-appearance="button" data-theme="orange">
-        Sign up now
+        {{ hero.data.buttonText }}
       </a>
     </engca-banner-content>
     <img src="/public/images/hero-bubbles.svg" aria-hidden="true">
@@ -18,15 +17,10 @@ permalink: /
 <section id="about">
   <div class="container banner-flex">
     <engca-banner-content>
-      <h2>Amplify your voice</h2>
-      <p>Would you like to be heard about issues that affect you and your community?</p>
-      <p>Now there's a new way.</p>
-      <p>
-        We're using an online platform to let you and other Californians have a voice in government. This helps us shape policy
-        - together.
-      </p>
+      {% set aboutSection = collections.snippets | getSnippet("homepage_about-section") %}
+      {{ aboutSection.htmlContent | safe }}
       <a href="/about" data-appearance="button" data-theme="off-white">
-        Learn more about the program
+        {{ aboutSection.data.buttonText }}
       </a>
     </engca-banner-content>
     <img src="/public/images/about-bubbles.svg" aria-hidden="true">
@@ -67,11 +61,8 @@ permalink: /
 </section>
 <section id="partners">
   <div class="container">
-    <h2>Our partners</h2>
-    <p>
-      We designed this platform to be non-partisan. The state's Government Operations Agency and Office of Data and Innovation
-      developed it. Other partners and advisors for this initiative are:
-    </p>
+    {% set partners = collections.snippets | getSnippet("homepage_partners") %}
+    {{ partners.htmlContent | safe }}
     <engca-partner-flex>
       <img src="/public/images/carnegie.svg" alt="Carnegie Endowment for International Peace">
       <img src="/public/images/liberty-color.png" alt="Project Liberty Institute">
