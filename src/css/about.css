@@ -70,8 +70,12 @@ engca-icon-heading h2 {
 }
 
 engca-icon-heading img {
-  inline-size: 3rem;
+  font-size: 3rem;
+  inline-size: 1em;
   aspect-ratio: 1 / 1;
+  position: relative;
+  top: 0.0625em;
+
 }
 
 @media (min-width: 768px) {
