@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ title }} | Engaged California</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+
     {% if doNotIndex %}
       <!-- Uncomment at launch -->
       <!-- <meta name="robots" content="noindex, nofollow"> -->
@@ -14,28 +15,58 @@
     <meta name="robots" content="noindex, nofollow">
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
-    <meta name="author" content="Office of Data and Innovation - State of California"/>
-    {% if description %}
-      <meta name="description" content="{{ description }}"/>
-    {% endif %}
-    {% if keywords | length %}
-      <meta name="keywords" content="{{ keywords | join(", ") }}"/>
-    {% endif %}
-
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-favicon.png">
-
+    <!-- Prime some resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link rel="preconnect" href="https://www.google-analytics.com/"/>
+    
+
+    <!-- Page metadata -->
+    <title>{{ title }} | Engaged California</title>
+    <meta name="title" content="{{ title }} | Engaged California"/>
+    <meta property="og:title" content="{{ title }} | Engaged California"/>
+    <meta property="og:site_name" content="Engaged California"/>
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://engaged.ca.gov{{permalink}}"/>
+    <meta property="og:locale" content="en_US"/>
+
+    <meta name="image" content="https://engaged.ca.gov/public/images/open-graph-image.png"/>
+    <meta property="og:image" content="https://engaged.ca.gov/public/images/open-graph-image.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="Engaged California"/>
+    <meta property="og:image:type" content="image/png"/>
+
+    {% if description %}
+      <meta name="description" content="{{ description }}"/>
+      <meta property="og:description" content="{{ description }}"/>
+    {% endif %}
+
+    <meta name="author" content="Office of Data and Innovation - State of California"/>
+    <meta property="article:author" content="Office of Data and Innovation - State of California"/>
+    <meta property="article:publisher" content="https://engaged.ca.gov/"/>
+
+    {% if keywords | length %}
+      <meta name="keywords" content="{{ keywords | join(", ") }}"/>
+    {% endif %}
+    {% for keyword in keywords %}
+      <meta property="article:tag" content="{{ keyword }}"/>
+    {% endfor %}
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32"/>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="/apple-touch-favicon.png"/>
+
+
+    <!-- Fonts, styles, and scripts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@900&family=Noto+Sans:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet">
     <link rel="stylesheet" href="/public/ca_state_template/css/cagov.core.min.css"/>
     <link rel="stylesheet" href="/public/ca_state_template/css/colortheme-oceanside.min.css"/>
-    
     <script src="/public/ca_state_template/js/cagov.core.min.js"></script>
     <link rel="stylesheet" href="/css/index.css"/>
     <script defer src="/js/index.js"></script>
