@@ -69,9 +69,15 @@ engca-icon-heading h2 {
   letter-spacing: -0.0425rem;
 }
 
-engca-icon-heading svg {
-  width: 4rem;
-  height: 4rem;
+engca-icon-heading img {
+  inline-size: 3rem;
+  aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 768px) {
+  engca-icon-heading img {
+    inline-size: unset;
+  }
 }
 
 #sign-up {
