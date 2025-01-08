@@ -99,6 +99,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     "src/public": "public",
+    "src/root": "/"
   });
 
   eleventyConfig.addWatchTarget("./src");
