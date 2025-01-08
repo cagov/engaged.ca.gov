@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
 
     {% if doNotIndex %}
@@ -12,7 +12,7 @@
 
 
     <!-- Delete this robots directive at launch -->
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow"/>
 
 
     <!-- Prime some resources -->
@@ -26,22 +26,27 @@
     <title>{{ fullTitle }}</title>
     <meta name="title" content="{{ fullTitle }}"/>
     <meta property="og:title" content="{{ fullTitle }}"/>
-    <meta property="og:site_name" content="Engaged California"/>
+    <meta name="twitter:title" content="{{ fullTitle }}"/>
 
+    <meta property="og:site_name" content="Engaged California"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://engaged.ca.gov{{permalink}}"/>
     <meta property="og:locale" content="en_US"/>
+    <meta name="twitter:card" content="summary_large_image"/>
 
     <meta name="image" content="https://engaged.ca.gov/public/images/open-graph-image.png"/>
     <meta property="og:image" content="https://engaged.ca.gov/public/images/open-graph-image.png"/>
+    <meta name="twitter:image" content="https://engaged.ca.gov/public/images/open-graph-image.png"/>
+    <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
     <meta property="og:image:alt" content="Engaged California"/>
-    <meta property="og:image:type" content="image/png"/>
+    <meta name="twitter:image:alt" content="Engaged California"/>
 
     {% if description %}
       <meta name="description" content="{{ description }}"/>
       <meta property="og:description" content="{{ description }}"/>
+      <meta name="twitter:description" content="{{ description }}"/>
     {% endif %}
 
     <meta name="author" content="Office of Data and Innovation - State of California"/>
