@@ -34,7 +34,7 @@ Office of Data and Innovation
 
 Contact: ODI Service Desk, [accessibility@innovation.ca.gov](mailto:accessibility@innovation.ca.gov)
 
-The undersigned certify that as of January 7, 2025, the website of the Office of Data and Innovation is designed, developed, and maintained to be accessible. This denotes compliance with the following:
+The undersigned certify that as of July 1, 2023, this website is designed, developed, and maintained to be accessible. This denotes compliance with the following:
 
 * California Government Code Sections 7405, 11135, and 11546.7
 * Web Content Accessibility Guidelines 2.1 published by the Web Accessibility Initiative of the World Wide Web Consortium
@@ -42,8 +42,4 @@ The undersigned certify that as of January 7, 2025, the website of the Office of
 
 /s/ Chad Bratton <br>
 Chief Information Officer <br>
-January 7, 2025
-
-/s/ Jeffery Marino <br>
-Director <br>
-January 7, 2025
+July 1, 2023
