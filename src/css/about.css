@@ -1,9 +1,18 @@
 /* About page styles */
 
-section#about-page-heading {
-  text-align: center;
+#about-page-heading {
   color: var(--off-white);
-  background-color: var(--navy);
+  background: url("/public/images/about-header-cropped.svg") center right / 20vw no-repeat, var(--navy);
+}
+
+#about-page-heading img {
+  inline-size: 16rem;
+}
+
+#about-page-heading .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 section#about-page-heading h1 {
@@ -18,8 +27,10 @@ section.about-page-shaded {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
-  max-width: 47rem;
+}
 
+engca-section-content {
+  max-inline-size: 40rem;
 }
 
 engca-icon-heading {
@@ -27,6 +38,25 @@ engca-icon-heading {
   flex-direction: row;
   gap: 1.25rem;
   align-items: center;
+}
+
+@media (min-width: 1200px) {
+  #about-page-heading {
+    background-image: unset;
+  }
+
+  .about-section-flex {
+    flex-direction: row;
+    max-width: 1176px;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  engca-icon-heading {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
 }
 
 engca-icon-heading h2 {
@@ -42,4 +72,8 @@ engca-icon-heading h2 {
 engca-icon-heading svg {
   width: 4rem;
   height: 4rem;
+}
+
+#sign-up {
+  border-bottom: 1px solid var(--blue);
 }

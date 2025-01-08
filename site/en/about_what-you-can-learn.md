@@ -1,6 +1,6 @@
 ---
 title: What you can learn
-icon: /public/images/sticker-about-stars.svg
+icon: /public/images/sticker-about-sparkles.svg
 permalink: false
 tags:
   - snippets
