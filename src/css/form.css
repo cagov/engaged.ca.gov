@@ -1,3 +1,37 @@
+#sign-up {
+  color: var(--white);
+  background: var(--navy);
+  background-size: 33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.signup-cluster-1,
+.signup-cluster-2 {
+  position: absolute;
+  inline-size: 30vw;
+}
+
+.signup-cluster-1 {
+  bottom: -10vw;
+  left: -12vw;
+}
+
+.signup-cluster-2 {
+  top: -10vw;
+  right: -12vw;
+}
+
+@media screen and (min-width: 1120px) {
+  section#sign-up {
+    background-size: 30%;
+  }
+}
+
+section#sign-up h2 {
+  color: var(--white);
+}
+
 .form-flex {
   max-width: 40rem;
 }
