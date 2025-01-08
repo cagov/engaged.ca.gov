@@ -22,9 +22,10 @@
     
 
     <!-- Page metadata -->
-    <title>{{ title }} | Engaged California</title>
-    <meta name="title" content="{{ title }} | Engaged California"/>
-    <meta property="og:title" content="{{ title }} | Engaged California"/>
+    {% set fullTitle %}{% if title %}{{ title }} | {% endif %}Engaged California{% endset %}
+    <title>{{ fullTitle }}</title>
+    <meta name="title" content="{{ fullTitle }}"/>
+    <meta property="og:title" content="{{ fullTitle }}"/>
     <meta property="og:site_name" content="Engaged California"/>
 
     <meta property="og:type" content="website"/>
