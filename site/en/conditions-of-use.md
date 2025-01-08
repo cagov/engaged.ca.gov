@@ -1,5 +1,10 @@
 ---
 title: Conditions of use
+description: These are the terms you agree to when you use this website. This includes the information we do and do not collect.
+keywords:
+  - use
+  - use policy
+  - conditions
 layout: page
 tags:
   - pages
@@ -8,7 +13,7 @@ tags:
 
 This website was authored by the Office of Data and Innovation.
 
-Updated: **DATE**
+*Updated: June 30, 2023*
 
 When you visit an Office of Data and Innovation (ODI) website, you accept our conditions of use. If you do not agree with these conditions of use, please exit this website. The conditions of use are subject to change without notice. They reflect ODI’s current business practices.
 
@@ -30,7 +35,7 @@ We only share information you give us if necessary. If we use your information f
 
 ## Security and monitoring
 
-ODI, as developer and manager of this website, has taken steps to safeguard the integrity of thisour website infrastructure for our visitors’ safety. This includes, but is not limited to:
+ODI, as developer and manager of this website, has taken steps to safeguard the integrity of this website infrastructure for our visitors’ safety. This includes, but is not limited to:
 
 * Limiting our data collection
 * Monitoring for resource availability and security risks, including unauthorized attempts to upload or change information

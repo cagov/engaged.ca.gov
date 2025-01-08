@@ -1,10 +1,14 @@
 ---
-title: Accessibility
+title: Accessibility certification
+description: State of California accessibility certification
 layout: page
+keywords:
+  - accessibility
+  - certification
 tags:
   - pages
 ---
-# Accessibility
+# Accessibility certification
 
 This website was authored by the Office of Data and Innovation.
 
@@ -22,9 +26,7 @@ We also consider performance a part of accessibility. Websites that load fast on
 
 You can learn more about our philosophies around [performance, accessibility, and readability](https://innovation.ca.gov/page-score-info/).
 
-We want to hear from you if you encounter any accessibility barriers on thisour website. We also welcome you to reach out if you have suggestions on how we can make thisour website more accessible. 
-
-You can contact us at [info@innovation.ca.gov](mailto:info@innovation.ca.gov).
+We want to hear from you if you encounter any accessibility barriers on thisour website. We also welcome you to reach out if you have suggestions on how we can make this website more accessible. You can contact us at [info@innovation.ca.gov](mailto:info@innovation.ca.gov).
 
 ## Website accessibility certification
 
@@ -32,10 +34,12 @@ Office of Data and Innovation
 
 Contact: ODI Service Desk, [accessibility@innovation.ca.gov](mailto:accessibility@innovation.ca.gov)
 
-The undersigned certify that as of **DATE**, the website of the Office of Data and Innovation is designed, developed, and maintained to be accessible. This denotes compliance with the following:
+The undersigned certify that as of July 1, 2023, this website is designed, developed, and maintained to be accessible. This denotes compliance with the following:
 
 * California Government Code Sections 7405, 11135, and 11546.7
 * Web Content Accessibility Guidelines 2.1 published by the Web Accessibility Initiative of the World Wide Web Consortium
 * At a minimum Level AA success criteria
 
-**Signatures**
+/s/ Chad Bratton <br>
+Chief Information Officer <br>
+July 1, 2023
