@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ locale }}" xml:lang="{{ locale }}" dir="{{ dir }}">
   <head>
+    <!-- locale: {{ locale }} dir: {{ dir }} WORKING -->
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
@@ -23,7 +24,10 @@
 
     <!-- Page metadata -->
     {% set fullTitle %}{% if title %}{{ title }} | {% endif %}Engaged California{% endset %}
-    <title>{{ fullTitle }}</title>
+    <title>{{ fullTitle }}</title> 
+
+    <!-- {{ 'engaged-california' | i18n }} -->
+
     <meta name="title" content="{{ fullTitle }}"/>
     <meta property="og:title" content="{{ fullTitle }}"/>
     <meta name="twitter:title" content="{{ fullTitle }}"/>
@@ -147,7 +151,7 @@
         <nav id="navigation" class="main-navigation dropdown" aria-label="Main navigation">
           <ul id="nav_list" class="top-level-nav">
             <li class="nav-item">
-              <a class="first-level-link" href="/about">About the program</a>
+              <a class="first-level-link" href="/about">{{ 'about-the-program' | i18n }}</a>
             </li>
           </ul>
         </nav>

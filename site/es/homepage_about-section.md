@@ -2,7 +2,7 @@
 buttonText: Learn more about the program
 tags:
   - snippets
-locale: en
+locale: es
 dir: ltr
 --- 
 ## Amplify your voice

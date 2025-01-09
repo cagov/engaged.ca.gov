@@ -3,7 +3,7 @@ title: The process
 icon: /public/images/sticker-about-chat.svg
 tags:
   - snippets
-locale: en
+locale: es
 dir: ltr
 ---
 Once we go live:

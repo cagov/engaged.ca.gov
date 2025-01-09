@@ -1,7 +1,7 @@
 ---
 tags:
   - snippets
-locale: en
+locale: es
 dir: ltr
 --- 
 ## Our partners

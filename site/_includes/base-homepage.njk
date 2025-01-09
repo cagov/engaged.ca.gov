@@ -1,0 +1,76 @@
+<section id="hero">
+  <div class="container banner-flex">
+    <engca-banner-content>
+      {% set hero = collections.snippets | getSnippet("homepage_hero") %}
+      {{ hero.htmlContent | safe }}
+      <a href="#sign-up" data-appearance="button" data-theme="orange">
+        {{ hero.data.buttonText }}
+      </a>
+    </engca-banner-content>
+    <img src="/public/images/hero-bubbles.svg" aria-hidden="true" class="desktop-only">
+  </div>
+</section>
+<section id="about">
+  <div class="container banner-flex">
+    <engca-banner-content>
+      {% set aboutSection = collections.snippets | getSnippet("homepage_about-section") %}
+      {{ aboutSection.htmlContent | safe }}
+      <a href="/about" data-appearance="button" data-theme="off-white">
+        {{ aboutSection.data.buttonText }}
+      </a>
+    </engca-banner-content>
+    <img src="/public/images/about-bubbles.svg" aria-hidden="true" class="desktop-only">
+  </div>
+</section>
+<section id="how-it-works">
+  <div class="container">
+    <h2>How it works</h2>
+    <ol class="hiw">
+      <li class="hiw-step-1">
+        <img src="/public/images/how-it-works-public.svg" alt="An icon of a group of people"/>
+        <span class="hiw-text">You opt in to a topic</span>
+        <span class="hiw-arrow"></span>
+      </li>
+      <li class="hiw-step-2">
+        <img src="/public/images/how-it-works-state.svg" alt="An icon of a government building"/>
+        <span class="hiw-text">We invite you to join</span>
+        <span class="hiw-arrow"></span>
+      </li>
+      <li class="hiw-step-3">
+        <img src="/public/images/how-it-works-public.svg" alt="An icon of a group of people"/>
+        <span class="hiw-text">You share your thoughts</span>
+        <span class="hiw-arrow"></span>
+      </li>
+      <li class="hiw-step-4">
+        <img src="/public/images/how-it-works-state.svg" alt="An icon of a government building"/>
+        <span class="hiw-text">We share results</span>
+      </li>
+    </ol>
+  </div>
+</section>
+<section id="sign-up">
+  <div class="container form-flex">
+    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true"/>
+    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true"/>
+    {% include "form.njk" %}
+  </div>
+</section>
+<section id="partners">
+  <div class="container">
+    {% set partners = collections.snippets | getSnippet("homepage_partners") %}
+    {{ partners.htmlContent | safe }}
+    <engca-partner-flex>
+      <img src="/public/images/carnegie.svg" alt="Carnegie Endowment for International Peace">
+      <img src="/public/images/liberty-color.png" alt="Project Liberty Institute">
+      <img src="/public/images/berggruen.svg" alt="Berggruen Institute">
+      <img src="/public/images/stanford.png" alt="Stanford: Deliberative Democracy Lab">
+      <img src="/public/images/berkman-klein.svg" alt="Berkman Klein Center">
+      <img src="/public/images/ppic.svg" alt="PPIC">
+      <img src="/public/images/sff.png" alt="San Francisco Foundation">
+      <img src="/public/images/american-public-trust.png" alt="The American Public Trust">
+      <img src="/public/images/public-good-group.png" alt="Public Good Group">
+      <img src="/public/images/goldman-school.png" alt="Berkeley Public Policy: The Goldman School">
+      <img src="/public/images/kapor-center.svg" alt="Kapor Center">
+    </engca-partner-flex>
+  </div>
+</section>
