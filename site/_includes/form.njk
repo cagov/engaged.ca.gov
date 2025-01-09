@@ -16,12 +16,23 @@
       </label>
       <input type="email" class="form-control" id="mce-EMAIL" name="EMAIL" aria-required="true">
       <engca-form-error id="emailError" hidden>
-          <strong>Please enter a valid email address.</strong>
-          Email addresses should contain a "@" and a "."
+        <strong>Please enter a valid email address.</strong>
+        Email addresses should contain a "@" and a "."
+      </engca-form-error>
+      <engca-form-error id="apiError" hidden>
+        <strong>We're sorry, there's a problem with our form.</strong>
+        Please try again later.
       </engca-form-error>
     </engca-form-field>
     <input type="submit" id="mc-embedded-subscribe" name="subscribe" data-theme="orange" value="Sign up now">
   </form>
+  <engca-form-success hidden>
+    <p>
+      <strong>Your subscription is confirmed.</strong>
+    </p>
+    <img width="75" height="75" src="/public/images/check-circle.svg" aria-hidden="true">
+    <p>Thank you for signing up! Look out for news and updates.</p>
+  </engca-form-success>
 </engca-join-convo-form>
 <p>
   We take your
