@@ -4,6 +4,8 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import chalk from "chalk";
 import markdownIt from "markdown-it";
+import i18n from 'eleventy-plugin-i18n';
+import translations from './site/_data/i18n.js';  // Note: might need .js extension
 
 /**
  * Log an output from a build process in the 11ty style.
@@ -67,6 +69,17 @@ const markdownEngine = markdownIt({
 let firstBuild = true;
 
 export default async function (eleventyConfig) {
+
+  eleventyConfig.addPlugin(i18n, {
+    translations,
+    fallbackLocales: {
+      '*': 'en'
+    },
+    defaultLanguage: "en",
+  });
+  // eleventyConfig.addFilter("i18n", i18n);
+
+
   eleventyConfig.on("eleventy.before", async ({ runMode }) => {
     // Only build all of the bundle files during first run, not on every change.
     if (firstBuild || runMode !== "serve") {

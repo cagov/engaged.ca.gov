@@ -8,7 +8,7 @@ keywords:
 layout: page
 tags:
   - pages
-locale: en
+locale: es
 dir: ltr
 ---
 # Conditions of use
