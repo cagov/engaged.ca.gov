@@ -1,5 +1,5 @@
-<h2>Join the conversation</h2>
-<p>Give us your email. We'll notify you when topics open.</p>
+<h2>{{ 'join-the-conversation' | i18n }}</h2>
+<p>{{ 'join-the-conversation-form-label' | i18n }}</p>
 <engca-join-convo-form>
   <form
     action="https://innovation.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id=61200a6dda&amp;f_id=0003e1e3f0"
@@ -11,32 +11,30 @@
     <engca-form-field>
       <label class="form-control-label" for="mce-EMAIL">
         <span class="required-label" aria-hidden="true">*</span>
-        <span class="sr-only">Required field:</span>
-        Email
+        <span class="sr-only">{{ 'required-label' | i18n }}:</span>
+        {{ 'email-label' | i18n }}
       </label>
       <input type="email" class="form-control" id="mce-EMAIL" name="EMAIL" aria-required="true">
       <engca-form-error id="emailError" hidden>
-        <strong>Please enter a valid email address.</strong>
-        Email addresses should contain a "@" and a "."
+        <strong>{{ 'valid-email-message' | i18n }}</strong>
+        {{ 'valid-email-message-2' | i18n }}
       </engca-form-error>
       <engca-form-error id="apiError" hidden>
-        <strong>We're sorry, there's a problem with our form.</strong>
-        Please try again later.
+        <strong>{{ 'form-problem-message' | i18n }}</strong>
+        {{ 'form-problem-message-2' | i18n }}
       </engca-form-error>
     </engca-form-field>
-    <input type="submit" id="mc-embedded-subscribe" name="subscribe" data-theme="orange" value="Sign up now">
+    <input type="submit" id="mc-embedded-subscribe" name="subscribe" data-theme="orange" value="{{ 'form-submit-button' | i18n }}">
   </form>
   <engca-form-success hidden>
     <p>
-      <strong>Your subscription is confirmed.</strong>
+      <strong>{{ 'form-success-message' | i18n }}</strong>
     </p>
     <img width="75" height="75" src="/public/images/check-circle.svg" aria-hidden="true">
-    <p>Thank you for signing up! Look out for news and updates.</p>
+    <p>{{ 'form-success-message-2' | i18n }}</p>
   </engca-form-success>
 </engca-join-convo-form>
 <p>
-  We take your
-  <a href="/privacy">privacy</a>
-  seriously.
-  <span>You can unsubscribe at any time.</span>
+  {{ 'form-privacy-message' | i18n | safe }}
+  <span>{{ 'form-privacy-message-2' | i18n | safe }}</span>
 </p>

@@ -112,8 +112,8 @@
                 </a>
               </div>
               <p class="official-tag">
-                <span class="desktop-only">Official website of the</span>
-                State of California
+                <span class="desktop-only">{{ 'official-website-prefix' | i18n }}</span>
+                {{ 'state-of-california' | i18n }}
               </p>
             </div>
           </div>
@@ -173,7 +173,7 @@
               Engaged California
             </div>
             <a href="/about" class="d-block no-underline m-y font-size-16">
-              About this program
+              {{ 'about-this-program' | i18n }}
             </a>
           </div>
         </div>
@@ -191,18 +191,18 @@
           </a>
           <ul class="footer-links">
             <li>
-              <a href="/conditions-of-use">Conditions of use</a>
+              <a href="/conditions-of-use">{{ 'conditions-of-use' | i18n }}</a>
             </li>
             <li>
-              <a href="/privacy">Privacy policy</a>
+              <a href="/privacy">{{ 'privacy-policy' | i18n }}</a>
             </li>
             <li>
               <a href="/accessibility">
-                Website accessibility certification
+                {{ 'website-accessibility-certification' | i18n }}
               </a>
             </li>
             <li>
-              <a href="/sitemap">Sitemap</a>
+              <a href="/sitemap">{{ 'sitemap' | i18n }}</a>
             </li>
           </ul>
           <ul class="socialsharer-container">
@@ -224,11 +224,11 @@
               document.getElementById('thisyear').appendChild(document.createTextNode(new Date().getFullYear()))
             </script>
           </span>
-          State of California
+          {{ 'state-of-california' | i18n }}
         </div>
       </div>
       <button class="return-top">
-        <span class="sr-only">Back to top</span>
+        <span class="sr-only">{{ 'back-to-top' | i18n }}</span>
       </button>
     </footer>
     <!-- Extra Decorative Content -->
