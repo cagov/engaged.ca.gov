@@ -131,8 +131,8 @@ const translations = {
     location: "Footer",
   },
   'form-privacy-message': {
-    'en': 'We take your <a href="/privacy">privacy</a> seriously.',
-    'es': 'Nos tomamos tu <a href="/es/privacy">privacidad</a> muy en serio.',
+    'en': 'We take your privacy seriously.',
+    'es': 'Nos tomamos tu privacidad muy en serio.',
     location: "Home",
   },
   'form-privacy-message-2': {
