@@ -1,5 +1,6 @@
 ---
 buttonText: Sign up now
+permalink: false
 tags:
   - snippets
 ---

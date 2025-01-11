@@ -1,6 +1,7 @@
 ---
 title: We need your voice
 icon: /public/images/sticker-about-megaphone.svg
+permalink: false
 tags:
   - snippets
 ---

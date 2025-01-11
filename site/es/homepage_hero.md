@@ -1,5 +1,6 @@
 ---
 buttonText: Regístrate ahora
+permalink: false
 tags:
   - snippets
 ---

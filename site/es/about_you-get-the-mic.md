@@ -1,6 +1,7 @@
 ---
 title: You get the mic
 icon: /public/images/sticker-about-mic.svg
+permalink: false
 tags:
   - snippets
 ---
