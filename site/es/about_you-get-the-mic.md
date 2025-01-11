@@ -3,8 +3,6 @@ title: You get the mic
 icon: /public/images/sticker-about-mic.svg
 tags:
   - snippets
-locale: es
-dir: ltr
 ---
 We know you have a busy life. You may not have time to go to a public meeting, send an email, or make a phone call.
 

@@ -7,8 +7,6 @@ keywords:
   - certification
 tags:
   - pages
-locale: es
-dir: ltr
 ---
 # Accessibility certification
 

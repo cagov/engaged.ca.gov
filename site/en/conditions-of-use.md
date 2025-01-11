@@ -8,8 +8,6 @@ keywords:
 layout: page
 tags:
   - pages
-locale: en
-dir: ltr
 ---
 # Conditions of use
 

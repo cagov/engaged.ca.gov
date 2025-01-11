@@ -7,8 +7,6 @@ keywords:
 layout: page
 tags:
   - pages
-locale: en
-dir: ltr
 ---
 # Privacy policy
 
