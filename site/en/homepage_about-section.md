@@ -1,9 +1,8 @@
 ---
 buttonText: Learn more about the program
+permalink: false
 tags:
   - snippets
-locale: en
-dir: ltr
 --- 
 ## Amplify your voice
 

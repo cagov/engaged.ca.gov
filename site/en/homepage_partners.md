@@ -1,8 +1,7 @@
 ---
+permalink: false
 tags:
   - snippets
-locale: en
-dir: ltr
 --- 
 ## Our partners
 

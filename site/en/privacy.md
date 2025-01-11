@@ -7,8 +7,6 @@ keywords:
 layout: page
 tags:
   - pages
-locale: en
-dir: ltr
 ---
 # Privacy policy
 
@@ -150,7 +148,7 @@ If there is a conflict between this policy and the Public Records Act, the Infor
 
 ## Privacy contact
 
-If you have questions about our privacy policy, contact our Chief Privacy Officer at [mailto:privacy@innovation.ca.gov](privacy@innovation.ca.gov). 
+If you have questions about our privacy policy, contact our Chief Privacy Officer at [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov). 
 
 Office of Data and Innovation<br>
 Attn: Chief Privacy Officer<br>

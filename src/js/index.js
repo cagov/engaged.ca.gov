@@ -1,7 +1,7 @@
 class JoinConversationForm extends window.HTMLElement {
   connectedCallback() {
     const form = this.querySelector("form");
-    const email = form.querySelector("input[type='email']");
+    const emailInput = form.querySelector("input[type='email']");
     const emailError = form.querySelector("engca-form-error#emailError");
     const apiError = form.querySelector("engca-form-error#apiError");
     const success = this.querySelector("engca-form-success");
@@ -10,15 +10,18 @@ class JoinConversationForm extends window.HTMLElement {
       e.preventDefault();
 
       // Validate email.
-      const emailIsBlank = email.value.length === 0;
-      const emailIsValid = email.checkValidity();
+      const emailIsBlank = emailInput.value.length === 0;
+      const emailIsValid = emailInput.checkValidity();
       if (emailIsBlank || !emailIsValid) {
-        email.setAttribute("aria-describedby", "emailError");
-        email.setAttribute("aria-invalid", "true");
+        emailInput.setAttribute("aria-describedby", "emailError");
+        emailInput.setAttribute("aria-invalid", "true");
         emailError.removeAttribute("hidden");
-        email.focus();
+        emailInput.focus();
         return; // <== Exit when invalid.
       }
+
+      // Remove the error message here: validation just passed.
+      emailError.setAttribute("hidden", "");
 
       // Massage the form entries into JSON.
       const formData = new FormData(e.target);
@@ -40,9 +43,10 @@ class JoinConversationForm extends window.HTMLElement {
       if (response.ok) {
         form.setAttribute("hidden", "");
         success.removeAttribute("hidden");
+        success.focus();
       } else {
-        emailError.removeAttribute("hidden");
-        emailError.focus();
+        apiError.removeAttribute("hidden");
+        apiError.focus();
       }
     });
   }

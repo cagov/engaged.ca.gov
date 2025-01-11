@@ -1,10 +1,9 @@
 ---
 title: The process
 icon: /public/images/sticker-about-chat.svg
+permalink: false
 tags:
   - snippets
-locale: es
-dir: ltr
 ---
 Once we go live:
 

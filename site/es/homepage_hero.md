@@ -1,8 +1,7 @@
 ---
 buttonText: Regístrate ahora
+permalink: false
 tags:
   - snippets
-locale: es
-dir: ltr
 ---
 # Habla con tu gobierno sobre los temas más importantes

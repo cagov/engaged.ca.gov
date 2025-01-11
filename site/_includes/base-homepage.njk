@@ -15,7 +15,7 @@
     <engca-banner-content>
       {% set aboutSection = collections.snippets | getSnippet("homepage_about-section") %}
       {{ aboutSection.htmlContent | safe }}
-      <a href="/about" data-appearance="button" data-theme="off-white">
+      <a href="{{ "/about" | locale_url }}" data-appearance="button" data-theme="off-white">
         {{ aboutSection.data.buttonText }}
       </a>
     </engca-banner-content>

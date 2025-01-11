@@ -8,8 +8,6 @@ keywords:
 layout: page
 doNotIndex: true
 eleventyExcludeFromCollections: true
-locale: en
-dir: ltr
 ---
 # We're sorry, that link didn't work.
 

@@ -1,10 +1,9 @@
 ---
 title: We need your voice
 icon: /public/images/sticker-about-megaphone.svg
+permalink: false
 tags:
   - snippets
-locale: es
-dir: ltr
 ---
 In California, we know a strong democracy takes work. We build it through practices that spark conversation and solve problems.
 

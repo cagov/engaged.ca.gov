@@ -9,11 +9,16 @@ dir: ltr
 
 <h1>Sitemap</h1>
 <a href="/">Engaged California Homepage</a>
-<h2>Pages</h2>
-<ul>
-  {%- for page in collections.pages %}
-    <li>
-      <a href="{{ page.url }}">{{ page.data.title }}</a>
-    </li>
-  {%- endfor %}
-</ul>
+
+{%- for lang, pages in collections.pages | groupby("data.lang") %}
+  {% if lang == "en" %}
+    <h2>Pages</h2>
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{%- endfor %}
