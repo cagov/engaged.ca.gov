@@ -1,7 +1,7 @@
 ---
-buttonText: Regístrate ahora
+buttonText: Sign up now
 permalink: false
 tags:
   - snippets
 ---
-# Habla con tu gobierno sobre los temas más importantes
+# Tell your government how you feel about pressing issues
