@@ -26,13 +26,15 @@
     </engca-form-field>
     <input type="submit" id="mc-embedded-subscribe" name="subscribe" data-theme="orange" value="{{ 'form-submit-button' | i18n }}">
   </form>
-  <engca-form-success hidden>
+
+  <engca-form-success aria-live="polite"></engca-form-success>
+  <template id="form-success-msg">
     <p>
       <strong>{{ 'form-success-message' | i18n }}</strong>
     </p>
     <img width="75" height="75" src="/public/images/check-circle.svg" aria-hidden="true">
     <p>{{ 'form-success-message-2' | i18n }}</p>
-  </engca-form-success>
+  </template>
 </engca-join-convo-form>
 <p>
   {{ 'form-privacy-message' | i18n | safe }}
