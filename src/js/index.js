@@ -1,10 +1,23 @@
+/* Accessibility note.
+ *
+ * Currently, the success and error messages for this form take 
+ * two different approaches to accessibility.
+ * 
+ * The success message uses an "aria-live" region, which announces 
+ * itself whenever contents are updated.
+ * 
+ * The error messages use hide-and-show techniques with the "hidden" 
+ * attribute, auto-focus, and other aria attributes.
+ */ 
+
 class JoinConversationForm extends window.HTMLElement {
   connectedCallback() {
     const form = this.querySelector("form");
     const emailInput = form.querySelector("input[type='email']");
     const emailError = form.querySelector("engca-form-error#emailError");
     const apiError = form.querySelector("engca-form-error#apiError");
-    const success = this.querySelector("engca-form-success");
+    const successLiveArea = this.querySelector("engca-form-success");
+    const successTemplate = this.querySelector("template#form-success-msg");
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -41,9 +54,9 @@ class JoinConversationForm extends window.HTMLElement {
       });
 
       if (response.ok) {
+        const successMessage = successTemplate.content;
+        successLiveArea.appendChild(successMessage);
         form.setAttribute("hidden", "");
-        success.removeAttribute("hidden");
-        success.focus();
       } else {
         apiError.removeAttribute("hidden");
         apiError.focus();

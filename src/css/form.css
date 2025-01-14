@@ -84,7 +84,7 @@ input[type="email"][aria-invalid="true"]:focus {
   outline-color: currentColor !important;
 }
 
-engca-form-success {
+engca-form-success:not(:empty) {
   text-align: center;
   background-color: var(--blue);
   padding: 1rem;
