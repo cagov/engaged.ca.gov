@@ -1,6 +1,13 @@
 ---
 title: Sitemap
+description: Sitemap for the Engaged California website.
 permalink: /sitemap/
+keywords:
+  - sitemap
+  - engagement
+  - issues
+  - california
+  - government
 layout: page
 eleventyExcludeFromCollections: true
 locale: en
@@ -8,7 +15,7 @@ dir: ltr
 ---
 
 <h1>Sitemap</h1>
-<a href="/">Engaged California Homepage</a>
+<a href="/">Engaged California homepage</a>
 
 {%- for lang, pages in collections.pages | groupby("data.lang") %}
   {% if lang == "en" %}

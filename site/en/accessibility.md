@@ -1,5 +1,5 @@
 ---
-title: Accessibility certification
+title: Accessibility
 description: State of California accessibility certification
 layout: page
 keywords:
