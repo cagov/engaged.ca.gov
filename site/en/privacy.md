@@ -136,7 +136,7 @@ Our outside analytics services may track you. You can block them from tracking y
 
 ## Surveys
 
-If you take a survey on thisthe ODI website, we will collect information from your responses. This can include text, audio, video, and images you choose to upload.
+If you take a survey on this ODI website, we will collect information from your responses. This can include text, audio, video, and images you choose to upload.
 
 ## Public disclosure
 
@@ -155,5 +155,4 @@ Attn: Chief Privacy Officer<br>
 401 I Street<br>
 Ste 200<br>
 Sacramento, CA 95814<br>
-Email: [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov)<br>
 Phone: [916-234-3480](tel:916-234-3480)

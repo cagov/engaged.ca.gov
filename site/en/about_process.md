@@ -12,5 +12,3 @@ Once we go live:
 * You will come together in a virtual space with others to discuss the topic over a set period of time
 * We will protect your privacy, and reveal no names
 * We will share key findings with leaders in state government - and you
-
-The first conversations will launch in early 2025.

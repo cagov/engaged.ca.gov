@@ -51,7 +51,7 @@ ODI is not responsible for the content or accessibility of other websites or ext
 
 ## Limitation of liability
 
-ODI values, but does not guarantee, the accuracy of content on this website. We welcome feedback on the website. You can report any errors or omissions to [mailto:info@innovation.ca.gov](info@innovation.ca.gov).
+ODI values, but does not guarantee, the accuracy of content on this website. We welcome feedback on the website. You can report any errors or omissions to [info@innovation.ca.gov](mailto:info@innovation.ca.gov).
 
 ODI makes no claims, promises, or guarantees about the absolute accuracy, completeness, or adequacy of the contents of this website and expressly disclaims liability for errors and omissions in the contents of this website. No warranty of any kind, implied, expressed, or statutory, including, but not limited to, the warranties of non-infringement of third party rights, title, merchantability, fitness for a particular purpose, and freedom from computer virus, is given with respect to the contents of this website or its links to other internet resources. References or links in this website to any specific commercial products, processes, or services, or the use of any trade, firm, or corporation name are for the information and convenience of the public, and do not constitute endorsement, recommendation, or favoring by ODI or the State of California, or its employees or agents.
 
