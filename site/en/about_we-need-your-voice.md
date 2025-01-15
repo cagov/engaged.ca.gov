@@ -9,7 +9,7 @@ In California, we know a strong democracy takes work. We build it through practi
 
 With this initiative, the state intends to:
 
-* empower Californians to have two-way, honest, respectful discussions on important topics, 
+* empower Californians to have honest, respectful discussions on important topics, 
 * let them be heard by government, and
 * make better policy.
 

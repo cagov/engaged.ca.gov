@@ -8,7 +8,7 @@ keywords:
 tags:
   - pages
 ---
-# Accessibility certification
+# Accessibility
 
 This website was authored by the Office of Data and Innovation.
 
@@ -26,7 +26,7 @@ We also consider performance a part of accessibility. Websites that load fast on
 
 You can learn more about our philosophies around [performance, accessibility, and readability](https://innovation.ca.gov/page-score-info/).
 
-We want to hear from you if you encounter any accessibility barriers on thisour website. We also welcome you to reach out if you have suggestions on how we can make this website more accessible. You can contact us at [info@innovation.ca.gov](mailto:info@innovation.ca.gov).
+We want to hear from you if you encounter any accessibility barriers on this website. We also welcome you to reach out if you have suggestions on how we can make this website more accessible. You can contact us at [info@innovation.ca.gov](mailto:info@innovation.ca.gov).
 
 ## Website accessibility certification
 

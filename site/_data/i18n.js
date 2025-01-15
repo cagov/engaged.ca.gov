@@ -265,7 +265,7 @@ const translations = {
     location: "Footer",
   },
   'website-accessibility-certification': {
-    'en': 'Website accessibility certification',
+    'en': 'Accessibility',
     'fr': 'Certification de l\'accessibilité du site web',
     'es': '',
     'ko': '',
@@ -298,7 +298,7 @@ const translations = {
     location: "Home",
   },
   'about-this-program': {
-    'en': 'About this program',
+    'en': 'About the program',
     'fr': 'À propos de ce programme',
     'es': '',
     'ko': '',
