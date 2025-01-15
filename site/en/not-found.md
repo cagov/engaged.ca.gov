@@ -17,6 +17,4 @@ To find what you need, you can:
 * Double check that link
 * Use the [sitemap](/sitemap)
 
-Did you get here from a link on our website? Let us know so we can fix it.
-
 Error: Page not found (404)
