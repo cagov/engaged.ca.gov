@@ -23,7 +23,7 @@ const translations = {
     location: "Site header",
   },
   'about-the-program': {
-    'en': 'About the Program',
+    'en': 'About the program',
     'fr': 'À propos du programme',
     'es': '',
     'ko': '',
