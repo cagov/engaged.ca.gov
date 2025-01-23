@@ -139,7 +139,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("pagePath", function(page, langPath) {
     let currentPath = page.filePathStem + "/index.html"; // Relative to base dir, localized path, with folder + /index.html.
 
-    let languages = ["/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/"]; // Localized folder paths, '/es/', '/vi', etc.
+    let languages = ["/en/","/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/"]; // Localized folder paths, '/es/', '/vi', etc.
     
     languages.map((language) => {
       currentPath = currentPath.replace(language, "/"); // Remove existing localized paths to get root.
@@ -149,6 +149,7 @@ export default async function (eleventyConfig) {
     if (page.fileSlug === "home") {
       currentPath = "/index.html";
     }
+    console.log("pagePath", page.filePathStem, currentPath);
 
     // Return a path with no localization and index.html
     return currentPath;
@@ -179,11 +180,16 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addFilter("localizedPath", function(path, locale) {
     let localeFolder = "/" + locale;
-    if (locale === "en") {
-      localeFolder = "";
+    // if (locale === "en") {
+    //   localeFolder = "";
+    // }
+    // if path starts with /en, remove it
+    if (path.startsWith("/en")) {
+      path = path.slice(3);
     }
-    
     let currentPath = localeFolder + path; // Relative to base dir, localized path, with folder.
+
+    // console.log("localizedPath", path, localeFolder, currentPath);
     // Add a slash only when it is merited
     if (!currentPath.endsWith("/") && currentPath.indexOf('#') === -1) {
       currentPath += "/";
