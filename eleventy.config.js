@@ -149,7 +149,7 @@ export default async function (eleventyConfig) {
     if (page.fileSlug === "home") {
       currentPath = "/index.html";
     }
-    console.log("pagePath", page.filePathStem, currentPath);
+    // console.log("pagePath", page.filePathStem, currentPath);
 
     // Return a path with no localization and index.html
     return currentPath;
