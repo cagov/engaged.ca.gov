@@ -125,6 +125,73 @@ export default async function (eleventyConfig) {
     return idealContentString;
   });
 
+  // This will be useful when setting social media meta/og tags.
+  eleventyConfig.addFilter("changeDomain", function (url, domain) {
+    try {
+      let u = new URL(url, `https://${domain}`);
+      u.host = domain;
+      return u.href;
+    } catch {
+      return url;
+    }
+  });
+
+  eleventyConfig.addFilter("pagePath", function(page, langPath) {
+    let currentPath = page.filePathStem + "/index.html"; // Relative to base dir, localized path, with folder + /index.html.
+
+    let languages = ["/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/"]; // Localized folder paths, '/es/', '/vi', etc.
+    
+    languages.map((language) => {
+      currentPath = currentPath.replace(language, "/"); // Remove existing localized paths to get root.
+    });
+
+    // Remove /home/ path slug from filePathStem variable
+    if (page.fileSlug === "home") {
+      currentPath = "/index.html";
+    }
+
+    // Return a path with no localization and index.html
+    return currentPath;
+  });
+
+  eleventyConfig.addFilter("relativePath", function(page, locale) {
+    let currentPath = page.filePathStem + "/index.html"; // Relative to base dir, localized path, with folder + /index.html.
+
+    // Remove /home/ path slug from filePathStem variable
+    if (page.fileSlug === "home") {
+      currentPath = "/index.html";
+      if (locale !== "en") {
+        currentPath = "/" + locale + "/index.html";
+      }
+      
+    }
+
+    // Return a path with localization and index.html
+    return currentPath;
+  });
+
+  eleventyConfig.addFilter("langPathActive", function(page, lang, locale) {
+    if (lang === locale) {
+      return false;
+    }
+    return true;
+  });
+
+  eleventyConfig.addFilter("localizedPath", function(path, locale) {
+    let localeFolder = "/" + locale;
+    if (locale === "en") {
+      localeFolder = "";
+    }
+    
+    let currentPath = localeFolder + path; // Relative to base dir, localized path, with folder.
+    // Add a slash only when it is merited
+    if (!currentPath.endsWith("/") && currentPath.indexOf('#') === -1) {
+      currentPath += "/";
+    }
+    // Return a path with localization and index.html
+    return currentPath;
+  });
+
   eleventyConfig.addGlobalData("layout", "layout");
 
   eleventyConfig.addPassthroughCopy({

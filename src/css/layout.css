@@ -48,6 +48,10 @@ html {
   fill: var(--white);
 }
 
+.utility-header .flex-row { /* needed for the language switcher */
+  display: flex;
+  justify-content: space-between;
+}
 
 /*
  * Sitewide styles 
@@ -135,4 +139,38 @@ section h1 {
 section h2 {
   margin-block: 0 1.8rem;
   color: #0F152F;
+}
+
+/* language switcher - copied from abortion.ca.gov */
+.cagov-language-switcher ul {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  margin-bottom: 0;
+
+  li {
+    list-style: none;
+  }
+  li a[data-active="true"] {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    margin-right: 16px;
+  }
+  li a[data-active="false"] {
+    display: none;
+  }
+  li a,
+  li a:hover {
+    color: #fff;
+  }
+}
+@media screen and (max-width: 800px) {
+  .cagov-language-switcher ul li a[data-active="true"] {
+    font-size: 13px;
+    margin-right: 8px;
+  }
 }
