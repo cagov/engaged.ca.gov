@@ -1,10 +1,10 @@
 ---
-title: What you can learn
+title: Lo que puede aprender
 icon: /public/images/sticker-about-sparkles.svg
 permalink: false
 tags:
   - snippets
 ---
-* What thousands of other Californians think about important issues
-* What's happening in our state
-* The power of your own voice
+* Lo que miles de otros californianos piensan sobre temas importantes
+* ¿Qué está pasando en nuestro estado?
+* El poder de su propia voz

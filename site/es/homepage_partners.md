@@ -3,6 +3,6 @@ permalink: false
 tags:
   - snippets
 --- 
-## Our partners
+## Nuestros socios
 
-We designed this platform to be non-partisan. The state's Government Operations Agency and Office of Data and Innovation developed it. Other partners and advisors for this initiative are:
+Diseñamos esta plataforma para que sea no partidista. La Agencia de Operaciones Gubernamentales y la Oficina de Datos e Innovación del estado lo desarrollaron. Otros socios y asesores de esta iniciativa son:

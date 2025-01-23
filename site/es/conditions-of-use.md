@@ -1,6 +1,6 @@
 ---
-title: Conditions of use
-description: These are the terms you agree to when you use this website. This includes the information we do and do not collect.
+title: Condiciones de uso
+description: Estos son los términos que usted acepta cuando utiliza este sitio web. Esto incluye la información que recopilamos y la que no.
 keywords:
   - use
   - use policy
@@ -9,56 +9,56 @@ layout: page
 tags:
   - pages
 ---
-# Conditions of use
+# Condiciones de uso
 
-This website was authored by the Office of Data and Innovation.
+Este sitio web fue creado por la Oficina de Datos e Innovación.
 
-*Updated: June 30, 2023*
+*Actualizado: 30 de junio de 2023*
 
-When you visit an Office of Data and Innovation (ODI) website, you accept our conditions of use. If you do not agree with these conditions of use, please exit this website. The conditions of use are subject to change without notice. They reflect ODI’s current business practices.
+Cuando visita un sitio web de la Oficina de Datos e Innovación (ODI), acepta nuestras condiciones de uso. Si no está de acuerdo con estas condiciones de uso, abandone este sitio web. Las condiciones de uso están sujetas a cambios sin previo aviso. Reflejan las prácticas comerciales actuales de ODI.
 
-If you leave this website, other websites will have their own privacy and use policies. You should review those policies as you access other sites.
+Si abandona este sitio web, otros sitios web tendrán sus propias políticas de privacidad y uso. Debe revisar esas políticas al acceder a otros sitios.
 
-ODI provides this website and its information as a public service. We monitor the website to ensure its operation and the functioning of its features. Anyone using this website consents to such monitoring.
+ODI proporciona este sitio web y su información como un servicio público. Monitoreamos el sitio web para garantizar su funcionamiento y el funcionamiento de sus funciones. Cualquier persona que utilice este sitio web consiente dicha monitorización.
 
-Unauthorized attempts to modify any information stored on this website, to defeat or circumvent security features, or to use this website for other than its intended purposes are prohibited and may result in criminal prosecution.
+Los intentos no autorizados de modificar cualquier información almacenada en este sitio web, de vencer o eludir las funciones de seguridad o de utilizar este sitio web para fines distintos a los previstos están prohibidos y pueden dar lugar a un proceso penal.
 
-If you have any questions about privacy, read our [privacy policy](/privacy).
+Si tiene alguna pregunta sobre privacidad, lea nuestra [política de privacidad](/privacy).
 
-## Information you send us
+## Información que nos envía
 
-We may use information you send us to improve our services or to respond to you.
+Podemos utilizar la información que nos envíe para mejorar nuestros servicios o para responderle.
 
-We may forward your information to other state employees who may be better able to help you. These employees may be part of a different state department. Except as required by law, we do not share information with non-state organizations.
+Podremos enviar su información a otros empleados estatales que puedan ayudarle mejor. Estos empleados pueden ser parte de un departamento estatal diferente. Salvo que lo requiera la ley, no compartimos información con organizaciones no estatales.
 
-We only share information you give us if necessary. If we use your information for statistical reporting, trend data, or investigative actions, we will remove any identifying information.
+Sólo compartimos la información que usted nos proporciona si es necesario. Si utilizamos su información para informes estadísticos, datos de tendencias o acciones de investigación, eliminaremos cualquier información de identificación.
 
-## Security and monitoring
+## Seguridad y monitoreo
 
-ODI, as developer and manager of this website, has taken steps to safeguard the integrity of this website infrastructure for our visitors’ safety. This includes, but is not limited to:
+ODI, como desarrollador y administrador de este sitio web, ha tomado medidas para salvaguardar la integridad de la infraestructura de este sitio web para la seguridad de nuestros visitantes. Esto incluye, pero no se limita a:
 
-* Limiting our data collection
-* Monitoring for resource availability and security risks, including unauthorized attempts to upload or change information
-* Auditing for security vulnerabilities and site performance and optimization
-* Encryption
-* Integrating security measures
+* Limitar nuestra recopilación de datos
+* Monitoreo de la disponibilidad de recursos y riesgos de seguridad, incluidos intentos no autorizados de cargar o cambiar información
+* Auditoría de vulnerabilidades de seguridad y optimización y rendimiento del sitio
+* Cifrado
+* Integración de medidas de seguridad
 
-## Links to other sites
+## Enlaces a otros sitios
 
-This website may have links to sites we feel might be useful to you and which may provide services. When you visit another site, you are no longer on our site and are subject to the policies of the new site. We encourage you to review the policies of other sites before you visit them.
+Este sitio web puede tener enlaces a sitios que creemos que podrían serle útiles y que pueden proporcionar servicios. Cuando visita otro sitio, ya no está en nuestro sitio y está sujeto a las políticas del nuevo sitio. Le recomendamos que revise las políticas de otros sitios antes de visitarlos.
 
-ODI is not responsible for the content or accessibility of other websites or external documents we link. If you access another website through a link from our website, you do so at your own risk.
+ODI no es responsable del contenido ni de la accesibilidad de otros sitios web o documentos externos a los que enlazamos. Si accede a otro sitio web a través de un enlace desde nuestro sitio web, lo hace bajo su propio riesgo.
 
-## Limitation of liability
+## Limitación de responsabilidad
 
-ODI values, but does not guarantee, the accuracy of content on this website. We welcome feedback on the website. You can report any errors or omissions to [mailto:info@innovation.ca.gov](info@innovation.ca.gov).
+ODI valora, pero no garantiza, la exactitud del contenido de este sitio web. Agradecemos sus comentarios sobre el sitio web. Puede informar cualquier error u omisión a [info@innovation.ca.gov](mailto:info@innovation.ca.gov).
 
-ODI makes no claims, promises, or guarantees about the absolute accuracy, completeness, or adequacy of the contents of this website and expressly disclaims liability for errors and omissions in the contents of this website. No warranty of any kind, implied, expressed, or statutory, including, but not limited to, the warranties of non-infringement of third party rights, title, merchantability, fitness for a particular purpose, and freedom from computer virus, is given with respect to the contents of this website or its links to other internet resources. References or links in this website to any specific commercial products, processes, or services, or the use of any trade, firm, or corporation name are for the information and convenience of the public, and do not constitute endorsement, recommendation, or favoring by ODI or the State of California, or its employees or agents.
+ODI no hace afirmaciones, promesas ni garantías sobre la absoluta exactitud, integridad o adecuación de los contenidos de este sitio web y renuncia expresamente a cualquier responsabilidad por errores y omisiones en los contenidos de este sitio web. No se ofrece garantía de ningún tipo, implícita, expresa o legal, incluidas, entre otras, las garantías de no infracción de derechos de terceros, título, comerciabilidad, idoneidad para un fin particular y ausencia de virus informáticos, con respecto al contenido de este sitio web o sus enlaces a otros recursos de Internet. Las referencias o enlaces en este sitio web a productos, procesos o servicios comerciales específicos, o el uso de cualquier nombre comercial, de empresa o corporación son para información y conveniencia del público, y no constituyen respaldo, recomendación o favoritismo por parte de ODI o el Estado de California, o sus empleados o agentes.
 
-## Ownership
+## Propiedad
 
-In general, information presented on this website, unless otherwise indicated, is in the public domain. You may distribute or copy it as permitted by law.
+En general, la información presentada en este sitio web, a menos que se indique lo contrario, es de dominio público. Puede distribuirlo o copiarlo según lo permita la ley.
 
-However, ODI uses copyrighted data (for example, images). These may require additional permissions before your use. You must get permission directly from the owning (or holding) sources to use any information on this website not owned or created by ODI.
+Sin embargo, ODI utiliza datos con derechos de autor (por ejemplo, imágenes). Es posible que estos requieran permisos adicionales antes de su uso. Debe obtener permiso directamente de las fuentes propietarias (o poseedoras) para utilizar cualquier información de este sitio web que no sea propiedad de ODI ni haya sido creada por ella.
 
-ODI has the unlimited right to use for any purpose, free of any charge, all information submitted via this site except those submissions made under separate legal contract. ODI is free to use, for any purpose, any ideas, concepts, or techniques contained in information provided through this site.
+ODI tiene el derecho ilimitado de utilizar para cualquier propósito, sin costo alguno, toda la información enviada a través de este sitio, excepto aquellas presentaciones realizadas bajo un contrato legal separado. ODI es libre de utilizar, para cualquier propósito, cualquier idea, concepto o técnica contenida en la información proporcionada a través de este sitio.
