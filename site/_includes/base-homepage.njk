@@ -1,7 +1,7 @@
 <section id="hero">
   <div class="container banner-flex">
     <engca-banner-content>
-      {% set hero = collections.snippets | getSnippet("homepage_hero") %}
+      {% set hero = collections.snippets | getSnippet("homepage_hero",locale) %}
       {{ hero.htmlContent | safe }}
       <a href="#sign-up" data-appearance="button" data-theme="orange">
         {{ hero.data.buttonText }}
@@ -13,7 +13,7 @@
 <section id="about">
   <div class="container banner-flex">
     <engca-banner-content>
-      {% set aboutSection = collections.snippets | getSnippet("homepage_about-section") %}
+      {% set aboutSection = collections.snippets | getSnippet("homepage_about-section",locale) %}
       {{ aboutSection.htmlContent | safe }}
       <a href="{{ "/about" | locale_url }}" data-appearance="button" data-theme="off-white">
         {{ aboutSection.data.buttonText }}
@@ -57,7 +57,7 @@
 </section>
 <section id="partners">
   <div class="container">
-    {% set partners = collections.snippets | getSnippet("homepage_partners") %}
+    {% set partners = collections.snippets | getSnippet("homepage_partners",locale) %}
     {{ partners.htmlContent | safe }}
     <engca-partner-flex>
       <img src="/public/images/carnegie.svg" alt="Carnegie Endowment for International Peace">
