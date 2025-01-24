@@ -150,8 +150,8 @@ ODI 使用外部分析服務來幫助改善我們的網站。這些工具用於�
 
 如果您對我們的隱私權政策有任何疑問，請聯絡我們的隱私權長：[privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov)。 
 
-數據與創新辦公室 <br>
-收件人：隱私權長 <br>
+Office of Data and Innovation<br>
+Attn: Chief Privacy Officer<br>
 401 I Street<br>
 Ste 200<br>
 Sacramento, CA 95814<br>

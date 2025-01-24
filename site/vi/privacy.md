@@ -150,8 +150,8 @@ Nếu có xung đột giữa chính sách này và Đạo Luật Hồ Sơ Công 
 
 Nếu quý vị có thắc mắc về chính sách bảo mật của chúng tôi, hãy liên hệ với Giám Đốc Bảo Mật của chúng tôi theo địa chỉ [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov). 
 
-Office of Data and Innovation (Văn Phòng Dữ Liệu Và Đổi Mới)<br>
-Attn: Chief Privacy Officer (Giám Đốc Bảo Mật)<br>
+Office of Data and Innovation<br>
+Attn: Chief Privacy Officer<br>
 401 I Street<br>
 Ste 200<br>
 Sacramento, CA 95814<br>

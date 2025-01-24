@@ -150,7 +150,7 @@ Kung may salungatan sa pagitan ng patakarang ito at ng Pampublikong mga Rekord (
 
 Kung mayroon kang mga tanong tungkol sa aming patakaran sa pagkapribado, makipag-ugnayan sa aming Punong Opisyal ng Pagkapribado (Chief Privacy Officer) sa [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov). 
 
-Tanggapan ng Datos at Inobasyon<br>
+Office of Data and Innovation<br>
 Attn: Chief Privacy Officer<br>
 401 I Street<br>
 Ste 200<br>

@@ -150,9 +150,9 @@ Si existe un conflicto entre esta política y la Ley de Registros Públicos, la 
 
 Si tiene preguntas sobre nuestra política de privacidad, comuníquese con nuestro Director de Privacidad en [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov). 
 
-Oficina de Datos e Innovación<br>
-A la atención de: Director de Privacidad<br>
-Calle I 401<br>
-Este 200<br>
+Office of Data and Innovation<br>
+Attn: Chief Privacy Officer<br>
+401 I Street<br>
+Ste 200<br>
 Sacramento, CA 95814<br>
 Teléfono: [916-234-3480](tel:916-234-3480)
