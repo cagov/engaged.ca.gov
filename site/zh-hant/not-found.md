@@ -13,8 +13,8 @@ eleventyExcludeFromCollections: true
 
 要找到您需要的內容，您可以：
 
-* 瀏覽我們的[首頁](/)
+* 瀏覽我們的 [首頁](/zh-hant/)
 * 仔細檢查該連結
-* 使用[網站地圖](/sitemap)
+* 使用 [網站地圖](/sitemap)
 
 錯誤：找不到頁面 (404)

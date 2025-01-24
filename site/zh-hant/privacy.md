@@ -16,12 +16,12 @@ tags:
 
 數據與創新辦公室（ODI）致力於保護您的資訊隱私。我們的資訊管理措施符合以下要求：
 
-* 加州憲法［第 1 條］(https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&division=&title=&part=&chapter=&article=I)
-* ［加州資訊處理法］(https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)
-* ［加州公共記錄法］(https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=)
-* 加州政府法典第［11015.5］條 (https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11015.5.) 及第［11019.9］條 (https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11019.9.)
-* ［1974 年聯邦隱私權法］(https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
-* 加州［全州資訊管理手冊 5310-A］(https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
+* 加州憲法[第 1 條](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&division=&title=&part=&chapter=&article=I)
+* [加州資訊處理法](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)
+* [加州公共記錄法](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=)
+* 加州政府法典第[11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11015.5.)條及第[11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11019.9.)條
+* [1974 年聯邦隱私權法](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
+* 加州[全州資訊管理手冊 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
 * 所有其他與資訊隱私相關的適用法律
 
 ODI 限制收集個人資訊。我們保護我們所收集或維護的個人資訊的隱私。
@@ -148,11 +148,11 @@ ODI 使用外部分析服務來幫助改善我們的網站。這些工具用於�
 
 ## 隱私聯絡人
 
-如果您對我們的隱私權政策有任何疑問，請聯絡我們的隱私權長：［privacy@innovation.ca.gov］（mailto:privacy@innovation.ca.gov）。 
+如果您對我們的隱私權政策有任何疑問，請聯絡我們的隱私權長：[privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov)。 
 
 數據與創新辦公室 <br>
 收件人：隱私權長 <br>
 401 I Street<br>
 Ste 200<br>
 Sacramento, CA 95814<br>
-電話：［916-234-3480］（tel:916-234-3480）
+電話：[916-234-3480](tel:916-234-3480)

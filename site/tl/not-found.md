@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
 
 Upang mahanap ang kailangan mo, maaari mong:
 
-* I-browse ang aming [homepage](/)
+* I-browse ang aming [homepage](/tl/)
 * I-double check ang link na iyon
 * Gamitin ang [sitemap](/sitemap)
 

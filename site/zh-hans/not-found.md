@@ -13,8 +13,8 @@ eleventyExcludeFromCollections: true
 
 要找到所需内容，您可以：
 
-* 浏览我们的［主页］（/）
+* 浏览我们的 [主页](/zh-hans/)
 * 仔细检查该链接
-* 使用［站点地图］(/sitemap)
+* 使用 [站点地图](/sitemap)
 
 错误：找不到页面（404）

@@ -23,7 +23,7 @@ ODI cung cấp trang mạng này và thông tin trong đó như một dịch v�
 
 Mọi hành vi trái phép nhằm sửa đổi bất kỳ thông tin nào được lưu trữ trên trang mạng này, nhằm vô hiệu hóa hoặc phá vỡ các tính năng bảo mật hoặc sử dụng trang mạng này cho mục đích khác đều bị nghiêm cấm và có thể bị truy tố hình sự.
 
-Nếu quý vị có bất kỳ câu hỏi nào về quyền riêng tư, hãy đọc [chính sách quyền riêng tư](/riêng tư) của chúng tôi.
+Nếu quý vị có bất kỳ câu hỏi nào về quyền riêng tư, hãy đọc [chính sách quyền riêng tư](/vi/privacy) của chúng tôi.
 
 ## Thông tin quý vị gửi cho chúng tôi
 

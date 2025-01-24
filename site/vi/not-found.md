@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
 
 Để tìm những gì quý vị cần, quý vị có thể:
 
-* Duyệt [trang chủ](/) của chúng tôi
+* Duyệt [trang chủ](/vi/) của chúng tôi
 * Kiểm tra lại liên kết đó
 * Sử dụng [sitemap](/sitemap)
 

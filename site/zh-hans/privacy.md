@@ -16,12 +16,12 @@ tags:
 
 数据与创新办公室（ODI）致力于保护您的信息隐私。我们的信息管理措施符合以下要求：
 
-* 加州宪法［第 1 条］(https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&division=&title=&part=&chapter=&article=I)
-* ［加州信息处理法］(https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)
-* ［加州公共记录法］(https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=)
-* 加州政府法典第［11015.5］条(https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11015.5.) 和第［11019.9］条(https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11019.9.)
-* ［1974 年联邦隐私法］(https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
-* 加州［全州信息管理手册 5310-A］(https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
+* 加州宪法[第 1 条](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&division=&title=&part=&chapter=&article=I)
+* [加州信息处理法](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)
+* [加州公共记录法](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=)
+* 加州政府法典第[11015.5条](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11015.5.) 和第[11019.9条](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11019.9.)
+* [1974 年联邦隐私法](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
+* 加州[全州信息管理手册 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
 * 所有其他与信息隐私相关的适用法律
 
 ODI 限制收集个人信息。我们保护我们所收集或维护的个人信息的隐私。
@@ -148,11 +148,11 @@ ODI 使用外部分析服务来帮助改进我们的网站。这些工具用于�
 
 ## 隐私联系人
 
-如果您对我们的隐私政策有任何疑问，请联系我们的首席隐私官：［privacy@innovation.ca.gov］（mailto:privacy@innovation.ca.gov）。 
+如果您对我们的隐私政策有任何疑问，请联系我们的首席隐私官：[privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov)。 
 
 数据与创新办公室 <br>
 收件人：首席隐私官 <br>
 401 I Street<br>
 Ste 200<br>
 Sacramento, CA 95814<br>
-电话：［916-234-3480］（tel:916-234-3480）
+电话：[916-234-3480](tel:916-234-3480)

@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
 
 Para encontrar lo que necesita, puede:
 
-* Navegue por nuestra [página de inicio](/)
+* Navegue por nuestra [página de inicio](/es/)
 * Vuelva a comprobar ese enlace
 * Utilice el [mapa del sitio](/sitemap)
 

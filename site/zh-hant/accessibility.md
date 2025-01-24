@@ -20,11 +20,11 @@ ODI 的網站符合或超過以下要求：
 * 《加州安魯民權法》；以及
 * 《美國殘障法》（ADA）。
 
-ODI 使用 [Lighthouse](https://developer.chrome.com/en/docs/lighthouse/performance/performance-scoring/)的無障礙審核功能來檢查我們的頁面。您可以查看每個頁面的無障礙評分。我們也使用 [@axe-core/puppeteer] (https://www.npmjs.com/package/@axe-core/puppeteer)在發布過程中檢查無障礙性。ODI 使用螢幕閱讀器等無障礙工具對每個頁面進行手動測試。這有助於發現自動化工具無法捕捉的問題。
+ODI 使用 [Lighthouse](https://developer.chrome.com/en/docs/lighthouse/performance/performance-scoring/)的無障礙審核功能來檢查我們的頁面。您可以查看每個頁面的無障礙評分。我們也使用 [@axe-core/puppeteer](https://www.npmjs.com/package/@axe-core/puppeteer) 在發布過程中檢查無障礙性。ODI 使用螢幕閱讀器等無障礙工具對每個頁面進行手動測試。這有助於發現自動化工具無法捕捉的問題。
 
 我們也將性能視為無障礙的一部分。能夠在所有設備上快速加載的網站可以更好地服務加州人。
 
-您可以了解更多關於我們在［效能、無障礙性和可讀性］(https://innovation.ca.gov/page-score-info/)方面的理念。
+您可以了解更多關於我們在 [效能、無障礙性和可讀性](https://innovation.ca.gov/page-score-info/)方面的理念。
 
 如果您在使用本網站時遇到任何無障礙障礙，我們希望聽到您的回饋。如果您有任何建議可以幫助我們改善網站的無障礙性，也歡迎隨時與我們聯繫。您可以透過 [info@innovation.ca.gov](mailto:info@innovation.ca.gov)聯絡我們。
 

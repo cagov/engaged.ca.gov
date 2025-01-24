@@ -23,7 +23,7 @@ Ibinibigay ng ODI ang website na ito at ang impormasyon nito bilang isang pampub
 
 Ang mga hindi awtorisadong pagtatangka na baguhin ang anumang impormasyong nakaimbak sa website na ito, upang talunin o iwasan ang mga tampok na panseguridad, o gamitin ang website na ito para sa iba sa mga layunin nito ay ipinagbabawal at maaaring magresulta sa kriminal na pag-uusig.
 
-Kung mayroon kang anumang mga tanong tungkol sa pagiging pribado, basahin ang aming [patakaran sa pagiging pribado](/privacy).
+Kung mayroon kang anumang mga tanong tungkol sa pagiging pribado, basahin ang aming [patakaran sa pagiging pribado](/tl/privacy).
 
 ## Impormasyong ipinadala mo sa amin
 

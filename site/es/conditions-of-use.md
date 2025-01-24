@@ -23,7 +23,7 @@ ODI proporciona este sitio web y su información como un servicio público. Moni
 
 Los intentos no autorizados de modificar cualquier información almacenada en este sitio web, de vencer o eludir las funciones de seguridad o de utilizar este sitio web para fines distintos a los previstos están prohibidos y pueden dar lugar a un proceso penal.
 
-Si tiene alguna pregunta sobre privacidad, lea nuestra [política de privacidad](/privacy).
+Si tiene alguna pregunta sobre privacidad, lea nuestra [política de privacidad](/es/privacy).
 
 ## Información que nos envía
 

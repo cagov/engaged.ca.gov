@@ -13,7 +13,7 @@ elevenyExcludeFromCollections: true
 
 필요한 정보를 찾으려면:
 
-* 저희 [홈페이지](/)를 탐색해 보세요
+* 저희 [홈페이지](/ko/)를 탐색해 보세요
 * 해당 링크를 다시 확인하세요
 * [사이트맵](/sitemap)을 사용하세요
 
