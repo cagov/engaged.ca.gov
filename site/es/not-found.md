@@ -1,6 +1,6 @@
 ---
-title: Page not found
-description: We’re sorry, that link didn’t work.
+title: Página no encontrada
+description: Lo sentimos, ese enlace no funcionó.
 keywords:
   - "404"
   - not found
@@ -9,14 +9,12 @@ layout: page
 doNotIndex: true
 eleventyExcludeFromCollections: true
 ---
-# We're sorry, that link didn't work.
+# Lo sentimos, ese enlace no funcionó.
 
-To find what you need, you can:
+Para encontrar lo que necesita, puede:
 
-* Browse our [homepage](/)
-* Double check that link
-* Use the [sitemap](/sitemap)
+* Navegue por nuestra [página de inicio](/es/)
+* Vuelva a comprobar ese enlace
+* Utilice el [mapa del sitio](/sitemap)
 
-Did you get here from a link on our website? Let us know so we can fix it.
-
-Error: Page not found (404)
+Error: Página no encontrada (404)

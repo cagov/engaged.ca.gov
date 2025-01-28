@@ -26,13 +26,17 @@
     {% set fullTitle %}{% if title %}{{ title }} | {% endif %}Engaged California{% endset %}
     <title>{{ fullTitle }}</title> 
 
+    <link rel="canonical" href="{{ page | relativePath(locale) | changeDomain(domain) }}" />
+    <meta property="og:url" content="{{ page | relativePath(locale) | changeDomain(domain) }}" />
+
+
     <meta name="title" content="{{ fullTitle }}"/>
     <meta property="og:title" content="{{ fullTitle }}"/>
     <meta name="twitter:title" content="{{ fullTitle }}"/>
 
     <meta property="og:site_name" content="Engaged California"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://engaged.ca.gov{{permalink}}"/>
+    <!-- <meta property="og:url" content="https://engaged.ca.gov{{permalink}}"/> -->
     <meta property="og:locale" content="en_US"/>
     <meta name="twitter:card" content="summary_large_image"/>
 
@@ -114,13 +118,24 @@
                 {{ 'state-of-california' | i18n }}
               </p>
             </div>
+            <div class="cagov-language-switcher">
+              <ul>
+                <li><a href="{{ page | pagePath('/en/') }}" rel="alternate" lang="en" hreflang="en" data-active="{{ page | langPathActive('en', locale) }}">English</a></li>
+                <li><a href="{{ page | pagePath('/es/') }}" rel="alternate" lang="es" hreflang="es" data-active="{{ page | langPathActive('es', locale) }}">Español</a></li>
+                <li><a href="{{ page | pagePath('/ko/') }}" rel="alternate" lang="ko" hreflang="ko" data-active="{{ page | langPathActive('ko', locale) }}">한국어</a></li>
+                <li><a href="{{ page | pagePath('/tl/') }}" rel="alternate" lang="tl" hreflang="tl" data-active="{{ page | langPathActive('tl', locale) }}">Tagalog</a></li>
+                <li><a href="{{ page | pagePath('/vi/') }}" rel="alternate" lang="vi" hreflang="vi" data-active="{{ page | langPathActive('vi', locale) }}">Tiếng Việt</a></li>
+                <li><a href="{{ page | pagePath('/zh-hans/') }}" rel="alternate" lang="zh-hans" hreflang="zh-hans" data-active="{{ page | langPathActive('zh-hans', locale) }}">简体中文</a></li>
+                <li><a href="{{ page | pagePath('/zh-hant/') }}" rel="alternate" lang="zh-hant" hreflang="zh-hant" data-active="{{ page | langPathActive('zh-hant', locale) }}">繁體中文</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div class="section-default">
         <div class="branding">
           <div class="header-organization-banner">
-            <a href="/">
+            <a href="{{ '/' | localizedPath(locale) }}">
               <div class="logo-assets">
                 <img src="/public/images/header-logo.svg" class="logo-img" alt="Engaged California"/>
               </div>
@@ -149,7 +164,7 @@
         <nav id="navigation" class="main-navigation dropdown" aria-label="Main navigation">
           <ul id="nav_list" class="top-level-nav">
             <li class="nav-item">
-              <a class="first-level-link" href="/about">{{ 'about-the-program' | i18n }}</a>
+              <a class="first-level-link" href="{{ '/about' | localizedPath(locale) }}">{{ 'about-the-program' | i18n }}</a>
             </li>
           </ul>
         </nav>
@@ -170,7 +185,7 @@
             <div class="h4 w-100 brd-bottom brd-highlight p-b" role="heading" aria-level="2">
               Engaged California
             </div>
-            <a href="/about" class="d-block no-underline m-y font-size-16">
+            <a href="{{ '/about' | localizedPath(locale) }}" class="d-block no-underline m-y font-size-16">
               {{ 'about-this-program' | i18n }}
             </a>
           </div>
@@ -189,13 +204,13 @@
           </a>
           <ul class="footer-links">
             <li>
-              <a href="/conditions-of-use">{{ 'conditions-of-use' | i18n }}</a>
+              <a href="{{ '/conditions-of-use' | localizedPath(locale) }}">{{ 'conditions-of-use' | i18n }}</a>
             </li>
             <li>
-              <a href="/privacy">{{ 'privacy-policy' | i18n }}</a>
+              <a href="{{ '/privacy' | localizedPath(locale) }}">{{ 'privacy-policy' | i18n }}</a>
             </li>
             <li>
-              <a href="/accessibility">
+              <a href="{{ '/accessibility' | localizedPath(locale) }}">
                 {{ 'website-accessibility-certification' | i18n }}
               </a>
             </li>

@@ -23,7 +23,7 @@ L'ODI fournit ce site web et ses informations comme un service public. Nous surv
 
 Les tentatives non autorisées de modifier toute information stockée sur ce site web, de contourner les fonctionnalités de sécurité ou d'utiliser ce site web à des fins autres que celles prévues sont interdites et peuvent entraîner des poursuites pénales.
 
-Si vous avez des questions sur la confidentialité, lisez notre [privacy policy](/privacy).
+Si vous avez des questions sur la confidentialité, lisez notre [privacy policy](/fr/privacy).
 
 ## Informations que vous nous envoyez
 

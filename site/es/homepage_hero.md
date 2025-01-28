@@ -1,7 +1,7 @@
 ---
-buttonText: Sign up now
+buttonText: Regístrese ahora
 permalink: false
 tags:
   - snippets
 ---
-# Tell your government how you feel about pressing issues
+# Dígale a su gobierno cómo se siente acerca de los problemas más urgentes

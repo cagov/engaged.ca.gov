@@ -1,6 +1,6 @@
 ---
-title: Accessibility certification
-description: State of California accessibility certification
+title: Accesibilidad
+description: Certificación de accesibilidad del Estado de California
 layout: page
 keywords:
   - accessibility
@@ -8,38 +8,38 @@ keywords:
 tags:
   - pages
 ---
-# Accessibility certification
+# Accesibilidad
 
-This website was authored by the Office of Data and Innovation.
+Este sitio web fue creado por la Oficina de Datos e Innovación.
 
-The Office of Data and Innovation (ODI) is committed to providing digital accessibility to everyone. ODI aims to make this website accessible to users with sensory, cognitive, and mobility disabilities. And ultimately to all users, regardless of ability. We consistently look for ways to make our website more accessible. 
+La Oficina de Datos e Innovación (ODI) está comprometida a brindar accesibilidad digital a todos. ODI tiene como objetivo hacer que este sitio web sea accesible para usuarios con discapacidades sensoriales, cognitivas y de movilidad. Y, en última instancia, a todos los usuarios, independientemente de sus capacidades. Buscamos constantemente formas de hacer que nuestro sitio web sea más accesible. 
 
-ODI’s website meets or exceeds the requirements of:
+El sitio web de ODI cumple o supera los requisitos de:
 
-* The World Wide Web Consortium Web Content Accessibility Guidelines (WCAG) 2.1, Level AA,
-* The California Unruh Civil Rights Act, and
-* The Americans with Disabilities Act (ADA).
+* Pautas de Accesibilidad al Contenido Web (WCAG) 2.1, Nivel AA del Consorcio World Wide Web,
+* La Ley de Derechos Civiles Unruh de California, y
+* La Ley de Estadounidenses con Discapacidades (ADA).
 
-ODI uses [Lighthouse](https://developer.chrome.com/en/docs/lighthouse/performance/performance-scoring/)'s accessibility audit to check our pages. You can view  accessibility scores on each page. We also use [@axe-core/puppeteer](https://www.npmjs.com/package/@axe-core/puppeteer) to check accessibility during our publishing process. ODI manually tests each page using accessibility tools like screen readers. This helps us find problems automated tools don’t catch.
+ODI utiliza la auditoría de accesibilidad de [Lighthouse](https://developer.chrome.com/en/docs/lighthouse/performance/performance-scoring/) para verificar nuestras páginas. Puede ver las puntuaciones de accesibilidad en cada página. También utilizamos [@axe-core/puppeteer](https://www.npmjs.com/package/@axe-core/puppeteer) para verificar la accesibilidad durante nuestro proceso de publicación. ODI prueba manualmente cada página utilizando herramientas de accesibilidad como lectores de pantalla. Esto nos ayuda a encontrar problemas que las herramientas automatizadas no detectan.
 
-We also consider performance a part of accessibility. Websites that load fast on all devices better serve Californians.
+También consideramos el rendimiento como parte de la accesibilidad. Los sitios web que se cargan rápidamente en todos los dispositivos sirven mejor a los californianos.
 
-You can learn more about our philosophies around [performance, accessibility, and readability](https://innovation.ca.gov/page-score-info/).
+Puede obtener más información sobre nuestras filosofías en torno a [rendimiento, accesibilidad y legibilidad](https://innovation.ca.gov/page-score-info/).
 
-We want to hear from you if you encounter any accessibility barriers on thisour website. We also welcome you to reach out if you have suggestions on how we can make this website more accessible. You can contact us at [info@innovation.ca.gov](mailto:info@innovation.ca.gov).
+Nos gustaría saber su opinión si encuentra alguna barrera de accesibilidad en este sitio web. También le invitamos a comunicarse con nosotros si tiene sugerencias sobre cómo podemos hacer que este sitio web sea más accesible. Puede contactarnos en [info@innovation.ca.gov](mailto:info@innovation.ca.gov).
 
-## Website accessibility certification
+## Certificación de accesibilidad de sitios web
 
-Office of Data and Innovation
+Oficina de Datos e Innovación
 
-Contact: ODI Service Desk, [accessibility@innovation.ca.gov](mailto:accessibility@innovation.ca.gov)
+Contacto: Centro de ayuda de ODI, [accessibility@innovation.ca.gov](mailto:accessibility@innovation.ca.gov)
 
-The undersigned certify that as of July 1, 2023, this website is designed, developed, and maintained to be accessible. This denotes compliance with the following:
+Los abajo firmantes certifican que, a partir del 1 de julio de 2023, este sitio web está diseñado, desarrollado y mantenido para ser accesible. Esto denota el cumplimiento de lo siguiente:
 
-* California Government Code Sections 7405, 11135, and 11546.7
-* Web Content Accessibility Guidelines 2.1 published by the Web Accessibility Initiative of the World Wide Web Consortium
-* At a minimum Level AA success criteria
+* Secciones 7405, 11135 y 11546.7 del Código de Gobierno de California
+* Pautas de Accesibilidad al Contenido Web 2.1 publicadas por la Iniciativa de Accesibilidad Web del Consorcio World Wide Web
+* Como mínimo, criterios de éxito de nivel AA
 
 /s/ Chad Bratton <br>
-Chief Information Officer <br>
-July 1, 2023
+Director de Información <br>
+1 de julio de 2023

@@ -1,13 +1,13 @@
 ---
-buttonText: Learn more about the program
+buttonText: Conozca más sobre el programa
 permalink: false
 tags:
   - snippets
 --- 
-## Amplify your voice
+## Amplifique su voz
 
-Would you like to be heard about issues that affect you and your community?
+¿Quiere que se escuche su voz acerca de temas que le afecten a usted y a su comunidad?
 
-Now there's a new way.
+Ahora hay una nueva forma.
 
-We're using an online platform to let you and other Californians have a voice in government. This helps us shape policy - together.
+Estamos utilizando una plataforma en línea para permitir que usted y otros californianos tengan voz en el gobierno. Esto nos ayuda a diseñar políticas... juntos.

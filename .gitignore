@@ -2,3 +2,7 @@ node_modules
 test-results
 _dist
 .DS_Store
+*/__pycache__/
+scripts/*.txt
+site/es_old
+

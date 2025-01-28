@@ -19,16 +19,16 @@
 </section>
 {% endmacro -%}
 
-{% set weNeedYourVoice = collections.snippets | getSnippet("about_we-need-your-voice") %}
+{% set weNeedYourVoice = collections.snippets | getSnippet("about_we-need-your-voice",locale) %}
 {{ section(weNeedYourVoice, shaded = false) }}
 
-{% set youGetTheMic = collections.snippets | getSnippet("about_you-get-the-mic") %}
+{% set youGetTheMic = collections.snippets | getSnippet("about_you-get-the-mic",locale) %}
 {{ section(youGetTheMic, shaded = true) }}
 
-{% set theProcess = collections.snippets | getSnippet("about_process") %}
+{% set theProcess = collections.snippets | getSnippet("about_process",locale) %}
 {{ section(theProcess, shaded = false) }}
 
-{% set whatYouCanLearn = collections.snippets | getSnippet("about_what-you-can-learn") %}
+{% set whatYouCanLearn = collections.snippets | getSnippet("about_what-you-can-learn",locale) %}
 {{ section(whatYouCanLearn, shaded = true) }}
 
 <section id="sign-up">

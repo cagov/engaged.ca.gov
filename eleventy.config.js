@@ -96,9 +96,11 @@ export default async function (eleventyConfig) {
     return page;
   });
 
-  eleventyConfig.addFilter("getSnippet", (collection, fileSlug) => {
-    const page = collection.find((item) => item?.page?.fileSlug === fileSlug);
+  eleventyConfig.addFilter("getSnippet", (collection, fileSlug, locale) => {
+    const page = collection.find((item) => item?.page?.fileSlug === fileSlug && item?.page?.inputPath.includes(locale+'/'));
     const htmlContent = markdownEngine.render(page.page.rawInput);
+    // console.log(`getSnippet fileSlug=${fileSlug} locale=${locale} filePathStem=${page.page.filePathStem} inputPath=${page.page.inputPath}`);
+
     return Object.assign(page, { htmlContent });
   });
 
@@ -123,6 +125,80 @@ export default async function (eleventyConfig) {
     }
 
     return idealContentString;
+  });
+
+  // Used to provide domain for canonical and oscial media tags
+  // domain is currently undefined
+  eleventyConfig.addFilter("changeDomain", function (url, domain) {
+    // console.log("changeDomain", url, domain);
+    try {
+      let u = new URL(url, `https://${domain}`);
+      u.host = domain;
+      return u.href;
+    } catch {
+      return url;
+    }
+  });
+
+  // Used in language switcher to get the path to the appropriate for current URL
+  eleventyConfig.addFilter("pagePath", function(page, langPath) {
+    let currentPath = page.filePathStem + "/index.html"; // Relative to base dir, localized path, with folder + /index.html.
+
+    let languages = ["/en/","/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/"]; // Localized folder paths, '/es/', '/vi', etc.
+    
+    languages.map((language) => {
+      currentPath = currentPath.replace(language, "/"); // Remove existing localized paths to get root.
+    });
+
+    // Remove /home/ path slug from filePathStem variable
+    if (currentPath.startsWith('/')) {
+      currentPath = currentPath.slice(1);
+    }
+    currentPath = langPath + currentPath;
+    // Return a path with no localization and index.html
+    currentPath = currentPath.replace('/homepage/', '/');
+    currentPath = currentPath.replace('/en/', '/');
+    return currentPath;
+  });
+
+  // used in header to provide canonical path and social media sharing url
+  eleventyConfig.addFilter("relativePath", function(page, locale) {
+    let currentPath = page.filePathStem + "/index.html"; // Relative to base dir, localized path, with folder + /index.html.
+    // Remove /homepage/ and /en/ from current paths
+    currentPath = currentPath.replace('/homepage/', '/');
+    currentPath = currentPath.replace('/en/', '/');
+    // console.log("relativePath fileSlug=", page.fileSlug, " filePathStem=", page.filePathStem, " -->", currentPath);
+    // Return a path with localization and index.html
+    return currentPath;
+  });
+
+  eleventyConfig.addFilter("langPathActive", function(page, lang, locale) {
+    if (lang === locale) {
+      return false;
+    }
+    return true;
+  });
+
+  // used to fix links in pages to point to the correct localized path for the locale
+  eleventyConfig.addFilter("localizedPath", function(path, locale) {
+    let localeFolder = "/" + locale;
+
+    // if path starts with /en, remove it
+    if (path.startsWith("/en")) {
+      path = path.slice(3);
+    }
+    let currentPath = localeFolder + path; // Relative to base dir, localized path, with folder.
+
+    // console.log("localizedPath", path, localeFolder, currentPath);
+    // Add a slash only when it is merited
+    if (!currentPath.endsWith("/") && currentPath.indexOf('#') === -1) {
+      currentPath += "/";
+    }
+    currentPath = currentPath.replace('/homepage/', '/');
+    currentPath = currentPath.replace('/en/', '/');
+    // console.log("localizedPath", path, localeFolder, currentPath);
+    // Return a path with localization and index.html
+    return currentPath;
   });
 
   eleventyConfig.addGlobalData("layout", "layout");
