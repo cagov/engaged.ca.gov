@@ -49,8 +49,12 @@ html {
 }
 
 .utility-header .flex-row { /* needed for the language switcher */
-  display: flex;
-  justify-content: space-between;
+  display: block;
+
+  @media screen and (min-width: 992px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /*
@@ -143,17 +147,31 @@ section h2 {
 
 /* language switcher - copied from abortion.ca.gov */
 .cagov-language-switcher ul {
+  align-items: start;
   text-decoration: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0px;
-  margin-bottom: 0;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+
+  @media screen and (min-width: 992px) {
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin-left: -5px;
+  }
 
   li {
     list-style: none;
+    padding: 0;
+
+    @media screen and (min-width: 992px) {
+      padding: 0 8px;
+    }
   }
+
   li a[data-active="true"] {
     font-weight: 400;
     font-size: 14px;
@@ -168,7 +186,7 @@ section h2 {
     color: #fff;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
   .cagov-language-switcher ul li a[data-active="true"] {
     font-size: 13px;
     margin-right: 8px;

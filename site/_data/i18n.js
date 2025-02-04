@@ -267,7 +267,7 @@ const translations = {
     "form-privacy-message": {
         "en": "We take your <a href=\"/privacy\">privacy</a> seriously.",
         "fr": "Nous prendrons votre <a href=\"/fr/privacy\">privacité</a> très au sérieux.",
-        "es": "Nosotros tomamos su <a href=\"/privacy\">privacidad< /a> en serio.",
+        "es": "Nosotros tomamos su <a href=\"/privacy\">privacidad</a> en serio.",
         "ko": "저희는 귀하의 <a href=\"/privacy\">프라이버시</a>를 중요하게 생각합니다.",
         "vi": "Chúng tôi xem trọng <a href=\"/quyền riêng tư\">quyền riêng tư</a> của quý vị.",
         "tl": "Itinuturing naming seryoso ang iyong <a href=\"/privacy\"> privacy</a>.",
