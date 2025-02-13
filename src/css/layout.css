@@ -23,6 +23,8 @@ html {
     sans-serif !important;
 }
 
+
+
 /* Custom element tags without JS shall default to the following. */
 :where(:not(:defined)){
   display: block;
@@ -54,6 +56,7 @@ html {
   @media screen and (min-width: 992px) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -182,7 +185,8 @@ section h2 {
     display: none;
   }
   li a,
-  li a:hover {
+  li a:hover,
+  li a:focus {
     color: #fff;
   }
 }
