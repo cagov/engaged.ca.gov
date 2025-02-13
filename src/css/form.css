@@ -28,8 +28,11 @@
   }
 }
 
+.section-standout,
+.section-standout a:not(.btn),
+section#sign-up,
 section#sign-up h2 {
-  color: var(--white);
+  color: var(--off-white);
 }
 
 .form-flex {
