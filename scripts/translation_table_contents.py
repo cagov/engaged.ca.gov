@@ -144,7 +144,7 @@ translations = {
     'location': "Home",
   },
   'join-the-conversation-form-label': {
-    'en': 'Give us your email. We\'ll notify you when topics open.',
+    'en': 'Topics I’m interested in:',
     'fr': 'Donnez-nous votre adresse e-mail. Nous vous notifierons lorsque les sujets seront disponibles.',
     'es': '',
     'ko': '',

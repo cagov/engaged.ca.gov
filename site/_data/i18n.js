@@ -122,7 +122,7 @@ const translations = {
         "location": "Home"
     },
     "join-the-conversation-form-label": {
-        "en": "Give us your email. We'll notify you when topics open.",
+        "en": "Topics I’m interested in:",
         "fr": "Donnez-nous votre adresse e-mail. Nous vous notifierons lorsque les sujets seront disponibles.",
         "es": "Proporciónenos su correo electrónico. Le avisaremos cuando se abran los temas.",
         "ko": "귀하의 이메일을 저희에게 알려주세요 주제가 열리면 알려드립니다",
