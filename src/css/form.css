@@ -139,3 +139,11 @@ ul.form-checkbox-list {
   list-style: none;
   padding: 0;
 }
+
+.form-title {
+  color: var(--Dark-Palette-Off-White, #FFF4EB);
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39px; /* 169.565% */
+}
