@@ -165,6 +165,17 @@ const translations = {
         "zh-hant": "必填欄",
         "location": "Home"
     },
+    "topic-future-topics": {
+        "en": "Future topics",
+        "fr": "Future topics",
+        "es": "Future topics",
+        "ko": "Future topics",
+        "vi": "Future topics",
+        "tl": "Future topics",
+        "zh-hans": "Future topics",
+        "zh-hant": "Future topics",
+        "location": "Home"
+    },
     "topic-los-angeles-fire-recovery": {
         "en": "I’m interested in talking about Los Angeles Fires recovery",
         "fr": "I’m interested in talking about Los Angeles Fires recovery",
