@@ -211,14 +211,14 @@ translations = {
       "location": "Home"
   },
   "topic-los-angeles-fire-recovery": {
-      "en": "I’m interested in talking about Los Angeles Fires recovery",
-      "fr": "I’m interested in talking about Los Angeles Fires recovery",
-      "es": "I’m interested in talking about Los Angeles Fires recovery",
-      "ko": "I’m interested in talking about Los Angeles Fires recovery",
-      "vi": "I’m interested in talking about Los Angeles Fires recovery",
-      "tl": "I’m interested in talking about Los Angeles Fires recovery",
-      "zh-hans": "I’m interested in talking about Los Angeles Fires recovery",
-      "zh-hant": "I’m interested in talking about Los Angeles Fires recovery",
+      "en": "Los Angeles fires recovery",
+      "fr": "Los Angeles fires recovery",
+      "es": "Los Angeles fires recovery",
+      "ko": "Los Angeles fires recovery",
+      "vi": "Los Angeles fires recovery",
+      "tl": "Los Angeles fires recovery",
+      "zh-hans": "Los Angeles fires recovery",
+      "zh-hant": "Los Angeles fires recovery",
       "location": "Home"
   },
   'valid-email-message': {
