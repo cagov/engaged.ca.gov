@@ -105,3 +105,32 @@ engca-form-success > p {
   font-size: 1.125rem;
   line-height: 2rem;
 }
+
+.form-check-input[type=checkbox] {
+   border-radius: 0em; 
+}
+
+.form-check-input {
+  background-color: transparent;
+  border-width: 2px;
+  margin-right: 21px;
+}
+
+.form-checkbox-label {
+  color: var(--Dark-Palette-Off-White, #FFF4EB);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39px; /* 216.667% */
+}
+  
+.form-check-input {
+  top: 0;  
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 2px solid var(--Dark-Palette-Off-White, #FFF4EB);
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
