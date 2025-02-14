@@ -145,7 +145,7 @@ translations = {
     'location': "Home",
   },
   'join-the-conversation-form-label': {
-    'en': 'Topics I’m interested in:',
+    'en': 'Give us your email. We’ll notify you when topics open.',
     'fr': 'Donnez-nous votre adresse e-mail. Nous vous notifierons lorsque les sujets seront disponibles.',
     'es': '',
     'ko': '',
@@ -186,6 +186,17 @@ translations = {
     'tl': '',
     'zh-hans': '',
     'zh-hant': '',
+    'location': "Home",
+  },
+  'topics-interests-label': {
+    'en': 'Topics I’m interested in:',
+    'fr': 'Topics I’m interested in:',
+    'es': 'Topics I’m interested in:',
+    'ko': 'Topics I’m interested in:',
+    'vi': 'Topics I’m interested in:',
+    'tl': 'Topics I’m interested in:',
+    'zh-hans': 'Topics I’m interested in:',
+    'zh-hant': 'Topics I’m interested in:',
     'location': "Home",
   },
   "topic-future-topics": {
