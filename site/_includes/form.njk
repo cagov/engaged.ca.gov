@@ -1,6 +1,7 @@
 <h2>{{ 'join-the-conversation' | i18n }}</h2>
 <p>{{ 'join-the-conversation-form-label' | i18n }}</p>
 <engca-join-convo-form>
+  
   <form
     action="https://innovation.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id=61200a6dda&amp;f_id=0003e1e3f0"
     method="post"
@@ -8,6 +9,7 @@
     name="mc-embedded-subscribe-form"
     target="_self"
     novalidate>
+
     <engca-form-field>
       <label class="form-control-label" for="mce-EMAIL">
         <span class="required-label" aria-hidden="true">*</span>
@@ -24,6 +26,24 @@
         {{ 'form-problem-message-2' | i18n }}
       </engca-form-error>
     </engca-form-field>
+
+    <engca-form-field>
+      
+      <input type="checkbox" id="mce-group[91023]-91023-0" name="group[91023][1]" value="Los Angeles Fires recovery">
+      <label class="form-control-label" for="mce-group[91023]-91023-0">
+        {{ 'topic-los-angeles-fire-recovery' | i18n }}
+      </label>
+
+      <engca-form-error id="emailError" hidden>
+        <strong>{{ 'valid-email-message' | i18n }}</strong>
+        {{ 'valid-email-message-2' | i18n }}
+      </engca-form-error>
+      <engca-form-error id="apiError" hidden>
+        <strong>{{ 'form-problem-message' | i18n }}</strong>
+        {{ 'form-problem-message-2' | i18n }}
+      </engca-form-error>
+    </engca-form-field>
+
     <input type="submit" id="mc-embedded-subscribe" name="subscribe" data-theme="orange" value="{{ 'form-submit-button' | i18n }}">
   </form>
 
