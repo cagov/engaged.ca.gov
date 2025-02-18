@@ -2,7 +2,7 @@
 const translations = {
     "engaged-california-untranslated": { // LEAVE THIS ONE UNTRANSLATED
       "en": "Engaged California",
-      "fr": "Engaged California", 
+      "fr": "Engaged California",
       "es": "Engaged California",
       "ko": "Engaged California",
       "vi": "Engaged California",
@@ -22,7 +22,7 @@ const translations = {
         "tl": "Tungkol sa programa",
         "zh-hans": "关于该计划",
         "zh-hant": "關於該計劃",
-        "fa": "TRANSLATE",
+        "fa": "در مورد برنامه",
         "hy": "TRANSLATE"  ,
         "location": "Home"
     },
@@ -35,7 +35,7 @@ const translations = {
         "tl": "Magpatala ngayon",
         "zh-hans": "立即注册",
         "zh-hant": "立即註冊",
-        "fa": "TRANSLATE",
+        "fa": "همین الان ثبت نام کنید",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -48,7 +48,7 @@ const translations = {
         "tl": "Opisyal na website ng",
         "zh-hans": "官方网站",
         "zh-hant": "官方網站",
-        "fa": "TRANSLATE",
+        "fa": "وب سایت رسمی از",
         "hy": "TRANSLATE",
         "location": "Site header"
     },
@@ -61,7 +61,7 @@ const translations = {
         "tl": "Estado ng California",
         "zh-hans": "加利福尼亚州",
         "zh-hant": "加利福尼亞州",
-        "fa": "TRANSLATE",
+        "fa": "ایالت کالیفرنیا",
         "hy": "TRANSLATE",
         "location": "Site header"
     },
@@ -74,7 +74,7 @@ const translations = {
         "tl": "Paano ito gumagana",
         "zh-hans": "如何运作",
         "zh-hant": "如何運作",
-        "fa": "TRANSLATE",
+        "fa": "چگونه کار می کند",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -87,7 +87,7 @@ const translations = {
         "tl": "Nag-opt in ka sa isang paksa",
         "zh-hans": "您选择加入主题",
         "zh-hant": "您選擇加入主題",
-        "fa": "TRANSLATE",
+        "fa": "شما در یک موضوع شرکت می کنید",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -100,7 +100,7 @@ const translations = {
         "tl": "Inaanyayahan ka naming sumali",
         "zh-hans": "我们邀请您加入",
         "zh-hant": "我們邀請您加入",
-        "fa": "TRANSLATE",
+        "fa": "از شما دعوت می کنیم که بپیوندید",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -113,7 +113,7 @@ const translations = {
         "tl": "Ibinahagi mo ang iyong mga saloobin",
         "zh-hans": "分享您的想法",
         "zh-hant": "您分享您的想法",
-        "fa": "TRANSLATE",
+        "fa": "شما افکار خود را به اشتراک بگذارید",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -126,7 +126,7 @@ const translations = {
         "tl": "Nagbabahagi kami ng mga resulta",
         "zh-hans": "我们分享结果",
         "zh-hant": "我們分享結果",
-        "fa": "TRANSLATE",
+        "fa": "ما نتایج را به اشتراک می گذاریم",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -139,7 +139,7 @@ const translations = {
         "tl": "Sumali sa usapan",
         "zh-hans": "加入对话",
         "zh-hant": "加入對話",
-        "fa": "TRANSLATE",
+        "fa": "به گفتگو بپیوندید",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -152,7 +152,7 @@ const translations = {
         "tl": "Ibigay sa amin ang iyong email. Aabisuhan ka namin kapag nagbukas ang mga paksa.",
         "zh-hans": "请提供您的电子邮件地址。当主题开放时我们会通知您。",
         "zh-hant": "請提供您的電子郵件地址。當主題開放時我們會通知您。",
-        "fa": "TRANSLATE",
+        "fa": "ایمیل خود را به ما بدهید با باز شدن موضوعات به شما اطلاع خواهیم داد.",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -168,7 +168,7 @@ const translations = {
         "tl": "Bumalik sa itaas",
         "zh-hans": "返回顶部",
         "zh-hant": "回到頂部",
-        "fa": "TRANSLATE",
+        "fa": "بازگشت به بالا",
         "hy": "TRANSLATE",
         "location": "Footer"
     },
@@ -181,7 +181,7 @@ const translations = {
         "tl": "Email",
         "zh-hans": "电子邮件",
         "zh-hant": "電子郵件",
-        "fa": "TRANSLATE",
+        "fa": "ایمیل",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -194,7 +194,7 @@ const translations = {
         "tl": "Kinakailangang field",
         "zh-hans": "必须填写的字段",
         "zh-hant": "必填欄",
-        "fa": "TRANSLATE",
+        "fa": "فیلد الزامی",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -240,7 +240,7 @@ const translations = {
         "tl": "Mangyaring magpasok ng wastong email address.",
         "zh-hans": "请输入有效的电子邮件地址。",
         "zh-hant": "請輸入有效的電子郵件地址。",
-        "fa": "TRANSLATE",
+        "fa": "لطفا یک آدرس ایمیل معتبر وارد کنید.",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -253,7 +253,7 @@ const translations = {
         "tl": "Ang mga email address ay dapat maglaman ng \"@\" at isang \".\"",
         "zh-hans": "电子邮件地址应包含“@”和“.”",
         "zh-hant": "電子郵件地址應包含「@」和「.」",
-        "fa": "TRANSLATE",
+        "fa": "آدرس های ایمیل باید حاوی \"@\" و \".\"",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -266,7 +266,7 @@ const translations = {
         "tl": "Paumanhin, may problema sa aming form.",
         "zh-hans": "很抱歉，我们的表格有问题。",
         "zh-hant": "很抱歉，我們的表格有問題。",
-        "fa": "TRANSLATE",
+        "fa": "متأسفیم، مشکلی در فرم ما وجود دارد.",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -279,7 +279,7 @@ const translations = {
         "tl": "Pakisubukang muli mamaya.",
         "zh-hans": "请稍后再试。",
         "zh-hant": "請稍後重試。",
-        "fa": "TRANSLATE",
+        "fa": "لطفاً بعداً دوباره امتحان کنید.",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -292,7 +292,7 @@ const translations = {
         "tl": "Magpatala ngayon",
         "zh-hans": "立即注册",
         "zh-hant": "立即註冊",
-        "fa": "TRANSLATE",
+        "fa": "همین الان ثبت نام کنید",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -305,7 +305,7 @@ const translations = {
         "tl": "Nakumpirma ang iyong suskripsyon.",
         "zh-hans": "您的订阅已确认。",
         "zh-hant": "您的訂閱已確認。",
-        "fa": "TRANSLATE",
+        "fa": "اشتراک شما تایید شد",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -318,7 +318,7 @@ const translations = {
         "tl": "Salamat sa pagpapatala! Abangan ang mga balita at update.",
         "zh-hans": "感谢您注册！留意新闻和更新。",
         "zh-hant": "感謝您註冊！留意新聞和更新。",
-        "fa": "TRANSLATE",
+        "fa": "با تشکر از شما برای ثبت نام! منتظر اخبار و به روز رسانی باشید.",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -331,7 +331,7 @@ const translations = {
         "tl": "Patakaran sa pagiging pribado",
         "zh-hans": "隐私政策",
         "zh-hant": "隱私政策",
-        "fa": "TRANSLATE",
+        "fa": "سیاست حفظ حریم خصوصی",
         "hy": "TRANSLATE",
         "location": "Footer"
     },
@@ -344,7 +344,7 @@ const translations = {
         "tl": "Aksesibilidad",
         "zh-hans": "无障碍访问",
         "zh-hant": "無障礙",
-        "fa": "TRANSLATE",
+        "fa": "قابلیت دسترسی",
         "hy": "TRANSLATE",
         "location": "Footer"
     },
@@ -357,7 +357,7 @@ const translations = {
         "tl": "Itinuturing naming seryoso ang iyong <a href=\"/privacy\"> privacy</a>.",
         "zh-hans": "我们非常重视您的<a href=\"/privacy\">隐私</a>。",
         "zh-hant": "我們非常重視您的<a href=\"/privacy\">隱私權</a>。",
-        "fa": "TRANSLATE",
+        "fa": "شما را می گیریم < a href=\"/privacy\"> حریم خصوصی< /a> به طور جدی",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -370,7 +370,7 @@ const translations = {
         "tl": "Maaari mong ihinto ang iyong suskripsyon anumang oras.",
         "zh-hans": "您可以随时取消订阅。",
         "zh-hant": "您可以隨時取消訂閱。",
-        "fa": "TRANSLATE",
+        "fa": "می توانید در هر زمانی اشتراک خود را لغو کنید.",
         "hy": "TRANSLATE",
         "location": "Home"
     },
@@ -383,7 +383,7 @@ const translations = {
         "tl": "Tungkol sa programa",
         "zh-hans": "关于该计划",
         "zh-hant": "關於該計劃",
-        "fa": "TRANSLATE",
+        "fa": "در مورد برنامه",
         "hy": "TRANSLATE",
         "location": "Footer"
     },
@@ -396,7 +396,7 @@ const translations = {
         "tl": "Mga kondisyon ng paggamit",
         "zh-hans": "使用条款",
         "zh-hant": "使用條款",
-        "fa": "TRANSLATE",
+        "fa": "شرایط استفاده",
         "hy": "TRANSLATE",
         "location": "Footer"
     },
@@ -409,7 +409,7 @@ const translations = {
         "tl": "Mapa ng website",
         "zh-hans": "网站地图",
         "zh-hant": "網站地圖",
-        "fa": "TRANSLATE",
+        "fa": "نقشه سایت",
         "hy": "TRANSLATE",
         "location": "Footer"
     }
