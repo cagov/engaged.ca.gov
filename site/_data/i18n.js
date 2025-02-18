@@ -165,6 +165,17 @@ const translations = {
         "zh-hant": "必填欄",
         "location": "Home"
     },
+    "topic-los-angeles-fire-recovery": {
+        "en": "I’m interested in talking about Los Angeles Fires recovery",
+        "fr": "I’m interested in talking about Los Angeles Fires recovery",
+        "es": "I’m interested in talking about Los Angeles Fires recovery",
+        "ko": "I’m interested in talking about Los Angeles Fires recovery",
+        "vi": "I’m interested in talking about Los Angeles Fires recovery",
+        "tl": "I’m interested in talking about Los Angeles Fires recovery",
+        "zh-hans": "I’m interested in talking about Los Angeles Fires recovery",
+        "zh-hant": "I’m interested in talking about Los Angeles Fires recovery",
+        "location": "Home"
+    },
     "valid-email-message": {
         "en": "Please enter a valid email address.",
         "fr": "Veuillez entrer une adresse e-mail valide.",
