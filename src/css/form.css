@@ -135,7 +135,8 @@ engca-form-success > p {
   aspect-ratio: 1/1;
 }
 
-ul.form-checkbox-list {
+
+ul.form-checkbox-list li {
   list-style: none;
   padding: 0;
 }
