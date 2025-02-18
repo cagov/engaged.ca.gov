@@ -3,25 +3,20 @@
 
 <div class="engaged-california-signup-form">
   <div id="mc_embed_shell">
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-            #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-              We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-    </style>
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <div id="mc_embed_signup">
       <form action="https://engaged.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id=61200a6dda&amp;f_id=0003e1e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
           <div id="mc_embed_signup_scroll">
             <h2>{{ 'button-text' | i18n | safe }}</h2>
               <div class="mc-field-group">
                 <label for="mce-EMAIL">
+                  <span class="required-label" aria-hidden="true">*</span>
+                  <span class="sr-only">{{ 'required-label' | i18n }}:</span>
                   {{ 'email-label' | i18n | safe }}
-                  <span class="asterisk">*</span>
                 </label>
-                 <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" aria-required="true">
               </div>
              
-            
               <div class="mc-field-group input-group"><strong>{{ 'topics-interests-label' | i18n | safe }}</strong>
               <ul>
                 <li><input type="checkbox" name="group[91023][2]" id="mce-group[91023]-91023-0" value=""><label for="mce-group[91023]-91023-0">{{ 'topic-future-topics' | i18n | safe }}</label></li>
@@ -31,7 +26,13 @@
           <div id="mce-responses" class="clear">
               <div class="response" id="mce-error-response" style="display: none;"></div>
               <div class="response" id="mce-success-response" style="display: none;"></div>
-          </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_c515d1563732573cbc10cd6e9_61200a6dda" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe"></div>
+          </div>
+          <div aria-hidden="true" style="position: absolute; left: -5000px;">
+            <input type="text" name="b_c515d1563732573cbc10cd6e9_61200a6dda" tabindex="-1" value="">
+          </div>
+          <div class="clear">
+            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value=" {{ 'sign-up-now' | i18n }}">
+          </div>
     </div>
   </form>
   </div>

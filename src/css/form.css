@@ -139,6 +139,17 @@ engca-form-success > p {
   aspect-ratio: 1/1;
 }
 
+
+.engaged-california-signup-form #mc_embed_signup {
+  width: 600px
+}
+
+@media (max-width: 575.98px) {
+  .engaged-california-signup-form #mc_embed_signup {
+    width: 100%;
+  }
+}
+
 .engaged-california-signup-form .mc-field-group.input-group ul li,
 ul.form-checkbox-list li {
   list-style: none;
@@ -164,13 +175,13 @@ ul.form-checkbox-list li {
 }
 
 
-.engaged-california-signup-form label[for="mce-EMAIL"] {
+/* .engaged-california-signup-form label[for="mce-EMAIL"] {
   text-transform: lowercase
-}
+} */
 
-.engaged-california-signup-form label[for="mce-EMAIL"]::first-letter {
+/* .engaged-california-signup-form label[for="mce-EMAIL"]::first-letter {
   text-transform: uppercase 
-}
+} */
 
 
 .engaged-california-signup-form .indicates-required {
