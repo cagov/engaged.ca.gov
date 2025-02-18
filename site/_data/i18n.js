@@ -23,7 +23,7 @@ const translations = {
         "zh-hans": "关于该计划",
         "zh-hant": "關於該計劃",
         "fa": "در مورد برنامه",
-        "hy": "TRANSLATE"  ,
+        "hy": "Ծրագրի մասին"  ,
         "location": "Home"
     },
     "sign-up-now": {
@@ -36,7 +36,7 @@ const translations = {
         "zh-hans": "立即注册",
         "zh-hant": "立即註冊",
         "fa": "همین الان ثبت نام کنید",
-        "hy": "TRANSLATE",
+        "hy": "Գրանցվեք հիմա",
         "location": "Home"
     },
     "official-website-prefix": {
@@ -49,7 +49,7 @@ const translations = {
         "zh-hans": "官方网站",
         "zh-hant": "官方網站",
         "fa": "وب سایت رسمی از",
-        "hy": "TRANSLATE",
+        "hy": "Կալիֆորնիա նահանգի",
         "location": "Site header"
     },
     "state-of-california": {
@@ -62,7 +62,7 @@ const translations = {
         "zh-hans": "加利福尼亚州",
         "zh-hant": "加利福尼亞州",
         "fa": "ایالت کالیفرنیا",
-        "hy": "TRANSLATE",
+        "hy": "Պաշտոնական կայք",
         "location": "Site header"
     },
     "how-it-works": {
@@ -75,7 +75,7 @@ const translations = {
         "zh-hans": "如何运作",
         "zh-hant": "如何運作",
         "fa": "چگونه کار می کند",
-        "hy": "TRANSLATE",
+        "hy": "Ինչպես է այն աշխատում",
         "location": "Home"
     },
     "how-it-works-step-1": {
@@ -88,7 +88,7 @@ const translations = {
         "zh-hans": "您选择加入主题",
         "zh-hant": "您選擇加入主題",
         "fa": "شما در یک موضوع شرکت می کنید",
-        "hy": "TRANSLATE",
+        "hy": "Դուք միանում եք թեմային",
         "location": "Home"
     },
     "how-it-works-step-2": {
@@ -101,7 +101,7 @@ const translations = {
         "zh-hans": "我们邀请您加入",
         "zh-hant": "我們邀請您加入",
         "fa": "از شما دعوت می کنیم که بپیوندید",
-        "hy": "TRANSLATE",
+        "hy": "Մենք հրավիրում ենք միանալ",
         "location": "Home"
     },
     "how-it-works-step-3": {
@@ -114,7 +114,7 @@ const translations = {
         "zh-hans": "分享您的想法",
         "zh-hant": "您分享您的想法",
         "fa": "شما افکار خود را به اشتراک بگذارید",
-        "hy": "TRANSLATE",
+        "hy": "Դուք կիսում եք ձեր մտքերը",
         "location": "Home"
     },
     "how-it-works-step-4": {
@@ -127,7 +127,7 @@ const translations = {
         "zh-hans": "我们分享结果",
         "zh-hant": "我們分享結果",
         "fa": "ما نتایج را به اشتراک می گذاریم",
-        "hy": "TRANSLATE",
+        "hy": "Մենք կիսում ենք արդյունքները",
         "location": "Home"
     },
     "join-the-conversation": {
@@ -140,7 +140,7 @@ const translations = {
         "zh-hans": "加入对话",
         "zh-hant": "加入對話",
         "fa": "به گفتگو بپیوندید",
-        "hy": "TRANSLATE",
+        "hy": "Միացեք զրույցին",
         "location": "Home"
     },
     "join-the-conversation-form-label": {
@@ -153,7 +153,7 @@ const translations = {
         "zh-hans": "请提供您的电子邮件地址。当主题开放时我们会通知您。",
         "zh-hant": "請提供您的電子郵件地址。當主題開放時我們會通知您。",
         "fa": "ایمیل خود را به ما بدهید با باز شدن موضوعات به شما اطلاع خواهیم داد.",
-        "hy": "TRANSLATE",
+        "hy": "Տվեք մեզ ձեր էլ.հասցեն Մենք ձեզ կտեղեկացնենք, երբ թեմաները բացվեն:",
         "location": "Home"
     },
     "": {
@@ -169,7 +169,7 @@ const translations = {
         "zh-hans": "返回顶部",
         "zh-hant": "回到頂部",
         "fa": "بازگشت به بالا",
-        "hy": "TRANSLATE",
+        "hy": "Վերադառնալ սկիզբ",
         "location": "Footer"
     },
     "email-label": {
@@ -182,7 +182,7 @@ const translations = {
         "zh-hans": "电子邮件",
         "zh-hant": "電子郵件",
         "fa": "ایمیل",
-        "hy": "TRANSLATE",
+        "hy": "Էլ․հասցե",
         "location": "Home"
     },
     "required-label": {
@@ -195,7 +195,7 @@ const translations = {
         "zh-hans": "必须填写的字段",
         "zh-hant": "必填欄",
         "fa": "فیلد الزامی",
-        "hy": "TRANSLATE",
+        "hy": "Պարտադիր դաշտ",
         "location": "Home"
     },
     "topics-interests-label": {
@@ -241,7 +241,7 @@ const translations = {
         "zh-hans": "请输入有效的电子邮件地址。",
         "zh-hant": "請輸入有效的電子郵件地址。",
         "fa": "لطفا یک آدرس ایمیل معتبر وارد کنید.",
-        "hy": "TRANSLATE",
+        "hy": "Խնդրում ենք մուտքագրել վավեր էլ․փոստի հասցեն:",
         "location": "Home"
     },
     "valid-email-message-2": {
@@ -254,7 +254,7 @@ const translations = {
         "zh-hans": "电子邮件地址应包含“@”和“.”",
         "zh-hant": "電子郵件地址應包含「@」和「.」",
         "fa": "آدرس های ایمیل باید حاوی \"@\" و \".\"",
-        "hy": "TRANSLATE",
+        "hy": "Էլ․փոստի հասցեները պետք է պարունակեն «@» և «․»",
         "location": "Home"
     },
     "form-problem-message": {
@@ -267,7 +267,7 @@ const translations = {
         "zh-hans": "很抱歉，我们的表格有问题。",
         "zh-hant": "很抱歉，我們的表格有問題。",
         "fa": "متأسفیم، مشکلی در فرم ما وجود دارد.",
-        "hy": "TRANSLATE",
+        "hy": "Ներեցեք, մեր ձևի հետ կապված խնդիր կա:",
         "location": "Home"
     },
     "form-problem-message-2": {
@@ -280,7 +280,7 @@ const translations = {
         "zh-hans": "请稍后再试。",
         "zh-hant": "請稍後重試。",
         "fa": "لطفاً بعداً دوباره امتحان کنید.",
-        "hy": "TRANSLATE",
+        "hy": "Խնդրում ենք փորձել ավելի ուշ:",
         "location": "Home"
     },
     "form-submit-button": {
@@ -293,7 +293,7 @@ const translations = {
         "zh-hans": "立即注册",
         "zh-hant": "立即註冊",
         "fa": "همین الان ثبت نام کنید",
-        "hy": "TRANSLATE",
+        "hy": "Գրանցվեք հիմա",
         "location": "Home"
     },
     "form-success-message": {
@@ -306,7 +306,7 @@ const translations = {
         "zh-hans": "您的订阅已确认。",
         "zh-hant": "您的訂閱已確認。",
         "fa": "اشتراک شما تایید شد",
-        "hy": "TRANSLATE",
+        "hy": "Ձեր բաժանորդագրությունը հաստատված է:",
         "location": "Home"
     },
     "form-success-message-2": {
@@ -319,7 +319,7 @@ const translations = {
         "zh-hans": "感谢您注册！留意新闻和更新。",
         "zh-hant": "感謝您註冊！留意新聞和更新。",
         "fa": "با تشکر از شما برای ثبت نام! منتظر اخبار و به روز رسانی باشید.",
-        "hy": "TRANSLATE",
+        "hy": "Շնորհակալություն գրանցվելու համար: Հետևեք նորություններին և թարմացումներին:",
         "location": "Home"
     },
     "privacy-policy": {
@@ -332,7 +332,7 @@ const translations = {
         "zh-hans": "隐私政策",
         "zh-hant": "隱私政策",
         "fa": "سیاست حفظ حریم خصوصی",
-        "hy": "TRANSLATE",
+        "hy": "Գաղտնիության քաղաքականություն",
         "location": "Footer"
     },
     "website-accessibility-certification": {
@@ -345,7 +345,7 @@ const translations = {
         "zh-hans": "无障碍访问",
         "zh-hant": "無障礙",
         "fa": "قابلیت دسترسی",
-        "hy": "TRANSLATE",
+        "hy": "Մատչելիություն",
         "location": "Footer"
     },
     "form-privacy-message": {
@@ -358,7 +358,7 @@ const translations = {
         "zh-hans": "我们非常重视您的<a href=\"/privacy\">隐私</a>。",
         "zh-hant": "我們非常重視您的<a href=\"/privacy\">隱私權</a>。",
         "fa": "شما را می گیریم < a href=\"/privacy\"> حریم خصوصی< /a> به طور جدی",
-        "hy": "TRANSLATE",
+        "hy": "Մենք լուրջ ենք վերաբերվում ձեր <a href=\"/privacy</a>։",
         "location": "Home"
     },
     "form-privacy-message-2": {
@@ -371,7 +371,7 @@ const translations = {
         "zh-hans": "您可以随时取消订阅。",
         "zh-hant": "您可以隨時取消訂閱。",
         "fa": "می توانید در هر زمانی اشتراک خود را لغو کنید.",
-        "hy": "TRANSLATE",
+        "hy": "Դուք կարող եք ցանկացած պահի չեղարկել բաժանորդագրությունը:",
         "location": "Home"
     },
     "about-this-program": {
@@ -384,7 +384,7 @@ const translations = {
         "zh-hans": "关于该计划",
         "zh-hant": "關於該計劃",
         "fa": "در مورد برنامه",
-        "hy": "TRANSLATE",
+        "hy": "Ծրագրի մասին",
         "location": "Footer"
     },
     "conditions-of-use": {
@@ -397,7 +397,7 @@ const translations = {
         "zh-hans": "使用条款",
         "zh-hant": "使用條款",
         "fa": "شرایط استفاده",
-        "hy": "TRANSLATE",
+        "hy": "Օգտագործման պայմանները",
         "location": "Footer"
     },
     "sitemap": {
@@ -410,7 +410,7 @@ const translations = {
         "zh-hans": "网站地图",
         "zh-hant": "網站地圖",
         "fa": "نقشه سایت",
-        "hy": "TRANSLATE",
+        "hy": "Կայքի քարտեզ",
         "location": "Footer"
     }
 };
