@@ -28,12 +28,21 @@
     </engca-form-field>
 
     <engca-form-field>
-      
-      <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-0" name="group[91023][1]" value="Los Angeles Fires recovery">
-      <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-0">
-        {{ 'topic-los-angeles-fire-recovery' | i18n }}
-      </label>
-
+    <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
+    <ul class="form-checkbox-list">
+      <li>
+        <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-0" name="group[91023][2]" value="Future topics">
+        <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-0">
+          {{ 'topic-future-topics' | i18n }}
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-1" name="group[91023][1]" value="Los Angeles fires recovery">
+        <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-1">
+          {{ 'topic-los-angeles-fire-recovery' | i18n }}
+        </label>
+      </li>
+      </ul>
       <engca-form-error id="emailError" hidden>
         <strong>{{ 'valid-email-message' | i18n }}</strong>
         {{ 'valid-email-message-2' | i18n }}

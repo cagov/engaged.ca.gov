@@ -122,7 +122,7 @@ const translations = {
         "location": "Home"
     },
     "join-the-conversation-form-label": {
-        "en": "Give us your email. We'll notify you when topics open.",
+        "en": "Give us your email. We’ll notify you when topics open.",
         "fr": "Donnez-nous votre adresse e-mail. Nous vous notifierons lorsque les sujets seront disponibles.",
         "es": "Proporciónenos su correo electrónico. Le avisaremos cuando se abran los temas.",
         "ko": "귀하의 이메일을 저희에게 알려주세요 주제가 열리면 알려드립니다",
@@ -131,6 +131,9 @@ const translations = {
         "zh-hans": "请提供您的电子邮件地址。当主题开放时我们会通知您。",
         "zh-hant": "請提供您的電子郵件地址。當主題開放時我們會通知您。",
         "location": "Home"
+    },
+    "": {
+
     },
     "back-to-top": {
         "en": "Back to top",
@@ -165,15 +168,37 @@ const translations = {
         "zh-hant": "必填欄",
         "location": "Home"
     },
+    "topics-interests-label": {
+        'en': "Topics I’m interested in:",
+        'fr': "Topics I’m interested in:",
+        'es': "Topics I’m interested in:",
+        'ko': "Topics I’m interested in:",
+        'vi': "Topics I’m interested in:",
+        'tl': "Topics I’m interested in:",
+        'zh-hans': "Topics I’m interested in:",
+        'zh-hant': "Topics I’m interested in:",
+        'location': "Home",
+    },
+    "topic-future-topics": {
+        "en": "Future topics",
+        "fr": "Future topics",
+        "es": "Future topics",
+        "ko": "Future topics",
+        "vi": "Future topics",
+        "tl": "Future topics",
+        "zh-hans": "Future topics",
+        "zh-hant": "Future topics",
+        "location": "Home"
+    },
     "topic-los-angeles-fire-recovery": {
-        "en": "I’m interested in talking about Los Angeles Fires recovery",
-        "fr": "I’m interested in talking about Los Angeles Fires recovery",
-        "es": "I’m interested in talking about Los Angeles Fires recovery",
-        "ko": "I’m interested in talking about Los Angeles Fires recovery",
-        "vi": "I’m interested in talking about Los Angeles Fires recovery",
-        "tl": "I’m interested in talking about Los Angeles Fires recovery",
-        "zh-hans": "I’m interested in talking about Los Angeles Fires recovery",
-        "zh-hant": "I’m interested in talking about Los Angeles Fires recovery",
+        "en": "Los Angeles fires recovery",
+        "fr": "Los Angeles fires recovery",
+        "es": "Los Angeles fires recovery",
+        "ko": "Los Angeles fires recovery",
+        "vi": "Los Angeles fires recovery",
+        "tl": "Los Angeles fires recovery",
+        "zh-hans": "Los Angeles fires recovery",
+        "zh-hant": "Los Angeles fires recovery",
         "location": "Home"
     },
     "valid-email-message": {
