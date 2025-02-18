@@ -144,8 +144,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("pagePath", function(page, langPath) {
     let currentPath = page.filePathStem + "/index.html"; // Relative to base dir, localized path, with folder + /index.html.
 
-    let languages = ["/en/","/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/"]; // Localized folder paths, '/es/', '/vi', etc.
-    
+    let languages = ["/en/","/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/","/fa/","/hy/"]; // Localized folder paths, '/es/', '/vi', etc.
+
     languages.map((language) => {
       currentPath = currentPath.replace(language, "/"); // Remove existing localized paths to get root.
     });
