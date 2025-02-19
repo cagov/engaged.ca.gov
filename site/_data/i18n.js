@@ -2,13 +2,15 @@
 const translations = {
     "engaged-california-untranslated": { // LEAVE THIS ONE UNTRANSLATED
       "en": "Engaged California",
-      "fr": "Engaged California", 
+      "fr": "Engaged California",
       "es": "Engaged California",
       "ko": "Engaged California",
       "vi": "Engaged California",
       "tl": "Engaged California",
       "zh-hans": "Engaged California",
       "zh-hant": "Engaged California",
+      "fa": "Engaged California",
+      "hy": "Engaged California",
       "location": "Site header",
     },
     "about-the-program": {
@@ -20,6 +22,8 @@ const translations = {
         "tl": "Tungkol sa programa",
         "zh-hans": "关于该计划",
         "zh-hant": "關於該計劃",
+        "fa": "در مورد برنامه",
+        "hy": "Ծրագրի մասին"  ,
         "location": "Home"
     },
     "sign-up-now": {
@@ -31,6 +35,8 @@ const translations = {
         "tl": "Magpatala ngayon",
         "zh-hans": "立即注册",
         "zh-hant": "立即註冊",
+        "fa": "همین الان ثبت نام کنید",
+        "hy": "Գրանցվեք հիմա",
         "location": "Home"
     },
     "official-website-prefix": {
@@ -42,6 +48,8 @@ const translations = {
         "tl": "Opisyal na website ng",
         "zh-hans": "官方网站",
         "zh-hant": "官方網站",
+        "fa": "وب سایت رسمی از",
+        "hy": "Կալիֆորնիա նահանգի",
         "location": "Site header"
     },
     "state-of-california": {
@@ -53,6 +61,8 @@ const translations = {
         "tl": "Estado ng California",
         "zh-hans": "加利福尼亚州",
         "zh-hant": "加利福尼亞州",
+        "fa": "ایالت کالیفرنیا",
+        "hy": "Պաշտոնական կայք",
         "location": "Site header"
     },
     "how-it-works": {
@@ -64,6 +74,8 @@ const translations = {
         "tl": "Paano ito gumagana",
         "zh-hans": "如何运作",
         "zh-hant": "如何運作",
+        "fa": "چگونه کار می کند",
+        "hy": "Ինչպես է այն աշխատում",
         "location": "Home"
     },
     "how-it-works-step-1": {
@@ -75,6 +87,8 @@ const translations = {
         "tl": "Nag-opt in ka sa isang paksa",
         "zh-hans": "您选择加入主题",
         "zh-hant": "您選擇加入主題",
+        "fa": "شما در یک موضوع شرکت می کنید",
+        "hy": "Դուք միանում եք թեմային",
         "location": "Home"
     },
     "how-it-works-step-2": {
@@ -86,6 +100,8 @@ const translations = {
         "tl": "Inaanyayahan ka naming sumali",
         "zh-hans": "我们邀请您加入",
         "zh-hant": "我們邀請您加入",
+        "fa": "از شما دعوت می کنیم که بپیوندید",
+        "hy": "Մենք հրավիրում ենք միանալ",
         "location": "Home"
     },
     "how-it-works-step-3": {
@@ -97,6 +113,8 @@ const translations = {
         "tl": "Ibinahagi mo ang iyong mga saloobin",
         "zh-hans": "分享您的想法",
         "zh-hant": "您分享您的想法",
+        "fa": "شما افکار خود را به اشتراک بگذارید",
+        "hy": "Դուք կիսում եք ձեր մտքերը",
         "location": "Home"
     },
     "how-it-works-step-4": {
@@ -108,6 +126,8 @@ const translations = {
         "tl": "Nagbabahagi kami ng mga resulta",
         "zh-hans": "我们分享结果",
         "zh-hant": "我們分享結果",
+        "fa": "ما نتایج را به اشتراک می گذاریم",
+        "hy": "Մենք կիսում ենք արդյունքները",
         "location": "Home"
     },
     "join-the-conversation": {
@@ -119,6 +139,8 @@ const translations = {
         "tl": "Sumali sa usapan",
         "zh-hans": "加入对话",
         "zh-hant": "加入對話",
+        "fa": "به گفتگو بپیوندید",
+        "hy": "Միացեք զրույցին",
         "location": "Home"
     },
     "join-the-conversation-form-label": {
@@ -130,10 +152,9 @@ const translations = {
         "tl": "Ibigay sa amin ang iyong email. Aabisuhan ka namin kapag nagbukas ang mga paksa.",
         "zh-hans": "请提供您的电子邮件地址。当主题开放时我们会通知您。",
         "zh-hant": "請提供您的電子郵件地址。當主題開放時我們會通知您。",
+        "fa": "ایمیل خود را به ما بدهید با باز شدن موضوعات به شما اطلاع خواهیم داد.",
+        "hy": "Տվեք մեզ ձեր էլ.հասցեն Մենք ձեզ կտեղեկացնենք, երբ թեմաները բացվեն:",
         "location": "Home"
-    },
-    "": {
-
     },
     "back-to-top": {
         "en": "Back to top",
@@ -144,6 +165,8 @@ const translations = {
         "tl": "Bumalik sa itaas",
         "zh-hans": "返回顶部",
         "zh-hant": "回到頂部",
+        "fa": "بازگشت به بالا",
+        "hy": "Վերադառնալ սկիզբ",
         "location": "Footer"
     },
     "email-label": {
@@ -155,6 +178,8 @@ const translations = {
         "tl": "Email",
         "zh-hans": "电子邮件",
         "zh-hant": "電子郵件",
+        "fa": "ایمیل",
+        "hy": "Էլ․հասցե",
         "location": "Home"
     },
     "required-label": {
@@ -166,39 +191,47 @@ const translations = {
         "tl": "Kinakailangang field",
         "zh-hans": "必须填写的字段",
         "zh-hant": "必填欄",
+        "fa": "فیلد الزامی",
+        "hy": "Պարտադիր դաշտ",
         "location": "Home"
     },
     "topics-interests-label": {
         'en': "Topics I’m interested in:",
         'fr': "Topics I’m interested in:",
-        'es': "Topics I’m interested in:",
-        'ko': "Topics I’m interested in:",
-        'vi': "Topics I’m interested in:",
-        'tl': "Topics I’m interested in:",
-        'zh-hans': "Topics I’m interested in:",
-        'zh-hant': "Topics I’m interested in:",
+        'es': "Temas que me interesan:",
+        'ko': "관심 주제:",
+        'vi': "Các chủ đề tôi quan tâm:",
+        'tl': "Mga paksang interesado ako:",
+        'zh-hans': "我感兴趣的主题：",
+        'zh-hant': "我感興趣的主題:",
+        "fa": "المواضيع التي تهمني:",
+        "hy": "Թեմաներ, որոնք ինձ հետաքրքրում են.",
         'location': "Home",
     },
     "topic-future-topics": {
         "en": "Future topics",
         "fr": "Future topics",
-        "es": "Future topics",
-        "ko": "Future topics",
-        "vi": "Future topics",
-        "tl": "Future topics",
-        "zh-hans": "Future topics",
-        "zh-hant": "Future topics",
+        "es": "Temas futuros",
+        "ko": "향후 다룰 주제",
+        "vi": "Chủ đề trong tương lai ",
+        "tl": "Mga paksa sa hinaharap ",
+        "zh-hans": "未来主题 ",
+        "zh-hant": "未來主題",
+        "fa": "مواضيع مستقبلية",
+        "hy": "Ապագա թեմաներ",
         "location": "Home"
     },
     "topic-los-angeles-fire-recovery": {
         "en": "Los Angeles fires recovery",
         "fr": "Los Angeles fires recovery",
-        "es": "Los Angeles fires recovery",
-        "ko": "Los Angeles fires recovery",
-        "vi": "Los Angeles fires recovery",
-        "tl": "Los Angeles fires recovery",
-        "zh-hans": "Los Angeles fires recovery",
-        "zh-hant": "Los Angeles fires recovery",
+        "es": "Recuperación de los incendios en Los Angeles",
+        "ko": "로스앤젤레스 화재 피해 복구",
+        "vi": "Phục hồi sau vụ cháy ở Los Angeles",
+        "tl": "Pagbangon mula sa mga sunog sa Los Angeles",
+        "zh-hans": "洛杉矶火灾恢复",
+        "zh-hant": "洛杉磯火災恢復",
+        "fa": "التعافي من حرائق لوس أنجلوس",
+        "hy": "Լոս Անջելեսի՝ հրդեհներիՑ վերականգնումը",
         "location": "Home"
     },
     "valid-email-message": {
@@ -210,6 +243,8 @@ const translations = {
         "tl": "Mangyaring magpasok ng wastong email address.",
         "zh-hans": "请输入有效的电子邮件地址。",
         "zh-hant": "請輸入有效的電子郵件地址。",
+        "fa": "لطفا یک آدرس ایمیل معتبر وارد کنید.",
+        "hy": "Խնդրում ենք մուտքագրել վավեր էլ․փոստի հասցեն:",
         "location": "Home"
     },
     "valid-email-message-2": {
@@ -221,6 +256,8 @@ const translations = {
         "tl": "Ang mga email address ay dapat maglaman ng \"@\" at isang \".\"",
         "zh-hans": "电子邮件地址应包含“@”和“.”",
         "zh-hant": "電子郵件地址應包含「@」和「.」",
+        "fa": "آدرس های ایمیل باید حاوی \"@\" و \".\"",
+        "hy": "Էլ․փոստի հասցեները պետք է պարունակեն «@» և «․»",
         "location": "Home"
     },
     "form-problem-message": {
@@ -232,6 +269,8 @@ const translations = {
         "tl": "Paumanhin, may problema sa aming form.",
         "zh-hans": "很抱歉，我们的表格有问题。",
         "zh-hant": "很抱歉，我們的表格有問題。",
+        "fa": "متأسفیم، مشکلی در فرم ما وجود دارد.",
+        "hy": "Ներեցեք, մեր ձևի հետ կապված խնդիր կա:",
         "location": "Home"
     },
     "form-problem-message-2": {
@@ -243,6 +282,8 @@ const translations = {
         "tl": "Pakisubukang muli mamaya.",
         "zh-hans": "请稍后再试。",
         "zh-hant": "請稍後重試。",
+        "fa": "لطفاً بعداً دوباره امتحان کنید.",
+        "hy": "Խնդրում ենք փորձել ավելի ուշ:",
         "location": "Home"
     },
     "form-submit-button": {
@@ -254,6 +295,8 @@ const translations = {
         "tl": "Magpatala ngayon",
         "zh-hans": "立即注册",
         "zh-hant": "立即註冊",
+        "fa": "همین الان ثبت نام کنید",
+        "hy": "Գրանցվեք հիմա",
         "location": "Home"
     },
     "form-success-message": {
@@ -265,6 +308,8 @@ const translations = {
         "tl": "Nakumpirma ang iyong suskripsyon.",
         "zh-hans": "您的订阅已确认。",
         "zh-hant": "您的訂閱已確認。",
+        "fa": "اشتراک شما تایید شد",
+        "hy": "Ձեր բաժանորդագրությունը հաստատված է:",
         "location": "Home"
     },
     "form-success-message-2": {
@@ -276,6 +321,8 @@ const translations = {
         "tl": "Salamat sa pagpapatala! Abangan ang mga balita at update.",
         "zh-hans": "感谢您注册！留意新闻和更新。",
         "zh-hant": "感謝您註冊！留意新聞和更新。",
+        "fa": "با تشکر از شما برای ثبت نام! منتظر اخبار و به روز رسانی باشید.",
+        "hy": "Շնորհակալություն գրանցվելու համար: Հետևեք նորություններին և թարմացումներին:",
         "location": "Home"
     },
     "privacy-policy": {
@@ -287,6 +334,8 @@ const translations = {
         "tl": "Patakaran sa pagiging pribado",
         "zh-hans": "隐私政策",
         "zh-hant": "隱私政策",
+        "fa": "سیاست حفظ حریم خصوصی",
+        "hy": "Գաղտնիության քաղաքականություն",
         "location": "Footer"
     },
     "website-accessibility-certification": {
@@ -298,17 +347,21 @@ const translations = {
         "tl": "Aksesibilidad",
         "zh-hans": "无障碍访问",
         "zh-hant": "無障礙",
+        "fa": "قابلیت دسترسی",
+        "hy": "Մատչելիություն",
         "location": "Footer"
     },
     "form-privacy-message": {
         "en": "We take your <a href=\"/privacy\">privacy</a> seriously.",
         "fr": "Nous prendrons votre <a href=\"/fr/privacy\">privacité</a> très au sérieux.",
-        "es": "Nosotros tomamos su <a href=\"/privacy\">privacidad</a> en serio.",
-        "ko": "저희는 귀하의 <a href=\"/privacy\">프라이버시</a>를 중요하게 생각합니다.",
-        "vi": "Chúng tôi xem trọng <a href=\"/quyền riêng tư\">quyền riêng tư</a> của quý vị.",
-        "tl": "Itinuturing naming seryoso ang iyong <a href=\"/privacy\"> privacy</a>.",
-        "zh-hans": "我们非常重视您的<a href=\"/privacy\">隐私</a>。",
-        "zh-hant": "我們非常重視您的<a href=\"/privacy\">隱私權</a>。",
+        "es": "Nosotros tomamos su <a href=\"/es/privacy\">privacidad</a> en serio.",
+        "ko": "저희는 귀하의 <a href=\"/ko/privacy\">프라이버시</a>를 중요하게 생각합니다.",
+        "vi": "Chúng tôi xem trọng <a href=\"/vi/privacy\">quyền riêng tư</a> của quý vị.",
+        "tl": "Itinuturing naming seryoso ang iyong <a href=\"/vi/privacy\"> privacy</a>.",
+        "zh-hans": "我们非常重视您的<a href=\"/zh-hans/privacy\">隐私</a>。",
+        "zh-hant": "我們非常重視您的<a href=\"/zh-hant/privacy\">隱私權</a>。",
+        "fa": "حریم خصوصی<a href=\"/fa/privacy\">حریم خصوصی</a>حریم خصوصی",
+        "hy": "Մենք լուրջ ենք վերաբերվում ձեր <a href=\"/hy/privacy\">գաղտնիությանը</a>։",
         "location": "Home"
     },
     "form-privacy-message-2": {
@@ -320,6 +373,8 @@ const translations = {
         "tl": "Maaari mong ihinto ang iyong suskripsyon anumang oras.",
         "zh-hans": "您可以随时取消订阅。",
         "zh-hant": "您可以隨時取消訂閱。",
+        "fa": "می توانید در هر زمانی اشتراک خود را لغو کنید.",
+        "hy": "Դուք կարող եք ցանկացած պահի չեղարկել բաժանորդագրությունը:",
         "location": "Home"
     },
     "about-this-program": {
@@ -331,6 +386,8 @@ const translations = {
         "tl": "Tungkol sa programa",
         "zh-hans": "关于该计划",
         "zh-hant": "關於該計劃",
+        "fa": "در مورد برنامه",
+        "hy": "Ծրագրի մասին",
         "location": "Footer"
     },
     "conditions-of-use": {
@@ -342,6 +399,8 @@ const translations = {
         "tl": "Mga kondisyon ng paggamit",
         "zh-hans": "使用条款",
         "zh-hant": "使用條款",
+        "fa": "شرایط استفاده",
+        "hy": "Օգտագործման պայմանները",
         "location": "Footer"
     },
     "sitemap": {
@@ -353,6 +412,8 @@ const translations = {
         "tl": "Mapa ng website",
         "zh-hans": "网站地图",
         "zh-hant": "網站地圖",
+        "fa": "نقشه سایت",
+        "hy": "Կայքի քարտեզ",
         "location": "Footer"
     }
 };
