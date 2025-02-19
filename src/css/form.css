@@ -126,6 +126,7 @@ engca-form-success:not(:empty) {
 .engaged-california-signup-form #mc_embed_signup div.response {
   padding: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .engaged-california-signup-form #mce-success-response,
