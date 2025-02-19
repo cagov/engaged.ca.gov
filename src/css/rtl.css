@@ -1,0 +1,15 @@
+[dir=rtl] {
+  /* Reorient arrows on How it works section */
+  .hiw-step-1,
+  .hiw-step-3 {
+    .hiw-arrow {
+      transform: scaleX(-1);
+    }
+  }
+
+  .hiw-step-2 {
+    .hiw-arrow {
+      transform: scale(-1);
+    }
+  }
+}
