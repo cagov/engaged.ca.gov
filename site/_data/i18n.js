@@ -354,14 +354,14 @@ const translations = {
     "form-privacy-message": {
         "en": "We take your <a href=\"/privacy\">privacy</a> seriously.",
         "fr": "Nous prendrons votre <a href=\"/fr/privacy\">privacité</a> très au sérieux.",
-        "es": "Nosotros tomamos su <a href=\"/privacy\">privacidad</a> en serio.",
-        "ko": "저희는 귀하의 <a href=\"/privacy\">프라이버시</a>를 중요하게 생각합니다.",
-        "vi": "Chúng tôi xem trọng <a href=\"/quyền riêng tư\">quyền riêng tư</a> của quý vị.",
-        "tl": "Itinuturing naming seryoso ang iyong <a href=\"/privacy\"> privacy</a>.",
-        "zh-hans": "我们非常重视您的<a href=\"/privacy\">隐私</a>。",
-        "zh-hant": "我們非常重視您的<a href=\"/privacy\">隱私權</a>。",
-        "fa": "شما را می گیریم < a href=\"/privacy\"> حریم خصوصی< /a> به طور جدی",
-        "hy": "Մենք լուրջ ենք վերաբերվում ձեր <a href=\"/privacy</a>։",
+        "es": "Nosotros tomamos su <a href=\"/es/privacy\">privacidad</a> en serio.",
+        "ko": "저희는 귀하의 <a href=\"/ko/privacy\">프라이버시</a>를 중요하게 생각합니다.",
+        "vi": "Chúng tôi xem trọng <a href=\"/vi/privacy\">quyền riêng tư</a> của quý vị.",
+        "tl": "Itinuturing naming seryoso ang iyong <a href=\"/vi/privacy\"> privacy</a>.",
+        "zh-hans": "我们非常重视您的<a href=\"/zh-hans/privacy\">隐私</a>。",
+        "zh-hant": "我們非常重視您的<a href=\"/zh-hant/privacy\">隱私權</a>。",
+        "fa": "حریم خصوصی<a href=\"/fa/privacy\">حریم خصوصی</a>حریم خصوصی",
+        "hy": "Մենք լուրջ ենք վերաբերվում ձեր <a href=\"/hy/privacy\">գաղտնիությանը</a>։",
         "location": "Home"
     },
     "form-privacy-message-2": {
