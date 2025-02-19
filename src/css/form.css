@@ -68,6 +68,16 @@ engca-join-convo-form, engca-form-field {
   color: #6FD0FB
 }
 
+.engaged-california-signup-form #mce-error-response, 
+.engaged-california-signup-form #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  background: #F1464E;
+  color: #fff;
+  border-radius: 3px;
+  margin-block: 0.5em;
+  padding: 0.5em;
+  font-size: 1rem;
+}
+
 engca-form-error {
   background: #F1464E;
   color: #fff;
@@ -87,6 +97,7 @@ input[type="email"][aria-invalid="true"]:focus {
   outline-color: currentColor !important;
 }
 
+.engaged-california-signup-form #mce-success-response,
 engca-form-success:not(:empty) {
   text-align: center;
   background-color: var(--blue);
@@ -97,10 +108,22 @@ engca-form-success:not(:empty) {
   gap: .5rem;
 }
 
+.engaged-california-signup-form #mc_embed_signup #mce-success-response {
+  color: #ffffff;
+}
+
+
+.engaged-california-signup-form #mc_embed_signup div.response {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.engaged-california-signup-form #mce-success-response,
 engca-form-success > * {
   margin: 0;
 }
 
+.engaged-california-signup-form #mce-success-response,
 engca-form-success > p {
   font-size: 1.125rem;
   line-height: 2rem;
@@ -139,19 +162,8 @@ engca-form-success > p {
   aspect-ratio: 1/1;
 }
 
-
-.engaged-california-signup-form #mc_embed_signup {
-  width: 600px
-}
-
-@media (max-width: 575.98px) {
-  .engaged-california-signup-form #mc_embed_signup {
-    width: 100%;
-  }
-}
-
 .engaged-california-signup-form .mc-field-group.input-group ul li,
-ul.form-checkbox-list li {
+ul.form-checkbox-list {
   list-style: none;
   padding: 0;
 }
@@ -173,16 +185,6 @@ ul.form-checkbox-list li {
 .engaged-california-signup-form #mc_embed_signup_scroll h2 {
   display: none;
 }
-
-
-/* .engaged-california-signup-form label[for="mce-EMAIL"] {
-  text-transform: lowercase
-} */
-
-/* .engaged-california-signup-form label[for="mce-EMAIL"]::first-letter {
-  text-transform: uppercase 
-} */
-
 
 .engaged-california-signup-form .indicates-required {
   display: none;
