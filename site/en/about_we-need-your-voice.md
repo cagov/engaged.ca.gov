@@ -10,7 +10,7 @@ In California, we know a strong democracy takes work. We build it through practi
 With this initiative, the state intends to:
 
 * empower Californians to have honest, respectful discussions on important topics, 
-* let them be heard by government, and
+* let them be heard by their government, and
 * make better policy.
 
 **Engaged California** focuses on meaningful conversations with the people of our state. We use the latest technology to include everyone. We value accountability, transparency, ethics, and facts.
