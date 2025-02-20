@@ -113,7 +113,7 @@ Confidential information is protected. It will only be disclosed as part of a le
 
 ## What we automatically collect
 
-When you browse thisour website, including downloading information, we automatically collect and store:
+When you browse this website, including downloading information, we automatically collect and store:
 
 * The type of browser and operating system you used
 * The date and time you visited this website
@@ -136,7 +136,7 @@ Our outside analytics services may track you. You can block them from tracking y
 
 ## Surveys
 
-If you take a survey on this ODI website, we will collect information from your responses. This can include text, audio, video, and images you choose to upload.
+If you take a survey on this website, we will collect information from your responses. This can include text, audio, video, and images you choose to upload.
 
 ## Public disclosure
 
