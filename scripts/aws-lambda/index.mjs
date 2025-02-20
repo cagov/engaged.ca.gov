@@ -1,7 +1,7 @@
 import client from "@mailchimp/mailchimp_marketing";
 
 client.setConfig({
-  apiKey: "<TOKEN>>",
+  apiKey: "<TOKEN>",
   server: "us2",
 });
 
