@@ -14900,7 +14900,7 @@ a.list-group-item {
   left: 50% !important;
   transform: translateX(-50%);
   clip: unset;
-  background-color: white;
+  background-color: transparent;
   border-radius: 0 0 7px 7px;
   overflow: hidden;
 }
