@@ -139,6 +139,7 @@ engca-form-success > p {
 ul.form-checkbox-list li {
   list-style: none;
   padding: 0;
+  display: flex;
 }
 
 .form-title {
