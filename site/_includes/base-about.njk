@@ -1,7 +1,7 @@
 <section id="about-page-heading">
   <div class="container">
     <h1>{{ title }}</h1>
-    <img src="/public/images/about-header.svg" aria-hidden="true" class="desktop-only">
+    <img src="/public/images/about-header.svg" aria-hidden="true" class="desktop-only" alt="{{ 'about-alt-header' | i18n }}" />
   </div>
 </section>
 
@@ -9,7 +9,7 @@
 <section {% if shaded -%}class="about-page-shaded"{%- endif -%}>
   <div class="container about-section-flex">
     <engca-icon-heading>
-      <img src="{{ snippet.data.icon }}" aria-hidden="true">
+      <img src="{{ snippet.data.icon }}" aria-hidden="true" alt="" />
       <h2>{{ snippet.data.title }}</h2>
     </engca-icon-heading>
     <engca-section-content>
@@ -33,8 +33,8 @@
 
 <section id="sign-up">
   <div class="container form-flex">
-    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true"/>
-    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true"/>
+    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
+    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
     {% include "form.njk" %}
   </div>
 </section>

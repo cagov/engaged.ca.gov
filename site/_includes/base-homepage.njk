@@ -7,7 +7,7 @@
         {{ hero.data.buttonText }}
       </a>
     </engca-banner-content>
-    <img src="/public/images/hero-bubbles.svg" aria-hidden="true" class="desktop-only">
+    <img src="/public/images/hero-bubbles.svg" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header' | i18n }}" />
   </div>
 </section>
 <section id="about">
@@ -19,7 +19,7 @@
         {{ aboutSection.data.buttonText }}
       </a>
     </engca-banner-content>
-    <img src="/public/images/about-bubbles.svg" aria-hidden="true" class="desktop-only">
+    <img src="/public/images/about-bubbles.svg" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header-about' | i18n }}" />
   </div>
 </section>
 <section id="how-it-works">
@@ -27,22 +27,22 @@
     <h2>{{ 'how-it-works' | i18n }}</h2>
     <ol class="hiw">
       <li class="hiw-step-1">
-        <img src="/public/images/how-it-works-public.svg" alt="An icon of a group of people"/>
+        <img src="/public/images/how-it-works-public.svg" alt="An icon of a group of people" />
         <span class="hiw-text">{{ 'how-it-works-step-1' | i18n }}</span>
         <span class="hiw-arrow"></span>
       </li>
       <li class="hiw-step-2">
-        <img src="/public/images/how-it-works-state.svg" alt="An icon of a government building"/>
+        <img src="/public/images/how-it-works-state.svg" alt="An icon of a government building" />
         <span class="hiw-text">{{ 'how-it-works-step-2' | i18n }}</span>
         <span class="hiw-arrow"></span>
       </li>
       <li class="hiw-step-3">
-        <img src="/public/images/how-it-works-public.svg" alt="An icon of a group of people"/>
+        <img src="/public/images/how-it-works-public.svg" alt="An icon of a group of people" />
         <span class="hiw-text">{{ 'how-it-works-step-3' | i18n }}</span>
         <span class="hiw-arrow"></span>
       </li>
       <li class="hiw-step-4">
-        <img src="/public/images/how-it-works-state.svg" alt="An icon of a government building"/>
+        <img src="/public/images/how-it-works-state.svg" alt="An icon of a government building" />
         <span class="hiw-text">{{ 'how-it-works-step-4' | i18n }}</span>
       </li>
     </ol>
@@ -50,8 +50,8 @@
 </section>
 <section id="sign-up">
   <div class="container form-flex">
-    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true"/>
-    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true"/>
+    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
+    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
     {% include "form.njk" %}
   </div>
 </section>
@@ -60,17 +60,17 @@
     {% set partners = collections.snippets | getSnippet("homepage_partners",locale) %}
     {{ partners.htmlContent | safe }}
     <engca-partner-flex>
-      <img src="/public/images/carnegie.svg" alt="Carnegie Endowment for International Peace">
-      <img src="/public/images/liberty-color.png" alt="Project Liberty Institute">
-      <img src="/public/images/berggruen.svg" alt="Berggruen Institute">
-      <img src="/public/images/stanford.png" alt="Stanford: Deliberative Democracy Lab">
-      <img src="/public/images/berkman-klein.svg" alt="Berkman Klein Center">
-      <img src="/public/images/ppic.svg" alt="PPIC">
-      <img src="/public/images/sff.png" alt="San Francisco Foundation">
-      <img src="/public/images/american-public-trust.png" alt="The American Public Trust">
-      <img src="/public/images/public-good-group.png" alt="Public Good Group">
-      <img src="/public/images/goldman-school.png" alt="Berkeley Public Policy: The Goldman School">
-      <img src="/public/images/kapor-center.svg" alt="Kapor Center">
+      <img src="/public/images/carnegie.svg" alt="Carnegie Endowment for International Peace" />
+      <img src="/public/images/liberty-color.png" alt="Project Liberty Institute" />
+      <img src="/public/images/berggruen.svg" alt="Berggruen Institute" />
+      <img src="/public/images/stanford.png" alt="Stanford Deliberative Democracy Lab, Center on Democracy, Development and the Rule of Law" />
+      <img src="/public/images/berkman-klein.svg" alt="Berkman Klein Center for internet & society at Harvard University" />
+      <img src="/public/images/ppic.svg" alt="PPIC" />
+      <img src="/public/images/sff.png" alt="San Francisco Foundation" />
+      <img src="/public/images/american-public-trust.png" alt="The American Public Trust" />
+      <img src="/public/images/public-good-group.png" alt="Public Good Group" />
+      <img src="/public/images/goldman-school.png" alt="UC Berkeley Center on Civility & Democratic Engagement, Goldman School of Public Policy, Founded by the Class of 1968" />
+      <img src="/public/images/kapor-center.svg" alt="Kapor Center" />
     </engca-partner-flex>
   </div>
 </section>

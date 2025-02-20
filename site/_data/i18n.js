@@ -224,7 +224,7 @@ const translations = {
     "topic-los-angeles-fires-recovery-palisades": {
         "en": "Los Angeles fires recovery: Palisades",
         "fr": "Los Angeles fires recovery: Palisades",
-        "es": "Los Angeles fires recovery: Palisades",
+        "es": "Recuperación de Los Angeles: Fuego Palisades",
         "ko": "Los Angeles fires recovery: Palisades",
         "vi": "Los Angeles fires recovery: Palisades",
         "tl": "Los Angeles fires recovery: Palisades",
@@ -237,7 +237,7 @@ const translations = {
     "topic-los-angeles-fires-recovery-eaton": {
         "en": "Los Angeles fires recovery: Eaton",
         "fr": "Los Angeles fires recovery: Eaton",
-        "es": "Los Angeles fires recovery: Eaton",
+        "es": "Recuperación de Los Angeles: Fuego Eaton",
         "ko": "Los Angeles fires recovery: Eaton",
         "vi": "Los Angeles fires recovery: Eaton",
         "tl": "Los Angeles fires recovery: Eaton",
@@ -388,6 +388,45 @@ const translations = {
         "zh-hant": "您可以隨時取消訂閱。",
         "fa": "می توانید در هر زمانی اشتراک خود را لغو کنید.",
         "hy": "Դուք կարող եք ցանկացած պահի չեղարկել բաժանորդագրությունը:",
+        "location": "Home"
+    },
+    "home-alt-header": {
+        "en": "Circles with thumbs up, text bubble, and exclamation point",
+        "fr": "Circles with thumbs up, text bubble, and exclamation point",
+        "es": "Circles with thumbs up, text bubble, and exclamation point",
+        "ko": "Circles with thumbs up, text bubble, and exclamation point",
+        "vi": "Circles with thumbs up, text bubble, and exclamation point",
+        "tl": "Circles with thumbs up, text bubble, and exclamation point",
+        "zh-hans": "Circles with thumbs up, text bubble, and exclamation point",
+        "zh-hant": "Circles with thumbs up, text bubble, and exclamation point",
+        "fa": "Circles with thumbs up, text bubble, and exclamation point",
+        "hy": "Circles with thumbs up, text bubble, and exclamation point",
+        "location": "Home"
+    },
+    "home-alt-header-about": {
+        "en": "Circles with exclamation point and question mark",
+        "fr": "Circles with exclamation point and question mark",
+        "es": "Circles with exclamation point and question mark",
+        "ko": "Circles with exclamation point and question mark",
+        "vi": "Circles with exclamation point and question mark",
+        "tl": "Circles with exclamation point and question mark",
+        "zh-hans": "Circles with exclamation point and question mark",
+        "zh-hant": "Circles with exclamation point and question mark",
+        "fa": "Circles with exclamation point and question mark",
+        "hy": "Circles with exclamation point and question mark",
+        "location": "Home"
+    },
+    "about-alt-header": {
+        "en": "Circles with megaphone, microphone, and chat bubbles",
+        "fr": "Circles with megaphone, microphone, and chat bubbles",
+        "es": "Circles with megaphone, microphone, and chat bubbles",
+        "ko": "Circles with megaphone, microphone, and chat bubbles",
+        "vi": "Circles with megaphone, microphone, and chat bubbles",
+        "tl": "Circles with megaphone, microphone, and chat bubbles",
+        "zh-hans": "Circles with megaphone, microphone, and chat bubbles",
+        "zh-hant": "Circles with megaphone, microphone, and chat bubbles",
+        "fa": "Circles with megaphone, microphone, and chat bubbles",
+        "hy": "Circles with megaphone, microphone, and chat bubbles",
         "location": "Home"
     },
     "about-this-program": {
