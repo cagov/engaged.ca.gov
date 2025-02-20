@@ -221,6 +221,28 @@ translations = {
       "zh-hant": "Los Angeles fires recovery",
       "location": "Home"
   },
+  "topic-los-angeles-fire-recovery-palisades": {
+      "en": "LA Fires: Palisades",
+      "fr": "LA Fires: Palisades",
+      "es": "LA Fires: Palisades",
+      "ko": "LA Fires: Palisades",
+      "vi": "LA Fires: Palisades",
+      "tl": "LA Fires: Palisades",
+      "zh-hans": "LA Fires: Palisades",
+      "zh-hant": "LA Fires: Palisades",
+      "location": "Home"
+  },
+  "topic-los-angeles-fire-recovery-eaton": {
+      "en": "LA Fires: Eaton",
+      "fr": "LA Fires: Eaton",
+      "es": "LA Fires: Eaton",
+      "ko": "LA Fires: Eaton",
+      "vi": "LA Fires: Eaton",
+      "tl": "LA Fires: Eaton",
+      "zh-hans": "LA Fires: Eaton",
+      "zh-hant": "LA Fires: Eaton",
+      "location": "Home"
+  },
   'valid-email-message': {
   'en': 'Please enter a valid email address.',
   'fr': 'Veuillez entrer une adresse e-mail valide.',
