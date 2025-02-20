@@ -1,44 +1,46 @@
 import client from "@mailchimp/mailchimp_marketing";
-import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
+// import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
 
-const getSecret = async () => {
-    const secret_name = "mailchimp-api-key";
+// const getSecret = async () => {
+//     const secret_name = "mailchimp-api-key";
   
-    const client = new SecretsManagerClient({
-      region: "us-west-1",
-    });
+//     const client = new SecretsManagerClient({
+//       region: "us-west-1",
+//     });
   
-    let response;
+//     let response;
   
-    try {
-      response = await client.send(
-        new GetSecretValueCommand({
-          SecretId: secret_name,
-          VersionStage: "AWSCURRENT"
-        })
-      );
-    } catch (error) {
-      throw error;
-    }
+//     try {
+//       response = await client.send(
+//         new GetSecretValueCommand({
+//           SecretId: secret_name,
+//           VersionStage: "AWSCURRENT"
+//         })
+//       );
+//     } catch (error) {
+//       throw error;
+//     }
   
-    const secret = response.SecretString;
+//     const secret = response.SecretString;
 
-    let secretString = JSON.parse(secret);
-    if (secretString["MAILCHIMP_API_KEY"] !== undefined && secretString["MAILCHIMP_API_KEY"] !== null ) {
-      return secretString.MAILCHIMP_API_KEY;
-    }
+//     let secretString = JSON.parse(secret);
+//     if (secretString["MAILCHIMP_API_KEY"] !== undefined && secretString["MAILCHIMP_API_KEY"] !== null ) {
+//       return secretString.MAILCHIMP_API_KEY;
+//     }
     
-    return false;
-  };
+//     return false;
+//   };
   
-let secret;
+// let secret;
 
 export const handler = async (event) => {
 
-  // Get secret if not already cached by Lambda. Run in event handler loop because it is faster.
-  if (secret === undefined) {    
-    secret = await getSecret();
-  }
+  // // Get secret if not already cached by Lambda. Run in event handler loop because it is faster.
+  // if (secret === undefined) {    
+  //   secret = await getSecret();
+  // }
+
+  const secret = process.env.MAILCHIMP_API_KEY;
 
   client.setConfig({
     apiKey: secret,
