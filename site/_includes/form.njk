@@ -10,11 +10,13 @@
             <h2>{{ 'button-text' | i18n | safe }}</h2>
               <div class="mc-field-group">
                 <label for="mce-EMAIL">
+                  <span class="required-label" aria-hidden="true">*</span>
+                  <span class="sr-only">{{ 'required-label' | i18n }}:</span>
                   {{ 'email-label' | i18n | safe }}
-                  <span class="asterisk">*</span>
                 </label>
-                 <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" aria-required="true">
               </div>
+
               <div class="mc-field-group input-group"><strong>{{ 'topics-interests-label' | i18n | safe }}</strong>
               <ul>
                 <li>
@@ -40,7 +42,13 @@
           <div id="mce-responses" class="clear">
               <div class="response" id="mce-error-response" style="display: none;"></div>
               <div class="response" id="mce-success-response" style="display: none;"></div>
-          </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_c515d1563732573cbc10cd6e9_61200a6dda" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe"></div>
+          </div>
+          <div aria-hidden="true" style="position: absolute; left: -5000px;">
+            <input type="text" name="b_c515d1563732573cbc10cd6e9_61200a6dda" tabindex="-1" value="">
+          </div>
+          <div class="clear">
+            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value=" {{ 'sign-up-now' | i18n }}">
+          </div>
     </div>
   </form>
   </div>
