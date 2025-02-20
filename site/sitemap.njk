@@ -28,4 +28,106 @@ dir: ltr
     {% endfor %}
     </ul>
   {% endif %}
+
+
+  {% if lang == "es" %}
+    <hr />
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if lang == "fa" %}
+    <hr />
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+
+  {% if lang == "fr" %}
+    <hr />
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if lang == "hy" %}
+    <hr />
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if lang == "ko" %}
+    <hr />
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if lang == "tl" %}
+    <hr />
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if lang == "vi" %}
+    <hr />
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if lang == "zh-hans" %}
+    <hr />
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if lang == "zh-hant" %}
+    <hr />
+    <ul>
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
 {%- endfor %}
