@@ -68,7 +68,7 @@ engca-join-convo-form, engca-form-field {
   color: #6FD0FB
 }
 
-.engaged-california-signup-form #mce-error-response, 
+.engaged-california-signup-form #mce-error-response,
 .engaged-california-signup-form #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
   background: #F1464E;
   color: #fff;
@@ -85,6 +85,16 @@ engca-form-error {
   margin-block: 0.5em;
   padding: 0.5em;
   font-size: 0.875em;
+}
+
+.engaged-california-signup-form #mc-embedded-subscribe-form {
+  width: 600px;
+}
+
+@media screen and (max-width: 600px) {
+  .engaged-california-signup-form #mc-embedded-subscribe-form {
+    width: 100%;
+  }
 }
 
 input[type="email"][aria-invalid="true"] {
