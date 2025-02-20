@@ -78,6 +78,10 @@ a[data-appearance="button"], button, input[type="submit"] {
   border-radius: 0.5rem;
 }
 
+.return-top {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
 /* data-theme="orange" */
 :is(a[data-appearance="button"], button, input[type="submit"])[data-theme="orange"] {
   color: var(--navy);
@@ -195,4 +199,8 @@ section h2 {
     font-size: 13px;
     margin-right: 8px;
   }
+}
+
+#skip-to-content a {
+  background-color: transparent;
 }
