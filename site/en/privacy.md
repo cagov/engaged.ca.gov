@@ -34,7 +34,7 @@ If you have any questions about using this website, read our conditions of use.
 
 Minors (people under the age of 18) cannot use services on their own that require them to submit personal information. Minors can only use these types of services with their parents or guardians.
 
-If ODI begin collecting personal information from minors, we will:
+If ODI begins collecting personal information from minors, we will:
 
 * Notify parents that it is being requested
 * Give the reasons for collecting it

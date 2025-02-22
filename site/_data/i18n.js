@@ -196,8 +196,8 @@ const translations = {
         "location": "Home"
     },
     "topics-interests-label": {
-        'en': "Topics I’m interested in:",
-        'fr': "Topics I’m interested in:",
+        'en': "Tell us what you’re interested in",
+        'fr': "Tell us what you’re interested in",
         'es': "Temas que me interesan:",
         'ko': "관심 주제:",
         'vi': "Các chủ đề tôi quan tâm:",
