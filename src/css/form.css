@@ -68,6 +68,16 @@ engca-join-convo-form, engca-form-field {
   color: #6FD0FB
 }
 
+.engaged-california-signup-form #mce-error-response,
+.engaged-california-signup-form #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  background: #F1464E;
+  color: #fff;
+  border-radius: 3px;
+  margin-block: 0.5em;
+  padding: 0.5em;
+  font-size: 1rem;
+}
+
 engca-form-error {
   background: #F1464E;
   color: #fff;
@@ -75,6 +85,16 @@ engca-form-error {
   margin-block: 0.5em;
   padding: 0.5em;
   font-size: 0.875em;
+}
+
+.engaged-california-signup-form #mc-embedded-subscribe-form {
+  width: 600px;
+}
+
+@media screen and (max-width: 600px) {
+  .engaged-california-signup-form #mc-embedded-subscribe-form {
+    width: 100%;
+  }
 }
 
 input[type="email"][aria-invalid="true"] {
@@ -87,6 +107,7 @@ input[type="email"][aria-invalid="true"]:focus {
   outline-color: currentColor !important;
 }
 
+.engaged-california-signup-form #mce-success-response,
 engca-form-success:not(:empty) {
   text-align: center;
   background-color: var(--blue);
@@ -97,25 +118,41 @@ engca-form-success:not(:empty) {
   gap: .5rem;
 }
 
+.engaged-california-signup-form #mc_embed_signup #mce-success-response {
+  color: #ffffff;
+}
+
+
+.engaged-california-signup-form #mc_embed_signup div.response {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.engaged-california-signup-form #mce-success-response,
 engca-form-success > * {
   margin: 0;
 }
 
+.engaged-california-signup-form #mce-success-response,
 engca-form-success > p {
   font-size: 1.125rem;
   line-height: 2rem;
 }
 
+.engaged-california-signup-form .mc-field-group.input-group ul li input[type="checkbox"],
 .form-check-input[type=checkbox] {
    border-radius: 0em; 
 }
 
+.engaged-california-signup-form .mc-field-group.input-group ul li input[type="checkbox"],
 .form-check-input {
   background-color: transparent;
   border-width: 2px;
   margin-right: 21px;
 }
 
+.engaged-california-signup-form .mc-field-group.input-group ul li label,
 .form-checkbox-label {
   color: var(--Dark-Palette-Off-White, #FFF4EB);
   font-size: 18px;
@@ -123,7 +160,8 @@ engca-form-success > p {
   font-weight: 400;
   line-height: 39px; /* 216.667% */
 }
-  
+
+.engaged-california-signup-form .mc-field-group.input-group ul li input[type="checkbox"],  
 .form-check-input {
   top: 0;  
   left: 0;
@@ -135,6 +173,11 @@ engca-form-success > p {
   aspect-ratio: 1/1;
 }
 
+.engaged-california-signup-form .mc-field-group.input-group ul li,
+ul.form-checkbox-list {
+  list-style: none;
+  padding: 0;
+}
 
 ul.form-checkbox-list li {
   list-style: none;
@@ -142,10 +185,60 @@ ul.form-checkbox-list li {
   display: flex;
 }
 
+.engaged-california-signup-form .mc-field-group.input-group strong,
 .form-title {
   color: var(--Dark-Palette-Off-White, #FFF4EB);
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
   line-height: 39px; /* 169.565% */
+}
+
+
+.engaged-california-signup-form #mc_embed_signup {
+  background-color: transparent;
+}
+
+.engaged-california-signup-form #mc_embed_signup_scroll h2 {
+  display: none;
+}
+
+.engaged-california-signup-form .indicates-required {
+  display: none;
+}
+
+
+.engaged-california-signup-form input[type="submit"]#mc-embedded-subscribe {
+  color: var(--navy);
+  background: var(--orange);
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 2rem;
+  display: inline-block;
+  text-decoration: none !important;
+  border-radius: .5rem;
+  height: auto;
+}
+
+
+.engaged-california-signup-form input[type="email"]#mce-EMAIL {
+  font-family: Noto Sans, system-ui, -apple-system, Roboto, Helvetica Neue, sans-serif !important;
+  border-radius: 0;
+  border-color: var(--gray-200, #d4d4d7);
+  font-size: 1.375rem;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  margin: 0;
 }

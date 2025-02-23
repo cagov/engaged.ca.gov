@@ -1,77 +1,58 @@
 <h2>{{ 'join-the-conversation' | i18n }}</h2>
 <p>{{ 'join-the-conversation-form-label' | i18n }}</p>
-<engca-join-convo-form>
-  
-  <form
-    action="https://innovation.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id=61200a6dda&amp;f_id=0003e1e3f0"
-    method="post"
-    id="mc-embedded-subscribe-form"
-    name="mc-embedded-subscribe-form"
-    target="_self"
-    novalidate>
+<div class="engaged-california-signup-form">
+  <div id="mc_embed_shell">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+    <div id="mc_embed_signup">
+      <form action="https://engaged.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id=61200a6dda&amp;f_id=0003e1e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+          <div id="mc_embed_signup_scroll">
+            <h2>{{ 'button-text' | i18n | safe }}</h2>
+              <div class="mc-field-group">
+                <label for="mce-EMAIL">
+                  <span class="required-label" aria-hidden="true">*</span>
+                  <span class="sr-only">{{ 'required-label' | i18n }}:</span>
+                  {{ 'email-label' | i18n | safe }}
+                </label>
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" aria-required="true">
+              </div>
 
-    <engca-form-field>
-      <label class="form-control-label" for="mce-EMAIL">
-        <span class="required-label" aria-hidden="true">*</span>
-        <span class="sr-only">{{ 'required-label' | i18n }}:</span>
-        {{ 'email-label' | i18n }}
-      </label>
-      <input type="email" class="form-control" id="mce-EMAIL" name="EMAIL" aria-required="true">
-      <engca-form-error id="emailError" hidden>
-        <strong>{{ 'valid-email-message' | i18n }}</strong>
-        {{ 'valid-email-message-2' | i18n }}
-      </engca-form-error>
-      <engca-form-error id="apiError" hidden>
-        <strong>{{ 'form-problem-message' | i18n }}</strong>
-        {{ 'form-problem-message-2' | i18n }}
-      </engca-form-error>
-    </engca-form-field>
-
-    <engca-form-field>
-    <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
-
-    <ul class="form-checkbox-list">
-        <li>
-        <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-1" name="group[91023][8]" value="Los Angeles fires recovery: Eaton">
-        <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-1">
-          {{ 'topic-los-angeles-fires-recovery-eaton' | i18n }}
-        </label>
-      </li>
-      <li>
-        <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-0" name="group[91023][4]" value="Los Angeles fires recovery: Palisades">
-        <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-0">
-          {{ 'topic-los-angeles-fires-recovery-palisades' | i18n }}
-        </label>
-      </li>
-      <li>
-        <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-2" name="group[91023][2]" value="Future topics" checked>
-        <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-2">
-          {{ 'topic-future-topics' | i18n }}
-        </label>
-      </li>
-      </ul>
-      <engca-form-error id="emailError" hidden>
-        <strong>{{ 'valid-email-message' | i18n }}</strong>
-        {{ 'valid-email-message-2' | i18n }}
-      </engca-form-error>
-      <engca-form-error id="apiError" hidden>
-        <strong>{{ 'form-problem-message' | i18n }}</strong>
-        {{ 'form-problem-message-2' | i18n }}
-      </engca-form-error>
-    </engca-form-field>
-
-    <input type="submit" id="mc-embedded-subscribe" name="subscribe" data-theme="orange" value="{{ 'form-submit-button' | i18n }}">
+              <div class="mc-field-group input-group"><strong>{{ 'topics-interests-label' | i18n | safe }}</strong>
+              <ul>
+                <li>
+                  <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-1" name="group[91023][8]" value="LA Fires: Eaton">
+                  <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-1">
+                    {{ 'topic-los-angeles-fires-recovery-eaton' | i18n }}
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-0" name="group[91023][4]" value="LA Fires: Palisades">
+                  <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-0">
+                    {{ 'topic-los-angeles-fires-recovery-palisades' | i18n }}
+                  </label>
+                </li>
+                <li>
+                  <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-2" name="group[91023][2]" value="Future topics" checked>
+                  <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-2">
+                    {{ 'topic-future-topics' | i18n }}
+                  </label>
+                </li>
+              </ul>
+          </div>
+          <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display: none;"></div>
+              <div class="response" id="mce-success-response" style="display: none;"></div>
+          </div>
+          <div aria-hidden="true" style="position: absolute; left: -5000px;">
+            <input type="text" name="b_c515d1563732573cbc10cd6e9_61200a6dda" tabindex="-1" value="">
+          </div>
+          <div class="clear">
+            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value=" {{ 'sign-up-now' | i18n }}">
+          </div>
+    </div>
   </form>
-
-  <engca-form-success aria-live="polite"></engca-form-success>
-  <template id="form-success-msg">
-    <p>
-      <strong>{{ 'form-success-message' | i18n }}</strong>
-    </p>
-    <img width="75" height="75" src="/public/images/check-circle.svg" aria-hidden="true" alt="" />
-    <p>{{ 'form-success-message-2' | i18n }}</p>
-  </template>
-</engca-join-convo-form>
+  </div>
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+</div>
 <p>
   {{ 'form-privacy-message' | i18n | safe }}
   <span>{{ 'form-privacy-message-2' | i18n | safe }}</span>
