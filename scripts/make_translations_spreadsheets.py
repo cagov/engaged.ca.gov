@@ -1,17 +1,12 @@
 # make_translations_table.py
 from translation_table_contents import translation_keys, translations, languages
 
-
-
 # import a library for producing spreadsheet files
 
 import pandas as pd
 
 # create a dataframe from the translations dictionary
 df = pd.DataFrame(translations)
-
-# save the dataframe to an Excel file
-df.to_excel('translations.xlsx', index=False)
 
 keys_to_ignore = ['engaged-california-untranslated']
 

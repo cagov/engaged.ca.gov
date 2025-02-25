@@ -5,4 +5,5 @@ _dist
 */__pycache__/
 scripts/*.txt
 site/es_old
-
+.autoenv*
+.venv*
