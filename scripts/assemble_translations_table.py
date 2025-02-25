@@ -13,7 +13,7 @@ if sys.stdout.encoding != 'utf-8':
 df = pd.DataFrame(translations)
 
 # save the dataframe to an Excel file
-df.to_excel('translations.xlsx', index=False)
+# df.to_excel('translations.xlsx', index=False)
 
 languages = ['en', 'fr', 'es', 'ko', 'vi', 'tl', 'zh-hans', 'zh-hant']
 keys_to_ignore = ['engaged-california-untranslated']
@@ -67,5 +67,4 @@ for language in languages:
     # df.to_excel(f'i18n_table_{language}.xlsx', index=False)
 
 # print a prettified json version of the i18n_table, with the top-level keys sorted by the order they appear in the translation_keys list, and the languages sorted by the order they appear in the languages list
-print(json.dumps(i18n_table, indent=4, ensure_ascii=False))
-
+print('const translations = ' + json.dumps(i18n_table, indent=4, ensure_ascii=False) + ";\n\nexport default translations;\n")

@@ -11,7 +11,7 @@ import pandas as pd
 df = pd.DataFrame(translations)
 
 # save the dataframe to an Excel file
-df.to_excel('translations.xlsx', index=False)
+# df.to_excel('translations.xlsx', index=False)
 
 keys_to_ignore = ['engaged-california-untranslated']
 

@@ -1,6 +1,6 @@
 // src/_data/i18n/index.js
 const translations = {
-    "engaged-california-untranslated": { // LEAVE THIS ONE UNTRANSLATED
+    "engaged-california-untranslated": {
       "en": "Engaged California",
       "fr": "Engaged California",
       "es": "Engaged California",
