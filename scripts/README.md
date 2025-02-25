@@ -13,7 +13,7 @@ These files are not part of the build process.
     `python3 -m venv ./venv`
     `source ./venv/bin/activate # note: this is useful https://github.com/Tarrasch/zsh-autoenv`
     `pip install pandas`
-3. `cd scripts; python3 make_translations_table.py`
+3. `cd scripts; python3 make_translations_spreadsheets.py`
    (New spreadsheets are written to spreadsheets_src. Send these to translator.)
 
 ## To assemble re-translated spreadsheets.
