@@ -3,7 +3,8 @@ test-results
 _dist
 .DS_Store
 */__pycache__/
-scripts/*.txt
+scripts/attic/
+scripts/i18n_candidate.js
 site/es_old
 .autoenv*
 .venv*
