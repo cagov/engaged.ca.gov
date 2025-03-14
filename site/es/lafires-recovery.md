@@ -1,0 +1,72 @@
+---
+title: Los Angeles fires recovery
+description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.
+layout: page
+keywords:
+  - Los Angeles
+  - fires
+  - recovery
+tags:
+  - pages
+---
+# Los Angeles fires recovery
+
+*Agenda setting goes through March 31, 2025*
+
+The State of California is bringing survivors and those impacted by the Los Angeles wildfires together to engage, interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery policy. Engaged California expands California’s all-in response to the wildfires. This platform allows state and local officials to hear and understand the needs of the people who survived the devastating fires.
+
+[Sign up to stay informed](/#sign-up)
+
+## Overview
+
+The Engaged California team will work with community members from greater Los Angeles. We will focus on people from Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this road, we’ll have identified the issues that are the most important to recovery.
+
+[Learn more about Engaged California](/about)
+
+### About the process
+
+Engaged California is built upon deliberative democracy. It’s unlike polling, voting, or town halls. Deliberative democracy empowers you to engage with your government in a new way. Engaged California is a space for you to have meaningful dialogue with others. This deepens understanding and can guide policy choices—before the choices are made.
+
+## What happens in each phase
+
+### Engagement opens
+
+We announced the Los Angeles fires recovery topic on February 24, 2025. You can sign up to get updates even when we’re in a later phase.
+
+### Agenda setting
+
+People affected by the Eaton and Palisades fires will prioritize issues that are most important to them. This shapes the community deliberations.
+
+### Review 
+
+You will take a break while we review the agenda-setting conversations. We will examine the items that surfaced from community input, analyze data, and gather insights. All of this information will help plan the deliberation phase.
+
+### Planning
+
+The Engaged California team will carefully set the stage for effective deliberation. We’ll work with our partners to set up deliberations that lead to actionable and relevant next steps.
+
+We’ll use the takeaways from agenda setting to find the right policymakers and officials to work with. We’ll also carefully plan a deliberation opportunity for each of the wildfire recovery efforts we’re focusing on in this engagement: Eaton and Palisades.
+
+This might take a while. The work requires a lot of detail and care to ensure we enable deliberations that lead to actionable and relevant next steps.
+
+### Deliberation
+
+You will discuss what the community needs most. You’ll reach a consensus on how to ensure a speedy and equitable recovery. We don’t expect this to be easy. Some topics might be triggering. But reaching consensus lets you inform what actions state or local officials take on fire recovery.
+
+### Reporting
+
+We will review and analyze the outcomes of the deliberation phase. We’ll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
+
+## General information
+
+* Participation is voluntary
+* You will not be paid for your time
+* You must be 18 years or older to participate
+* We will protect and keep personal information private 
+
+## Code of conduct
+
+* Everyone involved in the Engaged California process must follow a pledge of civility
+* You should be open to listening and sharing 
+* Treat each other with respect on the platform and in any follow-up chats
+* You must communicate with others respectfully 

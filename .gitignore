@@ -8,3 +8,4 @@ scripts/i18n_candidate.js
 site/es_old
 .autoenv*
 .venv*
+scripts/venv
