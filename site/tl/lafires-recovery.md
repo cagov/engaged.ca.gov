@@ -37,11 +37,11 @@ We announced the Los Angeles fires recovery topic on February 24, 2025. You can 
 
 People affected by the Eaton and Palisades fires will prioritize issues that are most important to them. This shapes the community deliberations.
 
-### Review 
+### ⚪️ Review 
 
 You will take a break while we review the agenda-setting conversations. We will examine the items that surfaced from community input, analyze data, and gather insights. All of this information will help plan the deliberation phase.
 
-### Planning
+### ⚪️ Planning
 
 The Engaged California team will carefully set the stage for effective deliberation. We’ll work with our partners to set up deliberations that lead to actionable and relevant next steps.
 
@@ -49,11 +49,11 @@ We’ll use the takeaways from agenda setting to find the right policymakers and
 
 This might take a while. The work requires a lot of detail and care to ensure we enable deliberations that lead to actionable and relevant next steps.
 
-### Deliberation
+### ⚪️ Deliberation
 
 You will discuss what the community needs most. You’ll reach a consensus on how to ensure a speedy and equitable recovery. We don’t expect this to be easy. Some topics might be triggering. But reaching consensus lets you inform what actions state or local officials take on fire recovery.
 
-### Reporting
+### ⚪️ Reporting
 
 We will review and analyze the outcomes of the deliberation phase. We’ll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
 
