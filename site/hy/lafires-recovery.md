@@ -57,14 +57,14 @@ You will discuss what the community needs most. You’ll reach a consensus on ho
 
 We will review and analyze the outcomes of the deliberation phase. We’ll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
 
-## General information
+### General information
 
 * Participation is voluntary
 * You will not be paid for your time
 * You must be 18 years or older to participate
 * We will protect and keep personal information private 
 
-## Code of conduct
+### Code of conduct
 
 * Everyone involved in the Engaged California process must follow a pledge of civility
 * You should be open to listening and sharing 
