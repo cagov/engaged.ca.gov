@@ -26,6 +26,19 @@ const translations = {
         "hy": "Ծրագրի մասին"  ,
         "location": "Home"
     },
+    "los-angeles-fires-recovery": {
+        "en": "Los Angeles fires recovery",
+        "fr": "Los Angeles fires recovery",
+        "es": "Los Angeles fires recovery",
+        "ko": "Los Angeles fires recovery",
+        "vi": "Los Angeles fires recovery",
+        "tl": "Los Angeles fires recovery",
+        "zh-hans": "Los Angeles fires recovery",
+        "zh-hant": "Los Angeles fires recovery",
+        "fa": "Los Angeles fires recovery",
+        "hy": "Los Angeles fires recovery",
+        "location": "Home"
+    },
     "sign-up-now": {
         "en": "Sign up now",
         "fr": "Inscrivez-vous maintenant",
