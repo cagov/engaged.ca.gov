@@ -1,7 +1,7 @@
 ---
 title: Los Angeles fires recovery
 description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.
-layout: page
+layout: page-with-form
 keywords:
   - Los Angeles
   - fires
@@ -15,7 +15,7 @@ tags:
 
 The State of California is bringing survivors and those impacted by the Los Angeles wildfires together to engage, interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery policy. Engaged California expands California’s all-in response to the wildfires. This platform allows state and local officials to hear and understand the needs of the people who survived the devastating fires.
 
-[Sign up to stay informed](/#sign-up)
+[Sign up to stay informed](#sign-up)
 
 ## Overview
 

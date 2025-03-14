@@ -1,0 +1,13 @@
+{% extends "layout.njk" %}
+{% block content %}
+  <div class="container m-b-lg">
+    {{ content | safe }}
+  </div>
+  <section id="sign-up">
+    <div class="container form-flex">
+      <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
+      <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
+      {% include "form.njk" %}
+    </div>
+  </section>
+{% endblock %}
