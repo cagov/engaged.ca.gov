@@ -29,11 +29,11 @@ Engaged California is built upon deliberative democracy. It’s unlike polling, 
 
 ## What happens in each phase
 
-### Engagement opens
+### ✅ Engagement opens
 
 We announced the Los Angeles fires recovery topic on February 24, 2025. You can sign up to get updates even when we’re in a later phase.
 
-### Agenda setting
+### ➡️ Agenda setting
 
 People affected by the Eaton and Palisades fires will prioritize issues that are most important to them. This shapes the community deliberations.
 
