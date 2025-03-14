@@ -21,11 +21,11 @@ The State of California is bringing survivors and those impacted by the Los Ange
 
 The Engaged California team will work with community members from greater Los Angeles. We will focus on people from Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this road, we’ll have identified the issues that are the most important to recovery.
 
-[Learn more about Engaged California](/about)
-
 ### About the process
 
 Engaged California is built upon deliberative democracy. It’s unlike polling, voting, or town halls. Deliberative democracy empowers you to engage with your government in a new way. Engaged California is a space for you to have meaningful dialogue with others. This deepens understanding and can guide policy choices—before the choices are made.
+
+[Learn more about Engaged California](/about)
 
 ## What happens in each phase
 
