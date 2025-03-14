@@ -11,7 +11,7 @@ tags:
 ---
 # Los Angeles fires recovery
 
-*Agenda setting goes through March 31, 2025*
+*Agenda setting is happening now*
 
 The State of California is bringing survivors and those impacted by the Los Angeles wildfires together to engage, interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery policy. Engaged California expands California’s all-in response to the wildfires. This platform allows state and local officials to hear and understand the needs of the people who survived the devastating fires.
 
