@@ -481,6 +481,19 @@ const translations = {
         "hy": "Օգտագործման պայմանները",
         "location": "Footer"
     },
+    "notice-of-collections": {
+        "en": "Notice of Collections",
+        "fr": "Notice of Collections",
+        "es": "Notice of Collections",
+        "ko": "Notice of Collections",
+        "vi": "Notice of Collections",
+        "tl": "Notice of Collections",
+        "zh-hans": "Notice of Collections",
+        "zh-hant": "Notice of Collections",
+        "fa": "Notice of Collections",
+        "hy": "Notice of Collections",
+        "location": "Footer"
+    },
     "sitemap": {
         "en": "Sitemap",
         "fr": "Plan du site",
