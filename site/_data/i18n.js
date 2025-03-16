@@ -391,7 +391,7 @@ const translations = {
         "location": "Footer"
     },
     "form-privacy-message": {
-        "en": "We take your <a href=\"/privacy\">privacy</a> seriously.",
+        "en": "We take your <a href=\"/privacy\">privacy</a> seriously. Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
         "fr": "Nous prendrons votre <a href=\"/fr/privacy\">privacité</a> très au sérieux.",
         "es": "Nosotros tomamos su <a href=\"/es/privacy\">privacidad</a> en serio.",
         "ko": "저희는 귀하의 <a href=\"/ko/privacy\">프라이버시</a>를 중요하게 생각합니다.",
@@ -479,6 +479,19 @@ const translations = {
         "zh-hant": "使用條款",
         "fa": "شرایط استفاده",
         "hy": "Օգտագործման պայմանները",
+        "location": "Footer"
+    },
+    "notice-on-collections": {
+        "en": "Notice on Collections",
+        "fr": "Notice on Collections",
+        "es": "Notice on Collections",
+        "ko": "Notice on Collections",
+        "vi": "Notice on Collections",
+        "tl": "Notice on Collections",
+        "zh-hans": "Notice on Collections",
+        "zh-hant": "Notice on Collections",
+        "fa": "Notice on Collections",
+        "hy": "Notice on Collections",
         "location": "Footer"
     },
     "sitemap": {
