@@ -481,17 +481,17 @@ const translations = {
         "hy": "Օգտագործման պայմանները",
         "location": "Footer"
     },
-    "notice-of-collections": {
-        "en": "Notice of Collections",
-        "fr": "Notice of Collections",
-        "es": "Notice of Collections",
-        "ko": "Notice of Collections",
-        "vi": "Notice of Collections",
-        "tl": "Notice of Collections",
-        "zh-hans": "Notice of Collections",
-        "zh-hant": "Notice of Collections",
-        "fa": "Notice of Collections",
-        "hy": "Notice of Collections",
+    "notice-on-collections": {
+        "en": "Notice on Collections",
+        "fr": "Notice on Collections",
+        "es": "Notice on Collections",
+        "ko": "Notice on Collections",
+        "vi": "Notice on Collections",
+        "tl": "Notice on Collections",
+        "zh-hans": "Notice on Collections",
+        "zh-hant": "Notice on Collections",
+        "fa": "Notice on Collections",
+        "hy": "Notice on Collections",
         "location": "Footer"
     },
     "sitemap": {
