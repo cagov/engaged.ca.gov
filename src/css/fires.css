@@ -1,0 +1,81 @@
+#los-angeles-fires-recovery {
+  color: var(--off-white);
+  background: url("/public/images/fires-about-bubbles-cropped.svg") bottom right / 30vw no-repeat, var(--navy);
+}
+
+@media (min-width: 1200px) {
+  #los-angeles-fires-recovery {
+    background: url("/public/images/fires-la-skyline-angled.png") center right / contain no-repeat, var(--navy);
+  }
+}
+
+.status-pill {
+  display: inline-block;
+  font-size: 1.125rem;
+  border: 1px solid var(--off-white);
+  padding: .25rem 1.25rem;
+  border-radius: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+section#overview {
+  background: #FFF4EB;
+}
+
+section#overview .row,
+section#what-happens-in-each-phase .row {
+  --bs-gutter-x: 3.75rem;
+  --bs-gutter-y: 2rem;
+}
+
+div.about-the-process > h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.4375rem;
+}
+
+div.about-the-process > *:not(h3) {
+  font-size: 1.125rem;
+}
+
+div.phase-list {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  grid-template-rows: auto max-content;
+  column-gap: 1rem;
+}
+
+div.phase-list > h3 {
+  margin: 0;
+  align-self: center;
+  font-size: 1.4375rem;
+}
+
+div.phase-list > :is(svg, img) {
+  align-self: center;
+  justify-self: center;
+}
+
+div.phase-list > svg {
+  height: 100%;
+}
+
+div.phase-list > div {
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+div.phase-sidebar > h3 {
+  font-size: 1.4375rem;
+}
+
+div.phase-sidebar > h3:first-child {
+  margin-top: 0;
+}
+
+div.phase-sidebar li {
+  margin-bottom: 1.5rem;
+}
+
+
+
+
