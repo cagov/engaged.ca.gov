@@ -12,8 +12,9 @@ tags:
 
 ----
 id: hero
-title: Los Angeles fires recovery
-statusText: Agenda setting is happening now
+statusAgendaSettingText: Agenda setting is happening now
+statusReviewText: Agenda setting outcomes are being reviewed
+statusPlanningText: Deliberations are being planned
 buttonText: Sign up to stay informed
 ----
 
@@ -21,6 +22,18 @@ The State of California is bringing survivors and those impacted by the Los Ange
 interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery
 policy. Engaged California expands California's all-in response to the wildfires. This platform allows state and local
 officials to hear and understand the needs of the people who survived the devastating fires.
+
+
+----
+id: overview
+----
+
+## Overview
+
+The Engaged California team will work with community members from greater Los Angeles. We will focus on people from
+Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and
+complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this
+road, we'll have identified the issues that are the most important to recovery.
 
 
 ----
@@ -34,18 +47,6 @@ democracy empowers you to engage with your government in a new way. Engaged Cali
 meaningful dialogue with others. This deepens understanding and can guide policy choices—before the choices are made.
 
 [Learn more about Engaged California](/about)
-
-
-----
-id: overview
-----
-
-## Overview
-
-The Engaged California team will work with community members from greater Los Angeles. We will focus on people from
-Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and
-complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this
-road, we'll have identified the issues that are the most important to recovery.
 
 
 ----

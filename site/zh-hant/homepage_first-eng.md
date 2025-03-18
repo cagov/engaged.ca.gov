@@ -1,9 +1,9 @@
 ---
-buttonText: Learn more about Los Angeles fires recovery
+buttonText: 進一步瞭解洛杉磯火災恢復資訊
 permalink: false
 tags:
   - snippets
 --- 
-## Our first engagement
+## 我們的第一次互動
 
-The State of California invites people affected by the Eaton and Palisades wildfires to help shape our plans for long-term recovery.
+加利福尼亞州邀請受 Eaton 和 Palisades 野火影響的民眾説明制定我們的長期恢復計劃。

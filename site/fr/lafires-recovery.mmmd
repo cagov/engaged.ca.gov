@@ -12,8 +12,9 @@ tags:
 
 ----
 id: hero
-title: Los Angeles fires recovery
-statusText: Agenda setting is happening now
+statusAgendaSettingText: Agenda setting is happening now
+statusReviewText: Agenda setting outcomes are being reviewed
+statusPlanningText: Deliberations are being planned
 buttonText: Sign up to stay informed
 ----
 

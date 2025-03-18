@@ -1,8 +1,9 @@
 ---
-buttonText: Magpatala ngayon
+buttonText: Matuto Pa
 permalink: false
 tags:
   - snippets
 ---
 # Sabihin sa iyong gobyerno kung ano ang nararamdaman mo tungkol sa mga mahahalagang isyu
-Ang una nating paksa ay ang pagbangon mula sa mga sunog sa Los Angeles
+
+Ang aming unang pakikipag-ugnayan ay nakatuon sa pagbawi mula sa mga wildfire sa Los Angeles. 

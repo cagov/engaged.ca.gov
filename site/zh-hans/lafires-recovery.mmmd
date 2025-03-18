@@ -1,6 +1,6 @@
 ---
-title: Los Angeles fires recovery
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.
+title: 洛杉矶火灾的恢复
+description: Engaged California 是一个在线平台，让加州人更容易在政府中发表意见。Engaged California 的第一个主题是从洛杉矶野火中恢复。
 layout: mmmd-lafires
 keywords:
   - Los Angeles
@@ -12,114 +12,105 @@ tags:
 
 ----
 id: hero
-title: Los Angeles fires recovery
-statusText: Agenda setting is happening now
-buttonText: Sign up to stay informed
+statusAgendaSettingText: 議程設定正在進行中
+statusReviewText: 正在审查议程设置结果
+statusPlanningText: 正在计划审议
+buttonText: 注册以随时了解情况
 ----
 
-The State of California is bringing survivors and those impacted by the Los Angeles wildfires together to engage,
-interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery
-policy. Engaged California expands California's all-in response to the wildfires. This platform allows state and local
-officials to hear and understand the needs of the people who survived the devastating fires.
-
-
-----
-id: about
-----
-
-### About the process
-
-Engaged California is built upon deliberative democracy. It's unlike polling, voting, or town halls. Deliberative
-democracy empowers you to engage with your government in a new way. Engaged California is a space for you to have
-meaningful dialogue with others. This deepens understanding and can guide policy choices—before the choices are made.
-
-[Learn more about Engaged California](/about)
+加利福尼亚州正在将野火幸存者和受其影响的洛杉矶居民聚集在一起，以便参与、互动和分享想法。这些见解将有助于制定恢复计划并共同设计野火恢复政策。Engaged California 扩大了加州对野火的全面响应。该平台使州和地方官员能够听到和了解在毁灭性火灾中幸存下来的人们的需求。
 
 
 ----
 id: overview
 ----
 
-## Overview
+## 概述
 
-The Engaged California team will work with community members from greater Los Angeles. We will focus on people from
-Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and
-complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this
-road, we'll have identified the issues that are the most important to recovery.
+Engaged California 团队将与来自大洛杉矶地区的社区成员合作。我们将重点关注来自 Altadena 和 Pacific Palisades 的人。您在 Engaged California 的旅程始于针对困难和复杂主题的讨论。您将参与解决如何从火灾中恢复的各种分歧意见。在这条路的尽头，我们将确定对恢复最重要的问题。
+
+
+----
+id: about
+----
+
+### 关于流程
+
+Engaged California 建立在审议民主的基础上。它与民意调查、投票或市政厅不同。审议民主使您能够以一种新的方式与政府互动。Engaged California 是您与他人进行有意义对话的空间。这加深了理解，并可以在做出选择之前指导策略选择。
+
+[了解有关 Engaged California 的更多信息](/zh-hans/about)
 
 
 ----
 id: phaseGeneral
-title: What happens in each phase
+title: 每个阶段会发生什么
 phaseCompleteText: Phase complete
 phaseCurrentText: Phase in progress
 phasePendingText: Phase pending
 ----
 
-### General information
+### 一般信息
 
-- Participation is voluntary
-- You will not be paid for your time
-- You must be 18 years or older to participate
-- We will protect and keep personal information private
+- 参与是自愿的
+- 您所用的时间不会得到报酬
+- 您必须年满 18 岁以上才能参加
+- 我们将保护个人信息并保持其私密性 
 
-### Code of conduct
+### 行为准则
 
-- Everyone involved in the Engaged California process must follow a pledge of civility
-- You should be open to listening and sharing
-- Treat each other with respect on the platform and in any follow-up chats
-- You must communicate with others respectfully
+- 参与 Engaged California 流程的每个人都必须遵守文明承诺
+- 您应该乐于倾听和分享 
+- 在平台上和任何后续聊天中互相尊重
+- 您必须以尊重的方式与他人交流
 
 
 ----
 id: phase1
-title: Engagement opens
+title: 参与开始
 ----
 
-We announced the Los Angeles fires recovery topic on February 24, 2025. You can sign up to get updates even when we're
-in a later phase.
+我们于 2025 年 2 月 24 日宣布了洛杉矶火灾恢复主题。即使我们处于后期阶段，您也可以注册以获取更新信息。
 
 
 ----
 id: phase2
-title: Agenda setting
+title: 议程设置
 ----
 
-People affected by the Eaton and Palisades fires will prioritize issues that are most important to them. This shapes the community deliberations.
+受 Eaton 和 Palisades 火灾影响的人们将优先考虑对他们来说最重要的问题。这决定了社区的审议
 
 
 ----
 id: phase3
-title: Review
+title: 回顾
 ----
 
-You will take a break while we review the agenda-setting conversations. We will examine the items that surfaced from community input, analyze data, and gather insights. All of this information will help plan the deliberation phase.
+在我们审查议程设置对话时，您可以休息一下。我们将检查从社区意见中浮现的项目，分析数据并收集见解。所有这些信息都将有助于规划审议阶段。
 
 
 ----
 id: phase4
-title: Planning
+title: 规划
 ----
 
+Engaged California 团队将精心布置有效审议的舞台。我们将与合作伙伴合作，进行审议，以制定可执行且相关的后续步骤。
 
-The Engaged California team will carefully set the stage for effective deliberation. We'll work with our partners to set up deliberations that lead to actionable and relevant next steps.
+我们将利用议程设置的要点来找到合适的政策制定者和官员进行合作。我们还将为我们在本次参与中重点关注的每项野火恢复工作仔细规划出一个审议机会：Eaton 和 Palisades。
 
-We'll use the takeaways from agenda setting to find the right policymakers and officials to work with. We'll also carefully plan a deliberation opportunity for each of the wildfire recovery efforts we're focusing on in this engagement: Eaton and Palisades.
-
-This might take a while. The work requires a lot of detail and care to ensure we enable deliberations that lead to actionable and relevant next steps.
+这可能需要一段时间。这项工作需要大量的细节和关怀，以确保我们能够进行深思熟虑，从而产生可执行且相关的后续步骤
 
 
 ----
 id: phase5
-title: Deliberation
+title: 审议
 ----
 
-You will discuss what the community needs most. You'll reach a consensus on how to ensure a speedy and equitable recovery. We don't expect this to be easy. Some topics might be triggering. But reaching consensus lets you inform what actions state or local officials take on fire recovery.
+您将讨论社区最需要什么。您将就如何确保快速和公平的恢复达成共识。我们并不指望这很容易。某些主题可能会引发争议。但是达成共识可以让您了解州或地方官员在火灾恢复方面采取的行动。
 
 
 ----
 id: phase6
-title: Reporting
+title: 报告
 ----
 
-We will review and analyze the outcomes of the deliberation phase. We'll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
+我们将审查和分析审议阶段的结果。我们将与政府官员合作，寻找对审议做出回应的行动。我们将在本网站上发布调查结果和行动报告。

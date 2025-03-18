@@ -1,6 +1,6 @@
 ---
-title: Los Angeles fires recovery
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.
+title: Լոս Անջելեսի հրդեհների վերականգնում
+description: "Engaged California-ն առցանց հարթակ է, որը կալիֆոռնիայի բնակիչների համար ավելի հեշտ է դարձնում կառավարության մեջ ձայն ունենալը: Engaged California-ի առաջին թեման Լոս Անջելեսի անտառային հրդեհներից վերականգնումն է:"
 layout: mmmd-lafires
 keywords:
   - Los Angeles
@@ -12,114 +12,105 @@ tags:
 
 ----
 id: hero
-title: Los Angeles fires recovery
-statusText: Agenda setting is happening now
-buttonText: Sign up to stay informed
+statusAgendaSettingText: Օրակարգային կարգավորումները տեղի են ունենում հիմա
+statusReviewText: Օրակարգային կարգավորումների արդյունքները վերանայվում են
+statusPlanningText: Ներկայումս նախատեսվում են քննարկումներ
+buttonText: Գրանցվեք՝ տեղեկացված մնալու համար
 ----
 
-The State of California is bringing survivors and those impacted by the Los Angeles wildfires together to engage,
-interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery
-policy. Engaged California expands California's all-in response to the wildfires. This platform allows state and local
-officials to hear and understand the needs of the people who survived the devastating fires.
-
-
-----
-id: about
-----
-
-### About the process
-
-Engaged California is built upon deliberative democracy. It's unlike polling, voting, or town halls. Deliberative
-democracy empowers you to engage with your government in a new way. Engaged California is a space for you to have
-meaningful dialogue with others. This deepens understanding and can guide policy choices—before the choices are made.
-
-[Learn more about Engaged California](/about)
+Կալիֆոռնիայի նահանգը ամախմբում է Լոս Անջելեսի անտառային հրդեհներից փրկվածներին և տուժածներին՝ ներգրավվելու, փոխազդելու և գաղափարներ փոխանակելու համար: Այս մտքերը կօգնեն ձևավորել վերականգնման ծրագրեր և հավաքականորեն մշակել անտառային հրդեհների վերականգնման քաղաքականություն: Engaged California-ն ընդլայնում է ընդլայնում է Կալիֆոռնիայում անտառային հրդեհների դեմ պայքարի միջոցառումների շարքը: Այս հարթակը թույլ է տալիս պետական և տեղական պաշտոնյաներին լսել և հասկանալ ավերիչ հրդեհներից փրկված մարդկանց կարիքները:
 
 
 ----
 id: overview
 ----
 
-## Overview
+## Ընդհանուր ակնարկ
 
-The Engaged California team will work with community members from greater Los Angeles. We will focus on people from
-Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and
-complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this
-road, we'll have identified the issues that are the most important to recovery.
+Engaged California-ի թիմը կաշխատի մեծ Լոս Անջելեսի համայնքի անդամների հետ: Մենք կենտրոնանալու ենք Ալտադենայի և Խաղաղօվկիանոսյան Պալիսադեսի մարդկանց վրա: Engaged California-ի հետ Ձեր ճանապարհորդությունը սկսվում է դժվար և բարդ թեմաների քննարկումից: Դուք աշխատելու եք հրդեհներից վերականգնման վերաբերյալ կարծիքների տարաձայնությունների հետ։ Այս ճանապարհի վերջում մենք կբացահայտենք այն խնդիրները, որոնք առավել կարևոր են վերականգնման համար:
+
+
+----
+id: about
+----
+
+### Գործընթացի մասին
+
+Engaged California-ն հիմնված է խորհրդակցական ժողովրդավարության վրա: Այն նման չէ քվեարկություններին, ընտրություններին կամ քաղաքապետարանի գործընթացներին։ Խորհրդակցական ժողովրդավարությունը Ձեզ հնարավորություն է տալիս նոր ձևերով համագործակցել Ձեր կառավարության հետ: Engaged California-ն Ձեզ համար այլ մարդկանց հետ բովանդակալից երկխոսություն վարելու հնարավորություն է: Սա խորացնում է ըմբռնումը և կարող է ծառայել որպես ուղեցույց քաղաքականության ընտրության հարցում՝ նախքան ընտրությունը կատարելը:
+
+[Իմացեք ավելին Engaged California-ի մասին](/hy/about)
 
 
 ----
 id: phaseGeneral
-title: What happens in each phase
+title: Ինչ է տեղի ունենում յուրաքանչյուր փուլում
 phaseCompleteText: Phase complete
 phaseCurrentText: Phase in progress
 phasePendingText: Phase pending
 ----
 
-### General information
+### Ընդհանուր տեղեկություններ
 
-- Participation is voluntary
-- You will not be paid for your time
-- You must be 18 years or older to participate
-- We will protect and keep personal information private
+- Մասնակցությունը կամավոր է
+- Դուք չեք վճարվի Ձեր ժամանակի համար
+- Մասնակցելու համար Դուք պետք է լինեք 18 տարի կամ ավելի
+- Մենք պաշտպանելու և գաղտնի ենք պահելու բոլոր անձնական տվյալները 
 
-### Code of conduct
+### Վարքագծի կանոններ
 
-- Everyone involved in the Engaged California process must follow a pledge of civility
-- You should be open to listening and sharing
-- Treat each other with respect on the platform and in any follow-up chats
-- You must communicate with others respectfully
+- Յուրաքանչյուր ոք, ով ներգրավված է Engaged California-ի գործընթացի մեջ, պետք է հետևի քաղաքավարության սկզբունքներին
+- Դուք պետք է բաց լինեք լսելու և կիսվելու համար 
+- Հարգանքով վերաբերվեք միմյանց հարթակում և ցանկացած հետագա զրույցներում
+- Դուք պետք է հարգալից հաղորդակցվեք այլ մարդկանց հետ
 
 
 ----
 id: phase1
-title: Engagement opens
+title: Ներգրավվածությունը սկսվում է
 ----
 
-We announced the Los Angeles fires recovery topic on February 24, 2025. You can sign up to get updates even when we're
-in a later phase.
+Լոս Անջելեսի հրդեհների վերականգնման թեման մենք հայտարարել ենք 2025 թվականի փետրվարի 24-ին։ Դուք կարող եք գրանցվել թարմացումներ ստանալու համար, նույնիսկ ավելի ուշ փուլում:
 
 
 ----
 id: phase2
-title: Agenda setting
+title: Օրակարգային կարգավորումներ
 ----
 
-People affected by the Eaton and Palisades fires will prioritize issues that are most important to them. This shapes the community deliberations.
+Իթոնի և Պալիսադեսի հրդեհներից տուժած մարդիկ առաջնահերթություն կտան իրենց համար ամենակարևոր հարցերին: Այս փուլում ձևավորվում է համայնքում քննարկումների ընթացքը։
 
 
 ----
 id: phase3
-title: Review
+title: Վերանայում
 ----
 
-You will take a break while we review the agenda-setting conversations. We will examine the items that surfaced from community input, analyze data, and gather insights. All of this information will help plan the deliberation phase.
+Մենք վերանայելու ենք օրակարգային կարգավորումների հետ կապված հարցերը։ Մենք կուսումնասիրենք համայնքի մասնակցության արդյունքում ի հայտ եկած նյութերը, կվերլուծենք տվյալները և կհավաքենք տեղեկատվություն: Այս բոլոր տեղեկությունները կօգնեն պլանավորելու քննարկման փուլը:
 
 
 ----
 id: phase4
-title: Planning
+title: Պլանավորում
 ----
 
+Engaged California-ի թիմը մանրակրկիտ հիմք կստեղծի արդյունավետ քննարկումների համար: Մենք աշխատելու ենք մեր գործընկերների հետ՝ քննարկումներ կազմակերպելու համար, որոնք կհանգեցնեն գործող և համապատասխան հաջորդ քայլերին:
 
-The Engaged California team will carefully set the stage for effective deliberation. We'll work with our partners to set up deliberations that lead to actionable and relevant next steps.
+Մենք օգտագործելու ենք օրակարգային կարգավորումների արդյունքները՝ գտնելու ճիշտ քաղաքականություն մշակողներին և պաշտոնյաներին, որոնց հետ պետք է աշխատել: Մենք նաև ուշադիր ծրագրելու ենք քննարկելու հնարավորություն անտառային հրդեհների վերականգնման յուրաքանչյուր ջանքերի համար, որոնց վրա կենտրոնանում ենք այս ներգրավվածության մեջ՝ Իթոն և Պալիսադես:
 
-We'll use the takeaways from agenda setting to find the right policymakers and officials to work with. We'll also carefully plan a deliberation opportunity for each of the wildfire recovery efforts we're focusing on in this engagement: Eaton and Palisades.
-
-This might take a while. The work requires a lot of detail and care to ensure we enable deliberations that lead to actionable and relevant next steps.
+Սա կարող է որոշ ժամանակ պահանջել։ Այս նախագիծը պահանջում է մեծ և մանրակրկիտ աշխատանք՝ ապահովելու համար, որ մենք հնարավորություն ընձեռենք քննարկումները, որոնք կհանգեցնեն գործող և համապատասխան հաջորդ քայլերին:
 
 
 ----
 id: phase5
-title: Deliberation
+title: Քննարկումներ
 ----
 
-You will discuss what the community needs most. You'll reach a consensus on how to ensure a speedy and equitable recovery. We don't expect this to be easy. Some topics might be triggering. But reaching consensus lets you inform what actions state or local officials take on fire recovery.
+Քննարկումները վերաբերելու են համայնքի ամենակարևոր կարիքներին։ Դուք համաձայնության կգաք այն մասին, թե ինչպես ապահովել արագ և արդար վերականգնում: Մենք չենք ակնկալում, որ սա հեշտ է լինելու։ Որոշ թեմաներ կարող են հուզիչ լինել։ Սակայն համաձայնության հասնելը թույլ կտա տեղեկանալ, թե ինչ գործողություններ են ձեռնարկում պետական կամ տեղական իշխանությունները հրդեհից վերականգնման համար:
 
 
 ----
 id: phase6
-title: Reporting
+title: Հաշվետվություն
 ----
 
-We will review and analyze the outcomes of the deliberation phase. We'll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
+Մենք կվերանայենք և կվերլուծենք քննարկման փուլի արդյունքները: Մենք աշխատելու ենք պետական պաշտոնյաների հետ, որպեսզի ընտրենք այն միջոցառումները, որոնք կարձագանքեն քննարկմանը: Արդյունքների և ձեռնարկված միջոցառումների մասին հաշվետվությունը կհրապարակենք այս կայքում:

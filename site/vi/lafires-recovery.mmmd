@@ -1,6 +1,6 @@
 ---
-title: Los Angeles fires recovery
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.
+title: Phục hồi sau các đám cháy ở Los Angeles
+description: Engaged California là một nền tảng trực tuyến giúp người dân California đóng góp ý kiến cho chính quyền dễ dàng hơn. Chủ đề đầu tiên của Engaged California là phục hồi sau các đám cháy rừng ở Los Angeles.
 layout: mmmd-lafires
 keywords:
   - Los Angeles
@@ -12,114 +12,104 @@ tags:
 
 ----
 id: hero
-title: Los Angeles fires recovery
-statusText: Agenda setting is happening now
-buttonText: Sign up to stay informed
+statusAgendaSettingText: Hiện đang xây dựng chương trình nghị sự
+statusReviewText: Đánh giá kết quả xây dựng chương trình nghị sự
+statusPlanningText: Lên kế hoạch các cuộc thảo luận
+buttonText: Đăng ký để cập nhật thông tin
 ----
 
-The State of California is bringing survivors and those impacted by the Los Angeles wildfires together to engage,
-interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery
-policy. Engaged California expands California's all-in response to the wildfires. This platform allows state and local
-officials to hear and understand the needs of the people who survived the devastating fires.
-
-
-----
-id: about
-----
-
-### About the process
-
-Engaged California is built upon deliberative democracy. It's unlike polling, voting, or town halls. Deliberative
-democracy empowers you to engage with your government in a new way. Engaged California is a space for you to have
-meaningful dialogue with others. This deepens understanding and can guide policy choices—before the choices are made.
-
-[Learn more about Engaged California](/about)
+Tiểu Bang California sẽ tập hợp nạn nhân và những người bị ảnh hưởng trong các đám cháy rừng ở Los Angeles với nhau để gắn kết, tương tác và chia sẻ ý tưởng. Những ý kiến đóng góp này sẽ giúp định hình các kế hoạch phục hồi và cùng xây dựng chính sách phục hồi sau cháy rừng. Engaged California mở rộng hoạt động ứng phó toàn diện của California đối với các đám cháy rừng. Nền tảng này cho phép các viên chức tiểu bang và địa phương lắng nghe và hiểu được nhu cầu của các nạn nhân trong những đám cháy tàn khốc.
 
 
 ----
 id: overview
 ----
 
-## Overview
+## Tổng quan
 
-The Engaged California team will work with community members from greater Los Angeles. We will focus on people from
-Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and
-complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this
-road, we'll have identified the issues that are the most important to recovery.
+Đội ngũ Engaged California sẽ làm việc với các thành viên cộng đồng từ khu đô thị Los Angeles. Chúng tôi sẽ tập trung vào những người đến từ Altadena và Pacific Palisades. Hành trình của quý vị với Engaged California sẽ bắt đầu bằng các cuộc thảo luận để giải quyết các chủ đề khó và phức tạp. Quý vị sẽ xử lý những khác biệt trong quan điểm về cách phục hồi sau các đám cháy. Khi kết thúc hoạt động này, chúng ta sẽ xác định được các vấn đề quan trọng nhất cần phục hồi.
+
+
+----
+id: about
+----
+
+### Giới thiệu về quy trình
+
+Engaged California được xây dựng dựa trên chế độ dân chủ tranh luận. Chương trình này khác với hoạt động bình chọn, bỏ phiếu hoặc cuộc họp hỏi đáp. Chế độ dân chủ tranh luận tạo điều kiện để quý vị gắn kết với chính quyền theo một cách mới. Engaged California là không gian để quý vị đối thoại hiệu quả với những người khác. Điều này giúp mọi người hiểu sâu hơn và có thể định hướng cho các lựa chọn chính sách trước khi đưa ra lựa chọn.
+
+[Tìm hiểu thêm về Engaged California](/vi/about)
 
 
 ----
 id: phaseGeneral
-title: What happens in each phase
+title: Quy trình trong mỗi giai đoạn
 phaseCompleteText: Phase complete
 phaseCurrentText: Phase in progress
 phasePendingText: Phase pending
 ----
 
-### General information
+### Thông tin chung
 
-- Participation is voluntary
-- You will not be paid for your time
-- You must be 18 years or older to participate
-- We will protect and keep personal information private
+- Quý vị tham gia trên tinh thần tự nguyện
+- Quý vị sẽ không được trả tiền cho thời gian tham gia
+- Quý vị phải từ 18 tuổi trở lên để được tham gia
+- Chúng tôi sẽ bảo vệ và giữ bí mật thông tin cá nhân
 
-### Code of conduct
+### Bộ quy tắc ứng xử
 
-- Everyone involved in the Engaged California process must follow a pledge of civility
-- You should be open to listening and sharing
-- Treat each other with respect on the platform and in any follow-up chats
-- You must communicate with others respectfully
+- Mọi người tham gia quy trình của Engaged California phải tuân thủ cam kết văn minh
+- Quý vị nên cởi mở để lắng nghe và chia sẻ 
+- Tôn trọng nhau trên nền tảng và trong bất kỳ cuộc trò chuyện tiếp theo nào
+- Quý vị phải giao tiếp với người khác với thái độ tôn trọng
 
 
 ----
 id: phase1
-title: Engagement opens
+title: Mở hoạt động tương tác
 ----
 
-We announced the Los Angeles fires recovery topic on February 24, 2025. You can sign up to get updates even when we're
-in a later phase.
+Chúng tôi đã công bố chủ đề phục hồi sau các đám cháy ở Los Angeles vào ngày 24 tháng 2 năm 2025. Quý vị có thể đăng ký để nhận thông tin cập nhật ngay cả khi chúng ta chuyển sang giai đoạn sau.
 
 
 ----
 id: phase2
-title: Agenda setting
+title: Xây dựng chương trình nghị sự
 ----
 
-People affected by the Eaton and Palisades fires will prioritize issues that are most important to them. This shapes the community deliberations.
-
+Những người bị ảnh hưởng bởi các đám cháy ở Eaton và Palisades sẽ ưu tiên các vấn đề quan trọng nhất đối với họ. Qua đó định hình các cuộc thảo luận của cộng đồng.
 
 ----
 id: phase3
-title: Review
+title: Đánh giá
 ----
 
-You will take a break while we review the agenda-setting conversations. We will examine the items that surfaced from community input, analyze data, and gather insights. All of this information will help plan the deliberation phase.
+Quý vị sẽ tạm nghỉ trong khi chúng tôi đánh giá các cuộc trò chuyện về xây dựng chương trình nghị sự. Chúng tôi sẽ kiểm tra các mục phát sinh từ ý kiến đóng góp của cộng đồng, phân tích dữ liệu và thu thập thông tin chi tiết. Tất cả những thông tin này sẽ giúp lập kế hoạch cho giai đoạn thảo luận.
 
 
 ----
 id: phase4
-title: Planning
+title: Lập kế hoạch
 ----
 
+Đội ngũ Engaged California sẽ chuẩn bị chu đáo để hoạt động thảo luận hiệu quả. Chúng tôi sẽ làm việc với các đối tác để bố trí các cuộc thảo luận dẫn đến các bước hữu ích và phù hợp tiếp theo.
 
-The Engaged California team will carefully set the stage for effective deliberation. We'll work with our partners to set up deliberations that lead to actionable and relevant next steps.
+Chúng tôi sẽ sử dụng những điều rút ra được từ việc xây dựng chương trình nghị sự để tìm ra các nhà hoạch định chính sách và viên chức phù hợp để hợp tác. Chúng tôi cũng sẽ lên kế hoạch cẩn thận cho một cơ hội thảo luận đối với từng nỗ lực phục hồi sau cháy rừng mà chúng tôi đang tập trung trong hoạt động gắn kết này: đó là tại Eaton và Palisades.
 
-We'll use the takeaways from agenda setting to find the right policymakers and officials to work with. We'll also carefully plan a deliberation opportunity for each of the wildfire recovery efforts we're focusing on in this engagement: Eaton and Palisades.
-
-This might take a while. The work requires a lot of detail and care to ensure we enable deliberations that lead to actionable and relevant next steps.
+Quá trình này có thể kéo dài trong một khoảng thời gian. Công việc đòi hỏi rất nhiều chi tiết và cẩn trọng để đảm bảo chúng tôi tạo điều kiện cho các cuộc thảo luận dẫn đến các bước hữu ích và phù hợp tiếp theo.
 
 
 ----
 id: phase5
-title: Deliberation
+title: Thảo luận
 ----
 
-You will discuss what the community needs most. You'll reach a consensus on how to ensure a speedy and equitable recovery. We don't expect this to be easy. Some topics might be triggering. But reaching consensus lets you inform what actions state or local officials take on fire recovery.
+Quý vị sẽ thảo luận về những gì cộng đồng cần nhất. Quý vị sẽ đạt được sự đồng thuận về cách đảm bảo quá trình phục hồi nhanh chóng và công bằng. Theo dự kiến của chúng tôi, quá trình này sẽ không dễ dàng. Một số chủ đề có thể gây tranh cãi. Nhưng việc đạt được sự đồng thuận sẽ giúp quý vị góp ý về những hành động mà các viên chức tiểu bang hoặc địa phương cần thực hiện để phục hồi sau đám cháy.
 
 
 ----
 id: phase6
-title: Reporting
+title: Báo cáo
 ----
 
-We will review and analyze the outcomes of the deliberation phase. We'll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
+Chúng tôi sẽ đánh giá và phân tích kết quả của giai đoạn thảo luận. Chúng tôi sẽ làm việc với các viên chức chính phủ để tìm ra các hành động phù hợp với nội dung thảo luận. Chúng tôi sẽ đăng một báo cáo về những phát hiện và hành động trên trang web này.

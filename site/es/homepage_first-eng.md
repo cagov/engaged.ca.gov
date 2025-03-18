@@ -1,9 +1,9 @@
 ---
-buttonText: Learn more about Los Angeles fires recovery
+buttonText: Conozca más sobre la recuperación de los incendios de Los Ángeles
 permalink: false
 tags:
   - snippets
 --- 
-## Our first engagement
+## Nuestro primer compromiso
 
-The State of California invites people affected by the Eaton and Palisades wildfires to help shape our plans for long-term recovery.
+El estado de California invita a las personas afectadas por los incendios forestales de Eaton y Palisades a ayudar a dar forma a nuestros planes de recuperación a largo plazo.

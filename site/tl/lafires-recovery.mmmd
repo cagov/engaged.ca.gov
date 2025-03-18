@@ -1,6 +1,6 @@
 ---
-title: Los Angeles fires recovery
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.
+title: Pagbangon mula sa mga sunog sa Los Angeles
+description: Ang Engaged California ay isang online na platform na nagpapadali para sa mga taga-California na magkaroon ng boses sa gobyerno. Ang unang paksa ng Engaged California ay ang pagbangon mula sa mga wildfire sa Los Angeles.
 layout: mmmd-lafires
 keywords:
   - Los Angeles
@@ -12,28 +12,13 @@ tags:
 
 ----
 id: hero
-title: Los Angeles fires recovery
-statusText: Agenda setting is happening now
-buttonText: Sign up to stay informed
+statusAgendaSettingText: Nangyayari na ngayon ang pagtatakda ng agenda
+statusReviewText: Ang mga resulta ng pagtatakda ng agenda ay sinusuri
+statusPlanningText: Pinaplano ang mga deliberasyon
+buttonText: Mag-sign up para manatiling may alam
 ----
 
-The State of California is bringing survivors and those impacted by the Los Angeles wildfires together to engage,
-interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery
-policy. Engaged California expands California's all-in response to the wildfires. This platform allows state and local
-officials to hear and understand the needs of the people who survived the devastating fires.
-
-
-----
-id: about
-----
-
-### About the process
-
-Engaged California is built upon deliberative democracy. It's unlike polling, voting, or town halls. Deliberative
-democracy empowers you to engage with your government in a new way. Engaged California is a space for you to have
-meaningful dialogue with others. This deepens understanding and can guide policy choices—before the choices are made.
-
-[Learn more about Engaged California](/about)
+Pinagsasama-sama ng Estado ng California ang mga nakaligtas at ang mga naapektuhan ng mga wildfire sa Los Angeles para makisali, makipag-ugnayan, at magbahagi ng mga ideya. Makakatulong ang mga insight na ito na hubugin ang mga plano sa pagbangon at sama-samang magdisenyo ng patakaran sa pagbangon mula sa wildfire. Pinalawak ng Engaged California ang all-in response ng California sa mga wildfire. Ang platform na ito ay nagbibigay-daan sa mga opisyal ng estado at lokal na marinig at maunawaan ang mga pangangailangan ng mga taong nakaligtas sa mapangwasak na sunog.
 
 
 ----
@@ -42,84 +27,89 @@ id: overview
 
 ## Overview
 
-The Engaged California team will work with community members from greater Los Angeles. We will focus on people from
-Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and
-complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this
-road, we'll have identified the issues that are the most important to recovery.
+Ang Engaged California team ay makikipagtulungan sa mga miyembro ng komunidad mula sa mas malaking Los Angeles. Pagtutuunan natin ng pansin ang mga tao mula sa Altadena at Pacific Palisades. Ang iyong pagbiyahe sa Engaged California ay nagsisimula sa mga talakayan upang mag-navigate sa mahirap at kumplikadong mga paksa. Haharapin mo ang mga pagkakaiba sa opinyon tungkol sa kung paano makabangon mula sa mga sunog. Sa dulo nito, matutukoy namin ang mga isyu na pinakamahalaga sa pagbangon.
+
+
+----
+id: about
+----
+
+### Tungkol sa proseso
+
+Ang Engaged California ay binuo sa deliberative na demokrasya. Ito ay hindi katulad ng botohan, pagboto, o mga bulwagan ng bayan. Binibigyang kapangyarihan ka ng deliberative na demokrasya na makipag-ugnayan sa iyong pamahalaan sa isang bagong paraan. Ang Engaged California ay isang puwang para sa iyo na magkaroon ng makabuluhang pag-uusap sa iba. Pinalalalim nito ang pag-unawa at maaaring gumabay sa mga pagpipilian sa patakaran—bago gawin ang mga pagpipilian.
+
+[Matuto pa tungkol sa Engaged California](/tl/about)
 
 
 ----
 id: phaseGeneral
-title: What happens in each phase
+title: Ano ang mangyayari sa bawat phase
 phaseCompleteText: Phase complete
 phaseCurrentText: Phase in progress
 phasePendingText: Phase pending
 ----
 
-### General information
+### Pangkalahatang Impormasyon
 
-- Participation is voluntary
-- You will not be paid for your time
-- You must be 18 years or older to participate
-- We will protect and keep personal information private
+- Boluntaryo ang paglahok
+- Hindi ka babayaran para sa iyong oras
+- Dapat ay 18 taong gulang ka o mas matanda para makasali
+- Poprotektahan at pananatilihin naming pribado ang personal na impormasyon
 
-### Code of conduct
+### Kodigo ng asal
 
-- Everyone involved in the Engaged California process must follow a pledge of civility
-- You should be open to listening and sharing
-- Treat each other with respect on the platform and in any follow-up chats
-- You must communicate with others respectfully
+- Ang lahat ng kasangkot sa proseso ng Engaged California ay dapat sumunod sa isang pangako ng pagkamagalang
+- Dapat kang maging bukas sa pakikinig at pagbabahagi 
+- Tratuhin ang bawat isa nang may paggalang sa platform at sa anumang mga follow-up na chat
+- Dapat kang makipag-usap sa iba nang may paggalang 
 
 
 ----
 id: phase1
-title: Engagement opens
+title: Magkakaroon ng mga ugnayan
 ----
 
-We announced the Los Angeles fires recovery topic on February 24, 2025. You can sign up to get updates even when we're
-in a later phase.
-
+Inanunsyo namin ang paksa ng Los Angeles fires recovery noong Pebrero 24, 2025. Maaari kang mag-sign up upang makakuha ng mga update kahit na tayo ay nasa mas huling yugto.
 
 ----
 id: phase2
-title: Agenda setting
+title: Pagtatakda ng agenda
 ----
 
-People affected by the Eaton and Palisades fires will prioritize issues that are most important to them. This shapes the community deliberations.
+Ang mga taong apektado ng sunog sa Eaton at Palisades ay uunahin ang mga isyu na pinakamahalaga sa kanila. Ito ang humuhubog sa mga deliberasyon ng komunidad.
 
 
 ----
 id: phase3
-title: Review
+title: Pagsusuri
 ----
 
-You will take a break while we review the agenda-setting conversations. We will examine the items that surfaced from community input, analyze data, and gather insights. All of this information will help plan the deliberation phase.
+Magpapahinga ka habang sinusuri namin ang mga pag-uusap sa pagtatakda ng agenda. Susuriin namin ang mga item na lumabas mula sa input ng komunidad, susuriin ang data, at mangalap ng mga insight. Ang lahat ng impormasyong ito ay makakatulong na planuhin ang yugto ng deliberasyon.
 
 
 ----
 id: phase4
-title: Planning
+title: Pagpaplano
 ----
 
+Ang koponan ng Engaged California ay maingat na magtatakda ng yugto para sa epektibong pagtalakay. Makikipagtulungan kami sa aming mga kasosyo upang mag-set up ng mga deliberasyon na hahantong sa naaaksyunan at nauugnay na mga susunod na hakbang.
 
-The Engaged California team will carefully set the stage for effective deliberation. We'll work with our partners to set up deliberations that lead to actionable and relevant next steps.
+Gagamitin namin ang mga takeaways mula sa setting ng agenda para mahanap ang mga tamang tagagawa ng patakaran at opisyal na makakasama namin. Maingat din kaming magpaplano ng pagkakataon sa pag-iisip para sa bawat isa sa mga pagsisikap sa pagbawi ng napakalaking apoy na tinututukan namin sa pakikipag-ugnayang ito: Eaton at Palisades.
 
-We'll use the takeaways from agenda setting to find the right policymakers and officials to work with. We'll also carefully plan a deliberation opportunity for each of the wildfire recovery efforts we're focusing on in this engagement: Eaton and Palisades.
-
-This might take a while. The work requires a lot of detail and care to ensure we enable deliberations that lead to actionable and relevant next steps.
+Maaaring magtagal ito. Nangangailangan ang gawain ng maraming detalye at pangangalaga upang matiyak na pinapagana namin ang mga deliberasyon na humahantong sa naaaksyunan at nauugnay na mga susunod na hakbang.
 
 
 ----
 id: phase5
-title: Deliberation
+title: Deliberasyon
 ----
 
-You will discuss what the community needs most. You'll reach a consensus on how to ensure a speedy and equitable recovery. We don't expect this to be easy. Some topics might be triggering. But reaching consensus lets you inform what actions state or local officials take on fire recovery.
+Tatalakayin mo kung ano ang higit na kailangan ng komunidad. Makakamit mo ang isang pinagkasunduan kung paano masisiguro ang isang mabilis at patas na pagbawi. Hindi namin inaasahan na ito ay magiging madali. Maaaring nagti-trigger ang ilang paksa. Ngunit ang pag-abot sa pinagkasunduan ay nagbibigay-daan sa iyong ipaalam kung anong mga aksyon ang ginagawa ng estado o lokal na mga opisyal sa pagbawi ng sunog.
 
 
 ----
 id: phase6
-title: Reporting
+title: Pag-uulat
 ----
 
-We will review and analyze the outcomes of the deliberation phase. We'll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
+Susuriin at susuriin namin ang mga kinalabasan ng yugto ng deliberasyon. Makikipagtulungan kami sa mga opisyal ng gobyerno para maghanap ng mga aksyon na tumutugon sa deliberasyon. Magpo-post kami ng ulat ng mga natuklasan at aksyon sa website na ito.

@@ -1,6 +1,6 @@
 ---
-title: Los Angeles fires recovery
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.
+title: Recuperación de los incendios de Los Ángeles
+description: Engaged California es una plataforma en línea que facilita que los californianos tengan voz en el gobierno. El primer tema de Engaged California es la recuperación de los incendios forestales de Los Ángeles.
 layout: mmmd-lafires
 keywords:
   - Los Angeles
@@ -12,114 +12,105 @@ tags:
 
 ----
 id: hero
-title: Los Angeles fires recovery
-statusText: Agenda setting is happening now
-buttonText: Sign up to stay informed
+statusAgendaSettingText: El establecimiento de la agenda se está realizando en este momento
+statusReviewText: Se están revisando los resultados de la agenda
+statusPlanningText: Se están planificando deliberaciones
+buttonText: Regístrese para mantenerse informado
 ----
 
-The State of California is bringing survivors and those impacted by the Los Angeles wildfires together to engage,
-interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery
-policy. Engaged California expands California's all-in response to the wildfires. This platform allows state and local
-officials to hear and understand the needs of the people who survived the devastating fires.
-
-
-----
-id: about
-----
-
-### About the process
-
-Engaged California is built upon deliberative democracy. It's unlike polling, voting, or town halls. Deliberative
-democracy empowers you to engage with your government in a new way. Engaged California is a space for you to have
-meaningful dialogue with others. This deepens understanding and can guide policy choices—before the choices are made.
-
-[Learn more about Engaged California](/about)
+El estado de California está reuniendo a los sobrevivientes y afectados por los incendios forestales de Los Ángeles para que participen, interactúen y compartan ideas. Estos conocimientos ayudarán a dar forma a los planes de recuperación y a diseñar colectivamente políticas de recuperación ante incendios forestales. Engaged California amplía la respuesta integral de California a los incendios forestales. Esta plataforma permite a los funcionarios estatales y locales escuchar y comprender las necesidades de las personas que sobrevivieron a los devastadores incendios.
 
 
 ----
 id: overview
 ----
 
-## Overview
+## Resumen
 
-The Engaged California team will work with community members from greater Los Angeles. We will focus on people from
-Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and
-complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this
-road, we'll have identified the issues that are the most important to recovery.
+El equipo de Engaged California trabajará con miembros de la comunidad del área metropolitana de Los Ángeles. Nos centraremos en las personas de Altadena y Pacific Palisades. Su trayecto con Engaged California comienza con conversaciones para abordar temas difíciles y complejos. Trabajará en las diferencias de opinión sobre cómo recuperarse de los incendios. Al final de este camino habremos identificado los problemas que son más importantes para la recuperación.
+
+
+----
+id: about
+----
+
+### Sobre el proceso
+
+Engaged California se basa en la democracia deliberativa. Es diferente de las encuestas, votaciones o reuniones municipales. La democracia deliberativa le permite interactuar con su gobierno de una manera nueva. Engaged California es un espacio para que usted pueda tener un diálogo significativo con otros. Esto profundiza la comprensión y puede orientar la toma de decisiones políticas, antes de tomarlas.
+
+[Obtenga más información sobre Engaged California](/es/about)
 
 
 ----
 id: phaseGeneral
-title: What happens in each phase
-phaseCompleteText: Phase complete
-phaseCurrentText: Phase in progress
-phasePendingText: Phase pending
+title: ¿Qué sucede en cada fase?
+phaseCompleteText: Completed phase
+phaseCurrentText: Current phase
+phasePendingText: Upcoming phase
 ----
 
-### General information
+### Información general
 
-- Participation is voluntary
-- You will not be paid for your time
-- You must be 18 years or older to participate
-- We will protect and keep personal information private
+- La participación es voluntaria.
+- No se le pagará por su tiempo.
+- Debe tener 18 años o más para participar.
+- Protegeremos y mantendremos privada la información personal. 
 
-### Code of conduct
+### Código de conducta
 
-- Everyone involved in the Engaged California process must follow a pledge of civility
-- You should be open to listening and sharing
-- Treat each other with respect on the platform and in any follow-up chats
-- You must communicate with others respectfully
+- Todos los involucrados en el proceso de Engaged California deben cumplir con un compromiso de civilidad.
+- Debe estar dispuesto a escuchar y compartir. 
+- Las personas deben tratarse entre sí con respeto en la plataforma y en cualquier conversación de seguimiento.
+- Debe comunicarse con los demás con respeto.
 
 
 ----
 id: phase1
-title: Engagement opens
+title: El compromiso se abre
 ----
 
-We announced the Los Angeles fires recovery topic on February 24, 2025. You can sign up to get updates even when we're
-in a later phase.
+Anunciamos el tema de recuperación de los incendios de Los Ángeles el 24 de febrero de 2025. Puede registrarse para recibir actualizaciones incluso cuando estemos en una fase posterior.
 
 
 ----
 id: phase2
-title: Agenda setting
+title: Establecimiento de la agenda
 ----
 
-People affected by the Eaton and Palisades fires will prioritize issues that are most important to them. This shapes the community deliberations.
+Las personas afectadas por los incendios de Eaton y Palisades priorizarán los problemas que sean más importantes para ellos. Esto da forma a las deliberaciones de la comunidad.
 
 
 ----
 id: phase3
-title: Review
+title: Revisión
 ----
 
-You will take a break while we review the agenda-setting conversations. We will examine the items that surfaced from community input, analyze data, and gather insights. All of this information will help plan the deliberation phase.
+Tomará un descanso mientras revisamos las conversaciones para establecer la agenda. Examinaremos los elementos que surgieron de los aportes de la comunidad, analizaremos datos y recopilaremos información. Toda esta información ayudará a planificar la fase de deliberación.
 
 
 ----
 id: phase4
-title: Planning
+title: Planificación
 ----
 
+El equipo de Engaged California preparará cuidadosamente el escenario para una deliberación efectiva. Trabajaremos con nuestros socios para establecer deliberaciones que conduzcan a próximos pasos viables y relevantes.
 
-The Engaged California team will carefully set the stage for effective deliberation. We'll work with our partners to set up deliberations that lead to actionable and relevant next steps.
+Utilizaremos las conclusiones del establecimiento de la agenda para encontrar los responsables políticos y funcionarios adecuados con los que trabajar. También planificaremos cuidadosamente una oportunidad de deliberación para cada uno de los esfuerzos de recuperación de incendios forestales en los que nos centraremos en este compromiso: Eaton y Palisades.
 
-We'll use the takeaways from agenda setting to find the right policymakers and officials to work with. We'll also carefully plan a deliberation opportunity for each of the wildfire recovery efforts we're focusing on in this engagement: Eaton and Palisades.
-
-This might take a while. The work requires a lot of detail and care to ensure we enable deliberations that lead to actionable and relevant next steps.
+Esto podría tomar un tiempo. El trabajo requiere mucho detalle y cuidado para garantizar que posibilitemos deliberaciones que conduzcan a próximos pasos viables y relevantes.
 
 
 ----
 id: phase5
-title: Deliberation
+title: Deliberación
 ----
 
-You will discuss what the community needs most. You'll reach a consensus on how to ensure a speedy and equitable recovery. We don't expect this to be easy. Some topics might be triggering. But reaching consensus lets you inform what actions state or local officials take on fire recovery.
+Hablará sobre lo que más necesita la comunidad. Llegará a un consenso sobre cómo garantizar una recuperación rápida y equitativa. No esperamos que esto sea fácil. Algunos temas podrían resultar desencadenantes. Sin embargo, llegar a un consenso le permitirá informar qué acciones tomarán los funcionarios estatales o locales para la recuperación de los incendios.
 
 
 ----
 id: phase6
-title: Reporting
+title: Informes
 ----
 
-We will review and analyze the outcomes of the deliberation phase. We'll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
+Revisaremos y analizaremos los resultados de la fase de deliberación. Trabajaremos con funcionarios del gobierno para encontrar medidas que respondan a la deliberación. Publicaremos un informe de los hallazgos y acciones en este sitio web.

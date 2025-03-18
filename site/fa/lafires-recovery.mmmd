@@ -1,6 +1,6 @@
 ---
-title: Los Angeles fires recovery
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.
+title: احیای پس از آتش‌سوزی لس آنجلس
+description: Engaged California یک پلتفرم آنلاین است که صدایی در دولت را برای کالیفرنیایی‌ها آسان‌تر می‌کند. اولین موضوع Engaged California بازیابی از آتش سوزی های لس آنجلس است.
 layout: mmmd-lafires
 keywords:
   - Los Angeles
@@ -12,114 +12,105 @@ tags:
 
 ----
 id: hero
-title: Los Angeles fires recovery
-statusText: Agenda setting is happening now
-buttonText: Sign up to stay informed
+statusAgendaSettingText: تنظیم دستور کار هم اکنون در حال انجام است
+statusReviewText: نتایج تنظیم دستور کار در حال بررسی است
+statusPlanningText: مذاکرات در حال برنامه ریزی است
+buttonText: جهت اطلاع رسانی ثبت نام کنید
 ----
 
-The State of California is bringing survivors and those impacted by the Los Angeles wildfires together to engage,
-interact, and share ideas. These insights will help shape recovery plans and collectively design wildfire recovery
-policy. Engaged California expands California's all-in response to the wildfires. This platform allows state and local
-officials to hear and understand the needs of the people who survived the devastating fires.
-
-
-----
-id: about
-----
-
-### About the process
-
-Engaged California is built upon deliberative democracy. It's unlike polling, voting, or town halls. Deliberative
-democracy empowers you to engage with your government in a new way. Engaged California is a space for you to have
-meaningful dialogue with others. This deepens understanding and can guide policy choices—before the choices are made.
-
-[Learn more about Engaged California](/about)
+ایالت کالیفرنیا بازماندگان و کسانی را که تحت تأثیر آتش سوزی های لس آنجلس قرار گرفته اند گرد هم می آورد تا درگیر شوند، تعامل کنند و ایده ها را به اشتراک بگذارند. این بینش ها به شکل دهی برنامه های بازیابی و طراحی جمعی خط مشی بازیابی آتش سوزی کمک می کند. Engaged California پاسخ همه جانبه کالیفرنیا به آتش سوزی های جنگلی را گسترش می دهد. این پلت فرم به مقامات ایالتی و محلی اجازه می دهد تا نیازهای مردمی را که از آتش سوزی های ویرانگر جان سالم به در برده اند بشنوند و درک کنند.
 
 
 ----
 id: overview
 ----
 
-## Overview
+## نمای کلی
 
-The Engaged California team will work with community members from greater Los Angeles. We will focus on people from
-Altadena and Pacific Palisades. Your journey with Engaged California begins with discussions to navigate difficult and
-complex topics. You will work through differences in opinion about how to recover from the fires. At the end of this
-road, we'll have identified the issues that are the most important to recovery.
+تیم Engaged California با اعضای جامعه از لس آنجلس بزرگ کار خواهد کرد. ما بر روی مردم آلتادنا (Altadena) و پاسیفیک پالیسید (Pacific Palisades) تمرکز خواهیم کرد. سفر شما با Engaged California با بحث و گفتگو برای پیمایش موضوعات دشوار و پیچیده آغاز می شود. شما از طریق اختلاف نظر در مورد چگونگی بهبودی پس از آتش سوزی کار خواهید کرد. در پایان این راه، ما مسائلی را که مهمترین آنها برای بهبودی هستند، شناسایی خواهیم کرد.
+
+
+----
+id: about
+----
+
+### در مورد روند
+
+Engaged California بر پایه دموکراسی مشورتی بنا شده است. بر خلاف رای گیری، رای دادن یا تالارهای شهر است. دموکراسی مشورتی به شما این قدرت را می دهد که با دولت خود به شیوه ای جدید درگیر شوید. Engaged California فضایی برای گفتگوی معنادار با دیگران است. این امر درک را عمیق‌تر می‌کند و می‌تواند انتخاب‌های خط‌مشی را - قبل از اینکه انتخاب شود - هدایت کند.
+
+[درباره Engaged California بیشتر بدانید](/fa/about)
 
 
 ----
 id: phaseGeneral
-title: What happens in each phase
+title: در هر مرحله چه اتفاقی می افتد
 phaseCompleteText: Phase complete
 phaseCurrentText: Phase in progress
 phasePendingText: Phase pending
 ----
 
-### General information
+### اطلاعات عمومی
 
-- Participation is voluntary
-- You will not be paid for your time
-- You must be 18 years or older to participate
-- We will protect and keep personal information private
+- مشارکت داوطلبانه است 
+- برای وقت خود پولی به شما پرداخت نمی شود
+- برای شرکت در این مسابقه باید 18 سال یا بیشتر داشته باشید
+- ما اطلاعات شخصی را محرمانه نگه می داریم
 
-### Code of conduct
+### منشور رفتار
 
-- Everyone involved in the Engaged California process must follow a pledge of civility
-- You should be open to listening and sharing
-- Treat each other with respect on the platform and in any follow-up chats
-- You must communicate with others respectfully
+- هرکسی که در Engaged California مشارکت دارد باید از تعهد متمدنانه پیروی کند
+- شما باید برای گوش دادن و اشتراک گذاری باز باشید 
+- در پلتفرم و در هر چت بعدی با احترام با یکدیگر رفتار کنید
+- شما باید با احترام با دیگران ارتباط برقرار کنید
 
 
 ----
 id: phase1
-title: Engagement opens
+title: مشارکت باز می شود
 ----
 
-We announced the Los Angeles fires recovery topic on February 24, 2025. You can sign up to get updates even when we're
-in a later phase.
+ما موضوع احیای پس از آتش‌سوزی لس آنجلس را در 24 فوریه 2025 اعلام کردیم. حتی زمانی که در مرحله بعدی هستیم، می‌توانید برای دریافت به‌روزرسانی ثبت‌نام کنید.
 
 
 ----
 id: phase2
-title: Agenda setting
+title: تنظیم دستور کار
 ----
 
-People affected by the Eaton and Palisades fires will prioritize issues that are most important to them. This shapes the community deliberations.
+افراد آسیب دیده از آتش سوزی های Eaton و Palisades مسائلی را که برای آنها مهم است اولویت بندی می کنند. این بحث های جامعه را شکل می دهد.
 
 
 ----
 id: phase3
-title: Review
+title: بررسی
 ----
 
-You will take a break while we review the agenda-setting conversations. We will examine the items that surfaced from community input, analyze data, and gather insights. All of this information will help plan the deliberation phase.
+. زمانی که مکالمات تنظیم دستور کار را بررسی می کنیم، استراحت خواهید کرد. ما مواردی را که از ورودی های جامعه به دست آمده است را بررسی می کنیم، داده ها را تجزیه و تحلیل می کنیم و بینش ها را جمع آوری می کنیم. همه این اطلاعات به برنامه ریزی مرحله مشورت کمک می کند.
 
 
 ----
 id: phase4
-title: Planning
+title: برنامه ریزی
 ----
 
+. تیم درگیر کالیفرنیا با دقت زمینه را برای مشورت موثر فراهم خواهد کرد. ما با شرکای خود کار خواهیم کرد تا مذاکراتی را تنظیم کنیم که به مراحل بعدی قابل اجرا و مرتبط منجر شود.
 
-The Engaged California team will carefully set the stage for effective deliberation. We'll work with our partners to set up deliberations that lead to actionable and relevant next steps.
+برای یافتن سیاستگذاران و مقامات مناسب برای همکاری، از نکات اولیه تنظیم دستور کار استفاده خواهیم کرد. ما همچنین به دقت برای هر یک از تلاش‌های بازیابی آتش‌سوزی که در این تعامل بر روی آنها تمرکز می‌کنیم، یک فرصت مشورتی برنامه‌ریزی خواهیم کرد: Eaton و Palisades.
 
-We'll use the takeaways from agenda setting to find the right policymakers and officials to work with. We'll also carefully plan a deliberation opportunity for each of the wildfire recovery efforts we're focusing on in this engagement: Eaton and Palisades.
-
-This might take a while. The work requires a lot of detail and care to ensure we enable deliberations that lead to actionable and relevant next steps.
+این ممکن است کمی طول بکشد. کار به جزئیات و دقت زیادی نیاز دارد تا اطمینان حاصل شود که ما رایزنی هایی را انجام می دهیم که منجر به مراحل بعدی عملی و مرتبط می شود.
 
 
 ----
 id: phase5
-title: Deliberation
+title: مشورت
 ----
 
-You will discuss what the community needs most. You'll reach a consensus on how to ensure a speedy and equitable recovery. We don't expect this to be easy. Some topics might be triggering. But reaching consensus lets you inform what actions state or local officials take on fire recovery.
+شما در مورد آنچه جامعه بیشتر نیاز دارد بحث خواهید کرد. شما در مورد چگونگی اطمینان از بهبودی سریع و عادلانه به اجماع خواهید رسید. ما انتظار نداریم که این آسان باشد. برخی از موضوعات ممکن است تحریک شوند. اما دستیابی به اجماع به شما امکان می‌دهد اطلاع دهید که مقامات ایالتی یا محلی در مورد بازیابی آتش چه اقداماتی انجام می‌دهند.
 
 
 ----
 id: phase6
-title: Reporting
+title: گزارش دهی
 ----
 
-We will review and analyze the outcomes of the deliberation phase. We'll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
+ما نتایج مرحله مشورت را بررسی و تحلیل خواهیم کرد. ما با مقامات دولتی کار خواهیم کرد تا اقداماتی را پیدا کنیم که به مشورت پاسخ دهد. ما گزارشی از یافته ها و اقدامات را در این وب سایت قرار خواهیم داد.
