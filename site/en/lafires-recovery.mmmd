@@ -52,9 +52,9 @@ meaningful dialogue with others. This deepens understanding and can guide policy
 ----
 id: phaseGeneral
 title: What happens in each phase
-phaseCompleteText: Phase complete
-phaseCurrentText: Phase in progress
-phasePendingText: Phase pending
+phaseCompleteText: Completed phase
+phaseCurrentText: Current phase
+phasePendingText: Upcoming phase
 ----
 
 ### General information
