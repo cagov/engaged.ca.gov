@@ -1,0 +1,83 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+<section id="los-angeles-fires-recovery">
+  <div class="container banner-flex">
+    <engca-banner-content>
+      <h1>{{ modules.hero.title }}</h1>
+      <p class="status-pill">{{ modules.hero.statusText }}</p>
+      {{ modules.hero.content | safe }}
+      <p>
+        <a data-appearance="button" data-theme="orange" href="#sign-up" class="m-t">{{ modules.hero.buttonText }}</a>
+      </p>
+    </engca-banner-content>
+    <img src="/public/images/fires-about-bubbles.svg" aria-hidden="true" class="desktop-only" alt=""/>
+  </div>
+</section>
+
+<section id="overview">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        {{ modules.overview.content | safe }}
+      </div>
+      <div class="col-lg-4">
+        <div class="about-the-process">
+          {{ modules.about.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- macro phase(module, icon, line) %}
+  {% if icon === "complete" %}
+    <img src="/public/images/phase-complete.svg" width="58" height="59" alt="{{ modules.phaseGeneral.phaseCompleteText }}"/>
+  {% elif icon === "current" %}
+    <img src="/public/images/phase-current.svg" width="58" height="59" alt="{{ modules.phaseGeneral.phaseCurrentText }}"/>
+  {% elif icon === "pending" %}
+    <img src="/public/images/phase-pending.svg" width="58" height="59" alt="{{ modules.phaseGeneral.phasePendingText }}"/>
+  {% endif %}
+  <h3>{{ module.title }}</h3>
+  {% if line === "complete" %}
+    <img src="/public/images/phase-complete-line.svg" width="6" height="100%" alt="" aria-hidden="true"/>
+  {% elif line === "pending" %}
+    <img src="/public/images/phase-pending-line.svg" width="6" height="100%" alt="" aria-hidden="true"/>
+  {% elif line === "none" %}
+    <span></span>
+  {% endif %}
+  <div>{{ module.content | safe }}</div>
+{% endmacro -%}
+
+<section id="what-happens-in-each-phase">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>{{ modules.phaseGeneral.title }}</h2>
+        <div class="phase-list">
+          {{ phase(modules.phase1, "complete", "complete") }}
+          {{ phase(modules.phase2, "current", "pending") }}
+          {{ phase(modules.phase3, "pending", "pending") }}
+          {{ phase(modules.phase4, "pending", "pending") }}
+          {{ phase(modules.phase5, "pending", "pending") }}
+          {{ phase(modules.phase6, "pending", "none") }}
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="phase-sidebar">
+          {{ modules.phaseGeneral.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sign-up">
+  <div class="container form-flex">
+    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt=""/>
+    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt=""/>
+    {% include "form.njk" %}
+  </div>
+</section>
+
+{% endblock %}

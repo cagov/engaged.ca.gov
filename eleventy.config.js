@@ -1,4 +1,5 @@
 import esbuild from "esbuild";
+import yaml from "js-yaml";
 import { Features as lcssFeatures, bundle as lcssBundle } from "lightningcss";
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -97,7 +98,7 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("getSnippet", (collection, fileSlug, locale) => {
-    const page = collection.find((item) => item?.page?.fileSlug === fileSlug && item?.page?.inputPath.includes(locale+'/'));
+    const page = collection.find((item) => item?.page?.fileSlug === fileSlug && item?.page?.inputPath.includes(`${locale}/`));
     const htmlContent = markdownEngine.render(page.page.rawInput);
     // console.log(`getSnippet fileSlug=${fileSlug} locale=${locale} filePathStem=${page.page.filePathStem} inputPath=${page.page.inputPath}`);
 
@@ -129,10 +130,10 @@ export default async function (eleventyConfig) {
 
   // Used to provide domain for canonical and oscial media tags
   // domain is currently undefined
-  eleventyConfig.addFilter("changeDomain", function (url, domain) {
+  eleventyConfig.addFilter("changeDomain", (url, domain) => {
     // console.log("changeDomain", url, domain);
     try {
-      let u = new URL(url, `https://${domain}`);
+      const u = new URL(url, `https://${domain}`);
       u.host = domain;
       return u.href;
     } catch {
@@ -141,10 +142,10 @@ export default async function (eleventyConfig) {
   });
 
   // Used in language switcher to get the path to the appropriate for current URL
-  eleventyConfig.addFilter("pagePath", function(page, langPath) {
-    let currentPath = page.filePathStem + "/index.html"; // Relative to base dir, localized path, with folder + /index.html.
+  eleventyConfig.addFilter("pagePath", (page, langPath) => {
+    let currentPath = `${page.filePathStem}/index.html`; // Relative to base dir, localized path, with folder + /index.html.
 
-    let languages = ["/en/","/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/","/fa/","/hy/"]; // Localized folder paths, '/es/', '/vi', etc.
+    const languages = ["/en/","/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/","/fa/","/hy/"]; // Localized folder paths, '/es/', '/vi', etc.
 
     languages.map((language) => {
       currentPath = currentPath.replace(language, "/"); // Remove existing localized paths to get root.
@@ -162,8 +163,8 @@ export default async function (eleventyConfig) {
   });
 
   // used in header to provide canonical path and social media sharing url
-  eleventyConfig.addFilter("relativePath", function(page, locale) {
-    let currentPath = page.filePathStem + "/index.html"; // Relative to base dir, localized path, with folder + /index.html.
+  eleventyConfig.addFilter("relativePath", (page, locale) => {
+    let currentPath = `${page.filePathStem}/index.html`; // Relative to base dir, localized path, with folder + /index.html.
     // Remove /homepage/ and /en/ from current paths
     currentPath = currentPath.replace('/homepage/', '/');
     currentPath = currentPath.replace('/en/', '/');
@@ -172,7 +173,7 @@ export default async function (eleventyConfig) {
     return currentPath;
   });
 
-  eleventyConfig.addFilter("langPathActive", function(page, lang, locale) {
+  eleventyConfig.addFilter("langPathActive", (page, lang, locale) => {
     if (lang === locale) {
       return false;
     }
@@ -180,14 +181,12 @@ export default async function (eleventyConfig) {
   });
 
   // used to fix links in pages to point to the correct localized path for the locale
-  eleventyConfig.addFilter("localizedPath", function(path, locale) {
-    let localeFolder = "/" + locale;
+  eleventyConfig.addFilter("localizedPath", (path, locale) => {
+    const localeFolder = `/${locale}`;
 
     // if path starts with /en, remove it
-    if (path.startsWith("/en")) {
-      path = path.slice(3);
-    }
-    let currentPath = localeFolder + path; // Relative to base dir, localized path, with folder.
+    const normalizedPath = path.startsWith("/en") ? path.slice(3) : path;
+    let currentPath = localeFolder + normalizedPath; // Relative to base dir, localized path, with folder.
 
     // console.log("localizedPath", path, localeFolder, currentPath);
     // Add a slash only when it is merited
@@ -200,6 +199,45 @@ export default async function (eleventyConfig) {
     // Return a path with localization and index.html
     return currentPath;
   });
+
+  // New file format: MMMD (Many Modules MarkDown)
+  // Allows embedding sub-documents into a Markdown file, including front-matter data.
+  eleventyConfig.addTemplateFormats("mmmd");
+  eleventyConfig.addExtension("mmmd", {
+		compile: async (inputContent) => {
+      // Remove all the modules.
+      const rootMarkdown = inputContent.replaceAll(/----(.+?)----(.*?)(?=----|$)/gs, "");
+      // Render the base markdown.
+      const output = markdownEngine.render(rootMarkdown);
+      // Insert into the typical 11ty content flow.
+			return async () => output;
+		},
+    getData: async (inputPath) => {
+      const content = await fs.readFile(inputPath, "utf-8");
+      const matches = [...content.matchAll(/----(.+?)----(.*?)(?=----|$)/gs)];
+      const modules = matches.reduce((bucket, match) => {
+        const capturedData = match[1] || "";
+        const data = yaml.load(capturedData);
+        const capturedContent = match[2] || "";
+        const content = markdownEngine.render(capturedContent);
+
+        const moduleId = data?.id;
+
+        if (moduleId) {
+          bucket[moduleId] = {
+            ...data,
+            content
+          }
+        }
+
+        return bucket;
+      }, {});
+
+      return {
+        modules
+      }
+    }
+	});
 
   eleventyConfig.addGlobalData("layout", "layout");
 
