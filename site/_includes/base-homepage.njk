@@ -22,6 +22,15 @@
     <img src="/public/images/about-bubbles.svg" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header-about' | i18n }}" />
   </div>
 </section>
+<section id="our-first-engagement">
+  {% set firstEngSection = collections.snippets | getSnippet("homepage_first-eng",locale) %}
+  <div class="container first-eng-content">
+    {{ firstEngSection.htmlContent | safe }}
+    <a href="{{ "/lafires-recovery" | locale_url }}" data-appearance="button" data-theme="orange">
+      {{ firstEngSection.data.buttonText }}
+    </a>
+  </div>
+</section>
 <section id="how-it-works">
   <div class="container">
     <h2>{{ 'how-it-works' | i18n }}</h2>

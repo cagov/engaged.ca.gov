@@ -76,6 +76,26 @@ engca-partner-flex > span {
   color: #514943;
 }
 
+section#our-first-engagement {
+  background: var(--blue);
+}
+
+div.first-eng-content {
+  background: white;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1.875rem;
+  text-align: center;
+  gap: 1.75rem;
+}
+
+div.first-eng-content > * {
+  max-width: 65ch;
+  margin: 0;
+}
+
 aside.site-footer {
   background-color: var(--navy);
 }
