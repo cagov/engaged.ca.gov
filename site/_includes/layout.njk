@@ -14,11 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link rel="preconnect" href="https://www.google-analytics.com/"/>
-    
+
 
     <!-- Page metadata -->
     {% set fullTitle %}{% if title %}{{ title }} | {% endif %}Engaged California{% endset %}
-    <title>{{ fullTitle }}</title> 
+    <title>{{ fullTitle }}</title>
 
     <link rel="canonical" href="{{ page | relativePath(locale) | changeDomain(domain) }}" />
     <meta property="og:url" content="{{ page | relativePath(locale) | changeDomain(domain) }}" />
@@ -76,7 +76,7 @@
     <script src="/public/ca_state_template/js/cagov.core.min.js"></script>
     <link rel="stylesheet" href="/css/index.css"/>
     <script defer src="/js/index.js"></script>
-    <!-- ca.gov Alert --> 
+    <!-- ca.gov Alert -->
     <script defer src="https://alert.cdt.ca.gov" crossorigin="anonymous"></script>
   </head>
   <body class="primary">
@@ -213,6 +213,11 @@
             <li>
               <a href="{{ '/accessibility' | localizedPath(locale) }}">
                 {{ 'website-accessibility-certification' | i18n }}
+              </a>
+            </li>
+            <li>
+              <a href="{{ '/notice-on-collections' | localizedPath(locale) }}">
+                {{ 'notice-on-collections' | i18n }}
               </a>
             </li>
             <li>
