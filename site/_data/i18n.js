@@ -404,7 +404,7 @@ const translations = {
         "location": "Footer"
     },
     "form-privacy-message": {
-        "en": "We take your <a href=\"/privacy\">privacy</a> seriously. Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "en": "We take your <a href=\"/privacy\">privacy</a> seriously.",
         "fr": "Nous prendrons votre <a href=\"/fr/privacy\">privacité</a> très au sérieux.",
         "es": "Nosotros tomamos su <a href=\"/es/privacy\">privacidad</a> en serio.",
         "ko": "저희는 귀하의 <a href=\"/ko/privacy\">프라이버시</a>를 중요하게 생각합니다.",
@@ -414,6 +414,19 @@ const translations = {
         "zh-hant": "我們非常重視您的<a href=\"/zh-hant/privacy\">隱私權</a>。",
         "fa": "حریم خصوصی<a href=\"/fa/privacy\">حریم خصوصی</a>حریم خصوصی",
         "hy": "Մենք լուրջ ենք վերաբերվում ձեր <a href=\"/hy/privacy\">գաղտնիությանը</a>։",
+        "location": "Home"
+    },
+    "form-privacy-message-1": {
+        "en": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "fr": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "es": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "ko": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "vi": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "tl": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "zh-hans": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "zh-hant": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "fa": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "hy": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
         "location": "Home"
     },
     "form-privacy-message-2": {
