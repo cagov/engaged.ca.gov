@@ -1,0 +1,84 @@
+<section id="los-angeles-fires-recovery">
+  <div class="container banner-flex">
+    <engca-banner-content>
+      {% set hero = collections.snippets | getSnippet("lafires_hero",locale) %}
+      <h1>{{ hero.data.title }}</h1>
+      <p class="status-pill">{{ hero.data.statusText }}</p>
+      {{ hero.htmlContent | safe }}
+      <p>
+        <a data-appearance="button" data-theme="orange" href="#sign-up" class="m-t">{{ hero.data.buttonText }}</a>
+      </p>
+    </engca-banner-content>
+    <img src="/public/images/fires-about-bubbles.svg" aria-hidden="true" class="desktop-only" alt=""/>
+  </div>
+</section>
+<section id="overview">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        {% set overview = collections.snippets | getSnippet("lafires_overview",locale) %}
+        {{ overview.htmlContent | safe }}
+      </div>
+      <div class="col-lg-4">
+        <div class="about-the-process">
+          {% set about = collections.snippets | getSnippet("lafires_about",locale) %}
+          {{ about.htmlContent | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% set phases = collections.snippets | getSnippet("lafires_phases-content",locale) %}
+{%- macro phase(snippet, icon, line) %}
+  {% if icon === "complete" %}
+    <img src="/public/images/phase-complete.svg" width="58" height="59" alt="{{ phases.data.phaseCompleteText }}"/>
+  {% elif icon === "current" %}
+    <img src="/public/images/phase-current.svg" width="58" height="59" alt="{{ phases.data.phaseCurrentText }}"/>
+  {% elif icon === "pending" %}
+    <img src="/public/images/phase-pending.svg" width="58" height="59" alt="{{ phases.data.phasePendingText }}"/>
+  {% endif %}
+  <h3>{{ snippet.data.title }}</h3>
+  {% if line === "complete" %}
+    <img src="/public/images/phase-complete-line.svg" width="6" height="100%" alt="" aria-hidden="true"/>
+  {% elif line === "pending" %}
+    <img src="/public/images/phase-pending-line.svg" width="6" height="100%" alt="" aria-hidden="true"/>
+  {% elif line === "none" %}
+    <span></span>
+  {% endif %}
+  <div>{{ snippet.htmlContent | safe }}</div>
+{% endmacro -%}
+<section id="what-happens-in-each-phase">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>{{ phases.data.title }}</h2>
+        <div class="phase-list">
+          {% set phase1 = collections.snippets | getSnippet("lafires_phase1",locale) %}
+          {{ phase(phase1, "complete", "complete") }}
+          {% set phase2 = collections.snippets | getSnippet("lafires_phase2",locale) %}
+          {{ phase(phase2, "current", "pending") }}
+          {% set phase3 = collections.snippets | getSnippet("lafires_phase3",locale) %}
+          {{ phase(phase3, "pending", "pending") }}
+          {% set phase4 = collections.snippets | getSnippet("lafires_phase4",locale) %}
+          {{ phase(phase4, "pending", "pending") }}
+          {% set phase5 = collections.snippets | getSnippet("lafires_phase5",locale) %}
+          {{ phase(phase5, "pending", "pending") }}
+          {% set phase6 = collections.snippets | getSnippet("lafires_phase6",locale) %}
+          {{ phase(phase6, "pending", "none") }}
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="phase-sidebar">
+          {{ phases.htmlContent | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="sign-up">
+  <div class="container form-flex">
+    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt=""/>
+    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt=""/>
+    {% include "form.njk" %}
+  </div>
+</section>

@@ -13,6 +13,19 @@ const translations = {
       "hy": "Engaged California",
       "location": "Site header",
     },
+    "los-angeles-fires-recovery": {
+        "en": "Los Angeles fires recovery",
+        "fr": "Los Angeles fires recovery",
+        "es": "Los Angeles fires recovery",
+        "ko": "Los Angeles fires recovery",
+        "vi": "Los Angeles fires recovery",
+        "tl": "Los Angeles fires recovery",
+        "zh-hans": "Los Angeles fires recovery",
+        "zh-hant": "Los Angeles fires recovery",
+        "fa": "Los Angeles fires recovery",
+        "hy": "Los Angeles fires recovery",
+        "location": "Site header"
+    },
     "about-the-program": {
         "en": "About the program",
         "fr": "À propos du programme",
