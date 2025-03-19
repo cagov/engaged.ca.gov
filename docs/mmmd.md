@@ -59,28 +59,37 @@ title: Sample MMMD module
 arbitraryData: Whatever you want
 \-\-\-\-
 
-Normal markdown content for the module goes here. Here's a list to show we're serious!
+Normal markdown content for the module goes here.
 
 \* list item 1
 \* list item 2
 \* list item 3
+
+\-\-\-\-
+id: mySecondModule
+title: 2nd sample MMMD module
+differentArbitraryData: Still whatever you want
+\-\-\-\-
+
+Another block of markdown content.
 ```
 
 Some important notes follow.
 
 * An MMMD module is started by including a new front-matter section, delimited by four dashes (`----`), instead of the usual three.
-* Each MMMD module **MUST** contain an `id`.
+* Each MMMD module front-matter **must** contain an `id`.
+* Many MMMD modules can be added to the same file.
 
 ### Use the module in a template
 
 11ty will make this module available for use in templates. Here's an example in nunjucks.
 
 ```
-<!-- The normal markdown content at top of file still works fine. -->
+<!-- The normal markdown content at top of file still works as usual in templates. -->
 <h1>{{ title }}</h1>
 <p>{{ description }}</p>
 
-<!-- Here's the module. -->
+<!-- Here's how to render the module. -->
 <section id="section-tag-not-required">
   <h2>{{ modules.myFirstModule.title }}</h2>
   <p>{{ modules.myFirstModule.arbitraryData }}</p>

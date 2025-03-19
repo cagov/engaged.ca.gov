@@ -215,6 +215,8 @@ export default async function (eleventyConfig) {
     getData: async (inputPath) => {
       const content = await fs.readFile(inputPath, "utf-8");
       const matches = [...content.matchAll(/----(.+?)----(.*?)(?=----|$)/gs)];
+
+      // Process mmmd modules for inclusion in 11ty data cascade.
       const modules = matches.reduce((bucket, match) => {
         const capturedData = match[1] || "";
         const data = yaml.load(capturedData);
@@ -223,6 +225,7 @@ export default async function (eleventyConfig) {
 
         const moduleId = data?.id;
 
+        // The module ID is required.
         if (moduleId) {
           bucket[moduleId] = {
             ...data,
