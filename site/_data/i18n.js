@@ -13,6 +13,19 @@ const translations = {
       "hy": "Engaged California",
       "location": "Site header",
     },
+    "los-angeles-fires-recovery": {
+        "en": "Los Angeles fires recovery",
+        "fr": "Los Angeles fires recovery",
+        "es": "Recuperación de los incendios de Los Ángeles",
+        "ko": "로스앤젤레스 화재 복구",
+        "vi": "Phục hồi sau các đám cháy ở Los Angeles",
+        "tl": "Pagbangon mula sa mga sunog sa Los Angeles",
+        "zh-hans": "洛杉矶火灾的恢复",
+        "zh-hant": "洛杉磯火災後的恢復",
+        "fa": "احیای پس از آتش‌سوزی لس آنجلس",
+        "hy": "Լոս Անջելեսի հրդեհների վերականգնում",
+        "location": "Site header"
+    },
     "about-the-program": {
         "en": "About the program",
         "fr": "À propos du programme",
@@ -170,16 +183,16 @@ const translations = {
         "location": "Home",
     },
     "join-the-conversation-form-label": {
-        "en": "Give us your email. We’ll notify you when topics open.",
+        "en": "Give us your email. We'll let you know when engagements start.",
         "fr": "Donnez-nous votre adresse e-mail. Nous vous notifierons lorsque les sujets seront disponibles.",
-        "es": "Proporciónenos su correo electrónico. Le avisaremos cuando se abran los temas.",
-        "ko": "귀하의 이메일을 저희에게 알려주세요 주제가 열리면 알려드립니다",
-        "vi": "Cung cấp cho chúng tôi email của quý vị. Chúng tôi sẽ thông báo cho quý vị khi có chủ đề mới.",
-        "tl": "Ibigay sa amin ang iyong email. Aabisuhan ka namin kapag nagbukas ang mga paksa.",
-        "zh-hans": "请提供您的电子邮件地址。当主题开放时我们会通知您。",
-        "zh-hant": "請提供您的電子郵件地址。當主題開放時我們會通知您。",
-        "fa": "ایمیل خود را به ما بدهید با باز شدن موضوعات به شما اطلاع خواهیم داد.",
-        "hy": "Տվեք մեզ ձեր էլ.հասցեն Մենք ձեզ կտեղեկացնենք, երբ թեմաները բացվեն:",
+        "es": "Denos su correo electrónico. Le avisaremos cuando comiencen los compromisos.",
+        "ko": "이메일을 보내주십시오. 업무가 시작되면 알려드리겠습니다.",
+        "vi": "Cho chúng tôi biết email của quý vị. Chúng tôi sẽ thông báo cho quý vị biết khi hoạt động gắn kết bắt đầu.",
+        "tl": "Ibigay sa amin ang iyong email. Ipapaalam namin sa iyo kapag nagsimula ang mga pakikipag-ugnayan.",
+        "zh-hans": "请给我们您的电子邮件。我们会在互动开始时通知您。",
+        "zh-hant": "請提供您的電子郵件給我們。我們會在互動開始時通知您。",
+        "fa": "ایمیل خود را به ما بدهید زمانی که نامزدی شروع شد به شما اطلاع خواهیم داد.",
+        "hy": "Տրամադրեք մեզ Ձեր էլեկտրոնային հասցեն։ Մենք Ձեզ կտեղեկացնենք, թե երբ է սկսվելու ներգրավվածության գործընթացը։",
         "location": "Home"
     },
     "back-to-top": {
@@ -391,7 +404,7 @@ const translations = {
         "location": "Footer"
     },
     "form-privacy-message": {
-        "en": "We take your <a href=\"/privacy\">privacy</a> seriously. Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "en": "We take your <a href=\"/privacy\">privacy</a> seriously.",
         "fr": "Nous prendrons votre <a href=\"/fr/privacy\">privacité</a> très au sérieux.",
         "es": "Nosotros tomamos su <a href=\"/es/privacy\">privacidad</a> en serio.",
         "ko": "저희는 귀하의 <a href=\"/ko/privacy\">프라이버시</a>를 중요하게 생각합니다.",
@@ -401,6 +414,19 @@ const translations = {
         "zh-hant": "我們非常重視您的<a href=\"/zh-hant/privacy\">隱私權</a>。",
         "fa": "حریم خصوصی<a href=\"/fa/privacy\">حریم خصوصی</a>حریم خصوصی",
         "hy": "Մենք լուրջ ենք վերաբերվում ձեր <a href=\"/hy/privacy\">գաղտնիությանը</a>։",
+        "location": "Home"
+    },
+    "form-privacy-message-1": {
+        "en": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "fr": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "es": "Haga clic aquí para conocer el <a href=\"/es/notice-on-collections\"> aviso de privacidad sobre la recopilación de datos.</a>",
+        "ko": "<a href=\"/ko/notice-on-collections\">수집하는 내용에 관한 개인정보 정책</a>은 여기를 클릭하십시오.",
+        "vi": "Nhấp vào đây để xem <a href=\"/vi/notice-on-collections\"> thông báo về quyền riêng tư khi thu thập thông tin.</a>",
+        "tl": "Mag-click dito para basahin ang <a href=\"/tl/notice-on-collections\"> abiso sa pagkapribado tungkol sa pagkolekta ng impormasyon.</a>",
+        "zh-hans": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "zh-hant": "點選此處以查閱<a href=\"/zh-hant/notice-on-collections\">蒐集個人資料之隱私權聲明。</a>",
+        "fa": "برای اطلاعیه <a href=\"/notice-on-collections\">حفظ حریم خصوصی در گردآوری</a> اینجا را کلیک کنید.",
+        "hy": "Սեղմեք այստեղ՝ <a href=\"/hy//notice-on-collections\"> տվյալների հավաքագրման գաղտնիության մասին ծանուցմանը ծանոթանալու համար:",
         "location": "Home"
     },
     "form-privacy-message-2": {

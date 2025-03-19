@@ -1,0 +1,38 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+<section id="about-page-heading">
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <img src="/public/images/about-header.svg" aria-hidden="true" class="desktop-only" alt="{{ 'about-alt-header' | i18n }}" />
+  </div>
+</section>
+
+{%- macro section(module, shaded, icon) %}
+<section {% if shaded -%}class="about-page-shaded"{%- endif -%}>
+  <div class="container about-section-flex">
+    <engca-icon-heading>
+      <img src="{{ icon }}" aria-hidden="true" alt="" />
+      <h2>{{ module.title }}</h2>
+    </engca-icon-heading>
+    <engca-section-content>
+      {{ module.content | safe }}
+    </engca-section-content>
+  </div>
+</section>
+{% endmacro -%}
+
+{{ section(modules.weNeedYourVoice, false, "/public/images/sticker-about-megaphone.svg") }}
+{{ section(modules.youGetTheMic, true, "/public/images/sticker-about-mic.svg") }}
+{{ section(modules.theProcess, false, "/public/images/sticker-about-chat.svg") }}
+{{ section(modules.whatYouCanLearn, true, "/public/images/sticker-about-sparkles.svg") }}
+
+<section id="sign-up">
+  <div class="container form-flex">
+    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
+    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
+    {% include "form.njk" %}
+  </div>
+</section>
+
+{% endblock %}

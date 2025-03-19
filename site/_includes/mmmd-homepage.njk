@@ -1,0 +1,86 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+<section id="hero">
+  <div class="container banner-flex">
+    <engca-banner-content>
+      {{ modules.hero.content | safe }}
+      <a href="{{ "/lafires-recovery" | locale_url }}" data-appearance="button" data-theme="orange">
+        {{ modules.hero.buttonText }}
+      </a>
+    </engca-banner-content>
+    <img src="/public/images/hero-bubbles.svg" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header' | i18n }}" />
+  </div>
+</section>
+<section id="about">
+  <div class="container banner-flex">
+    <engca-banner-content>
+      {{ modules.about.content | safe }}
+      <a href="{{ "/about" | locale_url }}" data-appearance="button" data-theme="off-white">
+        {{ modules.about.buttonText }}
+      </a>
+    </engca-banner-content>
+    <img src="/public/images/about-bubbles.svg" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header-about' | i18n }}" />
+  </div>
+</section>
+<section id="our-first-engagement">
+  <div class="container first-eng-content">
+    {{ modules.engagement.content | safe }}
+    <a href="{{ "/lafires-recovery" | locale_url }}" data-appearance="button" data-theme="orange">
+      {{ modules.engagement.buttonText }}
+    </a>
+  </div>
+</section>
+<section id="how-it-works">
+  <div class="container">
+    <h2>{{ 'how-it-works' | i18n }}</h2>
+    <ol class="hiw">
+      <li class="hiw-step-1">
+        <img src="/public/images/how-it-works-public.svg" alt="{{ 'how-it-works-alt-1' | i18n }}" />
+        <span class="hiw-text">{{ 'how-it-works-step-1' | i18n }}</span>
+        <span class="hiw-arrow"></span>
+      </li>
+      <li class="hiw-step-2">
+        <img src="/public/images/how-it-works-state.svg" alt="{{ 'how-it-works-alt-2' | i18n }}" />
+        <span class="hiw-text">{{ 'how-it-works-step-2' | i18n }}</span>
+        <span class="hiw-arrow"></span>
+      </li>
+      <li class="hiw-step-3">
+        <img src="/public/images/how-it-works-public.svg" alt="{{ 'how-it-works-alt-1' | i18n }}" />
+        <span class="hiw-text">{{ 'how-it-works-step-3' | i18n }}</span>
+        <span class="hiw-arrow"></span>
+      </li>
+      <li class="hiw-step-4">
+        <img src="/public/images/how-it-works-state.svg" alt="{{ 'how-it-works-alt-2' | i18n }}" />
+        <span class="hiw-text">{{ 'how-it-works-step-4' | i18n }}</span>
+      </li>
+    </ol>
+  </div>
+</section>
+<section id="sign-up">
+  <div class="container form-flex">
+    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
+    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
+    {% include "form.njk" %}
+  </div>
+</section>
+<section id="partners">
+  <div class="container">
+    {{ modules.partners.content | safe }}
+    <engca-partner-flex>
+      <img src="/public/images/carnegie.svg" alt="Carnegie Endowment for International Peace" />
+      <img src="/public/images/liberty-color.png" alt="Project Liberty Institute" />
+      <img src="/public/images/berggruen.svg" alt="Berggruen Institute" />
+      <img src="/public/images/stanford.png" alt="Stanford Deliberative Democracy Lab, Center on Democracy, Development and the Rule of Law" />
+      <img src="/public/images/berkman-klein.svg" alt="Berkman Klein Center for internet & society at Harvard University" />
+      <img src="/public/images/ppic.svg" alt="PPIC" />
+      <img src="/public/images/sff.png" alt="San Francisco Foundation" />
+      <img src="/public/images/american-public-trust.png" alt="The American Public Trust" />
+      <img src="/public/images/public-good-group.png" alt="Public Good Group" />
+      <img src="/public/images/goldman-school.svg" alt="UC Berkeley Center on Civility & Democratic Engagement, Goldman School of Public Policy, Founded by the Class of 1968" />
+      <img src="/public/images/kapor-center.svg" alt="Kapor Center" />
+    </engca-partner-flex>
+  </div>
+</section>
+
+{% endblock %}

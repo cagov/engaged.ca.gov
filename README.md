@@ -18,3 +18,4 @@
 - Helper scripts that aren't part of the build are in `/scripts`
 - Uses biome for linting and formatting
 - Uses 11ty for static site generation
+- See docs for special `.mmmd` file format, [Many Modules Markdown](docs/mmmd.md).
