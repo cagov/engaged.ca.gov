@@ -419,14 +419,14 @@ const translations = {
     "form-privacy-message-1": {
         "en": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
         "fr": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
-        "es": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "es": "Haga clic aquí para conocer el <a href=\"/es/notice-on-collections\"> aviso de privacidad sobre la recopilación de datos.</a>",
         "ko": "<a href=\"/ko/notice-on-collections\">수집하는 내용에 관한 개인정보 정책</a>은 여기를 클릭하십시오.",
         "vi": "Nhấp vào đây để xem <a href=\"/vi/notice-on-collections\"> thông báo về quyền riêng tư khi thu thập thông tin.</a>",
         "tl": "Mag-click dito para basahin ang <a href=\"/tl/notice-on-collections\"> abiso sa pagkapribado tungkol sa pagkolekta ng impormasyon.</a>",
         "zh-hans": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
         "zh-hant": "點選此處以查閱<a href=\"/zh-hant/notice-on-collections\">蒐集個人資料之隱私權聲明。</a>",
         "fa": "برای اطلاعیه <a href=\"/notice-on-collections\">حفظ حریم خصوصی در گردآوری</a> اینجا را کلیک کنید.",
-        "hy": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
+        "hy": "Սեղմեք այստեղ՝ <a href=\"/hy//notice-on-collections\"> տվյալների հավաքագրման գաղտնիության մասին ծանուցմանը ծանոթանալու համար:",
         "location": "Home"
     },
     "form-privacy-message-2": {

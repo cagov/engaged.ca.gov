@@ -60,6 +60,10 @@ html {
   }
 }
 
+[dir="rtl"] .header-organization-banner {
+  padding-inline-start: 1.5rem;
+}
+
 /*
  * Sitewide styles 
  */

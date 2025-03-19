@@ -54,6 +54,32 @@ div.phase-list {
   column-gap: 1rem;
 }
 
+img.phase-icon {
+  width: 58px;
+  height: auto;
+}
+
+img.phase-line {
+  width: 6px;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  div.phase-list {
+    grid-template-columns: 44px 1fr;
+  }
+
+  img.phase-icon {
+    width: 44px;
+    height: auto;
+  }
+
+  img.phase-line {
+    width: 4px;
+    height: 100%;
+  }
+}
+
 div.phase-list > h3 {
   margin: 0;
   align-self: center;

@@ -72,6 +72,20 @@ engca-partner-flex > span {
   color: #514943;
 }
 
+@media screen and (max-width: 768px) {
+  engca-partner-flex {
+    column-gap: 3.13rem;
+    row-gap: 2.5rem;
+  }
+
+  engca-partner-flex > :is(img, span) {
+    max-width: 100%;
+    max-height: 4rem;
+    height: auto;
+  }
+}
+
+
 section#our-first-engagement {
   padding: 1rem;
   background: var(--blue);
