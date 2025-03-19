@@ -97,14 +97,6 @@ export default async function (eleventyConfig) {
     return page;
   });
 
-  eleventyConfig.addFilter("getSnippet", (collection, fileSlug, locale) => {
-    const page = collection.find((item) => item?.page?.fileSlug === fileSlug && item?.page?.inputPath.includes(`${locale}/`));
-    const htmlContent = markdownEngine.render(page.page.rawInput);
-    // console.log(`getSnippet fileSlug=${fileSlug} locale=${locale} filePathStem=${page.page.filePathStem} inputPath=${page.page.inputPath}`);
-
-    return Object.assign(page, { htmlContent });
-  });
-
   eleventyConfig.addFilter('i18n', function (key, localeOverride) {
     const page = this.page || this.ctx.page;
     const locale = localeOverride || page.lang;
