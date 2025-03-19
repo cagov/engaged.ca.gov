@@ -425,7 +425,7 @@ const translations = {
         "tl": "Mag-click dito para basahin ang <a href=\"/tl/notice-on-collections\"> abiso sa pagkapribado tungkol sa pagkolekta ng impormasyon.</a>",
         "zh-hans": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
         "zh-hant": "點選此處以查閱<a href=\"/zh-hant/notice-on-collections\">蒐集個人資料之隱私權聲明。</a>",
-        "fa": "برای اطلاعیه <a href=\"/fa/notice-on-collections\">حفظ حریم خصوصی در گردآوری</a> اینجا را کلیک کنید.",
+        "fa": "برای اطلاعیه <a href=\"/notice-on-collections\">حفظ حریم خصوصی در گردآوری</a> اینجا را کلیک کنید.",
         "hy": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
         "location": "Home"
     },
