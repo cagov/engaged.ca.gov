@@ -50,10 +50,6 @@ section#partners p {
   margin-block-end: 5.4rem;
 }
 
-[lang="en"] section#partners p {
-  max-width: 45rem;
-}
-
 engca-partner-flex {
   display: flex;
   flex-direction: row;
@@ -77,6 +73,7 @@ engca-partner-flex > span {
 }
 
 section#our-first-engagement {
+  padding: 1rem;
   background: var(--blue);
 }
 
