@@ -7,6 +7,11 @@
   #los-angeles-fires-recovery {
     background: url("/public/images/fires-la-skyline-angled.png") center right / contain no-repeat, var(--navy);
   }
+
+  /* Remove image from rtl languages, for now */
+  html[lang="fa"] #los-angeles-fires-recovery {
+    background: var(--navy);
+  }
 }
 
 .status-pill {
