@@ -46,30 +46,30 @@ This part of the file can be used as usual throughout 11ty templates.
 To add a new MMMD "module", add a new section to the bottom.
 
 ```
-\-\-\-
+---
 title: Sample MMMD file
 description: Nothing fancy yet.
-\-\-\-
+---
 
 Typical markdown content goes here.
 
-\-\-\-\-
+----
 id: myFirstModule
 title: Sample MMMD module
 arbitraryData: Whatever you want
-\-\-\-\-
+----
 
 Normal markdown content for the module goes here.
 
-\* list item 1
-\* list item 2
-\* list item 3
+* list item 1
+* list item 2
+* list item 3
 
-\-\-\-\-
+----
 id: mySecondModule
 title: 2nd sample MMMD module
 differentArbitraryData: Still whatever you want
-\-\-\-\-
+----
 
 Another block of markdown content.
 ```
@@ -104,3 +104,7 @@ Recap:
 * 11ty will make each of your modules available to templates within the `modules` object.
 * Access each module by `id` given in the MMMD file. For example, `modules.myFirstModule`.
 * The parsed markdown content for the module will be available via `content`. For example, `module.myFirstModule.content`. 
+
+## Possible problems
+
+We might see problems if dashes are used to create a fourth-level nested list. At this time, the workaround would be to use asterix instead.
