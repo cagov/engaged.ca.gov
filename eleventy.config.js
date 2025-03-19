@@ -198,7 +198,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addExtension("mmmd", {
 		compile: async (inputContent) => {
       // Remove all the modules.
-      const rootMarkdown = inputContent.replaceAll(/----(.+?)----(.*?)(?=----|$)/gs, "");
+      const rootMarkdown = inputContent.replaceAll(/----(.+?)----(.*?)(?=----|\s*$)/gs, "");
       // Render the base markdown.
       const output = markdownEngine.render(rootMarkdown);
       // Insert into the typical 11ty content flow.
@@ -206,7 +206,7 @@ export default async function (eleventyConfig) {
 		},
     getData: async (inputPath) => {
       const content = await fs.readFile(inputPath, "utf-8");
-      const matches = [...content.matchAll(/----(.+?)----(.*?)(?=----|$)/gs)];
+      const matches = [...content.matchAll(/----(.+?)----(.*?)(?=----|\s*$)/gs)];
 
       // Process mmmd modules for inclusion in 11ty data cascade.
       const modules = matches.reduce((bucket, match) => {
@@ -218,11 +218,13 @@ export default async function (eleventyConfig) {
         const moduleId = data?.id;
 
         // The module ID is required.
-        if (moduleId) {
-          bucket[moduleId] = {
-            ...data,
-            content
-          }
+        if (!moduleId) {
+          console.warn('MMMD module found without ID. Skipping.');
+        }
+
+        bucket[moduleId] = {
+          ...data,
+          content
         }
 
         return bucket;
