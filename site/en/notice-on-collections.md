@@ -1,5 +1,5 @@
 ---
-title: Privacy Notice on Collections
+title: Privacy notice on collections
 description: The State of California is committed to promoting and protecting the privacy rights of individuals.
 keywords:
   - personal information
@@ -8,18 +8,20 @@ layout: page
 tags:
   - pages
 ---
-# Privacy Notice on Collections
+# Privacy notice on collections
 
-EFFECTIVE: MARCH 14, 2025
+*Effective March 14, 2025*
 
-## PURPOSE
+*Last revision March 20, 2025*
 
-This privacy notice explains how the California Office of Data and Innovation (ODI) collects, uses, and shares your information when you visit and interact with our website, engaged.ca.gov. We are committed to protecting your privacy and ensuring confidentiality of your personal information.
+## Purpose
 
-ODI limits the collection of personal information. We safeguard the privacy of personal information we collect or maintain. This notice supplements our ODI [privacy](/privacy) policy.
+This privacy notice explains how the California Office of Data and Innovation (ODI) collects, uses, and shares your information when you visit and interact with the [Engaged California website](/). We are committed to protecting your privacy and ensuring confidentiality of your personal information. 
+
+The [California Civil Code Section 1798.17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.17.) Information Practices Act requires state agencies to provide a notice on collection when personal information is collected and when it is subject to the limitations in the Information Practices Act and state policy. ODI limits the collection of personal information. We safeguard the privacy of personal information we collect or maintain. This notice supplements our [privacy policy](/privacy). 
 
 
-## AUTHORITY
+## Authority
 
 ODI is committed to protecting the privacy of your information. Our information management practices conform to the requirements of:
 
@@ -28,98 +30,105 @@ ODI is committed to protecting the privacy of your information. Our information 
 - California Government Code sections [11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11015.5.) and [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11019.9.)
 - [Federal Privacy Act of 1974](https://www.justice.gov/opcl/privacy-act-1974)
 - [California State Administrative Manual 5310.1](https://www.dgs.ca.gov/Resources/SAM/TOC/5300/5310-1)
-- California [Statewide Information Management Manual 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
+- [California Statewide Information Management Manual 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
 - [California Civil Code Section 1798.17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.17.)
+- [California Civil Code Section 1798.24](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.24.)
 
 
-## WHY ODI COLLECTS YOUR INFORMATION
+## Why ODI collects your information
 
-### Automatically Collected Information
+### Automatically collected information
 
 When you visit our website, we may automatically collect certain information, such as your Internet Protocol (IP) address, browser type, operating system, and pages visited. This information is used for website administration, troubleshooting, and improving user experience.
 
+
 ### Personally Identifiable Information (PII) 
 
-We may collect PII (e.g., name, address, email, phone number) only when you voluntarily provide it to us through forms, contact inquiries, or other means.
+We may collect PII (for example, name, address, email, phone number) only when you voluntarily provide it to us through forms, contact inquiries, or other means.
 
----
-#### Personal Identifiers
-**Description:** We may collect PII (e.g., email address, name/username, password, and zipcode) only when voluntarily provided to us through forms, contact inquiries, surveys or other means.
+#### Personal identifiers
 
+**Description:** We may collect PII (for example, email address, name/username, password, race, ethnicity, zipcode and other general demographic characteristics) only when voluntarily provided to us through forms, contact inquiries, surveys or other means.
 
-**Purpose of Collection:** Provide services that include communication, survey completion, our services; research and development; quality assurance; security/fraud; To comply with our legal obligations.
+**Purpose of collection:** Provide services that include communication, survey completion, our services; research and development; quality assurance; security/fraud and to comply with our legal obligations.
     
-#### Internet or Online Information
-**Description:** Internet Protocol (IP) address, browser type, operating system, and pages visited.
-    Cookies  and similar technologies.
+#### Internet or online information
+
+**Description:** IP address, browser type, operating system, and pages visited. Cookies and similar technologies.
     
-**Purpose of Collection:** This information is used for website administration, troubleshooting and to  enhance user’s experience, personalized content and website traffic.
+**Purpose of collection:** This information is used for website administration, troubleshooting and to enhance user’s experience, personalized content and website traffic.
 
----
+The collection of your personal information is voluntary. You have the right to limit disclosure and not provide personal information when it is not requested.
 
-The collection of your personal information is voluntary. You have the right to limit disclosure and not provide your personal information if not requested;
-
-The consequences of not providing your personal information, may impact your ability to receive services and future engagement with our website, [engaged.ca.gov](/).
+The consequences of not providing your personal information, may impact your ability to receive services and future engagement with the [Engaged California website](/).
 
 
-### INFORMATION FROM THIRD PARTIES
+### Information from third parties
 
-We may receive information about you from third parties, such as social media platforms, if you choose to interact with our website through those platforms we may use your information to:
+We may receive information about you from third parties, such as social media platforms, if you choose to interact with our website through those platforms we may use your information to: 
 
-**Provide Services:**
+#### Provide services
+
 We use your information to provide you with the services and information you request, such as responding to inquiries, processing applications, and delivering content.
 
-**Improve Our Website:**
+#### Improve our website
+
 We use collected data to analyze website traffic, identify areas for improvement, and personalize your experience.
 
-**Comply with Legal Obligations:**
+#### Comply with legal obligations
+
 We may use your information to comply with legal requirements, such as responding to subpoenas or court orders.
- 
-**Communicate with You:**
-We may use your contact information to send you updates, newsletters, or other information related to our services.
 
-### HOW WE SHARE YOUR INFORMATION
+#### Communicate with you
 
-**With Other Government Agencies:**
-We may share your information with other government agencies for legitimate purposes, such as coordinating services with the federal government or law enforcement as required by law pursuant of [California Civil Code Section 1798.24](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.24.)
-
-**With Third-Party Service Providers:**
-
-We may share your information with third-party service providers who help us operate our website, such as hosting providers or analytics tools. We will only share your information with third parties with your explicit consent, unless it is not required by law.
+We may use your contact information to send you updates, newsletters, or other information related to our services. 
 
 
-### YOUR RIGHTS
+### How we share your information
 
-Your rights to personal information include the following:
+#### With other government agencies
 
-- **Access:** You have the right to access personal information we hold about you.
-- **Correction:** You have the right to request corrections to inaccurate or incomplete information.
-- **Opt-Out:** You have the right to object and opt-out of the processing of your information in certain circumstances.&#x20;
-- **Deletion:** You have the right to request that we delete your personal information.
+We may share your information with other government agencies for legitimate purposes, such as coordinating services with the federal government or law enforcement as required by law pursuant of [California Civil Code Section 1798.24](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.24.).
 
+#### With third-party service providers
 
-### PUBLIC DISCLOSURE
-
-Laws in California ensure that government is open and the public can access appropriate state records and information. State and federal laws provide exceptions to the public’s right to access public records. These exceptions serve various needs including maintaining the privacy of individuals.
-
-Any information we acquire, including information collected on our website, may be released if requested as stated in the Information Practices Act of 1977 (see Civil Code Section 1798).
-
-Electronically collected personal identifiable information is exempt from disclosure when requested under the California Public Records Act (see Government Code Section 6250).
+We may share your information with third-party service providers who help us operate our website, such as hosting providers or analytics tools. We will only share your information with third parties with your explicit consent, unless it is not required by law. 
 
 
-### PROTECTING YOUR PRIVACY
+### Your rights
 
-You can help protect your private information. Be sure to update your browser and operating system regularly. For more information on how you can protect your privacy, visit the Privacy Enforcement and Protection page on the [Office of the Attorney General website](https://oag.ca.gov/privacy/facts/online-privacy/computer-secure).
+Your rights to personal information include:
+
+* **Access:** You have the right to access personal information we hold about you.
+* **Correction:** You have the right to request corrections to inaccurate or incomplete information.
+* **Opt-out:** You have the right to object and opt-out of the processing of your information in certain circumstances. 
+* **Deletion:** You have the right to request that we delete your personal information.
 
 
-### **CONTACT INFORMATION**
+### Public disclosure
 
-If you have questions about our privacy notice on collection, contact our Chief Privacy Officer at <privacy@innovation.ca.gov>.
+Laws in California ensure that government is open and the public can access appropriate state records and information. State and federal laws provide exceptions to the public’s right to access public records. These exceptions serve various needs including maintaining the privacy of individuals. Electronically collected personal identifiable information is exempt from disclosure when requested under the California Public Records Act.
 
+Any known or foreseeable disclosures which may be made of your information, including disclosures to other state agencies, the federal government, or law enforcement, as well as, disclosures of your information which may be made pursuant to subdivision (e) or (f) of [California Civil Code Section 1798.24](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.24.).
+
+Any information we acquire, including information collected on our website, may be released if requested as stated in the Information Practices Act of 1977 ([see California Civil Code Section 1798](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)).
+
+
+### Protecting your privacy
+
+You can help protect your private information. Be sure to update your browser and operating system regularly. 
+For more information on how you can protect your privacy, visit the [California Department of Justice](https://oag.ca.gov/privacy/facts/online-privacy/computer-secure). For tips on securing your computer, click on the Office of the California Attorney General link below:
+
+[Caution: Is Your Computer Secure?](https://oag.ca.gov/sites/all/files/agweb/pdfs/privacy/computer_secure.pdf)
+
+
+### Contact information
+
+If you have questions about our privacy notice on collection, contact our Chief Privacy Officer.
 
 Office of Data and Innovation<br>
 Attn: Chief Privacy Officer<br>
 401 I Street, Suite 200<br>
 Sacramento, CA 95814<br>
-Email: privacy@innovation.ca.gov<br>
-Phone: 916-234-3480<br>
+Email: [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov)<br>
+Phone: [916-234-3480](tel:916-234-3480)<br>
