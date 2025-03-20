@@ -17,9 +17,11 @@ dir: ltr
 <h1>Sitemap</h1>
 <a href="/">Engaged California homepage</a>
 
+<h2>Pages</h2>
+
 {%- for lang, pages in collections.pages | groupby("data.lang") %}
-  {% if lang == "en" %}
-    <h2>Pages</h2>
+  {% if pages[0].data.lang !== "fr" %}
+    <h3>{{ 'language-label' | i18n(pages[0].data.lang) }}</h3>
     <ul>
     {% for page in pages %}
       <li>
@@ -27,107 +29,8 @@ dir: ltr
       </li>
     {% endfor %}
     </ul>
+    {% if not loop.last %}
+      <hr />
+    {% endif %}
   {% endif %}
-
-
-  {% if lang == "es" %}
-    <hr />
-    <ul>
-    {% for page in pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if lang == "fa" %}
-    <hr />
-    <ul>
-    {% for page in pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-
-  {% if lang == "fr" %}
-    <hr />
-    <ul>
-    {% for page in pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if lang == "hy" %}
-    <hr />
-    <ul>
-    {% for page in pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if lang == "ko" %}
-    <hr />
-    <ul>
-    {% for page in pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if lang == "tl" %}
-    <hr />
-    <ul>
-    {% for page in pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if lang == "vi" %}
-    <hr />
-    <ul>
-    {% for page in pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if lang == "zh-hans" %}
-    <hr />
-    <ul>
-    {% for page in pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if lang == "zh-hant" %}
-    <hr />
-    <ul>
-    {% for page in pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-
 {%- endfor %}
