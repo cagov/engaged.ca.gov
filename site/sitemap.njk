@@ -29,6 +29,8 @@ dir: ltr
       </li>
     {% endfor %}
     </ul>
-    <hr />
+    {% if not loop.last %}
+      <hr />
+    {% endif %}
   {% endif %}
 {%- endfor %}
