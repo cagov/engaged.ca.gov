@@ -5,18 +5,19 @@ eleventyExcludeFromCollections: true
 locale: en
 dir: ltr
 ---
-{%- macro url(page) %}
+{%- macro url(page) -%}
+  {% if page.url !== false -%}
   <url>
     <loc>https://engaged.ca.gov{{ page.url | url }}</loc>
     <lastmod>{{ page.date.toISOString() }}</lastmod>
     <changefreq>daily</changefreq>
   </url>
-{% endmacro -%}
+  {%- endif %}
+{%- endmacro -%}
+
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% set homepage = collections.all | findByUrl("/") %}
-  {# url(homepage) #}
-  {%- for page in collections.pages %}
-    {{ url(page) }}
-  {%- endfor %}
+  {% for page in collections.all -%}
+  {{ url(page) }}
+  {% endfor %}
 </urlset>
