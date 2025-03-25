@@ -44,9 +44,9 @@ Engaged California는 우리가 의사 결정을 기반으로 한 민주주의(�
 ----
 id: phaseGeneral
 title: 각 과정에서 하는 일
-phaseCompleteText: Phase complete
-phaseCurrentText: Phase in progress
-phasePendingText: Phase pending
+phaseCompleteText: 완료된 단계
+phaseCurrentText: 현재 단계
+phasePendingText: 향후 단계
 ----
 
 ### 일반 정보

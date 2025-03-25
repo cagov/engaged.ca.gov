@@ -438,8 +438,8 @@ const translations = {
         "tl": "Mag-click dito para basahin ang <a href=\"/tl/notice-on-collections\"> abiso sa pagkapribado tungkol sa pagkolekta ng impormasyon.</a>",
         "zh-hans": "請點擊 <a href=\"/zh-hans/notice-on-collections\"> 資訊收集的隱私權聲明.</a>",
         "zh-hant": "點選此處以查閱<a href=\"/zh-hant/notice-on-collections\">蒐集個人資料之隱私權聲明。</a>",
-        "fa": "برای اطلاعیه <a href=\"/notice-on-collections\">حفظ حریم خصوصی در گردآوری</a> اینجا را کلیک کنید.",
-        "hy": "Սեղմեք այստեղ՝ <a href=\"/hy//notice-on-collections\"> տվյալների հավաքագրման գաղտնիության մասին ծանուցմանը ծանոթանալու համար:",
+        "fa": "برای اطلاعیه <a href=\"/fa/notice-on-collections\">حفظ حریم خصوصی در گردآوری</a> اینجا را کلیک کنید.",
+        "hy": "Սեղմեք այստեղ՝ <a href=\"/hy/notice-on-collections\"> տվյալների հավաքագրման գաղտնիության մասին ծանուցմանը ծանոթանալու համար</a>:",
         "location": "Home"
     },
     "form-privacy-message-2": {
@@ -523,14 +523,14 @@ const translations = {
     "notice-on-collections": {
         "en": "Notice on Collections",
         "fr": "Notice on Collections",
-        "es": "Notice on Collections",
-        "ko": "Notice on Collections",
-        "vi": "Notice on Collections",
-        "tl": "Notice on Collections",
-        "zh-hans": "Notice on Collections",
-        "zh-hant": "Notice on Collections",
-        "fa": "Notice on Collections",
-        "hy": "Notice on Collections",
+        "es": "Aviso de cobranzas",
+        "ko": "정보 수집 관련 고지",
+        "vi": "Thông Báo về Hoạt Động Thu Thập",
+        "tl": "Abiso Tungkol sa Mga Pangongolekta",
+        "zh-hans": "信息收集声明",
+        "zh-hant": "資訊收集聲明",
+        "fa": "اطلاعیه در مورد جمع آوری ها",
+        "hy": "Ծանուցում հավաքագրումների վերաբերյալ",
         "location": "Footer"
     },
     "sitemap": {

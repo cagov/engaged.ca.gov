@@ -1,125 +1,134 @@
 ---
-title: Privacy Notice on Collections
-description: The State of California is committed to promoting and protecting the privacy rights of individuals.
-keywords:
-  - personal information
-  - privacy law
+title: اطلاعیه حفظ حریم خصوصی جمع آوری ها
+description: ایالت کالیفرنیا متعهد به ترویج و حمایت از حقوق حریم خصوصی افراد است.
+Keywords:
+  - اطلاعات شخصی
+  - قانون حفظ حریم خصوصی
 layout: page
 tags:
   - pages
 ---
-# Privacy Notice on Collections
 
-EFFECTIVE: MARCH 14, 2025
+# اطلاعیه حفظ حریم خصوصی در جمع آوری ها
 
-## PURPOSE
+*اجرا از 14 مارس 2025*
 
-This privacy notice explains how the California Office of Data and Innovation (ODI) collects, uses, and shares your information when you visit and interact with our website, engaged.ca.gov. We are committed to protecting your privacy and ensuring confidentiality of your personal information.
+*آخرین ویرایش 20 مارس 2025*
 
-ODI limits the collection of personal information. We safeguard the privacy of personal information we collect or maintain. This notice supplements our ODI [privacy](/privacy) policy.
+## هدف
 
+این اعلامیه حفظ حریم خصوصی توضیح می‌دهد که چگونه دفتر داده‌ها و نوآوری کالیفرنیا (ODI) اطلاعات شما را هنگام بازدید و تعامل با [وب‌سایت Engaged California](/fa/) جمع‌آوری، استفاده و به اشتراک می‌گذارد. ما متعهد به محافظت از حریم خصوصی شما و اطمینان از محرمانه بودن اطلاعات شخصی شما هستیم. 
 
-## AUTHORITY
-
-ODI is committed to protecting the privacy of your information. Our information management practices conform to the requirements of:
-
-- [California Information Practices Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV\&division=3.\&title=1.8.\&part=4.\&chapter=1.\&article=)
-- [California Public Records Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV\&division=10.\&title=1.\&part=\&chapter=\&article=)
-- California Government Code sections [11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11015.5.) and [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11019.9.)
-- [Federal Privacy Act of 1974](https://www.justice.gov/opcl/privacy-act-1974)
-- [California State Administrative Manual 5310.1](https://www.dgs.ca.gov/Resources/SAM/TOC/5300/5310-1)
-- California [Statewide Information Management Manual 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
-- [California Civil Code Section 1798.17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.17.)
+[بخش 1798.17 قانون مدنی کالیفرنیا](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.17.) قانون رویه‌های اطلاعاتی، سازمان‌های ایالتی را ملزم می‌کند که در هنگام جمع‌آوری اطلاعات شخصی و زمانی که مشمول محدودیت‌های قانون شیوه‌های اطلاعاتی و خط‌مشی ایالتی است، اطلاعیه‌ای درباره جمع‌آوری ارائه کنند. ODI جمع آوری اطلاعات شخصی را محدود می کند. ما از حریم خصوصی اطلاعات شخصی که جمع آوری یا نگهداری می کنیم محافظت می کنیم. این اعلامیه مکمل [سیاست حفظ حریم خصوصی](/fa/privacy) ما است. 
 
 
-## WHY ODI COLLECTS YOUR INFORMATION
+## اقتدار
 
-### Automatically Collected Information
+ODI متعهد به حفاظت از حریم خصوصی اطلاعات شماست. شیوه های مدیریت اطلاعات ما مطابق با الزامات زیر است:
 
-When you visit our website, we may automatically collect certain information, such as your Internet Protocol (IP) address, browser type, operating system, and pages visited. This information is used for website administration, troubleshooting, and improving user experience.
+- [قانون اقدامات اطلاعاتی کالیفرنیا](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV\&division=3.\&title=1.8.\&part=4.\&chapter=1.\&article=)
+- [قانون سوابق عمومی کالیفرنیا](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV\&division=10.\&title=1.\&part=\&chapter=\&article=)
+- بخش‌های مجموعه قوانین دولتی کالیفرنیا[11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11015.5.)و [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11019.9.)
+- [قانون فدرال حریم خصوصی 1974](https://www.justice.gov/opcl/privacy-act-1974)
+- [راهنمای اداری ایالت کالیفرنیا 5310.1](https://www.dgs.ca.gov/Resources/SAM/TOC/5300/5310-1)
+- [راهنمای مدیریت اطلاعات ایالت کالیفرنیا 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
+- [بخش 1798.17 قانون مدنی کالیفرنیا](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.17.)
+- [بخش 1798.24 قانون مدنی کالیفرنیا](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.24.)
 
-### Personally Identifiable Information (PII) 
 
-We may collect PII (e.g., name, address, email, phone number) only when you voluntarily provide it to us through forms, contact inquiries, or other means.
+## چرا ODI اطلاعات شما را جمع آوری می کند
 
----
-#### Personal Identifiers
-**Description:** We may collect PII (e.g., email address, name/username, password, and zipcode) only when voluntarily provided to us through forms, contact inquiries, surveys or other means.
+### اطلاعات جمع آوری  شده  به صورت خودکار
+
+هنگامی که از وب سایت ما بازدید می کنید، ممکن است به طور خودکار اطلاعات خاصی مانند آدرس پروتکل اینترنت (IP)، نوع مرورگر، سیستم عامل و صفحات بازدید شده شما را جمع آوری کنیم. این اطلاعات برای مدیریت وب سایت، عیب یابی و بهبود تجربه کاربری استفاده می شود.
 
 
-**Purpose of Collection:** Provide services that include communication, survey completion, our services; research and development; quality assurance; security/fraud; To comply with our legal obligations.
+### اطلاعات قابل شناسایی شخصی (PII) 
+
+ما ممکن است PII (به عنوان مثال، نام، آدرس، ایمیل، شماره تلفن) را تنها زمانی جمع آوری کنیم که شما به طور داوطلبانه آن را از طریق فرم ها، درخواست های تماس یا سایر روش ها در اختیار ما قرار دهید.
+
+#### شناسه های شخصی
+
+**توضیحات:** ما ممکن است PII (به عنوان مثال، آدرس ایمیل، نام/نام کاربری، رمز عبور، نژاد، قومیت، کد پستی و سایر مشخصات عمومی جمعیتی) را تنها زمانی جمع آوری کنیم که به طور داوطلبانه از طریق فرم ها، سوالات تماس، نظرسنجی یا روش های دیگر در اختیار ما قرار گیرد.
+
+**هدف جمع آوری:** ارائه خدماتی که شامل ارتباط، تکمیل نظرسنجی، خدمات ما می شود. تحقیق و توسعه؛ تضمین کیفیت؛ امنیت/تقلب و پیروی از تعهدات قانونی ما.
     
-#### Internet or Online Information
-**Description:** Internet Protocol (IP) address, browser type, operating system, and pages visited.
-    Cookies  and similar technologies.
+#### اطلاعات اینترنتی یا آنلاین
+
+**توضیحات:** آدرس IP، نوع مرورگر، سیستم عامل و صفحات بازدید شده. کوکی ها و فناوری های مشابه
     
-**Purpose of Collection:** This information is used for website administration, troubleshooting and to  enhance user’s experience, personalized content and website traffic.
+**هدف جمع آوری:** این اطلاعات برای مدیریت وب سایت، عیب یابی و افزایش تجربه کاربر، محتوای شخصی سازی شده و ترافیک وب سایت استفاده می شود.
 
----
+جمع آوری اطلاعات شخصی شما داوطلبانه است. شما حق دارید افشای اطلاعات را محدود کنید و در صورت عدم درخواست اطلاعات شخصی را ارائه نکنید.
 
-The collection of your personal information is voluntary. You have the right to limit disclosure and not provide your personal information if not requested;
-
-The consequences of not providing your personal information, may impact your ability to receive services and future engagement with our website, [engaged.ca.gov](/).
+عواقب عدم ارائه اطلاعات شخصی شما، ممکن است بر توانایی شما برای دریافت خدمات و تعامل آینده با [وب سایت Engaged California](/fa/) تأثیر بگذارد.
 
 
-### INFORMATION FROM THIRD PARTIES
+### اطلاعات از اشخاص ثالث
 
-We may receive information about you from third parties, such as social media platforms, if you choose to interact with our website through those platforms we may use your information to:
+اگر بخواهید از طریق آن پلتفرم‌ها با وب‌سایت ما تعامل داشته باشید، ممکن است اطلاعاتی درباره شما از اشخاص ثالث دریافت کنیم، مانند پلتفرم‌های رسانه‌های اجتماعی، ممکن است از اطلاعات شما برای موارد زیر استفاده کنیم: 
 
-**Provide Services:**
-We use your information to provide you with the services and information you request, such as responding to inquiries, processing applications, and delivering content.
+#### ارائه خدمات
 
-**Improve Our Website:**
-We use collected data to analyze website traffic, identify areas for improvement, and personalize your experience.
+ما از اطلاعات شما برای ارائه خدمات و اطلاعاتی که درخواست می‌کنید، مانند پاسخ به سؤالات، پردازش برنامه‌ها و ارائه محتوا، استفاده می‌کنیم.
 
-**Comply with Legal Obligations:**
-We may use your information to comply with legal requirements, such as responding to subpoenas or court orders.
- 
-**Communicate with You:**
-We may use your contact information to send you updates, newsletters, or other information related to our services.
+#### وب سایت ما را بهبود بخشید
 
-### HOW WE SHARE YOUR INFORMATION
+ما از داده های جمع آوری شده برای تجزیه و تحلیل ترافیک وب سایت، شناسایی زمینه های بهبود و شخصی سازی تجربه شما استفاده می کنیم.
 
-**With Other Government Agencies:**
-We may share your information with other government agencies for legitimate purposes, such as coordinating services with the federal government or law enforcement as required by law pursuant of [California Civil Code Section 1798.24](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.24.)
+#### تعهدات قانونی را رعایت کنید
 
-**With Third-Party Service Providers:**
+ما ممکن است از اطلاعات شما برای رعایت الزامات قانونی، مانند پاسخ به احضاریه ها یا دستورات دادگاه استفاده کنیم.
 
-We may share your information with third-party service providers who help us operate our website, such as hosting providers or analytics tools. We will only share your information with third parties with your explicit consent, unless it is not required by law.
+#### برقراری ارتباط با شما
+
+ممکن است از اطلاعات تماس شما برای ارسال به‌روزرسانی‌ها، خبرنامه‌ها یا سایر اطلاعات مرتبط با خدمات خود استفاده کنیم. 
 
 
-### YOUR RIGHTS
+### چگونه اطلاعات شما را به اشتراک می گذاریم
 
-Your rights to personal information include the following:
+#### با سایر سازمان های دولتی
 
-- **Access:** You have the right to access personal information we hold about you.
-- **Correction:** You have the right to request corrections to inaccurate or incomplete information.
-- **Opt-Out:** You have the right to object and opt-out of the processing of your information in certain circumstances.&#x20;
-- **Deletion:** You have the right to request that we delete your personal information.
+ما ممکن است اطلاعات شما را با سایر سازمان های دولتی برای اهداف قانونی، مانند هماهنگی خدمات با دولت فدرال یا مجری قانون، همانطور که طبق قانون بر اساس [بخش 1798.24 قانون مدنی کالیفرنیا](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.24.) الزامی است، به اشتراک بگذاریم.
 
+#### با ارائه دهندگان خدمات شخص ثالث
 
-### PUBLIC DISCLOSURE
-
-Laws in California ensure that government is open and the public can access appropriate state records and information. State and federal laws provide exceptions to the public’s right to access public records. These exceptions serve various needs including maintaining the privacy of individuals.
-
-Any information we acquire, including information collected on our website, may be released if requested as stated in the Information Practices Act of 1977 (see Civil Code Section 1798).
-
-Electronically collected personal identifiable information is exempt from disclosure when requested under the California Public Records Act (see Government Code Section 6250).
+ما ممکن است اطلاعات شما را با ارائه دهندگان خدمات شخص ثالث که به ما در راه اندازی وب سایت ما کمک می کنند، مانند ارائه دهندگان میزبانی یا ابزارهای تجزیه و تحلیل، به اشتراک بگذاریم. ما فقط با رضایت صریح شما اطلاعات شما را با اشخاص ثالث به اشتراک می گذاریم، مگر اینکه طبق قانون الزامی نباشد. 
 
 
-### PROTECTING YOUR PRIVACY
+### حقوق شما
 
-You can help protect your private information. Be sure to update your browser and operating system regularly. For more information on how you can protect your privacy, visit the Privacy Enforcement and Protection page on the [Office of the Attorney General website](https://oag.ca.gov/privacy/facts/online-privacy/computer-secure).
+حقوق شما برای اطلاعات شخصی شامل موارد زیر است:
+
+* **دسترسی:** شما این حق را دارید که به اطلاعات شخصی ما در مورد شما دسترسی داشته باشید.
+* **اصلاح:** شما این حق را دارید که در مورد اطلاعات نادرست یا ناقص درخواست اصلاح کنید.
+* **انصراف:** شما حق اعتراض و انصراف از پردازش اطلاعات خود را در شرایط خاص دارید. 
+* **حذف:** شما حق دارید درخواست کنید که اطلاعات شخصی شما را حذف کنیم.
 
 
-### **CONTACT INFORMATION**
+### افشای عمومی
 
-If you have questions about our privacy notice on collection, contact our Chief Privacy Officer at <privacy@innovation.ca.gov>.
+قوانین در کالیفرنیا تضمین می کند که دولت باز است و عموم می توانند به سوابق و اطلاعات ایالتی مناسب دسترسی داشته باشند. قوانین ایالتی و فدرال استثناهایی را برای حق دسترسی عمومی به سوابق عمومی ارائه می کنند. این استثنائات نیازهای مختلفی از جمله حفظ حریم خصوصی افراد را تامین می کند. اطلاعات شناسایی شخصی که به صورت الکترونیکی جمع آوری شده است، در صورت درخواست تحت قانون سوابق عمومی کالیفرنیا از افشای معاف هستند.
+
+هرگونه افشای شناخته شده یا قابل پیش بینی که ممکن است از اطلاعات شما انجام شود، از جمله افشای اطلاعات به سایر سازمان های ایالتی، دولت فدرال، یا مجری قانون، و همچنین افشای اطلاعات شما که ممکن است بر اساس بخش فرعی (e) یا (f) [بخش 1798.24 قانون مدنی کالیفرنیا](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.24.) انجام شود.
+
+هر گونه اطلاعاتی که به دست می آوریم، از جمله اطلاعات جمع آوری شده در وب سایت ما، ممکن است در صورت درخواست همانطور که در قانون اقدامات اطلاعاتی 1977 بیان شده است، منتشر شود ([به بخش 1798 قانون مدنی کالیفرنیا مراجعه کنید](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)).
 
 
+### محافظت از حریم خصوصی شما
+
+شما می توانید به محافظت از اطلاعات خصوصی خود کمک کنید. حتما مرورگر و سیستم عامل خود را به طور منظم به روز کنید. 
+برای اطلاعات بیشتر در مورد اینکه چگونه می توانید از حریم خصوصی خود محافظت کنید، به [وزارت دادگستری کالیفرنیا](https://oag.ca.gov/privacy/facts/online-privacy/computer-secure) مراجعه کنید. برای راهنمایی در مورد ایمن کردن رایانه خود، روی پیوند دفتر دادستان کل کالیفرنیا در زیر کلیک کنید:
+
+[احتیاط: آیا کامپیوتر شما امن است؟](https://oag.ca.gov/sites/all/files/agweb/pdfs/privacy/computer_secure.pdf)
+
+
+### اطلاعات تماس
+
+اگر در مورد اطلاعیه حفظ حریم خصوصی ما در مورد مجموعه سؤالی دارید، با مدیر ارشد حریم خصوصی ما تماس بگیرید.<br>
 Office of Data and Innovation<br>
 Attn: Chief Privacy Officer<br>
 401 I Street, Suite 200<br>
 Sacramento, CA 95814<br>
-Email: privacy@innovation.ca.gov<br>
-Phone: 916-234-3480<br>
+ایمیل: [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov)<br>
+تلفن: [916-234-3480](tel:916-234-3480)<br> 

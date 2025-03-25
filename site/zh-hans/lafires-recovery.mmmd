@@ -44,9 +44,9 @@ Engaged California 建立在审议民主的基础上。它与民意调查、投�
 ----
 id: phaseGeneral
 title: 每个阶段会发生什么
-phaseCompleteText: Phase complete
-phaseCurrentText: Phase in progress
-phasePendingText: Phase pending
+phaseCompleteText: 已完成阶段
+phaseCurrentText: 当前阶段
+phasePendingText: 后续阶段
 ----
 
 ### 一般信息
