@@ -523,14 +523,14 @@ const translations = {
     "notice-on-collections": {
         "en": "Notice on Collections",
         "fr": "Notice on Collections",
-        "es": "Notice on Collections",
-        "ko": "Notice on Collections",
-        "vi": "Notice on Collections",
-        "tl": "Notice on Collections",
-        "zh-hans": "Notice on Collections",
-        "zh-hant": "Notice on Collections",
-        "fa": "Notice on Collections",
-        "hy": "Notice on Collections",
+        "es": "Aviso de cobranzas",
+        "ko": "정보 수집 관련 고지",
+        "vi": "Thông Báo về Hoạt Động Thu Thập",
+        "tl": "Abiso Tungkol sa Mga Pangongolekta",
+        "zh-hans": "信息收集声明",
+        "zh-hant": "資訊收集聲明",
+        "fa": "اطلاعیه در مورد جمع آوری ها",
+        "hy": "Ծանուցում հավաքագրումների վերաբերյալ",
         "location": "Footer"
     },
     "sitemap": {

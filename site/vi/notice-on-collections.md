@@ -1,125 +1,136 @@
 ---
-title: Privacy Notice on Collections
-description: The State of California is committed to promoting and protecting the privacy rights of individuals.
+title: Thông báo về quyền riêng tư liên quan đến hoạt động thu thập
+description: Tiểu Bang California cam kết thúc đẩy và bảo vệ quyền riêng tư của các cá nhân.
 keywords:
-  - personal information
-  - privacy law
+  - thông tin cá nhân
+  - luật về quyền riêng tư
 layout: page
 tags:
   - pages
 ---
-# Privacy Notice on Collections
-
-EFFECTIVE: MARCH 14, 2025
-
-## PURPOSE
-
-This privacy notice explains how the California Office of Data and Innovation (ODI) collects, uses, and shares your information when you visit and interact with our website, engaged.ca.gov. We are committed to protecting your privacy and ensuring confidentiality of your personal information.
-
-ODI limits the collection of personal information. We safeguard the privacy of personal information we collect or maintain. This notice supplements our ODI [privacy](/privacy) policy.
 
 
-## AUTHORITY
+# Thông báo về quyền riêng tư liên quan đến hoạt động thu thập
 
-ODI is committed to protecting the privacy of your information. Our information management practices conform to the requirements of:
+*Có hiệu lực từ ngày 14 tháng 3 năm 2025*
 
-- [California Information Practices Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV\&division=3.\&title=1.8.\&part=4.\&chapter=1.\&article=)
-- [California Public Records Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV\&division=10.\&title=1.\&part=\&chapter=\&article=)
-- California Government Code sections [11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11015.5.) and [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11019.9.)
-- [Federal Privacy Act of 1974](https://www.justice.gov/opcl/privacy-act-1974)
-- [California State Administrative Manual 5310.1](https://www.dgs.ca.gov/Resources/SAM/TOC/5300/5310-1)
-- California [Statewide Information Management Manual 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
-- [California Civil Code Section 1798.17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.17.)
+*Sửa đổi lần gần nhất ngày 20 tháng 3 năm 2025*
 
+## Mục Đích
 
-## WHY ODI COLLECTS YOUR INFORMATION
+Thông báo về quyền riêng tư này giải thích cách Văn Phòng Dữ Liệu và Đổi Mới (Office of Data and Innovation, ODI) California thu thập, sử dụng và chia sẻ thông tin của quý vị khi quý vị truy cập và tương tác với [trang web Engaged California](/vi/). Chúng tôi cam kết bảo vệ quyền riêng tư của quý vị và giữ bảo mật thông tin cá nhân của quý vị. 
 
-### Automatically Collected Information
-
-When you visit our website, we may automatically collect certain information, such as your Internet Protocol (IP) address, browser type, operating system, and pages visited. This information is used for website administration, troubleshooting, and improving user experience.
-
-### Personally Identifiable Information (PII) 
-
-We may collect PII (e.g., name, address, email, phone number) only when you voluntarily provide it to us through forms, contact inquiries, or other means.
-
----
-#### Personal Identifiers
-**Description:** We may collect PII (e.g., email address, name/username, password, and zipcode) only when voluntarily provided to us through forms, contact inquiries, surveys or other means.
+Đạo Luật Thực Hành Thông Tin [Mục 1798.17 thuộc Bộ Luật Dân Sự California](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.17.) yêu cầu các cơ quan tiểu bang cung cấp thông báo về hoạt động thu thập khi thông tin cá nhân được thu thập và phải tuân thủ các giới hạn trong Đạo Luật Thực Hành Thông Tin cũng như chính sách của tiểu bang. ODI đặt ra giới hạn về hoạt động thu thập thông tin cá nhân. Chúng tôi bảo vệ quyền riêng tư của thông tin cá nhân mình thu thập hoặc lưu giữ. Thông báo này bổ sung cho [chính sách về quyền riêng tư](/vi/privacy) của chúng tôi. 
 
 
-**Purpose of Collection:** Provide services that include communication, survey completion, our services; research and development; quality assurance; security/fraud; To comply with our legal obligations.
+## Thẩm Quyền
+
+ODI cam kết bảo vệ tính bảo mật về thông tin của quý vị. Hoạt động thực tiễn về quản lý thông tin của chúng tôi tuân thủ các yêu cầu của:
+
+- [Đạo Luật Thực Hành Thông Tin California](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV\&division=3.\&title=1.8.\&part=4.\&chapter=1.\&article=)
+- [Đạo Luật Hồ Sơ Công Khai California](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV\&division=10.\&title=1.\&part=\&chapter=\&article=)
+- Các mục [11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11015.5.) và [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11019.9.) thuộc Bộ Luật Chính Quyền California
+- [Đạo Luật Quyền Riêng Tư Liên Bang năm 1974](https://www.justice.gov/opcl/privacy-act-1974)
+- [Cẩm Nang Hành Chính Tiểu Bang California 5310.1](https://www.dgs.ca.gov/Resources/SAM/TOC/5300/5310-1)
+- [Cẩm Nang Quản Lý Thông Tin Toàn Tiểu Bang California 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
+- [Mục 1798.17 thuộc Bộ Luật Dân Sự California](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.17.)
+- [Mục 1798.24 thuộc Bộ Luật Dân Sự California](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.24.)
+
+
+## Lý do ODI thu thập thông tin của quý vị
+
+### Thông tin được thu thập tự động
+
+Khi quý vị truy cập trang web của chúng tôi, chúng tôi có thể tự động thu thập một số thông tin nhất định, chẳng hạn như địa chỉ Giao Thức Internet (Internet Protocol, IP), loại trình duyệt, hệ điều hành và các trang đã truy cập. Thông tin này được dùng vào mục đích quản trị trang web, khắc phục sự cố và cải thiện trải nghiệm người dùng.
+
+
+### Thông Tin Có Thể Định Danh Cá Nhân (Personally Identifiable Information, PII) 
+
+Chúng tôi chỉ có thể thu thập PII (ví dụ: tên, địa chỉ, email, số điện thoại) khi quý vị tự nguyện cung cấp cho chúng tôi thông qua các biểu mẫu, yêu cầu liên hệ hoặc các phương tiện khác.
+
+#### Mã định danh cá nhân
+
+**Mô tả:** Chúng tôi chỉ có thể thu thập PII (ví dụ: địa chỉ email, tên/tên người dùng, mật khẩu, chủng tộc, dân tộc, mã zip và các đặc điểm nhân khẩu học tổng quát khác) được tự nguyện cung cấp cho chúng tôi thông qua biểu mẫu, yêu cầu liên hệ, khảo sát hoặc các phương tiện khác.
+
+**Mục đích thu thập:** Cung cấp các dịch vụ bao gồm trao đổi thông tin, hoàn thành khảo sát, dịch vụ của chúng tôi; nghiên cứu và phát triển; đảm bảo chất lượng; bảo mật/gian lận và tuân thủ các nghĩa vụ pháp lý của chúng tôi.
     
-#### Internet or Online Information
-**Description:** Internet Protocol (IP) address, browser type, operating system, and pages visited.
-    Cookies  and similar technologies.
+#### Thông tin trên Internet hoặc trực tuyến
+
+**Mô tả:** Địa chỉ IP, loại trình duyệt, hệ điều hành và các trang đã truy cập. Cookie và các công nghệ tương tự.
     
-**Purpose of Collection:** This information is used for website administration, troubleshooting and to  enhance user’s experience, personalized content and website traffic.
+**Mục đích thu thập:** Thông tin này được dùng vào mục đích quản trị trang web, khắc phục sự cố và nâng cao trải nghiệm của người dùng, nội dung cá nhân hóa và lưu lượng truy cập trang web.
 
----
+Hoạt động thu thập thông tin cá nhân của quý vị mang tính tự nguyện. Quý vị có quyền giới hạn phạm vi tiết lộ và không cung cấp thông tin cá nhân khi không được yêu cầu.
 
-The collection of your personal information is voluntary. You have the right to limit disclosure and not provide your personal information if not requested;
-
-The consequences of not providing your personal information, may impact your ability to receive services and future engagement with our website, [engaged.ca.gov](/).
+Hậu quả từ việc không cung cấp thông tin cá nhân của quý vị có thể ảnh hưởng đến khả năng quý vị nhận dịch vụ và tương tác trong tương lai với [trang web Engaged California](/vi/).
 
 
-### INFORMATION FROM THIRD PARTIES
+### Thông tin từ bên thứ ba
 
-We may receive information about you from third parties, such as social media platforms, if you choose to interact with our website through those platforms we may use your information to:
+Chúng tôi có thể nhận thông tin về quý vị từ các bên thứ ba, chẳng hạn như nền tảng truyền thông xã hội, nếu quý vị chọn tương tác với trang web của chúng tôi thông qua các nền tảng đó, chúng tôi có thể sử dụng thông tin của quý vị để: 
 
-**Provide Services:**
-We use your information to provide you with the services and information you request, such as responding to inquiries, processing applications, and delivering content.
+#### Cung cấp dịch vụ
 
-**Improve Our Website:**
-We use collected data to analyze website traffic, identify areas for improvement, and personalize your experience.
+Chúng tôi sử dụng thông tin của quý vị để cung cấp cho quý vị các dịch vụ và thông tin theo yêu cầu, chẳng hạn như phản hồi truy vấn, xử lý đơn đăng ký và cung cấp nội dung.
 
-**Comply with Legal Obligations:**
-We may use your information to comply with legal requirements, such as responding to subpoenas or court orders.
- 
-**Communicate with You:**
-We may use your contact information to send you updates, newsletters, or other information related to our services.
+#### Cải thiện trang web của chúng tôi
 
-### HOW WE SHARE YOUR INFORMATION
+Chúng tôi sử dụng dữ liệu thu thập được để phân tích lưu lượng truy cập trang web, xác định các lĩnh vực cần cải thiện và cá nhân hóa trải nghiệm của quý vị.
 
-**With Other Government Agencies:**
-We may share your information with other government agencies for legitimate purposes, such as coordinating services with the federal government or law enforcement as required by law pursuant of [California Civil Code Section 1798.24](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.24.)
+#### Tuân thủ các nghĩa vụ pháp lý
 
-**With Third-Party Service Providers:**
+Chúng tôi có thể sử dụng thông tin của quý vị để tuân thủ các yêu cầu pháp lý, chẳng hạn như phản hồi trát đòi hầu tòa hoặc lệnh toà.
 
-We may share your information with third-party service providers who help us operate our website, such as hosting providers or analytics tools. We will only share your information with third parties with your explicit consent, unless it is not required by law.
+#### Trao đổi thông tin với quý vị
+
+Chúng tôi có thể sử dụng thông tin liên hệ của quý vị để gửi cho quý vị thông tin cập nhật, bản tin hoặc thông tin khác liên quan đến dịch vụ của chúng tôi. 
 
 
-### YOUR RIGHTS
+### Cách chúng tôi chia sẻ thông tin của quý vị
 
-Your rights to personal information include the following:
+#### Với các cơ quan chính phủ khác
 
-- **Access:** You have the right to access personal information we hold about you.
-- **Correction:** You have the right to request corrections to inaccurate or incomplete information.
-- **Opt-Out:** You have the right to object and opt-out of the processing of your information in certain circumstances.&#x20;
-- **Deletion:** You have the right to request that we delete your personal information.
+Chúng tôi có thể chia sẻ thông tin của quý vị với các cơ quan chính phủ khác nhằm các mục đích hợp pháp, chẳng hạn như điều phối các dịch vụ với chính phủ liên bang hoặc cơ quan thực thi pháp luật theo yêu cầu của pháp luật theo [Mục 1798.24 thuộc Bộ Luật Dân Sự California](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.24.).
 
+#### Với các nhà cung cấp dịch vụ bên thứ ba
 
-### PUBLIC DISCLOSURE
-
-Laws in California ensure that government is open and the public can access appropriate state records and information. State and federal laws provide exceptions to the public’s right to access public records. These exceptions serve various needs including maintaining the privacy of individuals.
-
-Any information we acquire, including information collected on our website, may be released if requested as stated in the Information Practices Act of 1977 (see Civil Code Section 1798).
-
-Electronically collected personal identifiable information is exempt from disclosure when requested under the California Public Records Act (see Government Code Section 6250).
+Chúng tôi có thể chia sẻ thông tin của quý vị với các nhà cung cấp dịch vụ bên thứ ba giúp chúng tôi vận hành trang web của mình, chẳng hạn như nhà cung cấp dịch vụ lưu trữ hoặc các công cụ phân tích. Chúng tôi sẽ chỉ chia sẻ thông tin của quý vị với bên thứ ba khi có ý kiến chấp thuận rõ ràng của quý vị, trừ khi pháp luật không yêu cầu. 
 
 
-### PROTECTING YOUR PRIVACY
+### Quyền của quý vị
 
-You can help protect your private information. Be sure to update your browser and operating system regularly. For more information on how you can protect your privacy, visit the Privacy Enforcement and Protection page on the [Office of the Attorney General website](https://oag.ca.gov/privacy/facts/online-privacy/computer-secure).
+Quyền của quý vị đối với thông tin cá nhân bao gồm:
+
+* **Truy cập:** Quý vị có quyền truy cập thông tin cá nhân mà chúng tôi nắm giữ về quý vị.
+* **Chỉnh sửa:** Quý vị có quyền yêu cầu chỉnh sửa thông tin không chính xác hoặc không đầy đủ.
+* **Chọn không tham gia:** Quý vị có quyền phản đối và chọn không xử lý thông tin của mình trong một số trường hợp nhất định. 
+* **Xóa bỏ:** Quý vị có quyền yêu cầu chúng tôi xóa bỏ thông tin cá nhân của mình.
 
 
-### **CONTACT INFORMATION**
+### Tiết lộ công khai
 
-If you have questions about our privacy notice on collection, contact our Chief Privacy Officer at <privacy@innovation.ca.gov>.
+Luật pháp ở California đảm bảo duy trì một chính quyền cởi mở, đồng thời công chúng có thể truy cập hồ sơ và thông tin phù hợp của tiểu bang. Luật tiểu bang và liên bang cung cấp các trường hợp ngoại lệ đối với quyền truy cập hồ sơ công khai của công chúng. Những trường hợp ngoại lệ này phục vụ các nhu cầu khác nhau bao gồm duy trì quyền riêng tư của các cá nhân. Thông tin có thể định danh cá nhân đã thu thập theo phương thức điện tử sẽ được miễn tiết lộ khi được yêu cầu theo Đạo Luật Hồ Sơ Công Khai California.
 
+Bất kỳ lần tiết lộ nào đã xác định hoặc trong tầm dự kiến có thể được thực hiện liên quan đến thông tin của quý vị, bao gồm những lần tiết lộ cho các cơ quan tiểu bang khác, chính quyền liên bang hoặc cơ quan thực thi pháp luật, cũng như những lần tiết lộ thông tin của quý vị có thể được thực hiện theo tiểu mục (e) hoặc (f) của [Mục 1798.24 thuộc Bộ Luật Dân Sự California](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.24.).
+
+Chúng tôi có thể sẽ tiết lộ mọi thông tin mình nhận về, bao gồm cả thông tin thu thập trên trang web, nếu được yêu cầu theo quy định trong Đạo Luật Thực Hành Thông Tin năm 1977 ([xem Mục 1798 thuộc Bộ Luật Dân Sự California](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)).
+
+
+### Bảo vệ quyền riêng tư của quý vị
+
+Quý vị có thể giúp bảo vệ thông tin cá nhân của mình. Hãy nhớ thường xuyên cập nhật trình duyệt và hệ điều hành của quý vị. 
+Để biết thêm thông tin về cách quý vị có thể bảo vệ quyền riêng tư của mình, hãy truy cập [Sở Tư Pháp California](https://oag.ca.gov/privacy/facts/online-privacy/computer-secure). Để biết các mẹo bảo mật máy tính của quý vị, hãy nhấp vào liên kết của Văn Phòng Tổng Chưởng Lý California dưới đây:
+
+[Thận trọng: Máy Tính của Quý Vị Có Được Bảo Mật Không?](https://oag.ca.gov/sites/all/files/agweb/pdfs/privacy/computer_secure.pdf)
+
+
+### Thông tin liên hệ
+
+Nếu quý vị có thắc mắc đối với thông báo về quyền riêng tư liên quan đến hoạt động thu thập của chúng tôi, hãy liên hệ với Giám Đốc Phụ Trách Quyền Riêng Tư của chúng tôi.
 
 Office of Data and Innovation<br>
 Attn: Chief Privacy Officer<br>
 401 I Street, Suite 200<br>
 Sacramento, CA 95814<br>
-Email: privacy@innovation.ca.gov<br>
-Phone: 916-234-3480<br>
+Email: [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov)<br>
+Số Điện Thoại: [916-234-3480](tel:916-234-3480)<br>

@@ -44,9 +44,9 @@ Engaged California được xây dựng dựa trên chế độ dân chủ tranh
 ----
 id: phaseGeneral
 title: Quy trình trong mỗi giai đoạn
-phaseCompleteText: Phase complete
-phaseCurrentText: Phase in progress
-phasePendingText: Phase pending
+phaseCompleteText: Giai đoạn đã hoàn thành
+phaseCurrentText: Giai đoạn hiện tại
+phasePendingText: Giai đoạn sắp tới
 ----
 
 ### Thông tin chung

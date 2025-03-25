@@ -44,9 +44,9 @@ Engaged California 建立在協商式民主的基礎上。它與民調、投票�
 ----
 id: phaseGeneral
 title: 每個階段將開展哪些事項
-phaseCompleteText: Phase complete
-phaseCurrentText: Phase in progress
-phasePendingText: Phase pending
+phaseCompleteText: 已完成階段
+phaseCurrentText: 當前階段
+phasePendingText: 後續階段
 ----
 
 ### 一般資訊

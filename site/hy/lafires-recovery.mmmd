@@ -44,9 +44,9 @@ Engaged California-ն հիմնված է խորհրդակցական ժողովր�
 ----
 id: phaseGeneral
 title: Ինչ է տեղի ունենում յուրաքանչյուր փուլում
-phaseCompleteText: Phase complete
-phaseCurrentText: Phase in progress
-phasePendingText: Phase pending
+phaseCompleteText: Ավարտված փուլ
+phaseCurrentText: Ընթացիկ փուլ
+phasePendingText: Առաջիկա փուլ
 ----
 
 ### Ընդհանուր տեղեկություններ

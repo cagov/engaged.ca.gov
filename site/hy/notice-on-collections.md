@@ -1,125 +1,136 @@
 ---
-title: Privacy Notice on Collections
-description: The State of California is committed to promoting and protecting the privacy rights of individuals.
+title: Ծանուցում հավաքագրումների գաղտնիության վերաբերյալ
+description: "Կալիֆորնիա նահանգը պարտավորվում է խթանել եւ պաշտպանել անհատների գաղտնիության իրավունքները:"
 keywords:
-  - personal information
-  - privacy law
+  - անձնական տեղեկատվություն
+  - Գաղտնիության օրենք
 layout: page
 tags:
   - pages
 ---
-# Privacy Notice on Collections
-
-EFFECTIVE: MARCH 14, 2025
-
-## PURPOSE
-
-This privacy notice explains how the California Office of Data and Innovation (ODI) collects, uses, and shares your information when you visit and interact with our website, engaged.ca.gov. We are committed to protecting your privacy and ensuring confidentiality of your personal information.
-
-ODI limits the collection of personal information. We safeguard the privacy of personal information we collect or maintain. This notice supplements our ODI [privacy](/privacy) policy.
 
 
-## AUTHORITY
+Ծանուցում հավաքագրումների գաղտնիության վերաբերյալ
 
-ODI is committed to protecting the privacy of your information. Our information management practices conform to the requirements of:
+*Ուժի մեջ է 2025 թվականի մարտի 14-ից*
 
-- [California Information Practices Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV\&division=3.\&title=1.8.\&part=4.\&chapter=1.\&article=)
-- [California Public Records Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV\&division=10.\&title=1.\&part=\&chapter=\&article=)
-- California Government Code sections [11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11015.5.) and [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11019.9.)
-- [Federal Privacy Act of 1974](https://www.justice.gov/opcl/privacy-act-1974)
-- [California State Administrative Manual 5310.1](https://www.dgs.ca.gov/Resources/SAM/TOC/5300/5310-1)
-- California [Statewide Information Management Manual 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
-- [California Civil Code Section 1798.17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.17.)
+*Վերջին վերանայումը՝ 2025 թվականի մարտի 20-ին*
 
+## Նպատակ
 
-## WHY ODI COLLECTS YOUR INFORMATION
+Սույն՝ գաղտնիության վերաբերյալ ծանուցումը բացատրում է, թե ինչպես է Կալիֆորնիայի տվյալների եւ նորարարությունների գրասենյակը (ՏՆԳ) հավաքում, օգտագործում եւ տարածում Ձեր մասին տեղեկատվությունը, երբ դուք այցելում եւ գործածում եք [Engaged California կայքը](/hy/): Մենք պարտավորվում ենք պաշտպանել Ձեր գաղտնիությունը եւ ապահովել Ձեր անձնական տվյալների պաշտպանությունը: 
 
-### Automatically Collected Information
-
-When you visit our website, we may automatically collect certain information, such as your Internet Protocol (IP) address, browser type, operating system, and pages visited. This information is used for website administration, troubleshooting, and improving user experience.
-
-### Personally Identifiable Information (PII) 
-
-We may collect PII (e.g., name, address, email, phone number) only when you voluntarily provide it to us through forms, contact inquiries, or other means.
-
----
-#### Personal Identifiers
-**Description:** We may collect PII (e.g., email address, name/username, password, and zipcode) only when voluntarily provided to us through forms, contact inquiries, surveys or other means.
+[Կալիֆորնիայի քաղաքացիական օրենսգրքի բաժին 1798.17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.17.) Տեղեկատվական պրակտիկայի մասին օրենքը պահանջում է, որ պետական գործակալությունները ծանուցում ներկայացնեն հավաքագրման մասին, երբ անձնական տեղեկատվությունը հավաքվում է, եւ երբ այն ենթակա է Տեղեկատվական պրակտիկայի մասին օրենքի եւ նահանգային քաղաքականության սահմանափակումներին: ՏՆԳ-ն սահմանափակում է անձնական տեղեկատվության հավաքագրումը: Մենք պաշտպանում ենք մեր հավաքած կամ պահպանած անձնական տեղեկատվության գաղտնիությունը: Այս ծանուցումը լրացնում է մեր [գաղտնիության քաղաքականությունը](/hy/privacy): 
 
 
-**Purpose of Collection:** Provide services that include communication, survey completion, our services; research and development; quality assurance; security/fraud; To comply with our legal obligations.
+## Իշխանություն
+
+ՏՆԳ-ն պարտավորվում է պաշտպանել Ձեր մասին տեղեկատվության գաղտնիությունը: Մեր տեղեկատվության կառավարման պրակտիկան համապատասխանում է հետեւյալ պահանջներին.
+
+- [Կալիֆորնիայի տեղեկատվական պրակտիկաների մասին օրենք](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV\&division=3.\&title=1.8.\&part=4.\&chapter=1.\&article=)
+- [Կալիֆորնիայի հանրային գրառումների մասին օրենք](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV\&division=10.\&title=1.\&part=\&chapter=\&article=)
+- Կալիֆորնիայի կառավարության օրենսգրքի բաժիններ[11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11015.5.) եւ [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV\&sectionNum=11019.9.)
+- [1974 թվականի գաղտնիության մասին դաշնային օրենք](https://www.justice.gov/opcl/privacy-act-1974)
+- [Կալիֆորնիայի նահանգի վարչական ձեռնարկ 5310.1](https://www.dgs.ca.gov/Resources/SAM/TOC/5300/5310-1)
+- [Կալիֆորնիայի նահանգային տեղեկատվության կառավարման ձեռնարկ 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
+- [Կալիֆորնիայի քաղաքացիական օրենսգրքի բաժին 1798.17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.17.)
+- [Կալիֆորնիայի քաղաքացիական օրենսգրքի բաժին 1798.24](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.24.)
+
+
+## Ինչո՞ւ է ՏՆԳ-ն հավաքում Ձեր մասին տեղեկատվությունը
+
+### Ինքնաշխատ եղանակով հավաքագրված տեղեկատվություն
+
+Երբ դուք այցելում եք մեր կայք, մենք կարող ենք ինքնաշխատ եղանակով հավաքել որոշակի տեղեկատվություն, ինչպիսիք են Ձեր համացանցային հաղորդակարգի (IP) հասցեն, բրաուզերի տեսակը, օպերացիոն համակարգը եւ այցելված էջերը: Այս տեղեկատվությունն օգտագործվում է կայքի կառավարման, խնդիրների լուծման եւ օգտվողի փորձի բարելավման համար:
+
+
+### Անձը նույնականացվող տեղեկատվություն (ԱՆՏ) 
+
+Մենք կարող ենք հավաքագրել ԱՆՏ-ները (օրինակ՝ անունը, հասցեն, էլ. փոստը, հեռախոսահամարը) միայն այն դեպքում, երբ դուք կամավոր տրամադրում եք այն մեզ՝ ձեւաթղթերի, կոնտակտային հարցումների կամ այլ միջոցների միջոցով:
+
+#### Անհատական բնութագրիչներ
+
+**Նկարագրություն.** Մենք կարող ենք հավաքել ԱՆՏ (օրինակ՝ էլեկտրոնային փոստի հասցեն, անունը/օգտվողի անունը, գաղտնաբառը, ռասան, էթնիկ պատկանելությունը, փոստային կոդը եւ այլ ընդհանուր ժողովրդագրական բնութագրեր) միայն այն դեպքում, երբ այն կամավոր տրամադրվում է մեզ ձեւաթղթերի, կոնտակտային հարցումների, հարցումների կամ այլ միջոցների միջոցով:
+
+** Հավաքագրման նպատակը. ** Մատուցել ծառայություններ, որոնք ներառում են՝ հաղորդակցություն, հարցումներ, մեր ծառայությունները, հետազոտություն եւ զարգացում, որակի ապահովում, անվտանգության/խարդախության եւ մեր իրավական պարտավորությունների կատարման համար:
     
-#### Internet or Online Information
-**Description:** Internet Protocol (IP) address, browser type, operating system, and pages visited.
-    Cookies  and similar technologies.
+#### Ինտերնետ կամ առցանց տեղեկատվություն
+
+**Նկարագրություն:** IP հասցեն, բրաուզերի տեսակը, օպերացիոն համակարգը եւ այցելված էջերը: Քուքիներ եւ նմանատիպ տեխնոլոգիաներ:
     
-**Purpose of Collection:** This information is used for website administration, troubleshooting and to  enhance user’s experience, personalized content and website traffic.
+**Հավաքագրման նպատակը.** Այս տեղեկատվությունը օգտագործվում է կայքի կառավարման, խնդիրների լուծման, ինչպես նաեւ օգտվողի փորձի, անհատականացված բովանդակության եւ կայքի տրաֆիկի բարելավման համար:
 
----
+Ձեր անձնական տեղեկատվության հավաքագրումը կամավոր է: Դուք իրավունք ունեք սահմանափակել բացահայտումը եւ չտրամադրել անձնական տեղեկատվություն, երբ այն չի պահանջվում:
 
-The collection of your personal information is voluntary. You have the right to limit disclosure and not provide your personal information if not requested;
-
-The consequences of not providing your personal information, may impact your ability to receive services and future engagement with our website, [engaged.ca.gov](/).
+Ձեր անձնական տվյալները չտրամադրելու հետեւանքները կարող են ազդել ծառայություններ ստանալու Ձեր հնարավորության եւ [Engaged California կայքն](/hy/) ապագայում օգտագործելու վրա:
 
 
-### INFORMATION FROM THIRD PARTIES
+### Տեղեկատվություն երրորդ անձանցից
 
-We may receive information about you from third parties, such as social media platforms, if you choose to interact with our website through those platforms we may use your information to:
+Մենք կարող ենք Ձեր մասին տեղեկություններ ստանալ երրորդ անձանցից, ինչպիսիք են սոցիալական մեդիայի հարթակները, եթե Դուք որոշում եք գործածել մեր կայքն այդ հարթակների միջոցով, մենք կարող ենք օգտագործել Ձեր մասին տեղեկատվությունը՝ հետեւյալ նպատակներով. 
 
-**Provide Services:**
-We use your information to provide you with the services and information you request, such as responding to inquiries, processing applications, and delivering content.
+#### Մատուցել ծառայություններ
 
-**Improve Our Website:**
-We use collected data to analyze website traffic, identify areas for improvement, and personalize your experience.
+Մենք օգտագործում ենք Ձեր մասին տեղեկատվությունը՝ Ձեր պահանջած ծառայությունները եւ տեղեկատվությունը Ձեզ տրամադրելու համար, ինչպիսիք են՝ հարցումներին պատասխանելը, դիմումները մշակելը եւ բովանդակության առաքումը:
 
-**Comply with Legal Obligations:**
-We may use your information to comply with legal requirements, such as responding to subpoenas or court orders.
- 
-**Communicate with You:**
-We may use your contact information to send you updates, newsletters, or other information related to our services.
+#### Բարելավել մեր կայքը
 
-### HOW WE SHARE YOUR INFORMATION
+Մենք օգտագործում ենք հավաքագրված տվյալները՝ վերլուծելու կայքի տրաֆիկը, բացահայտելու բարելավման ենթակա ոլորտները եւ անհատականացնելու Ձեր փորձը:
 
-**With Other Government Agencies:**
-We may share your information with other government agencies for legitimate purposes, such as coordinating services with the federal government or law enforcement as required by law pursuant of [California Civil Code Section 1798.24](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.24.)
+#### Կատարել իրավական պարտավորությունները
 
-**With Third-Party Service Providers:**
+Մենք կարող ենք օգտագործել Ձեր մասին տեղեկատվությունը իրավական պահանջներին համապատասխանելու համար, օրինակ՝ հարցաքննություններին կամ դատարանի հրամաններին արձագանքելու համար:
 
-We may share your information with third-party service providers who help us operate our website, such as hosting providers or analytics tools. We will only share your information with third parties with your explicit consent, unless it is not required by law.
+#### Շփվել Ձեզ հետ
+
+Մենք կարող ենք օգտագործել Ձեր կոնտակտային տվյալները՝ Ձեզ թարմացումներ, տեղեկագրեր կամ մեր ծառայությունների հետ կապված այլ տեղեկություններ ուղարկելու համար: 
 
 
-### YOUR RIGHTS
+### Ինչպես ենք մենք կիսվում Ձեր մասին տեղեկատվությամբ
 
-Your rights to personal information include the following:
+#### Պետական այլ մարմինների հետ
 
-- **Access:** You have the right to access personal information we hold about you.
-- **Correction:** You have the right to request corrections to inaccurate or incomplete information.
-- **Opt-Out:** You have the right to object and opt-out of the processing of your information in certain circumstances.&#x20;
-- **Deletion:** You have the right to request that we delete your personal information.
+Մենք կարող ենք Ձեր մասին տեղեկատվությունը փոխանցել այլ պետական մարմինների՝ օրինական նպատակներով, օրինակ՝ դաշնային կառավարության կամ իրավապահ մարմինների հետ ծառայությունները համակարգելու համար, ինչպես պահանջվում է օրենքով՝ համաձայն [Կալիֆորնիայի քաղաքացիական օրենսգրքի 1798.24 բաժնի](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV\&sectionNum=1798.24.):
 
+#### Երրորդ կողմ հանդիսացող ծառայություններ մատուցողների հետ
 
-### PUBLIC DISCLOSURE
-
-Laws in California ensure that government is open and the public can access appropriate state records and information. State and federal laws provide exceptions to the public’s right to access public records. These exceptions serve various needs including maintaining the privacy of individuals.
-
-Any information we acquire, including information collected on our website, may be released if requested as stated in the Information Practices Act of 1977 (see Civil Code Section 1798).
-
-Electronically collected personal identifiable information is exempt from disclosure when requested under the California Public Records Act (see Government Code Section 6250).
+Մենք կարող ենք կիսվել Ձեր մասին տեղեկատվությամբ երրորդ կողմ հանդիսացող ծառայություններ մատուցողների հետ, որոնք օգնում են մեզ գործարկել մեր կայքը, ինչպիսիք են հոսթինգ պրովայդերները կամ վերլուծական գործիքները: Մենք կփոխանցենք Ձեր մասին տեղեկատվությունը երրորդ անձանց՝ միայն Ձեր հստակ համաձայնությամբ,  բացառությամբ այն դեպքերի, երբ դա չի պահանջվում օրենքով: 
 
 
-### PROTECTING YOUR PRIVACY
+### Ձեր իրավունքները
 
-You can help protect your private information. Be sure to update your browser and operating system regularly. For more information on how you can protect your privacy, visit the Privacy Enforcement and Protection page on the [Office of the Attorney General website](https://oag.ca.gov/privacy/facts/online-privacy/computer-secure).
+Անձնական տեղեկատվության նկատմամբ Ձեր իրավունքները ներառում են.
+
+Դուք իրավունք ունեք ունենալ հասանելիություն այն անձնական տեղեկատվությանը, որը մենք պահում ենք Ձեր մասին:
+* **Ուղղում.** Դուք իրավունք ունեք պահանջել ուղղումներ ոչ ճշգրիտ կամ ոչ ամբողջական տեղեկատվության մեջ:
+* **Հրաժարվել.** Դուք իրավունք ունեք առարկել եւ հրաժարվել Ձեր վերաբերյալ տեղեկատվության մշակումից որոշակի հանգամանքներում: 
+* **Ջնջում.** Դուք իրավունք ունեք պահանջելու, որ մենք ջնջենք Ձեր անձնական տվյալները:
 
 
-### **CONTACT INFORMATION**
+### Հրապարակային բացահայտում
 
-If you have questions about our privacy notice on collection, contact our Chief Privacy Officer at <privacy@innovation.ca.gov>.
+Կալիֆորնիայի օրենքները երաշխավորում են, որ կառավարությունը բաց է, եւ հանրությունն ունի հասանելիություն համապատասխան պետական գրանցումներին եւ տեղեկատվությանը։ Նահանգային եւ դաշնային օրենքները բացառություններ են նախատեսում հանրության կողմից հանրային գրառումներին հասանելիություն ունենալու իրավունքում։ Այս բացառությունները ծառայում են տարբեր կարիքների, ներառյալ՝ անհատների տվյալների պաշտպանության ապահովումը։ Էլեկտրոնային եղանակով հավաքված անձնական նույնականացման տեղեկատվությունը ազատվում է բացահայտումից, երբ պահանջվում է Կալիֆորնիայի հանրային գրառումների մասին օրենքի համաձայն։
 
+Ձեր մասին տեղեկատվության ցանկացած հայտնի կամ կանխատեսելի բացահայտում, ներառյալ այլ պետական մարմիններին, դաշնային կառավարությանը կամ իրավապահ մարմիններին համար արվող բացահայտումները, ինչպես նաեւ Ձեր մասին տեղեկատվության բացահայտումները, որոնք կարող են կատարվել [Կալիֆորնիայի քաղաքացիական օրենսգրքի 1798.24 բաժնի](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.24.) (e) կամ (f) ենթաբաժինների համաձայն:
+
+Ցանկացած տեղեկատվություն, որը մենք ձեռք ենք բերում, ներառյալ մեր կայքում հավաքված տեղեկատվությունը, կարող է հրապարակվել, եթե պահանջված է համաձայն 1977 թվականի Տեղեկատվական պրակտիկայի մասին օրենքի ([տե՛ս Կալիֆորնիայի քաղաքացիական օրենսգրքի բաժին 1798](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)):
+
+
+### Ձեր տվյալների գաղտնիության պաշտպանությունը
+
+Դուք կարող եք օգնել պաշտպանել Ձեր անձնական տվյալները: Անպայման պարբերաբար թարմացրեք Ձեր բրաուզերը եւ օպերացիոն համակարգը: 
+Լրացուցիչ տեղեկությունների համար, թե ինչպես կարող եք պաշտպանել Ձեր գաղտնիությունը, այցելեք [Կալիֆորնիայի արդարադատության նախարարություն](https://oag.ca.gov/privacy/facts/online-privacy/computer-secure)։ Ձեր համակարգիչն ապահովելու վերաբերյալ խորհուրդներ ստանալու համար սեղմեք Կալիֆորնիայի գլխավոր դատախազության գրասենյակի հղումը ստորեւ.
+
+[Զգուշացում. Արդյո՞ք Ձեր համակարգիչն ապահով է:](https://oag.ca.gov/sites/all/files/agweb/pdfs/privacy/computer_secure.pdf)
+
+
+### Կոնտակտային տվյալներ
+
+Եթե հարցեր ունեք հավաքագրման վերաբերյալ մեր գաղտնիության ծանուցման վերաբերյալ, կապվեք մեր գլխավոր գաղտնիության պատասխանատուի հետ:
 
 Office of Data and Innovation<br>
 Attn: Chief Privacy Officer<br>
 401 I Street, Suite 200<br>
 Sacramento, CA 95814<br>
-Email: privacy@innovation.ca.gov<br>
-Phone: 916-234-3480<br>
+Էլ․ փոստ: [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov)<br>
+Հեռախոս: [916-234-3480](tel:916-234-3480)<br>

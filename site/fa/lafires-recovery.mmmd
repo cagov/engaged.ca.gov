@@ -44,9 +44,9 @@ Engaged California بر پایه دموکراسی مشورتی بنا شده ا�
 ----
 id: phaseGeneral
 title: در هر مرحله چه اتفاقی می افتد
-phaseCompleteText: Phase complete
-phaseCurrentText: Phase in progress
-phasePendingText: Phase pending
+phaseCompleteText: مرحله کامل شده
+phaseCurrentText: مرحله فعلی
+phasePendingText: مرحله آتی
 ----
 
 ### اطلاعات عمومی

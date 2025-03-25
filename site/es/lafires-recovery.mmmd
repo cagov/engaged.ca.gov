@@ -44,9 +44,9 @@ Engaged California se basa en la democracia deliberativa. Es diferente de las en
 ----
 id: phaseGeneral
 title: ¿Qué sucede en cada fase?
-phaseCompleteText: Completed phase
-phaseCurrentText: Current phase
-phasePendingText: Upcoming phase
+phaseCompleteText: Fase completada
+phaseCurrentText: Fase actual
+phasePendingText: Próxima fase
 ----
 
 ### Información general
