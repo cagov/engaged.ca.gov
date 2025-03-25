@@ -17,11 +17,11 @@ tags:
 Տվյալների և նորարարությունների գրասենյակը (ODI) պարտավորվում է պաշտպանել ձեր տեղեկատվության գաղտնիությունը: Տեղեկատվության կառավարման մեր պրակտիկան համապատասխանում է հետևյալ պահանջներին.
 
 * Կալիֆորնիայի Սահմանադրություն [Հոդված 1](https://leginfo.legislature.ca.gov/faces/codes\_displayText.xhtml?lawCode=CONS&division=&title=&part=&chapter=&article=I)
-* [Կալիֆորնիայի տեղեկատվական պրակտիկաների մասին օրենք] (https://leginfo.legislature.ca.gov/faces/codes\_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)
-* [Կալիֆորնիայի հանրային գրառումների մասին օրենք] (https://leginfo.legislature.ca.gov/faces/codes\_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=)
-* Կալիֆորնիայի կառավարության օրենսգրքի բաժինները [11015.5] (https://leginfo.legislature.ca.gov/faces/codes\_displaySection.xhtml?lawCode=GOV§ionNum=11015.5.) և [11019.9](https://leginfo.legislature.ca.gov/faces/codes\_displaySection.xhtml?lawCode=GOV§ionNum=11019.9.)
-* [1974 թվականի Գաղտնիության մասին դաշնային օրենք] (https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310\_A.pdf)
-* Կալիֆորնիա [Նահանգային ​​տեղեկատվության կառավարման ձեռնարկ 5310-A] (https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310\_A.pdf)
+* [Կալիֆորնիայի տեղեկատվական պրակտիկաների մասին օրենք](https://leginfo.legislature.ca.gov/faces/codes\_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)
+* [Կալիֆորնիայի հանրային գրառումների մասին օրենք](https://leginfo.legislature.ca.gov/faces/codes\_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=)
+* Կալիֆորնիայի կառավարության օրենսգրքի բաժինները [11015.5](https://leginfo.legislature.ca.gov/faces/codes\_displaySection.xhtml?lawCode=GOV§ionNum=11015.5.) և [11019.9](https://leginfo.legislature.ca.gov/faces/codes\_displaySection.xhtml?lawCode=GOV§ionNum=11019.9.)
+* [1974 թվականի Գաղտնիության մասին դաշնային օրենք](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310\_A.pdf)
+* Կալիֆորնիա [Նահանգային ​​տեղեկատվության կառավարման ձեռնարկ 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310\_A.pdf)
 * Տեղեկատվության գաղտնիության հետ կապված բոլոր այլ կիրառելի օրենքները
 
 ODI-ն սահմանափակում է անձնական տեղեկատվության հավաքագրումը: Մենք պաշտպանում ենք անձնական տեղեկատվության գաղտնիությունը, որը մենք հավաքում կամ պահպանում ենք:
