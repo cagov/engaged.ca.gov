@@ -1,0 +1,53 @@
+section#findings-overview {
+    background: #FFF4EB;
+}
+  
+
+section#findings-over700 {
+    background: #5489A3;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 136%;
+    letter-spacing: -2%;
+    text-align: center;
+    color: #FFF4EB;
+}
+
+section#findings-overview {
+    background: #FFFFFF;
+}
+
+section#findings-topics-people-rated {
+    background: #FFF4EB;
+}
+div.findings-quote {
+    padding: 10px;
+    margin: 10px;
+    width: 225px;
+    font-weight: 600;
+    font-style: italic;
+
+}
+div.findings-quote-container-1 {
+    background: #E79450;
+    border-radius: 4.5px;
+    color: #1C2745;
+}
+div.findings-quote-container-2 {
+    background: #5489A3;
+    border-radius: 4.5px;
+    color: #FFF4EB;
+}
+
+
+div.findings-key-tension-container {
+    background: #FFF4EB;
+    border: 2px solid #E79450;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 27px;
+}
