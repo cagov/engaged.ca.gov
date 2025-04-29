@@ -44,7 +44,7 @@ div.findings-quote {
     box-sizing: border-box;
 
     position: relative;
-    padding: 10px;
+    padding: 2rem;
     font-weight: 600;
     font-style: italic;
     font-size: 19px;
@@ -52,26 +52,25 @@ div.findings-quote {
     line-height: 125%;
     letter-spacing: -2%;
     margin-bottom: 5rem;
+    border-radius: 15px;
 }
 div.findings-quote-container-1 {
     background: #E79450;
-    border-radius: 4.5px;
     color: #1C2745;
 }
 div.findings-quote-container-2 {
     background: #5489A3;
-    border-radius: 4.5px;
     color: #FFF4EB;
 }
 img.findings-quote-balloon-tip-1 {
     position: absolute;
-    bottom: -54.5px;
+    bottom: -40px;
     left: calc(33.33% - 12.5%);
     width: 25%;
 }
 img.findings-quote-balloon-tip-2 {
     position: absolute;
-    bottom: -54px;
+    bottom: -40px;
     left: calc(66.6% - 12.5%);
     width: 25%;
 }
