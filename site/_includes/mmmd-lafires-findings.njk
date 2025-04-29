@@ -9,6 +9,7 @@
       </div>
     </div>
   </div>
+  <img class="findings-corner-adornment" src="/public/images/findings-corner-adornment.svg" aria-hidden="true" alt="Findings corner adornment">
 </section>
 
 <section id="findings-over700">
@@ -39,9 +40,9 @@
       </div>
       <div>Forthcoming chart</div>
       <div class="findings-scroll-button-container">
-        <a href="#" | locale_url }}" data-appearance="button" data-theme="orange">
+        <a href="#" data-appearance="button" data-theme="orange">
         {{ modules.findings_topics_people_rated.buttonText }}
-      </a>
+        </a>
       </div>
     </div>
   </div>
@@ -50,37 +51,53 @@
 <section id="findings-issues">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+        <div class="col-lg-12">
         {{ modules.findings_issues_for_further_discussion.content | safe }}
-      </div>
-      <div class="findings-quote findings-quote-container-1">
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="findings-quote findings-quote-container-1">
         {{ modules.findings_quote_1.content | safe }}
-      </div>
-      <div class="findings-quote findings-quote-container-2">
+        <img class="findings-quote-balloon-tip-1" src="/public/images/balloon-tip-1.png" aria-hidden="true">
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="findings-quote findings-quote-container-2">
         {{ modules.findings_quote_2.content | safe }}
-      </div>
-      <div>
+        <img class="findings-quote-balloon-tip-2" src="/public/images/balloon-tip-2.png" aria-hidden="true">
+        </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <div>
         {{ modules.findings_key_tensions.content | safe }}
-      </div>
-      <div class="col-lg-6 findings-key-tension-container">
-        <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_build_back.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_build_back.iconAlt }}">
-        {{ modules.findings_key_tension_build_back.content | safe }}
-      </div>
-      <div class="col-lg-6 findings-key-tension-container">
-        <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_public_private.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_public_private.iconAlt }}">
-        {{ modules.findings_key_tension_public_private.content | safe }}
-      </div>
-      <div class="col-lg-6 findings-key-tension-container">
-        <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_individual_collective.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_individual_collective.iconAlt }}">
-        {{ modules.findings_key_tension_individual_collective.content | safe }}
-      </div>
-      <div class="col-lg-6 findings-key-tension-container">
-        <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_insurance.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_insurance.iconAlt }}">
-        {{ modules.findings_key_tension_insurance.content | safe }}
-      </div>
-      <div class="col-lg-6 findings-key-tension-container">
-        <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_modernize.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_modernize.iconAlt }}">
-        {{ modules.findings_key_tension_modernize.content | safe }}
+        </div>
+      <div class="findings-key-tensions-container">
+        <div class="findings-key-tension-block">
+          <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_build_back.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_build_back.iconAlt }}">
+          {{ modules.findings_key_tension_build_back.content | safe }}
+        </div>
+        <div class="findings-key-tension-block">
+          <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_public_private.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_public_private.iconAlt }}">
+          {{ modules.findings_key_tension_public_private.content | safe }}
+        </div>
+        <div class="findings-key-tension-block">
+          <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_individual_collective.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_individual_collective.iconAlt }}">
+          {{ modules.findings_key_tension_individual_collective.content | safe }}
+        </div>
+        <div class="findings-key-tension-block">
+          <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_insurance.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_insurance.iconAlt }}">
+          {{ modules.findings_key_tension_insurance.content | safe }}
+        </div>
+        <div class="findings-key-tension-block">
+          <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_modernize.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_modernize.iconAlt }}">
+          {{ modules.findings_key_tension_modernize.content | safe }}
+        </div>
       </div>
     </div>
   </div>
