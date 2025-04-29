@@ -65,13 +65,13 @@ div.findings-quote-container-2 {
 img.findings-quote-balloon-tip-1 {
     position: absolute;
     bottom: -40px;
-    left: calc(33.33% - 12.5%);
+    left: calc(25% - 12.5%);
     width: 25%;
 }
 img.findings-quote-balloon-tip-2 {
     position: absolute;
     bottom: -40px;
-    left: calc(66.6% - 12.5%);
+    left: calc(75% - 12.5%);
     width: 25%;
 }
 
