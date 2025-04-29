@@ -60,7 +60,7 @@ img.findings-quote-balloon-tip-1 {
 }
 img.findings-quote-balloon-tip-2 {
     position: absolute;
-    bottom: -54.5px;
+    bottom: -54px;
     left: 10vw;
     width: 25%;
 }
@@ -83,7 +83,7 @@ div.findings-key-tensions-container {
 @media (max-width: 767px) {
     div.findings-key-tensions-container div.findings-key-tension-block  {
         flex: 0 0 100%;
-        max-width: 100%;
+        max-width: 98%;
     }
 }
 
@@ -117,4 +117,17 @@ img.findings-icon {
     position: absolute;
     top: -45px;
     left: calc(50% - 40px);
+}
+
+section#findings-whats-next {
+    background: #1C2745;
+    color: #FFF4EB;
+}
+
+section#findings-whats-next h2 {
+    color: #FFF4EB;
+}
+
+.findings-button-container {
+    margin-top:2rem;
 }
