@@ -28,10 +28,10 @@ section#findings-overview {
 }
 
 
-section#findings-over700 {
+section#findings-over700, section#findings-over700 p {
     background: #5489A3;
     font-weight: 700;
-    font-size: 27px;
+    font-size: 37px;
     line-height: 136%;
     letter-spacing: -2%;
     text-align: center;
@@ -128,6 +128,18 @@ div.findings-key-tension-block  {
     max-width: 300px;
 }
 
+div.findings-key-tension-read-more {
+    font-weight: 500;
+    font-size: 16px;
+    color: #0D5D90;
+}
+
+div.findings-key-tension-heading {
+    border-bottom: 1px solid #BCBBC1;
+    margin-bottom: 1rem;
+    min-height: 10rem;
+}
+
 @media (max-width: 767px) {
     div.findings-key-tension-block  {
         margin-bottom: 2rem;
@@ -192,7 +204,7 @@ div.findings-barchart-item-approval {
     color: #5489A3;
     
 }
-div.findings-barchart-caption {
+div.findings-barchart-item-caption {
     font-weight: 700;
     font-size: 19px;
 }
