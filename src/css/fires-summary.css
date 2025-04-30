@@ -162,3 +162,37 @@ section#findings-issues .findings-button-container
 {
     text-align: center;
 }
+
+div.findings-barchart-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+div.findings-barchart-item {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+div.findings-barchart-item-approval {
+    position: absolute;
+    top: -20px;
+    left: 80%;
+
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33.47px;
+    letter-spacing: 0%;
+    text-align: right;
+    font-variant-numeric-figure: lining-nums;
+    font-variant-numeric-spacing: proportional-nums;
+    color: #5489A3;
+    
+}
+div.findings-barchart-caption {
+    font-weight: 700;
+    font-size: 19px;
+}

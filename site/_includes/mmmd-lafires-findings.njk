@@ -39,7 +39,18 @@
         {{ modules.findings_topics_people_rated.content | safe }}
       </div>
 
-      <div>Forthcoming chart</div>
+      <div class="findings-barchart-container">
+        {% for item in barchart %}
+          <div class="findings-barchart-item">
+            <div class="findings-barchart-item-approval">{{ item.approval | round }}%</div>
+            <div class="findings-barchart-bar" data-percentage="{{ item.approval }}"></div>
+            <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
+          </div>
+        {% endfor %}
+      </div>
+
+
+
       <div class="findings-button-container">
         <a href="#" data-appearance="button" data-theme="orange">
         {{ modules.findings_topics_people_rated.buttonText }}
@@ -125,6 +136,50 @@
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const barElements = document.querySelectorAll('.findings-barchart-bar');
+  
+  barElements.forEach(barElement => {
+    const percentage = parseFloat(barElement.getAttribute('data-percentage'));
+    
+    // Create SVG element with responsive dimensions
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('height', '20');
+    svg.setAttribute('viewBox', '0 0 100 20');
+    svg.setAttribute('preserveAspectRatio', 'none');
+    
+    // Create the thin background horizontal line (2px high)
+    const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    horizontalLine.setAttribute('x1', '0');
+    horizontalLine.setAttribute('y1', '10');
+    horizontalLine.setAttribute('x2', '100');
+    horizontalLine.setAttribute('y2', '10');
+    horizontalLine.setAttribute('stroke', '#BCBBC1');
+    horizontalLine.setAttribute('stroke-width', '2');
+    
+    // Create the thicker percentage line (6px thick)
+    const percentageLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    percentageLine.setAttribute('x1', '0');
+    percentageLine.setAttribute('y1', '10');
+    percentageLine.setAttribute('x2', percentage);
+    percentageLine.setAttribute('y2', '10');
+    percentageLine.setAttribute('stroke', '#5489A3');
+    percentageLine.setAttribute('stroke-width', '6');
+    
+    // Add lines to SVG
+    svg.appendChild(horizontalLine);
+    svg.appendChild(percentageLine);
+    
+    // Clear existing content and append SVG
+    barElement.innerHTML = '';
+    barElement.appendChild(svg);
+  });
+});
+
+</script>
 
 
 {% endblock %}

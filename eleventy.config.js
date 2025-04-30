@@ -240,6 +240,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src");
   eleventyConfig.addWatchTarget("./site");
+  eleventyConfig.addWatchTarget("./src/data/barchart.json");
 
   eleventyConfig.setLibrary("md", markdownEngine);
 
