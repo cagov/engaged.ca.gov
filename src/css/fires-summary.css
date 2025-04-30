@@ -196,3 +196,8 @@ div.findings-barchart-caption {
     font-weight: 700;
     font-size: 19px;
 }
+
+div.findings-indent-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
