@@ -6,10 +6,27 @@ section#findings-overview {
 
 .findings-corner-adornment {
     position: absolute;
-    inline-size: 30vw;
+    inline-size: min(220px, 30vw);
     bottom: -6.5vw;
     right: -6.5vw;
 }
+
+@media (min-width: 767px) {
+    .findings-corner-adornment {
+        width: 220px;
+        bottom: -3.25vw;
+        right: -3.25vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .findings-corner-adornment {
+        width: 220px;
+        bottom: 0;
+        right: 0;
+    }
+}
+
 
 section#findings-over700 {
     background: #5489A3;
@@ -19,10 +36,6 @@ section#findings-over700 {
     letter-spacing: -2%;
     text-align: center;
     color: #FFF4EB;
-}
-
-section#findings-overview {
-    background: #FFFFFF;
 }
 
 section#findings-topics-people-rated {
