@@ -46,12 +46,13 @@
         </div>
       </div>
       <div class="findings-indent-container">
-        <div class="findings-barchart-container">
+        <div class="findings-barchart-container collapsed">
             {% for item in barchart %}
-            <div class="findings-barchart-item">
+            {% set visible = loop.index <= 4 %}
+            <div class="findings-barchart-item{% if visible %} visible{% endif %}">
                 <div class="findings-barchart-item-approval">{{ item.approval | round }}%</div>
                 <div class="findings-barchart-bar" data-percentage="{{ item.approval }}"></div>
-                <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
+                <div class="findings-barchart-item-caption">{{loop.index}} {{ modules.findings_bar_chart[item.key] }}</div>
             </div>
             {% endfor %}
         </div>
@@ -59,8 +60,9 @@
 
 
         <div class="findings-button-container">
-            <a href="#" data-appearance="button" data-theme="orange">
+            <a id="findings-show-all-button" href="#" data-appearance="button" data-theme="orange">
             {{ modules.findings_topics_people_rated.buttonText }}
+            <img src="/public/images/arrow-down.svg" alt="Show all" class="findings-show-all-button-icon">
             </a>
         </div>
       </div>
@@ -219,6 +221,35 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+document.getElementById('findings-show-all-button').addEventListener('click', function() {
+  // Prevent the default action and stop event propagation
+  event.preventDefault();
+  event.stopPropagation();
+  const barchartContainer = document.querySelector('.findings-barchart-container');
+  var isCollapsed = barchartContainer.classList.contains('collapsed');
+  barchartContainer.classList.toggle('collapsed');
+  isCollapsed = !isCollapsed;
+  if (isCollapsed) {
+    this.querySelector('.findings-show-all-button-icon').src = '/public/images/arrow-down.svg';
+  } else {
+    this.querySelector('.findings-show-all-button-icon').src = '/public/images/arrow-up.svg';
+  }
+  var barItems = document.querySelectorAll('.findings-barchart-item');
+  barItems.forEach((barItem, index) => {
+    if (isCollapsed) {
+        barItem.classList.remove('visible');
+        // When collapsing, only make the first 4 items visible
+        if (index < 4) {
+            barItem.classList.add('visible');
+        }
+    } else {
+        barItem.classList.add('visible');
+    }
+  });
+
+  // this.textContent = barchartContainer.classList.contains('collapsed') ? 'Show All' : 'Show Less';
+});
 </script>
 
 
