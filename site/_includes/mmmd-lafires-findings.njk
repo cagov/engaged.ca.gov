@@ -61,8 +61,9 @@
 
         <div class="findings-button-container">
             <a id="findings-show-all-button" href="#" data-appearance="button" data-theme="orange">
+                <div class="findings-show-all-button-label">
             {{ modules.findings_topics_people_rated.buttonText }}
-            <img src="/public/images/arrow-down.svg" alt="Show all" class="findings-show-all-button-icon">
+             </div>
             </a>
         </div>
       </div>
@@ -108,8 +109,16 @@
                         <div class="findings-key-tension-heading">
                             {{ modules.findings_key_tension_build_back.content | safe }}
                         </div>
-                        <div class="findings-key-tension-read-more">
-                            {{ modules.findings_key_tensions.readMore | safe }}
+                        <div class="findings-key-tension-expand-block block-1">
+                            <div class="findings-expand-header">Some residents want fewer rules to speed up rebuilding. </div>
+                            <div class="findings-expand-quote">"Don't go crazy on regulations that significantly increase costs to rebuild."</div>
+                            <div class="findings-expand-header">Some view this as a chance to change.</div> 
+                            <div class="findings-expand-quote">"We cannot rebuild LA without putting measures in place to mitigate these natural disasters in the future." </div>
+                            <div class="findings-expand-header">Some people think rebuilding is a bad idea.</div>
+                            <div class="findings-expand-quote">"We should buy out homeowners in these areas and turn unsafe zones back into wilderness. If they want to stay, they should have to pay for the true cost."</div>
+                        </div>
+                        <div class="findings-key-tension-read-more" data-block="block-1">
+                            <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                         </div>
                     </div>
                     <div class="findings-key-tension-block">
@@ -118,7 +127,7 @@
                             {{ modules.findings_key_tension_public_private.content | safe }}
                         </div>
                         <div class="findings-key-tension-read-more">
-                            {{ modules.findings_key_tensions.readMore | safe }}
+                            <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                         </div>
                     </div>
                     <div class="findings-key-tension-block">
@@ -127,7 +136,7 @@
                             {{ modules.findings_key_tension_individual_collective.content | safe }}
                         </div>
                         <div class="findings-key-tension-read-more">
-                            {{ modules.findings_key_tensions.readMore | safe }}
+                            <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                         </div>
                     </div>
                     <div class="findings-key-tension-block">
@@ -136,7 +145,7 @@
                             {{ modules.findings_key_tension_insurance.content | safe }}
                         </div>
                         <div class="findings-key-tension-read-more">
-                            {{ modules.findings_key_tensions.readMore | safe }}
+                            <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                         </div>
                     </div>
                     <div class="findings-key-tension-block">
@@ -145,7 +154,7 @@
                             {{ modules.findings_key_tension_modernize.content | safe }}
                         </div>
                         <div class="findings-key-tension-read-more">
-                            {{ modules.findings_key_tensions.readMore | safe }}
+                            <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                         </div>
                     </div>
                 </div>
@@ -227,17 +236,14 @@ document.getElementById('findings-show-all-button').addEventListener('click', fu
   event.preventDefault();
   event.stopPropagation();
   const barchartContainer = document.querySelector('.findings-barchart-container');
+  const showAllButtonLabel = document.querySelector('.findings-show-all-button-label');
   var isCollapsed = barchartContainer.classList.contains('collapsed');
   barchartContainer.classList.toggle('collapsed');
   isCollapsed = !isCollapsed;
-  if (isCollapsed) {
-    this.querySelector('.findings-show-all-button-icon').src = '/public/images/arrow-down.svg';
-  } else {
-    this.querySelector('.findings-show-all-button-icon').src = '/public/images/arrow-up.svg';
-  }
   var barItems = document.querySelectorAll('.findings-barchart-item');
   barItems.forEach((barItem, index) => {
     if (isCollapsed) {
+        showAllButtonLabel.classList.remove('open');
         barItem.classList.remove('visible');
         // When collapsing, only make the first 4 items visible
         if (index < 4) {
@@ -245,11 +251,25 @@ document.getElementById('findings-show-all-button').addEventListener('click', fu
         }
     } else {
         barItem.classList.add('visible');
+        showAllButtonLabel.classList.add('open');
     }
   });
 
   // this.textContent = barchartContainer.classList.contains('collapsed') ? 'Show All' : 'Show Less';
 });
+
+document.querySelectorAll('.findings-key-tension-read-more').forEach(readMore => {
+  readMore.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const block = this.getAttribute('data-block');
+    const expandBlock = document.querySelector(`.findings-key-tension-expand-block.${block}`);
+    if (expandBlock != null) {
+      expandBlock.classList.toggle('expanded');
+    }
+  });
+});
+
 </script>
 
 

@@ -117,7 +117,7 @@ div.findings-key-tension-block  {
     background: #FFF4EB;
     border: 2px solid #E79450;
     border-radius: 10px;
-    padding: 10px;
+    padding: 0;
     padding-top: 6rem;
     margin: 10px;
     margin-right: 0;
@@ -128,16 +128,25 @@ div.findings-key-tension-block  {
     max-width: 300px;
 }
 
-div.findings-key-tension-read-more {
+div.findings-key-tension-read-more:not(.expanded) {
     font-weight: 500;
     font-size: 16px;
     color: #0D5D90;
 }
 
+div.findings-key-tension-read-more:not(.expanded) span {
+    padding-right: 24px;
+    background: url("/public/images/arrow-blue-down.svg") no-repeat right center;
+}
+div.findings-key-tension-read-more.expanded span {
+    padding-right: 24px;
+    background: url("/public/images/arrow-blue-up.svg") no-repeat right center;
+}
+
 div.findings-key-tension-heading {
     border-bottom: 1px solid #BCBBC1;
     margin-bottom: 1rem;
-    min-height: 10rem;
+    min-height: 11rem;
 }
 
 @media (max-width: 767px) {
@@ -147,6 +156,50 @@ div.findings-key-tension-heading {
         flex: 1 1 85%;
         max-width: 85%;
     }
+}
+
+div.findings-key-tension-expand-block {
+    padding: 0px;
+    display: none;
+    cursor: pointer;
+}
+
+div.findings-key-tension-expand-block.expanded {
+    padding: 0px;
+    display: block;
+}
+
+
+div.findings-expand-header {
+    padding: 10px;
+    background: white;
+    color: #444444;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 27px;
+    letter-spacing: 0%;
+}
+
+div.findings-expand-quote {
+    padding: 10px;
+    background: #FFF4EB;
+    color: #444444;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 125%;
+    letter-spacing: -2%;
+}
+
+div.findings-show-all-button-label {
+    padding-right: 32px;
+    background: url("/public/images/arrow-down.svg") no-repeat right center;
+    cursor: pointer;
+}
+
+div.findings-show-all-button-label.open {
+    background: url("/public/images/arrow-up.svg") no-repeat right center;
+    cursor: pointer;
 }
 
 
@@ -235,3 +288,4 @@ div.findings-indent-container {
     max-width: 750px;
     margin: 0 auto;
 }
+
