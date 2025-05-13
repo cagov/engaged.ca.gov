@@ -77,7 +77,8 @@ def create_svg_scatterplot(
             x = float(item['UMAP_1'])
             y = float(item['UMAP_2'])
             subcat = item.get('SUBCATEGORY', 'Unknown')
-            points.append((x, y, subcat))
+            comment_id = item.get('COMMENT_ID', -1)
+            points.append((x, y, subcat, comment_id))
             subcategories.add(subcat)
     
     if not points:
@@ -146,7 +147,7 @@ def create_svg_scatterplot(
 '''
     
     # Map coordinates to SVG space and draw points
-    for i, (x, y, subcat) in enumerate(points):
+    for i, (x, y, subcat, comment_id) in enumerate(points):
         # Scale coordinates to fit in the plot area
         svg_x = margin + ((x - min_x) / (max_x - min_x)) * plot_width
         # Invert y-axis for SVG (0 is at the top)
@@ -156,7 +157,7 @@ def create_svg_scatterplot(
         # Add blend mode attribute if specified
         blend_mode_attr = f' style="mix-blend-mode: {config.dot_blendmode};"' if config.dot_blendmode else ''
         
-        svg_content += f'''    <circle class="{config.datapoint_class}" data-idx="{i}" cx="{svg_x}" cy="{svg_y}" r="{config.dot_size}" fill="{color}" fill-opacity="{config.dot_opacity}" stroke="none" stroke-width="0.5"{blend_mode_attr}/>
+        svg_content += f'''    <circle class="{config.datapoint_class}" data-cid="{comment_id}" cx="{svg_x}" cy="{svg_y}" r="{config.dot_size}" fill="{color}" fill-opacity="{config.dot_opacity}" stroke="none" stroke-width="0.5"{blend_mode_attr}/>
 '''
     
     # Add legend
