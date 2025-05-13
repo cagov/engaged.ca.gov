@@ -5,6 +5,8 @@
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 5px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 </style>
 <section id="plots-overview">
@@ -23,7 +25,7 @@
       <div class="col-lg-12 responsive-svg-container">
             {{ './src/public/images/public_private.svg' | getFileContents | safe }}
       </div>
-      <div class="quote-card">
+      <div class="quote-card" style="display: none;">
         <div class="quote-card-content">
         </div>
       </div>
@@ -39,6 +41,27 @@
 </style>
 <script>
 quoteData = null;
+
+function revealQuote(cid) {
+  if (quoteData == null) {
+    console.log('No quote data found');
+    return;
+  }
+  const quote = quoteData.find(q => q.COMMENT_ID === cid);
+  if (quote) {
+    document.querySelector('.quote-card-content').innerHTML = quote.CONTENT;
+  } else {
+    console.log('No quote found for comment_id:', cid);
+  }
+  document.querySelector('.quote-card').style.display = 'block';
+}
+
+function hideQuote() {
+  document.querySelector('.quote-card-content').innerHTML = '';
+  document.querySelector('.quote-card').style.display = 'none';
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch("/public/data/engca_comment_scatterplot_source.json", {})
     .then(response => response.json())
@@ -58,16 +81,24 @@ document.addEventListener('DOMContentLoaded', function() {
   // Direct access to SVG elements since they're now in the DOM
   const datapoints = document.querySelectorAll('.datapoint');
   console.log("Found datapoints:", datapoints.length);
+
   
   datapoints.forEach(datapoint => {
     // Add hover effect
     datapoint.addEventListener('mouseenter', function() {
       this.setAttribute('r', '8'); // Increase radius on hover
       this.style.cursor = 'pointer';
+      const comment_id = parseInt(this.getAttribute('data-cid'));
+      if (isNaN(comment_id)) {
+        console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
+        return;
+      }
+      revealQuote(comment_id);
     });
     
     datapoint.addEventListener('mouseleave', function() {
       this.setAttribute('r', '5'); // Reset radius when not hovering
+      hideQuote();
     });
     
     // Add click handler
@@ -82,13 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
         return;
       }
-      const quote = quoteData.find(q => q.COMMENT_ID === comment_id);
-      if (quote) {
-        document.querySelector('.quote-card-content').innerHTML = quote.CONTENT;
-      } else {
-        console.log('No quote found for comment_id:', comment_id);
-      }
-      console.log('Datapoint clicked:', comment_id);
+      revealQuote(comment_id);
+      // console.log('Datapoint clicked:', comment_id);
       // You can add more functionality here, like showing details about the point
     });
   });
