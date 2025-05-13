@@ -34,13 +34,13 @@
       {% import "form-checkbox.njk" as checkbox %}
 
       <li>
-        {{ checkbox.label('topic-los-angeles-fires-recovery-eaton' | i18n, 1, 8) }}
+        {{ checkbox.data('topic-los-angeles-fires-recovery-eaton' | i18n, 1, 8) }}
       </li>
       <li>
-        {{ checkbox.label('topic-los-angeles-fires-recovery-palisades' | i18n, 0, 4) }}
+        {{ checkbox.datal('topic-los-angeles-fires-recovery-palisades' | i18n, 0, 4) }}
       </li>
       <li>
-        {{ checkbox.label('topic-future-topics' | i18n, 0, 2, "checked") }}
+        {{ checkbox.data('topic-future-topics' | i18n, 0, 2, "checked") }}
       </li>
 
       <engca-form-error id="emailError" hidden>
