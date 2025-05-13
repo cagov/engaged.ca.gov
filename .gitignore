@@ -9,3 +9,4 @@ site/es_old
 .autoenv*
 .venv*
 *venv
+.idea
