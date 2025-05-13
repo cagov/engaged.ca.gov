@@ -4,8 +4,9 @@
     <section id="los-angeles-fires-recovery">
         <div class="container banner-flex">
             <engca-banner-content>
-                <h1>{{ title }}</h1>
-                <p class="status-pill">{{ modules.hero.statusAgendaSettingText }}</p>
+                <h1>{{ modules.hero.title  }}</h1>
+                <p><strong>{{ modules.hero.subtitle }}</strong></p>
+                <p class="status-pill">{{ modules.hero.pillText }}</p>
                 {{ modules.hero.content | safe }}
                 <p>
                     <a data-appearance="button" data-theme="orange" href="#sign-up" class="m-t">{{ modules.hero.buttonText }}</a>
@@ -35,7 +36,6 @@
             <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt=""/>
             <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt=""/>
 
-            <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
             {% include "form-government-efficiencies.njk" %}
 
         </div>

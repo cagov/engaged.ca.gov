@@ -1,5 +1,20 @@
 {% extends "form.njk" %}
+
+{% block formHeading %}
+    {{ modules.form.content | safe }}
+{% endblock formHeading %}
+
+{% block formEmail %}
+    {{ modules.form.emailLabel | safe }}
+{% endblock formEmail %}
+
 {% block formContent %}
     {% import "form-checkbox.njk" as checkbox %}
     {{ checkbox.data('topic-government-efficiencies' | i18n, 1, 8, "required") }}
 {% endblock formContent %}
+
+
+{% block formSubmit %}
+    {% import "form-submit.njk" as submit %}
+    {{ submit.data('form-submit-button' | i18n) }}
+{% endblock formSubmit %}

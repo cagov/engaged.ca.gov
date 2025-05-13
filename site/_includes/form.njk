@@ -1,5 +1,8 @@
 <h2>{{ 'join-the-conversation' | i18n }}</h2>
+{% block formHeading %}
 <p>{{ 'join-the-conversation-form-label' | i18n }}</p>
+{% endblock formHeading %}
+
 <engca-join-convo-form>
   
   <form
@@ -14,9 +17,13 @@
       <label class="form-control-label" for="mce-EMAIL">
         <span class="required-label" aria-hidden="true">*</span>
         <span class="sr-only">{{ 'required-label' | i18n }}:</span>
-        {{ 'email-label' | i18n }}
+        {% block formEmail %}
+          {{ 'email-label' | i18n }}
+        {% endblock formEmail %}
       </label>
+
       <input type="email" class="form-control" id="mce-EMAIL" name="EMAIL" aria-required="true">
+
       <engca-form-error id="emailError" hidden>
         <strong>{{ 'valid-email-message' | i18n }}</strong>
         {{ 'valid-email-message-2' | i18n }}
@@ -56,7 +63,9 @@
       </engca-form-error>
     </engca-form-field>
 
-    <input type="submit" id="mc-embedded-subscribe" name="subscribe" data-theme="orange" value="{{ 'form-submit-button' | i18n }}">
+    {% import "form-submit.njk" as submit %}
+    {{ submit.data('form-submit-button' | i18n) }}
+
   </form>
 
   <engca-form-success aria-live="polite"></engca-form-success>
