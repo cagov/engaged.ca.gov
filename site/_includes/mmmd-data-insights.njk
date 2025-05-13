@@ -8,6 +8,16 @@
   max-width: 500px;
   margin: 0 auto;
 }
+.plot-row {
+  position: relative;
+}
+.quote-card {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  opacity: 0.8;
+}
 </style>
 <section id="plots-overview">
   <div class="container">
@@ -21,7 +31,7 @@
 
 <section id="plot-1">
   <div class="container">
-    <div class="row">
+    <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
             {{ './src/public/images/public_private.svg' | getFileContents | safe }}
       </div>
