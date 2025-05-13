@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="1000" height="600" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
     <rect width="1000" height="600" fill="white"/>
-    <text x="50" y="25.0" text-anchor="start" font-family="Open Sans" font-size="16" font-weight="bold">Scatterplot for 'Individual v. Collective Mitigation'</text>
+    <text x="50" y="25.0" text-anchor="start" font-family="Open Sans" font-size="16" font-weight="bold">Individual v. Collective Mitigation</text>
     <circle class="datapoint" data-cid="1162" cx="718.1818181818182" cy="481.61365940961934" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
     <circle class="datapoint" data-cid="1591" cx="709.8746227968907" cy="489.05658700508064" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
     <circle class="datapoint" data-cid="1527" cx="707.1390718034827" cy="508.84526676987286" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>

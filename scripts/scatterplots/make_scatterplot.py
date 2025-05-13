@@ -228,7 +228,7 @@ def main():
     create_svg_scatterplot(
         filtered_data,
         output_file,
-        title=args.title if args.title else f"Scatterplot for '{args.tension_category}'",
+        title=args.title if args.title else f"{args.tension_category}",
         xlabel=args.xlabel,
         ylabel=args.ylabel
     )

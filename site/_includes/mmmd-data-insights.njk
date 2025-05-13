@@ -12,11 +12,13 @@
   position: relative;
 }
 .quote-card {
-  position: absolute;
-  top: 100px;
-  left: 0;
+  position: fixed;
+  top: 50%;
+  left: 66%;
+  transform: translate(-50%, -50%);
   width: 100%;
   opacity: 0.8;
+  z-index: 1000;
 }
 </style>
 <section id="plots-overview">
@@ -29,19 +31,64 @@
   </div>
 </section>
 
+<div class="quote-card" style="display: none;">
+  <div class="quote-card-content">
+  </div>
+</div>
+
+
 <section id="plot-1">
   <div class="container">
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
             {{ './src/public/images/public_private.svg' | getFileContents | safe }}
       </div>
-      <div class="quote-card" style="display: none;">
-        <div class="quote-card-content">
-        </div>
+    </div>
+  </div>
+</section>
+
+<section id="plot-2">
+  <div class="container">
+    <div class="row plot-row">
+      <div class="col-lg-12 responsive-svg-container">
+            {{ './src/public/images/ind_vs_collective.svg' | getFileContents | safe }}
       </div>
     </div>
   </div>
 </section>
+
+<section id="plot-3">
+  <div class="container">
+    <div class="row plot-row">
+      <div class="col-lg-12 responsive-svg-container">
+            {{ './src/public/images/financial_aid.svg' | getFileContents | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plot-4">
+  <div class="container">
+    <div class="row plot-row">
+      <div class="col-lg-12 responsive-svg-container">
+            {{ './src/public/images/density_vs_safety.svg' | getFileContents | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plot-5">
+  <div class="container">
+    <div class="row plot-row">
+      <div class="col-lg-12 responsive-svg-container">
+            {{ './src/public/images/build_faster_vs_better.svg' | getFileContents | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <style>
 .responsive-svg-container svg {
   width: 100%;
