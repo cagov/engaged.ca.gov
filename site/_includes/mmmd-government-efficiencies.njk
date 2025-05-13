@@ -1,0 +1,54 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+    <section id="los-angeles-fires-recovery">
+        <div class="container banner-flex">
+            <engca-banner-content>
+                <h1>{{ title }}</h1>
+                <p class="status-pill">{{ modules.hero.statusAgendaSettingText }}</p>
+                {{ modules.hero.content | safe }}
+                <p>
+                    <a data-appearance="button" data-theme="orange" href="#sign-up" class="m-t">{{ modules.hero.buttonText }}</a>
+                </p>
+            </engca-banner-content>
+            <img src="/public/images/fires-about-bubbles.svg" aria-hidden="true" class="desktop-only" alt=""/>
+        </div>
+    </section>
+
+    <section id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    {{ modules.overview.content | safe }}
+                </div>
+                <div class="col-lg-4">
+                    <div class="about-the-process">
+                        {{ modules.about.content | safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sign-up">
+        <div class="container form-flex">
+            <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt=""/>
+            <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt=""/>
+            {% include "form.njk" %}
+        </div>
+    </section>
+
+    <section id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    {{ modules.generalInfo.content | safe }}
+                </div>
+                <div class="col-lg-6">
+                    {{ modules.codeConduct.content | safe }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
