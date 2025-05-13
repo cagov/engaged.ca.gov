@@ -34,7 +34,10 @@
         <div class="container form-flex">
             <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt=""/>
             <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt=""/>
-            {% include "form.njk" %}
+
+            <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
+            {% include "form-government-efficiencies.njk" %}
+
         </div>
     </section>
 

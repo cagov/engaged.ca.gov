@@ -1,0 +1,5 @@
+{% extends "form.njk" %}
+{% block formContent %}
+    {% import "form-checkbox.njk" as checkbox %}
+    {{ checkbox.data('topic-government-efficiencies' | i18n, 1, 8, "required") }}
+{% endblock formContent %}

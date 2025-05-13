@@ -28,20 +28,24 @@
     </engca-form-field>
 
     <engca-form-field>
+      {% block formContent %}
     <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
 
     <ul class="form-checkbox-list">
-      {% import "form-checkbox.njk" as checkbox %}
-      <li>
-        {{ checkbox.data('topic-los-angeles-fires-recovery-eaton' | i18n, 1, 8) }}
-      </li>
-      <li>
-        {{ checkbox.data('topic-los-angeles-fires-recovery-palisades' | i18n, 0, 4) }}
-      </li>
-      <li>
-        {{ checkbox.data('topic-future-topics' | i18n, 2, 2, "checked") }}
-      </li>
+        {% import "form-checkbox.njk" as checkbox %}
+        <li>
+          {{ checkbox.data('topic-los-angeles-fires-recovery-eaton' | i18n, 1, 8) }}
+        </li>
+        <li>
+          {{ checkbox.data('topic-los-angeles-fires-recovery-palisades' | i18n, 0, 4) }}
+        </li>
+        <li>
+          {{ checkbox.data('topic-future-topics' | i18n, 2, 2, "checked") }}
+        </li>
     </ul>
+
+      {% endblock formContent %}
+
       <engca-form-error id="emailError" hidden>
         <strong>{{ 'valid-email-message' | i18n }}</strong>
         {{ 'valid-email-message-2' | i18n }}
