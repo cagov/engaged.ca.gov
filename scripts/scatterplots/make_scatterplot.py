@@ -109,8 +109,12 @@ def create_svg_scatterplot(
     
     # Generate colors for subcategories
     subcategories_list = list(subcategories)
+    # if one of the list items is None, remove it, and add it to the end of the list
+    if any([cat is None for cat in subcategories_list]):
+        subcategories_list.remove(None)
+        subcategories_list.append(None)
     colors = generate_distinct_colors(len(subcategories_list))
-    color_map = {subcat: colors[i] for i, subcat in enumerate(subcategories_list)}
+    color_map = {subcat: colors[i] if subcat is not None else 'lightgray' for i, subcat in enumerate(subcategories_list)}
     
     # Prepare SVG content
     svg_content = f'''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
