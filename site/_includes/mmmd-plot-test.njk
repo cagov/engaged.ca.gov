@@ -1,0 +1,60 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+<section id="plots-overview">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        {{ modules.plots_overview.content | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plot-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 responsive-svg-container">
+            {{ './src/public/images/plot-1.svg' | getFileContents | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.responsive-svg-container svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Set up event handlers for datapoints in plots
+  console.log("Setting up event handlers for datapoints in plots");
+  
+  // Direct access to SVG elements since they're now in the DOM
+  const datapoints = document.querySelectorAll('.datapoint');
+  console.log("Found datapoints:", datapoints.length);
+  
+  datapoints.forEach(datapoint => {
+    // Add hover effect
+    datapoint.addEventListener('mouseenter', function() {
+      this.setAttribute('r', '8'); // Increase radius on hover
+      this.style.cursor = 'pointer';
+    });
+    
+    datapoint.addEventListener('mouseleave', function() {
+      this.setAttribute('r', '5'); // Reset radius when not hovering
+    });
+    
+    // Add click handler
+    datapoint.addEventListener('click', function() {
+      const dataIdx = this.getAttribute('data-idx');
+      console.log('Datapoint clicked:', dataIdx);
+      // You can add more functionality here, like showing details about the point
+    });
+  });
+});
+</script>
+
+{% endblock %}
