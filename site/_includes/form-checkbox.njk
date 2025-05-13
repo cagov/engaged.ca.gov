@@ -1,0 +1,8 @@
+{% macro label(i8nkey, id, name, checked) %}
+
+    <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-{{ id }}" name="group[91023][{{ name }}]" value="{{ text }}" {{ checked }}>
+    <label class="form-control-label form-checkbox-label" for="{{ id }}">
+        {{ i8nkey }}
+    </label>
+
+{% endmacro %}
