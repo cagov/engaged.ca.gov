@@ -180,7 +180,7 @@ def create_svg_scatterplot(
         
         # Add colored circle and label for legend item
         svg_content += f'''    <circle cx="{legend_x + 7}" cy="{y_pos + 7}" r="5" fill="{color}" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>
-    <text fill="#5e5f66" x="{legend_x + 20}" y="{y_pos + 12}" font-family="Open Sans" font-size="10">{subcat}</text>
+    <text fill="#5e5f66" x="{legend_x + 20}" y="{y_pos + 10.5}" font-family="Open Sans" font-size="10">{subcat if subcat is not None else 'Other'}</text>
 '''
     
     # Close SVG
