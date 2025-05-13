@@ -6,19 +6,21 @@
   padding: 10px;
   border-radius: 5px;
   max-width: 500px;
-  margin: 0 auto;
+  {# margin: 0 auto; #}
 }
 .plot-row {
   position: relative;
 }
 .quote-card {
   position: fixed;
-  top: 50%;
-  left: 66%;
-  transform: translate(-50%, -50%);
   width: 100%;
   opacity: 0.8;
   z-index: 1000;
+}
+.responsive-svg-container svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 </style>
 <section id="plots-overview">
@@ -89,17 +91,12 @@
 
 
 
-<style>
-.responsive-svg-container svg {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
-</style>
 <script>
 quoteData = null;
 
-function revealQuote(cid) {
+function revealQuote(cid, evt) {
+  const mouseX = evt.clientX;
+  const mouseY = evt.clientY;
   if (quoteData == null) {
     console.log('No quote data found');
     return;
@@ -109,6 +106,26 @@ function revealQuote(cid) {
     document.querySelector('.quote-card-content').innerHTML = quote.CONTENT;
   } else {
     console.log('No quote found for comment_id:', cid);
+  }
+  const quote_left = mouseX > window.innerWidth / 2 ? '10%' : '50%';
+  const quote_top = mouseY > window.innerHeight / 2 ? '10%' : '50%';
+  if (mouseX > window.innerWidth / 2) {
+    // clear left, and set right to window.innerWidth/2
+    document.querySelector('.quote-card').style.left = 'inherit';
+    document.querySelector('.quote-card').style.right = '50%';
+  } else {
+    // clear right and set left to window.innerWidth/2
+    document.querySelector('.quote-card').style.left = '50%';
+    document.querySelector('.quote-card').style.right = 'inherit';
+  }
+  if (mouseY > window.innerHeight / 2) {
+    // clear top, and set bottom to window.innerHeight/2
+    document.querySelector('.quote-card').style.top = 'inherit';
+    document.querySelector('.quote-card').style.bottom = '50%';
+  } else {
+    // clear bottom and set top to window.innerHeight/2
+    document.querySelector('.quote-card').style.top = '50%';
+    document.querySelector('.quote-card').style.bottom = 'inherit';
   }
   document.querySelector('.quote-card').style.display = 'block';
 }
@@ -142,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   datapoints.forEach(datapoint => {
     // Add hover effect
-    datapoint.addEventListener('mouseenter', function() {
+    datapoint.addEventListener('mouseenter', function(e) {
       this.setAttribute('r', '8'); // Increase radius on hover
       this.style.cursor = 'pointer';
       const comment_id = parseInt(this.getAttribute('data-cid'));
@@ -150,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
         return;
       }
-      revealQuote(comment_id);
+      revealQuote(comment_id, e);
     });
     
     datapoint.addEventListener('mouseleave', function() {
@@ -159,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add click handler
-    datapoint.addEventListener('click', function() {
+    datapoint.addEventListener('click', function(e) {
       const comment_id = parseInt(this.getAttribute('data-cid'));
       // if not a valid integer when converted to int, return early
       if (quoteData == null) {
@@ -170,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
         return;
       }
-      revealQuote(comment_id);
+      revealQuote(comment_id, e);
       // console.log('Datapoint clicked:', comment_id);
       // You can add more functionality here, like showing details about the point
     });
