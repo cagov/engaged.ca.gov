@@ -12,7 +12,7 @@ If no output file is specified, the script will use the tension category as the 
 """
 
 import json
-import sys
+import sys, os
 import argparse
 import scatterplot_config as config
 from typing import Dict, List, Optional, Any, Tuple, Set
@@ -181,6 +181,8 @@ def create_svg_scatterplot(
     svg_content += '</svg>'
     
     # Write SVG to file
+    # Create directory for output file if it doesn't exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(svg_content)
