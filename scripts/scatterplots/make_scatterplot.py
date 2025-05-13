@@ -44,7 +44,8 @@ def filter_data_by_tension(data: List[Dict[str, Any]], tension_category: str) ->
 
 def generate_distinct_colors(count: int) -> List[str]:
     """Generate a list of distinct colors in hex format"""
-    color_hsvs = ['#5ed0b9','#70b6e5','#b98acb','#ee8176']
+    color_hsvs = ['#5ed0b9','#70b6e5','#b98acb','#ee8176',
+                  '#f9c280','#f7e79c','#c2c2f0','#a8d672']
     colors = color_hsvs[:count]
     return colors
 

@@ -2,66 +2,95 @@
 <svg width="1000" height="600" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
     <rect width="1000" height="600" fill="white"/>
     <text x="50" y="25.0" text-anchor="start" font-family="Open Sans" font-size="16" font-weight="bold">Density v. Safety</text>
-    <circle class="datapoint" data-cid="1154" cx="718.1818181818182" cy="351.71666195986325" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="952" cx="706.4337387323171" cy="336.49281004792596" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="598" cx="704.02901355074" cy="379.37089474801655" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="459" cx="696.0011554110665" cy="376.1267393957711" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1619" cx="672.7792701934378" cy="351.4082467737196" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1674" cx="652.2782595730808" cy="401.3859740781573" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="919" cx="639.7990918170001" cy="347.23027590036276" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="839" cx="620.9024844849067" cy="422.6817317093531" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="546" cx="612.2090699827644" cy="380.2744433225987" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1659" cx="587.5367496502962" cy="351.83138886285997" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1656" cx="526.9393070626434" cy="455.84741248429185" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="692" cx="522.1166115945905" cy="273.5406407566106" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1721" cx="510.8170177408261" cy="436.277610992234" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1418" cx="497.37054624916505" cy="85.98679816806663" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="412" cx="481.9534909880941" cy="104.70783863443393" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1415" cx="479.07928454525455" cy="87.49736883243668" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="714" cx="462.57809024722076" cy="117.81647542859702" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="264" cx="458.99569990430166" cy="72.72727272727275" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1012" cx="454.4303312488032" cy="166.76701072944365" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1093" cx="423.76678885741563" cy="206.76978994546528" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1091" cx="415.99388615980536" cy="251.61819502094414" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1286" cx="412.2504712697052" cy="75.18344850696394" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="261" cx="401.9113562138203" cy="185.81474541610862" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="932" cx="397.4468593515283" cy="100.82218354294304" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1473" cx="374.85287713579584" cy="413.70856326567844" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="418" cx="363.1739734140144" cy="309.2037615142901" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="537" cx="341.4951240552733" cy="411.98473730673254" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="290" cx="337.68756547350563" cy="97.88674059437506" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1657" cx="321.47400580106967" cy="522.4085251615824" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="874" cx="307.8023660705603" cy="128.66465569538207" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1262" cx="300.8570275219453" cy="273.96190043340874" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="407" cx="297.6032797750326" cy="511.42540709562047" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="269" cx="278.5592980137551" cy="159.88721175898456" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1010" cx="272.1391977721815" cy="309.7467823116406" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1300" cx="263.423920083196" cy="369.0490414392368" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1338" cx="260.254154998387" cy="493.1765994766881" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1613" cx="258.13862615059554" cy="372.79217963249755" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="500" cx="252.68733361507356" cy="194.43481662478104" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1353" cx="244.00352031292334" cy="492.0898147862099" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="398" cx="242.8216328991299" cy="527.2727272727273" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1011" cx="242.37204822472228" cy="181.39696767664748" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="328" cx="235.7591697540623" cy="409.56715046062936" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1532" cx="223.27482549634078" cy="504.0368171055326" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="521" cx="218.31158053680454" cy="457.1817069719097" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="984" cx="208.47971582078262" cy="166.37433369722646" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1067" cx="203.53882578905996" cy="490.07872584735753" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="664" cx="183.5167531643692" cy="470.3354469683328" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1475" cx="146.88252162877362" cy="186.73994152485562" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="914" cx="126.868662194227" cy="168.96921220466515" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="924" cx="105.35604287446338" cy="163.18952316013264" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="969" cx="96.31053176982988" cy="166.73699155076417" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="1706" cx="91.49069941323859" cy="200.3385453191101" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
-    <circle class="datapoint" data-cid="920" cx="81.81818181818184" cy="198.95563057239718" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1721" cx="147.0862623696873" cy="191.861307337109" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1674" cx="489.69677101367677" cy="147.9497242105378" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1658" cx="709.7842870327192" cy="167.4384469552533" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1661" cx="482.55291251870676" cy="509.18508620035135" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1657" cx="625.1228244994072" cy="376.02081663558863" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1659" cx="529.8218945644046" cy="162.7255545621881" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1651" cx="535.7970740131029" cy="508.3107887530912" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1662" cx="534.4718009596114" cy="461.71583768784205" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1656" cx="582.0310698896526" cy="364.04169254234506" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1610" cx="186.73974641100864" cy="278.24902723571114" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1619" cx="563.3092361233521" cy="106.2996402716488" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1590" cx="117.77074673806663" cy="291.38447066062434" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1475" cx="371.0592025041996" cy="416.3753168661856" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1403" cx="498.2474201164542" cy="483.7408711566516" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1383" cx="462.04945069074114" cy="469.9107259875402" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1418" cx="536.740796070259" cy="341.2896573061063" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1353" cx="139.7385760052635" cy="266.71281833247315" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1262" cx="617.3790692888606" cy="178.41854950644563" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1067" cx="182.98338038696068" cy="213.36939320844385" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="297" cx="371.116148904711" cy="431.7042148189335" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="952" cx="519.0894590790843" cy="189.49885469822584" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1166" cx="587.6797022062838" cy="263.91309011135087" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1154" cx="437.4038289229975" cy="175.3142158492049" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="418" cx="117.99149497012446" cy="218.91172723195064" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="834" cx="453.76577825179675" cy="128.16270687313795" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1212" cx="420.42944172741437" cy="198.71291114674233" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1194" cx="500.79143461991174" cy="426.65517285828525" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="919" cx="475.01734730784216" cy="119.76104661572214" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="546" cx="441.3078091195041" cy="162.53947553734838" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="272" cx="703.9027572705992" cy="230.7199726980433" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="714" cx="579.1574410765925" cy="214.8009029458678" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="932" cx="640.4029968351678" cy="203.86040049464515" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="328" cx="128.64052153692188" cy="252.10325169945105" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="598" cx="506.129128061749" cy="160.6667941987285" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="914" cx="275.1347931205752" cy="282.875647561416" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1093" cx="514.0145165343232" cy="220.13985887308763" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="870" cx="530.631276232356" cy="260.31426721366415" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1218" cx="533.8293393298395" cy="469.13104072070536" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1010" cx="526.6279210131452" cy="385.68507505644175" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="398" cx="207.57254989310343" cy="249.27781335342706" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="407" cx="593.0498390765634" cy="411.81789025590444" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1083" cx="563.3035789689618" cy="504.38505930565213" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1224" cx="632.5100427628279" cy="441.63877450368636" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="924" cx="666.4573857663606" cy="199.44281979344657" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1201" cx="607.6814836806864" cy="143.28886091199882" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="261" cx="453.97785332396523" cy="220.75460952162155" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1031" cx="468.55919695978815" cy="527.2727272727273" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1187" cx="274.69097926360865" cy="216.7791237531315" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="664" cx="81.81818181818183" cy="228.93498389424735" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1167" cx="636.8632554060856" cy="244.14272248762762" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="897" cx="537.1134183324001" cy="72.72727272727275" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="692" cx="481.0704659847115" cy="228.25895091998314" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="758" cx="485.43240288842566" cy="441.41859962114546" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1011" cx="597.2483319956395" cy="220.331853058253" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1086" cx="418.2126900498408" cy="399.8628843333037" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="506" cx="605.8157821787182" cy="106.22541160144272" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="412" cx="498.19296149166354" cy="261.7629846553991" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1012" cx="523.2472614384728" cy="288.8766551632514" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1043" cx="468.34943928047056" cy="344.6780252610655" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="877" cx="568.8758056461899" cy="119.9319877189294" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="268" cx="407.1083820155947" cy="503.3266918041034" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="313" cx="238.7511600401381" cy="238.29215076941387" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="269" cx="718.1818181818182" cy="187.14273315930063" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="567" cx="570.6348391811613" cy="163.69994302637565" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1223" cx="549.394209577289" cy="417.95843176103114" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="988" cx="429.83806949480584" cy="353.17465530741003" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="920" cx="446.3978828637966" cy="437.62459158254796" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="964" cx="613.3137579553596" cy="479.93949199879216" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="826" cx="306.8266364230898" cy="250.725201652279" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="663" cx="577.8160144548808" cy="458.5768146056817" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1168" cx="491.9931317287217" cy="95.47702508730777" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1082" cx="437.54392859625744" cy="485.3882994809122" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="404" cx="476.23373727408966" cy="399.151962815894" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="740" cx="405.9100540629427" cy="460.1990958598059" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1230" cx="517.4545421034918" cy="104.71845567458996" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="521" cx="94.39442289142474" cy="273.5305342542215" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1244" cx="369.8401202884938" cy="489.27999898946433" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1243" cx="177.51441380492344" cy="261.14232897480144" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1343" cx="428.1501934637919" cy="263.5019610203928" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1309" cx="663.796343245548" cy="150.55838153545153" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1292" cx="198.7101440205812" cy="224.83010519583183" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
+    <circle class="datapoint" data-cid="1532" cx="165.52605645435895" cy="199.74943415756036" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5" style="mix-blend-mode: darken;"/>
     <text x="740" y="45" font-family="Open Sans" font-size="12" font-weight="400" fill="#8c90a0">Subcategory</text>
     <circle cx="757" cy="61" r="5" fill="#5ed0b9" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>
-    <text fill="#5e5f66" x="770" y="66" font-family="Open Sans" font-size="10">Against Dense Housing Growth </text>
+    <text fill="#5e5f66" x="770" y="66" font-family="Open Sans" font-size="10">Inadequate Evacuation Infrastructure Concerns</text>
     <circle cx="757" cy="81" r="5" fill="#70b6e5" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>
-    <text fill="#5e5f66" x="770" y="86" font-family="Open Sans" font-size="10">Pro-Housing Density Advocates </text>
+    <text fill="#5e5f66" x="770" y="86" font-family="Open Sans" font-size="10">None</text>
     <circle cx="757" cy="101" r="5" fill="#b98acb" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>
-    <text fill="#5e5f66" x="770" y="106" font-family="Open Sans" font-size="10">Against High-Risk Zone Development </text>
+    <text fill="#5e5f66" x="770" y="106" font-family="Open Sans" font-size="10">Restrict Building In Fire Zones</text>
     <circle cx="757" cy="121" r="5" fill="#ee8176" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>
-    <text fill="#5e5f66" x="770" y="126" font-family="Open Sans" font-size="10">Oppose Dense Development </text>
+    <text fill="#5e5f66" x="770" y="126" font-family="Open Sans" font-size="10">Support Housing Density Expansion</text>
 </svg>
