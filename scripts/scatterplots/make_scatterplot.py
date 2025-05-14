@@ -48,21 +48,39 @@ def list_categories(data: List[Dict[str, Any]]) -> None:
     for category in sorted(categories):
         print(f"- {category}")
 
-# def convert_to_sentence_case(phrase: str) -> str:
-#     """Prepare a phrase for display"""
-#     tokens = phrase.split(" ")
-#     for i, token in enumerate(tokens):
-#         # if the token contains a lowercase letter, and i is not 0, lowercase the whole token
-#         if any(c.islower() for c in token) and i != 0:
-#             tokens[i] = token.lower()
-#     return " ".join(tokens)
-
 def get_translation(translation_data: Dict[str, Any], key: str, language: str) -> str:
     """Get a translation from the translation data"""
     if key in translation_data:
         return translation_data[key][language]
     return key
 
+
+def setup_subcats(data: List[Dict[str, Any]]) -> Set[str]:
+    """Setup the subcategories for the scatterplot"""
+    points = []
+    subcategories = set()
+    for item in data:
+        if 'UMAP_1' in item and 'UMAP_2' in item and item['UMAP_1'] is not None and item['UMAP_2'] is not None:
+            x = float(item['UMAP_1'])
+            y = float(item['UMAP_2'])
+            subcat = item.get('SUBCATEGORY', 'Other')
+            if subcat == None or subcat == "":
+                subcat = "Other"
+            comment_id = item.get('COMMENT_ID', -1)
+            points.append((x, y, subcat, comment_id))
+            subcategories.add(subcat)
+
+    subcategories_list = sorted([(cat if cat is not None else "Other") for cat in subcategories])
+    # if one of the list items is None, remove it, and add it to the end of the list
+    if any([cat == "Other" for cat in subcategories_list]):
+        subcategories_list.remove("Other")
+        subcategories_list.append("Other")
+    colors = config.color_table[:len(subcategories_list)]
+    color_map = {subcat: colors[i] if subcat != "Other" else 'lightgray' for i, subcat in enumerate(subcategories_list)}
+ 
+
+
+    return points, subcategories_list, color_map
 
 def create_svg_scatterplot(
     data: List[Dict[str, Any]],
@@ -79,19 +97,7 @@ def create_svg_scatterplot(
         sys.exit(1)
     
     # Extract UMAP coordinates and subcategories
-    points = []
-    subcategories = set()
-    
-    for item in data:
-        if 'UMAP_1' in item and 'UMAP_2' in item and item['UMAP_1'] is not None and item['UMAP_2'] is not None:
-            x = float(item['UMAP_1'])
-            y = float(item['UMAP_2'])
-            subcat = item.get('SUBCATEGORY', 'Other')
-            if subcat == None or subcat == "":
-                subcat = "Other"
-            comment_id = item.get('COMMENT_ID', -1)
-            points.append((x, y, subcat, comment_id))
-            subcategories.add(subcat)
+    points, subcategories_list, color_map = setup_subcats(data)
     
     if not points:
         print("Error: No valid coordinate data found.")
@@ -118,15 +124,6 @@ def create_svg_scatterplot(
     min_y -= y_padding
     max_y += y_padding
     
-    # Generate colors for subcategories
-    subcategories_list = sorted([(cat if cat is not None else "Other") for cat in subcategories])
-    # if one of the list items is None, remove it, and add it to the end of the list
-    if any([cat == "Other" for cat in subcategories_list]):
-        subcategories_list.remove("Other")
-        subcategories_list.append("Other")
-    colors = config.color_table[:len(subcategories_list)]
-    color_map = {subcat: colors[i] if subcat != "Other" else 'lightgray' for i, subcat in enumerate(subcategories_list)}
-    print("COLORMAP: ",color_map)
     # Prepare SVG content
     svg_content = f'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"> '
     
@@ -164,10 +161,7 @@ def create_svg_scatterplot(
         blend_mode_attr = f' style="mix-blend-mode: {config.dot_blendmode};"' if config.dot_blendmode else ''
         
         svg_content += f'    <circle class="{config.datapoint_class}" data-cid="{comment_id}" cx="{svg_x}" cy="{svg_y}" r="{config.dot_size}" fill="{color}" fill-opacity="{config.dot_opacity}" stroke="none" stroke-width="0.5"{blend_mode_attr}/>'
-    
-    # Do not add legend
 
-    # Close SVG
     svg_content += '</svg>'
     
     # Write SVG to file
@@ -193,30 +187,11 @@ def create_svg_scatterplot_legend(
         sys.exit(1)
     
     # Extract UMAP coordinates and subcategories
-    subcategories = set()
-    
-    for item in data:
-        if 'UMAP_1' in item and 'UMAP_2' in item and item['UMAP_1'] is not None and item['UMAP_2'] is not None:
-            x = float(item['UMAP_1'])
-            y = float(item['UMAP_2'])
-            subcat = item.get('SUBCATEGORY', 'Other')
-            if subcat == None or subcat == "":
-                subcat = "Other"
-            comment_id = item.get('COMMENT_ID', -1)
-            subcategories.add(subcat)
+    points, subcategories_list, color_map = setup_subcats(data)
     
     # Calculate dimensions and margins
     width = config.legend_width
     # height = config.legend_height
-    
-    # Generate colors for subcategories
-    subcategories_list = sorted([(cat if cat is not None else "Other") for cat in subcategories])
-    # if one of the list items is None, remove it, and add it to the end of the list
-    if any([cat == "Other" for cat in subcategories_list]):
-        subcategories_list.remove("Other")
-        subcategories_list.append("Other")
-    colors = config.color_table[:len(subcategories_list)]
-    color_map = {subcat: colors[i] if subcat != "Other" else 'lightgray' for i, subcat in enumerate(subcategories_list)}
     
     # Prepare SVG content
     svg_content = f'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="{width}" viewBox="0 0 {width} 100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">'
@@ -224,14 +199,6 @@ def create_svg_scatterplot_legend(
     legend_x = config.legend_offset_x
     legend_y = config.legend_offset_y
     legend_item_height = config.legend_item_height
-
-    # Move legend to the left to account for extra long subcategory names
-    # expected_subcat_length = 40
-    # longest_subcat_name_length = max([len(cat) for cat in subcategories_list if cat is not None])
-    # char_adjustment = 20
-    # legend_x -= max(0,longest_subcat_name_length-expected_subcat_length)*char_adjustment
-
-
 
     svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="{config.legend_title_font_family}" font-size="{config.legend_title_font_size}" font-weight="400" fill="#8c90a0">{get_translation(translation_data, "Subcategory", language)}</text>'
     legend_x +=  config.legend_indent_x # indent legend items
