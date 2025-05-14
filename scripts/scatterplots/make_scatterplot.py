@@ -3,12 +3,17 @@
 Scatterplot Generator
 
 This script creates an SVG scatterplot from JSON data, filtering by tension category
-and coloring points by subcategory.
+and coloring points by subcategory.  These plots are intended for the webpage 
+engaged.ca.gov/lafires-recovery/agenda-setting-data-insights/
+
+There is an option -legend to output just the legend as a separate SVG file (we're doing this so the legend
+can be more easily repositioned for mobile).
 
 Usage:
-    python3 make_scatterplot.py input.json "Tension Category" [output.svg] [--title "Chart Title"] [--xlabel "X Label"] [--ylabel "Y Label"]
+    python3 make_scatterplot.py input.json "Tension Category" [output.svg] 
 
-If no output file is specified, the script will use the tension category as the output filename.
+Normally this script is run by make_all_scatterplots.py, which also generates the legends in various legends.
+   
 """
 
 import json
@@ -160,7 +165,7 @@ def create_svg_scatterplot(
         # Add blend mode attribute if specified
         blend_mode_attr = f' style="mix-blend-mode: {config.dot_blendmode};"' if config.dot_blendmode else ''
         
-        svg_content += f'    <circle class="{config.datapoint_class}" data-cid="{comment_id}" cx="{svg_x}" cy="{svg_y}" r="{config.dot_size}" fill="{color}" fill-opacity="{config.dot_opacity}" stroke="none" stroke-width="0.5"{blend_mode_attr}/>'
+        svg_content += f'    <circle class="{config.datapoint_class}" data-cid="{comment_id}" cx="{svg_x}" cy="{svg_y}" r="{config.dot_radius}" fill="{color}" fill-opacity="{config.dot_opacity}" stroke="none" stroke-width="0.5"{blend_mode_attr}/>'
 
     svg_content += '</svg>'
     
@@ -188,13 +193,21 @@ def create_svg_scatterplot_legend(
     
     # Extract UMAP coordinates and subcategories
     points, subcategories_list, color_map = setup_subcats(data)
+    print("legend subcategories: ", subcategories_list)
     
     # Calculate dimensions and margins
     width = config.legend_width
-    # height = config.legend_height
+    
+    # estimate the height of the legend
+    height = config.legend_item_height * (len(subcategories_list)+1)
+    # add config.legend_line_height for item that needs to be wrapped
+    num_long_lines = sum([1 for subcat in subcategories_list if len(get_translation(translation_data, subcat, language)) > config.legend_line_break_pos])
+    height += num_long_lines * config.legend_line_height
+    height += config.legend_bottom_padding
+
     
     # Prepare SVG content
-    svg_content = f'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="{width}" viewBox="0 0 {width} 100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">'
+    svg_content = f'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="{width}" height="{height}"    viewBox="0 0 {width} {height}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">'
 
     legend_x = config.legend_offset_x
     legend_y = config.legend_offset_y
