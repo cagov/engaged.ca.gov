@@ -1,0 +1,15 @@
+{#
+i18nkey - (String) The key of the text string as definited in i18n.js
+id - (Integer) Suffix of the mailchimp `id` field value
+name - (Integer) Suffix of the mailchimp `name` field value
+attributes - (String) Add a space separated list of attributes such as "checked required"
+#}
+
+{% macro data(mc_audience_id) %}
+        action="https://innovation.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id={{ mc_audience_id }}&amp;f_id=0003e1e3f0"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        target="_self"
+        novalidate
+{% endmacro %}

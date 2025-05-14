@@ -1,20 +1,22 @@
 {% extends "form.njk" %}
 
+{% block formAction %}
+  {{ action.data("417d16b2c0") }}
+{% endblock formAction %}
+
 {% block formHeading %}
-    {{ modules.form.content | safe }}
+  {{ modules.form.content | safe }}
 {% endblock formHeading %}
 
 {% block formEmail %}
-    {{ modules.form.emailLabel | safe }}
+  {{ modules.form.emailLabel | safe }}
 {% endblock formEmail %}
 
 {% block formContent %}
-    {% import "form-checkbox.njk" as checkbox %}
-    {{ checkbox.data('topic-government-efficiencies' | i18n, 1, 8, "required") }}
+  {{ checkbox.data('topic-government-efficiencies' | i18n, 1, 8, "required") }}
 {% endblock formContent %}
 
-
 {% block formSubmit %}
-    {% import "form-submit.njk" as submit %}
-    {{ submit.data('form-submit-button' | i18n) }}
+  {% import "form-submit.njk" as submit %}
+  {{ submit.data('form-submit-button' | i18n) }}
 {% endblock formSubmit %}
