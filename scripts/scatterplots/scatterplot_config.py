@@ -18,7 +18,7 @@ title_font_size = 16
 
 legend_offset_x = -90
 legend_offset_y = 0
-legend_padding_x = 200
+legend_padding_x = 220
 legend_indent_x = 10
 legend_indent_y = 8
 legend_item_height = 24
