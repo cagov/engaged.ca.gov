@@ -16,14 +16,15 @@ title_font_family = 'Noto Sans'
 title_font_size = 16
 
 
-legend_offset_x = -90
-legend_offset_y = 0
-legend_padding_x = 220
+legend_offset_x = 16 # was -90 from edge of chart
+legend_offset_y = 24
+legend_width = 300
+legend_height = 300
 legend_indent_x = 10
 legend_indent_y = 8
 legend_item_height = 24
 legend_line_height = 16
-legend_line_break_pos = 40
+legend_line_break_pos = 42
 legend_text_offset_x = 20
 legend_text_offset_y = 10.5
 range_padding_ratio = 0.05

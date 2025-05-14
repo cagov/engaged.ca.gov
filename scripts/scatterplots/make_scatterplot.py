@@ -86,7 +86,9 @@ def create_svg_scatterplot(
         if 'UMAP_1' in item and 'UMAP_2' in item and item['UMAP_1'] is not None and item['UMAP_2'] is not None:
             x = float(item['UMAP_1'])
             y = float(item['UMAP_2'])
-            subcat = item.get('SUBCATEGORY', 'Unknown')
+            subcat = item.get('SUBCATEGORY', 'Other')
+            if subcat == None or subcat == "":
+                subcat = "Other"
             comment_id = item.get('COMMENT_ID', -1)
             points.append((x, y, subcat, comment_id))
             subcategories.add(subcat)
@@ -117,16 +119,16 @@ def create_svg_scatterplot(
     max_y += y_padding
     
     # Generate colors for subcategories
-    subcategories_list = list(subcategories)
+    subcategories_list = sorted([(cat if cat is not None else "Other") for cat in subcategories])
     # if one of the list items is None, remove it, and add it to the end of the list
-    if any([cat is None for cat in subcategories_list]):
-        subcategories_list.remove(None)
-        subcategories_list.append(None)
+    if any([cat == "Other" for cat in subcategories_list]):
+        subcategories_list.remove("Other")
+        subcategories_list.append("Other")
     colors = config.color_table[:len(subcategories_list)]
-    color_map = {subcat: colors[i] if subcat is not None else 'lightgray' for i, subcat in enumerate(subcategories_list)}
-    
+    color_map = {subcat: colors[i] if subcat != "Other" else 'lightgray' for i, subcat in enumerate(subcategories_list)}
+    print("COLORMAP: ",color_map)
     # Prepare SVG content
-    svg_content = f'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="{width + config.legend_padding_x}" height="{height}" viewBox="0 0 {width + config.legend_padding_x} {height}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><rect width="{width + config.legend_padding_x}" height="{height}" fill="white"/>'
+    svg_content = f'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"> '
     
     # Add title if provided
     if title:
@@ -163,9 +165,64 @@ def create_svg_scatterplot(
         
         svg_content += f'    <circle class="{config.datapoint_class}" data-cid="{comment_id}" cx="{svg_x}" cy="{svg_y}" r="{config.dot_size}" fill="{color}" fill-opacity="{config.dot_opacity}" stroke="none" stroke-width="0.5"{blend_mode_attr}/>'
     
-    # Add legend
-    legend_x = width + config.legend_offset_x
-    legend_y = margin + config.legend_offset_y
+    # Do not add legend
+
+    # Close SVG
+    svg_content += '</svg>'
+    
+    # Write SVG to file
+    # Create directory for output file if it doesn't exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    try:
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(svg_content)
+        print(f"Scatterplot saved to {output_path}")
+    except Exception as e:
+        print(f"Error saving the plot: {str(e)}")
+        sys.exit(1)
+
+def create_svg_scatterplot_legend(
+    data: List[Dict[str, Any]],
+    output_path: str,
+    translation_data: Optional[Dict[str, Any]] = None,
+    language: Optional[str] = None
+) -> None:
+
+    if not data:
+        print("Error: No data to plot.")
+        sys.exit(1)
+    
+    # Extract UMAP coordinates and subcategories
+    subcategories = set()
+    
+    for item in data:
+        if 'UMAP_1' in item and 'UMAP_2' in item and item['UMAP_1'] is not None and item['UMAP_2'] is not None:
+            x = float(item['UMAP_1'])
+            y = float(item['UMAP_2'])
+            subcat = item.get('SUBCATEGORY', 'Other')
+            if subcat == None or subcat == "":
+                subcat = "Other"
+            comment_id = item.get('COMMENT_ID', -1)
+            subcategories.add(subcat)
+    
+    # Calculate dimensions and margins
+    width = config.legend_width
+    # height = config.legend_height
+    
+    # Generate colors for subcategories
+    subcategories_list = sorted([(cat if cat is not None else "Other") for cat in subcategories])
+    # if one of the list items is None, remove it, and add it to the end of the list
+    if any([cat == "Other" for cat in subcategories_list]):
+        subcategories_list.remove("Other")
+        subcategories_list.append("Other")
+    colors = config.color_table[:len(subcategories_list)]
+    color_map = {subcat: colors[i] if subcat != "Other" else 'lightgray' for i, subcat in enumerate(subcategories_list)}
+    
+    # Prepare SVG content
+    svg_content = f'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="{width}" viewBox="0 0 {width} 100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">'
+
+    legend_x = config.legend_offset_x
+    legend_y = config.legend_offset_y
     legend_item_height = config.legend_item_height
 
     # Move legend to the left to account for extra long subcategory names
@@ -201,16 +258,15 @@ def create_svg_scatterplot(
         else:
             svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{display_text}</text>'
         y_pos += legend_item_height
-    # Close SVG
+
     svg_content += '</svg>'
-    
     # Write SVG to file
     # Create directory for output file if it doesn't exist
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(svg_content)
-        print(f"Scatterplot saved to {output_path}")
+        print(f"Scatterplot legend saved to {output_path}")
     except Exception as e:
         print(f"Error saving the plot: {str(e)}")
         sys.exit(1)
@@ -227,7 +283,7 @@ def main():
     parser.add_argument("-ylabel", "--ylabel", help="Y-axis label (optional)")
     parser.add_argument("-lang", "--language", help="Language (optional)", default="en")
     parser.add_argument("-out", "--output_file", help="Path to the output SVG file (optional)")
-    
+    parser.add_argument("-legend", "--output_legend", action="store_true", help="Output the legend as a separate SVG file")
     args = parser.parse_args()
     
     # Load JSON data
@@ -253,15 +309,23 @@ def main():
         output_file = args.output_file
     
     # Create scatterplot
-    create_svg_scatterplot(
-        filtered_data,
-        output_file,
-        title=args.title,
-        xlabel=args.xlabel,
-        ylabel=args.ylabel,
-        translation_data=translation_data,
-        language=args.language
-    )
+    if args.output_legend:
+        create_svg_scatterplot_legend(
+            filtered_data,
+            output_file,
+            translation_data=translation_data,
+            language=args.language
+        )
+    else:
+        create_svg_scatterplot(
+            filtered_data,
+            output_file,
+            title=args.title,
+            xlabel=args.xlabel,
+            ylabel=args.ylabel
+            # translation_data=translation_data,
+            # language=args.language
+        )
 
 
 if __name__ == "__main__":

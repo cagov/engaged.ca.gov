@@ -27,11 +27,36 @@
   font-size: 1.5rem;
   font-weight: 600;
   text-align: left;
-  max-width: 50%;
-  position: absolute;
+  {# max-width: 50%; #}
+  {# position: absolute;
   top: 0px;
-  left: 50px;
+  left: 50px; #}
 }
+div.plot-legend {
+  margin-top: 20px;
+}
+
+@media (orientation: landscape) {
+  .responsive-svg-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .plot-title {
+    width: 100%;
+  }
+  
+  .plot-plot {
+    width: 65%;
+  }
+  
+  div.plot-legend {
+    width: 35%;
+    margin-top: 0;
+    padding-left: 10px;
+  }
+}
+
 </style>
 <section id="plots-overview">
   <div class="container">
@@ -49,70 +74,27 @@
 </div>
 
 
-<section id="plot-1">
+{% for i in range(1, 6) %}
+<section id="plot-{{ i }}">
   <div class="container">
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
-            {{ ('./src/public/images/' + modules.plots.plot_1) | getFileContents | safe }}
             <div class="plot-title">
-              {{ modules.plots.title_1 }}
+              {{ modules.plots["title_" + i] }}
+            </div>
+            <div class="plot-plot">
+            {{ ('./src/public/images/' + modules.plots["plot_" + i]) | getFileContents | safe }}
+            </div>
+            <div class="plot-legend">
+              {{ ('./src/public/images/' + modules.plots["legend_" + i]) | getFileContents | safe }}
             </div>
       </div>
     </div>
   </div>
 </section>
+{% endfor %}
 
-<section id="plot-2">
-  <div class="container">
-    <div class="row plot-row">
-      <div class="col-lg-12 responsive-svg-container">
-            {{ ('./src/public/images/' + modules.plots.plot_2) | getFileContents | safe }}
-            <div class="plot-title">
-              {{ modules.plots.title_2 }}
-            </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="plot-3">
-  <div class="container">
-    <div class="row plot-row">
-      <div class="col-lg-12 responsive-svg-container">
-            {{ ('./src/public/images/' + modules.plots.plot_3) | getFileContents | safe }}
-            <div class="plot-title">
-              {{ modules.plots.title_3 }}
-            </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="plot-4">
-  <div class="container">
-    <div class="row plot-row">
-      <div class="col-lg-12 responsive-svg-container">
-            {{ ('./src/public/images/' + modules.plots.plot_4) | getFileContents | safe }}
-            <div class="plot-title">
-              {{ modules.plots.title_4 }}
-            </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="plot-5">
-  <div class="container">
-    <div class="row plot-row">
-      <div class="col-lg-12 responsive-svg-container">
-            {{ ('./src/public/images/' + modules.plots.plot_5) | getFileContents | safe }}
-            <div class="plot-title">
-              {{ modules.plots.title_5 }}
-            </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
