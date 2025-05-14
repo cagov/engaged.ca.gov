@@ -101,7 +101,7 @@ div.plot-legend {
 <script>
 quoteData = null;
 
-function revealQuote(cid, evt) {
+function revealQuote(cid, evt, is_touch) {
   const mouseX = evt.clientX;
   const mouseY = evt.clientY;
   if (quoteData == null) {
@@ -114,37 +114,22 @@ function revealQuote(cid, evt) {
   } else {
     console.log('No quote found for comment_id:', cid);
   }
-  const quote_left = mouseX > window.innerWidth / 2 ? '10%' : '50%';
-  const quote_top = mouseY > window.innerHeight / 2 ? '10%' : '50%';
 
   // Position the quote card 20px to the right and 200px above the cursor
   const quoteCard = document.querySelector('.quote-card');
-  quoteCard.style.left = (mouseX + 20) + 'px';
-  quoteCard.style.top = (mouseY - 100) + 'px';
+  if (is_touch) {
+    quoteCard.style.left = '0px';
+    quoteCard.style.top = (mouseY + 20) + 'px';
+  } else {
+    quoteCard.style.left = (mouseX + 20) + 'px';
+    quoteCard.style.top = (mouseY - 100) + 'px';
+  }
   
   // Clear any previously set positioning styles that might interfere
   quoteCard.style.right = 'auto';
   quoteCard.style.bottom = 'auto';
 
 
-  {# if (mouseX > window.innerWidth / 2) {
-    // clear left, and set right to window.innerWidth/2
-    document.querySelector('.quote-card').style.left = 'inherit';
-    document.querySelector('.quote-card').style.right = '50%';
-  } else {
-    // clear right and set left to window.innerWidth/2
-    document.querySelector('.quote-card').style.left = '50%';
-    document.querySelector('.quote-card').style.right = 'inherit';
-  }
-  if (mouseY > window.innerHeight / 2) {
-    // clear top, and set bottom to window.innerHeight/2
-    document.querySelector('.quote-card').style.top = 'inherit';
-    document.querySelector('.quote-card').style.bottom = '50%';
-  } else {
-    // clear bottom and set top to window.innerHeight/2
-    document.querySelector('.quote-card').style.top = '50%';
-    document.querySelector('.quote-card').style.bottom = 'inherit';
-  } #}
   document.querySelector('.quote-card').style.display = 'block';
 }
 
@@ -169,7 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Direct access to SVG elements since they're now in the DOM
   const datapoints = document.querySelectorAll('.datapoint');
   // console.log("Found datapoints:", datapoints.length);
-  
+
+
+
   // Set up event handlers for datapoints in plots
   datapoints.forEach(datapoint => {
     // Add hover effect
@@ -181,7 +168,17 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
         return;
       }
-      revealQuote(comment_id, e);
+      revealQuote(comment_id, e, false);
+    });
+    
+    datapoint.addEventListener('touchstart', function(e) {
+      this.setAttribute('r', '8'); // Increase radius on touch
+      const comment_id = parseInt(this.getAttribute('data-cid'));
+      if (isNaN(comment_id)) {
+        console.log('Datapoint touched with invalid comment_id:', this.getAttribute('data-cid'));
+        return;
+      }
+      revealQuote(comment_id, e, true);
     });
     
     datapoint.addEventListener('mouseleave', function() {
@@ -189,8 +186,13 @@ document.addEventListener('DOMContentLoaded', function() {
       hideQuote();
     });
     
+    datapoint.addEventListener('touchend', function() {
+      this.setAttribute('r', '5'); // Reset radius when touch ends
+      hideQuote();
+    });
+    
     // Add click handler
-    datapoint.addEventListener('click', function(e) {
+    {# datapoint.addEventListener('click', function(e) {
       const comment_id = parseInt(this.getAttribute('data-cid'));
       // if not a valid integer when converted to int, return early
       if (quoteData == null) {
@@ -201,10 +203,10 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
         return;
       }
-      revealQuote(comment_id, e);
+      revealQuote(comment_id, e, false);
       // console.log('Datapoint clicked:', comment_id);
       // You can add more functionality here, like showing details about the point
-    });
+    }); #}
   });
 });
 </script>
