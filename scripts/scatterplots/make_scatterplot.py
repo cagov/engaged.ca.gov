@@ -48,6 +48,16 @@ def list_categories(data: List[Dict[str, Any]]) -> None:
     for category in sorted(categories):
         print(f"- {category}")
 
+def prepare_phrase_for_display(phrase: str) -> str:
+    """Prepare a phrase for display"""
+    tokens = phrase.split(" ")
+    for i, token in enumerate(tokens):
+        # if the token contains a lowercase letter, and i is not 0, lowercase the whole token
+        if any(c.islower() for c in token) and i != 0:
+            tokens[i] = token.lower()
+    return " ".join(tokens)
+
+
 def create_svg_scatterplot(
     data: List[Dict[str, Any]],
     output_path: str,
@@ -112,7 +122,7 @@ def create_svg_scatterplot(
     
     # Add title if provided
     if title:
-        svg_content += f'    <text x="{margin}" y="{margin/2}" text-anchor="start" font-family="Open Sans" font-size="16" font-weight="bold">{title}</text>'
+        svg_content += f'    <text x="{margin}" y="{margin/2}" text-anchor="start" font-family="Open Sans" font-size="16" font-weight="bold">{prepare_phrase_for_display(title)}</text>'
 
     # center aligned example
     # svg_content += f'''    <text x="{margin + plot_width/2}" y="{margin/2}" text-anchor="middle" font-family="Open Sans" font-size="16" font-weight="bold">{title}</text>
@@ -159,7 +169,7 @@ def create_svg_scatterplot(
         
         # Add colored circle and label for legend item
         svg_content += f'    <circle cx="{legend_x + 7}" cy="{y_pos + 7}" r="5" fill="{color}" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>'
-        svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="Open Sans" font-size="10">{subcat if subcat is not None else 'Other'}</text>'
+        svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="Open Sans" font-size="10">{prepare_phrase_for_display(subcat) if subcat is not None else 'Other'}</text>'
     
     # Close SVG
     svg_content += '</svg>'
