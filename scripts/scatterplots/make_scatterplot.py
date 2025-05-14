@@ -130,7 +130,7 @@ def create_svg_scatterplot(
     
     # Add title if provided
     if title:
-        svg_content += f'    <text x="{margin}" y="{margin/2}" text-anchor="start" font-family="Open Sans" font-size="16" font-weight="bold">{get_translation(translation_data, title, language)}</text>'
+        svg_content += f'    <text x="{margin}" y="{margin/2}" text-anchor="start" font-family="{config.title_font_family}" font-size="{config.title_font_size}" font-weight="bold">{get_translation(translation_data, title, language)}</text>'
 
     # center aligned example
     # svg_content += f'''    <text x="{margin + plot_width/2}" y="{margin/2}" text-anchor="middle" font-family="Open Sans" font-size="16" font-weight="bold">{title}</text>
@@ -176,7 +176,7 @@ def create_svg_scatterplot(
 
 
 
-    svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="Open Sans" font-size="12" font-weight="400" fill="#8c90a0">{get_translation(translation_data, "Subcategory", language)}</text>'
+    svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="{config.legend_title_font_family}" font-size="{config.legend_title_font_size}" font-weight="400" fill="#8c90a0">{get_translation(translation_data, "Subcategory", language)}</text>'
     legend_x +=  config.legend_indent_x # indent legend items
     legend_y +=  config.legend_indent_y
     y_pos = legend_y
@@ -195,11 +195,11 @@ def create_svg_scatterplot(
             while line_1[-1] != " " and line_2[0] != " ":
                 line_2 = line_1[-1] + line_2
                 line_1 = line_1[:-1]
-            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="Open Sans" font-size="10">{line_1}</text>'
-            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y + config.legend_line_height}" font-family="Open Sans" font-size="10">{line_2}</text>'
+            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_1}</text>'
+            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y + config.legend_line_height}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_2}</text>'
             y_pos += config.legend_line_height
         else:
-            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="Open Sans" font-size="10">{display_text}</text>'
+            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{display_text}</text>'
         y_pos += legend_item_height
     # Close SVG
     svg_content += '</svg>'
@@ -256,7 +256,7 @@ def main():
     create_svg_scatterplot(
         filtered_data,
         output_file,
-        title=args.title if args.title else f"{args.tension_category}",
+        title=args.title,
         xlabel=args.xlabel,
         ylabel=args.ylabel,
         translation_data=translation_data,

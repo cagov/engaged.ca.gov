@@ -22,9 +22,14 @@ Here are some plots!
 
 ----
 id: plots
-plot_1: public_private_en.svg
-plot_2: ind_vs_collective_en.svg
-plot_3: financial_aid_en.svg
-plot_4: density_vs_safety_en.svg
-plot_5: build_faster_vs_better_en.svg
+plot_1: build_faster_vs_better_en.svg
+title_1: Whether to build back quickly or build back better
+plot_2: public_private_en.svg
+title_2: Whether responsibility for utilities and infrastructure should be public or private
+plot_3: ind_vs_collective_en.svg
+title_3: Whether fire mitigation should be an individual responsibility or a collective one
+plot_4: financial_aid_en.svg
+title_4: What equitable distribution of financial assistance looks like
+plot_5: density_vs_safety_en.svg
+title_5: Whether recovery efforts should limit housing density or make room for more residents
 ----

@@ -21,6 +21,16 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  position: relative;
+}
+.plot-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  max-width: 50%;
+  position: absolute;
+  top: 0px;
+  left: 50px;
 }
 </style>
 <section id="plots-overview">
@@ -44,6 +54,9 @@
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
             {{ ('./src/public/images/' + modules.plots.plot_1) | getFileContents | safe }}
+            <div class="plot-title">
+              {{ modules.plots.title_1 }}
+            </div>
       </div>
     </div>
   </div>
@@ -54,6 +67,9 @@
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
             {{ ('./src/public/images/' + modules.plots.plot_2) | getFileContents | safe }}
+            <div class="plot-title">
+              {{ modules.plots.title_2 }}
+            </div>
       </div>
     </div>
   </div>
@@ -64,6 +80,9 @@
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
             {{ ('./src/public/images/' + modules.plots.plot_3) | getFileContents | safe }}
+            <div class="plot-title">
+              {{ modules.plots.title_3 }}
+            </div>
       </div>
     </div>
   </div>
@@ -74,6 +93,9 @@
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
             {{ ('./src/public/images/' + modules.plots.plot_4) | getFileContents | safe }}
+            <div class="plot-title">
+              {{ modules.plots.title_4 }}
+            </div>
       </div>
     </div>
   </div>
@@ -84,6 +106,9 @@
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
             {{ ('./src/public/images/' + modules.plots.plot_5) | getFileContents | safe }}
+            <div class="plot-title">
+              {{ modules.plots.title_5 }}
+            </div>
       </div>
     </div>
   </div>
