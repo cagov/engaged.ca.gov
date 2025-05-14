@@ -109,7 +109,18 @@ function revealQuote(cid, evt) {
   }
   const quote_left = mouseX > window.innerWidth / 2 ? '10%' : '50%';
   const quote_top = mouseY > window.innerHeight / 2 ? '10%' : '50%';
-  if (mouseX > window.innerWidth / 2) {
+
+  // Position the quote card 20px to the right and 200px above the cursor
+  const quoteCard = document.querySelector('.quote-card');
+  quoteCard.style.left = (mouseX + 20) + 'px';
+  quoteCard.style.top = (mouseY - 100) + 'px';
+  
+  // Clear any previously set positioning styles that might interfere
+  quoteCard.style.right = 'auto';
+  quoteCard.style.bottom = 'auto';
+
+
+  {# if (mouseX > window.innerWidth / 2) {
     // clear left, and set right to window.innerWidth/2
     document.querySelector('.quote-card').style.left = 'inherit';
     document.querySelector('.quote-card').style.right = '50%';
@@ -126,7 +137,7 @@ function revealQuote(cid, evt) {
     // clear bottom and set top to window.innerHeight/2
     document.querySelector('.quote-card').style.top = '50%';
     document.querySelector('.quote-card').style.bottom = 'inherit';
-  }
+  } #}
   document.querySelector('.quote-card').style.display = 'block';
 }
 
