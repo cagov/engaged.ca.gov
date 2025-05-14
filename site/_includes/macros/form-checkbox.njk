@@ -1,13 +1,13 @@
 {#
     i18nkey - (String) The key of the text string as definited in i18n.js
-    id - (Integer) Suffix of the mailchimp `id` field value
-    name - (Integer) Suffix of the mailchimp `name` field value
+    id - (Integer or string) Suffix of the mailchimp `id` field value
+    name - (Integer or string) Suffix of the mailchimp `name` field value
     attributes - (String) Add a space separated list of attributes such as "checked required"
 #}
 
-{% macro data(i8nkey, id, name, attributes) %}
-    <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-{{ id }}" name="group[91023][{{ name }}]" value="{{ i8nkey }}" {{ attributes }}>
-    <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-{{ id }}">
+{% macro data(i8nkey, group, id, name, attributes) %}
+    <input type="checkbox" class="form-check-input" id="mce-group[{{ group }}]-{{ group }}-{{ id }}" name="group[{{ group }}][{{ name }}]" value="{{ i8nkey }}" {{ attributes }}>
+    <label class="form-control-label form-checkbox-label" for="mce-group[{{ group }}]-{{ group }}-{{ id }}">
         {{ i8nkey }}
     </label>
 {% endmacro %}

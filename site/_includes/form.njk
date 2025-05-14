@@ -13,7 +13,7 @@
   
   <form
       {% block formAction %}
-       {{ action.data("61200a6dda") }}
+       {{ action.data("61200a6dda", "0003e1e3f0") }}
       {% endblock formAction %}
            >
 
@@ -44,10 +44,10 @@
 
     <ul class="form-checkbox-list">
         <li>
-          {{ checkbox.data('topic-los-angeles-fires-recovery-eaton' | i18n, 1, 8) }}
+          {{ checkbox.data('topic-los-angeles-fires-recovery-eaton' | i18n, 91023, 1, 8) }}
         </li>
         <li>
-          {{ checkbox.data('topic-los-angeles-fires-recovery-palisades' | i18n, 0, 4) }}
+          {{ checkbox.data('topic-los-angeles-fires-recovery-palisades' | i18n, 91023, 0, 4) }}
         </li>
         <li>
           {{ checkbox.data('topic-future-topics' | i18n, 2, 2, "checked") }}
