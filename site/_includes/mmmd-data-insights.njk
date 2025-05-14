@@ -43,7 +43,7 @@
   <div class="container">
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
-            {{ './src/public/images/public_private.svg' | getFileContents | safe }}
+            {{ ('./src/public/images/' + modules.plots.plot_1) | getFileContents | safe }}
       </div>
     </div>
   </div>
@@ -53,7 +53,7 @@
   <div class="container">
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
-            {{ './src/public/images/ind_vs_collective.svg' | getFileContents | safe }}
+            {{ ('./src/public/images/' + modules.plots.plot_2) | getFileContents | safe }}
       </div>
     </div>
   </div>
@@ -63,7 +63,7 @@
   <div class="container">
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
-            {{ './src/public/images/financial_aid.svg' | getFileContents | safe }}
+            {{ ('./src/public/images/' + modules.plots.plot_3) | getFileContents | safe }}
       </div>
     </div>
   </div>
@@ -73,7 +73,7 @@
   <div class="container">
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
-            {{ './src/public/images/density_vs_safety.svg' | getFileContents | safe }}
+            {{ ('./src/public/images/' + modules.plots.plot_4) | getFileContents | safe }}
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@
   <div class="container">
     <div class="row plot-row">
       <div class="col-lg-12 responsive-svg-container">
-            {{ './src/public/images/build_faster_vs_better.svg' | getFileContents | safe }}
+            {{ ('./src/public/images/' + modules.plots.plot_5) | getFileContents | safe }}
       </div>
     </div>
   </div>
@@ -140,23 +140,19 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch("/public/data/engca_comment_scatterplot_source.json", {})
     .then(response => response.json())
     .then(data => {
-      console.log("Data fetched:", data);
+      // console.log("Data fetched:", data);
       quoteData = data;
     })
     .catch(error => {
       console.error("Error fetching data:", error);
     });
 
-  // Set up event handlers for datapoints in plots
-  console.log("Setting up event handlers for datapoints in plots");
-  // Set up event handlers for datapoints in plots
-  console.log("Setting up event handlers for datapoints in plots");
-  
+ 
   // Direct access to SVG elements since they're now in the DOM
   const datapoints = document.querySelectorAll('.datapoint');
-  console.log("Found datapoints:", datapoints.length);
-
+  // console.log("Found datapoints:", datapoints.length);
   
+  // Set up event handlers for datapoints in plots
   datapoints.forEach(datapoint => {
     // Add hover effect
     datapoint.addEventListener('mouseenter', function(e) {

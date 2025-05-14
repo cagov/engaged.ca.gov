@@ -48,14 +48,20 @@ def list_categories(data: List[Dict[str, Any]]) -> None:
     for category in sorted(categories):
         print(f"- {category}")
 
-def prepare_phrase_for_display(phrase: str) -> str:
-    """Prepare a phrase for display"""
-    tokens = phrase.split(" ")
-    for i, token in enumerate(tokens):
-        # if the token contains a lowercase letter, and i is not 0, lowercase the whole token
-        if any(c.islower() for c in token) and i != 0:
-            tokens[i] = token.lower()
-    return " ".join(tokens)
+# def convert_to_sentence_case(phrase: str) -> str:
+#     """Prepare a phrase for display"""
+#     tokens = phrase.split(" ")
+#     for i, token in enumerate(tokens):
+#         # if the token contains a lowercase letter, and i is not 0, lowercase the whole token
+#         if any(c.islower() for c in token) and i != 0:
+#             tokens[i] = token.lower()
+#     return " ".join(tokens)
+
+def get_translation(translation_data: Dict[str, Any], key: str, language: str) -> str:
+    """Get a translation from the translation data"""
+    if key in translation_data:
+        return translation_data[key][language]
+    return key
 
 
 def create_svg_scatterplot(
@@ -63,7 +69,9 @@ def create_svg_scatterplot(
     output_path: str,
     title: Optional[str] = None,
     xlabel: Optional[str] = None,
-    ylabel: Optional[str] = None
+    ylabel: Optional[str] = None,
+    translation_data: Optional[Dict[str, Any]] = None,
+    language: Optional[str] = None
 ) -> None:
     """Create an SVG scatterplot from the filtered data"""
     if not data:
@@ -122,7 +130,7 @@ def create_svg_scatterplot(
     
     # Add title if provided
     if title:
-        svg_content += f'    <text x="{margin}" y="{margin/2}" text-anchor="start" font-family="Open Sans" font-size="16" font-weight="bold">{prepare_phrase_for_display(title)}</text>'
+        svg_content += f'    <text x="{margin}" y="{margin/2}" text-anchor="start" font-family="Open Sans" font-size="16" font-weight="bold">{get_translation(translation_data, title, language)}</text>'
 
     # center aligned example
     # svg_content += f'''    <text x="{margin + plot_width/2}" y="{margin/2}" text-anchor="middle" font-family="Open Sans" font-size="16" font-weight="bold">{title}</text>
@@ -135,9 +143,9 @@ def create_svg_scatterplot(
     
     # Add axis labels if provided
     if xlabel:
-        svg_content += f'    <text x="{margin + plot_width/2}" y="{height - margin/3}" text-anchor="middle" font-family="Open Sans" font-size="12">{xlabel}</text>'
+        svg_content += f'    <text x="{margin + plot_width/2}" y="{height - margin/3}" text-anchor="middle" font-family="Open Sans" font-size="12">{get_translation(translation_data, xlabel, language)}</text>'
     if ylabel:
-        svg_content += f'    <text x="{margin/3}" y="{margin + plot_height/2}" text-anchor="middle" font-family="Open Sans" font-size="12" transform="rotate(-90 {margin/3} {margin + plot_height/2})">{ylabel}</text>'
+        svg_content += f'    <text x="{margin/3}" y="{margin + plot_height/2}" text-anchor="middle" font-family="Open Sans" font-size="12" transform="rotate(-90 {margin/3} {margin + plot_height/2})">{get_translation(translation_data, ylabel, language)}</text>'
     if config.draw_mid_lines:
         svg_content += f'    <line x1="{margin}" y1="{height/2}" x2="{width - margin}" y2="{height/2}" stroke="gray" stroke-width="0.5"/>'
         svg_content += f'    <line x1="{width/2}" y1="{margin}" x2="{width/2}" y2="{height - margin}" stroke="gray" stroke-width="0.5"/>'
@@ -159,18 +167,40 @@ def create_svg_scatterplot(
     legend_x = width + config.legend_offset_x
     legend_y = margin + config.legend_offset_y
     legend_item_height = config.legend_item_height
-    
-    svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="Open Sans" font-size="12" font-weight="400" fill="#8c90a0">Subcategory</text>'
+
+    # Move legend to the left to account for extra long subcategory names
+    # expected_subcat_length = 40
+    # longest_subcat_name_length = max([len(cat) for cat in subcategories_list if cat is not None])
+    # char_adjustment = 20
+    # legend_x -= max(0,longest_subcat_name_length-expected_subcat_length)*char_adjustment
+
+
+
+    svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="Open Sans" font-size="12" font-weight="400" fill="#8c90a0">{get_translation(translation_data, "Subcategory", language)}</text>'
     legend_x +=  config.legend_indent_x # indent legend items
     legend_y +=  config.legend_indent_y
+    y_pos = legend_y
     for i, subcat in enumerate(subcategories_list):
-        y_pos = legend_y + i * legend_item_height
+        # y_pos = legend_y + i * legend_item_height
         color = color_map[subcat]
         
         # Add colored circle and label for legend item
         svg_content += f'    <circle cx="{legend_x + 7}" cy="{y_pos + 7}" r="5" fill="{color}" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>'
-        svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="Open Sans" font-size="10">{prepare_phrase_for_display(subcat) if subcat is not None else 'Other'}</text>'
-    
+        display_text = get_translation(translation_data, subcat if subcat is not None else 'Other', language)
+        line_break_pos = config.legend_line_break_pos
+        if len(display_text) > line_break_pos:
+            # use a two line format, wrapped at approx 40 characters using word breaks
+            line_1 = display_text[:line_break_pos]
+            line_2 = display_text[line_break_pos:]
+            while line_1[-1] != " " and line_2[0] != " ":
+                line_2 = line_1[-1] + line_2
+                line_1 = line_1[:-1]
+            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="Open Sans" font-size="10">{line_1}</text>'
+            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y + config.legend_line_height}" font-family="Open Sans" font-size="10">{line_2}</text>'
+            y_pos += config.legend_line_height
+        else:
+            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="Open Sans" font-size="10">{display_text}</text>'
+        y_pos += legend_item_height
     # Close SVG
     svg_content += '</svg>'
     
@@ -191,16 +221,21 @@ def main():
     parser = argparse.ArgumentParser(description="Generate a scatterplot from JSON data based on tension category.")
     parser.add_argument("json_file", help="Path to the input JSON file")
     parser.add_argument("tension_category", nargs="?", help="Tension category to filter by (optional)")
-    parser.add_argument("output_file", nargs="?", help="Path to the output SVG file (optional)")
     parser.add_argument("-list", "--list_categories", action="store_true", help="List available tension categories")
     parser.add_argument("-t", "--title", help="Chart title (optional)")
     parser.add_argument("-xlabel", "--xlabel", help="X-axis label (optional)")
     parser.add_argument("-ylabel", "--ylabel", help="Y-axis label (optional)")
+    parser.add_argument("-lang", "--language", help="Language (optional)", default="en")
+    parser.add_argument("-out", "--output_file", help="Path to the output SVG file (optional)")
     
     args = parser.parse_args()
     
     # Load JSON data
     data = load_json_data(args.json_file)
+
+    # load translation data
+    with open("chart_translations.json", "r") as f:
+        translation_data = json.load(f)
 
     if args.list_categories:
         list_categories(data)
@@ -223,7 +258,9 @@ def main():
         output_file,
         title=args.title if args.title else f"{args.tension_category}",
         xlabel=args.xlabel,
-        ylabel=args.ylabel
+        ylabel=args.ylabel,
+        translation_data=translation_data,
+        language=args.language
     )
 
 

@@ -19,3 +19,12 @@ id: plots_overview
 ## Surfacing top issues for rebuilding LA
 
 Here are some plots!
+
+----
+id: plots
+plot_1: public_private_en.svg
+plot_2: ind_vs_collective_en.svg
+plot_3: financial_aid_en.svg
+plot_4: density_vs_safety_en.svg
+plot_5: build_faster_vs_better_en.svg
+----

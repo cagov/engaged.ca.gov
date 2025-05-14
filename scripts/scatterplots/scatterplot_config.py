@@ -13,12 +13,14 @@ dot_opacity = 1.0
 dot_size = 5
 
 
+legend_offset_x = -80
+legend_offset_y = 0
 legend_padding_x = 200
 legend_indent_x = 10
 legend_indent_y = 4
 legend_item_height = 20
-legend_offset_x = -60
-legend_offset_y = 0
+legend_line_height = 12
+legend_line_break_pos = 42
 legend_text_offset_x = 20
 legend_text_offset_y = 10.5
 range_padding_ratio = 0.05
