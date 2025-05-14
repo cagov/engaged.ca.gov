@@ -1,10 +1,10 @@
 {#
-mc_id - (Integer or string) value of `id` attribute attribute on Mailchimp form
+mc_listId - (Integer or string) Mailchimp List (Audience) ID
 mc_f_id - (Integer or string) value of `f_id` attribute on Mailchimp form
 #}
 
-{% macro data(mc_id, mc_f_id) %}
-        action="https://innovation.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id={{ mc_id }}&amp;f_id={{ mc_f_id }}"
+{% macro data(mc_listId, mc_f_id) %}
+        action="https://innovation.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id={{ mc_listId }}&amp;f_id={{ mc_f_id }}"
         method="post"
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
