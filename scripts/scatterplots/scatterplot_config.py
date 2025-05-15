@@ -15,7 +15,7 @@ range_padding_ratio = 0.05
 margin = dot_radius + 1
 
 
-title_font_family = 'Noto Sans'
+title_font_family = 'Noto Sans Display'
 title_font_size = 16
 
 
@@ -31,9 +31,9 @@ legend_line_height = 16
 legend_line_break_pos = 42
 legend_text_offset_x = 20
 legend_text_offset_y = 10.5
-legend_title_font_family = 'Noto Sans'
+legend_title_font_family = 'Noto Sans Display'
 legend_title_font_size = 16
-legend_item_font_family = 'Noto Sans'
+legend_item_font_family = 'Noto Sans Display'
 legend_item_font_size = 14
 color_table = ['#5ed0b9','#70b6e5','#b98acb','#ee8176',
                '#f9c280','#f7e79c','#c2c2f0','#a8d672']

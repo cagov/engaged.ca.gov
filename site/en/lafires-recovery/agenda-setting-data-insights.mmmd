@@ -17,7 +17,7 @@ id: plots_overview
 buttonText: Download the dataset
 ----
 
-## Agenda setting for LA wildfires recovery: A closer look at the comments 
+## Agenda setting for LA wildfires recovery: A closer look at the comments
 
 The agenda-setting phase of the Los Angeles wildfires recovery engagement is complete. We're now using the comments we got in that phase to shape talks that will help us solve important problems. You can download the comments to see what people said yourself.
 
@@ -27,16 +27,13 @@ id: plots_interpretation
 
 ## How to interpret these charts
 
-Each scatterplot represents the comments for one of the key tensions outlined in the findings report that summarizes Engaged California’s work so far on Los Angeles wildfires recovery. 
+Each scatterplot shows the comments that shape each of the opportunity areas outlined by our Los Angeles wildfires engagement.
 
-These charts show how opinions and priorities vary related to each key tension. This shows why these key tensions will make good deliberation topics
+The charts show how different opinions and priorities create opportunity areas for deliberation. People have strong but different views, but there are also some shared opinions that are worth exploring further, as seen by the clusters of similar comments. 
 
-1. because there is clearly a difference of opinion & strong beliefs and priorities, and 
-2. there is some consensus to dig into deeper (aka the clusters).
+Each dot represents an individual comment. Comments identified by a large language model as similar are grouped closer on the chart. 
 
-Each dot represents an individual comment. Comments that are identified by an LLM model as  semantically similar to each other are mapped closer to each other. 
-
-Each comment is also labelled with a subcategory. We also used an AI model to define subcategories for each key tension. Each subcategory is defined by a color in the visual (with grey dots representing comments that are related to the key tension, but did not map cleanly to one of the subcategories).
+Each comment is also labeled with a subcategory. We used an AI model to define subcategories for each opportunity area. Each subcategory is shown in a different color. Grey dots indicate comments related to the opportunity area. However, they don’t clearly fit into any subcategory.
 
 ----
 id: data_visualizations_header
@@ -70,18 +67,27 @@ id: how_we_built
 ### How we built these charts
 Methodology for creating these data visualizations:
 
-1. Identify which comments are in each key tension
-We started by labelling each comment with which of the five key tensions (if any) they relate to. We used an AI tool (the Snowflake Cortex Classify Text Large Language Model) to do this labeling. 
+1. Identify which comments are related to each opportunity area
+
+We started by labeling each comment with which of the five opportunity areas (if any) it relates to. We used an AI tool (the Snowflake Cortex Classify Text Large Language Model) to do this labeling. 
+
 2. Process and restructure the comments data
-For each comment, we used another AI tool (Claude 3.5 Sonnet LLM) to summarize the comment and measure its relationship to the key tension it is paired with. We did this in order to make sure we were plotting only the most relevant parts of the comment. We then converted those summaries into numerical data (called "semantic embeddings") that represent the meaning of the comments in a way a computer can understand and process. We did this using Snowflake Cortex Embed Text 1024.
-3. Finding sub-categories
-We used the BERTopic framework to organize comments by their similarities and sort them into different groups based on common topics. 
-This involved reducing the dimensionality of the comments using UMAP. We also performed density-based clustering with HDBSCAN, with algorithm parameters specifically tuned for each key tension to optimize topic delineation.
-4. Labeling the sub-categories
- After grouping the comments by topic, we used the 'Claude 3.5 Sonnet' model again to give each group a short label (usually 2-5 words) that captures the main idea or viewpoint of that group.
+
+We used an AI tool (Claude 3.5 Sonnet LLM) to summarize each comment. This also helped us see how each comment relates to the opportunity area it’s associated with. We did this to make sure we were focusing on only the most relevant parts of the comment. We turned those summaries into numerical data, or "semantic embeddings." These embeddings show the meaning of the comments in a way that computers can understand and use. We did this using Snowflake Cortex Embed Text 1024.
+
+3. Finding subcategories
+
+We used the BERTopic framework to group comments by similarities. This helped us sort them into different categories based on common topics. 
+
+We reduced the dimensionality of the comments using a tool called UMAP. In other words, we used UMAP to turn complex data about the comments into something that would be easier for us to visualize. We used density-based clustering with HDBSCAN. We tuned the algorithm settings for each opportunity area. This helped us optimize how we defined the topics.
+
+4. Labeling the subcategories
+
+We grouped the comments by topic. Then, we used the 'Claude 3.5 Sonnet' model to label each group. Each label is a short phrase that reflects the main idea or viewpoint.
+
 5. Plotting the comments
 
-Finally, we used a topic-supervised UMAP, tuned per key tension to reduce all that numerical data into two simple coordinates. This allows us to plot everything on a 2D chart, where the comments are color-coded based on their topic, making it easy to see the patterns and relationships.
+We used a topic-supervised UMAP. We tuned it for each key tension. This let us turn all the numbers into two easy coordinates. Then, we could plot everything on a 2D chart. The comments are color-coded by topic. This makes it easy to spot patterns and relationships.
 
 ----
 id: download_the_data_1
