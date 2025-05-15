@@ -102,7 +102,7 @@ def create_svg_scatterplot(
         sys.exit(1)
     
     # Extract UMAP coordinates and subcategories
-    points, subcategories_list, color_map = setup_subcats(data)
+    points, subcategories_list_unused, color_map = setup_subcats(data)
     
     if not points:
         print("Error: No valid coordinate data found.")
@@ -112,14 +112,16 @@ def create_svg_scatterplot(
     margin = config.margin
     width = config.width
     height = config.height
-    plot_width = width - 2 * margin
-    plot_height = height - 2 * margin
     
     # Calculate min and max values for scaling
     min_x = min(p[0] for p in points)
     max_x = max(p[0] for p in points)
     min_y = min(p[1] for p in points)
     max_y = max(p[1] for p in points)
+
+    # height = width * (max_y - min_y) / (max_x - min_x)
+    plot_width = width - 2 * margin
+    plot_height = height - 2 * margin
     
     # Add a small padding to the ranges
     x_padding = (max_x - min_x) * config.range_padding_ratio
@@ -132,15 +134,10 @@ def create_svg_scatterplot(
     # Prepare SVG content
     svg_content = f'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"> '
     
-    # Add title if provided
+    # TITLES, AXIS LABELS AND MID LINES ARE CURRENTLY UNUSED
     if title:
         svg_content += f'    <text x="{margin}" y="{margin/2}" text-anchor="start" font-family="{config.title_font_family}" font-size="{config.title_font_size}" font-weight="bold">{get_translation(translation_data, title, language)}</text>'
 
-    # center aligned example
-    # svg_content += f'''    <text x="{margin + plot_width/2}" y="{margin/2}" text-anchor="middle" font-family="Open Sans" font-size="16" font-weight="bold">{title}</text>
-    # '''
-
-    # Add axes
     if xlabel or ylabel:
         svg_content += f'    <line x1="{margin}" y1="{height - margin}" x2="{width - margin}" y2="{height - margin}" stroke="black" stroke-width="1"/>'
         svg_content += f'    <line x1="{margin}" y1="{margin}" x2="{margin}" y2="{height - margin}" stroke="black" stroke-width="1"/>'
@@ -150,12 +147,13 @@ def create_svg_scatterplot(
         svg_content += f'    <text x="{margin + plot_width/2}" y="{height - margin/3}" text-anchor="middle" font-family="Open Sans" font-size="12">{get_translation(translation_data, xlabel, language)}</text>'
     if ylabel:
         svg_content += f'    <text x="{margin/3}" y="{margin + plot_height/2}" text-anchor="middle" font-family="Open Sans" font-size="12" transform="rotate(-90 {margin/3} {margin + plot_height/2})">{get_translation(translation_data, ylabel, language)}</text>'
+    
     if config.draw_mid_lines:
         svg_content += f'    <line x1="{margin}" y1="{height/2}" x2="{width - margin}" y2="{height/2}" stroke="gray" stroke-width="0.5"/>'
         svg_content += f'    <line x1="{width/2}" y1="{margin}" x2="{width/2}" y2="{height - margin}" stroke="gray" stroke-width="0.5"/>'
     
     # Map coordinates to SVG space and draw points
-    for i, (x, y, subcat, comment_id) in enumerate(points):
+    for (x, y, subcat, comment_id) in points:
         # Scale coordinates to fit in the plot area
         svg_x = margin + ((x - min_x) / (max_x - min_x)) * plot_width
         # Invert y-axis for SVG (0 is at the top)
@@ -192,7 +190,7 @@ def create_svg_scatterplot_legend(
         sys.exit(1)
     
     # Extract UMAP coordinates and subcategories
-    points, subcategories_list, color_map = setup_subcats(data)
+    points_unused, subcategories_list, color_map = setup_subcats(data)
     print("legend subcategories: ", subcategories_list)
     
     # Calculate dimensions and margins
@@ -261,7 +259,7 @@ def main():
     parser.add_argument("-t", "--title", help="Chart title (optional)")
     parser.add_argument("-xlabel", "--xlabel", help="X-axis label (optional)")
     parser.add_argument("-ylabel", "--ylabel", help="Y-axis label (optional)")
-    parser.add_argument("-lang", "--language", help="Language (optional)", default="en")
+    parser.add_argument("-lang", "--language", help="Language (only necessary for legends)", default="en")
     parser.add_argument("-out", "--output_file", help="Path to the output SVG file (optional)")
     parser.add_argument("-legend", "--output_legend", action="store_true", help="Output the legend as a separate SVG file")
     args = parser.parse_args()

@@ -15,9 +15,9 @@ for theme_rec in theme_recs:
     theme = theme_rec['theme']
     filename_root = theme_rec['filename_root']
     # output just the dots here...
-    cmd = f'python3 make_scatterplot.py engca_comment_scatterplot_source_V2.json "{theme}" -out {out_dir}/{filename_root}_plot.svg'
-    print(cmd)
-    subprocess.run(cmd, shell=True)
+    # cmd = f'python3 make_scatterplot.py engca_comment_scatterplot_source_V2.json "{theme}" -out {out_dir}/{filename_root}_plot.svg'
+    # print(cmd)
+    # subprocess.run(cmd, shell=True)
     for language in languages:
         print(f"Making {theme} legend in {language}")
         # make scatterplot
@@ -25,6 +25,13 @@ for theme_rec in theme_recs:
         print(cmd)
         subprocess.run(cmd, shell=True)
 
+for theme_rec in theme_recs:
+    theme = theme_rec['theme']
+    filename_root = theme_rec['filename_root']
+    # output just the dots here...
+    cmd = f'python3 make_scatterplot.py engca_comment_scatterplot_source_V2.json "{theme}" -out {out_dir}/{filename_root}_plot.svg'
+    print(cmd)
+    subprocess.run(cmd, shell=True)
 
 # python3 make_scatterplot.py engca_comment_scatterplot_source_V2.json "Public v Private" plots/public_private.svg
 # python3 make_scatterplot.py engca_comment_scatterplot_source_V2.json "Individual v. Collective Mitigation" plots/ind_vs_collective.svg
