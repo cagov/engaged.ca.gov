@@ -158,7 +158,7 @@ section#data-visualizations {
 <script>
 quoteData = null;
 
-function revealQuote(cid, evt, is_touch) {
+function revealQuote(cid, evt) {
   const mouseX = evt.clientX;
   const mouseY = evt.clientY;
   if (quoteData == null) {
@@ -184,15 +184,21 @@ function revealQuote(cid, evt, is_touch) {
   // Adjust for browser zoom (higher zoom should make font smaller)
   const quoteCard = document.querySelector('.quote-card');
   quoteCard.style.fontSize = `${desiredFontSize / actualZoom}rem`;
-  quoteCard.style.maxWidth = `${500 / actualZoom}px`;
+  // quoteCard.style.maxWidth = `${500 / actualZoom}px`;
+
+  const isPortrait = window.innerWidth < window.innerHeight;
 
   // Position the quote card 20px to the right and 200px above the cursor
-  if (is_touch) {
-    quoteCard.style.left = '0px';
+  if (isPortrait) {
+    quoteCard.style.left = '20px';
     quoteCard.style.top = (mouseY + 20/actualZoom) + 'px';
+    // set maxWidth to smaller of 500px or (window.innerWidth-20-mouseX)
+    quoteCard.style.maxWidth = (window.innerWidth-40) + 'px';
   } else {
     quoteCard.style.left = (mouseX + 20/actualZoom) + 'px';
     quoteCard.style.top = (mouseY - 100/actualZoom) + 'px';
+    // set maxWidth to smaller of 500px or (window.innerWidth-20-mouseX)
+    quoteCard.style.maxWidth = Math.min(500, (window.innerWidth-20-mouseX)/actualZoom) + 'px';
   }
   
   // Clear any previously set positioning styles that might interfere
