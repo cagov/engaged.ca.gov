@@ -1,0 +1,17 @@
+/* "How it works"/"What happens in each phase */
+
+.hiw-style-2 li {
+  background: transparent;
+  border: 2px solid #5489a3;
+  color: #444444;
+  font-weight: 500;
+
+  &:nth-child(3),
+  &:nth-child(4) {
+    border-color: orange;
+  }
+
+  &:nth-child(4) .hiw-arrow {
+    display: none;
+  }
+}
