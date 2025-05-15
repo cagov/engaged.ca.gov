@@ -582,10 +582,10 @@ const translations = {
     en: "Sign up",
   },
   "ge-what-happens-2": {
-    en: "Review ideas",
+    en: "Gather ideas",
   },
   "ge-what-happens-3": {
-    en: "Gather ideas",
+    en: "Review ideas",
   },
   "ge-what-happens-4": {
     en: "Change",
@@ -613,6 +613,9 @@ const translations = {
   },
   "ge-what-happens-alt-4": {
     en: "Field required",
+  },
+  "ge-submit": {
+    en: "Sign up to opt in",
   },
 };
 // add default export
