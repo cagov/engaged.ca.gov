@@ -107,16 +107,16 @@ Should we rebuild quickly, or rebuild in a way that ensures lasting resilience?
 
 ----
 id: findings_key_tension_public_private
-icon: fire-hydrant.svg
-iconAlt: A fire hydrant
+icon: crane.svg
+iconAlt: A crane
 ----
 
 Should the public sector or the private sector be responsible for utilities and infrastructure?
 
 ----
 id: findings_key_tension_individual_collective
-icon: crane.svg
-iconAlt: A crane
+icon: fire-hydrant.svg
+iconAlt: A fire hydrant
 ----
 
 Should fire prevention be an individual or collective responsibility?
