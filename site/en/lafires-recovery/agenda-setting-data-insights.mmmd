@@ -1,5 +1,5 @@
 ---
-title: Surfacing top issues for rebuilding LA
+title: 'Agenda setting for LA wildfires recovery: A closer look at the comments'
 description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
 layout: mmmd-data-insights
 parentid: lafires-recovery
@@ -14,11 +14,35 @@ tags:
 
 ----
 id: plots_overview
+buttonText: Download the dataset
 ----
 
-## Surfacing top issues for rebuilding LA
+## Agenda setting for LA wildfires recovery: A closer look at the comments 
 
-Here are some plots!
+The agenda-setting phase of the Los Angeles wildfires recovery engagement is complete. We're now using the comments we got in that phase to shape talks that will help us solve important problems. You can download the comments to see what people said yourself.
+
+----
+id: plots_interpretation
+----
+
+## How to interpret these charts
+
+Each scatterplot represents the comments for one of the key tensions outlined in the findings report that summarizes Engaged California’s work so far on Los Angeles wildfires recovery. 
+
+These charts show how opinions and priorities vary related to each key tension. This shows why these key tensions will make good deliberation topics
+
+1. because there is clearly a difference of opinion & strong beliefs and priorities, and 
+2. there is some consensus to dig into deeper (aka the clusters).
+
+Each dot represents an individual comment. Comments that are identified by an LLM model as  semantically similar to each other are mapped closer to each other. 
+
+Each comment is also labelled with a subcategory. We also used an AI model to define subcategories for each key tension. Each subcategory is defined by a color in the visual (with grey dots representing comments that are related to the key tension, but did not map cleanly to one of the subcategories).
+
+----
+id: data_visualizations_header
+----
+
+## Data visualizations
 
 ----
 id: plots
@@ -38,3 +62,57 @@ plot_5: density_vs_safety_plot.svg
 title_5: Making space for more residents, or limiting housing density
 legend_5: density_vs_safety_en_legend.svg
 ----
+
+----
+id: how_we_built
+----
+
+### How we built these charts
+Methodology for creating these data visualizations:
+
+1. Identify which comments are in each key tension
+We started by labelling each comment with which of the five key tensions (if any) they relate to. We used an AI tool (the Snowflake Cortex Classify Text Large Language Model) to do this labeling. 
+2. Process and restructure the comments data
+For each comment, we used another AI tool (Claude 3.5 Sonnet LLM) to summarize the comment and measure its relationship to the key tension it is paired with. We did this in order to make sure we were plotting only the most relevant parts of the comment. We then converted those summaries into numerical data (called "semantic embeddings") that represent the meaning of the comments in a way a computer can understand and process. We did this using Snowflake Cortex Embed Text 1024.
+3. Finding sub-categories
+We used the BERTopic framework to organize comments by their similarities and sort them into different groups based on common topics. 
+This involved reducing the dimensionality of the comments using UMAP. We also performed density-based clustering with HDBSCAN, with algorithm parameters specifically tuned for each key tension to optimize topic delineation.
+4. Labeling the sub-categories
+ After grouping the comments by topic, we used the 'Claude 3.5 Sonnet' model again to give each group a short label (usually 2-5 words) that captures the main idea or viewpoint of that group.
+5. Plotting the comments
+
+Finally, we used a topic-supervised UMAP, tuned per key tension to reduce all that numerical data into two simple coordinates. This allows us to plot everything on a 2D chart, where the comments are color-coded based on their topic, making it easy to see the patterns and relationships.
+
+----
+id: download_the_data_1
+buttonText: Download a CSV containing the comments
+----
+### Download the data
+This is the comments dataset… The data does not contain personally identifying information. We have not edited or modified the comments in any way.
+
+----
+id: download_the_data_2
+buttonText:
+----
+**Data definitions**
+
+These are the columns in this dataset and their definitions.
+
+**Comment**
+
+The full text of a comment submitted by an agenda setting participant. Comments have not been edited for clarity, content, or grammar.
+
+**Topic**
+
+The topic to which the comment responded. There were 10 topics. 
+[Insert topic list]
+
+**Key tension**
+
+The key tension that is related to the comment
+There are 5 key tensions
+[Insert the list of key tensions]
+
+**Comment contains an actionable idea**
+
+Label denoting whether a comment contains an actionable idea. If yes, the field value will be [yes]. If not, the field value will be [null] or empty.  We generated these labels using an LLM and then hand-checked by our data team.
