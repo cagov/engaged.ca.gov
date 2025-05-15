@@ -1,0 +1,15 @@
+{#
+number - (Integer) Numerical order of phases
+heading - (String)
+body- (String)
+altText - (String)
+icon - (String)
+#}
+
+{% macro data(number, heading, body, altText, icon) %}
+  <li class="ge-what-happens-{{ number }}">
+    <img src="/public/images/how-it-works-{{ icon }}.svg" alt="{{ altText }}" />
+    <span class="hiw-text"><strong>{{ heading }}</strong><br> {{ body }}</span>
+    <span class="hiw-arrow"></span>
+  </li>
+{% endmacro %}
