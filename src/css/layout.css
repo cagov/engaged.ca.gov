@@ -15,6 +15,7 @@ html {
 /* Swap global font on all elements. State Template stuff. */
 :not(h1, h2, .display-text) {
   font-family:
+    "Noto Sans Display", 
     "Noto Sans", 
     system-ui, 
     -apple-system, 

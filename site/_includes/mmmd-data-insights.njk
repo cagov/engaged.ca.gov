@@ -181,20 +181,21 @@ function revealQuote(cid, evt) {
   // For Retina displays, we might want a slightly larger base size
   console.log('Actual zoom:', actualZoom);
    
-  // Adjust for browser zoom (higher zoom should make font smaller)
+  // Adjust for browser zoom (higher zoom should make font smaller, so we can still read quote)
   const quoteCard = document.querySelector('.quote-card');
   quoteCard.style.fontSize = `${desiredFontSize / actualZoom}rem`;
   // quoteCard.style.maxWidth = `${500 / actualZoom}px`;
 
   const isPortrait = window.innerWidth < window.innerHeight;
 
-  // Position the quote card 20px to the right and 200px above the cursor
   if (isPortrait) {
+    // quote is beneath cursor and uses available window width
     quoteCard.style.left = '20px';
     quoteCard.style.top = (mouseY + 20/actualZoom) + 'px';
     // set maxWidth to smaller of 500px or (window.innerWidth-20-mouseX)
     quoteCard.style.maxWidth = (window.innerWidth-40) + 'px';
   } else {
+    // quote is to the right of cursor
     quoteCard.style.left = (mouseX + 20/actualZoom) + 'px';
     quoteCard.style.top = (mouseY - 100/actualZoom) + 'px';
     // set maxWidth to smaller of 500px or (window.innerWidth-20-mouseX)
