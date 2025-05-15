@@ -162,8 +162,10 @@ def create_svg_scatterplot(
         
         # Add blend mode attribute if specified
         blend_mode_attr = f' style="mix-blend-mode: {config.dot_blendmode};"' if config.dot_blendmode else ''
+
+        # this draws a dot and a larger invisible circle which helps with selection
         
-        svg_content += f'    <circle class="{config.datapoint_class}" data-cid="{comment_id}" cx="{svg_x}" cy="{svg_y}" r="{config.dot_radius}" fill="{color}" fill-opacity="{config.dot_opacity}" stroke="none" stroke-width="0.5"{blend_mode_attr}/>'
+        svg_content += f'    <g class="{config.datapoint_class}" data-cid="{comment_id}"><circle class="visible" cx="{svg_x}" cy="{svg_y}" r="{config.dot_radius}" fill="{color}" fill-opacity="{config.dot_opacity}" stroke="none" {blend_mode_attr}/><circle cx="{svg_x}" cy="{svg_y}" r="{config.finger_radius}" fill="white" fill-opacity="0" stroke="none"/></g>'
 
     svg_content += '</svg>'
     

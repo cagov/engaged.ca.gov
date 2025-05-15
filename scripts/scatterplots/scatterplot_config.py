@@ -10,6 +10,7 @@ datapoint_class = "datapoint"
 dot_blendmode = "darken"
 dot_opacity = 1.0
 dot_radius = 5
+finger_radius = 10
 range_padding_ratio = 0.05
 
 margin = dot_radius + 1

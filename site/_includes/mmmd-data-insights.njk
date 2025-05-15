@@ -7,6 +7,7 @@
   border-radius: 5px;
   max-width: 500px;
   {# margin: 0 auto; #}
+  font-size: 1rem;
 }
 .plot-row {
   position: relative;
@@ -171,14 +172,27 @@ function revealQuote(cid, evt, is_touch) {
     console.log('No quote found for comment_id:', cid);
   }
 
-  // Position the quote card 20px to the right and 200px above the cursor
+  // This compensates for current zoom level to make the quote more readable if you are zoomed in or zoomed out
+  // which helps for mobile devices.
+  const desiredFontSize = 1;
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const actualZoom = (( window.outerWidth - 10 ) / window.innerWidth);
+   
+  // For Retina displays, we might want a slightly larger base size
+  console.log('Actual zoom:', actualZoom);
+   
+  // Adjust for browser zoom (higher zoom should make font smaller)
   const quoteCard = document.querySelector('.quote-card');
+  quoteCard.style.fontSize = `${desiredFontSize / actualZoom}rem`;
+  quoteCard.style.maxWidth = `${500 / actualZoom}px`;
+
+  // Position the quote card 20px to the right and 200px above the cursor
   if (is_touch) {
     quoteCard.style.left = '0px';
-    quoteCard.style.top = (mouseY + 20) + 'px';
+    quoteCard.style.top = (mouseY + 20/actualZoom) + 'px';
   } else {
-    quoteCard.style.left = (mouseX + 20) + 'px';
-    quoteCard.style.top = (mouseY - 100) + 'px';
+    quoteCard.style.left = (mouseX + 20/actualZoom) + 'px';
+    quoteCard.style.top = (mouseY - 100/actualZoom) + 'px';
   }
   
   // Clear any previously set positioning styles that might interfere
@@ -211,41 +225,30 @@ document.addEventListener('DOMContentLoaded', function() {
   const datapoints = document.querySelectorAll('.datapoint');
   // console.log("Found datapoints:", datapoints.length);
 
-
+  let expandHandler = function(e) {
+    this.querySelector('.visible').setAttribute('r', '8'); // Increase radius on hover
+    this.style.cursor = 'pointer';
+    const comment_id = parseInt(this.getAttribute('data-cid'));
+    if (isNaN(comment_id)) {
+      console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
+    }
+    revealQuote(comment_id, e, false);
+  }
+  let shrinkHandler = function(e) {
+    this.querySelector('.visible').setAttribute('r', ''); // Increase radius on hover
+    hideQuote();
+  }
 
   // Set up event handlers for datapoints in plots
   datapoints.forEach(datapoint => {
     // Add hover effect
-    datapoint.addEventListener('mouseenter', function(e) {
-      this.setAttribute('r', '8'); // Increase radius on hover
-      this.style.cursor = 'pointer';
-      const comment_id = parseInt(this.getAttribute('data-cid'));
-      if (isNaN(comment_id)) {
-        console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
-        return;
-      }
-      revealQuote(comment_id, e, false);
-    });
+    datapoint.addEventListener('mouseenter', expandHandler);
     
-    datapoint.addEventListener('touchstart', function(e) {
-      this.setAttribute('r', '8'); // Increase radius on touch
-      const comment_id = parseInt(this.getAttribute('data-cid'));
-      if (isNaN(comment_id)) {
-        console.log('Datapoint touched with invalid comment_id:', this.getAttribute('data-cid'));
-        return;
-      }
-      revealQuote(comment_id, e, true);
-    });
+    datapoint.addEventListener('touchstart', expandHandler);
     
-    datapoint.addEventListener('mouseleave', function() {
-      this.setAttribute('r', '5'); // Reset radius when not hovering
-      hideQuote();
-    });
+    datapoint.addEventListener('mouseleave', shrinkHandler);
     
-    datapoint.addEventListener('touchend', function() {
-      this.setAttribute('r', '5'); // Reset radius when touch ends
-      hideQuote();
-    });
+    datapoint.addEventListener('touchend', shrinkHandler);
     
     // Add click handler
     {# datapoint.addEventListener('click', function(e) {
