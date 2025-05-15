@@ -1,22 +1,33 @@
+{# Import macros. #}
+{% import "macros/form-checkbox.njk" as checkbox %}
+{% import "macros/form-action.njk" as action %}
+{% import "macros/form-submit.njk" as submit %}
+
+{# Begin HTML. #}
 <h2>{{ 'join-the-conversation' | i18n }}</h2>
+{% block formHeading %}
 <p>{{ 'join-the-conversation-form-label' | i18n }}</p>
+{% endblock formHeading %}
+
 <engca-join-convo-form>
   
   <form
-    action="https://innovation.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id=61200a6dda&amp;f_id=0003e1e3f0"
-    method="post"
-    id="mc-embedded-subscribe-form"
-    name="mc-embedded-subscribe-form"
-    target="_self"
-    novalidate>
+      {% block formAction %}
+       {{ action.data("61200a6dda", "0003e1e3f0") }}
+      {% endblock formAction %}
+           >
 
     <engca-form-field>
       <label class="form-control-label" for="mce-EMAIL">
         <span class="required-label" aria-hidden="true">*</span>
         <span class="sr-only">{{ 'required-label' | i18n }}:</span>
-        {{ 'email-label' | i18n }}
+        {% block formEmail %}
+          {{ 'email-label' | i18n }}
+        {% endblock formEmail %}
       </label>
+
       <input type="email" class="form-control" id="mce-EMAIL" name="EMAIL" aria-required="true">
+
       <engca-form-error id="emailError" hidden>
         <strong>{{ 'valid-email-message' | i18n }}</strong>
         {{ 'valid-email-message-2' | i18n }}
@@ -28,31 +39,29 @@
     </engca-form-field>
 
     <engca-form-field>
+      {% block formContent %}
     <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
 
     <ul class="form-checkbox-list">
         <li>
-        <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-1" name="group[91023][8]" value="Los Angeles fires recovery: Eaton">
-        <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-1">
-          {{ 'topic-los-angeles-fires-recovery-eaton' | i18n }}
-        </label>
-      </li>
-      <li>
-        <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-0" name="group[91023][4]" value="Los Angeles fires recovery: Palisades">
-        <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-0">
-          {{ 'topic-los-angeles-fires-recovery-palisades' | i18n }}
-        </label>
-      </li>
-      <li>
-        <input type="checkbox" class="form-check-input" id="mce-group[91023]-91023-2" name="group[91023][2]" value="Future topics" checked>
-        <label class="form-control-label form-checkbox-label" for="mce-group[91023]-91023-2">
-          {{ 'topic-future-topics' | i18n }}
-        </label>
-      </li>
-      </ul>
+          {{ checkbox.data('topic-los-angeles-fires-recovery-eaton' | i18n, 91023, 1, 8) }}
+        </li>
+        <li>
+          {{ checkbox.data('topic-los-angeles-fires-recovery-palisades' | i18n, 91023, 0, 4) }}
+        </li>
+        <li>
+          {{ checkbox.data('topic-future-topics' | i18n, 91023, 2, 2, "checked") }}
+        </li>
+    </ul>
+
+      {% endblock formContent %}
+
       <engca-form-error id="emailError" hidden>
         <strong>{{ 'valid-email-message' | i18n }}</strong>
         {{ 'valid-email-message-2' | i18n }}
+      </engca-form-error>
+      <engca-form-error id="requiredCheckboxError" hidden>
+        {{ 'required-checkbox-message' | i18n }}
       </engca-form-error>
       <engca-form-error id="apiError" hidden>
         <strong>{{ 'form-problem-message' | i18n }}</strong>
@@ -60,7 +69,8 @@
       </engca-form-error>
     </engca-form-field>
 
-    <input type="submit" id="mc-embedded-subscribe" name="subscribe" data-theme="orange" value="{{ 'form-submit-button' | i18n }}">
+    {{ submit.data('form-submit-button' | i18n) }}
+
   </form>
 
   <engca-form-success aria-live="polite"></engca-form-success>

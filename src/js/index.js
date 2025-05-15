@@ -1,20 +1,26 @@
 /* Accessibility note.
  *
- * Currently, the success and error messages for this form take 
+ * Currently, the success and error messages for this form take
  * two different approaches to accessibility.
- * 
- * The success message uses an "aria-live" region, which announces 
+ *
+ * The success message uses an "aria-live" region, which announces
  * itself whenever contents are updated.
- * 
- * The error messages use hide-and-show techniques with the "hidden" 
+ *
+ * The error messages use hide-and-show techniques with the "hidden"
  * attribute, auto-focus, and other aria attributes.
- */ 
+ */
 
 class JoinConversationForm extends window.HTMLElement {
   connectedCallback() {
     const form = this.querySelector("form");
     const emailInput = form.querySelector("input[type='email']");
     const emailError = form.querySelector("engca-form-error#emailError");
+    const requiredCheckboxInput = form.querySelector(
+      "input[type='checkbox'][required]",
+    );
+    const requiredCheckboxError = form.querySelector(
+      "engca-form-error#requiredCheckboxError",
+    );
     const apiError = form.querySelector("engca-form-error#apiError");
     const successLiveArea = this.querySelector("engca-form-success");
     const successTemplate = this.querySelector("template#form-success-msg");
@@ -30,6 +36,17 @@ class JoinConversationForm extends window.HTMLElement {
         emailInput.setAttribute("aria-invalid", "true");
         emailError.removeAttribute("hidden");
         emailInput.focus();
+        return; // <== Exit when invalid.
+      }
+
+      // Validate required checkbox.
+      const requiredCheckboxIsBlank = requiredCheckboxInput.checkValidity();
+      console.log(requiredCheckboxIsBlank);
+      if (!requiredCheckboxIsBlank) {
+        requiredCheckboxInput.setAttribute("aria-describedby", "requiredError");
+        requiredCheckboxInput.setAttribute("aria-invalid", "true");
+        requiredCheckboxError.removeAttribute("hidden");
+        requiredCheckboxInput.focus();
         return; // <== Exit when invalid.
       }
 
