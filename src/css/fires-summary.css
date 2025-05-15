@@ -147,8 +147,13 @@ div.findings-key-tension-heading {
     border-bottom: 1px solid #BCBBC1;
     margin-bottom: 1rem;
     min-height: 11rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
+div.findings-key-tension-heading.long {
+    min-height: 13.5rem;
+}
 @media (max-width: 767px) {
     div.findings-key-tension-block  {
         margin-bottom: 2rem;

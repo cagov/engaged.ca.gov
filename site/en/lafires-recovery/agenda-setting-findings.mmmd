@@ -103,7 +103,7 @@ icon: construction.svg
 iconAlt: A construction barrier
 ----
 
-Whether to build back quickly or build back better
+Should we rebuild quickly, or rebuild in a way that ensures lasting resilience?
 
 ----
 id: findings_key_tension_public_private
@@ -111,7 +111,7 @@ icon: fire-hydrant.svg
 iconAlt: A fire hydrant
 ----
 
-Whether responsibility for utilities and infrastructure should be public or private
+Should the public sector or the private sector be responsible for utilities and infrastructure?
 
 ----
 id: findings_key_tension_individual_collective
@@ -119,7 +119,7 @@ icon: crane.svg
 iconAlt: A crane
 ----
 
-Whether fire mitigation should be an individual responsibility or a collective one
+Should fire prevention be an individual or collective responsibility?
 
 ----
 id: findings_key_tension_insurance
@@ -127,15 +127,15 @@ icon: currency.svg
 iconAlt: A dollar bill
 ----
 
-Insurance reform and financial assistance
+Should emergency funds be distributed to everyone the same way, or based on those who need it most?
 
 ----
-id: findings_key_tension_modernize
+id: findings_key_tension_residents_density
 icon: hammer.svg
 iconAlt: A hammer
 ----
 
-Determining who should pay to modernize utilities and infrastructure
+Should recovery efforts include making space for more residents to move into the area?
 
 ----
 id: findings_download_button

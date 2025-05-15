@@ -23,18 +23,18 @@ Here are some plots!
 ----
 id: plots
 plot_1: build_faster_vs_better_plot.svg
-title_1: Should we rebuild quickly, or rebuild in a way that ensures lasting resilience?
+title_1: Rebuild quickly or rebuild for resilience
 legend_1: build_faster_vs_better_en_legend.svg
 plot_2: public_private_plot.svg
-title_2: Should the public sector or the private sector be responsible for utilities and infrastructure?
+title_2: Public or private sector responsibility for utilities and infrastructure
 legend_2: public_private_en_legend.svg
 plot_3: ind_vs_collective_plot.svg
-title_3: Should fire prevention be an individual or collective responsibility?
+title_3: Individual or collective responsibility for fire prevention
 legend_3: ind_vs_collective_en_legend.svg
 plot_4: financial_aid_plot.svg
-title_4: Should emergency funds be distributed to everyone the same way, or based on those who need it most?
+title_4: Distributing emergency funds to everyone equally, or based on need
 legend_4: financial_aid_en_legend.svg
 plot_5: density_vs_safety_plot.svg
-title_5: Should recovery efforts include making space for more residents to move into the area?
+title_5: Making space for more residents, or limiting housing density
 legend_5: density_vs_safety_en_legend.svg
 ----
