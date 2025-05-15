@@ -602,18 +602,6 @@ const translations = {
   "ge-what-happens-body-4": {
     en: "State officials create a plan of action based on the priorities staff set",
   },
-  "ge-what-happens-alt-1": {
-    en: "Field required",
-  },
-  "ge-what-happens-alt-2": {
-    en: "Field required",
-  },
-  "ge-what-happens-alt-3": {
-    en: "Field required",
-  },
-  "ge-what-happens-alt-4": {
-    en: "Field required",
-  },
   "ge-submit": {
     en: "Sign up to opt in",
   },
