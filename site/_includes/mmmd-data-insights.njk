@@ -221,10 +221,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
  
-  // Direct access to SVG elements since they're now in the DOM
-  const datapoints = document.querySelectorAll('.datapoint');
-  // console.log("Found datapoints:", datapoints.length);
-
   let expandHandler = function(e) {
     this.querySelector('.visible').setAttribute('r', '8'); // Increase radius on hover
     this.style.cursor = 'pointer';
@@ -234,38 +230,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     revealQuote(comment_id, e, false);
   }
-  let shrinkHandler = function(e) {
-    this.querySelector('.visible').setAttribute('r', ''); // Increase radius on hover
-    hideQuote();
+
+  let shrinkHandler = function(e, autoHide=false) {
+    this.querySelector('.visible').setAttribute('r', '5'); // Decrease radius on hover
+    if (autoHide) {
+      hideQuote();
+    }
   }
 
   // Set up event handlers for datapoints in plots
+  const datapoints = document.querySelectorAll('.datapoint');
   datapoints.forEach(datapoint => {
     // Add hover effect
     datapoint.addEventListener('mouseenter', expandHandler);
     
     datapoint.addEventListener('touchstart', expandHandler);
     
-    datapoint.addEventListener('mouseleave', shrinkHandler);
+    datapoint.addEventListener('mouseleave', e => shrinkHandler.call(datapoint, e, true));
     
-    datapoint.addEventListener('touchend', shrinkHandler);
-    
-    // Add click handler
-    {# datapoint.addEventListener('click', function(e) {
-      const comment_id = parseInt(this.getAttribute('data-cid'));
-      // if not a valid integer when converted to int, return early
-      if (quoteData == null) {
-        console.log('No quote data found');
-        return;
-      }
-      if (isNaN(comment_id)) {
-        console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
-        return;
-      }
-      revealQuote(comment_id, e, false);
-      // console.log('Datapoint clicked:', comment_id);
-      // You can add more functionality here, like showing details about the point
-    }); #}
+    datapoint.addEventListener('touchend', e => shrinkHandler.call(datapoint, e, false));
+   
   });
 });
 </script>
