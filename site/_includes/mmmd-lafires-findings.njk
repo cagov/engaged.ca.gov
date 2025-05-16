@@ -62,34 +62,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
+                    <h2>{{ modules.findings_opportunity_areas.title | safe }}</h2>
+            </div>
+            <div class="col-lg-8">
                 <div class="findings-indent-container">
-                    {{ modules.findings_issues_for_further_discussion.content | safe }}
+                    {{ modules.findings_opportunity_areas.content | safe }}
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="findings-balloons-container">
-                        <div class="findings-quote findings-quote-container-1">
-                            {{ modules.findings_quote_1.content | safe }}
-                            <img class="findings-quote-balloon-tip-1" src="/public/images/balloon-tip-1.svg" aria-hidden="true">
-                        </div>
-                        <div class="findings-quote findings-quote-container-2">
-                            {{ modules.findings_quote_2.content | safe }}
-                            <img class="findings-quote-balloon-tip-2" src="/public/images/balloon-tip-2.svg" aria-hidden="true">
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="findings-key-tensions-label">
-                    {{ modules.findings_key_tensions.content | safe }}
-                </div>
+
+
                 <div class="findings-key-tensions-container">
                     <div class="findings-key-tension-block">
                         <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_build_back.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_build_back.iconAlt }}">
@@ -127,17 +107,8 @@
                         </div>
                     </div>
                     <div class="findings-key-tension-block">
-                        <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_insurance.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_insurance.iconAlt }}">
-                        <div class="findings-key-tension-heading long">
-                            {{ modules.findings_key_tension_insurance.content | safe }}
-                        </div>
-                        <div class="findings-key-tension-read-more">
-                            <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
-                        </div>
-                    </div>
-                    <div class="findings-key-tension-block">
                         <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_residents_density.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_residents_density.iconAlt }}">
-                        <div class="findings-key-tension-heading long">
+                        <div class="findings-key-tension-heading">
                             {{ modules.findings_key_tension_residents_density.content | safe }}
                         </div>
                         <div class="findings-key-tension-read-more">
@@ -149,6 +120,18 @@
                     <a href="#" data-appearance="button" data-theme="orange">
                     {{ modules.findings_download_button.buttonText }}
                     </a>
+                </div>
+
+
+            </div>
+            <div class="col-lg-4">
+                <div class="findings-balloons-containerx">
+                        <div class="findings-quote findings-quote-container-1">
+                            {{ modules.findings_quote_1.content | safe }}
+                        </div>
+                        <div class="findings-quote findings-quote-container-2">
+                            {{ modules.findings_quote_2.content | safe }}
+                        </div>
                 </div>
             </div>
         </div>

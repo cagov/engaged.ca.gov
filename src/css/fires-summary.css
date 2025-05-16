@@ -43,40 +43,26 @@ section#findings-topics-people-rated {
     /* background: #FFF4EB; */
 }
 
-div.findings-balloons-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    /* gap: 3rem; */
-}
-
 div.findings-quote {
-    max-width: 300px;
-    margin: 5rem 5rem 0 5rem;
-    box-sizing: border-box;
-
-    position: relative;
-    padding: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     font-style: italic;
-    font-size: 19px;
-    text-align: center;
-    line-height: 125%;
-    letter-spacing: -2%;
-    margin-bottom: 5rem;
-    border-radius: 15px;
+    font-size: 23px;
+    line-height: 39px;
+    padding-left: 3.5rem;
+    background-image: url('/public/images/little-dialog-balloon.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 45px 46px;
 }
-div.findings-quote-container-1 {
+/* div.findings-quote-container-1 {
     background: #E79450;
     color: #1C2745;
 }
 div.findings-quote-container-2 {
     background: #5489A3;
     color: #FFF4EB;
-}
-img.findings-quote-balloon-tip-1 {
+} */
+/* img.findings-quote-balloon-tip-1 {
     position: absolute;
     bottom: -40px;
     left: calc(25% - 12.5%);
@@ -87,7 +73,7 @@ img.findings-quote-balloon-tip-2 {
     bottom: -40px;
     left: calc(75% - 12.5%);
     width: 25%;
-}
+} */
 
 div.findings-key-tensions-label {
     font-weight: 700;
@@ -231,7 +217,7 @@ section#findings-whats-next h2 {
 
 section#findings-issues .findings-button-container
 {
-    text-align: center;
+    text-align: left;
 }
 
 div.findings-barchart-container {
