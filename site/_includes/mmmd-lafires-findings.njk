@@ -2,21 +2,21 @@
 {% block content %}
 
 <section id="findings-overview">
-  <div class="container">
+  <div class="container findings-overview-container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-12 ">
         {{ modules.findings_overview.content | safe }}
       </div>
     </div>
+    <img class="findings-adornment" src="/public/images/findings-adornment.svg" />
   </div>
-  <img class="findings-adornment" src="/public/images/findings-adornment.svg" aria-hidden="true" alt="Findings adornment">
 </section>
 
 <section id="findings-how-we-listened">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="findings-indent-container">
+        <div class="findings-how-we-listened-container">
           {{ modules.findings_how_we_listened.content | safe }}
         </div>
       </div>
@@ -28,11 +28,11 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="findings-indent-container">
+        <div class="findings-no-indent-container">
           {{ modules.findings_what_we_heard.content | safe }}
         </div>
       </div>
-      <div class="findings-indent-container">
+      <div class="findings-no-indent-container">
         <div class="findings-barchart-container collapsed">
             {% for item in barchart %}
             {% set visible = loop.index <= 4 %}
@@ -65,7 +65,7 @@
                     <h2>{{ modules.findings_opportunity_areas.title | safe }}</h2>
             </div>
             <div class="col-lg-8">
-                <div class="findings-indent-container">
+                <div class="findings-no-indent-container">
                     {{ modules.findings_opportunity_areas.content | safe }}
                 </div>
 
@@ -138,16 +138,29 @@
     </div>
 </section>
 
+<section id="findings-how-we-did">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_how_we_did_the_analysis.content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <section id="findings-whats-next">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="findings-indent-container">
+                <div class="findings-no-indent-container">
                     {{ modules.findings_whats_next.content | safe }}
                 </div>
             </div>
         </div>
-        <div class="findings-indent-container">
+        <div class="findings-no-indent-container">
             <div class="findings-button-container">
                 <a href="/lafires-recovery/#sign-up" data-appearance="button" data-theme="orange">
                 {{ modules.findings_whats_next.buttonText }}
@@ -156,6 +169,8 @@
         </div>
     </div>
 </section>
+
+
 
 
 <script>

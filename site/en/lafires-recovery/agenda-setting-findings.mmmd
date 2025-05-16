@@ -157,19 +157,6 @@ id: findings_download_button
 buttonText: See more insights
 ----
 
-
-----
-id: findings_whats_next
-buttonText: Sign up to stay informed
-----
-
-## What’s next
-We are taking the input we have received seriously. The residents' voices provide a rich and valuable dataset. It’s full of insights and key points to consider. We are using it to create a series of actions that will help Los Angeles recover. 
-
-We will post progress updates on this website.
-
-We are working with public officials to plan the deliberation phase of this process. Many recovery efforts need collective and coordinated support from the community. Key tensions can block that support, making full recovery from the fires seem far away. Participants can use deliberation to navigate key tensions. This can help them agree on how to move forward.
-
 ----
 id: findings_whats_next
 buttonText: Sign up to stay informed
@@ -182,3 +169,19 @@ We are taking the input we have received seriously. The residents' voices provid
 We will post progress updates on this website.
 
 We are working with public officials to plan the deliberation phase of this process. Many recovery efforts need collective and coordinated support from the community. Key tensions can block that support, making full recovery from the fires seem far away. Participants can use deliberation to navigate key tensions. This can help them agree on how to move forward.
+
+----
+id: findings_how_we_did_the_analysis
+----
+
+## How we did the analysis
+
+We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
+
+We tried several ways to write the prompts, and chose to highlight the answers that occurred frequently, no matter how we phrased the questions.
+
+**Sample prompts**
+
+“I would like you to analyze a set of qualitative survey responses using extended thinking. 
+
+“Start by doing an initial exploration of the data: “First, read through the entire dataset without categorizing or labeling. “Note your immediate observations and impressions about what stands out to you. “Identify recurring words, phrases, and sentiments that appear across multiple responses. “Share what surprised you or caught your attention in this initial review.”

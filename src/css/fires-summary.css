@@ -9,6 +9,10 @@ section#findings-overview {
     position: relative;
 }
 
+.findings-overview-container {
+    position: relative;
+}
+
 section#findings-overview, section#findings-overview h2 {
     color: #FFF4EB;
 }
@@ -205,6 +209,10 @@ img.findings-icon {
 section#findings-whats-next {
     background: #1C2745;
     color: #FFF4EB;
+    border-bottom: 1px solid #5489A3;
+    background-image: url('/public/images/whats_next_adornment.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
 section#findings-whats-next h2 {
