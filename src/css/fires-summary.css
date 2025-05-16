@@ -40,7 +40,7 @@ section#findings-over700, section#findings-over700 p {
 }
 
 section#findings-topics-people-rated {
-    background: #FFF4EB;
+    /* background: #FFF4EB; */
 }
 
 div.findings-balloons-container {
@@ -255,7 +255,7 @@ div.findings-barchart-container.collapsed::after {
     left: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to bottom, transparent, #FFF4EB);
+    background: linear-gradient(to bottom, transparent, #FFFFFF);
     pointer-events: none;
 }
 
