@@ -39,16 +39,18 @@ section#sign-up h2 {
   max-width: 40rem;
 }
 
-.form-flex, engca-join-convo-form > form {
+.form-flex,
+engca-join-convo-form > form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
   gap: 1.8rem;
 }
 
 /* Make the email field full-width. */
-engca-join-convo-form, engca-form-field {
+engca-join-convo-form,
+engca-form-field {
   width: 100%;
 }
 

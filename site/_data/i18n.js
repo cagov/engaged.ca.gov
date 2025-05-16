@@ -196,7 +196,7 @@ const translations = {
         "location": "Home",
     },
     "join-the-conversation-form-label": {
-        "en": "Give us your email. We'll let you know when engagements start.",
+        "en": "Give us your email. We’ll let you know about our engagements.",
         "fr": "Donnez-nous votre adresse e-mail. Nous vous notifierons lorsque les sujets seront disponibles.",
         "es": "Denos su correo electrónico. Le avisaremos cuando comiencen los compromisos.",
         "ko": "이메일을 보내주십시오. 업무가 시작되면 알려드리겠습니다.",
@@ -352,7 +352,7 @@ const translations = {
         "location": "Home"
     },
     "form-submit-button": {
-        "en": "Sign up now",
+        "en": "Sign up to opt in",
         "fr": "Inscrivez-vous maintenant",
         "es": "Regístrese ahora",
         "ko": "지금 가입하세요",
