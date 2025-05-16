@@ -1,29 +1,30 @@
-section#findings-overview, section#plots-overview, section#download-the-data {
+section#plots-overview, section#download-the-data {
     background: #FFF4EB;
     overflow-y: hidden;
     position: relative;
 }
+section#findings-overview {
+    background: #1C2745;
+    overflow-y: hidden;
+    position: relative;
+}
 
-.findings-corner-adornment {
+section#findings-overview, section#findings-overview h2 {
+    color: #FFF4EB;
+}
+section#findings-overview p {
+    max-width: 80%;
+}
+.findings-adornment {
     position: absolute;
-    inline-size: min(220px, 30vw);
-    bottom: -6.5vw;
-    right: -6.5vw;
+    /* inline-size: min(220px, 30vw); */
+    right: 0;
+    bottom: 0;
 }
 
-@media (min-width: 767px) {
-    .findings-corner-adornment {
-        width: 220px;
-        bottom: -3.25vw;
-        right: -3.25vw;
-    }
-}
-
-@media (min-width: 1200px) {
-    .findings-corner-adornment {
-        width: 220px;
-        bottom: 0;
-        right: 0;
+@media (max-width: 767px) {
+    .findings-adornment {
+        width: 170px;
     }
 }
 
