@@ -39,16 +39,18 @@ section#sign-up h2 {
   max-width: 40rem;
 }
 
-.form-flex, engca-join-convo-form > form {
+.form-flex,
+engca-join-convo-form > form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
   gap: 1.8rem;
 }
 
 /* Make the email field full-width. */
-engca-join-convo-form, engca-form-field {
+engca-join-convo-form,
+engca-form-field {
   width: 100%;
 }
 
@@ -57,7 +59,6 @@ engca-join-convo-form, engca-form-field {
 }
 
 .form-flex > p:last-child {
-  text-align: center;
   font-size: 0.875em;
   font-style: normal;
   font-weight: 400;
@@ -65,11 +66,11 @@ engca-join-convo-form, engca-form-field {
 }
 
 .form-flex a {
-  color: #6FD0FB
+  color: #6fd0fb;
 }
 
 engca-form-error {
-  background: #F1464E;
+  background: #f1464e;
   color: #fff;
   border-radius: 3px;
   margin-block: 0.5em;
@@ -79,7 +80,7 @@ engca-form-error {
 
 input[type="email"][aria-invalid="true"] {
   box-shadow: inset 0 0 3px rgb(241 70 78 / 0.5);
-  color: #F1464E;
+  color: #f1464e;
   border-color: currentColor;
 }
 
@@ -106,8 +107,8 @@ engca-form-success > p {
   line-height: 2rem;
 }
 
-.form-check-input[type=checkbox] {
-   border-radius: 0em; 
+.form-check-input[type="checkbox"] {
+  border-radius: 0em;
 }
 
 .form-check-input {
@@ -117,24 +118,23 @@ engca-form-success > p {
 }
 
 .form-checkbox-label {
-  color: var(--Dark-Palette-Off-White, #FFF4EB);
+  color: var(--Dark-Palette-Off-White, #fff4eb);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 39px; /* 216.667% */
 }
-  
+
 .form-check-input {
-  top: 0;  
+  top: 0;
   left: 0;
   height: 25px;
   width: 25px;
   background-color: transparent;
-  border: 2px solid var(--Dark-Palette-Off-White, #FFF4EB);
+  border: 2px solid var(--Dark-Palette-Off-White, #fff4eb);
   flex-shrink: 0;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
 }
-
 
 ul.form-checkbox-list li {
   list-style: none;
@@ -143,7 +143,7 @@ ul.form-checkbox-list li {
 }
 
 .form-title {
-  color: var(--Dark-Palette-Off-White, #FFF4EB);
+  color: var(--Dark-Palette-Off-White, #fff4eb);
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
