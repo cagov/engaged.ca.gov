@@ -31,8 +31,6 @@ Over 700 people gave us feedback on 10 recovery-related topics.
 id: findings_how_we_listened
 ----
 
-## How we listened
-
 [Engaged California](https://engaged.ca.gov/) invites the public to shape the policies that impact their lives.
 
 
@@ -43,6 +41,20 @@ The first engagement to get community feedback on disaster response began in Mar
 
 
 The ideas and insights we have gathered so far are invaluable.
+
+----
+id: iconic_summary
+icon_1: invitations_sent.svg
+number_1: 2,500+
+caption_1: invitations sent
+icon_2: people_feedback.svg
+number_2: 700+
+caption_2: people gave us feedback
+icon_3: hand_heart.svg
+number_3: 10
+caption_3: topics about disaster recovery
+----
+
 
 ----
 id: findings_what_we_heard
@@ -69,16 +81,16 @@ This is the percent of people who rated a topic with a 4, “very important” o
 
 ----
 id: findings_bar_chart
-caption1: Debris removal & environmental recovery
-caption2: Wildfire prevention prioritization & accountability
-caption3: Climate & community resilience
-caption4: Infrastructure & utilities restoration
-caption5: Emergency planning & community safety
-caption6: Housing & rebuilding
-caption7: Financial & legal assistance
+caption1: Environmental recovery and clean up
+caption2: Wildfire prevention prioritization and accountability
+caption3: Climate and community resilience
+caption4: Infrastructure and utilities restoration
+caption5: Emergency planning and community safety
+caption6: Housing and rebuilding
+caption7: Financial and legal assistance
 caption8: Emergency communication
-caption9: Economic recovery & small business support
-caption10: Emotional & mental health support
+caption9: Economic recovery and small business support
+caption10: Emotional and mental health support
 
 ----
 
@@ -146,7 +158,7 @@ Should emergency funds be distributed to everyone the same way, or based on thos
 
 ----
 id: findings_key_tension_residents_density
-icon: construction.svg
+icon: house.svg
 iconAlt: A construction barrier
 ----
 
@@ -164,11 +176,12 @@ buttonText: Sign up to stay informed
 
 ## What’s next
 
-We are taking the input we have received seriously. The residents' voices provide a rich and valuable dataset. It’s full of insights and key points to consider. We are using it to create a series of actions  that will help Los Angeles recover. 
+We are working with public officials to plan the deliberation phase of this process. Participants will use deliberation to discuss the key opportunity areas. This can help them agree on how to move forward.
+
+We will use the deliberations to create a series of actions that will help Los Angeles recover. 
 
 We will post progress updates on this website.
 
-We are working with public officials to plan the deliberation phase of this process. Many recovery efforts need collective and coordinated support from the community. Key tensions can block that support, making full recovery from the fires seem far away. Participants can use deliberation to navigate key tensions. This can help them agree on how to move forward.
 
 ----
 id: findings_how_we_did_the_analysis
@@ -176,9 +189,12 @@ id: findings_how_we_did_the_analysis
 
 ## How we did the analysis
 
+For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">check out our detailed methodology and comments analysis.</a> 
+
 We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
 
-We tried several ways to write the prompts, and chose to highlight the answers that occurred frequently, no matter how we phrased the questions.
+AI was a helpful tool during our analysis, and our team checked all the findings to make sure they were relevant and accurate. We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
+
 
 **Sample prompts**
 

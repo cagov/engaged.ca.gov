@@ -9,6 +9,10 @@ section#findings-overview {
     position: relative;
 }
 
+section p {
+    margin-bottom: 1.5rem;
+}
+
 .findings-overview-container {
     position: relative;
 }
@@ -33,6 +37,34 @@ section#findings-overview p {
 }
 
 
+div.iconic-container {
+    text-align: center;
+}
+div.iconic-datum {
+    margin-bottom: 2rem;
+}
+div.iconic-number {
+    font-weight: 900;
+    font-size: 47px;
+    letter-spacing: -5%;
+    line-height: 50.9px;
+    letter-spacing: -5%;
+    text-align: center;
+    font-variant-numeric-figure: lining-nums;
+    font-variant-numeric-spacing: proportional-nums;
+}
+
+div.iconic-caption {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    max-width: 204px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 section#findings-over700, section#findings-over700 p {
     background: #5489A3;
     font-weight: 700;
@@ -43,8 +75,20 @@ section#findings-over700, section#findings-over700 p {
     color: #FFF4EB;
 }
 
+div.findings-what-we-heard {
+    padding-top: 2rem;
+}
+
+section#findings-how-we-listened {
+    padding-bottom: 0;
+}
+
 section#findings-topics-people-rated {
-    /* background: #FFF4EB; */
+    padding-top: 0;
+}
+
+section#findings-issues {
+    background-color: #FFF4EB;
 }
 
 div.findings-quote {
@@ -105,11 +149,10 @@ div.findings-key-tension-block  {
 
     position: relative;
 
-    background: #FFF4EB;
-    border: 2px solid #E79450;
+    background: #FFFFFF;
+    border: 2px solid #5489A3;
     border-radius: 10px;
-    padding: 0;
-    padding-top: 6rem;
+    padding: 6rem 0.5rem 1rem 0.5rem;
     margin: 10px;
     margin-right: 0;
     text-align: center;
@@ -137,7 +180,7 @@ div.findings-key-tension-read-more.expanded span {
 div.findings-key-tension-heading {
     border-bottom: 1px solid #BCBBC1;
     margin-bottom: 1rem;
-    min-height: 11rem;
+    min-height: 12rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
@@ -145,6 +188,8 @@ div.findings-key-tension-heading {
 div.findings-key-tension-heading.long {
     min-height: 13.5rem;
 }
+
+
 @media (max-width: 767px) {
     div.findings-key-tension-block  {
         margin-bottom: 2rem;
@@ -202,7 +247,7 @@ div.findings-show-all-button-label.open {
 
 img.findings-icon {
     position: absolute;
-    top: -20px;
+    top: -40px;
     left: calc(50% - 40px);
 }
 
@@ -248,7 +293,7 @@ div.findings-barchart-container.collapsed::after {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 50px;
     background: linear-gradient(to bottom, transparent, #FFFFFF);
     pointer-events: none;
 }
