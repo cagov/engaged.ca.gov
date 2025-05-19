@@ -152,7 +152,7 @@ div.findings-key-tension-block  {
     background: #FFFFFF;
     border: 2px solid #5489A3;
     border-radius: 10px;
-    padding: 6rem 0.5rem 1rem 0.5rem;
+    padding: 6rem 0rem 1rem 0rem;
     margin: 10px;
     margin-right: 0;
     text-align: center;
@@ -166,6 +166,7 @@ div.findings-key-tension-read-more:not(.expanded) {
     font-weight: 500;
     font-size: 16px;
     color: #0D5D90;
+    padding-top: 1rem;
 }
 
 div.findings-key-tension-read-more:not(.expanded) span {
@@ -179,7 +180,6 @@ div.findings-key-tension-read-more.expanded span {
 
 div.findings-key-tension-heading {
     border-bottom: 1px solid #BCBBC1;
-    margin-bottom: 1rem;
     min-height: 12rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -223,7 +223,7 @@ div.findings-expand-header {
 
 div.findings-expand-quote {
     padding: 10px;
-    background: #FFF4EB;
+    background: #F6F7FA;
     color: #444444;
     font-weight: 400;
     font-style: italic;
