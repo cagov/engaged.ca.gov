@@ -1,3 +1,5 @@
+// https://github.com/cagov/engaged.ca.gov/releases/tag/MailChimp-Sign-Up-Form-Post-003
+
 import client from "@mailchimp/mailchimp_marketing";
 
 export const handler = async (event) => {
@@ -18,19 +20,10 @@ export const handler = async (event) => {
 
   const listId = "61200a6dda"; // Also called Audience ID in Mailchimp.
 
-  const interests = {
-    "1552878c1b":
-      data["group[91023][8]"] === "Los Angeles fires recovery: Eaton",
-    "40c0f946cd":
-      data["group[91023][4]"] === "Los Angeles fires recovery: Palisades",
-    "4d15bd19e5": data["group[91023][2]"] === "Future topics",
-  };
-
   const response = await client.lists
     .setListMember(listId, subscriberHash, {
       email_address: email,
       status_if_new: "subscribed",
-      interests: interests,
     })
     .then((results) => {
       return {
