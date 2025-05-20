@@ -202,7 +202,7 @@ img.findings-quote-balloon-tip-2 {
 
 div.findings-key-tensions-label {
     font-weight: 700;
-    font-size: 34px;
+    font-size: 20px;
     line-height: 100%;
     letter-spacing: -2%;
     text-align: center;
@@ -256,7 +256,7 @@ div.findings-key-tension-read-more.expanded span {
     background: url("/public/images/arrow-blue-up.svg") no-repeat right center;
 }
 
-div.findings-key-tension-heading {
+div.findings-key-tension-heading p {
     border-bottom: 1px solid #BCBBC1;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -265,7 +265,13 @@ div.findings-key-tension-heading {
     }
 }
 
-
+div.findings-key-tension-heading {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+}
 
 div.findings-key-tension-heading.long {
     min-height: 13.5rem;
