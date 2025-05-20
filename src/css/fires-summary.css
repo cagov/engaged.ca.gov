@@ -307,7 +307,7 @@ div.findings-key-tension-heading.long {
         margin-bottom: 2rem;
         margin-top: 3rem;
         flex: 1 1 85%;
-        max-width: 85%;
+        max-width: 100%;
     }
 }
 
