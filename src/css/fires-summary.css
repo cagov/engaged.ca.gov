@@ -29,20 +29,8 @@ section#download-the-data h2 {
 
 }
 
-section#data-definitions {
-    padding-top: 0;
-}
-
-section#what-were-doing {
-    padding-top: 0;
-}
-
 section p {
     margin-bottom: 1.5rem;
-}
-
-section#data-visualizations {
-    padding-top: 0;
 }
 
 .findings-overview-container {
@@ -167,7 +155,6 @@ section#findings-over700, section#findings-over700 p {
     text-align: center;
     color: #FFF4EB;
 }
-
 div.findings-what-we-heard {
     padding-top: 2rem;
 }
@@ -179,7 +166,9 @@ section#findings-how-we-listened {
 section#findings-topics-people-rated {
     padding-top: 0;
 }
-
+section#data-definitions {
+    padding-top: 0;
+}
 section#findings-issues {
     background-color: #FFF4EB;
 }
@@ -237,14 +226,17 @@ div.findings-key-tensions-container {
     flex-direction: row;
     flex-wrap: wrap;
     /* justify-content: center; */
-    gap: 3rem;
+    row-gap: 3rem;
     justify-content: space-between;
-    /* padding? */
+    padding-top: 2rem;
+    @media (max-width: 767px) {
+        row-gap: inherit;
+        padding-top: 0;
+    }
 }
 
 div.findings-key-tension-block  {
     flex: 1 1 366px;
-    max-width: 366px;
     margin: 5rem 5rem 0 5rem;
     box-sizing: border-box;
 
@@ -260,7 +252,7 @@ div.findings-key-tension-block  {
     font-weight: 700;
     font-size: 19px;
     line-height: 27px;
-    max-width: 300px;
+    max-width: 366px;
 }
 
 div.findings-key-tension-read-more {
@@ -488,12 +480,7 @@ div.insights-back-button-container {
   div.plot-legend {
     margin-top: 20px;
   }
-  section.plot-section {
-      padding-top: 0;
-  }
-  section#data-visualizations {
-      padding-bottom: 0;
-  }
+
   @media (orientation: landscape) {
     .responsive-svg-container {
       display: flex;
