@@ -257,11 +257,16 @@ div.findings-expand-quote {
     line-height: 125%;
     letter-spacing: -2%;
 }
-
+div#findings-show-all-button {
+    width: fit-content;
+}
 div.findings-show-all-button-label {
     padding-right: 32px;
     background: url("/public/images/arrow-down.svg") no-repeat right center;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0D5D90;
 }
 
 div.findings-show-all-button-label.open {
