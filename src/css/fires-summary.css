@@ -201,8 +201,9 @@ div.findings-key-tensions-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 3rem;
+    justify-content: space-between;
     /* padding? */
 }
 
@@ -218,8 +219,8 @@ div.findings-key-tension-block  {
     border: 2px solid #5489A3;
     border-radius: 10px;
     padding: 6rem 0rem 1rem 0rem;
-    margin: 10px;
-    margin-right: 0;
+    margin: 0;
+    margin-top: 1rem;
     text-align: center;
     font-weight: 700;
     font-size: 19px;
