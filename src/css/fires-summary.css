@@ -239,17 +239,15 @@ div.findings-key-tension-expand-block.expanded {
 
 div.findings-expand-header {
     padding: 10px;
-    background: white;
     color: #444444;
-    font-weight: 500;
-    font-size: 19px;
+    font-weight: 600;
+    font-size: 18px;
     line-height: 27px;
     letter-spacing: 0%;
 }
 
 div.findings-expand-quote {
     padding: 10px;
-    background: #F6F7FA;
     color: #444444;
     font-weight: 400;
     font-style: italic;
@@ -257,9 +255,13 @@ div.findings-expand-quote {
     line-height: 125%;
     letter-spacing: -2%;
 }
-div#findings-show-all-button {
-    width: fit-content;
+.findings-key-tension-expand-block > div:nth-child(odd) {
+    background: #F6F7FA;
 }
+.findings-key-tension-expand-block > div:nth-child(even) {
+    background: #FFFFFF;
+}
+
 div.findings-show-all-button-label {
     padding-right: 32px;
     background: url("/public/images/arrow-down.svg") no-repeat right center;
