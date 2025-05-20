@@ -216,7 +216,7 @@ div.findings-key-tension-block  {
     max-width: 300px;
 }
 
-div.findings-key-tension-read-more:not(.expanded) {
+div.findings-key-tension-read-more {
     font-weight: 500;
     font-size: 16px;
     color: #0D5D90;

@@ -361,6 +361,7 @@ document.querySelectorAll('.findings-key-tension-read-more').forEach(readMore =>
     const expandBlock = document.querySelector(`.findings-key-tension-expand-block.${block}`);
     if (expandBlock != null) {
       expandBlock.classList.toggle('expanded');
+      this.classList.toggle('expanded');
     }
   });
 });
