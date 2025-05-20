@@ -111,6 +111,8 @@ div.iconic-container {
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
+        flex: 1 1 100%;
+        min-width: 0; /* Prevents flex items from overflowing */
     }
     
 }
@@ -128,6 +130,8 @@ div.iconic-number {
     font-variant-numeric-spacing: proportional-nums;
 }
 
+
+
 div.iconic-caption {
     font-weight: 400;
     font-size: 23px;
@@ -137,6 +141,21 @@ div.iconic-caption {
     max-width: 204px;
     margin-left: auto;
     margin-right: auto;
+}
+@media (max-width: 768px) {
+    div.iconic-number {
+        font-size: 24px; /* 47px * 0.6 */
+        line-height: 30.54px; /* 50.9px * 0.6 */
+    }
+    div.iconic-caption {
+        font-size: 14px;
+    }
+    div.iconic-datum img {
+        width: 40px;
+    }
+    div.iconic-datum {
+        width: 3%;
+    }
 }
 
 section#findings-over700, section#findings-over700 p {
@@ -234,7 +253,7 @@ div.findings-key-tension-block  {
     background: #FFFFFF;
     border: 2px solid #5489A3;
     border-radius: 10px;
-    padding: 6rem 0rem 1rem 0rem;
+    padding: 4.5rem 0rem 1rem 0rem;
     margin: 0;
     margin-top: 1rem;
     text-align: center;
@@ -248,7 +267,7 @@ div.findings-key-tension-read-more {
     font-weight: 500;
     font-size: 16px;
     color: #0D5D90;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 
 div.findings-key-tension-read-more:not(.expanded) span {
@@ -264,6 +283,7 @@ div.findings-key-tension-heading p {
     border-bottom: 1px solid #BCBBC1;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    padding-bottom: 1rem;
     @media (min-width: 769px) {
         min-height: 12rem;
     }
