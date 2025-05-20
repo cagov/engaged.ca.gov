@@ -91,25 +91,31 @@ This is the comments dataset… The data does not contain personally identifying
 id: data_definitions
 buttonText:
 ----
-**Data definitions**
+
+## Data definitions
 
 These are the columns in this dataset and their definitions.
 
-**Comment**
-
-The full text of a comment submitted by an agenda setting participant. Comments have not been edited for clarity, content, or grammar.
-
-**Topic**
-
-The topic to which the comment responded. There were 10 topics. 
-[Insert topic list]
-
-**Key tension**
-
-The key tension that is related to the comment
-There are 5 key tensions
-[Insert the list of key tensions]
-
-**Comment contains an actionable idea**
-
-Label denoting whether a comment contains an actionable idea. If yes, the field value will be [yes]. If not, the field value will be [null] or empty.  We generated these labels using an LLM and then hand-checked by our data team.
+- Comment 
+  - The full text of a comment submitted by an agenda setting participant. Comments have not been edited for clarity, content, or grammar.
+- Topic
+  - This column lists the topic a commenter was responding to. There were 10 topics. 
+    1. Emergency communication
+    2. Debris removal & environmental recovery
+    3. Financial & legal assistance
+    4. Emotional & mental health support
+    5. Housing & rebuilding
+    6. Economic recovery & small business support
+    7. Infrastructure & utilities restoration
+    8. Wildfire prevention prioritization & accountability
+    9. Climate & community resilience
+    10. Evacuation & emergency coordination
+- Opportunity areas
+  - This column contains the opportunity areas related to the comment
+  - There are 4 opportunity areas
+    1. Should we rebuild quickly, or rebuild in a way that ensures lasting resilience?
+    2. Should the public sector or private sector be responsible for utilities and infrastructure?
+    3. Should fire prevention be an individual or collective responsibility?
+    4. Should recovery efforts allow making space for more residents to move into the area?
+- Comment contains an actionable idea
+  - Label denoting whether a comment contains an actionable idea. If yes, the field value will be [yes]. If not, the field value will be [null] or empty. We generated these labels using an LLM and then hand-checked by our data team.

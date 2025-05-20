@@ -3,6 +3,10 @@ section#plots-overview {
     overflow-y: hidden;
     position: relative;
 }
+section#plots-overview .container {
+    position: relative;
+}
+
 section#findings-overview {
     background: #1C2745;
     overflow-y: hidden;
@@ -33,12 +37,20 @@ section#findings-overview, section#findings-overview h2 {
 section#findings-overview p {
     max-width: 80%;
 }
-.findings-adornment, .data-insights-adornment {
+.findings-adornment {
     position: absolute;
     /* inline-size: min(220px, 30vw); */
     right: 0;
     bottom: 0;
 }
+
+.data-insights-adornment {
+    position: absolute;
+    /* inline-size: min(220px, 30vw); */
+    right: 0;
+    top: 0;
+}
+
 
 .download-the-data-adornment {
     position: absolute;
@@ -383,3 +395,6 @@ div.findings-indent-container {
     margin: 0 auto;
 }
 
+div.insights-back-button-container {
+    padding-bottom: 2rem;
+}
