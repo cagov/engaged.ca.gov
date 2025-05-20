@@ -196,7 +196,7 @@ icon: crane.svg
 iconAlt: A crane
 ----
 
-Should the public sector or the private sector be responsible for utilities and infrastructure?
+Should the public sector or private sector be responsible for utilities and infrastructure?
 
 ----
 id: findings_key_tension_individual_collective
@@ -220,7 +220,7 @@ icon: house.svg
 iconAlt: A construction barrier
 ----
 
-Should recovery efforts include making space for more residents to move into the area?
+Should recovery efforts allow making space for more residents to move into the area?
 
 ----
 id: findings_more_insights_button
@@ -274,11 +274,12 @@ buttonText: Sign up to stay informed
 
 ## What’s next
 
-We are working with public officials to plan the deliberation phase of this process. Participants will use deliberation to discuss the key opportunity areas. This can help them agree on how to move forward.
+We are working with public officials to plan the next phase of this process: deliberation. Participants will be invited to discuss the key opportunity areas. This can help them agree on how to move forward.
 
-We will use the deliberations to create a series of actions that will help Los Angeles recover. 
+We will use what we learn from those talks to make a plan to help Los Angeles recover. 
 
 We will post progress updates on this website.
+
 
 
 ----
@@ -296,6 +297,6 @@ AI was a helpful tool during our analysis, and our team checked all the findings
 
 **Sample prompts**
 
-“I would like you to analyze a set of qualitative survey responses using extended thinking. 
+“I would like you to analyze a set of qualitative survey responses using extended thinking.” 
 
-“Start by doing an initial exploration of the data: “First, read through the entire dataset without categorizing or labeling. “Note your immediate observations and impressions about what stands out to you. “Identify recurring words, phrases, and sentiments that appear across multiple responses. “Share what surprised you or caught your attention in this initial review.”
+“Start by doing an initial exploration of the data: First, read through the entire dataset without categorizing or labeling. Note your immediate observations and impressions about what stands out to you. Identify recurring words, phrases, and sentiments that appear across multiple responses. Share what surprised you or caught your attention in this initial review.”
