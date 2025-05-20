@@ -13,6 +13,10 @@ section#findings-overview {
     position: relative;
 }
 
+div.findings-balloons-container.mobile-only {
+    margin-bottom:3rem;
+}
+
 section#download-the-data {
     background: #1C2745;
     color: #FFF4EB;
