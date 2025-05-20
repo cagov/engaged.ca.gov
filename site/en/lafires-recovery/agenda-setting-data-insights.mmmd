@@ -84,15 +84,16 @@ list_content_5: We used a topic-supervised UMAP. We tuned it for each key tensio
 id: download_the_data_1
 buttonText: Download a CSV containing the comments
 ----
-### Download the data
+
+## Download the data
+
 This is the comments dataset… The data does not contain personally identifying information. We have not edited or modified the comments in any way.
 
 ----
 id: data_definitions
 buttonText:
 ----
-
-## Data definitions
+### Data definitions
 
 These are the columns in this dataset and their definitions.
 

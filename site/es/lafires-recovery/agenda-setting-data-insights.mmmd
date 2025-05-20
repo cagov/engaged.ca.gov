@@ -93,8 +93,10 @@ We used a topic-supervised UMAP. We tuned it for each key tension. This let us t
 id: download_the_data_1
 buttonText: Download a CSV containing the comments
 ----
-### Download the data
-This is the comments dataset… The data does not contain personally identifying information. We have not edited or modified the comments in any way.
+
+<h2>Download the data</h2>
+
+This is xx the comments dataset… The data does not contain personally identifying information. We have not edited or modified the comments in any way.
 
 ----
 id: download_the_data_2

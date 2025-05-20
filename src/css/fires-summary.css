@@ -20,6 +20,14 @@ section#download-the-data {
     position: relative;
 }
 
+section#download-the-data h2 {
+    color: #FFF4EB;
+
+}
+
+section#data-definitions {
+    padding-top: 0;
+}
 
 section#what-were-doing {
     padding-top: 0;
@@ -27,6 +35,10 @@ section#what-were-doing {
 
 section p {
     margin-bottom: 1.5rem;
+}
+
+section#data-visualizations {
+    padding-top: 0;
 }
 
 .findings-overview-container {
