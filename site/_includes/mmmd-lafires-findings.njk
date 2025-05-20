@@ -19,7 +19,7 @@
         <div class="findings-how-we-listened-container">
           {{ modules.findings_how_we_listened.content | safe }}
         </div>
-        <div class="findings-no-indent-container findings-what-we-heard">
+        <div class="findings-no-indent-container findings-what-we-heard desktop-only">
           {{ modules.findings_what_we_heard.content | safe }}
         </div>
       </div>
@@ -39,6 +39,11 @@
             <img src="/public/images/{{ modules.iconic_summary.icon_3 }}" />
             <div class="iconic-number">{{ modules.iconic_summary.number_3 }}</div>
             <div class="iconic-caption">{{ modules.iconic_summary.caption_3 }}</div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="findings-no-indent-container findings-what-we-heard mobile-only">
+          {{ modules.findings_what_we_heard.content | safe }}
         </div>
       </div>
 
@@ -79,6 +84,43 @@
     </div>
   </div>
 </section>
+
+<section id="agreements">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_agreements_intro.content | safe }}
+                </div>
+                <div class="findings-no-indent-container findings-agreements-item">
+                    {{ modules.findings_agreements_1.content | safe }}
+                </div>
+                <div class="findings-no-indent-container findings-agreements-item">
+                    {{ modules.findings_agreements_2.content | safe }}
+                </div>
+                <div class="findings-no-indent-container findings-agreements-item">
+                    {{ modules.findings_agreements_3.content | safe }}
+                </div>
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_agreements_conclusion.content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="what-were-doing">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_what_were_doing.content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section id="findings-issues">
     <div class="container">

@@ -36,9 +36,28 @@ section#findings-overview p {
     }
 }
 
+.desktop-only {
+    @media (max-width: 992px) {
+        display: none;
+    }
+}
+
+.mobile-only {
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
 
 div.iconic-container {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    @media (max-width: 992px) {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
 }
 div.iconic-datum {
     margin-bottom: 2rem;
@@ -90,6 +109,13 @@ section#findings-topics-people-rated {
 section#findings-issues {
     background-color: #FFF4EB;
 }
+
+div.findings-agreements-item {
+    padding: 2rem;
+    background-color: #D7E7EF;
+    margin-bottom: 2rem;
+}
+
 
 div.findings-quote {
     font-weight: 500;
