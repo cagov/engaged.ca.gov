@@ -1,4 +1,4 @@
-section#plots-overview, section#download-the-data {
+section#plots-overview {
     background: #FFF4EB;
     overflow-y: hidden;
     position: relative;
@@ -8,6 +8,16 @@ section#findings-overview {
     overflow-y: hidden;
     position: relative;
 }
+
+section#download-the-data {
+    background: #1C2745;
+    color: #FFF4EB;
+    overflow-y: hidden;
+    position: relative;
+}
+
+
+
 
 section p {
     margin-bottom: 1.5rem;
@@ -23,11 +33,17 @@ section#findings-overview, section#findings-overview h2 {
 section#findings-overview p {
     max-width: 80%;
 }
-.findings-adornment {
+.findings-adornment, .data-insights-adornment {
     position: absolute;
     /* inline-size: min(220px, 30vw); */
     right: 0;
     bottom: 0;
+}
+
+.download-the-data-adornment {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 @media (max-width: 767px) {
@@ -240,8 +256,8 @@ div.findings-key-tension-expand-block.expanded {
 div.findings-expand-header {
     padding: 10px;
     color: #444444;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 19px;
     line-height: 27px;
     letter-spacing: 0%;
 }
@@ -255,7 +271,7 @@ div.findings-expand-quote {
     line-height: 125%;
     letter-spacing: -2%;
 }
-.findings-key-tension-expand-block > div:nth-child(odd) {
+div.findings-key-tension-expand-block:nth-child(odd) {
     background: #F6F7FA;
 }
 .findings-key-tension-expand-block > div:nth-child(even) {

@@ -1,87 +1,29 @@
 {% extends "layout.njk" %}
 {% block content %}
-<style>
-.quote-card {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 5px;
-  max-width: 500px;
-  {# margin: 0 auto; #}
-  font-size: 1rem;
-}
-.plot-row {
-  position: relative;
-}
-.quote-card {
-  position: fixed;
-  width: 100%;
-  opacity: 0.8;
-  z-index: 1000;
-}
-.responsive-svg-container svg {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  position: relative;
-}
-.plot-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: "Noto Sans Display" !important;
-  text-align: left;
-  {# max-width: 50%; #}
-  {# position: absolute;
-  top: 0px;
-  left: 50px; #}
-}
-div.plot-legend {
-  margin-top: 20px;
-}
-section.plot-section {
-    padding-top: 0;
-}
-section#data-visualizations {
-    padding-bottom: 0;
-}
-@media (orientation: landscape) {
-  .responsive-svg-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .plot-title {
-    width: 100%;
-  }
-  
-  .plot-plot {
-    width: 65%;
-  }
-  
-  div.plot-legend {
-    width: 35%;
-    margin-top: 0;
-    padding-left: 10px;
-  }
-}
 
-</style>
 <section id="plots-overview">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-8">
+        <div class="insights-back-button-container">
+        <a href="/lafires-recovery/agenda-setting-findings/" class="insights-back-button">
+          < {{ modules.plots_overview.backButtonText }}
+        </a>
+        </div>
         {{ modules.plots_overview.content | safe }}
       </div>
     </div>
-    <a href="#" data-appearance="button" data-theme="orange">
+    <a href="/public/data/DRAFT_LA_Wildfires_EngagedCA_Comments.csv" data-appearance="button" data-theme="orange">
       {{ modules.plots_overview.buttonText }}
     </a> 
+    <img class="data-insights-adornment" src="/public/images/data-insights-adornment-1.svg" />
   </div>
 </section>
 
 <section id="plots-interpretation">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-8">
         {{ modules.plots_interpretation.content | safe }}
       </div>
     </div>
@@ -129,8 +71,16 @@ section#data-visualizations {
 <section id="how-we-built">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-8">
         {{ modules.how_we_built.content | safe }}
+        <ol>
+          {% for i in range(1, 6) %}
+          <li>
+            <div class="how-we-built-list-item">{{ modules.how_we_built["list_item_" + i] }}</div>
+            <div class="how-we-built-list-content">{{ modules.how_we_built["list_content_" + i] }}</div>
+          </li>
+          {% endfor %}
+        </ol>
       </div>
     </div>
   </div>
@@ -146,13 +96,24 @@ section#data-visualizations {
         <a href="/public/data/DRAFT_LA_Wildfires_EngagedCA_Comments.csv" data-appearance="button" data-theme="orange">
           {{ modules.download_the_data_1.buttonText }}
         </a> 
-<br/><br/>
-        {{ modules.download_the_data_2.content | safe }}
+
+      </div>
+    </div>
+    <img class="download-the-data-adornment" src="/public/images/download-the-data-adornment.svg" />
+  </div>
+</section>
+
+<section id="data-definitions">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        {{ modules.data_definitions.content | safe }}
 
       </div>
     </div>
   </div>
 </section>
+
 
 
 <script>
