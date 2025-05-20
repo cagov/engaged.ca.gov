@@ -11,6 +11,8 @@ theme_recs = [{'theme':'Public v Private', 'filename_root':'public_private'},
 
 out_dir = './plots'
 
+src_file = 'engca_comment_scatterplot_source_V3.json'
+
 for theme_rec in theme_recs:
     theme = theme_rec['theme']
     filename_root = theme_rec['filename_root']
@@ -21,7 +23,7 @@ for theme_rec in theme_recs:
     for language in languages:
         print(f"Making {theme} legend in {language}")
         # make scatterplot
-        cmd = f'python3 make_scatterplot.py engca_comment_scatterplot_source_V2.json "{theme}" -legend -lang {language} -out {out_dir}/{filename_root}_{language}_legend.svg'
+        cmd = f'python3 make_scatterplot.py {src_file} "{theme}" -legend -lang {language} -out {out_dir}/{filename_root}_{language}_legend.svg'
         print(cmd)
         subprocess.run(cmd, shell=True)
 
@@ -29,7 +31,7 @@ for theme_rec in theme_recs:
     theme = theme_rec['theme']
     filename_root = theme_rec['filename_root']
     # output just the dots here...
-    cmd = f'python3 make_scatterplot.py engca_comment_scatterplot_source_V2.json "{theme}" -out {out_dir}/{filename_root}_plot.svg'
+    cmd = f'python3 make_scatterplot.py {src_file} "{theme}" -out {out_dir}/{filename_root}_plot.svg'
     print(cmd)
     subprocess.run(cmd, shell=True)
 
