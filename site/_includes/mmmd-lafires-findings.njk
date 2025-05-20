@@ -64,7 +64,7 @@
             <div class="findings-barchart-item{% if visible %} visible{% endif %}">
                 <div class="findings-barchart-item-approval">{{ item.approval | round }}%</div>
                 <div class="findings-barchart-bar" data-percentage="{{ item.approval }}"></div>
-                <div class="findings-barchart-item-caption">{{loop.index}} {{ modules.findings_bar_chart[item.key] }}</div>
+                <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
             </div>
             {% endfor %}
         </div>
@@ -266,6 +266,7 @@
                 </a>
             </div>
         </div>
+       <img class="findings-whats-next-adornment" src="/public/images/whats_next_adornment.svg" />
     </div>
 </section>
 

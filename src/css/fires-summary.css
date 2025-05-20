@@ -21,7 +21,9 @@ section#download-the-data {
 }
 
 
-
+section#what-were-doing {
+    padding-top: 0;
+}
 
 section p {
     margin-bottom: 1.5rem;
@@ -42,6 +44,15 @@ section#findings-overview p {
     /* inline-size: min(220px, 30vw); */
     right: 0;
     bottom: 0;
+}
+
+section#findings-whats-next {
+    position: relative;
+}
+.findings-whats-next-adornment {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .data-insights-adornment {
@@ -234,10 +245,14 @@ div.findings-key-tension-read-more.expanded span {
 
 div.findings-key-tension-heading {
     border-bottom: 1px solid #BCBBC1;
-    min-height: 12rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    @media (min-width: 769px) {
+        min-height: 12rem;
+    }
 }
+
+
 
 div.findings-key-tension-heading.long {
     min-height: 13.5rem;
@@ -316,9 +331,9 @@ section#findings-whats-next {
     background: #1C2745;
     color: #FFF4EB;
     border-bottom: 1px solid #5489A3;
-    background-image: url('/public/images/whats_next_adornment.svg');
+    /* background-image: url('/public/images/whats_next_adornment.svg');
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: top right; */
 }
 
 section#findings-whats-next h2 {
