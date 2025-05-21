@@ -77,6 +77,12 @@ section#findings-whats-next {
     position: absolute;
     right: 0;
     top: 0;
+    @media (max-width: 991px) {
+        width: 20%;
+    }
+    @media (max-width: 767px) {
+        width: 20%;
+    }
 }
 
 .data-insights-adornment {
@@ -84,6 +90,11 @@ section#findings-whats-next {
     /* inline-size: min(220px, 30vw); */
     right: 0;
     top: 0;
+    @media (max-width: 991px) {
+        width: 25%;
+        top: 100px;
+        right: -30px;
+    }
 }
 
 /* section#download-the-data .container {
@@ -94,6 +105,10 @@ section#findings-whats-next {
     position: absolute;
     right: 0;
     top: 0;
+    @media (max-width: 991px) {
+        width: 25%;
+        right: -30px;
+    }
 }
 
 
