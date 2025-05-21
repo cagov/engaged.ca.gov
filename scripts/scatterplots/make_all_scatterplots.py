@@ -5,7 +5,7 @@ languages = ['en', 'es', 'fa', 'hy', 'ko', 'tl','vi', 'zh-hans', 'zh-hant']
 
 theme_recs = [{'theme':'Public v Private', 'filename_root':'public_private'},
               {'theme':'Individual v. Collective Mitigation', 'filename_root':'ind_vs_collective'},
-              {'theme':'Financial Aid Distribution', 'filename_root':'financial_aid'},
+              # {'theme':'Financial Aid Distribution', 'filename_root':'financial_aid'},
               {'theme':'Build Faster v. Build Better', 'filename_root':'build_faster_vs_better'},
               {'theme':'Density v. Safety', 'filename_root':'density_vs_safety'}]
 
