@@ -118,6 +118,7 @@
 
 <script>
 quoteData = null;
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 function revealQuote(cid, evt) {
   const mouseX = evt.clientX;
@@ -138,6 +139,7 @@ function revealQuote(cid, evt) {
   const desiredFontSize = 1;
   const devicePixelRatio = window.devicePixelRatio || 1;
   const actualZoom = (( window.outerWidth - 10 ) / window.innerWidth);
+
    
   // For Retina displays, we might want a slightly larger base size
   console.log('Actual zoom:', actualZoom);
@@ -208,17 +210,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Set up event handlers for datapoints in plots
   const datapoints = document.querySelectorAll('.datapoint');
-  datapoints.forEach(datapoint => {
-    // Add hover effect
-    datapoint.addEventListener('mouseenter', expandHandler);
+  if (!isMobile) {
+    datapoints.forEach(datapoint => {
+      // Add hover effect
+      datapoint.addEventListener('mouseenter', expandHandler);
     
-    datapoint.addEventListener('touchstart', expandHandler);
+      datapoint.addEventListener('touchstart', expandHandler);
     
-    datapoint.addEventListener('mouseleave', e => shrinkHandler.call(datapoint, e, true));
+      datapoint.addEventListener('mouseleave', e => shrinkHandler.call(datapoint, e, true));
     
-    datapoint.addEventListener('touchend', e => shrinkHandler.call(datapoint, e, false));
-   
-  });
+      datapoint.addEventListener('touchend', e => shrinkHandler.call(datapoint, e, true));
+    });
+  }
 });
 </script>
 
