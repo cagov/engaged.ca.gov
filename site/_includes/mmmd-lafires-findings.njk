@@ -381,10 +381,13 @@ document.querySelectorAll('.findings-key-tension-read-more').forEach(readMore =>
     e.stopPropagation();
     const block = this.getAttribute('data-block');
     const expandBlock = document.querySelector(`.findings-key-tension-expand-block.${block}`);
+    const isExpanded = expandBlock.classList.contains('expanded');
     if (expandBlock != null) {
       expandBlock.classList.toggle('expanded');
       this.classList.toggle('expanded');
     }
+    this.setAttribute('aria-expanded', !isExpanded);
+
   });
 });
 
