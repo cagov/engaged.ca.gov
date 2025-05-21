@@ -43,6 +43,11 @@ section#findings-overview, section#findings-overview h2 {
 section#findings-overview p {
     max-width: 80%;
 }
+
+section#how-we-built {
+    padding-top: 0;
+}
+
 .findings-adornment {
     position: absolute;
     /* inline-size: min(220px, 30vw); */
