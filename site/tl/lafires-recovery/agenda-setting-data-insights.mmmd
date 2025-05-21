@@ -32,7 +32,7 @@ Each scatterplot shows the comments that shape each of the opportunity areas out
 
 The charts show how different opinions and priorities create opportunity areas for deliberation. People have strong but different views, but there are also some shared opinions that are worth exploring further, as seen by the clusters of similar comments. 
 
-Each dot represents an individual comment. Comments identified by a large language model (LLM) as similar appear near each other on the chart. 
+Each dot represents an individual comment. Comments identified by a large language model (LLM) as related to similar topics appear near each other on the chart. 
 
 Each comment is also labeled with a subcategory. We used an LLM to define subcategories for each opportunity area. Each subcategory is shown in a different color. Grey dots indicate comments related to the opportunity area. However, they don’t clearly fit into any subcategory.
 
@@ -69,7 +69,7 @@ list_content_2: We turned each comment into numerical data, or semantic embeddin
 list_item_3: Find subcategories
 list_content_3: We used the BERTopic framework to group comments by similarities. This helped us sort them into different categories based on common topics. 
 list_item_4: Label the subcategories
-list_content_4: We grouped the comments by topic. Then, we used the 'Claude 3.5 Sonnet' model to label each group. Each label is a short phrase that reflects the main idea or viewpoint. We then manually edited the LLM-generated labels for clarity.
+list_content_4: We grouped the comments by topic. Then, we used the 'Claude 3.5 Sonnet' model to label each group. Each label is a short phrase that reflects the main idea or viewpoint. We then edited the LLM-generated labels for clarity.
 list_item_5: Plot the comments
 list_content_5: We used a topic-supervised UMAP. We tuned it for each key tension. This let us turn all the numbers into two easy coordinates. Then, we could plot everything on a 2D chart. The comments are color-coded by topic. This makes it easy to spot patterns and relationships.
 ----
