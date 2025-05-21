@@ -63,7 +63,7 @@
             {% set visible = loop.index <= 4 %}
             <div class="findings-barchart-item{% if visible %} visible{% endif %}">
                 <div class="findings-barchart-item-approval">{{ item.approval | round }}%</div>
-                <div class="findings-barchart-bar" data-percentage="{{ item.approval }}"></div>
+                <div class="findings-barchart-bar" data-percentage="{{ item.approval }}" data-key="{{ modules.findings_bar_chart[item.key] }}"></div>
                 <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
             </div>
             {% endfor %}
@@ -298,14 +298,15 @@ document.addEventListener('DOMContentLoaded', function() {
   
   barElements.forEach(barElement => {
     const percentage = parseFloat(barElement.getAttribute('data-percentage'));
-    
+    const key = barElement.getAttribute('data-key');
     // Create SVG element with responsive dimensions
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', '100%');
     svg.setAttribute('height', '20');
     svg.setAttribute('viewBox', '0 0 100 20');
     svg.setAttribute('preserveAspectRatio', 'none');
-    
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', percentage + '% approval for ' + key);
     // Create the thin background horizontal line (2px high)
     const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     horizontalLine.setAttribute('x1', '0');
