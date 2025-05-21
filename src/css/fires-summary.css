@@ -61,6 +61,13 @@ section#how-we-built li {
     /* inline-size: min(220px, 30vw); */
     right: 0;
     top: 0px;
+    @media (max-width: 991px) {
+        width: 30%;
+    }
+    @media (max-width: 767px) {
+        width: 25%;
+        top: 40px;
+    }
 }
 
 section#findings-whats-next {
@@ -89,11 +96,6 @@ section#findings-whats-next {
     top: 0;
 }
 
-@media (max-width: 767px) {
-    .findings-adornment {
-        width: 170px;
-    }
-}
 
 .desktop-only {
     @media (max-width: 992px) {
