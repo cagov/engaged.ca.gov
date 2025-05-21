@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // get div.barchart-item-n, where n is loop counter, and set it's width to the percentage for the bar
     const barchartItem = document.querySelector(`#barchart-item-${loop_index+1}`);
-    barchartItem.style.left = `${percentage-6.5}%`; // 6.5 is a hack to get right alignment...
+    barchartItem.style.right = `${100-percentage}%`; // 6.5 is a hack to get right alignment...
   });
 });
 
