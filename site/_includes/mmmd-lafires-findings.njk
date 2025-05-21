@@ -62,7 +62,7 @@
             {% for item in barchart %}
             {% set visible = loop.index <= 4 %}
             <div class="findings-barchart-item{% if visible %} visible{% endif %}">
-                <div class="findings-barchart-item-approval">{{ item.approval | round }}%</div>
+                <div class="findings-barchart-item-approval" id="barchart-item-{{ loop.index }}">{{ item.approval | round }}%</div>
                 <div class="findings-barchart-bar" data-percentage="{{ item.approval }}" data-key="{{ modules.findings_bar_chart[item.key] }}"></div>
                 <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
             </div>
@@ -296,7 +296,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const barElements = document.querySelectorAll('.findings-barchart-bar');
   
-  barElements.forEach(barElement => {
+  barElements.forEach((barElement, loop_index) => {
     const percentage = parseFloat(barElement.getAttribute('data-percentage'));
     const key = barElement.getAttribute('data-key');
     // Create SVG element with responsive dimensions
@@ -332,6 +332,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear existing content and append SVG
     barElement.innerHTML = '';
     barElement.appendChild(svg);
+
+    // get div.barchart-item-n, where n is loop counter, and set it's width to the percentage for the bar
+    const barchartItem = document.querySelector(`#barchart-item-${loop_index+1}`);
+    barchartItem.style.left = `${percentage-6.5}%`; // 6.5 is a hack to get right alignment...
   });
 });
 

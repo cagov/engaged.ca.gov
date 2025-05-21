@@ -428,7 +428,7 @@ div.findings-barchart-item:not(.visible) {
 div.findings-barchart-item-approval {
     position: absolute;
     top: -20px;
-    left: 80%;
+    left: 80%; /* will be overridden by JS */
 
     font-weight: 700;
     font-size: 25px;
