@@ -26,6 +26,7 @@ section#download-the-data {
     background: #1C2745;
     color: #FFF4EB;
     overflow-y: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -61,17 +62,20 @@ section#how-we-built li {
     /* inline-size: min(220px, 30vw); */
     right: 0;
     top: 0px;
-    @media (max-width: 991px) {
+    /* @media (max-width: 991px) {
         width: 30%;
-    }
-    @media (max-width: 767px) {
-        width: 25%;
-        top: 40px;
+    } */
+    @media (width <= 991px) {
+            width: 169px; 
+            top: inherit;
+            bottom: -96px;
+            right: -29px;
     }
 }
 
 section#findings-whats-next {
     position: relative;
+    overflow-x: hidden;
 }
 .findings-whats-next-adornment {
     position: absolute;
@@ -89,11 +93,12 @@ section#findings-whats-next {
     position: absolute;
     /* inline-size: min(220px, 30vw); */
     right: 0;
-    top: 0;
-    @media (max-width: 991px) {
-        width: 25%;
-        top: 100px;
-        right: -30px;
+    top: 0px;
+    @media (width <= 991px) {
+            width: 169px; 
+            top: inherit;
+            bottom: -96px;
+            right: -29px;
     }
 }
 
@@ -216,7 +221,6 @@ div.findings-agreements-item {
 div.findings-quote {
     font-weight: 500;
     font-style: italic;
-    font-size: 23px;
     line-height: 39px;
     padding-left: 3.5rem;
     background-image: url('/public/images/little-dialog-balloon.svg');
@@ -299,6 +303,9 @@ div.findings-key-tension-read-more:not(.expanded) span {
     padding-right: 24px;
     background: url("/public/images/arrow-blue-down.svg") no-repeat right center;
 }
+.findings-key-tension-read-more.expanded {
+    padding-top: 1rem;
+}
 div.findings-key-tension-read-more.expanded span {
     padding-right: 24px;
     background: url("/public/images/arrow-blue-up.svg") no-repeat right center;
@@ -306,11 +313,11 @@ div.findings-key-tension-read-more.expanded span {
 
 div.findings-key-tension-heading p {
     border-bottom: 1px solid #BCBBC1;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     padding-bottom: 1rem;
     @media (min-width: 769px) {
-        min-height: 12rem;
+        min-height: 11rem;
     }
 }
 
@@ -347,11 +354,16 @@ div.findings-key-tension-expand-block.expanded {
     display: block;
 }
 
+.findings-quote-block {
+    text-align: left;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
 
 div.findings-expand-header {
     padding: 10px;
     color: #444444;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 19px;
     line-height: 27px;
     letter-spacing: 0%;

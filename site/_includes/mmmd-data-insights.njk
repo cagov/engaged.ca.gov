@@ -77,6 +77,11 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
+        <div class="insights-back-button-container">
+        <a href="/lafires-recovery/agenda-setting-findings/" class="insights-back-button">
+          {{ modules.how_we_built.backButtonText }}
+        </a>
+        </div>
         {{ modules.how_we_built.content | safe }}
         <ol>
           {% for i in range(1, 6) %}

@@ -62,6 +62,7 @@ legend_4: density_vs_safety_en_legend.svg
 
 ----
 id: how_we_built
+backButtonText: Read about agenda setting and LA wildfires recovery
 list_item_1: Identify which comments are related to each opportunity area
 list_content_1: We started by labeling each comment with which of the five opportunity areas (if any) it relates to. We used an AI tool (the Snowflake Cortex Classify Text Large Language Model) to do this labeling. 
 list_item_2: Process and restructure the comments data
