@@ -58,10 +58,10 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 findings-no-indent-container">
-        <div class="findings-barchart-container collapsed">
+        <div class="findings-barchart-container collapsed" role="list" aria-label="Topics people rated">
             {% for item in barchart %}
             {% set visible = loop.index <= 4 %}
-            <div class="findings-barchart-item{% if visible %} visible{% endif %}">
+            <div class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %}>
                 <div class="findings-barchart-item-approval" id="barchart-item-{{ loop.index }}">{{ item.approval | round }}%</div>
                 <div class="findings-barchart-bar" data-percentage="{{ item.approval }}" data-key="{{ modules.findings_bar_chart[item.key] }}"></div>
                 <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
@@ -69,13 +69,10 @@
             {% endfor %}
         </div>
 
-
-
         <div class="findings-button-container">
-            <div id="findings-show-all-button" >
-                <div class="findings-show-all-button-label">
-            {{ modules.findings_topics_people_rated.buttonText }}
-             </div>
+            <div id="findings-show-all-button" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-barchart-container">
+               
+                    <div class="findings-show-all-button-label">{{ modules.findings_topics_people_rated.buttonText }}</div>
             </div>
         </div>
       </div>
@@ -149,21 +146,21 @@
                           <div class="findings-key-tension-heading">
                               {{ modules.findings_key_tension_build_back.content | safe }}
                           </div>
-                          <div class="findings-key-tension-expand-block block-1">
-                              <div class="findings-quote-block">
+                          <div class="findings-key-tension-expand-block block-1" role="list" aria-label="Example comments">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_1.header_1 }} </div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_1.quote_1 }}</div>
                               </div>
-                              <div class="findings-quote-block">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_1.header_2 }}</div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_1.quote_2 }}</div>
                               </div>
-                              <div class="findings-quote-block">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_1.header_3 }}</div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_1.quote_3 }}</div>
                               </div>
                           </div>
-                          <div class="findings-key-tension-read-more" data-block="block-1">
+                          <div class="findings-key-tension-read-more" data-block="block-1" aria-expanded="false" aria-controls="block-1">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                           </div>
                       </div>
@@ -174,21 +171,21 @@
                           <div class="findings-key-tension-heading">
                               {{ modules.findings_key_tension_public_private.content | safe }}
                           </div>
-                          <div class="findings-key-tension-expand-block block-2">
-                              <div class="findings-quote-block">
+                          <div class="findings-key-tension-expand-block block-2" role="list" aria-label="Example comments">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_2.header_1 }}</div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_2.quote_1 }}</div>
                               </div>
-                              <div class="findings-quote-block">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_2.header_2 }}</div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_2.quote_2 }}</div>
                               </div>
-                              <div class="findings-quote-block">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_2.header_3 }}</div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_2.quote_3 }}</div>
                               </div>
                           </div>
-                          <div class="findings-key-tension-read-more" data-block="block-2">
+                          <div class="findings-key-tension-read-more" data-block="block-2" aria-expanded="false" aria-controls="block-2">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                           </div>
                         </div>
@@ -199,17 +196,17 @@
                           <div class="findings-key-tension-heading">
                               {{ modules.findings_key_tension_individual_collective.content | safe }}
                           </div>
-                          <div class="findings-key-tension-expand-block block-3">
-                              <div class="findings-quote-block">
+                          <div class="findings-key-tension-expand-block block-3" role="list" aria-label="Example comments">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_3.header_1 }}</div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_3.quote_1 }}</div>
                               </div>
-                              <div class="findings-quote-block">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_3.header_2 }}</div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_3.quote_2 }}</div>
                               </div>
                           </div>
-                          <div class="findings-key-tension-read-more" data-block="block-3">
+                          <div class="findings-key-tension-read-more" data-block="block-3" aria-expanded="false" aria-controls="block-3">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                           </div>
                       </div>
@@ -220,17 +217,17 @@
                           <div class="findings-key-tension-heading">
                               {{ modules.findings_key_tension_residents_density.content | safe }}
                           </div>
-                          <div class="findings-key-tension-expand-block block-4">
-                              <div class="findings-quote-block">
+                          <div class="findings-key-tension-expand-block block-4" role="list" aria-label="Example comments">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_4.header_1 }}</div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_4.quote_1 }}</div>
                               </div>
-                              <div class="findings-quote-block">
+                              <div class="findings-quote-block" role="listitem">
                                   <div class="findings-expand-header">{{ modules.findings_key_tension_block_4.header_2 }}</div>
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_4.quote_2 }}</div>
                               </div>
                           </div>
-                          <div class="findings-key-tension-read-more" data-block="block-4">
+                          <div class="findings-key-tension-read-more" data-block="block-4" aria-expanded="false" aria-controls="block-4">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                           </div>
                       </div>
@@ -340,32 +337,43 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.getElementById('findings-show-all-button').addEventListener('click', function() {
-  // Prevent the default action and stop event propagation
-  event.preventDefault();
-  event.stopPropagation();
+document.getElementById('findings-show-all-button').addEventListener('click', function(event) {
+  toggleBarchartVisibility(this);
+});
+
+document.getElementById('findings-show-all-button').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    toggleBarchartVisibility(this);
+  }
+});
+
+function toggleBarchartVisibility(button) {
   const barchartContainer = document.querySelector('.findings-barchart-container');
   const showAllButtonLabel = document.querySelector('.findings-show-all-button-label');
-  var isCollapsed = barchartContainer.classList.contains('collapsed');
+  const isCollapsed = barchartContainer.classList.contains('collapsed');
+  
   barchartContainer.classList.toggle('collapsed');
-  isCollapsed = !isCollapsed;
-  var barItems = document.querySelectorAll('.findings-barchart-item');
+  button.setAttribute('aria-expanded', !isCollapsed);
+  
+  const barItems = document.querySelectorAll('.findings-barchart-item');
   barItems.forEach((barItem, index) => {
     if (isCollapsed) {
-        showAllButtonLabel.classList.remove('open');
-        barItem.classList.remove('visible');
-        // When collapsing, only make the first 4 items visible
-        if (index < 4) {
-            barItem.classList.add('visible');
-        }
-    } else {
+      showAllButtonLabel.classList.remove('open');
+      barItem.classList.remove('visible');
+      barItem.setAttribute('aria-hidden', index >= 4);
+      // When collapsing, only make the first 4 items visible
+      if (index < 4) {
         barItem.classList.add('visible');
-        showAllButtonLabel.classList.add('open');
+        barItem.setAttribute('aria-hidden', 'false');
+      }
+    } else {
+      barItem.classList.add('visible');
+      barItem.setAttribute('aria-hidden', 'false');
+      showAllButtonLabel.classList.add('open');
     }
   });
-
-  // this.textContent = barchartContainer.classList.contains('collapsed') ? 'Show All' : 'Show Less';
-});
+}
 
 document.querySelectorAll('.findings-key-tension-read-more').forEach(readMore => {
   readMore.addEventListener('click', function(e) {
