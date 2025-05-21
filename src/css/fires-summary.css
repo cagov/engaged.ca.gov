@@ -17,6 +17,11 @@ div.findings-balloons-container.mobile-only {
     margin-bottom:3rem;
 }
 
+section#data-visualizations {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
 section#download-the-data {
     background: #1C2745;
     color: #FFF4EB;
