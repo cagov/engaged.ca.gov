@@ -80,7 +80,7 @@ list_content_5: We used a topic-supervised UMAP. We tuned it for each key tensio
 
 ----
 id: download_the_data_1
-buttonText: Download a CSV containing the comments
+buttonText: Download the full dataset
 ----
 
 ## Download the data
