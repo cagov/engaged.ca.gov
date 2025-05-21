@@ -14,7 +14,7 @@ tags:
 
 ----
 id: plots_overview
-buttonText: Download the dataset
+buttonText: Download the full dataset
 backButtonText: Agenda setting findings
 ----
 
@@ -38,6 +38,7 @@ Each comment is also labeled with a subcategory. We used an LLM to define subcat
 
 ----
 id: data_visualizations_header
+buttonText: Download the full dataset
 ----
 
 ## Data visualizations

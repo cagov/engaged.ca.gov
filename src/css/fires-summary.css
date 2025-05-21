@@ -506,3 +506,15 @@ div.insights-back-button-container {
       padding-left: 10px;
     }
   }
+
+  a.download-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-offset: 0%;
+    text-decoration-thickness: 0%;
+  }
+     
