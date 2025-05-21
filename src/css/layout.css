@@ -124,6 +124,10 @@ h2 {
   font-size: 1.602rem;
 }
 
+b, strong {
+  font-weight: 600;
+}
+
 section p, section li {
   line-height: 1.7;
 }
