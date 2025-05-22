@@ -355,6 +355,11 @@ function toggleBarchartVisibility(button) {
   
   barchartContainer.classList.toggle('collapsed');
   button.setAttribute('aria-expanded', !isCollapsed);
+
+  const openText = '{{ modules.findings_topics_people_rated.buttonText }}';
+  const closeText = '{{ modules.findings_topics_people_rated.buttonTextClose }}';
+
+
   
   const barItems = document.querySelectorAll('.findings-barchart-item');
   barItems.forEach((barItem, index) => {
@@ -367,10 +372,12 @@ function toggleBarchartVisibility(button) {
         barItem.classList.add('visible');
         barItem.setAttribute('aria-hidden', 'false');
       }
+      showAllButtonLabel.textContent = openText;
     } else {
       barItem.classList.add('visible');
       barItem.setAttribute('aria-hidden', 'false');
       showAllButtonLabel.classList.add('open');
+      showAllButtonLabel.textContent = closeText;
     }
   });
 }
@@ -379,15 +386,22 @@ document.querySelectorAll('.findings-key-tension-read-more').forEach(readMore =>
   readMore.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
+    const openText = '{{ modules.findings_key_tensions.readMore }}';
+    const closeText = '{{ modules.findings_key_tensions.readMoreClose }}';
     const block = this.getAttribute('data-block');
     const expandBlock = document.querySelector(`.findings-key-tension-expand-block.${block}`);
-    const isExpanded = expandBlock.classList.contains('expanded');
+    let isExpanded = expandBlock.classList.contains('expanded');
     if (expandBlock != null) {
       expandBlock.classList.toggle('expanded');
       this.classList.toggle('expanded');
     }
-    this.setAttribute('aria-expanded', !isExpanded);
-
+    isExpanded = !isExpanded;
+    this.setAttribute('aria-expanded', isExpanded);
+    if (isExpanded) {
+      this.querySelector('span').textContent = closeText;
+    } else {
+      this.querySelector('span').textContent = openText;
+    }
   });
 });
 
