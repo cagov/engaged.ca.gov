@@ -201,7 +201,10 @@ def create_svg_scatterplot_legend(
     # estimate the height of the legend
     height = config.legend_item_height * (len(subcategories_list)+1)
     # add config.legend_line_height for item that needs to be wrapped
-    num_long_lines = sum([1 for subcat in subcategories_list if len(get_translation(translation_data, subcat, language)) > config.legend_line_break_pos])
+    line_break_pos = config.legend_line_break_pos
+    if language == 'hy':
+        line_break_pos = config.legend_line_break_pos_hy
+    num_long_lines = sum([1 for subcat in subcategories_list if len(get_translation(translation_data, subcat, language)) > line_break_pos])
     height += num_long_lines * config.legend_line_height
     height += config.legend_bottom_padding
 
@@ -225,6 +228,8 @@ def create_svg_scatterplot_legend(
         svg_content += f'    <circle cx="{legend_x + 7}" cy="{y_pos + 7}" r="5" fill="{color}" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>'
         display_text = get_translation(translation_data, subcat if subcat is not None else 'Other', language)
         line_break_pos = config.legend_line_break_pos
+        if language == 'hy':
+            line_break_pos = config.legend_line_break_pos_hy
         if len(display_text) > line_break_pos:
             # use a two line format, wrapped at approx 40 characters using word breaks
             line_1 = display_text[:line_break_pos]

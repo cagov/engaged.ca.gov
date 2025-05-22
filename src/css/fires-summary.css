@@ -526,7 +526,6 @@ div.insights-back-button-container {
   }
   div.plot-legend {
     margin-top: 20px;
-    width: 50%;
   }
 
   @media (orientation: landscape) {
