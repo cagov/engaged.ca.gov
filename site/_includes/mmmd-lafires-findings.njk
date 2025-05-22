@@ -1,0 +1,397 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+<section id="findings-overview" class="hero">
+  <div class="container findings-overview-container">
+    <div class="row">
+      <div class="col-lg-8 ">
+        {{ modules.findings_overview.content | safe }}
+      </div>
+    </div>
+    <img class="findings-adornment" src="/public/images/findings-adornment.png" aria-hidden="true" alt="" />
+  </div>
+</section>
+
+<section id="findings-how-we-listened">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="findings-how-we-listened-container">
+          {{ modules.findings_how_we_listened.content | safe }}
+        </div>
+        <div class="findings-no-indent-container findings-what-we-heard desktop-only">
+          {{ modules.findings_what_we_heard.content | safe }}
+        </div>
+      </div>
+
+      <div class="col-lg-4 iconic-container">
+        <div class="iconic-datum">
+            <img src="/public/images/{{ modules.iconic_summary.icon_1 }}" />
+            <div class="iconic-number">{{ modules.iconic_summary.number_1 }}</div>
+            <div class="iconic-caption">{{ modules.iconic_summary.caption_1 }}</div>
+        </div>
+        <div class="iconic-datum">
+            <img src="/public/images/{{ modules.iconic_summary.icon_2 }}" />
+            <div class="iconic-number">{{ modules.iconic_summary.number_2 }}</div>
+            <div class="iconic-caption">{{ modules.iconic_summary.caption_2 }}</div>
+        </div>
+        <div class="iconic-datum">
+            <img src="/public/images/{{ modules.iconic_summary.icon_3 }}" />
+            <div class="iconic-number">{{ modules.iconic_summary.number_3 }}</div>
+            <div class="iconic-caption">{{ modules.iconic_summary.caption_3 }}</div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="findings-no-indent-container findings-what-we-heard mobile-only">
+          {{ modules.findings_what_we_heard.content | safe }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="findings-topics-people-rated">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 findings-no-indent-container">
+        <div class="findings-barchart-container collapsed" role="list" aria-label="Topics people rated">
+            {% for item in barchart %}
+            {% set visible = loop.index <= 4 %}
+            <div class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %}>
+                <div class="findings-barchart-item-approval" id="barchart-item-{{ loop.index }}">{{ item.approval | round }}%</div>
+                <div class="findings-barchart-bar" data-percentage="{{ item.approval }}" data-key="{{ modules.findings_bar_chart[item.key] }}"></div>
+                <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="findings-button-container">
+            <div id="findings-show-all-button" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-barchart-container">
+               
+                    <div class="findings-show-all-button-label">{{ modules.findings_topics_people_rated.buttonText }}</div>
+            </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+      </div>
+    </div>
+  </div>
+</section>
+
+{# <section id="agreements">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_agreements_intro.content | safe }}
+                </div>
+                <div class="findings-no-indent-container findings-agreements-item">
+                    {{ modules.findings_agreements_1.content | safe }}
+                </div>
+                <div class="findings-no-indent-container findings-agreements-item">
+                    {{ modules.findings_agreements_2.content | safe }}
+                </div>
+                <div class="findings-no-indent-container findings-agreements-item">
+                    {{ modules.findings_agreements_3.content | safe }}
+                </div>
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_agreements_conclusion.content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section> #}
+
+<section id="what-were-doing">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_what_were_doing.content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="findings-issues">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <h2>{{ modules.findings_opportunity_areas.title | safe }}</h2>
+            </div>
+            <div class="col-lg-8">
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_opportunity_areas.content | safe }}
+                </div>
+
+                <div class="findings-balloons-container mobile-only">
+                        <div class="findings-quote findings-quote-container-1">
+                            {{ modules.findings_quote_1.content | safe }}
+                        </div>
+                        <div class="findings-quote findings-quote-container-2">
+                            {{ modules.findings_quote_2.content | safe }}
+                        </div>
+                </div>
+
+                <div class="findings-key-tensions-container">
+                    <div class="sub-expand">
+                      <div class="findings-key-tension-block">
+                          <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_build_back.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_build_back.iconAlt }}">
+                          <div class="findings-key-tension-heading">
+                              {{ modules.findings_key_tension_build_back.content | safe }}
+                          </div>
+                          <div class="findings-key-tension-expand-block block-1" role="list" aria-label="Example comments">
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_1.header_1 }} </div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_1.quote_1 }}</div>
+                              </div>
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_1.header_2 }}</div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_1.quote_2 }}</div>
+                              </div>
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_1.header_3 }}</div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_1.quote_3 }}</div>
+                              </div>
+                          </div>
+                          <div class="findings-key-tension-read-more" data-block="block-1" aria-expanded="false" aria-controls="block-1">
+                              <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="sub-expand">
+                        <div class="findings-key-tension-block">
+                          <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_public_private.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_public_private.iconAlt }}">
+                          <div class="findings-key-tension-heading">
+                              {{ modules.findings_key_tension_public_private.content | safe }}
+                          </div>
+                          <div class="findings-key-tension-expand-block block-2" role="list" aria-label="Example comments">
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_2.header_1 }}</div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_2.quote_1 }}</div>
+                              </div>
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_2.header_2 }}</div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_2.quote_2 }}</div>
+                              </div>
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_2.header_3 }}</div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_2.quote_3 }}</div>
+                              </div>
+                          </div>
+                          <div class="findings-key-tension-read-more" data-block="block-2" aria-expanded="false" aria-controls="block-2">
+                              <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="sub-expand">
+                      <div class="findings-key-tension-block">
+                          <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_individual_collective.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_individual_collective.iconAlt }}">
+                          <div class="findings-key-tension-heading">
+                              {{ modules.findings_key_tension_individual_collective.content | safe }}
+                          </div>
+                          <div class="findings-key-tension-expand-block block-3" role="list" aria-label="Example comments">
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_3.header_1 }}</div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_3.quote_1 }}</div>
+                              </div>
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_3.header_2 }}</div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_3.quote_2 }}</div>
+                              </div>
+                          </div>
+                          <div class="findings-key-tension-read-more" data-block="block-3" aria-expanded="false" aria-controls="block-3">
+                              <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="sub-expand">
+                      <div class="findings-key-tension-block">
+                          <img class="findings-icon" src="/public/images/{{ modules.findings_key_tension_residents_density.icon }}" aria-hidden="true" alt="{{ modules.findings_key_tension_residents_density.iconAlt }}">
+                          <div class="findings-key-tension-heading">
+                              {{ modules.findings_key_tension_residents_density.content | safe }}
+                          </div>
+                          <div class="findings-key-tension-expand-block block-4" role="list" aria-label="Example comments">
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_4.header_1 }}</div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_4.quote_1 }}</div>
+                              </div>
+                              <div class="findings-quote-block" role="listitem">
+                                  <div class="findings-expand-header">{{ modules.findings_key_tension_block_4.header_2 }}</div>
+                                  <div class="findings-expand-quote">{{ modules.findings_key_tension_block_4.quote_2 }}</div>
+                              </div>
+                          </div>
+                          <div class="findings-key-tension-read-more" data-block="block-4" aria-expanded="false" aria-controls="block-4">
+                              <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
+                          </div>
+                      </div>
+                    </div>
+                </div> <!-- end tensions container -->
+                <div class="findings-button-container">
+                    <a href="/lafires-recovery/agenda-setting-data-insights/" data-appearance="button" data-theme="orange">
+                    {{ modules.findings_more_insights_button.buttonText }}
+                    </a>
+                </div>
+            </div> <!-- end col-lg-8 -->
+            <div class="col-lg-4">
+                <div class="findings-balloons-container desktop-only">
+                        <div class="findings-quote findings-quote-container-1">
+                            {{ modules.findings_quote_1.content | safe }}
+                        </div>
+                        <div class="findings-quote findings-quote-container-2">
+                            {{ modules.findings_quote_2.content | safe }}
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="findings-whats-next" class="action-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_whats_next.content | safe }}
+                </div>
+            </div>
+        </div>
+        <div class="findings-no-indent-container">
+            <div class="findings-button-container">
+                <a href="/lafires-recovery/#sign-up" data-appearance="button" data-theme="orange">
+                {{ modules.findings_whats_next.buttonText }}
+                </a>
+            </div>
+        </div>
+       <img class="findings-whats-next-adornment" src="/public/images/whats_next_adornment.png" aria-hidden="true" alt="" />
+    </div>
+</section>
+
+<section id="findings-how-we-did">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_how_we_did_the_analysis.content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const barElements = document.querySelectorAll('.findings-barchart-bar');
+  
+  barElements.forEach((barElement, loop_index) => {
+    const percentage = parseFloat(barElement.getAttribute('data-percentage'));
+    const key = barElement.getAttribute('data-key');
+    // Create SVG element with responsive dimensions
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('height', '20');
+    svg.setAttribute('viewBox', '0 0 100 20');
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', percentage + '% approval for ' + key);
+    // Create the thin background horizontal line (2px high)
+    const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    horizontalLine.setAttribute('x1', '0');
+    horizontalLine.setAttribute('y1', '10');
+    horizontalLine.setAttribute('x2', '100');
+    horizontalLine.setAttribute('y2', '10');
+    horizontalLine.setAttribute('stroke', '#BCBBC1');
+    horizontalLine.setAttribute('stroke-width', '2');
+    
+    // Create the thicker percentage line (6px thick)
+    const percentageLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    percentageLine.setAttribute('x1', '0');
+    percentageLine.setAttribute('y1', '10');
+    percentageLine.setAttribute('x2', percentage);
+    percentageLine.setAttribute('y2', '10');
+    percentageLine.setAttribute('stroke', '#5489A3');
+    percentageLine.setAttribute('stroke-width', '6');
+    
+    // Add lines to SVG
+    svg.appendChild(horizontalLine);
+    svg.appendChild(percentageLine);
+    
+    // Clear existing content and append SVG
+    barElement.innerHTML = '';
+    barElement.appendChild(svg);
+
+    // get div.barchart-item-n, where n is loop counter, and set it's width to the percentage for the bar
+    const barchartItem = document.querySelector(`#barchart-item-${loop_index+1}`);
+    barchartItem.style.right = `${100-percentage}%`; // 6.5 is a hack to get right alignment...
+  });
+});
+
+
+document.getElementById('findings-show-all-button').addEventListener('click', function(event) {
+  toggleBarchartVisibility(this);
+});
+
+document.getElementById('findings-show-all-button').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    toggleBarchartVisibility(this);
+  }
+});
+
+function toggleBarchartVisibility(button) {
+  const barchartContainer = document.querySelector('.findings-barchart-container');
+  const showAllButtonLabel = document.querySelector('.findings-show-all-button-label');
+  const isCollapsed = barchartContainer.classList.contains('collapsed');
+  
+  barchartContainer.classList.toggle('collapsed');
+  button.setAttribute('aria-expanded', !isCollapsed);
+  
+  const barItems = document.querySelectorAll('.findings-barchart-item');
+  barItems.forEach((barItem, index) => {
+    if (isCollapsed) {
+      showAllButtonLabel.classList.remove('open');
+      barItem.classList.remove('visible');
+      barItem.setAttribute('aria-hidden', index >= 4);
+      // When collapsing, only make the first 4 items visible
+      if (index < 4) {
+        barItem.classList.add('visible');
+        barItem.setAttribute('aria-hidden', 'false');
+      }
+    } else {
+      barItem.classList.add('visible');
+      barItem.setAttribute('aria-hidden', 'false');
+      showAllButtonLabel.classList.add('open');
+    }
+  });
+}
+
+document.querySelectorAll('.findings-key-tension-read-more').forEach(readMore => {
+  readMore.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const block = this.getAttribute('data-block');
+    const expandBlock = document.querySelector(`.findings-key-tension-expand-block.${block}`);
+    const isExpanded = expandBlock.classList.contains('expanded');
+    if (expandBlock != null) {
+      expandBlock.classList.toggle('expanded');
+      this.classList.toggle('expanded');
+    }
+    this.setAttribute('aria-expanded', !isExpanded);
+
+  });
+});
+
+</script>
+
+
+{% endblock %}

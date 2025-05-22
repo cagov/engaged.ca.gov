@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 {% block content %}
 
-<section id="hero">
+<section id="hero" class="hero">
   <div class="container banner-flex">
     <engca-banner-content>
       {{ modules.hero.content | safe }}
@@ -12,7 +12,7 @@
     <img src="/public/images/hero-bubbles.svg" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header' | i18n }}" />
   </div>
 </section>
-<section id="about">
+<section id="about" class="action-hero">
   <div class="container banner-flex">
     <engca-banner-content>
       {{ modules.about.content | safe }}
@@ -23,15 +23,15 @@
     <img src="/public/images/about-bubbles.svg" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header-about' | i18n }}" />
   </div>
 </section>
-<section id="our-first-engagement">
+<section id="our-first-engagement" class="action-hero">
   <div class="container first-eng-content">
-    {{ modules.engagement.content | safe }}
-    <a href="{{ "/lafires-recovery" | locale_url }}" data-appearance="button" data-theme="orange">
-      {{ modules.engagement.buttonText }}
+    {{ modules.surfacing_issues.content | safe }}
+    <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" data-appearance="button" data-theme="orange">
+      {{ modules.surfacing_issues.buttonText }}
     </a>
   </div>
 </section>
-<section id="how-it-works">
+<section id="how-it-works" class="action-hero">
   <div class="container">
     <h2>{{ 'how-it-works' | i18n }}</h2>
     <ol class="hiw">
@@ -57,14 +57,14 @@
     </ol>
   </div>
 </section>
-<section id="sign-up">
+<section id="sign-up" class="action-hero">
   <div class="container form-flex">
     <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
     <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
     {% include "form.njk" %}
   </div>
 </section>
-<section id="partners">
+<section id="partners" class="action-hero">
   <div class="container">
     {{ modules.partners.content | safe }}
     <engca-partner-flex>
