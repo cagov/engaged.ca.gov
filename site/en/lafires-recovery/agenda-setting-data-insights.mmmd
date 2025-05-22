@@ -49,15 +49,19 @@ nbr_charts: 4
 plot_1: build_faster_vs_better_plot.svg
 title_1: Rebuild quickly or rebuild for resilience
 legend_1: build_faster_vs_better_en_legend.svg
+alt_1: A scatter plot that visualizes comments using dots. The comments are categorized into six subcategories.
 plot_2: public_private_plot.svg
 title_2: Public or private sector responsibility for utilities and infrastructure
 legend_2: public_private_en_legend.svg
+alt_2: A scatter plot that visualizes comments using dots. The comments are categorized into five subcategories.
 plot_3: ind_vs_collective_plot.svg
 title_3: Individual or collective responsibility for fire prevention
 legend_3: ind_vs_collective_en_legend.svg
+alt_3: A scatter plot that visualizes comments using dots. The comments are categorized into four subcategories.
 plot_4: density_vs_safety_plot.svg
 title_4: Making space for more residents, or limiting housing density
 legend_4: density_vs_safety_en_legend.svg
+alt_4: A scatter plot that visualizes comments using dots. The comments are categorized into three subcategories.
 ----
 
 ----

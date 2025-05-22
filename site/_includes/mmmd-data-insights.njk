@@ -59,7 +59,7 @@
             <div class="plot-title">
               {{ modules.plots["title_" + i] }}
             </div>
-            <div class="sr-only">Scatterplot for "{{ modules.plots["title_" + i] }}"</div>
+            <div class="sr-only">{{ modules.plots["alt_" + i] }}</div>
             <div class="plot-plot">
             {{ ('./src/public/images/' + modules.plots["plot_" + i]) | getFileContents | safe }}
             </div>
