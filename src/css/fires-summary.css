@@ -432,6 +432,8 @@ section#findings-issues .findings-button-container
     text-align: left;
 }
 
+/****** BAR CHART ******/
+
 div.findings-barchart-container {
     position: relative;
     display: flex;
@@ -461,7 +463,49 @@ div.findings-barchart-item {
     position: relative;
     margin-bottom: 15px;
     display: flex;
+    flex-direction: row;
+    flex: 1 1;
+    width: 100%;
+}
+
+div.findings-barchart-caption-bar-container {
+    display: flex;
+    flex-direction: row;
+    flex: 88%;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+div.findings-barchart-item-caption {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    flex: 50%;
+    padding-right: 2rem;
+    @media (max-width: 767px) {
+        flex: 100%;
+        width: inherit;
+    }
+}
+div.findings-bar-container {
+    position: relative;
+    flex: 50%;
+    display: flex;
     flex-direction: column;
+}
+div.findings-barchart-button-container {
+    flex: 12%;
+    padding: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 767px) {
+        flex: 20%;
+    }
+}
+div.findings-barchart-button-container a.findings-barchart-button {
+    align-self: center;
 }
 
 div.findings-barchart-item:not(.visible) {
@@ -469,22 +513,15 @@ div.findings-barchart-item:not(.visible) {
 }
 
 div.findings-barchart-item-approval {
-    position: absolute;
-    top: -20px;
-
-    font-weight: 700;
-    font-size: 25px;
+    font-weight: 900;
+    font-size: 27px;
     line-height: 33.47px;
     letter-spacing: 0%;
     text-align: right;
     font-variant-numeric-figure: lining-nums;
     font-variant-numeric-spacing: proportional-nums;
-    color: #5489A3;
+    color: black;
     
-}
-div.findings-barchart-item-caption {
-    font-weight: 700;
-    font-size: 19px;
 }
 
 div.findings-indent-container {
