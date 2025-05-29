@@ -424,7 +424,9 @@ section#findings-whats-next h2 {
 }
 
 .findings-button-container {
-    margin-top:2rem;
+    margin-top:1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #BCBBC1;
 }
 
 section#findings-issues .findings-button-container
@@ -451,7 +453,7 @@ div.findings-barchart-item {
     flex-direction: row;
     flex: 1 1;
     width: 100%;
-    border-bottom: 6px solid #ececec;
+    /* border-bottom: 6px solid #ececec; */
 }
 div.findings-barchart-item:not(.visible) {
     display: none;
