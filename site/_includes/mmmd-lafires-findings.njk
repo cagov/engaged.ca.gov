@@ -62,9 +62,16 @@
             {% for item in barchart %}
             {% set visible = loop.index <= 4 %}
             <div class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %}>
-                <div class="findings-barchart-item-approval" id="barchart-item-{{ loop.index }}">{{ item.approval | round }}%</div>
-                <div class="findings-barchart-bar" data-percentage="{{ item.approval }}" data-key="{{ modules.findings_bar_chart[item.key] }}"></div>
-                <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
+                <div class="findings-barchart-caption-bar-container">
+                  <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
+                  <div class="findings-bar-container">
+                    <div class="findings-barchart-item-approval" id="barchart-item-{{ loop.index }}">{{ item.approval | round }}%</div>
+                    <div class="findings-barchart-bar" data-percentage="{{ item.approval }}" data-key="{{ modules.findings_bar_chart[item.key] }}"></div>
+                  </div>
+                </div>
+                <div class="findings-barchart-button-container">
+                    <a class="findings-barchart-button" href="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}"><img src="/public/images/barchart-link-button.svg" alt="View related comments"></a>
+                </div>
             </div>
             {% endfor %}
         </div>
@@ -319,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
     percentageLine.setAttribute('y1', '10');
     percentageLine.setAttribute('x2', percentage);
     percentageLine.setAttribute('y2', '10');
-    percentageLine.setAttribute('stroke', '#5489A3');
+    percentageLine.setAttribute('stroke', '#E79450');
     percentageLine.setAttribute('stroke-width', '6');
     
     // Add lines to SVG
@@ -332,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // get div.barchart-item-n, where n is loop counter, and set it's width to the percentage for the bar
     const barchartItem = document.querySelector(`#barchart-item-${loop_index+1}`);
-    barchartItem.style.right = `${100-percentage}%`; // 6.5 is a hack to get right alignment...
+    barchartItem.style.width = `${percentage}%`; // 6.5 is a hack to get right alignment...
   });
 });
 
