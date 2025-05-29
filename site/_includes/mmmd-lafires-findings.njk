@@ -358,9 +358,10 @@ document.getElementById('findings-show-all-button').addEventListener('keydown', 
 function toggleBarchartVisibility(button) {
   const barchartContainer = document.querySelector('.findings-barchart-container');
   const showAllButtonLabel = document.querySelector('.findings-show-all-button-label');
-  const isCollapsed = barchartContainer.classList.contains('collapsed');
+  let isCollapsed = barchartContainer.classList.contains('collapsed');
   
   barchartContainer.classList.toggle('collapsed');
+  isCollapsed = !isCollapsed;
   button.setAttribute('aria-expanded', !isCollapsed);
 
   const openText = '{{ modules.findings_topics_people_rated.buttonText }}';
