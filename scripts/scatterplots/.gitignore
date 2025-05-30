@@ -1,0 +1,4 @@
+attic/*
+plots/*
+test*
+__pycache__/
