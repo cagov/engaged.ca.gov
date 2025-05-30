@@ -36,6 +36,9 @@ if __name__ == "__main__":
     parser.add_argument("input_file", help="Path to the input CSV file")
     parser.add_argument("output_file", nargs="?", help="Path to the output JSON file (optional)")
     args = parser.parse_args()
+
+    if args.output_file is None:
+        args.output_file = args.input_file.replace('.csv', '.json')
     
     input_file = args.input_file
     output_file = args.output_file

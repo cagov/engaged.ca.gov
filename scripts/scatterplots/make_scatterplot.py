@@ -39,17 +39,19 @@ def load_json_data(json_file_path: str) -> List[Dict[str, Any]]:
         sys.exit(1)
 
 
-def filter_data_by_tension(data: List[Dict[str, Any]], tension_category: str) -> List[Dict[str, Any]]:
+def filter_data_by_tension(data: List[Dict[str, Any]], category: str) -> List[Dict[str, Any]]:
     """Filter the data by tension category"""
-    filtered_data = [item for item in data if item.get('TENSION_CATEGORY') == tension_category]
+    fieldname = 'TENSION_CATEGORY' if 'TENSION_CATEGORY' in data[0] else 'CATEGORY'
+    filtered_data = [item for item in data if item.get(fieldname) == category]
     if not filtered_data:
-        print(f"Warning: No data found for tension category '{tension_category}'.")
+        print(f"Warning: No data found for category '{category}'.")
     return filtered_data
 
 def list_categories(data: List[Dict[str, Any]]) -> None:
     """List all unique tension categories in the data"""
-    categories = set(item.get('TENSION_CATEGORY') for item in data)
-    print("Available tension categories:")
+    fieldname = 'TENSION_CATEGORY' if 'TENSION_CATEGORY' in data[0] else 'CATEGORY'
+    categories = set(item.get(fieldname) for item in data)
+    print("Available categories:")
     for category in sorted(categories):
         print(f"- {category}")
 
@@ -261,7 +263,7 @@ def main():
     # Set up argument parser
     parser = argparse.ArgumentParser(description="Generate a scatterplot from JSON data based on tension category.")
     parser.add_argument("json_file", help="Path to the input JSON file")
-    parser.add_argument("tension_category", nargs="?", help="Tension category to filter by (optional)")
+    parser.add_argument("category", nargs="?", help="Category to filter by (optional)")
     parser.add_argument("-list", "--list_categories", action="store_true", help="List available tension categories")
     parser.add_argument("-t", "--title", help="Chart title (optional)")
     parser.add_argument("-xlabel", "--xlabel", help="X-axis label (optional)")
@@ -283,12 +285,12 @@ def main():
         return
     
     # Filter data by tension category
-    filtered_data = filter_data_by_tension(data, args.tension_category)
+    filtered_data = filter_data_by_tension(data, args.category)
     
     # Determine output file name if not specified
     if not args.output_file:
         # Create a safe filename from tension category
-        safe_filename = args.tension_category.replace(" ", "_").replace("/", "_")
+        safe_filename = args.category.replace(" ", "_").replace("/", "_")
         output_file = f"{safe_filename}_scatterplot.svg"
     else:
         output_file = args.output_file
