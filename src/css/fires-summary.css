@@ -642,10 +642,29 @@ div.insights-back-button-container {
     position: relative;
   }
   .plot-title {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 700;
     font-family: "Noto Sans Display" !important;
     text-align: left;
+    line-height: 130%;
+    margin-bottom: 1rem;
+  }
+  .plot-description {
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "Noto Sans Display" !important;
+    text-align: left;
+    line-height: 39px;
+    margin-bottom: 1rem;
+  }
+  .plot-notes {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Noto Sans Display" !important;
+    text-align: left;
+    line-height: 150%;
+    margin-bottom: 1rem;
   }
   div.plot-legend {
     margin-top: 20px;

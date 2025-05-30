@@ -23,18 +23,34 @@ backButtonText: Agenda setting findings
 The agenda setting phase of the Los Angeles wildfires recovery engagement is complete. We're now using the comments we got in that phase to shape talks that will help us solve important problems. You can download the comments to see what people said yourself.
 
 ----
+id: plots_complexity
+----
+## Breaking down the complexity
+
+Residents responded with overwhelming volume and a wide range of views. We made data visualizations to simplify this complexity. They organize and show comments by topic and theme. This tool will help you explore what the community said and see patterns in the feedback.
+
+We designed the analysis and visuals below to help you:
+
+* See the full range of community perspectives on recovery priorities
+* Understand how different viewpoints cluster around key issues
+* Explore the complexity of challenges facing fire-affected communities
+* Prepare for upcoming community discussions
+
+Note: The info on this page does not offer final answers or solutions. Instead, it shows us the questions and tradeoffs we need to work through together. During the deliberation phase, we'll find the best way forward. Community members will work through these complex issues in a thoughtful manner. 
+
+We will invite California residents to help us with this. <a href="/lafires-recovery/#sign-up">Sign up to stay informed.</a>
+
+----
 id: plots_interpretation
 ----
 
 ## How to interpret these charts
 
-Each scatterplot shows the comments that shape each of the opportunity areas outlined by our Los Angeles wildfires engagement.
+Each chart shows the comments made about one topic.
 
-The charts show how different opinions and priorities create opportunity areas for deliberation. People have strong but different views, but there are also some shared opinions that are worth exploring further, as seen by the clusters of similar comments. 
-
-Each dot represents an individual comment. Comments identified by a large language model (LLM) as related to similar topics appear near each other on the chart. 
-
-Each comment is also labeled with a subcategory. We used an LLM to define subcategories for each opportunity area. Each subcategory is shown in a different color. Grey dots indicate comments related to the opportunity area. However, they don’t clearly fit into any subcategory.
+* Each dot represents an individual comment.
+* Dots are color-coded, with each color representing a theme that came up in the comments.
+* We used AI to identify themes. The comments that were identified as similar appear closer together on the chart.
 
 ----
 id: data_visualizations_header
@@ -45,23 +61,53 @@ buttonText: Download the full dataset
 
 ----
 id: plots
-nbr_charts: 4
-plot_1: build_faster_vs_better_plot.svg
-title_1: Rebuild quickly or rebuild for resilience
-legend_1: build_faster_vs_better_en_legend.svg
-alt_1: A scatter plot that visualizes comments using dots. The comments are categorized into six subcategories.
-plot_2: public_private_plot.svg
-title_2: Public or private sector responsibility for utilities and infrastructure
-legend_2: public_private_en_legend.svg
-alt_2: A scatter plot that visualizes comments using dots. The comments are categorized into five subcategories.
-plot_3: ind_vs_collective_plot.svg
-title_3: Individual or collective responsibility for fire prevention
-legend_3: ind_vs_collective_en_legend.svg
-alt_3: A scatter plot that visualizes comments using dots. The comments are categorized into four subcategories.
-plot_4: density_vs_safety_plot.svg
-title_4: Making space for more residents, or limiting housing density
-legend_4: density_vs_safety_en_legend.svg
-alt_4: A scatter plot that visualizes comments using dots. The comments are categorized into three subcategories.
+chart_boilerplate_notes: Each dot represents one comment made about this topic. Colors represent groups of related comments.
+chart_generic_alt: A scatter plot that visualizes comments using dots. The comments are categorized into subcategories.
+nbr_charts: 10
+id_1: findings_environmental_recovery
+title_1: Environmental recovery and clean-up
+desc_1: The community's environmental concerns are valid and intricate. They include long-term land safety, environmental justice, and future fire-prevention measures.
+
+id_2: findings_wildfire_prevention
+title_2: Wildfire prevention prioritization and accountability
+desc_2: The community wants accountability for fire prevention.
+
+id_3: findings_climate_community_resilience
+title_3: Climate and community resilience
+desc_3: Residents want to be heard. They want to help shape long-term recovery and future resilience. Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+
+id_4: findings_infrastructure_restoration
+title_4: Infrastructure and utilities restoration
+desc_4: Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+
+id_5: findings_emergency_planning_safety
+title_5: Emergency planning and community safety
+desc_5: Ensuring fast, safe evacuation and disaster communication is crucial for wildfire-prone communities. Community members view transparency and accessibility as key concerns.
+
+
+id_6: findings_housing_rebuilding
+title_6: Housing and rebuilding
+desc_6: Rebuilding quickly is important. But without policies that focus on equity, some residents may face permanent displacement.
+ 
+
+id_7: findings_financial_legal_assistance
+title_7: Financial and legal assistance
+desc_7: Survivors often find it hard to navigate aid systems. They need legal protections and financial assistance to rebuild.
+
+
+id_8: findings_emergency_communication
+title_8: Emergency communication
+desc_8: Effective communication in an emergency is vital. How can officials share important updates and connect with residents at key moments?
+
+
+id_9: findings_economic_recovery
+title_9: Economic recovery and small business support
+desc_9: Many small businesses closed after the fire, and workers lost jobs. Residents want to know how economic recovery can be equitable and forward-thinking.
+
+
+id_10: findings_emotional_mental_health
+title_10: Emotional and mental health support
+desc_10: Wildfire survivors, especially those cleaning up debris, face long-term health risks. They need easy access to mental health care.
 ----
 
 ----
