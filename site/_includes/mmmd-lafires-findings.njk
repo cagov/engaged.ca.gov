@@ -61,7 +61,7 @@
         <div class="findings-barchart-container collapsed" role="list" aria-label="Topics people rated">
             {% for item in barchart %}
             {% set visible = loop.index <= 4 %}
-            <div id="barchart-outer-item-{{ loop.index }}" data-destination="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}" class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %}>
+            <div id="barchart-outer-item-{{ loop.index }}" data-destination="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}" class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %} role="link" tabindex="0" aria-label="View insights about {{ modules.findings_bar_chart[item.key] }}">
                 <div class="findings-barchart-caption-bar-container">
                   <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
                   <div class="findings-bar-container">
