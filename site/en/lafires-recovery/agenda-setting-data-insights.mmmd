@@ -1,5 +1,5 @@
 ---
-title: 'Agenda setting for LA wildfires recovery: A closer look at the comments'
+title: 'Agenda setting for LA wildfires recovery: Exploring community input'
 description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
 layout: mmmd-data-insights
 parentid: lafires-recovery
@@ -18,9 +18,9 @@ buttonText: Download the full dataset
 backButtonText: Agenda setting findings
 ----
 
-# Agenda setting for LA wildfires recovery: A closer look at the comments
+# Agenda setting for LA wildfires recovery: Exploring community input
 
-The agenda setting phase of the Los Angeles wildfires recovery engagement is complete. We're now using the comments we got in that phase to shape talks that will help us solve important problems. You can download the comments to see what people said yourself.
+The agenda setting phase of the Los Angeles wildfires recovery engagement is complete. During this phase, community members shared thousands of comments about what they need most for recovery and rebuilding. You can download the comments to see what people said. 
 
 ----
 id: plots_complexity
@@ -113,16 +113,21 @@ desc_10: Wildfire survivors, especially those cleaning up debris, face long-term
 ----
 id: how_we_built
 backButtonText: Read about agenda setting and LA wildfires recovery
-list_item_1: Identify which comments are related to each opportunity area
-list_content_1: We started by labeling each comment with which of the five opportunity areas (if any) it relates to. We used an AI tool (the Snowflake Cortex Classify Text Large Language Model) to do this labeling. 
-list_item_2: Process and restructure the comments data
+
+list_item_1: Identify related comments
+list_content_1: We started by labeling each comment with which opportunity areas it relates to. We used an AI tool (the Snowflake Cortex Classify Text Large Language Model) to do this labeling.
+ 
+list_item_2: Process and restructure the data
 list_content_2: We turned each comment into numerical data, or semantic embeddings. These embeddings show the meaning of the comments in a way that computers can understand and use. We did this using Snowflake Cortex Embed Text 1024.
-list_item_3: Find subcategories
-list_content_3: We used the BERTopic framework to group comments by similarities. This helped us sort them into different categories based on common topics. 
-list_item_4: Label the subcategories
-list_content_4: We grouped the comments by topic. Then, we used the 'Claude 3.5 Sonnet' model to label each group. Each label is a short phrase that reflects the main idea or viewpoint. We then edited the LLM-generated labels for clarity.
+
+list_item_3: Find conversation themes
+list_content_3: We used the BERTopic framework to group comments within each topic area by similarities. This helped us sort them into different categories based on common themes.
+
+list_item_4: Label the conversation themes
+list_content_4: We grouped the comments by topic, then used the 'Claude 3.5 Sonnet' model to label each group. Each label is a short phrase that reflects the main idea or viewpoint. We then edited the AI-generated labels for clarity.
+
 list_item_5: Plot the comments
-list_content_5: We used a topic-supervised UMAP. We tuned it for each key tension. This let us turn all the numbers into two easy coordinates. Then, we could plot everything on a 2D chart. The comments are color-coded by topic. This makes it easy to spot patterns and relationships.
+list_content_5: We used a topic-supervised UMAP. We tuned it for each opportunity area.This allowed us to turn all the numerical data into two simple coordinates that we could plot on a 2D chart. The comments are color-coded by topic. This makes it easy to see patterns and connections.
 ----
 
 ### How we built these charts
