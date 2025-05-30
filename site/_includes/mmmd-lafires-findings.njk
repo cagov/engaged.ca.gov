@@ -61,7 +61,7 @@
         <div class="findings-barchart-container collapsed" role="list" aria-label="Topics people rated">
             {% for item in barchart %}
             {% set visible = loop.index <= 4 %}
-            <div class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %}>
+            <div id="barchart-item-{{ loop.index }}" class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %}>
                 <div class="findings-barchart-caption-bar-container">
                   <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
                   <div class="findings-bar-container">
@@ -128,7 +128,13 @@
                     {{ modules.findings_how_we_are_responding.content | safe }}
                 </div>
                 <div class="findings-no-indent-container findings-responding-list-container collapsed">
-                    {{ modules.findings_how_we_are_responding_list.content | safe }}
+                    <div class="findings-responding-list-title">{{ modules.findings_how_we_are_responding_list.title }}</div>
+                    {% for i in range(1, modules.findings_how_we_are_responding_list.nbr_items + 1) %}  
+                    <div class="findings-responding-item">
+                        <div class="findings-responding-item-title">{{i}}. {{ modules.findings_how_we_are_responding_list['item_' + i + '_title'] }}</div>
+                        <div class="findings-responding-item-text">{{ modules.findings_how_we_are_responding_list['item_' + i + '_text'] }}</div>
+                    </div>
+                    {% endfor %}
                 </div>
                 <div class="findings-button-container">
                     <div id="findings-responding-show-all-button" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-responding-list-container">
@@ -137,7 +143,13 @@
                 </div>
 
                 <div class="findings-no-indent-container findings-responding-list2-container collapsed">
-                    {{ modules.findings_how_we_are_responding_list2.content | safe }}
+                    <div class="findings-responding-list-title">{{ modules.findings_how_we_are_responding_list2.title }}</div>
+                    {% for i in range(1, modules.findings_how_we_are_responding_list2.nbr_items + 1) %}  
+                    <div class="findings-responding-item">
+                        <div class="findings-responding-item-title">{{i}}. {{ modules.findings_how_we_are_responding_list2['item_' + i + '_title'] }}</div>
+                        <div class="findings-responding-item-text">{{ modules.findings_how_we_are_responding_list2['item_' + i + '_text'] }}</div>
+                    </div>
+                    {% endfor %}
                 </div>
                 <div class="findings-button-container">
                     <div id="findings-responding-show-all-button2" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-responding-list2-container">
@@ -152,12 +164,12 @@
 </section>
 
 
-<section id="findings-issues">
+<section id="discussing-tough-issues">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            {# <div class="col-lg-12">
                     <h2>{{ modules.findings_discussing_tough_issues.title | safe }}</h2>
-            </div>
+            </div> #}
             <div class="col-lg-8">
                 <div class="findings-no-indent-container">
                     {{ modules.findings_discussing_tough_issues.content | safe }}

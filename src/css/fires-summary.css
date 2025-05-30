@@ -48,6 +48,9 @@ section#findings-overview, section#findings-overview h2 {
 }
 section#findings-overview p {
     max-width: 80%;
+    @media (min-width: 1000px) {
+        max-width: 95%;
+    }
 }
 
 section#how-we-built {
@@ -207,7 +210,7 @@ section#findings-topics-people-rated {
 section#data-definitions {
     padding-top: 0;
 }
-section#findings-issues {
+section#discussing-tough-issues {
     background-color: #FFF4EB;
 }
 
@@ -439,7 +442,7 @@ section#findings-whats-next h2 {
 }
 
 
-section#findings-issues .findings-button-container
+section#discussing-tough-issues .findings-button-container
 {
     text-align: left;
 }
@@ -497,6 +500,29 @@ div.findings-responding-list2-container.collapsed {
     overflow: hidden;
 }
 
+div.findings-responding-list-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    margin-bottom: 1rem;
+}
+
+div.findings-responding-item-title {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 39px;
+    letter-spacing: 0%;
+}
+
+div.findings-responding-item-text {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 39px;
+    letter-spacing: 0%;
+    margin-bottom: 15px;
+    padding-left: 1.5rem;
+}
 
 div.findings-barchart-container.collapsed::after, div.findings-responding-list-container.collapsed::after, div.findings-responding-list2-container.collapsed::after {
     content: '';
@@ -562,7 +588,9 @@ a.findings-barchart-button:active,
 a.findings-barchart-button:focus {
     background-color: #E79450;
 }
-
+div.findings-barchart-item:hover a.findings-barchart-button {
+    background-color: #E79450;
+}
 
 div.findings-barchart-button-container a.findings-barchart-button {
     align-self: center;
