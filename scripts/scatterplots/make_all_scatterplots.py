@@ -22,8 +22,8 @@ version = 'v4'
 for theme_rec in theme_recs:
     theme = theme_rec['theme']
     filename_root = theme_rec['root']
-    src_file_csv = f'./data_{filename_root}_{version}.csv'
-    src_file_json = f'./data_{filename_root}_{version}.json'
+    src_file_csv = f'./data/data_{filename_root}_{version}.csv'
+    src_file_json = f'./data/data_{filename_root}_{version}.json'
     if not os.path.exists(src_file_csv):
         continue
     if not os.path.exists(src_file_json):
@@ -40,7 +40,7 @@ for theme_rec in theme_recs:
 for theme_rec in theme_recs:
     theme = theme_rec['theme']
     filename_root = theme_rec['root']
-    src_file_json = f'./data_{filename_root}_{version}.json'
+    src_file_json = f'./data/data_{filename_root}_{version}.json'
     if not os.path.exists(src_file_json):
         continue
     # output just the dots here...
