@@ -61,7 +61,7 @@
         <div class="findings-barchart-container collapsed" role="list" aria-label="Topics people rated">
             {% for item in barchart %}
             {% set visible = loop.index <= 4 %}
-            <div id="barchart-outer-item-{{ loop.index }}" class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %}>
+            <div id="barchart-outer-item-{{ loop.index }}" data-destination="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}" class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %}>
                 <div class="findings-barchart-caption-bar-container">
                   <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
                   <div class="findings-bar-container">
@@ -70,7 +70,7 @@
                   </div>
                 </div>
                 <div class="findings-barchart-button-container">
-                    <a class="findings-barchart-button" href="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}"><img src="/public/images/barchart-link-button-arrow.svg" alt="View related comments"></a>
+                    <div class="findings-barchart-button"><img src="/public/images/barchart-link-button-arrow.svg" alt="View related comments"></div>
                 </div>
             </div>
             {% endfor %}
@@ -412,6 +412,16 @@ document.getElementById('findings-show-all-button').addEventListener('keydown', 
     toggleBarchartVisibility(this);
   }
 });
+
+document.querySelectorAll('.findings-barchart-item').forEach(item => {
+  item.addEventListener('click', function(event) {
+    const destination = this.getAttribute('data-destination');
+    if (destination) {
+      window.location.href = destination;
+    }
+  });
+});
+
 
 function toggleBarchartVisibility(button) {
   const barchartContainer = document.querySelector('.findings-barchart-container');
