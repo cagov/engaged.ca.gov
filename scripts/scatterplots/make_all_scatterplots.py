@@ -7,7 +7,7 @@ theme_recs = [{'theme':'Environmental recovery and clean-up','root':'environment
        {'theme':'Wildfire prevention prioritization and accountability','root':'wildfire_prevention'}, 
        {'theme':'Climate and community resilience','root':'climate_community_resilience'}, 
        {'theme':'Infrastructure & utilities restoration','root':'infrastructure_restoration'}, 
-       {'theme':'Emergency communication','root':'emergency_planning_safety'}, 
+       {'theme':'Emergency planning & community safety','root':'emergency_planning_safety'}, 
        {'theme':'Housing and rebuilding','root':'housing_rebuilding'}, 
        {'theme':'Financial and legal assistance','root':'financial_legal_assistance'}, 
        {'theme':'Emergency communication','root':'emergency_communication'}, 
@@ -19,6 +19,7 @@ out_dir = './plots'
 
 src_file = 'engca_comment_scatterplot_source_V3.json'
 version = 'v4'
+new_jsons = set()
 for theme_rec in theme_recs:
     theme = theme_rec['theme']
     filename_root = theme_rec['root']
@@ -30,17 +31,20 @@ for theme_rec in theme_recs:
         cmd = f'python3 convert_csv_to_json.py {src_file_csv} {src_file_json}'
         print(cmd)
         subprocess.run(cmd, shell=True)
-    for language in languages:
-        print(f"Making {theme} legend in {language}")
-        # make scatterplot
-        cmd = f'python3 make_scatterplot.py {src_file_json} "{theme}" -legend -lang {language} -out {out_dir}/findings_{filename_root}_{language}_legend.svg'
-        print(cmd)
-        subprocess.run(cmd, shell=True)
+        new_jsons.add(src_file_json)
+        for language in languages:
+            print(f"Making {theme} legend in {language}")
+            # make scatterplot
+            cmd = f'python3 make_scatterplot.py {src_file_json} "{theme}" -legend -lang {language} -out {out_dir}/findings_{filename_root}_{language}_legend.svg'
+            print(cmd)
+            subprocess.run(cmd, shell=True)
 
 for theme_rec in theme_recs:
     theme = theme_rec['theme']
     filename_root = theme_rec['root']
     src_file_json = f'./data/data_{filename_root}_{version}.json'
+    if src_file_json not in new_jsons:
+        continue
     if not os.path.exists(src_file_json):
         continue
     # output just the dots here...
