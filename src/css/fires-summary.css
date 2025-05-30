@@ -385,13 +385,13 @@ div.findings-key-tension-expand-block:nth-child(odd) {
     background: #FFFFFF;
 }
 
-div.findings-show-all-button {
+div.findings-show-all-button, div.findings-responding-show-all-button, div.findings-responding-show-all-button2 {
     background: white;
     padding: 0;
     cursor: pointer;
 }
 
-div.findings-show-all-button-label {
+div.findings-show-all-button-label, div.findings-responding-show-all-button-label, div.findings-responding-show-all-button-label2 {
     font-weight: 500;
     font-size: 16px;
     color: #0D5D90;
@@ -400,7 +400,7 @@ div.findings-show-all-button-label {
     width: fit-content;
 }
 
-div.findings-show-all-button-label.open {
+div.findings-show-all-button-label.open, div.findings-responding-show-all-button-label.open {
     background: url("/public/images/arrow-up.svg") no-repeat right center;
     cursor: pointer;
 }
@@ -428,6 +428,16 @@ section#findings-whats-next h2 {
     padding-top: 1rem;
     border-top: 1px solid #BCBBC1;
 }
+
+.findings-button-container.norule {
+    border-top: none;
+}
+
+
+.findings-insights-button-container {
+    margin-top:3rem;
+}
+
 
 section#findings-issues .findings-button-container
 {
@@ -472,7 +482,23 @@ div.findings-barchart-container.collapsed {
     /* overflow: hidden; */
 }
 
-div.findings-barchart-container.collapsed::after {
+div.findings-responding-list-container.collapsed {
+    position: relative;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+div.findings-responding-list2-container {
+    margin-top: 4rem;
+}
+div.findings-responding-list2-container.collapsed {
+    position: relative;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+
+div.findings-barchart-container.collapsed::after, div.findings-responding-list-container.collapsed::after, div.findings-responding-list2-container.collapsed::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -521,6 +547,23 @@ div.findings-barchart-button-container {
         flex: 20%;
     }
 }
+a.findings-barchart-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid #E79450;
+}
+a.findings-barchart-button:hover,
+a.findings-barchart-button:active,
+a.findings-barchart-button:focus {
+    background-color: #E79450;
+}
+
+
 div.findings-barchart-button-container a.findings-barchart-button {
     align-self: center;
 }
@@ -534,6 +577,8 @@ div.findings-barchart-item-approval {
     font-variant-numeric-figure: lining-nums;
     font-variant-numeric-spacing: proportional-nums;
     color: black;
+    position:relative;
+    top:12px;
     
 }
 

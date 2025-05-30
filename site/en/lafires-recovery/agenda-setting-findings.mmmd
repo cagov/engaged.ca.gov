@@ -39,7 +39,7 @@ What we learned will also guide the next phase of this engagement: deliberation.
 The ideas and insights we have collected so far are invaluable.
 
 ----
-id: iconic_summary
+id: iconic_summary_UNUSED
 icon_1: people_feedback.svg
 number_1: 7,681
 caption_1: subscribers
@@ -60,13 +60,12 @@ id: findings_what_we_heard
 
 We asked participants to rate the importance of 10 disaster-related topics. Participants used a 5-point scale to let us know how important it is to discuss each item further.  
 
-This is the percentage of people who said it is very important or essential to discuss a topic further.  
-
+This is the percentage of people who said it is very important or essential to discuss a topic further. Select a topic to explore comments and see insights about the conversations.
 
 
 ----
 id: findings_topics_people_rated
-buttonText: Show all topics
+buttonText: Show more
 buttonTextClose: Close
 ----
 
@@ -128,37 +127,109 @@ id: findings_agreements_conclusion
 
 We are working with public officials to create recovery proposals. We’re also using what we heard from participants to set the direction for the actions we take. When we can, we are teaming up with efforts already underway to speed up progress and increase impact.
 
-
 ----
-id: findings_what_were_doing
+id: findings_how_we_are_responding
+more_button_text: show more
+more_button_close_text: close
 ----
 
-## What we're doing
-
-**Continuing emotional and mental health support in the community**
-
-Participants agreed that mental and emotional health support services are important. They also agreed that they didn't need to discuss this topic further in order for the state to take action. 
-
-Participants stressed that the state should boost vital services. These services can help residents thrive once their basic needs are met. 
-
-As such, California is building on its record of providing mental health services. More details to come. 
-
-Agenda setting surfaced other areas, too, where participants are ready for immediate action. Participants said clearly that the state should improve emergency communication. They also said that economic recovery is key. We're using these insights and more to develop effective recovery plans.
-
-Stay tuned for updates on our progress.
 
 
 
 ----
-id: findings_opportunity_areas
+id: findings_how_we_are_responding
+buttonText: show more
+buttonTextClose: close
+old_id: findings_what_were_doing
+----
+
+## How we're responding to community needs
+
+Residents shared what they need most to recover and rebuild their communities. <a href="#discussing-tough-issues">We found that some issues need more discussion</a>. However, we also found issues we can act on now.
+
+The support that can be offered to fire victims right now can be split into two groups:
+
+* Opportunities for new support programs 
+* Opportunities to amplify and improve existing programs
+
+Many residents are facing mental health issues, safety concerns, and financial hardship. They want better emergency systems, direct financial assistance, and protection for renters. Finally, they need to know if their soil is safe. These are the concerns we are addressing now by creating new policies or programs.
+
+Residents need help with insurance, building permits, and fire prevention. California already has some programs to help with these issues. But residents either don't know about them or find them too hard to use. Our plan is to improve access to the existing help and better share key information.
+
+Below is a summary of how we are responding to what residents said they need most. 
+
+Stay tuned for updates on our progress. 
+
+
+----
+id: findings_how_we_are_responding_list
+----
+**Opportunities to create new support programs**
+
+1. Community mental health support
+
+Residents said they needed community support and places to gather after the fire. This would help them cope with being displaced.
+
+2. Soil safety testing
+
+Residents want soil testing to make sure they are safe from toxic chemicals after the fires. Some universities offer free soil testing, but federal agencies won't do full testing. There's no state program that covers this need completely.
+
+3. Improvements to emergency alert systems
+
+Residents want one emergency alert system that works for everyone. The various systems in use now don't work together well and don't reach all residents. People suggest working with local community groups to help evacuate areas during emergencies.
+
+4. Direct financial assistance
+
+Residents want direct financial assistance for all wildfire victims. They don't want income or immigration status to be a consideration for this support. Right now, help mainly comes from FEMA, insurance companies, and nonprofits. There is no comprehensive state-funded grant program. An emergency assistance program funded by the state could fill in the gaps.
+
+5. Protection for renters during recovery
+
+Residents seek special protections for renters. They want to prevent forced evictions or displacement and financial struggles. There are some protections against predatory investors. However, support for renters' specific needs is limited.
+
+
+----
+id: findings_how_we_are_responding_list2
+----
+**Opportunities to amplify and improve access to existing support**
+
+1. Insurance reform 
+
+Residents said insurance companies should offer adequate coverage in fire-prone areas. They said prices should be fair with simplified claims processes. Recent changes by the Insurance Commissioner have raised coverage limits and added discounts. Residents may need clearer information about these options.
+
+2. Streamlined rebuilding processes
+
+Residents want an easier permit process and less red tape for rebuilding. Executive orders have already streamlined rebuilding. But residents don’t seem to know about these changes or how to use them with their local governments.
+
+3. Fire prevention programs and education
+
+Residents agree that they want fire prevention programs that teach and help communities. California has programs in place to address this. Residents may need more local resources, and education to use them well. There may also be a need for more funding to effectively implement the programs.
+
+4. Fire-resistant materials for rebuilding
+
+Residents want to rebuild with fire-resistant materials. Yet, they feel confused about how to start. They think both individual homes and whole communities need attention. Fire-resistant building rules are in place, but residents may need more support. We could help them by offering education, incentives, and further assistance.
+
+
+
+----
+id: findings_discussing_tough_issues
+old_id: findings_opportunity_areas
 title: Opportunity areas
 ----
 
-People shared different ideas about how the state can help solve community problems. This showed us important areas to work on, but we don't have a clear path forward yet. 
+## Up next: Discussing tough issues
 
-The next phase, deliberation, is where we will create alignment and find the direction we need. Deliberation will help us work through different opinions in a respectful way. Community members will be able to weigh the tradeoffs of different proposals. 
+While we are ready to take action on the priorities above, there is still work to do for some other issues. We will invite California residents to help us with this. <a href="">Sign up to stay informed</a>. 
 
-Our ultimate goal is to create action plans that community members can support and feel a part of.
+Residents shared ideas about complex community challenges that need deeper exploration. These issues don't have simple solutions. They may involve difficult trade-offs that communities need to work through together.
+
+The next phase, deliberation, is where we will tackle these more complex topics. Deliberation will allow community members to:
+
+* Align and find the right direction to move ahead
+* Work through different opinions in a respectful way
+* Weigh the benefits and drawbacks of different proposals
+
+Our ultimate goal is to create action plans that community members can support and feel a part of. 
+
 
 
 ----

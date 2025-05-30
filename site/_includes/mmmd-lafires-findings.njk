@@ -25,7 +25,7 @@
       </div>
 
       <div class="col-lg-4 iconic-container">
-        <div class="iconic-datum">
+        {# <div class="iconic-datum">
             <img src="/public/images/{{ modules.iconic_summary.icon_1 }}" />
             <div class="iconic-number">{{ modules.iconic_summary.number_1 }}</div>
             <div class="iconic-caption">{{ modules.iconic_summary.caption_1 }}</div>
@@ -39,7 +39,7 @@
             <img src="/public/images/{{ modules.iconic_summary.icon_3 }}" />
             <div class="iconic-number">{{ modules.iconic_summary.number_3 }}</div>
             <div class="iconic-caption">{{ modules.iconic_summary.caption_3 }}</div>
-        </div>
+        </div> #}
       </div>
       <div class="col-lg-8">
         <div class="findings-no-indent-container findings-what-we-heard mobile-only">
@@ -70,7 +70,7 @@
                   </div>
                 </div>
                 <div class="findings-barchart-button-container">
-                    <a class="findings-barchart-button" href="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}"><img src="/public/images/barchart-link-button.svg" alt="View related comments"></a>
+                    <a class="findings-barchart-button" href="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}"><img src="/public/images/barchart-link-button-arrow.svg" alt="View related comments"></a>
                 </div>
             </div>
             {% endfor %}
@@ -82,6 +82,13 @@
                     <div class="findings-show-all-button-label">{{ modules.findings_topics_people_rated.buttonText }}</div>
             </div>
         </div>
+
+        <div class="findings-insights-button-container">
+            <a href="/lafires-recovery/agenda-setting-data-insights/" data-appearance="button" data-theme="orange">
+            {{ modules.findings_more_insights_button.buttonText }}
+            </a>
+        </div>
+
       </div>
       <div class="col-lg-4">
       </div>
@@ -118,8 +125,27 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="findings-no-indent-container">
-                    {{ modules.findings_what_were_doing.content | safe }}
+                    {{ modules.findings_how_we_are_responding.content | safe }}
                 </div>
+                <div class="findings-no-indent-container findings-responding-list-container collapsed">
+                    {{ modules.findings_how_we_are_responding_list.content | safe }}
+                </div>
+                <div class="findings-button-container">
+                    <div id="findings-responding-show-all-button" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-responding-list-container">
+                            <div class="findings-responding-show-all-button-label">{{ modules.findings_how_we_are_responding.buttonText }}</div>
+                    </div>
+                </div>
+
+                <div class="findings-no-indent-container findings-responding-list2-container collapsed">
+                    {{ modules.findings_how_we_are_responding_list2.content | safe }}
+                </div>
+                <div class="findings-button-container">
+                    <div id="findings-responding-show-all-button2" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-responding-list2-container">
+                            <div class="findings-responding-show-all-button-label2">{{ modules.findings_how_we_are_responding.buttonText }}</div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
@@ -130,11 +156,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                    <h2>{{ modules.findings_opportunity_areas.title | safe }}</h2>
+                    <h2>{{ modules.findings_discussing_tough_issues.title | safe }}</h2>
             </div>
             <div class="col-lg-8">
                 <div class="findings-no-indent-container">
-                    {{ modules.findings_opportunity_areas.content | safe }}
+                    {{ modules.findings_discussing_tough_issues.content | safe }}
                 </div>
 
                 <div class="findings-balloons-container mobile-only">
@@ -240,11 +266,23 @@
                       </div>
                     </div>
                 </div> <!-- end tensions container -->
-                <div class="findings-button-container">
+
+
+                <div class="findings-no-indent-container">
+                    <div class="findings-button-container norule">
+                        <a href="/lafires-recovery/#sign-up" data-appearance="button" data-theme="orange">
+                        {{ modules.findings_whats_next.buttonText }}
+                        </a>
+                    </div>
+                </div>
+                {# <div class="findings-insights-button-container">
                     <a href="/lafires-recovery/agenda-setting-data-insights/" data-appearance="button" data-theme="orange">
                     {{ modules.findings_more_insights_button.buttonText }}
                     </a>
-                </div>
+                </div> #}
+
+
+
             </div> <!-- end col-lg-8 -->
             <div class="col-lg-4">
                 <div class="findings-balloons-container desktop-only">
@@ -262,7 +300,7 @@
 
 
 
-<section id="findings-whats-next" class="action-hero">
+{# <section id="findings-whats-next" class="action-hero">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -280,7 +318,7 @@
         </div>
        <img class="findings-whats-next-adornment" src="/public/images/whats_next_adornment.png" aria-hidden="true" alt="" />
     </div>
-</section>
+</section> #}
 
 <section id="findings-how-we-did">
     <div class="container">
@@ -348,6 +386,14 @@ document.getElementById('findings-show-all-button').addEventListener('click', fu
   toggleBarchartVisibility(this);
 });
 
+document.getElementById('findings-responding-show-all-button').addEventListener('click', function(event) {
+  toggleRespondingVisibility(this, 'findings-responding-list-container', 'findings-responding-show-all-button-label');
+});
+document.getElementById('findings-responding-show-all-button2').addEventListener('click', function(event) {
+  toggleRespondingVisibility(this, 'findings-responding-list2-container', 'findings-responding-show-all-button-label2');
+});
+
+
 document.getElementById('findings-show-all-button').addEventListener('keydown', function(event) {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault();
@@ -388,6 +434,22 @@ function toggleBarchartVisibility(button) {
       showAllButtonLabel.textContent = closeText;
     }
   });
+}
+
+function toggleRespondingVisibility(button, contClass, buttonClass) {
+  const barchartContainer = document.querySelector(`.${contClass}`);
+  const showAllButtonLabel = document.querySelector(`.${buttonClass}`);
+  let isCollapsed = barchartContainer.classList.contains('collapsed');
+  
+  barchartContainer.classList.toggle('collapsed');
+  isCollapsed = !isCollapsed;
+  button.setAttribute('aria-expanded', !isCollapsed);
+
+  const openText = '{{ modules.findings_how_we_are_responding.buttonText }}';
+  const closeText = '{{ modules.findings_how_we_are_responding.buttonTextClose }}';
+
+  showAllButtonLabel.textContent = isCollapsed ? openText : closeText;
+  showAllButtonLabel.classList.toggle('open', !isCollapsed);
 }
 
 document.querySelectorAll('.findings-key-tension-read-more').forEach(readMore => {
