@@ -12,11 +12,11 @@ export const handler = async (event) => {
 
   const email = data.EMAIL;
 
-  // Get ids for interests - curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/<listId>/interest-categories' --header "Authorization: Bearer <TOKEN>"
+  // Get ids for interests - curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/<audienceId>/interest-categories' --header "Authorization: Bearer <TOKEN>"
   // API for interests https://mailchimp.com/developer/marketing/api/interests/
   const subscriberHash = email;
 
-  const listId = "61200a6dda"; // Also called Audience ID in Mailchimp.
+  const audienceId = "61200a6dda";
 
   const interests = {
     "1552878c1b":
@@ -27,7 +27,7 @@ export const handler = async (event) => {
   };
 
   const response = await client.lists
-    .setListMember(listId, subscriberHash, {
+    .setListMember(audienceId, subscriberHash, {
       email_address: email,
       status_if_new: "subscribed",
       interests: interests,
