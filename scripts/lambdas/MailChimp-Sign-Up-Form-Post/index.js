@@ -16,7 +16,7 @@ export const handler = async (event) => {
   // API for interests https://mailchimp.com/developer/marketing/api/interests/
   const subscriberHash = email;
 
-  const audienceId = "61200a6dda";
+  const audienceId = data.audienceId;
 
   const interests = {
     "1552878c1b":
