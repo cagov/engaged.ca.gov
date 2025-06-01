@@ -40,16 +40,19 @@ class JoinConversationForm extends window.HTMLElement {
       }
 
       // Validate required checkbox.
-      const requiredCheckboxIsBlank = requiredCheckboxInput.checkValidity();
-      console.log(requiredCheckboxIsBlank);
-      if (!requiredCheckboxIsBlank) {
-        requiredCheckboxInput.setAttribute("aria-describedby", "requiredError");
-        requiredCheckboxInput.setAttribute("aria-invalid", "true");
-        requiredCheckboxError.removeAttribute("hidden");
-        requiredCheckboxInput.focus();
-        return; // <== Exit when invalid.
+      if (requiredCheckboxInput !== null) {
+        const requiredCheckboxIsBlank = requiredCheckboxInput.checkValidity();
+        if (!requiredCheckboxIsBlank) {
+          requiredCheckboxInput.setAttribute(
+            "aria-describedby",
+            "requiredError",
+          );
+          requiredCheckboxInput.setAttribute("aria-invalid", "true");
+          requiredCheckboxError.removeAttribute("hidden");
+          requiredCheckboxInput.focus();
+          return; // <== Exit when invalid.
+        }
       }
-
       // Remove the error message here: validation just passed.
       emailError.setAttribute("hidden", "");
 
