@@ -1,13 +1,40 @@
 {#
+Note: audienceId is referred to as list_id in the mailchimp API docs
+
+1. Get the Audience Id from the MailChimip UI
+
+    Audience Ids
+        Engaged Califonia:  61200a6dda
+        Government Efficiencies: 417d16b2c0
+
+2. Get the categories.list_id
+    curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/[audienceId]/interest-categories/' --header "Authorization: Bearer [TOKEN]"
+
+    Interest category Ids
+        Engaged Califonia:  2a44a8fff7
+        Government Efficiencies: 9cd68bb129
+
+3. Get the interest ids
+    curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/[audienceId]/interest-categories/[listid]/interests' --header "Authorization: Bearer [TOKEN]"
+
+    Interest Ids
+        0f531f3ce0 - I certify I am a current State of California employee
+        1552878c1b - Los Angeles fires recovery: Eaton
+        40c0f946cd - Los Angeles fires recovery: Palisades
+        4d15bd19e5 - "Future topics",
+
+
+#}
+
+{#
 i18nkey - (String) The key of the text string as definited in i18n.js
-id - (Integer or string) Suffix of the mailchimp `id` field value
-name - (Integer or string) Suffix of the mailchimp `name` field value
+interest_id - (String) See comment above
 attributes - (String) Add a space separated list of attributes such as "checked required"
 #}
 
-{% macro data(i8nkey, group, id, name, attributes) %}
-    <input type="checkbox" class="form-check-input" id="mce-group[{{ group }}]-{{ group }}-{{ id }}" name="group[{{ group }}][{{ name }}]" value="{{ i8nkey }}" {{ attributes }}>
-    <label class="form-control-label form-checkbox-label" for="mce-group[{{ group }}]-{{ group }}-{{ id }}">
+{% macro data(i8nkey, interest_id, attributes) %}
+    <input type="checkbox" class="form-check-input" id="{{ interest_id }}" name="{{ interest_id }}" value="{{ i8nkey }}" {{ attributes }}>
+    <label class="form-control-label form-checkbox-label" for="{{ interest_id }}">
         {{ i8nkey }}
     </label>
 {% endmacro %}
