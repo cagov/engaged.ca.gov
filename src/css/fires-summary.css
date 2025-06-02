@@ -631,39 +631,43 @@ div.insights-back-button-container {
     border-radius: 5px;
     max-width: 500px;
     font-size: 1rem;
-  }
-  .plot-row {
+}
+
+.plot-row {
     position: relative;
-  }
-  .quote-card {
+}
+
+.quote-card {
     position: fixed;
     width: 100%;
     opacity: 0.8;
     z-index: 1000;
-  }
-  .responsive-svg-container svg {
+}
+
+.responsive-svg-container svg {
     width: 100%;
     height: auto;
     max-width: 100%;
     position: relative;
-  }
-  .plot-title {
+}
+
+.plot-title {
     font-size: 30px;
     font-weight: 700;
     font-family: "Noto Sans Display" !important;
     text-align: left;
     line-height: 130%;
     margin-bottom: 1rem;
-  }
-  .plot-description {
+}
+.plot-description {
     font-size: 23px;
     font-weight: 400;
     font-family: "Noto Sans Display" !important;
     text-align: left;
     line-height: 39px;
     margin-bottom: 1rem;
-  }
-  .plot-notes {
+}
+.plot-notes {
     font-size: 18px;
     font-weight: 400;
     font-style: italic;
@@ -671,58 +675,78 @@ div.insights-back-button-container {
     text-align: left;
     line-height: 150%;
     margin-bottom: 1rem;
-  }
-  div.plot-legend {
+}
+div.plot-legend {
     margin-top: 20px;
-  }
+}
 
-  @media (orientation: landscape) {
+@media (orientation: landscape) {
     .responsive-svg-container {
-      display: flex;
-      flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
     }
-    
-    .plot-title {
-      width: 100%;
-    }
-    
-    .plot-plot {
-      width: 65%;
-    }
-    
-    div.plot-legend {
-      width: 35%;
-      margin-top: 0;
-      padding-left: 10px;
-    }
-  }
 
-  a.download-navigate-link {
+    .plot-title {
+        width: 100%;
+    }
+
+    .plot-plot {
+        width: 65%;
+    }
+
+    div.plot-legend {
+        width: 35%;
+        margin-top: 0;
+        padding-left: 10px;
+    }
+}
+
+a.download-navigate-link {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0%;
     text-decoration: underline;
     text-decoration-style: solid;
-  }
-  section#how-we-built li::marker {
-    font-weight: 600;
-    font-size: 18px;
-  }
-  section#how-we-built strong {
-    font-weight: 600;
-    font-size: 18px;
-  }
+}
 
-  .how-we-built-list-item {
+section#how-we-built li::marker {
+    font-weight: 600;
+    font-size: 18px;
+}
+section#how-we-built strong {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.how-we-built-list-item {
     font-weight: 600;
     font-size: 18px;
     line-height: 150%;
     letter-spacing: 0%;
-  }
-  .how-we-built-list-content {
+}
+.how-we-built-list-content {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     margin-bottom: 1rem;
-  }
+}
+
+section#data-definitions p:has(strong) {
+    margin-bottom: 0;
+}
+
+section#data-definitions strong {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+section#data-definitions li {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+section#data-definitions li::marker {
+    font-weight: 400;
+    font-size: 18px;
+}
