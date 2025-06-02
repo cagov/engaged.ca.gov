@@ -9,7 +9,7 @@ theme_recs = [{'theme':'Environmental recovery and clean-up','root':'environment
        {'theme':'Infrastructure & utilities restoration','root':'infrastructure_restoration'}, 
        {'theme':'Emergency planning & community safety','root':'emergency_planning_safety'}, 
        {'theme':'Housing and rebuilding','root':'housing_rebuilding'}, 
-       {'theme':'Financial and legal assistance','root':'financial_legal_assistance'}, 
+       {'theme':'Financial & legal assistance','root':'financial_legal_assistance'}, 
        {'theme':'Emergency communication','root':'emergency_communication'}, 
        {'theme':'Economic recovery','root':'economic_recovery'}, 
        {'theme':'Emotional and mental health','root':'emotional_mental_health'}]
