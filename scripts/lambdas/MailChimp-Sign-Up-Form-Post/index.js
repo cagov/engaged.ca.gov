@@ -1,3 +1,6 @@
+// https://github.com/cagov/engaged.ca.gov/releases/tag/MailChimp-Sign-Up-Form-Post-004
+// See engaged.ca.gov/site/_includes/macros/form-checkbox.njk for more documentation
+
 import client from "@mailchimp/mailchimp_marketing";
 
 export const handler = async (event) => {
@@ -9,22 +12,17 @@ export const handler = async (event) => {
   });
 
   const data = JSON.parse(event.body);
-
   const email = data.EMAIL;
-
-  // Get ids for interests - curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/<audienceId>/interest-categories' --header "Authorization: Bearer <TOKEN>"
-  // API for interests https://mailchimp.com/developer/marketing/api/interests/
   const subscriberHash = email;
-
   const audienceId = data.audienceId;
 
-  const interests = {
-    "1552878c1b":
-      data["group[91023][8]"] === "Los Angeles fires recovery: Eaton",
-    "40c0f946cd":
-      data["group[91023][4]"] === "Los Angeles fires recovery: Palisades",
-    "4d15bd19e5": data["group[91023][2]"] === "Future topics",
-  };
+  const interests = {};
+  for (const [key, value] of Object.entries(data)) {
+    if (key.includes("interest-")) {
+      const interestId = key.replace("interest-", "");
+      interests[interestId] = true;
+    }
+  }
 
   const response = await client.lists
     .setListMember(audienceId, subscriberHash, {

@@ -23,6 +23,7 @@ Note: audienceId is referred to as list_id in the mailchimp API docs
         40c0f946cd - Los Angeles fires recovery: Palisades
         4d15bd19e5 - "Future topics",
 
+API docs for interests https://mailchimp.com/developer/marketing/api/interests/
 
 #}
 
@@ -33,7 +34,7 @@ attributes - (String) Add a space separated list of attributes such as "checked 
 #}
 
 {% macro data(i8nkey, interest_id, attributes) %}
-    <input type="checkbox" class="form-check-input" id="{{ interest_id }}" name="{{ interest_id }}" value="{{ i8nkey }}" {{ attributes }}>
+    <input type="checkbox" class="form-check-input" id="{{ interest_id }}" name="interest-{{ interest_id }}" value="{{ i8nkey }}" {{ attributes }}>
     <label class="form-control-label form-checkbox-label" for="{{ interest_id }}">
         {{ i8nkey }}
     </label>
