@@ -18,7 +18,7 @@ buttonText: Download the full dataset
 backButtonText: Agenda setting findings
 ----
 
-# Agenda setting for LA wildfires recovery: Exploring community input
+# Agenda setting for LA wildfires recovery: Exploring community feedback
 
 The agenda setting phase of the Los Angeles wildfires recovery engagement is complete. During this phase, community members shared thousands of comments about what they need most for recovery and rebuilding. You can download the comments to see what people said. 
 
@@ -154,10 +154,10 @@ These are the columns in this dataset and their definitions.
 
 
 **Comment ID**
-  - A comment ID is a unique value to identify each comment.
+  - A unique value to identify each comment.
 
 **Comment**
-  - A comment is the full text of a comment submitted by an agenda setting participant. Comments have not been edited for clarity, content, or grammar.
+  - The full text of a comment submitted by a participant. Comments have not been edited for clarity, content, or grammar.
 
 **Topic**
   - This column lists the topic a commenter was responding to. There were 10 topics. 

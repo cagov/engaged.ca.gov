@@ -143,7 +143,7 @@ buttonTextClose: Close
 old_id: findings_what_were_doing
 ----
 
-## How we're responding to community needs
+## How we’re responding to community needs
 
 Residents shared what they need most to recover and rebuild their communities. <a href="#discussing-tough-issues">We found that some issues need more discussion</a>. However, we also found issues we can act on now.
 
@@ -391,8 +391,7 @@ For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">che
 
 We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
 
-AI was a helpful tool during our analysis, and our team checked all the findings to make sure they were relevant and accurate. We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
-
+AI helped during our analysis. Our team checked all the findings to ensure they were relevant and accurate. We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
 
 **Sample prompts**
 
