@@ -98,7 +98,7 @@ section#findings-whats-next {
     right: 0;
     top: 0px;
     @media (width <= 991px) {
-            width: 169px; 
+            width: 150px; 
             top: inherit;
             bottom: -96px;
             right: -29px;
