@@ -251,6 +251,18 @@
         "zh-hant": "支持本地企業恢復",
         "status": "ap_review"
     },
+    "Conversation themes": {
+        "en": "Conversation themes",
+        "es": "Temas de conversación",
+        "fa": "موضوعات گفت‌وگو",
+        "hy": "Առաջարկվող խոսքերի թեմաներ",
+        "ko": "대화 주제",
+        "tl": "Mga tema ng paggulong",
+        "vi": "Chủ đề cuộc trò chuyện",
+        "zh-hans": "对话主题",
+        "zh-hant": "對話主題",
+        "status": "ap_review"
+    },
     "Subcategory": {
         "en": "Subcategory",
         "es": "Subcategoría",

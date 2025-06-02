@@ -218,7 +218,7 @@ def create_svg_scatterplot_legend(
     legend_y = config.legend_offset_y
     legend_item_height = config.legend_item_height
 
-    # svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="{config.legend_title_font_family}" font-size="{config.legend_title_font_size}" font-weight="400" fill="#8c90a0">{get_translation(translation_data, "Subcategory", language)}</text>'
+    svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="{config.legend_title_font_family}" font-size="{config.legend_title_font_size}" font-weight="{config.legend_title_font_weight}" fill="#0F1F2F">{get_translation(translation_data, "Conversation themes", language)}</text>'
     legend_x +=  config.legend_indent_x # indent legend items
     legend_y +=  config.legend_indent_y
     y_pos = legend_y
@@ -239,11 +239,11 @@ def create_svg_scatterplot_legend(
             while line_1[-1] != " " and line_2[0] != " ":
                 line_2 = line_1[-1] + line_2
                 line_1 = line_1[:-1]
-            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_1}</text>'
-            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y + config.legend_line_height}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_2}</text>'
+            svg_content += f'    <text fill="#444444" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_1}</text>'
+            svg_content += f'    <text fill="#444444" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y + config.legend_line_height}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_2}</text>'
             y_pos += config.legend_line_height
         else:
-            svg_content += f'    <text fill="#5e5f66" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{display_text}</text>'
+            svg_content += f'    <text fill="#444444" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{display_text}</text>'
         y_pos += legend_item_height
 
     svg_content += '</svg>'

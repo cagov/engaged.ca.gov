@@ -1,6 +1,13 @@
 # make scatterplots
 import subprocess
 import os, json
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-v', '--version', type=str, default='v4')
+parser.add_argument('-force','--force', action='store_true')
+args = parser.parse_args()
+
 languages = ['en', 'es', 'fa', 'hy', 'ko', 'tl','vi', 'zh-hans', 'zh-hant']
 
 theme_recs = [{'theme':'Environmental recovery and clean-up','root':'environmental_recovery'}, 
@@ -18,7 +25,7 @@ theme_recs = [{'theme':'Environmental recovery and clean-up','root':'environment
 out_dir = './plots'
 
 src_file = 'engca_comment_scatterplot_source_V3.json'
-version = 'v4'
+version = args.version
 new_jsons = set()
 for theme_rec in theme_recs:
     theme = theme_rec['theme']
@@ -27,7 +34,7 @@ for theme_rec in theme_recs:
     src_file_json = f'./data/data_{filename_root}_{version}.json'
     if not os.path.exists(src_file_csv):
         continue
-    if not os.path.exists(src_file_json):
+    if not os.path.exists(src_file_json) or args.force:
         cmd = f'python3 convert_csv_to_json.py {src_file_csv} {src_file_json}'
         print(cmd)
         subprocess.run(cmd, shell=True)
