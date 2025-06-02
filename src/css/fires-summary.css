@@ -670,6 +670,10 @@ div.insights-back-button-container {
     text-align: left;
     line-height: 130%;
     margin-bottom: 1rem;
+    @media (max-width: 767px) {
+        font-size: 19px;
+        line-height: 30px;
+    }
 }
 .plot-description {
     font-size: 23px;
@@ -678,6 +682,10 @@ div.insights-back-button-container {
     text-align: left;
     line-height: 39px;
     margin-bottom: 1rem;
+    @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 30px;
+    }
 }
 .plot-notes {
     font-size: 18px;
