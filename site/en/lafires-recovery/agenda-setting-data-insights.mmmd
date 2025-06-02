@@ -172,11 +172,3 @@ These are the columns in this dataset and their definitions.
     9. Climate and community resilience
     10. Evacuation and emergency coordination
 
-**Opportunity areas**
-  - This column contains the opportunity areas each comment fits into.
-  - If a comment fits into multiple opportunity areas, they are both included, and delimited by a semicolon.
-  - There are 4 opportunity areas.
-    1. Should we rebuild quickly, or rebuild in a way that ensures lasting resilience?
-    2. Should the public sector or private sector be responsible for utilities and infrastructure?
-    3. Should fire prevention be an individual or collective responsibility?
-    4. Should recovery efforts allow making space for more residents to move into the area?
