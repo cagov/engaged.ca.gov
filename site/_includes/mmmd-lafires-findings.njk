@@ -76,7 +76,7 @@
             {% endfor %}
         </div>
 
-        <div class="findings-button-container">
+        <div id="findings-show-all-button-container" class="findings-button-container">
             <div id="findings-show-all-button" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-barchart-container">
                
                     <div class="findings-show-all-button-label">{{ modules.findings_topics_people_rated.buttonText }}</div>
@@ -136,7 +136,7 @@
                     </div>
                     {% endfor %}
                 </div>
-                <div class="findings-button-container">
+                <div id="findings-responding-show-all-button-container" class="findings-button-container">
                     <div id="findings-responding-show-all-button" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-responding-list-container">
                             <div class="findings-responding-show-all-button-label">{{ modules.findings_how_we_are_responding.buttonText }}</div>
                     </div>
@@ -151,7 +151,7 @@
                     </div>
                     {% endfor %}
                 </div>
-                <div class="findings-button-container">
+                <div id="findings-responding-show-all-button2-container" class="findings-button-container">
                     <div id="findings-responding-show-all-button2" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-responding-list2-container">
                             <div class="findings-responding-show-all-button-label2">{{ modules.findings_how_we_are_responding.buttonText }}</div>
                     </div>
@@ -426,11 +426,19 @@ document.querySelectorAll('.findings-barchart-item').forEach(item => {
 function toggleBarchartVisibility(button) {
   const barchartContainer = document.querySelector('.findings-barchart-container');
   const showAllButtonLabel = document.querySelector('.findings-show-all-button-label');
+
+  const buttonContainer = document.querySelector('div#findings-show-all-button-container');
+
+  const btnTopBefore = buttonContainer.getBoundingClientRect().top;
+
+
   let isCollapsed = barchartContainer.classList.contains('collapsed');
   
   barchartContainer.classList.toggle('collapsed');
   isCollapsed = !isCollapsed;
   button.setAttribute('aria-expanded', !isCollapsed);
+
+
 
   const openText = '{{ modules.findings_topics_people_rated.buttonText }}';
   const closeText = '{{ modules.findings_topics_people_rated.buttonTextClose }}';
@@ -456,6 +464,18 @@ function toggleBarchartVisibility(button) {
       showAllButtonLabel.textContent = closeText;
     }
   });
+
+  {# const btnTopAfter = buttonContainer.getBoundingClientRect().top;
+  const btnTopDiff = btnTopAfter - btnTopBefore;
+
+  if (Math.abs(btnTopDiff) > 0) {
+    console.log('scrolling by', btnTopDiff);
+    window.scrollBy(0, -btnTopDiff);
+  } else {
+    console.log('no scrolling needed');
+  } #}
+
+
 }
 
 function toggleRespondingVisibility(button, contClass, buttonClass) {

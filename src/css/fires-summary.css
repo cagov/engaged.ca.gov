@@ -405,7 +405,8 @@ div.findings-show-all-button-label, div.findings-responding-show-all-button-labe
     width: fit-content;
 }
 
-div.findings-show-all-button-label.open, div.findings-responding-show-all-button-label.open {
+div.findings-show-all-button-label.open, div.findings-responding-show-all-button-label.open,
+div.findings-show-all-button-label2.open, div.findings-responding-show-all-button-label2.open {
     background: url("/public/images/arrow-up.svg") no-repeat right center;
     cursor: pointer;
 }
