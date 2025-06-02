@@ -1,6 +1,6 @@
 # make scatterplots
 import subprocess
-import os
+import os, json
 languages = ['en', 'es', 'fa', 'hy', 'ko', 'tl','vi', 'zh-hans', 'zh-hant']
 
 theme_recs = [{'theme':'Environmental recovery and clean-up','root':'environmental_recovery'}, 
@@ -39,10 +39,16 @@ for theme_rec in theme_recs:
             print(cmd)
             subprocess.run(cmd, shell=True)
 
+cumulative_json = []
 for theme_rec in theme_recs:
     theme = theme_rec['theme']
     filename_root = theme_rec['root']
     src_file_json = f'./data/data_{filename_root}_{version}.json'
+    if os.path.exists(src_file_json):
+        with open(src_file_json, 'r') as f:
+            data = json.load(f)
+        for record in data:
+            cumulative_json.append(record)
     if src_file_json not in new_jsons:
         continue
     if not os.path.exists(src_file_json):
@@ -52,3 +58,7 @@ for theme_rec in theme_recs:
     print(cmd)
     subprocess.run(cmd, shell=True)
 
+# load all the jsons and merge into a single json, saved at src/public/data/engca_comment_scatterplot_source.json
+# save cumulative.json to ./src/public/data/engca_comment_scatterplot_source.json
+with open('/Users/jbum/Development/ca.gov/engaged.ca.gov/src/public/data/engca_comment_scatterplot_source.json', 'w') as f:
+    json.dump(cumulative_json, f, indent=2)
