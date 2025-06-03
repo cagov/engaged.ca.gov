@@ -1,5 +1,5 @@
 ---
-title: 'Agenda setting for LA wildfires recovery: Exploring community input'
+title: 'Agenda setting for LA wildfires recovery: Exploring community feedback'
 description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
 layout: mmmd-data-insights
 parentid: lafires-recovery
@@ -114,6 +114,7 @@ desc_10: Wildfire survivors, especially those cleaning up debris, face long-term
 id: how_we_built
 backButtonText: Read about agenda setting and LA wildfires recovery
 
+
 list_item_1: Identify related comments
 list_content_1: We started by labeling each comment with which opportunity areas it relates to. We used an AI tool (the Snowflake Cortex Classify Text Large Language Model) to do this labeling.
  
@@ -132,7 +133,7 @@ list_content_5: We used a topic-supervised UMAP. We tuned it for each opportunit
 
 ### How we built these charts
 
-**Methodology for creating these data visualizations:**
+Below is a step-by-step explanation of the methodology for these charts. 
 
 
 ----
