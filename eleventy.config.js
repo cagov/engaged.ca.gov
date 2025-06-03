@@ -162,6 +162,9 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("langPathActive", (page, lang, locale) => {
+    if (page.fileSlug.includes('sitemap')) {
+      return false;
+    }
     if (lang === locale) {
       return false;
     }
