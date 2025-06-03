@@ -57,11 +57,10 @@
 <section id="findings-topics-people-rated">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 findings-no-indent-container">
+      <div class="col-lg-8 findings-no-indent-container findings-barchart-outer-container">
         <div class="findings-barchart-container collapsed" role="list" aria-label="Topics people rated">
             {% for item in barchart %}
-            {% set visible = loop.index <= 4 %}
-            <div id="barchart-outer-item-{{ loop.index }}" data-destination="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}" class="findings-barchart-item{% if visible %} visible{% endif %}" role="listitem" {% if not visible %}aria-hidden="true"{% endif %} role="link" tabindex="0" aria-label="View insights about {{ modules.findings_bar_chart[item.key] }}">
+            <div id="barchart-outer-item-{{ loop.index }}" data-destination="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}" class="findings-barchart-item" role="listitem" role="link" tabindex="0" aria-label="View insights about {{ modules.findings_bar_chart[item.key] }}">
                 <div class="findings-barchart-caption-bar-container">
                   <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
                   <div class="findings-bar-container">
@@ -449,17 +448,17 @@ function toggleBarchartVisibility(button) {
   barItems.forEach((barItem, index) => {
     if (isCollapsed) {
       showAllButtonLabel.classList.remove('open');
-      barItem.classList.remove('visible');
+      {# barItem.classList.remove('visible');
       barItem.setAttribute('aria-hidden', index >= 4);
       // When collapsing, only make the first 4 items visible
       if (index < 4) {
         barItem.classList.add('visible');
         barItem.setAttribute('aria-hidden', 'false');
-      }
+      } #}
       showAllButtonLabel.textContent = openText;
     } else {
-      barItem.classList.add('visible');
-      barItem.setAttribute('aria-hidden', 'false');
+      {# barItem.classList.add('visible');
+      barItem.setAttribute('aria-hidden', 'false'); #}
       showAllButtonLabel.classList.add('open');
       showAllButtonLabel.textContent = closeText;
     }

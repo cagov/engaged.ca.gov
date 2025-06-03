@@ -477,9 +477,9 @@ div.findings-barchart-item {
     width: 100%;
     /* border-bottom: 6px solid #ececec; */
 }
-div.findings-barchart-item:not(.visible) {
+/* div.findings-barchart-item:not(.visible) {
     display: none;
-}
+} */
 div.findings-barchart-container div.findings-barchart-item:nth-child(odd) {
     background-color: #F6F7FA;
 }
@@ -487,26 +487,41 @@ div.findings-barchart-container div.findings-barchart-item:nth-child(even) {
     background-color: white;
 }
 
+div.findings-barchart-outer-container {
+    height: fit-content;
+}
+
+div.findings-barchart-container {
+    transition: height 0.6s ease-out;
+    overflow: hidden;
+    max-height: 100%
+}
 
 div.findings-barchart-container.collapsed {
     position: relative;
-    /* max-height: 400px; */
-    /* overflow: hidden; */
+    max-height: 30%;
+    height: 300px;
 }
 
-div.findings-responding-list-container.collapsed {
+div.findings-responding-list-container {
     position: relative;
-    max-height: 400px;
+    transition: max-height 0.6s ease-out;
     overflow: hidden;
+    max-height: 100%
+}
+div.findings-responding-list-container.collapsed {
+    max-height: 400px;
 }
 
 div.findings-responding-list2-container {
     margin-top: 4rem;
+    position: relative;
+    transition: max-height 0.6s ease-out;
+    overflow: hidden;
+    max-height: 100%
 }
 div.findings-responding-list2-container.collapsed {
-    position: relative;
     max-height: 500px;
-    overflow: hidden;
 }
 
 div.findings-responding-list-title {
