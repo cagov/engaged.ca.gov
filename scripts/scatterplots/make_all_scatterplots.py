@@ -24,7 +24,7 @@ theme_recs = [{'theme':'Environmental recovery and clean-up','root':'environment
 
 out_dir = './plots'
 
-src_file = 'engca_comment_scatterplot_source_V3.json'
+# src_file = 'engca_comment_scatterplot_source_V3.json'
 version = args.version
 new_jsons = set()
 for theme_rec in theme_recs:
@@ -55,7 +55,10 @@ for theme_rec in theme_recs:
         with open(src_file_json, 'r') as f:
             data = json.load(f)
         for record in data:
-            cumulative_json.append(record)
+            cumulative_json.append({
+                'COMMENT_ID': record['COMMENT_ID'],
+                'CONTENT': record['CONTENT']
+            })
     if src_file_json not in new_jsons:
         continue
     if not os.path.exists(src_file_json):
@@ -68,4 +71,4 @@ for theme_rec in theme_recs:
 # load all the jsons and merge into a single json, saved at src/public/data/engca_comment_scatterplot_source.json
 # save cumulative.json to ./src/public/data/engca_comment_scatterplot_source.json
 with open('/Users/jbum/Development/ca.gov/engaged.ca.gov/src/public/data/engca_comment_scatterplot_source.json', 'w') as f:
-    json.dump(cumulative_json, f, indent=2)
+    json.dump(cumulative_json, f)
