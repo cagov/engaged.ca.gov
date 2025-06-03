@@ -1,5 +1,5 @@
 ---
-title: 'Agenda setting for LA wildfires recovery: A closer look at the comments'
+title: 'Agenda setting for LA wildfires recovery: Exploring community feedback'
 description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
 layout: mmmd-data-insights
 parentid: lafires-recovery
@@ -18,9 +18,27 @@ buttonText: Download the full dataset
 backButtonText: Agenda setting findings
 ----
 
-# Agenda setting for LA wildfires recovery: A closer look at the comments
+# Agenda setting for LA wildfires recovery: Exploring community feedback
 
-The agenda setting phase of the Los Angeles wildfires recovery engagement is complete. We're now using the comments we got in that phase to shape talks that will help us solve important problems. You can download the comments to see what people said yourself.
+The agenda setting phase of the Los Angeles wildfires recovery engagement is complete. During this phase, community members shared thousands of comments about what they need most for recovery and rebuilding. You can download the comments to see what people said. 
+
+----
+id: plots_complexity
+----
+## Breaking down the complexity
+
+Residents responded with overwhelming volume and a wide range of views. We made data visualizations to simplify this complexity. They organize and show comments by topic and theme. This tool will help you explore what the community said and see patterns in the feedback.
+
+We designed the analysis and visuals below to help you:
+
+* See the full range of community perspectives on recovery priorities
+* Understand how different viewpoints cluster around key issues
+* Explore the complexity of challenges facing fire-affected communities
+* Prepare for upcoming community discussions
+
+Note: The info on this page does not offer final answers or solutions. Instead, it shows us the questions and tradeoffs we need to work through together. During the deliberation phase, we'll find the best way forward. Community members will work through these complex issues in a thoughtful manner. 
+
+We will invite California residents to help us with this. <a href="/lafires-recovery/#sign-up">Sign up to stay informed</a>.
 
 ----
 id: plots_interpretation
@@ -28,13 +46,11 @@ id: plots_interpretation
 
 ## How to interpret these charts
 
-Each scatterplot shows the comments that shape each of the opportunity areas outlined by our Los Angeles wildfires engagement.
+Each chart shows the comments made about one topic.
 
-The charts show how different opinions and priorities create opportunity areas for deliberation. People have strong but different views, but there are also some shared opinions that are worth exploring further, as seen by the clusters of similar comments. 
-
-Each dot represents an individual comment. Comments identified by a large language model (LLM) as related to similar topics appear near each other on the chart. 
-
-Each comment is also labeled with a subcategory. We used an LLM to define subcategories for each opportunity area. Each subcategory is shown in a different color. Grey dots indicate comments related to the opportunity area. However, they don’t clearly fit into any subcategory.
+* Each dot represents an individual comment.
+* Dots are color-coded, with each color representing a theme that came up in the comments.
+* We used AI to identify themes. The comments that were identified as similar appear closer together on the chart.
 
 ----
 id: data_visualizations_header
@@ -45,39 +61,79 @@ buttonText: Download the full dataset
 
 ----
 id: plots
-nbr_charts: 4
-plot_1: build_faster_vs_better_plot.svg
-title_1: Rebuild quickly or rebuild for resilience
-legend_1: build_faster_vs_better_en_legend.svg
-plot_2: public_private_plot.svg
-title_2: Public or private sector responsibility for utilities and infrastructure
-legend_2: public_private_en_legend.svg
-plot_3: ind_vs_collective_plot.svg
-title_3: Individual or collective responsibility for fire prevention
-legend_3: ind_vs_collective_en_legend.svg
-plot_4: density_vs_safety_plot.svg
-title_4: Making space for more residents, or limiting housing density
-legend_4: density_vs_safety_en_legend.svg
+chart_boilerplate_notes: Each dot represents one comment made about this topic. Colors represent groups of related comments.
+chart_generic_alt: A scatter plot that visualizes comments using dots. The comments are categorized into subcategories.
+nbr_charts: 10
+id_1: findings_environmental_recovery
+title_1: Environmental recovery and clean-up
+desc_1: The community's environmental concerns are valid and intricate. They include long-term land safety, environmental justice, and future fire-prevention measures.
+
+id_2: findings_wildfire_prevention
+title_2: Wildfire prevention prioritization and accountability
+desc_2: The community wants accountability for fire prevention.
+
+id_3: findings_climate_community_resilience
+title_3: Climate and community resilience
+desc_3: Residents want to be heard. They want to help shape long-term recovery and future resilience. Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+
+id_4: findings_infrastructure_restoration
+title_4: Infrastructure and utilities restoration
+desc_4: Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+
+id_5: findings_emergency_planning_safety
+title_5: Emergency planning and community safety
+desc_5: Ensuring fast, safe evacuation and disaster communication is crucial for wildfire-prone communities. Community members view transparency and accessibility as key concerns.
+
+
+id_6: findings_housing_rebuilding
+title_6: Housing and rebuilding
+desc_6: Rebuilding quickly is important. But without policies that focus on equity, some residents may face permanent displacement.
+ 
+
+id_7: findings_financial_legal_assistance
+title_7: Financial and legal assistance
+desc_7: Survivors often find it hard to navigate aid systems. They need legal protections and financial assistance to rebuild.
+
+
+id_8: findings_emergency_communication
+title_8: Emergency communication
+desc_8: Effective communication in an emergency is vital. How can officials share important updates and connect with residents at key moments?
+
+
+id_9: findings_economic_recovery
+title_9: Economic recovery and small business support
+desc_9: Many small businesses closed after the fire, and workers lost jobs. Residents want to know how economic recovery can be equitable and forward-thinking.
+
+
+id_10: findings_emotional_mental_health
+title_10: Emotional and mental health support
+desc_10: Wildfire survivors, especially those cleaning up debris, face long-term health risks. They need easy access to mental health care.
 ----
 
 ----
 id: how_we_built
 backButtonText: Read about agenda setting and LA wildfires recovery
-list_item_1: Identify which comments are related to each opportunity area
-list_content_1: We started by labeling each comment with which of the five opportunity areas (if any) it relates to. We used an AI tool (the Snowflake Cortex Classify Text Large Language Model) to do this labeling. 
-list_item_2: Process and restructure the comments data
+
+
+list_item_1: Identify related comments
+list_content_1: We started by labeling each comment with which opportunity areas it relates to. We used an AI tool (the Snowflake Cortex Classify Text Large Language Model) to do this labeling.
+ 
+list_item_2: Process and restructure the data
 list_content_2: We turned each comment into numerical data, or semantic embeddings. These embeddings show the meaning of the comments in a way that computers can understand and use. We did this using Snowflake Cortex Embed Text 1024.
-list_item_3: Find subcategories
-list_content_3: We used the BERTopic framework to group comments by similarities. This helped us sort them into different categories based on common topics. 
-list_item_4: Label the subcategories
-list_content_4: We grouped the comments by topic. Then, we used the 'Claude 3.5 Sonnet' model to label each group. Each label is a short phrase that reflects the main idea or viewpoint. We then edited the LLM-generated labels for clarity.
+
+list_item_3: Find conversation themes
+list_content_3: We used the BERTopic framework to group comments within each topic area by similarities. This helped us sort them into different categories based on common themes.
+
+list_item_4: Label the conversation themes
+list_content_4: We grouped the comments by topic, then used the 'Claude 3.5 Sonnet' model to label each group. Each label is a short phrase that reflects the main idea or viewpoint. We then edited the AI-generated labels for clarity.
+
 list_item_5: Plot the comments
-list_content_5: We used a topic-supervised UMAP. We tuned it for each key tension. This let us turn all the numbers into two easy coordinates. Then, we could plot everything on a 2D chart. The comments are color-coded by topic. This makes it easy to spot patterns and relationships.
+list_content_5: We used a topic-supervised UMAP. We tuned it for each opportunity area.This allowed us to turn all the numerical data into two simple coordinates that we could plot on a 2D chart. The comments are color-coded by topic. This makes it easy to see patterns and connections.
 ----
 
 ### How we built these charts
 
-**Methodology for creating these data visualizations:**
+Below is a step-by-step explanation of the methodology for these charts. 
 
 
 ----
@@ -99,10 +155,10 @@ These are the columns in this dataset and their definitions.
 
 
 **Comment ID**
-  - A comment ID is a unique value to identify each comment.
+  - A unique value to identify each comment.
 
 **Comment**
-  - A comment is the full text of a comment submitted by an agenda setting participant. Comments have not been edited for clarity, content, or grammar.
+  - The full text of a comment submitted by a participant. Comments have not been edited for clarity, content, or grammar.
 
 **Topic**
   - This column lists the topic a commenter was responding to. There were 10 topics. 
@@ -117,11 +173,3 @@ These are the columns in this dataset and their definitions.
     9. Climate and community resilience
     10. Evacuation and emergency coordination
 
-**Opportunity areas**
-  - This column contains the opportunity areas each comment fits into.
-  - If a comment fits into multiple opportunity areas, they are both included, and delimited by a semicolon.
-  - There are 4 opportunity areas.
-    1. Should we rebuild quickly, or rebuild in a way that ensures lasting resilience?
-    2. Should the public sector or private sector be responsible for utilities and infrastructure?
-    3. Should fire prevention be an individual or collective responsibility?
-    4. Should recovery efforts allow making space for more residents to move into the area?
