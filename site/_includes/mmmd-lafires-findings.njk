@@ -60,7 +60,7 @@
       <div class="col-lg-8 findings-no-indent-container findings-barchart-outer-container">
         <div class="findings-barchart-container collapsed" role="list" aria-label="Topics people rated">
             {% for item in barchart %}
-            <div id="barchart-outer-item-{{ loop.index }}" data-destination="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}" class="findings-barchart-item" role="listitem" role="link" tabindex="0" aria-label="View insights about {{ modules.findings_bar_chart[item.key] }}">
+            <div id="barchart-outer-item-{{ loop.index }}" data-destination="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}" class="findings-barchart-item" role="listitem" role="link" tabindex="0">
                 <div class="findings-barchart-caption-bar-container">
                   <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
                   <div class="findings-bar-container">
@@ -69,7 +69,7 @@
                   </div>
                 </div>
                 <div class="findings-barchart-button-container">
-                    <div class="findings-barchart-button"><img src="/public/images/barchart-link-button-arrow.svg" alt="View related comments"></div>
+                    <div class="findings-barchart-button"><img src="/public/images/barchart-link-button-arrow.svg" alt="Arrow"></div>
                 </div>
             </div>
             {% endfor %}
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
     svg.setAttribute('viewBox', '0 0 100 20');
     svg.setAttribute('preserveAspectRatio', 'none');
     svg.setAttribute('role', 'img');
-    svg.setAttribute('aria-label', percentage + '% approval for ' + key);
+    svg.setAttribute('aria-label', 'Bar chart shows ' + percentage + '% approval for ' + key);
     // Create the thin background horizontal line (2px high)
     const horizontalLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     horizontalLine.setAttribute('x1', '0');
