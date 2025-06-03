@@ -11,8 +11,8 @@ args = parser.parse_args()
 languages = ['en', 'es', 'fa', 'hy', 'ko', 'tl','vi', 'zh-hans', 'zh-hant']
 
 theme_recs = [{'theme':'Environmental recovery and clean-up','root':'environmental_recovery'}, 
-       {'theme':'Wildfire prevention prioritization and accountability','root':'wildfire_prevention'}, 
-       {'theme':'Climate and community resilience','root':'climate_community_resilience'}, 
+       {'theme':'Wildfire prevention prioritization & accountability','root':'wildfire_prevention'}, 
+       {'theme':'Climate & community resilience','root':'climate_community_resilience'}, 
        {'theme':'Infrastructure & utilities restoration','root':'infrastructure_restoration'}, 
        {'theme':'Emergency planning & community safety','root':'emergency_planning_safety'}, 
        {'theme':'Housing and rebuilding','root':'housing_rebuilding'}, 
