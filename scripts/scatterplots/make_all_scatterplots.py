@@ -18,8 +18,8 @@ theme_recs = [{'theme':'Environmental recovery and clean-up','root':'environment
        {'theme':'Housing and rebuilding','root':'housing_rebuilding'}, 
        {'theme':'Financial & legal assistance','root':'financial_legal_assistance'}, 
        {'theme':'Emergency communication','root':'emergency_communication'}, 
-       {'theme':'Economic recovery','root':'economic_recovery'}, 
-       {'theme':'Emotional and mental health','root':'emotional_mental_health'}]
+       {'theme':'Economic recovery & small business support','root':'economic_recovery'}, 
+       {'theme':'Emotional & mental health support','root':'emotional_mental_health'}]
 #  python3 make_scatterplot.py housing_rebuilding_v4.json "Housing and rebuilding" -out plots/housing_rebuilding.svg
 
 out_dir = './plots'
