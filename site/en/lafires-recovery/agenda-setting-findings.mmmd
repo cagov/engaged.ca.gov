@@ -32,6 +32,8 @@ Over 700 people gave us feedback on 10 recovery-related topics.
 id: findings_how_we_listened
 ----
 
+## What we did
+
 The agenda setting phase for this engagement began in March and lasted through May 16, 2025. Participants opted in and shared thoughts about recovery from the Los Angeles Wildfires.  The information gathered will guide how public officials move forward. 
 
 What we learned will also guide the next phase of this engagement: deliberation. 
@@ -73,7 +75,7 @@ buttonTextClose: Close
 
 We asked participants to rate the importance of disaster-related topics. Using a scale of 1-5, people rated how important it is to discuss these items further. 
 
-This is the percent of people who rated a topic with a 4, “very important” or 5, “essential”.  
+The table below shows the percentage of people who said it is very important or essential to discuss a topic further. Select a topic to explore comments and see insights about the conversations.
 
 ----
 id: findings_bar_chart
@@ -287,7 +289,7 @@ Should recovery efforts allow making space for more residents to move into the a
 
 ----
 id: findings_more_insights_button
-buttonText: See more insights
+buttonText: See more data insights
 ----
 
 ----
@@ -355,7 +357,7 @@ For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">che
 
 We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
 
-Our team reviewed all of the findings to ensure they were relevant and accurate. We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
+We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
 
 **Sample prompts**
 
