@@ -127,7 +127,7 @@
                     {{ modules.findings_how_we_are_responding.content | safe }}
                 </div>
                 <div class="findings-no-indent-container findings-responding-list-container collapsed">
-                    <div class="findings-responding-list-title">{{ modules.findings_how_we_are_responding_list.title }}</div>
+                    {# <div class="findings-responding-list-title">{{ modules.findings_how_we_are_responding_list.title }}</div> #}
                     {% for i in range(1, modules.findings_how_we_are_responding_list.nbr_items + 1) %}  
                     <div class="findings-responding-item">
                         <div class="findings-responding-item-title">{{ modules.findings_how_we_are_responding_list['item_' + i + '_title'] }}</div>
@@ -142,7 +142,7 @@
                 </div>
 
                 <div class="findings-no-indent-container findings-responding-list2-container collapsed">
-                    <div class="findings-responding-list-title">{{ modules.findings_how_we_are_responding_list2.title }}</div>
+                    {# <div class="findings-responding-list-title">{{ modules.findings_how_we_are_responding_list2.title }}</div> #}
                     {% for i in range(1, modules.findings_how_we_are_responding_list2.nbr_items + 1) %}  
                     <div class="findings-responding-item">
                         <div class="findings-responding-item-title">{{ modules.findings_how_we_are_responding_list2['item_' + i + '_title'] }}</div>
