@@ -105,7 +105,7 @@
         </div> #}
         {{ modules.how_we_built.content | safe }}
         <ol>
-          {% for i in range(1, 6) %}
+          {% for i in range(1, modules.how_we_built.nbr_list_items+1) %}
           <li>
             <div class="how-we-built-list-item">{{ modules.how_we_built["list_item_" + i] }}</div>
             <div class="how-we-built-list-content">{{ modules.how_we_built["list_content_" + i] }}</div>
