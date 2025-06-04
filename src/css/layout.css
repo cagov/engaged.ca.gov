@@ -165,7 +165,9 @@ section h2 {
   margin-block: 0 1.8rem;
   color: #0F152F;
 }
-
+.cagov-language-switcher {
+  padding-bottom: 0.5rem;
+}
 /* language switcher - copied from abortion.ca.gov */
 .cagov-language-switcher ul {
   align-items: start;
