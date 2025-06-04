@@ -218,7 +218,7 @@ def create_svg_scatterplot_legend(
     legend_y = config.legend_offset_y
     legend_item_height = config.legend_item_height
 
-    svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="{config.legend_title_font_family}" font-size="{config.legend_title_font_size}" font-weight="{config.legend_title_font_weight}" fill="#0F1F2F">{get_translation(translation_data, "Conversation themes", language)}</text>'
+    svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="{config.legend_title_font_family}" font-size="{config.legend_title_font_size}" font-weight="{config.legend_title_font_weight}" fill="#0F1F2F">{get_translation(translation_data, "Conversation groups", language)}</text>'
     legend_x +=  config.legend_indent_x # indent legend items
     legend_y +=  config.legend_indent_y
     y_pos = legend_y

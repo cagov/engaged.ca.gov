@@ -49,7 +49,7 @@ id: plots_interpretation
 Each chart shows the comments made about one topic.
 
 * Each dot represents an individual comment.
-* Dots are color-coded, with each color representing a theme that came up in the comments.
+* Dots are color-coded, with each color representing a group that came up in the comments.
 * We used AI to identify themes. The comments that were identified as similar appear closer together on the chart.
 
 ----
@@ -61,7 +61,7 @@ buttonText: Download the full dataset
 
 ----
 id: plots
-chart_boilerplate_notes: Each dot represents one comment made about this topic. Colors represent groups of related comments.
+chart_boilerplate_notes: Each dot represents one comment made about this topic. Grouped comments have their own color.
 chart_generic_alt: A scatter plot that visualizes comments using dots. The comments are categorized into subcategories.
 nbr_charts: 10
 id_1: findings_environmental_recovery
@@ -118,14 +118,14 @@ nbr_list_items: 4
 list_item_1: Process and restructure the data
 list_content_1: We did this for all the comments within a topic. We turned each comment into numerical data, or semantic embeddings. These embeddings show the meaning of the comments in a way that computers can understand and use. We did this using Snowflake Cortex Embed Text 1024.
  
-list_item_2: Find conversation themes
-list_content_2: We used the BERTopic framework to group comments within each topic area by similarities. This helped us sort them into different categories based on common themes. We then used UMAP to reduce the dimensionality of the comments. This tool made complex data simpler to visualize. We used density-based clustering with HDBSCAN and then tuned the algorithm settings for each opportunity area.
+list_item_2: Find conversation groups
+list_content_2: We used the BERTopic framework to group comments within each topic area by similarities. This helped us sort them into different categories based on common themes.  We then used UMAP to reduce the dimensionality of the comments. This tool made complex data simpler to visualize. We used density-based clustering with HDBSCAN and then tuned the algorithm settings for each opportunity area.
 
-list_item_3: Label the conversation themes
-list_content_3: We grouped the comments by topic, then used the 'Claude 3.5 Sonnet' model to create the initial label for each topic group. Our team of data analysts then reviewed and edited these labels for clarity. Each label is a short phrase that reflects the main idea or topic that the comments have in common. 
+list_item_3: Label the conversation groups
+list_content_3: We grouped the comments by topic, then used the 'Claude 3.5 Sonnet' model to create the initial label for each group. Our team of data analysts then reviewed and edited these labels for clarity. Each label is a short phrase that reflects the main idea or topic that the comments have in common. 
 
 list_item_4: Plot the comments
-list_content_4: We used a topic-supervised UMAP. We tuned it for each topic.This allowed us to turn all the numerical data into two simple coordinates that we could plot on a 2D chart. The comments are color-coded by conversation theme. This makes it easy to see patterns and connections.
+list_content_4: We used a topic-supervised UMAP. We tuned it for each topic.This allowed us to turn all the numerical data into two simple coordinates that we could plot on a 2D chart. The comments are color-coded by conversation group. This makes it easy to see patterns and connections.
 ----
 
 ### How we built these charts
@@ -157,7 +157,7 @@ These are the columns in this dataset and their definitions.
 
 **Comment**
 
-  The full text of a comment submitted by a participant. Comments have not been edited for clarity, content, or grammar.
+  The full text of a comment submitted by a participant. Comments have not been edited for clarity, content, grammar, or for any other reason.
 
 **Topic**
 
@@ -175,3 +175,7 @@ These are the columns in this dataset and their definitions.
   10. Evacuation and emergency coordination
 
 We also included comments that were not in response to a specific topic. We labeled those comments with “general comment.”
+
+**Conversation group**
+
+The conversation group a comment aligns to. 

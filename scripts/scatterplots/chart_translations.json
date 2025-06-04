@@ -574,5 +574,17 @@
         "zh-hans": "对话主题",
         "zh-hant": "對話主題",
         "status": "ap_review"
+    },
+    "Conversation themes": {
+        "en": "Conversation groups",
+        "es": "Grupos de conversación",
+        "fa": "گروه‌های گفت‌وگو",
+        "hy": "Բանալի թեմաներ",
+        "ko": "대화 그룹",
+        "tl": "Mga tema ng pag-uusap",
+        "vi": "Chủ đề trò chuyện",
+        "zh-hans": "对话主题",
+        "zh-hant": "對話主題",
+        "status": "ap_review"
     }
 }
