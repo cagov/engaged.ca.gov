@@ -140,23 +140,6 @@
                             <div class="findings-responding-show-all-button-label">{{ modules.findings_how_we_are_responding.buttonText }}</div>
                     </div>
                 </div>
-
-                <div class="findings-no-indent-container findings-responding-list2-container collapsed">
-                    {# <div class="findings-responding-list-title">{{ modules.findings_how_we_are_responding_list2.title }}</div> #}
-                    {% for i in range(1, modules.findings_how_we_are_responding_list2.nbr_items + 1) %}  
-                    <div class="findings-responding-item">
-                        <div class="findings-responding-item-title">{{ modules.findings_how_we_are_responding_list2['item_' + i + '_title'] }}</div>
-                        <div class="findings-responding-item-text">{{ modules.findings_how_we_are_responding_list2['item_' + i + '_text'] }}</div>
-                    </div>
-                    {% endfor %}
-                </div>
-                <div id="findings-responding-show-all-button2-container" class="findings-button-container">
-                    <div id="findings-responding-show-all-button2" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-responding-list2-container">
-                            <div class="findings-responding-show-all-button-label2">{{ modules.findings_how_we_are_responding.buttonText }}</div>
-                    </div>
-                </div>
-
-
             </div>
         </div>
     </div>
@@ -399,9 +382,6 @@ document.getElementById('findings-show-all-button').addEventListener('click', fu
 
 document.getElementById('findings-responding-show-all-button').addEventListener('click', function(event) {
   toggleRespondingVisibility(this, 'findings-responding-list-container', 'findings-responding-show-all-button-label');
-});
-document.getElementById('findings-responding-show-all-button2').addEventListener('click', function(event) {
-  toggleRespondingVisibility(this, 'findings-responding-list2-container', 'findings-responding-show-all-button-label2');
 });
 
 
