@@ -3,6 +3,18 @@
 import argparse
 import json
 
+theme_recs = [{'theme':'Debris removal & environmental recovery','root':'environmental_recovery'}, 
+       {'theme':'Wildfire prevention prioritization & accountability','root':'wildfire_prevention'}, 
+       {'theme':'Climate & community resilience','root':'climate_community_resilience'}, 
+       {'theme':'Infrastructure & utilities restoration','root':'infrastructure_restoration'}, 
+       {'theme':'Emergency planning & community safety','root':'emergency_planning_safety'}, 
+       {'theme':'Housing and rebuilding','root':'housing_rebuilding'}, 
+       {'theme':'Financial & legal assistance','root':'financial_legal_assistance'}, 
+       {'theme':'Emergency communication','root':'emergency_communication'}, 
+       {'theme':'Economic recovery & small business support','root':'economic_recovery'}, 
+       {'theme':'Emotional & mental health support','root':'emotional_mental_health'}]
+
+
 def convert_to_sentence_case(phrase: str) -> str:
     """Prepare a phrase for display"""
     tokens = phrase.split(" ")
@@ -14,21 +26,21 @@ def convert_to_sentence_case(phrase: str) -> str:
 
 
 # get filename of json
-parser = argparse.ArgumentParser()
-parser.add_argument("filename", type=str)
-args = parser.parse_args()
-
+version = 'v4'
 # load json
-with open(args.filename, "r") as f:
-    data = json.load(f)
-
 unique_strings = set()
-fields_to_extract = ['TENSION_CATEGORY', 'SUBCATEGORY']
+fields_to_extract = ['CATEGORY', 'SUBCATEGORY']
 # for each record, extract CATEGORY, and SUBCATEGORY
-for record in data:
-    for field in fields_to_extract:
-        if record[field] is not None and record[field] != "":
-            unique_strings.add(record[field])
+
+for theme_rec in theme_recs:
+    filename_root = theme_rec['root']
+    src_file_json = f'./data/data_{filename_root}_{version}.json'
+    with open(src_file_json, "r") as f:
+        data = json.load(f)
+    for record in data:
+        for field in fields_to_extract:
+            if record[field] is not None and record[field] != "":
+                unique_strings.add(record[field])
 
 unique_strings = sorted(list(unique_strings))
 output_recs = {}
@@ -37,7 +49,7 @@ for s in unique_strings:
                       'zh-hans':'', 'zh-hant':'', 'status':'ap_review'}
 
 # output as prettified json
-output_filename = args.filename.replace(".json", "_chart_text.json")
+output_filename = "./chart_translations.json"
 with open(output_filename, "w") as f:
     json.dump(output_recs, f, indent=4)
 
