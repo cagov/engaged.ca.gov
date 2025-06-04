@@ -781,3 +781,7 @@ section#data-definitions li::marker {
     font-weight: 400;
     font-size: 18px;
 }
+
+.cagov-language-switcher {
+    padding-bottom: 0.5rem;
+}
