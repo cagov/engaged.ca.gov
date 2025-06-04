@@ -155,22 +155,26 @@ These are the columns in this dataset and their definitions.
 
 
 **Comment ID**
-  - A unique value to identify each comment.
+
+  A unique value to identify each comment.
 
 **Comment**
-  - The full text of a comment submitted by a participant. Comments have not been edited for clarity, content, or grammar.
+
+  The full text of a comment submitted by a participant. Comments have not been edited for clarity, content, or grammar.
 
 **Topic**
-  - This column lists the topic a commenter was responding to. There were 10 topics. 
-    1. Emergency communication
-    2. Debris removal and environmental recovery
-    3. Financial and legal assistance
-    4. Emotional and mental health support
-    5. Housing and rebuilding
-    6. Economic recovery and small business support
-    7. Infrastructure and utilities restoration
-    8. Wildfire prevention prioritization and accountability
-    9. Climate and community resilience
-    10. Evacuation and emergency coordination
+
+  This column lists the topic a commenter was responding to. There were 10 topics. 
+
+  1. Emergency communication
+  2. Debris removal and environmental recovery
+  3. Financial and legal assistance
+  4. Emotional and mental health support
+  5. Housing and rebuilding
+  6. Economic recovery and small business support
+  7. Infrastructure and utilities restoration
+  8. Wildfire prevention prioritization and accountability
+  9. Climate and community resilience
+  10. Evacuation and emergency coordination
 
 We also included comments that were not in response to a specific topic. We labeled those comments with “general comment.”

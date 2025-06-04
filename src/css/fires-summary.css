@@ -772,7 +772,7 @@ section#data-definitions strong {
     font-size: 18px;
 }
 
-section#data-definitions li {
+section#data-definitions li, section#data-definitions p {
     font-weight: 400;
     font-size: 18px;
 }
