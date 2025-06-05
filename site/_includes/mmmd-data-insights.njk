@@ -1,0 +1,259 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+<section id="plots-overview" class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="insights-back-button-container">
+        &lt; <a href="/lafires-recovery/agenda-setting-findings/" class="insights-back-button">
+          {{ modules.plots_overview.backButtonText }}
+        </a>
+        </div>
+        {{ modules.plots_overview.content | safe }}
+      </div>
+    </div>
+    <a href="#download-the-data" data-appearance="button" data-theme="orange">
+      {{ modules.plots_overview.buttonText }}
+    </a> 
+    <img class="data-insights-adornment" src="/public/images/data-insights-adornment-1.png" aria-hidden="true" alt="" />
+  </div>
+</section>
+
+<section id="plots-complexity">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        {{ modules.plots_complexity.content | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plots-interpretation">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        {{ modules.plots_interpretation.content | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="data-visualizations">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        {{ modules.data_visualizations_header.content | safe }}
+
+        <a href="#download-the-data" class="download-navigate-link">
+          {{ modules.data_visualizations_header.buttonText }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="quote-card" style="display: none;">
+  <div class="quote-card-content">
+  </div>
+</div>
+
+
+{% for i in range(1, modules.plots.nbr_charts+1) %}
+<section id="plot-{{ i }}" class="plot-section">
+  <div class="container" id="{{ modules.plots["id_" + i] }}">
+    <div class="row plot-row">
+      <div class="col-lg-12 responsive-svg-container">
+            <div class="plot-title">
+              {{ modules.plots["title_" + i] }}
+            </div>
+            <div class="plot-description">
+              {{ modules.plots["desc_" + i] }}
+            </div>
+            <div class="plot-notes">
+              {{ modules.plots.chart_boilerplate_notes }}
+            </div>
+            <div class="sr-only">{{ modules.plots.chart_generic_alt }}</div>
+            <div class="plot-plot">
+            {{ ('./src/public/images/' + modules.plots["id_" + i] + '.svg') | getFileContents | safe }}
+            </div>
+            <div class="plot-legend">
+              {{ ('./src/public/images/' + modules.plots["id_" + i] + '_en_legend.svg') | getFileContents | safe }}
+            </div>
+            <div class="insights-back-button-container">
+            &lt; <a href="/lafires-recovery/agenda-setting-findings/#findings-topics-people-rated" class="insights-back-button">
+              {{ modules.plots_overview.backButtonText }}
+            </a>
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+
+<section id="how-we-built">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        {# <div class="insights-back-button-container">
+        <a href="/lafires-recovery/agenda-setting-findings/" class="insights-back-button">
+          {{ modules.how_we_built.backButtonText }}
+        </a>
+        </div> #}
+        {{ modules.how_we_built.content | safe }}
+        <ol>
+          {% for i in range(1, modules.how_we_built.nbr_list_items+1) %}
+          <li>
+            <div class="how-we-built-list-item">{{ modules.how_we_built["list_item_" + i] }}</div>
+            <div class="how-we-built-list-content">{{ modules.how_we_built["list_content_" + i] }}</div>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download-the-data" class="action-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+
+        {{ modules.download_the_data_1.content | safe }}
+
+        <a href="/public/data/wildfire_agenda_setting_comments.csv" data-appearance="button" data-theme="orange">
+          {{ modules.download_the_data_1.buttonText }}
+        </a> 
+
+      </div>
+    </div>
+    <img class="download-the-data-adornment" src="/public/images/download-the-data-adornment.png" aria-hidden="true" alt="" />
+  </div>
+</section>
+
+<section id="data-definitions">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        {{ modules.data_definitions.content | safe }}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+quoteData = null;
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+function revealQuote(cid, evt) {
+  const mouseX = evt.clientX;
+  const mouseY = evt.clientY;
+  if (quoteData == null) {
+    console.log('No quote data found');
+    return;
+  }
+  const quote = quoteData.find(q => q.COMMENT_ID === cid);
+  if (quote) {
+    document.querySelector('.quote-card-content').innerHTML = quote.CONTENT;
+  } else {
+    console.log('No quote found for comment_id:', cid);
+  }
+
+  // This compensates for current zoom level to make the quote more readable if you are zoomed in or zoomed out
+  // which helps for mobile devices.
+  const desiredFontSize = 1;
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const actualZoom = (( window.outerWidth - 10 ) / window.innerWidth);
+
+   
+  // For Retina displays, we might want a slightly larger base size
+  console.log('Actual zoom:', actualZoom);
+   
+  // Adjust for browser zoom (higher zoom should make font smaller, so we can still read quote)
+  const quoteCard = document.querySelector('.quote-card');
+  quoteCard.style.fontSize = `${desiredFontSize / actualZoom}rem`;
+  // quoteCard.style.maxWidth = `${500 / actualZoom}px`;
+
+  const isPortrait = window.innerWidth < window.innerHeight;
+
+  if (isPortrait) {
+    // quote is beneath cursor and uses available window width
+    quoteCard.style.left = '20px';
+    quoteCard.style.top = (mouseY + 20/actualZoom) + 'px';
+    // set maxWidth to smaller of 500px or (window.innerWidth-20-mouseX)
+    quoteCard.style.maxWidth = (window.innerWidth-40) + 'px';
+  } else {
+    // quote is to the right of cursor
+    quoteCard.style.left = (mouseX + 20/actualZoom) + 'px';
+    quoteCard.style.top = (mouseY - 100/actualZoom) + 'px';
+    // set maxWidth to smaller of 500px or (window.innerWidth-20-mouseX)
+    quoteCard.style.maxWidth = Math.min(500, (window.innerWidth-20-mouseX)/actualZoom) + 'px';
+  }
+  
+  // Clear any previously set positioning styles that might interfere
+  quoteCard.style.right = 'auto';
+  quoteCard.style.bottom = 'auto';
+
+
+  document.querySelector('.quote-card').style.display = 'block';
+}
+
+function hideQuote() {
+  document.querySelector('.quote-card-content').innerHTML = '';
+  document.querySelector('.quote-card').style.display = 'none';
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetch("/public/data/engca_comment_scatterplot_source.json", {})
+    .then(response => response.json())
+    .then(data => {
+      // console.log("Data fetched:", data);
+      quoteData = data;
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+    });
+
+ 
+  let expandHandler = function(e) {
+    this.querySelector('.visible').setAttribute('r', '8'); // Increase radius on hover
+    this.style.cursor = 'pointer';
+    const comment_id = parseInt(this.getAttribute('data-cid'));
+    if (isNaN(comment_id)) {
+      console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
+    }
+    revealQuote(comment_id, e, false);
+  }
+
+  let shrinkHandler = function(e, autoHide=false) {
+    this.querySelector('.visible').setAttribute('r', '5'); // Decrease radius on hover
+    if (autoHide) {
+      hideQuote();
+    }
+  }
+
+  // Set up event handlers for datapoints in plots
+  const datapoints = document.querySelectorAll('.datapoint');
+  if (!isMobile) {
+    datapoints.forEach(datapoint => {
+      // Add hover effect
+      datapoint.addEventListener('mouseenter', expandHandler);
+    
+      datapoint.addEventListener('touchstart', expandHandler);
+    
+      datapoint.addEventListener('mouseleave', e => shrinkHandler.call(datapoint, e, true));
+    
+      datapoint.addEventListener('touchend', e => shrinkHandler.call(datapoint, e, true));
+    });
+  }
+});
+</script>
+
+{% endblock %}

@@ -7,6 +7,7 @@ import chalk from "chalk";
 import markdownIt from "markdown-it";
 import translations from './site/_data/i18n.js';  // Note: might need .js extension
 import { EleventyI18nPlugin } from "@11ty/eleventy";
+import { readFileSync } from 'fs';
 
 /**
  * Log an output from a build process in the 11ty style.
@@ -161,6 +162,9 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("langPathActive", (page, lang, locale) => {
+    if (page.fileSlug.includes('sitemap')) {
+      return false;
+    }
     if (lang === locale) {
       return false;
     }
@@ -230,6 +234,15 @@ export default async function (eleventyConfig) {
       }
     }
 	});
+  // Add filter to read file contents
+  eleventyConfig.addFilter('getFileContents', function(filePath) {
+    try {
+      return readFileSync(filePath, 'utf8');
+    } catch (err) {
+      console.error(`Error reading file ${filePath}:`, err);
+      return `<!-- Error reading SVG file: ${err.message} -->`;
+    }
+  });
 
   eleventyConfig.addGlobalData("layout", "layout");
 
@@ -240,6 +253,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src");
   eleventyConfig.addWatchTarget("./site");
+  eleventyConfig.addWatchTarget("./src/data/barchart.json");
 
   eleventyConfig.setLibrary("md", markdownEngine);
 

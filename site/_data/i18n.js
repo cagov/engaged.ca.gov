@@ -521,8 +521,8 @@ const translations = {
         "location": "Footer"
     },
     "notice-on-collections": {
-        "en": "Notice on Collections",
-        "fr": "Notice on Collections",
+        "en": "Notice on collections",
+        "fr": "Notice on collections",
         "es": "Aviso de cobranzas",
         "ko": "정보 수집 관련 고지",
         "vi": "Thông Báo về Hoạt Động Thu Thập",
