@@ -11,6 +11,30 @@
         "zh-hant": "附屬住宅單元考慮因素",
         "status": "ap_review"
     },
+    "Accountable utilities and buried lines": {
+        "en": "Accountable utilities and buried lines",
+        "es": "Servicios públicos responsables y líneas enterradas",
+        "fa": "تأسیسات مسئول و خطوط دفن شده",
+        "hy": "Պատասխանատու կոմունալ ծառայություններ և թաղված գծեր",
+        "ko": "책임 있는 유틸리티 및 매설된 전선",
+        "tl": "Mapagkakatiwalaang mga utility at mga nakabaong linya",
+        "vi": "Tiện ích có trách nhiệm và đường dây ngầm",
+        "zh-hans": "负责任的公用事业和埋地线路",
+        "zh-hant": "負責任的公用事業和埋地線路",
+        "status": "ap_review"
+    },
+    "Affordability, density, and fire-safe rebuilding": {
+        "en": "Affordability, density, and fire-safe rebuilding",
+        "es": "Asequibilidad, densidad y reconstrucción resistente al fuego",
+        "fa": "قابلیت پرداخت، تراکم و بازسازی مقاوم در برابر آتش",
+        "hy": "Մատչելիություն, խտություն և հրդեհակայուն վերակառուցում",
+        "ko": "가격 책정, 밀도 및 화재 안전 재건축",
+        "tl": "Abot-kayang presyo, density, at ligtas sa sunog na muling pagtatayo",
+        "vi": "Khả năng chi trả, mật độ và tái thiết an toàn cháy nổ",
+        "zh-hans": "可负担性、密度和防火重建",
+        "zh-hant": "可負擔性、密度和防火重建",
+        "status": "ap_review"
+    },
     "Altadena infrastructure": {
         "en": "Altadena infrastructure",
         "es": "Infraestructura de Altadena",
@@ -21,6 +45,18 @@
         "vi": "Cơ sở hạ tầng Altadena",
         "zh-hans": "阿尔塔迪纳基础设施",
         "zh-hant": "阿爾塔迪納基礎設施",
+        "status": "ap_review"
+    },
+    "Altadena-specific concerns": {
+        "en": "Altadena-specific concerns",
+        "es": "Preocupaciones específicas de Altadena",
+        "fa": "نگرانی‌های خاص آلتادنا",
+        "hy": "Ալտադենայի հատուկ մտահոգություններ",
+        "ko": "알타데나 특화 우려사항",
+        "tl": "Mga partikular na alalahanin sa Altadena",
+        "vi": "Mối quan tâm đặc thù của Altadena",
+        "zh-hans": "阿尔塔迪纳特定问题",
+        "zh-hant": "阿爾塔迪納特定問題",
         "status": "ap_review"
     },
     "Broadband access": {
@@ -35,16 +71,16 @@
         "zh-hant": "寬頻接入",
         "status": "ap_review"
     },
-    "Building code and zoning requirements": {
-        "en": "Building code and zoning requirements",
-        "es": "Código de construcción y requisitos de zonificación",
-        "fa": "کد ساختمان و الزامات منطقه‌بندی",
-        "hy": "Շինարարական կոդ և գոտիավորման պահանջներ",
-        "ko": "건축 규정 및 구역 지정 요구사항",
-        "tl": "Mga kinakailangan sa building code at zoning",
-        "vi": "Quy định xây dựng và yêu cầu phân vùng",
-        "zh-hans": "建筑规范和分区要求",
-        "zh-hant": "建築規範和分區要求",
+    "Building code and permitting reform": {
+        "en": "Building code and permitting reform",
+        "es": "",
+        "fa": "",
+        "hy": "",
+        "ko": "",
+        "tl": "",
+        "vi": "",
+        "zh-hans": "",
+        "zh-hant": "",
         "status": "ap_review"
     },
     "Climate & community resilience": {
@@ -59,13 +95,13 @@
         "zh-hant": "氣候和社區恢復力",
         "status": "ap_review"
     },
-    "Climate resilient infrastructure": {
-        "en": "Climate resilient infrastructure",
+    "Climate resilient infrastructure ": {
+        "en": "Climate resilient infrastructure ",
         "es": "Infraestructura resiliente al clima",
-        "fa": "زیرساخت مقاوم در برابر اقلیم",
+        "fa": "زیرساخت مقاوم در برابر تغییرات اقلیمی",
         "hy": "Կլիմայական դիմացկուն ենթակառուցվածք",
         "ko": "기후 회복력 인프라",
-        "tl": "Imprastraktura na lumalaban sa klima",
+        "tl": "Imprastraktura na matatag sa klima",
         "vi": "Cơ sở hạ tầng thích ứng với khí hậu",
         "zh-hans": "气候适应型基础设施",
         "zh-hant": "氣候適應型基礎設施",
@@ -83,28 +119,16 @@
         "zh-hant": "社區準備",
         "status": "ap_review"
     },
-    "Community resources": {
-        "en": "Community resources",
-        "es": "Recursos comunitarios",
-        "fa": "منابع جامعه",
-        "hy": "Համայնքային ռեսուրսներ",
-        "ko": "지역사회 자원",
-        "tl": "Mga mapagkukunan ng komunidad",
-        "vi": "Tài nguyên cộng đồng",
-        "zh-hans": "社区资源",
-        "zh-hant": "社區資源",
-        "status": "ap_review"
-    },
-    "Controlled burns and firebreaks": {
-        "en": "Controlled burns and firebreaks",
-        "es": "Quemas controladas y cortafuegos",
-        "fa": "سوزاندن کنترل شده و آتش‌بندها",
-        "hy": "Վերահսկվող այրվածքներ և հրդեհային արգելքներ",
-        "ko": "통제된 소각 및 방화선",
-        "tl": "Kontroladong pagsunog at mga firebreak",
-        "vi": "Đốt có kiểm soát và đường ngăn lửa",
-        "zh-hans": "受控燃烧和防火带",
-        "zh-hant": "受控燃燒和防火帶",
+    "Controlled burn management": {
+        "en": "Controlled burn management",
+        "es": "",
+        "fa": "",
+        "hy": "",
+        "ko": "",
+        "tl": "",
+        "vi": "",
+        "zh-hans": "",
+        "zh-hant": "",
         "status": "ap_review"
     },
     "Counseling access through healthcare": {
@@ -129,18 +153,6 @@
         "vi": "Dọn dẹp mảnh vỡ và phục hồi môi trường",
         "zh-hans": "废墟清理和环境恢复",
         "zh-hant": "廢墟清理和環境恢復",
-        "status": "ap_review"
-    },
-    "Debris removal concerns": {
-        "en": "Debris removal concerns",
-        "es": "Preocupaciones sobre la eliminación de escombros",
-        "fa": "نگرانی‌های مربوط به حذف آوار",
-        "hy": "Աղբի հեռացման մտահոգություններ",
-        "ko": "잔해 제거 관련 우려사항",
-        "tl": "Mga alalahanin sa pag-alis ng mga labi",
-        "vi": "Mối quan tâm về việc dọn dẹp mảnh vỡ",
-        "zh-hans": "废墟清理问题",
-        "zh-hant": "廢墟清理問題",
         "status": "ap_review"
     },
     "Economic recovery & small business support": {
@@ -239,18 +251,6 @@
         "zh-hant": "情感和心理健康支持",
         "status": "ap_review"
     },
-    "Employment opportunities": {
-        "en": "Employment opportunities",
-        "es": "Oportunidades de empleo",
-        "fa": "فرصت‌های شغلی",
-        "hy": "Աշխատանքի հնարավորություններ",
-        "ko": "고용 기회",
-        "tl": "Mga oportunidad sa trabaho",
-        "vi": "Cơ hội việc làm",
-        "zh-hans": "就业机会",
-        "zh-hant": "就業機會",
-        "status": "ap_review"
-    },
     "Evacuation planning": {
         "en": "Evacuation planning",
         "es": "Planificación de evacuación",
@@ -275,28 +275,16 @@
         "zh-hant": "財務和法律援助",
         "status": "ap_review"
     },
-    "Fire prevention and fire fighting resources": {
-        "en": "Fire prevention and fire fighting resources",
-        "es": "Prevención de incendios y recursos para combatirlos",
-        "fa": "پیشگیری از آتش‌سوزی و منابع اطفاء حریق",
-        "hy": "Հրդեհների կանխարգելում և մարման ռեսուրսներ",
-        "ko": "화재 예방 및 소방 자원",
-        "tl": "Pag-iwas sa sunog at mga mapagkukunan ng pagsugpo ng sunog",
-        "vi": "Phòng cháy và nguồn lực chữa cháy",
-        "zh-hans": "防火和消防资源",
-        "zh-hant": "防火和消防資源",
-        "status": "ap_review"
-    },
-    "Fire resilient rebuilding": {
-        "en": "Fire resilient rebuilding",
-        "es": "Reconstrucción resistente al fuego",
-        "fa": "بازسازی مقاوم در برابر آتش",
-        "hy": "Հրդեհակայուն վերակառուցում",
-        "ko": "화재 저항성 재건축",
-        "tl": "Pagsasaayos na lumalaban sa sunog",
-        "vi": "Tái thiết chống cháy",
-        "zh-hans": "防火重建",
-        "zh-hant": "防火重建",
+    "Financial relief navigation": {
+        "en": "Financial relief navigation",
+        "es": "Navegación de ayuda financiera",
+        "fa": "هدایت کمک‌های مالی",
+        "hy": "Ֆինանսական օգնության ուղղորդում",
+        "ko": "재정 지원 안내",
+        "tl": "Paggabay sa tulong pinansyal",
+        "vi": "Hướng dẫn hỗ trợ tài chính",
+        "zh-hans": "财务援助导航",
+        "zh-hant": "財務援助導航",
         "status": "ap_review"
     },
     "Fire resistant building and landscaping": {
@@ -311,16 +299,16 @@
         "zh-hant": "防火建築和景觀設計",
         "status": "ap_review"
     },
-    "Fire resistant building requirements": {
-        "en": "Fire resistant building requirements",
-        "es": "Requisitos de construcción resistente al fuego",
-        "fa": "نیازهای ساختمان مقاوم در برابر آتش",
-        "hy": "Հրդեհակայուն շինարարության պահանջներ",
-        "ko": "화재 저항성 건물 요구사항",
-        "tl": "Mga kinakailangan sa gusaling lumalaban sa sunog",
-        "vi": "Yêu cầu xây dựng chống cháy",
-        "zh-hans": "防火建筑要求",
-        "zh-hant": "防火建築要求",
+    "Fire-safe home enforcement": {
+        "en": "Fire-safe home enforcement",
+        "es": "",
+        "fa": "",
+        "hy": "",
+        "ko": "",
+        "tl": "",
+        "vi": "",
+        "zh-hans": "",
+        "zh-hant": "",
         "status": "ap_review"
     },
     "Fire-safe infrastructure management": {
@@ -345,6 +333,18 @@
         "vi": "Tư vấn khẩn cấp miễn phí",
         "zh-hans": "免费紧急咨询",
         "zh-hant": "免費緊急諮詢",
+        "status": "ap_review"
+    },
+    "Government fire prevention accountability": {
+        "en": "Government fire prevention accountability",
+        "es": "Rendición de cuentas gubernamental en prevención de incendios",
+        "fa": "پاسخگویی دولت در پیشگیری از آتش‌سوزی",
+        "hy": "Կառավարության հրդեհների կանխարգելման պատասխանատվություն",
+        "ko": "정부 화재 예방 책임",
+        "tl": "Pananagutan ng gobyerno sa pag-iwas sa sunog",
+        "vi": "Trách nhiệm phòng cháy của chính phủ",
+        "zh-hans": "政府防火问责制",
+        "zh-hant": "政府防火問責制",
         "status": "ap_review"
     },
     "Grant distribution oversight": {
@@ -381,18 +381,6 @@
         "vi": "Nhà ở và tái thiết",
         "zh-hans": "住房和重建",
         "zh-hant": "住房和重建",
-        "status": "ap_review"
-    },
-    "Importance of mental health support": {
-        "en": "Importance of mental health support",
-        "es": "Importancia del apoyo a la salud mental",
-        "fa": "اهمیت حمایت از سلامت روان",
-        "hy": "Հոգեկան առողջության աջակցության կարևորությունը",
-        "ko": "정신 건강 지원의 중요성",
-        "tl": "Kahalagahan ng suporta sa kalusugang pangkaisipan",
-        "vi": "Tầm quan trọng của hỗ trợ sức khỏe tâm thần",
-        "zh-hans": "心理健康支持的重要性",
-        "zh-hant": "心理健康支持的重要性",
         "status": "ap_review"
     },
     "Importance of supporting local businesses": {
@@ -443,16 +431,28 @@
         "zh-hant": "保險改革",
         "status": "ap_review"
     },
-    "Navigating insurance and financial resources": {
-        "en": "Navigating insurance and financial resources",
-        "es": "Navegación de seguros y recursos financieros",
-        "fa": "مدیریت بیمه و منابع مالی",
-        "hy": "Ապահովագրության և ֆինանսական ռեսուրսների կառավարում",
-        "ko": "보험 및 금융 자원 관리",
-        "tl": "Paglalakbay sa insurance at mga mapagkukunang pampinansyal",
-        "vi": "Quản lý bảo hiểm và nguồn lực tài chính",
-        "zh-hans": "保险和金融资源管理",
-        "zh-hant": "保險和金融資源管理",
+    "Mental health support": {
+        "en": "Mental health support",
+        "es": "Apoyo de salud mental",
+        "fa": "حمایت از سلامت روان",
+        "hy": "Հոգեկան առողջության աջակցություն",
+        "ko": "정신 건강 지원",
+        "tl": "Suporta sa kalusugang pangkaisipan",
+        "vi": "Hỗ trợ sức khỏe tâm thần",
+        "zh-hans": "心理健康支持",
+        "zh-hant": "心理健康支持",
+        "status": "ap_review"
+    },
+    "Next-gen wildfire readiness": {
+        "en": "Next-gen wildfire readiness",
+        "es": "Preparación de próxima generación para incendios forestales",
+        "fa": "آمادگی نسل بعدی برای آتش‌سوزی جنگل",
+        "hy": "Հաջորդ սերնդի անտառային հրդեհների պատրաստվածություն",
+        "ko": "차세대 산불 대비",
+        "tl": "Kahandaan sa sunog sa kagubatan ng susunod na henerasyon",
+        "vi": "Sẵn sàng cho cháy rừng thế hệ mới",
+        "zh-hans": "新一代野火防范准备",
+        "zh-hant": "新一代野火防範準備",
         "status": "ap_review"
     },
     "Other": {
@@ -477,6 +477,18 @@
         "vi": "Thông tin liên lạc sau tình trạng khẩn cấp",
         "zh-hans": "紧急情况后通信",
         "zh-hant": "緊急情況後通訊",
+        "status": "ap_review"
+    },
+    "Satisfied with debris removal": {
+        "en": "Satisfied with debris removal",
+        "es": "Satisfecho con la remoción de escombros",
+        "fa": "راضی از پاکسازی آوار",
+        "hy": "Բավարարված աղբի հեռացմամբ",
+        "ko": "파편 제거에 만족",
+        "tl": "Nasiyahan sa pag-alis ng mga dumi",
+        "vi": "Hài lòng với việc dọn dẹp mảnh vụn",
+        "zh-hans": "对碎片清理满意",
+        "zh-hant": "對碎片清理滿意",
         "status": "ap_review"
     },
     "Soil and other environmental testing": {
@@ -527,30 +539,6 @@
         "zh-hant": "地下電力線",
         "status": "ap_review"
     },
-    "Utility company accountability": {
-        "en": "Utility company accountability",
-        "es": "Responsabilidad de las empresas de servicios públicos",
-        "fa": "پاسخگویی شرکت‌های خدمات شهری",
-        "hy": "Կոմունալ ընկերությունների պատասխանատվություն",
-        "ko": "공공 시설 회사의 책임",
-        "tl": "Pananagutan ng mga kumpanya ng utility",
-        "vi": "Trách nhiệm của công ty tiện ích",
-        "zh-hans": "公用事业公司责任",
-        "zh-hant": "公用事業公司責任",
-        "status": "ap_review"
-    },
-    "Wildfire preparedness": {
-        "en": "Wildfire preparedness",
-        "es": "Preparación para incendios forestales",
-        "fa": "آمادگی در برابر آتش‌سوزی",
-        "hy": "Անտառային հրդեհների նկատմամբ պատրաստվածություն",
-        "ko": "산불 대비",
-        "tl": "Paghahanda sa wildfire",
-        "vi": "Chuẩn bị cho cháy rừng",
-        "zh-hans": "野火防范准备",
-        "zh-hant": "野火防範準備",
-        "status": "ap_review"
-    },
     "Wildfire prevention prioritization & accountability": {
         "en": "Wildfire prevention prioritization & accountability",
         "es": "Priorización y responsabilidad en la prevención de incendios forestales",
@@ -563,19 +551,7 @@
         "zh-hant": "野火預防優先事項和責任",
         "status": "ap_review"
     },
-    "Conversation themes": {
-        "en": "Conversation themes",
-        "es": "Temas de conversación",
-        "fa": "موضوعات گفت‌وگو",
-        "hy": "Բանալի թեմաներ",
-        "ko": "대화 주제",
-        "tl": "Mga tema ng pag-uusap",
-        "vi": "Chủ đề trò chuyện",
-        "zh-hans": "对话主题",
-        "zh-hant": "對話主題",
-        "status": "ap_review"
-    },
-    "Conversation themes": {
+    "Conversation groups": {
         "en": "Conversation groups",
         "es": "Grupos de conversación",
         "fa": "گروه‌های گفت‌وگو",
