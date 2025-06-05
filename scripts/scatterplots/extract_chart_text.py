@@ -30,6 +30,15 @@ version = 'v4'
 # load json
 unique_strings = set()
 fields_to_extract = ['CATEGORY', 'SUBCATEGORY']
+
+json_file_name = './chart_translations_v1.json'
+with open(json_file_name, "r") as f:
+    existing_data = json.load(f)
+# print(existing_data)
+
+for theme_rec in theme_recs:
+    filename_root = theme_rec['root']
+    src_file_json = f'./data/data_{filename_root}_{version}.json'
 # for each record, extract CATEGORY, and SUBCATEGORY
 
 for theme_rec in theme_recs:
@@ -45,11 +54,17 @@ for theme_rec in theme_recs:
 unique_strings = sorted(list(unique_strings))
 output_recs = {}
 for s in unique_strings:
-    output_recs[s] = {'en':convert_to_sentence_case(s), 'es':'', 'fa':'', 'hy':'', 'ko':'', 'tl':'', 'vi':'',
-                      'zh-hans':'', 'zh-hant':'', 'status':'ap_review'}
+    phrase = convert_to_sentence_case(s)
+    # if a version with matching english text already exists in the loaded data, use that
+    if s in existing_data:
+        print(f"found {s} in {json_file_name}")
+        output_recs[s] = existing_data[s]
+    else:
+        output_recs[s] = {'en':convert_to_sentence_case(s), 'es':'', 'fa':'', 'hy':'', 'ko':'', 'tl':'', 'vi':'',
+                          'zh-hans':'', 'zh-hant':'', 'status':'ap_review'}
 
 # output as prettified json
-output_filename = "./chart_translations.json"
-with open(output_filename, "w") as f:
-    json.dump(output_recs, f, indent=4)
+json_file_name = './chart_translations_v2.json'
+with open(json_file_name, "w") as f:
+    json.dump(output_recs, f, indent=4, ensure_ascii=False)
 
