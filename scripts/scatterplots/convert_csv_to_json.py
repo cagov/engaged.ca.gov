@@ -20,13 +20,12 @@ import pandas
 import argparse
 
 def csv_to_json(csv_file_path: str, json_file_path: str = None) -> None:
-    # Read CSV into pandas DataFrame
-    df = pandas.read_csv(csv_file_path)
+    # Read CSV into pandas DataFrame with UTF-8 encoding
+    df = pandas.read_csv(csv_file_path, encoding='utf-8')
     
-    # Convert to JSON with pretty formatting
-    # pandas.to_json doesn't support indentation, so we use json.dumps
+    # Convert to JSON with pretty formatting and UTF-8 encoding
     with open(json_file_path, 'w', encoding='utf-8') as f:
-        json_str = json.dumps(json.loads(df.to_json(orient="records")), indent=2)
+        json_str = json.dumps(json.loads(df.to_json(orient="records")), indent=2, ensure_ascii=False)
         f.write(json_str)
 
 if __name__ == "__main__":
