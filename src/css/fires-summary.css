@@ -485,8 +485,6 @@ div.findings-barchart-item-approval {
     line-height: 33.47px;
     letter-spacing: 0%;
     text-align: right;
-    font-variant-numeric-figure: lining-nums;
-    font-variant-numeric-spacing: proportional-nums;
     color: black;
     position:relative;
     top:12px;
