@@ -17,7 +17,7 @@
 
   <engca-form-field>
     <label class="form-control-label" for="mce-EMAIL">
-      <span class="required-label" aria-hidden="true">*</span>
+      <span aria-hidden="true">*</span>
       <span class="sr-only">{{ 'required-label' | i18n }}:</span>
       {% block formEmail %}
         {{ 'email-label' | i18n }}
@@ -38,33 +38,9 @@
 
   <engca-form-field>
     {% block formContent %}
-      <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
-
-      <ul class="form-checkbox-list">
-        <li>
-          {{ checkbox.data('topic-los-angeles-fires-recovery-eaton' | i18n, "1552878c1b") }}
-        </li>
-        <li>
-          {{ checkbox.data('topic-los-angeles-fires-recovery-palisades' | i18n, "40c0f946cd") }}
-        </li>
-        <li>
-          {{ checkbox.data('topic-future-topics' | i18n, "4d15bd19e5", "checked") }}
-        </li>
-      </ul>
 
     {% endblock formContent %}
 
-    <engca-form-error id="emailError" hidden>
-      <strong>{{ 'valid-email-message' | i18n }}</strong>
-      {{ 'valid-email-message-2' | i18n }}
-    </engca-form-error>
-    <engca-form-error id="requiredCheckboxError" hidden>
-      {{ 'required-checkbox-message' | i18n }}
-    </engca-form-error>
-    <engca-form-error id="apiError" hidden>
-      <strong>{{ 'form-problem-message' | i18n }}</strong>
-      {{ 'form-problem-message-2' | i18n }}
-    </engca-form-error>
   </engca-form-field>
 
   {{ submit.data('form-submit-button' | i18n) }}
