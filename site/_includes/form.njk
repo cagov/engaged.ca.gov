@@ -1,43 +1,50 @@
+{# Import macros. #}
+{% import "macros/form-checkbox.njk" as checkbox %}
+{% import "macros/form-action.njk" as action %}
+{% import "macros/form-submit.njk" as submit %}
+
+{# Begin HTML. #}
 <h2>{{ 'join-the-conversation' | i18n }}</h2>
-<p>{{ 'join-the-conversation-form-label' | i18n }}</p>
+{% block formHeading %}
+  <p>{{ 'join-the-conversation-form-label' | i18n }}</p>
+{% endblock formHeading %}
+
 <engca-join-convo-form>
-  
-  <form
-    action="https://innovation.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id=61200a6dda&amp;f_id=0003e1e3f0"
-    method="post"
-    id="mc-embedded-subscribe-form"
-    name="mc-embedded-subscribe-form"
-    target="_self"
-    novalidate>
 
-    <engca-form-field>
-      <label class="form-control-label" for="mce-EMAIL">
-        <span aria-hidden="true">*</span>
+  {% block formAction %}
+    {{ action.data("61200a6dda", "0003e1e3f0") }}
+  {% endblock formAction %}
+
+  <engca-form-field>
+    <label class="form-control-label" for="mce-EMAIL">
+      <span aria-hidden="true">*</span>
+      <span class="sr-only">{{ 'required-label' | i18n }}:</span>
+      {% block formEmail %}
         {{ 'email-label' | i18n }}
-      </label>
-      <input type="email" class="form-control" id="mce-EMAIL" name="EMAIL" aria-required="true">
-      <engca-form-error id="emailError" hidden>
-        <strong>{{ 'valid-email-message' | i18n }}</strong>
-        {{ 'valid-email-message-2' | i18n }}
-      </engca-form-error>
-      <engca-form-error id="apiError" hidden>
-        <strong>{{ 'form-problem-message' | i18n }}</strong>
-        {{ 'form-problem-message-2' | i18n }}
-      </engca-form-error>
-    </engca-form-field>
+      {% endblock formEmail %}
+    </label>
 
-    <engca-form-field>
-      <engca-form-error id="emailError" hidden>
-        <strong>{{ 'valid-email-message' | i18n }}</strong>
-        {{ 'valid-email-message-2' | i18n }}
-      </engca-form-error>
-      <engca-form-error id="apiError" hidden>
-        <strong>{{ 'form-problem-message' | i18n }}</strong>
-        {{ 'form-problem-message-2' | i18n }}
-      </engca-form-error>
-    </engca-form-field>
+    <input type="email" class="form-control" id="mce-EMAIL" name="EMAIL" aria-required="true">
 
-    <input type="submit" id="mc-embedded-subscribe" name="subscribe" data-theme="orange" value="{{ 'form-submit-button' | i18n }}">
+    <engca-form-error id="emailError" hidden>
+      <strong>{{ 'valid-email-message' | i18n }}</strong>
+      {{ 'valid-email-message-2' | i18n }}
+    </engca-form-error>
+    <engca-form-error id="apiError" hidden>
+      <strong>{{ 'form-problem-message' | i18n }}</strong>
+      {{ 'form-problem-message-2' | i18n }}
+    </engca-form-error>
+  </engca-form-field>
+
+  <engca-form-field>
+    {% block formContent %}
+
+    {% endblock formContent %}
+
+  </engca-form-field>
+
+  {{ submit.data('form-submit-button' | i18n) }}
+
   </form>
 
   <engca-form-success aria-live="polite"></engca-form-success>
