@@ -1,0 +1,17 @@
+{#
+mc_audienceId - (Integer or string) Mailchimp Audience ID
+mc_f_id - (Integer or string) value of `f_id` attribute on Mailchimp form
+#}
+
+{% macro data(mc_audienceId, mc_f_id) %}
+        <form
+            action="https://innovation.us2.list-manage.com/subscribe/post?u=c515d1563732573cbc10cd6e9&amp;id={{ mc_audienceId }}&amp;f_id={{ mc_f_id }}"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        target="_self"
+        novalidate
+        >
+        <input type="hidden" name="audienceId" value="{{ mc_audienceId }}" >
+
+{% endmacro %}
