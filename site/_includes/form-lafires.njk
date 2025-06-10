@@ -32,13 +32,13 @@
     <fieldset>
       <ul class="form-radio-list">
         <li>
-          {{ radio.merge_field_data('topic-los-angeles-fires-recovery-eaton' | i18n, "Eaton", "Yes, I was in the Eaton fire evacuation zone", "EVACZONE") }}
+          {{ radio.merge_field_data('topic-los-angeles-fires-recovery-evacuation-eaton' | i18n, "Eaton", "Yes, I was in the Eaton fire evacuation zone", "EVACZONE") }}
         </li>
         <li>
-          {{ radio.merge_field_data('topic-los-angeles-fires-recovery-palisades' | i18n, "Palisades", "Yes, I was in the Palisades fire evacuation zone", "EVACZONE" ) }}
+          {{ radio.merge_field_data('topic-los-angeles-fires-recovery-evacuation-palisades' | i18n, "Palisades", "Yes, I was in the Palisades fire evacuation zone", "EVACZONE" ) }}
         </li>
         <li>
-          {{ radio.interest_data('topic-future-topics' | i18n, "4d15bd19e5") }}
+          {{ radio.merge_field_data('topic-los-angeles-fires-recovery-no-evacuation' | i18n, "No", "No", "EVACZONE" ) }}
         </li>
       </ul>
     </fieldset>

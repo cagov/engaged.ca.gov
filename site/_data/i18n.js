@@ -287,8 +287,8 @@ const translations = {
         "location": "Home"
     },
     "topic-los-angeles-fires-recovery-palisades": {
-        "en": "Yes, I was in the Palisades fire evacuation zone",
-        "fr": "Yes, I was in the Palisades fire evacuation zone",
+        "en": "Los Angeles fires recovery: Palisades",
+        "fr": "Los Angeles fires recovery: Palisades",
         "es": "Recuperación de los incendios en Los Ángeles: Palisades",
         "ko": "로스앤젤레스 산불 피해 복구: 팰리세이드(Palisades)",
         "vi": "Phục hồi sau vụ cháy ở Los Angeles: Palisades",
@@ -300,8 +300,8 @@ const translations = {
         "location": "Home"
     },
     "topic-los-angeles-fires-recovery-eaton": {
-        "en": "Yes, I was in the Eaton fire evacuation zone",
-        "fr": "Yes, I was in the Eaton fire evacuation zone",
+        "en": "Los Angeles fires recovery: Eaton",
+        "fr": "Los Angeles fires recovery: Eaton",
         "es": "Recuperación de los incendios en Los Ángeles: Eaton",
         "ko": "로스앤젤레스 산불 피해 복구: 이튼(Eaton)",
         "vi": "Phục hồi sau vụ cháy ở Los Angeles: Eaton",
@@ -310,6 +310,45 @@ const translations = {
         "zh-hant":"洛杉磯火災恢復：伊頓 (Eaton)",
         "fa": "احیای پس از آتشسوزی لس آنجلس :ایتون",
         "hy": "Լոս Անջելեսի հրդեհներից վերականգնում. Eaton",
+        "location": "Home"
+    },
+    "topic-los-angeles-fires-recovery-evacuation-palisades": {
+        "en": "Yes, I was in the Palisades fire evacuation zone",
+        "fr": "Yes, I was in the Palisades fire evacuation zone",
+        "es": "Yes, I was in the Palisades fire evacuation zone",
+        "ko": "Yes, I was in the Palisades fire evacuation zone",
+        "vi": "Yes, I was in the Palisades fire evacuation zone",
+        "tl": "Yes, I was in the Palisades fire evacuation zone",
+        "zh-hans": "Yes, I was in the Palisades fire evacuation zone",
+        "zh-hant": "Yes, I was in the Palisades fire evacuation zone",
+        "fa": "Yes, I was in the Palisades fire evacuation zone",
+        "hy": "Yes, I was in the Palisades fire evacuation zone",
+        "location": "Home"
+    },
+    "topic-los-angeles-fires-recovery-evacuation-eaton": {
+        "en": "Yes, I was in the Eaton fire evacuation zone",
+        "fr": "Yes, I was in the Eaton fire evacuation zone",
+        "es": "Yes, I was in the Eaton fire evacuation zone",
+        "ko": "Yes, I was in the Eaton fire evacuation zone",
+        "vi": "Yes, I was in the Eaton fire evacuation zone",
+        "tl": "Yes, I was in the Eaton fire evacuation zone",
+        "zh-hans": "Yes, I was in the Eaton fire evacuation zone",
+        "zh-hant": "Yes, I was in the Eaton fire evacuation zone",
+        "fa": "Yes, I was in the Eaton fire evacuation zone",
+        "hy": "Yes, I was in the Eaton fire evacuation zone",
+        "location": "Home"
+    },
+    "topic-los-angeles-fires-recovery-no-evacuation": {
+        "en": "No",
+        "fr": "No",
+        "es": "No",
+        "ko": "No",
+        "vi": "No",
+        "tl": "No",
+        "zh-hans": "No",
+        "zh-hant": "No",
+        "fa": "No",
+        "hy": "No",
         "location": "Home"
     },
     "valid-email-message": {
