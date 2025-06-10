@@ -274,6 +274,19 @@ translations = {
         "hy": "Լոս Անջելեսի հրդեհներից վերականգնում.Palisades",
         "location": "Home"
     },
+    "topic-los-angeles-fires-recovery-evacuation-label": {
+        "en": "Did you live or work in an evacuation zone?",
+        "fr": "Did you live or work in an evacuation zone?",
+        "es": "Did you live or work in an evacuation zone?",
+        "ko": "Did you live or work in an evacuation zone?",
+        "vi": "Did you live or work in an evacuation zone?",
+        "tl": "Did you live or work in an evacuation zone?",
+        "zh-hans": "Did you live or work in an evacuation zone?",
+        "zh-hant": "Did you live or work in an evacuation zone?",
+        "fa": "Did you live or work in an evacuation zone?",
+        "hy": "Did you live or work in an evacuation zone?",
+        "location": "Home"
+    },
     "topic-los-angeles-fires-recovery-eaton": {
         "en": "Los Angeles fires recovery: Eaton",
         "fr": "Los Angeles fires recovery: Eaton",
