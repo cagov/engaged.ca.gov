@@ -208,6 +208,19 @@ const translations = {
         "hy": "Տրամադրեք մեզ Ձեր էլեկտրոնային հասցեն։ Մենք Ձեզ կտեղեկացնենք, թե երբ է սկսվելու ներգրավվածության գործընթացը։",
         "location": "Home"
     },
+    "join-the-conversation-form-prompt": {
+        "en": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "fr": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "es": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "ko": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "vi": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "tl": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "zh-hans": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "zh-hant": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "fa": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "hy": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "location": "Home"
+    },
     "back-to-top": {
         "en": "Back to top",
         "fr": "Haut de page",
@@ -274,8 +287,8 @@ const translations = {
         "location": "Home"
     },
     "topic-los-angeles-fires-recovery-palisades": {
-        "en": "Los Angeles fires recovery: Palisades",
-        "fr": "Los Angeles fires recovery: Palisades",
+        "en": "Yes, I was in the Palisades fire evacuation zone",
+        "fr": "Yes, I was in the Palisades fire evacuation zone",
         "es": "Recuperación de los incendios en Los Ángeles: Palisades",
         "ko": "로스앤젤레스 산불 피해 복구: 팰리세이드(Palisades)",
         "vi": "Phục hồi sau vụ cháy ở Los Angeles: Palisades",
@@ -287,8 +300,8 @@ const translations = {
         "location": "Home"
     },
     "topic-los-angeles-fires-recovery-eaton": {
-        "en": "Los Angeles fires recovery: Eaton",
-        "fr": "Los Angeles fires recovery: Eaton",
+        "en": "Yes, I was in the Eaton fire evacuation zone",
+        "fr": "Yes, I was in the Eaton fire evacuation zone",
         "es": "Recuperación de los incendios en Los Ángeles: Eaton",
         "ko": "로스앤젤레스 산불 피해 복구: 이튼(Eaton)",
         "vi": "Phục hồi sau vụ cháy ở Los Angeles: Eaton",
