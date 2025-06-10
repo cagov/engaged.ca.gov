@@ -1,0 +1,80 @@
+{# Import macros. #}
+{% import "macros/form-lafires-radio.njk" as radio %}
+{% import "macros/form-action.njk" as action %}
+{% import "macros/form-submit.njk" as submit %}
+
+{# Begin HTML. #}
+<h2>{{ 'join-the-conversation' | i18n }}</h2>
+{% block formHeading %}
+  <p>{{ 'join-the-conversation-form-label' | i18n }}</p>
+  <p>{{ 'join-the-conversation-form-prompt' | i18n }}</p>
+{% endblock formHeading %}
+
+<engca-join-convo-form>
+
+  {% block formAction %}
+    {{ action.data("61200a6dda", "0003e1e3f0") }}
+  {% endblock formAction %}
+
+  <engca-form-field>
+    <label class="form-control-label" for="mce-EMAIL">
+      <span aria-hidden="true">*</span>
+      <span class="sr-only">{{ 'required-label' | i18n }}:</span>
+      {% block formEmail %}
+        {{ 'email-label' | i18n }}
+      {% endblock formEmail %}
+    </label>
+
+    <p>
+      <input type="email" class="form-control" id="mce-EMAIL" name="EMAIL" aria-required="true">
+    </p>
+
+    <fieldset>
+      <ul class="form-radio-list">
+        <li>
+          {{ radio.merge_field_data('topic-los-angeles-fires-recovery-eaton' | i18n, "Eaton", "Yes, I was in the Eaton fire evacuation zone", "EVACZONE") }}
+        </li>
+        <li>
+          {{ radio.merge_field_data('topic-los-angeles-fires-recovery-palisades' | i18n, "Palisades", "Yes, I was in the Palisades fire evacuation zone", "EVACZONE" ) }}
+        </li>
+        <li>
+          {{ radio.interest_data('topic-future-topics' | i18n, "4d15bd19e5") }}
+        </li>
+      </ul>
+    </fieldset>
+
+    <engca-form-error id="emailError" hidden>
+      <strong>{{ 'valid-email-message' | i18n }}</strong>
+      {{ 'valid-email-message-2' | i18n }}
+    </engca-form-error>
+    <engca-form-error id="apiError" hidden>
+      <strong>{{ 'form-problem-message' | i18n }}</strong>
+      {{ 'form-problem-message-2' | i18n }}
+    </engca-form-error>
+  </engca-form-field>
+
+  <engca-form-field>
+    {% block formContent %}
+
+    {% endblock formContent %}
+
+  </engca-form-field>
+
+  {{ submit.data('form-submit-button' | i18n) }}
+
+  </form>
+
+  <engca-form-success aria-live="polite"></engca-form-success>
+  <template id="form-success-msg">
+    <p>
+      <strong>{{ 'form-success-message' | i18n }}</strong>
+    </p>
+    <img width="75" height="75" src="/public/images/check-circle.svg" aria-hidden="true" alt="" />
+    <p>{{ 'form-success-message-2' | i18n }}</p>
+  </template>
+</engca-join-convo-form>
+<p>
+  {{ 'form-privacy-message' | i18n | safe }} 
+  {{ 'form-privacy-message-1' | i18n | safe }}
+  {{ 'form-privacy-message-2' | i18n | safe }}
+</p>
