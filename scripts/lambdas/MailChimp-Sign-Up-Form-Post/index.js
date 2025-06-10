@@ -1,4 +1,4 @@
-// https://github.com/cagov/engaged.ca.gov/releases/tag/MailChimp-Sign-Up-Form-Post-004
+// https://github.com/cagov/engaged.ca.gov/releases/tag/MailChimp-Sign-Up-Form-Post-005
 // MailchimpForm v2.1
 // See engaged.ca.gov/site/_includes/macros/form-checkbox.njk for more documentation
 
@@ -12,20 +12,34 @@ export const handler = async (event) => {
     server: "us2",
   });
 
-  const data = JSON.parse(event.body);
 
+  const data = JSON.parse(event.body); // Production
+  // const data = event.body; // Test case
   const email = data.EMAIL;
-
-  // Get ids for interests - curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/<listId>/interest-categories' --header "Authorization: Bearer <TOKEN>"
-  // API for interests https://mailchimp.com/developer/marketing/api/interests/
   const subscriberHash = email;
+  const audienceId = data.audienceId;
+  const evaczone = data.EVACZONE !== undefined ? data.EVACZONE : "";
 
-  const listId = "61200a6dda"; // Also called Audience ID in Mailchimp.
+  const interests = {};
+  for (const [key, value] of Object.entries(data)) {
+    if (key.includes("interest-")) {
+      const interestId = key.replace("interest-", "");
+      interests[interestId] = true;
+    }
+    if (key.includes("lafires-radio-group")) {
+      const interestId = key.replace("lafires-radio-group-", "");
+      interests[interestId] = true;
+    }
+  }
 
   const response = await client.lists
-    .setListMember(listId, subscriberHash, {
+    .setListMember(audienceId, subscriberHash, {
       email_address: email,
       status_if_new: "subscribed",
+      interests: interests,
+      merge_fields: {
+        EVACZONE: evaczone,
+      }
     })
     .then((results) => {
       return {
