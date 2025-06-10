@@ -1,6 +1,7 @@
 // https://github.com/cagov/engaged.ca.gov/releases/tag/MailChimp-Sign-Up-Form-Post-005
-// MailchimpForm v2.1
-// See engaged.ca.gov/site/_includes/macros/form-checkbox.njk for more documentation
+// MailchimpForm v2.2
+// See 
+// * engaged.ca.gov/site/_includes/macros/form-radio.njk for more documentation
 
 import client from "@mailchimp/mailchimp_marketing";
 
