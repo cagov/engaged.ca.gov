@@ -208,6 +208,19 @@ const translations = {
         "hy": "Տրամադրեք մեզ Ձեր էլեկտրոնային հասցեն։ Մենք Ձեզ կտեղեկացնենք, թե երբ է սկսվելու ներգրավվածության գործընթացը։",
         "location": "Home"
     },
+    "join-the-conversation-form-prompt": {
+        "en": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "fr": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "es": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "ko": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "vi": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "tl": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "zh-hans": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "zh-hant": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "fa": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "hy": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "location": "Home"
+    },
     "back-to-top": {
         "en": "Back to top",
         "fr": "Haut de page",
@@ -273,6 +286,19 @@ const translations = {
         "hy": "Ապագա թեմաներ",
         "location": "Home"
     },
+    "topic-los-angeles-fires-recovery-evacuation-label": {
+        "en": "Did you live or work in an evacuation zone?",
+        "fr": "Did you live or work in an evacuation zone?",
+        "es": "Did you live or work in an evacuation zone?",
+        "ko": "Did you live or work in an evacuation zone?",
+        "vi": "Did you live or work in an evacuation zone?",
+        "tl": "Did you live or work in an evacuation zone?",
+        "zh-hans": "Did you live or work in an evacuation zone?",
+        "zh-hant": "Did you live or work in an evacuation zone?",
+        "fa": "Did you live or work in an evacuation zone?",
+        "hy": "Did you live or work in an evacuation zone?",
+        "location": "Home"
+    },
     "topic-los-angeles-fires-recovery-palisades": {
         "en": "Los Angeles fires recovery: Palisades",
         "fr": "Los Angeles fires recovery: Palisades",
@@ -297,6 +323,45 @@ const translations = {
         "zh-hant":"洛杉磯火災恢復：伊頓 (Eaton)",
         "fa": "احیای پس از آتشسوزی لس آنجلس :ایتون",
         "hy": "Լոս Անջելեսի հրդեհներից վերականգնում. Eaton",
+        "location": "Home"
+    },
+    "topic-los-angeles-fires-recovery-evacuation-palisades": {
+        "en": "Yes, I was in the Palisades fire evacuation zone",
+        "fr": "Yes, I was in the Palisades fire evacuation zone",
+        "es": "Yes, I was in the Palisades fire evacuation zone",
+        "ko": "Yes, I was in the Palisades fire evacuation zone",
+        "vi": "Yes, I was in the Palisades fire evacuation zone",
+        "tl": "Yes, I was in the Palisades fire evacuation zone",
+        "zh-hans": "Yes, I was in the Palisades fire evacuation zone",
+        "zh-hant": "Yes, I was in the Palisades fire evacuation zone",
+        "fa": "Yes, I was in the Palisades fire evacuation zone",
+        "hy": "Yes, I was in the Palisades fire evacuation zone",
+        "location": "Home"
+    },
+    "topic-los-angeles-fires-recovery-evacuation-eaton": {
+        "en": "Yes, I was in the Eaton fire evacuation zone",
+        "fr": "Yes, I was in the Eaton fire evacuation zone",
+        "es": "Yes, I was in the Eaton fire evacuation zone",
+        "ko": "Yes, I was in the Eaton fire evacuation zone",
+        "vi": "Yes, I was in the Eaton fire evacuation zone",
+        "tl": "Yes, I was in the Eaton fire evacuation zone",
+        "zh-hans": "Yes, I was in the Eaton fire evacuation zone",
+        "zh-hant": "Yes, I was in the Eaton fire evacuation zone",
+        "fa": "Yes, I was in the Eaton fire evacuation zone",
+        "hy": "Yes, I was in the Eaton fire evacuation zone",
+        "location": "Home"
+    },
+    "topic-los-angeles-fires-recovery-no-evacuation": {
+        "en": "No",
+        "fr": "No",
+        "es": "No",
+        "ko": "No",
+        "vi": "No",
+        "tl": "No",
+        "zh-hans": "No",
+        "zh-hant": "No",
+        "fa": "No",
+        "hy": "No",
         "location": "Home"
     },
     "valid-email-message": {

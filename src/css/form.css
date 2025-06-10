@@ -111,13 +111,37 @@ engca-form-success > p {
   border-radius: 0em;
 }
 
+.form-radio-input[type="radio"] {
+  border-radius: 0em;
+}
+
 .form-check-input {
   background-color: transparent;
   border-width: 2px;
   margin-right: 21px;
 }
 
+.form-radio-input {
+  background-color: transparent;
+  border-width: 2px;
+  margin: 0 8px;
+  padding: 0;
+  border: 0px;
+  width: 1rem;
+  height: 1rem;
+  margin: 12px 8px 0 8px;
+  padding: 0;
+}
+
 .form-checkbox-label {
+  color: var(--Dark-Palette-Off-White, #fff4eb);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39px; /* 216.667% */
+}
+
+.form-radio-label {
   color: var(--Dark-Palette-Off-White, #fff4eb);
   font-size: 18px;
   font-style: normal;
@@ -140,6 +164,19 @@ ul.form-checkbox-list li {
   list-style: none;
   padding: 0;
   display: flex;
+}
+
+ul.form-radio-list li {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul.form-radio-list {
+  margin: 0;
+  padding: 0;
 }
 
 .form-title {
