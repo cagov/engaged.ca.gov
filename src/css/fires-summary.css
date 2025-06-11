@@ -291,6 +291,10 @@ img.findings-icon {
     top: -40px;
     left: calc(50% - 40px);
 }
+img.findings-icon.png-icon {
+    width: 96px;
+}
+
 
 .findings-button-container {
     margin-top:1rem;

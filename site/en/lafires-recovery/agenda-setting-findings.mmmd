@@ -163,7 +163,7 @@ The key tensions revealed in the conversation include:
 
 ----
 id: findings_key_tension_build_back
-icon: hammer.svg
+icon: hammer_retina.png
 iconAlt: A hammer
 ----
 
@@ -171,7 +171,7 @@ Should we rebuild quickly, or rebuild in a way that ensures lasting resilience?
 
 ----
 id: findings_key_tension_public_private
-icon: crane.svg
+icon: crane_retina.png
 iconAlt: A crane
 ----
 
@@ -179,7 +179,7 @@ Should the public sector or private sector be responsible for utilities and infr
 
 ----
 id: findings_key_tension_individual_collective
-icon: fire-hydrant.svg
+icon: fire-hydrant_retina.png
 iconAlt: A fire hydrant
 ----
 
@@ -187,7 +187,7 @@ Should fire prevention be an individual or collective responsibility?
 
 ----
 id: findings_key_tension_residents_density
-icon: house.svg
+icon: house_retina.png
 iconAlt: A construction barrier
 ----
 
