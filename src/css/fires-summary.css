@@ -100,8 +100,10 @@ section#how-we-built li {
     position: absolute;
     right: 0;
     top: 0;
+    width: 247px;
     @media (max-width: 991px) {
-        width: 25%;
+        display: none;
+        width: 247px;
         right: -30px;
     }
 }
