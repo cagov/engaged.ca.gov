@@ -8,6 +8,7 @@ section#plots-overview {
     background: #FFF4EB;
     overflow-y: hidden;
     position: relative;
+    padding-block: 2.4rem;
 }
 section#plots-overview .container {
     position: relative;
