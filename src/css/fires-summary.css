@@ -498,6 +498,15 @@ div.findings-barchart-item-approval {
 div.insights-back-button-container {
     padding-bottom: 2rem;
 }
+img.insights-back-button-icon {
+    width: 8px;
+    margin-right: 0.5rem;
+    position: relative;
+    top: -2px;
+}
+a.insights-back-button {
+    color: #0D5D90
+}
 
 .quote-card {
     background-color: #f0f0f0;
