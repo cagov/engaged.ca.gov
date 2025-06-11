@@ -7,7 +7,9 @@ section {
 section#plots-overview {
     background: #FFF4EB;
     overflow-y: hidden;
+    overflow-x: hidden;
     position: relative;
+    padding-block: 2.4rem;
 }
 section#plots-overview .container {
     position: relative;
@@ -16,6 +18,7 @@ section#plots-overview .container {
 section#findings-overview {
     background: #1C2745;
     overflow-y: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -70,24 +73,26 @@ section#how-we-built li {
     position: absolute;
     right: 0;
     top: 0px;
+    width: 247px; 
     @media (width <= 991px) {
-            width: 169px; 
-            top: inherit;
-            bottom: -96px;
-            right: -29px;
-    }
+        width: 169px; 
+        top: inherit;
+        bottom: -105px;
+        right: -44px;
+}
 }
 
 .data-insights-adornment {
     position: absolute;
     /* inline-size: min(220px, 30vw); */
     right: 0;
-    top: 0px;
+    top: 10px;
+    width: 247px; 
     @media (width <= 991px) {
             width: 150px; 
             top: inherit;
-            bottom: -96px;
-            right: -29px;
+            bottom: -64px;
+            right: -40px;
     }
 }
 
@@ -95,8 +100,10 @@ section#how-we-built li {
     position: absolute;
     right: 0;
     top: 0;
+    width: 247px;
     @media (max-width: 991px) {
-        width: 25%;
+        display: none;
+        width: 247px;
         right: -30px;
     }
 }
@@ -132,7 +139,7 @@ section#discussing-tough-issues {
     background-color: #FFF4EB;
 }
 
-div.findings-quote {
+div.findings-quote, quote.findings-quote {
     font-weight: 500;
     font-style: italic;
     line-height: 39px;
@@ -151,7 +158,7 @@ div.findings-key-tensions-container {
     row-gap: 3rem;
     justify-content: space-between;
     padding-top: 2rem;
-    @media (max-width: 767px) {
+    @media (max-width: 1200px) {
         row-gap: inherit;
         padding-top: 0;
     }
@@ -201,7 +208,7 @@ div.findings-key-tension-heading p {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     padding-bottom: 1rem;
-    @media (min-width: 769px) {
+    @media (min-width: 1201px) {
         min-height: 11rem;
     }
 }
@@ -214,7 +221,7 @@ div.findings-key-tension-heading {
     text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
     div.findings-key-tension-block  {
         margin-bottom: 2rem;
         margin-top: 3rem;
@@ -291,6 +298,10 @@ img.findings-icon {
     top: -40px;
     left: calc(50% - 40px);
 }
+img.findings-icon.png-icon {
+    width: 96px;
+}
+
 
 .findings-button-container {
     margin-top:1rem;
@@ -493,6 +504,15 @@ div.findings-barchart-item-approval {
 
 div.insights-back-button-container {
     padding-bottom: 2rem;
+}
+img.insights-back-button-icon {
+    width: 8px;
+    margin-right: 0.5rem;
+    position: relative;
+    top: -2px;
+}
+a.insights-back-button {
+    color: #0D5D90
 }
 
 .quote-card {
