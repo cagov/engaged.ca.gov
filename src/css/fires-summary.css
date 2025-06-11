@@ -151,7 +151,7 @@ div.findings-key-tensions-container {
     row-gap: 3rem;
     justify-content: space-between;
     padding-top: 2rem;
-    @media (max-width: 767px) {
+    @media (max-width: 1200px) {
         row-gap: inherit;
         padding-top: 0;
     }
@@ -201,7 +201,7 @@ div.findings-key-tension-heading p {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     padding-bottom: 1rem;
-    @media (min-width: 769px) {
+    @media (min-width: 1201px) {
         min-height: 11rem;
     }
 }
@@ -214,7 +214,7 @@ div.findings-key-tension-heading {
     text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
     div.findings-key-tension-block  {
         margin-bottom: 2rem;
         margin-top: 3rem;
