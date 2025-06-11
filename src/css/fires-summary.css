@@ -132,7 +132,7 @@ section#discussing-tough-issues {
     background-color: #FFF4EB;
 }
 
-div.findings-quote {
+div.findings-quote, quote.findings-quote {
     font-weight: 500;
     font-style: italic;
     line-height: 39px;
