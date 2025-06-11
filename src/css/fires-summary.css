@@ -7,6 +7,7 @@ section {
 section#plots-overview {
     background: #FFF4EB;
     overflow-y: hidden;
+    overflow-x: hidden;
     position: relative;
     padding-block: 2.4rem;
 }
@@ -17,6 +18,7 @@ section#plots-overview .container {
 section#findings-overview {
     background: #1C2745;
     overflow-y: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -71,24 +73,26 @@ section#how-we-built li {
     position: absolute;
     right: 0;
     top: 0px;
+    width: 247px; 
     @media (width <= 991px) {
-            width: 169px; 
-            top: inherit;
-            bottom: -96px;
-            right: -29px;
-    }
+        width: 169px; 
+        top: inherit;
+        bottom: -105px;
+        right: -44px;
+}
 }
 
 .data-insights-adornment {
     position: absolute;
     /* inline-size: min(220px, 30vw); */
     right: 0;
-    top: 0px;
+    top: 10px;
+    width: 247px; 
     @media (width <= 991px) {
             width: 150px; 
             top: inherit;
-            bottom: -96px;
-            right: -29px;
+            bottom: -64px;
+            right: -40px;
     }
 }
 
