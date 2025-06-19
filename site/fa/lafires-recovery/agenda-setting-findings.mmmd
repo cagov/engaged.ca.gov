@@ -1,13 +1,13 @@
 ﻿---
-عنوان: مطرح کردن مسائل اصلی برای بازسازی لس‎‌آنجلس
-توضیحات: Engaged California یک پلتفرم آنلاین است که صدایی در دولت را برای کالیفرنیایی‎‌ها آسان‎‌تر می‎‌کند. اولین موضوع Engaged California بازیابی از آتش سوزی های لس آنجلس است.  این صفحه مهمترین مسائل مربوط به بازسازی لس‎‌آنجلس را نشان می‎‌دهد.
-طرح بندی: یافته های mmmd-lafires
-شناسه اصلی: lafires-recovery
-کلمات کلیدی:
+title: مطرح کردن مسائل اصلی برای بازسازی لس‎‌آنجلس
+description: Engaged California یک پلتفرم آنلاین است که صدایی در دولت را برای کالیفرنیایی‎‌ها آسان‎‌تر می‎‌کند. اولین موضوع Engaged California بازیابی از آتش سوزی های لس آنجلس است.  این صفحه مهمترین مسائل مربوط به بازسازی لس‎‌آنجلس را نشان می‎‌دهد.
+layout: mmmd-lafires-findings
+parentid: lafires-recovery
+keywords:
   - لس آنجلس
   - آتش‎‌سوزی‎‌ها
   - بازیابی
-برچسب ها:
+tags:
   - صفحات
 ---
 
@@ -22,7 +22,7 @@ id: findings_overview
 
 
 ----
-شناسه: findings_how_we_listened
+id: findings_how_we_listened
 ----
 
 ## کاری که ما انجام دادیم
@@ -35,7 +35,7 @@ id: findings_overview
 
 
 ----
-شناسه: findings_what_we_heard
+id: findings_what_we_heard
 ----
 
 ## آنچه شنیدیم
@@ -46,13 +46,13 @@ id: findings_overview
 
 
 ----
-شناسه: findings_topics_people_rated
+id: findings_topics_people_rated
 buttonText: نمایش بیشتر
 buttonTextClose: بستن
 ----
 
 ----
-شناسه: findings_bar_chart
+id: findings_bar_chart
 عنوان۱: بازیابی و پاکسازی محیط زیست
 عنوان۲: اولویت‎‌بندی و پاسخگویی در پیشگیری از آتش‎‌سوزی‎‌های جنگلی
 عنوان۳: تاب‎‌آوری اقلیمی و جامعه
@@ -66,14 +66,14 @@ buttonTextClose: بستن
 ----
 
 ----
-شناسه: findings_how_we_are_responding
+id: findings_how_we_are_responding
 more_button_text: نمایش بیشتر
 more_button_close_text: بستن
 ----
 
 
 ----
-شناسه: findings_how_we_are_responding
+id: findings_how_we_are_responding
 buttonText: نمایش بیشتر
 buttonTextClose: بستن
 old_id: findings_what_were_doing
@@ -89,8 +89,8 @@ old_id: findings_what_were_doing
 
 
 ----
-شناسه: findings_how_we_are_responding_list
-عنوان: فرصت‎‌هایی برای ایجاد برنامه‎‌های حمایتی جدید
+id: findings_how_we_are_responding_list
+title: فرصت‎‌هایی برای ایجاد برنامه‎‌های حمایتی جدید
 nbr_items: 9
 item_1_title: "حمایت از سلامت روان: ایجاد فضاهای مشترک منابع جمعی"
 item_1_text: ساکنان گفتند که پس از آتش‎‌سوزی به حمایت جمعی و مکان‎‌هایی برای تجمع نیاز داشتند. وجود این فضا به آنها کمک می‎‌کرد تا با آوارگی کنار بیایند.
@@ -117,7 +117,7 @@ item_9_text: ساکنان می‎‌خواهند با مصالح مقاوم در
 
 
 ----
-شناسه: findings_discussing_tough_issues
+id: findings_discussing_tough_issues
 old_id: findings_opportunity_areas
 old_title: زمینه‎‌های فرصت
 ----
@@ -139,7 +139,7 @@ old_title: زمینه‎‌های فرصت
 
 
 ----
-شناسه: findings_quote_1
+id: findings_quote_1
 ----
 
 «صاحبان خانه باید بتوانند از گاز طبیعی استفاده کنند.» این گفته از همه دستورالعمل‎‌های مربوط به برق قابل اعتمادتر و مقرون به صرفه‎‌تر است.
@@ -147,13 +147,13 @@ old_title: زمینه‎‌های فرصت
 
 
 ----
-شناسه: findings_quote_2
+id: findings_quote_2
 ----
 
 «تمام خانه‎‌ها باید بدون گاز ساخته شوند.» قرار است تا سال ۲۰۳۵ تمام لس‎‌آنجلس از برق بهره‎‌مند شود... پس چرا باید روی تعمیر زیرساخت‎‌های گازی سرمایه‎‌گذاری کنیم که به زودی منسوخ/بی‎‌استفاده خواهند شد؟
 
 ----
-شناسه: findings_key_tensions
+id: findings_key_tensions
 بیشتر بخوانید: درباره این شماره بیشتر بخوانید
 readMoreClose: بستن
 ----
@@ -162,7 +162,7 @@ readMoreClose: بستن
 
 
 ----
-شناسه: findings_key_tension_build_back
+id: findings_key_tension_build_back
 آیکون: hammer.svg
 iconAlt: یک چکش
 ----
@@ -170,7 +170,7 @@ iconAlt: یک چکش
 آیا باید به سرعت بازسازی کنیم، یا به گونه‎‌ای بازسازی کنیم که تابآوری بادوام را تضمین کند؟
 
 ----
-شناسه: findings_key_tension_public_private
+id: findings_key_tension_public_private
 آیکون: crane.svg
 iconAlt: یک جرثقیل
 ----
@@ -178,28 +178,28 @@ iconAlt: یک جرثقیل
 آیا بخش دولتی باید مسئول تأسیسات شهری و زیرساخت‎‌ها باشد یا بخش خصوصی؟
 
 ----
-شناسه: findings_key_tension_individual_collective
-آیکون: fire-hydrant.svg
+id: findings_key_tension_individual_collective
+icon: fire-hydrant.svg
 iconAlt: یک شیر آتش نشانی
 ----
 
 آیا پیشگیری از آتش‎‌سوزی باید یک مسئولیت فردی باشد یا جمعی؟
 
 ----
-شناسه: findings_key_tension_residents_density
-آیکون: house.svg
+id: findings_key_tension_residents_density
+icon: house.svg
 iconAlt: مانع ساختمانی
 ----
 
 آیا تلاش‎‌های بازیابی باید امکان ایجاد فضا برای سکونت ساکنان بیشتر در این منطقه را فراهم کند؟
 
 ----
-شناسه: findings_more_insights_button
+id: findings_more_insights_button
 buttonText: اطلاعات بیشتر در مورد داده‎‌ها را ببینید
 ----
 
 ----
-شناسه: findings_key_tension_block_1
+id: findings_key_tension_block_1
 header_1: برخی از ساکنان می‎‌خواهند قوانین کمتری باشد تا سرعت بازسازی بیشتر شود. 
 quote_1: «دیوانه‎‌وار به دنبال مقرراتی نباشید که هزینه‎‌های بازسازی را به میزان قابل توجهی افزایش می‎‌دهند.»
 header_2: برخی این موقعیت را فرصتی برای تغییر می‎‌دانند. 
@@ -209,7 +209,7 @@ quote_3: «ما باید سهم مالکان خانه‎‌ها را در این
 ----
 
 ----
-شناسه: findings_key_tension_block_2
+id: findings_key_tension_block_2
 header_1: برخی معتقدند که دولت باید مالک تأسیسات شهری باشد. 
 quote_1: «ما می‎‌توانیم در مورد بیمه مسکن کاملاً تجدیدنظر کنیم.» شاید بهتر باشد که توسط شرکت‎‌های خصوصی مدیریت نشود، بلکه توسط یک سازمان دولتی (به همین شکل) اداره شود.
 header_2: برخی دیگر، بخش خصوصی با مقررات بهتر را ترجیح می‎‌دهند.
@@ -220,7 +220,7 @@ quote_3: «ادیسون باید مسئول این امر باشد.» ساکنا
 
 
 ----
-شناسه: findings_key_tension_block_3
+id: findings_key_tension_block_3
 header_1: برخی افراد بر مسئولیت فردی تأکید دارند.
 quote_1: «بیشتر الزامات مربوط به فضای قابل دفاع، از قبل در قوانین شهرداری وجود داشته است.» نظرتان در مورد این موضوع چیست که واقعاً قوانین موجود را اجرا کنیم و افرادی را که اموالشان برای بقیه ما خطر آتش‎‌سوزی دارد، جریمه کنیم؟
 header_2: دیگران بر لزوم اقدام دولتی و جمعی تأکید دارند.
@@ -230,7 +230,7 @@ quote_2: «من قویاً به مسئولیت مشترک اعتقاد دارم.
 
 
 ----
-شناسه: findings_key_tension_block_4
+id: findings_key_tension_block_4
 header_1: برخی از ساکنان از ایده تراکم بیشتر در حین بازسازی جوامع حمایت می‎‌کنند.
 quote_1: «خانه‎‌های چندخانواری بیشتری بسازید، محدودیت‎‌های دوبلکس و تریپلکس را در منطقه‎‌بندی تک‎‌خانواری حذف کنید، بیشتر بسازید و در همه جا بسازید.»
 header_2: برخی دیگر نگران ایمنی هستند و مایلند تراکم را مانند قبل حفظ کنند.
@@ -239,12 +239,12 @@ quote_2: «تراکم مسکونی را به این منطقه اضافه نکن
 
 
 ----
-شناسه: findings_whats_next
+id: findings_whats_next
 buttonText: برای مطلع ماندن ثبت نام کنید
 ----
 
 ----
-شناسه: findings_how_we_did_the_analysis
+id: findings_how_we_did_the_analysis
 ----
 
 ## چگونه تحلیل را انجام دادیم

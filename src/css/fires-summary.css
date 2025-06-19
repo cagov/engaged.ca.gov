@@ -81,6 +81,9 @@ section#how-we-built li {
         right: -44px;
 }
 }
+[dir="rtl"] .findings-adornment {
+    display: none;
+}
 
 .data-insights-adornment {
     position: absolute;
