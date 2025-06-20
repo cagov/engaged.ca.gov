@@ -1,181 +1,181 @@
 ---
-title: 'Agenda setting for LA wildfires recovery: Exploring community feedback'
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
+title: 『洛杉磯野火災後恢復工作計畫：探索社區回饋』
+description: 作為線上平台的 Engaged California，能夠讓加州居民更便捷地在政府決策中表達意見。Engaged California 的首個主題是從洛杉磯野火中恢復。 本頁面展示了重建洛杉磯的主要問題。
 layout: mmmd-data-insights
 parentid: lafires-recovery
-keywords:
-  - Los Angeles
-  - fires
-  - recovery
-tags:
-  - pages
+keywords: 
+  - 洛杉磯
+  - 火災
+  - 恢復
+tags: 
+  - 頁面
 ---
 
 
 ----
 id: plots_overview
-buttonText: Download the full dataset
-backButtonText: Agenda setting findings
+buttonText: 下載完整資料集
+backButtonText: 議程設定結果
 ----
 
-# Agenda setting for LA wildfires recovery: Exploring community feedback
+# 洛杉磯野火災後恢復工作計畫：探索社區回饋
 
-The agenda setting phase of the Los Angeles wildfires recovery engagement is complete. During this phase, community members shared thousands of comments about what they need most for recovery and rebuilding. You can download the comments to see what people said. 
+洛杉磯野火災後恢復工作中的計畫階段已完成。在此階段，社區成員分享了數千條評論，表達他們最需要的恢復和重建內容。您可以下載這些評論，瞭解大家的想法。 
 
 ----
 id: plots_complexity
 ----
-## Breaking down the complexity
+## 拆解複雜的需求
 
-Residents responded with overwhelming volume and a wide range of views. We made data visualizations to simplify this complexity. They organize and show comments by topic and theme. This tool will help you explore what the community said and see patterns in the feedback.
+居民們提交了數量龐大、觀點多元的評論。我們製作了資料視覺化圖表，簡化了這些複雜資訊。這些圖表按話題和主題對評論進行了整理並展示。 這一工具將幫助您瞭解社區居民的意見並查看回饋模式。
 
-We designed the analysis and visuals below to help you:
+我們設計了以下分析和視覺化圖表來幫助您：
 
-* See the full range of community perspectives on recovery priorities
-* Understand how different viewpoints cluster around key issues
-* Explore the complexity of challenges facing fire-affected communities
-* Prepare for upcoming community discussions
+* 全面瞭解社區居民在恢復優先事項上的觀點
+* 理解不同觀點如何圍繞關鍵問題聚集
+* 探索受火災影響社區所面臨問題的複雜性
+* 為即將到來的社區討論做好準備
 
-Note: The info on this page does not offer final answers or solutions. Instead, it shows us the questions and tradeoffs we need to work through together. During the deliberation phase, we'll find the best way forward. Community members will work through these complex issues in a thoughtful manner. 
+注意：本頁面提供的資訊並非最終答案或解決方案。而是説明我們識別出需要共同探討的問題與權衡事項。在接下來的商議階段，我們將尋求最佳路徑。社區成員將以審慎的方式探討這些複雜問題。 
 
-We will invite California residents to help us with this. <a href="/lafires-recovery/#sign-up">Sign up to stay informed</a>.
+我們將邀請加州居民一同參與探討。 <a href=“/lafires-recovery/#sign-up”>點選此處註冊，獲取最新動態</a>。
 
 ----
 id: plots_interpretation
 ----
 
-## How to interpret these charts
+## 如何解讀這些圖表
 
-Each chart shows the comments made about one topic.
+每張圖展示一個主題下的評論。
 
-* Each dot represents an individual comment.
-* Dots are color-coded, with each color representing a group that came up in the comments.
-* We used AI to identify themes. The comments that were identified as similar appear closer together on the chart.
+* 每個圓點代表一條獨立評論。
+* 圓點用顏色編碼，每種顏色代表評論中的一個群組。
+* 我們使用 AI 來識別主題。相似評論在圖上顯示得更靠近。
 
 ----
 id: data_visualizations_header
-buttonText: Download the full dataset
+buttonText: 下載完整資料集
 ----
 
-## Data visualizations
+## 數據視覺化
 
 ----
 id: plots
-chart_boilerplate_notes: Each dot represents one comment made about this topic. Grouped comments have their own color.
-chart_generic_alt: A scatter plot that visualizes comments using dots. The comments are categorized into subcategories.
+chart_boilerplate_notes: 每個圓點代表一條與該主題相關的評論。相似評論以相同顏色顯示。
+chart_generic_alt: 使用圓點顯示評論的散點圖。評論分為以下子類別。
 nbr_charts: 10
 id_1: findings_environmental_recovery
-title_1: Environmental recovery and clean-up
-desc_1: The community's environmental concerns are valid and intricate. They include long-term land safety, environmental justice, and future fire-prevention measures.
+title_1: 環境恢復和清理
+desc_1: 社區成員關注的環境問題既合理又複雜。相關問題包括土地安全、環境正義與未來防火措施。
 
 id_2: findings_wildfire_prevention
-title_2: Wildfire prevention prioritization and accountability
-desc_2: The community wants accountability for fire prevention.
+title_2: 野火預防的優先排序和問責機制
+desc_2: 社區呼籲在防火方面建立問責制度。
 
 id_3: findings_climate_community_resilience
-title_3: Climate and community resilience
-desc_3: Residents want to be heard. They want to help shape long-term recovery and future resilience. Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+title_3: 氣候和社區復原力
+desc_3: 居民希望自己的聲音得到傾聽。它們希望參與制定長期恢復和增強未來復原力的策略。居民希望擁有安全、持久的基礎設施。當前的決策將決定恢復工作的長期安全性和復原力。 
 
 id_4: findings_infrastructure_restoration
-title_4: Infrastructure and utilities restoration
-desc_4: Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+title_4: 基礎設施和公用服務恢復
+desc_4: 居民希望擁有安全、持久的基礎設施。當前的決策將決定恢復工作的長期安全性和復原力。 
 
 id_5: findings_emergency_planning_safety
-title_5: Emergency planning and community safety
-desc_5: Ensuring fast, safe evacuation and disaster communication is crucial for wildfire-prone communities. Community members view transparency and accessibility as key concerns.
+title_5: 應急預案和社區安全
+desc_5: 對於易受野火影響的社區而言，確保快速、安全的疏散與災害通信至關重要。居民的關注重點是透明與可及性。
 
 
 id_6: findings_housing_rebuilding
-title_6: Housing and rebuilding
-desc_6: Rebuilding quickly is important. But without policies that focus on equity, some residents may face permanent displacement.
+title_6: 住房和重建
+desc_6: 快速重建很重要。但如果缺乏公平政策，部分居民可能會被永久遷離。
  
 
 id_7: findings_financial_legal_assistance
-title_7: Financial and legal assistance
-desc_7: Survivors often find it hard to navigate aid systems. They need legal protections and financial assistance to rebuild.
+title_7: 財務和法律援助
+desc_7: 倖存者在求助於援助系統時常常感到困難。他們需要法律保護和財政支援來重建家園。
 
 
 id_8: findings_emergency_communication
-title_8: Emergency communication
-desc_8: Effective communication in an emergency is vital. How can officials share important updates and connect with residents at key moments?
+title_8: 緊急通信
+desc_8: 在緊急情況下，有效的溝通至關重要。官員應如何在關鍵時刻傳達資訊、與居民保持聯絡？
 
 
 id_9: findings_economic_recovery
-title_9: Economic recovery and small business support
-desc_9: Many small businesses closed after the fire, and workers lost jobs. Residents want to know how economic recovery can be equitable and forward-thinking.
+title_9: 經濟恢復和小企業支援
+desc_9: 火災後，許多小企業倒閉，並造成工人失業。居民希望瞭解如何實現公平且具前瞻性的經濟恢復。
 
 
 id_10: findings_emotional_mental_health
-title_10: Emotional and mental health support
-desc_10: Wildfire survivors, especially those cleaning up debris, face long-term health risks. They need easy access to mental health care.
+title_10: 情感和心理健康上的支持
+desc_10: 野火倖存者，尤其是清理廢棄物的人，面臨長期健康風險。他們需要方便地獲得心理健康服務。
 ----
 
 ----
 id: how_we_built
-backButtonText: Read about agenda setting and LA wildfires recovery
+backButtonText: 閱讀有關工作計畫和洛杉磯野火災後恢復情況
 nbr_list_items: 4
 
-list_item_1: Process and restructure the data
-list_content_1: We did this for all the comments within a topic. We turned each comment into numerical data, or semantic embeddings. These embeddings show the meaning of the comments in a way that computers can understand and use. We did this using Snowflake Cortex Embed Text 1024.
+list_item_1: 處理和重組資料
+list_content_1: 我們對主題中的所有評論都進行了處理。我們將每條評論轉換為數值資料或進行語義嵌入。這種處理方式便於電腦解析並使用資料。我們使用 Snowflake Cortex Embed Text 1024 進行處理。
  
-list_item_2: Find conversation groups
-list_content_2: We used the BERTopic framework to group comments within each topic area by similarities. This helped us sort them into different categories based on common themes.  We then used UMAP to reduce the dimensionality of the comments. This tool made complex data simpler to visualize. We used density-based clustering with HDBSCAN and then tuned the algorithm settings for each opportunity area.
+list_item_2: 識別會話群組
+list_content_2: 我們使用 BERTopic 框架對每個主題中的評論按相似性分組。這有助於我們根據主題將評論分為不同的類別。 然後，我們使用 UMAP 對評論進行降維處理。該工具使複雜資料更易於視覺化。我們使用 HDBSCAN 聚類，並針對每個主題區域微調演算法參數。
 
-list_item_3: Label the conversation groups
-list_content_3: We grouped the comments by topic, then used the 'Claude 3.5 Sonnet' model to create the initial label for each group. Our team of data analysts then reviewed and edited these labels for clarity. Each label is a short phrase that reflects the main idea or topic that the comments have in common. 
+list_item_3: 為會話群組添加標籤 
+list_content_3: 我們按主題對評論進行分組，然後使用 ‘Claude 3.5 Sonnet’ 模型為每個群組生成初始標籤。然後，我們的資料分析團隊審核並修改標籤，使標籤更清晰。每個標籤都是一個簡短的短語，反映評論的共同主要觀點或主題。 
 
-list_item_4: Plot the comments
-list_content_4: We used a topic-supervised UMAP. We tuned it for each topic.This allowed us to turn all the numerical data into two simple coordinates that we could plot on a 2D chart. The comments are color-coded by conversation group. This makes it easy to see patterns and connections.
+list_item_4: 繪圖展示
+list_content_4: 我們使用主題監督的 UMAP。我們針對每個主題對其進行了調整。這個步驟讓我們將所有數值資料轉換為兩個簡單的座標，並可以在 2D 圖表上繪製。評論按會話群組進行顏色編碼。這便於識別模式和關聯。
 ----
 
-### How we built these charts
+### 我們如何構建這些圖表
 
-Below is a step-by-step explanation of the methodology for these charts. 
+以下是構建這些圖表方法的分步說明。 
 
 
 ----
 id: download_the_data_1
-buttonText: Download the full dataset
+buttonText: 下載完整的資料集
 ----
 
-## Download the data
+## 下載數據
 
-The comments dataset does not contain personally identifying information. We have not edited or modified the comments in any way. 
+評論資料集不包含個人身分資訊。我們沒有以任何方式編輯或修改評論。 
 
 ----
 id: data_definitions
 buttonText:
 ----
-### Data definitions
+### 資料定義
 
-These are the columns in this dataset and their definitions.
+這些是此資料集中的列及其定義。
 
 
-**Comment ID**
+**評論 ID**
 
-  A unique value to identify each comment.
+  用於標識每條評論的唯一值。
 
-**Comment**
+**評論**
 
-  The full text of a comment submitted by a participant. Comments have not been edited for clarity, content, grammar, or for any other reason.
+  參與者提交的評論全文。評論均未因清晰度、內容、語法或其他任何原因受到編輯。
 
-**Topic**
+**主題**
 
-  This column lists the topic a commenter was responding to. There were 10 topics. 
+  此列載明了評論者所回應的主題。共有 10 個主題。 
 
-  1. Emergency communication
-  2. Debris removal and environmental recovery
-  3. Financial and legal assistance
-  4. Emotional and mental health support
-  5. Housing and rebuilding
-  6. Economic recovery and small business support
-  7. Infrastructure and utilities restoration
-  8. Wildfire prevention prioritization and accountability
-  9. Climate and community resilience
-  10. Evacuation and emergency coordination
+  1. 緊急通信
+  2. 廢棄物清理和環境恢復
+  3. 財務和法律援助
+  4. 情緒和心理健康支持
+  5. 住房和重建
+  6. 經濟恢復和小企業支援
+  7. 基礎設施和公用服務恢復
+  8. 野火預防的優先排序和問責機制
+  9. 氣候和社區復原力
+  10. 疏散和應急協調
 
-We also included comments that were not in response to a specific topic. We labeled those comments with “general comment.”
+我們也納入了非針對特定主題的評論。我們用「一般評論」標注這些評論。
 
-**Conversation group**
+**會話群組**
 
-The conversation group a comment aligns to. 
+評論對應的會話群組。 

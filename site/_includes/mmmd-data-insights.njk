@@ -80,7 +80,7 @@
             {{ ('./src/public/images/' + modules.plots["id_" + i] + '.svg') | getFileContents | safe }}
             </div>
             <div class="plot-legend">
-              {{ ('./src/public/images/' + modules.plots["id_" + i] + '_en_legend.svg') | getFileContents | safe }}
+              {{ ('./src/public/images/' + modules.plots["id_" + i] + '_' + lang + '_legend.svg') | getFileContents | safe }}
             </div>
             <div class="insights-back-button-container">
             <img src="/public/images/back_bracket_blue.png" class="insights-back-button-icon" /><a href="/lafires-recovery/agenda-setting-findings/#findings-topics-people-rated" class="insights-back-button">

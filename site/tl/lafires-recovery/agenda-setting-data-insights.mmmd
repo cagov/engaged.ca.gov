@@ -1,181 +1,181 @@
 ---
-title: 'Agenda setting for LA wildfires recovery: Exploring community feedback'
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
+title: 'Pagtatakda ng agenda para sa pagbangon mula sa mga wildfire sa LA: Pagtuklas sa feedback ng komunidad'
+description: Ang Engaged California ay isang online na platform na nagpapadali para sa mga taga-California na magkaroon ng boses sa gobyerno. Ang unang paksa ng Engaged California ay ang pagbangon mula sa mga wildfire sa Los Angeles.  Sa page na ito, ipinapakita ang mga pangunahing isyu para sa muling pagtatayo sa Los Angeles (LA).
 layout: mmmd-data-insights
 parentid: lafires-recovery
 keywords:
   - Los Angeles
-  - fires
-  - recovery
+  - sunog
+  - pagbangon
 tags:
-  - pages
+  - mga page
 ---
 
 
 ----
 id: plots_overview
-buttonText: Download the full dataset
-backButtonText: Agenda setting findings
+buttonText: I-download ang buong dataset
+backButtonText: Mga napag-alaman sa pagtatakda ng agenda
 ----
 
-# Agenda setting for LA wildfires recovery: Exploring community feedback
+# Pagtatakda ng agenda para sa pagbangon mula sa mga wildfire sa LA: Pagtuklas sa feedback ng komunidad
 
-The agenda setting phase of the Los Angeles wildfires recovery engagement is complete. During this phase, community members shared thousands of comments about what they need most for recovery and rebuilding. You can download the comments to see what people said. 
+Tapos na ang yugto ng pagtatakda ng agenda ng engagement sa pagbangon mula sa mga wildfire sa Los Angeles. Sa yugtong ito, ang mga miyembro ng komunidad ay nagbahagi ng libo-libong komento tungkol sa pinakakailangan nila para sa pagbangon at muling pagtatayo. Puwede mong i-download ang mga komento para makita ang sinabi ng mga tao. 
 
 ----
 id: plots_complexity
 ----
-## Breaking down the complexity
+## Pagbibigay-linaw sa kumplikadong bagay
 
-Residents responded with overwhelming volume and a wide range of views. We made data visualizations to simplify this complexity. They organize and show comments by topic and theme. This tool will help you explore what the community said and see patterns in the feedback.
+Napakarami ang naging sagot ng mga residente at mayroon silang iba't ibang pananaw. Gumawa kami ng mga data vizualization para mapadali ang kumplikadong bagay na ito. Sa mga ito, nakasaayos at ipinapakita ang mga komento ayon sa paksa at tema. Makakatulong sa iyo ang tool na ito na tuklasin ang sinabi ng komunidad at makakita ng mga pattern sa feedback.
 
-We designed the analysis and visuals below to help you:
+Idinisenyo namin ang pagsusuri at mga visual sa ibaba para matulungan ka na:
 
-* See the full range of community perspectives on recovery priorities
-* Understand how different viewpoints cluster around key issues
-* Explore the complexity of challenges facing fire-affected communities
-* Prepare for upcoming community discussions
+* Makita ang lahat ng perspektibo ng komunidad tungkol sa mga priyoridad sa pagbangon
+* Maunawaan kung paano nagsasama-sama sa mga pangunahing isyu ang iba't ibang pananaw
+* Malaman ang hirap ng mga pagsubok na nararanasan ng mga komunidad na apektado ng sunog
+* Makapaghanda para sa mga paparating na talakayan sa komunidad
 
-Note: The info on this page does not offer final answers or solutions. Instead, it shows us the questions and tradeoffs we need to work through together. During the deliberation phase, we'll find the best way forward. Community members will work through these complex issues in a thoughtful manner. 
+Tandaan: Ang impormasyong nasa page na ito ay hindi nagbibigay ng mga pinal na sagot o solusyon. Sa halip, ipinapakita rito ang mga tanong at kapalit na kailangan nating maunawaan nang sama-sama. Sa yugto ng deliberasyon, hahanapin namin ang pinakamainam na paraan para umusad. Uunawain ng mga miyembro ng komunidad ang mga kumplikadong isyu na ito nang may konsiderasyon. 
 
-We will invite California residents to help us with this. <a href="/lafires-recovery/#sign-up">Sign up to stay informed</a>.
+Iimbitahan namin ang mga residente ng California para matulungan kami rito. <a href="/lafires-recovery/#sign-up">Mag-sign up para manatiling may alam</a>.
 
 ----
 id: plots_interpretation
 ----
 
-## How to interpret these charts
+## Paano bibigyang-kahulugan ang mga chart na ito
 
-Each chart shows the comments made about one topic.
+Sa bawat chart, ipinapakita ang mga komentong ginawa tungkol sa isang paksa.
 
-* Each dot represents an individual comment.
-* Dots are color-coded, with each color representing a group that came up in the comments.
-* We used AI to identify themes. The comments that were identified as similar appear closer together on the chart.
+* Ang bawat tuldok ay kumakatawan sa isang komento.
+* Ang mga tuldok ay color-coded, kung saan ang bawat kulay ay kumakatawan sa isang grupo na lumabas sa mga komento.
+* Gumamit kami ng AI para tukuyin ang mga tema. Ang mga komento na natukoy bilang magkatulad ay lumalabas nang mas malapit sa bawat isa sa chart.
 
 ----
 id: data_visualizations_header
-buttonText: Download the full dataset
+buttonText: I-download ang buong dataset
 ----
 
-## Data visualizations
+## Mga data visualization
 
 ----
 id: plots
-chart_boilerplate_notes: Each dot represents one comment made about this topic. Grouped comments have their own color.
-chart_generic_alt: A scatter plot that visualizes comments using dots. The comments are categorized into subcategories.
+chart_boilerplate_notes: Ang bawat tuldok ay kumakatawan sa isang komento na ginawa tungkol sa paksang ito. May sariling kulay ang mga nakagrupong komento.
+chart_generic_alt: Isang scatter plot na nagvi-visualize sa mga komento gamit ang mga tuldok. Ang mga komento ay nakakategorya sa mga subcategory.
 nbr_charts: 10
 id_1: findings_environmental_recovery
-title_1: Environmental recovery and clean-up
-desc_1: The community's environmental concerns are valid and intricate. They include long-term land safety, environmental justice, and future fire-prevention measures.
+title_1: Pagbangon at paglilinis ng kapaligiran
+desc_1: Ang mga alalahanin ng komunidad na nauugnay sa kapaligiran ay makatuwiran at kumplikado. Kabilang sa mga ito ang pangmatagalang kaligtasan sa lupa, pangkapaligirang katarungan, at mga hinaharap na panuntunan para sa pag-iwas sa sunog.
 
 id_2: findings_wildfire_prevention
-title_2: Wildfire prevention prioritization and accountability
-desc_2: The community wants accountability for fire prevention.
+title_2: Pagbibigay-priyoridad at pananagutan sa pag-iwas sa wildfire
+desc_2: Ang komunidad ay naghahangad ng pananagutan para sa pag-iwas sa sunog.
 
 id_3: findings_climate_community_resilience
-title_3: Climate and community resilience
-desc_3: Residents want to be heard. They want to help shape long-term recovery and future resilience. Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+title_3: Klima at katatagan ng komunidad
+desc_3: Gusto ng mga residente na mapakinggan. Gusto nilang hubugin ang pangmatagalang pagbangon at katatagan sa hinaharap. Ang mga residente ay naghahangad ng ligtas at matibay na imprastraktura. Ang mga desisyong gagawin ngayon ay tutukoy sa pangmatagalang kaligtasan at katatagan para sa pagbangon. 
 
 id_4: findings_infrastructure_restoration
-title_4: Infrastructure and utilities restoration
-desc_4: Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+title_4: Pagpapanumbalik ng imprastraktura at mga utility
+desc_4: Ang mga residente ay naghahangad ng ligtas at matibay na imprastraktura. Ang mga desisyong gagawin ngayon ay tutukoy sa pangmatagalang kaligtasan at katatagan para sa pagbangon. 
 
 id_5: findings_emergency_planning_safety
-title_5: Emergency planning and community safety
-desc_5: Ensuring fast, safe evacuation and disaster communication is crucial for wildfire-prone communities. Community members view transparency and accessibility as key concerns.
+title_5: Pagpaplano para sa emergency at kaligtasan ng komunidad
+desc_5: Ang pagtiyak sa mabilis at ligtas na paglikas at pakikipag-ugnayan sa panahon ng sakuna ay napakahalaga para sa mga komunidad na madaling magkaroon ng wildfire. Nakikita ng mga miyembro ng komunidad ang transparency at accessibility bilang mga pangunahing alalahanin.
 
 
 id_6: findings_housing_rebuilding
-title_6: Housing and rebuilding
-desc_6: Rebuilding quickly is important. But without policies that focus on equity, some residents may face permanent displacement.
+title_6: Pabahay at muling pagtatayo
+desc_6: Mahalaga ang mabilis na muling pagtatayo. Gayunpaman, kung walang mga patakaran na nakatuon sa katarungan, may ilang residente na posible na permanenteng mawalan ng tirahan.
  
 
 id_7: findings_financial_legal_assistance
-title_7: Financial and legal assistance
-desc_7: Survivors often find it hard to navigate aid systems. They need legal protections and financial assistance to rebuild.
+title_7: Pinansyal at legal na tulong
+desc_7: Kadalasan, nahihirapan ang mga nakaligtas na gamitin ang mga sistema ng tulong. Nangangailangan sila ng mga legal na proteksyon at pinansyal na tulong para muling magtayo.
 
 
 id_8: findings_emergency_communication
-title_8: Emergency communication
-desc_8: Effective communication in an emergency is vital. How can officials share important updates and connect with residents at key moments?
+title_8: Pakikipag-ugnayan sa panahon ng emergency
+desc_8: Mahalaga ang epektibong pakikipag-ugnayan sa panahon ng emergency. Paano magagawa ng mga opisyal na magbahagi ng mahahalagang update at kumonekta sa mga residente sa mga kritikal na sandali?
 
 
 id_9: findings_economic_recovery
-title_9: Economic recovery and small business support
-desc_9: Many small businesses closed after the fire, and workers lost jobs. Residents want to know how economic recovery can be equitable and forward-thinking.
+title_9: Pagbangon ng ekonomiya at suporta sa maliit na negosyo
+desc_9: Maraming maliit na negosyo na nagsara pagkatapos ng sunog, at nawalan ng mga trabaho ang mga manggagawa. Gustong malaman ng mga residente kung paano magiging makatarungan at progresibo ang pagbangon ng ekonomiya.
 
 
 id_10: findings_emotional_mental_health
-title_10: Emotional and mental health support
-desc_10: Wildfire survivors, especially those cleaning up debris, face long-term health risks. They need easy access to mental health care.
+title_10: Suporta sa kalusugan ng emosyon at pag-iisip
+desc_10: Ang mga nakaligtas sa wildfire, lalo na ang mga naglilinis ng kalat, ay nahaharap sa mga pangmatagalang panganib sa kalusugan. Nangangailangan sila ng madaling access sa pangangalaga sa kalusugan ng pag-iisip.
 ----
 
 ----
 id: how_we_built
-backButtonText: Read about agenda setting and LA wildfires recovery
+backButtonText: Magbasa tungkol sa pagtatakda ng agenda at pagbangon mula sa mga wildfire sa LA
 nbr_list_items: 4
 
-list_item_1: Process and restructure the data
-list_content_1: We did this for all the comments within a topic. We turned each comment into numerical data, or semantic embeddings. These embeddings show the meaning of the comments in a way that computers can understand and use. We did this using Snowflake Cortex Embed Text 1024.
+list_item_1: Iproseso at baguhin ang istruktura ng data
+list_content_1: Ginawa namin ito para sa lahat ng komento sa isang paksa. Ang bawat komento ay ginawa naming numerical na data, o mga semantic embedding. Sa mga embedding na ito, ipinapakita ang kahulugan ng mga komento sa paraang mauunawaan at magagamit ng mga computer. Ginawa namin ito gamit ang Snowflake Cortex Embed Text 1024.
  
-list_item_2: Find conversation groups
-list_content_2: We used the BERTopic framework to group comments within each topic area by similarities. This helped us sort them into different categories based on common themes.  We then used UMAP to reduce the dimensionality of the comments. This tool made complex data simpler to visualize. We used density-based clustering with HDBSCAN and then tuned the algorithm settings for each opportunity area.
+list_item_2: Maghanap ng mga grupo ng pag-uusap
+list_content_2: Ginamit namin ang BERTopic framework para igrupo ang mga komento sa bawat paksa ayon sa mga pagkakatulad. Nakatulong sa amin ito na pagbukud-bukurin ang mga ito sa iba't ibang kategorya batay sa mga karaniwang tema.  Pagkatapos ay ginamit namin ang UMAP para bawasan ang dimensionality ng mga komento. Gamit ang tool na ito, naging mas madali na i-visualize ang kumplikadong data. Gumamit kami ng clustering na nakabatay sa density gamit ang HDBSCAN at pagkatapos ay in-adjust namin ang mga setting ng algorithm para sa bawat opportunity area.
 
-list_item_3: Label the conversation groups
-list_content_3: We grouped the comments by topic, then used the 'Claude 3.5 Sonnet' model to create the initial label for each group. Our team of data analysts then reviewed and edited these labels for clarity. Each label is a short phrase that reflects the main idea or topic that the comments have in common. 
+list_item_3: I-label ang mga grupo ng pag-uusap
+list_content_3: Iginrupo namin ang mga komento ayon sa paksa, pagkatapos ay ginamit namin ang 'Claude 3.5 Sonnet' model para gawin ang inisyal na label para sa bawat grupo. Pagkatapos ay sinuri at in-edit ng aming team ng mga data analyst ang mga label na ito para sa linaw. Ang bawat label ay isang maikling parirala na sumasalamin sa pangunahing ideya o paksa na parehong mayroon ang mga komento. 
 
-list_item_4: Plot the comments
-list_content_4: We used a topic-supervised UMAP. We tuned it for each topic.This allowed us to turn all the numerical data into two simple coordinates that we could plot on a 2D chart. The comments are color-coded by conversation group. This makes it easy to see patterns and connections.
+list_item_4: I-plot ang mga komento
+list_content_4: Gumamit kami ng UMAP na pinapangasiwaan batay sa paksa. In-adjust namin ito para sa bawat paksa. Nagbigay-daan ito sa amin na gawing dalawang simpleng coordinate na puwede naming i-plot sa isang 2D na chart ang lahat ng numerical data. Ang mga komento ay color-coded ayon sa grupo ng pag-uusap. Sa pamamagitan nito, nagiging madali na makakita ng mga pattern at ugnayan.
 ----
 
-### How we built these charts
+### Paano namin ginawa ang mga chart na ito
 
-Below is a step-by-step explanation of the methodology for these charts. 
+Nakasaad sa ibaba ang isang step-by-step na paliwanag ng pamamaraan para sa mga chart na ito. 
 
 
 ----
 id: download_the_data_1
-buttonText: Download the full dataset
+buttonText: I-download ang buong dataset
 ----
 
-## Download the data
+## I-download ang data
 
-The comments dataset does not contain personally identifying information. We have not edited or modified the comments in any way. 
+Ang dataset ng mga komento ay hindi naglalaman ng impormasyon na nagbibigay ng personal na pagkakakilanlan. Hindi namin in-edit o binago ang mga komento sa anumang paraan. 
 
 ----
 id: data_definitions
 buttonText:
 ----
-### Data definitions
+### Mga kahulugan ng data
 
-These are the columns in this dataset and their definitions.
+Ang mga ito ay ang mga column sa dataset na ito at ang mga kahulugan ng mga ito.
 
 
-**Comment ID**
+**ID ng Komento**
 
-  A unique value to identify each comment.
+  Isang natatanging value para tukuyin ang bawat komento.
 
-**Comment**
+**Komento**
 
-  The full text of a comment submitted by a participant. Comments have not been edited for clarity, content, grammar, or for any other reason.
+  Ang buong text ng komentong isinumite ng kalahok. Ang mga komento ay hindi in-edit para sa linaw, nilalaman, balarila, o para sa anumang iba pang dahilan. 
 
-**Topic**
+**Paksa**
 
-  This column lists the topic a commenter was responding to. There were 10 topics. 
+  Nakalista sa column na ito ang paksa kung saan nagbibigay ng tugon ang nagkomento. Mayroong 10 paksa. 
 
-  1. Emergency communication
-  2. Debris removal and environmental recovery
-  3. Financial and legal assistance
-  4. Emotional and mental health support
-  5. Housing and rebuilding
-  6. Economic recovery and small business support
-  7. Infrastructure and utilities restoration
-  8. Wildfire prevention prioritization and accountability
-  9. Climate and community resilience
-  10. Evacuation and emergency coordination
+  1. Pakikipag-ugnayan sa panahon ng emergency
+  2. Pag-aalis ng kalat at pagbangon ng kapaligiran
+  3. Pinansyal at legal na tulong
+  4. Suporta sa kalusugan ng emosyon at pag-iisip
+  5. Pabahay at muling pagtatayo
+  6. Pagbangon ng ekonomiya at suporta sa maliit na negosyo
+  7. Pagpapanumbalik ng imprastraktura at mga utility
+  8. Pagbibigay-priyoridad at pananagutan sa pag-iwas sa wildfire
+  9. Klima at katatagan ng komunidad
+  10. Paglikas at koordinasyon sa emergency
 
-We also included comments that were not in response to a specific topic. We labeled those comments with “general comment.”
+Nagsama rin kami ng mga komento na wala sa tugon sa isang partikular na paksa. Binigyan namin ng label na “pangkalahatang komento” ang mga komentong iyon.
 
-**Conversation group**
+**Grupo ng pag-uusap**
 
-The conversation group a comment aligns to. 
+Ang grupo ng pag-uusap kung saan naaayon ang komento. 

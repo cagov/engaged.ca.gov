@@ -7,7 +7,7 @@ import chalk from "chalk";
 import markdownIt from "markdown-it";
 import translations from './site/_data/i18n.js';  // Note: might need .js extension
 import { EleventyI18nPlugin } from "@11ty/eleventy";
-import { readFileSync } from 'fs';
+import { readFileSync } from 'node:fs';
 
 /**
  * Log an output from a build process in the 11ty style.
@@ -204,38 +204,43 @@ export default async function (eleventyConfig) {
 			return async () => output;
 		},
     getData: async (inputPath) => {
-      const content = await fs.readFile(inputPath, "utf-8");
-      const matches = [...content.matchAll(/----(.+?)----(.*?)(?=----|\s*$)/gs)];
+      try {
+        const content = await fs.readFile(inputPath, "utf-8");
+        const matches = [...content.matchAll(/----(.+?)----(.*?)(?=----|\s*$)/gs)];
 
-      // Process mmmd modules for inclusion in 11ty data cascade.
-      const modules = matches.reduce((bucket, match) => {
-        const capturedData = match[1] || "";
-        const data = yaml.load(capturedData);
-        const capturedContent = match[2] || "";
-        const content = markdownEngine.render(capturedContent);
+        // Process mmmd modules for inclusion in 11ty data cascade.
+        const modules = matches.reduce((bucket, match) => {
+          const capturedData = match[1] || "";
+          const data = yaml.load(capturedData);
+          const capturedContent = match[2] || "";
+          const content = markdownEngine.render(capturedContent);
 
-        const moduleId = data?.id;
+          const moduleId = data?.id;
 
-        // The module ID is required.
-        if (!moduleId) {
-          console.warn('MMMD module found without ID. Skipping.');
+          // The module ID is required.
+          if (!moduleId) {
+            console.warn('MMMD module found without ID. Skipping.');
+          }
+
+          bucket[moduleId] = {
+            ...data,
+            content
+          }
+
+          return bucket;
+        }, {});
+
+        return {
+          modules
         }
-
-        bucket[moduleId] = {
-          ...data,
-          content
-        }
-
-        return bucket;
-      }, {});
-
-      return {
-        modules
+      } catch (e) {
+        console.log(`ERROR: ${inputPath}`);
+        throw e;
       }
     }
 	});
   // Add filter to read file contents
-  eleventyConfig.addFilter('getFileContents', function(filePath) {
+  eleventyConfig.addFilter('getFileContents', (filePath) => {
     try {
       return readFileSync(filePath, 'utf8');
     } catch (err) {

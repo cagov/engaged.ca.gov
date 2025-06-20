@@ -81,6 +81,9 @@ section#how-we-built li {
         right: -44px;
 }
 }
+[dir="rtl"] .findings-adornment {
+    display: none;
+}
 
 .data-insights-adornment {
     position: absolute;
@@ -94,6 +97,9 @@ section#how-we-built li {
             bottom: -64px;
             right: -40px;
     }
+}
+[dir="rtl"] .data-insights-adornment {
+    display: none;
 }
 
 .download-the-data-adornment {
