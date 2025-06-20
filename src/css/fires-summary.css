@@ -98,6 +98,9 @@ section#how-we-built li {
             right: -40px;
     }
 }
+[dir="rtl"] .data-insights-adornment {
+    display: none;
+}
 
 .download-the-data-adornment {
     position: absolute;

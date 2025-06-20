@@ -1,181 +1,181 @@
----
-title: 'Agenda setting for LA wildfires recovery: Exploring community feedback'
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
+﻿---
+title: "عنوان: تنظیم دستور کار برای بازیابی آتش‎‌سوزی‎‌های جنگلی لس‎‌ بررسی بازخورد جامعه" 
+description: Engaged California یک پلتفرم آنلاین است که صدایی در دولت را برای کالیفرنیایی‎‌ها آسان‎‌تر می‎‌کند. اولین موضوع Engaged California بازیابی از آتش سوزی های لس آنجلس است.  این صفحه مهمترین مسائل مربوط به بازسازی لس‎‌آنجلس را نشان می‎‌دهد.
 layout: mmmd-data-insights
 parentid: lafires-recovery
 keywords:
-  - Los Angeles
-  - fires
-  - recovery
+  - لس آنجلس
+  - آتش‎‌سوزی‎‌ها
+  - بازیابی
 tags:
-  - pages
+  - صفحات
 ---
 
 
 ----
 id: plots_overview
-buttonText: Download the full dataset
-backButtonText: Agenda setting findings
+buttonText: دانلود مجموعه کامل داده‎‌ها
+backButtonText: یافته‎‌های مربوط به تنظیم دستور کار
 ----
 
-# Agenda setting for LA wildfires recovery: Exploring community feedback
+# تنظیم دستور کار برای بازیابی آتش‎‌سوزی‎‌های جنگلی لس‎‌آنجلس: بررسی بازخورد جامعه
 
-The agenda setting phase of the Los Angeles wildfires recovery engagement is complete. During this phase, community members shared thousands of comments about what they need most for recovery and rebuilding. You can download the comments to see what people said. 
+مرحله تنظیم دستور کار برای عملیات امدادرسانی به آسیب دیدگان آتش‎‌سوزی‎‌های لس‎‌آنجلس به پایان رسید. در طول این مرحله، اعضای جامعه هزاران نظر در مورد آنچه که برای بازیابی و بازسازی بیش از همه به آن نیاز دارند، به اشتراک گذاشتند. شما می‎‌توانید نظرات را دانلود کنید تا ببینید مردم چه گفته‎‌اند. 
 
 ----
 id: plots_complexity
 ----
-## Breaking down the complexity
+## تجزیه پیچیدگی
 
-Residents responded with overwhelming volume and a wide range of views. We made data visualizations to simplify this complexity. They organize and show comments by topic and theme. This tool will help you explore what the community said and see patterns in the feedback.
+ساکنان با حجم عظیمی از نظرات و دیدگاه‎‌های مختلف پاسخ دادند. ما برای ساده‎‌سازی این پیچیدگی، مصورسازی داده‎‌ها را انجام دادیم. مصورسازی نظرات را بر اساس موضوع و تم سازماندهی و نمایش می‎‌دهد. این ابزار به شما کمک می‎‌کند تا آنچه جامعه گفته است را بررسی کنید و الگوهای موجود در بازخورد را ببینید.
 
-We designed the analysis and visuals below to help you:
+ما تحلیل‎‌ها و تصاویر زیر را برای کمک به شما طراحی کرده‎‌ایم:
 
-* See the full range of community perspectives on recovery priorities
-* Understand how different viewpoints cluster around key issues
-* Explore the complexity of challenges facing fire-affected communities
-* Prepare for upcoming community discussions
+* طیف کاملی از دیدگاه‎‌های جامعه در مورد اولویت‎‌های بازیابی را ببینید
+* درک کنید که چگونه دیدگاه‎‌های مختلف پیرامون مسائل کلیدی جمع می‎‌شود
+* پیچیدگی چالش‎‌های پیش روی جوامع آسیب‎‌دیده از آتش‎‌سوزی را بررسی کنید
+* برای بحث‎‌های آتی جامعه آماده شوید
 
-Note: The info on this page does not offer final answers or solutions. Instead, it shows us the questions and tradeoffs we need to work through together. During the deliberation phase, we'll find the best way forward. Community members will work through these complex issues in a thoughtful manner. 
+توجه: اطلاعات موجود در این صفحه پاسخ‎‌ها یا راه‎‌حل‎‌های نهایی را ارائه نمی‎‌دهد. در عوض، سوالات و تعاملاتی را که باید با هم روی آنها کار کنیم، به ما نشان می‎‌دهد. در طول مرحله‎‌ی مشورت، بهترین راه پیش رو را پیدا خواهیم کرد. اعضای جامعه با روشی متفکرانه به بررسی این مسائل پیچیده خواهند پرداخت. 
 
-We will invite California residents to help us with this. <a href="/lafires-recovery/#sign-up">Sign up to stay informed</a>.
+ما از ساکنان کالیفرنیا دعوت خواهیم کرد تا در این امر به ما کمک کنند. ‎<a href="/lafires-recovery/#sign-up">‎برای مطلع ماندن ثبت نام کنید‎</a>.
 
 ----
 id: plots_interpretation
 ----
 
-## How to interpret these charts
+## چگونه این نمودارها را تفسیر کنیم
 
-Each chart shows the comments made about one topic.
+هر نمودار، نظرات مطرح‎‌شده در مورد یک موضوع را نشان می‎‌دهد.
 
-* Each dot represents an individual comment.
-* Dots are color-coded, with each color representing a group that came up in the comments.
-* We used AI to identify themes. The comments that were identified as similar appear closer together on the chart.
+* هر نقطه نشان دهنده یک نظر جداگانه است.
+* نقطه‎‌ها دارای کد رنگی هستند و هر رنگ نشان‎‌دهنده‎‌ی گروهی است که در نظرات مطرح شده است.
+* ما از هوش مصنوعی برای شناسایی مضامین استفاده کردیم. نظراتی که به عنوان مشابه شناسایی شدند، در نمودار به هم نزدیک‎‌تر به نظر می‎‌رسند.
 
 ----
 id: data_visualizations_header
-buttonText: Download the full dataset
+buttonText: دانلود مجموعه کامل داده‎‌ها
 ----
 
-## Data visualizations
+## مصورسازی داده‎‌ها
 
 ----
 id: plots
-chart_boilerplate_notes: Each dot represents one comment made about this topic. Grouped comments have their own color.
-chart_generic_alt: A scatter plot that visualizes comments using dots. The comments are categorized into subcategories.
+chart_boilerplate_notes: هر نقطه نشان دهنده یک نظر در مورد این موضوع است. هر دسته از نظرات رنگ مخصوص به خود را دارند.
+chart_generic_alt: یک نمودار پراکندگی که نظرات را با استفاده از نقاط نمایش می‎‌دهد. نظرات به زیرگروه‎‌هایی دسته‎‌بندی می‎‌شوند.
 nbr_charts: 10
 id_1: findings_environmental_recovery
-title_1: Environmental recovery and clean-up
-desc_1: The community's environmental concerns are valid and intricate. They include long-term land safety, environmental justice, and future fire-prevention measures.
+title_1: بازیابی و پاکسازی محیط زیست
+desc_1: نگرانی‎‌های زیست‎‌محیطی جامعه، بجا و پیچیده هستند. این موارد شامل ایمنی بلندمدت زمین، عدالت زیست‎‌محیطی و اقدامات پیشگیرانه از آتش‎‌سوزی در آینده می‎‌شود.
 
 id_2: findings_wildfire_prevention
-title_2: Wildfire prevention prioritization and accountability
-desc_2: The community wants accountability for fire prevention.
+title_2: اولویت‎‌بندی و پاسخگویی در پیشگیری از آتش‎‌سوزی‎‌های جنگلی
+desc_2: جامعه خواهان پاسخگویی در قبال پیشگیری از آتش‎‌سوزی است.
 
 id_3: findings_climate_community_resilience
-title_3: Climate and community resilience
-desc_3: Residents want to be heard. They want to help shape long-term recovery and future resilience. Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+title_3: تاب‎‌آوری اقلیمی و جامعه
+desc_3: ساکنان می‎‌خواهند صدایشان شنیده شود. می‎‌خواهند به شکل‎‌گیری بازیابی بلندمدت و تاب‎‌آوری در آینده کمک کنند. ساکنان زیرساخت‎‌های امن و بادوام می‎‌خواهند. تصمیماتی که اکنون گرفته می‎‌شود، ایمنی و تاب‎‌آوری بلندمدت برای بازیابی را تعیین خواهد کرد. 
 
 id_4: findings_infrastructure_restoration
-title_4: Infrastructure and utilities restoration
-desc_4: Residents want safe and lasting infrastructure. The decisions made now will determine long-term safety and resilience for recovery. 
+title_4: بازسازی زیرساخت‎‌ها و تأسیسات شهری
+desc_4: ساکنان زیرساخت‎‌های امن و بادوام می‎‌خواهند. تصمیماتی که اکنون گرفته می‎‌شود، ایمنی و تاب‎‌آوری بلندمدت برای بازیابی را تعیین خواهد کرد. 
 
 id_5: findings_emergency_planning_safety
-title_5: Emergency planning and community safety
-desc_5: Ensuring fast, safe evacuation and disaster communication is crucial for wildfire-prone communities. Community members view transparency and accessibility as key concerns.
+title_5: برنامه‎‌ریزی اضطراری و ایمنی جامعه
+desc_5: اطمینان از تخلیه سریع و ایمن و اطلاع‎‌رسانی در مورد بلایای طبیعی برای جوامع مستعد آتش‎‌سوزی بسیار مهم است. اعضای جامعه، شفافیت و دسترسی‎‌پذیری را از دغدغه‎‌های اصلی خود می‎‌دانند.
 
 
 id_6: findings_housing_rebuilding
-title_6: Housing and rebuilding
-desc_6: Rebuilding quickly is important. But without policies that focus on equity, some residents may face permanent displacement.
+title_6: مسکن و بازسازی
+desc_6: بازسازی سریع مهم است. اما بدون سیاست‎‌هایی که بر عدالت تمرکز داشته باشد، برخی از ساکنان ممکن است با آوارگی دائمی مواجه شوند.
  
 
 id_7: findings_financial_legal_assistance
-title_7: Financial and legal assistance
-desc_7: Survivors often find it hard to navigate aid systems. They need legal protections and financial assistance to rebuild.
+title_7: کمک‎‌های مالی و حقوقی
+desc_7: بازماندگان اغلب در استفاده از سیستم‎‌های کمکی مشکل دارند. آنها برای بازسازی به حمایت‎‌های قانونی و کمک‎‌های مالی نیاز دارند.
 
 
 id_8: findings_emergency_communication
-title_8: Emergency communication
-desc_8: Effective communication in an emergency is vital. How can officials share important updates and connect with residents at key moments?
+title_8: ارتباط اضطراری
+desc_8: ارتباط مؤثر در مواقع اضطراری حیاتی است. چگونه مقامات می‎‌توانند به‎‌روزرسانی‎‌های مهم را به اشتراک بگذارند و در لحظات کلیدی با ساکنان ارتباط برقرار کنند؟
 
 
 id_9: findings_economic_recovery
-title_9: Economic recovery and small business support
-desc_9: Many small businesses closed after the fire, and workers lost jobs. Residents want to know how economic recovery can be equitable and forward-thinking.
+title_9: بازیابی اقتصادی و حمایت از کسب و کارهای کوچک
+desc_9: بسیاری از مشاغل کوچک پس از آتش‎‌سوزی تعطیل شدند و کارگران شغل خود را از دست دادند. ساکنان می‎‌خواهند بدانند که چگونه بازیابی اقتصادی می‎‌تواند عادلانه و آینده‎‌نگر باشد.
 
 
 id_10: findings_emotional_mental_health
-title_10: Emotional and mental health support
-desc_10: Wildfire survivors, especially those cleaning up debris, face long-term health risks. They need easy access to mental health care.
+title_10: حمایت عاطفی و سلامت روان
+desc_10: بازماندگان آتش‎‌سوزی‎‌های جنگلی، به ویژه کسانی که در حال پاکسازی آوار هستند، با خطرات سلامتی طولانی‎‌مدت روبرو هستند. آنها نیاز به دسترسی آسان به مراقبت‎‌های سلامت روان دارند.
 ----
 
 ----
 id: how_we_built
-backButtonText: Read about agenda setting and LA wildfires recovery
+backButtonText: درباره تنظیم دستور کار و بازیابی آتش‎‌سوزی‎‌های جنگلی لس‎‌آنجلس بخوانید
 nbr_list_items: 4
 
-list_item_1: Process and restructure the data
-list_content_1: We did this for all the comments within a topic. We turned each comment into numerical data, or semantic embeddings. These embeddings show the meaning of the comments in a way that computers can understand and use. We did this using Snowflake Cortex Embed Text 1024.
+list_item_1: پردازش و ساختار‎‌بندی مجدد داده‎‌ها
+list_content_1: ما برای همه نظرات موجود در قالب یک موضوع همین کار را انجام دادیم. ما هر نظر را به داده‎‌های عددی یا جاسازی‎‌های معنایی تبدیل کردیم. این جاسازی‎‌ها معنای نظرات را به گونه‎‌ای نشان می‎‌دهند که کامپیوترها بتوانند آن را بفهمند و استفاده کنند. ما این کار را با استفاده از Snowflake Cortex Embed Text 1024 انجام دادیم.
  
-list_item_2: Find conversation groups
-list_content_2: We used the BERTopic framework to group comments within each topic area by similarities. This helped us sort them into different categories based on common themes.  We then used UMAP to reduce the dimensionality of the comments. This tool made complex data simpler to visualize. We used density-based clustering with HDBSCAN and then tuned the algorithm settings for each opportunity area.
+list_item_2: گروه‎‌های گفتگو را پیدا کنید
+list_content_2: ما از چارچوب BERTopic برای گروه‎‌بندی نظرات در هر حوزه موضوعی بر اساس شباهت‎‌ها استفاده کردیم. این کار به ما کمک کرد تا آنها را بر اساس مضامین مشترک در دسته‎‌های مختلف دسته‎‌بندی کنیم.  سپس از UMAP برای کاهش ابعاد نظرات استفاده کردیم. این ابزار، تجسم داده‎‌های پیچیده را ساده‎‌تر کرد. ما از خوشه‎‌بندی مبتنی بر چگالی با HDBSCAN استفاده کردیم و سپس تنظیمات الگوریتم را برای هر زمینه فرصت تنظیم کردیم.
 
-list_item_3: Label the conversation groups
-list_content_3: We grouped the comments by topic, then used the 'Claude 3.5 Sonnet' model to create the initial label for each group. Our team of data analysts then reviewed and edited these labels for clarity. Each label is a short phrase that reflects the main idea or topic that the comments have in common. 
+list_item_3: برچسب‎‌گذاری گروه‎‌های گفتگو
+list_content_3: ما نظرات را بر اساس موضوع گروه‎‌بندی کردیم، سپس از مدل «‎ Claude 3.5 Sonnet» برای ایجاد برچسب اولیه برای هر گروه استفاده کردیم. سپس تیم تحلیلگران داده ما این برچسب‎‌ها را برای وضوح بیشتر بررسی و ویرایش کردند. هر برچسب یک عبارت کوتاه است که ایده یا موضوع اصلی مشترک نظرات را منعکس می‎‌کند. 
 
-list_item_4: Plot the comments
-list_content_4: We used a topic-supervised UMAP. We tuned it for each topic.This allowed us to turn all the numerical data into two simple coordinates that we could plot on a 2D chart. The comments are color-coded by conversation group. This makes it easy to see patterns and connections.
+list_item_4: ترسیم نظرات
+list_content_4: ما از یک UMAP تحت نظارت موضوع استفاده کردیم. ما آن را برای هر موضوع تنظیم کردیم. این کار به ما اجازه داد تا تمام داده‎‌های عددی را به دو مختصات ساده تبدیل کنیم که بتوانیم آنها را روی یک نمودار دوبعدی رسم کنیم. نظرات بر اساس گروه گفتگو با رنگ کدگذاری شده‎‌اند. این کار باعث می‎‌شود الگوها و ارتباطات به راحتی دیده شوند.
 ----
 
-### How we built these charts
+### چگونه این نمودارها را ساختیم
 
-Below is a step-by-step explanation of the methodology for these charts. 
+در زیر توضیح گام به گام روش‎‌شناسی این نمودارها آمده است. 
 
 
 ----
 id: download_the_data_1
-buttonText: Download the full dataset
+buttonText: دانلود مجموعه کامل داده‎‌ها
 ----
 
-## Download the data
+## دانلود داده‎‌ها
 
-The comments dataset does not contain personally identifying information. We have not edited or modified the comments in any way. 
+مجموعه داده‎‌های نظرات حاوی اطلاعات قابل شناسایی شخصی نیست. ما به هیچ وجه نظرات را ویرایش یا اصلاح نکرده‎‌ایم. 
 
 ----
 id: data_definitions
 buttonText:
 ----
-### Data definitions
+### تعاریف داده‎‌ها
 
-These are the columns in this dataset and their definitions.
+ستون‎‌های این مجموعه داده و تعاریف آنها شامل موارد زیر است.
 
 
-**Comment ID**
+**شناسه نظر**
 
-  A unique value to identify each comment.
+  یک مقدار منحصر به فرد برای شناسایی هر نظر.
 
-**Comment**
+**نظر**
 
-  The full text of a comment submitted by a participant. Comments have not been edited for clarity, content, grammar, or for any other reason.
+  متن کامل نظر ارسالی یکی از شرکت‎‌کنندگان. نظرات از نظر وضوح، محتوا، دستور زبان یا هر دلیل دیگری ویرایش نشده‎‌اند.
 
-**Topic**
+**موضوع**
 
-  This column lists the topic a commenter was responding to. There were 10 topics. 
+  این ستون موضوعی را که یک نظردهنده به آن پاسخ داده است، فهرست می‎‌کند. موضوعات 10 مورد بود. 
 
-  1. Emergency communication
-  2. Debris removal and environmental recovery
-  3. Financial and legal assistance
-  4. Emotional and mental health support
-  5. Housing and rebuilding
-  6. Economic recovery and small business support
-  7. Infrastructure and utilities restoration
-  8. Wildfire prevention prioritization and accountability
-  9. Climate and community resilience
-  10. Evacuation and emergency coordination
+  ۱. ارتباط اضطراری
+  ۲. جمع‎‌آوری نخاله‎‌ها و احیای محیط زیست
+  ۳. کمک‎‌های مالی و حقوقی
+  ۴. حمایت عاطفی و سلامت روان
+  ۵. مسکن و بازسازی
+  ۶. بازیابی اقتصادی و حمایت از کسب و کارهای کوچک
+  ۷. بازسازی زیرساخت‎‌ها و تأسیسات شهری
+  ۸. اولویت‎‌بندی و پاسخگویی در پیشگیری از آتش‎‌سوزی‎‌های جنگلی
+  ۹. تاب‎‌آوری اقلیمی و جامعه
+  ۱۰. (یا: ۱۰.) هماهنگی تخلیه و شرایط اضطراری
 
-We also included comments that were not in response to a specific topic. We labeled those comments with “general comment.”
+همچنین نظراتی را که در پاسخ به یک موضوع خاص نبودند، لحاظ کردیم. ما آن نظرات را با عنوان «نظر عمومی» برچسب‎‌گذاری کردیم.
 
-**Conversation group**
+**گروه گفتگو**
 
-The conversation group a comment aligns to. 
+گروه گفتگویی که یک نظر در آن قرار می‎‌گیرد. 
