@@ -70,5 +70,5 @@ for theme_rec in theme_recs:
 
 # load all the jsons and merge into a single json, saved at src/public/data/engca_comment_scatterplot_source.json
 # save cumulative.json to ./src/public/data/engca_comment_scatterplot_source.json
-with open('/Users/jbum/Development/ca.gov/engaged.ca.gov/src/public/data/engca_comment_scatterplot_source.json', 'w') as f:
+with open('../../src/public/data/engca_comment_scatterplot_source.json', 'w') as f:
     json.dump(cumulative_json, f)

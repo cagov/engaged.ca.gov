@@ -215,23 +215,41 @@ def create_svg_scatterplot_legend(
     svg_content = f'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="{width}" height="{height}"    viewBox="0 0 {width} {height}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">'
 
     legend_x = config.legend_offset_x
+    if language == "fa":
+        legend_x = width - legend_x
+
     legend_y = config.legend_offset_y
     legend_item_height = config.legend_item_height
 
     svg_content += f'    <text x="{legend_x}" y="{legend_y - 5}" font-family="{config.legend_title_font_family}" font-size="{config.legend_title_font_size}" font-weight="{config.legend_title_font_weight}" fill="#0F1F2F">{get_translation(translation_data, "Conversation groups", language)}</text>'
-    legend_x +=  config.legend_indent_x # indent legend items
-    legend_y +=  config.legend_indent_y
-    y_pos = legend_y
+    
+    indent_x = legend_x + config.legend_indent_x # indent legend items
+    if language == "fa":
+        legend_x = width - config.legend_indent_x
+
+    indent_y =  legend_y + config.legend_indent_y
+    y_pos = indent_y
     for i, subcat in enumerate(subcategories_list):
-        # y_pos = legend_y + i * legend_item_height
+        # y_pos = indent_y + i * legend_item_height
         color = color_map[subcat]
-        
-        # Add colored circle and label for legend item
-        svg_content += f'    <circle cx="{legend_x + 7}" cy="{y_pos + 7}" r="5" fill="{color}" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>'
-        display_text = get_translation(translation_data, subcat if subcat is not None else 'Other', language)
+
+        # Define line break position
         line_break_pos = config.legend_line_break_pos
         if language == 'hy':
             line_break_pos = config.legend_line_break_pos_hy
+        
+        circle_x_pos = indent_x + 7
+        if language == "fa":
+            circle_x_pos = indent_x - 7
+
+        text_x_pos = indent_x + config.legend_text_offset_x
+        if language == "fa":
+            text_x_pos = indent_x - config.legend_text_offset_x
+
+        # Add colored circle and label for legend item
+        svg_content += f'    <circle cx="{circle_x_pos}" cy="{y_pos + 7}" r="5" fill="{color}" fill-opacity="1.0" stroke="none" stroke-width="0.5"/>'
+        display_text = get_translation(translation_data, subcat if subcat is not None else 'Other', language)
+
         if len(display_text) > line_break_pos:
             # use a two line format, wrapped at approx 40 characters using word breaks
             line_1 = display_text[:line_break_pos]
@@ -239,11 +257,11 @@ def create_svg_scatterplot_legend(
             while line_1[-1] != " " and line_2[0] != " ":
                 line_2 = line_1[-1] + line_2
                 line_1 = line_1[:-1]
-            svg_content += f'    <text fill="#444444" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_1}</text>'
-            svg_content += f'    <text fill="#444444" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y + config.legend_line_height}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_2}</text>'
+            svg_content += f'    <text fill="#444444" x="{text_x_pos}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_1}</text>'
+            svg_content += f'    <text fill="#444444" x="{text_x_pos}" y="{y_pos + config.legend_text_offset_y + config.legend_line_height}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{line_2}</text>'
             y_pos += config.legend_line_height
         else:
-            svg_content += f'    <text fill="#444444" x="{legend_x + config.legend_text_offset_x}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{display_text}</text>'
+            svg_content += f'    <text fill="#444444" x="{text_x_pos}" y="{y_pos + config.legend_text_offset_y}" font-family="{config.legend_item_font_family}" font-size="{config.legend_item_font_size}">{display_text}</text>'
         y_pos += legend_item_height
 
     svg_content += '</svg>'
