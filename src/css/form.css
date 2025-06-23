@@ -191,7 +191,8 @@ button.button-reset {
   -webkit-appearance: none;
   background: none;
   border: 0;
-  padding: 2px;
+  padding: 0 2px;
   font-weight: initial;
   font-size: initial;
+  line-height: 1.5;
 }
