@@ -189,7 +189,7 @@ ul.form-radio-list {
 
 button.button-reset {
   -webkit-appearance: none;
-  background: none;
+  background-color: transparent;
   border: 0;
   padding: 0 2px;
   font-weight: initial;
