@@ -545,7 +545,6 @@ a.insights-back-button {
     font-size: 30px;
     font-weight: 700;
     font-family: "Noto Sans Display" !important;
-    text-align: left;
     line-height: 130%;
     margin-bottom: 1rem;
     @media (max-width: 767px) {
@@ -557,7 +556,6 @@ a.insights-back-button {
     font-size: 23px;
     font-weight: 400;
     font-family: "Noto Sans Display" !important;
-    text-align: left;
     line-height: 39px;
     margin-bottom: 1rem;
     @media (max-width: 767px) {
