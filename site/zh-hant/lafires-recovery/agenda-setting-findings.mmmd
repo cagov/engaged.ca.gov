@@ -81,7 +81,7 @@ old_id: findings_what_were_doing
 
 ## 我們如何回應社區居民的需求
 
-居民分享了他們在恢復與重建過程中最迫切的需求。 <a href=“#discussing-tough-issues”>我們發現有些問題仍需進一步討論</a>。與此同時，我們也找出某些可立即採取行動的領域。
+居民分享了他們在恢復與重建過程中最迫切的需求。 <a href="#discussing-tough-issues">我們發現有些問題仍需進一步討論</a>。與此同時，我們也找出某些可立即採取行動的領域。
 
 以下是我們目前如何回應居民需求的摘要。 
 
@@ -124,7 +124,7 @@ old_title: 機會領域
 
 ## 接下來：討論複雜問題
 
-儘管我們已準備好針對前述優先事項採取行動，但仍有一些問題需要進一步推進。我們將邀請加州居民一同參與探討。 <a href=“/lafires-recovery/#sign-up”>點選此處註冊，獲取最新動態</a>。 
+儘管我們已準備好針對前述優先事項採取行動，但仍有一些問題需要進一步推進。我們將邀請加州居民一同參與探討。 <a href="/zh-hant/lafires-recovery/#sign-up">點選此處註冊，獲取最新動態</a>。 
 
 居民們分享了一些關於社區所面臨複雜挑戰的想法，這些挑戰需要更深入的探討。這些問題沒有簡單的解決方案。其可能涉及社區內部需要共同權衡的難題。
 
@@ -249,7 +249,7 @@ id: findings_how_we_did_the_analysis
 
 ## 我們如何進行分析
 
-若要更深入地瞭解，<a href=“/lafires-recovery/agenda-setting-data-insights/”>查看我們的詳細方法和評論分析</a>。 
+若要更深入地瞭解，<a href="/zh-hant/lafires-recovery/agenda-setting-data-insights/">查看我們的詳細方法和評論分析</a>。 
 
 我們使用 Claude 3.5 Sonnet 生成式 AI 模型，來説明識別評論中的主題和趨勢。我們向模型提出了一系列問題，以幫助我們瞭解居民的想法。這是一種高效方式，能夠快速掌握民眾在關鍵議題上的共識與分歧。 
 
