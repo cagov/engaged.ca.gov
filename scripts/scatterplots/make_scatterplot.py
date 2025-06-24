@@ -225,7 +225,7 @@ def create_svg_scatterplot_legend(
     
     indent_x = legend_x + config.legend_indent_x # indent legend items
     if language == "fa":
-        legend_x = width - config.legend_indent_x
+        indent_x = width - config.legend_offset_x - config.legend_indent_x
 
     indent_y =  legend_y + config.legend_indent_y
     y_pos = indent_y
