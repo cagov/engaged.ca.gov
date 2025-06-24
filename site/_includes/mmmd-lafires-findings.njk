@@ -36,7 +36,7 @@
       <div class="col-lg-8 findings-no-indent-container findings-barchart-outer-container">
         <div class="findings-barchart-container collapsed" role="list" aria-label="Topics people rated">
             {% for item in barchart %}
-            <div id="barchart-outer-item-{{ loop.index }}" data-destination="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}" class="findings-barchart-item" role="listitem" role="link" tabindex="0">
+            <div id="barchart-outer-item-{{ loop.index }}" data-destination="{{ "/lafires-recovery/agenda-setting-data-insights/" | locale_url }}#{{ item.link_id }}" class="findings-barchart-item" role="listitem" role="link" tabindex="0">
                 <div class="findings-barchart-caption-bar-container">
                   <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
                   <div class="findings-bar-container">
@@ -59,7 +59,7 @@
         </div>
 
         <div class="findings-insights-button-container">
-            <a href="/lafires-recovery/agenda-setting-data-insights/" data-appearance="button" data-theme="orange">
+            <a href="{{ "/lafires-recovery/agenda-setting-data-insights/" | locale_url }}" data-appearance="button" data-theme="orange">
             {{ modules.findings_more_insights_button.buttonText }}
             </a>
         </div>
