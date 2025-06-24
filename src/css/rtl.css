@@ -16,4 +16,22 @@
   .findings-adornment, .data-insights-adornment {
     display: none;
   }
+
+  .findings-quote-block {
+    text-align: right;
+  }
+
+  .findings-barchart-item {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+
+  .findings-barchart-item-caption {
+    padding-right: 0;
+    padding-left: 2rem;
+  }
+
+  .findings-barchart-button > img {
+    transform: rotate(180deg);
+  }
 }
