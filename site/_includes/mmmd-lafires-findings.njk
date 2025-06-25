@@ -260,6 +260,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const lang = "{{ lang }}";
   const barElements = document.querySelectorAll('.findings-barchart-bar');
   
   barElements.forEach((barElement, loop_index) => {
@@ -284,9 +285,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create the thicker percentage line (6px thick)
     const percentageLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    percentageLine.setAttribute('x1', '0');
+    const pct_x1 = lang == "fa" ? 100 - percentage : 0;
+    const pct_x2 = lang == "fa" ? 100 : percentage;
+    percentageLine.setAttribute('x1', `${pct_x1}`);
     percentageLine.setAttribute('y1', '10');
-    percentageLine.setAttribute('x2', percentage);
+    percentageLine.setAttribute('x2', `${pct_x2}`);
     percentageLine.setAttribute('y2', '10');
     percentageLine.setAttribute('stroke', '#E79450');
     percentageLine.setAttribute('stroke-width', '6');

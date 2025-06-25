@@ -40,4 +40,8 @@
     padding-right: 3.5rem;
     background-position: 100% 0;
   }
+
+  div.findings-barchart-item-approval {
+    text-align: left;
+  }
 }
