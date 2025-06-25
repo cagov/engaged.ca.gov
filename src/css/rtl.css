@@ -53,4 +53,8 @@
     position: relative;
     top: -2px;
   }
+
+  .quote-card {
+    direction: ltr;
+  }
 }

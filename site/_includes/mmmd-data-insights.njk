@@ -151,6 +151,7 @@
 
 <script>
 quoteData = null;
+const lang = "{{ lang }}";
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 function revealQuote(cid, evt) {
@@ -187,11 +188,20 @@ function revealQuote(cid, evt) {
   if (isPortrait) {
     // quote is beneath cursor and uses available window width
     quoteCard.style.left = '20px';
+    quoteCard.style.right = 'auto';
     quoteCard.style.top = (mouseY + 20/actualZoom) + 'px';
     // set maxWidth to smaller of 500px or (window.innerWidth-20-mouseX)
     quoteCard.style.maxWidth = (window.innerWidth-40) + 'px';
   } else {
-    // quote is to the right of cursor
+    // quote is to the right (or left in Farsi) of cursor
+    if (lang == "fa") {
+      quoteCard.style.right = window.innerWidth - (mouseX - 20/actualZoom) + 'px';
+      quoteCard.style.left = 'auto';
+    } else {
+      quoteCard.style.left = (mouseX + 20/actualZoom) + 'px';
+      quoteCard.style.right = 'auto';
+    }
+    
     quoteCard.style.left = (mouseX + 20/actualZoom) + 'px';
     quoteCard.style.top = (mouseY - 100/actualZoom) + 'px';
     // set maxWidth to smaller of 500px or (window.innerWidth-20-mouseX)
@@ -199,7 +209,6 @@ function revealQuote(cid, evt) {
   }
   
   // Clear any previously set positioning styles that might interfere
-  quoteCard.style.right = 'auto';
   quoteCard.style.bottom = 'auto';
 
 
