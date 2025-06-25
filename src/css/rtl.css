@@ -13,7 +13,7 @@
     }
   }
 
-  .findings-adornment, .data-insights-adornment {
+  .findings-adornment, .data-insights-adornment, .download-the-data-adornment {
     display: none;
   }
 
