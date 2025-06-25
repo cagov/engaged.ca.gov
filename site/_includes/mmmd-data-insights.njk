@@ -6,13 +6,10 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="insights-back-button-container">
-<<<<<<< june-translations
-        <img src="/public/images/back_bracket_blue.png" class="insights-back-button-icon" /><a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" class="insights-back-button">
-=======
-        <img src="/public/images/back_bracket_blue.png" alt="<" class="insights-back-button-icon" /><a href="/lafires-recovery/agenda-setting-findings/" class="insights-back-button">
->>>>>>> main
-          {{ modules.plots_overview.backButtonText }}
-        </a>
+          <img src="/public/images/back_bracket_blue.png" alt="<"  class="insights-back-button-icon" />
+          <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" class="insights-back-button">
+            {{ modules.plots_overview.backButtonText }}
+          </a>
         </div>
         {{ modules.plots_overview.content | safe }}
       </div>
@@ -87,13 +84,10 @@
               {{ ('./src/public/images/' + modules.plots["id_" + i] + '_' + lang + '_legend.svg') | getFileContents | safe }}
             </div>
             <div class="insights-back-button-container">
-<<<<<<< june-translations
-            <img src="/public/images/back_bracket_blue.png" class="insights-back-button-icon" /><a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}#findings-topics-people-rated" class="insights-back-button">
-=======
-            <img src="/public/images/back_bracket_blue.png" alt="<" class="insights-back-button-icon" /><a href="/lafires-recovery/agenda-setting-findings/#findings-topics-people-rated" class="insights-back-button">
->>>>>>> main
-              {{ modules.plots_overview.backButtonText }}
-            </a>
+              <img src="/public/images/back_bracket_blue.png" alt="<" class="insights-back-button-icon" />
+              <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}#findings-topics-people-rated" class="insights-back-button">
+                {{ modules.plots_overview.backButtonText }}
+              </a>
             </div>
       </div>
     </div>
