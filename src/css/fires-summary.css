@@ -184,21 +184,20 @@ div.findings-key-tension-block  {
     max-width: 366px;
 }
 
-div.findings-key-tension-read-more {
+.findings-key-tension-read-more {
     font-weight: 500;
     font-size: 16px;
-    color: #0D5D90;
-    /* padding-top: 1rem; */
+    color: #0d5d90;
 }
 
-div.findings-key-tension-read-more:not(.expanded) span {
+.findings-key-tension-read-more:not(.expanded) span {
     padding-right: 24px;
     background: url("/public/images/arrow-blue-down.svg") no-repeat right center;
 }
 .findings-key-tension-read-more.expanded {
-    padding-top: 1rem;
+    margin-top: 1rem;
 }
-div.findings-key-tension-read-more.expanded span {
+.findings-key-tension-read-more.expanded span {
     padding-right: 24px;
     background: url("/public/images/arrow-blue-up.svg") no-repeat right center;
 }

@@ -186,3 +186,13 @@ ul.form-radio-list {
   font-weight: 400;
   line-height: 39px; /* 169.565% */
 }
+
+button.button-reset {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0 2px;
+  font-weight: initial;
+  font-size: initial;
+  line-height: 1.5;
+}

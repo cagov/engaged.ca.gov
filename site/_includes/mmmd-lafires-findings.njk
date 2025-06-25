@@ -52,10 +52,10 @@
         </div>
 
         <div id="findings-show-all-button-container" class="findings-button-container">
-            <div id="findings-show-all-button" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-barchart-container">
+            <button id="findings-show-all-button" class="findings-show-all-button button-reset" aria-expanded="false" aria-controls="findings-barchart-container">
                
                     <div class="findings-show-all-button-label">{{ modules.findings_topics_people_rated.buttonText }}</div>
-            </div>
+            </button>
         </div>
 
         <div class="findings-insights-button-container">
@@ -88,9 +88,9 @@
                     {% endfor %}
                 </div>
                 <div id="findings-responding-show-all-button-container" class="findings-button-container">
-                    <div id="findings-responding-show-all-button" class="findings-show-all-button" aria-expanded="false" aria-controls="findings-responding-list-container">
+                    <button id="findings-responding-show-all-button" class="findings-show-all-button button-reset" aria-expanded="false" aria-controls="findings-responding-list-container">
                             <div class="findings-responding-show-all-button-label">{{ modules.findings_how_we_are_responding.buttonText }}</div>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -110,10 +110,10 @@
                 </div>
 
                 <div class="findings-balloons-container mobile-only">
-                        <div class="findings-quote findings-quote-container-1" aria-role="quote">
+                        <div class="findings-quote findings-quote-container-1" role="blockquote">
                             {{ modules.findings_quote_1.content | safe }}
                         </div>
-                        <div class="findings-quote findings-quote-container-2" aria-role="quote">
+                        <div class="findings-quote findings-quote-container-2" role="blockquote">
                             {{ modules.findings_quote_2.content | safe }}
                         </div>
                 </div>
@@ -139,9 +139,9 @@
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_1.quote_3 }}</div>
                               </div>
                           </div>
-                          <div class="findings-key-tension-read-more" data-block="block-1" aria-expanded="false" aria-controls="block-1">
+                          <button class="findings-key-tension-read-more button-reset" data-block="block-1" aria-expanded="false" aria-controls="block-1">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
-                          </div>
+                          </button>
                       </div>
                     </div>
                     <div class="sub-expand">
@@ -164,9 +164,9 @@
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_2.quote_3 }}</div>
                               </div>
                           </div>
-                          <div class="findings-key-tension-read-more" data-block="block-2" aria-expanded="false" aria-controls="block-2">
+                          <button class="findings-key-tension-read-more button-reset" data-block="block-2" aria-expanded="false" aria-controls="block-2">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
-                          </div>
+                          </button>
                         </div>
                     </div>
                     <div class="sub-expand">
@@ -185,9 +185,9 @@
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_3.quote_2 }}</div>
                               </div>
                           </div>
-                          <div class="findings-key-tension-read-more" data-block="block-3" aria-expanded="false" aria-controls="block-3">
+                          <button class="findings-key-tension-read-more button-reset" data-block="block-3" aria-expanded="false" aria-controls="block-3">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
-                          </div>
+                          </button>
                       </div>
                     </div>
                     <div class="sub-expand">
@@ -206,9 +206,9 @@
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_4.quote_2 }}</div>
                               </div>
                           </div>
-                          <div class="findings-key-tension-read-more" data-block="block-4" aria-expanded="false" aria-controls="block-4">
+                          <button class="findings-key-tension-read-more button-reset" data-block="block-4" aria-expanded="false" aria-controls="block-4">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
-                          </div>
+                          </button>
                       </div>
                     </div>
                 </div> <!-- end tensions container -->
@@ -232,10 +232,10 @@
             </div> <!-- end col-lg-8 -->
             <div class="col-lg-4">
                 <div class="findings-balloons-container desktop-only">
-                        <div class="findings-quote findings-quote-container-1" aria-role="quote">
+                        <div class="findings-quote findings-quote-container-1" role="blockquote">
                             {{ modules.findings_quote_1.content | safe }}
                         </div>
-                        <div class="findings-quote findings-quote-container-2" aria-role="quote">
+                        <div class="findings-quote findings-quote-container-2" role="blockquote">
                             {{ modules.findings_quote_2.content | safe }}
                         </div>
                 </div>
