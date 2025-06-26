@@ -36,7 +36,7 @@
       <div class="col-lg-8 findings-no-indent-container findings-barchart-outer-container">
         <div class="findings-barchart-container collapsed" role="list" aria-label="Topics people rated">
             {% for item in barchart %}
-            <div id="barchart-outer-item-{{ loop.index }}" data-destination="/lafires-recovery/agenda-setting-data-insights/#{{ item.link_id }}" class="findings-barchart-item" role="listitem" role="link" tabindex="0">
+            <div id="barchart-outer-item-{{ loop.index }}" data-destination="{{ "/lafires-recovery/agenda-setting-data-insights/" | locale_url }}#{{ item.link_id }}" class="findings-barchart-item" role="listitem" role="link" tabindex="0">
                 <div class="findings-barchart-caption-bar-container">
                   <div class="findings-barchart-item-caption">{{ modules.findings_bar_chart[item.key] }}</div>
                   <div class="findings-bar-container">
@@ -59,7 +59,7 @@
         </div>
 
         <div class="findings-insights-button-container">
-            <a href="/lafires-recovery/agenda-setting-data-insights/" data-appearance="button" data-theme="orange">
+            <a href="{{ "/lafires-recovery/agenda-setting-data-insights/" | locale_url }}" data-appearance="button" data-theme="orange">
             {{ modules.findings_more_insights_button.buttonText }}
             </a>
         </div>
@@ -216,7 +216,7 @@
 
                 <div class="findings-no-indent-container">
                     <div class="findings-button-container norule">
-                        <a href="/lafires-recovery/#sign-up" data-appearance="button" data-theme="orange">
+                        <a href="{{ "/lafires-recovery/" | locale_url }}#sign-up"  data-appearance="button" data-theme="orange">
                         {{ modules.findings_whats_next.buttonText }}
                         </a>
                     </div>
@@ -260,6 +260,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const lang = "{{ lang }}";
   const barElements = document.querySelectorAll('.findings-barchart-bar');
   
   barElements.forEach((barElement, loop_index) => {
@@ -284,9 +285,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create the thicker percentage line (6px thick)
     const percentageLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    percentageLine.setAttribute('x1', '0');
+    const pct_x1 = lang == "fa" ? 100 - percentage : 0;
+    const pct_x2 = lang == "fa" ? 100 : percentage;
+    percentageLine.setAttribute('x1', `${pct_x1}`);
     percentageLine.setAttribute('y1', '10');
-    percentageLine.setAttribute('x2', percentage);
+    percentageLine.setAttribute('x2', `${pct_x2}`);
     percentageLine.setAttribute('y2', '10');
     percentageLine.setAttribute('stroke', '#E79450');
     percentageLine.setAttribute('stroke-width', '6');

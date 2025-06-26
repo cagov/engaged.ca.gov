@@ -1,4 +1,4 @@
-[dir=rtl] {
+[dir="rtl"] {
   /* Reorient arrows on How it works section */
   .hiw-step-1,
   .hiw-step-3 {
@@ -11,5 +11,50 @@
     .hiw-arrow {
       transform: scale(-1);
     }
+  }
+
+  .findings-adornment, .data-insights-adornment, .download-the-data-adornment {
+    display: none;
+  }
+
+  .findings-quote-block {
+    text-align: right;
+  }
+
+  .findings-barchart-item {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+
+  .findings-barchart-item-caption {
+    padding-right: 0;
+    padding-left: 2rem;
+  }
+
+  .findings-barchart-button > img {
+    transform: rotate(180deg);
+  }
+
+  div.findings-quote {
+    padding-left: 0;
+    padding-right: 3.5rem;
+    background-position: 100% 0;
+  }
+
+  div.findings-barchart-item-approval {
+    text-align: left;
+  }
+
+  img.insights-back-button-icon {
+    width: 8px;
+    margin-right: 0;
+    margin-left: 0.5rem;
+    transform: rotate(180deg);
+    position: relative;
+    top: -2px;
+  }
+
+  .quote-card {
+    direction: ltr;
   }
 }

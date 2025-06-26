@@ -151,8 +151,14 @@ section {
   padding-block: 2.4rem;
 }
 
-section.hero, section.action-hero {
+section.hero, section.action-hero, section.action-form {
   padding-block: 4.8rem;
+}
+/* Make room for the scaling bubbles on the form at some screen sizes. */
+@media (min-width: 450px) and (max-width: 810px) {
+  section.action-form {
+    padding-block: 18vw;
+  }
 }
 
 
