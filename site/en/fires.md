@@ -10,9 +10,10 @@ donotindex: true
 [Sign up to opt in](/lafires-recovery/#sign-up)
 
 <script type="text/javascript">
-    window.location.href = "https://engaged.ca.gov/lafires-recovery/#sign-up";
      gtag('event', 'screen_view', {
         'app_name': 'fires_redirect',
         'screen_name': 'Fires'
       });
+window.location.href = "https://engaged.ca.gov/lafires-recovery/#sign-up";
+
 </script>
