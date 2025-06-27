@@ -10,5 +10,9 @@ donotindex: true
 [Sign up to opt in](/lafires-recovery/#sign-up)
 
 <script type="text/javascript">
-    window.location.href = "/lafires-recovery/#sign-up"
+    window.location.href = "/lafires-recovery/#sign-up";
+     gtag('event', 'screen_view', {
+        'app_name': 'fires_redirect',
+        'screen_name': 'Fires'
+      });
 </script>
