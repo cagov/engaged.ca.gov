@@ -16,7 +16,7 @@ The Office of Data and Innovation (ODI) is committed to providing digital access
 
 ODI’s website meets or exceeds the requirements of:
 
-* The World Wide Web Consortium Web Content Accessibility Guidelines (WCAG) 2.1, Level AA,
+* The World Wide Web Consortium Web Content Accessibility Guidelines (WCAG) 2.2, Level AA,
 * The California Unruh Civil Rights Act, and
 * The Americans with Disabilities Act (ADA).
 
@@ -34,12 +34,12 @@ Office of Data and Innovation
 
 Contact: ODI Service Desk, [accessibility@innovation.ca.gov](mailto:accessibility@innovation.ca.gov)
 
-The undersigned certifies that as of July 1, 2023, this website is designed, developed, and maintained to be accessible. This denotes compliance with the following:
+The undersigned certifies that as of July 1, 2025, this website is designed, developed, and maintained to be accessible. This denotes compliance with the following:
 
 * California Government Code Sections 7405, 11135, and 11546.7
-* Web Content Accessibility Guidelines 2.1 published by the Web Accessibility Initiative of the World Wide Web Consortium
+* Web Content Accessibility Guidelines 2.2 published by the Web Accessibility Initiative of the World Wide Web Consortium
 * At a minimum Level AA success criteria
 
 /s/ Chad Bratton <br>
 Chief Information Officer <br>
-July 1, 2023
+July 1, 2025
