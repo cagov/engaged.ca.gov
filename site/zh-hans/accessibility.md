@@ -43,3 +43,7 @@ ODI 使用 [Lighthouse](https://developer.chrome.com/en/docs/lighthouse/performa
 /s/ Chad Bratton <br>
 首席信息官 <br>
 2025年7月1日
+
+/s/ Jeffery Marino <br>
+Director <br>
+2025年7月1日

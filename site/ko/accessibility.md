@@ -43,3 +43,7 @@ ODI는  [Lighthouse](https://developer.chrome.com/en/docs/lighthouse/performance
 /s/ Chad Bratton <br>
 최고 정보 책임자 <br>
 2025년 7월 1일
+
+/s/ Jeffery Marino <br>
+Director <br>
+2025년 7월 1일

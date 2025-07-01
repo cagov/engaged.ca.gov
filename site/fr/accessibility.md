@@ -43,3 +43,7 @@ Les soussignés certifient qu'à compter du 1er juillet 2025, ce site web est co
 /s/ Chad Bratton <br>
 Directeur des systèmes d'information <br>
 1er juillet 2025
+
+/s/ Jeffery Marino <br>
+Directeur <br>
+1er juillet 2025

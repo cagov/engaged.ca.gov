@@ -43,3 +43,7 @@ Pinapatunayan ng may lagda sa ibaba na simula Hulyo 1, 2025, ang website na ito 
 /s/ Chad Bratton <br>
 Punong Opisyal ng Impormasyon <br>
 Hulyo 1, 2025
+
+/s/ Jeffery Marino <br>
+Director <br>
+Hulyo 1, 2025

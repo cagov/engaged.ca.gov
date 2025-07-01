@@ -43,3 +43,7 @@ Người ký tên dưới đây chứng nhận rằng kể từ ngày 1 tháng 7
 /s/ Chad Bratton <br>
 Giám Đốc Thông Tin <br>
 Ngày 1 tháng 7 năm 2025
+
+/s/ Jeffery Marino <br>
+Director <br>
+Ngày 1 tháng 7 năm 2025

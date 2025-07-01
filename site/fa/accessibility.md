@@ -45,3 +45,8 @@ ODI از ممیزی دسترسی [Lighthouse](https://developer.chrome.com/en/do
 مدیر ارشد اطلاعات <br>
 
 1. ژوئیه 2025
+
+/s/ Jeffery Marino <br>
+Director <br>
+
+1. ژوئیه 2025

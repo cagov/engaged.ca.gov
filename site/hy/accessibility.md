@@ -45,3 +45,9 @@ ODI-ն օգտագործում է [Lighthouse](https://developer.chrome.com/en/do
 Տեղեկատվության գլխավոր պատասխանատու <br>
 
 1. հուլիսի 2025 թ․
+
+
+/s/ Jeffery Marino <br>
+Director <br>
+
+1. հուլիսի 2025 թ․
