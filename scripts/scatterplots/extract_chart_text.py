@@ -36,11 +36,7 @@ with open(json_file_name, "r") as f:
     existing_data = json.load(f)
 # print(existing_data)
 
-for theme_rec in theme_recs:
-    filename_root = theme_rec['root']
-    src_file_json = f'./data/data_{filename_root}_{version}.json'
 # for each record, extract CATEGORY, and SUBCATEGORY
-
 for theme_rec in theme_recs:
     filename_root = theme_rec['root']
     src_file_json = f'./data/data_{filename_root}_{version}.json'
