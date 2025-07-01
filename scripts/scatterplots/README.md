@@ -27,9 +27,6 @@ Constructs SVG files (both for plots and translated legends).
 ### make_scatterplot_legend_json.py
 Constructs scatterplot legend json file, used to create interactive legends.  Data stored for each legend includes it's translation key, color, and list of associated comment-ids.
 
-### extract_chart_text.py
-One-time script used to produce the chart_translations.json, which then had translations added.  This file is used to provide legend translations.  Should no longer be run.
-
 ### scatterplot_config.py
 Stores common settings for import.
 
