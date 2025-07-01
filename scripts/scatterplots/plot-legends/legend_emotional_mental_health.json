@@ -1,0 +1,102 @@
+[
+    {
+        "idx": 1,
+        "key": "emotional_mental_health_1",
+        "subcat_en": "Counseling access through healthcare",
+        "color": "#5ed0b9",
+        "comment_ids": [
+            549,
+            660,
+            945,
+            965,
+            1535,
+            1539
+        ]
+    },
+    {
+        "idx": 2,
+        "key": "emotional_mental_health_2",
+        "subcat_en": "Free emergency counseling",
+        "color": "#70b6e5",
+        "comment_ids": [
+            436,
+            575,
+            898,
+            995,
+            1308,
+            1332,
+            1362,
+            1437
+        ]
+    },
+    {
+        "idx": 3,
+        "key": "emotional_mental_health_3",
+        "subcat_en": "Mental health support",
+        "color": "#b98acb",
+        "comment_ids": [
+            296,
+            324,
+            378,
+            762,
+            778,
+            976,
+            998,
+            1080,
+            1170,
+            1237,
+            1347,
+            1359,
+            1394,
+            1456,
+            1497,
+            1518,
+            1553,
+            1575,
+            1598,
+            1634,
+            1677,
+            1697,
+            1703
+        ]
+    },
+    {
+        "idx": 4,
+        "key": "emotional_mental_health_4",
+        "subcat_en": "Other",
+        "color": "lightgray",
+        "comment_ids": [
+            305,
+            306,
+            458,
+            511,
+            532,
+            536,
+            559,
+            585,
+            589,
+            676,
+            725,
+            748,
+            768,
+            825,
+            862,
+            955,
+            977,
+            1069,
+            1143,
+            1202,
+            1220,
+            1303,
+            1419,
+            1447,
+            1465,
+            1510,
+            1526,
+            1584,
+            1646,
+            1690,
+            1719
+        ]
+    }
+]
