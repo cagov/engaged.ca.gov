@@ -16,7 +16,7 @@ Ang Tanggapan ng Datos at Inobasyon (Office of Data and Innovation o ODI) ay nak
 
 Ang website ng ODI ay nakakatugon o lumalampas sa mga kinakailangan ng:
 
-* Ang World Wide Web Consortium Web Content Accessibility Guidelines (WCAG) 2.1, Level AA,
+* Ang World Wide Web Consortium Web Content Accessibility Guidelines (WCAG) 2.2, Level AA,
 * Ang California Unruh Civil Rights Act (Batas ng Unruh sa mga Karapatang Sibil ng California), at
 * Ang Batas ng mga Amerikano na may Kapansanan (Americans with Disabilities Act o ADA).
 
@@ -34,12 +34,16 @@ Tanggapan ng Datos at Inobasyon (Office of Data and Innovation)
 
 Kaugnayan: ODI Service Desk, [accessibility@innovation.ca.gov](mailto:accessibility@innovation.ca.gov)
 
-Pinapatunayan ng may lagda sa ibaba na simula Hulyo 1, 2023, ang website na ito ay idinisenyo, binuo, at pinananatili upang ma-access. Ito ay nagpapahiwatig ng pagsunod sa mga sumusunod:
+Pinapatunayan ng may lagda sa ibaba na simula Hulyo 1, 2025, ang website na ito ay idinisenyo, binuo, at pinananatili upang ma-access. Ito ay nagpapahiwatig ng pagsunod sa mga sumusunod:
 
 * Mga Seksyon ng Kodigo ng Pamahalaan ng California 7405, 11135, at 11546.7
-* Web Content Accessibility Guidelines 2.1 na inilathala ng Web Accessibility Initiative ng World Wide Web Consortium
+* Web Content Accessibility Guidelines 2.2 na inilathala ng Web Accessibility Initiative ng World Wide Web Consortium
 * Sa pinakamababang antas ng pamantayan sa tagumpay ng AA
 
 /s/ Chad Bratton <br>
 Punong Opisyal ng Impormasyon <br>
-Hulyo 1, 2023
+Hulyo 1, 2025
+
+/s/ Jeffery Marino <br>
+Director <br>
+Hulyo 1, 2025

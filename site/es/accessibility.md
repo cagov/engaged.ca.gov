@@ -16,7 +16,7 @@ La Oficina de Datos e Innovación (ODI) está comprometida a brindar accesibilid
 
 El sitio web de ODI cumple o supera los requisitos de:
 
-* Pautas de Accesibilidad al Contenido Web (WCAG) 2.1, Nivel AA del Consorcio World Wide Web,
+* Pautas de Accesibilidad al Contenido Web (WCAG) 2.2, Nivel AA del Consorcio World Wide Web,
 * La Ley de Derechos Civiles Unruh de California, y
 * La Ley de Estadounidenses con Discapacidades (ADA).
 
@@ -34,12 +34,16 @@ Oficina de Datos e Innovación
 
 Contacto: Centro de ayuda de ODI, [accessibility@innovation.ca.gov](mailto:accessibility@innovation.ca.gov)
 
-Los abajo firmantes certifican que, a partir del 1 de julio de 2023, este sitio web está diseñado, desarrollado y mantenido para ser accesible. Esto denota el cumplimiento de lo siguiente:
+Los abajo firmantes certifican que, a partir del 1 de julio de 2025, este sitio web está diseñado, desarrollado y mantenido para ser accesible. Esto denota el cumplimiento de lo siguiente:
 
 * Secciones 7405, 11135 y 11546.7 del Código de Gobierno de California
-* Pautas de Accesibilidad al Contenido Web 2.1 publicadas por la Iniciativa de Accesibilidad Web del Consorcio World Wide Web
+* Pautas de Accesibilidad al Contenido Web 2.2 publicadas por la Iniciativa de Accesibilidad Web del Consorcio World Wide Web
 * Como mínimo, criterios de éxito de nivel AA
 
 /s/ Chad Bratton <br>
 Director de Información <br>
-1 de julio de 2023
+1 de julio de 2025
+
+/s/ Jeffery Marino <br>
+Director <br>
+1 de julio de 2025

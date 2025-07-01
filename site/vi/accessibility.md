@@ -16,7 +16,7 @@ Văn Phòng Dữ Liệu Và Đổi Mới (Office of Data and Innovation, hoặc 
 
 Trang mạng của ODI đáp ứng hoặc vượt quá các yêu cầu sau:
 
-* Hướng dẫn về khả năng tiếp cận nội dung mạng của World Wide Web Consortium (WCAG) 2.1, Cấp độ AA,
+* Hướng dẫn về khả năng tiếp cận nội dung mạng của World Wide Web Consortium (WCAG) 2.2, Cấp độ AA,
 * Đạo Luật Dân Quyền Unruh Của California (UCRA) và
 * Đạo Luật Người Khuyết Tật Hoa Kỳ (ADA).
 
@@ -34,12 +34,16 @@ Văn Phòng Dữ Liệu Và Đổi Mới (ODI)
 
 Liên hệ: Bàn dịch vụ ODI, [accessibility@innovation.ca.gov](mailto:accessibility@innovation.ca.gov)
 
-Người ký tên dưới đây chứng nhận rằng kể từ ngày 1 tháng 7 năm 2023, trang mạng này được thiết kế, phát triển và bảo trì để có thể tiếp cận được. Điều này biểu thị sự tuân thủ những điều sau:
+Người ký tên dưới đây chứng nhận rằng kể từ ngày 1 tháng 7 năm 2025, trang mạng này được thiết kế, phát triển và bảo trì để có thể tiếp cận được. Điều này biểu thị sự tuân thủ những điều sau:
 
 * Bộ Luật Chính Phủ California Mục 7405, 11135 Và 11546.7
-* Hướng dẫn về khả năng tiếp cận nội dung mạng 2.1 do Sáng kiến ​​khả năng tiếp cận mạng của World Wide Web Consortium công bố
+* Hướng dẫn về khả năng tiếp cận nội dung mạng 2.2 do Sáng kiến ​​khả năng tiếp cận mạng của World Wide Web Consortium công bố
 * Tiêu chí thành công tối thiểu ở Cấp độ AA
 
 /s/ Chad Bratton <br>
 Giám Đốc Thông Tin <br>
-Ngày 1 tháng 7 năm 2023
+Ngày 1 tháng 7 năm 2025
+
+/s/ Jeffery Marino <br>
+Director <br>
+Ngày 1 tháng 7 năm 2025
