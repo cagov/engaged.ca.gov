@@ -581,11 +581,15 @@ div.legend-item {
     display: flex;
     flex-direction: row;
     min-height: 65px;
-    min-width: 500px;
+    width: 350px;
     border: 1px solid #BCBBC1;
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0px 4px 4px 0px #0000000F;
+    @media (max-width: 767px) {
+        width: 100%;
+        min-width: unset;
+    }
 }
 
 div.legend-circle {
