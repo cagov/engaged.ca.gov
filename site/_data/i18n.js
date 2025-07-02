@@ -611,8 +611,7 @@ const translations = {
         "hy": "Կայքի քարտեզ",
         "location": "Footer"
     },
-
-    "legends_infrastructure_restoration_1": {
+    "legends_findings_infrastructure_restoration_1": {
         "en": "Altadena infrastructure",
         "es": "Infraestructura de Altadena",
         "fa": "زیرساخت آلتادنا",
@@ -622,9 +621,10 @@ const translations = {
         "vi": "Cơ sở hạ tầng Altadena",
         "zh-hans": "阿尔塔迪纳基础设施",
         "zh-hant": "阿爾塔迪納基礎設施",
-        "status": "human_approved"
+        "status": "human_approved",
+        "location": "data_insights"
     },
-    "legends_infrastructure_restoration_2": {
+    "legends_findings_infrastructure_restoration_2": {
         "en": "Broadband access",
         "es": "Acceso de banda ancha",
         "fa": "دسترسی به پهنای باند",
@@ -634,9 +634,10 @@ const translations = {
         "vi": "Truy cập băng thông rộng",
         "zh-hans": "宽带接入",
         "zh-hant": "寬頻接入",
-        "status": "human_approved"
+        "status": "human_approved",
+        "location": "data_insights"
     },
-    "legends_infrastructure_restoration_3": {
+    "legends_findings_infrastructure_restoration_3": {
         "en": "Climate resilient infrastructure ",
         "es": "Infraestructura resiliente al clima ",
         "fa": "زیرساخت‌های مقاوم در برابر تغییرات اقلیمی ",
@@ -646,9 +647,10 @@ const translations = {
         "vi": "Cơ sở hạ tầng thích ứng với khí hậu ",
         "zh-hans": "气候适应型基础设施",
         "zh-hant": "氣候韌性基礎設施 ",
-        "status": "human_approved"
+        "status": "human_approved",
+        "location": "data_insights"
     },
-    "legends_infrastructure_restoration_4": {
+    "legends_findings_infrastructure_restoration_4": {
         "en": "Underground power lines",
         "es": "Líneas eléctricas subterráneas",
         "fa": "خطوط برق زیرزمینی",
@@ -660,7 +662,7 @@ const translations = {
         "zh-hant": "埋設電線",
         "status": "human_approved"
     },
-    "legends_infrastructure_restoration_5": {
+    "legends_findings_infrastructure_restoration_5": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",
@@ -672,7 +674,7 @@ const translations = {
         "zh-hant": "其他",
         "status": "human_approved"
     },
-    "legends_housing_rebuilding_1": {
+    "legends_findings_housing_rebuilding_1": {
         "en": "ADU considerations",
         "es": "Consideraciones de las unidades de vivienda accesorias (Accessory Dwelling Units, ADU)",
         "fa": "ملاحظات ADU",
@@ -684,7 +686,7 @@ const translations = {
         "zh-hant": "附屬住房注意事項",
         "status": "human_approved"
     },
-    "legends_housing_rebuilding_2": {
+    "legends_findings_housing_rebuilding_2": {
         "en": "Affordability, density, and fire-safe rebuilding",
         "es": "Asequibilidad, densidad y reconstrucción segura contra incendios",
         "fa": "مقرون به صرفه بودن، تراکم و بازسازی ایمن در برابر آتش",
@@ -696,7 +698,7 @@ const translations = {
         "zh-hant": "經濟性、密度和防火安全重建",
         "status": "human_approved"
     },
-    "legends_housing_rebuilding_3": {
+    "legends_findings_housing_rebuilding_3": {
         "en": "Streamline rebuilding process",
         "es": "Agilizar el proceso de reconstrucción",
         "fa": "ساده‌سازی فرآیند بازسازی",
@@ -708,7 +710,7 @@ const translations = {
         "zh-hant": "簡化重建流程",
         "status": "human_approved"
     },
-    "legends_housing_rebuilding_4": {
+    "legends_findings_housing_rebuilding_4": {
         "en": "Temporary housing",
         "es": "Vivienda temporal",
         "fa": "مسکن موقت",
@@ -720,7 +722,7 @@ const translations = {
         "zh-hant": "臨時住房安置",
         "status": "human_approved"
     },
-    "legends_housing_rebuilding_5": {
+    "legends_findings_housing_rebuilding_5": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",
@@ -732,7 +734,7 @@ const translations = {
         "zh-hant": "其他",
         "status": "human_approved"
     },
-    "legends_financial_legal_assistance_1": {
+    "legends_findings_financial_legal_assistance_1": {
         "en": "Building code and permitting reform",
         "es": "Reforma del reglamento de construcción y permisos",
         "fa": "اصلاح ضوابط ساختمانی و صدور مجوزها",
@@ -744,7 +746,7 @@ const translations = {
         "zh-hant": "建築規範和許可改革",
         "status": "human_approved"
     },
-    "legends_financial_legal_assistance_2": {
+    "legends_findings_financial_legal_assistance_2": {
         "en": "Financial relief navigation",
         "es": "Navegación de ayuda financiera",
         "fa": "پیمایش کمک‌های مالی",
@@ -756,7 +758,7 @@ const translations = {
         "zh-hant": "經濟援助指引",
         "status": "human_approved"
     },
-    "legends_financial_legal_assistance_3": {
+    "legends_findings_financial_legal_assistance_3": {
         "en": "Insurance reform",
         "es": "Reforma de seguros",
         "fa": "اصلاحات بیمه",
@@ -768,7 +770,7 @@ const translations = {
         "zh-hant": "保險改革",
         "status": "human_approved"
     },
-    "legends_financial_legal_assistance_4": {
+    "legends_findings_financial_legal_assistance_4": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",
@@ -780,7 +782,7 @@ const translations = {
         "zh-hant": "其他",
         "status": "human_approved"
     },
-    "legends_economic_recovery_1": {
+    "legends_findings_economic_recovery_1": {
         "en": "Grant distribution oversight",
         "es": "Supervisión de la distribución de subvenciones",
         "fa": "نظارت بر توزیع کمک‌های بلاعوض",
@@ -792,7 +794,7 @@ const translations = {
         "zh-hant": "資金分配監督",
         "status": "human_approved"
     },
-    "legends_economic_recovery_2": {
+    "legends_findings_economic_recovery_2": {
         "en": "Importance of supporting local businesses",
         "es": "Importancia de apoyar a los negocios locales",
         "fa": "اهمیت حمایت از کسب و کارهای محلی",
@@ -804,7 +806,7 @@ const translations = {
         "zh-hant": "支持本地企業的重要性",
         "status": "human_approved"
     },
-    "legends_economic_recovery_3": {
+    "legends_findings_economic_recovery_3": {
         "en": "Incentives for small business recovery",
         "es": "Incentivos para la recuperación de las pequeñas empresas",
         "fa": "مشوق‌هایی برای بهبود کسب‌وکارهای کوچک",
@@ -816,7 +818,7 @@ const translations = {
         "zh-hant": "小企業恢復激勵措施",
         "status": "human_approved"
     },
-    "legends_economic_recovery_4": {
+    "legends_findings_economic_recovery_4": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",
@@ -828,7 +830,7 @@ const translations = {
         "zh-hant": "其他",
         "status": "human_approved"
     },
-    "legends_environmental_recovery_1": {
+    "legends_findings_environmental_recovery_1": {
         "en": "Altadena-specific concerns",
         "es": "Inquietudes específicas de Altadena",
         "fa": "نگرانی‌های خاص آلتادنا",
@@ -840,7 +842,7 @@ const translations = {
         "zh-hant": "特定於阿爾塔迪納的問題",
         "status": "human_approved"
     },
-    "legends_environmental_recovery_2": {
+    "legends_findings_environmental_recovery_2": {
         "en": "Habitat restoration and natural fire prevention",
         "es": "Restauración del hábitat y prevención de incendios naturales",
         "fa": "احیای زیستگاه و پیشگیری از آتش‌سوزی‌های طبیعی",
@@ -852,7 +854,7 @@ const translations = {
         "zh-hant": "棲息地恢復與自然防火",
         "status": "human_approved"
     },
-    "legends_environmental_recovery_3": {
+    "legends_findings_environmental_recovery_3": {
         "en": "Satisfied with debris removal",
         "es": "Satisfacción con la remoción de escombros",
         "fa": "از جمع‌آوری نخاله‌ها راضی هستم",
@@ -864,7 +866,7 @@ const translations = {
         "zh-hant": "對廢棄物清理措施感到滿意",
         "status": "human_approved"
     },
-    "legends_environmental_recovery_4": {
+    "legends_findings_environmental_recovery_4": {
         "en": "Soil and other environmental testing",
         "es": "Suelo y otras pruebas ambientales",
         "fa": "آزمایش خاک و سایر آزمایش‌های محیطی",
@@ -876,7 +878,7 @@ const translations = {
         "zh-hant": "土壤及其他環境監測",
         "status": "human_approved"
     },
-    "legends_environmental_recovery_5": {
+    "legends_findings_environmental_recovery_5": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",
@@ -888,7 +890,7 @@ const translations = {
         "zh-hant": "其他",
         "status": "human_approved"
     },
-    "legends_wildfire_prevention_1": {
+    "legends_findings_wildfire_prevention_1": {
         "en": "Accountable utilities and buried lines",
         "es": "Servicios públicos responsables e infraestructura subterránea",
         "fa": "تأسیسات شهری و خطوط لوله مدفون پاسخگو",
@@ -900,7 +902,7 @@ const translations = {
         "zh-hant": "負責任的公共服務設施和埋地管線",
         "status": "human_approved"
     },
-    "legends_wildfire_prevention_2": {
+    "legends_findings_wildfire_prevention_2": {
         "en": "Controlled burn management",
         "es": "Manejo controlado de quemaduras",
         "fa": "مدیریت کنترل‌شده سوختگی",
@@ -912,7 +914,7 @@ const translations = {
         "zh-hant": "控制性燃燒管理",
         "status": "human_approved"
     },
-    "legends_wildfire_prevention_3": {
+    "legends_findings_wildfire_prevention_3": {
         "en": "Fire-safe home enforcement",
         "es": "Cumplimiento de normas de seguridad contra incendios en el hogar",
         "fa": "اجرای طرح ایمن‌سازی خانه در برابر آتش‌سوزی",
@@ -924,7 +926,7 @@ const translations = {
         "zh-hant": "消防安全住宅執法",
         "status": "human_approved"
     },
-    "legends_wildfire_prevention_4": {
+    "legends_findings_wildfire_prevention_4": {
         "en": "Government fire prevention accountability",
         "es": "Rendición de cuentas del gobierno en la prevención de incendios",
         "fa": "پاسخگویی دولت در پیشگیری از آتش‌سوزی",
@@ -936,7 +938,7 @@ const translations = {
         "zh-hant": "政府防火問責機制",
         "status": "human_approved"
     },
-    "legends_wildfire_prevention_5": {
+    "legends_findings_wildfire_prevention_5": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",
@@ -948,7 +950,7 @@ const translations = {
         "zh-hant": "其他",
         "status": "human_approved"
     },
-    "legends_emotional_mental_health_1": {
+    "legends_findings_emotional_mental_health_1": {
         "en": "Counseling access through healthcare",
         "es": "Acceso al asesoramiento a través de la atención de salud",
         "fa": "دسترسی به مشاوره از طریق مراکز درمانی",
@@ -960,7 +962,7 @@ const translations = {
         "zh-hant": "透過醫療服務提供心理諮詢",
         "status": "human_approved"
     },
-    "legends_emotional_mental_health_2": {
+    "legends_findings_emotional_mental_health_2": {
         "en": "Free emergency counseling",
         "es": "Asesoramiento gratuito para emergencias",
         "fa": "مشاوره رایگان در مواقع اضطراری",
@@ -972,7 +974,7 @@ const translations = {
         "zh-hant": "免費應急諮詢",
         "status": "human_approved"
     },
-    "legends_emotional_mental_health_3": {
+    "legends_findings_emotional_mental_health_3": {
         "en": "Mental health support",
         "es": "Apoyo para la salud mental",
         "fa": "حمایت از سلامت روان",
@@ -984,7 +986,7 @@ const translations = {
         "zh-hant": "心理健康支持",
         "status": "human_approved"
     },
-    "legends_emotional_mental_health_4": {
+    "legends_findings_emotional_mental_health_4": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",
@@ -996,7 +998,7 @@ const translations = {
         "zh-hant": "其他",
         "status": "human_approved"
     },
-    "legends_emergency_communication_1": {
+    "legends_findings_emergency_communication_1": {
         "en": "Emergency alert apps",
         "es": "Aplicaciones de alerta de emergencia",
         "fa": "اپلیکیشن‌های هشدار اضطراری",
@@ -1008,7 +1010,7 @@ const translations = {
         "zh-hant": "緊急警報應用程式",
         "status": "human_approved"
     },
-    "legends_emergency_communication_2": {
+    "legends_findings_emergency_communication_2": {
         "en": "Emergency alert systems",
         "es": "Sistemas de alerta de emergencia",
         "fa": "سیستم‌های هشدار اضطراری",
@@ -1020,7 +1022,7 @@ const translations = {
         "zh-hant": "緊急警報系統",
         "status": "human_approved"
     },
-    "legends_emergency_communication_3": {
+    "legends_findings_emergency_communication_3": {
         "en": "Post-emergency communications",
         "es": "Comunicación después de emergencias",
         "fa": "ارتباطات پس از شرایط اضطراری",
@@ -1032,7 +1034,7 @@ const translations = {
         "zh-hant": "緊急事件後進行溝通",
         "status": "human_approved"
     },
-    "legends_emergency_communication_4": {
+    "legends_findings_emergency_communication_4": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",
@@ -1044,7 +1046,7 @@ const translations = {
         "zh-hant": "其他",
         "status": "human_approved"
     },
-    "legends_climate_community_resilience_1": {
+    "legends_findings_climate_community_resilience_1": {
         "en": "Community preparedness",
         "es": "Preparación de la comunidad",
         "fa": "آمایش جامعه",
@@ -1056,7 +1058,7 @@ const translations = {
         "zh-hant": "社區應對準備",
         "status": "human_approved"
     },
-    "legends_climate_community_resilience_2": {
+    "legends_findings_climate_community_resilience_2": {
         "en": "Fire resistant building and landscaping",
         "es": "Construcción y paisajismo resistentes al fuego",
         "fa": "ساختمان و محوطه سازی مقاوم در برابر آتش",
@@ -1068,7 +1070,7 @@ const translations = {
         "zh-hant": "耐火建築和耐火園林設計",
         "status": "human_approved"
     },
-    "legends_climate_community_resilience_3": {
+    "legends_findings_climate_community_resilience_3": {
         "en": "Fire-safe infrastructure management",
         "es": "Gestión de infraestructuras a prueba de incendios",
         "fa": "مدیریت زیرساخت‌های ایمن در برابر آتش‌سوزی",
@@ -1080,7 +1082,7 @@ const translations = {
         "zh-hant": "防火基礎設施管理",
         "status": "human_approved"
     },
-    "legends_climate_community_resilience_4": {
+    "legends_findings_climate_community_resilience_4": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",
@@ -1092,7 +1094,7 @@ const translations = {
         "zh-hant": "其他",
         "status": "human_approved"
     },
-    "legends_emergency_planning_safety_1": {
+    "legends_findings_emergency_planning_safety_1": {
         "en": "Emergency response improvements",
         "es": "Mejoras en la respuesta a emergencias",
         "fa": "بهبودهای واکنش اضطراری",
@@ -1104,7 +1106,7 @@ const translations = {
         "zh-hant": "應急改善措施",
         "status": "human_approved"
     },
-    "legends_emergency_planning_safety_2": {
+    "legends_findings_emergency_planning_safety_2": {
         "en": "Emergency warning systems",
         "es": "Sistemas de avisos de emergencia",
         "fa": "سیستم‌های هشدار اضطراری",
@@ -1116,7 +1118,7 @@ const translations = {
         "zh-hant": "緊急預警系統",
         "status": "human_approved"
     },
-    "legends_emergency_planning_safety_3": {
+    "legends_findings_emergency_planning_safety_3": {
         "en": "Evacuation planning",
         "es": "Planificación de evacuación",
         "fa": "برنامه‌ریزی تخلیه",
@@ -1128,7 +1130,7 @@ const translations = {
         "zh-hant": "疏散計畫",
         "status": "human_approved"
     },
-    "legends_emergency_planning_safety_4": {
+    "legends_findings_emergency_planning_safety_4": {
         "en": "Next-gen wildfire readiness",
         "es": "Preparación de próxima generación para incendios forestales",
         "fa": "آمایش نسل بعدی برای آتش‌سوزی‌های جنگلی",
@@ -1140,7 +1142,7 @@ const translations = {
         "zh-hant": "預防下一次野火準備",
         "status": "human_approved"
     },
-    "legends_emergency_planning_safety_5": {
+    "legends_findings_emergency_planning_safety_5": {
         "en": "Other",
         "es": "Otro",
         "fa": "سایر",

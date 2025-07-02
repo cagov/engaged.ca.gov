@@ -81,7 +81,7 @@ def create_svg_scatterplot_legend_json(
         comment_ids = [item['COMMENT_ID'] for item in data if item['SUBCATEGORY'] == subcat]
         legend_json.append({
             'idx': i+1,
-            'key': f"{root_name}_{i+1}",
+            'key': f"findings_{root_name}_{i+1}",
             'subcat_en': subcat,
             'color': color_map[subcat],
             'comment_ids': comment_ids
@@ -101,13 +101,14 @@ for theme_rec in theme_recs:
 
     legend_json =     create_svg_scatterplot_legend_json(
         data, root_name=filename_root)
-    legend_dict[filename_root] = legend_json
+    legend_dict['findings_' + filename_root] = legend_json
 
 # save legend_dict to a json file
-with open('legend_dict.js', 'w') as f:
-    f.write('export const legend_dict = ')
+with open('dvlegends.cjs', 'w') as f:
+    f.write('const legendsData = ')
     json.dump(legend_dict, f, indent=4)
     f.write(';')
+    f.write('module.exports = legendsData;')
 
 
 

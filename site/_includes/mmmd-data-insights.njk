@@ -63,6 +63,8 @@
 
 
 {% for i in range(1, modules.plots.nbr_charts+1) %}
+{% set legend_key = modules.plots["id_" + i] %}
+{% set legend_data = dvlegends[legend_key] %}
 <section id="plot-{{ i }}" class="plot-section">
   <div class="container" id="{{ modules.plots["id_" + i] }}">
     <div class="row plot-row">
@@ -81,8 +83,16 @@
             {{ ('./src/public/images/' + modules.plots["id_" + i] + '.svg') | getFileContents | safe }}
             </div>
             <div class="plot-legend">
-              {{ ('./src/public/images/' + modules.plots["id_" + i] + '_' + lang + '_legend.svg') | getFileContents | safe }}
+              {% for legend_item in legend_data %}
+              {% set translation_key = 'legends_' + legend_item.key %}
+              <div class="legend-item">
+                <div class="legend-item-color legend-circle " style="background-color: {{ legend_item.color }};"></div>
+                <div class="legend-item-label">{{ translation_key | i18n  }}</div>
+              </div>
+              {% endfor %}
+              {# {{ ('./src/public/images/' + modules.plots["id_" + i] + '_' + lang + '_legend.svg') | getFileContents | safe }} #}
             </div>
+
             <div class="insights-back-button-container">
               <img src="/public/images/back_bracket_blue.png" alt="<" class="insights-back-button-icon" />
               <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}#findings-topics-people-rated" class="insights-back-button">

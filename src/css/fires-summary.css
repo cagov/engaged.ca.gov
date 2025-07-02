@@ -496,7 +496,8 @@ div.findings-barchart-item-approval {
 }
 
 div.insights-back-button-container {
-    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 img.insights-back-button-icon {
     width: 8px;
@@ -569,11 +570,26 @@ div.plot-legend {
     margin-top: 20px;
 }
 
+div.legend-item {
+    display: flex;
+    flex-direction: row;
+}
+
+div.legend-circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    min-width: 10px;
+}
+
 @media (orientation: landscape) {
-    .responsive-svg-container {
+    /* .responsive-svg-container {
         display: flex;
         flex-wrap: wrap;
-    }
+    } */
 
     .plot-title {
         width: 100%;
@@ -583,11 +599,11 @@ div.plot-legend {
         width: 65%;
     }
 
-    div.plot-legend {
+    /* div.plot-legend {
         width: 35%;
         margin-top: 0;
         padding-left: 10px;
-    }
+    } */
 }
 
 a.download-navigate-link {

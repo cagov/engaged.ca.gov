@@ -9,6 +9,8 @@ import translations from './site/_data/i18n.js';  // Note: might need .js extens
 import { EleventyI18nPlugin } from "@11ty/eleventy";
 import { readFileSync } from 'node:fs';
 
+console.log("translations", translations);
+
 /**
  * Log an output from a build process in the 11ty style.
  * @param {string} srcPath The source of the build process.

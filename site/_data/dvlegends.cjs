@@ -1,8 +1,8 @@
-export const legend_dict = {
-    "environmental_recovery": [
+const legendsData = {
+    "findings_environmental_recovery": [
         {
             "idx": 1,
-            "key": "environmental_recovery_1",
+            "key": "findings_environmental_recovery_1",
             "subcat_en": "Altadena-specific concerns",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -15,7 +15,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "environmental_recovery_2",
+            "key": "findings_environmental_recovery_2",
             "subcat_en": "Habitat restoration and natural fire prevention",
             "color": "#70b6e5",
             "comment_ids": [
@@ -39,7 +39,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "environmental_recovery_3",
+            "key": "findings_environmental_recovery_3",
             "subcat_en": "Satisfied with debris removal",
             "color": "#b98acb",
             "comment_ids": [
@@ -52,7 +52,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "environmental_recovery_4",
+            "key": "findings_environmental_recovery_4",
             "subcat_en": "Soil and other environmental testing",
             "color": "#ee8176",
             "comment_ids": [
@@ -91,7 +91,7 @@ export const legend_dict = {
         },
         {
             "idx": 5,
-            "key": "environmental_recovery_5",
+            "key": "findings_environmental_recovery_5",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -156,10 +156,10 @@ export const legend_dict = {
             ]
         }
     ],
-    "wildfire_prevention": [
+    "findings_wildfire_prevention": [
         {
             "idx": 1,
-            "key": "wildfire_prevention_1",
+            "key": "findings_wildfire_prevention_1",
             "subcat_en": "Accountable utilities and buried lines",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -188,7 +188,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "wildfire_prevention_2",
+            "key": "findings_wildfire_prevention_2",
             "subcat_en": "Controlled burn management",
             "color": "#70b6e5",
             "comment_ids": [
@@ -208,7 +208,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "wildfire_prevention_3",
+            "key": "findings_wildfire_prevention_3",
             "subcat_en": "Fire-safe home enforcement",
             "color": "#b98acb",
             "comment_ids": [
@@ -234,7 +234,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "wildfire_prevention_4",
+            "key": "findings_wildfire_prevention_4",
             "subcat_en": "Government fire prevention accountability",
             "color": "#ee8176",
             "comment_ids": [
@@ -295,7 +295,7 @@ export const legend_dict = {
         },
         {
             "idx": 5,
-            "key": "wildfire_prevention_5",
+            "key": "findings_wildfire_prevention_5",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -316,10 +316,10 @@ export const legend_dict = {
             ]
         }
     ],
-    "climate_community_resilience": [
+    "findings_climate_community_resilience": [
         {
             "idx": 1,
-            "key": "climate_community_resilience_1",
+            "key": "findings_climate_community_resilience_1",
             "subcat_en": "Community preparedness",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -341,7 +341,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "climate_community_resilience_2",
+            "key": "findings_climate_community_resilience_2",
             "subcat_en": "Fire resistant building and landscaping",
             "color": "#70b6e5",
             "comment_ids": [
@@ -408,7 +408,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "climate_community_resilience_3",
+            "key": "findings_climate_community_resilience_3",
             "subcat_en": "Fire-safe infrastructure management",
             "color": "#b98acb",
             "comment_ids": [
@@ -450,7 +450,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "climate_community_resilience_4",
+            "key": "findings_climate_community_resilience_4",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -488,10 +488,10 @@ export const legend_dict = {
             ]
         }
     ],
-    "infrastructure_restoration": [
+    "findings_infrastructure_restoration": [
         {
             "idx": 1,
-            "key": "infrastructure_restoration_1",
+            "key": "findings_infrastructure_restoration_1",
             "subcat_en": "Altadena infrastructure",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -511,7 +511,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "infrastructure_restoration_2",
+            "key": "findings_infrastructure_restoration_2",
             "subcat_en": "Broadband access",
             "color": "#70b6e5",
             "comment_ids": [
@@ -527,7 +527,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "infrastructure_restoration_3",
+            "key": "findings_infrastructure_restoration_3",
             "subcat_en": "Climate resilient infrastructure ",
             "color": "#b98acb",
             "comment_ids": [
@@ -552,7 +552,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "infrastructure_restoration_4",
+            "key": "findings_infrastructure_restoration_4",
             "subcat_en": "Underground power lines",
             "color": "#ee8176",
             "comment_ids": [
@@ -648,7 +648,7 @@ export const legend_dict = {
         },
         {
             "idx": 5,
-            "key": "infrastructure_restoration_5",
+            "key": "findings_infrastructure_restoration_5",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -672,10 +672,10 @@ export const legend_dict = {
             ]
         }
     ],
-    "emergency_planning_safety": [
+    "findings_emergency_planning_safety": [
         {
             "idx": 1,
-            "key": "emergency_planning_safety_1",
+            "key": "findings_emergency_planning_safety_1",
             "subcat_en": "Emergency response improvements",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -711,7 +711,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "emergency_planning_safety_2",
+            "key": "findings_emergency_planning_safety_2",
             "subcat_en": "Emergency warning systems",
             "color": "#70b6e5",
             "comment_ids": [
@@ -738,7 +738,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "emergency_planning_safety_3",
+            "key": "findings_emergency_planning_safety_3",
             "subcat_en": "Evacuation planning",
             "color": "#b98acb",
             "comment_ids": [
@@ -775,7 +775,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "emergency_planning_safety_4",
+            "key": "findings_emergency_planning_safety_4",
             "subcat_en": "Next-gen wildfire readiness",
             "color": "#ee8176",
             "comment_ids": [
@@ -809,7 +809,7 @@ export const legend_dict = {
         },
         {
             "idx": 5,
-            "key": "emergency_planning_safety_5",
+            "key": "findings_emergency_planning_safety_5",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -844,10 +844,10 @@ export const legend_dict = {
             ]
         }
     ],
-    "housing_rebuilding": [
+    "findings_housing_rebuilding": [
         {
             "idx": 1,
-            "key": "housing_rebuilding_1",
+            "key": "findings_housing_rebuilding_1",
             "subcat_en": "ADU considerations",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -873,7 +873,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "housing_rebuilding_2",
+            "key": "findings_housing_rebuilding_2",
             "subcat_en": "Affordability, density, and fire-safe rebuilding",
             "color": "#70b6e5",
             "comment_ids": [
@@ -919,7 +919,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "housing_rebuilding_3",
+            "key": "findings_housing_rebuilding_3",
             "subcat_en": "Streamline rebuilding process",
             "color": "#b98acb",
             "comment_ids": [
@@ -946,7 +946,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "housing_rebuilding_4",
+            "key": "findings_housing_rebuilding_4",
             "subcat_en": "Temporary housing",
             "color": "#ee8176",
             "comment_ids": [
@@ -976,7 +976,7 @@ export const legend_dict = {
         },
         {
             "idx": 5,
-            "key": "housing_rebuilding_5",
+            "key": "findings_housing_rebuilding_5",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -1023,10 +1023,10 @@ export const legend_dict = {
             ]
         }
     ],
-    "financial_legal_assistance": [
+    "findings_financial_legal_assistance": [
         {
             "idx": 1,
-            "key": "financial_legal_assistance_1",
+            "key": "findings_financial_legal_assistance_1",
             "subcat_en": "Building code and permitting reform",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -1064,7 +1064,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "financial_legal_assistance_2",
+            "key": "findings_financial_legal_assistance_2",
             "subcat_en": "Financial relief navigation",
             "color": "#70b6e5",
             "comment_ids": [
@@ -1123,7 +1123,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "financial_legal_assistance_3",
+            "key": "findings_financial_legal_assistance_3",
             "subcat_en": "Insurance reform",
             "color": "#b98acb",
             "comment_ids": [
@@ -1158,7 +1158,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "financial_legal_assistance_4",
+            "key": "findings_financial_legal_assistance_4",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -1189,10 +1189,10 @@ export const legend_dict = {
             ]
         }
     ],
-    "emergency_communication": [
+    "findings_emergency_communication": [
         {
             "idx": 1,
-            "key": "emergency_communication_1",
+            "key": "findings_emergency_communication_1",
             "subcat_en": "Emergency alert apps",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -1214,7 +1214,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "emergency_communication_2",
+            "key": "findings_emergency_communication_2",
             "subcat_en": "Emergency alert systems",
             "color": "#70b6e5",
             "comment_ids": [
@@ -1236,7 +1236,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "emergency_communication_3",
+            "key": "findings_emergency_communication_3",
             "subcat_en": "Post-emergency communications",
             "color": "#b98acb",
             "comment_ids": [
@@ -1300,7 +1300,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "emergency_communication_4",
+            "key": "findings_emergency_communication_4",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -1335,10 +1335,10 @@ export const legend_dict = {
             ]
         }
     ],
-    "economic_recovery": [
+    "findings_economic_recovery": [
         {
             "idx": 1,
-            "key": "economic_recovery_1",
+            "key": "findings_economic_recovery_1",
             "subcat_en": "Grant distribution oversight",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -1365,7 +1365,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "economic_recovery_2",
+            "key": "findings_economic_recovery_2",
             "subcat_en": "Importance of supporting local businesses",
             "color": "#70b6e5",
             "comment_ids": [
@@ -1415,7 +1415,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "economic_recovery_3",
+            "key": "findings_economic_recovery_3",
             "subcat_en": "Incentives for small business recovery",
             "color": "#b98acb",
             "comment_ids": [
@@ -1437,7 +1437,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "economic_recovery_4",
+            "key": "findings_economic_recovery_4",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -1461,10 +1461,10 @@ export const legend_dict = {
             ]
         }
     ],
-    "emotional_mental_health": [
+    "findings_emotional_mental_health": [
         {
             "idx": 1,
-            "key": "emotional_mental_health_1",
+            "key": "findings_emotional_mental_health_1",
             "subcat_en": "Counseling access through healthcare",
             "color": "#5ed0b9",
             "comment_ids": [
@@ -1478,7 +1478,7 @@ export const legend_dict = {
         },
         {
             "idx": 2,
-            "key": "emotional_mental_health_2",
+            "key": "findings_emotional_mental_health_2",
             "subcat_en": "Free emergency counseling",
             "color": "#70b6e5",
             "comment_ids": [
@@ -1494,7 +1494,7 @@ export const legend_dict = {
         },
         {
             "idx": 3,
-            "key": "emotional_mental_health_3",
+            "key": "findings_emotional_mental_health_3",
             "subcat_en": "Mental health support",
             "color": "#b98acb",
             "comment_ids": [
@@ -1525,7 +1525,7 @@ export const legend_dict = {
         },
         {
             "idx": 4,
-            "key": "emotional_mental_health_4",
+            "key": "findings_emotional_mental_health_4",
             "subcat_en": "Other",
             "color": "lightgray",
             "comment_ids": [
@@ -1563,4 +1563,4 @@ export const legend_dict = {
             ]
         }
     ]
-};
+};module.exports = legendsData;
