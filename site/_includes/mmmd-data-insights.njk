@@ -61,6 +61,17 @@
   </div>
 </div>
 
+<section id="plot-selection-pulldown">
+  <div class="plot-selection-container container">
+    {% for i in range(1, modules.plots.nbr_charts+1) %}
+    <div class="plot-selection-item {{ 'active' if loop.first else '' }}" data-plot-id="{{ modules.plots["id_" + i] }}" data-plot-idx="{{ i }}">
+      <div class="plot-selection-item-title">
+        {{ modules.plots["title_" + i] }}
+      </div> 
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
 {% for i in range(1, modules.plots.nbr_charts+1) %}
 {% set legend_key = modules.plots["id_" + i] %}
