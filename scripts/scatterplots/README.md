@@ -9,7 +9,7 @@ Top level script.
 
 ### make_all_legends.py
 Top level script.
-Generates legend json files to ./plot-legends/ using make_scatter_plot_legend_json.py
+Generates legend data to ./legend_dict.js.
 
 ### make_cumulative_comments_json.py
 Top levels script.
@@ -23,9 +23,6 @@ Originally, this was one large file, which is why the make_scatterplot.py has co
 
 ### make_scatterplot.py
 Constructs SVG files (both for plots and translated legends).
-
-### make_scatterplot_legend_json.py
-Constructs scatterplot legend json file, used to create interactive legends.  Data stored for each legend includes it's translation key, color, and list of associated comment-ids.
 
 ### scatterplot_config.py
 Stores common settings for import.
