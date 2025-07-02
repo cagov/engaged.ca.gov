@@ -655,6 +655,15 @@ div.plot-selection-item:not(:last-child):not(.active) {
     border-bottom: 1px solid #BCBBC1;
 }
 /* End Generation Here */
+div.plot-selection-container.collapsed div.plot-selection-item.active .plot-selection-item-title {
+    background: url("/public/images/arrow-down.svg") no-repeat right center;
+    padding-right: 24px;
+}
+
+div.plot-selection-container:not(.collapsed) div.plot-selection-item.active .plot-selection-item-title {
+    background: url("/public/images/arrow-up.svg") no-repeat right center;
+    padding-right: 24px;
+}
 
 
 a.download-navigate-link {
