@@ -59,8 +59,11 @@ buttonText: Download the full dataset
 
 ## Data visualizations
 
+Topic area
+
 ----
 id: plots
+chart_boilerplate_title: Data visualization
 chart_boilerplate_notes: Each dot represents one comment made about this topic. Grouped comments have their own color.
 chart_generic_alt: A scatter plot that visualizes comments using dots. The comments are categorized into subcategories.
 nbr_charts: 10

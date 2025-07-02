@@ -536,10 +536,11 @@ a.insights-back-button {
 }
 
 .plot-title {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     font-family: "Noto Sans Display" !important;
     line-height: 130%;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     @media (max-width: 767px) {
         font-size: 19px;
@@ -584,6 +585,7 @@ div.legend-item {
     border: 1px solid #BCBBC1;
     border-radius: 8px;
     padding: 1rem;
+    box-shadow: 0px 4px 4px 0px #0000000F;
 }
 
 div.legend-circle {
@@ -624,9 +626,20 @@ div.plot-selection-container {
     border-radius: 16px;
     padding: 0;
 }
+div.plot-section-container:not(.active) {
+    display: none;
+}
+
+div.plot-selection-container.collapsed .plot-selection-item:not(.active) {
+    display: none;
+}
+
 
 div.plot-selection-item {
     padding: 1rem;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
 }
 div.plot-selection-item {
     min-height: 60px;
@@ -635,6 +648,7 @@ div.plot-selection-item.active {
     border: 3px solid #E79450;
     margin: -1.5px;
     border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px #0000000F;
 }
 /* Start Generation Here */
 div.plot-selection-item:not(:last-child):not(.active) {
@@ -693,3 +707,6 @@ section#data-definitions li::marker {
     font-size: 18px;
 }
 
+section#plot-section {
+    padding-top: 0;
+}
