@@ -568,21 +568,32 @@ a.insights-back-button {
 }
 div.plot-legend {
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 div.legend-item {
     display: flex;
     flex-direction: row;
+    min-height: 65px;
+    min-width: 500px;
+    border: 1px solid #BCBBC1;
+    border-radius: 8px;
+    padding: 1rem;
 }
 
 div.legend-circle {
     border-radius: 50%;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
     display: inline-block;
-    min-width: 10px;
+    min-width: 20px;
 }
 
 @media (orientation: landscape) {
@@ -605,22 +616,31 @@ div.legend-circle {
         padding-left: 10px;
     } */
 }
-
-div.plot-selection-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    border: 1px solid #BCBBC1;
-    border-radius: 10px;
-    padding: 1rem;
+section#plot-selection-pulldown {
     margin-bottom: 1rem;
 }
+div.plot-selection-container {
+    border: 1px solid #BCBBC1;
+    border-radius: 16px;
+    padding: 0;
+}
 
+div.plot-selection-item {
+    padding: 1rem;
+}
+div.plot-selection-item {
+    min-height: 60px;
+}
 div.plot-selection-item.active {
     border: 3px solid #E79450;
-
+    margin: -1.5px;
+    border-radius: 16px;
 }
+/* Start Generation Here */
+div.plot-selection-item:not(:last-child):not(.active) {
+    border-bottom: 1px solid #BCBBC1;
+}
+/* End Generation Here */
 
 
 a.download-navigate-link {
