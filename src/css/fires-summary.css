@@ -703,6 +703,11 @@ div.plot-selection-item:not(:first-child):not(.active) {
 div.plot-selection-item.active + div.plot-selection-item {
     border-top: none;
 }
+div.plot-selection-item:not(.active):hover {
+    background-color: #F6F7FA;
+    text-decoration: underline;
+}
+
 /* End Generation Here */
 div.plot-selection-container.collapsed div.plot-selection-item.active .plot-selection-item-title {
     background: url("/public/images/arrow-down.svg") no-repeat right center;
