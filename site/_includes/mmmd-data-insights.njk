@@ -102,6 +102,12 @@
                   <div class="plot-plot">
                   {{ ('./src/public/images/' + modules.plots["id_" + i] + '.svg') | getFileContents | safe }}
                   </div>
+                  <div class="plot-legend-title">
+                    {{ modules.plots.chart_legend_title }}
+                  </div>
+                  <div class="plot-legend-notes">
+                    {{ modules.plots.chart_legend_notes }}
+                  </div>
                   <div class="plot-legend">
                     {% for legend_item in legend_data %}
                     {% set translation_key = 'legends_' + legend_item.key %}
@@ -111,7 +117,6 @@
                         <div class="legend-item-label">{{ translation_key | i18n  }}</div>
                       </div>
                       <div class="legend-item-expansion-block">
-                        <div class="legend-item-info">{{ 'comments_info' | i18n }}</div>
                         <div class="legend-item-content"></div>
                       </div>
                     </div>

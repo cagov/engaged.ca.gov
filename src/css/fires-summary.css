@@ -535,7 +535,7 @@ a.insights-back-button {
     position: relative;
 }
 
-.plot-title {
+.plot-title, .plot-legend-title {
     font-size: 18px;
     font-weight: 600;
     font-family: "Noto Sans Display" !important;
@@ -558,7 +558,7 @@ a.insights-back-button {
         line-height: 30px;
     }
 }
-.plot-notes {
+.plot-notes, .plot-legend-notes {
     font-size: 18px;
     font-weight: 400;
     font-style: italic;
@@ -626,12 +626,6 @@ div.legend-item-comment-item {
 div.legend-item-comment-item:nth-child(even) {
     background-color: #F6F7FA;
 }
-div.legend-item-info {
-    font-size: 16px;
-    font-weight: 600;
-    font-style: italic;
-    padding: 1rem;
-}
 div.legend-circle {
     border-radius: 50%;
     width: 20px;
@@ -648,7 +642,7 @@ div.legend-circle {
         flex-wrap: wrap;
     } */
 
-    .plot-title {
+    .plot-title, .plot-legend-title {
         width: 100%;
     }
 
@@ -682,24 +676,32 @@ div.plot-selection-container.collapsed .plot-selection-item:not(.active) {
 div.plot-selection-item {
     padding: 1rem;
     cursor: pointer;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 23px;
+    font-weight: 500;
+    min-height: 65px;
     @media (max-width: 767px) {
-        font-size: 18px;
+        font-size: 19px;
+        line-height: 30px;
     }
 }
-div.plot-selection-item {
-    min-height: 60px;
-}
+
 div.plot-selection-item.active {
     border: 3px solid #E79450;
     margin: -1.5px;
     border-radius: 16px;
     box-shadow: 0px 4px 4px 0px #0000000F;
+    font-size: 30px;
+    font-weight: 700;
+    @media (max-width: 767px) {
+        font-size: 19px;
+    }
 }
 /* Start Generation Here */
-div.plot-selection-item:not(:last-child):not(.active) {
-    border-bottom: 1px solid #BCBBC1;
+div.plot-selection-item:not(:first-child):not(.active) {
+    border-top: 1px solid #BCBBC1;
+}
+div.plot-selection-item.active + div.plot-selection-item {
+    border-top: none;
 }
 /* End Generation Here */
 div.plot-selection-container.collapsed div.plot-selection-item.active .plot-selection-item-title {
