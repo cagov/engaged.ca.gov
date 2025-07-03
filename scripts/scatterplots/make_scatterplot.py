@@ -302,7 +302,7 @@ def main():
         list_categories(data)
         return
     
-    # Filter data by tension category
+    # Filter data by tension category (technically no longer needed, now that the files are kept separate)
     filtered_data = filter_data_by_tension(data, args.category)
     
     # Determine output file name if not specified
