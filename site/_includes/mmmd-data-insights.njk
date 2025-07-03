@@ -105,9 +105,15 @@
                   <div class="plot-legend">
                     {% for legend_item in legend_data %}
                     {% set translation_key = 'legends_' + legend_item.key %}
-                    <div class="legend-item">
-                      <div class="legend-item-color legend-circle " style="background-color: {{ legend_item.color }};"></div>
-                      <div class="legend-item-label">{{ translation_key | i18n  }}</div>
+                    <div class="legend-item collapsed" data-nbr-comments="{{ legend_item.comment_ids.length }}" data-comment-ids="{{ legend_item.comment_ids | join(',') }}">
+                      <div class="legend-item-header">
+                        <div class="legend-item-color legend-circle " style="background-color: {{ legend_item.color }};"></div>
+                        <div class="legend-item-label">{{ translation_key | i18n  }}</div>
+                      </div>
+                      <div class="legend-item-expansion-block">
+                        <div class="legend-item-info">{{ 'comments_info' | i18n }}</div>
+                        <div class="legend-item-content"></div>
+                      </div>
                     </div>
                     {% endfor %}
                     {# {{ ('./src/public/images/' + modules.plots["id_" + i] + '_' + lang + '_legend.svg') | getFileContents | safe }} #}
@@ -204,7 +210,7 @@ function revealQuote(cid, evt) {
   }
   const quote = quoteData.find(q => q.COMMENT_ID === cid);
   if (quote) {
-    document.querySelector('.quote-card-content').innerHTML = quote.CONTENT;
+    document.querySelector('.quote-card-content').innerHTML = '“' + quote.CONTENT + '”';
   } else {
     console.log('No quote found for comment_id:', cid);
   }
@@ -261,6 +267,73 @@ function hideQuote() {
   document.querySelector('.quote-card').style.display = 'none';
 }
 
+function chartSelectionHandler(e) {
+  const plotId = this.getAttribute('data-plot-id');
+  const plotIdx = this.getAttribute('data-plot-idx');
+  console.log('Chart selected:', plotId, plotIdx);
+  const plotSection = document.querySelector('.plot-section-container[data-plot-id="' + plotId + '"]');
+  const plotSelectionContainer = document.getElementById('plot-selection-container');
+  let is_collapsed = plotSelectionContainer.classList.contains('collapsed');
+  if (is_collapsed) {
+    plotSelectionContainer.classList.remove('collapsed');
+  } else {
+
+    plotSelectionContainer.classList.remove('collapsed');
+
+    if (plotSection) {
+      plotSection.classList.add('active');
+    }
+    const allPlotSections = document.querySelectorAll('.plot-section-container');
+    allPlotSections.forEach(section => {
+      if (section.getAttribute('data-plot-id') !== plotId) {
+        section.classList.remove('active');
+      }
+    });
+
+    // selector buttons
+    this.classList.add('active');
+    const allSelectorButtons = document.querySelectorAll('.plot-selection-item');
+    allSelectorButtons.forEach(button => {
+      if (button.getAttribute('data-plot-id') !== plotId) {
+        button.classList.remove('active');
+      }
+    });
+    plotSelectionContainer.classList.add('collapsed');
+  }
+}
+
+function legendItemHandler(e) {
+  const legendItem = this;
+  let is_collapsed = legendItem.classList.contains('collapsed');
+  if (is_collapsed) {
+    legendItem.classList.remove('collapsed');
+  } else {
+    legendItem.classList.add('collapsed');
+  }
+  is_collapsed = !is_collapsed;
+  const nbrComments = legendItem.getAttribute('data-nbr-comments');
+  const commentIds = legendItem.getAttribute('data-comment-ids');
+  console.log('Legend item clicked:', nbrComments, commentIds);
+
+  const legendItemContent = legendItem.querySelector('.legend-item-content');
+  if (!is_collapsed) {
+    let comment_list = '<div class="legend-item-content-inner">';
+    const commentIdsArray = commentIds.split(',');
+    for (let i = 0; i < nbrComments; i++) {
+      comment_list += '<div class="legend-item-comment-item">';
+      const cid = parseInt(commentIdsArray[i]);
+      console.log("Looking up quote with comment id ", cid);
+      const quote = quoteData.find(q => q.COMMENT_ID === cid);
+      comment_list += '“' + quote.CONTENT + '”';
+      comment_list += '</div>';
+    }
+    comment_list += '</div>';
+    legendItemContent.innerHTML = comment_list;
+  } else {
+    legendItemContent.innerHTML = '';
+  }
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch("/public/data/engca_comment_scatterplot_source.json", {})
@@ -291,40 +364,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  let chartSelectionHandler = function(e) {
-    const plotId = this.getAttribute('data-plot-id');
-    const plotIdx = this.getAttribute('data-plot-idx');
-    console.log('Chart selected:', plotId, plotIdx);
-    const plotSection = document.querySelector('.plot-section-container[data-plot-id="' + plotId + '"]');
-    const plotSelectionContainer = document.getElementById('plot-selection-container');
-    let is_collapsed = plotSelectionContainer.classList.contains('collapsed');
-    if (is_collapsed) {
-      plotSelectionContainer.classList.remove('collapsed');
-    } else {
 
-      plotSelectionContainer.classList.remove('collapsed');
-
-      if (plotSection) {
-        plotSection.classList.add('active');
-      }
-      const allPlotSections = document.querySelectorAll('.plot-section-container');
-      allPlotSections.forEach(section => {
-        if (section.getAttribute('data-plot-id') !== plotId) {
-          section.classList.remove('active');
-        }
-      });
-
-      // selector buttons
-      this.classList.add('active');
-      const allSelectorButtons = document.querySelectorAll('.plot-selection-item');
-      allSelectorButtons.forEach(button => {
-        if (button.getAttribute('data-plot-id') !== plotId) {
-          button.classList.remove('active');
-        }
-      });
-      plotSelectionContainer.classList.add('collapsed');
-    }
-  }
 
   const plotSelectionItems = document.querySelectorAll('.plot-selection-item');
   plotSelectionItems.forEach(item => {
@@ -345,7 +385,14 @@ document.addEventListener('DOMContentLoaded', function() {
       datapoint.addEventListener('touchend', e => shrinkHandler.call(datapoint, e, true));
     });
   }
+  
+  const legendItems = document.querySelectorAll('.legend-item');
+  legendItems.forEach(item => {
+    item.addEventListener('click', legendItemHandler);
+  });
+  
 });
+
 </script>
 
 {% endblock %}

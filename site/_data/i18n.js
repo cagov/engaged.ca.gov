@@ -1153,6 +1153,18 @@ const translations = {
         "zh-hans": "其他",
         "zh-hant": "其他",
         "status": "human_approved"
+    },
+    "comments_info": {
+        "en": "Note: Comments are presented in their original language.",
+        "es": "Nota: Los comentarios se presentan en su idioma original.",
+        "fa": "توجه: نظرات به زبان اصلی خودشان نمایش داده می شوند.",
+        "hy": "Նշում: Մեկնաբանությունները ներկայացվում են իրենց բնօրինակ լեզվով:",
+        "ko": "참고: 댓글은 원래 언어로 표시됩니다.",
+        "tl": "Tandaan: Ang mga komento ay ipinapakita sa kanilang orihinal na wika.",
+        "vi": "Lưu ý: Bình luận được trình bày bằng ngôn ngữ gốc của chúng.",
+        "zh-hans": "注意：评论以原始语言呈现。",
+        "zh-hant": "注意：評論以原始語言呈現。",
+        "status": "machine-translated"
     }
 };
 // add default export
