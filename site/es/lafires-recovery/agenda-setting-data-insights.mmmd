@@ -1,0 +1,181 @@
+---
+title: "Establecer una agenda para la recuperación de los incendios forestales en Los Ángeles: Explorar la opiniones de la comunidad"
+description: Engaged California es una plataforma en línea que facilita que los californianos tengan voz en el gobierno. El primer tema de Engaged California es la recuperación de los incendios forestales de Los Ángeles.  Esta página muestra los principales problemas para la reconstrucción de Los Ángeles.
+layout: mmmd-data-insights
+parentid: lafires-recovery
+keywords:
+  - Los Ángeles
+  - incendios
+  - recuperación
+tags:
+  - páginas
+---
+
+
+----
+id: plots_overview
+buttonText: Descargue el conjunto de datos
+backButtonText: Hallazgos de la programación de la agenda
+----
+
+# Establecer una agenda para la recuperación de los incendios forestales en Los Ángeles: análisis de las opiniones de la comunidad
+
+La fase de establecimiento de la agenda del compromiso de recuperación de los incendios forestales de Los Ángeles ha finalizado. Durante esta fase, los miembros de la comunidad compartieron miles de comentarios sobre lo que más necesitan para la recuperación y la reconstrucción. Puede descargar los comentarios para ver lo que la gente dijo. 
+
+----
+id: plots_complexity
+----
+## Desglosando la complejidad
+
+Los residentes respondieron con un volumen abrumador y una amplia variedad de puntos de vista. Realizamos visualizaciones de datos para simplificar esta complejidad. Se organizan y muestran comentarios por tema y tópico. Esta herramienta le ayudará a explorar lo que dijo la comunidad y ver patrones en los comentarios.
+
+Diseñamos el análisis y las imágenes a continuación para ayudarle a:
+
+* Ver la gama completa de perspectivas de la comunidad sobre las prioridades de recuperación.
+* Comprender cómo se agrupan diferentes puntos de vista en torno a cuestiones clave.
+* Explorar la complejidad de los desafíos que enfrentan las comunidades afectadas por los incendios.
+* Prepararse para las próximas discusiones de la comunidad.
+
+Nota: La información de esta página no ofrece respuestas finales ni soluciones. En su lugar, nos muestra las cuestiones y los compromisos que necesitamos trabajar juntos. Durante la fase de deliberación, encontraremos la mejor manera de seguir adelante. Los miembros de la comunidad trabajarán en estos temas complejos de manera reflexiva. 
+
+Invitaremos a los residentes de California a colaborar con nosotros. <a href="/es/lafires-recovery/#sign-up">Regístrese para mantenerse informado</a>.
+
+----
+id: plots_interpretation
+----
+
+## Cómo interpretar estas gráficas
+
+Cada gráfica muestra los comentarios realizados sobre un tema.
+
+* Cada punto representa un comentario individual.
+* Los puntos están codificados por colores, cada color representa un grupo que surgió en los comentarios.
+* Utilizamos inteligencia artificial (IA) para identificar temas. Los comentarios que se identificaron como similares aparecen más cerca unos de otros en el gráfico.
+
+----
+id: data_visualizations_header
+buttonText: Descargar el conjunto de datos
+----
+
+## Visualizaciones de datos
+
+----
+id: plots
+chart_boilerplate_notes: Cada punto representa un comentario realizado sobre este tema. Los comentarios agrupados tienen su propio color.
+chart_generic_alt: Una gráfica de dispersión que visualiza los comentarios mediante puntos. Los comentarios se clasifican en subcategorías.
+nbr_charts: 10
+id_1: findings_environmental_recovery
+title_1: Recuperación y limpieza ambiental
+desc_1: Las preocupaciones ambientales de la comunidad son válidas y complejas. Incluyen la seguridad de la tierra a largo plazo, la justicia ambiental y futuras medidas de prevención contra incendios.
+
+id_2: findings_wildfire_prevention
+title_2: Priorización y rendición de cuentas de la prevención de incendios forestales
+desc_2: La comunidad quiere rendición de cuentas de la prevención de incendios.
+
+id_3: findings_climate_community_resilience
+title_3: Resiliencia climática y comunitaria
+desc_3: Los residentes quieren ser escuchados. Quieren ayudar a dar forma a la recuperación a largo plazo y la resiliencia futura. Los residentes quieren una infraestructura segura y duradera. Las decisiones que se tomen ahora determinarán la seguridad y la resiliencia a largo plazo para la recuperación. 
+
+id_4: findings_infrastructure_restoration
+title_4: Restauración de infraestructura y servicios públicos
+desc_4: Los residentes quieren una infraestructura segura y duradera. Las decisiones que se tomen ahora determinarán la seguridad y la resiliencia a largo plazo para la recuperación. 
+
+id_5: findings_emergency_planning_safety
+title_5: Planificación de emergencias y seguridad comunitaria
+desc_5: Garantizar una evacuación rápida y segura y la comunicación en caso de desastre es crucial para las comunidades propensas a incendios forestales. Los miembros de la comunidad consideran que la transparencia y la accesibilidad son preocupaciones clave.
+
+
+id_6: findings_housing_rebuilding
+title_6: Vivienda y reconstrucción
+desc_6: Es importante reconstruir rápidamente. Pero sin políticas centradas en la equidad, algunos residentes podrían enfrentarse a un desplazamiento permanente.
+ 
+
+id_7: findings_financial_legal_assistance
+title_7: Asistencia legal y financiera
+desc_7: A los sobrevivientes a menudo les resulta difícil navegar por los sistemas de ayuda. Necesitan protección legal y asistencia financiera para reconstruir.
+
+
+id_8: findings_emergency_communication
+title_8: Comunicación en emergencias
+desc_8: La comunicación efectiva en una emergencia es vital. ¿Cómo pueden los funcionarios compartir actualizaciones importantes y comunicarse con los residentes en momentos clave?
+
+
+id_9: findings_economic_recovery
+title_9: Recuperación económica y apoyo a las pequeñas empresas
+desc_9: Muchas pequeñas empresas cerraron después del incendio y trabajadores perdieron sus empleos. Los residentes quieren saber cómo la recuperación económica puede ser equitativa y previsora.
+
+
+id_10: findings_emotional_mental_health
+title_10: Apoyo para la salud mental y emocional
+desc_10: Los sobrevivientes de los incendios forestales, especialmente aquellos que limpian los escombros, enfrentan riesgos de salud a largo plazo. Necesitan un acceso fácil a la atención de salud mental.
+----
+
+----
+id: how_we_built
+backButtonText: Lea sobre la agenda y la recuperación de los incendios forestales en Los Ángeles.
+nbr_list_items: 4
+
+list_item_1: Procesar y reestructurar los datos
+list_content_1: Hicimos esto para todos los comentarios dentro de un tema. Convertimos cada comentario en datos numéricos o incrustaciones semánticas. Estas incrustaciones muestran el significado de los comentarios de una manera que las computadoras pueden entenderlos y usarlos. Lo hicimos usando Snowflake Cortex Embed Text 1024.
+ 
+list_item_2: Encontrar grupos de conversación
+list_content_2: Utilizamos el marco BERTopic para agrupar los comentarios dentro de cada área temática por similitudes. Esto nos ayudó a clasificarlos en diferentes categorías según temas comunes.  Luego usamos UMAP para reducir la dimensionalidad de los comentarios. Esta herramienta hizo que los datos complejos fueran más fáciles de visualizar. Utilizamos agrupamiento basado en densidad con HDBSCAN y luego ajustamos la configuración del algoritmo para cada área de oportunidad.
+
+list_item_3: Etiquetar los grupos de conversación
+list_content_3: Agrupamos los comentarios por tema y luego utilizamos el modelo ‘Claude 3.5 Sonnet’ para crear la etiqueta inicial para cada grupo. Luego, nuestro equipo de analistas de datos revisó y editó estas etiquetas para mayor claridad. Cada etiqueta es una frase corta que refleja la idea principal o tema que los comentarios tienen en común. 
+
+list_item_4: Graficar los comentarios
+list_content_4: Utilizamos un uMap supervisado por temas. Lo ajustamos para cada tema. Esto nos permitió convertir todos los datos numéricos en dos coordenadas simples que pudimos trazar en una gráfica 2D. Los comentarios están codificados por colores según el grupo de conversación. Esto hace que sea fácil ver patrones y conexiones.
+----
+
+### Cómo construimos estas gráficas
+
+A continuación se muestra una explicación paso a paso de la metodología para estas gráficas. 
+
+
+----
+id: download_the_data_1
+buttonText: Descargar el conjunto de datos
+----
+
+## Descargar la información
+
+El conjunto de datos de los comentarios no contiene información de identificación personal. No hemos editado ni modificado los comentarios de ninguna manera. 
+
+----
+id: data_definitions
+buttonText:
+----
+### Definiciones de datos
+
+Estas son las columnas de este conjunto de datos y sus definiciones.
+
+
+**ID del comentario**
+
+Un valor único para identificar cada comentario.
+
+**Comentario**
+
+El texto completo de un comentario enviado por un participante. Los comentarios no se han editado por motivos de claridad, contenido, gramática o por cualquier otro motivo.
+
+**Tema**
+
+Esta columna enlista el tema al que respondió la persona que comenta. Había 10 temas. 
+
+1. Comunicación en emergencias
+2. Retirada de escombros y recuperación del medio ambiente
+3. Asistencia financiera y legal
+4. Apoyo para la salud mental y emocional
+5. Vivienda y reconstrucción
+6. Recuperación económica y apoyo a las pequeñas empresas
+7. Restauración de infraestructura y servicios públicos
+8. Priorización y rendición de cuentas de la prevención de incendios forestales
+9. Resiliencia climática y comunitaria
+10. Coordinación de evacuación y emergencias
+
+También incluimos comentarios que no respondían a un tema específico. Etiquetamos esos comentarios como “comentarios generales”.
+
+**Grupo de conversación**
+
+El grupo de conversación al que se alinea un comentario. 

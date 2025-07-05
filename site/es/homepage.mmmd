@@ -11,7 +11,7 @@ layout: mmmd-homepage
 
 ----
 id: hero
-buttonText: Más información
+buttonText: Regístrese ahora
 ----
 
 # Dígale a su gobierno cómo se siente acerca de los problemas más urgentes
@@ -41,6 +41,16 @@ buttonText: Conozca más sobre la recuperación de los incendios de Los Ángeles
 ## Nuestro primer compromiso
 
 El estado de California invita a las personas afectadas por los incendios forestales de Eaton y Palisades a ayudar a dar forma a nuestros planes de recuperación a largo plazo.
+
+
+----
+id: surfacing_issues
+buttonText: Vea lo que encontramos respecto al establecimiento de la agenda
+----
+
+## Problemas principales para la reconstrucción de Los Ángeles
+
+Las personas afectadas por los incendios de Eaton y Palisades compartieron lo que es más importante para ellos. Esto dará forma a las deliberaciones de la comunidad que se llevarán a cabo.
 
 
 ----

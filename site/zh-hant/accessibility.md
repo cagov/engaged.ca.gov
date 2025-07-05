@@ -16,7 +16,7 @@ tags:
 
 ODI 的網站符合或超過以下要求：
 
-* 萬維網聯盟的《網路內容無障礙指導原則 (WCAG) 2.1》，AA 級標準；
+* 萬維網聯盟的《網路內容無障礙指導原則 (WCAG) 2.2》，AA 級標準；
 * 《加州安魯民權法》；以及
 * 《美國殘障法》（ADA）。
 
@@ -34,12 +34,16 @@ ODI 使用 [Lighthouse](https://developer.chrome.com/en/docs/lighthouse/performa
 
 聯絡方式：ODI 服務台，[accessibility@innovation.ca.gov](mailto:accessibility@innovation.ca.gov)
 
-以下簽署人確認，截至 2023 年 7 月 1 日，本網站的設計、開發和維護均符合無障礙標準。這表示本網站遵守以下要求：
+以下簽署人確認，截至 2025 年 7 月 1 日，本網站的設計、開發和維護均符合無障礙標準。這表示本網站遵守以下要求：
 
 * 《加州政府法典》第 7405、11135 和 11546.7 條
-* 萬維網聯盟網路無障礙倡議發布的《網路內容無障礙指導原則 2.1》
+* 萬維網聯盟網路無障礙倡議發布的《網路內容無障礙指導原則 2.2》
 * 至少達到 AA 級成功標準
 
 /s/ Chad Bratton <br>
 資訊長 <br>
-2023年7月1日
+2025年7月1日
+
+/s/ Jeffery Marino <br>
+Director <br>
+2025年7月1日

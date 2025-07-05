@@ -1,0 +1,181 @@
+---
+title: 'Thiết lập chương trình nghị sự cho việc phục hồi sau các đám cháy rừng ở LA: Khám phá phản hồi của cộng đồng'
+description: Engaged California là một nền tảng trực tuyến giúp người dân California dễ dàng lên tiếng trong chính quyền. Chủ đề đầu tiên của Engaged California là phục hồi sau các đám cháy rừng ở Los Angeles.  Trang này nêu lên những vấn đề quan trọng nhất trong việc xây dựng lại LA.
+layout: mmmd-data-insights
+parentid: lafires-recovery
+keywords:
+  - Los Angeles
+  - cháy
+  - phục hồi
+tags:
+  - trang
+---
+
+
+----
+id: plots_overview
+buttonText: Tải xuống toàn bộ bộ dữ liệu
+backButtonText: Những phát hiện trong việc thiết lập chương trình nghị sự
+----
+
+# Thiết lập chương trình nghị sự cho việc phục hồi sau các đám cháy rừng ở LA: Khám phá phản hồi của cộng đồng
+
+Giai đoạn thiết lập chương trình nghị sự cho hoạt động phục hồi sau các đám cháy rừng ở Los Angeles đã hoàn tất. Trong giai đoạn này, các thành viên cộng đồng đã chia sẻ hàng nghìn ý kiến về những nhu cầu thiết yếu nhất để phục hồi và xây dựng lại. Quý vị có thể tải xuống các ý kiến để xem mọi người nói gì. 
+
+----
+id: plots_complexity
+----
+## Phân tích sự phức tạp
+
+Cư dân đã phản hồi với số lượng lớn và nhiều quan điểm khác nhau. Chúng tôi đã trực quan hóa dữ liệu để đơn giản hóa sự phức tạp này. Các bình luận được sắp xếp và hiển thị theo chủ đề. Công cụ này sẽ giúp quý vị khám phá ý kiến của cộng đồng và thấy được các xu hướng trong ý kiến phản hồi.
+
+Chúng tôi đã thiết kế phần phân tích và hình ảnh dưới đây để giúp quý vị:
+
+* Xem toàn bộ quan điểm của cộng đồng về các ưu tiên phục hồi
+* Hiểu cách các quan điểm khác nhau tập trung xung quanh các vấn đề chính
+* Khám phá sự phức tạp của những thách thức mà các cộng đồng bị ảnh hưởng bởi hỏa hoạn phải đối mặt
+* Chuẩn bị cho các cuộc thảo luận cộng đồng sắp tới
+
+Lưu ý: Thông tin trên trang này không đưa ra câu trả lời hoặc giải pháp chính thức. Thay vào đó, trang này cho chúng ta thấy những câu hỏi và những đánh đổi mà chúng ta cần cùng nhau giải quyết. Trong giai đoạn thảo luận, chúng tôi sẽ tìm ra cách tốt nhất để tiến hành. Các thành viên cộng đồng sẽ giải quyết chu đáo những vấn đề phức tạp này. 
+
+Chúng tôi sẽ mời cư dân California giúp chúng tôi thực hiện việc này. <a href="/vi/lafires-recovery/#sign-up">Đăng ký để cập nhật thông tin</a>.
+
+----
+id: plots_interpretation
+----
+
+## Cách diễn giải những biểu đồ này
+
+Mỗi biểu đồ hiển thị các ý kiến được đưa ra về một chủ đề.
+
+* Mỗi dấu chấm tượng trưng cho một ý kiến riêng lẻ.
+* Các chấm được mã hóa màu, mỗi màu đại diện cho một nhóm xuất hiện trong phần nêu ý kiến.
+* Chúng tôi đã sử dụng AI để xác định chủ đề. Những ý kiến được xác định là tương tự nhau sẽ xuất hiện gần nhau hơn trên biểu đồ.
+
+----
+id: data_visualizations_header
+buttonText: Tải xuống toàn bộ bộ dữ liệu
+----
+
+## Trực quan hóa dữ liệu
+
+----
+id: plots
+chart_boilerplate_notes: Mỗi dấu chấm tượng trưng cho một ý kiến về chủ đề này. Các ý kiến được nhóm lại có màu riêng.
+chart_generic_alt: Biểu đồ phân tán trực quan hóa các ý kiến bằng các dấu chấm. Các ý kiến được phân loại thành các tiểu danh mục.
+nbr_charts: 10
+id_1: findings_environmental_recovery
+title_1: Phục hồi và vệ sinh môi trường
+desc_1: Những mối quan ngại của cộng đồng về môi trường là có cơ sở và phức tạp. Những mối quan ngại này bao gồm an toàn đất đai dài hạn, công lý môi trường và các biện pháp phòng cháy chữa cháy trong tương lai.
+
+id_2: findings_wildfire_prevention
+title_2: Ưu tiên phòng ngừa cháy rừng và trách nhiệm giải trình
+desc_2: Cộng đồng muốn thấy trách nhiệm giải trình trong việc phòng cháy chữa cháy.
+
+id_3: findings_climate_community_resilience
+title_3: Khả năng phục hồi của cộng đồng và khí hậu
+desc_3: Cư dân muốn được lắng nghe. Họ muốn giúp định hình việc phục hồi dài hạn và khả năng phục hồi trong tương lai. Cư dân muốn có cơ sở hạ tầng an toàn và lâu dài. Những quyết định được đưa ra ở hiện tại sẽ quyết định sự an toàn và khả năng phục hồi dài hạn. 
+
+id_4: findings_infrastructure_restoration
+title_4: Phục hồi cơ sở hạ tầng và dịch vụ tiện ích
+desc_4: Cư dân muốn có cơ sở hạ tầng an toàn và lâu dài. Những quyết định được đưa ra ở hiện tại sẽ quyết định sự an toàn và khả năng phục hồi dài hạn. 
+
+id_5: findings_emergency_planning_safety
+title_5: Lập kế hoạch khẩn cấp và an toàn cộng đồng
+desc_5: Việc đảm bảo hoạt động sơ tán nhanh chóng, an toàn và thông tin liên lạc về thảm họa là rất quan trọng đối với các cộng đồng dễ xảy ra cháy rừng. Các thành viên cộng đồng coi tính minh bạch và khả năng tiếp cận là những mối quan ngại chính.
+
+
+id_6: findings_housing_rebuilding
+title_6: Nhà ở và xây dựng lại
+desc_6: Việc xây dựng lại nhanh chóng là rất quan trọng. Tuy nhiên, nếu không có chính sách chú trọng vào tính công bằng, một số cư dân có thể sẽ phải đối mặt với tình trạng di dời vĩnh viễn.
+ 
+
+id_7: findings_financial_legal_assistance
+title_7: Hỗ trợ tài chính và pháp lý
+desc_7: Những người sống sót thường gặp khó khăn trong việc tìm kiếm hỗ trợ từ hệ thống cứu trợ. Họ cần biện pháp bảo vệ về mặt pháp lý và hỗ trợ tài chính để xây dựng lại.
+
+
+id_8: findings_emergency_communication
+title_8: Thông tin liên lạc khẩn cấp
+desc_8: Việc đưa ra thông tin liên lạc hiệu quả trong trường hợp khẩn cấp là rất quan trọng. Các viên chức có thể chia sẻ thông tin cập nhật quan trọng và kết nối với cư dân vào những thời điểm quan trọng bằng cách nào?
+
+
+id_9: findings_economic_recovery
+title_9: Phục hồi kinh tế và hỗ trợ doanh nghiệp nhỏ
+desc_9: Nhiều doanh nghiệp nhỏ đã đóng cửa sau vụ hỏa hoạn còn người lao động thì mất việc làm. Cư dân muốn biết cách để phục hồi kinh tế trên tinh thần công bằng và hướng tới tương lai.
+
+
+id_10: findings_emotional_mental_health
+title_10: Hỗ trợ sức khỏe tinh thần và cảm xúc
+desc_10: Những người sống sót sau cháy rừng, đặc biệt là những người dọn dẹp đống đổ nát, phải đối mặt với những rủi ro sức khỏe lâu dài. Họ cần được tiếp cận dễ dàng với dịch vụ chăm sóc sức khỏe tinh thần.
+----
+
+----
+id: how_we_built
+backButtonText: Đọc về việc thiết lập chương trình nghị sự và phục hồi sau các đám cháy rừng ở LA
+nbr_list_items: 4
+
+list_item_1: Xử lý và tái cấu trúc dữ liệu
+list_content_1: Chúng tôi đã thực hiện việc này cho tất cả các ý kiến trong một chủ đề. Chúng tôi chuyển từng ý kiến thành dữ liệu số hoặc nhúng ngữ nghĩa. Những nội dung nhúng này cho thấy ý nghĩa của các ý kiến theo cách mà máy tính có thể hiểu và sử dụng được. Chúng tôi đã thực hiện việc này bằng cách sử dụng Snowflake Cortex Embed Text 1024.
+ 
+list_item_2: Tìm nhóm trò chuyện
+list_content_2: Chúng tôi đã sử dụng khuôn khổ BERTopic để nhóm các ý kiến trong từng lĩnh vực chủ đề theo điểm tương đồng. Việc này giúp chúng tôi phân loại ý kiến thành các danh mục khác nhau căn cứ vào các chủ đề chung.  Sau đó, chúng tôi sử dụng Phép Chiếu Xấp Xỉ và Phép Chiếu Thống Nhất Cho Phép Giảm Kích Thước (Uniform Manifold Approximation and Projection, UMAP) để giảm kích thước của các ý kiến. Công cụ này giúp việc trực quan hóa dữ liệu phức tạp trở nên đơn giản hơn. Chúng tôi đã sử dụng phương pháp phân cụm dựa vào mật độ với Phân Cụm Không Gian Dựa Trên Mật Độ Phân Cấp của Các Ứng Dụng Có Nhiễu (Hierarchical Density-Based Spatial Clustering of Applications with Noise, HDBSCAN) và sau đó điều chỉnh cài đặt thuật toán cho từng lĩnh vực cơ hội.
+
+list_item_3: Gắn nhãn cho các nhóm trò chuyện
+list_content_3: Chúng tôi nhóm các ý kiến theo chủ đề, sau đó sử dụng mô hình 'Claude 3.5 Sonnet' để tạo nhãn ban đầu cho mỗi nhóm. Sau đó, đội ngũ phân tích dữ liệu của chúng tôi đã xem xét và chỉnh sửa các nhãn này để rõ ràng hơn. Mỗi nhãn là một cụm từ ngắn phản ánh ý tưởng hoặc chủ đề chính mà các ý kiến có điểm chung. 
+
+list_item_4: Vẽ các ý kiến
+list_content_4: Chúng tôi đã sử dụng UMAP có giám sát chủ đề. Chúng tôi đã điều chỉnh cho từng chủ đề. Việc này giúp chúng tôi chuyển tất cả dữ liệu số thành hai tọa độ đơn giản mà chúng tôi có thể biểu diễn trên biểu đồ 2D. Các ý kiến được mã hóa màu theo nhóm trò chuyện. Điều này giúp quý vị dễ dàng nhìn thấy các xu hướng và mối liên hệ.
+----
+
+### Cách chúng tôi xây dựng những biểu đồ này
+
+Nội dung dưới đây giải thích từng bước về phương pháp luận cho những biểu đồ này. 
+
+
+----
+id: download_the_data_1
+buttonText: Tải xuống toàn bộ bộ dữ liệu
+----
+
+## Tải xuống dữ liệu
+
+Bộ dữ liệu ý kiến không chứa thông tin định danh cá nhân. Chúng tôi không chỉnh sửa hoặc sửa đổi các ý kiến dưới bất kỳ hình thức nào. 
+
+----
+id: data_definitions
+buttonText:
+----
+### Định nghĩa dữ liệu
+
+Đây là các cột trong bộ dữ liệu này và định nghĩa của các cột.
+
+
+**ID ý kiến**
+
+  Giá trị riêng biệt để xác định từng ý kiến.
+
+**Ý kiến**
+
+  Toàn văn ý kiến do người tham gia gửi đến. Ý kiến không được chỉnh sửa về độ rõ ràng, nội dung, ngữ pháp hoặc bất kỳ lý do nào khác.
+
+**Chủ đề**
+
+  Cột này liệt kê chủ đề mà người nêu ý kiến đang phản hồi. Có 10 chủ đề. 
+
+  1. Thông tin liên lạc khẩn cấp
+  2. Dọn dẹp đống đổ nát và phục hồi môi trường
+  3. Hỗ trợ tài chính và pháp lý
+  4. Hỗ trợ sức khỏe tinh thần và cảm xúc
+  5. Nhà ở và xây dựng lại
+  6. Phục hồi kinh tế và hỗ trợ doanh nghiệp nhỏ
+  7. Phục hồi cơ sở hạ tầng và dịch vụ tiện ích
+  8. Ưu tiên phòng ngừa cháy rừng và trách nhiệm giải trình
+  9. Khả năng phục hồi của cộng đồng và khí hậu
+  10. Sơ tán và phối hợp trong trường hợp khẩn cấp
+
+Chúng tôi cũng bao gồm cả những ý kiến không liên quan đến một chủ đề cụ thể. Chúng tôi gắn nhãn những ý kiến đó là “ý kiến chung”.
+
+**Nhóm trò chuyện**
+
+Nhóm trò chuyện mà ý kiến sẽ liên kết tới. 

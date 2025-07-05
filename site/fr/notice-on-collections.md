@@ -1,5 +1,5 @@
 ---
-title: Privacy Notice on Collections
+title: Privacy Notice on collections
 description: The State of California is committed to promoting and protecting the privacy rights of individuals.
 keywords:
   - personal information
@@ -8,7 +8,7 @@ layout: page
 tags:
   - pages
 ---
-# Privacy Notice on Collections
+# Privacy Notice on collections
 
 EFFECTIVE: MARCH 14, 2025
 
