@@ -611,6 +611,33 @@ const translations = {
         "hy": "Կայքի քարտեզ",
         "location": "Footer"
     },
+    // Government Efficiencies page
+    "topic-government-efficiencies": {
+        en: "I certify I am a current State of California employee *",
+        fr: "I certify I am a current State of California employee",
+        es: "I certify I am a current State of California employee",
+        ko: "I certify I am a current State of California employee",
+        vi: "I certify I am a current State of California employee",
+        tl: "I certify I am a current State of California employee",
+        "zh-hans": "I certify I am a current State of California employee",
+        "zh-hant": "I certify I am a current State of California employee",
+        fa: "I certify I am a current State of California employee",
+        hy: "I certify I am a current State of California employee",
+        location: "Government efficiencies page",
+    },
+    "required-checkbox-message": {
+        en: "Field required",
+        fr: "I certify I am a current State of California employee",
+        es: "I certify I am a current State of California employee",
+        ko: "I certify I am a current State of California employee",
+        vi: "I certify I am a current State of California employee",
+        tl: "I certify I am a current State of California employee",
+        "zh-hans": "I certify I am a current State of California employee",
+        "zh-hant": "I certify I am a current State of California employee",
+        fa: "I certify I am a current State of California employee",
+        hy: "I certify I am a current State of California employee",
+        location: "Government efficiencies page",
+    },
     "ge-what-happens-title": {
         en: "What happens in each phase",
     },
