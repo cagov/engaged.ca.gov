@@ -610,7 +610,37 @@ const translations = {
         "fa": "نقشه سایت",
         "hy": "Կայքի քարտեզ",
         "location": "Footer"
-    }
+    },
+    "ge-what-happens-title": {
+        en: "What happens in each phase",
+    },
+    "ge-what-happens-1": {
+        en: "Sign up",
+    },
+    "ge-what-happens-2": {
+        en: "Gather ideas",
+    },
+    "ge-what-happens-3": {
+        en: "Review ideas",
+    },
+    "ge-what-happens-4": {
+        en: "Change",
+    },
+    "ge-what-happens-body-1": {
+        en: "State staff opt-in to an online, text-based conversation",
+    },
+    "ge-what-happens-body-2": {
+        en: "State staff share ideas to improve government",
+    },
+    "ge-what-happens-body-3": {
+        en: "We review the ideas to find changes we can make soon and suggestions that we can explore",
+    },
+    "ge-what-happens-body-4": {
+        en: "State officials create a plan of action based on the priorities staff set",
+    },
+    "ge-submit": {
+        en: "Sign up to opt in",
+    },
 };
 // add default export
 export default translations;
