@@ -14,4 +14,4 @@ const barchartData = [
     {"key":"caption10", "caption": "Emotional and mental health support", "approval":50.43,"link_id":"findings_emotional_mental_health"}
    ]
 // Export the data for use in templates
-module.exports = barchartData; 
+export default barchartData; 
