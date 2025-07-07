@@ -62,15 +62,14 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <div id="plot-selection-container" class="plot-selection-container container collapsed">
+        <div id="plot-selection-container" class="plot-selection-container">
+          <select id="plot-select" class="plot-select">
             {% for i in range(1, modules.plots.nbr_charts+1) %}
-            <div class="plot-selection-item {{ 'active' if loop.first else '' }}" data-plot-id="{{ modules.plots["id_" + i] }}" data-plot-idx="{{ i }}">
-              <div class="plot-selection-item-title">
-                {{ modules.plots["title_" + i] }}
-              </div> 
-            </div>
+            <option value="{{ modules.plots["id_" + i] }}" data-plot-idx="{{ i }}" {{ 'selected' if loop.first else '' }}>
+              {{ modules.plots["title_" + i] }}
+            </option>
             {% endfor %}
-          </div>
+          </select>
         </div>
       </div>
     </div>
@@ -273,38 +272,23 @@ function hideQuote() {
 }
 
 function chartSelectionHandler(e) {
-  const plotId = this.getAttribute('data-plot-id');
-  const plotIdx = this.getAttribute('data-plot-idx');
+  const select = e.target;
+  const plotId = select.value;
+  const selectedOption = select.options[select.selectedIndex];
+  const plotIdx = selectedOption.getAttribute('data-plot-idx');
   console.log('Chart selected:', plotId, plotIdx);
+  
   const plotSection = document.querySelector('.plot-section-container[data-plot-id="' + plotId + '"]');
-  const plotSelectionContainer = document.getElementById('plot-selection-container');
-  let is_collapsed = plotSelectionContainer.classList.contains('collapsed');
-  if (is_collapsed) {
-    plotSelectionContainer.classList.remove('collapsed');
-  } else {
-
-    plotSelectionContainer.classList.remove('collapsed');
-
-    if (plotSection) {
-      plotSection.classList.add('active');
-    }
-    const allPlotSections = document.querySelectorAll('.plot-section-container');
-    allPlotSections.forEach(section => {
-      if (section.getAttribute('data-plot-id') !== plotId) {
-        section.classList.remove('active');
-      }
-    });
-
-    // selector buttons
-    this.classList.add('active');
-    const allSelectorButtons = document.querySelectorAll('.plot-selection-item');
-    allSelectorButtons.forEach(button => {
-      if (button.getAttribute('data-plot-id') !== plotId) {
-        button.classList.remove('active');
-      }
-    });
-    plotSelectionContainer.classList.add('collapsed');
+  
+  if (plotSection) {
+    plotSection.classList.add('active');
   }
+  const allPlotSections = document.querySelectorAll('.plot-section-container');
+  allPlotSections.forEach(section => {
+    if (section.getAttribute('data-plot-id') !== plotId) {
+      section.classList.remove('active');
+    }
+  });
 }
 
 function legendItemHandler(e) {
@@ -371,10 +355,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  const plotSelectionItems = document.querySelectorAll('.plot-selection-item');
-  plotSelectionItems.forEach(item => {
-    item.addEventListener('click', chartSelectionHandler);
-  });
+  const plotSelect = document.getElementById('plot-select');
+  plotSelect.addEventListener('change', chartSelectionHandler);
 
   // Set up event handlers for datapoints in plots
   const datapoints = document.querySelectorAll('.datapoint');

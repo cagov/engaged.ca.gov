@@ -535,6 +535,11 @@ a.insights-back-button {
     position: relative;
 }
 
+section#data-visualizations b {    
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .plot-title, .plot-legend-title {
     font-size: 18px;
     font-weight: 600;
@@ -657,67 +662,72 @@ div.legend-circle {
     } */
 }
 section#plot-selection-pulldown {
-    margin-bottom: 1rem;
+    padding-top: 0;
 }
 div.plot-selection-container {
     border: 1px solid #BCBBC1;
     border-radius: 16px;
     padding: 0;
 }
-div.plot-section-container:not(.active) {
-    display: none;
-}
 
-div.plot-selection-container.collapsed .plot-selection-item:not(.active) {
-    display: none;
-}
-
-
-div.plot-selection-item {
+select.plot-select {
+    width: 100%;
     padding: 1rem;
-    cursor: pointer;
     font-size: 23px;
-    font-weight: 500;
+    font-weight: 700;
     min-height: 65px;
+    border: 3px solid #E79450;
+    border-radius: 16px;
+    background-color: transparent;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("/public/images/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    padding-right: 3.5rem;
+    outline: none !important;
+    box-shadow: 0px 4px 4px 0px #0000000F;
+    overflow-wrap: break-word;
+    word-break: break-word;
     @media (max-width: 767px) {
         font-size: 19px;
         line-height: 30px;
     }
 }
 
-div.plot-selection-item.active {
+select.plot-select:focus {
+    outline: none !important;
     border: 3px solid #E79450;
-    margin: -1.5px;
     border-radius: 16px;
     box-shadow: 0px 4px 4px 0px #0000000F;
-    font-size: 30px;
+    font-size: 23px;
     font-weight: 700;
     @media (max-width: 767px) {
         font-size: 19px;
     }
 }
-/* Start Generation Here */
-div.plot-selection-item:not(:first-child):not(.active) {
-    border-top: 1px solid #BCBBC1;
-}
-div.plot-selection-item.active + div.plot-selection-item {
-    border-top: none;
-}
-div.plot-selection-item:not(.active):hover {
-    background-color: #F6F7FA;
-    text-decoration: underline;
+
+select.plot-select:focus-visible {
+    outline: none !important;
 }
 
-/* End Generation Here */
-div.plot-selection-container.collapsed div.plot-selection-item.active .plot-selection-item-title {
-    background: url("/public/images/arrow-down.svg") no-repeat right center;
-    padding-right: 24px;
+select.plot-select option {
+    padding: 1rem;
+    font-size: 23px;
+    font-weight: 500;
+    min-height: 65px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    @media (max-width: 767px) {
+        font-size: 19px;
+        line-height: 30px;
+    }
+}
+div.plot-section-container:not(.active) {
+    display: none;
 }
 
-div.plot-selection-container:not(.collapsed) div.plot-selection-item.active .plot-selection-item-title {
-    background: url("/public/images/arrow-up.svg") no-repeat right center;
-    padding-right: 24px;
-}
+
 
 
 a.download-navigate-link {
