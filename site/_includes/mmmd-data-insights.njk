@@ -322,7 +322,7 @@ function legendItemHandler(e) {
 
   const legendItemContent = legendItem.querySelector('.legend-item-content');
   if (!is_collapsed) {
-    let comment_list = '<div class="legend-item-content-inner">';
+    let comment_list = '';
     const commentIdsArray = commentIds.split(',');
     for (let i = 0; i < nbrComments; i++) {
       comment_list += '<div class="legend-item-comment-item">';
@@ -332,7 +332,6 @@ function legendItemHandler(e) {
       comment_list += '“' + quote.CONTENT + '”';
       comment_list += '</div>';
     }
-    comment_list += '</div>';
     legendItemContent.innerHTML = comment_list;
   } else {
     legendItemContent.innerHTML = '';

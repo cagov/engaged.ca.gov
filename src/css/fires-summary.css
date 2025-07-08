@@ -635,6 +635,11 @@ div.legend-item.collapsed .legend-item-expansion-block {
     display: none;
 }
 
+div.legend-item:not(.collapsed) .legend-item-expansion-block {  
+    max-height: 600px;
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
 div.legend-item-comment-item {
 /* Start Generation Here */
     font-style: italic;
