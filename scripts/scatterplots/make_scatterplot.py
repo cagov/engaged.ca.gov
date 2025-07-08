@@ -83,11 +83,13 @@ def setup_subcats(data: List[Dict[str, Any]]) -> Set[str]:
         subcategories_list.remove("Other")
         subcategories_list.append("Other")
     colors = config.color_table[:len(subcategories_list)]
+    lt_colors = config.light_color_table[:len(subcategories_list)]
     color_map = {subcat: colors[i] if subcat != "Other" else 'lightgray' for i, subcat in enumerate(subcategories_list)}
+    lt_color_map = {subcat: lt_colors[i] if subcat != "Other" else '#F7F7F7' for i, subcat in enumerate(subcategories_list)}
  
 
 
-    return points, subcategories_list, color_map
+    return points, subcategories_list, color_map, lt_color_map
 
 def create_svg_scatterplot(
     data: List[Dict[str, Any]],
@@ -104,7 +106,7 @@ def create_svg_scatterplot(
         sys.exit(1)
     
     # Extract UMAP coordinates and subcategories
-    points, subcategories_list_unused, color_map = setup_subcats(data)
+    points, subcategories_list_unused, color_map, lt_color_map = setup_subcats(data)
     
     if not points:
         print("Error: No valid coordinate data found.")
@@ -161,6 +163,7 @@ def create_svg_scatterplot(
         # Invert y-axis for SVG (0 is at the top)
         svg_y = height - margin - ((y - min_y) / (max_y - min_y)) * plot_height
         color = color_map[subcat]
+        lt_color = lt_color_map[subcat]
         
         # Add blend mode attribute if specified
         blend_mode_attr = f' style="mix-blend-mode: {config.dot_blendmode};"' if config.dot_blendmode else ''
@@ -194,7 +197,7 @@ def create_svg_scatterplot_legend(
         sys.exit(1)
     
     # Extract UMAP coordinates and subcategories
-    points_unused, subcategories_list, color_map = setup_subcats(data)
+    points_unused, subcategories_list, color_map, lt_color_map = setup_subcats(data)
     print("legend subcategories: ", subcategories_list)
     
     # Calculate dimensions and margins

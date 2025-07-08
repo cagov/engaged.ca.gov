@@ -4,7 +4,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_environmental_recovery_1",
             "subcat_en": "Altadena-specific concerns",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 561,
                 460,
@@ -17,7 +17,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_environmental_recovery_2",
             "subcat_en": "Habitat restoration and natural fire prevention",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 1739,
                 1609,
@@ -41,7 +41,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_environmental_recovery_3",
             "subcat_en": "Satisfied with debris removal",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 1682,
                 1671,
@@ -54,7 +54,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_environmental_recovery_4",
             "subcat_en": "Soil and other environmental testing",
-            "color": "#ee8176",
+            "color": "#ee8176", "lt_color": "#FBE4E1",
             "comment_ids": [
                 715,
                 1360,
@@ -93,7 +93,7 @@ const legendsData = {
             "idx": 5,
             "key": "findings_environmental_recovery_5",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 1594,
                 1700,
@@ -161,7 +161,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_wildfire_prevention_1",
             "subcat_en": "Accountable utilities and buried lines",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 1169,
                 1732,
@@ -190,7 +190,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_wildfire_prevention_2",
             "subcat_en": "Controlled burn management",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 613,
                 818,
@@ -210,7 +210,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_wildfire_prevention_3",
             "subcat_en": "Fire-safe home enforcement",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 568,
                 655,
@@ -236,7 +236,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_wildfire_prevention_4",
             "subcat_en": "Government fire prevention accountability",
-            "color": "#ee8176",
+            "color": "#ee8176", "lt_color": "#FBE4E1",
             "comment_ids": [
                 1716,
                 983,
@@ -297,7 +297,7 @@ const legendsData = {
             "idx": 5,
             "key": "findings_wildfire_prevention_5",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 309,
                 366,
@@ -321,7 +321,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_climate_community_resilience_1",
             "subcat_en": "Community preparedness",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 550,
                 262,
@@ -343,7 +343,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_climate_community_resilience_2",
             "subcat_en": "Fire resistant building and landscaping",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 997,
                 1218,
@@ -410,7 +410,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_climate_community_resilience_3",
             "subcat_en": "Fire-safe infrastructure management",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 1293,
                 1698,
@@ -452,7 +452,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_climate_community_resilience_4",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 520,
                 1357,
@@ -493,7 +493,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_infrastructure_restoration_1",
             "subcat_en": "Altadena infrastructure",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 280,
                 577,
@@ -513,7 +513,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_infrastructure_restoration_2",
             "subcat_en": "Broadband access",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 380,
                 551,
@@ -529,7 +529,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_infrastructure_restoration_3",
             "subcat_en": "Climate resilient infrastructure ",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 293,
                 322,
@@ -554,7 +554,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_infrastructure_restoration_4",
             "subcat_en": "Underground power lines",
-            "color": "#ee8176",
+            "color": "#ee8176", "lt_color": "#FBE4E1",
             "comment_ids": [
                 281,
                 359,
@@ -650,7 +650,7 @@ const legendsData = {
             "idx": 5,
             "key": "findings_infrastructure_restoration_5",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 1005,
                 407,
@@ -677,7 +677,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_emergency_planning_safety_1",
             "subcat_en": "Emergency response improvements",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 375,
                 481,
@@ -713,7 +713,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_emergency_planning_safety_2",
             "subcat_en": "Emergency warning systems",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 555,
                 892,
@@ -740,7 +740,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_emergency_planning_safety_3",
             "subcat_en": "Evacuation planning",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 308,
                 313,
@@ -777,7 +777,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_emergency_planning_safety_4",
             "subcat_en": "Next-gen wildfire readiness",
-            "color": "#ee8176",
+            "color": "#ee8176", "lt_color": "#FBE4E1",
             "comment_ids": [
                 447,
                 449,
@@ -811,7 +811,7 @@ const legendsData = {
             "idx": 5,
             "key": "findings_emergency_planning_safety_5",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 295,
                 363,
@@ -849,7 +849,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_housing_rebuilding_1",
             "subcat_en": "ADU considerations",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 368,
                 459,
@@ -875,7 +875,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_housing_rebuilding_2",
             "subcat_en": "Affordability, density, and fire-safe rebuilding",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 264,
                 290,
@@ -921,7 +921,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_housing_rebuilding_3",
             "subcat_en": "Streamline rebuilding process",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 367,
                 513,
@@ -948,7 +948,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_housing_rebuilding_4",
             "subcat_en": "Temporary housing",
-            "color": "#ee8176",
+            "color": "#ee8176", "lt_color": "#FBE4E1",
             "comment_ids": [
                 270,
                 467,
@@ -978,7 +978,7 @@ const legendsData = {
             "idx": 5,
             "key": "findings_housing_rebuilding_5",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 272,
                 289,
@@ -1028,7 +1028,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_financial_legal_assistance_1",
             "subcat_en": "Building code and permitting reform",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 1699,
                 1692,
@@ -1066,7 +1066,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_financial_legal_assistance_2",
             "subcat_en": "Financial relief navigation",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 1708,
                 1723,
@@ -1125,7 +1125,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_financial_legal_assistance_3",
             "subcat_en": "Insurance reform",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 1670,
                 1655,
@@ -1160,7 +1160,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_financial_legal_assistance_4",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 1485,
                 1494,
@@ -1194,7 +1194,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_emergency_communication_1",
             "subcat_en": "Emergency alert apps",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 461,
                 619,
@@ -1216,7 +1216,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_emergency_communication_2",
             "subcat_en": "Emergency alert systems",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 361,
                 423,
@@ -1238,7 +1238,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_emergency_communication_3",
             "subcat_en": "Post-emergency communications",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 263,
                 266,
@@ -1302,7 +1302,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_emergency_communication_4",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 321,
                 427,
@@ -1340,7 +1340,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_economic_recovery_1",
             "subcat_en": "Grant distribution oversight",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 267,
                 276,
@@ -1367,7 +1367,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_economic_recovery_2",
             "subcat_en": "Importance of supporting local businesses",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 299,
                 327,
@@ -1417,7 +1417,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_economic_recovery_3",
             "subcat_en": "Incentives for small business recovery",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 445,
                 540,
@@ -1439,7 +1439,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_economic_recovery_4",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 288,
                 307,
@@ -1466,7 +1466,7 @@ const legendsData = {
             "idx": 1,
             "key": "findings_emotional_mental_health_1",
             "subcat_en": "Counseling access through healthcare",
-            "color": "#5ed0b9",
+            "color": "#5ed0b9", "lt_color": "#DDF4EF",
             "comment_ids": [
                 549,
                 660,
@@ -1480,7 +1480,7 @@ const legendsData = {
             "idx": 2,
             "key": "findings_emotional_mental_health_2",
             "subcat_en": "Free emergency counseling",
-            "color": "#70b6e5",
+            "color": "#70b6e5", "lt_color": "#E0EFF9",
             "comment_ids": [
                 436,
                 575,
@@ -1496,7 +1496,7 @@ const legendsData = {
             "idx": 3,
             "key": "findings_emotional_mental_health_3",
             "subcat_en": "Mental health support",
-            "color": "#b98acb",
+            "color": "#b98acb", "lt_color": "#EFE5F3",
             "comment_ids": [
                 296,
                 324,
@@ -1527,7 +1527,7 @@ const legendsData = {
             "idx": 4,
             "key": "findings_emotional_mental_health_4",
             "subcat_en": "Other",
-            "color": "lightgray",
+            "color": "lightgray", "lt_color": "#F7F7F7",
             "comment_ids": [
                 305,
                 306,

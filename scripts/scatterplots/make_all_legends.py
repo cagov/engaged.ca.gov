@@ -55,11 +55,12 @@ def setup_subcats(data: List[Dict[str, Any]]) -> Set[str]:
         subcategories_list.remove("Other")
         subcategories_list.append("Other")
     colors = config.color_table[:len(subcategories_list)]
+    lt_colors = config.light_color_table[:len(subcategories_list)]
     color_map = {subcat: colors[i] if subcat != "Other" else 'lightgray' for i, subcat in enumerate(subcategories_list)}
- 
+    lt_color_map = {subcat: lt_colors[i] if subcat != "Other" else '#F7F7F7' for i, subcat in enumerate(subcategories_list)}
 
 
-    return points, subcategories_list, color_map
+    return points, subcategories_list, color_map, lt_color_map
 
 def create_svg_scatterplot_legend_json(
     data: List[Dict[str, Any]],
@@ -71,7 +72,7 @@ def create_svg_scatterplot_legend_json(
         sys.exit(1)
     
     # Extract UMAP coordinates and subcategories
-    points_unused, subcategories_list, color_map = setup_subcats(data)
+    points_unused, subcategories_list, color_map, lt_color_map = setup_subcats(data)
     print("legend subcategories: ", subcategories_list)
     
 
@@ -84,6 +85,7 @@ def create_svg_scatterplot_legend_json(
             'key': f"findings_{root_name}_{i+1}",
             'subcat_en': subcat,
             'color': color_map[subcat],
+            'lt_color': lt_color_map[subcat],
             'comment_ids': comment_ids
         })
     return legend_json
