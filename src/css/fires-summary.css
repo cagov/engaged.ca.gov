@@ -533,6 +533,10 @@ a.insights-back-button {
     z-index: 1000;
 }
 
+.col-lg-12.responsive-svg-container {
+    padding-left: 0;
+}
+
 .responsive-svg-container svg {
     width: 100%;
     height: auto;
