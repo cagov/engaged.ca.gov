@@ -273,14 +273,16 @@ function hideQuote() {
   document.querySelector('.quote-card').style.display = 'none';
 }
 
-function chartSelectionHandler(e) {
-  const plotId = this.getAttribute('data-plot-id');
-  const plotIdx = this.getAttribute('data-plot-idx');
-  console.log('Chart selected:', plotId, plotIdx);
+function loadChart(plotId, forceOpen=false) {
+  console.log('Loading chart:', plotId);
+  const plotSelectionItem = document.querySelector('.plot-selection-item[data-plot-id="' + plotId + '"]');
+
+  const allPlotSectionItems = document.querySelectorAll('.plot-selection-item');
+
   const plotSection = document.querySelector('.plot-section-container[data-plot-id="' + plotId + '"]');
   const plotSelectionContainer = document.getElementById('plot-selection-container');
   let is_collapsed = plotSelectionContainer.classList.contains('collapsed');
-  if (is_collapsed) {
+  if (is_collapsed && !forceOpen) {
     plotSelectionContainer.classList.remove('collapsed');
   } else {
 
@@ -297,7 +299,7 @@ function chartSelectionHandler(e) {
     });
 
     // selector buttons
-    this.classList.add('active');
+    plotSelectionItem.classList.add('active');
     const allSelectorButtons = document.querySelectorAll('.plot-selection-item');
     allSelectorButtons.forEach(button => {
       if (button.getAttribute('data-plot-id') !== plotId) {
@@ -306,6 +308,11 @@ function chartSelectionHandler(e) {
     });
     plotSelectionContainer.classList.add('collapsed');
   }
+}
+
+function chartSelectionHandler(e) {
+  const plotId = this.getAttribute('data-plot-id');
+  loadChart(plotId);
 }
 
 function legendItemHandler(e) {
@@ -345,7 +352,6 @@ function legendItemHandler(e) {
 }
 
 function setLegendFade(elem, childElement) {
-  console.log('Setting legend fade for element:', elem);
     // Remove both classes first
     elem.classList.remove('fade-top', 'fade-bottom');
     // If not at the very top, add fade-top
@@ -372,6 +378,28 @@ function handleLegendItemContentScroll(e) {
 }
 
 // Attach scroll handler to all .legend-item-content elements (on DOMContentLoaded or dynamically as needed)
+function openSelectedChart() {
+  const hash = window.location.hash;
+
+if (hash && hash.startsWith('#findings_')) {
+  console.log("Intercepted hash: ", hash);
+  const targetId = hash.substring(1); // remove the #
+  
+  // Optional: Replace the hash in the URL without scrolling
+  // history.replaceState(null, '', '#data-visualization');
+
+  // Scroll to a specific section instead of the default - delay by 500 to avoid fighting with the default scroll behavior
+  setTimeout(function() {
+    const scrollTarget = document.getElementById('data-visualizations');
+    if (scrollTarget) {
+      scrollTarget.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 500);
+
+  // Do additional work, e.g. load the appropriate chart
+  loadChart(targetId, true); // use full ID, like 'findings_123'
+}
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch("/public/data/engca_comment_scatterplot_source.json", {})
@@ -384,16 +412,16 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error("Error fetching data:", error);
     });
 
-  const color_bg_table = {
-    '#5ed0b9': '#DDF4EF',
-    '#70b6e5': '#E0EFF9',
-    '#b98acb': '#EFE5F3',
-    '#ee8176': '#FBE4E1',
-    '#f9c280': '#FFF4E4',
-    '#f7e79c': '#FFF4E4',
-    '#c2c2f0': '#E4F2FF',
-    'lightgray': '#F7F7F7'
-  }
+    const color_bg_table = {
+      '#5ed0b9': '#DDF4EF',
+      '#70b6e5': '#E0EFF9',
+      '#b98acb': '#EFE5F3',
+      '#ee8176': '#FBE4E1',
+      '#f9c280': '#FFF4E4',
+      '#f7e79c': '#FFF4E4',
+      '#c2c2f0': '#E4F2FF',
+      'lightgray': '#F7F7F7'
+    }
 
   
   let expandHandler = function(e) {
@@ -468,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
     handleLegendItemContentScroll({target: el});
   });
 
-
+  openSelectedChart();
 
 });
 
