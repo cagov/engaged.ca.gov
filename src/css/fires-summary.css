@@ -656,6 +656,11 @@ div.legend-circle {
         padding-left: 10px;
     } */
 }
+
+div.plot-selection-container:not(.collapsed) {
+    background-color: white;
+}
+
 section#plot-selection-pulldown {
     margin-bottom: 1rem;
 }

@@ -376,6 +376,18 @@ document.addEventListener('DOMContentLoaded', function() {
     item.addEventListener('click', chartSelectionHandler);
   });
 
+  document.addEventListener('click', function(event) {
+    const plotSelectionContainer = document.querySelector('.plot-selection-container');
+    if (!plotSelectionContainer) return;
+    // Only collapse if not already collapsed
+    if (!plotSelectionContainer.classList.contains('collapsed')) {
+      // If the click target is not inside the container
+      if (!plotSelectionContainer.contains(event.target)) {
+        plotSelectionContainer.classList.add('collapsed');
+      }
+    }
+  });
+
   // Set up event handlers for datapoints in plots
   const datapoints = document.querySelectorAll('.datapoint');
   if (!isMobile) {
@@ -396,6 +408,8 @@ document.addEventListener('DOMContentLoaded', function() {
     item.addEventListener('click', legendItemHandler);
   });
   
+
+
 });
 
 </script>
