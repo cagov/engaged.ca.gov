@@ -116,8 +116,8 @@
                         <div class="legend-item-color legend-circle " style="background-color: {{ legend_item.color }};"></div>
                         <div class="legend-item-label">{{ translation_key | i18n  }}</div>
                       </div>
-                      <div class="legend-item-expansion-block">
-                        <div class="legend-item-content"></div>
+                      <div class="legend-item-expansion-block" id="{{ translation_key }}">
+                        <div class="legend-item-content" data-parent-id="{{ translation_key }}"></div>
                       </div>
                     </div>
                     {% endfor %}
@@ -321,6 +321,8 @@ function legendItemHandler(e) {
   console.log('Legend item clicked:', nbrComments, commentIds);
 
   const legendItemContent = legendItem.querySelector('.legend-item-content');
+  const parentId = legendItemContent.getAttribute('data-parent-id');
+  const parentElement = document.getElementById(parentId);
   if (!is_collapsed) {
     let comment_list = '';
     const commentIdsArray = commentIds.split(',');
@@ -333,11 +335,42 @@ function legendItemHandler(e) {
       comment_list += '</div>';
     }
     legendItemContent.innerHTML = comment_list;
+    if (parentElement) {
+      setLegendFade(parentElement, legendItemContent);
+    }
   } else {
     legendItemContent.innerHTML = '';
   }
 }
 
+function setLegendFade(elem, childElement) {
+  console.log('Setting legend fade for element:', elem);
+    // Remove both classes first
+    elem.classList.remove('fade-top', 'fade-bottom');
+    // If not at the very top, add fade-top
+    if (childElement.scrollTop > 0) {
+      console.log('Adding fade-top');
+      elem.classList.add('fade-top');
+    }
+    // If not at the very bottom, add fade-bottom
+    if (childElement.scrollTop + childElement.clientHeight < childElement.scrollHeight - 1) {
+      console.log('Adding fade-bottom');
+      elem.classList.add('fade-bottom');
+    }
+
+}
+
+function handleLegendItemContentScroll(e) {
+  const el = e.target;
+  // Get the immediate parent of the element
+  const parentId = el.getAttribute('data-parent-id');
+  const parentElement = document.getElementById(parentId);
+  if (parentElement) {
+    setLegendFade(parentElement, el);
+  }
+}
+
+// Attach scroll handler to all .legend-item-content elements (on DOMContentLoaded or dynamically as needed)
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch("/public/data/engca_comment_scatterplot_source.json", {})
@@ -406,7 +439,14 @@ document.addEventListener('DOMContentLoaded', function() {
   legendItems.forEach(item => {
     item.addEventListener('click', legendItemHandler);
   });
-  
+
+  const legendContents = document.querySelectorAll('.legend-item-content');
+  legendContents.forEach(el => {
+    el.addEventListener('scroll', handleLegendItemContentScroll);
+    // Initial check in case content is already scrolled
+    handleLegendItemContentScroll({target: el});
+  });
+
 
 
 });

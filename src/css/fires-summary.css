@@ -598,6 +598,7 @@ div.plot-legend {
 
 div.legend-item {
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 350px;
     border: 1px solid #BCBBC1;
@@ -635,10 +636,36 @@ div.legend-item.collapsed .legend-item-expansion-block {
     display: none;
 }
 
-div.legend-item:not(.collapsed) .legend-item-expansion-block {  
+div.legend-item:not(.collapsed) .legend-item-content {  
     max-height: 600px;
     overflow-y: auto; /* Enables vertical scrolling */
 }
+
+div.legend-item-expansion-block {
+    position: relative;
+}
+
+div.legend-item:not(.collapsed) .legend-item-expansion-block.fade-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+div.legend-item:not(.collapsed) .legend-item-expansion-block.fade-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
 
 div.legend-item-comment-item {
 /* Start Generation Here */
