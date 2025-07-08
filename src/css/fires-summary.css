@@ -70,9 +70,9 @@ section#findings-overview p {
 section#how-we-built {
     padding-top: 0;
 }
-section#how-we-built li {
+/* section#how-we-built li {
     padding-bottom: 1rem;
-}
+} */
 
 .findings-adornment {
     position: absolute;
