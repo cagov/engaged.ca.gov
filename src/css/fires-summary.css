@@ -15,6 +15,10 @@ section#plots-overview .container {
     position: relative;
 }
 
+section#plots-interpretation {
+    padding-top: 0;
+}
+
 section#findings-overview {
     background: #1C2745;
     overflow-y: hidden;
@@ -549,13 +553,19 @@ a.insights-back-button {
     font-weight: 600;
     font-family: "Noto Sans Display" !important;
     line-height: 130%;
-    margin-top: 1rem;
     margin-bottom: 1rem;
     @media (max-width: 767px) {
         font-size: 19px;
         line-height: 30px;
     }
 }
+.plot-legend-title {
+    margin-top: 1rem;
+}
+.plot-title {
+    margin-top: 2rem;
+}
+
 .plot-description {
     font-size: 23px;
     font-weight: 400;
@@ -672,6 +682,7 @@ div.plot-selection-container:not(.collapsed) {
 
 section#plot-selection-pulldown {
     padding-top: 0;
+    padding-bottom: 1.5rem;
 }
 
 div.plot-selection-container {
