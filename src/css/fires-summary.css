@@ -632,7 +632,7 @@ div.legend-item-comment-item {
     font-size: 18px;
     padding: 1rem;
 }
-div.legend-item-comment-item:nth-child(even) {
+div.legend-item-comment-item:nth-child(odd) {
     background-color: #F6F7FA;
 }
 div.legend-circle {
