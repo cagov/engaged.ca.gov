@@ -62,9 +62,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <div id="plot-selection-container" class="plot-selection-container container collapsed">
+        <div id="plot-selection-container" class="plot-selection-container container collapsed" role="listbox" aria-label="{{ modules.plots_overview.plotSelectionLabel or 'Select a data visualization' }}" aria-expanded="false">
             {% for i in range(1, modules.plots.nbr_charts+1) %}
-            <div class="plot-selection-item {{ 'active' if loop.first else '' }}" data-plot-id="{{ modules.plots["id_" + i] }}" data-plot-idx="{{ i }}">
+            <div class="plot-selection-item {{ 'active' if loop.first else '' }}" data-plot-id="{{ modules.plots["id_" + i] }}" data-plot-idx="{{ i }}" role="option" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="0">
               <div class="plot-selection-item-title">
                 {{ modules.plots["title_" + i] }}
               </div> 
@@ -121,7 +121,6 @@
                       </div>
                     </div>
                     {% endfor %}
-                    {# {{ ('./src/public/images/' + modules.plots["id_" + i] + '_' + lang + '_legend.svg') | getFileContents | safe }} #}
                   </div>
 
             </div>
@@ -285,6 +284,7 @@ function loadChart(plotId, forceOpen=false) {
   let is_collapsed = plotSelectionContainer.classList.contains('collapsed');
   if (is_collapsed && !forceOpen) {
     plotSelectionContainer.classList.remove('collapsed');
+    plotSelectionContainer.setAttribute('aria-expanded', 'true');
     if (current_chart_id != null) {
       // scroll so that plot-selection-item with data-plot-id == current_chart_id is visible ( ideally under the cursor)
       const currentChartItem = document.querySelector('.plot-selection-item[data-plot-id="' + current_chart_id + '"]');
@@ -296,6 +296,7 @@ function loadChart(plotId, forceOpen=false) {
     current_chart_id = plotId;
 
     plotSelectionContainer.classList.remove('collapsed');
+    plotSelectionContainer.setAttribute('aria-expanded', 'true');
 
     if (plotSection) {
       plotSection.classList.add('active');
@@ -309,19 +310,53 @@ function loadChart(plotId, forceOpen=false) {
 
     // selector buttons
     plotSelectionItem.classList.add('active');
+    plotSelectionItem.setAttribute('aria-selected', 'true');
     const allSelectorButtons = document.querySelectorAll('.plot-selection-item');
     allSelectorButtons.forEach(button => {
       if (button.getAttribute('data-plot-id') !== plotId) {
         button.classList.remove('active');
+        button.setAttribute('aria-selected', 'false');
       }
     });
     plotSelectionContainer.classList.add('collapsed');
+    plotSelectionContainer.setAttribute('aria-expanded', 'false');
   }
 }
 
 function chartSelectionHandler(e) {
   const plotId = this.getAttribute('data-plot-id');
   loadChart(plotId);
+}
+
+function handlePlotSelectionKeydown(e) {
+  const plotSelectionContainer = document.getElementById('plot-selection-container');
+  const currentItem = e.target;
+  const allItems = document.querySelectorAll('.plot-selection-item');
+  const currentIndex = Array.from(allItems).indexOf(currentItem);
+  
+  switch(e.key) {
+    case 'Enter':
+    case ' ':
+      e.preventDefault();
+      const plotId = currentItem.getAttribute('data-plot-id');
+      loadChart(plotId);
+      break;
+    case 'ArrowDown':
+      e.preventDefault();
+      const nextIndex = (currentIndex + 1) % allItems.length;
+      allItems[nextIndex].focus();
+      break;
+    case 'ArrowUp':
+      e.preventDefault();
+      const prevIndex = currentIndex === 0 ? allItems.length - 1 : currentIndex - 1;
+      allItems[prevIndex].focus();
+      break;
+    case 'Escape':
+      e.preventDefault();
+      plotSelectionContainer.classList.add('collapsed');
+      plotSelectionContainer.setAttribute('aria-expanded', 'false');
+      break;
+  }
 }
 
 function legendItemHandler(e) {
@@ -464,6 +499,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const plotSelectionItems = document.querySelectorAll('.plot-selection-item');
   plotSelectionItems.forEach(item => {
     item.addEventListener('click', chartSelectionHandler);
+    item.addEventListener('keydown', handlePlotSelectionKeydown);
   });
 
   document.addEventListener('click', function(event) {
@@ -474,6 +510,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // If the click target is not inside the container
       if (!plotSelectionContainer.contains(event.target)) {
         plotSelectionContainer.classList.add('collapsed');
+        plotSelectionContainer.setAttribute('aria-expanded', 'false');
       }
     }
   });
