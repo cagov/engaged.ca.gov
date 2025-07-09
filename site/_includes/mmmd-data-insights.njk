@@ -108,16 +108,16 @@
                   <div class="plot-legend-notes">
                     {{ modules.plots.chart_legend_notes }}
                   </div>
-                  <div class="plot-legend">
+                  <div class="plot-legend" role="region" aria-label="{{ modules.plots.chart_legend_title }}">
                     {% for legend_item in legend_data %}
                     {% set translation_key = 'legends_' + legend_item.key %}
-                    <div class="legend-item collapsed" data-nbr-comments="{{ legend_item.comment_ids.length }}" data-comment-ids="{{ legend_item.comment_ids | join(',') }}">
+                    <div class="legend-item collapsed" data-nbr-comments="{{ legend_item.comment_ids.length }}" data-comment-ids="{{ legend_item.comment_ids | join(',') }}" role="button" tabindex="0" aria-expanded="false" aria-controls="{{ translation_key }}-content">
                       <div class="legend-item-header">
-                        <div class="legend-item-color legend-circle " style="background-color: {{ legend_item.color }}"></div>
+                        <div class="legend-item-color legend-circle " style="background-color: {{ legend_item.color }}" aria-hidden="true"></div>
                         <div class="legend-item-label">{{ translation_key | i18n  }}</div>
                       </div>
-                      <div class="legend-item-expansion-block" id="{{ translation_key }}">
-                        <div class="legend-item-content" data-parent-id="{{ translation_key }}"></div>
+                      <div class="legend-item-expansion-block" id="{{ translation_key }}-content" role="region" aria-labelledby="{{ translation_key }}-label" aria-hidden="true">
+                        <div class="legend-item-content" data-parent-id="{{ translation_key }}-content" role="log" aria-live="polite"></div>
                       </div>
                     </div>
                     {% endfor %}
@@ -362,10 +362,16 @@ function handlePlotSelectionKeydown(e) {
 function legendItemHandler(e) {
   const legendItem = this;
   let is_collapsed = legendItem.classList.contains('collapsed');
+  const expansionBlock = legendItem.querySelector('.legend-item-expansion-block');
+
   if (is_collapsed) {
     legendItem.classList.remove('collapsed');
+    legendItem.setAttribute('aria-expanded', 'true');
+    expansionBlock.setAttribute('aria-hidden', 'false');
   } else {
     legendItem.classList.add('collapsed');
+    legendItem.setAttribute('aria-expanded', 'false');
+    expansionBlock.setAttribute('aria-hidden', 'true');
   }
   is_collapsed = !is_collapsed;
   const nbrComments = legendItem.getAttribute('data-nbr-comments');
@@ -418,6 +424,35 @@ function handleLegendItemContentScroll(e) {
   const parentElement = document.getElementById(parentId);
   if (parentElement) {
     setLegendFade(parentElement, el);
+  }
+}
+
+function handleLegendItemKeydown(e) {
+  const legendItems = Array.from(document.querySelectorAll('.legend-item'));
+  const currentItem = e.target;
+  const currentIndex = legendItems.indexOf(currentItem);
+  switch (e.key) {
+    case 'Enter':
+    case ' ':
+      e.preventDefault();
+      legendItemHandler.call(currentItem, e);
+      break;
+    case 'ArrowDown':
+      e.preventDefault();
+      legendItems[(currentIndex + 1) % legendItems.length].focus();
+      break;
+    case 'ArrowUp':
+      e.preventDefault();
+      legendItems[(currentIndex - 1 + legendItems.length) % legendItems.length].focus();
+      break;
+    case 'Home':
+      e.preventDefault();
+      legendItems[0].focus();
+      break;
+    case 'End':
+      e.preventDefault();
+      legendItems[legendItems.length - 1].focus();
+      break;
   }
 }
 
@@ -533,6 +568,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const legendItems = document.querySelectorAll('.legend-item');
   legendItems.forEach(item => {
     item.addEventListener('click', legendItemHandler);
+    item.addEventListener('keydown', handleLegendItemKeydown);
   });
 
   const legendContents = document.querySelectorAll('.legend-item-content');
