@@ -106,7 +106,7 @@ a[data-appearance="button"], button, input[type="submit"] {
 /* data-theme="off-white" */
 :is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"] {
   color: var(--navy);
-  border: 2px solid var(--navy);
+  border: 2px solid #E79450;
 }
 
 h1, h2, .display-text {
