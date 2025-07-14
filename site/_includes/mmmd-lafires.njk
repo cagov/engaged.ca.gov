@@ -5,10 +5,10 @@
   <div class="container banner-flex">
     <engca-banner-content>
       <h1>{{ title }}</h1>
-      <p class="status-pill">{{ modules.hero_2.statusPlanningText }}</p>
+      <p class="status-pill">{{ modules.hero_2.statusPlanningTextV2 }}</p>
       {{ modules.hero_2.content | safe }}
       <p>
-        <a data-appearance="button" data-theme="orange" href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" class="m-t">{{ modules.hero_2.buttonText }}</a>
+        <a data-appearance="button" data-theme="orange" href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" class="m-t">{{ modules.hero_2.buttonTextV2 }}</a>
       </p>
     </engca-banner-content>
     <img src="/public/images/fires-about-bubbles.svg" aria-hidden="true" class="desktop-only" alt=""/>
@@ -58,13 +58,17 @@
           {{ phase(modules.phase1, "complete", "complete") }}
           {{ phase(modules.phase2, "complete", "complete") }}
           {{ phase(modules.phase3, "complete", "complete") }}
-          {{ phase(modules.phase4, "current", "pending") }}
-          {{ phase(modules.phase5, "pending", "pending") }}
+          {{ phase(modules.phase4, "complete", "pending") }}
+          {{ phase(modules.phase5, "current", "pending") }}
           {{ phase(modules.phase6, "pending", "none") }}
         </div>
       </div>
       <div class="col-lg-4">
         <div class="phase-sidebar">
+          <h3>{{ modules.phaseGeneral.resourcesTitle }}</h3>
+          <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" data-appearance="button" data-theme="off-white" class="findings-link-icon">
+            {{ modules.phaseGeneral.resourcesLinkTitle }}
+          </a>
           {{ modules.phaseGeneral.content | safe }}
         </div>
       </div>

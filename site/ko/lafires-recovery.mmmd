@@ -27,6 +27,8 @@ statusAgendaSettingText: 의제 설정이 현재 진행 중입니다
 statusReviewText: 의제 설정 결과를 검토 중입니다
 statusPlanningText: 심의를 계획 중입니다
 buttonText: 의제 설정에서 찾은 내용을 확인하십시오
+statusPlanningTextV2: 심의가 진행 중입니다
+buttonTextV2: 등록하십시오
 ----
 
 로스앤젤레스 산불로 피해를 입은 사람들은 복구 계획에 관한 발언권이 있습니다. 그렇기에 캘리포니아 주는 새로운 방식으로 정부와 함께하고 있습니다.
