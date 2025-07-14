@@ -110,13 +110,12 @@ a[data-appearance="button"], button, input[type="submit"] {
 }
 
 .findings-link-icon {
-  padding-left: 2.5rem !important;
+  padding-left: 3.5rem !important;
   font-size: 18px !important;
   background-image: url("/public/images/link_icon.svg");
   /* Existing styles */
   background-repeat: no-repeat;
   background-position: left 0.5rem center;
-  background-size: 1.25rem 1.25rem;
   vertical-align: middle;
 }
 
