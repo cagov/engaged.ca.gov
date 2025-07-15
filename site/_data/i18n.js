@@ -611,7 +611,7 @@ const translations = {
         "fa": "نقشه سایت",
         "hy": "Կայքի քարտեզ",
         "location": "Footer"
-    }
+    },
 };
 // add default export
 export default translations;
