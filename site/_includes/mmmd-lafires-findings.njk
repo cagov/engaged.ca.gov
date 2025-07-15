@@ -52,7 +52,7 @@
         </div>
 
         <div id="findings-show-all-button-container" class="findings-button-container">
-            <button id="findings-show-all-button" class="findings-show-all-button button-reset" aria-expanded="false" aria-controls="findings-barchart-container">
+            <button id="findings-show-all-button" class="findings-show-all-button button-reset open" aria-expanded="false" aria-controls="findings-barchart-container">
                
                     <div class="findings-show-all-button-label">{{ modules.findings_topics_people_rated.buttonText }}</div>
             </button>
@@ -88,7 +88,7 @@
                     {% endfor %}
                 </div>
                 <div id="findings-responding-show-all-button-container" class="findings-button-container">
-                    <button id="findings-responding-show-all-button" class="findings-show-all-button button-reset" aria-expanded="false" aria-controls="findings-responding-list-container">
+                    <button id="findings-responding-show-all-button" class="findings-show-all-button button-reset open" aria-expanded="false" aria-controls="findings-responding-list-container">
                             <div class="findings-responding-show-all-button-label">{{ modules.findings_how_we_are_responding.buttonText }}</div>
                     </button>
                 </div>
@@ -139,7 +139,7 @@
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_1.quote_3 }}</div>
                               </div>
                           </div>
-                          <button class="findings-key-tension-read-more button-reset" data-block="block-1" aria-expanded="false" aria-controls="block-1">
+                          <button class="findings-key-tension-read-more button-reset data-block-1 open" data-block="block-1" aria-expanded="false" aria-controls="block-1">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                           </button>
                       </div>
@@ -164,7 +164,7 @@
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_2.quote_3 }}</div>
                               </div>
                           </div>
-                          <button class="findings-key-tension-read-more button-reset" data-block="block-2" aria-expanded="false" aria-controls="block-2">
+                          <button class="findings-key-tension-read-more button-reset data-block-2 open" data-block="block-2" aria-expanded="false" aria-controls="block-2">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                           </button>
                         </div>
@@ -185,7 +185,7 @@
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_3.quote_2 }}</div>
                               </div>
                           </div>
-                          <button class="findings-key-tension-read-more button-reset" data-block="block-3" aria-expanded="false" aria-controls="block-3">
+                          <button class="findings-key-tension-read-more button-reset data-block-3 open" data-block="block-3" aria-expanded="false" aria-controls="block-3">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                           </button>
                       </div>
@@ -206,7 +206,7 @@
                                   <div class="findings-expand-quote">{{ modules.findings_key_tension_block_4.quote_2 }}</div>
                               </div>
                           </div>
-                          <button class="findings-key-tension-read-more button-reset" data-block="block-4" aria-expanded="false" aria-controls="block-4">
+                          <button class="findings-key-tension-read-more button-reset data-block-4 open" data-block="block-4" aria-expanded="false" aria-controls="block-4">
                               <span>{{ modules.findings_key_tensions.readMore | safe }}</span>
                           </button>
                       </div>
@@ -337,6 +337,7 @@ document.querySelectorAll('.findings-barchart-item').forEach(item => {
 
 function toggleBarchartVisibility(button) {
   const barchartContainer = document.querySelector('.findings-barchart-container');
+  const showAllButton = document.querySelector('#findings-show-all-button');
   const showAllButtonLabel = document.querySelector('.findings-show-all-button-label');
 
   const buttonContainer = document.querySelector('div#findings-show-all-button-container');
@@ -369,11 +370,15 @@ function toggleBarchartVisibility(button) {
         barItem.setAttribute('aria-hidden', 'false');
       } #}
       showAllButtonLabel.textContent = openText;
+      showAllButton.classList.remove('close'); 
+      showAllButton.classList.add('open') ; // indicates what the button WILL do when pressed
     } else {
       {# barItem.classList.add('visible');
       barItem.setAttribute('aria-hidden', 'false'); #}
-      showAllButtonLabel.classList.add('open');
+      showAllButtonLabel.classList.add('open'); // indicates current state
       showAllButtonLabel.textContent = closeText;
+      showAllButton.classList.remove('open');
+      showAllButton.classList.add('close'); // indicates what the button WILL do when pressed
     }
   });
 
@@ -423,8 +428,12 @@ document.querySelectorAll('.findings-key-tension-read-more').forEach(readMore =>
     this.setAttribute('aria-expanded', isExpanded);
     if (isExpanded) {
       this.querySelector('span').textContent = closeText;
+      this.classList.remove('open');
+      this.classList.add('close');
     } else {
       this.querySelector('span').textContent = openText;
+      this.classList.remove('close');
+      this.classList.add('open');
     }
   });
 });
