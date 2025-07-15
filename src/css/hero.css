@@ -1,0 +1,23 @@
+/*
+@todo: Refactor the following styles to use a content-agnostic, reusable pattern:
+  .hero
+  #hero
+  #about-page-heading
+  #los-angeles-fires-recovery
+  #findings-overview
+ */
+
+.engca-hero {
+    padding-block: 4.8rem;
+    color: var(--off-white);
+    background: url("/public/images/bubbles-exclamation.svg") bottom right / 30vw no-repeat, var(--navy);
+}
+
+@media (min-width: 1200px) {
+    .engca-hero {
+        background-image: unset;
+    }
+    .engca-hero-person {
+        background: url("/public/images/ge-hero-background.png") center right / contain no-repeat, var(--navy);
+    }
+}

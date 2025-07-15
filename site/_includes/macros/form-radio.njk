@@ -35,13 +35,6 @@ interest_id - (String) See comment above
 attributes - (String) Add a space separated list of attributes such as "checked required"
 #}
 
-{% macro interest_data(i8nkey, interest_id, attributes) %}
-    <input type="radio" class="form-radio-input" id="{{ interest_id }}" name="lafires-radio-group-{{ interest_id }}" value="{{ i8nkey }}" {{ attributes }}>
-    <label class="form-control-label form-radio-label" for="{{ interest_id }}">
-        {{ i8nkey }}
-    </label>
-{% endmacro %}
-
 {% macro merge_field_data(i8nkey, value, value_label, radio_name, attributes) %}
     <input type="radio" class="form-radio-input" id="{{ radio_name }}-{{ value }}" name="{{ radio_name }}" value="{{ i8nkey }}" {{ attributes }}>
     <label class="form-control-label form-radio-label" for="{{ radio_name }}-{{ value }}">
