@@ -10,7 +10,7 @@
 }
 
 .scenario-panel.panel-heading::before {
-  content: "Our action plan" !important;
+  content: "Live community results" !important;
   color: #ffffff;
   font-family: "Noto Sans", system-ui, sans-serif !important;
   font-size: 26px;
@@ -50,8 +50,12 @@
   color: #1c2745;
 }
 
-.card.result-card .detail-toggle .labels .label i {
+.card.result-card .detail-toggle .labels .label i.expand_less {
     color: #ffffff !important;
+}
+
+.results-summary-page .card.result-card .detail-toggle .labels .label i.expand-more {
+    color: #1c2745 !important;
 }
 
 .page-results-group .content-col .panel-body:last-child {
@@ -64,7 +68,7 @@
 .scenario-panel-default::before,
 .scenario-panel::before {
   padding-left: 24px;
-  content: "How much we agree on taking these 5 actions";
+  content: "The following top 5 options will shape our recovery action plan";
 }
 
 .points-container {
