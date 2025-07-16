@@ -66,6 +66,12 @@
 .card.result-card .detail-toggle.collapsed {
   background-color: #ffffff !important;
   border-bottom: 2px solid #1c2745;
+  border-top: 2px solid #1c2745;
+}
+
+.card.result-card .detail-toggle {
+    margin-top: 0;
+    margin-bottom: -2px !important;
 }
 
 .tab-content-metrics .format-ethelo:before {
@@ -167,7 +173,7 @@
 .results-summary-page .votes-header {
   background-color: #fff;
   align-items: start;
-  padding: 0 16px 8px 16px;
+  padding: 8px 16px 8px 16px;
   color: #1c2745;
 }
 
@@ -193,7 +199,8 @@
 }
 
 .card.flat .card-body {
-  padding: 0px;
+  padding: 0px !important;
+  background-color: #ffffff;
 }
 
 .histogram-people-container {
@@ -228,9 +235,10 @@
 }
 
 .card.flat .card-body .nav-pills > li.active > a {
-  color: #5489a3 !important;
   border-bottom: 6px solid #5489a3;
   background-color: transparent;
+  color: #000 !important;
+  font-weight: 800 !important;
 }
 
 .card.flat .card-body .nav {
