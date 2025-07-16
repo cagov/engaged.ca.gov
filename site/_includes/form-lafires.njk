@@ -6,7 +6,7 @@
 {# Begin HTML. #}
 <h2>{{ 'join-the-conversation' | i18n }}</h2>
 {% block formHeading %}
-  <p>{{ 'join-the-conversation-form-prompt' | i18n }}</p>
+  <p>{{ modules.signup.content | safe }}</p>
 {% endblock formHeading %}
 
 <engca-join-convo-form>

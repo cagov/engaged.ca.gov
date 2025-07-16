@@ -183,19 +183,6 @@ translations = {
         "hy": "Տվեք մեզ ձեր էլ.հասցեն Մենք ձեզ կտեղեկացնենք, երբ թեմաները բացվեն:",
         "location": "Home"
     },
-    "join-the-conversation-form-prompt": {
-        "en": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "fr": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "es": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "ko": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "vi": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "tl": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "zh-hans": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "zh-hant": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "fa": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "hy": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
-        "location": "Home"
-    },
     "back-to-top": {
         "en": "Back to top",
         "fr": "Haut de page",

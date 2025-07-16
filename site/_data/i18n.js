@@ -2,7 +2,6 @@
 const translations = {
     "language-label": {
         "en": "English",
-        "fr": "Français",
         "es": "Español",
         "ko": "한국어",
         "vi": "Tiếng Việt",
@@ -12,10 +11,10 @@ const translations = {
         "fa": "فارسی",
         "hy": "հայ",
         "location": "Global",
+        "status": "human_approved"
     },
     "engaged-california-untranslated": {
         "en": "Engaged California",
-        "fr": "Engaged California",
         "es": "Engaged California",
         "ko": "Engaged California",
         "vi": "Engaged California",
@@ -25,10 +24,10 @@ const translations = {
         "fa": "Engaged California",
         "hy": "Engaged California",
         "location": "Site header",
+        "status": "human_approved"
     },
     "los-angeles-fires-recovery": {
         "en": "Los Angeles fires recovery",
-        "fr": "Los Angeles fires recovery",
         "es": "Recuperación de los incendios de Los Ángeles",
         "ko": "로스앤젤레스 화재 복구",
         "vi": "Phục hồi sau các đám cháy ở Los Angeles",
@@ -37,11 +36,11 @@ const translations = {
         "zh-hant": "洛杉磯火災後的恢復",
         "fa": "احیای پس از آتش‌سوزی لس آنجلس",
         "hy": "Լոս Անջելեսի հրդեհների վերականգնում",
-        "location": "Site header"
+        "location": "Site header",
+        "status": "human_approved"
     },
     "about-the-program": {
         "en": "About the program",
-        "fr": "À propos du programme",
         "es": "Acerca del programa",
         "ko": "프로그램 소개",
         "vi": "Về chương trình",
@@ -50,11 +49,11 @@ const translations = {
         "zh-hant": "關於該計劃",
         "fa": "در مورد برنامه",
         "hy": "Ծրագրի մասին"  ,
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "sign-up-now": {
         "en": "Sign up now",
-        "fr": "Inscrivez-vous maintenant",
         "es": "Regístrese ahora",
         "ko": "지금 가입하세요",
         "vi": "Đăng ký ngay",
@@ -63,11 +62,11 @@ const translations = {
         "zh-hant": "立即註冊",
         "fa": "همین الان ثبت نام کنید",
         "hy": "Գրանցվեք հիմա",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "official-website-prefix": {
         "en": "Official website of the",
-        "fr": "Site web officiel du",
         "es": "Sitio web oficial de la",
         "ko": "캘리포니아주",
         "vi": "Trang mạng chính thức của",
@@ -76,11 +75,11 @@ const translations = {
         "zh-hant": "官方網站",
         "fa": "وب سایت رسمی از",
         "hy": "Կալիֆորնիա նահանգի",
-        "location": "Site header"
+        "location": "Site header",
+        "status": "human_approved"
     },
     "state-of-california": {
         "en": "State of California",
-        "fr": "État de Californie",
         "es": "Estado de California",
         "ko": "공식 웹사이트",
         "vi": "Tiểu Bang California",
@@ -89,11 +88,11 @@ const translations = {
         "zh-hant": "加利福尼亞州",
         "fa": "ایالت کالیفرنیا",
         "hy": "Պաշտոնական կայք",
-        "location": "Site header"
+        "location": "Site header",
+        "status": "human_approved"
     },
     "how-it-works": {
         "en": "How it works",
-        "fr": "Comment ça fonctionne",
         "es": "Cómo funciona",
         "ko": "작동 방식",
         "vi": "Chương trình hoạt động như thế nào",
@@ -102,11 +101,11 @@ const translations = {
         "zh-hant": "如何運作",
         "fa": "چگونه کار می کند",
         "hy": "Ինչպես է այն աշխատում",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "how-it-works-step-1": {
         "en": "You opt in to a topic",
-        "fr": "Vous optent pour un sujet",
         "es": "Usted opta por inscribirse en un tema",
         "ko": "귀하가 주제를 선택하여 참여합니다",
         "vi": "Quý vị chọn tham gia vào một chủ đề",
@@ -115,11 +114,11 @@ const translations = {
         "zh-hant": "您選擇加入主題",
         "fa": "شما در یک موضوع شرکت می کنید",
         "hy": "Դուք միանում եք թեմային",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "how-it-works-step-2": {
         "en": "We invite you to join",
-        "fr": "Nous vous invitons à rejoindre",
         "es": "Le invitamos a unirse",
         "ko": "저희가 귀하가 참여하시기를 초대합니다",
         "vi": "Chúng tôi mời quý vị tham gia",
@@ -128,11 +127,11 @@ const translations = {
         "zh-hant": "我們邀請您加入",
         "fa": "از شما دعوت می کنیم که بپیوندید",
         "hy": "Մենք հրավիրում ենք միանալ",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "how-it-works-step-3": {
         "en": "You share your thoughts",
-        "fr": "Vous partagez vos idées",
         "es": "Usted comparte sus pensamientos",
         "ko": "귀하는 귀하의 의견을 공유합니다",
         "vi": "Quý vị chia sẻ suy nghĩ của quý vị",
@@ -141,11 +140,11 @@ const translations = {
         "zh-hant": "您分享您的想法",
         "fa": "شما افکار خود را به اشتراک بگذارید",
         "hy": "Դուք կիսում եք ձեր մտքերը",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "how-it-works-step-4": {
         "en": "We share results",
-        "fr": "Nous partageons les résultats",
         "es": "Compartimos resultados",
         "ko": "저희는 결과를 공유합니다",
         "vi": "Chúng tôi chia sẻ kết quả",
@@ -154,11 +153,11 @@ const translations = {
         "zh-hant": "我們分享結果",
         "fa": "ما نتایج را به اشتراک می گذاریم",
         "hy": "Մենք կիսում ենք արդյունքները",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "join-the-conversation": {
         "en": "Join the conversation",
-        "fr": "Rejoignez la conversation",
         "es": "Únase a la conversación",
         "ko": "대화에 참여하세요",
         "vi": "Tham gia cuộc trò chuyện",
@@ -167,11 +166,11 @@ const translations = {
         "zh-hant": "加入對話",
         "fa": "به گفتگو بپیوندید",
         "hy": "Միացեք զրույցին",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "how-it-works-alt-1": {
         "en": "An icon of a group of people",
-        "fr": "Engaged California",
         "es": "Un icono de un grupo de personas.",
         "ko": "사람들 그룹 아이콘",
         "vi": "Biểu tượng của một nhóm người",
@@ -181,10 +180,10 @@ const translations = {
         "fa": "نماد گروهی از افراد",
         "hy": "Մի խումբ մարդկանց պատկերակ",
         "location": "Home",
+        "status": "human_approved"
     },
     "how-it-works-alt-2": {
         "en": "An icon of a government building",
-        "fr": "Engaged California",
         "es": "Un icono de un edificio gubernamental.",
         "ko": "정부 건물 아이콘",
         "vi": "Biểu tượng của một tòa nhà chính phủ",
@@ -194,10 +193,10 @@ const translations = {
         "fa": "نماد ی ساختمان دولتی",
         "hy": "Կառավարության շենքի պատկերակ",
         "location": "Home",
+        "status": "human_approved"
     },
     "join-the-conversation-form-label": {
         "en": "Give us your email. We’ll let you know about our engagements.",
-        "fr": "Donnez-nous votre adresse e-mail. Nous vous notifierons lorsque les sujets seront disponibles.",
         "es": "Denos su correo electrónico. Le avisaremos cuando comiencen los compromisos.",
         "ko": "이메일을 보내주십시오. 업무가 시작되면 알려드리겠습니다.",
         "vi": "Cho chúng tôi biết email của quý vị. Chúng tôi sẽ thông báo cho quý vị biết khi hoạt động gắn kết bắt đầu.",
@@ -206,25 +205,11 @@ const translations = {
         "zh-hant": "請提供您的電子郵件給我們。我們會在互動開始時通知您。",
         "fa": "ایمیل خود را به ما بدهید زمانی که نامزدی شروع شد به شما اطلاع خواهیم داد.",
         "hy": "Տրամադրեք մեզ Ձեր էլեկտրոնային հասցեն։ Մենք Ձեզ կտեղեկացնենք, թե երբ է սկսվելու ներգրավվածության գործընթացը։",
-        "location": "Home"
-    },
-    "join-the-conversation-form-prompt": {
-        "en": "Deliberations for LA fires recovery are happening now. Give us your email if you're interested in participating.",
-        "fr": "",
-        "es": "Las deliberaciones para la recuperación de los incendios de Los Ángeles están ocurriendo ahora. Déjenos su correo electrónico si desea participar.",
-        "ko": "LA 화재 복구를 위한 심의가 지금 진행 중입니다. 참여에 관심이 있다면 이메일을 보내주십시오.",
-        "vi": "Các cuộc thảo luận về việc phục hồi sau các đám cháy ở LA đang diễn ra ngay bây giờ. Hãy cung cấp cho chúng tôi email của quý vị nếu quý vị muốn tham gia.",
-        "tl": "Ang mga deliberasyon para sa pagbangon mula sa sunog sa LA ay kasalukuyang nagaganap. Ibigay sa amin ang iyong email kung interesado kang lumahok.",
-        "zh-hans": "洛杉矶火灾恢复的协商正在进行中。如果您有兴趣参与，请留下您的电子邮件。",
-        "zh-hant": "洛杉磯火災恢復的商議正在進行中。如果您有興趣參與，請留下您的電子郵件。",
-        "fa": "رایزنی‌ها برای بازسازی مناطق آتش‌سوزی لس‌آنجلس هم‌اکنون در حال انجام است. اگر علاقه‌مند به شرکت هستید، ایمیلتان را برایمان ارسال کنید.",
-        "hy": "Լոս Անջելեսի հրդեհների հետևանքների վերացման վերաբերյալ քննարկումները այժմ ընթանում են։ Մասնակցելու ցանկության դեպքում տրամադրեք ձեր էլ. հասցեն։",
         "location": "Home",
-        "status": "machine translated"
+        "status": "human_approved"
     },
     "back-to-top": {
         "en": "Back to top",
-        "fr": "Haut de page",
         "es": "Volver al inicio",
         "ko": "맨 위로 돌아가기",
         "vi": "Quay lại đầu trang",
@@ -233,11 +218,11 @@ const translations = {
         "zh-hant": "回到頂部",
         "fa": "بازگشت به بالا",
         "hy": "Վերադառնալ սկիզբ",
-        "location": "Footer"
+        "location": "Footer",
+        "status": "human_approved"
     },
     "email-label": {
         "en": "Email",
-        "fr": "Adresse e-mail",
         "es": "Correo electrónico",
         "ko": "이메일",
         "vi": "Email",
@@ -246,11 +231,11 @@ const translations = {
         "zh-hant": "電子郵件",
         "fa": "ایمیل",
         "hy": "Էլ․հասցե",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "required-label": {
         "en": "Required field",
-        "fr": "Champ requis",
         "es": "Campo obligatorio",
         "ko": "필수 필드",
         "vi": "Trường bắt buộc",
@@ -259,7 +244,8 @@ const translations = {
         "zh-hant": "必填欄",
         "fa": "فیلد الزامی",
         "hy": "Պարտադիր դաշտ",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "topics-interests-label": {
         'en': "Tell us what you’re interested in",
@@ -273,10 +259,10 @@ const translations = {
         "fa": "المواضيع التي تهمني:",
         "hy": "Թեմաներ, որոնք ինձ հետաքրքրում են.",
         'location': "Home",
+        "status": "human_approved"
     },
     "topic-future-topics": {
         "en": "Future topics",
-        "fr": "Future topics",
         "es": "Temas futuros",
         "ko": "향후 다룰 주제",
         "vi": "Chủ đề trong tương lai ",
@@ -285,11 +271,11 @@ const translations = {
         "zh-hant": "未來主題",
         "fa": "مواضيع مستقبلية",
         "hy": "Ապագա թեմաներ",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "topic-los-angeles-fires-recovery-evacuation-label": {
         "en": "Did you live or work in an evacuation zone?",
-        "fr": "",
         "es": "¿Usted vivía o trabajaba en una zona de evacuación?",
         "ko": "대피 구역에서 거주하거나 근무하셨습니까?",
         "vi": "Quý vị có sống hay làm việc trong khu vực sơ tán không?",
@@ -298,11 +284,11 @@ const translations = {
         "zh-hant": "您是否在疏散區生活或工作過？",
         "fa": "آیا در منطقه تخلیه‌شده زندگی یا کار می‎‌کردید؟",
         "hy": "Արդյո՞ք դուք ապրել կամ աշխատել եք տարհանման գոտում։",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "topic-los-angeles-fires-recovery-palisades": {
         "en": "Los Angeles fires recovery: Palisades",
-        "fr": "Los Angeles fires recovery: Palisades",
         "es": "Recuperación de los incendios en Los Ángeles: Palisades",
         "ko": "로스앤젤레스 산불 피해 복구: 팰리세이드(Palisades)",
         "vi": "Phục hồi sau vụ cháy ở Los Angeles: Palisades",
@@ -311,11 +297,11 @@ const translations = {
         "zh-hant":"洛杉磯火災恢復：帕利塞茲 (Palisades)",
         "fa": "احیای پس از آتشسوزی لس آنجلس: پالیسیدس",
         "hy": "Լոս Անջելեսի հրդեհներից վերականգնում.Palisades",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "topic-los-angeles-fires-recovery-eaton": {
         "en": "Los Angeles fires recovery: Eaton",
-        "fr": "Los Angeles fires recovery: Eaton",
         "es": "Recuperación de los incendios en Los Ángeles: Eaton",
         "ko": "로스앤젤레스 산불 피해 복구: 이튼(Eaton)",
         "vi": "Phục hồi sau vụ cháy ở Los Angeles: Eaton",
@@ -324,11 +310,11 @@ const translations = {
         "zh-hant":"洛杉磯火災恢復：伊頓 (Eaton)",
         "fa": "احیای پس از آتشسوزی لس آنجلس :ایتون",
         "hy": "Լոս Անջելեսի հրդեհներից վերականգնում. Eaton",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "topic-los-angeles-fires-recovery-evacuation-palisades": {
         "en": "Yes, in the Palisades fire evacuation zone",
-        "fr": "",
         "es": "Sí, estaba en la zona de evacuación por el incendio de Palisades.",
         "ko": "예, 저는 팰리세이즈 화재 대피 구역에 있었습니다",
         "vi": "Có, tôi đã ở trong khu vực sơ tán hỏa hoạn Palisades",
@@ -337,11 +323,11 @@ const translations = {
         "zh-hant": "是的，我在帕利塞茲火災疏散區",
         "fa": "بله، من در منطقه تخلیه ‌شده آتش‎‌سوزی پالیسیدز بودم.",
         "hy": "Այո, ես գտնվում էի Փելիսեյդսի հրդեհի տարհանման գոտում",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "topic-los-angeles-fires-recovery-evacuation-eaton": {
         "en": "Yes, in the Eaton fire evacuation zone",
-        "fr": "",
         "es": "Sí, estaba en la zona de evacuación por el incendio de Eaton.",
         "ko": "예, 저는 이튼 화재 대피 구역에 있었습니다 ",
         "vi": "Có, tôi đã ở trong khu vực sơ tán hỏa hoạn Eaton",
@@ -350,11 +336,11 @@ const translations = {
         "zh-hant": "是的，我在伊頓火災疏散區",
         "fa": "بله، من در منطقه تخلیه‌شده آتش‎‌سوزی ایتون بودم.",
         "hy": "Այո, ես գտնվում էի Իթոնի հրդեհի տարհանման գոտում",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "topic-los-angeles-fires-recovery-no-evacuation": {
         "en": "No",
-        "fr": "",
         "es": "No.",
         "ko": "아니요",
         "vi": "Không",
@@ -363,11 +349,11 @@ const translations = {
         "zh-hant": "否",
         "fa": "خیر",
         "hy": "Ոչ",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "valid-email-message": {
         "en": "Please enter a valid email address.",
-        "fr": "Veuillez entrer une adresse e-mail valide.",
         "es": "Por favor, introduzca una dirección de correo electrónico válida.",
         "ko": "유효한 이메일 주소를 입력하세요.",
         "vi": "Vui lòng nhập địa chỉ email hợp lệ.",
@@ -376,11 +362,11 @@ const translations = {
         "zh-hant": "請輸入有效的電子郵件地址。",
         "fa": "لطفا یک آدرس ایمیل معتبر وارد کنید.",
         "hy": "Խնդրում ենք մուտքագրել վավեր էլ․փոստի հասցեն:",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "valid-email-message-2": {
         "en": "Email addresses should contain a \"@\" and a \".\"",
-        "fr": "Les adresses e-mail doivent contenir un \"@\" et un \".\"",
         "es": "Las direcciones de correo electrónico deben contener una \"@\" y un \".\"",
         "ko": "이메일 주소에는 \"@\"과 \".\"가 포함되어야 합니다",
         "vi": "Địa chỉ email phải chứa dấu \"@\" và dấu \".\"",
@@ -389,11 +375,11 @@ const translations = {
         "zh-hant": "電子郵件地址應包含「@」和「.」",
         "fa": "آدرس های ایمیل باید حاوی \"@\" و \".\"",
         "hy": "Էլ․փոստի հասցեները պետք է պարունակեն «@» և «․»",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "form-problem-message": {
         "en": "We're sorry, there's a problem with our form.",
-        "fr": "Nous sommes désolés, il y a un problème avec notre formulaire.",
         "es": "Lo sentimos, hay un problema con nuestro formulario.",
         "ko": "죄송합니다. 양식에 문제가 발생했습니다.",
         "vi": "Rất tiếc, mẫu đơn của chúng tôi có vấn đề.",
@@ -402,11 +388,11 @@ const translations = {
         "zh-hant": "很抱歉，我們的表格有問題。",
         "fa": "متأسفیم، مشکلی در فرم ما وجود دارد.",
         "hy": "Ներեցեք, մեր ձևի հետ կապված խնդիր կա:",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "form-problem-message-2": {
         "en": "Please try again later.",
-        "fr": "Veuillez réessayer plus tard.",
         "es": "Por favor, inténtelo de nuevo más tarde.",
         "ko": "나중에 다시 시도하세요.",
         "vi": "Vui lòng thử lại sau.",
@@ -415,11 +401,12 @@ const translations = {
         "zh-hant": "請稍後重試。",
         "fa": "لطفاً بعداً دوباره امتحان کنید.",
         "hy": "Խնդրում ենք փորձել ավելի ուշ:",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved",
+        "status": "human_approved"
     },
     "form-submit-button": {
         "en": "Sign up to opt in",
-        "fr": "Inscrivez-vous maintenant",
         "es": "Regístrese ahora",
         "ko": "지금 가입하세요",
         "vi": "Đăng ký ngay",
@@ -428,11 +415,11 @@ const translations = {
         "zh-hant": "立即註冊",
         "fa": "همین الان ثبت نام کنید",
         "hy": "Գրանցվեք հիմա",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "form-success-message": {
         "en": "Your subscription is confirmed.",
-        "fr": "Votre inscription est confirmée.",
         "es": "Su suscripción está confirmada.",
         "ko": "구독이 확인되었습니다.",
         "vi": "Đăng ký của quý vị đã được xác nhận.",
@@ -441,11 +428,11 @@ const translations = {
         "zh-hant": "您的訂閱已確認。",
         "fa": "اشتراک شما تایید شد",
         "hy": "Ձեր բաժանորդագրությունը հաստատված է:",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "form-success-message-2": {
         "en": "Thank you for signing up! Look out for news and updates.",
-        "fr": "Merci pour votre inscription ! Restez à l'écoute des nouvelles et des mises à jour.",
         "es": "¡Gracias por registrarse! Esté atento a noticias y actualizaciones.",
         "ko": "가입해 주셔서 감사합니다! 뉴스와 업데이트를 확인하세요.",
         "vi": "Cảm ơn quý vị đã đăng ký! Hãy chú ý theo dõi tin tức và cập nhật.",
@@ -454,11 +441,11 @@ const translations = {
         "zh-hant": "感謝您註冊！留意新聞和更新。",
         "fa": "با تشکر از شما برای ثبت نام! منتظر اخبار و به روز رسانی باشید.",
         "hy": "Շնորհակալություն գրանցվելու համար: Հետևեք նորություններին և թարմացումներին:",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "privacy-policy": {
         "en": "Privacy policy",
-        "fr": "Politique de confidentialité",
         "es": "Política de privacidad",
         "ko": "개인정보 보호정책",
         "vi": "Chính sách bảo mật",
@@ -467,11 +454,11 @@ const translations = {
         "zh-hant": "隱私政策",
         "fa": "سیاست حفظ حریم خصوصی",
         "hy": "Գաղտնիության քաղաքականություն",
-        "location": "Footer"
+        "location": "Footer",
+        "status": "human_approved"
     },
     "website-accessibility-certification": {
         "en": "Accessibility",
-        "fr": "Certification de l'accessibilité du site web",
         "es": "Accesibilidad",
         "ko": "접근성",
         "vi": "Khả năng tiếp cận",
@@ -480,11 +467,11 @@ const translations = {
         "zh-hant": "無障礙",
         "fa": "قابلیت دسترسی",
         "hy": "Մատչելիություն",
-        "location": "Footer"
+        "location": "Footer",
+        "status": "human_approved"
     },
     "form-privacy-message": {
         "en": "We take your <a href=\"/privacy\">privacy</a> seriously.",
-        "fr": "Nous prendrons votre <a href=\"/fr/privacy\">privacité</a> très au sérieux.",
         "es": "Nosotros tomamos su <a href=\"/es/privacy\">privacidad</a> en serio.",
         "ko": "저희는 귀하의 <a href=\"/ko/privacy\">프라이버시</a>를 중요하게 생각합니다.",
         "vi": "Chúng tôi xem trọng <a href=\"/vi/privacy\">quyền riêng tư</a> của quý vị.",
@@ -493,11 +480,11 @@ const translations = {
         "zh-hant": "我們非常重視您的<a href=\"/zh-hant/privacy\">隱私權</a>。",
         "fa": "حریم خصوصی<a href=\"/fa/privacy\">حریم خصوصی</a>حریم خصوصی",
         "hy": "Մենք լուրջ ենք վերաբերվում ձեր <a href=\"/hy/privacy\">գաղտնիությանը</a>։",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "form-privacy-message-1": {
         "en": "<a href=\"/notice-on-collections\">Read our privacy notice on collection here.</a>",
-        "fr": "Click here for the <a href=\"/notice-on-collections\">privacy notice on collection</a>.",
         "es": "<a href=\"/es/notice-on-collections\">Lea nuestro aviso de privacidad sobre la recopilación aquí.</a>",
         "ko": "<a href=\"/ko/notice-on-collections\">정보 수집에 대한 개인 정보 보호 고지를 여기서 읽을 수 있습니다.</a>",
         "vi": "<a href=\"/vi/notice-on-collections\">Đọc thông báo về quyền riêng tư của chúng tôi về việc thu thập thông tin tại đây.</a>",
@@ -506,11 +493,11 @@ const translations = {
         "zh-hant": "<a href=\"/zh-hant/notice-on-collections\">請在此處閱讀我們關於資料收集的隱私權聲明。</a>",
         "fa": "<a href=\"/fa/notice-on-collections\">اطلاعیه حریم خصوصی ما در مورد جمع‎‌آوری را اینجا بخوانید.</a>",
         "hy": "<a href=\"/hy/notice-on-collections\">Կարդացեք մեր գաղտնիության քաղաքականությունը հավաքագրման վերաբերյալ այստեղ։</a>",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "form-privacy-message-2": {
         "en": "You can unsubscribe at any time.",
-        "fr": "Vous pouvez vous désabonner à tout moment.",
         "es": "Puede darse de baja en cualquier momento.",
         "ko": "언제든지 구독을 취소할 수 있습니다.",
         "vi": "Quý vị có thể hủy đăng ký bất cứ lúc nào.",
@@ -519,11 +506,11 @@ const translations = {
         "zh-hant": "您可以隨時取消訂閱。",
         "fa": "می توانید در هر زمانی اشتراک خود را لغو کنید.",
         "hy": "Դուք կարող եք ցանկացած պահի չեղարկել բաժանորդագրությունը:",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "home-alt-header": {
         "en": "Circles with thumbs up, text bubble, and exclamation point",
-        "fr": "Circles with thumbs up, text bubble, and exclamation point",
         "es": "Círculos con pulgares hacia arriba, burbuja de texto y signo de exclamación.",
         "ko": "엄지 손가락(좋아요), 말풍선과 느낌표가 있는 원",
         "vi": "Hình tròn có ngón tay cái hướng lên, bong bóng văn bản và dấu chấm than",
@@ -532,11 +519,11 @@ const translations = {
         "zh-hant": "帶有豎起大拇指、文字氣泡和感嘆號的圓圈",
         "fa": "دایرههایی با شست رو به بالا، حباب متن و علامت تعجب",
         "hy": "Շրջանակներ՝ դեպի վեր բութ մատներով, տեքստային բաբլով և բացականչական նշանով",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "home-alt-header-about": {
         "en": "Circles with exclamation point and question mark",
-        "fr": "Circles with exclamation point and question mark",
         "es": "Círculos con signo de exclamación y signo de interrogación",
         "ko": "느낌표와 물음표가 있는 원",
         "vi": "Các vòng tròn có dấu chấm than và dấu chấm hỏi",
@@ -545,11 +532,11 @@ const translations = {
         "zh-hant": "帶有感嘆號和問號的圓圈",
         "fa": "دایرههایی با علامت تعجب و علامت سوال",
         "hy": "Շրջանակներ՝ բացականչական և հարցական նշանով",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "about-alt-header": {
         "en": "Circles with megaphone, microphone, and chat bubbles",
-        "fr": "Circles with megaphone, microphone, and chat bubbles",
         "es": "Círculos con megáfono, micrófono y burbujas de chat.",
         "ko": "메가폰, 마이크 및 말풍선이 있는 서클",
         "vi": "Vòng tròn có loa phóng thanh, micrô và bong bóng trò chuyện",
@@ -558,11 +545,11 @@ const translations = {
         "zh-hant": "帶有擴音器、麥克風和聊天氣泡的圓圈",
         "fa": "دایرههایی با مگافون، می و حباب‎های چت",
         "hy": "Շրջանակներ՝ մեգաֆոնով, խոսափողով և չաթի բաբլներով",
-        "location": "Home"
+        "location": "Home",
+        "status": "human_approved"
     },
     "about-this-program": {
         "en": "About the program",
-        "fr": "À propos de ce programme",
         "es": "Acerca del programa",
         "ko": "프로그램 소개",
         "vi": "Về chương trình",
@@ -571,11 +558,11 @@ const translations = {
         "zh-hant": "關於該計劃",
         "fa": "در مورد برنامه",
         "hy": "Ծրագրի մասին",
-        "location": "Footer"
+        "location": "Footer",
+        "status": "human_approved"
     },
     "conditions-of-use": {
         "en": "Conditions of use",
-        "fr": "Conditions d'utilisation",
         "es": "Condiciones de uso",
         "ko": "이용 약관",
         "vi": "Điều kiện sử dụng",
@@ -584,11 +571,11 @@ const translations = {
         "zh-hant": "使用條款",
         "fa": "شرایط استفاده",
         "hy": "Օգտագործման պայմանները",
-        "location": "Footer"
+        "location": "Footer",
+        "status": "human_approved"
     },
     "notice-on-collections": {
         "en": "Notice on collections",
-        "fr": "Notice on collections",
         "es": "Aviso de cobranzas",
         "ko": "정보 수집 관련 고지",
         "vi": "Thông Báo về Hoạt Động Thu Thập",
@@ -597,11 +584,11 @@ const translations = {
         "zh-hant": "資訊收集聲明",
         "fa": "اطلاعیه در مورد جمع آوری ها",
         "hy": "Ծանուցում հավաքագրումների վերաբերյալ",
-        "location": "Footer"
+        "location": "Footer",
+        "status": "human_approved"
     },
     "sitemap": {
         "en": "Sitemap",
-        "fr": "Plan du site",
         "es": "Mapa del sitio",
         "ko": "사이트맵",
         "vi": "Sơ đồ trang mạng",
@@ -610,7 +597,8 @@ const translations = {
         "zh-hant": "網站地圖",
         "fa": "نقشه سایت",
         "hy": "Կայքի քարտեզ",
-        "location": "Footer"
+        "location": "Footer",
+        "status": "human_approved"
     },
     "legends_findings_infrastructure_restoration_1": {
         "en": "Altadena infrastructure",
@@ -623,7 +611,8 @@ const translations = {
         "zh-hans": "阿尔塔迪纳基础设施",
         "zh-hant": "阿爾塔迪納基礎設施",
         "status": "human_approved",
-        "location": "data_insights"
+        "location": "data_insights",
+        "status": "human_approved"
     },
     "legends_findings_infrastructure_restoration_2": {
         "en": "Broadband access",
@@ -635,8 +624,8 @@ const translations = {
         "vi": "Truy cập băng thông rộng",
         "zh-hans": "宽带接入",
         "zh-hant": "寬頻接入",
-        "status": "human_approved",
-        "location": "data_insights"
+        "location": "data_insights",
+        "status": "human_approved"
     },
     "legends_findings_infrastructure_restoration_3": {
         "en": "Climate resilient infrastructure ",
