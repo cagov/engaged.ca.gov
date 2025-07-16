@@ -1,16 +1,34 @@
 /* 7-15-2025 - patches */
-
-
-/* ember-view panel panel-default show-default-view */
  
 .page-results-group .show-default-view, 
-.results-summary-page .show-default-view {
+.results-summary-page .show-default-view,
+.page-results-group .hide-default-view, 
+.results-summary-page .hide-default-view {
   background-color: #ffffff !important;
   border: 4px solid  #5489A3;
-      /* border: 2px solid #d1d1d1; */
-    /* border-radius: 50%; */
+  margin: 0 16px;
 }
   
+.scenario-panel.panel-heading::before {
+  content: "Highlight consensus" !important;
+  color: #ffffff;
+  font-family: "Noto Sans", system-ui, sans-serif !important;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 150%;
+  letter-spacing: -0.015em;
+  display: block;
+  width: 65%;
+  padding-left: 0px
+}
+
+.page-results-group .panel-heading h3,
+.page-results-group .show-default-view h3, 
+.results-summary-page .show-default-view h3 {
+  display: none;
+  color: #ffffff;
+
+} 
 
 .page-results-group .panel.panel-default>.panel-heading, 
 .results-summary-page .panel.panel-default>.panel-heading {
@@ -18,15 +36,58 @@
   color: #ffffff;
 }
 
-.page-results-group .panel-heading-left .ember-view,
-.results-summary-page .panel-heading-left .ember-view {
-  content: "Highlight consensus" !important;
-} 
-
-.points-container::before {
-  padding-left: 24px;
-  content: "How we all agreed on this"
+.page-results-group .content-col .panel-body:last-child {
+  padding: 16px 16px 16px 16px;
 }
+
+.page-results-group.content-col .panel-body:last-child {
+  padding: 0px 16px !important;
+}
+.scenario-panel-default::before,
+.scenario-panel::before {
+  padding-left: 24px;
+  content: "How we all agreed on this scenario"
+}
+
+.points-container {
+  padding: 0 16px;
+}
+
+.tab-content-metrics .format {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: #5489A3;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    content: "";
+}
+
+.tab-content-metrics .format-ethelo:before {
+    content: "";
+    color: #5489A3;
+}
+
+.scenario-navigator-container {
+  padding: 0;
+}
+.page-results-group .card.flat {
+  background-color: #ffffff !important;
+}
+
+.page-results-group .card.flat .card-body {
+  padding-left: 0px !important;
+}
+
+.result-card .title {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+/* .result-breakdown-all-options::before {
+  content: "Options in this scenario";
+} */
 
 .page-results-group .panel-heading .panel-heading-right span, 
 .results-summary-page .panel-heading .panel-heading-right span{
@@ -45,10 +106,7 @@
   color: #ffffff !important;
 }
 
-.page-results-group .show-default-view h3, 
-.results-summary-page .show-default-view h3 {
-  color: #ffffff;
-}
+
 
 .person.bin1-color-text {
     color: #5489A3;
@@ -94,11 +152,30 @@
 }
 
 
-
-.page-results-group .votes-header, .results-summary-page .votes-header  {
-  background-color: none;
-  align-items: left;
+.page-results-group .votes, 
+.results-summary-page .votes, 
+.page-results-group .votes-header, 
+.results-summary-page .votes-header  {
+  background-color:#FFF;
+  align-items: start;
   padding: 0 16px 8px 16px;
+  color: rgba(0, 0, 0, .87);
+}
+
+.votes .text-block {
+
+}
+
+.distribution-captions .distribution-caption {
+
+  background-color: #5489A3;
+  font-size: 14px;
+}
+
+.page-results-group .votes-header .text-block a i,
+.page-results-group .votes-header .text-block a,
+.page-results-group .votes-header .text-block a span {
+  color: rgba(0, 0, 0, .87);
 }
 
 .support-distribution {
@@ -108,8 +185,6 @@
     padding: 0px;
     width: 100%;
 }
-
-
 
 .form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-american-indian-or-alaska-native-input-label"] label,
 .form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-asian-first-level-category-input-label"] label,
@@ -1143,6 +1218,7 @@ div:not(.modal-body) .ethelo-likert-label.visible-md.visible-lg {
 .content-col .panel-body:last-child {
   padding: 16px 16px 16px 16px;
 }
+
 
 .content-col .panel-body li:not(.comments),
 .content-col .panel-body p,
