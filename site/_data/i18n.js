@@ -209,17 +209,18 @@ const translations = {
         "location": "Home"
     },
     "join-the-conversation-form-prompt": {
-        "en": "Deliberations for LA fires recovery start soon. Give us your email if you're interested in participating.",
+        "en": "Deliberations for LA fires recovery are happening now. Give us your email if you're interested in participating.",
         "fr": "",
-        "es": "Pronto comenzarán las deliberaciones para la recuperación de los incendios de Los Ángeles. Déjenos su correo electrónico si desea participar.",
-        "ko": "LA 화재로 인한 복구를 위한 심의가 곧 시작됩니다. 참여에 관심이 있다면 이메일을 보내주십시오.",
-        "vi": "Các cuộc thảo luận về việc phục hồi sau các đám cháy ở LA sẽ sớm bắt đầu. Hãy cung cấp cho chúng tôi email của quý vị nếu quý vị muốn tham gia.",
-        "tl": "Malapit nang magsimula ang mga deliberasyon para sa pagbangon mula sa sunog sa LA. Ibigay sa amin ang iyong email kung interesado kang lumahok.",
-        "zh-hans": "洛杉矶火灾恢复的协商即将开始。如果您有兴趣参与，请留下您的电子邮件。",
-        "zh-hant": "洛杉磯火災恢復的商議即將開始。如果您有興趣參與，請留下您的電子郵件。",
-        "fa": "رایزنی‎‌ها برای بازسازی مناطق آتش‎‌سوزی لس‎‌آنجلس به زودی آغاز می‎‌شود. اگر علاقه‎‌مند به شرکت‌کردن هستید، ایمیلتان را برایمان ارسال کنید.",
-        "hy": "Լոս Անջելեսի հրդեհների հետևանքների վերացման վերաբերյալ քննարկումները շուտով կսկսվեն։ Մասնակցելու ցանկության դեպքում տրամադրեք ձեր էլ. հասցեն։",
-        "location": "Home"
+        "es": "Las deliberaciones para la recuperación de los incendios de Los Ángeles están ocurriendo ahora. Déjenos su correo electrónico si desea participar.",
+        "ko": "LA 화재 복구를 위한 심의가 지금 진행 중입니다. 참여에 관심이 있다면 이메일을 보내주십시오.",
+        "vi": "Các cuộc thảo luận về việc phục hồi sau các đám cháy ở LA đang diễn ra ngay bây giờ. Hãy cung cấp cho chúng tôi email của quý vị nếu quý vị muốn tham gia.",
+        "tl": "Ang mga deliberasyon para sa pagbangon mula sa sunog sa LA ay kasalukuyang nagaganap. Ibigay sa amin ang iyong email kung interesado kang lumahok.",
+        "zh-hans": "洛杉矶火灾恢复的协商正在进行中。如果您有兴趣参与，请留下您的电子邮件。",
+        "zh-hant": "洛杉磯火災恢復的商議正在進行中。如果您有興趣參與，請留下您的電子郵件。",
+        "fa": "رایزنی‌ها برای بازسازی مناطق آتش‌سوزی لس‌آنجلس هم‌اکنون در حال انجام است. اگر علاقه‌مند به شرکت هستید، ایمیلتان را برایمان ارسال کنید.",
+        "hy": "Լոս Անջելեսի հրդեհների հետևանքների վերացման վերաբերյալ քննարկումները այժմ ընթանում են։ Մասնակցելու ցանկության դեպքում տրամադրեք ձեր էլ. հասցեն։",
+        "location": "Home",
+        "status": "machine translated"
     },
     "back-to-top": {
         "en": "Back to top",
@@ -326,7 +327,7 @@ const translations = {
         "location": "Home"
     },
     "topic-los-angeles-fires-recovery-evacuation-palisades": {
-        "en": "Yes, I was in the Palisades fire evacuation zone",
+        "en": "Yes, in the Palisades fire evacuation zone",
         "fr": "",
         "es": "Sí, estaba en la zona de evacuación por el incendio de Palisades.",
         "ko": "예, 저는 팰리세이즈 화재 대피 구역에 있었습니다",
@@ -339,7 +340,7 @@ const translations = {
         "location": "Home"
     },
     "topic-los-angeles-fires-recovery-evacuation-eaton": {
-        "en": "Yes, I was in the Eaton fire evacuation zone",
+        "en": "Yes, in the Eaton fire evacuation zone",
         "fr": "",
         "es": "Sí, estaba en la zona de evacuación por el incendio de Eaton.",
         "ko": "예, 저는 이튼 화재 대피 구역에 있었습니다 ",
@@ -610,7 +611,7 @@ const translations = {
         "fa": "نقشه سایت",
         "hy": "Կայքի քարտեզ",
         "location": "Footer"
-    }
+    },
 };
 // add default export
 export default translations;

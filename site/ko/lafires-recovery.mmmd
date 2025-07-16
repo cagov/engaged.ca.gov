@@ -27,6 +27,8 @@ statusAgendaSettingText: 의제 설정이 현재 진행 중입니다
 statusReviewText: 의제 설정 결과를 검토 중입니다
 statusPlanningText: 심의를 계획 중입니다
 buttonText: 의제 설정에서 찾은 내용을 확인하십시오
+statusPlanningTextV2: 심의가 진행 중입니다
+buttonTextV2: 등록하십시오
 ----
 
 로스앤젤레스 산불로 피해를 입은 사람들은 복구 계획에 관한 발언권이 있습니다. 그렇기에 캘리포니아 주는 새로운 방식으로 정부와 함께하고 있습니다.
@@ -60,6 +62,7 @@ title: 각 과정에서 하는 일
 phaseCompleteText: 완료된 단계
 phaseCurrentText: 현재 단계
 phasePendingText: 향후 단계
+resourcesLinkTitle: 의제 설정에서 찾은 내용을 확인하십시오
 ----
 
 ### 일반 정보
@@ -98,7 +101,7 @@ id: phase3
 title: 검토
 ----
 
-의제를 설정하며 한 대화를 검토하는 동안 잠시 휴식을 취하게 됩니다. 지역사회 토론 과정에서 언급한 내용을 검토하고, 데이터를 분석하고, 사람들의 의견을 수집합니다. 이 모든 정보는 심의 과정을 계획하는 데 도움이 됩니다.
+의제를 설정하며 한 대화를 검토하는 동안 잠시 휴식을 취하게 됩니다. 지역사회 토론 과정에서 언급한 내용을 검토하고, 데이터를 분석하고, 사람들의 의견을 수집합니다. 이 모든 정보는 심의 과정을 계획하는 데 도움이 됩니다. <a href="/ko/lafires-recovery/agenda-setting-findings/">의제 설정에서 우리가 찾은 것을 확인하세요.</a>
 
 
 ----

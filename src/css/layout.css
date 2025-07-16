@@ -106,7 +106,17 @@ a[data-appearance="button"], button, input[type="submit"] {
 /* data-theme="off-white" */
 :is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"] {
   color: var(--navy);
-  border: 2px solid var(--navy);
+  border: 2px solid #E79450;
+}
+
+.findings-link-icon {
+  padding-left: 4.5rem !important;
+  font-size: 18px !important;
+  background-image: url("/public/images/link_icon.svg");
+  /* Existing styles */
+  background-repeat: no-repeat;
+  background-position: left 1rem center;
+  vertical-align: middle;
 }
 
 h1, h2, .display-text {
