@@ -41,3 +41,17 @@ legend_item_font_size = 18
 legend_item_font_weight = 400
 color_table = ['#5ed0b9','#70b6e5','#b98acb','#ee8176',
                '#f9c280','#f7e79c','#c2c2f0','#a8d672']
+light_color_table = ['#DDF4EF','#E0EFF9','#EFE5F3','#FBE4E1',
+                     '#FFF4E4','#FFF4E4','#E4F2FF','#E4F2FF']
+languages = ['en', 'es', 'fa', 'hy', 'ko', 'tl','vi', 'zh-hans', 'zh-hant']
+
+theme_recs = [{'theme':'Debris removal & environmental recovery','root':'environmental_recovery'}, 
+       {'theme':'Wildfire prevention prioritization & accountability','root':'wildfire_prevention'}, 
+       {'theme':'Climate & community resilience','root':'climate_community_resilience'}, 
+       {'theme':'Infrastructure & utilities restoration','root':'infrastructure_restoration'}, 
+       {'theme':'Emergency planning & community safety','root':'emergency_planning_safety'}, 
+       {'theme':'Housing and rebuilding','root':'housing_rebuilding'}, 
+       {'theme':'Financial & legal assistance','root':'financial_legal_assistance'}, 
+       {'theme':'Emergency communication','root':'emergency_communication'}, 
+       {'theme':'Economic recovery & small business support','root':'economic_recovery'}, 
+       {'theme':'Emotional & mental health support','root':'emotional_mental_health'}]
