@@ -6,7 +6,7 @@ const CONFIG = {
 
     // Google Sheets details
     spreadsheetId: '1tpwxT05MsYVin975Rdk9n8iglEki_uRRdSlsReAFeoU', // From the URL: docs.google.com/spreadsheets/d/SPREADSHEET-ID/edit
-    sheetName: 'comments', // Name of the sheet tab
+    sheetName: 'test1', // Name of the sheet tab
 
     // Options
     clearExistingData: true, // Set to false to append data instead
@@ -15,11 +15,6 @@ const CONFIG = {
 };
 
 function importFileFromDrive() {
-    // const fileId = '1SUJb-AcW7-8vMPQxMva9xOrWmwUjZfe8';
-    // const spreadsheetId = '1tpwxT05MsYVin975Rdk9n8iglEki_uRRdSlsReAFeoU';
-    // const sheetName = 'comment'; // or whatever your sheet name is
-
-
     try {
         const file = getCsvFromDrive();
         const blob = file.getBlob();
