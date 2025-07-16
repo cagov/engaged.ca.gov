@@ -6,7 +6,7 @@ const CONFIG = {
 
     // Google Sheets details
     spreadsheetId: '1tpwxT05MsYVin975Rdk9n8iglEki_uRRdSlsReAFeoU', // From the URL: docs.google.com/spreadsheets/d/SPREADSHEET-ID/edit
-    sheetName: 'test1', // Name of the sheet tab
+    sheetName: 'comment', // Name of the sheet tab
 
     // Options
     clearExistingData: true, // Set to false to append data instead
@@ -34,8 +34,6 @@ function importFileFromDrive() {
     } catch (error) {
         Logger.log('Error: ' + error.toString());
     }
-
-
 }
 
 function getCsvFromDrive() {
