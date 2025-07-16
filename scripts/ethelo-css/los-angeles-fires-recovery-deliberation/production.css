@@ -1,5 +1,143 @@
 /* 7-15-2025 - patches */
 
+
+/* ember-view panel panel-default show-default-view */
+ 
+.page-results-group .show-default-view, 
+.results-summary-page .show-default-view {
+  background-color: #ffffff !important;
+  border: 4px solid  #5489A3;
+      /* border: 2px solid #d1d1d1; */
+    /* border-radius: 50%; */
+}
+  
+
+.page-results-group .panel.panel-default>.panel-heading, 
+.results-summary-page .panel.panel-default>.panel-heading {
+  background-color: #5489A3;
+  color: #ffffff;
+}
+
+.page-results-group .panel-heading-left .ember-view,
+.results-summary-page .panel-heading-left .ember-view {
+  content: "Highlight consensus" !important;
+} 
+
+.points-container::before {
+  padding-left: 24px;
+  content: "How we all agreed on this"
+}
+
+.page-results-group .panel-heading .panel-heading-right span, 
+.results-summary-page .panel-heading .panel-heading-right span{
+  color: #ffffff !important;
+}
+
+.page-results-group .accordion-toggle .circle-toggle-close, 
+.page-results-group .accordion-toggle .circle-toggle-open {
+  border: 2px solid #ffffff !important;
+}
+
+.results-summary-page .accordion-toggle .circle-toggle-close i.material-icons, 
+.results-summary-page .accordion-toggle .circle-toggle-open i.material-icons,
+.page-results-group .accordion-toggle .circle-toggle-close i.material-icons, 
+.page-results-group .accordion-toggle .circle-toggle-open i.material-icons {
+  color: #ffffff !important;
+}
+
+.page-results-group .show-default-view h3, 
+.results-summary-page .show-default-view h3 {
+  color: #ffffff;
+}
+
+.person.bin1-color-text {
+    color: #5489A3;
+}
+.person.bin2-color-text {
+    color: #5489A3;
+}
+.person.bin3-color-text {
+    color: #5489A3;
+}
+.person.bin4-color-text {
+    color: #5489A3;
+}
+.person.bin5-color-text {
+    color: #5489A3;
+}
+.person.bin6-color-text {
+    color: #5489A3;
+}
+.person.bin7-color-text {
+    color: #5489A3;
+}
+.person.bin8-color-text {
+    color: #5489A3;
+}
+.person.bin9-color-text {
+    color: #5489A3;
+}
+.person.bin9-color-text {
+    color: #5489A3;
+}
+.person.bin10-color-text {
+    color: #5489A3;
+}
+.person.bin11-color-text {
+    color: #5489A3;
+}
+.person.bin12-color-text {
+    color: #5489A3;
+}
+.person.bin13-color-text {
+    color: #5489A3;
+}
+
+
+
+.page-results-group .votes-header, .results-summary-page .votes-header  {
+  background-color: none;
+  align-items: left;
+  padding: 0 16px 8px 16px;
+}
+
+.support-distribution {
+    background-color: #FFF;
+    border-radius: 0;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+}
+
+
+
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-american-indian-or-alaska-native-input-label"] label,
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-asian-first-level-category-input-label"] label,
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-black-or-african-american-first-level-category-input-label"] label,
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-hispanic-or-latino-first-level-category-input-label"] label,
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-middle-eastern-or-north-african-first-level-category-input-label"] label,
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-native-hawaiian-or-pacific-islander-first-level-category-input-label"] label,
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-white-first-level-category-input-label"] label {
+  font-weight: 800 !important;
+}
+
+
+
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-asian-input-label"],
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-black-or-african-american-input-label"],
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-hispanic-or-latino-input-label"],
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-middle-eastern-or-north-african-input-label"],
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-native-hawaiian-or-pacific-islander-input-label"],
+.form-group .checkbox[aria-labelledby="q-demographics-race-and-or-ethnicity-white-input-label"] {
+   margin-left: 64px;
+}
+
+
+.scenario-navigator-item-center .ember-view,
+.scenario-navigator-item {
+display: none;
+}
+
 .navigation-group a[data-toggle="collapse"] {
   font-style: italic;
 }
@@ -378,6 +516,7 @@ h3,
   font-weight: 800;
   line-height: 150%;
 }
+
 .navbar .navbar-brand {
   color: #1c2745;
   height: 80px;
@@ -484,6 +623,10 @@ h2,
 h3 {
   margin-top: 0.9rem;
   margin-bottom: 0.9rem;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 .navbar .navbar-brand,
@@ -1178,6 +1321,7 @@ button.comment-section-btns,
 .form-group + .help-block {
   padding: 16px;
   background-color: #f0e6dc;
+  color: #585858;
   margin: 10px 24px;
   padding: 10px 32px;
   border-radius: 20px;
