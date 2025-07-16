@@ -16,7 +16,7 @@ buttonText: Magpatala ngayon
 
 # Sabihin sa iyong gobyerno kung ano ang nararamdaman mo tungkol sa mga mahahalagang isyu
 
-Ang aming unang pakikipag-ugnayan ay nakatuon sa pagbawi mula sa mga wildfire sa Los Angeles. 
+Ang aming unang pakikipag-ugnayan ay nakatuon sa pagbawi mula sa mga wildfire sa Los Angeles 
 
 
 ----
@@ -52,6 +52,14 @@ buttonText: Tingnan ang napag-alaman namin sa pagtatakda ng agenda
 
 Ibinahagi ng mga taong apektado ng sunog sa Eaton at Palisades kung ano ang pinakamahalaga para sa kanila. Huhubugin nito ang mga paparating nang deliberasyon ng komunidad.
 
+----
+id: deliberations_are_happening
+buttonText: Matuto pa tungkol sa programa
+----
+
+## Ang mga deliberasyon ay nangyayari na
+
+Ang Estado ng California ay nag-aanyaya sa mga taong apektado ng Eaton at Palisades wildfires upang tumulong na hubugin ang aming mga plano para sa pangmatagalang pagbawi.
 
 ----
 id: partners

@@ -27,6 +27,8 @@ statusAgendaSettingText: 議程設定在過程中
 statusReviewText: 正在審查議程設定結果
 statusPlanningText: 正在計劃審議
 buttonText: 看看我們在工作計畫中發現了什麼
+statusPlanningTextV2: 協商正在進行中
+buttonTextV2: 註冊以隨時瞭解情況
 ----
 
 受洛杉磯野火影響的民眾，應該在災後恢復的規劃中擁有發言權。因此，加利福尼亞州透過全新的方式，將其與政府緊密聯繫在一起。
@@ -60,6 +62,7 @@ title: 每個階段將開展哪些事項
 phaseCompleteText: 已完成階段
 phaseCurrentText: 當前階段
 phasePendingText: 後續階段
+resourcesLinkTitle: 看看我們在工作計畫中發現了什麼
 ----
 
 ### 一般資訊
@@ -98,7 +101,7 @@ id: phase3
 title: 審查
 ----
 
-在我們審查議程設定對話時，您將有一次休息時間。我們將檢查從社區意見中出現的專案，分析數據並收集見解。所有這些資訊都將有助於規劃審議階段。
+在我們審查議程設定對話時，您將有一次休息時間。我們將檢查從社區意見中出現的專案，分析數據並收集見解。所有這些資訊都將有助於規劃審議階段。<a href="/zh-hant/lafires-recovery/agenda-setting-findings/">查看我們在議程設定中找到的內容。</a>
 
 
 ----
