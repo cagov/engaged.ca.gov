@@ -10,7 +10,7 @@
 }
 
 .scenario-panel.panel-heading::before {
-  content: "Our best action plan" !important;
+  content: "Our action plan" !important;
   color: #ffffff;
   font-family: "Noto Sans", system-ui, sans-serif !important;
   font-size: 26px;
@@ -20,6 +20,10 @@
   display: block;
   width: 65%;
   padding-left: 0px;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+  border-top-color: transparent;
 }
 
 .page-results-group .panel-heading h3,
