@@ -573,7 +573,7 @@ li.navbar-user-dropdown {
 .invited-panel .panel-body::before {
   font-weight: 700;
   font-size: 2.2rem !important;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 }
 
 .panel-body.signin-form p:first-child,
