@@ -709,6 +709,14 @@ strong#auth-modal-label {
   margin-top: 16px;
 }
 
+.reset-password-panel .form-group.has-error .help-block,
+.reset-password-panel .form-group.has-error label.control-label  {
+  color: #1c2745;
+  position: relative;
+  margin-top: 16px;
+}
+
+
 /* Match fonts colors default to engaged.ca.gov */
 body
   *:not(
