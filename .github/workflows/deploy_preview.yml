@@ -56,18 +56,26 @@ jobs:
           echo 'User-agent: *' > _dist/robots.txt
           echo 'Disallow: /' >> _dist/robots.txt
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@master
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-west-1
-
       - name: Deploy site to S3
-        run: aws s3 sync --follow-symlinks --delete ./_dist s3://pr.engaged.ca.gov/pr/${URLSAFE_BRANCH_NAME}
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        with:
+          args: --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: "pr.engaged.ca.gov"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: "us-west-1"
+          SOURCE_DIR: ./_dist
+          DEST_DIR: pr/${URLSAFE_BRANCH_NAME}
 
       - name: Invalidate Cloudfront cache
-        run: AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id EJBCVN0CVEA2Z --paths "/*"
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: "EJBCVN0CVEA2Z"
+          PATHS: "/*"
+          AWS_REGION: "us-west-1"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Post URL to PR
         uses: mshick/add-pr-comment@v2.8.2
