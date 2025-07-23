@@ -28,5 +28,10 @@ section.sign-up-ge h3 {
 }
 
 section.overview-ge li {
+    font-size: 18px;
     margin-bottom: 0.75rem;
+}
+
+section.overview-ge h3 {
+    font-size: 23px;
 }
