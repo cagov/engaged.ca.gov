@@ -27,6 +27,8 @@ statusAgendaSettingText: Nangyayari na ngayon ang pagtatakda ng agenda
 statusReviewText: Ang mga resulta ng pagtatakda ng agenda ay sinusuri
 statusPlanningText: Pinaplano ang mga deliberasyon
 buttonText: Tingnan ang napag-alaman namin sa pagtatakda ng agenda
+statusPlanningTextV2: Ang mga deliberasyon ay nangyayari na
+buttonTextV2: Mag-sign up ngayon
 ----
 
 Ang mga tao na apektado ng mga wildfire sa Los Angeles ay dapat na makapagpahayag ng opinyon sa pagpaplano sa pagbangon nito. Kaya sila at ang gobyerno ay ipinagtatagpo ng Estado ng California sa bagong paraan.
@@ -60,6 +62,7 @@ title: Ano ang mangyayari sa bawat phase
 phaseCompleteText: Nakumpletong yugto
 phaseCurrentText: Kasalukuyang yugto
 phasePendingText: Paparating na yugto
+resourcesLinkTitle: Tingnan ang napag-alaman namin sa pagtatakda ng agenda
 ----
 
 ### Pangkalahatang Impormasyon
@@ -97,7 +100,7 @@ id: phase3
 title: Pagsusuri
 ----
 
-Magpapahinga ka habang sinusuri namin ang mga pag-uusap sa pagtatakda ng agenda. Susuriin namin ang mga item na lumabas mula sa input ng komunidad, susuriin ang data, at mangalap ng mga insight. Ang lahat ng impormasyong ito ay makakatulong na planuhin ang yugto ng deliberasyon.
+Magpapahinga ka habang sinusuri namin ang mga pag-uusap sa pagtatakda ng agenda. Susuriin namin ang mga item na lumabas mula sa input ng komunidad, susuriin ang data, at mangalap ng mga insight. Ang lahat ng impormasyong ito ay makakatulong na planuhin ang yugto ng deliberasyon. <a href="/tl/lafires-recovery/agenda-setting-findings/">Tingnan kung ano ang namin nahanap sa pagtatakda ng agenda.</a>
 
 
 ----

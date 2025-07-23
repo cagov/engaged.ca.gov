@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ locale }}" xml:lang="{{ locale }}" dir="{{ dir }}">
   <head>
+    <!-- new analytics code 7-14-2025 -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MDRRLC9M');</script>
+    <!-- End Google Tag Manager -->
     <!-- locale: {{ locale }} dir: {{ dir }} WORKING -->
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
@@ -80,6 +84,10 @@
     <script defer src="https://alert.cdt.ca.gov" crossorigin="anonymous"></script>
   </head>
   <body class="primary">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDRRLC9M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header role="banner" id="header" class="global-header fixed">
       <div id="skip-to-content">
         <a href="#main-content">Skip to Main Content</a>
@@ -116,15 +124,15 @@
             </div>
             <div class="cagov-language-switcher">
               <ul>
-                <li><a href="{{ page | pagePath('/en/') }}" rel="alternate" lang="en" hreflang="en" data-active="{{ page | langPathActive('en', locale) }}">English</a></li>
-                <li><a href="{{ page | pagePath('/es/') }}" rel="alternate" lang="es" hreflang="es" data-active="{{ page | langPathActive('es', locale) }}">Español</a></li>
-                <li><a href="{{ page | pagePath('/ko/') }}" rel="alternate" lang="ko" hreflang="ko" data-active="{{ page | langPathActive('ko', locale) }}">한국어</a></li>
-                <li><a href="{{ page | pagePath('/tl/') }}" rel="alternate" lang="tl" hreflang="tl" data-active="{{ page | langPathActive('tl', locale) }}">Tagalog</a></li>
-                <li><a href="{{ page | pagePath('/vi/') }}" rel="alternate" lang="vi" hreflang="vi" data-active="{{ page | langPathActive('vi', locale) }}">Tiếng Việt</a></li>
-                <li><a href="{{ page | pagePath('/zh-hans/') }}" rel="alternate" lang="zh-hans" hreflang="zh-hans" data-active="{{ page | langPathActive('zh-hans', locale) }}">简体中文</a></li>
-                <li><a href="{{ page | pagePath('/zh-hant/') }}" rel="alternate" lang="zh-hant" hreflang="zh-hant" data-active="{{ page | langPathActive('zh-hant', locale) }}">繁體中文</a></li>
-                <li><a href="{{ page | pagePath('/fa/') }}" rel="alternate" lang="fa" hreflang="fa" data-active="{{ page | langPathActive('fa', locale) }}">فارسی</a></li>
-                <li><a href="{{ page | pagePath('/hy/') }}" rel="alternate" lang="hy" hreflang="hy" data-active="{{ page | langPathActive('hy', locale) }}">հայ</a></li>
+                <li><a class="lang_select" href="{{ page | pagePath('/en/') }}" rel="alternate" lang="en" hreflang="en" data-active="{{ page | langPathActive('en', locale) }}">English</a></li>
+                <li><a class="lang_select" href="{{ page | pagePath('/es/') }}" rel="alternate" lang="es" hreflang="es" data-active="{{ page | langPathActive('es', locale) }}">Español</a></li>
+                <li><a class="lang_select" href="{{ page | pagePath('/ko/') }}" rel="alternate" lang="ko" hreflang="ko" data-active="{{ page | langPathActive('ko', locale) }}">한국어</a></li>
+                <li><a class="lang_select" href="{{ page | pagePath('/tl/') }}" rel="alternate" lang="tl" hreflang="tl" data-active="{{ page | langPathActive('tl', locale) }}">Tagalog</a></li>
+                <li><a class="lang_select" href="{{ page | pagePath('/vi/') }}" rel="alternate" lang="vi" hreflang="vi" data-active="{{ page | langPathActive('vi', locale) }}">Tiếng Việt</a></li>
+                <li><a class="lang_select" href="{{ page | pagePath('/zh-hans/') }}" rel="alternate" lang="zh-hans" hreflang="zh-hans" data-active="{{ page | langPathActive('zh-hans', locale) }}">简体中文</a></li>
+                <li><a class="lang_select" href="{{ page | pagePath('/zh-hant/') }}" rel="alternate" lang="zh-hant" hreflang="zh-hant" data-active="{{ page | langPathActive('zh-hant', locale) }}">繁體中文</a></li>
+                <li><a class="lang_select" href="{{ page | pagePath('/fa/') }}" rel="alternate" lang="fa" hreflang="fa" data-active="{{ page | langPathActive('fa', locale) }}">فارسی</a></li>
+                <li><a class="lang_select" href="{{ page | pagePath('/hy/') }}" rel="alternate" lang="hy" hreflang="hy" data-active="{{ page | langPathActive('hy', locale) }}">հայ</a></li>
               </ul>
             </div>
           </div>
@@ -247,6 +255,7 @@
     </footer>
     <!-- Extra Decorative Content -->
     <div class="decoration-last">&nbsp;</div>
+    {# 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ESTFZXV9TN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -256,6 +265,6 @@
       gtag('js', new Date());
       gtag('config', 'G-69TD0KNT0F'); // statewide GA4 measurement ID
       gtag('config', 'G-ESTFZXV9TN'); // individual agency GA4 measurement ID
-    </script>
+    </script> #}
   </body>
 </html>

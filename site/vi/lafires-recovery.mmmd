@@ -27,6 +27,8 @@ statusAgendaSettingText: Hiện đang xây dựng chương trình nghị sự
 statusReviewText: Đánh giá kết quả xây dựng chương trình nghị sự
 statusPlanningText: Lên kế hoạch các cuộc thảo luận
 buttonText: Xem những phát hiện của chúng tôi trong việc thiết lập chương trình nghị sự
+statusPlanningTextV2: Các cuộc thảo luận đang diễn ra
+buttonTextV2: Đăng ký ngay
 ----
 
 Những người bị ảnh hưởng bởi các vụ cháy rừng ở Los Angeles phải có tiếng nói trong việc lập kế hoạch phục hồi. Vì vậy, Tiểu Bang California đang đưa họ lại gần với chính quyền theo một cách mới.
@@ -60,6 +62,7 @@ title: Quy trình trong mỗi giai đoạn
 phaseCompleteText: Giai đoạn đã hoàn thành
 phaseCurrentText: Giai đoạn hiện tại
 phasePendingText: Giai đoạn sắp tới
+resourcesLinkTitle: Xem những phát hiện của chúng tôi trong việc thiết lập chương trình nghị sự
 ----
 
 ### Thông tin chung
@@ -97,7 +100,7 @@ id: phase3
 title: Đánh giá
 ----
 
-Quý vị sẽ tạm nghỉ trong khi chúng tôi đánh giá các cuộc trò chuyện về xây dựng chương trình nghị sự. Chúng tôi sẽ kiểm tra các mục phát sinh từ ý kiến đóng góp của cộng đồng, phân tích dữ liệu và thu thập thông tin chi tiết. Tất cả những thông tin này sẽ giúp lập kế hoạch cho giai đoạn thảo luận.
+Quý vị sẽ tạm nghỉ trong khi chúng tôi đánh giá các cuộc trò chuyện về xây dựng chương trình nghị sự. Chúng tôi sẽ kiểm tra các mục phát sinh từ ý kiến đóng góp của cộng đồng, phân tích dữ liệu và thu thập thông tin chi tiết. Tất cả những thông tin này sẽ giúp lập kế hoạch cho giai đoạn thảo luận.<a href="/vi/lafires-recovery/agenda-setting-findings/">Xem những gì chúng tôi tìm thấy trong việc xây dựng chương trình nghị sự.</a>
 
 
 ----
