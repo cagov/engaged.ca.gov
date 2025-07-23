@@ -98,7 +98,7 @@ section#how-we-built {
     top: 10px;
     width: 247px; 
     @media (width <= 991px) {
-            width: 150px; 
+            width: 140px; 
             top: inherit;
             bottom: -64px;
             right: -40px;
