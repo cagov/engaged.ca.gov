@@ -22,3 +22,7 @@ section.sign-up-ge {
     padding-top: 3rem;
     padding-bottom: 4rem;
 }
+
+section.sign-up-ge h3 {
+    font-size: 23px;
+}
