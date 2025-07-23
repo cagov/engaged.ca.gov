@@ -63,6 +63,9 @@ buttonText: 전체 데이터세트 다운로드
 id: plots
 chart_boilerplate_notes: 각 점은 이 주제에 대한 의견을 나타냅니다. 그룹화된 의견에는 고유한 색상이 있습니다.
 chart_generic_alt: 점을 이용해 시각화한 산점도입니다. 의견은 하위 범주로 분류됩니다.
+chart_legend_title: 대화 그룹
+chart_legend_notes: 아래 섹션을 확장하여 댓글(기존 언어로 표시)을 확인합니다.
+
 nbr_charts: 10
 id_1: findings_environmental_recovery
 title_1: 환경 회복 및 정화

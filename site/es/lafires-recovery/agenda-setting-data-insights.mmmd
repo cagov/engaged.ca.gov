@@ -63,6 +63,9 @@ buttonText: Descargar el conjunto de datos
 id: plots
 chart_boilerplate_notes: Cada punto representa un comentario realizado sobre este tema. Los comentarios agrupados tienen su propio color.
 chart_generic_alt: Una gráfica de dispersión que visualiza los comentarios mediante puntos. Los comentarios se clasifican en subcategorías.
+chart_legend_title: Grupos de conversación
+chart_legend_notes: Expanda las secciones a continuación para ver los comentarios (mostrados en su idioma original).
+
 nbr_charts: 10
 id_1: findings_environmental_recovery
 title_1: Recuperación y limpieza ambiental
