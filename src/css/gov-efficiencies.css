@@ -1,0 +1,24 @@
+.hiw.ge-hiw {
+    row-gap: 2px;
+    font-size: 1rem;
+}
+
+.hiw.ge-hiw li {
+    border-radius: 2rem;
+}
+
+.hiw.ge-hiw span.hiw-text strong {
+    line-height: 3rem;
+}
+
+.hiw.ge-hiw span.hiw-arrow.hiw-arrow-1, .hiw.ge-hiw span.hiw-arrow.hiw-arrow-3 {
+    top: calc(100% + var(--grid-gap) - 24px);
+}
+.hiw.ge-hiw span.hiw-arrow.hiw-arrow-2 {
+    transform: scaleY(-1) translateY(-24px);
+}
+
+section.sign-up-ge {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
