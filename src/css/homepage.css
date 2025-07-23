@@ -237,6 +237,18 @@ footer .cagov-logo svg {
     gap: var(--grid-gap);
   }
 
+  .hiw.ge-hiw {
+    row-gap: 2px;
+    font-size: 1rem;
+  }
+
+  .hiw.ge-hiw span.hiw-arrow.hiw-arrow-1, .hiw.ge-hiw span.hiw-arrow.hiw-arrow-3 {
+    top: calc(100% + var(--grid-gap) - 24px);
+  }
+  .hiw.ge-hiw span.hiw-arrow.hiw-arrow-2 {
+    transform: scaleY(-1) translateY(-24px);
+  }
+
   .hiw img {
     top: -0.75em;
     left: -0.75em;
@@ -256,6 +268,8 @@ footer .cagov-logo svg {
     grid-column: 2;
   }
   
+  
+
   /*  Add a curved edge to the arrow
       (This is just a rectangle with borders on 2 sides)
   */
