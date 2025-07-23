@@ -248,7 +248,7 @@ id: findings_how_we_did_the_analysis
 
 ## Hoạt động phân tích chúng tôi đã thực hiện
 
-Để hiểu sâu hơn, <a href="/vi/lafires-recovery/agenda-setting-data-insights/">hãy xem phương pháp luận chi tiết và phân tích ý kiến của chúng tôi</a>. 
+<div class="sub-head">Để hiểu sâu hơn, <a href="/vi/lafires-recovery/agenda-setting-data-insights/">hãy xem phương pháp luận chi tiết và phân tích ý kiến của chúng tôi</a>. </div>
 
 Chúng tôi đã sử dụng mô hình AI tạo sinh Claude 3.5 Sonnet để tìm chủ đề và xu hướng trong các ý kiến. Chúng tôi hướng dẫn mô hình bằng những câu hỏi để hiểu được suy nghĩ của mọi người. Đây là một cách hiệu quả để xem mọi người đồng ý hay không đồng ý về các chủ đề quan trọng. 
 

@@ -249,7 +249,7 @@ id: findings_how_we_did_the_analysis
 
 ## Paano namin ginawa ang pagsisiyasat
 
-Para sa mas malalim na pagsusuri, <a href="/tl/lafires-recovery/agenda-setting-data-insights/">tingnan ang aming detalyadong pamamaraan at pagsisiyasat sa mga komento</a>. 
+<div class="sub-head">Para sa mas malalim na pagsusuri, <a href="/tl/lafires-recovery/agenda-setting-data-insights/">tingnan ang aming detalyadong pamamaraan at pagsisiyasat sa mga komento</a>.</div>
 
 Ginamit namin ang Claude 3.5 Sonnet generative AI model para makatulong na humanap ng mga tema at trend sa mga komento. Nag-prompt kami ng mga tanong sa model para matulungan kaming maunawaan ang naisip ng mga tao. Isa itong mahusay na paraan para makita kung paano sumang-ayon o hindi sumang-ayon sa mahahalagang paksa ang mga tao. 
 

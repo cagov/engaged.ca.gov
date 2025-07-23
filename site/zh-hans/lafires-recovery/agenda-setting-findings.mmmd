@@ -248,7 +248,7 @@ id: findings_how_we_did_the_analysis
 
 ## 我们如何进行分析
 
-要更深入地了解，<a href="/zh-hans/lafires-recovery/agenda-setting-data-insights/">查看我们的详细方法和评论分析</a>。 
+<div class="sub-head">要更深入地了解，<a href="/zh-hans/lafires-recovery/agenda-setting-data-insights/">查看我们的详细方法和评论分析</a>。 </div>
 
 我们使用 Claude 3.5 Sonnet 生成式 AI 模型，来帮助识别评论中的主题和趋势。我们向模型提出了一系列问题，以帮助我们了解居民的想法。这是一种高效方式，能够快速掌握公众在关键议题上的共识与分歧。 
 

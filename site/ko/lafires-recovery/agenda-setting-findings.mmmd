@@ -249,7 +249,7 @@ id: findings_how_we_did_the_analysis
 
 ## 분석 방법
 
-더 자세히 살펴보려면 <a href="/ko/lafires-recovery/agenda-setting-data-insights/">에서 자세한 방법론 및 의견 분석을 확인하십시오</a>. 
+<div class="sub-head">더 자세히 살펴보려면 <a href="/ko/lafires-recovery/agenda-setting-data-insights/">에서 자세한 방법론 및 의견 분석을 확인하십시오</a>.</div>
 
 Claude 3.5 Sonnet 생성형 AI 모델을 사용하여 의견에서 주제와 트렌드를 찾는 데 도움을 받았습니다. 저희는 사람들이 어떻게 생각하는지 이해하는 데 도움이 되는 질문을 모델에 요청했습니다. 이는 사람들이 중요한 주제에 대해 어떻게 동의하거나 동의하지 않는지 확인하는 효율적인 방법이었습니다. 
 

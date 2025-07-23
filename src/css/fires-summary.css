@@ -138,6 +138,18 @@ section#findings-how-we-listened {
     padding-bottom: 0;
 }
 
+section#findings-how-we-did h2 {
+    font-weight: 700;
+    line-height: 2em;
+}
+section#findings-how-we-did .sub-head {
+    font-size: 23px;
+    margin-bottom: 1rem;
+}
+section#findings-how-we-did p {
+    font-size: 18px;
+}
+
 section#findings-topics-people-rated {
     padding-top: 0;
 }
