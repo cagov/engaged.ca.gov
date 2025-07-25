@@ -42,7 +42,7 @@ id: findings_what_we_heard
 
 We asked participants to rate the importance of 10 disaster-related topics. Participants used a 5-point scale to let us know how important it is to discuss each item further. The table below shows the percentage of people who said a topic is “very important” or “essential.” 
 
-Select a topic to explore comments and see insights about the conversations.
+<strong>Select a topic to explore comments and see insights about the conversations.</strong>
 
 
 ----
@@ -249,7 +249,7 @@ id: findings_how_we_did_the_analysis
 
 ## How we did the analysis
 
-For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">check out our detailed methodology and comments analysis</a>. 
+<div class="sub-head">For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">check out our detailed methodology and comments analysis</a>.</div>
 
 We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
 

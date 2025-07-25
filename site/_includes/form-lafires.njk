@@ -5,7 +5,7 @@
 {% endblock formAction %}
 
 {% block formHeading %}
-  <p>{{ 'join-the-conversation-form-prompt' | i18n }}</p>
+  <p>{{ modules.signup.content | safe }}</p>
 {% endblock formHeading %}
 
 {% block formEmail %}

@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="insights-back-button-container">
-          <img src="/public/images/back_bracket_blue.png" aria-hiddent="true" alt="" class="insights-back-button-icon" />
+          <img src="/public/images/back_bracket_blue.png" aria-hidden="true" alt="" class="insights-back-button-icon" />
           <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" class="insights-back-button">
             {{ modules.plots_overview.backButtonText }}
           </a>
@@ -47,9 +47,6 @@
       <div class="col-lg-12">
         {{ modules.data_visualizations_header.content | safe }}
 
-        <a href="#download-the-data" class="download-navigate-link">
-          {{ modules.data_visualizations_header.buttonText }}
-        </a>
       </div>
     </div>
   </div>
@@ -61,28 +58,84 @@
   </div>
 </div>
 
+<section id="plot-selection-pulldown">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div id="plot-selection-container" class="plot-selection-container container collapsed" role="listbox" aria-label="{{ modules.plots_overview.plotSelectionLabel or 'Select a data visualization' }}" aria-expanded="false">
+            {% for i in range(1, modules.plots.nbr_charts+1) %}
+            <div class="plot-selection-item {{ 'active' if loop.first else '' }}" data-plot-id="{{ modules.plots["id_" + i] }}" data-plot-idx="{{ i }}" role="option" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="0">
+              <div class="plot-selection-item-title">
+                {{ modules.plots["title_" + i] }}
+              </div> 
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-{% for i in range(1, modules.plots.nbr_charts+1) %}
-<section id="plot-{{ i }}" class="plot-section">
-  <div class="container" id="{{ modules.plots["id_" + i] }}">
-    <div class="row plot-row">
-      <div class="col-lg-12 responsive-svg-container">
-            <div class="plot-title">
-              {{ modules.plots["title_" + i] }}
+<section id="plot-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+
+
+        {% for i in range(1, modules.plots.nbr_charts+1) %}
+        {% set legend_key = modules.plots["id_" + i] %}
+        {% set legend_data = dvlegends[legend_key] %}
+        <div class="container plot-section-container {{ 'active' if loop.first else '' }}" id="{{ modules.plots["id_" + i] }}" data-plot-id="{{ modules.plots["id_" + i] }}" data-plot-idx="{{ i }}">
+          <div class="row plot-row">
+            <div class="col-lg-12 responsive-svg-container">
+                  <div class="plot-description">
+                    {{ modules.plots["desc_" + i] }}
+                  </div>
+                  <div class="plot-title">
+                    {{ modules.plots.chart_boilerplate_title }}
+                  </div>
+                  <div class="plot-notes">
+                    {{ modules.plots.chart_boilerplate_notes }}
+                  </div>
+                  <div class="sr-only">{{ modules.plots.chart_generic_alt }}</div>
+                  <div class="plot-plot">
+                  {{ ('./src/public/images/' + modules.plots["id_" + i] + '.svg') | getFileContents | safe }}
+                  </div>
+                  <div class="plot-legend-title">
+                    {{ modules.plots.chart_legend_title }}
+                  </div>
+                  <div class="plot-legend-notes">
+                    {{ modules.plots.chart_legend_notes }}
+                  </div>
+                  <div class="plot-legend" role="region" aria-label="{{ modules.plots.chart_legend_title }}">
+                    {% for legend_item in legend_data %}
+                    {% set translation_key = 'legends_' + legend_item.key %}
+                    <div class="legend-item collapsed" data-nbr-comments="{{ legend_item.comment_ids.length }}" data-comment-ids="{{ legend_item.comment_ids | join(',') }}" role="button" tabindex="0" aria-expanded="false" aria-controls="{{ translation_key }}-scroll-content">
+                      <div class="legend-item-header">
+                        <div class="legend-item-color legend-circle " style="background-color: {{ legend_item.color }}" aria-hidden="true"></div>
+                        <div class="legend-item-label">{{ translation_key | i18n  }}</div>
+                      </div>
+                      <div class="legend-item-expansion-block" id="{{ translation_key }}-scroll-content" role="region" aria-labelledby="{{ translation_key }}-label" aria-hidden="true">
+                        <div class="legend-item-content" dir="ltr" role="log" aria-live="polite"></div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+
             </div>
-            <div class="plot-description">
-              {{ modules.plots["desc_" + i] }}
-            </div>
-            <div class="plot-notes">
-              {{ modules.plots.chart_boilerplate_notes }}
-            </div>
-            <div class="sr-only">{{ modules.plots.chart_generic_alt }}</div>
-            <div class="plot-plot">
-            {{ ('./src/public/images/' + modules.plots["id_" + i] + '.svg') | getFileContents | safe }}
-            </div>
-            <div class="plot-legend">
-              {{ ('./src/public/images/' + modules.plots["id_" + i] + '_' + lang + '_legend.svg') | getFileContents | safe }}
-            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="insights-back-button-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
             <div class="insights-back-button-container">
               <img src="/public/images/back_bracket_blue.png" alt="<" class="insights-back-button-icon" />
               <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}#findings-topics-people-rated" class="insights-back-button">
@@ -93,18 +146,11 @@
     </div>
   </div>
 </section>
-{% endfor %}
-
 
 <section id="how-we-built">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        {# <div class="insights-back-button-container">
-        <a href="/lafires-recovery/agenda-setting-findings/" class="insights-back-button">
-          {{ modules.how_we_built.backButtonText }}
-        </a>
-        </div> #}
         {{ modules.how_we_built.content | safe }}
         <ol>
           {% for i in range(1, modules.how_we_built.nbr_list_items+1) %}
@@ -153,8 +199,9 @@
 quoteData = null;
 const lang = "{{ lang }}";
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+let current_chart_id = null;
 
-function revealQuote(cid, evt) {
+function revealQuote(cid, evt, bgFillColor) {
   const mouseX = evt.clientX;
   const mouseY = evt.clientY;
   if (quoteData == null) {
@@ -163,7 +210,8 @@ function revealQuote(cid, evt) {
   }
   const quote = quoteData.find(q => q.COMMENT_ID === cid);
   if (quote) {
-    document.querySelector('.quote-card-content').innerHTML = quote.CONTENT;
+    document.querySelector('.quote-card-content').innerHTML = '“' + quote.CONTENT + '”';
+    document.querySelector('.quote-card').style.backgroundColor = bgFillColor;
   } else {
     console.log('No quote found for comment_id:', cid);
   }
@@ -220,6 +268,209 @@ function hideQuote() {
   document.querySelector('.quote-card').style.display = 'none';
 }
 
+function loadChart(plotId, forceOpen=false) {
+  console.log('Loading chart:', plotId);
+  const plotSelectionItem = document.querySelector('.plot-selection-item[data-plot-id="' + plotId + '"]');
+
+  const allPlotSectionItems = document.querySelectorAll('.plot-selection-item');
+
+  const plotSection = document.querySelector('.plot-section-container[data-plot-id="' + plotId + '"]');
+  const plotSelectionContainer = document.getElementById('plot-selection-container');
+  let is_collapsed = plotSelectionContainer.classList.contains('collapsed');
+  if (is_collapsed && !forceOpen) {
+    plotSelectionContainer.classList.remove('collapsed');
+    plotSelectionContainer.setAttribute('aria-expanded', 'true');
+    if (current_chart_id != null) {
+      // scroll so that plot-selection-item with data-plot-id == current_chart_id is visible ( ideally under the cursor)
+      const currentChartItem = document.querySelector('.plot-selection-item[data-plot-id="' + current_chart_id + '"]');
+      if (currentChartItem) {
+          currentChartItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  } else {
+    current_chart_id = plotId;
+
+    plotSelectionContainer.classList.remove('collapsed');
+    plotSelectionContainer.setAttribute('aria-expanded', 'true');
+
+    if (plotSection) {
+      plotSection.classList.add('active');
+    }
+    const allPlotSections = document.querySelectorAll('.plot-section-container');
+    allPlotSections.forEach(section => {
+      if (section.getAttribute('data-plot-id') !== plotId) {
+        section.classList.remove('active');
+      }
+    });
+
+    // selector buttons
+    plotSelectionItem.classList.add('active');
+    plotSelectionItem.setAttribute('aria-selected', 'true');
+    const allSelectorButtons = document.querySelectorAll('.plot-selection-item');
+    allSelectorButtons.forEach(button => {
+      if (button.getAttribute('data-plot-id') !== plotId) {
+        button.classList.remove('active');
+        button.setAttribute('aria-selected', 'false');
+      }
+    });
+    plotSelectionContainer.classList.add('collapsed');
+    plotSelectionContainer.setAttribute('aria-expanded', 'false');
+  }
+}
+
+function chartSelectionHandler(e) {
+  const plotId = this.getAttribute('data-plot-id');
+  loadChart(plotId);
+}
+
+function handlePlotSelectionKeydown(e) {
+  const plotSelectionContainer = document.getElementById('plot-selection-container');
+  const currentItem = e.target;
+  const allItems = document.querySelectorAll('.plot-selection-item');
+  const currentIndex = Array.from(allItems).indexOf(currentItem);
+  
+  switch(e.key) {
+    case 'Enter':
+    case ' ':
+      e.preventDefault();
+      const plotId = currentItem.getAttribute('data-plot-id');
+      loadChart(plotId);
+      break;
+    case 'ArrowDown':
+      e.preventDefault();
+      const nextIndex = (currentIndex + 1) % allItems.length;
+      allItems[nextIndex].focus();
+      break;
+    case 'ArrowUp':
+      e.preventDefault();
+      const prevIndex = currentIndex === 0 ? allItems.length - 1 : currentIndex - 1;
+      allItems[prevIndex].focus();
+      break;
+    case 'Escape':
+      e.preventDefault();
+      plotSelectionContainer.classList.add('collapsed');
+      plotSelectionContainer.setAttribute('aria-expanded', 'false');
+      break;
+  }
+}
+
+function legendItemHandler(e) {
+  const legendItem = this;
+  let is_collapsed = legendItem.classList.contains('collapsed');
+  const expansionBlock = legendItem.querySelector('.legend-item-expansion-block');
+
+  if (is_collapsed) {
+    legendItem.classList.remove('collapsed');
+    legendItem.setAttribute('aria-expanded', 'true');
+    expansionBlock.setAttribute('aria-hidden', 'false');
+  } else {
+    legendItem.classList.add('collapsed');
+    legendItem.setAttribute('aria-expanded', 'false');
+    expansionBlock.setAttribute('aria-hidden', 'true');
+  }
+  is_collapsed = !is_collapsed;
+  const nbrComments = legendItem.getAttribute('data-nbr-comments');
+  const commentIds = legendItem.getAttribute('data-comment-ids');
+  console.log('Legend item clicked:', nbrComments, commentIds);
+
+  const legendItemContent = legendItem.querySelector('.legend-item-content');
+  const parentElement = legendItemContent.parentElement;
+  if (!is_collapsed) {
+    let comment_list = '';
+    const commentIdsArray = commentIds.split(',');
+    for (let i = 0; i < nbrComments; i++) {
+      comment_list += '<div class="legend-item-comment-item">';
+      const cid = parseInt(commentIdsArray[i]);
+      console.log("Looking up quote with comment id ", cid);
+      const quote = quoteData.find(q => q.COMMENT_ID === cid);
+      comment_list += '“' + quote.CONTENT + '”';
+      comment_list += '</div>';
+    }
+    legendItemContent.innerHTML = comment_list;
+    if (parentElement) {
+      setLegendFade(parentElement, legendItemContent);
+    }
+  } else {
+    legendItemContent.innerHTML = '';
+  }
+}
+
+function setLegendFade(elem, childElement) {
+    // Remove both classes first
+    elem.classList.remove('fade-top', 'fade-bottom');
+    // If not at the very top, add fade-top
+    if (childElement.scrollTop > 0) {
+      console.log('Adding fade-top');
+      elem.classList.add('fade-top');
+    }
+    // If not at the very bottom, add fade-bottom
+    if (childElement.scrollTop + childElement.clientHeight < childElement.scrollHeight - 1) {
+      console.log('Adding fade-bottom');
+      elem.classList.add('fade-bottom');
+    }
+
+}
+
+function handleLegendItemContentScroll(e) {
+  const el = e.target;
+  const parentElement = el.parentElement;
+  if (parentElement) {
+    setLegendFade(parentElement, el);
+  }
+}
+
+function handleLegendItemKeydown(e) {
+  const legendItems = Array.from(document.querySelectorAll('.legend-item'));
+  const currentItem = e.target;
+  const currentIndex = legendItems.indexOf(currentItem);
+  switch (e.key) {
+    case 'Enter':
+    case ' ':
+      e.preventDefault();
+      legendItemHandler.call(currentItem, e);
+      break;
+    case 'ArrowDown':
+      e.preventDefault();
+      legendItems[(currentIndex + 1) % legendItems.length].focus();
+      break;
+    case 'ArrowUp':
+      e.preventDefault();
+      legendItems[(currentIndex - 1 + legendItems.length) % legendItems.length].focus();
+      break;
+    case 'Home':
+      e.preventDefault();
+      legendItems[0].focus();
+      break;
+    case 'End':
+      e.preventDefault();
+      legendItems[legendItems.length - 1].focus();
+      break;
+  }
+}
+
+// Attach scroll handler to all .legend-item-content elements (on DOMContentLoaded or dynamically as needed)
+function openSelectedChart() {
+  const hash = window.location.hash;
+
+if (hash && hash.startsWith('#findings_')) {
+  console.log("Intercepted hash: ", hash);
+  const targetId = hash.substring(1); // remove the #
+  
+  // Optional: Replace the hash in the URL without scrolling
+  // history.replaceState(null, '', '#data-visualization');
+
+  // Scroll to a specific section instead of the default - delay by 500 to avoid fighting with the default scroll behavior
+  setTimeout(function() {
+    const scrollTarget = document.getElementById('data-visualizations');
+    if (scrollTarget) {
+      scrollTarget.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 500);
+
+  // Do additional work, e.g. load the appropriate chart
+  loadChart(targetId, true); // use full ID, like 'findings_123'
+}
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch("/public/data/engca_comment_scatterplot_source.json", {})
@@ -232,15 +483,35 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error("Error fetching data:", error);
     });
 
- 
+    const color_bg_table = {
+      '#5ed0b9': '#DDF4EF',
+      '#70b6e5': '#E0EFF9',
+      '#b98acb': '#EFE5F3',
+      '#ee8176': '#FBE4E1',
+      '#f9c280': '#FFF4E4',
+      '#f7e79c': '#FFF4E4',
+      '#c2c2f0': '#E4F2FF',
+      'lightgray': '#F7F7F7'
+    }
+
+  
   let expandHandler = function(e) {
     this.querySelector('.visible').setAttribute('r', '8'); // Increase radius on hover
     this.style.cursor = 'pointer';
     const comment_id = parseInt(this.getAttribute('data-cid'));
+    const firstChild = this.firstElementChild;
+    let bgFillColor = '#F0F0F0';
+    if (firstChild) {
+      const fillColor = firstChild.getAttribute('fill');
+      if (fillColor in color_bg_table) {
+        bgFillColor = color_bg_table[fillColor];
+      }
+      console.log("BGFill Color: ", bgFillColor);
+    }
     if (isNaN(comment_id)) {
       console.log('Datapoint clicked with invalid comment_id:', this.getAttribute('data-cid'));
     }
-    revealQuote(comment_id, e, false);
+    revealQuote(comment_id, e, bgFillColor);
   }
 
   let shrinkHandler = function(e, autoHide=false) {
@@ -249,6 +520,27 @@ document.addEventListener('DOMContentLoaded', function() {
       hideQuote();
     }
   }
+
+
+
+  const plotSelectionItems = document.querySelectorAll('.plot-selection-item');
+  plotSelectionItems.forEach(item => {
+    item.addEventListener('click', chartSelectionHandler);
+    item.addEventListener('keydown', handlePlotSelectionKeydown);
+  });
+
+  document.addEventListener('click', function(event) {
+    const plotSelectionContainer = document.querySelector('.plot-selection-container');
+    if (!plotSelectionContainer) return;
+    // Only collapse if not already collapsed
+    if (!plotSelectionContainer.classList.contains('collapsed')) {
+      // If the click target is not inside the container
+      if (!plotSelectionContainer.contains(event.target)) {
+        plotSelectionContainer.classList.add('collapsed');
+        plotSelectionContainer.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
 
   // Set up event handlers for datapoints in plots
   const datapoints = document.querySelectorAll('.datapoint');
@@ -264,7 +556,24 @@ document.addEventListener('DOMContentLoaded', function() {
       datapoint.addEventListener('touchend', e => shrinkHandler.call(datapoint, e, true));
     });
   }
+  
+  const legendItems = document.querySelectorAll('.legend-item');
+  legendItems.forEach(item => {
+    item.addEventListener('click', legendItemHandler);
+    item.addEventListener('keydown', handleLegendItemKeydown);
+  });
+
+  const legendContents = document.querySelectorAll('.legend-item-content');
+  legendContents.forEach(el => {
+    el.addEventListener('scroll', handleLegendItemContentScroll);
+    // Initial check in case content is already scrolled
+    handleLegendItemContentScroll({target: el});
+  });
+
+  openSelectedChart();
+
 });
+
 </script>
 
 {% endblock %}

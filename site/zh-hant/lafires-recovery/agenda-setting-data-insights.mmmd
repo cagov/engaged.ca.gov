@@ -63,6 +63,9 @@ buttonText: 下載完整資料集
 id: plots
 chart_boilerplate_notes: 每個圓點代表一條與該主題相關的評論。相似評論以相同顏色顯示。
 chart_generic_alt: 使用圓點顯示評論的散點圖。評論分為以下子類別。
+chart_legend_title: 對話群組
+chart_legend_notes: 展開下方區塊以查看評論（以其原始語言顯示）。
+
 nbr_charts: 10
 id_1: findings_environmental_recovery
 title_1: 環境恢復和清理
