@@ -237,6 +237,8 @@ footer .cagov-logo svg {
     gap: var(--grid-gap);
   }
 
+
+
   .hiw img {
     top: -0.75em;
     left: -0.75em;
@@ -256,6 +258,8 @@ footer .cagov-logo svg {
     grid-column: 2;
   }
   
+  
+
   /*  Add a curved edge to the arrow
       (This is just a rectangle with borders on 2 sides)
   */
