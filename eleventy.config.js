@@ -5,7 +5,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import chalk from "chalk";
 import markdownIt from "markdown-it";
-import translations from './site/_data/i18n.js';  // Note: might need .js extension
+import translations from './site/_data/i18n.js';
 import { EleventyI18nPlugin } from "@11ty/eleventy";
 import { readFileSync } from 'node:fs';
 

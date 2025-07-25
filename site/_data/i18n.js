@@ -1143,7 +1143,7 @@ const translations = {
         "zh-hans": "其他",
         "zh-hant": "其他",
         "status": "human_approved"
-    }
+    },
     // Government Efficiencies page
     "topic-government-efficiencies": {
         en: "I certify I am a current State of California employee *",
