@@ -63,6 +63,9 @@ buttonText: I-download ang buong dataset
 id: plots
 chart_boilerplate_notes: Ang bawat tuldok ay kumakatawan sa isang komento na ginawa tungkol sa paksang ito. May sariling kulay ang mga nakagrupong komento.
 chart_generic_alt: Isang scatter plot na nagvi-visualize sa mga komento gamit ang mga tuldok. Ang mga komento ay nakakategorya sa mga subcategory.
+chart_legend_title: Grupo ng pag-uusap
+chart_legend_notes: I-expand ang mga seksyon sa ibaba para makita ang mga komento (ipinapakita sa orihinal na wika ng mga ito).
+
 nbr_charts: 10
 id_1: findings_environmental_recovery
 title_1: Pagbangon at paglilinis ng kapaligiran

@@ -10,5 +10,10 @@
   "description": "",
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80"
+  },
+  "overrides": {
+    "mailchimp_marketing": {
+      "form-data": "^2.5.4"
+    }
   }
 }

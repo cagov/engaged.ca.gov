@@ -63,6 +63,9 @@ buttonText: Tải xuống toàn bộ bộ dữ liệu
 id: plots
 chart_boilerplate_notes: Mỗi dấu chấm tượng trưng cho một ý kiến về chủ đề này. Các ý kiến được nhóm lại có màu riêng.
 chart_generic_alt: Biểu đồ phân tán trực quan hóa các ý kiến bằng các dấu chấm. Các ý kiến được phân loại thành các tiểu danh mục.
+chart_legend_title: Các nhóm trò chuyện
+chart_legend_notes: Mở rộng các phần dưới đây để xem bình luận (được hiển thị bằng ngôn ngữ gốc).
+
 nbr_charts: 10
 id_1: findings_environmental_recovery
 title_1: Phục hồi và vệ sinh môi trường

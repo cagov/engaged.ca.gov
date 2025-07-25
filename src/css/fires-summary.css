@@ -15,6 +15,10 @@ section#plots-overview .container {
     position: relative;
 }
 
+section#plots-interpretation {
+    padding-top: 0;
+}
+
 section#findings-overview {
     background: #1C2745;
     overflow-y: hidden;
@@ -29,6 +33,11 @@ div.findings-balloons-container.mobile-only {
 section#data-visualizations {
     padding-bottom: 0;
     padding-top: 0;
+}
+
+section#data-visualizations b {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 section#download-the-data {
@@ -65,9 +74,9 @@ section#findings-overview p {
 section#how-we-built {
     padding-top: 0;
 }
-section#how-we-built li {
+/* section#how-we-built li {
     padding-bottom: 1rem;
-}
+} */
 
 .findings-adornment {
     position: absolute;
@@ -89,7 +98,7 @@ section#how-we-built li {
     top: 10px;
     width: 247px; 
     @media (width <= 991px) {
-            width: 150px; 
+            width: 140px; 
             top: inherit;
             bottom: -64px;
             right: -40px;
@@ -127,6 +136,18 @@ div.findings-what-we-heard {
 
 section#findings-how-we-listened {
     padding-bottom: 0;
+}
+
+section#findings-how-we-did h2 {
+    font-weight: 700;
+    line-height: 2em;
+}
+section#findings-how-we-did .sub-head {
+    font-size: 23px;
+    margin-bottom: 1rem;
+}
+section#findings-how-we-did p {
+    font-size: 18px;
 }
 
 section#findings-topics-people-rated {
@@ -496,7 +517,8 @@ div.findings-barchart-item-approval {
 }
 
 div.insights-back-button-container {
-    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 img.insights-back-button-icon {
     width: 8px;
@@ -527,6 +549,10 @@ a.insights-back-button {
     z-index: 1000;
 }
 
+.col-lg-12.responsive-svg-container {
+    padding-left: 0;
+}
+
 .responsive-svg-container svg {
     width: 100%;
     height: auto;
@@ -534,9 +560,9 @@ a.insights-back-button {
     position: relative;
 }
 
-.plot-title {
-    font-size: 30px;
-    font-weight: 700;
+.plot-title, .plot-legend-title {
+    font-size: 18px;
+    font-weight: 600;
     font-family: "Noto Sans Display" !important;
     line-height: 130%;
     margin-bottom: 1rem;
@@ -545,6 +571,13 @@ a.insights-back-button {
         line-height: 30px;
     }
 }
+.plot-legend-title {
+    margin-top: 1rem;
+}
+.plot-title {
+    margin-top: 2rem;
+}
+
 .plot-description {
     font-size: 23px;
     font-weight: 400;
@@ -556,7 +589,7 @@ a.insights-back-button {
         line-height: 30px;
     }
 }
-.plot-notes {
+.plot-notes, .plot-legend-notes {
     font-size: 18px;
     font-weight: 400;
     font-style: italic;
@@ -567,28 +600,195 @@ a.insights-back-button {
 }
 div.plot-legend {
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+div.legend-item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 350px;
+    border: 1px solid #BCBBC1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px #0000000F;
+    @media (max-width: 767px) {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+div.legend-item-header {
+    display: flex;
+    flex-direction: row;
+    min-height: 65px;
+    padding: 1rem;
+    margin-right: 24px;
+}
+
+div.legend-item-label {
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+div.legend-item.collapsed .legend-item-header {
+    
+    background: url("/public/images/arrow-down.svg") no-repeat right center;
+}
+
+div.legend-item:not(.collapsed) .legend-item-header {
+    background: url("/public/images/arrow-up.svg") no-repeat right center;
+}
+
+div.legend-item.collapsed .legend-item-expansion-block {
+    display: none;
+}
+
+div.legend-item:not(.collapsed) .legend-item-content {  
+    max-height: 500px;
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+div.legend-item-expansion-block {
+    position: relative;
+}
+
+div.legend-item:not(.collapsed) .legend-item-expansion-block.fade-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+div.legend-item:not(.collapsed) .legend-item-expansion-block.fade-top::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+
+div.legend-item-comment-item {
+/* Start Generation Here */
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 1rem;
+}
+div.legend-item-comment-item:nth-child(odd) {
+    background-color: #F6F7FA;
+}
+div.legend-circle {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+    display: inline-block;
+    min-width: 20px;
 }
 
 @media (orientation: landscape) {
-    .responsive-svg-container {
+    /* .responsive-svg-container {
         display: flex;
         flex-wrap: wrap;
-    }
+    } */
 
-    .plot-title {
+    .plot-title, .plot-legend-title {
         width: 100%;
     }
 
     .plot-plot {
-        width: 65%;
+        /* width: 65%; */
     }
 
-    div.plot-legend {
+    /* div.plot-legend {
         width: 35%;
         margin-top: 0;
         padding-left: 10px;
+    } */
+}
+
+div.plot-selection-container:not(.collapsed) {
+    background-color: white;
+}
+
+section#plot-selection-pulldown {
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+}
+
+div.plot-selection-container {
+    border: 1px solid #BCBBC1;
+    border-radius: 16px;
+    padding: 0;
+}
+div.plot-section-container:not(.active) {
+    display: none;
+}
+
+div.plot-selection-container.collapsed .plot-selection-item:not(.active) {
+    display: none;
+}
+
+
+div.plot-selection-item {
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: 500;
+    min-height: 65px;
+    @media (max-width: 767px) {
+        font-size: 19px;
+        line-height: 30px;
     }
 }
+
+div.plot-selection-item.active {
+    border: 3px solid #E79450;
+    margin: -1.5px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px #0000000F;
+    font-size: 30px;
+    font-weight: 700;
+    @media (max-width: 767px) {
+        font-size: 19px;
+    }
+}
+/* Start Generation Here */
+div.plot-selection-item:not(:first-child):not(.active) {
+    border-top: 1px solid #BCBBC1;
+}
+div.plot-selection-item.active + div.plot-selection-item {
+    border-top: none;
+}
+div.plot-selection-item:not(.active):hover {
+    background-color: #F6F7FA;
+    text-decoration: underline;
+}
+
+/* End Generation Here */
+div.plot-selection-container.collapsed div.plot-selection-item.active .plot-selection-item-title {
+    background: url("/public/images/arrow-down.svg") no-repeat right center;
+    padding-right: 24px;
+}
+
+div.plot-selection-container:not(.collapsed) div.plot-selection-item.active .plot-selection-item-title {
+    background: url("/public/images/arrow-up.svg") no-repeat right center;
+    padding-right: 24px;
+}
+
 
 a.download-navigate-link {
     font-weight: 400;
@@ -640,3 +840,6 @@ section#data-definitions li::marker {
     font-size: 18px;
 }
 
+section#plot-section {
+    padding-top: 0;
+}

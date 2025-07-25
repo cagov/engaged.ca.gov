@@ -329,6 +329,7 @@ document.querySelectorAll('.findings-barchart-item').forEach(item => {
   item.addEventListener('click', function(event) {
     const destination = this.getAttribute('data-destination');
     if (destination) {
+      console.log("Destination: ", destination);
       window.location.href = destination;
     }
   });

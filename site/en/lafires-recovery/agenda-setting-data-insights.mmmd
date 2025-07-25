@@ -59,10 +59,16 @@ buttonText: Download the full dataset
 
 ## Data visualizations
 
+<b>Topic area</b>
+
 ----
 id: plots
+chart_boilerplate_title: Data visualization
 chart_boilerplate_notes: Each dot represents one comment made about this topic. Grouped comments have their own color.
 chart_generic_alt: A scatter plot that visualizes comments using dots. The comments are categorized into subcategories.
+chart_legend_title: Conversation groups
+chart_legend_notes: Expand the sections below to see the comments (shown in their original language).
+
 nbr_charts: 10
 id_1: findings_environmental_recovery
 title_1: Environmental recovery and clean-up
