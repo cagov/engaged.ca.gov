@@ -1201,6 +1201,12 @@ const translations = {
     "ge-submit": {
         en: "Sign up to opt in",
     },
+    "state-employees": {
+        en: "State employees"
+    },
+    "engagements": {
+        en: "Engagements"
+    },
 };
 // add default export
 export default translations;

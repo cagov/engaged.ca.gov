@@ -164,6 +164,7 @@
           </button>
         </div>
       </div>
+
       <div
         class="navigation-search full-width-nav container">
         <!-- navigation types -->
@@ -173,7 +174,16 @@
               <a class="first-level-link" href="{{ '/about' | localizedPath(locale) }}">{{ 'about-the-program' | i18n }}</a>
             </li>
             <li class="nav-item">
-              <a class="first-level-link" href="{{ '/lafires-recovery' | localizedPath(locale) }}">{{ 'los-angeles-fires-recovery' | i18n }}</a>
+              <a class="first-level-link" ">{{ 'engagements' | i18n }}</a>
+              <div class="sub-nav" role="tabpanel" aria-labelled-by="navmysubnav1_tab1" id="navmysubnav1_panel1" data-nav-id="mysubnav1" aria-hidden="true">
+                <ul class="second-level-nav">
+                  <li class="unit1">
+                    <a class="second-level-link" tabindex="-1" href="{{ '/lafires-recovery' | localizedPath(locale) }}">{{ 'los-angeles-fires-recovery' | i18n }}</a>
+                  </li>
+                  <li class="unit1">
+                    <a class="second-level-link" tabindex="-1" href="{{ '/stateemployees' | localizedPath(locale) }}">{{ 'state-employees' | i18n }}</a>
+                  </li>
+                </ul>
             </li>
           </ul>
         </nav>
