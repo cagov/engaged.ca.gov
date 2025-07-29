@@ -236,3 +236,7 @@ section h2 {
 #skip-to-content a {
   background-color: transparent;
 }
+
+.ca-gov-icon-caret-down::before {
+  font-family: 'CaGov';
+}
