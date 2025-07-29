@@ -26,8 +26,13 @@
 }
 
 .hiw.ge-hiw span.hiw-arrow.hiw-arrow-1, .hiw.ge-hiw span.hiw-arrow.hiw-arrow-3 {
-    top: calc(100% + var(--grid-gap));
+    top: calc(100% + var(--grid-gap) - 16px);
 }
+
+.hiw.ge-hiw span.hiw-arrow.hiw-arrow-2 {
+    top: calc(0% + var(--grid-gap) - 54px);
+}
+
 
 @media (max-width: 768px) {
     .hiw.ge-hiw li {
@@ -43,6 +48,7 @@
         top: calc(100% + var(--grid-gap) - 48px);
     } 
     .hiw.ge-hiw span.hiw-arrow.hiw-arrow-2 {
+        top: calc(100% + var(--grid-gap) - 48px);
         transform: translateX(0px);
     }
 }
