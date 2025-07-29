@@ -38,16 +38,15 @@
     }
 
     .hiw.ge-hiw .hiw-arrow {
-        width: inherit;
+        width: 30px;
         height: inherit;
     }
-    
 
-    /* .hiw.ge-hiw span.hiw-arrow.hiw-arrow-1, .hiw.ge-hiw span.hiw-arrow.hiw-arrow-3 {
+     .hiw.ge-hiw span.hiw-arrow.hiw-arrow-1, .hiw.ge-hiw span.hiw-arrow.hiw-arrow-3 {
         top: calc(100% + var(--grid-gap) - 48px);
-    } */
+    } 
     .hiw.ge-hiw span.hiw-arrow.hiw-arrow-2 {
-        transform: translateX(24px);
+        transform: translateX(0px);
     }
 }
 
