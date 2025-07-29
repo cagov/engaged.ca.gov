@@ -12,6 +12,10 @@
     margin-bottom: 1rem !important;
 }
 
+.overview-ge-content .col-lg-6 {
+    margin-top: 0;
+}
+
 .hiw.ge-hiw span.hiw-arrow.hiw-arrow-1, .hiw.ge-hiw span.hiw-arrow.hiw-arrow-3 {
     top: calc(100% + var(--grid-gap) - 24px);
 }
