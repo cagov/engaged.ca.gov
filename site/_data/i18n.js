@@ -1232,7 +1232,7 @@ const translations = {
         status: "machine translated"
     },
     "ge-what-happens-body-1": {
-        en: "State staff opt-in to an online, text-based conversation",
+        en: "State workforce opt-in to an online, text-based conversation",
         es: "El personal estatal se une a una conversación en línea basada en texto",
         ko: "주 직원이 온라인 텍스트 기반 대화에 참여합니다",
         vi: "Nhân viên tiểu bang tham gia vào cuộc trò chuyện trực tuyến dựa trên văn bản",
@@ -1244,7 +1244,7 @@ const translations = {
         status: "machine translated"
     },
     "ge-what-happens-body-2": {
-        en: "State staff share ideas to improve government",
+        en: "State workforce share ideas to improve government",
         es: "El personal estatal comparte ideas para mejorar el gobierno",
         ko: "주 직원이 정부 개선을 위한 아이디어를 공유합니다",
         vi: "Nhân viên tiểu bang chia sẻ ý tưởng để cải thiện chính phủ",
@@ -1256,27 +1256,27 @@ const translations = {
         status: "machine translated"
     },
     "ge-what-happens-body-3": {
-        en: "We review the ideas to find changes we can make soon and suggestions that we can explore",
+        en: "We review the ideas to find changes we may make soon and suggestions we can explore",
         es: "Revisamos las ideas para encontrar cambios que podamos hacer pronto y sugerencias que podamos explorar",
         ko: "우리는 곧바로 할 수 있는 변화와 탐색할 수 있는 제안을 찾기 위해 아이디어를 검토합니다",
-        vi: "Chúng tôi xem xét các ý tưởng để tìm ra những thay đổi có thể thực hiện sớm và các đề xuất có thể khám phá",
-        tl: "Sinusuri namin ang mga ideya upang makahanap ng mga pagbabagong maaari naming gawin kaagad at mga mungkahing maaari naming tuklasin",
-        "zh-hans": "我们审查这些想法，以寻找我们可以尽快实施的变革和可以探索的建议",
-        "zh-hant": "我們審查這些想法，以尋找我們可以盡快實施的變革和可以探索的建議",
-        fa: "ما ایده‌ها را بررسی می‌کنیم تا تغییراتی که می‌توانیم به زودی انجام دهیم و پیشنهاداتی که می‌توانیم بررسی کنیم را پیدا کنیم",
-        hy: "Մենք վերանայում ենք գաղափարները՝ գտնելու շուտով իրականացվող փոփոխություններ և առաջարկներ, որոնք կարող ենք ուսումնասիրել",
+        vi: "Chúng tôi xem xét các ý tưởng để tìm ra những thay đổi có thể thực hiện sớm và những đề xuất có thể khám phá",
+        tl: "Sinusuri namin ang mga ideya upang makahanap ng mga pagbabagong maaari naming gawin sa lalong madaling panahon at mga mungkahing maaari naming tuklasin",
+        "zh-hans": "我们会审查这些想法，寻找可以尽快实施的变革和可以进一步探索的建议",
+        "zh-hant": "我們會審查這些想法，尋找可以盡快實施的變革和可以進一步探索的建議",
+        fa: "ما ایده‌ها را بررسی می‌کنیم تا تغییراتی که می‌توانیم به زودی انجام دهیم و پیشنهاداتی که می‌توانیم بررسی کنیم را بیابیم",
+        hy: "Մենք վերանայում ենք գաղափարները՝ գտնելու շուտով իրականացվող փոփոխություններ և առաջարկներ, որոնք կարող ենք հետազոտել",
         status: "machine translated"
     },
     "ge-what-happens-body-4": {
-        en: "State officials create a plan of action based on the priorities staff set",
-        es: "Los funcionarios estatales crean un plan de acción basado en las prioridades establecidas por el personal",
-        ko: "주 공무원들이 직원들이 정한 우선순위에 따라 행동 계획을 수립합니다",
-        vi: "Các quan chức tiểu bang lập kế hoạch hành động dựa trên các ưu tiên do nhân viên đặt ra",
-        tl: "Gumagawa ang mga opisyal ng estado ng plano ng aksyon batay sa mga prayoridad na itinakda ng mga kawani",
-        "zh-hans": "州官员根据工作人员设定的优先事项制定行动计划",
-        "zh-hant": "州官員根據工作人員設定的優先事項制定行動計劃",
-        fa: "مقامات ایالتی بر اساس اولویت‌هایی که کارکنان تعیین کرده‌اند، برنامه عملیاتی ایجاد می‌کنند",
-        hy: "Պետական պաշտոնյաները կազմում են գործողությունների պլան՝ հիմնվելով աշխատակիցների կողմից սահմանված առաջնահերթությունների վրա",
+        en: "State officials consider all input and may create a plan of action based upon input from all Californians.",
+        es: "Los funcionarios estatales consideran todas las aportaciones y pueden crear un plan de acción basado en las aportaciones de todos los californianos.",
+        ko: "주 공무원들은 모든 의견을 고려하고, 모든 캘리포니아 주민의 의견을 바탕으로 행동 계획을 수립할 수 있습니다.",
+        vi: "Các quan chức tiểu bang xem xét tất cả các ý kiến đóng góp và có thể lập kế hoạch hành động dựa trên ý kiến của tất cả người dân California.",
+        tl: "Isinasaalang-alang ng mga opisyal ng estado ang lahat ng input at maaaring lumikha ng plano ng aksyon batay sa input mula sa lahat ng taga-California.",
+        "zh-hans": "州官员会考虑所有反馈，并可能根据所有加州人的意见制定行动计划。",
+        "zh-hant": "州官員會考慮所有意見，並可能根據所有加州人的意見制定行動計劃。",
+        fa: "مقامات ایالتی همه بازخوردها را در نظر می‌گیرند و ممکن است بر اساس نظرات همه مردم کالیفرنیا یک برنامه عملیاتی تهیه کنند.",
+        hy: "Պետական պաշտոնյաները հաշվի են առնում բոլոր կարծիքները և կարող են գործողությունների պլան մշակել՝ հիմնվելով բոլոր կալիֆորնիացիների կարծիքների վրա։",
         status: "machine translated"
     },
     "ge-submit": {
