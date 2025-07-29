@@ -26,10 +26,7 @@
 }
 
 .hiw.ge-hiw span.hiw-arrow.hiw-arrow-1, .hiw.ge-hiw span.hiw-arrow.hiw-arrow-3 {
-    top: calc(100% + var(--grid-gap) - 16px);
-}
-.hiw.ge-hiw span.hiw-arrow.hiw-arrow-2 {
-    transform: scaleY(-1) translateY(-16px);
+    top: calc(100% + var(--grid-gap));
 }
 
 @media (max-width: 768px) {
