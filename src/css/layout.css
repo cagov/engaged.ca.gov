@@ -73,7 +73,7 @@ a {
   color: #1F3B83;
 }
 
-a[data-appearance="button"], button, input[type="submit"] {
+a[data-appearance="button"], button:not(.nav-header), input[type="submit"] {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 2rem;
