@@ -14,6 +14,10 @@
 
 {% block formContent %}
   {{ checkbox.data('topic-stateemployees' | i18n, "0f531f3ce0", "required") }} *
+
+  <engca-form-error id="requiredCheckboxError" hidden>
+    <strong>{{ 'form-problem-state-employee-not-checked' | i18n }}</strong>
+  </engca-form-error>
 {% endblock formContent %}
 
 {% block formSubmit %}
