@@ -1146,7 +1146,7 @@ const translations = {
     },
     // Government Efficiencies page
     "topic-stateemployees": {
-        en: "I certify I am a current State of California employee *",
+        en: "I certify I am a current State of California employee",
         fr: "I certify I am a current State of California employee",
         es: "I certify I am a current State of California employee",
         ko: "I certify I am a current State of California employee",
@@ -1171,19 +1171,19 @@ const translations = {
         hy: "I certify I am a current State of California employee",
         location: "Government efficiencies page",
     },
-    "ge-what-happens-title": {
-        en: "What happens in each phase",
-        es: "Qué sucede en cada fase",
-        ko: "각 단계에서 무슨 일이 일어나는가",
-        vi: "Điều gì xảy ra trong mỗi giai đoạn",
-        tl: "Ano ang nangyayari sa bawat yugto",
-        "zh-hans": "每个阶段会发生什么",
-        "zh-hant": "每個階段會發生什麼",
-        fa: "در هر مرحله چه اتفاقی می‌افتد",
-        hy: "Ի՞նչ է տեղի ունենում յուրաքանչյուր փուլում",
+    "ge-how-it-works-title": {
+        en: "How it works",
+        es: "Cómo funciona",
+        ko: "어떻게 작동하나요",
+        vi: "Cách hoạt động",
+        tl: "Paano ito gumagana",
+        "zh-hans": "运作方式",
+        "zh-hant": "運作方式",
+        fa: "چگونه کار می‌کند",
+        hy: "Ինչպես է աշխատում",
         status: "machine translated"
     },
-    "ge-what-happens-1": {
+    "ge-how-it-works-1": {
         en: "Opt in and share",
         es: "Participa y comparte",
         ko: "참여하고 공유하기",
@@ -1195,7 +1195,7 @@ const translations = {
         hy: "Մասնակցեք և կիսվեք",
         status: "human_approved"
     },
-    "ge-what-happens-2": {
+    "ge-how-it-works-2": {
         en: "Engage with others",
         es: "Interactúa con otros",
         ko: "다른 사람들과 소통하기",
@@ -1207,7 +1207,7 @@ const translations = {
         hy: "Ներգրավվեք մյուսների հետ",
         status: "human_approved"
     },
-    "ge-what-happens-3": {
+    "ge-how-it-works-3": {
         en: "Ideas move forward",
         es: "Las ideas avanzan",
         ko: "아이디어가 발전합니다",
@@ -1219,7 +1219,7 @@ const translations = {
         hy: "Գաղափարները առաջ են շարժվում",
         status: "human_approved"
     },
-    "ge-what-happens-4": {
+    "ge-how-it-works-4": {
         en: "Inform real change",
         es: "Genera un cambio real",
         ko: "실질적인 변화를 알리기",
@@ -1231,7 +1231,7 @@ const translations = {
         hy: "Տեղեկացրեք իրական փոփոխության մասին",
         status: "human_approved"
     },
-    "ge-what-happens-body-1": {
+    "ge-how-it-works-body-1": {
         en: "You share an idea based on your experience to help drive smarter, more effective solutions.",
         es: "Comparte una idea basada en tu experiencia para ayudar a impulsar soluciones más inteligentes y efectivas.",
         ko: "여러분의 경험을 바탕으로 아이디어를 공유하여 더 스마트하고 효과적인 해결책을 제시하세요.",
@@ -1243,7 +1243,7 @@ const translations = {
         hy: "Կիսվեք ձեր փորձի վրա հիմնված գաղափարով՝ խթանելու ավելի խելացի և արդյունավետ լուծումներ։",
         status: "human_approved"
     },
-    "ge-what-happens-body-2": {
+    "ge-how-it-works-body-2": {
         en: "See what your colleagues are saying and help surface the ideas with potential.",
         es: "Descubre lo que dicen tus colegas y ayuda a destacar las ideas con potencial.",
         ko: "동료들이 무엇을 말하는지 확인하고 잠재력 있는 아이디어를 부각시키세요.",
@@ -1255,7 +1255,7 @@ const translations = {
         hy: "Տեսեք, թե ինչ են ասում ձեր գործընկերները և օգնեք բացահայտել ներուժ ունեցող գաղափարները։",
         status: "human_approved"
     },
-    "ge-what-happens-body-3": {
+    "ge-how-it-works-body-3": {
         en: "Each idea is reviewed for its impact, relevance, and potential to inform actionable change.",
         es: "Cada idea se revisa por su impacto, relevancia y potencial para generar cambios concretos.",
         ko: "각 아이디어는 영향력, 관련성 및 실행 가능한 변화에 기여할 가능성에 따라 검토됩니다.",
@@ -1267,7 +1267,7 @@ const translations = {
         hy: "Յուրաքանչյուր գաղափար վերանայվում է՝ հաշվի առնելով դրա ազդեցությունը, արդիականությունը և գործնական փոփոխություն բերելու հնարավորությունը։",
         status: "human_approved"
     },
-    "ge-what-happens-body-4": {
+    "ge-how-it-works-body-4": {
         en: "Innovation teams develop action plans based on the ideas shared here.",
         es: "Los equipos de innovación desarrollan planes de acción basados en las ideas compartidas aquí.",
         ko: "혁신팀이 여기에서 공유된 아이디어를 바탕으로 실행 계획을 수립합니다.",

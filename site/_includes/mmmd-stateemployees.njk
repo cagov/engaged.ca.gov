@@ -1,6 +1,6 @@
 {% extends "layout.njk" %}
 {% block content %}
-{% import 'macros/ge-what-happens.njk' as gewh %}
+{% import 'macros/ge-how-it-works.njk' as gewh %}
 
     <section id="ge-hero" class="engca-hero engca-hero-person">
         <div class="container banner-flex">
@@ -34,12 +34,12 @@
 
     <section id="how-it-works" class="hiw-style-2">
         <div class="container">
-            <h2>{{ 'ge-what-happens-title' | i18n }}</h2>
+            <h2>{{ 'ge-how-it-works-title' | i18n }}</h2>
             <ol class="hiw ge-hiw">
-                {{  gewh.data(1, 'ge-what-happens-1' | i18n, 'ge-what-happens-body-1' | i18n, 'how-it-works-alt-1' | i18n, 'public')  }}
-                {{  gewh.data(2, 'ge-what-happens-2' | i18n, 'ge-what-happens-body-2' | i18n, 'how-it-works-alt-1' | i18n, 'public')  }}
-                {{  gewh.data(3, 'ge-what-happens-3' | i18n, 'ge-what-happens-body-3' | i18n, 'how-it-works-alt-2' | i18n, 'state')  }}
-                {{  gewh.data(4, 'ge-what-happens-4' | i18n, 'ge-what-happens-body-4' | i18n, 'how-it-works-alt-2' | i18n, 'state')  }}
+                {{  gewh.data(1, 'ge-how-it-works-1' | i18n, 'ge-how-it-works-body-1' | i18n, 'how-it-works-alt-1' | i18n, 'public')  }}
+                {{  gewh.data(2, 'ge-how-it-works-2' | i18n, 'ge-how-it-works-body-2' | i18n, 'how-it-works-alt-1' | i18n, 'public')  }}
+                {{  gewh.data(3, 'ge-how-it-works-3' | i18n, 'ge-how-it-works-body-3' | i18n, 'how-it-works-alt-2' | i18n, 'state')  }}
+                {{  gewh.data(4, 'ge-how-it-works-4' | i18n, 'ge-how-it-works-body-4' | i18n, 'how-it-works-alt-2' | i18n, 'state')  }}
             </ol>
         </div>
     </section>
