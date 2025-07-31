@@ -68,5 +68,10 @@ section.overview-ge li {
 }
 
 section.overview-ge h3 {
+    font-weight: 900;
+    font-size: 37px;
+}
+
+section.overview-ge h4 {
     font-size: 23px;
 }
