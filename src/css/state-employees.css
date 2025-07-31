@@ -33,8 +33,7 @@
     top: calc(0% + var(--grid-gap) - 54px);
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .hiw.ge-hiw li {
         width: inherit; /* turn off on mobile */
     }
@@ -52,6 +51,12 @@
         transform: translateX(0px);
     }
 }
+@media (max-width: 992px) {
+    .hiw.ge-hiw span.hiw-arrow.hiw-arrow-2 {
+        top: calc(0% + var(--grid-gap) + 134px);
+    }
+}
+
 
 section.sign-up-ge {
     padding-top: 3rem;
