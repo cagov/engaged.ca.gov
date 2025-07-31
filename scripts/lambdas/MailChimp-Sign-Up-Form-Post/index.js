@@ -1,6 +1,11 @@
 // https://github.com/cagov/engaged.ca.gov/releases/tag/MailChimp-Sign-Up-Form-Post-005
 // MailchimpForm v2.3
 // See engaged.ca.gov/site/_includes/macros/form-checkbox.njk for more documentation
+//
+// history
+// v2.3 added support for 'Test user' tag for innovation.ca.gov emails - jbum
+// v2.2 removed comments
+// v2.1
 
 import client from "@mailchimp/mailchimp_marketing";
 
