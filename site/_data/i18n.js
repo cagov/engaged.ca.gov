@@ -1160,15 +1160,14 @@ const translations = {
     // Government Efficiencies page
     "topic-stateemployees": {
         en: "* I certify I am a current State of California employee",
-        fr: "* I certify I am a current State of California employee",
-        es: "* I certify I am a current State of California employee",
-        ko: "* I certify I am a current State of California employee",
-        vi: "* I certify I am a current State of California employee",
-        tl: "* I certify I am a current State of California employee",
-        "zh-hans": "* I certify I am a current State of California employee",
-        "zh-hant": "* I certify I am a current State of California employee",
-        fa: "* I certify I am a current State of California employee",
-        hy: "* I certify I am a current State of California employee",
+        es: "* Certifico que soy un empleado actual del Estado de California",
+        ko: "* 저는 현재 캘리포니아 주정부 직원임을 인증합니다",
+        vi: "* Tôi xác nhận tôi là nhân viên hiện tại của Tiểu bang California",
+        tl: "* Pinapatunayan kong ako ay kasalukuyang empleyado ng Estado ng California",
+        "zh-hans": "* 我确认我是加利福尼亚州现任雇员",
+        "zh-hant": "* 我確認我是加州現任員工",
+        fa: "* تأیید می‌کنم که کارمند فعلی ایالت کالیفرنیا هستم",
+        hy: "* Հաստատում եմ, որ Կալիֆոռնիայի նահանգի ներկայիս աշխատակից եմ",
         location: "Government efficiencies page",
     },
     "required-checkbox-message": {
