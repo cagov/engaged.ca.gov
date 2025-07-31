@@ -106,9 +106,13 @@
             </div> #}
             <div class="col-lg-8">
                 <div class="findings-no-indent-container">
+                    <h2>{{ modules.findings_discussing_tough_issues.title | safe }}</h2>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="findings-no-indent-container">
                     {{ modules.findings_discussing_tough_issues.content | safe }}
                 </div>
-
                 <div class="findings-balloons-container mobile-only">
                         <div class="findings-quote findings-quote-container-1" role="blockquote">
                             {{ modules.findings_quote_1.content | safe }}
