@@ -11,3 +11,4 @@ site/es_old
 *venv
 .idea
 local_settings.js
+__pycache__
