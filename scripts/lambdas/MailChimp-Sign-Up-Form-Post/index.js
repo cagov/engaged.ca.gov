@@ -1,7 +1,11 @@
 // https://github.com/cagov/engaged.ca.gov/releases/tag/MailChimp-Sign-Up-Form-Post-005
-// MailchimpForm v2.2
-// See 
-// * engaged.ca.gov/site/_includes/macros/form-radio.njk for more documentation
+// MailchimpForm v2.3
+// See engaged.ca.gov/site/_includes/macros/form-checkbox.njk for more documentation
+//
+// history
+// v2.3 added support for 'Test user' tag for innovation.ca.gov emails - jbum
+// v2.2 removed comments
+// v2.1
 
 import client from "@mailchimp/mailchimp_marketing";
 
@@ -33,37 +37,56 @@ export const handler = async (event) => {
     }
   }
 
-  const response = await client.lists
-    .setListMember(audienceId, subscriberHash, {
+  try {
+    // First, add/update the list member
+    const results = await client.lists.setListMember(audienceId, subscriberHash, {
       email_address: email,
       status_if_new: "subscribed",
       interests: interests,
       merge_fields: {
         EVACZONE: evaczone,
       }
-    })
-    .then((results) => {
-      return {
-        statusCode: 200,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "*",
-        "Access-Control-Allow-Headers": "*",
-        body: JSON.stringify({ message: "OK: Form submission successful!" }),
-      };
-    })
-    .catch((error) => {
-      console.log(error);
-
-      return {
-        statusCode: 400,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "*",
-        "Access-Control-Allow-Headers": "*",
-        body: JSON.stringify({
-          message: "ERROR: Form submission unsuccessful.",
-        }),
-      };
     });
 
-  return response;
+    // Then, update the test User tag accordingly
+    const test_user_status = email.toLowerCase().includes('@innovation.ca.gov') ? 'active' : 'inactive';
+    try {
+      const results2 = await client.lists.updateListMemberTags(audienceId, subscriberHash, {
+        tags: [{ name: "Test user", status: test_user_status }],
+      });
+      console.log(results2);
+    } catch (error2) {
+      console.log("Tag update error:", error2);
+      // Continue even if tag update fails
+    }
+
+    return {
+      statusCode: 200,
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "*",
+      "Access-Control-Allow-Headers": "*",
+      body: JSON.stringify({ message: "OK: Form submission successful!" }),
+    };
+
+  } catch (error) {
+    console.log("List member update error:", error);
+
+    return {
+      statusCode: 400,
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "*",
+      "Access-Control-Allow-Headers": "*",
+      body: JSON.stringify({
+        message: "ERROR: Form submission unsuccessful.",
+      }),
+    };
+  }
 };
+
+
+
+
+
+
+
+

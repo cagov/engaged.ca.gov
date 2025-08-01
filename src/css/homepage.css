@@ -4,12 +4,15 @@
 
 #hero {
   color: var(--off-white);
-  background: url("/public/images/hero-bubbles-cropped.svg") bottom right / 30vw no-repeat, var(--navy);
+  background: url("/public/images/hero-bubbles-cropped.png") bottom right / 30vw no-repeat, var(--navy);
 }
 
+section#hero img {
+  max-width: 356px;
+}
 #about {
   color: #444;
-  background: url("/public/images/about-bubbles-cropped.svg") bottom right / 25vw no-repeat, var(--off-white);
+  background: url("/public/images/about-bubbles-cropped.png") bottom right / 25vw no-repeat, var(--off-white);
 }
 
 @media (min-width: 1200px) {
@@ -237,6 +240,8 @@ footer .cagov-logo svg {
     gap: var(--grid-gap);
   }
 
+
+
   .hiw img {
     top: -0.75em;
     left: -0.75em;
@@ -256,6 +261,8 @@ footer .cagov-logo svg {
     grid-column: 2;
   }
   
+  
+
   /*  Add a curved edge to the arrow
       (This is just a rectangle with borders on 2 sides)
   */

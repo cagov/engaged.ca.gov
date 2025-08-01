@@ -1,5 +1,6 @@
 {# Import macros. #}
 {% import "macros/form-checkbox.njk" as checkbox %}
+{% import "macros/form-radio.njk" as radio %}
 {% import "macros/form-action.njk" as action %}
 {% import "macros/form-submit.njk" as submit %}
 
@@ -33,6 +34,9 @@
     <engca-form-error id="apiError" hidden>
       <strong>{{ 'form-problem-message' | i18n }}</strong>
       {{ 'form-problem-message-2' | i18n }}
+    </engca-form-error>
+    <engca-form-error id="stateEmployeeError" hidden>
+      <strong>{{ 'form-problem-state-employee-not-checked' | i18n }}</strong>
     </engca-form-error>
   </engca-form-field>
 

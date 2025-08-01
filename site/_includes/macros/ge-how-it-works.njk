@@ -1,0 +1,18 @@
+{#
+number - (Integer) Numerical order of phases
+heading - (String)
+body- (String)
+altText - (String)
+icon - (String)
+#}
+
+{% macro data(number, heading, body, altText, icon) %}
+  <li class="hiw-step-{{ number }}">
+    <img src="/public/images/how-it-works-{{ icon }}.svg" alt="{{ altText }}" />
+    <div class="hiw-step-content">
+      <div class="hiw-heading">{{ heading }}</div>
+      <div class="hiw-text">{{ body }}</div>
+    </div>
+    <span class="hiw-arrow hiw-arrow-{{ number }}"></span>
+  </li>
+{% endmacro %}

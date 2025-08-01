@@ -1,20 +1,26 @@
 /* Accessibility note.
  *
- * Currently, the success and error messages for this form take 
+ * Currently, the success and error messages for this form take
  * two different approaches to accessibility.
- * 
- * The success message uses an "aria-live" region, which announces 
+ *
+ * The success message uses an "aria-live" region, which announces
  * itself whenever contents are updated.
- * 
- * The error messages use hide-and-show techniques with the "hidden" 
+ *
+ * The error messages use hide-and-show techniques with the "hidden"
  * attribute, auto-focus, and other aria attributes.
- */ 
+ */
 
 class JoinConversationForm extends window.HTMLElement {
   connectedCallback() {
     const form = this.querySelector("form");
     const emailInput = form.querySelector("input[type='email']");
     const emailError = form.querySelector("engca-form-error#emailError");
+    const requiredCheckboxInput = form.querySelector(
+      "input[type='checkbox'][required]",
+    );
+    const requiredCheckboxError = form.querySelector(
+      "engca-form-error#requiredCheckboxError",
+    );
     const apiError = form.querySelector("engca-form-error#apiError");
     const successLiveArea = this.querySelector("engca-form-success");
     const successTemplate = this.querySelector("template#form-success-msg");
@@ -24,7 +30,10 @@ class JoinConversationForm extends window.HTMLElement {
 
       // Validate email.
       const emailIsBlank = emailInput.value.length === 0;
-      const emailIsValid = emailInput.checkValidity();
+      // Email must be valid and contain at least one period.
+      const emailIsValid =
+        emailInput.checkValidity() &&
+        emailInput.value.includes(".");
       if (emailIsBlank || !emailIsValid) {
         emailInput.setAttribute("aria-describedby", "emailError");
         emailInput.setAttribute("aria-invalid", "true");
@@ -33,6 +42,20 @@ class JoinConversationForm extends window.HTMLElement {
         return; // <== Exit when invalid.
       }
 
+      // Validate required checkbox.
+      if (requiredCheckboxInput !== null) {
+        const requiredCheckboxIsBlank = requiredCheckboxInput.checkValidity();
+        if (!requiredCheckboxIsBlank) {
+          requiredCheckboxInput.setAttribute(
+            "aria-describedby",
+            "requiredError",
+          );
+          requiredCheckboxInput.setAttribute("aria-invalid", "true");
+          requiredCheckboxError.removeAttribute("hidden");
+          requiredCheckboxInput.focus();
+          return; // <== Exit when invalid.
+        }
+      }
       // Remove the error message here: validation just passed.
       emailError.setAttribute("hidden", "");
 

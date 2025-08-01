@@ -1,6 +1,9 @@
 #los-angeles-fires-recovery {
   color: var(--off-white);
-  background: url("/public/images/fires-about-bubbles-cropped.svg") bottom right / 30vw no-repeat, var(--navy);
+  background: url("/public/images/fires-about-bubbles-cropped.png") bottom right / 30vw no-repeat, var(--navy);
+}
+section#los-angeles-fires-recovery img {
+  max-width: 331px;
 }
 
 /* Remove background image from rtl languages, for now */

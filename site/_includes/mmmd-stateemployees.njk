@@ -1,0 +1,73 @@
+{% extends "layout.njk" %}
+{% block content %}
+{% import 'macros/ge-how-it-works.njk' as gewh %}
+
+    <section id="ge-hero" class="engca-hero engca-hero-person">
+        <div class="container banner-flex">
+            <engca-banner-content>
+                <p class="status-pill">{{ modules.hero.pillText }}</p>
+                <h1>{{ modules.hero.title  }}</h1>
+                <p><strong>{{ modules.hero.subtitle }}</strong></p>
+                {{ modules.hero.content | safe }}
+                <p>
+                    <a data-appearance="button" data-theme="orange" href="#sign-up" class="m-t">{{ modules.hero.buttonText }}</a>
+                </p>
+            </engca-banner-content>
+            <img src="/public/images/bubbles-exclamation.png" aria-hidden="true" class="desktop-only" alt=""/>
+        </div>
+    </section>
+
+    <section id="overview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    {{ modules.overview.content | safe }}
+                </div>
+                <div class="col-lg-4">
+                    <div class="about-the-process">
+                        {{ modules.about.content | safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="hiw-style-2">
+        <div class="container">
+            <h2>{{ 'ge-how-it-works-title' | i18n }}</h2>
+            <ol class="hiw ge-hiw">
+                {{  gewh.data(1, 'ge-how-it-works-1' | i18n, 'ge-how-it-works-body-1' | i18n, 'how-it-works-alt-1' | i18n, 'public')  }}
+                {{  gewh.data(2, 'ge-how-it-works-2' | i18n, 'ge-how-it-works-body-2' | i18n, 'how-it-works-alt-1' | i18n, 'public')  }}
+                {{  gewh.data(3, 'ge-how-it-works-3' | i18n, 'ge-how-it-works-body-3' | i18n, 'how-it-works-alt-2' | i18n, 'state')  }}
+                {{  gewh.data(4, 'ge-how-it-works-4' | i18n, 'ge-how-it-works-body-4' | i18n, 'how-it-works-alt-2' | i18n, 'state')  }}
+            </ol>
+        </div>
+    </section>
+
+    <section id="sign-up" class="sign-up-ge">
+        <div class="container form-flex">
+            <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt=""/>
+            <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt=""/>
+
+            {% include "form-stateemployees.njk" %}
+
+        </div>
+    </section>
+
+    <section id="overview" class="overview-ge">
+        <div class="container overview-ge-title">
+            <div class="row">
+                <h3>{{ modules.generalInfo.title | safe }}</h3>
+            </div>
+            <div class="row overview-ge-content">
+                <div class="col-lg-6">
+                    {{ modules.generalInfo.content | safe }}
+                </div>
+                <div class="col-lg-6">
+                    {{ modules.codeConduct.content | safe }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

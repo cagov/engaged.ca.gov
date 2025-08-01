@@ -120,9 +120,8 @@ item_9_text: Los residentes quieren reconstruir con materiales resistentes al fu
 id: findings_discussing_tough_issues
 old_id: findings_opportunity_areas
 old_title: Áreas de oportunidad
+title: "A continuación: Hablar sobre problemas complejos"
 ----
-
-## A continuación: Hablar sobre problemas complejos
 
 Si bien estamos dispuestos a adoptar medidas respecto de las prioridades mencionadas anteriormente, aún queda trabajo por hacer en otras cuestiones. Invitaremos a los residentes de California a colaborar con nosotros. <a href="/es/lafires-recovery/#sign-up">Regístrese para mantenerse al tanto</a>. 
 
@@ -247,7 +246,7 @@ buttonText: Regístrese para mantenerse informado
 id: findings_how_we_did_the_analysis
 ----
 
-## Cómo hicimos el análisis
+### Cómo hicimos el análisis
 
 <div class="sub-head">Para información más detallada, <a href="/es/lafires-recovery/agenda-setting-data-insights/">consulte nuestra metodología detallada y análisis de comentarios</a>.</div>
 
