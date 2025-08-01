@@ -13,6 +13,10 @@
     background: url("/public/images/bubbles-exclamation.svg") bottom right / 30vw no-repeat, var(--navy);
 }
 
+section#ge-hero img {
+    width: 276px;
+}
+
 @media (min-width: 1200px) {
     .engca-hero {
         background-image: unset;
