@@ -14,15 +14,14 @@ const DECISION_FIRES_PROD= {
 
 const DECISION_SANDBOX= {
     decision_id: 38,
-    csvFolderId: '',
-    spreadsheetId: '',
+    csvFolderId: '1jIS5XQqDmxYYFobldcistaItj-A0GGaI',
+    spreadsheetId: '10TM5mykUruWt_qORxYYgSfDlzpLMAB3nWqto3hlcMzo',
 }
 
 // Global config.
 const CONFIG = {
     csvFileName: 'comments.csv',
-    sheetName: 'comment', // Name of the sheet tab
-    clearExistingData: true, // Set to false to append data instead
+    sheetName: 'comments', // Name of the sheet tab
     addTimestamp: true, // Add a timestamp column
 };
 
@@ -68,7 +67,7 @@ function importFileFromDrive(decision) {
 
 function getCsvFromDrive(decision) {
 
-if (CONFIG.csvFileName) {
+    if (CONFIG.csvFileName) {
         let files;
 
         // Search within specific folder if provided
@@ -88,7 +87,11 @@ if (CONFIG.csvFileName) {
     }
 }
 
+function runFires() {
+    importFileFromDrive(DECISION_FIRES_PROD);
+}
 
-importFileFromDrive(DECISION_FIRES_PROD);
-importFileFromDrive(DECISION_SANDBOX);
+function runSandbox() {
+    importFileFromDrive(DECISION_SANDBOX);
 
+}
