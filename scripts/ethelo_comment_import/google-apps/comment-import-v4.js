@@ -1,3 +1,12 @@
+// Global config.
+const CONFIG = {
+    csvFileName: 'comments.csv',
+    sheetName: 'comments', // Name of the sheet tab
+    addTimestamp: true, // Add a timestamp column
+    zakiya_mydrive_38: '1GC1ugnZWhz17gEsFF6m7HOoTVd7HvwbA', // My Drive/Comments/38
+    engca_shareddrive_38: '10TM5mykUruWt_qORxYYgSfDlzpLMAB3nWqto3hlcMzo' //Shared Drive/Engaged California Downloads/Comments/38
+};
+
 // spreadsheetId
 // string
 // From the URL: docs.google.com/spreadsheets/d/SPREADSHEET-ID/edit
@@ -8,62 +17,21 @@
 
 const DECISION_FIRES_PROD= {
     decision_id: 33,
-    csvFolderId: '1m7r0HRzcqxtVKaSyMTjM40RvY8Js67V6',
+    csvFolderId: CONFIG.zakiya_mydrive,
     spreadsheetId: '1tpwxT05MsYVin975Rdk9n8iglEki_uRRdSlsReAFeoU',
 }
 
-const DECISION_SANDBOX= {
+const DECISION_SANDBOX_SHARED_DRIVE= {
     decision_id: 38,
-    csvFolderId: '1jIS5XQqDmxYYFobldcistaItj-A0GGaI',
+    csvFolderId: CONFIG.engca_shareddrive_38,
     spreadsheetId: '10TM5mykUruWt_qORxYYgSfDlzpLMAB3nWqto3hlcMzo',
 }
 
-// Global config.
-const CONFIG = {
-    csvFileName: 'comments.csv',
-    sheetName: 'comments', // Name of the sheet tab
-    addTimestamp: true, // Add a timestamp column
-};
-
-function importFileFromDrive(decision) {
-    try {
-        const file = getCsvFromDrive(decision);
-        const blob = file.getBlob();
-        const content = blob.getDataAsString();
-
-        // Parse CSV data
-        const rows = Utilities.parseCsv(content);
-
-        // Add timestamp column if configured
-        if (CONFIG.addTimestamp) {
-            const timestamp = new Date();
-            rows.forEach(row => {
-                if (row.length > 0) {
-                    row.push(timestamp);
-                }
-            });
-
-            // Update header row if it exists
-            if (rows.length > 0 && rows[0].length > 0) {
-                rows[0][rows[0].length - 1] = 'Import_Timestamp';
-            }
-        }
-
-
-        const spreadsheet = SpreadsheetApp.openById(decision.spreadsheetId);
-        const sheet = spreadsheet.getSheetByName(CONFIG.sheetName);
-
-        sheet.clear();
-        sheet.getRange(1, 1, rows.length, rows[0].length).setValues(rows);
-
-        Logger.log('Import completed successfully');
-
-    } catch (error) {
-        Logger.log('Error: ' + error.toString());
-    }
+const DECISION_SANDBOX_MY_DRIVE= {
+    decision_id: 38,
+    csvFolderId: CONFIG.zakiyas_mydrive,
+    spreadsheetId: '1Qkw5utYYygfKxBxcYHWvQD1QbWElEQ1HyrxOfhFZz8w',
 }
-
-
 
 function getCsvFromDrive(decision) {
 
@@ -87,11 +55,50 @@ function getCsvFromDrive(decision) {
     }
 }
 
+function importFileFromDrive(decision) {
+    try {
+        const file = getCsvFromDrive(decision.spreadsheetId);
+        const blob = file.getBlob();
+        const content = blob.getDataAsString();
+
+        // Parse CSV data
+        const rows = Utilities.parseCsv(content);
+
+        // Add timestamp column if configured
+        if (CONFIG.addTimestamp) {
+            const timestamp = new Date();
+            rows.forEach(row => {
+                if (row.length > 0) {
+                    row.push(timestamp);
+                }
+            });
+
+            // Update header row if it exists
+            if (rows.length > 0 && rows[0].length > 0) {
+                rows[0][rows[0].length - 1] = 'Import_Timestamp';
+            }
+        }
+
+        const spreadsheet = SpreadsheetApp.openById(decision.spreadsheetId);
+        const sheet = spreadsheet.getSheetByName(CONFIG.sheetName);
+
+        // sheet.clear();
+        sheet.getRange(1, 1, rows.length, rows[0].length).setValues(rows);
+
+        Logger.log('Import completed successfully');
+
+    } catch (error) {
+        Logger.log('Error: ' + error.toString());
+    }
+}
+
+
 function runFires() {
     importFileFromDrive(DECISION_FIRES_PROD);
 }
 
 function runSandbox() {
-    importFileFromDrive(DECISION_SANDBOX);
-
+    // importFileFromDrive(DECISION_SANDBOX_SHARED_DRIVE);
+    importFileFromDrive(DECISION_SANDBOX_MY_DRIVE);
 }
+

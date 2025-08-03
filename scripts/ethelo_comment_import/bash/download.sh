@@ -3,7 +3,8 @@
 ## Vars be varrin'.
 DECISION_ID=$1
 HOME="/Users/zakiya/"
-GDRIVE_FOLDER="$HOME""Google Drive/Shared drives/Engaged California Downloads/Comments/""$DECISION_ID"
+#GDRIVE_FOLDER="$HOME""Google Drive/Shared drives/Engaged California Downloads/Comments/""$DECISION_ID"
+GDRIVE_FOLDER="$HOME""Google Drive/My Drive/Comments/""$DECISION_ID"
 LOG_FILE=~/comments/download.txt
 DOWNLOADED_FILE="$HOME"comments/comments.csv
 TEMP_FILE=~/comments/comments-$DECISION_ID.csv
