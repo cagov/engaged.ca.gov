@@ -12,7 +12,7 @@ section#hero img {
 }
 #about {
   color: #444;
-  background: url("/public/images/about-bubbles-cropped.png") bottom right / 25vw no-repeat, var(--off-white);
+  background: url("/public/images/about-bubbles-cropped.svg") bottom right / 25vw no-repeat, var(--off-white);
 }
 
 @media (min-width: 1200px) {
