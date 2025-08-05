@@ -13,6 +13,11 @@
 {% endblock formEmail %}
 
 {% block formContent %}
+  <label class="form-control-label" for="radio-group-label">
+    <span aria-hidden="true">*</span>
+    <span class="sr-only">{{ 'required-label' | i18n }}:</span>
+      {{ 'topic-los-angeles-fires-recovery-evacuation-label' | i18n }}
+  </label>
   <ul class="form-radio-list">
   <li>
     {{ radio.merge_field_data('topic-los-angeles-fires-recovery-evacuation-eaton' | i18n, "Eaton", "Yes, I was in the Eaton fire evacuation zone", "EVACZONE") }}
