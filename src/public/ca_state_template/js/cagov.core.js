@@ -1,4 +1,4 @@
-var StateTemplateNpmPackageVersion="6.4.0";
+var StateTemplateNpmPackageVersion="6.5.1";
 /*!
   * Bootstrap v5.3.3 (https://getbootstrap.com/)
   * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -8296,7 +8296,8 @@ window.addEventListener("load", () => {
 
 /* EXTERNAL LINK ICON */
 window.addEventListener("load", () => {
-  const ext = '<span class="external-link-icon" aria-hidden="true"></span>';
+  const ext =
+    '<span class="external-link-icon" aria-hidden="true"></span><span class="sr-only">(external link)</span>';
 
   // Check if link is external function
   /**
@@ -8381,6 +8382,17 @@ window.addEventListener("load", () => {
     // add ul item to the nav and set aria labelledby
     pagenav.appendChild(pagenavUL);
     pagenav.setAttribute("aria-labelledby", "on-this-page-navigation-label");
+  }
+
+  // Scroll to hash solution
+  const hashLocation = window.location;
+  if (hashLocation.hash) {
+    // Trigger a hashchange to ensure hash scrolling works
+    setTimeout(() => {
+      const currentHash = hashLocation.hash;
+      hashLocation.hash += "_"; // Remove the hash temporarily
+      hashLocation.hash = currentHash; // Reapply the hash
+    }, 500);
   }
 }); // call out the function on the page load
 
@@ -8714,7 +8726,7 @@ window.addEventListener("load", () => {
 
   //Used for hiding/showing main elements
   const mainElements = document.querySelectorAll(
-    ".main-content, footer, .site-footer, .utility-header, .branding, header"
+    ".main-content, footer, .site-footer, .utility-header, .branding"
   );
 
   const regularHeader = document.querySelector("header");
@@ -8911,4 +8923,64 @@ window.addEventListener("load", () => {
   // move duplicated logo to navigation drawer section
   document.querySelector(".navigation-search")?.prepend(mobileItemsCont);
   mobileCheck();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const csscorelink = /** @type {HTMLcsscorelinkElement} */ (
+    document.querySelector("link[rel='stylesheet'][href*='cagov.core.']")
+  );
+
+  /**
+   * Checks if media queries are supported by the browser.
+   * @returns {boolean} True if media queries are supported, otherwise false.
+   */
+  function mediaQueriesSupported() {
+    return (
+      typeof window.matchMedia != "undefined" ||
+      typeof window.msMatchMedia != "undefined"
+    );
+  }
+
+  /**
+   * Tests if media query range notation is supported by the browser.
+   * @returns {boolean} True if range notation is supported, otherwise false.
+   */
+  function testMediaQueryRangeNotation() {
+    return window.matchMedia("(width >= 0px)").matches;
+  }
+
+  /**
+   * Loads an alternative CSS file if CSS nesting or media query range notation is not supported.
+   */
+  function loadAlternativeCSS() {
+    if (csscorelink) {
+      csscorelink.removeAttribute("integrity");
+      csscorelink.href = csscorelink.href.replace(
+        /cagov\.core(\.min)?\.css/,
+        "cagov.core.flat.css"
+      );
+      console.log(`POLYFILL: Using new CSS file - ${csscorelink.href}`);
+    }
+  }
+
+  // POLYFILL for CSS nesting and media query range notation
+  /**
+   * Checks if CSS nesting is supported by the browser.
+   */
+  if (!CSS.supports("selector(&)")) {
+    console.log("POLYFILL: Nested CSS is not supported");
+
+    loadAlternativeCSS();
+  }
+
+  /**
+   * Checks if media queries are supported by the browser.
+   */
+  if (!mediaQueriesSupported() || !testMediaQueryRangeNotation()) {
+    console.log(
+      "POLYFILL: Media query range notation (<, <=, >, >=) is not supported."
+    );
+
+    loadAlternativeCSS();
+  }
 });

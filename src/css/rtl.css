@@ -57,4 +57,10 @@
   .quote-card {
     direction: ltr;
   }
+
+  @media (min-width: 1200px) {
+    .engca-hero-person {
+      background: var(--navy);
+    }
+  }
 }

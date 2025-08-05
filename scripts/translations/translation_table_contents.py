@@ -378,6 +378,20 @@ translations = {
         "hy": "Խնդրում ենք փորձել ավելի ուշ:",
         "location": "Home"
     },
+    "form-problem-state-employee-not-checked": {
+        "en": "You must certify you are a state employee to sign up for this engagement.",
+        "fr": "Vous devez certifier que vous êtes un employé de l'État pour vous inscrire à cette engagement.",
+        "es": "Debe certificar que es empleado del estado para registrarse en este engagement.",
+        "ko": "이 참여에 가입하려면 국가 직원임을 인증해야 합니다.",
+        "vi": "Bạn phải xác nhận rằng bạn là nhân viên của tiểu bang để đăng ký tham gia sự kiện này.",
+        "tl": "Kailangan mong certipikasyon na ikaw ay isang empleyado ng estado upang magpatala sa pag-sign up para sa engagement na ito.",
+        "zh-hans": "您必须证明您是州雇员才能注册此参与。",
+        "zh-hant": "您必須證明您是州雇員才能註冊此參與。",
+        "fa": "برای ثبت نام در این همکاری، باید اثبات کنید که متقاضی یک کارمزدار است.",
+        "hy": "Այս մասնակցության համար պետք է ապացուցել, որ դուք պետական աշխատակից եք:",
+        "location": "Home",
+        "status": "machine translated"
+    },
     "form-submit-button": {
         "en": "Sign up now",
         "fr": "Inscrivez-vous maintenant",

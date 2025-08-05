@@ -5,7 +5,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import chalk from "chalk";
 import markdownIt from "markdown-it";
-import translations from './site/_data/i18n.js';  // Note: might need .js extension
+import translations from './site/_data/i18n.js';
 import { EleventyI18nPlugin } from "@11ty/eleventy";
 import { readFileSync } from 'node:fs';
 
@@ -131,7 +131,7 @@ export default async function (eleventyConfig) {
 
   // Used in language switcher to get the path to the appropriate for current URL
   eleventyConfig.addFilter("pagePath", (page, langPath) => {
-    let currentPath = `${page.filePathStem}/index.html`; // Relative to base dir, localized path, with folder + /index.html.
+    let currentPath = `${page.filePathStem}/`; // Relative to base dir, localized path, with folder + /index.html.
 
     const languages = ["/en/","/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/","/fa/","/hy/"]; // Localized folder paths, '/es/', '/vi', etc.
 
@@ -152,7 +152,7 @@ export default async function (eleventyConfig) {
 
   // used in header to provide canonical path and social media sharing url
   eleventyConfig.addFilter("relativePath", (page, locale) => {
-    let currentPath = `${page.filePathStem}/index.html`; // Relative to base dir, localized path, with folder + /index.html.
+    let currentPath = `${page.filePathStem}/`; // Relative to base dir, localized path, with folder + /index.html.
     // Remove /homepage/ and /en/ from current paths
     currentPath = currentPath.replace('/homepage/', '/');
     currentPath = currentPath.replace('/en/', '/');
