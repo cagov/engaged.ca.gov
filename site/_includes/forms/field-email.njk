@@ -1,0 +1,14 @@
+<label class="form-control-label" for="mce-EMAIL">
+  <span aria-hidden="true">*</span>
+  <span class="sr-only">{{ 'required-label' | i18n }}:</span>
+  {% block formEmail %}
+    {{ 'email-label' | i18n }}
+  {% endblock formEmail %}
+</label>
+
+<input type="email" class="form-control" id="mce-EMAIL" name="EMAIL" aria-required="true">
+
+<engca-form-error id="emailError" hidden>
+  <strong>{{ 'valid-email-message' | i18n }}</strong>
+  {{ 'valid-email-message-2' | i18n }}
+</engca-form-error>
