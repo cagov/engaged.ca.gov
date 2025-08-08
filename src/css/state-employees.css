@@ -6,6 +6,8 @@
 .hiw.ge-hiw li {
     border-radius: 2rem;
     width: 130%; /* turn off on mobile */
+    padding: 1.58em;
+
 }
 
 .hiw.ge-hiw div.hiw-heading {
