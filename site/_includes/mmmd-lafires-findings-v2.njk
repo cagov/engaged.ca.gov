@@ -15,7 +15,7 @@
    .canvas-wrapper {
       position: relative;
       width: 100%;
-      height: 100vw;
+      height: 800px;
       background: #f0f0f0;
     }
 
@@ -93,7 +93,8 @@
   for (let i = 0; i < balloonCount; i++) {
     let size = Math.random()*Math.random() * 40 + 5; 
     let sx = Math.random() * width;
-    let sy = Math.random() * 2 * height - size * speedFactor/2;
+    let y_extra = size * speedFactor/2;
+    let sy = Math.random() * (y_extra*2 + height) - y_extra;
     balloons.push({
       sx: sx,
       sy: sy,
@@ -194,7 +195,7 @@
     scrollTrigger: {
       trigger: ".canvas-wrapper",
       start: "top top",
-      end: "+=1000", // scroll range for animation
+      end: "+=2000", // scroll range for animation
       scrub: true,
       pin: true,
       onUpdate: (self) => {
