@@ -1,3 +1,0 @@
-MAILCHIMP_API_KEY=
-EMAIL=
-audienceId
