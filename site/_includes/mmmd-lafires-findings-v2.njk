@@ -14,7 +14,7 @@
 
    .canvas-wrapper {
       position: relative;
-      {# width: 100%; #}
+      width: 100%;
       height: 100vw;
       background: #f0f0f0;
     }
@@ -34,7 +34,7 @@
 </head>
 
 <div class="canvas-wrapper">
-  <canvas id="myCanvas" width="900" height="600"></canvas>
+  <canvas id="myCanvas" width="1152" height="800"></canvas>
 </div>
 
 <section>
@@ -88,12 +88,12 @@
   const width = canvas.width;
   const height = canvas.height;
   let balloons = [];
-  let balloonCount = 200;
+  let balloonCount = 360;
+  let speedFactor = 12;
   for (let i = 0; i < balloonCount; i++) {
-    let size = Math.random() * 40 + 5; 
+    let size = Math.random()*Math.random() * 40 + 5; 
     let sx = Math.random() * width;
-    let sy = Math.random() * 2 * height - height;
-    let speedFactor = 12;
+    let sy = Math.random() * 2 * height - size * speedFactor/2;
     balloons.push({
       sx: sx,
       sy: sy,
@@ -103,7 +103,7 @@
       vy: size * speedFactor,
       // Alpha increases with size: min 0.3 for smallest, max 1 for largest
       // Vary luminance by ±10 randomly
-      color: `hsla(0, 0%, ${80 + (Math.random() * 20 - 10)}%, ${0.05 + 0.7 * ((size - 10) / 20)})`
+      color: `hsla(0, 0%, ${70 + (Math.random() * 5)}%, ${0.15 + 0.7 * ((size - 10) / 20)})`
     });
   }
   // Sort balloons by size ascending
@@ -113,7 +113,7 @@
     updateBalloons(t);
     balloons.forEach(balloon => {
       // Draw a dialog balloon: rounded rect with a triangular tail
-      // (Old code commented out)
+
       // ctx.beginPath();
       // ctx.arc(balloon.x, balloon.y, balloon.size, 0, Math.PI * 2);
       // ctx.fillStyle = balloon.color;
