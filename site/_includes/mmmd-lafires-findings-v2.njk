@@ -170,10 +170,29 @@
       ctx.moveTo(tailBaseX - radius * 0.5, tailBaseY);
       ctx.lineTo(tailTipX, tailTipY);
       ctx.lineTo(tailBaseX + radius * 0.5, tailBaseY);
+
+      // Calculate bar dimensions
+      const barWidth = rectW * (2/3);
+      const barHeight = rectH * (1/19);
+      const barSpacing = rectH * (1/9);
+
+      // The left edge of the bars (centered horizontally)
+      const barX = rectX + (rectW - barWidth) / 2;
+
+      // Draw 3 bars as holes using even-odd fill rule
+      // Start further down to avoid intersecting with top/bottom of balloon
+      const totalBarsHeight = 3 * barHeight + 2 * barSpacing;
+      const startY = rectY + rectH * 0.3; // Start at 25% down from top
+      for (let i = 0; i < 3; i++) {
+        const barY = startY + i * (barHeight + barSpacing);
+        ctx.rect(barX, barY, barWidth, barHeight);
+      }
+
       ctx.closePath();
 
+      // Use even-odd fill rule to create holes
       ctx.fillStyle = balloon.color;
-      ctx.fill();
+      ctx.fill('evenodd');
     });
   }
 
