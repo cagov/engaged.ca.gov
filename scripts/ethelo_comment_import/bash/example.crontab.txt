@@ -1,1 +1,0 @@
-15 * * * * ~/Code/engaged.ca.gov/scripts/ethelo_comment_import/bash/download.sh 33
