@@ -10,6 +10,8 @@ mc_f_id - (Integer or string) value of `f_id` attribute on Mailchimp form
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
         target="_self"
+        {# Change data-env value to "test" to use test variables in index.js. #}
+        data-env=""
         novalidate
         >
         <input type="hidden" name="audienceId" value="{{ mc_audienceId }}" >

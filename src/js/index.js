@@ -13,6 +13,7 @@
 class JoinConversationForm extends window.HTMLElement {
   connectedCallback() {
     const form = this.querySelector("form");
+    const env = form.getAttribute("data-env");
     const emailInput = form.querySelector("input[type='email']");
     const emailError = form.querySelector("engca-form-error#emailError");
     const requiredCheckboxInput = form.querySelector(
@@ -24,6 +25,8 @@ class JoinConversationForm extends window.HTMLElement {
     const apiError = form.querySelector("engca-form-error#apiError");
     const successLiveArea = this.querySelector("engca-form-success");
     const successTemplate = this.querySelector("template#form-success-msg");
+
+    const postJsonUrl= (env === "test") ? "http://127.0.0.1:3001/api/subscribe" : "https://engaged.ca.gov/api/subscribe"
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -65,7 +68,6 @@ class JoinConversationForm extends window.HTMLElement {
       const formJson = JSON.stringify(formObject);
 
       // Submit.
-      const postJsonUrl = "https://engaged.ca.gov/api/subscribe";
       const response = await fetch(postJsonUrl, {
         method: "POST",
         headers: {
