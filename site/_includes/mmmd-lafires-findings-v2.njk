@@ -68,6 +68,22 @@
   }
   requestAnimationFrame(raf);
 
+  // Let ScrollTrigger work with Lenis, necessary to avoid positioning glitches, especially when scrolling back up
+  ScrollTrigger.scrollerProxy(document.body, {
+    scrollTop(value) {
+      return arguments.length ? lenis.scrollTo(value) : window.scrollY;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    },
+    pinType: document.body.style.transform ? "transform" : "fixed"
+  });
+
   // Let ScrollTrigger use native scroll position while Lenis handles visual smoothing
   ScrollTrigger.refresh();
 
