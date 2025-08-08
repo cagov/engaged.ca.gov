@@ -6,15 +6,11 @@
 
 {# Begin HTML. #}
 <h2>{{ 'join-the-conversation' | i18n }}</h2>
-{% block formHeading %}
-  <p>{{ 'join-the-conversation-form-label' | i18n }}</p>
-{% endblock formHeading %}
+<p>{{ 'join-the-conversation-form-label' | i18n }}</p>
 
 <engca-join-convo-form>
 
-  {% block formAction %}
-    {{ action.data("61200a6dda", "0003e1e3f0") }}
-  {% endblock formAction %}
+  {{ action.data("23461fc80f") }}
 
   <engca-form-field>
     <label class="form-control-label" for="mce-EMAIL">
@@ -41,9 +37,6 @@
   </engca-form-field>
 
   <engca-form-field>
-    {% block formContent %}
-
-    {% endblock formContent %}
 
   </engca-form-field>
 
