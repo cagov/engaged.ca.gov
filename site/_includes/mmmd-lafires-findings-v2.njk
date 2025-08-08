@@ -45,6 +45,10 @@
   <p>Nam vel commodo justo. Nullam sit amet tincidunt justo, ut suscipit ex.</p>
 </section>
 
+<div class="canvas-wrapper">
+  <canvas id="secondCanvas" width="800" height="400"></canvas>
+</div>
+
 <!-- Include Libraries -->
 
 <script>
@@ -64,22 +68,7 @@
   }
   requestAnimationFrame(raf);
 
-  // Let ScrollTrigger work with Lenis
-  ScrollTrigger.scrollerProxy(document.body, {
-    scrollTop(value) {
-      return arguments.length ? lenis.scrollTo(value) : window.scrollY;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight
-      };
-    },
-    pinType: document.body.style.transform ? "transform" : "fixed"
-  });
-
+  // Let ScrollTrigger use native scroll position while Lenis handles visual smoothing
   ScrollTrigger.refresh();
 
   // Canvas animation
