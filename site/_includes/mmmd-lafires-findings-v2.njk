@@ -18,6 +18,12 @@
       height: 800px;
       background: #f0f0f0;
     }
+   .canvas-wrapper2 {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: #f0f0f0;
+    }
 
     canvas {
       display: block;
@@ -34,7 +40,7 @@
 </head>
 
 <div class="canvas-wrapper">
-  <canvas id="myCanvas" width="1152" height="800"></canvas>
+  <canvas id="firstCanvas" width="1152" height="800"></canvas>
 </div>
 
 <section>
@@ -45,8 +51,8 @@
   <p>Nam vel commodo justo. Nullam sit amet tincidunt justo, ut suscipit ex.</p>
 </section>
 
-<div class="canvas-wrapper">
-  <canvas id="secondCanvas" width="800" height="400"></canvas>
+<div class="canvas-wrapper2">
+  <canvas id="secondCanvas" width="1152" height="200"></canvas>
 </div>
 
 <!-- Include Libraries -->
@@ -88,10 +94,14 @@
   ScrollTrigger.refresh();
 
   // Canvas animation
-  const canvas = document.getElementById('myCanvas');
+  const canvas = document.getElementById('firstCanvas');
   const ctx = canvas.getContext('2d');
+  const canvas2 = document.getElementById('secondCanvas');
+  const ctx2 = canvas2.getContext('2d');
   const width = canvas.width;
   const height = canvas.height;
+  const width2 = canvas2.width;
+  const height2 = canvas2.height;
   let balloons = [];
   let balloonCount = 360;
   let speedFactor = 12;
@@ -214,7 +224,15 @@
     ctx.fill();
   }
 
-  // GSAP animation timeline synced to scroll
+  function drawCircle2(x) {
+    ctx2.beginPath();
+    ctx2.arc(x, height2 / 2, 20, 0, Math.PI * 2);
+    ctx2.fillStyle = 'green';
+    ctx2.fill();
+  }
+
+
+  // GSAP animation timeline synced to scroll for first canvas
   gsap.to({}, {
     scrollTrigger: {
       trigger: ".canvas-wrapper",
@@ -232,9 +250,27 @@
     }
   });
 
-  // Initial circle position
+  // GSAP animation timeline synced to scroll for second canvas
+  gsap.to({}, {
+    scrollTrigger: {
+      trigger: ".canvas-wrapper2",
+      start: "top center",
+      end: "+=2000", // scroll range for animation
+      scrub: true,
+      pin: true,
+      onUpdate: (self) => {
+        const t = self.progress; // 0 to 1
+        const x = 20 + t * (width2 - 40);
+        ctx2.clearRect(0, 0, width2, height2);
+        drawCircle2(x);
+      }
+    }
+  });
+
+  // Initial circle positions
   drawCircle(20);
   drawBalloons(0);
+  drawCircle2(20);
 </script>
 
 
