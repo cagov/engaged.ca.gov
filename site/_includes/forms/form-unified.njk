@@ -12,26 +12,22 @@
 
   {{ action.data("23461fc80f") }}
 
-  <engca-form-field>
-   {% include 'forms/field-email.njk' %}
+  {% include 'forms/field-email.njk' %}
+  <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
 
+  <ul class="form-checkbox-list">
+    <li>{{ checkbox.data('topic-los-angeles-fires-recovery-eaton' | i18n, "1552878c1b") }}</li>
+    <li>{{ checkbox.data('topic-los-angeles-fires-recovery-palisades' | i18n, "40c0f946cd") }}</li>
+    <li>{{ checkbox.data('topic-future-topics' | i18n, "4d15bd19e5", "checked") }}</li>
+  </ul>
 
-    <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
-
-    <ul class="form-checkbox-list">
-      <li>{{ checkbox.data('topic-los-angeles-fires-recovery-eaton' | i18n, "1552878c1b") }}</li>
-      <li>{{ checkbox.data('topic-los-angeles-fires-recovery-palisades' | i18n, "40c0f946cd") }}</li>
-      <li>{{ checkbox.data('topic-future-topics' | i18n, "4d15bd19e5", "checked") }}</li>
-    </ul>
-
-    <engca-form-error id="apiError" hidden>
-      <strong>{{ 'form-problem-message' | i18n }}</strong>
-      {{ 'form-problem-message-2' | i18n }}
-    </engca-form-error>
-    <engca-form-error id="stateEmployeeError" hidden>
-      <strong>{{ 'form-problem-state-employee-not-checked' | i18n }}</strong>
-    </engca-form-error>
-  </engca-form-field>
+  <engca-form-error id="apiError" hidden>
+    <strong>{{ 'form-problem-message' | i18n }}</strong>
+    {{ 'form-problem-message-2' | i18n }}
+  </engca-form-error>
+  <engca-form-error id="stateEmployeeError" hidden>
+    <strong>{{ 'form-problem-state-employee-not-checked' | i18n }}</strong>
+  </engca-form-error>
 
   {{ submit.data('form-submit-button' | i18n) }}
 
