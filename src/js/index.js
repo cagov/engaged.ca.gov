@@ -1,3 +1,22 @@
+class UnifiedForm extends window.HTMLElement {
+  constructor() {
+    super();
+    this.sectionState = this.querySelector('[data-form-section="state"]');
+    this.sectionFires = this.querySelector('[data-form-section="fires"]');
+  }
+
+  connectedCallback() {
+    this.hide(this.sectionState);
+    this.hide(this.sectionFires);
+    this.setupEventListeners();
+  }
+  hide = (element) => {
+    element.classList.add("hidden");
+  };
+}
+
+customElements.define("engca-form-unified", UnifiedForm);
+
 /* Accessibility note.
  *
  * Currently, the success and error messages for this form take
@@ -9,7 +28,6 @@
  * The error messages use hide-and-show techniques with the "hidden"
  * attribute, auto-focus, and other aria attributes.
  */
-
 class JoinConversationForm extends window.HTMLElement {
   connectedCallback() {
     const form = this.querySelector("form");
@@ -26,7 +44,10 @@ class JoinConversationForm extends window.HTMLElement {
     const successLiveArea = this.querySelector("engca-form-success");
     const successTemplate = this.querySelector("template#form-success-msg");
 
-    const postJsonUrl= (env === "test") ? "http://127.0.0.1:3001/api/subscribe" : "https://engaged.ca.gov/api/subscribe"
+    const postJsonUrl =
+      env === "test"
+        ? "http://127.0.0.1:3001/api/subscribe"
+        : "https://engaged.ca.gov/api/subscribe";
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -35,8 +56,7 @@ class JoinConversationForm extends window.HTMLElement {
       const emailIsBlank = emailInput.value.length === 0;
       // Email must be valid and contain at least one period.
       const emailIsValid =
-        emailInput.checkValidity() &&
-        emailInput.value.includes(".");
+        emailInput.checkValidity() && emailInput.value.includes(".");
       if (emailIsBlank || !emailIsValid) {
         emailInput.setAttribute("aria-describedby", "emailError");
         emailInput.setAttribute("aria-invalid", "true");

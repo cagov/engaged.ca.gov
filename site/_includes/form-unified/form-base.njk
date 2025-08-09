@@ -5,7 +5,7 @@
 {% import "macros/form-submit.njk" as submit %}
 
 {# Begin HTML. #}
-<engca-join-convo-form>
+<engca-form-unified>
 
   {# HEADING. #}
   <h2>{{ 'join-the-conversation' | i18n }}</h2>
@@ -36,22 +36,26 @@
     {# - #}
 
     {# Fires options. #}
+    <div data-form-section="fires">
     <label class="form-control-label" for="radio-group-label">
       <span aria-hidden="true">*</span>
       <span class="sr-only">{{ 'required-label' | i18n }}:</span>
       {{ 'topic-los-angeles-fires-recovery-evacuation-label' | i18n }}
     </label>
     <ul class="form-radio-list">
-      <li>{{ radio.merge_field_data('topic-los-angeles-fires-recovery-evacuation-eaton' | i18n, "Eaton", "Yes, I was in the Eaton fire evacuation zone", "EVACZONE") }}</li>
-      <li>{{ radio.merge_field_data('topic-los-angeles-fires-recovery-evacuation-palisades' | i18n, "Palisades", "Yes, I was in the Palisades fire evacuation zone", "EVACZONE" ) }}</li>
-      <li>{{ radio.merge_field_data('topic-los-angeles-fires-recovery-no-evacuation' | i18n, "No", "No", "EVACZONE" ) }}</li>
+      <li>{{ radio.merge_field_data('topic-los-angeles-fires-recovery-evacuation-eaton' | i18n ) }}</li>
+      <li>{{ radio.merge_field_data('topic-los-angeles-fires-recovery-evacuation-palisades' | i18n) }}</li>
+      <li>{{ radio.merge_field_data('topic-los-angeles-fires-recovery-no-evacuation' | i18n ) }}</li>
     </ul>
+    </div>
     {# - #}
 
     {# State employee option. #}
+    <div data-form-section="state">
     {{ formVars.label_employees_question }}
     {{ checkbox.data( formVars.label_yes) }}
     {{ checkbox.data(formVars.label_no) }}
+    </div>
     {# - #}
 
     {# Hidden field. #}
@@ -86,7 +90,7 @@
   </template>
   {# = #}
 
-</engca-join-convo-form>
+</engca-form-unified>
 {# - #}
 
 {# Privacy. #}
