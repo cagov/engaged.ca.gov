@@ -1,17 +1,55 @@
 class UnifiedForm extends window.HTMLElement {
   constructor() {
     super();
+    this.form = this.querySelector("form");
     this.sectionState = this.querySelector('[data-form-section="state"]');
     this.sectionFires = this.querySelector('[data-form-section="fires"]');
+    this.discussionCheckboxes = this.querySelectorAll(
+      '[data-form-section="discussion"] input',
+    );
   }
 
   connectedCallback() {
     this.hide(this.sectionState);
     this.hide(this.sectionFires);
-    this.setupEventListeners();
+
+    if (this.form) {
+      this.form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        this.handleFormSubmit(e);
+      });
+    }
+
+    for (const checkbox of this.discussionCheckboxes) {
+      checkbox.addEventListener("change", (e) => {
+        this.handleCheckboxChange(e);
+      });
+    }
   }
   hide = (element) => {
     element.classList.add("hidden");
+  };
+
+  show = (element) => {
+    element.classList.remove("hidden");
+  };
+
+  handleFormSubmit = async (e) => {
+    // Handle form submission logic here
+    const formData = new FormData(e.target);
+    console.log("Form data:", Object.fromEntries(formData));
+  };
+  handleCheckboxChange = (e) => {
+    const { checked, value } = e.target;
+
+    switch (value) {
+      case "state":
+        checked ? this.show(this.sectionState) : this.hide(this.sectionState);
+        break;
+      case "fires":
+        checked ? this.show(this.sectionFires) : this.hide(this.sectionFires);
+        break;
+    }
   };
 }
 
