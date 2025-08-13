@@ -675,7 +675,8 @@ function change_consensus_topic(canvas, topic_index) {
           let y = ellipse_radius + dot.ry * (ctx.canvas.height-ellipse_radius*2);
           let color = dot.color;
 
-          let er = ellipse_radius * (1 + 1-dot.copacity);
+          // let er = ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
+          let er = ellipse_radius;
 
           ctx.save();
           ctx.beginPath();
