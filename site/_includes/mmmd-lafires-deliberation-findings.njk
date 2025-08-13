@@ -159,6 +159,17 @@ div.findings-discussions-topic-result {
   text-align: center;
 }
 
+div#findings-consensus-sentiment-chart-dataviz-container {
+  width: 100%;       /* Take up the available width */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+canvas#findings-consensus-sentiment-chart-dataviz-canvas {
+  width: 100%;       /* Scale to container's width */
+  height: auto;      /* Keep aspect ratio */
+  display: block;    /* Remove inline spacing */
+}
 
 .data-viz-2-labels {
   display: flex;
@@ -332,7 +343,7 @@ section#partners.deliberation-partners {
             <div class="findings-consensus-intro">
               {{ modules.findings_consensus_watch_intro.content | safe }}
             </div>
-            <div class="findings-consensus-sentiment-chart-title test-margins style-strong-body-text">
+            <div id="findings-consensus-sentiment-chart-title" class="findings-consensus-sentiment-chart-title test-margins style-strong-body-text">
             {{ modules.findings_consensus_watch_explore.label_1 | safe }}
             </div>
           </div>
@@ -340,7 +351,7 @@ section#partners.deliberation-partners {
 
 
         <div class="findings-consensus-sentiment-chart">
-          <div class="test-dataviz test-margins">data-viz-1</div>
+          <div id="findings-consensus-sentiment-chart-dataviz-container" class="test-dataviz test-margins"><canvas id="findings-consensus-sentiment-chart-dataviz-canvas" width="1200" height="400"></canvas></div>
 
 
           <div class="data-viz-1-labels">
@@ -589,7 +600,112 @@ section#partners.deliberation-partners {
 
 
 <script>
+let voteData = null;
+
+function render_consensus_topic(canvas, topic_index) {
+    console.log("render_topic", topic_index);
+
+
+    let topic_names = voteData['topics'];
+    let long_topic_name = (topic_index + 1) + ". " + topic_names[topic_index][1];
+    document.getElementById('findings-consensus-sentiment-chart-title').innerHTML = long_topic_name;
+
+    let userRecs = voteData['user_recs'];
+
+    ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
+
+    // For each user record, render an ellipse
+    let ellipse_radius = 10;
+    let bandWidth = ctx.canvas.width / 7;
+    let adj_band = bandWidth - ellipse_radius*2;
+
+    fUserRecords.forEach(rec => {
+
+
+        // rec.v is a string, convert to int
+        let likert = rec.v
+        // Clamp likert to [1,7]
+        if (likert < 1) likert = 1;
+        if (likert > 7) likert = 7;
+
+        // Calculate x position: likert 1-7 mapped evenly across the width
+        // Center ellipses in each band
+        let nbr_users = voteData && voteData.nbr_users ? voteData.nbr_users : 1;
+
+
+        let x = bandWidth * (likert - 0.5);
+
+
+        x_offset = rec.rx * adj_band - adj_band / 2;
+        x += x_offset;
+
+
+        // y position: random within the band height, with some padding
+        // The height should be uid/nbr_users
+        let y = ellipse_radius + rec.ry * (ctx.canvas.height-ellipse_radius*2);
+
+        // Color: use voteData.vote_colors if available, else fallback
+        let color = voteData && voteData.vote_colors ? voteData.vote_colors[likert] : "#1f77b4";
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.ellipse(x, y, ellipse_radius, ellipse_radius, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        {# ctx.globalAlpha = 0.5; #}
+        ctx.fill();
+        ctx.restore();
+    });
+}
+
+function setup_consensus_chart() {
+    console.log("voteData record 0", voteData['user_recs'][0]);
+    const canvas = document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
+    canvas.width = 1500;
+    canvas.height = 310;
+
+    let userRecs = voteData['user_recs'];
+
+    userRecs.forEach(rec => {
+        rec.rx = Math.random();
+        rec.ry = rec.uid / voteData.nbr_users;
+    });
+
+    // Fill the canvas with white
+
+    let   topic_number = 0;
+
+    render_consensus_topic(canvas, topic_number);
+
+    setInterval(() => {
+        topic_number++;
+        if (topic_number >= voteData.topics.length) {
+            topic_number = 0;
+        }
+        render_consensus_topic(canvas, topic_number);
+    }, 1000);
+
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+
+
+    fetch("/public/data/lafires_voting_data_v1.json", {})
+    .then(response => response.json())
+    .then(data => {
+      // console.log("Data fetched:", data);
+      voteData = data;
+      setup_consensus_chart();
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+    });
+
+
 
 });
 
