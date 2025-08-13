@@ -2,6 +2,17 @@
 {% block content %}
 
 <style>
+div.center-body {
+   text-align: center;
+   max-width: 772px;
+}
+
+div.center-container {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
 
 div.findings-narrative-step {
   display: flex;
@@ -10,10 +21,18 @@ div.findings-narrative-step {
   height: 300px;
 }
 
+div.findings-discussions-topic-description {
+}
+
+div.findings-discussions-topic-result {
+  margin-left: 30px;
+}
+
 .findings-narrative-top-options-tally-list {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  justify-content: center;
 }
 
 .findings-narrative-tally-box {
@@ -27,6 +46,45 @@ div.findings-narrative-step {
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
+
+.findings-top-discussions-tally-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.findings-top-discussions-tally-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 100px;
+  padding: 1rem 0.5rem;
+  background: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.findings-top-discussions-picker-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.findings-top-discussions-picker-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 100px;
+  padding: 1rem 0.5rem;
+  background: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+
+
 
 .option-total {
   font-size: 2rem;
@@ -59,7 +117,125 @@ div.findings-narrative-step {
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
+.ringchart-legend {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+}
 
+.test-margins {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.test-dataviz {
+   width: 100%;
+   height: 200px;
+   background-color: #EEE;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.data-viz-1-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.data-viz-1-label:first-child {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.data-viz-1-label:last-child {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.data-viz-1-label {
+  flex: 1;
+  text-align: center;
+}
+
+
+.data-viz-2-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.data-viz-2-label:first-child {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.data-viz-2-label:last-child {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.data-viz-2-label {
+  flex: 1;
+  text-align: center;
+}
+
+.topic-comments-scroller {
+   width: 100%;
+   height: 400px;
+   background-color: #EEE;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+
+.test-ringchart {
+  width: 100%;
+  height: 400px;
+  background-color: #EEE;
+}
+
+.ring-chart-legend-tally {
+  font-weight: 700;
+  font-size: 30px;
+}
+.ring-chart-legend-tally span.total {
+  font-weight: 900;
+  font-size: 37px;
+}
+
+section#partners.deliberation-partners {
+  background-color: #F6F7FA;
+}
+
+.style-strong-body-text {
+  font-weight: 600;
+  font-size: 23px;
+}
+.style-strong-small-body-text {
+  font-weight: 600;
+  font-size: 18px;
+}
+.style-small-body-text {
+  font-weight: 400;
+  font-size: 18px;
+}
+.style-body-text {
+  font-weight: 400;
+  font-size: 23px;
+}
+.style-callout-text {
+  font-weight: 600;
+  font-size: 20px;
+}
+.upper-divider {
+   border-top: 2px solid #EEE;
+}
+.lower-divider {
+   border-bottom: 2px solid #EEE;
+}
 
 </style>
 
@@ -78,14 +254,18 @@ div.findings-narrative-step {
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="findings-narrative-step-1 findings-narrative-step">
-          {{ modules.findings_narrative_step_1.content | safe }}
-        </div>
-        <div class="findings-narrative-step-2 findings-narrative-step">
-          {{ modules.findings_narrative_step_2.content | safe }}
-        </div>
-        <div class="findings-narrative-step-3 findings-narrative-step">
-          {{ modules.findings_narrative_step_3.content | safe }}
+        <div class="center-container">
+          <div class="center-body">
+            <div class="findings-narrative-step-1 findings-narrative-step ">
+              {{ modules.findings_narrative_step_1.content | safe }}
+            </div>
+            <div class="findings-narrative-step-2 findings-narrative-step ">
+              {{ modules.findings_narrative_step_2.content | safe }}
+            </div>
+            <div class="findings-narrative-step-3 findings-narrative-step ">
+              {{ modules.findings_narrative_step_3.content | safe }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -96,33 +276,45 @@ div.findings-narrative-step {
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="findings-narrative-top-options-title">
-          <h2>{{ modules.findings_narrative_top_options.title_h2 | safe }}</h2>
-        </div>
-        <div class="findings-narrative-top-options-tally-list">
-          <div class="findings-narrative-tally-box">
-            <div class="option-total">{{ modules.findings_narrative_top_options.value_1 }}</div>
-            <div class="option-label">{{ modules.findings_narrative_top_options.label_1 }}</div>
+        <div class="center-container">
+          <div class="center-body">
+            <div class="findings-narrative-top-options-title">
+              <h2>{{ modules.findings_narrative_top_options.title_h2 | safe }}</h2>
+            </div>
+            <div class="findings-narrative-top-options-tally-list  test-margins">
+              <div class="findings-narrative-tally-box">
+                <div class="option-total">{{ modules.findings_narrative_top_options.value_1 }}</div>
+                <div class="option-label">{{ modules.findings_narrative_top_options.label_1 }}</div>
+              </div>
+              <div class="findings-narrative-tally-box">
+                <div class="option-total">{{ modules.findings_narrative_top_options.value_2 }}</div>
+                <div class="option-label">{{ modules.findings_narrative_top_options.label_2 }}</div>
+              </div>
+              <div class="findings-narrative-tally-box">
+                <div class="option-total">{{ modules.findings_narrative_top_options.value_3 }}</div>
+                <div class="option-label">{{ modules.findings_narrative_top_options.label_3 }}</div>
+              </div>
+            </div>
+            <div class="findings-narrative-top-options-subtitle">
+              <h2>{{ modules.findings_narrative_top_options.subtitle_h2 | safe }}</h2>
+            </div>
           </div>
-          <div class="findings-narrative-tally-box">
-            <div class="option-total">{{ modules.findings_narrative_top_options.value_2 }}</div>
-            <div class="option-label">{{ modules.findings_narrative_top_options.label_2 }}</div>
-          </div>
-          <div class="findings-narrative-tally-box">
-            <div class="option-total">{{ modules.findings_narrative_top_options.value_3 }}</div>
-            <div class="option-label">{{ modules.findings_narrative_top_options.label_3 }}</div>
-          </div>
         </div>
-        <div class="findings-narrative-top-options-subtitle">
-          <h2>{{ modules.findings_narrative_top_options.subtitle_h2 | safe }}</h2>
-        </div>
-        <div class="findings-narrative-top-options-options-list">
+
+        <div class="findings-narrative-top-options-options-list  test-margins">
           {% for i in range(1, modules.findings_narrative_top_options.nbr_options + 1) %}
           <div class="findings-narrative-top-options-option-box">
-            <div class="option-label">{{ modules.findings_narrative_top_options["option_" + i + "_label"] }}</div>
-            {# <div class="option-description">{{ modules.findings_narrative_top_options["option_" + i + "_description"] }}</div> #}
+            <div class="option-label">{{ modules.findings_narrative_top_options["option_label_" + i] }}</div>
           </div>
           {% endfor %}
+        </div>
+
+        <div class="center-container">
+          <div class="center-body">
+            <div class="findings-narrative-top-options-followup-text">
+              <div class="option-description">{{ modules.findings_narrative_top_options.followup_text }}</div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -134,17 +326,48 @@ div.findings-narrative-step {
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="findings-consensus-intro">
-          {{ modules.findings_consensus_watch_intro.content | safe }}
+
+        <div class="center-container">
+          <div class="center-body">
+            <div class="findings-consensus-intro">
+              {{ modules.findings_consensus_watch_intro.content | safe }}
+            </div>
+            <div class="findings-consensus-sentiment-chart-title test-margins style-strong-body-text">
+            {{ modules.findings_consensus_watch_explore.label_1 | safe }}
+            </div>
+          </div>
         </div>
-        <div class="findings-consensus-sentiment-chart-title">
-         {{ modules.findings_consensus_watch_explore.label_1 | safe }}
-        </div>
+
+
         <div class="findings-consensus-sentiment-chart">
+          <div class="test-dataviz test-margins">data-viz-1</div>
+
+
+          <div class="data-viz-1-labels">
+            <div class="data-viz-1-label">
+              {{ modules.findings_consensus_sentiment_chart.label_1 }}
+            </div>
+            <div class="data-viz-1-label">
+              {{ modules.findings_consensus_sentiment_chart.label_2 }}
+            </div>
+            <div class="data-viz-1-label">
+              {{ modules.findings_consensus_sentiment_chart.label_3 }}
+            </div>
+          </div>
+
+
+
         </div>
-        <div class="findings-consensus-outro">
-          {{ modules.findings_consensus_watch_explore.content | safe }}
+
+        <div class="center-container">
+          <div class="center-body">
+            <div class="findings-consensus-outro test-margins">
+              {{ modules.findings_consensus_watch_explore.content | safe }}
+            </div>
+          </div>
         </div>
+
+
       </div>
     </div>
   </div>
@@ -163,41 +386,100 @@ div.findings-narrative-step {
         </div>
       </div>
       <div class="col-lg-4">
-        Overall, Eaton, Palisades
+        <div class="findings-top-discussions-picker-list">
+          <div class="findings-top-discussions-picker-box">
+            <div class="option-label">{{ modules.findings_top_discussions.picker_label_1 }}</div>
+          </div>
+          <div class="findings-top-discussions-picker-box">
+            <div class="option-label">{{ modules.findings_top_discussions.picker_label_2 }}</div>
+          </div>
+          <div class="findings-top-discussions-picker-box">
+            <div class="option-label">{{ modules.findings_top_discussions.picker_label_3 }}</div>
+          </div>
+        </div>
+
+
+
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="findings-discussions-topic-title">
-          <h3>{{ modules.discussion_1.title_h3 | safe }}</h3>
+    <div class="topic-section upper-divider test-margins">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="findings-discussions-topic-title">
+            <h3>{{ modules.discussion_1.title_h3 | safe }}</h3>
+          </div>
+          <div class="findings-discussions-topic-description style-small-body-text">
+            {{ modules.discussion_1.topic_description | safe }}
+          </div>
+          <div class="findings-discussions-topic-result test-margins">
+            {{ modules.discussion_1.topic_result | safe }}
+          </div>
         </div>
-        <div class="findings-discussions-topic-description">
-          {{ modules.discussion_1.topic_description | safe }}
-        </div>
-        <div class="findings-discussions-topic-result">
-          <br>
-          {{ modules.discussion_1.topic_result | safe }}
+        <div class="col-lg-4">
+          <div class="findings-top-discussions-tally-list">
+            <div class="findings-top-discussions-tally-box">
+              <div class="option-total">{{ modules.discussion_1.value_1 }}</div>
+              <div class="option-label">{{ modules.discussion_1.label_1 }}</div>
+            </div>
+            <div class="findings-top-discussions-tally-box">
+              <div class="option-total">{{ modules.discussion_1.value_2 }}</div>
+              <div class="option-label">{{ modules.discussion_1.label_2 }}</div>
+            </div>
+            <div class="findings-top-discussions-tally-box">
+              <div class="option-total">{{ modules.discussion_1.value_3 }}</div>
+              <div class="option-label">{{ modules.discussion_1.label_3 }}</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-4">
-        Participants, votes, comments
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="style-strong-body-text test-margins">
+            {{ modules.topic_data_vis.title }}
+          </div>
+          <div>
+            {{ modules.topic_data_vis.desc }}
+          </div>
+          <div class="findings-top-topics-data-viz test-dataviz test-margins">
+            data-viz-2
+          </div>
+          <div class="data-viz-2-labels">
+            <div class="data-viz-2-label">
+              {{ modules.findings_consensus_sentiment_chart.label_1 }}
+            </div>
+            <div class="data-viz-2-label">
+              {{ modules.findings_consensus_sentiment_chart.label_2 }}
+            </div>
+            <div class="data-viz-2-label">
+              {{ modules.findings_consensus_sentiment_chart.label_3 }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="test-margins topic-comments-scroller-label style-strong-body-text">
+            {{ modules.topic_comments_scroller.label }}
+          </div>
+          <div class="test-margins topic-comments-scroller-desc">
+            <i>{{ modules.topic_comments_scroller.desc }}</i>
+          </div>
+          <div class="topic-comments-scroller">
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="findings-top-topics-data-viz">
-          <br>
-          data-visualization
-        </div>
-      </div>
+    <div class="topic-section test-margins upper-divider">
+      Topic 2 expander...
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="findings-remainder">
-          <br>
-          more-to-come
-        </div>
-      </div>
+    <div class="topic-section test-margins upper-divider">
+      Topic 3 expander...
+    </div>
+    <div class="topic-section test-margins upper-divider">
+      Topic 4 expander...
+    </div>
+    <div class="topic-section test-margins upper-divider lower-divider">
+      Topic 5 expander...
     </div>
   </div>
 </section>
@@ -205,39 +487,44 @@ div.findings-narrative-step {
 <section id="findings-ring-chart-section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
-        <h3>ring-chart goes here</h3>
+      <div class="col-lg-6 ringchart-chart">
+        <div class="test-ringchart">ring-chart</div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 ringchart-legend">
         <div class="ring-chart-legend-tally">
-          <span>{{ modules.ring_chart.legend_header_1_tally | safe }}</span>
+          <span class="total">{{ modules.ring_chart.legend_header_1_tally | safe }}</span>
           <span>{{ modules.ring_chart.legend_header_h3_1 | safe }}</span>
         </div>
-        <div class="ring-chart-legend-explain">
-          <br>
+        <div class="ring-chart-legend-explain test-margins">
           {{ modules.ring_chart.legend_copy_1 | safe }}
         </div>
       </div>
-      <div class="col-lg-12">
-          {{ modules.ring_chart.content | safe }}
+      <div class="col-lg-12 test-margins">
+          <div class="center-container">
+            <div class="test-margins center-body">
+            {{ modules.ring_chart.content | safe }}
+            </div>
+          </div>
       </div>
     </div>
   </div>
 </section>
 
 <section id="findings-signup-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-          {{ modules.signup_plea.content | safe }}
-      </div>
-      <div class="col-lg-12">
-        <div class="signup-button">
-          <a href="#">{{ modules.signup_plea.button_text | safe }}</a>
+    <div class="center-container">
+      <div class="container center-body">
+        <div class="row">
+          <div class="col-lg-12">
+              {{ modules.signup_plea.content | safe }}
+          </div>
+          <div class="col-lg-12">
+            <div class="signup-button">
+              <a href="#">{{ modules.signup_plea.button_text | safe }}</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 <section id="what-were-doing">
@@ -266,7 +553,7 @@ div.findings-narrative-step {
     </div>
 </section>
 
-<section id="partners" class="action-hero">
+<section id="partners" class="action-hero deliberation-partners">
   <div class="container">
     {{ modules.partners.content | safe }}
     <engca-partner-flex>

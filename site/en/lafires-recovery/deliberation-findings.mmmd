@@ -48,22 +48,18 @@ id: findings_narrative_top_options
 title_h2: And you weighed in...
 label_1: Participants
 label_2: Votes
-label_3: California는omments
+label_3: Comments
 value_1: XXX
 value_2: XXX
 value_3: XXX
 subtitle_h2: "to identify the overall top 5 options:"
 nbr_options: 5
-option_1_label: Underground power lines and equipment safety
-option_1_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-option_2_label: Enhanced water infrastructure for fire protection
-option_2_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-option_3_label: Resilient emergency communication networks
-option_3_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-option_4_label: Expanded construction training programs
-option_4_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-option_5_label: Comprehensive homeowner education program
-option_5_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+option_label_1: Underground power lines and equipment safety
+option_label_2: Enhanced water infrastructure for fire protection
+option_label_3: Resilient emergency communication networks
+option_label_4: Expanded construction training programs
+option_label_5: Comprehensive homeowner education program
+followup_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ----
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -109,7 +105,7 @@ id: discussion_1
 comment: there will be 5 dicsussion topics
 title_h3: Put power lines underground
 topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
-topic_result: On this topic, the community was united. The discussion brought about some real solutions and ideas that will be considered.
+topic_result: On this topic, the community was united. The discussion brought about some real solutions and ideas that will be considered. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 nbr_comments: 3
 comment_1: Homeowners should be able to use Natural gas. It's more reliable and affordable than all electric mandates.
 comment_2: All housing should be built with no gas, we are supposed to be all electric in Los Angeles by 2035 anyway [...] so why invest in repairing gas infrastructure that will be obsolete/stranded assets soon
@@ -120,6 +116,12 @@ label_3: comments
 value_1: XXX
 value_2: XXX
 value_3: XXX
+----
+
+----
+id: topic_comments_scroller 
+label: Comments on this topic
+desc: Scroll to see the comments about this topic (shown in their original language)
 ----
 
 ----
@@ -139,6 +141,9 @@ group_label_5: Somewhat supportive
 group_label_6: Supportive
 group_label_7: Strongly supportive
 ----
+
+
+
 
 ----
 id: ring_chart
