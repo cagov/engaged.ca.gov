@@ -1,0 +1,236 @@
+---
+title: Phase 2 report title
+description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
+layout: mmmd-lafires-deliberation-findings
+parentid: lafires-recovery
+keywords:
+  - Los Angeles
+  - fires
+  - recovery
+tags:
+  - pages
+---
+
+
+----
+id: findings_overview
+----
+
+# Phase 2 report title
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+
+----
+id: findings_narrative_step_1
+----
+
+## We heard your opinions and solutions...
+
+----
+id: findings_narrative_step_2
+----
+
+## A team of experts used their disaster recovery experience, data science, and AI to narrow the topics for discussion
+
+Narrowed down to the set of 19 priority options with anchor link to partners at bottom
+
+----
+id: findings_narrative_step_3
+----
+
+## Then, we presented these options to the community for further deliberation
+
+Our goal was to hear directly from the community to best prioritize what items we should pursue etc
+
+----
+id: findings_narrative_top_options
+title_h2: And you weighed in...
+label_1: Participants
+label_2: Votes
+label_3: California는omments
+value_1: XXX
+value_2: XXX
+value_3: XXX
+subtitle_h2: "to identify the overall top 5 options:"
+nbr_options: 5
+option_1_label: Underground power lines and equipment safety
+option_1_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+option_2_label: Enhanced water infrastructure for fire protection
+option_2_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+option_3_label: Resilient emergency communication networks
+option_3_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+option_4_label: Expanded construction training programs
+option_4_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+option_5_label: Comprehensive homeowner education program
+option_5_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+----
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+----
+id: findings_consensus_watch_intro
+----
+## Watch how the community reached consensus
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+----
+id: findings_consensus_sentiment_chart
+nbr_labels: 3
+label_1: Strongly oppose
+label_2: Neutral
+label_3: Strongly support
+----
+
+Unused content
+
+----
+id: findings_consensus_watch_explore
+label_1: Increased housing density and expedited permits
+----
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+----
+id: findings_top_discussions
+title_h2: Explore our top 5 discussions
+nbr_picker_items: 3
+picker_label_1: Overall
+picker_label_2: Eaton
+picker_label_3: Palisades
+----
+
+The fire zones voted and not everyone was aligned. Toggle between the fire zones to see how votes from the Palisades differed from the Eaton fire zone.
+
+----
+id: discussion_1
+comment: there will be 5 dicsussion topics
+title_h3: Put power lines underground
+topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
+topic_result: On this topic, the community was united. The discussion brought about some real solutions and ideas that will be considered.
+nbr_comments: 3
+comment_1: Homeowners should be able to use Natural gas. It's more reliable and affordable than all electric mandates.
+comment_2: All housing should be built with no gas, we are supposed to be all electric in Los Angeles by 2035 anyway [...] so why invest in repairing gas infrastructure that will be obsolete/stranded assets soon
+comment_3: Homeowners should be able to use Natural gas. It's more reliable and affordable than all electric mandates.
+label_1: Participants
+label_2: Votes
+label_3: comments
+value_1: XXX
+value_2: XXX
+value_3: XXX
+----
+
+----
+id: topic_data_vis
+title: Data visualization
+desc: Each dot represents one vote made on this topic. Similar votes have their own color.
+----
+
+----
+id: conversation_groups
+nbr_groups: 7
+group_label_1: Strongly opposed
+group_label_2: Opposed
+group_label_3: Somewhat opposed
+group_label_4: Neutral
+group_label_5: Somewhat supportive
+group_label_6: Supportive
+group_label_7: Strongly supportive
+----
+
+----
+id: ring_chart
+nbr_labels: 3
+label_1: Support
+label_2: Not sure
+label_3: Opposed
+legend_header_1_tally: XX
+legend_header_h3_1: "of participants agree with the overall top 5 solutions"
+legend_header_2_tally: XX
+legend_header_h3_2: "of participants neither agree nor disagree with the overall top 5 solutions"
+legend_header_3_tally: XX
+legend_header_h3_3: "of participants disagree with the overall top 5 solutions"
+legend_copy_1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+legend_copy_2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+legend_copy_3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+----
+
+## This is deliberative democracy in action.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+----
+id: signup_plea
+button_text: Learn about next steps
+----
+## Sign up to remain engaged in important work
+
+Learn more about our community partner XYZ Project
+
+----
+id: findings_how_we_are_responding
+buttonText: Show more
+buttonTextClose: Close
+old_id: findings_what_were_doing
+----
+
+## How we’re responding to community needs
+
+Residents shared what they need most to recover and rebuild their communities. <a href="#discussing-tough-issues">We found that some issues need more discussion</a>. However, we also found issues we can act on now.
+
+Below is a summary of how we are responding to what residents said they need most. 
+
+Stay tuned for updates on our progress. 
+
+
+----
+id: findings_how_we_are_responding_list
+title: Opportunities to create new support programs
+nbr_items: 9
+item_1_title: 'Mental health support: creating shared community resource spaces'
+item_1_text: As a result of the early findings and the feedback from participants, mental health support is readily available for anyone in need. There are many resources available now, such as immediate assistance, ongoing support, as well as care for all age groups and language needs. Those resources can be found <a href="https://www.ca.gov/lafires/help-for-you/health-and-safety/#Mental-health-support">here</a>.
+item_2_title: 'Beneath the surface: our communities depend on soil we can trust'
+item_2_text: Residents want soil testing to make sure they are safe from toxic chemicals after the fires. The federal government has declined comprehensive soil testing. While the state, community, and universities are proactively testing soil, confusion about who is responsible persists, absent federal coordination.
+item_3_title: 'When minutes matter: reaching everyone in crisis'
+item_3_text: Residents want one emergency alert system that works for everyone. The various systems in use now don't work together well and don't reach all residents. People suggest working with local community groups to help evacuate areas during emergencies.
+item_4_title: 'Bridging the gap: financial support that reaches everyone'
+item_4_text: Residents want direct financial assistance for all wildfire victims. They don’t think income or immigration status should affect eligibility. Right now, help mainly comes from FEMA, insurance companies, and nonprofits. There is no comprehensive state-funded grant program. An emergency assistance program funded by the state could fill in the gaps.
+item_5_title: 'Renters in recovery: a place at the table'
+item_5_text: Residents seek special protections for renters. They want to prevent forced evictions or displacement and financial struggles. There are some protections against predatory investors However, support for renters’ specific needs is limited, and there may be a lack of awareness of state programs that do support their needs.
+item_6_title: 'Reimagining insurance: coverage we can count on'
+item_6_text: Residents said insurance companies should offer adequate coverage in fire-prone areas. They said prices should be fair with simplified claims processes. Recent changes by the Insurance Commissioner have raised coverage limits and added discounts. Residents may need clearer information about these options.
+item_7_title: 'Rebuilding pathways: simplifying the journey home'
+item_7_text: Residents want an easier permit process and less red tape for rebuilding. Executive orders have already streamlined rebuilding. But residents don’t seem to know about these changes or how to use them with their local governments.
+item_8_title: 'Communities united: empowering neighbors against fire'
+item_8_text: Residents agree that they want fire prevention programs that teach and help communities. California has programs in place to address this. Residents may need more local resources, and education to use them well. There may also be a need for more funding to effectively implement the programs.
+item_9_title: 'Building to endure: homes that withstand the flames'
+item_9_text: Residents want to rebuild with fire-resistant materials. Yet, they feel confused about how to start. They think both individual homes and whole communities need attention. Fire-resistant building rules are in place, but residents may need more support. The state could help them by offering education, incentives, and further assistance.
+----
+
+----
+id: findings_how_we_did_the_analysis
+----
+
+### How we did the analysis
+
+<div class="sub-head">For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">check out our detailed methodology and comments analysis</a>.</div>
+
+We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
+
+We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
+
+**Sample prompts**
+
+“I would like you to analyze a set of qualitative survey responses using extended thinking.” 
+
+“Start by doing an initial exploration of the data: First, read through the entire dataset without categorizing or labeling. Note your immediate observations and impressions about what stands out to you. Identify recurring words, phrases, and sentiments that appear across multiple responses. Share what surprised you or caught your attention in this initial review.”
+
+----
+id: partners
+----
+
+## Our partners
+
+We designed this platform to be non-partisan. The state's Government Operations Agency and Office of Data and Innovation developed it. Other partners and advisors for this initiative are:
