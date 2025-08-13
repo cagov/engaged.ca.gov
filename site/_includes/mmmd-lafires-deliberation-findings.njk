@@ -601,65 +601,96 @@ section#partners.deliberation-partners {
 
 <script>
 let voteData = null;
+let user_dots = [];
+let bandWidth = 0, adj_band = 0;
+let ellipse_radius = 10;
 
-function render_consensus_topic(canvas, topic_index) {
+function reset_user_dots(topic_index) {
+    let userRecs = voteData['user_recs'];
+    let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
+
+    let encountered_uids = {};
+
+    fUserRecords.forEach(rec => {
+      let uid = rec.uid;
+      encountered_uids[uid] = true;
+      let user_dot = user_dots[uid];
+
+      let likert = rec.v;
+      // Clamp likert to [1,7]
+      if (likert < 1) likert = 1;
+      if (likert > 7) likert = 7;
+      let x = bandWidth * (likert - 0.5);
+      x_offset = user_dot.rx * adj_band - adj_band / 2;
+      x += x_offset;
+      user_dot.tx = x;
+      user_dot.topacity = 1;
+      let color = voteData && voteData.vote_colors ? voteData.vote_colors[likert] : "#1f77b4";
+      user_dot.color = color;
+
+      if (user_dot.copacity < 0.1) {
+        user_dot.cx = user_dot.tx;
+      }
+    });
+
+    // For each user that is not in the fUserRecords, set the opacity to 0
+    for (let uid = 0; uid < voteData.nbr_users; uid++) {
+      if (!encountered_uids[uid]) {
+        user_dots[uid].topacity = 0;
+        user_dots[uid].tx = user_dots[uid].cx;
+      }
+    }
+}
+
+
+let render_handle = null;
+
+function change_consensus_topic(canvas, topic_index) {
     console.log("render_topic", topic_index);
+    ctx = canvas.getContext('2d');
+    bandWidth = ctx.canvas.width / 7;
+    adj_band = bandWidth - ellipse_radius*2;
+
+    if (render_handle) {
+      clearInterval(render_handle);
+    }
 
 
+    reset_user_dots(topic_index);
     let topic_names = voteData['topics'];
     let long_topic_name = (topic_index + 1) + ". " + topic_names[topic_index][1];
     document.getElementById('findings-consensus-sentiment-chart-title').innerHTML = long_topic_name;
 
-    let userRecs = voteData['user_recs'];
+    function render_dots() {
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx = canvas.getContext('2d');
+      user_dots.forEach(dot => {
+        if (true) {
+          dot.cx += (dot.tx - dot.cx) * 0.05;
+          dot.copacity += (dot.topacity - dot.copacity) * 0.1;
 
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+          let x = dot.cx;
 
-    let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
+          let y = ellipse_radius + dot.ry * (ctx.canvas.height-ellipse_radius*2);
+          let color = dot.color;
 
-    // For each user record, render an ellipse
-    let ellipse_radius = 10;
-    let bandWidth = ctx.canvas.width / 7;
-    let adj_band = bandWidth - ellipse_radius*2;
+          let er = ellipse_radius * (1 + 1-dot.copacity);
 
-    fUserRecords.forEach(rec => {
+          ctx.save();
+          ctx.beginPath();
+          ctx.ellipse(x, y, er, er, 0, 0, 2 * Math.PI);
+          ctx.fillStyle = color;
+          ctx.globalAlpha = dot.copacity;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+          ctx.restore();
+        }
 
+      });
+    }
 
-        // rec.v is a string, convert to int
-        let likert = rec.v
-        // Clamp likert to [1,7]
-        if (likert < 1) likert = 1;
-        if (likert > 7) likert = 7;
-
-        // Calculate x position: likert 1-7 mapped evenly across the width
-        // Center ellipses in each band
-        let nbr_users = voteData && voteData.nbr_users ? voteData.nbr_users : 1;
-
-
-        let x = bandWidth * (likert - 0.5);
-
-
-        x_offset = rec.rx * adj_band - adj_band / 2;
-        x += x_offset;
-
-
-        // y position: random within the band height, with some padding
-        // The height should be uid/nbr_users
-        let y = ellipse_radius + rec.ry * (ctx.canvas.height-ellipse_radius*2);
-
-        // Color: use voteData.vote_colors if available, else fallback
-        let color = voteData && voteData.vote_colors ? voteData.vote_colors[likert] : "#1f77b4";
-
-        ctx.save();
-        ctx.beginPath();
-        ctx.ellipse(x, y, ellipse_radius, ellipse_radius, 0, 0, 2 * Math.PI);
-        ctx.fillStyle = color;
-        {# ctx.globalAlpha = 0.5; #}
-        ctx.fill();
-        ctx.restore();
-    });
+    render_handle = setInterval(render_dots, 40);
 }
 
 function setup_consensus_chart() {
@@ -670,24 +701,34 @@ function setup_consensus_chart() {
 
     let userRecs = voteData['user_recs'];
 
-    userRecs.forEach(rec => {
-        rec.rx = Math.random();
-        rec.ry = rec.uid / voteData.nbr_users;
-    });
+    user_dots = [];
+
+    for (let uid = 0; uid < voteData.nbr_users; uid++) {
+        user_dots.push({
+            uid: uid,
+            rx: Math.random(),
+            ry: uid / voteData.nbr_users,
+            cx: 0,
+            tx: 0,
+            'color': '#fff',
+            copacity: 0, // current opacity
+            topacity: 0, // target opacity
+        });
+    }
 
     // Fill the canvas with white
 
     let   topic_number = 0;
 
-    render_consensus_topic(canvas, topic_number);
+    change_consensus_topic(canvas, topic_number);
 
     setInterval(() => {
         topic_number++;
         if (topic_number >= voteData.topics.length) {
             topic_number = 0;
         }
-        render_consensus_topic(canvas, topic_number);
-    }, 1000);
+        change_consensus_topic(canvas, topic_number);
+    }, 5000);
 
 }
 
