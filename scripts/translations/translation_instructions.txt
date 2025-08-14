@@ -1,0 +1,9 @@
+Do not translate label strings which precede colons (such as id: title:, etc.)
+
+Do not translate the id: in each block
+
+Do not translate the source_file: in each block
+
+Do not translate Markdown syntax characters (e.g. ## HEADLINE — translate the headline, but leave the ##)
+
+Do not translate the phrase “Engaged California”
