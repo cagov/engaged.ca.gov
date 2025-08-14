@@ -1,18 +1,46 @@
+/*
+Note: audienceId is referred to as list_id in the mailchimp API docs
+
+1. Get the Audience Id from the MailChimip UI
+
+    Audience Ids
+        Engaged Califonia:  61200a6dda
+        Government Efficiencies: 417d16b2c0
+        [SANDBOX] EngCA testing: 23461fc80f
+
+2. Get the categories.list_id
+    curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/[audienceId]/interest-categories/' --header "Authorization: Bearer [TOKEN]"
+
+    Interest category Ids
+        Engaged Califonia: 2a44a8fff7
+        Government Efficiencies: 9cd68bb129
+        [SANDBOX] EngCA testing: Participant choice: 29534fdf65
+
+3. Get the interest ids
+    curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/[audienceId]/interest-categories/[listid]/interests' --header "Authorization: Bearer [TOKEN]"
+
+API docs for interests https://mailchimp.com/developer/marketing/api/interests/
+
+ */
+
 const mailchimpConfig = {
   engca: {
     audience_name: "Engaged California",
     audience_id: "61200a6dda",
-    options: 1,
   },
   state: {
     audience_name: "EngCA - State Employees",
     audience_id: "417d16b2c0",
-    options: 2,
   },
   sandbox: {
     audience_name: "[SANDBOX] EngCA testing",
     audience_id: "23461fc80f",
-    options: 2,
+  },
+  interests: {
+    eaton: "1552878c1b",
+    palisades: "40c0f946cd",
+    stateNo: "",
+    stateYes: "0f531f3ce0",
   },
 };
 
@@ -45,13 +73,23 @@ class UnifiedForm extends window.HTMLElement {
   }
 
   getAudienceID = (data) => {
-    const audienceID = Object.keys(data).some(
-      (key) => key === "interest-state",
-    );
+    const audienceID = Object.values(data).some((value) => value === "state");
 
     return audienceID
       ? mailchimpConfig.state.audience_id
       : mailchimpConfig.engca.audience_id;
+  };
+
+  getInterests = (data) => {
+    const interests = {};
+
+    for (const [key, value] of Object.entries(data)) {
+      if (key.includes("interest-")) {
+        const interestId = mailchimpConfig.interests[value];
+        interests[interestId] = true;
+      }
+    }
+    return interests;
   };
 
   hide = (element) => {
@@ -63,12 +101,10 @@ class UnifiedForm extends window.HTMLElement {
   };
 
   handleFormSubmit = async (e) => {
-    // Handle form submission logic here
     const formData = new FormData(e.target);
     const calculatedData = Object.fromEntries(formData);
     calculatedData.audienceID = this.getAudienceID(calculatedData);
-
-    console.log("Calculated data:", calculatedData);
+    calculatedData.interests = this.getInterests(calculatedData);
   };
   handleCheckboxChange = (e) => {
     const { checked, value } = e.target;

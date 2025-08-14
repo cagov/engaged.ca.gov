@@ -1,0 +1,13 @@
+{#
+formKey - (string) key in form submission
+formValue - (string) value in form submission
+i18nkey - (String) The key of the text string as definited in i18n.js
+attributes - (String) Add a space separated list of attributes such as "checked required"
+#}
+
+{% macro data(formKey, formValue, i8nkey, attributes) %}
+    <label class="form-control-label form-checkbox-label" for="{{ formKey }}">
+        <input type="checkbox" class="form-check-input" id="{{ formKey }}" name="{{ formKey }}" value="{{ formValue }}" {{ attributes }}>
+        {{ i8nkey }}
+    </label>
+{% endmacro %}
