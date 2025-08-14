@@ -169,6 +169,19 @@ const translations = {
         "location": "Home",
         "status": "human_approved"
     },
+    "join-the-anonymous-conversation": {
+        "en": "Join the anonymous conversation",
+        "es": "Únase a la conversación anónima",
+        "ko": "익명 대화에 참여하세요",
+        "vi": "Tham gia cuộc trò chuyện ẩn danh",
+        "tl": "Sumali sa anonymous na usapan",
+        "zh-hans": "加入匿名对话",
+        "zh-hant": "加入匿名對話",
+        "fa": "به گفتگوی ناشناس بپیوندید",
+        "hy": "Միացեք անանուն զրույցին",
+        "location": "Home",
+        "status": "human_approved"
+    },
     "how-it-works-alt-1": {
         "en": "An icon of a group of people",
         "es": "Un icono de un grupo de personas.",
