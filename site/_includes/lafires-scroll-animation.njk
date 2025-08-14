@@ -42,9 +42,46 @@ let chart_data = null;
 
 gsap.to({}, {
     scrollTrigger: {
-      trigger: "#findings-consensus-sentiment-chart-dataviz-container",
-      start: "top bottom",
-      end: "+=0", // scroll range for animation
+      trigger: ".findings-narrative-step-1",
+      start: "center center",
+      end: "+=600", // scroll range for animation
+      scrub: true,
+      pin: true,
+    }
+  });
+gsap.to({}, {
+    scrollTrigger: {
+      trigger: ".findings-narrative-step-2",
+      start: "center center",
+      end: "+=600", // scroll range for animation
+      scrub: true,
+      pin: true,
+    }
+  });
+gsap.to({}, {
+    scrollTrigger: {
+      trigger: ".findings-narrative-step-3",
+      start: "center center",
+      end: "+=600", // scroll range for animation
+      scrub: true,
+      pin: true,
+    }
+  });
+gsap.to({}, {
+    scrollTrigger: {
+      trigger: "#findings-narrative-top-options",
+      start: "center center",
+      end: "+=900", // scroll range for animation
+      scrub: true,
+      pin: true,
+    }
+  });
+
+gsap.to({}, {
+    scrollTrigger: {
+      trigger: "#findings-consensus",
+      start: "center center",
+      end: "+=900", // scroll range for animation
       scrub: true,
       pin: true,
       onUpdate: (self) => {
