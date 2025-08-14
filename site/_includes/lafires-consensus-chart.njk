@@ -1,0 +1,161 @@
+<script>
+
+let consensus_vars = {
+  "user_dots": [],
+  "bandWidth": 0,
+  "adj_band": 0,
+  "ellipse_radius": 10,
+  "voteData": null,
+  "render_handle": null
+};
+
+
+// UTILS
+function mapv(v, in_min, in_max, out_min, out_max) {
+  return (v-in_min) * (out_max-out_min) / (in_max-in_min) + out_min;
+}
+
+function clamp(v, min, max) {
+  return Math.max(min, Math.min(v, max));
+}
+
+function compute_color(cx) {
+  let r = cx/1200;
+  let hue,sat,val;
+  val = 65;
+  if (r < 0.5) {
+    sat = mapv(r, 0.5, 0, 0, 60);
+  } else {
+    sat = mapv(r, 0.5, 1, 0, 60);
+  }
+  hue = clamp(mapv(r,0.45, 0.55, 0, 205), 0, 205);
+  return "hsl(" + hue + ", " + sat + "%, " + val + "%)";
+}
+
+function reset_user_dots(topic_index) {
+    let userRecs = consensus_vars.voteData['user_recs'];
+    let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
+
+    let encountered_uids = {};
+
+    fUserRecords.forEach(rec => {
+      let uid = rec.uid;
+      encountered_uids[uid] = true;
+      let user_dot = consensus_vars.user_dots[uid];
+
+      let likert = rec.v;
+      // Clamp likert to [1,7]
+      if (likert < 1) likert = 1;
+      if (likert > 7) likert = 7;
+      let x = consensus_vars.bandWidth * (likert - 0.5);
+      x_offset = user_dot.rx * consensus_vars.adj_band - consensus_vars.adj_band / 2;
+      x += x_offset;
+      user_dot.tx = x;
+      user_dot.topacity = 1;
+
+      if (user_dot.copacity < 0.1) {
+        user_dot.cx = user_dot.tx;
+      }
+    });
+
+    // For each user that is not in the fUserRecords, set the opacity to 0
+    for (let uid = 0; uid < consensus_vars.voteData.nbr_users; uid++) {
+      if (!encountered_uids[uid]) {
+        consensus_vars.user_dots[uid].topacity = 0;
+        consensus_vars.user_dots[uid].tx = consensus_vars.user_dots[uid].cx;
+      }
+    }
+}
+
+
+function change_consensus_topic(canvas, topic_index) {
+    // console.log("render_topic", topic_index);
+    ctx = canvas.getContext('2d');
+    consensus_vars.bandWidth = ctx.canvas.width / 7;
+    consensus_vars.adj_band = consensus_vars.bandWidth - consensus_vars.ellipse_radius*2;
+
+    if (consensus_vars.render_handle) {
+      clearInterval(consensus_vars.render_handle);
+    }
+
+
+    reset_user_dots(topic_index);
+    let topic_names = consensus_vars.voteData['topics'];
+    let long_topic_name = (topic_index + 1) + ". " + topic_names[topic_index][1];
+    document.getElementById('findings-consensus-sentiment-chart-title').innerHTML = long_topic_name;
+
+    function render_dots() {
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      consensus_vars.user_dots.forEach(dot => {
+        if (true) {
+          dot.cx += (dot.tx - dot.cx) * 0.05;
+          dot.copacity += (dot.topacity - dot.copacity) * 0.1;
+
+          let x = dot.cx;
+
+          let y = consensus_vars.ellipse_radius + dot.ry * (ctx.canvas.height-consensus_vars.ellipse_radius*2);
+          let color = compute_color(dot.cx);
+
+          // let er = consensus_vars.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
+          let er = consensus_vars.ellipse_radius;
+
+          ctx.save();
+          ctx.beginPath();
+          ctx.ellipse(x, y, er, er, 0, 0, 2 * Math.PI);
+          ctx.fillStyle = color;
+          ctx.globalAlpha = dot.copacity;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+          ctx.restore();
+        }
+
+      });
+    }
+
+    console.log("beginning to render dots");
+
+    consensus_vars.render_handle = setInterval(render_dots, 40);
+}
+
+function setup_consensus_chart(itsVoteData) {
+    consensus_vars.voteData = itsVoteData;
+    console.log("consensus_vars.voteData record 0", consensus_vars.voteData['user_recs'][0]);
+    const canvas = document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
+    canvas.width = 1500;
+    canvas.height = 310;
+
+    let userRecs = consensus_vars.voteData['user_recs'];
+
+    consensus_vars.user_dots = [];
+
+    for (let uid = 0; uid < consensus_vars.voteData.nbr_users; uid++) {
+        consensus_vars.user_dots.push({
+            uid: uid,
+            rx: Math.random(),
+            ry: uid / consensus_vars.voteData.nbr_users,
+            cx: 600,
+            tx: 0,
+            copacity: 0, // current opacity
+            topacity: 0, // target opacity
+        });
+    }
+
+    // Fill the canvas with white
+
+    let   topic_number = 0;
+
+    change_consensus_topic(canvas, 0);
+
+    setInterval(() => {
+        topic_number++;
+        if (topic_number >= consensus_vars.voteData.topics.length) {
+            topic_number = 0;
+        }
+        change_consensus_topic(canvas, topic_number);
+    }, 5000);
+
+}
+
+</script>

@@ -1,0 +1,130 @@
+<script>
+// data-viz 2, the topic chart 
+let topic_vars = {
+  "user_dots": [],
+  "bandWidth": 0,
+  "adj_band": 0,
+  "ellipse_radius": 10,
+  "voteData": null,
+  "render_handle": null
+};
+
+function reset_topics_user_dots(topic_index) {
+    let userRecs = topic_vars.voteData['user_recs'];
+    let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
+
+    let encountered_uids = {};
+
+    fUserRecords.forEach(rec => {
+      let uid = rec.uid;
+      encountered_uids[uid] = true;
+      let user_dot = topic_vars.user_dots[uid];
+
+      let likert = rec.v;
+      // Clamp likert to [1,7]
+      if (likert < 1) likert = 1;
+      if (likert > 7) likert = 7;
+      let x = topic_vars.bandWidth * (likert - 0.5);
+      x_offset = user_dot.rx * topic_vars.adj_band - topic_vars.adj_band / 2;
+      x += x_offset;
+      user_dot.tx = x;
+      user_dot.cx = x;
+      user_dot.topacity = 1;
+      user_dot.copacity = 1;
+
+      if (user_dot.copacity < 0.1) {
+        user_dot.cx = user_dot.tx;
+      }
+    });
+
+    // For each user that is not in the fUserRecords, set the opacity to 0
+    for (let uid = 0; uid < topic_vars.voteData.nbr_users; uid++) {
+      if (!encountered_uids[uid]) {
+        topic_vars.user_dots[uid].topacity = 0;
+        topic_vars.user_dots[uid].tx = topic_vars.user_dots[uid].cx;
+      }
+    }
+}
+
+
+
+function change_topic_topic(canvas, topic_index) {
+    // console.log("render_topic", topic_index);
+    ctx = canvas.getContext('2d');
+    topic_vars.bandWidth = ctx.canvas.width / 7;
+    topic_vars.adj_band = topic_vars.bandWidth - topic_vars.ellipse_radius*2;
+
+    if (topic_vars.render_handle) {
+      clearInterval(topic_vars.render_handle);
+    }
+
+
+    reset_topics_user_dots(topic_index);
+
+    function render_dots() {
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      topic_vars.user_dots.forEach(dot => {
+        if (true) {
+          dot.cx += (dot.tx - dot.cx) * 0.05;
+          dot.copacity += (dot.topacity - dot.copacity) * 0.1;
+
+          let x = dot.cx;
+
+          let y = topic_vars.ellipse_radius + dot.ry * (ctx.canvas.height-topic_vars.ellipse_radius*2);
+          let color = compute_color(dot.cx);
+
+          // let er = topic_vars.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
+          let er = topic_vars.ellipse_radius;
+
+          ctx.save();
+          ctx.beginPath();
+          ctx.ellipse(x, y, er, er, 0, 0, 2 * Math.PI);
+          ctx.fillStyle = color;
+          ctx.globalAlpha = dot.copacity;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+          ctx.restore();
+        }
+
+      });
+    }
+
+    render_dots();
+}
+
+function setup_topic_chart(itsVoteData) {
+    topic_vars.voteData = itsVoteData;
+    console.log("voteData record 0", topic_vars.voteData['user_recs'][0]);
+    const canvas = document.getElementById('findings-top-topics-dataviz-canvas');
+    canvas.width = 1500;
+    canvas.height = 310;
+
+    let userRecs = topic_vars.voteData['user_recs'];
+
+    topic_vars.user_dots = [];
+
+    for (let uid = 0; uid < topic_vars.voteData.nbr_users; uid++) {
+        topic_vars.user_dots.push({
+            uid: uid,
+            rx: Math.random(),
+            ry: uid / topic_vars.voteData.nbr_users,
+            cx: 0,
+            tx: 0,
+            copacity: 0, // current opacity
+            topacity: 0, // target opacity
+        });
+    }
+
+    // Fill the canvas with white
+
+    let   topic_number = 0;
+
+    change_topic_topic(canvas, topic_number);
+
+
+
+}
+
+</script>

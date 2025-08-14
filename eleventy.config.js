@@ -29,19 +29,23 @@ function buildLog(srcPath, distPath, assetType) {
  * @returns {Promise<void>}
  */
 async function buildCSS() {
-  const srcPath = "src/css/index.css";
-  const distPath = "_dist/css/index.css";
+  const cssFiles = [
+    { src: "src/css/index.css", dist: "_dist/css/index.css" },
+    { src: "src/css/deliberation-findings.css", dist: "_dist/css/deliberation-findings.css" }
+  ];
 
-  const { code, map } = lcssBundle({
-    filename: srcPath,
-    include: lcssFeatures.Nesting,
-    minify: true,
-  });
+  for (const file of cssFiles) {
+    const { code, map } = lcssBundle({
+      filename: file.src,
+      include: lcssFeatures.Nesting,
+      minify: true,
+    });
 
-  buildLog(srcPath, distPath, "CSS");
+    buildLog(file.src, file.dist, "CSS");
 
-  await fs.mkdir(path.dirname(distPath), { recursive: true });
-  await fs.writeFile(distPath, code);
+    await fs.mkdir(path.dirname(file.dist), { recursive: true });
+    await fs.writeFile(file.dist, code);
+  }
 }
 
 /**

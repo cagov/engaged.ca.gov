@@ -1,0 +1,259 @@
+div.center-body {
+   text-align: center;
+   max-width: 772px;
+}
+
+div.center-container {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+div.findings-narrative-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+}
+
+div.findings-discussions-topic-description {
+}
+
+div.findings-discussions-topic-result {
+  margin-left: 30px;
+}
+
+.findings-narrative-top-options-tally-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.findings-narrative-tally-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 100px;
+  padding: 1rem 0.5rem;
+  background: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.findings-top-discussions-tally-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.findings-top-discussions-tally-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 100px;
+  padding: 1rem 0.5rem;
+  background: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.findings-top-discussions-picker-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.findings-top-discussions-picker-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 100px;
+  padding: 1rem 0.5rem;
+  background: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+
+
+
+.option-total {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2d3a4a;
+  margin-bottom: 0.25rem;
+}
+
+.option-label {
+  font-size: 1rem;
+  color: #5a6a7a;
+  text-align: center;
+}
+
+.findings-narrative-top-options-options-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.findings-narrative-option-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 100px;
+  padding: 1rem 0.5rem;
+  background: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.ringchart-legend {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+}
+
+.test-margins {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.test-dataviz {
+   width: 100%;
+   height: 200px;
+   background-color: #EEE;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.data-viz-1-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.data-viz-1-label:first-child {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.data-viz-1-label:last-child {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.data-viz-1-label {
+  flex: 1;
+  text-align: center;
+}
+
+div#findings-consensus-sentiment-chart-dataviz-container {
+  width: 100%;       /* Take up the available width */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+canvas#findings-consensus-sentiment-chart-dataviz-canvas {
+  width: 100%;       /* Scale to container's width */
+  height: auto;      /* Keep aspect ratio */
+  display: block;    /* Remove inline spacing */
+}
+
+div#findings-top-topics-dataviz-container {
+  width: 100%;       /* Take up the available width */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+canvas#findings-top-topics-dataviz-canvas {
+  width: 100%;       /* Scale to container's width */
+  height: auto;      /* Keep aspect ratio */
+  display: block;    /* Remove inline spacing */
+}
+
+
+.data-viz-2-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.data-viz-2-label:first-child {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.data-viz-2-label:last-child {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.data-viz-2-label {
+  flex: 1;
+  text-align: center;
+}
+
+.topic-comments-scroller {
+   width: 100%;
+   height: 400px;
+   background-color: #EEE;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+
+.test-ringchart {
+  width: 100%;
+  height: 400px;
+  background-color: #EEE;
+}
+
+.ring-chart-legend-tally {
+  font-weight: 700;
+  font-size: 30px;
+}
+.ring-chart-legend-tally span.total {
+  font-weight: 900;
+  font-size: 37px;
+}
+
+section#partners.deliberation-partners {
+  background-color: #F6F7FA;
+}
+
+.style-strong-body-text {
+  font-weight: 600;
+  font-size: 23px;
+}
+.style-strong-small-body-text {
+  font-weight: 600;
+  font-size: 18px;
+}
+.style-small-body-text {
+  font-weight: 400;
+  font-size: 18px;
+}
+.style-body-text {
+  font-weight: 400;
+  font-size: 23px;
+}
+.style-callout-text {
+  font-weight: 600;
+  font-size: 20px;
+}
+.upper-divider {
+   border-top: 2px solid #EEE;
+}
+.lower-divider {
+   border-bottom: 2px solid #EEE;
+}
+
