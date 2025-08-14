@@ -1,3 +1,21 @@
+const mailchimpConfig = {
+  engca: {
+    audience_name: "Engaged California",
+    audience_id: "61200a6dda",
+    options: 1,
+  },
+  state: {
+    audience_name: "EngCA - State Employees",
+    audience_id: "417d16b2c0",
+    options: 2,
+  },
+  sandbox: {
+    audience_name: "[SANDBOX] EngCA testing",
+    audience_id: "23461fc80f",
+    options: 2,
+  },
+};
+
 class UnifiedForm extends window.HTMLElement {
   constructor() {
     super();
@@ -8,7 +26,6 @@ class UnifiedForm extends window.HTMLElement {
       '[data-form-section="discussion"] input',
     );
   }
-
   connectedCallback() {
     this.hide(this.sectionState);
     this.hide(this.sectionFires);
@@ -26,6 +43,17 @@ class UnifiedForm extends window.HTMLElement {
       });
     }
   }
+
+  getAudienceID = (data) => {
+    const audienceID = Object.keys(data).some(
+      (key) => key === "interest-state",
+    );
+
+    return audienceID
+      ? mailchimpConfig.state.audience_id
+      : mailchimpConfig.engca.audience_id;
+  };
+
   hide = (element) => {
     element.classList.add("hidden");
   };
@@ -37,7 +65,10 @@ class UnifiedForm extends window.HTMLElement {
   handleFormSubmit = async (e) => {
     // Handle form submission logic here
     const formData = new FormData(e.target);
-    console.log("Form data:", Object.fromEntries(formData));
+    const calculatedData = Object.fromEntries(formData);
+    calculatedData.audienceID = this.getAudienceID(calculatedData);
+
+    console.log("Calculated data:", calculatedData);
   };
   handleCheckboxChange = (e) => {
     const { checked, value } = e.target;
