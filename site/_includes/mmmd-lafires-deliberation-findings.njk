@@ -1,6 +1,9 @@
 {% extends "layout.njk" %}
 {% block content %}
-
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 <link rel="stylesheet" href="/css/deliberation-findings.css" />
 
 <section id="findings-overview" class="hero">
@@ -353,27 +356,7 @@
 
 {% include "lafires-consensus-chart.njk" %}
 {% include "lafires-topics-chart.njk" %}
-<script>
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    fetch("/public/data/lafires_voting_data_v1.json", {})
-    .then(response => response.json())
-    .then(data => {
-      // console.log("Data fetched:", data);
-      setup_topic_chart(data);
-      setup_consensus_chart(data);
-    })
-    .catch(error => {
-      console.error("Error fetching data:", error);
-    });
-});
-
-
-
-
-</script>
-
+{% include "lafires-scroll-animation.njk" %}
+{% include "lafires-deliberation-accordions.njk" %}
 
 {% endblock %}

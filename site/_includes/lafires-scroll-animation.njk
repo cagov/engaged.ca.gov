@@ -1,0 +1,76 @@
+<script>
+
+// Register GSAP plugin
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Init Lenis
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+});
+
+// Smooth scroll loop
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// Let ScrollTrigger work with Lenis, necessary to avoid positioning glitches, especially when scrolling back up
+ScrollTrigger.scrollerProxy(document.body, {
+  scrollTop(value) {
+    return arguments.length ? lenis.scrollTo(value) : window.scrollY;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  },
+  pinType: document.body.style.transform ? "transform" : "fixed"
+});
+
+// Let ScrollTrigger use native scroll position while Lenis handles visual smoothing
+ScrollTrigger.refresh();
+
+let consensus_chart_setup = false;
+let topic_chart_setup = false;
+let chart_data = null;
+
+gsap.to({}, {
+    scrollTrigger: {
+      trigger: "#findings-consensus-sentiment-chart-dataviz-container",
+      start: "top bottom",
+      end: "+=0", // scroll range for animation
+      scrub: true,
+      pin: true,
+      onUpdate: (self) => {
+        const t = self.progress; // 0 to 1
+        if (!consensus_chart_setup) {
+          consensus_chart_setup = true;
+          setup_consensus_chart(chart_data);
+        }
+      }
+    }
+  });
+gsap.to({}, {
+    scrollTrigger: {
+      trigger: "#findings-top-topics-dataviz-container",
+      start: "top center",
+      end: "+=0", // scroll range for animation
+      scrub: true,
+      pin: true,
+      onUpdate: (self) => {
+        const t = self.progress; // 0 to 1
+        if (!topic_chart_setup) {
+          topic_chart_setup = true;
+          setup_topic_chart(chart_data);
+        }
+      }
+    }
+  });
+
+</script>
