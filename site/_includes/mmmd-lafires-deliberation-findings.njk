@@ -625,11 +625,6 @@ function reset_user_dots(topic_index) {
       x += x_offset;
       user_dot.tx = x;
       user_dot.topacity = 1;
-      let vote_color_hsl = voteData.vote_colors_hsl[likert];
-      user_dot.tHue = vote_color_hsl[0];
-      user_dot.tSat = vote_color_hsl[1];
-      user_dot.tLum = vote_color_hsl[2];
-      // user_dot.color = color;
 
       if (user_dot.copacity < 0.1) {
         user_dot.cx = user_dot.tx;
@@ -664,6 +659,27 @@ function change_consensus_topic(canvas, topic_index) {
     let long_topic_name = (topic_index + 1) + ". " + topic_names[topic_index][1];
     document.getElementById('findings-consensus-sentiment-chart-title').innerHTML = long_topic_name;
 
+    function map(v, in_min, in_max, out_min, out_max) {
+      return (v-in_min) * (out_max-out_min) / (in_max-in_min) + out_min;
+    }
+
+    function clamp(v, min, max) {
+      return Math.max(min, Math.min(v, max));
+    }
+
+    function compute_color(cx) {
+      let r = cx/1200;
+      let hue,sat,val;
+      val = 65;
+      if (r < 0.5) {
+        sat = map(r, 0.5, 0, 0, 60);
+      } else {
+        sat = map(r, 0.5, 1, 0, 60);
+      }
+      hue = clamp(map(r,0.45, 0.55, 0, 205), 0, 205);
+      return "hsl(" + hue + ", " + sat + "%, " + val + "%)";
+    }
+
     function render_dots() {
       ctx.fillStyle = "#fff";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -672,15 +688,11 @@ function change_consensus_topic(canvas, topic_index) {
         if (true) {
           dot.cx += (dot.tx - dot.cx) * 0.05;
           dot.copacity += (dot.topacity - dot.copacity) * 0.1;
-          dot.cHue += (dot.tHue - dot.cHue) * 0.05;
-          dot.cSat += (dot.tSat - dot.cSat) * 0.05;
-          dot.cLum += (dot.tLum - dot.cLum) * 0.05;
 
           let x = dot.cx;
 
           let y = ellipse_radius + dot.ry * (ctx.canvas.height-ellipse_radius*2);
-          let color = "hsl(" + dot.cHue + ", " + dot.cSat + "%, " + dot.cLum + "%)";
-          console.log("color", color);
+          let color = compute_color(dot.cx);
 
           // let er = ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
           let er = ellipse_radius;
@@ -718,12 +730,6 @@ function setup_consensus_chart() {
             ry: uid / voteData.nbr_users,
             cx: 0,
             tx: 0,
-            cHue: 0,
-            cSat: 0,
-            cLum: 0,
-            tHue: 0,
-            tSat: 0,
-            tLum: 0,
             copacity: 0, // current opacity
             topacity: 0, // target opacity
         });
