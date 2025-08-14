@@ -7,9 +7,9 @@
       <p class="status-pill">{{ modules.hero_2.statusPlanningTextV2 }}</p>
       <h1>{{ title }}</h1>
       {{ modules.hero_2.content | safe }}
-      <p>
+      {# <p>
         <a data-appearance="button" data-theme="orange" href="{{ "#sign-up" }}" class="m-t">{{ modules.hero_2.buttonTextV2 }}</a>
-      </p>
+      </p> #}
     </engca-banner-content>
     <img src="/public/images/fires-about-bubbles.png" aria-hidden="true" class="desktop-only" alt=""/>
   </div>
@@ -76,12 +76,12 @@
   </div>
 </section>
 
-<section id="sign-up"  class="action-form">
+{# <section id="sign-up"  class="action-form">
   <div class="container form-flex">
     <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt=""/>
     <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt=""/>
     {% include "form-lafires.njk" %}
   </div>
-</section>
+</section> #}
 
 {% endblock %}
