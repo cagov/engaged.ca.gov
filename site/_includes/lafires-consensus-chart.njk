@@ -182,6 +182,7 @@ function consensus_chart_phase(phase)
     setTimeout(() => {
       console.log("Setting up phase 2 timeout");
       change_consensus_topic(canvas, (consensus_vars.topic_number + 1 ) % consensus_vars.voteData.topics.length);
+      clearInterval(consensus_vars.phase_handle);
       consensus_vars.phase_handle = setInterval(() => {
           change_consensus_topic(canvas, (consensus_vars.topic_number + 1 ) % consensus_vars.voteData.topics.length);
       }, 5000);
