@@ -187,11 +187,24 @@
     </div>
     <div class="topic-section upper-divider">
       <div class="row">
-        <div class="col-lg-8">
-          <div class="findings-discussions-topic-title">
-            <h3>{{ modules.discussion_1.title_h3 | safe }}</h3>
+        <div class="col-lg-12">
+          <div class="findings-discussions-topic-title-container">
+            <div class="findings-discussions-topic-step-number">
+              1
+            </div>
+            <div class="findings-discussions-topic-title style-h3">
+              <h3>{{ modules.discussion_1.title_h3 | safe }}</h3>
+            </div>
+            <div class="findings-discussions-topic-expander">
+              +
+            </div>
           </div>
-          <div class="findings-discussions-topic-description style-small-body-text">
+        </div>
+        <div class="col-lg-8">
+          <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
+            {{ modules.findings_top_discussions.solution_details_label | safe }}
+          </div>
+          <div class="findings-discussions-topic-description">
             {{ modules.discussion_1.topic_description | safe }}
           </div>
           <div class="findings-discussions-topic-result">
