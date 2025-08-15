@@ -6,7 +6,12 @@ let topic_vars = {
   "adj_band": 0,
   "ellipse_radius": 10,
   "voteData": null,
-  "render_handle": null
+  "render_handle": null,
+  "phase_handle": null,
+  "phase": -1,
+  "topic_number": 0,
+  "canvas": null,
+  "ctx": null
 };
 
 function reset_topics_user_dots(topic_index) {
@@ -45,8 +50,6 @@ function reset_topics_user_dots(topic_index) {
       }
     }
 }
-
-
 
 function change_topic_topic(canvas, topic_index) {
     // console.log("render_topic", topic_index);
@@ -101,6 +104,9 @@ function setup_topic_chart(itsVoteData) {
     canvas.width = 1500;
     canvas.height = 310;
 
+    topic_vars.canvas = canvas;
+    topic_vars.ctx = canvas.getContext('2d');
+
     let userRecs = topic_vars.voteData['user_recs'];
 
     topic_vars.user_dots = [];
@@ -119,12 +125,31 @@ function setup_topic_chart(itsVoteData) {
 
     // Fill the canvas with white
 
-    let   topic_number = 0;
+    let   topic_number = 18;
 
     change_topic_topic(canvas, topic_number);
 
 
 
+}
+
+
+function topic_chart_phase(phase)
+{
+  let canvas = consensus_vars.canvas; //  document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
+ 
+  consensus_vars.phase = phase;
+  console.log("topic_chart_phase", phase);
+  switch (phase) {
+  case 1:
+  case 2:
+  case 3:
+    if (consensus_vars.phase_handle) {
+      clearInterval(consensus_vars.phase_handle);
+      consensus_vars.phase_handle = null;
+    }
+    break;
+  }
 }
 
 </script>

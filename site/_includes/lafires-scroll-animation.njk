@@ -36,7 +36,6 @@ ScrollTrigger.scrollerProxy(document.body, {
 // Let ScrollTrigger use native scroll position while Lenis handles visual smoothing
 ScrollTrigger.refresh();
 
-let consensus_chart_setup = false;
 let topic_chart_setup = false;
 let chart_data = null;
 
@@ -74,6 +73,12 @@ gsap.to({}, {
       end: "+=900", // scroll range for animation
       scrub: true,
       pin: true,
+      onUpdate: (self) => {
+        const t = self.progress; // 0 to 1
+        if (consensus_vars.phase != 1) {
+          consensus_chart_phase(1);
+        }
+      }
     }
   });
 
@@ -86,13 +91,31 @@ gsap.to({}, {
       pin: true,
       onUpdate: (self) => {
         const t = self.progress; // 0 to 1
-        if (!consensus_chart_setup) {
-          consensus_chart_setup = true;
-          setup_consensus_chart(chart_data);
+        if (consensus_vars.phase != 2) {
+          consensus_chart_phase(2);
         }
       }
     }
   });
+
+
+
+gsap.to({}, {
+    scrollTrigger: {
+      trigger: "#consensus-chart-outro-trigger",
+      start: "center center",
+      end: "+=0", // scroll range for animation
+      scrub: true,
+      pin: true,
+      onUpdate: (self) => {
+        const t = self.progress; // 0 to 1
+        if (consensus_vars.phase != 3) {
+          consensus_chart_phase(3);
+        }
+      }
+    }
+  });
+
 gsap.to({}, {
     scrollTrigger: {
       trigger: "#findings-top-topics-dataviz-container",
@@ -102,9 +125,8 @@ gsap.to({}, {
       pin: true,
       onUpdate: (self) => {
         const t = self.progress; // 0 to 1
-        if (!topic_chart_setup) {
-          topic_chart_setup = true;
-          setup_topic_chart(chart_data);
+        if (topic_vars.phase != 2) {
+          topic_chart_phase(2);
         }
       }
     }

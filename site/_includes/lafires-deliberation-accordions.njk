@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       // console.log("Data fetched:", data);
       chart_data = data;
+      setup_topic_chart(chart_data);
+      setup_consensus_chart(chart_data);
     })
     .catch(error => {
       console.error("Error fetching data:", error);
