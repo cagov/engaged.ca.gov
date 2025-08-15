@@ -28,6 +28,7 @@ statusReviewText: 의제 설정 결과를 검토 중입니다
 statusPlanningText: 심의를 계획 중입니다
 buttonText: 의제 설정에서 찾은 내용을 확인하십시오
 statusPlanningTextV2: 심의가 진행 중입니다
+statusDeliberationsClosedText: 커뮤니티 심의가 종료되었습니다
 buttonTextV2: 등록하십시오
 ----
 
