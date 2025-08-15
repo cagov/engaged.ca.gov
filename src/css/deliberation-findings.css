@@ -125,6 +125,13 @@ div.findings-discussions-topic-result {
   margin-bottom: 1rem;
 }
 
+.dataviz {
+  width: 100%;
+  height: 200px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .test-dataviz {
    width: 100%;
    height: 200px;

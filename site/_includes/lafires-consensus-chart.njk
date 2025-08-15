@@ -27,13 +27,14 @@ function clamp(v, min, max) {
 function compute_color(cx) {
   let r = cx/1200;
   let hue,sat,val;
-  val = 65;
   if (r < 0.5) {
     sat = mapv(r, 0.5, 0, 0, 60);
+    val = mapv(r, 0, 0.5, 61, 85);
   } else {
     sat = mapv(r, 0.5, 1, 0, 60);
+    val = mapv(r, 0.5, 1, 85, 64);
   }
-  hue = clamp(mapv(r,0.45, 0.55, 0, 205), 0, 205);
+  hue = clamp(mapv(r,0.45, 0.55, 27, 205), 27, 205);
   return "hsl(" + hue + ", " + sat + "%, " + val + "%)";
 }
 
