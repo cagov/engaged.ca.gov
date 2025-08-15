@@ -55,6 +55,16 @@ html :has(.signon) {
   display: none !important;
 }
 
+.dropdown:has(select:focus) {
+  border: 2px solid #e79450 !important;
+  outline: 1px solid #000000 !important;
+}
+
+.form-group input:focus {
+  border: 2px solid #e79450 !important;
+  outline: 1px solid #000000 !important;
+}
+
 /* 7-22-2025 - patches */
 
 .new-comment .instruct {
