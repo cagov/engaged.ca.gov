@@ -601,6 +601,7 @@ a.client-feedback {
 
 .visible-xs.visible-sm.navbar-brand.decision-title {
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 .comment-section-btns.btn-xs {
@@ -638,7 +639,16 @@ a.client-feedback {
   display: none;
 }
 
+#edit-profile .form-group:has([name="email"]) {
+  display: none;
+}
+
+
 #edit-profile .form-group:has([name="username"]) input {
+  opacity: 0.3;
+}
+
+#edit-profile .form-group:has([name="email"]) input {
   opacity: 0.3;
 }
 
@@ -656,6 +666,9 @@ a#user-dropdown:after {
   display: none !important;
 }
 
+#edit-profile .panel-body { 
+  margin-top: 70px;
+}
 
 /* -- User profile menu ----*/
 li.navbar-user-dropdown {
