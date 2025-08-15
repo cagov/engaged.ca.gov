@@ -22,7 +22,7 @@
   padding-left: 0px;
 }
 
-.panel-default>.panel-heading+.panel-collapse>.panel-body {
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: transparent;
 }
 
@@ -44,18 +44,29 @@
   color: #ffffff;
 }
 
-.page-results-group .right-sidebar__bottom.panel-group .panel.panel-default > .panel-heading,
-.results-summary-page .right-sidebar__bottom.panel-group .panel.panel-default > .panel-heading {
+.page-results-group
+  .right-sidebar__bottom.panel-group
+  .panel.panel-default
+  > .panel-heading,
+.results-summary-page
+  .right-sidebar__bottom.panel-group
+  .panel.panel-default
+  > .panel-heading {
   background-color: #fff;
   color: #1c2745;
 }
 
 .card.result-card .detail-toggle .labels .label i.expand_less {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
-.results-summary-page .card.result-card .detail-toggle .labels .label i.expand-more {
-    color: #1c2745 !important;
+.results-summary-page
+  .card.result-card
+  .detail-toggle
+  .labels
+  .label
+  i.expand-more {
+  color: #1c2745 !important;
 }
 
 .page-results-group .content-col .panel-body:last-child {
@@ -93,8 +104,8 @@
 }
 
 .card.result-card .detail-toggle {
-    margin-top: 0;
-    margin-bottom: -2px !important;
+  margin-top: 0;
+  margin-bottom: -2px !important;
 }
 
 .tab-content-metrics .format-ethelo:before {
@@ -365,13 +376,13 @@
 }
 
 #participant-results .option {
-    padding: 3px 16px;
-    font-size: 14px;
-    background-color: #FFF;
+  padding: 3px 16px;
+  font-size: 14px;
+  background-color: #fff;
 }
 .participant-results-option a,
 .participant-results-option span {
-    color: #1c2745 !important;
+  color: #1c2745 !important;
 }
 
 #participant-results .option {
@@ -379,13 +390,11 @@
   font-family: "Noto Sans", sans-serif !important;
 }
 
-.right-sidebar__bottom.panel-group .h4 .float-left, 
+.right-sidebar__bottom.panel-group .h4 .float-left,
 .right-sidebar__bottom.panel-group h4 .float-left {
   font-weight: 800 !important;
   font-size: 18px !important;
-  
 }
-
 
 #center-col .panel body p a,
 #center-col .panel body ul li a {
@@ -710,12 +719,11 @@ strong#auth-modal-label {
 }
 
 .reset-password-panel .form-group.has-error .help-block,
-.reset-password-panel .form-group.has-error label.control-label  {
+.reset-password-panel .form-group.has-error label.control-label {
   color: #1c2745;
   position: relative;
   margin-top: 16px;
 }
-
 
 /* Match fonts colors default to engaged.ca.gov */
 body

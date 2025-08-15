@@ -487,8 +487,8 @@ a {
 #balance-link {
   display: none;
 }
-/* swaps surplus and deficit colors on first balance bar 
-Change #balance-bar to #balance-bar2 for second balance bar 
+/* swaps surplus and deficit colors on first balance bar
+Change #balance-bar to #balance-bar2 for second balance bar
 */
 
 #balance-bar.surplus-slider .surplus,

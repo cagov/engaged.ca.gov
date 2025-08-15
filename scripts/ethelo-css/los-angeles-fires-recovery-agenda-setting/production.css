@@ -13,7 +13,7 @@
 }
 
 .main {
-   padding: 8px;
+  padding: 8px;
 }
 
 /* Demo mode UX improvements - Hide comment input box  */
@@ -284,7 +284,7 @@ h3,
 }
 
 .nav-item.active {
-  background-color: #FFCDA4;
+  background-color: #ffcda4;
 }
 
 .list-group-item .material-icons-outlined.half-complete {
@@ -635,7 +635,7 @@ button.btn.btn-raised.navigation-button.btn-primary:focus {
 
 /* Fix page padding */
 .main {
-/*  padding: 8px; */
+  /*  padding: 8px; */
 }
 
 a {
@@ -1158,9 +1158,3 @@ label.checkbox-inline .checkbox-material {
   display: flex;
   flex-direction: row;
 }
-
-
-
-
-
-
