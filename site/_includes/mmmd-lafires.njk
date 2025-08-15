@@ -5,7 +5,7 @@
 <section id="los-angeles-fires-recovery" class="hero">
   <div class="container banner-flex">
     <engca-banner-content>
-      <p class="status-pill">{{ modules.hero_2.statusPlanningTextV2 }}</p>
+      <p class="status-pill">{{ modules.hero_2.statusDeliberationsClosedText }}</p>
       <h1>{{ title }}</h1>
       {{ modules.hero_2.content | safe }}
       {# <p>
@@ -60,8 +60,8 @@
           {{ phase(modules.phase2, "complete", "complete") }}
           {{ phase(modules.phase3, "complete", "complete") }}
           {{ phase(modules.phase4, "complete", "complete") }}
-          {{ phase(modules.phase5, "current", "pending") }}
-          {{ phase(modules.phase6, "pending", "none") }}
+          {{ phase(modules.phase5, "complete", "pending") }}
+          {{ phase(modules.phase6, "current", "none") }}
         </div>
       </div>
       <div class="col-lg-4">
