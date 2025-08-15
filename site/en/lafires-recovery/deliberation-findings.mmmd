@@ -165,16 +165,12 @@ id: ring_chart
 nbr_labels: 3
 label_1: Support
 label_2: Not sure
-label_3: Opposed
-legend_header_1_tally: XX
-legend_header_h3_1: "of participants agree with the overall top 5 solutions"
-legend_header_2_tally: XX
-legend_header_h3_2: "of participants neither agree nor disagree with the overall top 5 solutions"
-legend_header_3_tally: XX
-legend_header_h3_3: "of participants disagree with the overall top 5 solutions"
-legend_copy_1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-legend_copy_2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-legend_copy_3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+label_3: Oppose
+tally_1: 55%
+tally_2: 35%
+tally_3: 10%
+legend_header: Building momentum on what we agreed to.
+legend_copy: This chart shows the breakdown of support of the top 5 solutions. While some topics received less support, our focus now will be on the areas where we reached agreement. By prioritizing the measures that gained majority backing, we can direct our energy toward concrete next steps and make visible progress.
 ----
 
 ## This is deliberative democracy in action.

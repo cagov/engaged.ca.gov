@@ -37,6 +37,18 @@ div.center-container {
   margin-bottom: 1rem;
 }
 
+.style-h1 {
+  font-weight: 900;
+  font-size: 47px;
+}
+.style-h2 {
+  font-weight: 900;
+  font-size: 37px;
+}
+.style-h3 {
+  font-weight: 700;
+  font-size: 30px;
+}
 .style-strong-body-text {
   font-weight: 600;
   font-size: 23px;
@@ -64,6 +76,24 @@ div.center-container {
    border-bottom: 2px solid #EEE;
 }
 
+@media (max-width: 720px) {
+  .style-h1 {
+    font-weight: 900;
+    font-size: 33px;
+  }
+  .style-h2 {
+    font-weight: 900;
+    font-size: 27px;
+  }
+  .style-h3 {
+    font-weight: 700;
+    font-size: 23px;
+  }
+  .style-strong-body-text {
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
 
 /* 
  * NARRATIVE SECTION
@@ -366,6 +396,16 @@ canvas#findings-top-topics-dataviz-canvas {
   font-size: 37px;
 }
 
+.ring-chart-followup-text {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* SIGN UP SECTION */
+
+section#findings-signup-section {
+  background-color: #F6F7FA;
+}
 
 
 /* PARTNERS SECTION */

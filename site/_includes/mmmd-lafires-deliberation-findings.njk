@@ -287,40 +287,33 @@
         <div class="test-ringchart">ring-chart</div>
       </div>
       <div class="col-lg-6 ringchart-legend">
-        <div class="ring-chart-legend-tally">
-          <span class="total">{{ modules.ring_chart.legend_header_1_tally | safe }}</span>
-          <span>{{ modules.ring_chart.legend_header_h3_1 | safe }}</span>
+        <div class="ring-chart-legend-header style-h2">
+          {{ modules.ring_chart.legend_header | safe }}
         </div>
         <div class="ring-chart-legend-explain">
-          {{ modules.ring_chart.legend_copy_1 | safe }}
+          {{ modules.ring_chart.legend_copy | safe }}
         </div>
       </div>
-      <div class="col-lg-12">
-          <div class="center-container">
-            <div class="center-body">
-            {{ modules.ring_chart.content | safe }}
-            </div>
-          </div>
+      <div class="col-lg-12 ring-chart-followup-text">
+         {{ modules.ring_chart.content | safe }}
       </div>
     </div>
   </div>
 </section>
 
 <section id="findings-signup-section">
-    <div class="center-container">
-      <div class="container center-body">
-        <div class="row">
-          <div class="col-lg-12">
-              {{ modules.signup_plea.content | safe }}
-          </div>
-          <div class="col-lg-12">
-            <div class="signup-button">
-              <a href="#">{{ modules.signup_plea.button_text | safe }}</a>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          {{ modules.signup_plea.content | safe }}
+      </div>
+      <div class="col-lg-12">
+        <div class="signup-button">
+          <a data-appearance="button" data-theme="orange" href="#">{{ modules.signup_plea.button_text | safe }}</a>
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 <section id="what-were-doing">
