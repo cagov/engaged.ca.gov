@@ -14,6 +14,7 @@ tags:
 
 ----
 id: findings_overview
+buttonText: Skip to summary section
 ----
 
 # Phase 2 report title
@@ -31,35 +32,46 @@ id: findings_narrative_step_1
 id: findings_narrative_step_2
 ----
 
-## A team of experts used their disaster recovery experience, data science, and AI to narrow the topics for discussion
+## ...a team of experts used their disaster recovery experience, data science, and AI to narrow the topics for discussion...
 
-Narrowed down to the set of 19 priority options with anchor link to partners at bottom
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ----
 id: findings_narrative_step_3
 ----
 
-## Then, we presented these options to the community for further deliberation
+## ...then, we presented these options to the community for further deliberation...
 
 Our goal was to hear directly from the community to best prioritize what items we should pursue etc
 
 ----
 id: findings_narrative_top_options
-title_h2: And you weighed in...
+title_h2: ...and you weighed in...
 label_1: Participants
 label_2: Votes
 label_3: Comments
 value_1: XXX
 value_2: XXX
 value_3: XXX
-subtitle_h2: "to identify the overall top 5 options:"
+subtitle_h2: "...to find overall consensus on the top 5 solutions"
 nbr_options: 5
 option_label_1: Underground power lines and equipment safety
 option_label_2: Enhanced water infrastructure for fire protection
 option_label_3: Resilient emergency communication networks
 option_label_4: Expanded construction training programs
 option_label_5: Comprehensive homeowner education program
-followup_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+option_icon_1: hammer_retina.png
+option_icon_alt_1: Underground power lines
+option_icon_2: hammer_retina.png
+option_icon_alt_2: Enhanced water infrastructure
+option_icon_3: hammer_retina.png
+option_icon_alt_3: Resilient emergency communication networks
+option_icon_4: hammer_retina.png
+option_icon_alt_4: Expanded construction training programs
+option_icon_5: hammer_retina.png
+option_icon_alt_5: Comprehensive homeowner education program
+
+followup_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 ----
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -67,9 +79,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ----
 id: findings_consensus_watch_intro
+title_h2: Watch how the community reached consensus
 ----
-## Watch how the community reached consensus
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ----

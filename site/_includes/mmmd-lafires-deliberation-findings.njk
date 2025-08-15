@@ -1,3 +1,4 @@
+{% set active_page = 'lafires-recovery' %}
 {% extends "layout.njk" %}
 {% block content %}
 <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
@@ -9,8 +10,12 @@
 <section id="findings-overview" class="hero">
   <div class="container findings-overview-container">
     <div class="row">
-      <div class="col-lg-12 ">
+      <div class="col-lg-8">
         {{ modules.findings_overview.content | safe }}
+        <p>
+            <a data-appearance="button" data-theme="orange" href="#findings-consensus" class="m-t">{{ modules.findings_overview.buttonText }}</a>
+        </p>
+
       </div>
     </div>
     <img class="findings-adornment" src="/public/images/findings-adornment.png" aria-hidden="true" alt="" />
@@ -44,11 +49,11 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="center-container">
-          <div class="center-body">
+          <div class="center-body-lg">
             <div class="findings-narrative-top-options-title">
               <h2>{{ modules.findings_narrative_top_options.title_h2 | safe }}</h2>
             </div>
-            <div class="findings-narrative-top-options-tally-list  test-margins">
+            <div class="findings-narrative-top-options-tally-list">
               <div class="findings-narrative-tally-box">
                 <div class="option-total">{{ modules.findings_narrative_top_options.value_1 }}</div>
                 <div class="option-label">{{ modules.findings_narrative_top_options.label_1 }}</div>
@@ -68,9 +73,11 @@
           </div>
         </div>
 
-        <div class="findings-narrative-top-options-options-list  test-margins">
+        <div class="findings-narrative-top-options-options-list">
           {% for i in range(1, modules.findings_narrative_top_options.nbr_options + 1) %}
+          <!-- this will mimic the other report -->
           <div class="findings-narrative-top-options-option-box">
+            <img class="findings-option-icon png-icon" src="/public/images/{{ modules.findings_narrative_top_options["option_icon_" + i] }}" aria-hidden="true" alt="{{ modules.findings_narrative_top_options["option_icon_alt_" + i] }}">
             <div class="option-label">{{ modules.findings_narrative_top_options["option_label_" + i] }}</div>
           </div>
           {% endfor %}
@@ -93,21 +100,26 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-
-        <div class="center-container">
-          <div class="center-body">
             <div class="findings-consensus-intro">
-              {{ modules.findings_consensus_watch_intro.content | safe }}
+             <h2>{{ modules.findings_consensus_watch_intro.title_h2 | safe }}</h2>
             </div>
-            <div id="findings-consensus-sentiment-chart-title" class="findings-consensus-sentiment-chart-title test-margins style-strong-body-text">
+      </div>
+      <div class="col-lg-8">
+            <div class="findings-consensus-intro">
+             {{ modules.findings_consensus_watch_intro.content | safe }}
+            </div>
+            <div id="findings-consensus-sentiment-chart-title" class="findings-consensus-sentiment-chart-title style-strong-body-text">
             {{ modules.findings_consensus_watch_explore.label_1 | safe }}
             </div>
-          </div>
-        </div>
+      </div>
+      <div class="col-lg-12">
+
 
 
         <div class="findings-consensus-sentiment-chart">
-          <div id="findings-consensus-sentiment-chart-dataviz-container" class="dataviz test-margins"><canvas id="findings-consensus-sentiment-chart-dataviz-canvas" width="100" height="400"></canvas></div>
+          <div id="findings-consensus-sentiment-chart-dataviz-container" class="dataviz">
+            <canvas id="findings-consensus-sentiment-chart-dataviz-canvas" width="100" height="400"></canvas>
+          </div>
 
 
           <div class="data-viz-1-labels">
@@ -128,7 +140,7 @@
 
         <div class="center-container">
           <div class="center-body">
-            <div class="findings-consensus-outro test-margins">
+            <div class="findings-consensus-outro">
               {{ modules.findings_consensus_watch_explore.content | safe }}
             </div>
           </div>
@@ -171,7 +183,7 @@
 
       </div>
     </div>
-    <div class="topic-section upper-divider test-margins">
+    <div class="topic-section upper-divider">
       <div class="row">
         <div class="col-lg-8">
           <div class="findings-discussions-topic-title">
@@ -180,7 +192,7 @@
           <div class="findings-discussions-topic-description style-small-body-text">
             {{ modules.discussion_1.topic_description | safe }}
           </div>
-          <div class="findings-discussions-topic-result test-margins">
+          <div class="findings-discussions-topic-result">
             {{ modules.discussion_1.topic_result | safe }}
           </div>
         </div>
@@ -203,13 +215,13 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <div class="style-strong-body-text test-margins">
+          <div class="style-strong-body-text">
             {{ modules.topic_data_vis.title }}
           </div>
           <div>
             {{ modules.topic_data_vis.desc }}
           </div>
-          <div id="findings-top-topics-dataviz-container" class="findings-top-topics-data-viz dataviz test-margins">
+          <div id="findings-top-topics-dataviz-container" class="findings-top-topics-data-viz dataviz">
             <canvas id="findings-top-topics-dataviz-canvas" width="1200" height="400"></canvas>
           </div>
           <div class="data-viz-2-labels">
@@ -227,10 +239,10 @@
       </div>
       <div class="row">
         <div class="col-lg-8">
-          <div class="test-margins topic-comments-scroller-label style-strong-body-text">
+          <div class="topic-comments-scroller-label style-strong-body-text">
             {{ modules.topic_comments_scroller.label }}
           </div>
-          <div class="test-margins topic-comments-scroller-desc">
+          <div class="topic-comments-scroller-desc">
             <i>{{ modules.topic_comments_scroller.desc }}</i>
           </div>
           <div class="topic-comments-scroller">
@@ -238,16 +250,16 @@
         </div>
       </div>
     </div>
-    <div class="topic-section test-margins upper-divider">
+    <div class="topic-section upper-divider">
       Topic 2 expander...
     </div>
-    <div class="topic-section test-margins upper-divider">
+    <div class="topic-section upper-divider">
       Topic 3 expander...
     </div>
-    <div class="topic-section test-margins upper-divider">
+    <div class="topic-section upper-divider">
       Topic 4 expander...
     </div>
-    <div class="topic-section test-margins upper-divider lower-divider">
+    <div class="topic-section upper-divider lower-divider">
       Topic 5 expander...
     </div>
   </div>
@@ -264,13 +276,13 @@
           <span class="total">{{ modules.ring_chart.legend_header_1_tally | safe }}</span>
           <span>{{ modules.ring_chart.legend_header_h3_1 | safe }}</span>
         </div>
-        <div class="ring-chart-legend-explain test-margins">
+        <div class="ring-chart-legend-explain">
           {{ modules.ring_chart.legend_copy_1 | safe }}
         </div>
       </div>
-      <div class="col-lg-12 test-margins">
+      <div class="col-lg-12">
           <div class="center-container">
-            <div class="test-margins center-body">
+            <div class="center-body">
             {{ modules.ring_chart.content | safe }}
             </div>
           </div>

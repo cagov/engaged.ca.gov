@@ -185,10 +185,10 @@
               <div class="sub-nav">
                 <ul class="second-level-nav">
                   <li class="unit1">
-                    <a class="second-level-link" tabindex="-1" href="{{ '/lafires-recovery' | localizedPath(locale) }}">{{ 'los-angeles-fires-recovery' | i18n }}</a>
+                    <a class="second-level-link  {% if active_page == 'lafires-recovery' %}active{% endif %}" tabindex="-1" href="{{ '/lafires-recovery' | localizedPath(locale) }}">{{ 'los-angeles-fires-recovery' | i18n }}</a>
                   </li>
                   <li class="unit1">
-                    <a class="second-level-link" tabindex="-1" href="{{ '/stateemployees' | localizedPath(locale) }}">{{ 'state-employees' | i18n }}</a>
+                    <a class="second-level-link {% if active_page == 'stateemployees' %}active{% endif %}" tabindex="-1" href="{{ '/stateemployees' | localizedPath(locale) }}">{{ 'state-employees' | i18n }}</a>
                   </li>
                 </ul>
               </div>

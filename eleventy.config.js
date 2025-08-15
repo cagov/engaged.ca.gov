@@ -82,11 +82,11 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.on("eleventy.before", async ({ runMode }) => {
     // Only build all of the bundle files during first run, not on every change.
-    if (firstBuild || runMode !== "serve") {
+    // if (firstBuild || runMode !== "serve") {
       await buildCSS();
       await buildJS();
-      firstBuild = false;
-    }
+    //   firstBuild = false;
+    // }
   });
 
   eleventyConfig.on("eleventy.beforeWatch", async (changedFiles) => {
