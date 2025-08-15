@@ -77,7 +77,7 @@ function reset_user_dots(topic_index) {
 function change_consensus_topic(canvas, topic_index) {
     // console.log("render_topic", topic_index);
     consensus_vars.topic_number = topic_index;
-    ctx = canvas.getContext('2d');
+    let ctx = canvas.getContext('2d');
     consensus_vars.bandWidth = ctx.canvas.width / 7;
     consensus_vars.adj_band = consensus_vars.bandWidth - consensus_vars.ellipse_radius*2;
 
@@ -88,7 +88,11 @@ function change_consensus_topic(canvas, topic_index) {
 
     reset_user_dots(topic_index);
     let topic_names = consensus_vars.voteData['topics'];
-    let long_topic_name = (topic_index + 1) + ". " + topic_names[topic_index][1];
+    let topic_number_template = '{{ modules.findings_consensus_watch_explore.topic_number_template | safe}}';
+    let topic_number_string = topic_number_template.replace('<NUM>', topic_index + 1).replace('<TOTAL>', topic_names.length);
+    document.getElementById('findings-consensus-sentiment-chart-topic-number').innerHTML = topic_number_string;
+    // let topic_number_label = f'Topic {topic_index + 1} of {topic_names.length}'; // TRANSLATION!!!
+    let long_topic_name = topic_names[topic_index][1];
     document.getElementById('findings-consensus-sentiment-chart-title').innerHTML = long_topic_name;
 
     function render_dots() {
@@ -160,7 +164,7 @@ function setup_consensus_chart(itsVoteData) {
 
 function consensus_chart_phase(phase)
 {
-  let canvas = consensus_vars.canvas; //  document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
+  const canvas = consensus_vars.canvas; //  document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
  
   consensus_vars.phase = phase;
   console.log("consensus_chart_phase", phase);

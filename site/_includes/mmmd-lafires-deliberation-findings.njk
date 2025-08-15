@@ -108,6 +108,9 @@
             <div class="findings-consensus-intro">
              {{ modules.findings_consensus_watch_intro.content | safe }}
             </div>
+            <div id="findings-consensus-sentiment-chart-topic-number" class="style-small-body-text">
+              Topic 1 of 19
+            </div>
             <div id="findings-consensus-sentiment-chart-title" class="findings-consensus-sentiment-chart-title style-strong-body-text">
             {{ modules.findings_consensus_watch_explore.label_1 | safe }}
             </div>
@@ -117,19 +120,19 @@
 
 
         <div class="findings-consensus-sentiment-chart">
-          <div id="findings-consensus-sentiment-chart-dataviz-container" class="dataviz">
+          <div id="findings-consensus-sentiment-chart-dataviz-container">
             <canvas id="findings-consensus-sentiment-chart-dataviz-canvas" width="100" height="400"></canvas>
           </div>
 
 
-          <div class="data-viz-1-labels">
-            <div class="data-viz-1-label">
+          <div class="data-viz-1-labels ">
+            <div class="data-viz-1-labelv style-small-body-text">
               {{ modules.findings_consensus_sentiment_chart.label_1 }}
             </div>
-            <div class="data-viz-1-label">
+            <div class="data-viz-1-label style-small-body-text">
               {{ modules.findings_consensus_sentiment_chart.label_2 }}
             </div>
-            <div class="data-viz-1-label">
+            <div class="data-viz-1-label style-small-body-text">
               {{ modules.findings_consensus_sentiment_chart.label_3 }}
             </div>
           </div>
@@ -138,12 +141,8 @@
 
         </div>
 
-        <div class="center-container">
-          <div class="center-body">
-            <div class="findings-consensus-outro">
-              {{ modules.findings_consensus_watch_explore.content | safe }}
-            </div>
-          </div>
+        <div class="findings-consensus-outro">
+          <p>{{ modules.findings_consensus_watch_explore.outro | safe }}</p>
         </div>
 
 
@@ -166,9 +165,12 @@
           {{ modules.findings_top_discussions.content | safe }}
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-12 findings-top-discussions-picker-container">
+        <div class="findings-top-discussions-picker-instructions style-strong-small-body-text">
+          {{ modules.findings_top_discussions.picker_instructions | safe }}
+        </div>
         <div class="findings-top-discussions-picker-list">
-          <div class="findings-top-discussions-picker-box">
+          <div class="findings-top-discussions-picker-box active">
             <div class="option-label">{{ modules.findings_top_discussions.picker_label_1 }}</div>
           </div>
           <div class="findings-top-discussions-picker-box">
@@ -200,15 +202,15 @@
           <div class="findings-top-discussions-tally-list">
             <div class="findings-top-discussions-tally-box">
               <div class="option-total">{{ modules.discussion_1.value_1 }}</div>
-              <div class="option-label">{{ modules.discussion_1.label_1 }}</div>
+              <div class="option-label style-body-text">{{ modules.discussion_1.label_1 }}</div>
             </div>
             <div class="findings-top-discussions-tally-box">
               <div class="option-total">{{ modules.discussion_1.value_2 }}</div>
-              <div class="option-label">{{ modules.discussion_1.label_2 }}</div>
+              <div class="option-label style-body-text">{{ modules.discussion_1.label_2 }}</div>
             </div>
             <div class="findings-top-discussions-tally-box">
               <div class="option-total">{{ modules.discussion_1.value_3 }}</div>
-              <div class="option-label">{{ modules.discussion_1.label_3 }}</div>
+              <div class="option-label style-body-text">{{ modules.discussion_1.label_3 }}</div>
             </div>
           </div>
         </div>

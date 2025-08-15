@@ -39,6 +39,53 @@ div.findings-discussions-topic-result {
   margin-bottom: 3rem;
 }
 
+
+section#findings-top-discussions {
+  background-color: #F6F7FA;
+  
+}
+
+.findings-top-discussions-picker-container {
+  background-color: #E6F0F5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  margin: 1rem 0 3rem 0;
+}
+.findings-top-discussions-picker-instructions {
+  padding-left: 2rem;
+}
+
+.findings-top-discussions-picker-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.findings-top-discussions-picker-box {
+  min-width: 120px;
+  height: 44px;
+  background: #f7f7f7;
+  border-radius: 8.37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #5a6a7a;
+}
+
+
+.findings-top-discussions-picker-box.active {
+  background: #1C2745;
+  color: white;
+
+}
+
+
 .findings-top-discussions-tally-list {
   display: flex;
   flex-direction: column;
@@ -64,42 +111,19 @@ div.findings-discussions-topic-result {
   justify-content: flex-start;
   min-width: 100px;
   padding: 1rem 0.5rem;
-  background: #f7f7f7;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-}
-
-.findings-top-discussions-picker-list {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-}
-
-.findings-top-discussions-picker-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-width: 100px;
-  padding: 1rem 0.5rem;
-  background: #f7f7f7;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 
 
 
 .option-total {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 56px;
+  font-weight: 600;
   color: #2d3a4a;
   margin-bottom: 0.25rem;
 }
 
 .option-label {
-  font-size: 1rem;
-  color: #5a6a7a;
   text-align: center;
 }
 
@@ -201,8 +225,9 @@ img.findings-option-icon.png-icon {
 
 div#findings-consensus-sentiment-chart-dataviz-container {
   width: 100%;       /* Take up the available width */
+  height: 100%;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 }
 
 canvas#findings-consensus-sentiment-chart-dataviz-canvas {
@@ -244,6 +269,11 @@ canvas#findings-top-topics-dataviz-canvas {
 .data-viz-2-label {
   flex: 1;
   text-align: center;
+}
+
+.findings-consensus-outro {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 .topic-comments-scroller {

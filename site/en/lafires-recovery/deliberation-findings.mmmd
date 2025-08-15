@@ -95,21 +95,24 @@ Unused content
 
 ----
 id: findings_consensus_watch_explore
-label_1: 1. Increased housing density and expedited permits
+topic_number_template: "Topic <NUM> of <TOTAL>"
+explanation: DO NOT TRANSLATE <NUM> or <TOTAL>
+label_1: Increased housing density and expedited permits
+outro: We’re advancing the initiatives that received the strongest community support.
 ----
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ----
 id: findings_top_discussions
-title_h2: Explore our top 5 discussions
+title_h2: Analyze the top 5 from all angles
+picker_instructions: Select a fire zone from this panel to view and compare voting results.
 nbr_picker_items: 3
 picker_label_1: Overall
 picker_label_2: Eaton
 picker_label_3: Palisades
 ----
 
-The fire zones voted and not everyone was aligned. Toggle between the fire zones to see how votes from the Palisades differed from the Eaton fire zone.
+Every vote was counted and weighted to achieve consensus on the top 5 solutions California should explore. Between the fire zones, votes and comments looked a little different, use the toggle to see how opinons from the Palisades differed from those in the Eaton fire zone.
 
 ----
 id: discussion_1
@@ -121,12 +124,12 @@ nbr_comments: 3
 comment_1: Homeowners should be able to use Natural gas. It's more reliable and affordable than all electric mandates.
 comment_2: All housing should be built with no gas, we are supposed to be all electric in Los Angeles by 2035 anyway [...] so why invest in repairing gas infrastructure that will be obsolete/stranded assets soon
 comment_3: Homeowners should be able to use Natural gas. It's more reliable and affordable than all electric mandates.
-label_1: Participants
+label_1: Support
 label_2: Votes
 label_3: comments
-value_1: XXX
-value_2: XXX
-value_3: XXX
+value_1: 98%
+value_2: 2,700
+value_3: 2,400
 ----
 
 ----
