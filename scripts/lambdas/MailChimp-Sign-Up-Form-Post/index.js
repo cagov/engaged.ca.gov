@@ -3,6 +3,7 @@
 // See engaged.ca.gov/site/_includes/macros/form-checkbox.njk for more documentation
 //
 // history
+// v2.4 'Test user' tag only added for users who put engcatest in their email address
 // v2.3 added support for 'Test user' tag for innovation.ca.gov emails - jbum
 // v2.2 removed comments
 // v2.1
@@ -48,8 +49,9 @@ export const handler = async (event) => {
       }
     });
 
-    // Then, update the test User tag accordingly
-    const test_user_status = email.toLowerCase().includes('@innovation.ca.gov') ? 'active' : 'inactive';
+    // Then, update the test User tag accordingly if the user includes something like +engcatest001 in the meail
+    const test_user_status = email.toLowerCase().includes('engcatest')
+                              ? 'active' : 'inactive';
     try {
       const results2 = await client.lists.updateListMemberTags(audienceId, subscriberHash, {
         tags: [{ name: "Test user", status: test_user_status }],
@@ -82,11 +84,6 @@ export const handler = async (event) => {
     };
   }
 };
-
-
-
-
-
 
 
 
