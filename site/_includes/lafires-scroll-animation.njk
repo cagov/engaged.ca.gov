@@ -1,4 +1,7 @@
 <script>
+let topic_chart_setup = false;
+const use_LENIS = true;
+const use_MARKERS = false;
 
 document.addEventListener('DOMContentLoaded', function() {
   // IMPORTANT - if not in DOMContentLoaded, scroll aniimation is very unreliable due to potentially missing elements
@@ -7,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const use_LENIS = true;
 
   // Init Lenis
   if (use_LENIS) {
@@ -40,13 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-
-  // Let ScrollTrigger use native scroll position while Lenis handles visual smoothing
-  ScrollTrigger.refresh();
-
-  let topic_chart_setup = false;
-  let chart_data = null;
-
   gsap.to({}, {
       scrollTrigger: {
         trigger: ".findings-narrative-step-1",
@@ -54,9 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
         end: "+=600", // scroll range for animation
         scrub: true,
         pin: true,
-        markers: true, // Enable markers for debugging
+        markers: use_MARKERS, // Enable markers for debugging
       }
-    });
+  });
+  
   gsap.to({}, {
       scrollTrigger: {
         trigger: ".findings-narrative-step-2",
@@ -64,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         end: "+=600", // scroll range for animation
         scrub: true,
         pin: true,
-        markers: true, // Disable markers for pin trigger
+        markers: use_MARKERS, // Disable markers for pin trigger
       }
     });
 
@@ -76,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         end: "bottom top",   // when bottom edge hits top of viewport
         scrub: true,
         pin: false, // No pinning for this trigger
-        markers: true, // Enable markers for debugging opacity
+        markers: use_MARKERS, // Enable markers for debugging opacity
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
           let opacity;
@@ -106,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         end: "+=600", // scroll range for animation
         scrub: true,
         pin: true,
-        markers: true, // Enable markers for debugging
+        markers: use_MARKERS, // Enable markers for debugging
       }
     });
 
@@ -117,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         end: "bottom top",   // when bottom edge hits top of viewport
         scrub: true,
         pin: false, // No pinning for this trigger
-        markers: true, // Enable markers for debugging opacity
+        markers: use_MARKERS, // Enable markers for debugging opacity
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
           let opacity;
@@ -144,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         end: "+=900", // scroll range for animation
         scrub: true,
         pin: true,
-        markers: true, // Enable markers for debugging
+        markers: use_MARKERS, // Enable markers for debugging
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
           if (consensus_vars.phase != 1) {
@@ -161,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
         end: "bottom top",         
         scrub: 1, // Add a small delay to smooth out the progress updates
         pin: false,
-        markers: true, // Enable markers for debugging
+        markers: use_MARKERS, // Enable markers for debugging
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
           // At start (appears at bottom), set phase 1
@@ -193,14 +189,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-  gsap.to({}, {
+  {# gsap.to({}, {
       scrollTrigger: {
         trigger: "#findings-top-topics-dataviz-container",
         start: "top center",
         end: "+=0", // scroll range for animation
         scrub: true,
         pin: true,
-        markers: true,
+        markers: use_MARKERS,
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
           if (topic_vars.phase != 2) {
@@ -208,7 +204,11 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
       }
-    });
+    }); #}
+
+
+  // Final refresh after all triggers are created
+  ScrollTrigger.refresh();
 
 });
 
