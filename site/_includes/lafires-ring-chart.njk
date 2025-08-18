@@ -1,9 +1,9 @@
 <script>
 
 let ringchart_vars = {
-  "wedges": [{'nom':'Support', 'percent':55,  'color':'#1c2745', 'angle': -Math.PI/4},
-             {'nom':'Not Sure','percent':35, 'color':'#e6f0f5', 'angle': Math.PI},
-             {'nom':'Oppose',  'percent':10, 'color':'#5489a3', 'angle': Math.PI + Math.PI/3}],
+  "wedges": [{'nom':'{{ modules.ring_chart.label_1 }}', 'percent':{{ modules.ring_chart.tally_1 }},  'color':'#1c2745', 'angle': -Math.PI/4},
+             {'nom':'{{ modules.ring_chart.label_2 }}', 'percent':{{ modules.ring_chart.tally_2 }}, 'color':'#e6f0f5', 'angle': Math.PI},
+             {'nom':'{{ modules.ring_chart.label_3 }}', 'percent':{{ modules.ring_chart.tally_3 }}, 'color':'#5489a3', 'angle': Math.PI + Math.PI/3}],
   "ring_radius": 152,
   "caption_radius": 212,
   "linewidth": 21,
@@ -30,7 +30,8 @@ function render_ringchart(t)
     ctx.restore();
     let cx = ctx.canvas.width / 2;
     let cy = ctx.canvas.height / 2;
-    let r = ringchart_vars.ring_radius;
+
+    let r = ringchart_vars.ring_radius; //mapv(t, 0, 1, ringchart_vars.ring_radius*0.3, ringchart_vars.ring_radius);
     var curAngle = (-Math.PI / 2);
     var gapAngle = ringchart_vars.gap_angle * Math.PI / 180;
     for (let i = 0; i < ringchart_vars.wedges.length; i++) {

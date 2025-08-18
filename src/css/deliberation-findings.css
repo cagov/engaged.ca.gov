@@ -377,7 +377,7 @@ canvas#findings-top-topics-dataviz-canvas {
   margin-bottom: 0rem;
 }
 
-canvas#ringchart-canvas {
+canvas#ring chart-canvas {
   width: 100%;       /* Scale to container's width */
   height: auto;      /* Keep aspect ratio */
   display: block;    /* Remove inline spacing */
