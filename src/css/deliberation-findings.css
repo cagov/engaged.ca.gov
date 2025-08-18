@@ -99,7 +99,11 @@ div.center-container {
  * NARRATIVE SECTION
  */
 
-section#findings-narrative-top-options {
+section#findings-narrative-top-options-1 {
+  background-color: #FFF4EB;
+}
+
+section#findings-narrative-top-options-2 {
   background-color: #FFF4EB;
 }
 

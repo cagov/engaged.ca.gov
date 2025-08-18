@@ -47,7 +47,7 @@
   </div>
 </section>
 
-<section id="findings-narrative-top-options">
+<section id="findings-narrative-top-options-1">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -70,6 +70,19 @@
                 <div class="option-label">{{ modules.findings_narrative_top_options.label_3 }}</div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="findings-narrative-top-options-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="center-container">
+          <div class="center-body-lg">
             <div class="findings-narrative-top-options-subtitle">
               <h2>{{ modules.findings_narrative_top_options.subtitle_h2 | safe }}</h2>
             </div>
@@ -113,19 +126,17 @@
             </div>
       </div>
       <div class="col-lg-12">
-            <div id="findings-consensus-progressbar-container">
-              <canvas id="findings-consensus-progressbar-canvas" width="1200" height="16"></canvas>
-            </div>
-      </div>
-      <div class="col-lg-8">
-            <div id="findings-consensus-sentiment-chart-topic-number" class="style-small-body-text">
-              Topic 1 of 19
-            </div>
-            <div id="findings-consensus-sentiment-chart-title" class="findings-consensus-sentiment-chart-title style-strong-body-text">
-            {{ modules.findings_consensus_watch_explore.label_1 | safe }}
-            </div>
-      </div>
-      <div class="col-lg-12">
+        <div id="findings-consensus-progressbar-container">
+          <canvas id="findings-consensus-progressbar-canvas" width="1200" height="16"></canvas>
+        </div>
+
+        <div id="findings-consensus-sentiment-chart-topic-number" class="style-small-body-text">
+          Topic 1 of 19
+        </div>
+        <div id="findings-consensus-sentiment-chart-title" class="findings-consensus-sentiment-chart-title style-strong-body-text">
+        {{ modules.findings_consensus_watch_explore.label_1 | safe }}
+        </div>
+
         <div id="findings-consensus-sentiment-chart-dataviz-container">
           <canvas id="findings-consensus-sentiment-chart-dataviz-canvas" width="1200" height="310"></canvas>
         </div>
