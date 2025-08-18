@@ -1,14 +1,39 @@
+/*
+Note: audienceId is referred to as list_id in the mailchimp API docs
+
+1. Get the Audience Id from the MailChimip UI
+
+    Audience Ids
+        Engaged Califonia:  61200a6dda
+        Government Efficiencies: 417d16b2c0
+        [SANDBOX] EngCA testing: 23461fc80f
+
+2. Get the categories.list_id
+    curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/[listid]/interest-categories/' --header "Authorization: Bearer [TOKEN]"
+
+    Interest category Ids
+        Engaged Califonia: 2a44a8fff7
+        Government Efficiencies: 9cd68bb129
+        [SANDBOX] EngCA testing: Participant choice: 29534fdf65
+
+3. Get the interest ids
+    curl -i -H POST --url 'https://us2.api.mailchimp.com/3.0/lists/[audienceId]/interest-categories/[listid]/interests' --header "Authorization: Bearer [TOKEN]"
+
+    API docs for interests https://mailchimp.com/developer/marketing/api/interests/
+ */
+
 class UnifiedForm extends window.HTMLElement {
   constructor() {
     super();
     this.form = this.querySelector("form");
+    this.env = this.form.getAttribute("data-env");
     this.sectionState = this.querySelector('[data-form-section="state"]');
     this.sectionFires = this.querySelector('[data-form-section="fires"]');
+    this.email = this.querySelector("input[type='email']");
     this.discussionCheckboxes = this.querySelectorAll(
       '[data-form-section="discussion"] input',
     );
   }
-
   connectedCallback() {
     this.hide(this.sectionState);
     this.hide(this.sectionFires);
@@ -26,6 +51,72 @@ class UnifiedForm extends window.HTMLElement {
       });
     }
   }
+
+  // Configuration settings.
+  isTest = () => {
+    return this.env === "test";
+  };
+
+  defaultConfig = {
+    engca: {
+      audience_name: "Engaged California",
+      audience_id: "61200a6dda",
+    },
+    state: {
+      audience_name: "EngCA - State Employees",
+      audience_id: "417d16b2c0",
+    },
+    interests: {
+      eaton: "1552878c1b",
+      palisades: "40c0f946cd",
+      stateNo: "",
+      stateYes: "0f531f3ce0",
+    },
+  };
+  testConfig = {
+    engca: {
+      audience_name: "Engaged California(sandbox)",
+      audience_id: "23461fc80f",
+    },
+    state: {
+      audience_name: "EngCA - State Employees(sandbox)",
+      audience_id: "23461fc80f",
+    },
+    categories: {
+      state: "29534fdf65",
+      fires: "02b58955d5",
+    },
+    interests: {
+      eaton: "22329966e2",
+      palisades: "f6c04a4be0",
+      nope: "36bcda8f6f",
+      stateYes: "3f58175db3",
+      stateNo: "eb7da3ee1e",
+    },
+  };
+
+  // Use defaultcConfig for production and testConfig for early development.
+  mailchimpConfig = () =>
+    this.isTest() ? this.testConfig : this.defaultConfig;
+
+  getAudienceID = (data) => {
+    const audienceID = Object.values(data).some((value) => value === "state");
+    const config = this.mailchimpConfig();
+    return audienceID ? config.state.audience_id : config.engca.audience_id;
+  };
+
+  getInterests = (data) => {
+    const interests = {};
+
+    for (const [key, value] of Object.entries(data)) {
+      if (key.includes("interest-")) {
+        const interestId = this.mailchimpConfig.interests[value];
+        interests[interestId] = true;
+      }
+    }
+    return interests;
+  };
+
   hide = (element) => {
     element.classList.add("hidden");
   };
@@ -34,11 +125,6 @@ class UnifiedForm extends window.HTMLElement {
     element.classList.remove("hidden");
   };
 
-  handleFormSubmit = async (e) => {
-    // Handle form submission logic here
-    const formData = new FormData(e.target);
-    console.log("Form data:", Object.fromEntries(formData));
-  };
   handleCheckboxChange = (e) => {
     const { checked, value } = e.target;
 
@@ -50,6 +136,32 @@ class UnifiedForm extends window.HTMLElement {
         checked ? this.show(this.sectionFires) : this.hide(this.sectionFires);
         break;
     }
+  };
+
+  handleFormSubmit = async (e) => {
+    const formData = new FormData(e.target);
+    const calculatedData = Object.fromEntries(formData);
+    const dataToSend = {};
+    dataToSend.audienceID = this.getAudienceID(calculatedData);
+    dataToSend.email = this.email.value;
+    dataToSend.interests = this.getInterests(calculatedData);
+
+    const submitString = JSON.stringify(dataToSend);
+
+    console.log("istest", this.isTest());
+    const postJsonUrl = this.isTest
+      ? "http://127.0.0.1:3001/api/subscribe"
+      : "https://engaged.ca.gov/api/subscribe";
+
+    const response = await fetch(postJsonUrl, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: submitString,
+      mode: "cors",
+    });
   };
 }
 

@@ -1,6 +1,6 @@
 {# Import macros. #}
-{% import "macros/form-checkbox.njk" as checkbox %}
-{% import "macros/form-radio.njk" as radio %}
+{% import "form-unified/field-checkbox.njk" as checkbox %}
+{% import "form-unified/field-radio.njk" as radio %}
 {% import "macros/form-action.njk" as action %}
 {% import "macros/form-submit.njk" as submit %}
 
@@ -30,9 +30,9 @@
     <div data-form-section="discussion">
     <h3 class="form-title">{{ 'topics-interests-label' | i18n }}</h3>
     <ul class="form-checkbox-list">
-      <li>{{ checkbox.data(formVars.label_fires, 'fires') }}</li>
-      <li>{{ checkbox.data(formVars.label_state, 'state') }}</li>
-      <li>{{ checkbox.data(formVars.label_future, 'future') }}</li>
+      <li>{{ checkbox.data('audience', 'fires', formVars.label_fires) }}</li>
+      <li>{{ checkbox.data('audience', 'state', formVars.label_state ) }}</li>
+      <li>{{ checkbox.data('audience', 'future', formVars.label_future ) }}</li>
     </ul>
     </div>
     {# - #}
@@ -45,9 +45,9 @@
       {{ 'topic-los-angeles-fires-recovery-evacuation-label' | i18n }}
     </label>
     <ul class="form-radio-list">
-      <li>{{ radio.merge_field_data('topic-los-angeles-fires-recovery-evacuation-eaton' | i18n ) }}</li>
-      <li>{{ radio.merge_field_data('topic-los-angeles-fires-recovery-evacuation-palisades' | i18n) }}</li>
-      <li>{{ radio.merge_field_data('topic-los-angeles-fires-recovery-no-evacuation' | i18n ) }}</li>
+      {{ radio.merge_field_data('interest-fire', 'eaton', 'topic-los-angeles-fires-recovery-evacuation-eaton' | i18n, "required" ) }}
+      {{ radio.merge_field_data('interest-fire', 'palisades','topic-los-angeles-fires-recovery-evacuation-palisades' | i18n, "required") }}
+      {{ radio.merge_field_data('interest-fire', 'no','topic-los-angeles-fires-recovery-no-evacuation' | i18n , "required" ) }}
     </ul>
     </div>
     {# - #}
@@ -60,14 +60,10 @@
       {{ formVars.label_state_question }}
     </label>
       <ul class="form-checkbox-list">
-        <li>{{ checkbox.data( formVars.label_yes) }}</li>
-        <li> {{ checkbox.data(formVars.label_no) }}</li>
+        <li>{{ checkbox.data('interest-stateYes', 'stateYes', formVars.label_yes) }}</li>
+        <li>{{ checkbox.data('interest-stateNo', 'stateNo', formVars.label_no) }}</li>
       </ul>
     </div>
-    {# - #}
-
-    {# Hidden field. #}
-    {{ action.data(audience_id) }}
     {# - #}
 
     {# Error messages. #}
