@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let chart_data = data;
       setup_topic_chart(chart_data); // consensus chart wants to be loaded second, otherwise it doesn't render -- need to figure out why
       setup_consensus_chart(chart_data);
+      init_ringchart();
       ScrollTrigger.refresh();
     })
     .catch(error => {

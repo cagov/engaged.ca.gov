@@ -287,7 +287,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 ringchart-chart">
-        <div class="test-ringchart">ring-chart</div>
+        <div id="ringchart-canvas-container">
+            <canvas id="ringchart-canvas" width="570" height="500"></canvas>
+        </div>
       </div>
       <div class="col-lg-6 ringchart-legend">
         <div class="ring-chart-legend-header style-h2">
@@ -381,7 +383,8 @@
 
 {% include "lafires-consensus-chart.njk" %}
 {% include "lafires-topics-chart.njk" %}
-{% include "lafires-deliberation-accordions.njk" %}
+{% include "lafires-ring-chart.njk" %}
+{% include "lafires-deliberation-utilities.njk" %}
 {% include "lafires-scroll-animation.njk" %}
 
 {% endblock %}

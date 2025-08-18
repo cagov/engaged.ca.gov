@@ -107,7 +107,7 @@ div.findings-narrative-step {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 300px;
+  height: 500px;
 }
 
 
@@ -369,6 +369,20 @@ canvas#findings-top-topics-dataviz-canvas {
 /*
  * RINGCHART SECTION
  */
+
+ div#ringchart-canvas-container {
+  width: 100%;       /* Take up the available width */
+  height: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+canvas#ringchart-canvas {
+  width: 100%;       /* Scale to container's width */
+  height: auto;      /* Keep aspect ratio */
+  display: block;    /* Remove inline spacing */
+}
+
 
  .ringchart-legend {
   display: flex;
