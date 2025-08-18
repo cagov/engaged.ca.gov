@@ -6,8 +6,8 @@ import json
 
 parser = argparse.ArgumentParser(description="Process votes CSV file and output as JSON.")
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
-parser.add_argument("input_file", nargs="?", default="voting_data_v1.csv", help="Input CSV file (default: voting_data.csv)")
-parser.add_argument("output_file", nargs="?", default="voting_data_v1.json", help="Output JSON file (default: voting_data.json)")
+parser.add_argument("input_file", nargs="?", default="voting_data_v2.csv", help="Input CSV file (default: voting_data.csv)")
+parser.add_argument("output_file", nargs="?", default="voting_data_v2.json", help="Output JSON file (default: voting_data.json)")
 args = parser.parse_args()
 
 if args.verbose:
@@ -41,6 +41,7 @@ with open(args.input_file, "r") as f:
                 "COMMENT_CONTENT": row[field_indices["COMMENT_CONTENT"]],
                 "LIKE_COUNT": row[field_indices["LIKE_COUNT"]],
                 "REPLY_COUNT": row[field_indices["REPLY_COUNT"]],
+                "EVACUATION_ZONE": row[field_indices["EVACUATION_ZONE"]],
       
             })
     # print(f"Records: {records}")
@@ -71,6 +72,16 @@ topic_index_dict = {topic[0]: index for index, topic in enumerate(topic_index_li
 for record in records:
     record["TOPIC_INDEX"] = topic_index_dict[record["TOPIC"]]
 
+
+for record in records:
+    if 'Palisades' in record["EVACUATION_ZONE"]:
+        record["EVAC_ZONE_INDEX"] = 1
+    elif 'Eaton' in record["EVACUATION_ZONE"]:
+        record["EVAC_ZONE_INDEX"] = 2
+    else:
+        record["EVAC_ZONE_INDEX"] = 0
+
+
 if args.verbose:
     print("First few records:")
     for rec in records[:3]:
@@ -84,13 +95,13 @@ if args.verbose:
     print(f"Topic index list: {topic_index_list}")
 
 likert_index_list = ["","Strongly opposed", "Opposed", "Somewhat opposed", "Neutral", "Somewhat supportive", "Supportive", "Strongly supportive"]
-
-
+evac_zone_labels = ["None","Palisades", "Eaton"]
 user_recs = []
 for record in records:
     user_recs.append({
         'uid': record['PARTICIPANT_ID_INT'],
         'tid': record['TOPIC_INDEX'],
+        'eid': record['EVAC_ZONE_INDEX'],
         'v': int(record['VOTE_NUMBER'])
         })
 
@@ -117,6 +128,7 @@ output_dict = {
     'topics': topic_index_list,
     'nbr_users': len(participant_id_int_dict),
     'likert_labels': likert_index_list,
+    'evac_zone_labels': evac_zone_labels,
     'vote_colors': vote_colors,
     'vote_colors_hsl': vote_colors_hsl,
     'user_recs': user_recs
