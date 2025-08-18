@@ -193,17 +193,26 @@ img.findings-option-icon.png-icon {
 
  div#findings-consensus-sentiment-chart-dataviz-container {
   width: 100%;       /* Take up the available width */
-  height: 100%;
   margin-top: 1rem;
   margin-bottom: 0rem;
 }
 
-canvas#findings-consensus-sentiment-chart-dataviz-canvas {
+canvas#findings-consensus-sentiment-chart-dataviz-canvas, canvas#findings-consensus-progressbar-canvas {
   width: 100%;       /* Scale to container's width */
   height: auto;      /* Keep aspect ratio */
   display: block;    /* Remove inline spacing */
 }
 
+div#findings-consensus-progressbar-container {
+  width: 100%;       /* Take up the available width */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+canvas#findings-consensus-progressbar-canvas {
+  width: 100%;       /* Scale to container's width */
+  height: auto;      /* Keep aspect ratio */
+  display: block;    /* Remove inline spacing */
+}
 
 .data-viz-1-labels {
   display: flex;

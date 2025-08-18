@@ -128,9 +128,13 @@ function change_consensus_topic(canvas, topic_index) {
     console.log("beginning to render dots");
 
     consensus_vars.render_handle = setInterval(render_dots, 40);
+    draw_consensus_progress_bar(topic_index);
+
 }
 
 function setup_consensus_chart(itsVoteData) {
+    setup_consensus_progress_bar();
+
     consensus_vars.voteData = itsVoteData;
     console.log("consensus_vars.voteData record 0", consensus_vars.voteData['user_recs'][0]);
     const canvas = document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
@@ -193,6 +197,71 @@ function consensus_chart_phase(phase)
     }, 1000);
     break;
   }
+
+
+}
+
+
+let cprogress_vars = {
+  "ellipse_radius": 7.91,
+  "step_number": 0,
+  "nbr_topics": 19,
+  "canvas": null,
+  "ctx": null
+};
+
+function draw_consensus_progress_bar(step_index) {
+  let ctx = cprogress_vars.ctx;
+  if (ctx == null) {
+    return;
+  }
+  ctx.fillStyle = "#fff";
+  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+  ctx.fillStyle = "#000";
+
+  // Draw a series of ellipses across the bar, one per topic
+  let n = cprogress_vars.nbr_topics;
+  let w = ctx.canvas.width;
+  let h = ctx.canvas.height;
+  let r = cprogress_vars.ellipse_radius;
+  let gap = (w - 2 * r) / (n - 1);
+
+  for (let i = 0; i < n; i++) {
+    let x = r + i * gap;
+    let y = h / 2;
+    let clr = compute_color(x);
+    let fill_color = step_index == i? '#000' : clr;
+    ctx.save();
+    if (i < n-1) {
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(x + gap, y);
+      ctx.lineWidth = 4;
+      ctx.strokeStyle = clr;
+      ctx.stroke();
+    }
+    ctx.beginPath();
+    ctx.ellipse(x, y, r, r, 0, 0, 2 * Math.PI);
+    ctx.fillStyle = fill_color;
+    ctx.globalAlpha = 1;
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+function setup_consensus_progress_bar()
+{
+    const canvas = document.getElementById('findings-consensus-progressbar-canvas');
+    canvas.width = 1500;
+    canvas.height = 16;
+
+    cprogress_vars.canvas = canvas;
+    cprogress_vars.ctx = canvas.getContext('2d');
+
+    // Fill the canvas with white
+
+    draw_consensus_progress_bar(0);
 }
 
 </script>

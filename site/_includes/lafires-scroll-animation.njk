@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const t = self.progress; // 0 to 1
           // At start (appears at bottom), set phase 1
           const canvas = document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
+          const canvas2 = document.getElementById('findings-consensus-progressbar-canvas');
           let opacity;
           if (t <= 0.4) {
             opacity = clamp(mapv(t, .2, 0.4, 0, 1), 0, 1);
@@ -172,6 +173,9 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           if (canvas) {
             canvas.style.opacity = opacity;
+          }
+          if (canvas2) {
+            canvas2.style.opacity = opacity;
           }
 
           if (t <= 0.4 && consensus_vars.phase !== 1) {
