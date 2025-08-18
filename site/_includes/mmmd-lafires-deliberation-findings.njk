@@ -193,13 +193,13 @@
         <div class="col-lg-12">
           <div class="findings-discussions-topic-title-container">
             <div class="findings-discussions-topic-step-number">
-              1
+              <img src="/public/images/circle-blue-1.svg" alt="Topic 1" />
             </div>
             <div class="findings-discussions-topic-title style-h3">
               <h3>{{ modules.discussion_1.title_h3 | safe }}</h3>
             </div>
             <div class="findings-discussions-topic-expander">
-              +
+              <img src="/public/images/circle-expander-plus.svg" alt="Topic 1" />
             </div>
           </div>
         </div>
@@ -264,22 +264,35 @@
             <i>{{ modules.topic_comments_scroller.desc }}</i>
           </div>
           <div class="topic-comments-scroller">
+            <p><i>Comments will appear here...</i></p>
           </div>
         </div>
       </div>
     </div>
+
+   {% for i in range(2, 5) %}  
+
     <div class="topic-section upper-divider">
-      Topic 2 expander...
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="findings-discussions-topic-title-container">
+            <div class="findings-discussions-topic-step-number">
+              <img src="/public/images/circle-blue-{{ i }}.svg" alt="Topic {{ i }}" />
+            </div>
+            <div class="findings-discussions-topic-title style-h3">
+              <h3>{{ modules['discussion_' ~ i].title_h3 | safe }}</h3>
+            </div>
+            <div class="findings-discussions-topic-expander">
+              <img src="/public/images/circle-expander-plus.svg" alt="Topic 1" />
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="topic-section upper-divider">
-      Topic 3 expander...
-    </div>
-    <div class="topic-section upper-divider">
-      Topic 4 expander...
-    </div>
-    <div class="topic-section upper-divider lower-divider">
-      Topic 5 expander...
-    </div>
+   {% endfor %}  
+
   </div>
 </section>
 

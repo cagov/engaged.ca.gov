@@ -281,6 +281,18 @@ section#findings-top-discussions {
   flex-direction: row;
   align-items: center;
   margin-bottom: 2rem;
+  min-height: 50px;
+  align-items: center;
+  margin-top:1rem;
+}
+
+.findings-discussions-topic-title.style-h3 h3 {
+  /* height: 50px; */
+  /* vertical-align: middle; */
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .findings-discussions-topic-title-container > :nth-child(1),
@@ -364,6 +376,11 @@ canvas#findings-top-topics-dataviz-canvas {
   background-color: #EEE;
   margin-top: 1rem;
   margin-bottom: 1rem;
+
+  display: flex; /* TEMP */
+  align-items: center; /* TEMP */
+  justify-content: center; /* TEMP */
+
 }
 
 /*

@@ -115,10 +115,10 @@ solution_details_label: "Solution details"
 
 Every vote was counted and weighted to achieve consensus on the top 5 solutions California should explore. Between the fire zones, votes and comments looked a little different, use the toggle to see how opinons from the Palisades differed from those in the Eaton fire zone.
 
+
 ----
 id: discussion_1
-comment: there will be 5 dicsussion topics
-title_h3: Put power lines underground
+title_h3: Underground power lines and equipment safety
 topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
 topic_result: On this topic, the community was united. The discussion brought about some real solutions and ideas that will be considered. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 nbr_comments: 3
@@ -132,6 +132,29 @@ value_1: 98%
 value_2: 2,700
 value_3: 2,400
 ----
+
+----
+id: discussion_2
+title_h3: Enhanced water infrastructure for fire protection
+----
+
+----
+id: discussion_3
+title_h3: Resilient emergency communication networks
+----
+
+----
+id: discussion_4
+title_h3: Help people find financial support programs
+----
+
+----
+id: discussion_5
+title_h3: Dedicated permitting support teams
+----
+
+
+
 
 ----
 id: topic_comments_scroller 
