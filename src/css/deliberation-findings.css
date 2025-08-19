@@ -40,18 +40,37 @@ div.center-container {
 .style-h1 {
   font-weight: 900;
   font-size: 47px;
+  @media (max-width: 720px) {
+    font-size: 37px;
+  }
 }
 .style-h2 {
   font-weight: 900;
   font-size: 37px;
+  @media (max-width: 720px) {
+    font-size: 27px;
+  }
 }
 .style-h3 {
   font-weight: 700;
   font-size: 30px;
+  @media (max-width: 720px) {
+    font-size: 23px;
+  }
+}
+.style-body-text {
+  font-weight: 400;
+  font-size: 23px;
+  @media (max-width: 720px) {
+    font-size: 18px;
+  }
 }
 .style-strong-body-text {
   font-weight: 600;
   font-size: 23px;
+  @media (max-width: 720px) {
+    font-size: 18px;
+  }
 }
 .style-strong-small-body-text {
   font-weight: 600;
@@ -60,10 +79,6 @@ div.center-container {
 .style-small-body-text {
   font-weight: 400;
   font-size: 18px;
-}
-.style-body-text {
-  font-weight: 400;
-  font-size: 23px;
 }
 .style-callout-text {
   font-weight: 600;
@@ -74,25 +89,6 @@ div.center-container {
 }
 .lower-divider {
    border-bottom: 2px solid #EEE;
-}
-
-@media (max-width: 720px) {
-  .style-h1 {
-    font-weight: 900;
-    font-size: 33px;
-  }
-  .style-h2 {
-    font-weight: 900;
-    font-size: 27px;
-  }
-  .style-h3 {
-    font-weight: 700;
-    font-size: 23px;
-  }
-  .style-strong-body-text {
-    font-weight: 600;
-    font-size: 18px;
-  }
 }
 
 /* 
@@ -122,6 +118,9 @@ div.findings-narrative-step {
   justify-content: center;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  @media (max-width: 720px) {
+    gap: 1rem;
+  }
 }
 
 .findings-narrative-tally-box {
@@ -145,6 +144,8 @@ div.findings-narrative-step {
   @media (max-width: 1200px) {
       row-gap: inherit;
       padding-top: 0;
+      margin-top: 2rem;
+      gap: 3rem;
   }
   margin-bottom: 4rem;
 }
@@ -163,17 +164,28 @@ div.findings-narrative-step {
   text-wrap: balance;
   margin: 0;
   text-align: center;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 27px;
   max-width: 350px; 
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+
+  @media (max-width: 720px) {
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
+
+
 
 .option-total {
   font-size: 56px;
   font-weight: 600;
   color: #2d3a4a;
   margin-bottom: 0.25rem;
+  @media (max-width: 720px) {
+    font-size: 36px;
+  }
 }
 
 .option-label {
@@ -343,8 +355,6 @@ section#findings-top-discussions {
 .findings-discussions-topic-description {
   margin-top: 1rem;
   margin-bottom: 2rem;
-  font-size: 18px;
-  font-weight: 400;
   font-style: italic;
 }
 
@@ -425,15 +435,6 @@ canvas#ring chart-canvas {
   width: 100%;
   height: 400px;
   background-color: #EEE;
-}
-
-.ring-chart-legend-tally {
-  font-weight: 700;
-  font-size: 30px;
-}
-.ring-chart-legend-tally span.total {
-  font-weight: 900;
-  font-size: 37px;
 }
 
 .ring-chart-followup-text {

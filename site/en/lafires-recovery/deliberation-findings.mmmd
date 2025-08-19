@@ -47,12 +47,12 @@ Our goal was to hear directly from the community to best prioritize what items w
 ----
 id: findings_narrative_top_options
 title_h2: ...and you weighed in...
-label_1: Participants
-label_2: Votes
+label_1: Conversations
+label_2: Participants
 label_3: Comments
-value_1: XXX
-value_2: XXX
-value_3: XXX
+value_1: ~325
+value_2: 416
+value_3: 1,504
 subtitle_h2: "...to find overall consensus on the top 5 solutions"
 nbr_options: 5
 option_label_1: Underground power lines and equipment safety
