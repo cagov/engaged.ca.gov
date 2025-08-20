@@ -24,64 +24,74 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ----
 id: findings_narrative_step_1
+title: Agenda setting
 ----
 
 ## We heard your opinions and solutions...
 
+After the severe wildfires in Los Angeles, more than 600 community members met online to discuss recovery priorities.
+
 ----
 id: findings_narrative_step_2
+title: Review and planning
 ----
 
-## ...a team of experts used their disaster recovery experience, data science, and AI to narrow the topics for discussion...
+## Experts turned individual voices into shared data
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+A group of subject matter experts refined those ideas into 19 actionable policy options. They cover five key areas: utilities, community support, financial support, building permits, fire-proofing, and emergency preparedness.
 
 ----
 id: findings_narrative_step_3
+title: Deliberation
 ----
 
-## ...then, we presented these options to the community for further deliberation...
+## The communithy voted on all 19 options
 
-Our goal was to hear directly from the community to best prioritize what items we should pursue etc
+More than 400 new and returning participants ranked these options, again using an online platform where they could discuss and collaborate.
+
 
 ----
-id: findings_narrative_top_options
-title_h2: ...and you weighed in...
+id: findings_narrative_top_options_intro
+title: Residents weighed in to find agreement on the top 5 solutions
 label_1: Conversations
 label_2: Participants
 label_3: Comments
 value_1: ~325
 value_2: 416
 value_3: 1,504
-subtitle_h2: "...to find overall consensus on the top 5 solutions"
+description: The engagement was notable. Instead of letters vanishing into a bureaucratic black box, this process encouraged neighbors to share their thoughts and respond. They talked about solutions and worked together to refine their priorities. 
+nbr_options: 5
+----
+
+
+----
+id: findings_narrative_top_options
+results_description: "The results reveal a community united around building fire-resilient infrastructure for the future:"
 nbr_options: 5
 option_label_1: Underground power lines and equipment safety
 option_label_2: Enhanced water infrastructure for fire protection
 option_label_3: Resilient emergency communication networks
 option_label_4: Expanded construction training programs
 option_label_5: Comprehensive homeowner education program
-option_icon_1: hammer_retina.png
+option_icon_1: circle_blue_1.svg
 option_icon_alt_1: Underground power lines
-option_icon_2: hammer_retina.png
+option_icon_2: circle_blue_2.svg
 option_icon_alt_2: Enhanced water infrastructure
-option_icon_3: hammer_retina.png
+option_icon_3: circle_blue_3.svg
 option_icon_alt_3: Resilient emergency communication networks
-option_icon_4: hammer_retina.png
+option_icon_4: circle_blue_4.svg
 option_icon_alt_4: Expanded construction training programs
-option_icon_5: hammer_retina.png
+option_icon_5: circle_blue_5.svg
 option_icon_alt_5: Comprehensive homeowner education program
-
-followup_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 ----
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 
 ----
 id: findings_consensus_watch_intro
-title_h2: Watch how the community reached consensus
+title_h2: Community alignment
 ----
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Each dot represents an individual voter. Follow a dot across topics to see how that person’s opinions align from one topic to the next. Topics with stronger alignment appear farther to the right, while those with more divided opinions appear farther to the left.
 
 ----
 id: findings_consensus_sentiment_chart
@@ -98,7 +108,6 @@ id: findings_consensus_watch_explore
 topic_number_template: "Topic <NUM> of <TOTAL>"
 explanation: DO NOT TRANSLATE <NUM> or <TOTAL>
 label_1: Increased housing density and expedited permits
-outro: We’re advancing the initiatives that received the strongest community support.
 ----
 
 
@@ -118,19 +127,19 @@ Every vote was counted and weighted to achieve consensus on the top 5 solutions 
 
 ----
 id: discussion_1
-title_h3: Underground power lines and equipment safety
+title: Underground power lines and equipment safety
 topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
-topic_result: On this topic, the community was united. The discussion brought about some real solutions and ideas that will be considered. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 nbr_comments: 3
 comment_1: Homeowners should be able to use Natural gas. It's more reliable and affordable than all electric mandates.
 comment_2: All housing should be built with no gas, we are supposed to be all electric in Los Angeles by 2035 anyway [...] so why invest in repairing gas infrastructure that will be obsolete/stranded assets soon
 comment_3: Homeowners should be able to use Natural gas. It's more reliable and affordable than all electric mandates.
+nbr_tally_items: 3
 label_1: Support
 label_2: Votes
 label_3: comments
 value_1: 98%
-value_2: 2,700
-value_3: 2,400
+value_2: 210
+value_3: 90
 ----
 
 ----

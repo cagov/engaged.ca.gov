@@ -32,81 +32,19 @@
         <div class="center-container">
           <div class="center-body">
             <div class="findings-narrative-step-1 findings-narrative-step ">
+              <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_1.title }}</div>
               {{ modules.findings_narrative_step_1.content | safe }}
             </div>
             <div class="findings-narrative-step-2 findings-narrative-step ">
+              <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_2.title }}</div>
               {{ modules.findings_narrative_step_2.content | safe }}
             </div>
             <div class="findings-narrative-step-3 findings-narrative-step ">
+              <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_3.title }}</div>
               {{ modules.findings_narrative_step_3.content | safe }}
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="findings-narrative-top-options-1">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="center-container">
-          <div class="center-body-lg">
-            <div class="findings-narrative-top-options-title">
-              <h2>{{ modules.findings_narrative_top_options.title_h2 | safe }}</h2>
-            </div>
-            <div class="findings-narrative-top-options-tally-list">
-              <div class="findings-narrative-tally-box">
-                <div class="option-total">{{ modules.findings_narrative_top_options.value_1 }}</div>
-                <div class="option-label">{{ modules.findings_narrative_top_options.label_1 }}</div>
-              </div>
-              <div class="findings-narrative-tally-box">
-                <div class="option-total">{{ modules.findings_narrative_top_options.value_2 }}</div>
-                <div class="option-label">{{ modules.findings_narrative_top_options.label_2 }}</div>
-              </div>
-              <div class="findings-narrative-tally-box">
-                <div class="option-total">{{ modules.findings_narrative_top_options.value_3 }}</div>
-                <div class="option-label">{{ modules.findings_narrative_top_options.label_3 }}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="findings-narrative-top-options-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="center-container">
-          <div class="center-body-lg">
-            <div class="findings-narrative-top-options-subtitle">
-              <h2>{{ modules.findings_narrative_top_options.subtitle_h2 | safe }}</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="findings-narrative-top-options-options-list">
-          {% for i in range(1, modules.findings_narrative_top_options.nbr_options + 1) %}
-          <!-- this will mimic the other report -->
-          <div class="findings-narrative-top-options-option-box">
-            <img class="findings-option-icon png-icon" src="/public/images/{{ modules.findings_narrative_top_options["option_icon_" + i] }}" aria-hidden="true" alt="{{ modules.findings_narrative_top_options["option_icon_alt_" + i] }}">
-            <div class="option-label">{{ modules.findings_narrative_top_options["option_label_" + i] }}</div>
-          </div>
-          {% endfor %}
-        </div>
-
-        <div class="center-container">
-          <div class="center-body">
-            <div class="findings-narrative-top-options-followup-text">
-              <div class="option-description">{{ modules.findings_narrative_top_options.followup_text }}</div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
@@ -154,8 +92,70 @@
           </div>
         </div>
 
-        <div class="findings-consensus-outro">
+        {# <div class="findings-consensus-outro">
           <p>{{ modules.findings_consensus_watch_explore.outro | safe }}</p>
+        </div> #}
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="findings-narrative-top-options-intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="center-container">
+          <div class="center-body-lg">
+            <div class="findings-narrative-top-options-title">
+              <h2>{{ modules.findings_narrative_top_options_intro.title | safe }}</h2>
+            </div>
+            <div class="findings-narrative-top-options-tally-list">
+              <div class="findings-narrative-tally-box">
+                <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_1 }}</div>
+                <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_1 }}</div>
+              </div>
+              <div class="findings-narrative-tally-box">
+                <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_2 }}</div>
+                <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_2 }}</div>
+              </div>
+              <div class="findings-narrative-tally-box">
+                <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_3 }}</div>
+                <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_3 }}</div>
+              </div>
+            </div>
+            <div class="top-options-description style-body-text">
+              {{ modules.findings_narrative_top_options_intro.description | safe }}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="findings-narrative-top-options">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="center-container">
+          <div class="center-body-lg">
+            <div class="findings-narrative-top-options-subtitle">
+              <h2>{{ modules.findings_narrative_top_options.results_description | safe }}</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="findings-narrative-top-options-options-list">
+          {% for i in range(1, modules.findings_narrative_top_options.nbr_options + 1) %}
+          <!-- this will mimic the other report -->
+          <div class="findings-narrative-top-options-option-box">
+            <img class="findings-option-icon png-icon" src="/public/images/{{ modules.findings_narrative_top_options["option_icon_" + i] }}" aria-hidden="true" alt="{{ modules.findings_narrative_top_options["option_icon_alt_" + i] }}">
+            <div class="option-label">{{ modules.findings_narrative_top_options["option_label_" + i] }}</div>
+          </div>
+          {% endfor %}
         </div>
 
 
@@ -164,83 +164,34 @@
   </div>
 </section>
 
-<div id="consensus-chart-outro-trigger">
-</div>
-
 <section id="findings-top-discussions">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="findings-top-discussions-intro">
-          <h2>{{ modules.findings_top_discussions.title_h2 | safe }}</h2>
-        </div>
-        <div class="findings-top-discussions-intro">
-          {{ modules.findings_top_discussions.content | safe }}
-        </div>
-      </div>
-      <div class="col-lg-12 findings-top-discussions-picker-container">
-        <div class="findings-top-discussions-picker-instructions style-strong-small-body-text">
-          {{ modules.findings_top_discussions.picker_instructions | safe }}
-        </div>
-        <div class="findings-top-discussions-picker-list">
-          <div class="findings-top-discussions-picker-box active">
-            <div class="option-label">{{ modules.findings_top_discussions.picker_label_1 }}</div>
-          </div>
-          <div class="findings-top-discussions-picker-box">
-            <div class="option-label">{{ modules.findings_top_discussions.picker_label_2 }}</div>
-          </div>
-          <div class="findings-top-discussions-picker-box">
-            <div class="option-label">{{ modules.findings_top_discussions.picker_label_3 }}</div>
-          </div>
-        </div>
-
-
-
-      </div>
-    </div>
-    <div class="topic-section upper-divider">
+    <div class="topic-section">
       <div class="row">
         <div class="col-lg-12">
           <div class="findings-discussions-topic-title-container">
-            <div class="findings-discussions-topic-step-number">
-              <img src="/public/images/circle-blue-1.svg" alt="Topic 1" />
-            </div>
-            <div class="findings-discussions-topic-title style-h3">
-              <h3>{{ modules.discussion_1.title_h3 | safe }}</h3>
-            </div>
-            <div class="findings-discussions-topic-expander">
-              <img src="/public/images/circle-expander-plus.svg" alt="Topic 1" />
+            <div class="findings-discussions-topic-title style-h2">
+              <h2>{{ modules.discussion_1.title | safe }}</h2>
             </div>
           </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-12">
           <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
             {{ modules.findings_top_discussions.solution_details_label | safe }}
           </div>
           <div class="findings-discussions-topic-description style-small-body-text">
             {{ modules.discussion_1.topic_description | safe }}
           </div>
-          <div class="findings-discussions-topic-result">
-            {{ modules.discussion_1.topic_result | safe }}
-          </div>
         </div>
-        <div class="col-lg-4">
-          <div class="findings-top-discussions-tally-list">
-            <div class="findings-top-discussions-tally-box">
-              <div class="option-total">{{ modules.discussion_1.value_1 }}</div>
-              <div class="option-label style-body-text">{{ modules.discussion_1.label_1 }}</div>
-            </div>
-            <div class="findings-top-discussions-tally-box">
-              <div class="option-total">{{ modules.discussion_1.value_2 }}</div>
-              <div class="option-label style-body-text">{{ modules.discussion_1.label_2 }}</div>
-            </div>
-            <div class="findings-top-discussions-tally-box">
-              <div class="option-total">{{ modules.discussion_1.value_3 }}</div>
-              <div class="option-label style-body-text">{{ modules.discussion_1.label_3 }}</div>
-            </div>
+        <div class="findings-top-discussions-tally-list">
+          {% for i in range(1, modules.discussion_1.nbr_tally_items + 1) %}
+          <div class="findings-top-discussions-tally-box">
+            <div class="option-total style-h1">{{ modules.discussion_1["value_" + i] }}</div>
+            <div class="option-label style-body-text">{{ modules.discussion_1["label_" + i] }}</div>
           </div>
+          {% endfor %}
         </div>
-      </div>
+    </div>
       <div class="row">
         <div class="col-lg-12">
           <div class="style-strong-body-text">
@@ -279,29 +230,6 @@
         </div>
       </div>
     </div>
-
-   {% for i in range(2, 5) %}  
-
-    <div class="topic-section upper-divider">
-
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="findings-discussions-topic-title-container">
-            <div class="findings-discussions-topic-step-number">
-              <img src="/public/images/circle-blue-{{ i }}.svg" alt="Topic {{ i }}" />
-            </div>
-            <div class="findings-discussions-topic-title style-h3">
-              <h3>{{ modules['discussion_' ~ i].title_h3 | safe }}</h3>
-            </div>
-            <div class="findings-discussions-topic-expander">
-              <img src="/public/images/circle-expander-plus.svg" alt="Topic 1" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-   {% endfor %}  
 
   </div>
 </section>

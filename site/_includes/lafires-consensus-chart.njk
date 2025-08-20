@@ -96,8 +96,9 @@ function change_consensus_topic(canvas, topic_index) {
     document.getElementById('findings-consensus-sentiment-chart-title').innerHTML = long_topic_name;
 
     function render_dots() {
-      ctx.fillStyle = "#fff";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      {# ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height); #}
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       consensus_vars.user_dots.forEach(dot => {
         if (true) {
@@ -215,8 +216,7 @@ function draw_consensus_progress_bar(step_index) {
   if (ctx == null) {
     return;
   }
-  ctx.fillStyle = "#fff";
-  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
   ctx.fillStyle = "#000";
 
