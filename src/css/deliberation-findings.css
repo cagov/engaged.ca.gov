@@ -172,7 +172,7 @@ section#findings-top-options {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: space-between;
   /* justify-content: center; */
   row-gap: 1rem;
   column-gap: 1rem;
@@ -186,7 +186,7 @@ section#findings-top-options {
 }
 
 .findings-top-options-option-box {
-  flex: 1 1 200px;
+  flex: 1 1 230px;
   box-sizing: border-box;
 
   position: relative;
@@ -300,6 +300,9 @@ canvas#findings-consensus-progressbar-canvas {
   margin-bottom: 4rem;
 }
 
+div#findings-deliberation-comments-container {
+  margin-top: 2rem;
+}
 
 
 /* 

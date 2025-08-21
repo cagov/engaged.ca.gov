@@ -210,7 +210,11 @@
             </div>
           </div>
         </div>
-        <div class="row">
+      </div>
+
+      <div id="findings-deliberation-comments-container">
+
+        {# <div class="row">
           <div class="col-lg-8">
             <div class="topic-comments-scroller-label style-strong-body-text">
               {{ modules.topic_comments_scroller.label }}
@@ -222,8 +226,17 @@
               <p><i>Comments will appear here...</i></p>
             </div>
           </div>
-        </div>
+        </div> #}
+
+          <div class="findings-button-container">
+          <button id="findings-deliberation-comments-show-all-button" class="findings-show-all-button button-reset open" aria-expanded="false" aria-controls="findings-responding-list-container">
+                  <div class="findings-responding-show-all-button-label">{{ modules.findings_top_discussions.show_comments_button | safe }}</div>
+          </button>
+          </div>
       </div>
+
+
+
     </div>
   </div>
 </section>
