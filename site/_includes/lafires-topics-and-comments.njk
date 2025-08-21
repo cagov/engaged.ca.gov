@@ -1,0 +1,23 @@
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Set up event handler for clicks on .findings-top-options-option-box
+  document.querySelectorAll('.findings-top-options-option-box').forEach(function(box) {
+    box.addEventListener('click', function() {
+      // Remove 'active' from all option boxes
+      document.querySelectorAll('.findings-top-options-option-box').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.findings-top-discussion-container').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      // Add 'active' to the clicked box
+      this.classList.add('active');
+      // Add 'active' to the corresponding discussion container
+      document.getElementById('findings-top-discussions-topic-' + this.dataset.topicNumber).classList.add('active');
+      select_topic_chart(parseInt(this.dataset.chartTopicIndex, 10));
+    });
+  });
+
+});
+</script>
