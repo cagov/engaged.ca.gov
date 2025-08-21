@@ -149,13 +149,13 @@ function animate_step_1(t, ctx) {
         ctx.restore();
 
         // Draw centered text
-        ctx.save();
+        {# ctx.save();
         ctx.font = `italic ${Math.round(text_size)}px "Noto Sans Display"`;
         ctx.fillStyle = txt_color;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText("yada yada", bx, by);
-        ctx.restore();
+        ctx.restore(); #}
     });
 
     particles.forEach(particle => {
