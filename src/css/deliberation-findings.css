@@ -224,13 +224,15 @@ section#findings-top-options {
 }
 .findings-top-options-option-box.active img.findings-option-icon.png-icon 
 {
-  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.18));
+  filter: drop-shadow(0px 3.67px 3.67px rgba(0,0,0,0.18));
 }
 
 .findings-top-options-option-box:not(.active) img.findings-option-icon.png-icon 
 {
-  filter: saturate(0%) brightness(0.5) invert(100%) contrast(200%) drop-shadow(2px 2px 2px rgba(0,0,0,0.18));
+  filter: saturate(0%) brightness(0.5) invert(100%) contrast(200%) drop-shadow(0px 3.67px 3.67px rgba(0,0,0,0.18));
 }
+
+
 
 .option-total {
   font-weight: 700;
