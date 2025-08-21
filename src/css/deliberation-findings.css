@@ -159,7 +159,7 @@ section#findings-top-options {
   }
 }
 
-.findings-narrative-tally-box {
+.findings-top-options-tally-box {
   display: flex;
   flex-direction: column;
   align-items: center;
