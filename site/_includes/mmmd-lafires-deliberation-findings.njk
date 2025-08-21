@@ -29,20 +29,25 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="center-container">
-          <div class="center-body">
-            <div class="findings-narrative-step-1 findings-narrative-step ">
-              <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_1.title }}</div>
-              {{ modules.findings_narrative_step_1.content | safe }}
-            </div>
-            <div class="findings-narrative-step-2 findings-narrative-step ">
-              <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_2.title }}</div>
-              {{ modules.findings_narrative_step_2.content | safe }}
-            </div>
-            <div class="findings-narrative-step-3 findings-narrative-step ">
-              <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_3.title }}</div>
-              {{ modules.findings_narrative_step_3.content | safe }}
-            </div>
+        <div id="narrative-wrapper-1" class="narrative-wrapper">
+          <canvas id="findings-narrative-step-1-canvas"></canvas>
+          <div class="findings-narrative-step-1 findings-narrative-step ">
+            <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_1.title }}</div>
+            {{ modules.findings_narrative_step_1.content | safe }}
+          </div>
+        </div>
+        <div id="narrative-wrapper-2" class="narrative-wrapper">
+          <canvas id="findings-narrative-step-2-canvas"></canvas>
+          <div class="findings-narrative-step-2 findings-narrative-step ">
+            <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_2.title }}</div>
+            {{ modules.findings_narrative_step_2.content | safe }}
+          </div>
+        </div>
+        <div id="narrative-wrapper-3" class="narrative-wrapper">
+          <canvas id="findings-narrative-step-3-canvas"></canvas>
+          <div class="findings-narrative-step-3 findings-narrative-step ">
+            <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_3.title }}</div>
+            {{ modules.findings_narrative_step_3.content | safe }}
           </div>
         </div>
       </div>
@@ -102,16 +107,16 @@
   </div>
 </section>
 
-<section id="findings-narrative-top-options-intro">
+<section id="findings-top-options-intro">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="center-container">
           <div class="center-body-lg">
-            <div class="findings-narrative-top-options-title">
+            <div class="findings-top-options-title">
               <h2>{{ modules.findings_narrative_top_options_intro.title | safe }}</h2>
             </div>
-            <div class="findings-narrative-top-options-tally-list">
+            <div class="findings-top-options-tally-list">
               <div class="findings-narrative-tally-box">
                 <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_1 }}</div>
                 <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_1 }}</div>
@@ -136,22 +141,22 @@
   </div>
 </section>
 
-<section id="findings-narrative-top-options">
+<section id="findings-top-options">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="center-container">
           <div class="center-body-lg">
-            <div class="findings-narrative-top-options-subtitle">
+            <div class="findings-top-options-subtitle">
               <h2>{{ modules.findings_narrative_top_options.results_description | safe }}</h2>
             </div>
           </div>
         </div>
 
-        <div class="findings-narrative-top-options-options-list">
+        <div class="findings-top-options-options-list">
           {% for i in range(1, modules.findings_narrative_top_options.nbr_options + 1) %}
           <!-- this will mimic the other report -->
-          <div class="findings-narrative-top-options-option-box">
+          <div class="findings-top-options-option-box">
             <img class="findings-option-icon png-icon" src="/public/images/{{ modules.findings_narrative_top_options["option_icon_" + i] }}" aria-hidden="true" alt="{{ modules.findings_narrative_top_options["option_icon_alt_" + i] }}">
             <div class="option-label">{{ modules.findings_narrative_top_options["option_label_" + i] }}</div>
           </div>
@@ -337,5 +342,6 @@
 {# {% include "lafires-ring-chart.njk" %} #}
 {% include "lafires-deliberation-utilities.njk" %}
 {% include "lafires-scroll-animation.njk" %}
+{% include "lafires-narrative-backgrounds.njk" %}
 
 {% endblock %}

@@ -1,0 +1,234 @@
+<script>
+
+class Particle {
+    constructor(x, y, options = {}) {
+        this.x = x;
+        this.y = y;
+        this.options = options;
+    }
+}
+
+let particles = [];
+
+function init_narrative_backgrounds_step_1(canvas_id, color) {
+    const canvas = document.getElementById(canvas_id);
+    canvas.width = 1200*2;
+    canvas.height = 600*2;
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    console.log("canvas size", canvas.width, canvas.height);
+
+    particles = [];
+    let nbr_particles = 10;
+    let ellipse_radius_x = canvas.width * 0.4;
+    let ellipse_radius_y = canvas.height * 0.4;
+    let ellipse_center_x = canvas.width / 2;
+    let ellipse_center_y = canvas.height / 2;
+    for (let i = 0; i < nbr_particles; i++) {
+        let angle = i * 2 * Math.PI / nbr_particles;
+        let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle);
+        let y = ellipse_center_y + ellipse_radius_y * Math.sin(angle);
+        let scale = 2;
+        let min_balloon_size = 40*scale;
+        let max_balloon_size = 90*scale;
+        let min_txt_size = 12*scale;
+        let max_txt_size = 19*scale;
+        let balloon_size = mapv(Math.random(),0,1,min_balloon_size,max_balloon_size);
+        let size_split = (min_balloon_size + max_balloon_size) / 2;
+        let options = {
+            'ellipse_yw': ellipse_radius_y,
+            'ellipse_xw': ellipse_radius_x,
+            'ellipse_angle': angle,
+            'body_width': balloon_size * 2.2,
+            'body_height': balloon_size * 1.4,
+            'balloon_corner_radius': 4,
+            'bg_color': balloon_size < size_split? '#5489A3' : '#E6F0F5',
+            'txt_color': balloon_size < size_split? 'white' : 'black',
+            'tail_angle': angle + Math.PI, // Math.atan2(ellipse_center_y-y, ellipse_center_x-x),
+            'tail_length': balloon_size * 1.5,
+            'tail_offset': (Math.random() - 0.5) * balloon_size * 2.2 * 0.5,
+            'text_size': mapv(balloon_size, min_balloon_size, max_balloon_size, min_txt_size, max_txt_size),
+        }
+        particles.push(new Particle(x, y, options));
+    }
+    animate_step(0, 1);
+}
+
+function init_narrative_backgrounds_step_2(canvas_id, color) {
+    const canvas = document.getElementById(canvas_id);
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = color;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+function init_narrative_backgrounds_step_3(canvas_id, color) {
+    const canvas = document.getElementById(canvas_id);
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = color;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+
+
+function animate_step_1(t, ctx) {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+    let alpha;
+    if (t < 0.2) {
+        alpha = mapv(t, 0, 0.2, 0, 1);
+    } else if (t > 0.8) {
+        alpha = mapv(t, 0.8, 1, 1, 0);
+    } else {
+        alpha = 1;
+    }
+    ctx.canvas.style.opacity = alpha;
+
+    particles.forEach(particle => {
+        let x = particle.x;
+        let y = particle.y;
+        let balloon_size = particle.options.balloon_size;
+        let bg_color = particle.options.bg_color;
+        let txt_color = particle.options.txt_color;
+        let tail_angle = particle.options.tail_angle;
+        let text_size = particle.options.text_size;
+        // Draw balloon body (rounded rect)
+        const bodyWidth = particle.options.body_width;
+        const bodyHeight = particle.options.body_height;
+        const radius = particle.options.balloon_corner_radius;
+
+        // Balloon body center
+        const bx = x;
+        const by = y;
+
+        // Balloon body rect
+        const rectX = bx - bodyWidth / 2;
+        const rectY = by - bodyHeight / 2;
+        const rectW = bodyWidth;
+        const rectH = bodyHeight;
+
+        // Tail base (on bottom edge of rect, offset horizontally)
+        const tailBaseX = bx; // bx + particle.options.tail_offset;
+        const tailBaseY = by; // rectY + rectH;
+
+        // Tail tip (downward, at randomized angle and length)
+        const tailTipX = tailBaseX + Math.cos(tail_angle) * particle.options.tail_length;
+        const tailTipY = tailBaseY + Math.sin(tail_angle) * particle.options.tail_length;
+
+        ctx.save();
+
+        ctx.beginPath();
+        ctx.moveTo(rectX + radius, rectY);
+        ctx.lineTo(rectX + rectW - radius, rectY);
+        ctx.quadraticCurveTo(rectX + rectW, rectY, rectX + rectW, rectY + radius);
+        ctx.lineTo(rectX + rectW, rectY + rectH - radius);
+        ctx.quadraticCurveTo(rectX + rectW, rectY + rectH, rectX + rectW - radius, rectY + rectH);
+        ctx.lineTo(rectX + radius, rectY + rectH);
+        ctx.quadraticCurveTo(rectX, rectY + rectH, rectX, rectY + rectH - radius);
+        ctx.lineTo(rectX, rectY + radius);
+        ctx.quadraticCurveTo(rectX, rectY, rectX + radius, rectY);
+
+
+        ctx.closePath();
+        ctx.fillStyle = bg_color;
+        ctx.fill();
+        // Draw tail (triangle)
+        let tail_fat = 50*2;
+        const tail_x_offset = Math.cos(tail_angle+Math.PI/2)*tail_fat;
+        const tail_y_offset = Math.sin(tail_angle+Math.PI/2)*tail_fat;
+        ctx.moveTo(tailBaseX - tail_x_offset*0.5, tailBaseY - tail_y_offset*0.5);
+        ctx.lineTo(tailTipX, tailTipY);
+        ctx.lineTo(tailBaseX + tail_x_offset*0.5, tailBaseY + tail_y_offset*0.5);
+        ctx.fillStyle = bg_color;
+        ctx.strokeStyle = bg_color;
+        ctx.lineWidth = 4*2;
+        ctx.lineJoin = "round";
+        ctx.lineCap = "round";
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.restore();
+
+        // Draw centered text
+        ctx.save();
+        ctx.font = `italic ${Math.round(text_size)}px "Noto Sans Display"`;
+        ctx.fillStyle = txt_color;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("yada yada", bx, by);
+        ctx.restore();
+    });
+
+    particles.forEach(particle => {
+    // Advance each particle's x, y, and tail_angle to move around an ellipse
+    // We'll use particle.options.ellipse_a and ellipse_b for axes, and particle.options.ellipse_angle for orientation
+    // Animate using t (0..1), and a per-particle phase offset for variety
+
+    // If not already present, initialize phase offset and angular speed
+    if (particle.phase === undefined) {
+        particle.phase = Math.random() * Math.PI * 2;
+        particle.angular_speed = 0.7 + Math.random() * 0.6; // radians per t unit
+    }
+
+    // Center of ellipse
+    const cx = ctx.canvas.width / 2;
+    const cy = ctx.canvas.height / 2;
+
+    // Current angle along ellipse
+    particle.options.ellipse_angle += 0.01;
+    particle.x = cx + particle.options.ellipse_xw * Math.cos(particle.options.ellipse_angle);
+    particle.y = cy + particle.options.ellipse_yw * Math.sin(particle.options.ellipse_angle);
+    particle.options.tail_angle = particle.options.ellipse_angle + Math.PI;
+
+    });
+
+}
+
+function animate_step_2(t, ctx) {
+    // TODO: implement animation for step 2
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+}
+
+function animate_step_3(t, ctx) {
+    // TODO: implement animation for step 3
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+}
+
+
+
+function init_narrative_backgrounds() {
+    init_narrative_backgrounds_step_1('findings-narrative-step-1-canvas', 'red');
+
+    init_narrative_backgrounds_step_2('findings-narrative-step-2-canvas', 'green');
+
+    init_narrative_backgrounds_step_3('findings-narrative-step-3-canvas', 'blue');
+
+    console.log("narrative backgrounds initialized");
+
+}
+
+function animate_narrative(t, step_index) {
+    console.log("animating narrative for step", step_index, t);
+    const canvas_id = `findings-narrative-step-${step_index}-canvas`;
+    const canvas = document.getElementById(canvas_id);
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    switch (step_index) {
+    case 1:
+        animate_step_1(t, ctx);
+        break;
+    case 2:
+        animate_step_2(t, ctx);
+        break;
+    case 3:
+        animate_step_3(t, ctx);
+        break;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    init_narrative_backgrounds();
+    ScrollTrigger.refresh();
+
+});
+</script>

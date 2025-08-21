@@ -44,32 +44,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
   gsap.to({}, {
       scrollTrigger: {
-        trigger: ".findings-narrative-step-1",
-        start: "center center+=50",
+        trigger: "#narrative-wrapper-1",
+        start: "center center+=70",
         end: "+=600", // scroll range for animation
         scrub: true,
         pin: true,
+        anticipatePin: true,
         markers: use_MARKERS, // Enable markers for debugging
+        onUpdate: (self) => {
+          const t = self.progress; // 0 to 1
+          animate_narrative(t, 1);
+        }
       }
   });
   
   gsap.to({}, {
       scrollTrigger: {
-        trigger: ".findings-narrative-step-2",
-        start: "center center+=50",
+        trigger: "#narrative-wrapper-2",
+        start: "center center+=70",
         end: "+=600", // scroll range for animation
         scrub: true,
         pin: true,
+        anticipatePin: true,
         markers: use_MARKERS, // Disable markers for pin trigger
+        onUpdate: (self) => {
+          const t = self.progress; // 0 to 1
+          animate_narrative(t, 2);
+        }
       }
     });
 
   // Opacity trigger - handles the fade in/out animation
   gsap.to({}, {
       scrollTrigger: {
-        trigger: ".findings-narrative-step-2",
+        trigger: "#narrative-wrapper-2",
         start: "middle bottom", // when middle hits bottom of viewport
-        end: "bottom top",   // when bottom edge hits top of viewport
+        end: "bottom top+=140",   // when bottom edge hits top of viewport
         scrub: true,
         pin: false, // No pinning for this trigger
         markers: use_MARKERS, // Enable markers for debugging opacity
@@ -97,18 +107,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
   gsap.to({}, {
       scrollTrigger: {
-        trigger: ".findings-narrative-step-3",
-        start: "center center+=50",
+        trigger: "#narrative-wrapper-3",
+        start: "center center+=70",
         end: "+=600", // scroll range for animation
         scrub: true,
         pin: true,
+        anticipatePin: true,
         markers: use_MARKERS, // Enable markers for debugging
+        onUpdate: (self) => {
+          const t = self.progress; // 0 to 1
+          animate_narrative(t, 3);
+        }
       }
     });
 
   gsap.to({}, {
       scrollTrigger: {
-        trigger: ".findings-narrative-step-3",
+        trigger: "#narrative-wrapper-3",
         start: "middle bottom", // when middle hits bottom of viewport
         end: "bottom top",   // when bottom edge hits top of viewport
         scrub: true,
@@ -133,9 +148,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  gsap.to({}, {
+  {# gsap.to({}, {
       scrollTrigger: {
-        trigger: "#findings-narrative-top-options-1",
+        trigger: "#findings-top-options-1",
         start: "center center+=50",
         end: "+=900", // scroll range for animation
         scrub: true,
@@ -146,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   gsap.to({}, {
       scrollTrigger: {
-        trigger: "#findings-narrative-top-options-2",
+        trigger: "#findings-top-options-2",
         start: "center center+=50",
         end: "+=900", // scroll range for animation
         scrub: true,
@@ -159,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
       }
-    });
+    }); #}
 
 
   gsap.to({}, {
