@@ -66,6 +66,7 @@ nbr_options: 5
 
 ----
 id: findings_narrative_top_options
+results_header: The top 5
 results_description: "The results reveal a community united around building fire-resilient infrastructure for the future:"
 nbr_options: 5
 option_label_1: Underground power lines and equipment safety
@@ -189,8 +190,35 @@ group_label_6: Supportive
 group_label_7: Strongly supportive
 ----
 
+----
+id: findings_alignment_section
+----
+## Noteworthy alignment 
 
+People from different fire zones showed surprising consistency. Residents impacted by Eaton and Palisades ranked the top needs the same: underground power lines, improved water infrastructure, and improved emergency communications.
+This shows that regardless of geographic separation, there is community-wide agreement on essential recovery priorities.
 
+### Your community, your voice, your impact
+
+Through open discussion and shared decision-making, we found common ground. Your input shaped the outcome, and now we can work on the priorities that earned your collective support.
+
+**This group of priorities tells a clear story.**
+
+Residents want both immediate support for recovery and long-term investments in fire-resistant infrastructure. They also need streamlined bureaucratic processes to be streamlined to serve the community's urgent rebuilding needs. 
+
+This engagement allowed us to turn personal experiences into real policy guidance.
+
+----
+id: findings_alignment_section_sidebar
+----
+
+**Building on shared support**
+
+The process didn't just gather opinions; it built confidence and momentum as we move forward together.
+
+While participants arrived with mixed feelings—only 24% started optimistic while 48% felt pessimistic—the outlook shifted through the process. 
+
+More than a quarter of participants (27%) emerged more optimistic about LA fires recovery.
 
 ----
 id: ring_chart

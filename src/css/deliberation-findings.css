@@ -144,6 +144,7 @@ canvas#findings-narrative-step-3-canvas {
 }
 
 section#findings-top-options {
+  padding-bottom: 0;
   /* background-color: #FFF4EB; */
 }
 
@@ -151,7 +152,6 @@ section#findings-top-options {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  justify-content: center;
   margin-top: 2rem;
   margin-bottom: 3rem;
   @media (max-width: 720px) {
@@ -183,7 +183,6 @@ section#findings-top-options {
       margin-top: 2rem;
       gap: 3rem;
   }
-  margin-bottom: 4rem;
 }
 
 .findings-top-options-option-box {
@@ -206,9 +205,18 @@ section#findings-top-options {
     font-size: 18px;
     line-height: 23px;
   }
+  padding: 1rem 0.5rem;
+  background-color: #F6F7FA;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: 12px solid #D9D9D9;
 }
 
-
+.findings-top-options-option-box.active {
+  background-color: white;
+  border: 2px solid #5489A3;
+  border-bottom: 12px solid #5489A3;
+}
 
 .option-total {
   font-weight: 900;
@@ -224,12 +232,15 @@ section#findings-top-options {
 }
 
 img.findings-option-icon {
-  margin-bottom: 1rem;
 }
 img.findings-option-icon.png-icon {
   width: 60px;
 }
 
+section#findings-top-discussions {
+  padding-top: 0;
+  /* background-color: #FFF4EB; */
+}
 
 
 /* 
@@ -295,10 +306,11 @@ canvas#findings-consensus-progressbar-canvas {
  * TOP DISCUSSIONS SECTION
  */
 
-section#findings-top-discussions .container {
+div#findings-top-discussions {
   /* background-color: #F6F7FA; */
-  border: 2px solid #EEE;
-  border-radius: 16px;
+  border: 2px solid #5489A3;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
   padding: 1rem;
 }
 
@@ -444,6 +456,14 @@ canvas#findings-top-topics-dataviz-canvas {
 }
 
 /*
+ * ALIGNMENT SECTION
+ */
+section#findings-alignment-section {
+  background-color: #FFF4EB;
+  margin-top: 2rem;
+}
+
+/*
  * RINGCHART SECTION
  */
 
@@ -482,7 +502,11 @@ canvas#ring chart-canvas {
 /* SIGN UP SECTION */
 
 section#findings-signup-section {
-  background-color: #F6F7FA;
+  background-color: #1C2745;
+  color: #FFF4EB;
+  h2 {
+    color: #FFF4EB;
+  }
 }
 
 

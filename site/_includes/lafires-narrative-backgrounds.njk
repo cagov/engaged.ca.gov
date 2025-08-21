@@ -13,6 +13,26 @@ let particles_2 = [];
 let particles_3 = [];
 
 // ADD RESIZE HANDLING HERE
+
+function resize_canvas(step_nbr) {
+    const canvas = document.getElementById(`findings-narrative-step-${step_nbr}-canvas`);
+    const wrapper = document.getElementById(`narrative-wrapper-${step_nbr}`);
+    const scale = 2;
+    if (wrapper) {
+        const rect = wrapper.getBoundingClientRect();
+        canvas.width = Math.round(rect.width*scale);
+        canvas.height = Math.round(rect.height*scale);
+    }
+}
+
+window.addEventListener('resize', function() {
+    // this is not helping yet...
+    resize_canvas(1);
+    resize_canvas(2);
+    resize_canvas(3);
+});
+
+
 function init_narrative_backgrounds_step_1(canvas_id, color) {
     const canvas = document.getElementById(canvas_id);
     console.log("init 1, canvas size", canvas.width, canvas.height);
@@ -138,7 +158,7 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
     console.log("canvas size 2", canvas.width, canvas.height);
 
     particles_3 = [];
-    let nbr_particles = 21;
+    let nbr_particles = 31;
     let min_ellipse_radius_x = canvas.width * 0.4;
     let max_ellipse_radius_x = canvas.width * 0.45;
     let min_ellipse_radius_y = canvas.height * 0.2;
@@ -151,10 +171,10 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
         let ellipse_radius_y = mapv(Math.random(),0,1,min_ellipse_radius_y,max_ellipse_radius_y);
         let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle);
         let y = ellipse_center_y + ellipse_radius_y * Math.sin(angle);
-        let min_circle_size = 18*scale;
-        let max_circle_size = 60*scale;
+        let min_circle_size = 10*scale;
+        let max_circle_size = 40*scale;
         let circle_size = mapv(Math.random(),0,1,min_circle_size,max_circle_size);
-        let circle_type = Math.floor(Math.random()*3);
+        let circle_type = Math.floor(Math.random()*Math.random()*3);
         let options = {
             'scale': scale,
             'ellipse_yw': ellipse_radius_y,
@@ -365,7 +385,7 @@ function animate_step_3(t, ctx) {
         ctx.closePath();
         ctx.lineWidth = 1.73*particle.options.scale;
         switch (particle.options.circle_type) {
-        case 0:
+        case 2:
             ctx.fillStyle = '#5489A3';
             ctx.fill();
             break;
@@ -373,7 +393,7 @@ function animate_step_3(t, ctx) {
             ctx.fillStyle = '#E6883B';
             ctx.fill();
             break;
-        case 2:
+        case 0:
             ctx.strokeStyle = '#E6883B';
             ctx.fillStyle = 'white';
             ctx.fill();

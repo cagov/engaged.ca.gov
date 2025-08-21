@@ -110,31 +110,26 @@
 <section id="findings-top-options-intro">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <div class="center-container">
-          <div class="center-body-lg">
-            <div class="findings-top-options-title">
-              <h2>{{ modules.findings_narrative_top_options_intro.title | safe }}</h2>
-            </div>
-            <div class="findings-top-options-tally-list">
-              <div class="findings-top-options-tally-box">
-                <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_1 }}</div>
-                <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_1 }}</div>
-              </div>
-              <div class="findings-top-options-tally-box">
-                <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_2 }}</div>
-                <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_2 }}</div>
-              </div>
-              <div class="findings-top-options-tally-box">
-                <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_3 }}</div>
-                <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_3 }}</div>
-              </div>
-            </div>
-            <div class="top-options-description style-body-text">
-              {{ modules.findings_narrative_top_options_intro.description | safe }}
-            </div>
-
+      <div class="col-lg-8">
+        <div class="findings-top-options-title">
+          <h2>{{ modules.findings_narrative_top_options_intro.title | safe }}</h2>
+        </div>
+        <div class="findings-top-options-tally-list">
+          <div class="findings-top-options-tally-box">
+            <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_1 }}</div>
+            <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_1 }}</div>
           </div>
+          <div class="findings-top-options-tally-box">
+            <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_2 }}</div>
+            <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_2 }}</div>
+          </div>
+          <div class="findings-top-options-tally-box">
+            <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_3 }}</div>
+            <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_3 }}</div>
+          </div>
+        </div>
+        <div class="top-options-description style-body-text">
+          {{ modules.findings_narrative_top_options_intro.description | safe }}
         </div>
       </div>
     </div>
@@ -145,18 +140,15 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="center-container">
-          <div class="center-body-lg">
-            <div class="findings-top-options-subtitle">
-              <h2>{{ modules.findings_narrative_top_options.results_description | safe }}</h2>
-            </div>
-          </div>
+        <div class="findings-top-options-subtitle">
+          <div class="style-h3">{{ modules.findings_narrative_top_options.results_header | safe }}</div>
+          <div class="style-h2">{{ modules.findings_narrative_top_options.results_description | safe }}</div>
         </div>
 
         <div class="findings-top-options-options-list">
           {% for i in range(1, modules.findings_narrative_top_options.nbr_options + 1) %}
           <!-- this will mimic the other report -->
-          <div class="findings-top-options-option-box">
+          <div class="findings-top-options-option-box{% if i == 1 %} active{% endif %}">
             <img class="findings-option-icon png-icon" src="/public/images/{{ modules.findings_narrative_top_options["option_icon_" + i] }}" aria-hidden="true" alt="{{ modules.findings_narrative_top_options["option_icon_alt_" + i] }}">
             <div class="option-label">{{ modules.findings_narrative_top_options["option_label_" + i] }}</div>
           </div>
@@ -166,79 +158,94 @@
 
       </div>
     </div>
+
+    <div id="findings-top-discussions">
+      <div class="topic-section">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="findings-discussions-topic-title-container">
+              <div class="findings-discussions-topic-title style-h2">
+                <h2>{{ modules.discussion_1.title | safe }}</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
+              {{ modules.findings_top_discussions.solution_details_label | safe }}
+            </div>
+            <div class="findings-discussions-topic-description style-small-body-text">
+              {{ modules.discussion_1.topic_description | safe }}
+            </div>
+          </div>
+          <div class="findings-top-discussions-tally-list">
+            {% for i in range(1, modules.discussion_1.nbr_tally_items + 1) %}
+            <div class="findings-top-discussions-tally-box">
+              <div class="option-total style-h1">{{ modules.discussion_1["value_" + i] }}</div>
+              <div class="option-label style-body-text">{{ modules.discussion_1["label_" + i] }}</div>
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="style-strong-body-text">
+              {{ modules.topic_data_vis.title }}
+            </div>
+            <div>
+              {{ modules.topic_data_vis.desc }}
+            </div>
+            <div id="findings-top-topics-dataviz-container" class="findings-top-topics-data-viz dataviz">
+              <canvas id="findings-top-topics-dataviz-canvas" width="1200" height="400"></canvas>
+            </div>
+            <div class="data-viz-2-labels">
+              <div class="data-viz-2-label">
+                {{ modules.findings_consensus_sentiment_chart.label_1 }}
+              </div>
+              <div class="data-viz-2-label">
+                {{ modules.findings_consensus_sentiment_chart.label_2 }}
+              </div>
+              <div class="data-viz-2-label">
+                {{ modules.findings_consensus_sentiment_chart.label_3 }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="topic-comments-scroller-label style-strong-body-text">
+              {{ modules.topic_comments_scroller.label }}
+            </div>
+            <div class="topic-comments-scroller-desc">
+              <i>{{ modules.topic_comments_scroller.desc }}</i>
+            </div>
+            <div class="topic-comments-scroller">
+              <p><i>Comments will appear here...</i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="findings-top-discussions">
+<section id="findings-alignment-section">
   <div class="container">
-    <div class="topic-section">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="findings-discussions-topic-title-container">
-            <div class="findings-discussions-topic-title style-h2">
-              <h2>{{ modules.discussion_1.title | safe }}</h2>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
-            {{ modules.findings_top_discussions.solution_details_label | safe }}
-          </div>
-          <div class="findings-discussions-topic-description style-small-body-text">
-            {{ modules.discussion_1.topic_description | safe }}
-          </div>
-        </div>
-        <div class="findings-top-discussions-tally-list">
-          {% for i in range(1, modules.discussion_1.nbr_tally_items + 1) %}
-          <div class="findings-top-discussions-tally-box">
-            <div class="option-total style-h1">{{ modules.discussion_1["value_" + i] }}</div>
-            <div class="option-label style-body-text">{{ modules.discussion_1["label_" + i] }}</div>
-          </div>
-          {% endfor %}
-        </div>
-    </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="style-strong-body-text">
-            {{ modules.topic_data_vis.title }}
-          </div>
-          <div>
-            {{ modules.topic_data_vis.desc }}
-          </div>
-          <div id="findings-top-topics-dataviz-container" class="findings-top-topics-data-viz dataviz">
-            <canvas id="findings-top-topics-dataviz-canvas" width="1200" height="400"></canvas>
-          </div>
-          <div class="data-viz-2-labels">
-            <div class="data-viz-2-label">
-              {{ modules.findings_consensus_sentiment_chart.label_1 }}
-            </div>
-            <div class="data-viz-2-label">
-              {{ modules.findings_consensus_sentiment_chart.label_2 }}
-            </div>
-            <div class="data-viz-2-label">
-              {{ modules.findings_consensus_sentiment_chart.label_3 }}
-            </div>
-          </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="findings-alignment-section-content">
+          {{ modules.findings_alignment_section.content | safe }}
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="topic-comments-scroller-label style-strong-body-text">
-            {{ modules.topic_comments_scroller.label }}
-          </div>
-          <div class="topic-comments-scroller-desc">
-            <i>{{ modules.topic_comments_scroller.desc }}</i>
-          </div>
-          <div class="topic-comments-scroller">
-            <p><i>Comments will appear here...</i></p>
+      <div class="col-lg-4">
+        <div class="findings-alignment-section-sidebar">
+          <div class="findings-alignment-section-sidebar-content">
+            {{ modules.findings_alignment_section_sidebar.content | safe }}
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
 {# <section id="findings-ring-chart-section">
   <div class="container">
     <div class="row">
@@ -324,7 +331,7 @@
 
 
 
-<section id="findings-how-we-did">
+{# <section id="findings-how-we-did">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -334,7 +341,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> #}
 
 
 {% include "lafires-consensus-chart.njk" %}
