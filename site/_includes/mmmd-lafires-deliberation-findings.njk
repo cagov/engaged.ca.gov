@@ -34,6 +34,9 @@
           <div class="findings-narrative-step-1 findings-narrative-step ">
             <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_1.title }}</div>
             {{ modules.findings_narrative_step_1.content | safe }}
+            <p>
+              <a class="style-small-body-text" href="{{'/lafires-recovery/agenda-setting-findings/' | locale_url }}" class="m-t">{{ modules.findings_narrative_step_1.button_text | safe }}</a>
+            </p>
           </div>
         </div>
         <div id="narrative-wrapper-2" class="narrative-wrapper">
@@ -112,7 +115,7 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="findings-top-options-title">
-          <h2>{{ modules.findings_narrative_top_options_intro.title | safe }}</h2>
+          <h3>{{ modules.findings_narrative_top_options_intro.title | safe }}</h3>
         </div>
         <div class="findings-top-options-tally-list">
           <div class="findings-top-options-tally-box">
@@ -145,8 +148,8 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="findings-top-options-subtitle">
-          <div class="style-h3">{{ modules.findings_narrative_top_options.results_header | safe }}</div>
-          <div class="style-h2">{{ modules.findings_narrative_top_options.results_description | safe }}</div>
+          <div class="style-h2">{{ modules.findings_narrative_top_options.results_header | safe }}</div>
+          <div class="style-h3">{{ modules.findings_narrative_top_options.results_description | safe }}</div>
         </div>
 
         <div class="findings-top-options-options-list">

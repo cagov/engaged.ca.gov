@@ -222,6 +222,15 @@ section#findings-top-options {
   border: 2px solid #5489A3;
   border-bottom: 12px solid #5489A3;
 }
+.findings-top-options-option-box.active img.findings-option-icon.png-icon 
+{
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.18));
+}
+
+.findings-top-options-option-box:not(.active) img.findings-option-icon.png-icon 
+{
+  filter: saturate(0%) brightness(0.5) invert(100%) contrast(200%) drop-shadow(2px 2px 2px rgba(0,0,0,0.18));
+}
 
 .option-total {
   font-weight: 700;
@@ -260,7 +269,7 @@ section#findings-consensus {
 
  div#findings-consensus-sentiment-chart-dataviz-container {
   width: 100%;       /* Take up the available width */
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 0rem;
 }
 
@@ -316,6 +325,10 @@ div#findings-deliberation-comments-container {
 /* 
  * TOP DISCUSSIONS SECTION
  */
+
+.findings-top-options-subtitle .style-h2 {
+  margin-bottom: 1rem;
+}
 
 div#findings-top-discussions {
   /* background-color: #F6F7FA; */

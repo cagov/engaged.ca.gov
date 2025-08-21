@@ -1,5 +1,5 @@
 ---
-title: Phase 2 report title
+title: Community results
 description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
 layout: mmmd-lafires-deliberation-findings
 parentid: lafires-recovery
@@ -17,14 +17,15 @@ id: findings_overview
 buttonText: Skip to summary section
 ----
 
-# Phase 2 report title
+# Community results
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+After the severe wildfires in Los Angeles in January 2025, more than an estimated 1,000 community members met online. They gathered in virtual town halls to discuss recovery priorities. In the second part of this two-phase project, the community created an action plan. This plan will guide state and local officials in their next steps for full recovery.  
 
 
 ----
 id: findings_narrative_step_1
 title: Agenda setting
+button_text: Read about the agenda setting phase
 ----
 
 ## Residents shared their concerns and ideas
@@ -47,18 +48,18 @@ title: Deliberation
 
 ## The communithy voted on all 19 options
 
-More than 400 new and returning participants ranked these options, again using an online platform where they could discuss and collaborate.
+Over **400** new and returning participants ranked these options, again using an online platform where they could discuss and collaborate.
 
 
 ----
 id: findings_narrative_top_options_intro
 title: Residents weighed in to find agreement on the top 5 solutions
-label_1: Conversations
-label_2: Participants
-label_3: Comments
-value_1: ~325
-value_2: 416
-value_3: 1,504
+label_1: Participants
+label_2: Comments and replies
+label_3: Votes
+value_1: 416
+value_2: 1,504
+value_3: 3,977
 description: The engagement was notable. Instead of letters vanishing into a bureaucratic black box, this process encouraged neighbors to share their thoughts and respond. They talked about solutions and worked together to refine their priorities. 
 nbr_options: 5
 ----
