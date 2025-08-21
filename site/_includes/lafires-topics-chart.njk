@@ -125,14 +125,18 @@ function setup_topic_chart(itsVoteData) {
 
     // Fill the canvas with white
 
-    let   topic_number = 19-1;
+    let   topic_number = 19;
 
-    change_topic_topic(canvas, topic_number);
+    change_topic_topic(canvas, topic_number-1);
 
 
 
 }
 
+function select_topic_chart(topic_index) {
+  let canvas = topic_vars.canvas;
+  change_topic_topic(canvas, topic_index-1);
+}
 
 function topic_chart_phase(phase)
 {

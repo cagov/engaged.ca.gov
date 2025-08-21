@@ -212,6 +212,11 @@ section#findings-top-options {
   border-bottom: 12px solid #D9D9D9;
 }
 
+.findings-top-options-option-box:not(.active):hover {
+  cursor: pointer;
+  background-color: #EDEEF2
+}
+
 .findings-top-options-option-box.active {
   background-color: white;
   border: 2px solid #5489A3;
@@ -219,8 +224,8 @@ section#findings-top-options {
 }
 
 .option-total {
-  font-weight: 900;
-  font-size: 56px;
+  font-weight: 700;
+  font-size: 48px;
   color: #2d3a4a;
   @media (max-width: 720px) {
     font-size: 36px;
@@ -242,6 +247,9 @@ section#findings-top-discussions {
   /* background-color: #FFF4EB; */
 }
 
+.findings-top-discussion-container:not(.active) {
+  display: none;
+}
 
 /* 
  * CONSENSUS SECTION

@@ -138,6 +138,10 @@
 
 <section id="findings-top-options">
   <div class="container">
+
+   {# display of the topic selector-tabs #}
+
+
     <div class="row">
       <div class="col-lg-12">
         <div class="findings-top-options-subtitle">
@@ -148,7 +152,7 @@
         <div class="findings-top-options-options-list">
           {% for i in range(1, modules.findings_narrative_top_options.nbr_options + 1) %}
           <!-- this will mimic the other report -->
-          <div class="findings-top-options-option-box{% if i == 1 %} active{% endif %}">
+          <div class="findings-top-options-option-box{% if i == 1 %} active{% endif %}" data-topic-number="{{ i }}" data-chart-topic-index="{{ modules["discussion_" + i].chart_topic_index }}">
             <img class="findings-option-icon png-icon" src="/public/images/{{ modules.findings_narrative_top_options["option_icon_" + i] }}" aria-hidden="true" alt="{{ modules.findings_narrative_top_options["option_icon_alt_" + i] }}">
             <div class="option-label">{{ modules.findings_narrative_top_options["option_label_" + i] }}</div>
           </div>
@@ -159,33 +163,39 @@
       </div>
     </div>
 
+   {# display of the topic title and stats #}
+
     <div id="findings-top-discussions">
       <div class="topic-section">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="findings-discussions-topic-title-container">
-              <div class="findings-discussions-topic-title style-h2">
-                <h2>{{ modules.discussion_1.title | safe }}</h2>
+        {% for i in range(1, 5 + 1) %}
+          <div id="findings-top-discussions-topic-{{ i }}" class="findings-top-discussion-container row {% if i == 1 %} active{% endif %}" data-topic-number="{{ i }}">
+            <div class="col-lg-12">
+              <div class="findings-discussions-topic-title-container">
+                <div class="findings-discussions-topic-title style-h2">
+                  <h2>{{ modules["discussion_" + i].title | safe }}</h2>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-12">
-            <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
-              {{ modules.findings_top_discussions.solution_details_label | safe }}
+            <div class="col-lg-8">
+              <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
+                {{ modules.findings_top_discussions.solution_details_label | safe }}
+              </div>
+              <div class="findings-discussions-topic-description style-small-body-text">
+                {{ modules["discussion_" + i].topic_description | safe }}
+              </div>
             </div>
-            <div class="findings-discussions-topic-description style-small-body-text">
-              {{ modules.discussion_1.topic_description | safe }}
+
+            <div class="findings-top-discussions-tally-list">
+              {% for j in range(1, modules.findings_top_discussions.nbr_tally_items + 1) %}
+                <div class="findings-top-discussions-tally-box">
+                  <div class="option-total style-h1">{{ modules["discussion_" + i]["value_" + j] }}</div>
+                  <div class="option-label style-body-text">{{ modules.findings_top_discussions["label_" + j] }}</div>
+                </div>
+              {% endfor %}
             </div>
+
           </div>
-          <div class="findings-top-discussions-tally-list">
-            {% for i in range(1, modules.discussion_1.nbr_tally_items + 1) %}
-            <div class="findings-top-discussions-tally-box">
-              <div class="option-total style-h1">{{ modules.discussion_1["value_" + i] }}</div>
-              <div class="option-label style-body-text">{{ modules.discussion_1["label_" + i] }}</div>
-            </div>
-            {% endfor %}
-          </div>
-      </div>
+        {% endfor %}
         <div class="row">
           <div class="col-lg-12">
             <div class="style-strong-body-text">
@@ -363,5 +373,6 @@
 {% include "lafires-deliberation-utilities.njk" %}
 {% include "lafires-scroll-animation.njk" %}
 {% include "lafires-narrative-backgrounds.njk" %}
+{% include "lafires-topics-and-comments.njk" %}
 
 {% endblock %}
