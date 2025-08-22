@@ -4,10 +4,12 @@ import argparse
 import csv
 import json
 
+current_version = 2
+
 parser = argparse.ArgumentParser(description="Process votes CSV file and output as JSON.")
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
-parser.add_argument("input_file", nargs="?", default="voting_data_v2.csv", help="Input CSV file (default: voting_data.csv)")
-parser.add_argument("output_file", nargs="?", default="voting_data_v2.json", help="Output JSON file (default: voting_data.json)")
+parser.add_argument("input_file", nargs="?", default=f"voting_data_v{current_version}.csv", help="Input CSV file (default: voting_data.csv)")
+parser.add_argument("output_file", nargs="?", default=f"voting_data_v{current_version}.json", help="Output JSON file (default: voting_data.json)")
 args = parser.parse_args()
 
 if args.verbose:
@@ -58,6 +60,17 @@ for record in records:
         participant_id_int += 1
     record["PARTICIPANT_ID_INT"] = participant_id_int_dict[record["PARTICIPANT_ID"]]
 
+# walk through records and collect non-empty comments into an array of comments, assign an ascending comment_idx to each record, set to -1 for no comment
+comment_array = []
+comment_idx = 0
+for record in records:
+    if record["COMMENT_CONTENT"] != "":
+        comment_array.append(record["COMMENT_CONTENT"])
+        record["COMMENT_IDX"] = comment_idx
+        comment_idx += 1
+    else:
+        record["COMMENT_IDX"] = -1
+
 # collect the unique TOPIC fields, sort them alphabetically, and then make a dictionary of topic name to integer, with the first topic_index 0
 # then assign TOPIC_INDEX to each record based on that dictionary
 topic_index_set = set()
@@ -102,7 +115,8 @@ for record in records:
         'uid': record['PARTICIPANT_ID_INT'],
         'tid': record['TOPIC_INDEX'],
         'eid': record['EVAC_ZONE_INDEX'],
-        'v': int(record['VOTE_NUMBER'])
+        'v': int(record['VOTE_NUMBER']),
+        'cid': record['COMMENT_IDX']
         })
 
 vote_colors = ['#777777', '#d62728', '#ff7f0e', '#ffbb78', '#bcbd22', '#98df8a', '#2ca02c', '#1f77b4']
@@ -131,7 +145,8 @@ output_dict = {
     'evac_zone_labels': evac_zone_labels,
     'vote_colors': vote_colors,
     'vote_colors_hsl': vote_colors_hsl,
-    'user_recs': user_recs
+    'user_recs': user_recs,
+    'comments': comment_array
 }
 
 
