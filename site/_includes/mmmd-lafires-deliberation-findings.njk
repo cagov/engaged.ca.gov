@@ -30,7 +30,8 @@
     <div class="row">
       <div class="col-lg-12">
         <div id="narrative-wrapper-1" class="narrative-wrapper">
-          <canvas id="findings-narrative-step-1-canvas"></canvas>
+          {# <canvas id="findings-narrative-step-1-canvas" class="findings-narrative-canvas"></canvas> #}
+          <img class="findings-narrative-image" src="/public/images/narrative-1-test.png" alt="Findings narrative step 1" width="100%" height="auto"/>
           <div class="findings-narrative-step-1 findings-narrative-step ">
             <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_1.title }}</div>
             {{ modules.findings_narrative_step_1.content | safe }}
@@ -40,14 +41,16 @@
           </div>
         </div>
         <div id="narrative-wrapper-2" class="narrative-wrapper">
-          <canvas id="findings-narrative-step-2-canvas"></canvas>
+          {# <canvas id="findings-narrative-step-2-canvas" class="findings-narrative-canvas"></canvas> #}
+          <img class="findings-narrative-image" src="/public/images/narrative-2-test.png" alt="Findings narrative step 2" width="100%" height="auto"/>
           <div class="findings-narrative-step-2 findings-narrative-step ">
             <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_2.title }}</div>
             {{ modules.findings_narrative_step_2.content | safe }}
           </div>
         </div>
         <div id="narrative-wrapper-3" class="narrative-wrapper">
-          <canvas id="findings-narrative-step-3-canvas"></canvas>
+          {# <canvas id="findings-narrative-step-3-canvas" class="findings-narrative-canvas"></canvas> #}
+          <img class="findings-narrative-image" src="/public/images/narrative-3-test.png" alt="Findings narrative step 3" width="100%" height="auto"/>
           <div class="findings-narrative-step-3 findings-narrative-step ">
             <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_3.title }}</div>
             {{ modules.findings_narrative_step_3.content | safe }}
@@ -375,7 +378,7 @@
 {# {% include "lafires-ring-chart.njk" %} #}
 {% include "lafires-deliberation-utilities.njk" %}
 {% include "lafires-scroll-animation.njk" %}
-{% include "lafires-narrative-backgrounds.njk" %}
+{# {% include "lafires-narrative-backgrounds.njk" %} #}
 {% include "lafires-topics-and-comments.njk" %}
 
 {% endblock %}
