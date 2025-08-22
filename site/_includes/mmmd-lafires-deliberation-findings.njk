@@ -91,15 +91,11 @@
         </div>
         <div class="findings-consensus-sentiment-chart">
           <div class="data-viz-1-labels ">
-            <div class="data-viz-1-labelv style-small-body-text">
-              {{ modules.findings_consensus_sentiment_chart.label_1 }}
-            </div>
-            <div class="data-viz-1-label style-small-body-text">
-              {{ modules.findings_consensus_sentiment_chart.label_2 }}
-            </div>
-            <div class="data-viz-1-label style-small-body-text">
-              {{ modules.findings_consensus_sentiment_chart.label_3 }}
-            </div>
+            {% for i in range(1, modules.findings_consensus_sentiment_chart.nbr_labels + 1) %}
+              <div class="data-viz-1-label style-small-body-text">
+                {{ modules.findings_consensus_sentiment_chart["label_" + i] }}
+              </div>
+            {% endfor %}
           </div>
         </div>
 
@@ -210,45 +206,47 @@
             <div>
               {{ modules.topic_data_vis.desc }}
             </div>
-            <div id="findings-top-topics-dataviz-container" class="findings-top-topics-data-viz dataviz">
+            <div id="findings-top-topics-dataviz-container" class="findings-top-topics-data-viz">
               <canvas id="findings-top-topics-dataviz-canvas" width="1200" height="400"></canvas>
             </div>
             <div class="data-viz-2-labels">
+              {% for i in range(1, modules.findings_topic_chart.nbr_labels + 1) %}
               <div class="data-viz-2-label">
-                {{ modules.findings_consensus_sentiment_chart.label_1 }}
+                {{ modules.findings_topic_chart["label_" + i] }}
               </div>
-              <div class="data-viz-2-label">
-                {{ modules.findings_consensus_sentiment_chart.label_2 }}
-              </div>
-              <div class="data-viz-2-label">
-                {{ modules.findings_consensus_sentiment_chart.label_3 }}
-              </div>
+              {% endfor %}
             </div>
           </div>
         </div>
       </div>
 
-      <div id="findings-deliberation-comments-container">
-
-        {# <div class="row">
-          <div class="col-lg-8">
-            <div class="topic-comments-scroller-label style-strong-body-text">
-              {{ modules.topic_comments_scroller.label }}
+      <div id="topics-deliberation-comments-container" class="collapsed">
+          <div id="topics-deliberation-comments-container-expandable" class="expandible">
+            <div class="topics-alignment-switcher-list">
+              <div class="topic-alignment-switcher-item-label style-strong-small-body-text">
+                Pick one:
+              </div>
+              <div class="topics-alignment-switcher-item selected" data-filter="all">
+                All
+              </div>
+              <div class="topics-alignment-switcher-item" data-filter="support">
+                Support
+              </div>
+              <div class="topics-alignment-switcher-item" data-filter="neutral">
+                Neutral
+              </div>
+              <div class="topics-alignment-switcher-item" data-filter="oppose">
+                Oppose
+              </div>
             </div>
-            <div class="topic-comments-scroller-desc">
-              <i>{{ modules.topic_comments_scroller.desc }}</i>
-            </div>
-            <div class="topic-comments-scroller">
-              <p><i>Comments will appear here...</i></p>
+            <div class="legend-item-expansion-block" id="legends-scroll-content" role="region" aria-hidden="true">
+              <div id="topics-deliberation-comments-container-content" class="legend-item-content" dir="ltr" role="log" aria-live="polite"></div>
             </div>
           </div>
-        </div> #}
 
-          <div class="findings-button-container">
           <button id="findings-deliberation-comments-show-all-button" class="findings-show-all-button button-reset open" aria-expanded="false" aria-controls="findings-responding-list-container">
-                  <div class="findings-responding-show-all-button-label">{{ modules.findings_top_discussions.show_comments_button | safe }}</div>
+                <div class="findings-responding-show-all-button-label">{{ modules.findings_top_discussions.show_comments_button | safe }}</div>
           </button>
-          </div>
       </div>
 
 

@@ -103,7 +103,13 @@ label_2: Neutral
 label_3: Strongly support
 ----
 
-Unused content
+----
+id: findings_topic_chart
+nbr_labels: 3
+label_1: Strongly oppose
+label_2: Neutral
+label_3: Strongly support
+----
 
 ----
 id: findings_consensus_watch_explore

@@ -1,10 +1,13 @@
 <script>
+
+let global_chart_data = null;
 document.addEventListener('DOMContentLoaded', function() {
     fetch("/public/data/lafires_voting_data_v2.json", {})
     .then(response => response.json())
     .then(data => {
       // console.log("Data fetched:", data);
       let chart_data = data;
+      global_chart_data = chart_data;
       setup_topic_chart(chart_data); // consensus chart wants to be loaded second, otherwise it doesn't render -- need to figure out why
       setup_consensus_chart(chart_data);
       // init_ringchart();

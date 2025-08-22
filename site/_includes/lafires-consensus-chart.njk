@@ -28,14 +28,20 @@ function compute_color(cx) {
   let r = cx/1200;
   let hue,sat,val;
   if (r < 0.5) {
-    sat = mapv(r, 0.5, 0, 0, 60);
-    val = mapv(r, 0, 0.5, 61, 85);
+    sat = Math.round(mapv(r, 0.5, 0, 0, 60)*100)/100;
+    val = Math.round(mapv(r, 0, 0.5, 61, 85)*100)/100;
   } else {
-    sat = mapv(r, 0.5, 1, 0, 60);
-    val = mapv(r, 0.5, 1, 85, 64);
+    sat = Math.round(mapv(r, 0.5, 1, 0, 60)*100)/100;
+    val = Math.round(mapv(r, 0.5, 1, 85, 64)*100)/100;
   }
-  hue = clamp(mapv(r,0.45, 0.55, 27, 205), 27, 205);
+  hue = Math.round(clamp(mapv(r,0.45, 0.55, 27, 205), 27, 205)*100)/100;
   return "hsl(" + hue + ", " + sat + "%, " + val + "%)";
+}
+
+for (let i = 0; i < 7; ++i) {
+  let cx = mapv(i,0,6,0,1200);
+  let color = compute_color(cx);
+  console.log("color",i+1, color);
 }
 
 function reset_user_dots(topic_index) {

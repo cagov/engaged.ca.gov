@@ -448,7 +448,6 @@ div#findings-top-discussions {
 div#findings-top-topics-dataviz-container {
   width: 100%;       /* Take up the available width */
   margin-top: 1rem;
-  margin-bottom: 2rem;
 }
 
 canvas#findings-top-topics-dataviz-canvas {
@@ -493,9 +492,88 @@ canvas#findings-top-topics-dataviz-canvas {
 
 }
 
+div.topics-alignment-switcher-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#topics-deliberation-comments-container {
+  margin-top:2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #BCBBC1;
+}
+
+#topics-deliberation-comments-container.norule {
+  border-top: none;
+}
+
+#topics-deliberation-comments-container.collapsed .expandible {
+  display: none;
+}
+
 /*
  * ALIGNMENT SECTION
  */
+.topics-alignment-switcher-item {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #F6F7FA;
+  border: 1px solid #BCBBC1;
+  color: #5a6a7a;
+  font-size: 1rem;
+}
+.topics-alignment-switcher-item.selected {
+  background-color: #1C2745;
+  color: white;
+}
+.topics-alignment-switcher-item:not(.selected):hover {
+  background-color: white;
+}
+
+.legend-item-comment-item {
+  border-left: 4px solid #777777;
+}
+
+.legend-item-comment-item.vote-1 {
+  border-left-color: hsl(27, 60%, 61%);
+}
+
+.legend-item-comment-item.vote-2 {
+  border-left-color: hsl(27, 40%, 69%);
+}
+
+.legend-item-comment-item.vote-3 {
+  border-left-color: hsl(27, 20%, 77%);
+}
+
+.legend-item-comment-item.vote-4 {
+  border-left-color: hsl(116, 0%, 85%);
+}
+
+.legend-item-comment-item.vote-5 {
+  border-left-color: hsl(205, 20%, 78%); 
+}
+.legend-item-comment-item.vote-6 {
+  border-left-color: hsl(205, 40%, 71%); 
+}
+.legend-item-comment-item.vote-7 {
+  border-left-color: hsl(205, 60%, 64%); 
+}
+
+/*
+color 2 hsl(27, 40%, 69%)
+color 3 hsl(27, 20%, 77%)
+color 4 hsl(116, 0%, 85%)
+color 5 hsl(205, 20%, 78%)
+color 6 hsl(205, 40%, 71%)
+color 7 hsl(205, 60%, 64%)
+*/
+
 section#findings-alignment-section {
   background-color: #FFF4EB;
   margin-top: 2rem;
