@@ -38,11 +38,13 @@ function compute_color(cx) {
   return "hsl(" + hue + ", " + sat + "%, " + val + "%)";
 }
 
+{# 
+// color debugging
 for (let i = 0; i < 7; ++i) {
   let cx = mapv(i,0,6,0,1200);
   let color = compute_color(cx);
   console.log("color",i+1, color);
-}
+} #}
 
 function reset_user_dots(topic_index) {
     let userRecs = consensus_vars.voteData['user_recs'];

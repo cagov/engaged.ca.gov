@@ -565,15 +565,6 @@ div.topics-alignment-switcher-list {
   border-left-color: hsl(205, 60%, 64%); 
 }
 
-/*
-color 2 hsl(27, 40%, 69%)
-color 3 hsl(27, 20%, 77%)
-color 4 hsl(116, 0%, 85%)
-color 5 hsl(205, 20%, 78%)
-color 6 hsl(205, 40%, 71%)
-color 7 hsl(205, 60%, 64%)
-*/
-
 section#findings-alignment-section {
   background-color: #FFF4EB;
   margin-top: 2rem;
