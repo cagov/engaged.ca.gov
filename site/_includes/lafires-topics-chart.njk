@@ -24,23 +24,6 @@ function reset_topics_user_dots(topic_index, ctx) {
 
     let precomputed_coords = topic_coords_dict[topic_index+1];
 
-    if (!compute_coords) {
-      console.log("precomputed coords for topic",topic_index,precomputed_coords);
-      if (precomputed_coords == null) {
-        console.log("PROBLEM WITH PRECOMPUTED COORDS FOR ", topic_index);
-        return;
-      }
-    }
-
-    {# if (!compute_coords) {
-      userRecs.forEach(rec => {
-        let uid = rec.uid;
-        let coord_triplet = precomputed_coords[uid];
-        topic_vars.user_dots[uid].tx = coord_triplet[0];
-        topic_vars.user_dots[uid].ty = coord_triplet[1];
-        topic_vars.user_dots[uid].active = coord_triplet[2];
-      });
-    } #}
 
     fUserRecords.forEach(rec => {
       let uid = rec.uid;
@@ -111,7 +94,7 @@ function apply_topic_forces(ctx) {
     let fx = 0;
     let fy = 0;
     // compute forces from neighbors
-    let min_distance = topic_vars.ellipse_radius*2 * 1.2;
+    let min_distance = topic_vars.ellipse_radius*2 * 1.25;
     let neighbors = activeDots.filter(d => d.uid != dot.uid && dot_distance(d, dot) < min_distance);
     neighbors.forEach(neb => {
       let dist = dot_distance(neb, dot);
@@ -142,10 +125,10 @@ function apply_topic_forces(ctx) {
     // compute weak forces from gravity
     let center_y = ctx.canvas.height/2;
     let dy = dot.ty - center_y;
-    if (dy > 1) {
-      fy -= 0.05;
-    } else if (dy < -1) {
-      fy += 0.05;
+    if (dy > 2) {
+      fy -= 0.01;
+    } else if (dy < -2) {
+      fy += 0.01;
     }
     dot.vx += fx;
     dot.vy += fy;
