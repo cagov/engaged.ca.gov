@@ -14,11 +14,33 @@ let topic_vars = {
   "ctx": null
 };
 
-function reset_topics_user_dots(topic_index) {
+let compute_coords = false;
+
+function reset_topics_user_dots(topic_index, ctx) {
     let userRecs = topic_vars.voteData['user_recs'];
     let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
 
     let encountered_uids = {};
+
+    let precomputed_coords = topic_coords_dict[topic_index+1];
+
+    if (!compute_coords) {
+      console.log("precomputed coords for topic",topic_index,precomputed_coords);
+      if (precomputed_coords == null) {
+        console.log("PROBLEM WITH PRECOMPUTED COORDS FOR ", topic_index);
+        return;
+      }
+    }
+
+    {# if (!compute_coords) {
+      userRecs.forEach(rec => {
+        let uid = rec.uid;
+        let coord_triplet = precomputed_coords[uid];
+        topic_vars.user_dots[uid].tx = coord_triplet[0];
+        topic_vars.user_dots[uid].ty = coord_triplet[1];
+        topic_vars.user_dots[uid].active = coord_triplet[2];
+      });
+    } #}
 
     fUserRecords.forEach(rec => {
       let uid = rec.uid;
@@ -32,10 +54,26 @@ function reset_topics_user_dots(topic_index) {
       let x = topic_vars.bandWidth * (likert - 0.5);
       x_offset = user_dot.rx * topic_vars.adj_band - topic_vars.adj_band / 2;
       x += x_offset;
+      user_dot.min_x = topic_vars.bandWidth * (likert - 0.5) - topic_vars.adj_band / 2;
+      user_dot.max_x = topic_vars.bandWidth * (likert - 0.5) + topic_vars.adj_band / 2;
       user_dot.tx = x;
-      user_dot.cx = x;
       user_dot.topacity = 1;
-      user_dot.copacity = 1;
+      user_dot.active = true;
+      // user_dot.copacity = 1;
+      let dot_y = topic_vars.ellipse_radius + user_dot.ry * (ctx.canvas.height-topic_vars.ellipse_radius*2);
+      user_dot.ty = dot_y;
+      user_dot.vx = 0;
+      user_dot.vy = 0;
+
+      if (!compute_coords) {
+        let coord_triplet = precomputed_coords[uid];
+        let active = coord_triplet[2];
+        if (active) {
+          user_dot.tx = coord_triplet[0];
+          user_dot.ty = coord_triplet[1];
+        }
+        user_dot.active = coord_triplet[2];
+      }
 
       if (user_dot.copacity < 0.1) {
         user_dot.cx = user_dot.tx;
@@ -46,36 +84,105 @@ function reset_topics_user_dots(topic_index) {
     for (let uid = 0; uid < topic_vars.voteData.nbr_users; uid++) {
       if (!encountered_uids[uid]) {
         topic_vars.user_dots[uid].topacity = 0;
+        topic_vars.user_dots[uid].active = false;
         topic_vars.user_dots[uid].tx = topic_vars.user_dots[uid].cx;
       }
     }
 }
 
+function dot_distance(da, db) {
+  let dx = da.tx - db.tx;
+  let dy = da.ty - db.ty;
+  return Math.sqrt(dx*dx + dy*dy);
+}
+function dot_angle(da, db) {
+  let dx = db.tx - da.tx;
+  let dy = db.ty - da.ty;
+  return Math.atan2(dy, dx);
+}
+
+
+function apply_topic_forces(ctx) {
+  let activeDots = topic_vars.user_dots.filter(d => d.active);
+  let canvas = ctx.canvas;
+  activeDots.forEach(dot => {
+    dot.vx *= 0.95;
+    dot.vy *= 0.95;
+    let fx = 0;
+    let fy = 0;
+    // compute forces from neighbors
+    let min_distance = topic_vars.ellipse_radius*2 * 1.2;
+    let neighbors = activeDots.filter(d => d.uid != dot.uid && dot_distance(d, dot) < min_distance);
+    neighbors.forEach(neb => {
+      let dist = dot_distance(neb, dot);
+      let angle = dot_angle(neb, dot);
+      // To make force 0 at d = min_distance, and increase as d gets smaller:
+      // We'll use: force = (min_distance - d) / min_distance, but clamp to >= 0
+      let force = clamp((min_distance - dist) / min_distance, 0, 0.2);
+      fx += force * Math.cos(angle);
+      fy += force * Math.sin(angle);
+    });
+    // contain within rectangle
+    if (dot.tx >= canvas.width - topic_vars.ellipse_radius*2) {
+      fx -= 0.1;
+    } else if (dot.tx <= topic_vars.ellipse_radius*2) {
+      fx += 0.1;
+    }
+    if (dot.tx >= dot.max_x) {
+      fx -= 0.1;
+    } else if (dot.tx <= dot.min_x) {
+      fx += 0.1;
+    }
+
+    if (dot.ty >= canvas.height - topic_vars.ellipse_radius) {
+      fy -= 0.1;
+    } else if (dot.ty <= topic_vars.ellipse_radius) {
+      fy += 0.1;
+    }
+    // compute weak forces from gravity
+    let center_y = ctx.canvas.height/2;
+    let dy = dot.ty - center_y;
+    if (dy > 1) {
+      fy -= 0.05;
+    } else if (dy < -1) {
+      fy += 0.05;
+    }
+    dot.vx += fx;
+    dot.vy += fy;
+    dot.tx += dot.vx;
+    dot.ty += dot.vy;
+  });
+}
+
 function change_topic_topic(canvas, topic_index) {
     // console.log("render_topic", topic_index);
     ctx = canvas.getContext('2d');
-    topic_vars.bandWidth = ctx.canvas.width / 7;
-    topic_vars.adj_band = topic_vars.bandWidth - topic_vars.ellipse_radius*2;
+    topic_vars.bandWidth = (ctx.canvas.width - topic_vars.ellipse_radius*4) / 7;
+    topic_vars.adj_band = topic_vars.bandWidth;
 
     if (topic_vars.render_handle) {
       clearInterval(topic_vars.render_handle);
     }
 
 
-    reset_topics_user_dots(topic_index);
+    reset_topics_user_dots(topic_index, ctx);
 
     function render_dots() {
       ctx.fillStyle = "#fff";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+      if (compute_coords) {
+        apply_topic_forces(ctx);
+      }
+
       topic_vars.user_dots.forEach(dot => {
         if (true) {
-          dot.cx += (dot.tx - dot.cx) * 0.05;
+          dot.cx += (dot.tx - dot.cx) * 0.1;
+          dot.cy += (dot.ty - dot.cy) * 0.1;
           dot.copacity += (dot.topacity - dot.copacity) * 0.1;
 
           let x = dot.cx;
-
-          let y = topic_vars.ellipse_radius + dot.ry * (ctx.canvas.height-topic_vars.ellipse_radius*2);
+          let y = dot.cy;
           let color = compute_color(dot.cx);
 
           // let er = topic_vars.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
@@ -92,9 +199,12 @@ function change_topic_topic(canvas, topic_index) {
         }
 
       });
+      // !! clear the render_handle if the amount of movement is negligable
     }
 
     render_dots();
+    topic_vars.render_handle = setInterval(render_dots, 40); // use for position settling
+
 }
 
 function setup_topic_chart(itsVoteData) {
@@ -118,6 +228,10 @@ function setup_topic_chart(itsVoteData) {
             ry: uid / topic_vars.voteData.nbr_users,
             cx: 0,
             tx: 0,
+            cy: 0,
+            ty: 0,
+            vx: 0,
+            vy: 0,
             copacity: 0, // current opacity
             topacity: 0, // target opacity
         });
@@ -126,16 +240,29 @@ function setup_topic_chart(itsVoteData) {
     // Fill the canvas with white
 
     let   topic_number = 19;
-
+    topic_vars.topic_number = topic_number;
     change_topic_topic(canvas, topic_number-1);
 
+    // make click handler for canvas that outputs "click" to console
+    if (compute_coords) {
+      canvas.addEventListener('click', (e) => {
+        let coords = [];
+        for (let i = 0; i < topic_vars.user_dots.length; i++) {
+          coords.push([Math.round(topic_vars.user_dots[i].tx*10)/10, 
+                       Math.round(topic_vars.user_dots[i].ty*10)/10, 
+                       topic_vars.user_dots[i].active? 1 : 0]);
+        }
+        console.log("coords for topic", topic_vars.topic_number, coords);
+      });
+    }
 
 
 }
 
-function select_topic_chart(topic_index) {
+function select_topic_chart(topic_number) {
   let canvas = topic_vars.canvas;
-  change_topic_topic(canvas, topic_index-1);
+  topic_vars.topic_number = topic_number;
+  change_topic_topic(canvas, topic_number-1);
 }
 
 function topic_chart_phase(phase)
