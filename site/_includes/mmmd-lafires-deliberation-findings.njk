@@ -125,10 +125,6 @@
             <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_2 }}</div>
             <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_2 }}</div>
           </div>
-          <div class="findings-top-options-tally-box">
-            <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_3 }}</div>
-            <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_3 }}</div>
-          </div>
         </div>
         <div class="top-options-description style-body-text">
           {{ modules.findings_narrative_top_options_intro.description | safe }}
@@ -222,6 +218,11 @@
 
       <div id="topics-deliberation-comments-container" class="collapsed">
           <div id="topics-deliberation-comments-container-expandable" class="expandible">
+
+          <button id="findings-deliberation-comments-hide-button" class="deliberation-comment-expander-button button-reset close" aria-expanded="false" aria-controls="findings-responding-list-container">
+                <div class="deliberation-comment-expander-label">{{ modules.findings_top_discussions.hide_comments_button | safe }}</div>
+          </button>
+
             <div class="topics-alignment-switcher-list">
               <div class="topic-alignment-switcher-item-label style-strong-small-body-text">
                 Pick one:
@@ -244,15 +245,23 @@
             </div>
           </div>
 
-          <button id="findings-deliberation-comments-show-all-button" class="findings-show-all-button button-reset open" aria-expanded="false" aria-controls="findings-responding-list-container">
-                <div class="findings-responding-show-all-button-label">{{ modules.findings_top_discussions.show_comments_button | safe }}</div>
+          <button id="findings-deliberation-comments-show-button" class="deliberation-comment-expander-button button-reset open" aria-expanded="false" aria-controls="findings-responding-list-container">
+                <div class="deliberation-comment-expander-label">{{ modules.findings_top_discussions.show_comments_button | safe }}</div>
           </button>
+          <button id="findings-deliberation-comments-hide-button-2" class="deliberation-comment-expander-button button-reset close" aria-expanded="false" aria-controls="findings-responding-list-container">
+                <div class="deliberation-comment-expander-label">{{ modules.findings_top_discussions.hide_comments_button | safe }}</div>
+          </button>
+
       </div>
 
 
 
     </div>
+    <div class="download-buton-div">
+      <a class="style-strong-small-body" data-appearance="button" data-theme="off-white" href="">Download a CSV of the comments from this engagement</a>
+    </div>
   </div>
+
 </section>
 
 <section id="findings-alignment-section">

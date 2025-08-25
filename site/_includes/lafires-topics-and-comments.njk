@@ -24,19 +24,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  let commentExpander = document.getElementById('findings-deliberation-comments-show-all-button');
+  let commentExpander = document.getElementById('findings-deliberation-comments-show-button');
   commentExpander.addEventListener('click', function() {
     console.log('Comment expander clicked');
     let container = document.getElementById('topics-deliberation-comments-container');
-    let is_collapsed = container.classList.contains('collapsed');
-
-    if (is_collapsed) {
-      // populate it...
-      populate_comments(current_topic_index, current_filter);
-      container.classList.remove('collapsed');
-    } else {
-      container.classList.add('collapsed');
-    }
+    // populate it...
+    populate_comments(current_topic_index, current_filter);
+    container.classList.remove('collapsed');
+  });
+  document.querySelectorAll('.deliberation-comment-expander-button.close').forEach(function(item) {
+    item.addEventListener('click', function() {
+        console.log('Comment hider clicked');
+        let container = document.getElementById('topics-deliberation-comments-container');
+        container.classList.add('collapsed');
+    });
   });
 
   document.querySelectorAll('.topics-alignment-switcher-item').forEach(function(item) {
@@ -77,6 +78,7 @@ function populate_comments(topic_index, filter) {
     });
     let comment_container = document.getElementById('topics-deliberation-comments-container-content');  
     comment_container.innerHTML = cmarkup;
+    // ScrollTrigger.refresh();
 }
 
 function legendItemHandler(e) {
@@ -119,6 +121,37 @@ function legendItemHandler(e) {
     legendItemContent.innerHTML = '';
   }
 }
+
+{# function setLegendFade(elem, childElement) {
+    // Remove both classes first
+    elem.classList.remove('fade-top', 'fade-bottom');
+    // If not at the very top, add fade-top
+    if (childElement.scrollTop > 0) {
+      console.log('Adding fade-top');
+      elem.classList.add('fade-top');
+    }
+    // If not at the very bottom, add fade-bottom
+    if (childElement.scrollTop + childElement.clientHeight < childElement.scrollHeight - 1) {
+      console.log('Adding fade-bottom');
+      elem.classList.add('fade-bottom');
+    }
+
+}
+
+function handleLegendItemContentScroll(e) {
+  const el = e.target;
+  const parentElement = el.parentElement;
+  if (parentElement) {
+    setLegendFade(parentElement, el);
+  }
+}
+
+const legendContents = document.querySelectorAll('#topics-deliberation-comments-container-content');
+  legendContents.forEach(el => {
+    el.addEventListener('scroll', handleLegendItemContentScroll);
+    // Initial check in case content is already scrolled
+    handleLegendItemContentScroll({target: el});
+  }); #}
 
 
 </script>

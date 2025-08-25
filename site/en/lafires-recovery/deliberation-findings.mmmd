@@ -54,12 +54,10 @@ Over **400** new and returning participants ranked these options, again using an
 ----
 id: findings_narrative_top_options_intro
 title: Residents weighed in to find agreement on the top 5 solutions
-label_1: Participants
-label_2: Comments and replies
-label_3: Votes
-value_1: 416
-value_2: 1,504
-value_3: 3,977
+label_1: Comments and replies
+label_2: Votes
+value_1: 1,504
+value_2: 3,977
 description: The engagement was notable. Instead of letters vanishing into a bureaucratic black box, this process encouraged neighbors to share their thoughts and respond. They talked about solutions and worked together to refine their priorities. 
 nbr_options: 5
 ----
@@ -67,8 +65,8 @@ nbr_options: 5
 
 ----
 id: findings_narrative_top_options
-results_header: The top 5
-results_description: "The results reveal a community united around building fire-resilient infrastructure for the future:"
+results_header: Action plan
+results_description: "The plan, which includes 5 focus areas for recovery – reveals  a community united around building fire-resilient infrastructure for the future and providing support to the community now:"
 nbr_options: 5
 option_label_1: Underground power lines and equipment safety
 option_label_2: Enhanced water infrastructure for fire protection
@@ -128,7 +126,8 @@ picker_label_1: Overall
 picker_label_2: Eaton
 picker_label_3: Palisades
 solution_details_label: "Solution details"
-show_comments_button: Show all comments
+show_comments_button: Show comments
+hide_comments_button: Hide comments
 nbr_tally_items: 3
 label_1: Support
 label_2: Consensus

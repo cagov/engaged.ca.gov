@@ -274,6 +274,7 @@ section#findings-top-discussions {
   display: none;
 }
 
+
 /* 
  * CONSENSUS SECTION
  */
@@ -519,10 +520,43 @@ div.topics-alignment-switcher-list {
 #topics-deliberation-comments-container.collapsed .expandible {
   display: none;
 }
+div.deliberation-comment-expander-label {
+  font-weight: 500;
+  font-size: 16px;
+  color: #0D5D90;
+  padding-right: 32px;
+  background: url("/public/images/arrow-down.svg") no-repeat right center;
+  width: fit-content;
+}
+
+.deliberation-comment-expander-button.open div.deliberation-comment-expander-label {
+    background: url("/public/images/arrow-down.svg") no-repeat right center;
+    cursor: pointer;
+}
+.deliberation-comment-expander-button.close div.deliberation-comment-expander-label {
+  background: url("/public/images/arrow-up.svg") no-repeat right center;
+  cursor: pointer;
+}
+.deliberation-comment-expander-button.close div.deliberation-comment-expander-label {
+  padding-top: 1rem;
+}
+.download-buton-div {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 
 /*
- * ALIGNMENT SECTION
+ * ALIGNMENT PICKER SECTION
  */
+ button.deliberation-comment-expander-button {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+
+
+}
+
+
 .topics-alignment-switcher-item {
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -539,6 +573,20 @@ div.topics-alignment-switcher-list {
 .topics-alignment-switcher-item:not(.selected):hover {
   background-color: white;
 }
+
+/*
+ * DELIBERATION COMMENTS
+ */
+
+#topics-deliberation-comments-container.collapsed .deliberation-comment-expander-button.close {
+  display: none;
+}
+
+#topics-deliberation-comments-container:not(.collapsed) .deliberation-comment-expander-button.open {
+  display: none;
+}
+
+
 div.deliberation-comment-item {
     font-style: italic;
     font-weight: 400;
