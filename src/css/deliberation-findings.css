@@ -349,6 +349,10 @@ div#findings-top-discussions {
   border: 2px solid #5489A3;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+  /* padding: 1rem; */
+}
+
+div#findings-top-discussions div.topic-section {
   padding: 1rem;
 }
 
@@ -499,6 +503,7 @@ div.topics-alignment-switcher-list {
   justify-content: left;
   align-items: center;
   margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 #topics-deliberation-comments-container {
@@ -534,34 +539,51 @@ div.topics-alignment-switcher-list {
 .topics-alignment-switcher-item:not(.selected):hover {
   background-color: white;
 }
+div.deliberation-comment-item {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 1rem;
+}
+div.deliberation-comment-item:nth-child(odd) {
+  background-color: #F6F7FA;
+}
 
-.legend-item-comment-item {
+.deliberation-comment-item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+}
+.deliberation-comment-item .comment-fill {
+  padding-left: 1rem;
+}
+.deliberation-comment-item .comment-fill {
   border-left: 4px solid #777777;
 }
 
-.legend-item-comment-item.vote-1 {
+.deliberation-comment-item.vote-1 .comment-fill {
   border-left-color: hsl(27, 60%, 61%);
 }
 
-.legend-item-comment-item.vote-2 {
+.deliberation-comment-item.vote-2 .comment-fill {
   border-left-color: hsl(27, 40%, 69%);
 }
 
-.legend-item-comment-item.vote-3 {
+.deliberation-comment-item.vote-3 .comment-fill {
   border-left-color: hsl(27, 20%, 77%);
 }
 
-.legend-item-comment-item.vote-4 {
+.deliberation-comment-item.vote-4 .comment-fill {
   border-left-color: hsl(116, 0%, 85%);
 }
 
-.legend-item-comment-item.vote-5 {
+.deliberation-comment-item.vote-5 .comment-fill {
   border-left-color: hsl(205, 20%, 78%); 
 }
-.legend-item-comment-item.vote-6 {
+.deliberation-comment-item.vote-6 .comment-fill {
   border-left-color: hsl(205, 40%, 71%); 
 }
-.legend-item-comment-item.vote-7 {
+.deliberation-comment-item.vote-7 .comment-fill {
   border-left-color: hsl(205, 60%, 64%); 
 }
 

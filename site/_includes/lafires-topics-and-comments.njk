@@ -70,9 +70,9 @@ function populate_comments(topic_index, filter) {
       let cid = rec.cid;
       if (cid >= 0 && cid < chart_data.comments.length) {
         let comment = chart_data.comments[cid];
-        cmarkup += `<div class="legend-item-comment-item vote-${rec.v}">`;
+        cmarkup += `<div class="deliberation-comment-item vote-${rec.v}"><div class="comment-fill">`;
         cmarkup += '“' + comment + '”';
-        cmarkup += '</div>';
+        cmarkup += '</div></div>';
       }
     });
     let comment_container = document.getElementById('topics-deliberation-comments-container-content');  
@@ -104,7 +104,7 @@ function legendItemHandler(e) {
     let comment_list = '';
     const commentIdsArray = commentIds.split(',');
     for (let i = 0; i < nbrComments; i++) {
-      comment_list += '<div class="legend-item-comment-item">';
+      comment_list += '<div class="deliberation-comment-item">';
       const cid = parseInt(commentIdsArray[i]);
       console.log("Looking up quote with comment id ", cid);
       const quote = quoteData.find(q => q.COMMENT_ID === cid);
