@@ -22,12 +22,12 @@ div.center-container {
   margin-bottom: 1rem;
 }
 
-.dataviz {
+/* .dataviz {
   width: 100%;
-  height: 310px;
+  height: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
+} */
 
 .test-dataviz {
    width: 100%;

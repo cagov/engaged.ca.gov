@@ -81,7 +81,7 @@ function apply_topic_forces(ctx) {
   let gravityForce = 0.025;
   let borderForce = 0.2;
   let maxRepelForce = 0.1;
-  let repelScale = 1.1; // 1.1
+  let repelScale = 1.2; // 1.1
 
 
 
@@ -203,7 +203,7 @@ function setup_topic_chart(itsVoteData) {
     console.log("voteData record 0", topic_vars.voteData['user_recs'][0]);
     const canvas = document.getElementById('findings-top-topics-dataviz-canvas');
     canvas.width = 1500;
-    canvas.height = 310;
+    canvas.height = 400;
 
     topic_vars.canvas = canvas;
     topic_vars.ctx = canvas.getContext('2d');
