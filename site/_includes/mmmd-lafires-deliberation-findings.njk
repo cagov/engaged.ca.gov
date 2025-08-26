@@ -85,6 +85,9 @@
         <div id="findings-consensus-sentiment-chart-title" class="findings-consensus-sentiment-chart-title style-strong-body-text">
         {{ modules.findings_consensus_watch_explore.label_1 | safe }}
         </div>
+        <div id="findings-consensus-sentiment-chart-subtitle" class="findings-consensus-sentiment-chart-subtitle style-small-body-text">
+        {{ modules.findings_consensus_watch_explore.percent_default | safe }}
+        </div>
 
         <div id="findings-consensus-sentiment-chart-dataviz-container">
           <canvas id="findings-consensus-sentiment-chart-dataviz-canvas" width="1200" height="400"></canvas>
@@ -174,7 +177,7 @@
             </div>
             <div class="col-lg-8">
               {# <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
-                {{ modules.findings_top_discussions.solution_details_label | safe }}
+                xx{{ modules.findings_top_discussions.solution_details_label | safe }}
               </div> #}
               <div class="findings-discussions-topic-description style-small-body-text">
                 {{ modules["discussion_" + i].topic_description | safe }}
@@ -196,10 +199,10 @@
         {% endfor %}
         <div class="row">
           <div class="col-lg-12">
-            {# <div class="style-small-strong-body-text">
+            <div class="style-strong-small-body-text">
               {{ modules.topic_data_vis.title }}
-            </div> #}
-            <div>
+            </div>
+            <div class="style-small-body-text italic">
               {{ modules.topic_data_vis.desc }}
             </div>
             <div id="findings-top-topics-dataviz-container" class="findings-top-topics-data-viz">
@@ -217,7 +220,20 @@
       </div>
 
       <div id="topics-deliberation-comments-container" class="collapsed">
+
+          <div id="explore-the-comments">
+
+            <div class="style-strong-small-body-text">
+              Explore the commments
+            </div>
+            <div class="style-small-body-text italic">
+              Comments can be filtered by how people voted on a topic: support, neutral, oppose. Note: The comments themselves may not reflect how a person voted on a topic. In some cases, people commented on a topic without casting a vote.
+            </div>
+          </div>
+
           <div id="topics-deliberation-comments-container-expandable" class="expandible">
+
+
 
           <button id="findings-deliberation-comments-hide-button" class="deliberation-comment-expander-button button-reset close" aria-expanded="false" aria-controls="findings-responding-list-container">
                 <div class="deliberation-comment-expander-label">{{ modules.findings_top_discussions.hide_comments_button | safe }}</div>

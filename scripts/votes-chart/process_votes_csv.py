@@ -4,7 +4,7 @@ import argparse
 import csv
 import json
 
-current_version = 2
+current_version = 3
 
 parser = argparse.ArgumentParser(description="Process votes CSV file and output as JSON.")
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
@@ -44,7 +44,7 @@ with open(args.input_file, "r") as f:
                 "LIKE_COUNT": row[field_indices["LIKE_COUNT"]],
                 "REPLY_COUNT": row[field_indices["REPLY_COUNT"]],
                 "EVACUATION_ZONE": row[field_indices["EVACUATION_ZONE"]],
-      
+                "SUPPORT": row[field_indices["SUPPORT"]],      
             })
     # print(f"Records: {records}")
 
@@ -77,7 +77,7 @@ topic_index_set = set()
 topic_index = 0
 for record in records:
     if record["TOPIC"] not in topic_index_set:
-        topic_index_set.add((record["TOPIC"], record["LONG_TOPIC"], record["CONSENSUS"]))
+        topic_index_set.add((record["TOPIC"], record["LONG_TOPIC"], record["CONSENSUS"], record["SUPPORT"]))
         topic_index += 1
 
 topic_index_list = sorted(list(topic_index_set), key=lambda x: x[2])

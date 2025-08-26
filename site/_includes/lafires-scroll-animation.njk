@@ -179,7 +179,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   gsap.to({}, {
       scrollTrigger: {
-        trigger: "#findings-consensus-sentiment-chart-dataviz-container",
+       //  trigger: "#findings-consensus-sentiment-chart-dataviz-container",
+        trigger: "#findings-consensus",
+
         start: "top bottom", // when bottom of object hits bottom of viewport
         end: "bottom top",         
         scrub: 1, // Add a small delay to smooth out the progress updates

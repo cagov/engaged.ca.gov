@@ -12,7 +12,8 @@ let topic_vars = {
   "phase": -1,
   "topic_number": 0,
   "canvas": null,
-  "ctx": null
+  "ctx": null,
+  "topic-change-time": null,
 };
 
 let compute_coords = true;
@@ -160,6 +161,8 @@ function change_topic_topic(canvas, topic_index) {
 
       const mood_word_to_val = {'oppose': 0, 'neutral': 1, 'support': 2, 'all':-1};
       let mood_filter = mood_word_to_val[current_mood_filter];
+      let mood_elapsed = (new Date()).getTime() - current_mood_time_ms;
+      let mood_effect_alpha = clamp(mapv(mood_elapsed, 0, 4000, .2, 1), .2, 1);
 
       topic_vars.user_dots.forEach(dot => {
         if (true) {
@@ -181,7 +184,7 @@ function change_topic_topic(canvas, topic_index) {
           let opacity = dot.copacity;
           // override opacity here using current mood filter 
           if (mood_filter != -1 && mood_filter != dot.mood) {
-            opacity = Math.min(dot.copacity, 0.2);
+            opacity = Math.min(dot.copacity, mood_effect_alpha);
           }
           ctx.globalAlpha = opacity;
           ctx.fill();

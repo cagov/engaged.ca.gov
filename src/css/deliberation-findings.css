@@ -37,6 +37,10 @@ div.center-container {
   margin-bottom: 1rem;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .style-h1 {
   font-weight: 900;
   font-size: 47px;
@@ -332,6 +336,11 @@ canvas#findings-consensus-progressbar-canvas {
   margin-bottom: 4rem;
 }
 
+div#explore-the-comments {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
 div#findings-deliberation-comments-container {
   margin-top: 2rem;
 }
@@ -431,7 +440,7 @@ div#findings-top-discussions div.topic-section {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  justify-content: left;
+  justify-content: space-evenly;
   margin-bottom: 2rem;
 }
 
@@ -441,13 +450,12 @@ div#findings-top-discussions div.topic-section {
   align-items: center;
   justify-content: flex-start;
   min-width: 100px;
-  padding: 1rem 0.5rem;
+  /* padding: 1rem 0.5rem; */
 }
 
 .findings-discussions-topic-description {
-  margin-top: 1rem;
   margin-bottom: 2rem;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 div#findings-top-topics-dataviz-container {

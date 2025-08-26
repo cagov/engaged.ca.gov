@@ -115,6 +115,8 @@ id: findings_consensus_watch_explore
 topic_number_template: "Topic <NUM> of <TOTAL>"
 explanation: DO NOT TRANSLATE <NUM> or <TOTAL>
 label_1: Increased housing density and expedited permits
+percent_default: 92% of participants supported this topic
+percent_template: <PERCENT>% of participants supported this topic
 ----
 
 
@@ -193,7 +195,7 @@ desc: Scroll to see the comments about this topic (shown in their original langu
 
 ----
 id: topic_data_vis
-title: Data visualization
+title: Explore the votes
 desc: Each dot represents one vote made on this topic. Similar votes have their own color.
 ----
 

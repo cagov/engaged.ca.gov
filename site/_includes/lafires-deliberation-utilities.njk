@@ -2,7 +2,7 @@
 
 let global_chart_data = null;
 document.addEventListener('DOMContentLoaded', function() {
-    fetch("/public/data/lafires_voting_data_v2.json", {})
+    fetch("/public/data/lafires_voting_data_v3.json", {})
     .then(response => response.json())
     .then(data => {
       // console.log("Data fetched:", data);

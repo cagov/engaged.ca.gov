@@ -2,6 +2,7 @@
 
 let current_topic_index = 19;
 let current_mood_filter = 'all';
+let current_mood_time_ms = new Date().getTime();
 
 document.addEventListener('DOMContentLoaded', function() {
   // Set up event handler for clicks on .findings-top-options-option-box
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       this.classList.add('selected');
       current_mood_filter = this.dataset.filter;
+      current_mood_time_ms = new Date().getTime();
       console.log("current_mood_filter", current_mood_filter);
       populate_comments(current_topic_index, current_mood_filter);
     });
