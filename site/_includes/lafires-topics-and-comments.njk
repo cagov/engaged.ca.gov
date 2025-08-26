@@ -4,6 +4,21 @@ let current_topic_index = 19;
 let current_mood_filter = 'all';
 let current_mood_time_ms = new Date().getTime();
 
+
+function switch_alignment(requested_alignment) {
+    document.querySelectorAll('.topics-alignment-switcher-item').forEach(function(el) {
+    el.classList.remove('selected');
+    let itsFilter = el.dataset.filter;
+    if (itsFilter == requested_alignment) {
+        el.classList.add('selected');
+    }
+    });
+    current_mood_filter = requested_alignment;
+    current_mood_time_ms = new Date().getTime();
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // Set up event handler for clicks on .findings-top-options-option-box
   document.querySelectorAll('.findings-top-options-option-box').forEach(function(box) {
@@ -21,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('findings-top-discussions-topic-' + this.dataset.topicNumber).classList.add('active');
       select_topic_chart(parseInt(this.dataset.chartTopicIndex, 10));
       current_topic_index = parseInt(this.dataset.chartTopicIndex, 10);
+      switch_alignment('all');
       populate_comments(current_topic_index, current_mood_filter);
     });
   });
@@ -43,14 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelectorAll('.topics-alignment-switcher-item').forEach(function(item) {
     item.addEventListener('click', function() {
-      // INSERT_YOUR_CODE
-      document.querySelectorAll('.topics-alignment-switcher-item').forEach(function(el) {
-        el.classList.remove('selected');
-      });
-      this.classList.add('selected');
-      current_mood_filter = this.dataset.filter;
-      current_mood_time_ms = new Date().getTime();
-      console.log("current_mood_filter", current_mood_filter);
+      switch_alignment(this.dataset.filter);
       populate_comments(current_topic_index, current_mood_filter);
     });
   });

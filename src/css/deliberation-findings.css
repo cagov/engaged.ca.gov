@@ -155,10 +155,6 @@ img.findings-narrative-image
  * TOP OPTIONS SECTION
  */
 
- section#findings-top-options-intro {
-  /* background-color: #FFF4EB; */
-}
-
 section#findings-top-options {
   padding-bottom: 0;
   /* background-color: #FFF4EB; */
@@ -263,8 +259,6 @@ section#findings-top-options {
   text-align: center;
 }
 
-img.findings-option-icon {
-}
 img.findings-option-icon.png-icon {
   width: 60px;
 }
@@ -349,6 +343,10 @@ div#findings-deliberation-comments-container {
 /* 
  * TOP DISCUSSIONS SECTION
  */
+
+.deliberations-learn-link {
+  margin-bottom: 1rem !important;
+}
 
 .findings-top-options-subtitle .style-h2 {
   margin-bottom: 1rem;

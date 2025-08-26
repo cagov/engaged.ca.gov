@@ -196,6 +196,7 @@ desc: Scroll to see the comments about this topic (shown in their original langu
 ----
 id: topic_data_vis
 title: Explore the votes
+learn_button_label: Learn about the actions being taken
 desc: Each dot represents one vote made on this topic. Similar votes have their own color.
 ----
 
