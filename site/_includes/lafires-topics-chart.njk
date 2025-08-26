@@ -24,7 +24,7 @@ function reset_topics_user_dots(topic_index, ctx) {
 
     let precomputed_coords = topic_coords_dict[topic_index+1];
 
-
+    let moods = [0,0,1,1,1,2,2];
     fUserRecords.forEach(rec => {
       let uid = rec.uid;
       encountered_uids[uid] = true;
@@ -37,6 +37,7 @@ function reset_topics_user_dots(topic_index, ctx) {
       let x = topic_vars.bandWidth * (likert - 0.5);
       x_offset = user_dot.rx * topic_vars.adj_band - topic_vars.adj_band / 2;
       x += x_offset;
+      user_dot.mood = moods[likert-1];
       user_dot.min_x = topic_vars.bandWidth * (likert - 0.5) - topic_vars.adj_band / 2;
       user_dot.max_x = topic_vars.bandWidth * (likert - 0.5) + topic_vars.adj_band / 2;
       user_dot.tx = x;
@@ -91,6 +92,8 @@ function apply_topic_forces(ctx) {
   let gravityForce = 0.025;
   let borderForce = 0.1;
   let maxRepelForce = 0.2;
+  let repelScale = 1.1; // 1.1
+
 
 
   activeDots.forEach(dot => {
@@ -99,7 +102,7 @@ function apply_topic_forces(ctx) {
     let fx = 0;
     let fy = 0;
     // compute forces from neighbors
-    let min_distance = topic_vars.ellipse_radius*2 * 1.25;
+    let min_distance = topic_vars.ellipse_radius*2 * repelScale;
     let neighbors = activeDots.filter(d => d.uid != dot.uid && dot_distance(d, dot) < min_distance);
     neighbors.forEach(neb => {
       let dist = dot_distance(neb, dot);
@@ -127,14 +130,14 @@ function apply_topic_forces(ctx) {
     } else if (dot.ty <= topic_vars.ellipse_radius) {
       fy += borderForce;
     }
-    // compute weak forces from gravity
+    {# // compute weak forces from gravity to center line - UNUSED
     let center_y = ctx.canvas.height/2;
     let dy = dot.ty - center_y;
     if (dy > 2) {
       fy -= gravityForce;
     } else if (dy < -2) {
       fy += gravityForce;
-    }
+    } #}
     dot.vx += fx;
     dot.vy += fy;
     dot.tx += dot.vx;
@@ -166,6 +169,9 @@ function change_topic_topic(canvas, topic_index) {
         }
       }
 
+      const mood_word_to_val = {'oppose': 0, 'neutral': 1, 'support': 2, 'all':-1};
+      let mood_filter = mood_word_to_val[current_mood_filter];
+
       topic_vars.user_dots.forEach(dot => {
         if (true) {
           dot.cx += (dot.tx - dot.cx) * 0.1;
@@ -183,7 +189,12 @@ function change_topic_topic(canvas, topic_index) {
           ctx.beginPath();
           ctx.ellipse(x, y, er, er, 0, 0, 2 * Math.PI);
           ctx.fillStyle = color;
-          ctx.globalAlpha = dot.copacity;
+          let opacity = dot.copacity;
+          // override opacity here using current mood filter 
+          if (mood_filter != -1 && mood_filter != dot.mood) {
+            opacity = Math.min(dot.copacity, 0.2);
+          }
+          ctx.globalAlpha = opacity;
           ctx.fill();
           ctx.globalAlpha = 1;
           ctx.restore();

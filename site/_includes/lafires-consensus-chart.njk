@@ -28,13 +28,13 @@ function compute_color(cx) {
   let r = cx/1200;
   let hue,sat,val;
   if (r < 0.5) {
-    sat = Math.round(mapv(r, 0.5, 0, 0, 60)*100)/100;
-    val = Math.round(mapv(r, 0, 0.5, 61, 85)*100)/100;
+    sat = Math.round(clamp(mapv(r, 0, 0.5, 76, 0),0,76)*100)/100;
+    val = Math.round(clamp(mapv(r, 0, 0.5, 61, 85),61,85)*100)/100;
   } else {
-    sat = Math.round(mapv(r, 0.5, 1, 0, 60)*100)/100;
-    val = Math.round(mapv(r, 0.5, 1, 85, 64)*100)/100;
+    sat = Math.round(clamp(mapv(r, 0.5, 1, 0, 32),0,32)*100)/100;
+    val = Math.round(clamp(mapv(r, 0.5, 1, 85, 48),48,85)*100)/100;
   }
-  hue = Math.round(clamp(mapv(r,0.45, 0.55, 27, 205), 27, 205)*100)/100;
+  hue = Math.round(clamp(mapv(r,0.45, 0.55, 27, 200), 27, 200)*100)/100;
   return "hsl(" + hue + ", " + sat + "%, " + val + "%)";
 }
 

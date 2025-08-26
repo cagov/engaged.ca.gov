@@ -128,10 +128,9 @@ picker_label_3: Palisades
 solution_details_label: "Solution details"
 show_comments_button: Show comments
 hide_comments_button: Hide comments
-nbr_tally_items: 3
+nbr_tally_items: 2
 label_1: Support
-label_2: Consensus
-label_3: Comments
+label_2: Comments
 ----
 
 Every vote was counted and weighted to achieve consensus on the top 5 solutions California should explore. Between the fire zones, votes and comments looked a little different, use the toggle to see how opinons from the Palisades differed from those in the Eaton fire zone.
@@ -142,8 +141,7 @@ title: Underground power lines and equipment safety
 topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
 nbr_comments: 3
 value_1: 92%
-value_2: 98%
-value_3: 90
+value_2: 90
 chart_topic_index: 19
 ----
 
@@ -152,8 +150,7 @@ id: discussion_2
 title: Enhanced water infrastructure for fire protection
 topic_description: Upgrade water systems to meet modern fire flow requirements and ensure there are enough fire hydrants in all areas. This would improve the water supply and pressure needed for effective firefighting operations.
 value_1: 87%
-value_2: 96%
-value_3: 74
+value_2: 74
 chart_topic_index: 18
 ----
 
@@ -162,8 +159,7 @@ id: discussion_3
 title: Resilient emergency communication networks
 topic_description: Promote communication infrastructure that allows first responders and residents to stay connected even when cell towers or fiber lines fail, such as mesh internet networks that can operate independently during disasters.
 value_1: 86%
-value_2: 96%
-value_3: 59
+value_2: 59
 chart_topic_index: 17
 ----
 
@@ -172,8 +168,7 @@ id: discussion_4
 title: Help people find financial support programs
 topic_description: Create a comprehensive catalog of financial support programs and organizations available to help with rebuilding efforts. This directory would connect fire-affected residents with grants, loans, and aid programs, while also partnering with trusted financial organizations willing to assist with recovery funding.
 value_1: 82%
-value_2: 95%
-value_3: 59
+value_2: 59
 chart_topic_index: 16
 ----
 
@@ -182,8 +177,7 @@ id: discussion_5
 title: Dedicated permitting support teams
 topic_description: Establish teams of dedicated staff at triage centers to quickly guide fire-affected communities through permitting processes. These specialized teams would provide personalized assistance to residents navigating complex rebuilding requirements.
 value_1: 82%
-value_2: 95%
-value_3: 73
+value_2: 73
 chart_topic_index: 15
 ----
 

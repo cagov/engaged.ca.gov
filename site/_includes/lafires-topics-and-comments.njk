@@ -1,7 +1,7 @@
 <script>
 
 let current_topic_index = 19;
-let current_filter = 'all';
+let current_mood_filter = 'all';
 
 document.addEventListener('DOMContentLoaded', function() {
   // Set up event handler for clicks on .findings-top-options-option-box
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('findings-top-discussions-topic-' + this.dataset.topicNumber).classList.add('active');
       select_topic_chart(parseInt(this.dataset.chartTopicIndex, 10));
       current_topic_index = parseInt(this.dataset.chartTopicIndex, 10);
-      populate_comments(current_topic_index, current_filter);
+      populate_comments(current_topic_index, current_mood_filter);
     });
   });
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Comment expander clicked');
     let container = document.getElementById('topics-deliberation-comments-container');
     // populate it...
-    populate_comments(current_topic_index, current_filter);
+    populate_comments(current_topic_index, current_mood_filter);
     container.classList.remove('collapsed');
   });
   document.querySelectorAll('.deliberation-comment-expander-button.close').forEach(function(item) {
@@ -47,9 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         el.classList.remove('selected');
       });
       this.classList.add('selected');
-      current_filter = this.dataset.filter;
-      console.log("current_filter", current_filter);
-      populate_comments(current_topic_index, current_filter);
+      current_mood_filter = this.dataset.filter;
+      console.log("current_mood_filter", current_mood_filter);
+      populate_comments(current_topic_index, current_mood_filter);
     });
   });
 });
@@ -60,11 +60,11 @@ function populate_comments(topic_index, filter) {
     // console.log("chart_data", chart_data);
     let fUserRecords = chart_data.user_recs.filter(rec => rec.tid == topic_index-1);
     if (filter == 'support') {
-      fUserRecords = fUserRecords.filter(rec => rec.v >= 5);
+      fUserRecords = fUserRecords.filter(rec => rec.v >= 6);
     } else if (filter == 'neutral') {
-      fUserRecords = fUserRecords.filter(rec => rec.v == 4);
+      fUserRecords = fUserRecords.filter(rec => rec.v >= 3 && rec.v <= 5);
     } else if (filter == 'oppose') {
-      fUserRecords = fUserRecords.filter(rec => rec.v <= 3);
+      fUserRecords = fUserRecords.filter(rec => rec.v <= 2);
     }
     console.log("fUserRecords found:", fUserRecords.length);
     fUserRecords.forEach(rec => {

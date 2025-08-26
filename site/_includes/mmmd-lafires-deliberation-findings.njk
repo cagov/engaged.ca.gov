@@ -175,9 +175,9 @@
               </div>
             </div>
             <div class="col-lg-8">
-              <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
+              {# <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
                 {{ modules.findings_top_discussions.solution_details_label | safe }}
-              </div>
+              </div> #}
               <div class="findings-discussions-topic-description style-small-body-text">
                 {{ modules["discussion_" + i].topic_description | safe }}
               </div>
@@ -196,9 +196,9 @@
         {% endfor %}
         <div class="row">
           <div class="col-lg-12">
-            <div class="style-strong-body-text">
+            {# <div class="style-small-strong-body-text">
               {{ modules.topic_data_vis.title }}
-            </div>
+            </div> #}
             <div>
               {{ modules.topic_data_vis.desc }}
             </div>
@@ -225,10 +225,10 @@
 
             <div class="topics-alignment-switcher-list">
               <div class="topic-alignment-switcher-item-label style-strong-small-body-text">
-                Pick one:
+                Viewpoint:
               </div>
               <div class="topics-alignment-switcher-item selected" data-filter="all">
-                All
+                All comments
               </div>
               <div class="topics-alignment-switcher-item" data-filter="oppose">
                 Oppose
