@@ -156,11 +156,15 @@ function setup_consensus_chart(itsVoteData) {
 
     consensus_vars.user_dots = [];
 
+    const row_size = Math.round(Math.sqrt(topic_vars.voteData.nbr_users));
+    const masonry_incx = 0.5 / row_size;
+
     for (let uid = 0; uid < consensus_vars.voteData.nbr_users; uid++) {
+       let ryi = Math.floor(uid / row_size);
         consensus_vars.user_dots.push({
             uid: uid,
-            rx: Math.random(),
-            ry: uid / consensus_vars.voteData.nbr_users,
+            rx:  (uid % row_size) / row_size + ((ryi % 2) * masonry_incx),         // Math.random(),
+            ry:  (uid / row_size) / row_size,         // uid / topic_vars.voteData.nbr_users,
             cx: 600,
             tx: 0,
             copacity: 0, // current opacity

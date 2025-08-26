@@ -44,7 +44,7 @@ function reset_topics_user_dots(topic_index, ctx) {
       user_dot.topacity = 1;
       user_dot.active = true;
       // user_dot.copacity = 1;
-      let dot_y = topic_vars.ellipse_radius + user_dot.ry * (ctx.canvas.height-topic_vars.ellipse_radius*2);
+      let dot_y = topic_vars.ellipse_radius*4 + user_dot.ry * (ctx.canvas.height-topic_vars.ellipse_radius*8);
       user_dot.ty = dot_y;
       user_dot.vx = 0;
       user_dot.vy = 0;
@@ -90,8 +90,8 @@ function apply_topic_forces(ctx) {
   let activeDots = topic_vars.user_dots.filter(d => d.active);
   let canvas = ctx.canvas;
   let gravityForce = 0.025;
-  let borderForce = 0.1;
-  let maxRepelForce = 0.2;
+  let borderForce = 0.2;
+  let maxRepelForce = 0.1;
   let repelScale = 1.1; // 1.1
 
 
@@ -223,11 +223,15 @@ function setup_topic_chart(itsVoteData) {
 
     topic_vars.user_dots = [];
 
+    const row_size = Math.round(Math.sqrt(topic_vars.voteData.nbr_users));
+    const masonry_incx = 0.5 / row_size;
+
     for (let uid = 0; uid < topic_vars.voteData.nbr_users; uid++) {
+       let ryi = Math.floor(uid / row_size);
         topic_vars.user_dots.push({
             uid: uid,
-            rx: Math.random(),
-            ry: uid / topic_vars.voteData.nbr_users,
+            rx:  (uid % row_size) / row_size + ((ryi % 2) * masonry_incx),         // Math.random(),
+            ry:  (uid / row_size) / row_size,         // uid / topic_vars.voteData.nbr_users,
             cx: 0,
             tx: 0,
             cy: 0,

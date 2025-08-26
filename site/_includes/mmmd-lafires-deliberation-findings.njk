@@ -117,14 +117,12 @@
           <h3>{{ modules.findings_narrative_top_options_intro.title | safe }}</h3>
         </div>
         <div class="findings-top-options-tally-list">
-          <div class="findings-top-options-tally-box">
-            <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_1 }}</div>
-            <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_1 }}</div>
-          </div>
-          <div class="findings-top-options-tally-box">
-            <div class="option-total">{{ modules.findings_narrative_top_options_intro.value_2 }}</div>
-            <div class="option-label">{{ modules.findings_narrative_top_options_intro.label_2 }}</div>
-          </div>
+          {% for i in range(1, modules.findings_narrative_top_options_intro.nbr_values + 1) %}
+            <div class="findings-top-options-tally-box">
+              <div class="option-total">{{ modules.findings_narrative_top_options_intro["value_" + i] }}</div>
+              <div class="option-label">{{ modules.findings_narrative_top_options_intro["label_" + i] }}</div>
+            </div>
+          {% endfor %}
         </div>
         <div class="top-options-description style-body-text">
           {{ modules.findings_narrative_top_options_intro.description | safe }}
@@ -183,13 +181,15 @@
               </div>
             </div>
 
-            <div class="findings-top-discussions-tally-list">
-              {% for j in range(1, modules.findings_top_discussions.nbr_tally_items + 1) %}
-                <div class="findings-top-discussions-tally-box">
-                  <div class="option-total style-h1">{{ modules["discussion_" + i]["value_" + j] }}</div>
-                  <div class="option-label style-body-text">{{ modules.findings_top_discussions["label_" + j] }}</div>
-                </div>
-              {% endfor %}
+            <div class="col-lg-4">
+              <div class="findings-top-discussions-tally-list">
+                {% for j in range(1, modules.findings_top_discussions.nbr_tally_items + 1) %}
+                  <div class="findings-top-discussions-tally-box">
+                    <div class="option-total style-h1">{{ modules["discussion_" + i]["value_" + j] }}</div>
+                    <div class="option-label style-body-text">{{ modules.findings_top_discussions["label_" + j] }}</div>
+                  </div>
+                {% endfor %}
+              </div>
             </div>
 
           </div>
