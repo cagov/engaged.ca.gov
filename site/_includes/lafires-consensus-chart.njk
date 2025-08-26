@@ -337,10 +337,12 @@ function draw_consensus_progress_bar(step_index) {
   let w = ctx.canvas.width;
   let h = ctx.canvas.height;
   let r = cprogress_vars.ellipse_radius;
-  let gap = (w - 2 * r) / (n - 1);
+  let dot_grow = 24/16;
+  let hmargin = r*dot_grow; // maximum dot radius
+  let gap = (w - 2 * hmargin) / (n - 1);
 
   for (let i = 0; i < n; i++) {
-    let x = r + i * gap;
+    let x = hmargin + i * gap;
     let y = h / 2;
     let clr = compute_color(x);
     let fill_color = step_index == i? '#000' : clr;
@@ -354,7 +356,7 @@ function draw_consensus_progress_bar(step_index) {
       ctx.stroke();
     }
     ctx.beginPath();
-    let radius = (step_index == i)? r*24/16 : r;
+    let radius = (step_index == i)? r*dot_grow : r;
     ctx.ellipse(x, y, radius, radius, 0, 0, 2 * Math.PI);
     ctx.fillStyle = fill_color;
     ctx.globalAlpha = 1;

@@ -253,9 +253,14 @@ section#findings-top-options {
 .option-total {
   font-weight: 700;
   font-size: 48px;
+  line-height: 48px;
   color: #2d3a4a;
+  position: relative;
+  top: -2px;
   @media (max-width: 720px) {
     font-size: 36px;
+    line-height: 36px;
+    top: inherit;
   }
 }
 
