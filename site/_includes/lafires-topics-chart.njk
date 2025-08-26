@@ -5,7 +5,7 @@ let topic_vars = {
   "bandWidth": 0,
   "adj_band": 0,
   "ellipse_radius": 10,
-  "vert_margin": 40,
+  "vert_margin": 11,
   "voteData": null,
   "render_handle": null,
   "phase_handle": null,
@@ -98,7 +98,7 @@ function apply_topic_forces(ctx) {
       let angle = dot_angle(neb, dot);
       // To make force 0 at d = min_distance, and increase as d gets smaller:
       // We'll use: force = (min_distance - d) / min_distance, but clamp to >= 0
-      let force = clamp((min_distance - dist) / min_distance, 0, maxRepelForce);
+      let force = clamp((min_distance - dist) / min_distance,0, maxRepelForce);
       fx += force * Math.cos(angle);
       fy += force * Math.sin(angle);
     });
