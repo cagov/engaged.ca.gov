@@ -1,5 +1,5 @@
 ---
-title: Community results
+title: LA aligns on recovery plans
 description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
 layout: mmmd-lafires-deliberation-findings
 parentid: lafires-recovery
@@ -12,15 +12,17 @@ tags:
 ---
 
 
+
 ----
 id: findings_overview
-buttonText: Skip to summary section
+buttonText: Skip to the action plan
 ----
 
-# Community results
+# LA aligns on recovery plans
 
-After the severe wildfires in Los Angeles in January 2025, more than an estimated 1,000 community members met online. They gathered in virtual town halls to discuss recovery priorities. In the second part of this two-phase project, the community created an action plan. This plan will guide state and local officials in their next steps for full recovery.  
+In a unique two-phase community engagement process, more than 900 community members gathered in virtual town halls to develop an action plan to recover from the devastating Los Angeles wildfires in January 2025. 
 
+The action plan, developed through online deliberation sessions over a 7 month period, reflects priorities directly from those who lost homes and businesses. The priorities they set – focusing on immediate community support and long-term infrastructure improvements – will guide state and local officials toward full recovery.
 
 ----
 id: findings_narrative_step_1
@@ -30,7 +32,7 @@ button_text: Read about the agenda setting phase
 
 ## Residents shared their concerns and ideas
 
-After the severe wildfires in Los Angeles, more than 600 community members met online to discuss recovery priorities.
+After the severe wildfires in Los Angeles, more than 750 community members met online to discuss recovery priorities.
 
 ----
 id: findings_narrative_step_2
@@ -52,6 +54,30 @@ Over **400** new and returning participants ranked these options, again using an
 
 
 ----
+id: findings_consensus_watch_intro
+title_h2: Community alignment
+----
+Each dot represents one voter. As the visualization changes, you can track the community’s level of support for each issue. Topics are arranged from least community support (left) to most community support (right).
+
+----
+id: findings_consensus_watch_explore
+topic_number_template: "Topic <NUM> of <TOTAL>"
+explanation: DO NOT TRANSLATE <NUM> or <TOTAL>
+label_1: Increased housing density and expedited permits
+percent_default: 92% of participants supported this topic
+percent_template: <PERCENT>% of participants supported this topic
+----
+
+
+----
+id: findings_consensus_sentiment_chart
+nbr_labels: 3
+label_1: Strongly oppose
+label_2: Neutral
+label_3: Strongly support
+----
+
+----
 id: findings_narrative_top_options_intro
 title: Residents weighed in to find agreement on the top 5 solutions
 nbr_values: 2
@@ -59,10 +85,10 @@ label_1: Comments and replies
 label_2: Votes
 value_1: 1,504
 value_2: 3,977
-description: The engagement was notable. Instead of letters vanishing into a bureaucratic black box, this process encouraged neighbors to share their thoughts and respond. They talked about solutions and worked together to refine their priorities. 
 nbr_options: 5
 ----
 
+The engagement was notable. Neighbors were able to share their thoughts and replied to one another. The 1,504 participant comments received didn’t vanish into a black box. People talked about the solutions, effectively working together to refine priorities.
 
 ----
 id: findings_narrative_top_options
@@ -88,19 +114,7 @@ option_icon_alt_5: Comprehensive homeowner education program
 
 
 
-----
-id: findings_consensus_watch_intro
-title_h2: Community alignment
-----
-Each dot represents an individual voter. Follow a dot across topics to see how that person’s opinions align from one topic to the next. Topics with stronger alignment appear farther to the right, while those with more divided opinions appear farther to the left.
 
-----
-id: findings_consensus_sentiment_chart
-nbr_labels: 3
-label_1: Strongly oppose
-label_2: Neutral
-label_3: Strongly support
-----
 
 ----
 id: findings_topic_chart
@@ -110,14 +124,6 @@ label_2: Neutral
 label_3: Strongly support
 ----
 
-----
-id: findings_consensus_watch_explore
-topic_number_template: "Topic <NUM> of <TOTAL>"
-explanation: DO NOT TRANSLATE <NUM> or <TOTAL>
-label_1: Increased housing density and expedited permits
-percent_default: 92% of participants supported this topic
-percent_template: <PERCENT>% of participants supported this topic
-----
 
 
 ----

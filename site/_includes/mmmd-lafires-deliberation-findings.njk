@@ -128,7 +128,7 @@
           {% endfor %}
         </div>
         <div class="top-options-description style-body-text">
-          {{ modules.findings_narrative_top_options_intro.description | safe }}
+          {{ modules.findings_narrative_top_options_intro.content | safe }}
         </div>
       </div>
     </div>
@@ -145,7 +145,7 @@
       <div class="col-lg-12">
         <div class="findings-top-options-subtitle">
           <div class="style-h2">{{ modules.findings_narrative_top_options.results_header | safe }}</div>
-          <div class="style-h3">{{ modules.findings_narrative_top_options.results_description | safe }}</div>
+          <div class="style-h3 text-align-justify">{{ modules.findings_narrative_top_options.results_description | safe }}</div>
         </div>
 
         <div class="findings-top-options-options-list">
@@ -259,6 +259,9 @@
                 Support
               </div>
             </div>
+            <div class="comments-caveat style-small-body-text italic">
+              Filter comments by their corresponding votes. We do not translate comments; they are displayed in their original language. 
+           </div>
             <div class="legend-item-expansion-block" id="legends-scroll-content" role="region" aria-hidden="true">
               <div id="topics-deliberation-comments-container-content" class="legend-item-content" dir="ltr" role="log" aria-live="polite"></div>
             </div>

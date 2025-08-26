@@ -41,6 +41,10 @@ div.center-container {
   font-style: italic;
 }
 
+.text-align-justify {
+  text-align: justify;
+}
+
 .style-h1 {
   font-weight: 900;
   font-size: 47px;
@@ -509,8 +513,14 @@ div.topics-alignment-switcher-list {
   gap: 1rem;
   justify-content: left;
   align-items: center;
-  margin-bottom: 1rem;
   padding: 1rem;
+}
+
+.comments-caveat {
+  font-weight: italic;
+  font-size: 18px;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 #topics-deliberation-comments-container {
