@@ -537,9 +537,6 @@ div.deliberation-comment-expander-label {
   background: url("/public/images/arrow-up.svg") no-repeat right center;
   cursor: pointer;
 }
-.deliberation-comment-expander-button.close div.deliberation-comment-expander-label {
-  padding-top: 1rem;
-}
 .download-buton-div {
   margin-top: 2rem;
   margin-bottom: 1rem;

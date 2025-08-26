@@ -5,6 +5,7 @@ let topic_vars = {
   "bandWidth": 0,
   "adj_band": 0,
   "ellipse_radius": 10,
+  "vert_margin": 40,
   "voteData": null,
   "render_handle": null,
   "phase_handle": null,
@@ -34,17 +35,17 @@ function reset_topics_user_dots(topic_index, ctx) {
       // Clamp likert to [1,7]
       if (likert < 1) likert = 1;
       if (likert > 7) likert = 7;
-      let x = topic_vars.bandWidth * (likert - 0.5);
+      let dot_x = topic_vars.bandWidth * (likert - 0.5);
       x_offset = user_dot.rx * topic_vars.adj_band - topic_vars.adj_band / 2;
-      x += x_offset;
+      dot_x += x_offset;
       user_dot.mood = moods[likert-1];
       user_dot.min_x = topic_vars.bandWidth * (likert - 0.5) - topic_vars.adj_band / 2;
       user_dot.max_x = topic_vars.bandWidth * (likert - 0.5) + topic_vars.adj_band / 2;
-      user_dot.tx = x;
+      user_dot.tx = dot_x;
       user_dot.topacity = 1;
       user_dot.active = true;
       // user_dot.copacity = 1;
-      let dot_y = topic_vars.ellipse_radius*4 + user_dot.ry * (ctx.canvas.height-topic_vars.ellipse_radius*8);
+      let dot_y = topic_vars.vert_margin + user_dot.ry * (ctx.canvas.height-topic_vars.vert_margin*2);
       user_dot.ty = dot_y;
       user_dot.vx = 0;
       user_dot.vy = 0;
@@ -73,18 +74,6 @@ function reset_topics_user_dots(topic_index, ctx) {
       }
     }
 }
-
-function dot_distance(da, db) {
-  let dx = da.tx - db.tx;
-  let dy = da.ty - db.ty;
-  return Math.sqrt(dx*dx + dy*dy);
-}
-function dot_angle(da, db) {
-  let dx = db.tx - da.tx;
-  let dy = db.ty - da.ty;
-  return Math.atan2(dy, dx);
-}
-
 
 function apply_topic_forces(ctx) {
   let activeDots = topic_vars.user_dots.filter(d => d.active);
@@ -228,14 +217,17 @@ function setup_topic_chart(itsVoteData) {
 
     for (let uid = 0; uid < topic_vars.voteData.nbr_users; uid++) {
        let ryi = Math.floor(uid / row_size);
+       let initRX = (uid % row_size) / row_size + ((ryi % 2) * masonry_incx);
+       let initRY = (uid / row_size) / row_size;
+       let initCY = topic_vars.vert_margin + initRY * (canvas.height-topic_vars.vert_margin*2);
         topic_vars.user_dots.push({
             uid: uid,
-            rx:  (uid % row_size) / row_size + ((ryi % 2) * masonry_incx),         // Math.random(),
-            ry:  (uid / row_size) / row_size,         // uid / topic_vars.voteData.nbr_users,
-            cx: 0,
+            rx:  initRX,         // Math.random(),
+            ry:  initRY,         // uid / topic_vars.voteData.nbr_users,
+            cx: canvas.width/2,
             tx: 0,
-            cy: 0,
-            ty: 0,
+            cy: initCY,
+            ty: initCY,
             vx: 0,
             vy: 0,
             copacity: 0, // current opacity
@@ -250,18 +242,7 @@ function setup_topic_chart(itsVoteData) {
     change_topic_topic(canvas, topic_number-1);
 
     // make click handler for canvas that outputs "click" to console
-    if (compute_coords) {
-      canvas.addEventListener('click', (e) => {
-        let coords = [];
-        for (let i = 0; i < topic_vars.user_dots.length; i++) {
-          coords.push([Math.round(topic_vars.user_dots[i].tx*10)/10, 
-                       Math.round(topic_vars.user_dots[i].ty*10)/10, 
-                       topic_vars.user_dots[i].active? 1 : 0]);
-        }
-        console.log("coords for topic", topic_vars.topic_number, coords);
-      });
-    }
-
+s
 
 }
 
