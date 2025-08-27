@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   /* ACCORDIONS */
-  function toggleRespondingVisibility(button, contClass, buttonClass) {
+  {# function toggleRespondingVisibility(button, contClass, buttonClass) {
     const barchartContainer = document.querySelector(`.${contClass}`);
     const showAllButtonLabel = document.querySelector(`.${buttonClass}`);
     let isCollapsed = barchartContainer.classList.contains('collapsed');
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('findings-responding-show-all-button').addEventListener('click', function(event) {
     console.log("GOT CLICK")
     toggleRespondingVisibility(this, 'findings-responding-list-container', 'findings-responding-show-all-button-label');
-  });
+  }); #}
 
 
 });

@@ -16,7 +16,7 @@
       <div class="col-lg-8">
         {{ modules.findings_overview.content | safe }}
         <p>
-            <a data-appearance="button" data-theme="orange" href="#response" class="m-t">{{ modules.findings_overview.buttonText }}</a>
+            <a data-appearance="button" data-theme="orange" href="#findings-top-options" class="m-t">{{ modules.findings_overview.buttonText }}</a>
         </p>
 
       </div>
@@ -30,8 +30,8 @@
     <div class="row">
       <div class="col-lg-12">
         <div id="narrative-wrapper-1" class="narrative-wrapper">
-          {# <canvas id="findings-narrative-step-1-canvas" class="findings-narrative-canvas"></canvas> #}
-          <img class="findings-narrative-image" src="/public/images/narrative-1-test.png" alt="Findings narrative step 1" width="100%" height="auto"/>
+          <canvas id="findings-narrative-step-1-canvas" class="findings-narrative-canvas"></canvas>
+          {# <img class="findings-narrative-image" src="/public/images/narrative-1-test.png" alt="Findings narrative step 1" width="100%" height="auto"/> #}
           <div class="findings-narrative-step-1 findings-narrative-step ">
             <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_1.title }}</div>
             {{ modules.findings_narrative_step_1.content | safe }}
@@ -419,7 +419,7 @@
 {# {% include "lafires-ring-chart.njk" %} #}
 {% include "lafires-deliberation-utilities.njk" %}
 {% include "lafires-scroll-animation.njk" %}
-{# {% include "lafires-narrative-backgrounds.njk" %} #}
+{% include "lafires-narrative-backgrounds.njk" %}
 {% include "lafires-topics-and-comments.njk" %}
 
 {% endblock %}
