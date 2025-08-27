@@ -138,9 +138,15 @@ function animate_step_1(t, ctx) {
         const bx = x;
         const by = y;
 
+        ctx.save();
+        ctx.translate(bx, by);
+        if (tail_reverse) {
+            ctx.scale(-1, 1);
+        }
+
         // Balloon body rect
-        const rectX = bx - bodyWidth / 2;
-        const rectY = by - bodyHeight / 2;
+        const rectX = 0 - bodyWidth / 2;
+        const rectY = 0 - bodyHeight / 2;
         const rectW = bodyWidth;
         const rectH = bodyHeight;
 
@@ -161,27 +167,35 @@ function animate_step_1(t, ctx) {
 
         ctx.closePath();
         ctx.fillStyle = bg_color;
+        ctx.strokeStyle = bg_color;
         ctx.fill();
 
         // Tail base (on bottom edge of rect, offset horizontally)
-        const tailBaseX1 = rectX + bodyWidth*0.147; // bx + particle.options.tail_offset;
-        const tailBaseY1 = rectY + bodyHeight; // rectY + rectH;
-        const tailBaseX2 = rectX + bodyWidth*0.378;
-        const tailBaseY2 = rectY + bodyHeight;
+        let tailBaseX1 = rectX + bodyWidth*0.147; // bx + particle.options.tail_offset;
+        let tailBaseY1 = rectY + bodyHeight; // rectY + rectH;
+        let tailBaseX2 = rectX + bodyWidth*0.378;
+        let tailBaseY2 = rectY + bodyHeight;
 
         // Tail tip (downward, at randomized angle and length)
-        const tailTipX = tailBaseX1;
-        const tailTipY = tailBaseY1 + bodyHeight * 0.25;
-
+        let tailTipX1 = tailBaseX1;
+        let tailTipY1 = tailBaseY1 + bodyHeight * 0.23;
+        let tailTipX2 = tailBaseX1 + bodyHeight * 0.05;
+        let tailTipY2 = tailBaseY2 + bodyHeight * 0.24;
 
         // Draw tail (triangle)
         ctx.beginPath();
-        ctx.moveTo(tailBaseX1, tailBaseY1);
-        ctx.lineTo(tailTipX, tailTipY);
+        ctx.moveTo(tailBaseX1-bodyWidth*0.05, tailBaseY1);
+        ctx.quadraticCurveTo(tailBaseX1, tailBaseY1,
+                             tailBaseX1, tailBaseY1 + bodyHeight*0.05);
+        // Draw to just above the tip for a smoother curve
+        ctx.lineTo(tailTipX1, tailTipY1);
+        // Use quadratic curve for rounded tip
+        ctx.quadraticCurveTo(
+            tailTipX1, tailTipY1 + (bodyHeight * 0.05), // control point below tip for more roundness
+            tailTipX2, tailTipY2
+        );
         ctx.lineTo(tailBaseX2, tailBaseY2);
         ctx.lineWidth = 4*scale;
-        ctx.lineJoin = "round";
-        ctx.lineCap = "round";
         ctx.fill();
 
 
@@ -209,12 +223,13 @@ function animate_step_1(t, ctx) {
             ctx.restore();
         }
         ctx.restore();
+        ctx.restore();
         ctx.globalAlpha = 1;
 
     });
 
     particles_1.forEach(particle => {
-      particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2 + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 4);
+      particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2 + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
     });
 
 }
