@@ -1,5 +1,41 @@
 <script>
 
+// Preload the report_icons.png sprite and draw it into an offscreen canvas for later use
+let report_icons_canvas;
+let report_icons_ctx;
+
+function load_icons() {
+    report_icons_canvas = document.createElement('canvas');
+    report_icons_canvas.width = 4000;
+    report_icons_canvas.height = 200;
+    report_icons_ctx = report_icons_canvas.getContext('2d');
+
+    const report_icons_img = new Image();
+    report_icons_img.src = '/public/images/report_icons.png';
+    console.log("loading report_icons_img");
+    report_icons_img.onload = function() {
+        console.log("report_icons_img loaded");
+        report_icons_ctx.clearRect(0, 0, report_icons_canvas.width, report_icons_canvas.height);
+        report_icons_ctx.drawImage(report_icons_img, 0, 0, 4000, 200);
+    };
+}
+
+
+function render_icon(ctx, icon_index) {
+    // console.log("render_icon", icon_index, x, y, scale);
+    ctx.save();
+        ctx.scale(0.8, 0.8);
+        ctx.drawImage(report_icons_canvas, icon_index * 200, 0, 200, 200, -100, -100, 200, 200);
+        // Draw an orange circle around the icon image
+        ctx.beginPath();
+        ctx.arc(0, 0, 83, 0, 2 * Math.PI);
+        ctx.lineWidth = 1.73*2;
+        ctx.strokeStyle = '#E6883B';
+        ctx.closePath();
+        ctx.stroke();
+    ctx.restore();
+}
+
 class Particle {
     constructor(x, y, options = {}) {
         this.x = x;
@@ -47,7 +83,7 @@ function shuffled_order(nbr_particles) {
 
 function init_narrative_backgrounds_step_1(canvas_id, color) {
     const canvas = document.getElementById(canvas_id);
-    console.log("init 1, canvas size", canvas.width, canvas.height);
+    // console.log("init 1, canvas size", canvas.width, canvas.height);
 
     // Get the width and height in pixels of div#narrative-wrapper-1 and set canvas size to match
     const wrapper = document.getElementById('narrative-wrapper-1');
@@ -59,7 +95,7 @@ function init_narrative_backgrounds_step_1(canvas_id, color) {
 
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    console.log("canvas size", canvas.width, canvas.height);
+    // console.log("canvas size", canvas.width, canvas.height);
 
     particles_1 = [];
     let nbr_particles = 10;
@@ -110,7 +146,7 @@ function init_narrative_backgrounds_step_1(canvas_id, color) {
 }
 
 function animate_step_1(t, ctx) {
-    console.log("draw 1, canvas size", ctx.canvas.width, ctx.canvas.height);
+    // console.log("draw 1, canvas size", ctx.canvas.width, ctx.canvas.height);
 
     particles_1.forEach(particle => {
       particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2 + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
@@ -217,7 +253,7 @@ function animate_step_1(t, ctx) {
             ctx.save();
             ctx.strokeStyle = text_color;
             ctx.lineWidth = 4;
-            console.log(nbr_text_lines, line_vert_margin, line_gap_y, top_line_y);
+            // console.log(nbr_text_lines, line_vert_margin, line_gap_y, top_line_y);
 
             for (let i = 0; i < nbr_text_lines; i++) {
                 let line_y = top_line_y + i * line_gap_y;
@@ -255,7 +291,7 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
     {# ctx.fillStyle = color;
     ctx.fillRect(0, 0, canvas.width, canvas.height); #}
 
-    console.log("canvas size 2", canvas.width, canvas.height);
+    // console.log("canvas size 2", canvas.width, canvas.height);
     phrases = ['Utilities', 'Community/Support', "Financial/support", "Emergency/preparedness", 
                "Fire/proofing", "Building/permits"];
 
@@ -294,7 +330,7 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
         }
         particles_2.push(new Particle(x, y, options));
     }
-    console.log("nbr particles 2", particles_2);
+    // console.log("nbr particles 2", particles_2);
     // animate_step(0, 2);
 }
 
@@ -373,7 +409,7 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    console.log("canvas size 2", canvas.width, canvas.height);
+    // console.log("canvas size 3", canvas.width, canvas.height);
 
     particles_3 = [];
     let nbr_particles = 31;
@@ -383,7 +419,8 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
     let max_ellipse_radius_y = canvas.height * 0.45;
     let ellipse_center_x = canvas.width / 2;
     let ellipse_center_y = canvas.height / 2;
-    let text_index = 0;
+    let icon_index = 0;
+    let nbr_icons = 20;
     let order = shuffled_order(nbr_particles);
     for (let i = 0; i < nbr_particles; i++) {
         let angle = i * 2 * Math.PI / nbr_particles;
@@ -395,23 +432,26 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
         let max_circle_size = 30*scale;
         let circle_size = mapv(Math.random(),0,1,min_circle_size,max_circle_size);
         let circle_type = Math.floor(Math.random()*Math.random()*2);
-        if (i % 3 == 0) {
+        if (i % 2 == 0) {
             circle_type = 2;
+            icon_index = icon_index % nbr_icons;
+            icon_index += 1;
         }
         let options = {
             'phase': order[i] / nbr_particles,
             'circle_size': circle_size,
             'circle_type': circle_type,
+            'icon_index': icon_index,
         }
         particles_3.push(new Particle(x, y, options));
     }
-    console.log("nbr particles 2", particles_3);
+    // console.log("nbr particles 3", particles_3);
 }
 
 function animate_step_3(t, ctx) {
     // TODO: implement animation for step 3
    // TODO: implement animation for step 2
-    // console.log("animate_step_2", t, "nbr particles", particles_2.length);
+    // console.log("animate_step_3", t, "nbr particles", particles_3.length);
     particles_3.forEach(particle => {
         particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2 + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
         particle.options.scale = mapv(t,0,1,.8,1.2);
@@ -451,20 +491,20 @@ function animate_step_3(t, ctx) {
             ctx.fill();
             break;
         case 2:
-            ctx.strokeStyle = '#E6883B';
-            ctx.fillStyle = 'white';
-            ctx.fill();
-            ctx.stroke();
+            render_icon(ctx, particle.options.icon_index);
             break;
         }
         ctx.globalAlpha = 1;
         ctx.restore();
     });
+    // console.log("  done animating step 3");
 }
 
 
 
 function init_narrative_backgrounds() {
+    load_icons();
+
     init_narrative_backgrounds_step_1('findings-narrative-step-1-canvas', 'red');
 
     init_narrative_backgrounds_step_2('findings-narrative-step-2-canvas', 'green');
