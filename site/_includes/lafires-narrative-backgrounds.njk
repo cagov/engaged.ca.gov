@@ -151,7 +151,6 @@ function animate_step_1(t, ctx) {
         const rectH = bodyHeight;
 
         ctx.globalAlpha = particle.options.opacity;
-        ctx.save();
 
         ctx.beginPath();
         ctx.moveTo(rectX + radius, rectY);
@@ -222,7 +221,6 @@ function animate_step_1(t, ctx) {
             }
             ctx.restore();
         }
-        ctx.restore();
         ctx.restore();
         ctx.globalAlpha = 1;
 
