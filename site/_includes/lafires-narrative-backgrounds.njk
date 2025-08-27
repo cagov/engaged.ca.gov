@@ -378,12 +378,12 @@ function animate_step_2(t, ctx) {
             break;
         case 2: // TEXT
             lines = particle.options.text.split('/');
-            ctx.font = "italic 600 22px Noto Sans Display";
+            ctx.font = "italic 600 32px Noto Sans Display";
             ctx.textAlign = "center";
             ctx.fillStyle = '#868686';
             ctx.textBaseline = "middle";
             for (let i = 0; i < lines.length; i++) {
-                ctx.fillText(lines[i], 0, i * 24 - 12);
+                ctx.fillText(lines[i], 0, i * 50 - 20);
             }
             break;
         }
