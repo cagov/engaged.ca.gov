@@ -32,6 +32,18 @@ window.addEventListener('resize', function() {
     resize_canvas(3);
 });
 
+function shuffled_order(nbr_particles) {
+    let order = [];
+    for (let i = 0; i < nbr_particles; i++) {
+        order.push(i);
+    }
+    // Fisher-Yates shuffle
+    for (let i = order.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+    }
+    return order;
+}
 
 function init_narrative_backgrounds_step_1(canvas_id, color) {
     const canvas = document.getElementById(canvas_id);
@@ -58,15 +70,7 @@ function init_narrative_backgrounds_step_1(canvas_id, color) {
     let balloon_colors = ['#98B8C8', '#E6F0F5', '#EFB389'];
     let text_color = '#868686';
     // produce order array (integers from 0->nbr_particles) which is shuffled.
-    let order = [];
-    for (let i = 0; i < nbr_particles; i++) {
-        order.push(i);
-    }
-    // Fisher-Yates shuffle
-    for (let i = order.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [order[i], order[j]] = [order[j], order[i]];
-    }
+    let order = shuffled_order(nbr_particles);
     for (let i = 0; i < nbr_particles; i++) {
         let angle = i * 2 * Math.PI / nbr_particles;
         let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle);
@@ -252,6 +256,8 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
     ctx.fillRect(0, 0, canvas.width, canvas.height); #}
 
     console.log("canvas size 2", canvas.width, canvas.height);
+    phrases = ['Utilities', 'Community/Support', "Financial/support", "Emergency/preparedness", 
+               "Fire/proofing", "Building/permits"];
 
     particles_2 = [];
     let nbr_particles = 21;
@@ -261,6 +267,8 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
     let max_ellipse_radius_y = canvas.height * 0.45;
     let ellipse_center_x = canvas.width / 2;
     let ellipse_center_y = canvas.height / 2;
+    let text_index = 0;
+    let order = shuffled_order(nbr_particles);
     for (let i = 0; i < nbr_particles; i++) {
         let angle = i * 2 * Math.PI / nbr_particles;
         let ellipse_radius_x = mapv(Math.random(),0,1,min_ellipse_radius_x,max_ellipse_radius_x);
@@ -270,19 +278,91 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
         let min_circle_size = 18*scale;
         let max_circle_size = 60*scale;
         let circle_size = mapv(Math.random(),0,1,min_circle_size,max_circle_size);
-        let circle_type = Math.floor(Math.random()*3);
+        let circle_type = Math.floor(Math.random()*2);
+        let text = '';
+        if (i % 3 == 0) {
+            circle_type = 2;
+            text = phrases[text_index];
+            text_index = (text_index + 1) % phrases.length;
+        }
+
         let options = {
+            'phase': order[i] / nbr_particles,
             'scale': scale,
             'ellipse_yw': ellipse_radius_y,
             'ellipse_xw': ellipse_radius_x,
             'ellipse_angle': angle,
             'circle_size': circle_size,
             'circle_type': circle_type,
+            'text': text,
+            'opacity': 0,
+            'scale': 1,
         }
         particles_2.push(new Particle(x, y, options));
     }
     console.log("nbr particles 2", particles_2);
     // animate_step(0, 2);
+}
+
+function animate_step_2(t, ctx) {
+    // TODO: implement animation for step 2
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+    // console.log("animate_step_2", t, "nbr particles", particles_2.length);
+
+    let alpha;
+    if (t < 0.1) {
+        alpha = mapv(t, 0, 0.1, 0, 0.8);
+    } else {
+        alpha = 0.8;
+    }
+    let size_scale = 1; // mapv(alpha, 0, 0.8, .2, 1)
+    ctx.canvas.style.opacity = alpha;
+
+    particles_2.forEach(particle => {
+        let x = particle.x;
+        let y = particle.y;
+        let circle_size = particle.options.circle_size;
+
+
+        ctx.save();
+        ctx.globalAlpha = particle.options.opacity;
+
+        ctx.translate(x, y);
+        ctx.scale(particle.options.scale, particle.options.scale);
+
+        ctx.beginPath();
+        ctx.arc(0, 0, circle_size*size_scale, 0, 2 * Math.PI);
+        ctx.closePath();
+        ctx.lineWidth = 1.73*particle.options.scale;
+        switch (particle.options.circle_type) {
+        case 0:
+            ctx.fillStyle = '#98B8C8';
+            ctx.fill();
+            break;
+        case 1:
+            ctx.fillStyle = '#E5B389';
+            ctx.fill();
+            break;
+        case 2: // TEXT
+            lines = particle.options.text.split('/');
+            ctx.font = "italic bold 24px Noto Sans Display";
+            ctx.textAlign = "center";
+            ctx.fillStyle = '#868686';
+            ctx.textBaseline = "middle";
+            for (let i = 0; i < lines.length; i++) {
+                ctx.fillText(lines[i], 0, i * 24 - 12);
+            }
+            break;
+        }
+        ctx.globalAlpha = 1;
+        ctx.restore();
+    });
+
+    particles_2.forEach(particle => {
+        particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2 + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
+        particle.options.scale = mapv(t,0,1,.8,1.2);
+    });
 }
 
 function init_narrative_backgrounds_step_3(canvas_id, color) {
@@ -311,6 +391,7 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
     let max_ellipse_radius_y = canvas.height * 0.45;
     let ellipse_center_x = canvas.width / 2;
     let ellipse_center_y = canvas.height / 2;
+    let text_index = 0;
     for (let i = 0; i < nbr_particles; i++) {
         let angle = i * 2 * Math.PI / nbr_particles;
         let ellipse_radius_x = mapv(Math.random(),0,1,min_ellipse_radius_x,max_ellipse_radius_x);
@@ -338,56 +419,7 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
 
 
 
-function animate_step_2(t, ctx) {
-    // TODO: implement animation for step 2
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
-    // console.log("animate_step_2", t, "nbr particles", particles_2.length);
-
-    let alpha;
-    if (t < 0.2) {
-        alpha = mapv(t, 0, 0.2, 0, 0.8);
-    {# } else if (t > 0.8) {
-        alpha = mapv(t, 0.8, 1, 0.8, 0); #}
-    } else {
-        alpha = 0.8;
-    }
-    let size_scale = 1; // mapv(alpha, 0, 0.8, .2, 1)
-    ctx.canvas.style.opacity = alpha;
-
-    particles_2.forEach(particle => {
-        let x = particle.x;
-        let y = particle.y;
-        let circle_size = particle.options.circle_size;
-
-
-        ctx.save();
-
-        ctx.beginPath();
-        ctx.arc(x, y, circle_size*size_scale, 0, 2 * Math.PI);
-        ctx.closePath();
-        ctx.lineWidth = 1.73*particle.options.scale;
-        switch (particle.options.circle_type) {
-        case 0:
-            ctx.fillStyle = '#5489A3';
-            ctx.fill();
-            break;
-        case 1:
-            ctx.fillStyle = '#E6883B';
-            ctx.fill();
-            break;
-        case 2:
-            ctx.strokeStyle = '#E6883B';
-            ctx.fillStyle = 'white';
-            ctx.fill();
-            ctx.stroke();
-            break;
-        }
-        ctx.restore();
-    });
-
-
-}
 
 function animate_step_3(t, ctx) {
     // TODO: implement animation for step 3
