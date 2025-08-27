@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       // Add 'active' to the clicked box
       this.classList.add('active');
+
+      let topic_number = this.dataset.topicNumber;
+      console.log("loading topic_number", topic_number);
+      let learn_more_link = document.getElementById('learn-more-link');
+      learn_more_link.href = "#response-step-" + topic_number;
+
       // Add 'active' to the corresponding discussion container
       document.getElementById('findings-top-discussions-topic-' + this.dataset.topicNumber).classList.add('active');
       select_topic_chart(parseInt(this.dataset.chartTopicIndex, 10));
