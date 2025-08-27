@@ -11,7 +11,20 @@ tags:
   - pages
 ---
 
-
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+If the text following a label contains a colon, please use quote marks, as in the example_quoted_text above
+(Especially important for Armenian, where colons are added as sentence-ending punctuation)
+When text contains words inside double asterisks, that text is intended to be printed in bold-face.  
+When text contains words inside single asterisks, that text is intended to be printed in italics. 
+In either case, preserve the asterisks.
+Text preceded by a one-or-more hash symbols are headings.  Preserve the hash-symbols.
+This is typically used for templates that insert numbers into a sentence.
 
 ----
 id: findings_overview
@@ -62,10 +75,12 @@ Each dot represents one voter. As the visualization changes, you can track the c
 ----
 id: findings_consensus_watch_explore
 topic_number_template: "Topic <NUM> of <TOTAL>"
-explanation: DO NOT TRANSLATE <NUM> or <TOTAL>
+translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to insert numbers into the phrase
+translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
 label_1: Increased housing density and expedited permits
 percent_default: 92% of participants supported this topic
 percent_template: <PERCENT>% of participants supported this topic
+translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
 ----
 
 
@@ -271,44 +286,133 @@ button_text: Sign up
 Give us your email to learn about upcoming opportunities. 
 
 ----
-id: findings_how_we_are_responding
-buttonText: Show more
-buttonTextClose: Close
-old_id: findings_what_were_doing
+id: response_intro
 ----
 
 ## How we’re responding to community needs
 
-Residents shared what they need most to recover and rebuild their communities. <a href="#discussing-tough-issues">We found that some issues need more discussion</a>. However, we also found issues we can act on now.
+Residents spoke up during both the agenda-setting phase and our later deliberations. **State, County, City, utilities, and federal partners** have responded with tangible actions. And more are on the way.
 
-Below is a summary of how we are responding to what residents said they need most. 
-
-Stay tuned for updates on our progress. 
+----
+id: response_steps
+action_now: Action now
+coming_soon: Coming soon
+did_you_know: Did you know?
+nbr_steps: 5
+----
 
 
 ----
-id: findings_how_we_are_responding_list
-title: Opportunities to create new support programs
-nbr_items: 9
-item_1_title: 'Mental health support: creating shared community resource spaces'
-item_1_text: As a result of the early findings and the feedback from participants, mental health support is readily available for anyone in need. There are many resources available now, such as immediate assistance, ongoing support, as well as care for all age groups and language needs. Those resources can be found <a href="https://www.ca.gov/lafires/help-for-you/health-and-safety/#Mental-health-support">here</a>.
-item_2_title: 'Beneath the surface: our communities depend on soil we can trust'
-item_2_text: Residents want soil testing to make sure they are safe from toxic chemicals after the fires. The federal government has declined comprehensive soil testing. While the state, community, and universities are proactively testing soil, confusion about who is responsible persists, absent federal coordination.
-item_3_title: 'When minutes matter: reaching everyone in crisis'
-item_3_text: Residents want one emergency alert system that works for everyone. The various systems in use now don't work together well and don't reach all residents. People suggest working with local community groups to help evacuate areas during emergencies.
-item_4_title: 'Bridging the gap: financial support that reaches everyone'
-item_4_text: Residents want direct financial assistance for all wildfire victims. They don’t think income or immigration status should affect eligibility. Right now, help mainly comes from FEMA, insurance companies, and nonprofits. There is no comprehensive state-funded grant program. An emergency assistance program funded by the state could fill in the gaps.
-item_5_title: 'Renters in recovery: a place at the table'
-item_5_text: Residents seek special protections for renters. They want to prevent forced evictions or displacement and financial struggles. There are some protections against predatory investors However, support for renters’ specific needs is limited, and there may be a lack of awareness of state programs that do support their needs.
-item_6_title: 'Reimagining insurance: coverage we can count on'
-item_6_text: Residents said insurance companies should offer adequate coverage in fire-prone areas. They said prices should be fair with simplified claims processes. Recent changes by the Insurance Commissioner have raised coverage limits and added discounts. Residents may need clearer information about these options.
-item_7_title: 'Rebuilding pathways: simplifying the journey home'
-item_7_text: Residents want an easier permit process and less red tape for rebuilding. Executive orders have already streamlined rebuilding. But residents don’t seem to know about these changes or how to use them with their local governments.
-item_8_title: 'Communities united: empowering neighbors against fire'
-item_8_text: Residents agree that they want fire prevention programs that teach and help communities. California has programs in place to address this. Residents may need more local resources, and education to use them well. There may also be a need for more funding to effectively implement the programs.
-item_9_title: 'Building to endure: homes that withstand the flames'
-item_9_text: Residents want to rebuild with fire-resistant materials. Yet, they feel confused about how to start. They think both individual homes and whole communities need attention. Fire-resistant building rules are in place, but residents may need more support. The state could help them by offering education, incentives, and further assistance.
+id: response_step_1
+title: Undergrounding and improving equipment safety
+icon: construction-orange.svg
 ----
+
+----
+id: response_step_1_action_now
+----
+Crews are already burying more than 150 miles of power, gas, and telecom lines in high fire-risk areas. **Los Angeles County and California** are seeking federal funds. This money will help residents pay for connecting underground utilities. **Governor Gavin Newsom** signed an executive order in July 2025 so utilities and local governments can fast track this work. The **LA County Blueprint for Rebuilding** highlights that undergrounding is key to cutting wildfire ignition risks.
+
+----
+id: response_step_1_coming_soon
+----
+Utilities are working with **Los Angeles County and the State of California**. They are expanding undergrounding until 2027. Construction is beginning this year in Malibu, Altadena, and Pacific Palisades. The **Blueprint for Rebuilding** calls for “dig once” coordination. The would allow fiber and gas lines to be installed alongside buried power lines.
+
+----
+id: response_sidebar_1
+----
+The 2018 Camp Fire, which destroyed Paradise, was caused by overhead lines. In response, the **Town of Paradise**, working with **PG&E** and **state regulators**, rebuilt with every line buried — a model now guiding Los Angeles.
+
+----
+id: response_step_2
+title: Water for firefighting
+icon: hydrant-orange.svg
+----
+
+----
+id: response_step_2_action_now
+----
+After residents voiced concerns about weak water systems, the **Los Angeles County Fire Marshal** updated fire-flow rules. Now, 90% of homeowners can rebuild without needing expensive upgrades. **County fire crews and public works staff** are setting up portable pumps and tanks in areas with low hydrant pressure. The **Blueprint for Rebuilding** highlights these emergency fixes as immediate actions. Meanwhile, long-term system upgrades are being designed.
+
+----
+id: response_step_2_coming_soon
+----
+An independent review of the January fires is driving $30 million in new projects. We'll add larger mains, backup power for pump stations, and modern hydrants. **County water agencies**, with support from the State, will start design and construction in 2026. The **Blueprint for Rebuilding** elevates these upgrades as critical infrastructure investments for long-term safety.
+
+----
+id: response_sidebar_2
+----
+During the January Palisades fire, hydrants ran dry within hours as tanks drained, and nearly one in four hydrants were outdated 1940s models. **County water agencies** are now prioritizing their replacement, as emphasized in the **Blueprint for Rebuilding**.
+
+
+
+----
+id: response_step_3
+title: Stronger emergency communication
+icon: communication-orange.svg
+----
+
+----
+id: response_step_3_action_now
+----
+New rules from the **California Public Utilities Commission** require 72 hours of backup power at towers in high fire-threat zones. During the January fires, this kept most towers online. **County first responders** relied on their dedicated FirstNet network, supported by mobile towers deployed by AT&T. As noted in the **Blueprint for Rebuilding**, strengthening emergency communications and alert systems is essential to protect residents during future disasters.
+
+----
+id: response_step_3_coming_soon
+----
+**Los Angeles County**, in coordination with **Cal OES**, is upgrading its emergency alert system. Soon, evacuation warnings will appear in navigation apps, outdoor sirens will be tested in high-risk zones, and solar-powered resilience hubs with Wi-Fi and charging stations will open in 2026. The **Blueprint for Rebuilding** highlights these systems as vital for timely evacuations. 
+
+----
+id: response_sidebar_3
+----
+After wildfires in 2017 left thousands cut off from phone service, the **California Public Utilities Commission** required telecom providers to install 72-hour backup batteries at towers. That rule kept residents connected during the 2025 fires.
+
+----
+id: response_step_4
+title: Rebuilding-help
+icon: currency-orange.svg
+----
+
+----
+id: response_step_4_action_now
+----
+**State and federal aid programs** have sent over $50 million in direct relief to families through **Los Angeles County’s Fire Recovery Fund**.  The program has waived permit fees to save thousands of dollars per household. It has also extended hotel vouchers and lowered property taxes on destroyed homes. The **Blueprint for Rebuilding** says this support acts as a bridge. It helps survivors while they wait for insurance and federal funds. 
+
+
+----
+id: response_step_4_coming_soon
+----
+**Los Angeles County** is launching a navigator program. This program is made possible through philanthropic partnerships and private industry. The goal is to provide families with personal support related to insurance, financing, and permits. The **Blueprint for Rebuilding** identifies rebuild navigators as a major innovation to reduce barriers for survivors. We also heard that renters asked to not be left out. **Los Angeles County’s Fire Recovery Fund** includes direct rental assistance, and county supervisors are reviewing stronger anti-gouging protections for tenants in fire zones. The **Blueprint for Rebuilding** affirms renters must be supported alongside homeowners.
+
+The **LA County Department of Mental Health**, and local partners are using feedback from an earlier phase of this engagement. They are funding shared community spaces where survivors can access free counseling and trauma support groups. The **Blueprint for Rebuilding** affirms that mental health services are a critical part of community resilience.
+
+
+
+----
+id: response_sidebar_4
+----
+Residents asked for aid without barriers during the agenda-setting phase. **Los Angeles County**, working with community organizations, delivered direct payments even to undocumented residents to ensure no one was excluded. The **Blueprint for Rebuilding** highlights this as a milestone in equitable recovery. Also, the **California Department of Insurance** enforces a one-year moratorium preventing insurers from canceling fire coverage after a declared disaster, giving survivors time to rebuild.
+
+----
+id: response_step_5
+title: Permitting teams
+icon: house-orange.svg
+----
+
+----
+id: response_step_5_action_now
+----
+One-stop rebuild centers are now open, where **County and City staff** from multiple departments sit together to provide over-the-counter approvals and personal guidance. **County and State leaders** have also waived costly non-safety building requirements to remove hurdles for survivors. The **Blueprint for Rebuilding** identifies these dedicated permitting teams as a cornerstone of recovery
+
+----
+id: response_step_5_coming_soon
+----
+**The County** is preparing pre-approved fire-resistant home designs and batch permit reviews that will be available later in 2025. Surge staffing will be added if wait times rise. As noted in the **Blueprint for Rebuilding**, pre-approved plans and flexible staffing ensure survivors can move forward without delays.
+
+----
+id: response_sidebar_5
+----
+Debris from the 2025 fires was cleared in just six months — the fastest large-scale residential cleanup in U.S. history — thanks to the **U.S. Army Corps of Engineers**, **Cal OES**, **Los Angeles County Public Works**, and emergency orders signed by **Governor Newsom**. The **Blueprint for Rebuilding** notes this unprecedented pace as the foundation for rapid rebuilding.
 
 ----
 id: findings_how_we_did_the_analysis

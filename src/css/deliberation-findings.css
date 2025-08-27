@@ -694,6 +694,64 @@ canvas#ring chart-canvas {
   margin-bottom: 2rem;
 }
 
+/* RESPONSE SECTION */
+.response-indent {
+  padding-left: 80px;
+}
+.response-item-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60px;
+
+  border-top: 1px solid #D7D7D7;
+}
+
+.response-step-container:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.response-item-title-container.icon {
+  background-image: url("/public/images/construction-orange.svg");
+  background-size: 60px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.response-item-title-container.icon-1 {
+  background-image: url("/public/images/construction-orange.svg");
+}
+.response-item-title-container.icon-2 {
+  background-image: url("/public/images/hydrant-orange.svg");
+}
+.response-item-title-container.icon-3 {
+  background-image: url("/public/images/communication-orange.svg");
+}
+.response-item-title-container.icon-4 {
+  background-image: url("/public/images/currency-orange.svg");
+}
+.response-item-title-container.icon-5 {
+  background-image: url("/public/images/house-orange.svg");
+}
+
+.response-intro {
+  margin-bottom: 2rem;
+}
+
+.response-item-title {
+  margin-bottom: 1rem;
+}
+
+.response-item-text {
+  margin-bottom: 1rem;
+}
+
+.response-item-text p {
+  margin-bottom: 1rem;
+}
+.response-sidebar p {
+  font-size: 18px;
+}
+
 /* SIGN UP SECTION */
 
 section#findings-signup-section {
