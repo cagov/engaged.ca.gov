@@ -294,13 +294,13 @@
           {{ modules.findings_alignment_section.content | safe }}
         </div>
       </div>
-      <div class="col-lg-4">
+      {# <div class="col-lg-4">
         <div class="findings-alignment-section-sidebar">
           <div class="findings-alignment-section-sidebar-content">
             {{ modules.findings_alignment_section_sidebar.content | safe }}
           </div>
         </div>
-      </div>
+      </div> #}
     </div>
   </div>
 </section>
@@ -327,21 +327,6 @@
   </div>
 </section> #}
 
-<section id="findings-signup-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-          {{ modules.signup_plea.content | safe }}
-      </div>
-      <div class="col-lg-12">
-        <div class="signup-button">
-          <a data-appearance="button" data-theme="orange" href="#">{{ modules.signup_plea.button_text | safe }}</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="what-were-doing">
     <div class="container">
         <div class="row">
@@ -367,6 +352,23 @@
         </div>
     </div>
 </section>
+
+<section id="findings-signup-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          {{ modules.signup_plea.content | safe }}
+      </div>
+      <div class="col-lg-12">
+        <div class="signup-button">
+          <a data-appearance="button" data-theme="orange" href="#">{{ modules.signup_plea.button_text | safe }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <section id="partners" class="action-hero deliberation-partners">
   <div class="container">
