@@ -104,7 +104,6 @@ function init_narrative_backgrounds_step_1(canvas_id, color) {
             'has_text_lines': has_text_lines,
             'tail_reverse': tail_reverse,
             'nbr_text_lines': nbr_text_lines,
-            'opacity': 0,
         }
         particles_1.push(new Particle(x, y, options));
     }
@@ -114,6 +113,11 @@ function init_narrative_backgrounds_step_1(canvas_id, color) {
 function animate_step_1(t, ctx) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     console.log("draw 1, canvas size", ctx.canvas.width, ctx.canvas.height);
+
+    particles_1.forEach(particle => {
+      particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2 + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
+      particle.options.scale = mapv(t,0,1,.8,1.2);
+    });
 
     let alpha;
     if (t < 0.1) {
@@ -144,6 +148,7 @@ function animate_step_1(t, ctx) {
 
         ctx.save();
         ctx.translate(bx, by);
+        ctx.scale(scale, scale);
         if (tail_reverse) {
             ctx.scale(-1, 1);
         }
@@ -230,9 +235,6 @@ function animate_step_1(t, ctx) {
 
     });
 
-    particles_1.forEach(particle => {
-      particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2 + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-    });
 
 }
 
@@ -295,8 +297,6 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
             'circle_size': circle_size,
             'circle_type': circle_type,
             'text': text,
-            'opacity': 0,
-            'scale': 1,
         }
         particles_2.push(new Particle(x, y, options));
     }
@@ -309,6 +309,10 @@ function animate_step_2(t, ctx) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
     // console.log("animate_step_2", t, "nbr particles", particles_2.length);
+    particles_2.forEach(particle => {
+        particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2 + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
+        particle.options.scale = mapv(t,0,1,.8,1.2);
+    });
 
     let alpha;
     if (t < 0.1) {
@@ -346,7 +350,7 @@ function animate_step_2(t, ctx) {
             break;
         case 2: // TEXT
             lines = particle.options.text.split('/');
-            ctx.font = "italic bold 24px Noto Sans Display";
+            ctx.font = "italic 600 22px Noto Sans Display";
             ctx.textAlign = "center";
             ctx.fillStyle = '#868686';
             ctx.textBaseline = "middle";
@@ -359,10 +363,6 @@ function animate_step_2(t, ctx) {
         ctx.restore();
     });
 
-    particles_2.forEach(particle => {
-        particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2 + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-        particle.options.scale = mapv(t,0,1,.8,1.2);
-    });
 }
 
 function init_narrative_backgrounds_step_3(canvas_id, color) {
