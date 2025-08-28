@@ -36,6 +36,11 @@ function dot_angle(da, db) {
   return Math.atan2(dy, dx);
 }
 
+function ease_in_out(t) {
+  let k = t*t*(3-2*t);
+  return k;
+}
+
 function compute_color(cx) {
   let r = cx/1200;
   let hue,sat,val;

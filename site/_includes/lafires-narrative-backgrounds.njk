@@ -3,7 +3,7 @@
 // Preload the report_icons.png sprite and draw it into an offscreen canvas for later use
 let report_icons_canvas;
 let report_icons_ctx;
-const cycle_frequency = 0.5;
+const cycle_frequency = 0.2;
 
 function load_icons() {
     report_icons_canvas = document.createElement('canvas');
@@ -150,8 +150,8 @@ function animate_step_1(t, ctx) {
     // console.log("draw 1, canvas size", ctx.canvas.width, ctx.canvas.height);
 
     particles_1.forEach(particle => {
-      particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-      particle.options.scale = mapv(t,0,1,.8,1.2);
+      particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
+      particle.options.scale = mapv(t,0,1,.95,1.05);
     });
 
     let alpha;
@@ -339,8 +339,8 @@ function animate_step_2(t, ctx) {
     // TODO: implement animation for step 2
     // console.log("animate_step_2", t, "nbr particles", particles_2.length);
     particles_2.forEach(particle => {
-        particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-        particle.options.scale = mapv(t,0,1,.8,1.2);
+        particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
+        particle.options.scale = mapv(t,0,1,.95,1.05);
     });
 
     let alpha;
@@ -454,8 +454,8 @@ function animate_step_3(t, ctx) {
    // TODO: implement animation for step 2
     // console.log("animate_step_3", t, "nbr particles", particles_3.length);
     particles_3.forEach(particle => {
-        particle.options.opacity = Math.pow(mapv(Math.sin(t*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-        particle.options.scale = mapv(t,0,1,.8,1.2);
+        particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
+        particle.options.scale = mapv(t,0,1,.95,1.05);
     });
 
     let alpha;
