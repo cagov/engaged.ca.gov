@@ -3,6 +3,8 @@ let topic_chart_setup = false;
 const use_LENIS = true;
 const use_MARKERS = false;
 
+const pin_extend = 600; // was 600
+
 document.addEventListener('DOMContentLoaded', function() {
   // IMPORTANT - if not in DOMContentLoaded, scroll aniimation is very unreliable due to potentially missing elements
 
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollTrigger: {
         trigger: "#narrative-wrapper-1",
         start: "center center+=70",
-        end: "+=600", // scroll range for animation
+        end: `+=${pin_extend}`, // scroll range for animation
         scrub: true,
         pin: true,
         anticipatePin: true,
@@ -62,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollTrigger: {
         trigger: "#narrative-wrapper-2",
         start: "center center+=70",
-        end: "+=600", // scroll range for animation
+        end: `+=${pin_extend}`, // scroll range for animation
         scrub: true,
         pin: true,
         anticipatePin: true,
@@ -109,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollTrigger: {
         trigger: "#narrative-wrapper-3",
         start: "center center+=70",
-        end: "+=600", // scroll range for animation
+        end: `+=${pin_extend}`, // scroll range for animation
         scrub: true,
         pin: true,
         anticipatePin: true,
