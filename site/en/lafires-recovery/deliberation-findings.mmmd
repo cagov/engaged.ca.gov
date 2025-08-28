@@ -118,15 +118,10 @@ option_label_3: Strengthen emergency communication networks
 option_label_4: Help people find financial support programs
 option_label_5: Dedicate teams to support permitting
 option_icon_1: circle-blue-1.png
-option_icon_alt_1: Underground power lines
 option_icon_2: circle-blue-2.png
-option_icon_alt_2: Enhanced water infrastructure
 option_icon_3: circle-blue-3.png
-option_icon_alt_3: Resilient emergency communication networks
 option_icon_4: circle-blue-4.png
-option_icon_alt_4: Expanded construction training programs
 option_icon_5: circle-blue-5.png
-option_icon_alt_5: Comprehensive homeowner education program
 ----
 
 
@@ -163,7 +158,7 @@ Every vote was counted and weighted to achieve consensus on the top 5 solutions 
 
 ----
 id: discussion_1
-title: Underground power lines and equipment safety
+title: Bury power lines and equipment safety measures
 topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
 nbr_comments: 3
 value_1: 92%
@@ -173,7 +168,7 @@ chart_topic_index: 19
 
 ----
 id: discussion_2
-title: Enhanced water infrastructure for fire protection
+title: Improve water systems for firefighting
 topic_description: Upgrade water systems to meet modern fire flow requirements and ensure there are enough fire hydrants in all areas. This would improve the water supply and pressure needed for effective firefighting operations.
 value_1: 87%
 value_2: 74
@@ -182,7 +177,7 @@ chart_topic_index: 18
 
 ----
 id: discussion_3
-title: Resilient emergency communication networks
+title: Strengthen emergency communication networks
 topic_description: Promote communication infrastructure that allows first responders and residents to stay connected even when cell towers or fiber lines fail, such as mesh internet networks that can operate independently during disasters.
 value_1: 86%
 value_2: 59
@@ -200,7 +195,7 @@ chart_topic_index: 16
 
 ----
 id: discussion_5
-title: Dedicated permitting support teams
+title: Dedicate teams to support permitting
 topic_description: Establish teams of dedicated staff at triage centers to quickly guide fire-affected communities through permitting processes. These specialized teams would provide personalized assistance to residents navigating complex rebuilding requirements.
 value_1: 82%
 value_2: 73

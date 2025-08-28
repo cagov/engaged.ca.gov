@@ -155,7 +155,7 @@
           {% for i in range(1, modules.findings_narrative_top_options.nbr_options + 1) %}
           <!-- this will mimic the other report -->
           <div class="findings-top-options-option-box{% if i == 1 %} active{% endif %}" data-topic-number="{{ i }}" data-chart-topic-index="{{ modules["discussion_" + i].chart_topic_index }}">
-            <img class="findings-option-icon png-icon" src="/public/images/{{ modules.findings_narrative_top_options["option_icon_" + i] }}" aria-hidden="true" alt="{{ modules.findings_narrative_top_options["option_icon_alt_" + i] }}">
+            <img class="findings-option-icon png-icon" src="/public/images/{{ modules.findings_narrative_top_options["option_icon_" + i] }}" aria-hidden="true" alt="{{ modules.findings_narrative_top_options["option_label_" + i] }}">
             <div class="option-label">{{ modules.findings_narrative_top_options["option_label_" + i] }}</div>
           </div>
           {% endfor %}

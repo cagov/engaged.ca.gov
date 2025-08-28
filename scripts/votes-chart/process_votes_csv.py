@@ -73,11 +73,20 @@ for record in records:
 
 # collect the unique TOPIC fields, sort them alphabetically, and then make a dictionary of topic name to integer, with the first topic_index 0
 # then assign TOPIC_INDEX to each record based on that dictionary
+topic_replacement_desc = {
+    "UNDERGROUND_POWER_SAFETY": "Bury power lines and equipment safety measures",
+    "ENHANCED_WATER_INFRASTRUCTURE": "Improve water systems for firefighting",
+    "EMERGENCY_COMMUNICATION_NETWORKS": "Strengthen emergency communication networks",
+    "FIND_FINANCIAL_SUPPORT": "Help people find financial support programs",
+    "PERMITTING_SUPPORT_TEAMS": "Dedicate teams to support permitting",
+}
+
 topic_index_set = set()
 topic_index = 0
 for record in records:
     if record["TOPIC"] not in topic_index_set:
-        topic_index_set.add((record["TOPIC"], record["LONG_TOPIC"], record["CONSENSUS"], record["SUPPORT"]))
+        topic_name = topic_replacement_desc.get(record["TOPIC"], record["LONG_TOPIC"])
+        topic_index_set.add((record["TOPIC"], topic_name, record["CONSENSUS"], record["SUPPORT"]))
         topic_index += 1
 
 topic_index_list = sorted(list(topic_index_set), key=lambda x: x[2])
