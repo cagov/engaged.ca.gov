@@ -664,7 +664,7 @@ function animate_step_3(t, ctx) {
                 particle.options.opacity = mapv(phase_t,0,opacity_peak,0,1);
             }
         } else {
-            particle.options.scale = 1;
+            {# particle.options.scale = 1;
             particle.options.opacity = 1;
             let center_x = ctx.canvas.width/2;
             let center_y = ctx.canvas.height/2;
@@ -675,7 +675,7 @@ function animate_step_3(t, ctx) {
             dist += ease_in_out(t)*20;
             angle += ease_in_out(t)*Math.PI/16;
             particle.x = center_x + dist * Math.cos(angle);
-            particle.y = center_y + dist * Math.sin(angle);
+            particle.y = center_y + dist * Math.sin(angle); #}
             particle.options.scale = mapv(t,0,1,1,1.2);
         }
 
