@@ -149,6 +149,17 @@ function init_narrative_backgrounds_step_1(canvas_id, color) {
             'nbr_text_lines': nbr_text_lines,
         }
         particles_1.push(new Particle(x, y, options));
+        if (Math.random() < 0.3) {
+            let new_options = {...options};
+            let offset = new_options.body_height / 2;
+            let offset_x = offset * (Math.random() < 0.5? 1 : -1);
+            let offset_y = offset;
+            new_options.bg_color = compute_color(1-(order2[i] / nbr_particles));
+            new_options.has_text_lines = true;
+            new_options.body_width = options.body_width * 0.8;
+            new_options.body_height = options.body_height * 0.8;
+            particles_1.push(new Particle(x+offset_x, y+offset_y, new_options));
+        }
     }
     animate_step_1(0, ctx);
 }
