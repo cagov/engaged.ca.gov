@@ -5,6 +5,9 @@ let report_icons_canvas;
 let report_icons_ctx;
 const cycle_frequency = 0.2;
 
+let k_minZoom = 0.925;
+let k_maxZoom = 1.075;
+
 function load_icons() {
     report_icons_canvas = document.createElement('canvas');
     report_icons_canvas.width = 4000;
@@ -143,15 +146,15 @@ function init_narrative_backgrounds_step_1(canvas_id, color) {
         }
         particles_1.push(new Particle(x, y, options));
     }
-    // animate_step(0, 1);
+    animate_step_1(0, ctx);
 }
 
 function animate_step_1(t, ctx) {
     // console.log("draw 1, canvas size", ctx.canvas.width, ctx.canvas.height);
 
     particles_1.forEach(particle => {
-      particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-      particle.options.scale = mapv(t,0,1,.95,1.05);
+      particle.options.opacity = 1; // Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
+      particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom);
     });
 
     let alpha;
@@ -160,6 +163,7 @@ function animate_step_1(t, ctx) {
     } else {
         alpha = 1;
     }
+    alpha = 1;
     ctx.canvas.style.opacity = alpha;
 
     particles_1.forEach(particle => {
@@ -332,15 +336,15 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
         particles_2.push(new Particle(x, y, options));
     }
     // console.log("nbr particles 2", particles_2);
-    // animate_step(0, 2);
+    animate_step_2(0, ctx);
 }
 
 function animate_step_2(t, ctx) {
     // TODO: implement animation for step 2
     // console.log("animate_step_2", t, "nbr particles", particles_2.length);
     particles_2.forEach(particle => {
-        particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-        particle.options.scale = mapv(t,0,1,.95,1.05);
+        particle.options.opacity = 1; // Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
+        particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom);
     });
 
     let alpha;
@@ -349,6 +353,7 @@ function animate_step_2(t, ctx) {
     } else {
         alpha = 1;
     }
+    alpha = 1;
     ctx.canvas.style.opacity = alpha;
 
     particles_2.forEach(particle => {
@@ -446,6 +451,7 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
         particles_3.push(new Particle(x, y, options));
     }
     // console.log("nbr particles 3", particles_3);
+    animate_step_3(0, ctx);
 }
 
 function animate_step_3(t, ctx) {
@@ -453,8 +459,8 @@ function animate_step_3(t, ctx) {
    // TODO: implement animation for step 2
     // console.log("animate_step_3", t, "nbr particles", particles_3.length);
     particles_3.forEach(particle => {
-        particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-        particle.options.scale = mapv(t,0,1,.95,1.05);
+        particle.options.opacity = 1; // Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
+        particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom);
     });
 
     let alpha;
@@ -463,6 +469,7 @@ function animate_step_3(t, ctx) {
     } else {
         alpha = 1;
     }
+    alpha = 1;
     ctx.canvas.style.opacity = alpha;
 
     particles_3.forEach(particle => {
