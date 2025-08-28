@@ -73,6 +73,9 @@
             <div class="findings-consensus-intro">
              {{ modules.findings_consensus_watch_intro.content | safe }}
             </div>
+            <div class="findings-consensus-intro-caveat style-small-body-text italic">
+             *{{ modules.findings_consensus_watch_intro.caveat | safe }}
+            </div>
       </div>
       <div class="col-lg-12">
         <div id="findings-consensus-progressbar-container">
@@ -280,7 +283,7 @@
 
     </div>
     <div class="download-buton-div">
-      <a class="style-strong-small-body" data-appearance="button" data-theme="off-white" href="/public/data/lafires_deliberation_all_comments.csv">Download a CSV of particiapnt comments</a>
+      <a class="style-strong-small-body" data-appearance="button" data-theme="off-white" href="/public/data/lafires_deliberation_all_comments.csv">{{ modules.topic_data_vis.download_text | safe }}</a>
     </div>
   </div>
 
@@ -381,7 +384,7 @@
 
 <section id="partners" class="action-hero deliberation-partners">
   <div class="container">
-    {{ modules.partners.content | safe }}
+    <div class="findings-partners-content">{{ modules.partners.content | safe }}</div>
     <engca-partner-flex>
       <img src="/public/images/carnegie.svg" alt="Carnegie Endowment for International Peace" />
       <img src="/public/images/liberty-color.png" alt="Project Liberty Institute" />

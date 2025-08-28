@@ -285,7 +285,11 @@ section#findings-top-discussions {
 /* 
  * CONSENSUS SECTION
  */
-section#findings-consensus {
+ .findings-consensus-intro-caveat {
+  margin-bottom: 1rem;
+ }
+
+ section#findings-consensus {
   background-color: #F6F7FA;
 }
 
@@ -764,6 +768,21 @@ section#findings-signup-section {
 
 
 /* PARTNERS SECTION */
+
+section#partners.deliberation-partners {
+  color: #444;
+  background: var(--off-white);
+}
+
+section#partners.deliberation-partners .findings-partners-content {
+  margin-block-end: 3rem;
+}
+
+
+section#partners.deliberation-partners p {
+  margin-block-end: 1rem;
+}
+
 
 section#partners.deliberation-partners {
   background-color: #F6F7FA;

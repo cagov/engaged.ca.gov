@@ -50,6 +50,7 @@ After the severe wildfires in Los Angeles, more than 750 community members met o
 ----
 id: findings_narrative_step_2
 title: Review and planning
+button_text: Learn about our partners
 ----
 
 ## Individual ideas turned into shared data
@@ -69,8 +70,9 @@ Over 400 new and returning participants ranked these options, again using an onl
 ----
 id: findings_consensus_watch_intro
 title_h2: Community alignment
+caveat: "Support is the average score of the votes, where the score of strongly supporting an option is 100, and the score of strongly opposing an option is 0."
 ----
-Each dot represents one voter. As the visualization changes, you can track the community’s level of support for each issue. Topics are arranged from least community support (left) to most community support (right).
+Each dot represents one voter. As the visualization changes, you can track the average level of support for each issue. Topics are arranged from least community support (left) to most community support (right).
 
 ----
 id: findings_consensus_watch_explore
@@ -219,6 +221,7 @@ id: topic_data_vis
 title: Explore the votes
 learn_button_label: Learn about the actions being taken
 desc: Each dot represents one vote made on this topic. Similar votes have their own color.
+download_text: Download a CSV of participant comments
 ----
 
 ----
@@ -438,4 +441,6 @@ id: partners
 
 ## Our partners
 
-We designed this platform to be non-partisan. The state's Government Operations Agency and Office of Data and Innovation developed it. Other partners and advisors for this initiative are:
+California’s Office of Data and Innovation partnered with disaster recovery experts and advocates for deliberative democracy to carry out this work. Our partners also helped shape the actions that will come from this work. 
+
+Our partners and advisors for this initiative include:
