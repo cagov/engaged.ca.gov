@@ -110,11 +110,11 @@ id: findings_narrative_top_options
 results_header: Action plan
 results_description: "The plan, which includes 5 focus areas for recovery – reveals a community united around building fire-resilient infrastructure for the future and providing support to the community now:"
 nbr_options: 5
-option_label_1: Underground power lines and equipment safety
-option_label_2: Enhanced water infrastructure for fire protection
-option_label_3: Resilient emergency communication networks
-option_label_4: Expanded construction training programs
-option_label_5: Comprehensive homeowner education program
+option_label_1: Bury power lines and equipment safety measures
+option_label_2: Improve water systems for firefighting
+option_label_3: Strengthen emergency communication networks
+option_label_4: Help people find financial support programs
+option_label_5: Dedicate teams to support permitting
 option_icon_1: circle-blue-1.png
 option_icon_alt_1: Underground power lines
 option_icon_2: circle-blue-2.png
