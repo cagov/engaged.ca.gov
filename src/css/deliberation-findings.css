@@ -188,7 +188,6 @@ section#findings-top-options {
 .findings-top-options-options-list {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
   /* justify-content: center; */
   row-gap: 0.5rem;
@@ -197,13 +196,11 @@ section#findings-top-options {
   @media (max-width: 1200px) {
       row-gap: inherit;
       padding-top: 0;
-      margin-top: 2rem;
-      gap: 3rem;
+      margin-top: 1rem;
   }
 }
 
 .findings-top-options-option-box {
-  flex: 1 1 200px;
   box-sizing: border-box;
 
   position: relative;
@@ -267,10 +264,16 @@ section#findings-top-options {
 
 .option-label {
   text-align: center;
+  @media (max-width: 720px) {
+    display: none;
+  }
 }
 
 img.findings-option-icon.png-icon {
   width: 60px;
+  @media (max-width: 720px) {
+    width: 40px;
+  }
 }
 
 section#findings-top-discussions {
