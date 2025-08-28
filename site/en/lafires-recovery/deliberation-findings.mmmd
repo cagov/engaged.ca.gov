@@ -79,7 +79,7 @@ translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to in
 translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
 label_1: Increased housing density and expedited permits
 percent_default: 92% of participants supported this topic
-percent_template: <PERCENT>% of participants supported this topic
+percent_template: <PERCENT>% support
 translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
 ----
 
