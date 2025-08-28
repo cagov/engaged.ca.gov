@@ -6,7 +6,7 @@ let report_icons_ctx;
 const cycle_frequency = 0.2;
 
 let k_minZoom = 0.925;
-let k_maxZoom = 1.075;
+let k_maxZoom = 1.1; // 1.075;
 
 function load_icons() {
     report_icons_canvas = document.createElement('canvas');
@@ -29,14 +29,16 @@ function render_icon(ctx, icon_index) {
     // console.log("render_icon", icon_index, x, y, scale);
     ctx.save();
         ctx.scale(0.8, 0.8);
-        ctx.drawImage(report_icons_canvas, icon_index * 200, 0, 200, 200, -100, -100, 200, 200);
         // Draw an orange circle around the icon image
         ctx.beginPath();
         ctx.arc(0, 0, 83, 0, 2 * Math.PI);
         ctx.lineWidth = 1.73*2;
+        ctx.fillStyle = 'white';
         ctx.strokeStyle = '#E6883B';
         ctx.closePath();
+        ctx.fill();
         ctx.stroke();
+        ctx.drawImage(report_icons_canvas, icon_index * 200, 0, 200, 200, -100, -100, 200, 200);
     ctx.restore();
 }
 
@@ -153,8 +155,8 @@ function animate_step_1(t, ctx) {
     // console.log("draw 1, canvas size", ctx.canvas.width, ctx.canvas.height);
 
     particles_1.forEach(particle => {
-      particle.options.opacity = 1; // Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-      particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom);
+      particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
+      particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom)*particle.options.opacity;
     });
 
     let alpha;
@@ -343,8 +345,8 @@ function animate_step_2(t, ctx) {
     // TODO: implement animation for step 2
     // console.log("animate_step_2", t, "nbr particles", particles_2.length);
     particles_2.forEach(particle => {
-        particle.options.opacity = 1; // Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-        particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom);
+        particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
+        particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom)*particle.options.opacity;
     });
 
     let alpha;
@@ -459,8 +461,8 @@ function animate_step_3(t, ctx) {
    // TODO: implement animation for step 2
     // console.log("animate_step_3", t, "nbr particles", particles_3.length);
     particles_3.forEach(particle => {
-        particle.options.opacity = 1; // Math.pow(mapv(Math.sin(ease_in_out(t)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0, 1), 2);
-        particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom);
+        particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
+        particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom)*particle.options.opacity;
     });
 
     let alpha;
