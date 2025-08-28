@@ -457,6 +457,9 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
             'circle_type': circle_type,
             'text': text,
             'bg_color': bg_color,
+            'ox': x,
+            'oy': y,
+            'travel_angle': Math.PI*2*Math.random(),
         }
         particles_2.push(new Particle(x, y, options));
     }
@@ -467,11 +470,6 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
 function animate_step_2(t, ctx) {
     // TODO: implement animation for step 2
     // console.log("animate_step_2", t, "nbr particles", particles_2.length);
-    particles_2.forEach(particle => {
-        particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
-        particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom)*particle.options.opacity;
-    });
-
     let alpha;
     if (t < 0.1) {
         alpha = mapv(t, 0, 0.1, 0, 1);
@@ -482,6 +480,13 @@ function animate_step_2(t, ctx) {
     ctx.canvas.style.opacity = alpha;
 
     particles_2.forEach(particle => {
+        particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
+        particle.options.scale = mapv(t,0,1,k_minZoom,k_maxZoom)*particle.options.opacity;
+        let dist = t*50;
+        let angle = particle.options.travel_angle;
+        particle.x = particle.options.ox + dist * Math.cos(angle);
+        particle.y = particle.options.oy + dist * Math.sin(angle);
+
         let x = particle.x;
         let y = particle.y;
 
@@ -550,8 +555,8 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
     let nbr_particles = 31;
     let min_ellipse_radius_x = canvas.width * 0.37;
     let max_ellipse_radius_x = canvas.width * 0.45;
-    let min_ellipse_radius_y = canvas.height * 0.2;
-    let max_ellipse_radius_y = canvas.height * 0.3;
+    let min_ellipse_radius_y = canvas.height * 0.3;
+    let max_ellipse_radius_y = canvas.height * 0.4;
     let ellipse_center_x = canvas.width / 2;
     let ellipse_center_y = canvas.height / 2;
     let nbr_icons = 20;
@@ -599,6 +604,7 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
             'bg_color': bg_color,
             'ox': x,
             'oy': y,
+            'travel_angle': Math.PI*2*Math.random(),
         }
         particles_3.push(new Particle(x, y, options));
     }
@@ -664,18 +670,11 @@ function animate_step_3(t, ctx) {
                 particle.options.opacity = mapv(phase_t,0,opacity_peak,0,1);
             }
         } else {
-            {# particle.options.scale = 1;
             particle.options.opacity = 1;
-            let center_x = ctx.canvas.width/2;
-            let center_y = ctx.canvas.height/2;
-            let dx = particle.options.ox - center_x;
-            let dy = particle.options.oy - center_y;
-            let dist = Math.sqrt(dx*dx + dy*dy);
-            let angle = Math.atan2(dy, dx);
-            dist += ease_in_out(t)*20;
-            angle += ease_in_out(t)*Math.PI/16;
-            particle.x = center_x + dist * Math.cos(angle);
-            particle.y = center_y + dist * Math.sin(angle); #}
+            let dist = t*50;
+            let angle = particle.options.travel_angle;
+            particle.x = particle.options.ox + dist * Math.cos(angle);
+            particle.y = particle.options.oy + dist * Math.sin(angle);
             particle.options.scale = mapv(t,0,1,1,1.2);
         }
 
