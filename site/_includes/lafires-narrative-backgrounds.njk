@@ -113,6 +113,7 @@ function init_narrative_backgrounds_step_1(canvas_id, color) {
     let text_color = '#868686';
     // produce order array (integers from 0->nbr_particles) which is shuffled.
     let order = shuffled_order(nbr_particles);
+    let order2 = shuffled_order(nbr_particles);
     for (let i = 0; i < nbr_particles; i++) {
         let angle = i * 2 * Math.PI / nbr_particles;
         let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle);
@@ -124,7 +125,8 @@ function init_narrative_backgrounds_step_1(canvas_id, color) {
         let max_txt_size = 19*scale;
         let balloon_size = mapv(Math.random(),0,1,min_balloon_size,max_balloon_size);
         let size_split = (min_balloon_size + max_balloon_size) / 2;
-        let bg_color = balloon_colors[Math.floor(Math.random()*balloon_colors.length)];
+        // let bg_color = balloon_colors[Math.floor(Math.random()*balloon_colors.length)];
+        let bg_color = compute_color(order2[i] / nbr_particles);
         let has_text_lines = Math.random() < 0.5;
         let tail_reverse = Math.random() < 0.5;
         let balloon_type = Math.random() < 0.4? 1 : 0;
@@ -312,6 +314,7 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
     let ellipse_center_y = canvas.height / 2;
     let text_index = 0;
     let order = shuffled_order(nbr_particles);
+    let order2 = shuffled_order(nbr_particles);
     for (let i = 0; i < nbr_particles; i++) {
         let angle = i * 2 * Math.PI / nbr_particles;
         let ellipse_radius_x = mapv(Math.random(),0,1,min_ellipse_radius_x,max_ellipse_radius_x);
@@ -323,6 +326,7 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
         let circle_size = mapv(Math.random(),0,1,min_circle_size,max_circle_size);
         let circle_type = Math.floor(Math.random()*2);
         let text = '';
+        let bg_color = compute_color(order2[i] / nbr_particles);
         if (i % 3 == 0) {
             circle_type = 2;
             text = phrases[text_index];
@@ -334,6 +338,7 @@ function init_narrative_backgrounds_step_2(canvas_id, color) {
             'circle_size': circle_size,
             'circle_type': circle_type,
             'text': text,
+            'bg_color': bg_color,
         }
         particles_2.push(new Particle(x, y, options));
     }
@@ -376,14 +381,15 @@ function animate_step_2(t, ctx) {
         ctx.lineWidth = 1.73*particle.options.scale;
         switch (particle.options.circle_type) {
         case 0:
-            ctx.fillStyle = '#98B8C8';
+        case 1:
+            ctx.fillStyle = particle.options.bg_color;
             ctx.fill();
             break;
-        case 1:
+        {# case 1:
             ctx.fillStyle = '#E5B389';
             ctx.fill();
             break;
-        case 2: // TEXT
+        case 2: // TEXT #}
             lines = particle.options.text.split('/');
             ctx.font = "italic 600 32px Noto Sans Display";
             ctx.textAlign = "center";
@@ -429,6 +435,7 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
     let icon_index = 0;
     let nbr_icons = 20;
     let order = shuffled_order(nbr_particles);
+    let order2 = shuffled_order(nbr_particles);
     for (let i = 0; i < nbr_particles; i++) {
         let angle = i * 2 * Math.PI / nbr_particles;
         let ellipse_radius_x = mapv(Math.random(),0,1,min_ellipse_radius_x,max_ellipse_radius_x);
@@ -439,6 +446,7 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
         let max_circle_size = 30*scale;
         let circle_size = mapv(Math.random(),0,1,min_circle_size,max_circle_size);
         let circle_type = Math.floor(Math.random()*Math.random()*2);
+        let bg_color = compute_color(order2[i] / nbr_particles);
         if (i % 2 == 0) {
             circle_type = 2;
             icon_index = icon_index % nbr_icons;
@@ -449,6 +457,7 @@ function init_narrative_backgrounds_step_3(canvas_id, color) {
             'circle_size': circle_size,
             'circle_type': circle_type,
             'icon_index': icon_index,
+            'bg_color': bg_color,
         }
         particles_3.push(new Particle(x, y, options));
     }
@@ -491,13 +500,14 @@ function animate_step_3(t, ctx) {
         ctx.lineWidth = 1.73*2;
         switch (particle.options.circle_type) {
         case 0:
-            ctx.fillStyle = '#98B8C8';
+        case 1:
+            ctx.fillStyle = particle.options.bg_color;
             ctx.fill();
             break;
-        case 1:
+        {# case 1:
             ctx.fillStyle = '#E5B389';
             ctx.fill();
-            break;
+            break; #}
         case 2:
             render_icon(ctx, particle.options.icon_index);
             break;

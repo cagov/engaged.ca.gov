@@ -41,8 +41,8 @@ function ease_in_out(t) {
   return k;
 }
 
-function compute_color(cx) {
-  let r = cx/1200;
+function compute_color(r) {
+  // let r = cx/1200;
   let hue,sat,val;
   if (r < 0.5) {
     sat = Math.round(clamp(mapv(r, 0, 0.5, 76, 0),0,76)*100)/100;
@@ -58,7 +58,7 @@ function compute_color(cx) {
 // color debugging
 for (let i = 0; i < 7; ++i) {
   let cx = mapv(i,0,6,0,1200);
-  let color = compute_color(cx);
+  let color = compute_color(cx/1200);
   // console.log("color",i+1, color);
 }
 
@@ -211,7 +211,7 @@ function change_consensus_topic(canvas, topic_index) {
 
           let x = dot.cx;
           let y = dot.cy;
-          let color = compute_color(dot.cx);
+          let color = compute_color(dot.cx/1200);
 
           // let er = consensus_vars.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
           let er = consensus_vars.ellipse_radius;
@@ -349,7 +349,7 @@ function draw_consensus_progress_bar(step_index) {
   for (let i = 0; i < n; i++) {
     let x = hmargin + i * gap;
     let y = h / 2;
-    let clr = compute_color(x);
+    let clr = compute_color(x/1200);
     let fill_color = step_index == i? '#000' : clr;
     ctx.save();
     if (i < n-1) {
