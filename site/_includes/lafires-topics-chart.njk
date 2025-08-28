@@ -172,7 +172,7 @@ function change_topic_topic(canvas, topic_index) {
 
           let x = dot.cx;
           let y = dot.cy;
-          let color = compute_color(dot.cx/1200);
+          let color = compute_color(clamp((dot.cx-20)/(1200-40),0,1));
 
           // let er = topic_vars.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
           let er = topic_vars.ellipse_radius;
