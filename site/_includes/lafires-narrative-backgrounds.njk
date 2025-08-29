@@ -30,8 +30,6 @@ class CanvasOutlineDrawer {
         // Scale context to match the retina scaling
         this.ctx.scale(this.retinaScale, this.retinaScale);
         
-        {# // Update debug info
-        this.updateDebugInfo(); #}
     }
 
     setupEventListeners() {
@@ -81,22 +79,6 @@ class CanvasOutlineDrawer {
         if (this.currentRenderFunction) {
             this.currentRenderFunction(this.ctx);
         }
-
-        {# // Clear canvas (use actual canvas dimensions divided by retina scale)
-        this.ctx.clearRect(0, 0, this.canvas.width / this.retinaScale, this.canvas.height / this.retinaScale);
-        
-        // Draw fixed red circle
-        this.drawRedCircle();
-        
-        // Get div bounds
-        const bounds = this.getDivBounds();
-        
-        // Only draw if at least partially visible
-        if (bounds.visible) {
-            this.drawOutline(bounds);
-        } #}
-        
-        {# this.updateDebugInfo(bounds); #}
     }
 
     drawRedCircle() {
@@ -415,13 +397,6 @@ function animate_step_1(t, ctx) {
       particle.options.scale = mapv(t,0,1,0.1,1);
     });
 
-    {# let alpha;
-    if (t < 0.1) {
-        alpha = mapv(t, 0, 0.1, 0, 1);
-    } else {
-        alpha = 1;
-    }
-    ctx.canvas.style.opacity = alpha; #}
     canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
     canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
 
@@ -607,14 +582,6 @@ function init_narrative_backgrounds_step_2() {
 function animate_step_2(t, ctx) {
     // TODO: implement animation for step 2
     // console.log("animate_step_2", t, "nbr particles", particles_2.length);
-    let alpha;
-    {# if (t < 0.1) {
-        alpha = mapv(t, 0, 0.1, 0, 1);
-    } else {
-        alpha = 1;
-    }
-    alpha = 1;
-    ctx.canvas.style.opacity = alpha; #}
 
     particles_2.forEach(particle => {
         particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
@@ -758,15 +725,6 @@ function animate_step_3(t, ctx) {
     // console.log("animate_step_3", t, "nbr particles", particles_3.length);
     let canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
     let canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
-
-    {# let alpha;
-    if (t < 0.1) {
-        alpha = mapv(t, 0, 0.1, 0, 1);
-    } else {
-        alpha = 1;
-    }
-    alpha = 1;
-    ctx.canvas.style.opacity = alpha; #}
 
     let opacity_peak = 0.6;
 

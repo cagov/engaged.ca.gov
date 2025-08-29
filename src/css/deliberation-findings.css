@@ -740,7 +740,9 @@ canvas#ring chart-canvas {
 .response-intro {
   margin-bottom: 2rem;
 }
-
+.response-small-title {
+  margin-bottom: 0.5rem;
+}
 .response-item-title {
   margin-bottom: 1rem;
 }
