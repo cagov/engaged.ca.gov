@@ -16,15 +16,13 @@ let topic_vars = {
   "topic-change-time": null,
 };
 
-let compute_coords = true;
+
 
 function reset_topics_user_dots(topic_index, ctx) {
     let userRecs = topic_vars.voteData['user_recs'];
     let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
 
     let encountered_uids = {};
-
-    {# let precomputed_coords = topic_coords_dict[topic_index+1]; #}
 
     let moods = [0,0,1,1,1,2,2];
     fUserRecords.forEach(rec => {
@@ -50,16 +48,6 @@ function reset_topics_user_dots(topic_index, ctx) {
       user_dot.ty = dot_y;
       user_dot.vx = 0;
       user_dot.vy = 0;
-
-      if (!compute_coords) {
-        let coord_triplet = precomputed_coords[uid];
-        let active = coord_triplet[2];
-        if (active) {
-          user_dot.tx = coord_triplet[0];
-          user_dot.ty = coord_triplet[1];
-        }
-        user_dot.active = coord_triplet[2];
-      }
 
       if (user_dot.copacity < 0.1) {
         user_dot.cx = user_dot.tx;
@@ -120,14 +108,6 @@ function apply_topic_forces(ctx) {
     } else if (dot.ty <= topic_vars.ellipse_radius) {
       fy += borderForce;
     }
-    {# // compute weak forces from gravity to center line - UNUSED
-    let center_y = ctx.canvas.height/2;
-    let dy = dot.ty - center_y;
-    if (dy > 2) {
-      fy -= gravityForce;
-    } else if (dy < -2) {
-      fy += gravityForce;
-    } #}
     dot.vx += fx;
     dot.vy += fy;
     dot.tx += dot.vx;
@@ -137,28 +117,27 @@ function apply_topic_forces(ctx) {
 
 function change_topic_topic(canvas, topic_index) {
     // console.log("render_topic", topic_index);
-    ctx = canvas.getContext('2d');
+    let ctx = canvas.getContext('2d');
     topic_vars.bandWidth = (ctx.canvas.width - topic_vars.ellipse_radius*4) / 7;
     topic_vars.adj_band = topic_vars.bandWidth;
 
     if (topic_vars.render_handle) {
       clearInterval(topic_vars.render_handle);
+      topic_vars.render_handle = null;
     }
-
 
     reset_topics_user_dots(topic_index, ctx);
 
     function render_dots() {
-      ctx.fillStyle = "#fff";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      {# ctx.fillStyle = 'rgba(255,255,255,0.8)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height); #}
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      if (compute_coords) {
-        let nbr_applications = 6;
-        for (let a = 0; a < nbr_applications; ++a) {
-          apply_topic_forces(ctx);
-        }
+      let nbr_applications = 6;
+      for (let a = 0; a < nbr_applications; ++a) {
+        apply_topic_forces(ctx);
       }
-
+ 
       const mood_word_to_val = {'oppose': 0, 'neutral': 1, 'support': 2, 'all':-1};
       let mood_filter = mood_word_to_val[current_mood_filter];
       let mood_elapsed = (new Date()).getTime() - current_mood_time_ms;
@@ -195,9 +174,9 @@ function change_topic_topic(canvas, topic_index) {
       });
       // !! clear the render_handle if the amount of movement is negligable
     }
-
+    console.log("initialzing topic chart");
     render_dots();
-    topic_vars.render_handle = setInterval(render_dots, 40); // use for position settling
+    topic_vars.render_handle = setInterval(render_dots.bind(this), 40); // use for position settling 
 
 }
 

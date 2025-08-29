@@ -1,4 +1,6 @@
 <script>
+// Global reference for button access
+let narrativeDrawer;
 
 class CanvasOutlineDrawer {
     constructor() {
@@ -56,6 +58,22 @@ class CanvasOutlineDrawer {
 
     setRenderFunction(render_function) {
         this.currentRenderFunction = render_function;
+    }
+
+    clear() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+
+    fadeOut() {
+        // Set up a fade out transition for the canvas
+        this.canvas.style.transition = 'opacity 0.5s';
+        this.canvas.style.opacity = 0;
+    }
+
+    fadeIn() {
+        // Set up a fade in transition for the canvas
+        this.canvas.style.transition = 'opacity 0.5s';
+        this.canvas.style.opacity = 1;
     }
 
     draw() {
@@ -146,36 +164,8 @@ class CanvasOutlineDrawer {
         ctx.stroke();
        
     }
-
-    {# updateDebugInfo(bounds = null) {
-        document.getElementById('canvas-size').textContent = 
-            `${this.canvas.width}×${this.canvas.height}`;
-        document.getElementById('window-size').textContent = 
-            `${window.innerWidth}×${window.innerHeight}`;
-        document.getElementById('dpr').textContent = this.devicePixelRatio;
-        document.getElementById('retina-scale-debug').textContent = this.retinaScale;
-        
-        if (bounds) {
-            document.getElementById('div-position').textContent = 
-                `(${Math.round(bounds.x)}, ${Math.round(bounds.y)}) ${Math.round(bounds.width)}×${Math.round(bounds.height)}`;
-        }
-    } #}
-
-    {# toggleRetinaScale() {
-        // Toggle between 1x and 2x scaling
-        this.retinaScale = this.retinaScale === 2 ? 1 : 2;
-        
-        // Update display
-        document.getElementById('retina-scale-display').textContent = this.retinaScale;
-        
-        // Recreate canvas with new scaling
-        this.setupCanvas();
-        this.draw();
-    } #}
 }
 
-// Global reference for button access
-let narrativeDrawer;
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -211,7 +201,7 @@ function load_icons() {
 function render_icon(ctx, icon_index) {
     // console.log("render_icon", icon_index, x, y, scale);
     ctx.save();
-        ctx.scale(0.8, 0.8);
+        ctx.scale(0.5, 0.5);
         // Draw an orange circle around the icon image
         ctx.beginPath();
         ctx.arc(0, 0, 83, 0, 2 * Math.PI);
@@ -250,25 +240,20 @@ function shuffled_order(nbr_particles) {
     return order;
 }
 
-function init_narrative_backgrounds_step_1(canvas_id_ignore, color) {
+function init_narrative_backgrounds_step_1() {
     const canvas = narrativeDrawer.canvas;
     // console.log("init 1, canvas size", canvas.width, canvas.height);
 
     // Get the width and height in pixels of div#narrative-wrapper-1 and set canvas size to match
-    {# const wrapper = document.getElementById('narrative-wrapper-1');
-    if (wrapper) {
-        const rect = wrapper.getBoundingClientRect();
-        canvas.width = Math.round(rect.width*2);
-        canvas.height = Math.round(rect.height*2);
-    } #}
-
     // console.log("canvas size", canvas.width, canvas.height);
+    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
+    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
 
     particles_1 = [];
-    let ellipse_radius_x = canvas.width * 0.45;
-    let ellipse_radius_y = canvas.height * 0.3;
-    let ellipse_center_x = canvas.width / 2;
-    let ellipse_center_y = canvas.height / 2;
+    let ellipse_radius_x = canvas_width * 0.4;
+    let ellipse_radius_y = (canvas_height-180) * 0.4;
+    let ellipse_center_x = canvas_width / 2;
+    let ellipse_center_y = canvas_height / 2 + 90;
     let balloon_colors = ['#98B8C8', '#E6F0F5', '#EFB389'];
     let text_color = '#868686';
     // produce order array (integers from 0->nbr_particles) which is shuffled.
@@ -300,8 +285,8 @@ function init_narrative_backgrounds_step_1(canvas_id_ignore, color) {
         },
         {
             'ang_idx': 2, // secondary
-            'x_offset': -150,
-            'y_offset': 95,
+            'x_offset': -75,
+            'y_offset': 42,
             'width': 282,
             'color': 2,
             'balloon_type': 0,
@@ -320,7 +305,7 @@ function init_narrative_backgrounds_step_1(canvas_id_ignore, color) {
         {
             'ang_idx': 4,
             'width': 269,
-            'x_offset': 70,
+            'x_offset': 45,
             'y_offset': 0,
             'color': 2,
             'balloon_type': 0,
@@ -330,8 +315,8 @@ function init_narrative_backgrounds_step_1(canvas_id_ignore, color) {
         },
         {
             'ang_idx': 4, // secondary
-            'x_offset': 70-150,
-            'y_offset': 78,
+            'x_offset': 45-75,
+            'y_offset': 42,
             'width': 269,
             'color': 0,
             'balloon_type': 0,
@@ -358,8 +343,8 @@ function init_narrative_backgrounds_step_1(canvas_id_ignore, color) {
         },
         {
             'ang_idx': 6, // secondary
-            'x_offset': -150,
-            'y_offset': -78,
+            'x_offset': -75,
+            'y_offset': -42,
             'width': 262,
             'color': 0,
             'balloon_type': 0,
@@ -369,7 +354,7 @@ function init_narrative_backgrounds_step_1(canvas_id_ignore, color) {
         {
             'ang_idx': 7,
             'x_offset': 0,
-            'y_offset': -200,
+            'y_offset': -100,
             'width': 445,
             'color': 2,
             'balloon_type': 1,
@@ -423,7 +408,6 @@ function init_narrative_backgrounds_step_1(canvas_id_ignore, color) {
 }
 
 function animate_step_1(t, ctx) {
-    // console.log("draw 1, canvas size", ctx.canvas.width, ctx.canvas.height);
 
     particles_1.forEach(particle => {
       particle.options.opacity = mapv(t,0,1,0,1); // Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
@@ -437,12 +421,16 @@ function animate_step_1(t, ctx) {
         alpha = 1;
     }
     ctx.canvas.style.opacity = alpha;
+    canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
+    canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
 
     particles_1.forEach(particle => {
+        let center_x = canvas_width/2;
+        let center_y = canvas_height/2 + 90;
         let tx = particle.x + particle.options.x_offset;
         let ty = particle.y + particle.options.y_offset;
-        let sx = ctx.canvas.width/2 + (tx - ctx.canvas.width/2) * 1.5;
-        let sy = ctx.canvas.height/2 + (ty - ctx.canvas.height/2) * 1.5;
+        let sx = center_x + (tx - center_x) * 1.5;
+        let sy = center_y + (ty - center_y) * 1.5;
         let x = mapv(t,0,1,sx,tx);
         let y = mapv(t,0,1,sy,ty);
         let scale = particle.options.scale;
@@ -557,22 +545,11 @@ function animate_step_1(t, ctx) {
 
 }
 
-function init_narrative_backgrounds_step_2(canvas_id_unused, color) {
+function init_narrative_backgrounds_step_2() {
     let scale = 1;
-
-    // Get the width and height in pixels of div#narrative-wrapper-1 and set canvas size to match
-    {# const wrapper = document.getElementById('narrative-wrapper-2');
-    if (wrapper) {
-        const rect = wrapper.getBoundingClientRect();
-        canvas.width = Math.round(rect.width*scale);
-        canvas.height = Math.round(rect.height*scale);
-    } #}
-
-    {# const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height); #}
-
-    {# ctx.fillStyle = color;
-    ctx.fillRect(0, 0, canvas.width, canvas.height); #}
+    let canvas = narrativeDrawer.canvas;
+    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
+    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
 
     // console.log("canvas size 2", canvas.width, canvas.height);
     phrases = ['Utilities', 'Community/Support', "Financial/support", "Emergency/preparedness", 
@@ -583,12 +560,12 @@ function init_narrative_backgrounds_step_2(canvas_id_unused, color) {
 
     particles_2 = [];
     let nbr_particles = 21;
-    let min_ellipse_radius_x = canvas.width * 0.4;
-    let max_ellipse_radius_x = canvas.width * 0.45;
-    let min_ellipse_radius_y = canvas.height * 0.2;
-    let max_ellipse_radius_y = canvas.height * 0.45;
-    let ellipse_center_x = canvas.width / 2;
-    let ellipse_center_y = canvas.height / 2;
+    let min_ellipse_radius_x = canvas_width * 0.4;
+    let max_ellipse_radius_x = canvas_width * 0.45;
+    let min_ellipse_radius_y = (canvas_height-180) * 0.4;
+    let max_ellipse_radius_y = (canvas_height-180) * 0.45;
+    let ellipse_center_x = canvas_width / 2;
+    let ellipse_center_y = canvas_height / 2 + 90;
     let text_index = 0;
     let order = shuffled_order(nbr_particles);
     let order2 = shuffled_order(nbr_particles);
@@ -668,11 +645,7 @@ function animate_step_2(t, ctx) {
             ctx.fillStyle = particle.options.bg_color;
             ctx.fill();
             break;
-        {# case 1:
-            ctx.fillStyle = '#E5B389';
-            ctx.fill();
-            break;
-        case 2: // TEXT #}
+        case 2: // TEXT
             lines = particle.options.text.split('/');
             ctx.font = "italic 600 32px Noto Sans Display";
             ctx.textAlign = "center";
@@ -691,33 +664,24 @@ function animate_step_2(t, ctx) {
 
 let first_topic_particle = 0;
 
-function init_narrative_backgrounds_step_3(canvas_id_unused, color) {
-    {# const canvas = document.getElementById(canvas_id);
-    let aspect_ratio = canvas.height / canvas.width; #}
-    let scale = 2;
+function init_narrative_backgrounds_step_3() {
+    let scale = 1;
 
-    // Get the width and height in pixels of div#narrative-wrapper-1 and set canvas size to match
-    {# const wrapper = document.getElementById('narrative-wrapper-3');
-    if (wrapper) {
-        const rect = wrapper.getBoundingClientRect();
-        canvas.width = Math.round(rect.width*scale);
-        canvas.height = Math.round(rect.height*scale);
-    } #}
-
-    {# const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height); #}
+    let canvas = narrativeDrawer.canvas;
+    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
+    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
 
     // console.log("canvas size 3", canvas.width, canvas.height);
     let dot_colors = ['#98B8C8', '#EFB389'];
 
     particles_3 = [];
     let nbr_particles = 31;
-    let min_ellipse_radius_x = canvas.width * 0.37;
-    let max_ellipse_radius_x = canvas.width * 0.45;
-    let min_ellipse_radius_y = canvas.height * 0.3;
-    let max_ellipse_radius_y = canvas.height * 0.4;
-    let ellipse_center_x = canvas.width / 2;
-    let ellipse_center_y = canvas.height / 2;
+    let min_ellipse_radius_x = canvas_width * 0.35;
+    let max_ellipse_radius_x = canvas_width * 0.4;
+    let min_ellipse_radius_y = (canvas_height-180) * 0.35;
+    let max_ellipse_radius_y = (canvas_height-180) * 0.4;
+    let ellipse_center_x = canvas_width / 2;
+    let ellipse_center_y = canvas_height / 2 + 90;
     let nbr_icons = 20;
     let order = shuffled_order(nbr_particles);
     let order2 = shuffled_order(nbr_particles);
@@ -791,6 +755,8 @@ function animate_step_3(t, ctx) {
     // TODO: implement animation for step 3
    // TODO: implement animation for step 2
     // console.log("animate_step_3", t, "nbr particles", particles_3.length);
+    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
+    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
 
     let alpha;
     if (t < 0.1) {
@@ -813,13 +779,16 @@ function animate_step_3(t, ctx) {
             let end_t = begin_t + 1/2;
             let phase_t = clamp(mapv(t, begin_t, end_t, 0, 1), 0, 1);
 
+            let center_x = canvas_width/2;
+            let center_y = canvas_height/2 + 90;
+
 
             let tx = particles_3[first_topic_particle + particle.options.closest_topic].x;
             let ty = particles_3[first_topic_particle + particle.options.closest_topic].y;
 
 
-            let sx = ctx.canvas.width/2 + (particle.x - ctx.canvas.width/2) * 2;
-            let sy = ctx.canvas.height/2 + (particle.y - ctx.canvas.height/2) * 2;
+            let sx = center_x + (particle.x - center_x) * 2;
+            let sy = center_y + (particle.y - center_y) * 2;
             x = mapv(phase_t,0,1,sx,tx);
             y = mapv(phase_t,0,1,sy,ty);
             particle.options.scale = mapv(phase_t,0,1,0.1,1);
@@ -856,10 +825,6 @@ function animate_step_3(t, ctx) {
             ctx.fillStyle = particle.options.bg_color;
             ctx.fill();
             break;
-        {# case 1:
-            ctx.fillStyle = '#E5B389';
-            ctx.fill();
-            break; #}
         case 2:
             render_icon(ctx, particle.options.icon_index);
             break;
@@ -875,11 +840,11 @@ function animate_step_3(t, ctx) {
 function init_narrative_backgrounds() {
     load_icons();
 
-    init_narrative_backgrounds_step_1('findings-narrative-step-1-canvas', 'red');
+    init_narrative_backgrounds_step_1();
 
-    init_narrative_backgrounds_step_2('findings-narrative-step-2-canvas', 'green');
+    init_narrative_backgrounds_step_2();
 
-    init_narrative_backgrounds_step_3('findings-narrative-step-3-canvas', 'blue');
+    init_narrative_backgrounds_step_3();
 
     console.log("narrative backgrounds initialized");
 
@@ -894,19 +859,20 @@ function refresh_narrative_backgrounds(ctx) {
 
 function animate_narrative(t, step_index) {
     // console.log("animating narrative for step", step_index, t);
-    {# const canvas_id = `findings-narrative-step-${step_index}-canvas`;
-    const canvas = document.getElementById(canvas_id);
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height); #}
 
     canvas = narrativeDrawer.canvas;
-    ctx = canvas.getContext('2d');
+    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
+    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
+
+    let ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas_width, canvas_height);
+
     current_animation_time = t;
     current_animation_step_index = step_index;
 
     narrativeDrawer.setRenderFunction(refresh_narrative_backgrounds);
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     switch (step_index) {
     case 1:

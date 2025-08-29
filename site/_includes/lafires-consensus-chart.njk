@@ -66,6 +66,7 @@ function reset_user_dots(topic_index) {
     let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
 
     let encountered_uids = {};
+    let ctx = consensus_vars.ctx;
 
     fUserRecords.forEach(rec => {
       let uid = rec.uid;
@@ -231,7 +232,7 @@ function change_consensus_topic(canvas, topic_index) {
 
     console.log("beginning to render dots");
     render_dots();
-    consensus_vars.render_handle = setInterval(render_dots, 40);
+    consensus_vars.render_handle = setInterval(render_dots.bind(this), 40);
     draw_consensus_progress_bar(topic_index);
 
 }
@@ -333,6 +334,8 @@ function draw_consensus_progress_bar(step_index) {
     return;
   }
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  {# ctx.fillStyle = 'red';
+  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height); #}
 
   ctx.fillStyle = "#000";
 

@@ -56,7 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
           animate_narrative(t, 1);
-        }
+        },
+        onLeave: (self) => {
+          narrativeDrawer.fadeOut();
+        },
+        onEnter: (self) => {
+          narrativeDrawer.fadeIn();
+        },
       }
   });
   
@@ -72,7 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
           animate_narrative(t, 2);
-        }
+        },
+        onLeave: (self) => {
+          narrativeDrawer.fadeOut();
+        },
+        onEnter: (self) => {
+          narrativeDrawer.fadeIn();
+        },
       }
     });
 
@@ -119,7 +131,13 @@ document.addEventListener('DOMContentLoaded', function() {
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
           animate_narrative(t, 3);
-        }
+        },
+        onLeave: (self) => {
+          narrativeDrawer.fadeOut();
+        },
+        onEnter: (self) => {
+          narrativeDrawer.fadeIn();
+        },
       }
     });
 
@@ -144,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             div.style.opacity = opacity;
             // div.style.transform = `scale(${opacity})`;
           }
-        }
+        },
       }
     });
 
@@ -225,52 +243,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
-
-  {# gsap.to({}, {
-      scrollTrigger: {
-        trigger: "#findings-top-topics-dataviz-container",
-        start: "top center",
-        end: "+=0", // scroll range for animation
-        scrub: true,
-        pin: true,
-        markers: use_MARKERS,
-        onUpdate: (self) => {
-          const t = self.progress; // 0 to 1
-          if (topic_vars.phase != 2) {
-            topic_chart_phase(2);
-          }
-        }
-      }
-    }); #}
-
-  {# gsap.to({}, {
-      scrollTrigger: {
-        trigger: "#ringchart-canvas-container",
-        start: "top bottom", // when bottom of object hits bottom of viewport
-        end: "bottom top",         
-        scrub: 1, // Add a small delay to smooth out the progress updates
-        pin: false,
-        markers: use_MARKERS, // Enable markers for debugging
-        onUpdate: (self) => {
-          const t = self.progress; // 0 to 1
-          // At start (appears at bottom), set phase 1
-          const canvas = document.getElementById('ringchart-canvas');
-          let opacity;
-          let arc_phase;
-          if (t <= 0.4) {
-            opacity = clamp(mapv(t, .2, 0.4, 0, 1), 0, 1);
-            arc_phase = clamp(mapv(t, .2, 0.4, 0, 1), 0, 1);
-          } else {
-            opacity = 1;
-            arc_phase = 1;
-          }
-          if (canvas) {
-            canvas.style.opacity = opacity;
-            render_ringchart(arc_phase);
-          }
-        }
-      }
-    }); #}
 
 
 
