@@ -58,10 +58,14 @@ document.addEventListener('DOMContentLoaded', function() {
           animate_narrative(t, 1);
         },
         onLeave: (self) => {
-          narrativeDrawer.fadeOut();
+          if (narrativeDrawer) {
+            narrativeDrawer.fadeOut();
+          }
         },
         onEnter: (self) => {
-          narrativeDrawer.fadeIn();
+          if (narrativeDrawer) {
+            narrativeDrawer.fadeIn();
+          }
         },
       }
   });
@@ -80,10 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
           animate_narrative(t, 2);
         },
         onLeave: (self) => {
-          narrativeDrawer.fadeOut();
+          if (narrativeDrawer) {
+            narrativeDrawer.fadeOut();
+          }
         },
         onEnter: (self) => {
-          narrativeDrawer.fadeIn();
+          if (narrativeDrawer) {
+            narrativeDrawer.fadeIn();
+          }
         },
       }
     });
@@ -133,10 +141,14 @@ document.addEventListener('DOMContentLoaded', function() {
           animate_narrative(t, 3);
         },
         onLeave: (self) => {
-          narrativeDrawer.fadeOut();
+          if (narrativeDrawer) {
+            narrativeDrawer.fadeOut();
+          }
         },
         onEnter: (self) => {
-          narrativeDrawer.fadeIn();
+          if (narrativeDrawer) {
+            narrativeDrawer.fadeIn();
+          }
         },
       }
     });

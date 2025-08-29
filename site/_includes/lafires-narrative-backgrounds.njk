@@ -170,8 +170,8 @@ class CanvasOutlineDrawer {
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     narrativeDrawer = new CanvasOutlineDrawer();
+    console.log("narrativeDrawer", narrativeDrawer);
 });
-
 
 // Preload the report_icons.png sprite and draw it into an offscreen canvas for later use
 let report_icons_canvas;
@@ -859,7 +859,9 @@ function refresh_narrative_backgrounds(ctx) {
 
 function animate_narrative(t, step_index) {
     // console.log("animating narrative for step", step_index, t);
-
+    if (narrativeDrawer == null || narrativeDrawer.canvas == null) {
+        return;
+    }
     canvas = narrativeDrawer.canvas;
     let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
     let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
