@@ -108,7 +108,6 @@ div.center-container {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1000; /* In front of everything */
   pointer-events: none; /* Don't interfere with interactions */
 }
 
