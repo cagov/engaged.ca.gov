@@ -236,17 +236,17 @@ function select_topic_chart(topic_number) {
 
 function topic_chart_phase(phase)
 {
-  let canvas = consensus_vars.canvas; //  document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
+  let canvas = topic_vars.canvas; //  document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
  
-  consensus_vars.phase = phase;
+  topic_vars.phase = phase;
   console.log("topic_chart_phase", phase);
   switch (phase) {
   case 1:
   case 2:
   case 3:
-    if (consensus_vars.phase_handle) {
-      clearInterval(consensus_vars.phase_handle);
-      consensus_vars.phase_handle = null;
+    if (topic_vars.phase_handle) {
+      clearInterval(topic_vars.phase_handle);
+      topic_vars.phase_handle = null;
     }
     break;
   }

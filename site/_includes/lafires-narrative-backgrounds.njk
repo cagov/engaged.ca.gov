@@ -1,11 +1,12 @@
 <script>
 // Global reference for button access
-let narrativeDrawer;
+let narrativeDisplay;
 
 class CanvasOutlineDrawer {
     constructor() {
         this.canvas = document.getElementById('narrative-canvas');
         this.ctx = this.canvas.getContext('2d');
+        this.canvas.style.opacity = 0;
         this.scrollableDiv = document.getElementById('narrative-wrapper-1');
         this.currentRenderFunction = null;
         
@@ -169,8 +170,8 @@ class CanvasOutlineDrawer {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    narrativeDrawer = new CanvasOutlineDrawer();
-    console.log("narrativeDrawer", narrativeDrawer);
+    narrativeDisplay = new CanvasOutlineDrawer();
+    console.log("narrativeDisplay", narrativeDisplay);
 });
 
 // Preload the report_icons.png sprite and draw it into an offscreen canvas for later use
@@ -241,13 +242,13 @@ function shuffled_order(nbr_particles) {
 }
 
 function init_narrative_backgrounds_step_1() {
-    const canvas = narrativeDrawer.canvas;
+    const canvas = narrativeDisplay.canvas;
     // console.log("init 1, canvas size", canvas.width, canvas.height);
 
     // Get the width and height in pixels of div#narrative-wrapper-1 and set canvas size to match
     // console.log("canvas size", canvas.width, canvas.height);
-    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
-    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
+    let canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
+    let canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
 
     particles_1 = [];
     let ellipse_radius_x = canvas_width * 0.4;
@@ -421,8 +422,8 @@ function animate_step_1(t, ctx) {
         alpha = 1;
     }
     ctx.canvas.style.opacity = alpha;
-    canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
-    canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
+    canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
+    canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
 
     particles_1.forEach(particle => {
         let center_x = canvas_width/2;
@@ -547,9 +548,9 @@ function animate_step_1(t, ctx) {
 
 function init_narrative_backgrounds_step_2() {
     let scale = 1;
-    let canvas = narrativeDrawer.canvas;
-    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
-    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
+    let canvas = narrativeDisplay.canvas;
+    let canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
+    let canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
 
     // console.log("canvas size 2", canvas.width, canvas.height);
     phrases = ['Utilities', 'Community/Support', "Financial/support", "Emergency/preparedness", 
@@ -667,9 +668,9 @@ let first_topic_particle = 0;
 function init_narrative_backgrounds_step_3() {
     let scale = 1;
 
-    let canvas = narrativeDrawer.canvas;
-    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
-    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
+    let canvas = narrativeDisplay.canvas;
+    let canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
+    let canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
 
     // console.log("canvas size 3", canvas.width, canvas.height);
     let dot_colors = ['#98B8C8', '#EFB389'];
@@ -755,8 +756,8 @@ function animate_step_3(t, ctx) {
     // TODO: implement animation for step 3
    // TODO: implement animation for step 2
     // console.log("animate_step_3", t, "nbr particles", particles_3.length);
-    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
-    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
+    let canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
+    let canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
 
     let alpha;
     if (t < 0.1) {
@@ -859,12 +860,12 @@ function refresh_narrative_backgrounds(ctx) {
 
 function animate_narrative(t, step_index) {
     // console.log("animating narrative for step", step_index, t);
-    if (narrativeDrawer == null || narrativeDrawer.canvas == null) {
+    if (narrativeDisplay == null || narrativeDisplay.canvas == null) {
         return;
     }
-    canvas = narrativeDrawer.canvas;
-    let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
-    let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
+    canvas = narrativeDisplay.canvas;
+    let canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
+    let canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
 
     let ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas_width, canvas_height);
@@ -872,7 +873,7 @@ function animate_narrative(t, step_index) {
     current_animation_time = t;
     current_animation_step_index = step_index;
 
-    narrativeDrawer.setRenderFunction(refresh_narrative_backgrounds);
+    narrativeDisplay.setRenderFunction(refresh_narrative_backgrounds);
 
     // ctx.clearRect(0, 0, canvas.width, canvas.height);
 

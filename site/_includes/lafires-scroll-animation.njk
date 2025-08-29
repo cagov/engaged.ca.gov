@@ -58,13 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
           animate_narrative(t, 1);
         },
         onLeave: (self) => {
-          if (narrativeDrawer) {
-            narrativeDrawer.fadeOut();
+          if (narrativeDisplay) {
+            narrativeDisplay.fadeOut();
           }
         },
         onEnter: (self) => {
-          if (narrativeDrawer) {
-            narrativeDrawer.fadeIn();
+          if (narrativeDisplay) {
+            narrativeDisplay.fadeIn();
           }
         },
       }
@@ -84,13 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
           animate_narrative(t, 2);
         },
         onLeave: (self) => {
-          if (narrativeDrawer) {
-            narrativeDrawer.fadeOut();
+          if (narrativeDisplay) {
+            narrativeDisplay.fadeOut();
           }
         },
         onEnter: (self) => {
-          if (narrativeDrawer) {
-            narrativeDrawer.fadeIn();
+          if (narrativeDisplay) {
+            narrativeDisplay.fadeIn();
           }
         },
       }
@@ -141,13 +141,13 @@ document.addEventListener('DOMContentLoaded', function() {
           animate_narrative(t, 3);
         },
         onLeave: (self) => {
-          if (narrativeDrawer) {
-            narrativeDrawer.fadeOut();
+          if (narrativeDisplay) {
+            narrativeDisplay.fadeOut();
           }
         },
         onEnter: (self) => {
-          if (narrativeDrawer) {
-            narrativeDrawer.fadeIn();
+          if (narrativeDisplay) {
+            narrativeDisplay.fadeIn();
           }
         },
       }
@@ -201,8 +201,10 @@ document.addEventListener('DOMContentLoaded', function() {
         markers: use_MARKERS, // Enable markers for debugging
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
-          if (consensus_vars.phase != 1) {
-            consensus_chart_phase(1);
+          if (consensusChart) {
+            if (consensusChart.phase != 1) {
+              consensusChart.consensus_chart_phase(1);
+            }
           }
         }
       }
@@ -240,17 +242,18 @@ document.addEventListener('DOMContentLoaded', function() {
             canvas2.style.opacity = opacity;
             div2.style.width = `${clamp(opacity*1.3,0,1)*100}%`;
           }
-
-          if (t <= 0.4 && consensus_vars.phase !== 1) {
-            consensus_chart_phase(1);
-          }
-          // At center (about halfway), set phase 2
-          else if (t > 0.4 && t < 0.6 && consensus_vars.phase !== 2) {
-            consensus_chart_phase(2);
-          }
-          // At end (exits top), set phase 3
-          else if (t >= 0.6 && consensus_vars.phase !== 3) {
-            consensus_chart_phase(3);
+          if (consensusChart) {
+            if (t <= 0.4 && consensusChart.phase !== 1) {
+              consensusChart.consensus_chart_phase(1);
+            }
+            // At center (about halfway), set phase 2
+            else if (t > 0.4 && t < 0.6 && consensusChart.phase !== 2) {
+              consensusChart.consensus_chart_phase(2);
+            }
+            // At end (exits top), set phase 3
+            else if (t >= 0.6 && consensusChart.phase !== 3) {
+              consensusChart.consensus_chart_phase(3);
+            }
           }
         }
       }
