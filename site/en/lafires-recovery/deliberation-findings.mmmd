@@ -202,15 +202,6 @@ value_2: 73
 chart_topic_index: 15
 ----
 
-----
-id: other_efforts
-title: Other efforts
-mental_health: Mental health
-----
-The **LA County Department of Mental Health** is helping survivors get the support they need. They’re teaming up with local partners to create shared spaces. Here, people can get free counseling and join trauma support groups.
-
-The Blueprint for Rebuilding says mental health services are critical to community resilience.
-
 
 ----
 id: topic_comments_scroller 
@@ -296,7 +287,7 @@ id: response_intro
 
 ## How we’re responding to community needs
 
-Residents spoke up during both the agenda-setting phase and our later deliberations. **State, County, City, utilities, and federal partners** have responded with tangible actions. And more are on the way.
+Residents spoke up during both the agenda-setting phase and our later deliberations. **State**, **County**, **City**, **utilities**, and **federal partners** have responded with tangible actions. And more are on the way.
 
 ----
 id: response_steps
@@ -316,7 +307,7 @@ icon: construction-orange.svg
 ----
 id: response_step_1_action_now
 ----
-Crews are working to bury more than 150 miles of power lines within the burn scar. The county and state are teaming up with power and telecom companies to plan for undergrounding. **Governor Gavin Newsom** signed an executive order in March 2025 to fast-track this work. The **Blueprint for Rebuilding** says undergrounding is central to cutting wildfire risks.
+Crews are working to bury more than 150 miles of power lines within the burn scar. The **County** and **State** are teaming up with power and telecom companies to plan for undergrounding. **Governor Gavin Newsom** signed an executive order in March 2025 to fast-track this work. The **Blueprint for Rebuilding** says undergrounding is central to cutting wildfire risks.
 
 ----
 id: response_step_1_coming_soon
@@ -338,12 +329,12 @@ icon: hydrant-orange.svg
 ----
 id: response_step_2_action_now
 ----
-The Los Angeles County Fire Department is working with the Department of Public Works and 6 local water companies. Together, they are assessing the availability of fire flow in the fire areas. A new process has been created to streamline the fire flow form. It will speed up the timeline, let homeowners stay out of the process, and save them money. The water companies, Building and Safety, and the LA County Fire will handle this new process. The Fire Department will update the fire code to meet current state standards. The water companies will upgrade their systems. All this will help homeowners rebuild.
+The **Los Angeles County Fire Department** is working with the **Department of Public Works** and **6 local water companies**. Together, they are assessing the availability of fire flow in the fire areas. A new process has been created to streamline the fire flow form. It will speed up the timeline, let homeowners stay out of the process, and save them money. The **water companies**, **Building and Safety**, and **LA County Fire** will handle this new process. The **Fire Department** will update the fire code to meet current state standards. The **water companies** will upgrade their systems. All this will help homeowners rebuild.
 
 ----
 id: response_step_2_coming_soon
 ----
-Water districts have identified damages and applied for funding (e.g., FEMA PA) to rebuild. The state and county have committed to helping districts rebuild and improve systems.
+Water districts have identified damages and applied for funding (e.g., FEMA PA) to rebuild. The **State** and **County** have committed to helping districts rebuild and improve systems.
 
 The **Blueprint for Rebuilding** calls these upgrades critical infrastructure investments for long-term safety.
 
@@ -363,7 +354,7 @@ There are new rules that require towers to have 72 hours of backup power. The ru
 ----
 id: response_sidebar_3
 ----
-The wildfires in 2017 left thousands without phone service. This led to the California Public Utilities Commission's policy requiring backup power. Telecom providers had to install backup batteries at towers that would last 72 hours. That rule kept residents connected during the 2025 fires.
+The wildfires in 2017 left thousands without phone service. This led to the **California Public Utilities Commission's** policy requiring backup power. Telecom providers had to install backup batteries at towers that would last 72 hours. That rule kept residents connected during the 2025 fires.
 
 ----
 id: response_step_4
@@ -374,7 +365,7 @@ icon: currency-orange.svg
 ----
 id: response_step_4_action_now
 ----
-The government is stepping up to help residents. The State’s CalAssist Mortgage Fund is directing over $105 million. Also, there is $3 billion in federal assistance and loans available. The County has mobilized over $50 million to support families and small businesses. This aid comes from the LA County Wildfire Relief Fund. The County has also deferred or refunded fees for zoning, plan checks, and permits. This will help homeowners reduce costs. This applies to key agencies like Public Works, Regional Planning, Public Health, and Fire. These fees can be over $20,000 per household. More support has been provided as well. Section 8 vouchers are available for displaced renters. There are emergency shelter grant funds for persons experiencing homelessness in the area. Facilitated workshops are available for seniors with reverse mortgages.
+The government is stepping up to help residents. The **State’s CalAssist Mortgage Fund** is directing over $105 million. Also, there is $3 billion in federal assistance and loans available. The **County** has mobilized over $50 million to support families and small businesses. This aid comes from the **LA County Wildfire Relief Fund**. The **County** has also deferred or refunded fees for zoning, plan checks, and permits. This will help homeowners reduce costs. This applies to key agencies like **Public Works**, **Regional Planning**, **Public Health**, and **Fire**. These fees can be over $20,000 per household. More support has been provided as well. Section 8 vouchers are available for displaced renters. There are emergency shelter grant funds for persons experiencing homelessness in the area. Facilitated workshops are available for seniors with reverse mortgages.
 
 ----
 id: response_step_4_coming_soon
@@ -383,7 +374,7 @@ id: response_step_4_coming_soon
 
 Additionally, we listened to renters when they asked us to not leave them out. The **Los Angeles County’s Fire Recovery Fund** includes direct rental assistance. **County supervisors** are reviewing stronger anti-gouging protections for tenants in fire zones.
 
-The **Blueprint for Rebuilding** highlights the coordinated effort from **County**, **State**, and philanthropy to provide residents with “bridge funding” to cover near-term costs to survive and begin rebuilding that are not covered by other funding sources.
+The **Blueprint for Rebuilding** highlights the coordinated effort from **County**, **State**, and **philanthropy** to provide residents with “bridge funding” to cover near-term costs to survive and begin rebuilding that are not covered by other funding sources.
 
 
 ----
@@ -402,22 +393,35 @@ icon: house-orange.svg
 ----
 id: response_step_5_action_now
 ----
-The County has created One-Stop Permit Centers in areas hit by fire. This includes Altadena and Pacific Palisades. These centers offer residents in-person help from various County agencies. City residents can utilize the One-Stop Rebuilding Center at 1828 Sawtelle Blvd. County residents can apply for permits online using the EPIC-LA platform. This platform offers a unified application and review process. The goal is to make it easier to navigate. The County has also started its surge plan. It’s reallocating staff to meet its plan check and zoning review timelines.
+The **County** has created One-Stop Permit Centers in areas hit by fire. This includes Altadena and Pacific Palisades. These centers offer residents in-person help from various **County agencies**. City residents can utilize the One-Stop Rebuilding Center at 1828 Sawtelle Blvd. County residents can apply for permits online using the EPIC-LA platform. This platform offers a unified application and review process. The goal is to make it easier to navigate. The **County** has also started its surge plan. It’s reallocating staff to meet its plan check and zoning review timelines.
 
 ----
 id: response_step_5_coming_soon
 ----
-The County is accelerating permitting and inspection through fast tracks. The county is also maintaining safety and code compliance while expediting rebuilds. This includes expanding the catalog of pre-approved plans. It’s bundling reviews for similar projects. It’s also increasing self-certification for licensed architects and engineers.
+The **County** is accelerating permitting and inspection through fast tracks. The **County** is also maintaining safety and code compliance while expediting rebuilds. This includes expanding the catalog of pre-approved plans. It’s bundling reviews for similar projects. It’s also increasing self-certification for licensed architects and engineers.
 
-The County is increasing surge capacity. They are expanding the AI eCheck pilot with Archistar. They are also growing digital and remote inspections. Additionally, they are adding plan checkers and inspectors to manage higher volumes.
+The **County** is increasing surge capacity. They are expanding the AI eCheck pilot with Archistar. They are also growing digital and remote inspections. Additionally, they are adding plan checkers and inspectors to manage higher volumes.
 
 
 ----
 id: response_sidebar_5
 ----
-Federal, state, and local teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history. This is thanks to unprecedented partnership among City, County, State, and federal agencies, including the U.S. Army Corps of Engineers. Governor Newsom signed emergency orders.
+**Federal**, **state**, and **local** teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history. This is thanks to unprecedented partnership among **City**, **County**, **State**, and **federal** agencies, including the **U.S. Army Corps of Engineers**. **Governor Newsom** signed emergency orders.
 
 The **Blueprint for Rebuilding** applauds this work. The publication said the unprecedented pace is the foundation for rapid rebuilding
+
+
+----
+id: other_efforts
+title: Other efforts
+mental_health: Mental health
+----
+The **LA County Department of Mental Health** is helping survivors get the support they need. They’re teaming up with local partners to create shared spaces. Here, people can get free counseling and join trauma support groups.
+
+The **Blueprint for Rebuilding** says mental health services are critical to community resilience.
+
+
+
 
 ----
 id: findings_how_we_did_the_analysis
