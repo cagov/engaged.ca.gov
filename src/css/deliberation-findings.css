@@ -102,6 +102,23 @@ div.center-container {
 /* 
  * NARRATIVE SECTION
  */
+ #narrative-canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000; /* In front of everything */
+  pointer-events: none; /* Don't interfere with interactions */
+}
+
+#narrative-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
 section#findings-narrative-steps {
   padding-top: 0;
 }
