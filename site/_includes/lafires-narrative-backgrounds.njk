@@ -130,7 +130,6 @@ class CanvasOutlineDrawer {
     }
 
     icon_images_loaded() {
-        console.log("report_icons_img loaded");
         this.report_icons_ctx.clearRect(0, 0, this.report_icons_canvas.width, this.report_icons_canvas.height);
         this.report_icons_ctx.drawImage(this.report_icons_img, 0, 0, 4000, 200);
     }
@@ -142,13 +141,11 @@ class CanvasOutlineDrawer {
         this.report_icons_ctx = this.report_icons_canvas.getContext('2d');
         this.report_icons_img = new Image();
         this.report_icons_img.src = '/public/images/report_icons.png';
-        console.log("loading report_icons_img");
         this.report_icons_img.onload = this.icon_images_loaded.bind(this);
     }
 
     render_icon(icon_index) {
         let ctx = this.ctx;
-        // console.log("render_icon", icon_index, x, y, scale);
         ctx.save();
             ctx.scale(0.5, 0.5);
             // Draw an orange circle around the icon image
@@ -166,10 +163,7 @@ class CanvasOutlineDrawer {
 
     init_narrative_backgrounds_step_1() {
         const canvas = this.canvas;
-        // console.log("init 1, canvas size", canvas.width, canvas.height);
 
-        // Get the width and height in pixels of div#narrative-wrapper-1 and set canvas size to match
-        // console.log("canvas size", canvas.width, canvas.height);
         let canvas_width = this.canvas.width / this.retinaScale;
         let canvas_height = this.canvas.height / this.retinaScale;
 
@@ -444,7 +438,6 @@ class CanvasOutlineDrawer {
                 ctx.save();
                 ctx.strokeStyle = text_color;
                 ctx.lineWidth = 4;
-                // console.log(nbr_text_lines, line_vert_margin, line_gap_y, top_line_y);
 
                 for (let i = 0; i < nbr_text_lines; i++) {
                     let line_y = top_line_y + i * line_gap_y;
@@ -469,7 +462,6 @@ class CanvasOutlineDrawer {
         let canvas_width = this.canvas.width / this.retinaScale;
         let canvas_height = this.canvas.height / this.retinaScale;
 
-        // console.log("canvas size 2", canvas.width, canvas.height);
         let phrases = ['Utilities', 'Community/Support', "Financial/support", "Emergency/preparedness", 
                 "Fire/proofing", "Building/permits"];
 
@@ -517,13 +509,9 @@ class CanvasOutlineDrawer {
             }
             this.particles_2.push(new Particle(x, y, options));
         }
-        console.log("nbr particles 2", this.particles_2);
-        // animate_step_2(0);
     }
 
     animate_step_2(t) {
-        // TODO: implement animation for step 2
-        // console.log("animate_step_2", t, "nbr particles", this.particles_2.length);
         let ctx = this.ctx;
 
         this.particles_2.forEach(particle => {
@@ -580,7 +568,6 @@ class CanvasOutlineDrawer {
         let canvas_width = this.canvas.width / this.retinaScale;
         let canvas_height = this.canvas.height / this.retinaScale;
 
-        // console.log("canvas size 3", canvas.width, canvas.height);
         let dot_colors = ['#98B8C8', '#EFB389'];
 
         this.particles_3 = [];
@@ -654,16 +641,9 @@ class CanvasOutlineDrawer {
             this.particles_3[i].tx = this.particles_3[this.first_topic_particle + closest_topic].x;
             this.particles_3[i].ty = this.particles_3[this.first_topic_particle + closest_topic].y;
         }
-
-
-        // console.log("nbr particles 3", this.particles_3);
-        // animate_step_3(0);
     }
 
     animate_step_3(t) {
-        // TODO: implement animation for step 3
-    // TODO: implement animation for step 2
-        // console.log("animate_step_3", t, "nbr particles", this.particles_3.length);
         let ctx = this.ctx;
         let canvas_width = this.canvas.width / this.retinaScale;
         let canvas_height = this.canvas.height / this.retinaScale;
@@ -733,7 +713,6 @@ class CanvasOutlineDrawer {
             ctx.globalAlpha = 1;
             ctx.restore();
         });
-        // console.log("  done animating step 3");
     }
 
     refresh_narrative_backgrounds(ctx) {
@@ -742,7 +721,6 @@ class CanvasOutlineDrawer {
     }
 
     animate_narrative(t, step_index) {
-        // console.log("animating narrative for step", step_index, t);
         if (narrativeDisplay == null || this.canvas == null) {
             return;
         }
@@ -777,7 +755,6 @@ class CanvasOutlineDrawer {
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     narrativeDisplay = new CanvasOutlineDrawer();
-    console.log("narrativeDisplay", narrativeDisplay);
 });
 
 

@@ -103,28 +103,24 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         },
         onLeave: (self) => {
-          console.log("got leave #2");
           if (narrativeDisplay) {
             narrativeDisplay.scrollBack = false;
             narrativeDisplay.fadeOut();
           }
         },
         onEnter: (self) => {
-          console.log("got enter #2");
           if (narrativeDisplay) {
             narrativeDisplay.scrollBack = false;
             narrativeDisplay.fadeIn();
           }
         },
         onEnterBack: (self) => {
-          console.log("got enter back #2");
           if (narrativeDisplay) {
             narrativeDisplay.scrollBack = true;
             narrativeDisplay.fadeIn();
           }
         },
         onLeaveBack: (self) => {
-          console.log("got enter back #2");
           if (narrativeDisplay) {
             narrativeDisplay.scrollBack = true;
             narrativeDisplay.fadeOut();
