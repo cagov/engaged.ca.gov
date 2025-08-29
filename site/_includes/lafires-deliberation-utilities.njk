@@ -8,9 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // console.log("Data fetched:", data);
       let chart_data = data;
       global_chart_data = chart_data;
-      setup_topic_chart(chart_data); // consensus chart wants to be loaded second, otherwise it doesn't render -- need to figure out why
+      // setup_topic_chart(chart_data); // consensus chart wants to be loaded second, otherwise it doesn't render -- need to figure out why
       consensusChart = new ConsensusChart(chart_data);
       consensusProgressBar = new ConsensusProgressBar();
+      topicsChart = new TopicsChart(chart_data);
       // init_ringchart();
       ScrollTrigger.refresh();
     })

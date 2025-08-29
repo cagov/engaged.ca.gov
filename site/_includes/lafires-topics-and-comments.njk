@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Add 'active' to the corresponding discussion container
       document.getElementById('findings-top-discussions-topic-' + this.dataset.topicNumber).classList.add('active');
-      select_topic_chart(parseInt(this.dataset.chartTopicIndex, 10));
+      if (topicsChart) {
+        topicsChart.select_topic_chart(parseInt(this.dataset.chartTopicIndex, 10));
+      }
       current_topic_index = parseInt(this.dataset.chartTopicIndex, 10);
       switch_alignment('all');
       populate_comments(current_topic_index, current_mood_filter);

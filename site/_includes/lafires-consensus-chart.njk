@@ -28,7 +28,7 @@ class ConsensusChart {
 
     this.user_dots = [];
 
-    const row_size = Math.round(Math.sqrt(topic_vars.voteData.nbr_users));
+    const row_size = Math.round(Math.sqrt(this.voteData.nbr_users));
     const masonry_incx = 0.5 / row_size;
 
     for (let uid = 0; uid < this.voteData.nbr_users; uid++) {
@@ -39,7 +39,7 @@ class ConsensusChart {
         this.user_dots.push({
             uid: uid,
             rx:  initRX,         // Math.random(),
-            ry:  initRY,         // uid / topic_vars.voteData.nbr_users,
+            ry:  initRY,         // uid / this.voteData.nbr_users,
             cx: canvas.width/2,
             tx: 0,
             cy: initCY,
@@ -72,15 +72,15 @@ class ConsensusChart {
       if (likert < 1) likert = 1;
       if (likert > 7) likert = 7;
       let dot_x = this.bandWidth * (likert - 0.5);
-      x_offset = user_dot.rx * this.adj_band - this.adj_band / 2;
+      let x_offset = user_dot.rx * this.adj_band - this.adj_band / 2;
       dot_x += x_offset;
-      user_dot.min_x = topic_vars.bandWidth * (likert - 0.5) - topic_vars.adj_band / 2;
-      user_dot.max_x = topic_vars.bandWidth * (likert - 0.5) + topic_vars.adj_band / 2;
+      user_dot.min_x = this.bandWidth * (likert - 0.5) - this.adj_band / 2;
+      user_dot.max_x = this.bandWidth * (likert - 0.5) + this.adj_band / 2;
       user_dot.tx = dot_x;
       user_dot.topacity = 1;
       user_dot.active = true;
 
-      let dot_y = topic_vars.vert_margin + user_dot.ry * (ctx.canvas.height-topic_vars.vert_margin*2);
+      let dot_y = this.vert_margin + user_dot.ry * (ctx.canvas.height-this.vert_margin*2);
       user_dot.ty = dot_y;
       user_dot.vx = 0;
       user_dot.vy = 0;
@@ -118,7 +118,7 @@ class ConsensusChart {
       let fx = 0;
       let fy = 0;
       // compute forces from neighbors
-      let min_distance = topic_vars.ellipse_radius*2 * repelScale;
+      let min_distance = this.ellipse_radius*2 * repelScale;
       let neighbors = activeDots.filter(d => d.uid != dot.uid && dot_distance(d, dot) < min_distance);
       neighbors.forEach(neb => {
         let dist = dot_distance(neb, dot);
@@ -130,9 +130,9 @@ class ConsensusChart {
         fy += force * Math.sin(angle);
       });
       // contain within rectangle
-      if (dot.tx >= canvas.width - topic_vars.ellipse_radius*2) {
+      if (dot.tx >= canvas.width - this.ellipse_radius*2) {
         fx -= borderForce;
-      } else if (dot.tx <= topic_vars.ellipse_radius*2) {
+      } else if (dot.tx <= this.ellipse_radius*2) {
         fx += borderForce;
       }
       if (dot.tx >= dot.max_x) {
@@ -141,9 +141,9 @@ class ConsensusChart {
         fx += borderForce;
       }
 
-      if (dot.ty >= canvas.height - topic_vars.ellipse_radius) {
+      if (dot.ty >= canvas.height - this.ellipse_radius) {
         fy -= borderForce;
-      } else if (dot.ty <= topic_vars.ellipse_radius) {
+      } else if (dot.ty <= this.ellipse_radius) {
         fy += borderForce;
       }
       {# // compute weak forces from gravity to center line - UNUSED

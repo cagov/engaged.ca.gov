@@ -1,211 +1,48 @@
 <script>
 // data-viz 2, the topic chart 
-let topic_vars = {
-  "user_dots": [],
-  "bandWidth": 0,
-  "adj_band": 0,
-  "ellipse_radius": 10,
-  "vert_margin": 11,
-  "voteData": null,
-  "render_handle": null,
-  "phase_handle": null,
-  "phase": -1,
-  "topic_number": 0,
-  "canvas": null,
-  "ctx": null,
-  "topic-change-time": null,
-};
+
+let topicsChart;
+
+class TopicsChart {
+  constructor(voteData) {
+    this.voteData = voteData;
+    this.user_dots = [];
+    this.bandWidth = 0;
+    this.adj_band = 0;
+    this.ellipse_radius = 10;
+    this.vert_margin = 11;
+    this.render_handle = null;
+    this.phase_handle = null;
+    this.phase = -1;
+    this.topic_number = 0;
+    this.canvas = null;
+    this.ctx = null;
 
 
-
-function reset_topics_user_dots(topic_index, ctx) {
-    let userRecs = topic_vars.voteData['user_recs'];
-    let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
-
-    let encountered_uids = {};
-
-    let moods = [0,0,1,1,1,2,2];
-    fUserRecords.forEach(rec => {
-      let uid = rec.uid;
-      encountered_uids[uid] = true;
-      let user_dot = topic_vars.user_dots[uid];
-
-      let likert = rec.v;
-      // Clamp likert to [1,7]
-      if (likert < 1) likert = 1;
-      if (likert > 7) likert = 7;
-      let dot_x = topic_vars.bandWidth * (likert - 0.5);
-      x_offset = user_dot.rx * topic_vars.adj_band - topic_vars.adj_band / 2;
-      dot_x += x_offset;
-      user_dot.mood = moods[likert-1];
-      user_dot.min_x = topic_vars.bandWidth * (likert - 0.5) - topic_vars.adj_band / 2;
-      user_dot.max_x = topic_vars.bandWidth * (likert - 0.5) + topic_vars.adj_band / 2;
-      user_dot.tx = dot_x;
-      user_dot.topacity = 1;
-      user_dot.active = true;
-      // user_dot.copacity = 1;
-      let dot_y = topic_vars.vert_margin + user_dot.ry * (ctx.canvas.height-topic_vars.vert_margin*2);
-      user_dot.ty = dot_y;
-      user_dot.vx = 0;
-      user_dot.vy = 0;
-
-      if (user_dot.copacity < 0.1) {
-        user_dot.cx = user_dot.tx;
-      }
-    });
-
-    // For each user that is not in the fUserRecords, set the opacity to 0
-    for (let uid = 0; uid < topic_vars.voteData.nbr_users; uid++) {
-      if (!encountered_uids[uid]) {
-        topic_vars.user_dots[uid].topacity = 0;
-        topic_vars.user_dots[uid].active = false;
-        topic_vars.user_dots[uid].tx = topic_vars.user_dots[uid].cx;
-      }
-    }
-}
-
-function apply_topic_forces(ctx) {
-  let activeDots = topic_vars.user_dots.filter(d => d.active);
-  let canvas = ctx.canvas;
-  let gravityForce = 0.025;
-  let borderForce = 0.2;
-  let maxRepelForce = 0.1;
-  let repelScale = 1.2; // 1.1
-
-
-
-  activeDots.forEach(dot => {
-    dot.vx *= 0.95;
-    dot.vy *= 0.95;
-    let fx = 0;
-    let fy = 0;
-    // compute forces from neighbors
-    let min_distance = topic_vars.ellipse_radius*2 * repelScale;
-    let neighbors = activeDots.filter(d => d.uid != dot.uid && dot_distance(d, dot) < min_distance);
-    neighbors.forEach(neb => {
-      let dist = dot_distance(neb, dot);
-      let angle = dot_angle(neb, dot);
-      // To make force 0 at d = min_distance, and increase as d gets smaller:
-      // We'll use: force = (min_distance - d) / min_distance, but clamp to >= 0
-      let force = clamp((min_distance - dist) / min_distance,0, maxRepelForce);
-      fx += force * Math.cos(angle);
-      fy += force * Math.sin(angle);
-    });
-    // contain within rectangle
-    if (dot.tx >= canvas.width - topic_vars.ellipse_radius*2) {
-      fx -= borderForce;
-    } else if (dot.tx <= topic_vars.ellipse_radius*2) {
-      fx += borderForce;
-    }
-    if (dot.tx >= dot.max_x) {
-      fx -= borderForce;
-    } else if (dot.tx <= dot.min_x) {
-      fx += borderForce;
-    }
-
-    if (dot.ty >= canvas.height - topic_vars.ellipse_radius) {
-      fy -= borderForce;
-    } else if (dot.ty <= topic_vars.ellipse_radius) {
-      fy += borderForce;
-    }
-    dot.vx += fx;
-    dot.vy += fy;
-    dot.tx += dot.vx;
-    dot.ty += dot.vy;
-  });
-}
-
-function change_topic_topic(canvas, topic_index) {
-    // console.log("render_topic", topic_index);
-    let ctx = canvas.getContext('2d');
-    topic_vars.bandWidth = (ctx.canvas.width - topic_vars.ellipse_radius*4) / 7;
-    topic_vars.adj_band = topic_vars.bandWidth;
-
-    if (topic_vars.render_handle) {
-      clearInterval(topic_vars.render_handle);
-      topic_vars.render_handle = null;
-    }
-
-    reset_topics_user_dots(topic_index, ctx);
-
-    function render_dots() {
-      {# ctx.fillStyle = 'rgba(255,255,255,0.8)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height); #}
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      let nbr_applications = 6;
-      for (let a = 0; a < nbr_applications; ++a) {
-        apply_topic_forces(ctx);
-      }
- 
-      const mood_word_to_val = {'oppose': 0, 'neutral': 1, 'support': 2, 'all':-1};
-      let mood_filter = mood_word_to_val[current_mood_filter];
-      let mood_elapsed = (new Date()).getTime() - current_mood_time_ms;
-      let mood_effect_alpha = clamp(mapv(mood_elapsed, 0, 4000, .2, 1), .2, 1);
-
-      topic_vars.user_dots.forEach(dot => {
-        if (true) {
-          dot.cx += (dot.tx - dot.cx) * 0.1;
-          dot.cy += (dot.ty - dot.cy) * 0.1;
-          dot.copacity += (dot.topacity - dot.copacity) * 0.1;
-
-          let x = dot.cx;
-          let y = dot.cy;
-          let color = compute_color(clamp((dot.cx-20)/(1200-40),0,1));
-
-          // let er = topic_vars.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
-          let er = topic_vars.ellipse_radius;
-
-          ctx.save();
-          ctx.beginPath();
-          ctx.ellipse(x, y, er, er, 0, 0, 2 * Math.PI);
-          ctx.fillStyle = color;
-          let opacity = dot.copacity;
-          // override opacity here using current mood filter 
-          if (mood_filter != -1 && mood_filter != dot.mood) {
-            opacity = Math.min(dot.copacity, mood_effect_alpha);
-          }
-          ctx.globalAlpha = opacity;
-          ctx.fill();
-          ctx.globalAlpha = 1;
-          ctx.restore();
-        }
-
-      });
-      // !! clear the render_handle if the amount of movement is negligable
-    }
-    console.log("initialzing topic chart");
-    render_dots();
-    topic_vars.render_handle = setInterval(render_dots.bind(this), 40); // use for position settling 
-
-}
-
-function setup_topic_chart(itsVoteData) {
-    topic_vars.voteData = itsVoteData;
-    console.log("voteData record 0", topic_vars.voteData['user_recs'][0]);
+    {# console.log("voteData record 0", this.voteData['user_recs'][0]); #}
     const canvas = document.getElementById('findings-top-topics-dataviz-canvas');
     canvas.width = 1500;
     canvas.height = 400;
 
-    topic_vars.canvas = canvas;
-    topic_vars.ctx = canvas.getContext('2d');
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
 
-    let userRecs = topic_vars.voteData['user_recs'];
+    let userRecs = this.voteData['user_recs'];
 
-    topic_vars.user_dots = [];
+    this.user_dots = [];
 
-    const row_size = Math.round(Math.sqrt(topic_vars.voteData.nbr_users));
+    const row_size = Math.round(Math.sqrt(this.voteData.nbr_users));
     const masonry_incx = 0.5 / row_size;
 
-    for (let uid = 0; uid < topic_vars.voteData.nbr_users; uid++) {
+    for (let uid = 0; uid < this.voteData.nbr_users; uid++) {
        let ryi = Math.floor(uid / row_size);
        let initRX = (uid % row_size) / row_size + ((ryi % 2) * masonry_incx);
        let initRY = (uid / row_size) / row_size;
-       let initCY = topic_vars.vert_margin + initRY * (canvas.height-topic_vars.vert_margin*2);
-        topic_vars.user_dots.push({
+       let initCY = this.vert_margin + initRY * (canvas.height-this.vert_margin*2);
+        this.user_dots.push({
             uid: uid,
             rx:  initRX,         // Math.random(),
-            ry:  initRY,         // uid / topic_vars.voteData.nbr_users,
+            ry:  initRY,         // uid / this.voteData.nbr_users,
             cx: canvas.width/2,
             tx: 0,
             cy: initCY,
@@ -220,37 +57,216 @@ function setup_topic_chart(itsVoteData) {
     // Fill the canvas with white
 
     let   topic_number = 19;
-    topic_vars.topic_number = topic_number;
-    change_topic_topic(canvas, topic_number-1);
-
-    // make click handler for canvas that outputs "click" to console
-s
-
-}
-
-function select_topic_chart(topic_number) {
-  let canvas = topic_vars.canvas;
-  topic_vars.topic_number = topic_number;
-  change_topic_topic(canvas, topic_number-1);
-}
-
-function topic_chart_phase(phase)
-{
-  let canvas = topic_vars.canvas; //  document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
- 
-  topic_vars.phase = phase;
-  console.log("topic_chart_phase", phase);
-  switch (phase) {
-  case 1:
-  case 2:
-  case 3:
-    if (topic_vars.phase_handle) {
-      clearInterval(topic_vars.phase_handle);
-      topic_vars.phase_handle = null;
-    }
-    break;
+    this.topic_number = topic_number;
+    this.change_topic(topic_number-1);
   }
+
+  reset_topics_user_dots(topic_index) {
+    let ctx = this.ctx;
+    let userRecs = this.voteData['user_recs'];
+    let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
+
+    let encountered_uids = {};
+
+    let moods = [0,0,1,1,1,2,2];
+    fUserRecords.forEach(rec => {
+      let uid = rec.uid;
+      encountered_uids[uid] = true;
+      let user_dot = this.user_dots[uid];
+
+      let likert = rec.v;
+      // Clamp likert to [1,7]
+      if (likert < 1) likert = 1;
+      if (likert > 7) likert = 7;
+      let dot_x = this.bandWidth * (likert - 0.5);
+      let x_offset = user_dot.rx * this.adj_band - this.adj_band / 2;
+      dot_x += x_offset;
+      user_dot.mood = moods[likert-1];
+      user_dot.min_x = this.bandWidth * (likert - 0.5) - this.adj_band / 2;
+      user_dot.max_x = this.bandWidth * (likert - 0.5) + this.adj_band / 2;
+      user_dot.tx = dot_x;
+      user_dot.topacity = 1;
+      user_dot.active = true;
+      // user_dot.copacity = 1;
+      let dot_y = this.vert_margin + user_dot.ry * (ctx.canvas.height-this.vert_margin*2);
+      user_dot.ty = dot_y;
+      user_dot.vx = 0;
+      user_dot.vy = 0;
+
+      if (user_dot.copacity < 0.1) {
+        user_dot.cx = user_dot.tx;
+      }
+    });
+
+    // For each user that is not in the fUserRecords, set the opacity to 0
+    for (let uid = 0; uid < this.voteData.nbr_users; uid++) {
+      if (!encountered_uids[uid]) {
+        this.user_dots[uid].topacity = 0;
+        this.user_dots[uid].active = false;
+        this.user_dots[uid].tx = this.user_dots[uid].cx;
+      }
+    }
+  }
+
+  apply_topic_forces() {
+    let ctx = this.ctx;
+    let activeDots = this.user_dots.filter(d => d.active);
+    let canvas = ctx.canvas;
+    let gravityForce = 0.025;
+    let borderForce = 0.2;
+    let maxRepelForce = 0.1;
+    let repelScale = 1.2; // 1.1
+
+
+
+    activeDots.forEach(dot => {
+      dot.vx *= 0.95;
+      dot.vy *= 0.95;
+      let fx = 0;
+      let fy = 0;
+      // compute forces from neighbors
+      let min_distance = this.ellipse_radius*2 * repelScale;
+      let neighbors = activeDots.filter(d => d.uid != dot.uid && dot_distance(d, dot) < min_distance);
+      neighbors.forEach(neb => {
+        let dist = dot_distance(neb, dot);
+        let angle = dot_angle(neb, dot);
+        // To make force 0 at d = min_distance, and increase as d gets smaller:
+        // We'll use: force = (min_distance - d) / min_distance, but clamp to >= 0
+        let force = clamp((min_distance - dist) / min_distance,0, maxRepelForce);
+        fx += force * Math.cos(angle);
+        fy += force * Math.sin(angle);
+      });
+      // contain within rectangle
+      if (dot.tx >= canvas.width - this.ellipse_radius*2) {
+        fx -= borderForce;
+      } else if (dot.tx <= this.ellipse_radius*2) {
+        fx += borderForce;
+      }
+      if (dot.tx >= dot.max_x) {
+        fx -= borderForce;
+      } else if (dot.tx <= dot.min_x) {
+        fx += borderForce;
+      }
+
+      if (dot.ty >= canvas.height - this.ellipse_radius) {
+        fy -= borderForce;
+      } else if (dot.ty <= this.ellipse_radius) {
+        fy += borderForce;
+      }
+      dot.vx += fx;
+      dot.vy += fy;
+      dot.tx += dot.vx;
+      dot.ty += dot.vy;
+    });
+  }
+
+  render_dots() {
+    let ctx = this.ctx;
+    let canvas = this.canvas;
+    {# ctx.fillStyle = 'rgba(255,255,255,0.8)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height); #}
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    let nbr_applications = 6;
+    for (let a = 0; a < nbr_applications; ++a) {
+      this.apply_topic_forces();
+    }
+
+    const mood_word_to_val = {'oppose': 0, 'neutral': 1, 'support': 2, 'all':-1};
+    let mood_filter = mood_word_to_val[current_mood_filter];
+    let mood_elapsed = (new Date()).getTime() - current_mood_time_ms;
+    let mood_effect_alpha = clamp(mapv(mood_elapsed, 0, 4000, .2, 1), .2, 1);
+
+    this.user_dots.forEach(dot => {
+      if (true) {
+        dot.cx += (dot.tx - dot.cx) * 0.1;
+        dot.cy += (dot.ty - dot.cy) * 0.1;
+        dot.copacity += (dot.topacity - dot.copacity) * 0.1;
+
+        let x = dot.cx;
+        let y = dot.cy;
+        let color = compute_color(clamp((dot.cx-20)/(1200-40),0,1));
+
+        // let er = this.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
+        let er = this.ellipse_radius;
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.ellipse(x, y, er, er, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        let opacity = dot.copacity;
+        // override opacity here using current mood filter 
+        if (mood_filter != -1 && mood_filter != dot.mood) {
+          opacity = Math.min(dot.copacity, mood_effect_alpha);
+        }
+        ctx.globalAlpha = opacity;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.restore();
+      }
+
+    });
+   // !! clear the render_handle if the amount of movement is negligable
+  }
+
+  change_topic(topic_index) {
+      // console.log("render_topic", topic_index);
+      let ctx = this.ctx; // canvas.getContext('2d');
+      let canvas = this.canvas;
+      this.bandWidth = (ctx.canvas.width - this.ellipse_radius*4) / 7;
+      this.adj_band = this.bandWidth;
+
+      if (this.render_handle) {
+        clearInterval(this.render_handle);
+        this.render_handle = null;
+      }
+
+      this.reset_topics_user_dots(topic_index);
+
+      
+      console.log("initialzing topic chart");
+      this.render_dots();
+      this.render_handle = setInterval(this.render_dots.bind(this), 40); // use for position settling 
+
+  }
+
+  select_topic_chart(topic_number) { // called by topic picker
+    let canvas = this.canvas;
+    this.topic_number = topic_number;
+    this.change_topic(topic_number-1);
+  }
+
+  {# topic_chart_phase(phase)
+  {
+    this.phase = phase;
+    console.log("topic_chart_phase", phase);
+    switch (phase) {
+    case 1:
+    case 2:
+    case 3:
+      if (this.phase_handle) {
+        clearInterval(this.phase_handle);
+        this.phase_handle = null;
+      }
+      break;
+    }
+  } #}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
