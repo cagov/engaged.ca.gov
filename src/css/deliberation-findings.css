@@ -63,6 +63,7 @@ div.center-container {
 .style-h3 {
   font-weight: 700;
   font-size: 30px;
+  color: #0f152f;
   @media (max-width: 720px) {
     font-size: 23px;
   }
