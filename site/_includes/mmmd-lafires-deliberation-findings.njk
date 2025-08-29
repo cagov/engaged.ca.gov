@@ -346,8 +346,10 @@
                       <div class="response-indent">
                           <div class="response-small-title style-strong-body-text">{{modules.response_steps.action_now}}</div>
                           <div class="response-item-text">{{ modules['response_step_' + i + "_action_now"].content | safe }}</div>
+                      {% if modules['response_step_' + i + "_coming_soon"] %}
                           <div class="response-small-title style-strong-body-text">{{modules.response_steps.coming_soon}}</div>
                           <div class="response-item-text">{{ modules['response_step_' + i + "_coming_soon"].content | safe }}</div>
+                      {% endif %}
                       </div>
                     </div>
                     <div class="col-lg-4">
@@ -364,6 +366,24 @@
         </div>
     </div>
 </section>
+
+<section id="other-efforts">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+          <div class="col-lg-12 response-item-title-container icon icon-{{ i }}">
+                <div class="response-item-title response-indent"><h3>{{ modules.other_efforts.title }}</h3></div>
+          </div>
+            <div class="response-indent">
+                <div class="response-small-title style-strong-body-text">{{modules.other_efforts.mental_health}}</div>
+                <div class="response-item-text">{{ modules.other_efforts.content | safe }}</div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</section>
+ 
 
 <section id="findings-signup-section">
   <div class="container">

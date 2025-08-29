@@ -202,7 +202,14 @@ value_2: 73
 chart_topic_index: 15
 ----
 
+----
+id: other_efforts
+title: Other efforts
+mental_health: Mental health
+----
+The **LA County Department of Mental Health** is helping survivors get the support they need. They’re teaming up with local partners to create shared spaces. Here, people can get free counseling and join trauma support groups.
 
+The Blueprint for Rebuilding says mental health services are critical to community resilience.
 
 
 ----
@@ -309,18 +316,18 @@ icon: construction-orange.svg
 ----
 id: response_step_1_action_now
 ----
-Crews are working to bury more than 150 miles of power lines within the burn scar. The County and State are working with power and telecommunication providers to coordinate undergrounding. **Governor Gavin Newsom** signed an executive order in March 2025 so utilities and local governments can fast track this work. The **Blueprint for Rebuilding** says undergrounding is central to cutting wildfire risks.
+Crews are working to bury more than 150 miles of power lines within the burn scar. The county and state are teaming up with power and telecom companies to plan for undergrounding. **Governor Gavin Newsom** signed an executive order in March 2025 to fast-track this work. The **Blueprint for Rebuilding** says undergrounding is central to cutting wildfire risks.
 
 ----
 id: response_step_1_coming_soon
 ----
-Utilities are working with Los Angeles County and the State of California. Construction is expanding this year in Malibu, Altadena, and Pacific Palisades, and is expected to continue for several years. The **State** and **County** are calling for a “dig once” approach — putting power and telecom lines in the same trench to cut costs, reduce time, and limit disruptions from multiple work crews.
+Utilities are working with **Los Angeles County** and the **State of California**. Construction is growing this year in Malibu, Altadena, and Pacific Palisades. It will likely keep going for several more years. The **State** and **County** are promoting a “dig once” approach. This means placing power and telecom lines in the same trench. It will save money, cut down on time, and minimize disruptions from several work crews.
 
 
 ----
 id: response_sidebar_1
 ----
-Overhead power lines caused the 2018 Camp Fire, which destroyed the **Town of Paradise**. As Paradise rebuilt, working with **PG&E**, **telecom providers** and **state regulators**, it formed an agreement to underground overhead lines that were at risk. Los Angeles is using this as a model and guide for its own recovery.
+Overhead power lines caused the 2018 Camp Fire, which destroyed the **Town of Paradise**. As Paradise rebuilt, it worked with PG&E, telecom providers, and state regulators. Together, they agreed to put overhead lines underground that were at risk. Los Angeles is using this as a model and guide for its own recovery.
 
 ----
 id: response_step_2
@@ -331,12 +338,12 @@ icon: hydrant-orange.svg
 ----
 id: response_step_2_action_now
 ----
-The **Los Angeles County Fire Department** has been working with the **Department of Public Works** and the six water companies in the fire areas to evaluate fire flow availability. A new streamlined process has been developed that eliminates the need for homeowners to be involved in the fire flow form process. This new streamlined process will be handled between the water companies, **Building and Safety**, and the **Fire Department**. It will streamline the timeline, eliminate the need for homeowners to complete the process, and save homeowners money. The **Fire Department** will also be amending the fire code to the current **State** standards, while the water companies upgrade their water systems allowing homeowners to rebuild.
+The Los Angeles County Fire Department is working with the Department of Public Works and 6 local water companies. Together, they are assessing the availability of fire flow in the fire areas. A new process has been created to streamline the fire flow form. It will speed up the timeline, let homeowners stay out of the process, and save them money. The water companies, Building and Safety, and the LA County Fire will handle this new process. The Fire Department will update the fire code to meet current state standards. The water companies will upgrade their systems. All this will help homeowners rebuild.
 
 ----
 id: response_step_2_coming_soon
 ----
-Water districts have identified damages and applied for funding (e.g., FEMA PA) to rebuild. **State** and **County** are committed to supporting the districts in rebuilding and improving systems.
+Water districts have identified damages and applied for funding (e.g., FEMA PA) to rebuild. The state and county have committed to helping districts rebuild and improve systems.
 
 The **Blueprint for Rebuilding** calls these upgrades critical infrastructure investments for long-term safety.
 
@@ -351,64 +358,66 @@ icon: communication-orange.svg
 ----
 id: response_step_3_action_now
 ----
-New rules from the **California Public Utilities Commission** require 72 hours of backup power at towers in high fire-threat zones. During the January fires, this kept most towers online. **County first responders** relied on their dedicated FirstNet network, supported by mobile towers deployed by AT&T. As noted in the **Blueprint for Rebuilding**, strengthening emergency communications and alert systems is essential to protect residents during future disasters.
-
-----
-id: response_step_3_coming_soon
-----
-**Los Angeles County**, in coordination with **Cal OES**, is upgrading its emergency alert system. Soon, evacuation warnings will appear in navigation apps, outdoor sirens will be tested in high-risk zones, and solar-powered resilience hubs with Wi-Fi and charging stations will open in 2026. The **Blueprint for Rebuilding** highlights these systems as vital for timely evacuations. 
+There are new rules that require towers to have 72 hours of backup power. The rule was set by the **California Public Utilities Commission**. It applies to towers in zones where fire is a high threat. This kept most towers online during the January fires. **County first responders** used their FirstNet network, backed by AT&T's mobile towers.
 
 ----
 id: response_sidebar_3
 ----
-After wildfires in 2017 left thousands cut off from phone service, the **California Public Utilities Commission** required telecom providers to install 72-hour backup batteries at towers. That rule kept residents connected during the 2025 fires.
+The wildfires in 2017 left thousands without phone service. This led to the California Public Utilities Commission's policy requiring backup power. Telecom providers had to install backup batteries at towers that would last 72 hours. That rule kept residents connected during the 2025 fires.
 
 ----
 id: response_step_4
-title: Rebuilding-help
+title: Rebuilding help
 icon: currency-orange.svg
 ----
 
 ----
 id: response_step_4_action_now
 ----
-**State and federal aid programs** have sent over $50 million in direct relief to families through **Los Angeles County’s Fire Recovery Fund**.  The program has waived permit fees to save thousands of dollars per household. It has also extended hotel vouchers and lowered property taxes on destroyed homes. The **Blueprint for Rebuilding** says this support acts as a bridge. It helps survivors while they wait for insurance and federal funds. 
-
+The government is stepping up to help residents. The State’s CalAssist Mortgage Fund is directing over $105 million. Also, there is $3 billion in federal assistance and loans available. The County has mobilized over $50 million to support families and small businesses. This aid comes from the LA County Wildfire Relief Fund. The County has also deferred or refunded fees for zoning, plan checks, and permits. This will help homeowners reduce costs. This applies to key agencies like Public Works, Regional Planning, Public Health, and Fire. These fees can be over $20,000 per household. More support has been provided as well. Section 8 vouchers are available for displaced renters. There are emergency shelter grant funds for persons experiencing homelessness in the area. Facilitated workshops are available for seniors with reverse mortgages.
 
 ----
 id: response_step_4_coming_soon
 ----
-**Los Angeles County** is launching a navigator program. This program is made possible through philanthropic partnerships and private industry. The goal is to provide families with personal support related to insurance, financing, and permits. The **Blueprint for Rebuilding** identifies rebuild navigators as a major innovation to reduce barriers for survivors. We also heard that renters asked to not be left out. **Los Angeles County’s Fire Recovery Fund** includes direct rental assistance, and county supervisors are reviewing stronger anti-gouging protections for tenants in fire zones. The **Blueprint for Rebuilding** affirms renters must be supported alongside homeowners.
+**Los Angeles County** is working with the State and philanthropy to launch a program to help people navigate recovery processes. Families will receive personalized help with insurance, financing, and permits. The **Blueprint for Rebuilding** says navigators are a major innovation in reducing barriers.
 
-The **LA County Department of Mental Health**, and local partners are using feedback from an earlier phase of this engagement. They are funding shared community spaces where survivors can access free counseling and trauma support groups. The **Blueprint for Rebuilding** affirms that mental health services are a critical part of community resilience.
+Additionally, we listened to renters when they asked us to not leave them out. The **Los Angeles County’s Fire Recovery Fund** includes direct rental assistance. **County supervisors** are reviewing stronger anti-gouging protections for tenants in fire zones.
 
+The **Blueprint for Rebuilding** highlights the coordinated effort from **County**, **State**, and philanthropy to provide residents with “bridge funding” to cover near-term costs to survive and begin rebuilding that are not covered by other funding sources.
 
 
 ----
 id: response_sidebar_4
 ----
-Residents asked for aid without barriers during the agenda-setting phase. **Los Angeles County**, working with community organizations, delivered direct payments even to undocumented residents to ensure no one was excluded. The **Blueprint for Rebuilding** highlights this as a milestone in equitable recovery. Also, the **California Department of Insurance** enforces a one-year moratorium preventing insurers from canceling fire coverage after a declared disaster, giving survivors time to rebuild.
+Residents asked for aid without barriers during the agenda-setting phase of this engagement. **Los Angeles County** then provided language application support and direct payments through the LA Region Worker Relief Fund, including to undocumented residents. The county, with support from community groups, made sure not to exclude people. Also, the **California Department of Insurance** enforces a one-year moratorium. This means that insurers cannot cancel coverage after a declared disaster. Fire survivors have time to rebuild.
+
+The **Blueprint for Rebuilding** highlights the payments as a milestone in equitable recovery.
 
 ----
 id: response_step_5
-title: Permitting teams
+title: Accelerating permitting and inspections
 icon: house-orange.svg
 ----
 
 ----
 id: response_step_5_action_now
 ----
-One-stop rebuild centers are now open, where **County and City staff** from multiple departments sit together to provide over-the-counter approvals and personal guidance. **County and State leaders** have also waived costly non-safety building requirements to remove hurdles for survivors. The **Blueprint for Rebuilding** identifies these dedicated permitting teams as a cornerstone of recovery
+The County has created One-Stop Permit Centers in areas hit by fire. This includes Altadena and Pacific Palisades. These centers offer residents in-person help from various County agencies. City residents can utilize the One-Stop Rebuilding Center at 1828 Sawtelle Blvd. County residents can apply for permits online using the EPIC-LA platform. This platform offers a unified application and review process. The goal is to make it easier to navigate. The County has also started its surge plan. It’s reallocating staff to meet its plan check and zoning review timelines.
 
 ----
 id: response_step_5_coming_soon
 ----
-**The County** is preparing pre-approved fire-resistant home designs and batch permit reviews that will be available later in 2025. Surge staffing will be added if wait times rise. As noted in the **Blueprint for Rebuilding**, pre-approved plans and flexible staffing ensure survivors can move forward without delays.
+The County is accelerating permitting and inspection through fast tracks. The county is also maintaining safety and code compliance while expediting rebuilds. This includes expanding the catalog of pre-approved plans. It’s bundling reviews for similar projects. It’s also increasing self-certification for licensed architects and engineers.
+
+The County is increasing surge capacity. They are expanding the AI eCheck pilot with Archistar. They are also growing digital and remote inspections. Additionally, they are adding plan checkers and inspectors to manage higher volumes.
+
 
 ----
 id: response_sidebar_5
 ----
-Debris from the 2025 fires was cleared in just six months — the fastest large-scale residential cleanup in U.S. history — thanks to the **U.S. Army Corps of Engineers**, **Cal OES**, **Los Angeles County Public Works**, and emergency orders signed by **Governor Newsom**. The **Blueprint for Rebuilding** notes this unprecedented pace as the foundation for rapid rebuilding.
+Federal, state, and local teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history. This is thanks to unprecedented partnership among City, County, State, and federal agencies, including the U.S. Army Corps of Engineers. Governor Newsom signed emergency orders.
+
+The **Blueprint for Rebuilding** applauds this work. The publication said the unprecedented pace is the foundation for rapid rebuilding
 
 ----
 id: findings_how_we_did_the_analysis
