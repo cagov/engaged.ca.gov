@@ -1,5 +1,4 @@
 <script>
-let topic_chart_setup = false;
 const use_LENIS = true;
 const use_MARKERS = false;
 
@@ -54,20 +53,38 @@ document.addEventListener('DOMContentLoaded', function() {
         anticipatePin: true,
         markers: use_MARKERS, // Enable markers for debugging
         onUpdate: (self) => {
+          {# if (narrativeDisplay && narrativeDisplay.canvas.style.opacity == 0) {
+            narrativeDisplay.fadeIn();
+          } #}
           const t = self.progress; // 0 to 1
-          animate_narrative(t, 1);
+          if (narrativeDisplay) {
+            narrativeDisplay.animate_narrative(narrativeDisplay.scrollBack ? 1 : t, 1);
+          }
         },
         onLeave: (self) => {
           if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = false;
             narrativeDisplay.fadeOut();
           }
         },
         onEnter: (self) => {
           if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = false;
             narrativeDisplay.fadeIn();
           }
         },
-      }
+        onEnterBack: (self) => {
+          if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = true;
+            narrativeDisplay.fadeIn();
+          }
+        },
+        onLeaveBack: (self) => {
+          if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = true;
+            narrativeDisplay.fadeOut();
+          }
+        }      }
   });
   
   gsap.to({}, {
@@ -81,18 +98,38 @@ document.addEventListener('DOMContentLoaded', function() {
         markers: use_MARKERS, // Disable markers for pin trigger
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
-          animate_narrative(t, 2);
+          if (narrativeDisplay) {
+            narrativeDisplay.animate_narrative(narrativeDisplay.scrollBack ? 1 : t, 2);
+          }
         },
         onLeave: (self) => {
+          console.log("got leave #2");
           if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = false;
             narrativeDisplay.fadeOut();
           }
         },
         onEnter: (self) => {
+          console.log("got enter #2");
           if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = false;
             narrativeDisplay.fadeIn();
           }
         },
+        onEnterBack: (self) => {
+          console.log("got enter back #2");
+          if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = true;
+            narrativeDisplay.fadeIn();
+          }
+        },
+        onLeaveBack: (self) => {
+          console.log("got enter back #2");
+          if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = true;
+            narrativeDisplay.fadeOut();
+          }
+        }
       }
     });
 
@@ -138,18 +175,34 @@ document.addEventListener('DOMContentLoaded', function() {
         markers: use_MARKERS, // Enable markers for debugging
         onUpdate: (self) => {
           const t = self.progress; // 0 to 1
-          animate_narrative(t, 3);
+          if (narrativeDisplay) {
+            narrativeDisplay.animate_narrative(narrativeDisplay.scrollBack ? 1 : t, 3);
+          }
         },
         onLeave: (self) => {
           if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = false;
             narrativeDisplay.fadeOut();
           }
         },
         onEnter: (self) => {
           if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = false;
             narrativeDisplay.fadeIn();
           }
         },
+        onEnterBack: (self) => {
+          if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = true;
+            narrativeDisplay.fadeIn();
+          }
+        },
+        onLeaveBack: (self) => {
+          if (narrativeDisplay) {
+            narrativeDisplay.scrollBack = true;
+            narrativeDisplay.fadeOut();
+          }
+        }
       }
     });
 
