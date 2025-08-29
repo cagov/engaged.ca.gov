@@ -415,13 +415,13 @@ function animate_step_1(t, ctx) {
       particle.options.scale = mapv(t,0,1,0.1,1);
     });
 
-    let alpha;
+    {# let alpha;
     if (t < 0.1) {
         alpha = mapv(t, 0, 0.1, 0, 1);
     } else {
         alpha = 1;
     }
-    ctx.canvas.style.opacity = alpha;
+    ctx.canvas.style.opacity = alpha; #}
     canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
     canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
 
@@ -608,13 +608,13 @@ function animate_step_2(t, ctx) {
     // TODO: implement animation for step 2
     // console.log("animate_step_2", t, "nbr particles", particles_2.length);
     let alpha;
-    if (t < 0.1) {
+    {# if (t < 0.1) {
         alpha = mapv(t, 0, 0.1, 0, 1);
     } else {
         alpha = 1;
     }
     alpha = 1;
-    ctx.canvas.style.opacity = alpha;
+    ctx.canvas.style.opacity = alpha; #}
 
     particles_2.forEach(particle => {
         particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
@@ -759,14 +759,14 @@ function animate_step_3(t, ctx) {
     let canvas_width = narrativeDisplay.canvas.width / narrativeDisplay.retinaScale;
     let canvas_height = narrativeDisplay.canvas.height / narrativeDisplay.retinaScale;
 
-    let alpha;
+    {# let alpha;
     if (t < 0.1) {
         alpha = mapv(t, 0, 0.1, 0, 1);
     } else {
         alpha = 1;
     }
     alpha = 1;
-    ctx.canvas.style.opacity = alpha;
+    ctx.canvas.style.opacity = alpha; #}
 
     let opacity_peak = 0.6;
 

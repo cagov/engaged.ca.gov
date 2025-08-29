@@ -175,6 +175,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // div.style.transform = `scale(${opacity})`;
           }
         },
+        onLeave: (self) => {
+          if (narrativeDisplay) {
+            narrativeDisplay.fadeOut();
+          }
+        },
       }
     });
 
@@ -206,7 +211,12 @@ document.addEventListener('DOMContentLoaded', function() {
               consensusChart.consensus_chart_phase(1);
             }
           }
-        }
+        },
+        onEnter: (self) => {
+          if (narrativeDisplay) {
+            narrativeDisplay.fadeOut();
+          }
+        },
       }
     }); #}
 
@@ -255,7 +265,13 @@ document.addEventListener('DOMContentLoaded', function() {
               consensusChart.consensus_chart_phase(3);
             }
           }
-        }
+        },
+        onEnter: (self) => {
+          if (narrativeDisplay) {
+            narrativeDisplay.fadeOut();
+          }
+        },
+
       }
     });
 
