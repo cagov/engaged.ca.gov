@@ -544,14 +544,20 @@ class CanvasOutlineDrawer {
                 ctx.fillStyle = particle.options.bg_color;
                 ctx.fill();
                 break;
-            case 2: // TEXT
+            case 2: // TEXT - we use a larger font at 1/2 scale which produces slightly better looking text
                 let lines = particle.options.text.split('/');
-                ctx.font = "italic 600 32px Noto Sans Display";
+                ctx.font = "italic 600 64px Noto Sans Display";
                 ctx.textAlign = "center";
                 ctx.fillStyle = '#868686';
                 ctx.textBaseline = "middle";
                 for (let i = 0; i < lines.length; i++) {
-                    ctx.fillText(lines[i], 0, i * 50 - 20);
+                    let x = 0;
+                    let y = i*50 - 20;
+                    ctx.save();
+                    ctx.translate(x,y);
+                    ctx.scale(0.5,0.5);
+                    ctx.fillText(lines[i], 0, 0);
+                    ctx.restore();
                 }
                 break;
             }
