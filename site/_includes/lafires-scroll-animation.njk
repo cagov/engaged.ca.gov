@@ -129,36 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-  // Opacity trigger - handles the fade in/out animation
-  gsap.to({}, {
-      scrollTrigger: {
-        trigger: "#narrative-wrapper-2",
-        start: "middle bottom", // when middle hits bottom of viewport
-        end: "bottom top+=140",   // when bottom edge hits top of viewport
-        scrub: true,
-        pin: false, // No pinning for this trigger
-        markers: use_MARKERS, // Enable markers for debugging opacity
-        onUpdate: (self) => {
-          const t = self.progress; // 0 to 1
-          let opacity;
-          if (t < 0.5) {
-            opacity = clamp(mapv(t, 0, 0.3, 0, 1), 0, 1);
-          } else {
-            opacity = clamp(mapv(t, 0.7, 1, 1, 0), 0, 1);
-          }
-          let div = document.querySelector("#narrative-wrapper-2");
-          if (div) {
-            div.style.opacity = opacity;
-            // div.style.transform = `scale(${0.5+opacity/2})`;
-          }
-          let divPre = document.querySelector("#narrative-wrapper-1");
-          if (divPre) {
-            divPre.style.opacity = 1 - opacity;
-            // divPre.style.transform = `scale(${1 - opacity})`;
-          }
-        }
-      }
-    });
 
   gsap.to({}, {
       scrollTrigger: {
@@ -202,6 +172,40 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
+
+  // Opacity trigger - handles the fade in/out animation
+  gsap.to({}, {
+      scrollTrigger: {
+        trigger: "#narrative-wrapper-2",
+        start: "middle bottom", // when middle hits bottom of viewport
+        end: "bottom top+=140",   // when bottom edge hits top of viewport
+        scrub: true,
+        pin: false, // No pinning for this trigger
+        markers: use_MARKERS, // Enable markers for debugging opacity
+        onUpdate: (self) => {
+          const t = self.progress; // 0 to 1
+          let opacity;
+          if (t < 0.5) {
+            opacity = clamp(mapv(t, 0, 0.3, 0, 1), 0, 1);
+          } else {
+            opacity = clamp(mapv(t, 0.7, 1, 1, 0), 0, 1);
+          }
+          let div = document.querySelector("#narrative-wrapper-2");
+          if (div) {
+            div.style.opacity = opacity;
+            // div.style.transform = `scale(${0.5+opacity/2})`;
+          }
+          let divPre = document.querySelector("#narrative-wrapper-1");
+          if (divPre) {
+            divPre.style.opacity = 1 - opacity;
+            // divPre.style.transform = `scale(${1 - opacity})`;
+          }
+        }
+      }
+    });
+
+
+
   gsap.to({}, {
       scrollTrigger: {
         trigger: "#narrative-wrapper-3",
@@ -232,43 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-
-
-  {# gsap.to({}, {
-      scrollTrigger: {
-        trigger: "#findings-top-options-1",
-        start: "center center+=50",
-        end: "+=900", // scroll range for animation
-        scrub: true,
-        pin: true,
-        markers: use_MARKERS, // Enable markers for debugging
-      }
-    });
-
-  gsap.to({}, {
-      scrollTrigger: {
-        trigger: "#findings-top-options-2",
-        start: "center center+=50",
-        end: "+=900", // scroll range for animation
-        scrub: true,
-        pin: true,
-        markers: use_MARKERS, // Enable markers for debugging
-        onUpdate: (self) => {
-          const t = self.progress; // 0 to 1
-          if (consensusChart) {
-            if (consensusChart.phase != 1) {
-              consensusChart.consensus_chart_phase(1);
-            }
-          }
-        },
-        onEnter: (self) => {
-          if (narrativeDisplay) {
-            narrativeDisplay.fadeOut();
-          }
-        },
-      }
-    }); #}
-
+ 
 
   gsap.to({}, {
       scrollTrigger: {
