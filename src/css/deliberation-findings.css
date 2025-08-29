@@ -55,6 +55,7 @@ div.center-container {
 .style-h2 {
   font-weight: 900;
   font-size: 37px;
+  color: #0f152f;
   @media (max-width: 720px) {
     font-size: 27px;
   }
