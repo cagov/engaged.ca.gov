@@ -24,6 +24,14 @@ function ease_in_out(t) {
   return k;
 }
 
+function ease_in(t) {
+  return t*t;
+}
+
+function ease_out(t) {
+  return 1-ease_in(1-t);
+}
+
 function compute_color(r) {
   // let r = cx/1200;
   let hue,sat,val;

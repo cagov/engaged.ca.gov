@@ -327,10 +327,11 @@ class CanvasOutlineDrawer {
 
     animate_step_1(t) {
         let ctx = this.ctx;
+        let adjT = clamp(mapv(t,0,.5,0,1),0,1);
 
         this.particles_1.forEach(particle => {
-        particle.options.opacity = mapv(t,0,1,0,1); 
-        particle.options.scale = mapv(t,0,1,0.1,1);
+        particle.options.opacity = mapv(adjT,0,1,0,1); 
+        particle.options.scale = mapv(ease_out(t),0,1,0.1,1);
         });
 
         let canvas_width = this.canvas.width / this.retinaScale;
@@ -343,8 +344,8 @@ class CanvasOutlineDrawer {
             let ty = particle.y + particle.options.y_offset;
             let sx = center_x + (tx - center_x) * 1.5;
             let sy = center_y + (ty - center_y) * 1.5;
-            let x = mapv(t,0,1,sx,tx);
-            let y = mapv(t,0,1,sy,ty);
+            let x = mapv(adjT,0,1,sx,tx);
+            let y = mapv(adjT,0,1,sy,ty);
             let scale = particle.options.scale;
             let balloon_size = particle.options.balloon_size;
             let bg_color = particle.options.bg_color;
@@ -506,6 +507,8 @@ class CanvasOutlineDrawer {
                 'ox': x,
                 'oy': y,
                 'travel_angle': Math.PI*2*Math.random(),
+                'vx': 0,
+                'vy': 0,
             }
             this.particles_2.push(new Particle(x, y, options));
         }
@@ -606,6 +609,8 @@ class CanvasOutlineDrawer {
                 'circle_size': circle_size,
                 'circle_type': circle_type,
                 'bg_color': bg_color,
+                'vx': 0,
+                'vy': 0,
             }
             this.particles_3.push(new Particle(x, y, options));
         }
@@ -630,6 +635,9 @@ class CanvasOutlineDrawer {
                 'ox': x,
                 'oy': y,
                 'travel_angle': Math.PI*2*Math.random(),
+                'uid': i,
+                'vx': 0,
+                'vy': 0,
             }
             this.particles_3.push(new Particle(x, y, options));
         }
@@ -649,12 +657,58 @@ class CanvasOutlineDrawer {
         }
     }
 
+    tdot_distance(da, db) {
+        let dx = da.x - db.x;
+        let dy = da.y - db.y;
+        return Math.sqrt(dx*dx + dy*dy);
+    }
+    tdot_angle(da, db) {
+        let dx = db.x - da.x;
+        let dy = db.y - da.y;
+        return Math.atan2(dy, dx);
+    }
+
+
     animate_step_3(t) {
         let ctx = this.ctx;
         let canvas_width = this.canvas.width / this.retinaScale;
         let canvas_height = this.canvas.height / this.retinaScale;
 
-        let opacity_peak = 0.6;
+        const opacity_peak = 0.6;
+
+        const maxRepelForce = 0.1;
+        const repelScale = 1.2; // 1.1
+
+
+        /****
+
+        let topic_particles = this.particles_3.slice(this.first_topic_particle);
+        let topic_particles_count = topic_particles.length;
+        let min_distance = 60 * repelScale;
+        console.log("topic_particles_count", topic_particles_count);
+        // apply forces
+        topic_particles.forEach(dot => {
+            dot.options.vx *= 0.95;
+            dot.options.vy *= 0.95;
+            let fx = 0;
+            let fy = 0;
+            let neighbors = topic_particles.filter(d => d.uid != dot.uid && this.tdot_distance(d, dot) < min_distance);
+            neighbors.forEach(neb => {
+                console.log("push");
+                let dist = this.tdot_distance(neb, dot);
+                let angle = this.tdot_angle(neb, dot);
+                // To make force 0 at d = min_distance, and increase as d gets smaller:
+                // We'll use: force = (min_distance - d) / min_distance, but clamp to >= 0
+                let force = clamp((min_distance - dist) / min_distance, 0, maxRepelForce);
+                fx += force * Math.cos(angle);
+                fy += force * Math.sin(angle);
+            });
+            dot.options.vx += fx;
+            dot.options.vy += fy;
+            dot.x += dot.options.vx;
+            dot.y += dot.options.vy;
+        });
+        ***/
 
         this.particles_3.forEach(particle => {
             let x = particle.x;
