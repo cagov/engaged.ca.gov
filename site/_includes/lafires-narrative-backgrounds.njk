@@ -463,14 +463,14 @@ class CanvasOutlineDrawer {
         let canvas_width = this.canvas.width / this.retinaScale;
         let canvas_height = this.canvas.height / this.retinaScale;
 
-        let phrases = ['Utilities', 'Community/Support', "Financial/support", "Emergency/preparedness", 
-                "Fire/proofing", "Building/permits"];
+        let phrases = ['Utilities', 'Community/Support', "Financial/support",   
+        "Emergency/preparedness", "Fire/proofing", "Building/permits"];
 
         let dot_colors = ['#98B8C8', '#EFB389'];
 
 
         this.particles_2 = [];
-        let nbr_particles = 21;
+        let nbr_particles = 23;
         let min_ellipse_radius_x = canvas_width * 0.4;
         let max_ellipse_radius_x = canvas_width * 0.45;
         let min_ellipse_radius_y = (canvas_height-180) * 0.4;
@@ -492,7 +492,7 @@ class CanvasOutlineDrawer {
             let circle_type = Math.floor(Math.random()*2);
             let text = '';
             let bg_color = dot_colors[Math.floor(Math.random()*dot_colors.length)];
-            if (i % 3 == 0) {
+            if (i % 4 == 0) {
                 circle_type = 2;
                 text = phrases[text_index];
                 text_index = (text_index + 1) % phrases.length;
@@ -518,8 +518,8 @@ class CanvasOutlineDrawer {
         let ctx = this.ctx;
 
         this.particles_2.forEach(particle => {
-            particle.options.opacity = Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*this.cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
-            particle.options.scale = mapv(t,0,1,this.k_minZoom,this.k_maxZoom)*particle.options.opacity;
+            particle.options.opacity = 0.8; // Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*this.cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
+            particle.options.scale = mapv(t,0,1,this.k_minZoom,this.k_maxZoom)*0.8;
             let dist = t*50;
             let angle = particle.options.travel_angle;
             particle.x = particle.options.ox + dist * Math.cos(angle);
@@ -619,8 +619,8 @@ class CanvasOutlineDrawer {
             let angle = i * 2 * Math.PI / nbr_topics;
             let ellipse_radius_x = mapv(Math.random(),0,1,min_ellipse_radius_x,max_ellipse_radius_x);
             let ellipse_radius_y = mapv(Math.random(),0,1,min_ellipse_radius_y,max_ellipse_radius_y);
-            let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle);
-            let y = ellipse_center_y + ellipse_radius_y * Math.sin(angle);
+            let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle) * (i % 2 == 0? 1.12 : 0.85);
+            let y = ellipse_center_y + ellipse_radius_y * Math.sin(angle) * (i % 2 == 0? 1.12 : 0.85);
             let circle_size = 30*scale;
             let circle_type = 2;
             let bg_color = dot_colors[Math.floor(Math.random()*dot_colors.length)];
