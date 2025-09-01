@@ -22,6 +22,8 @@ Note: audienceId is referred to as list_id in the mailchimp API docs
     API docs for interests https://mailchimp.com/developer/marketing/api/interests/
  */
 
+/* @todo create noJS version with embed code from mc */
+
 class UnifiedForm extends window.HTMLElement {
   constructor() {
     super();
@@ -33,6 +35,7 @@ class UnifiedForm extends window.HTMLElement {
     this.discussionCheckboxes = this.querySelectorAll(
       '[data-form-section="discussion"] input',
     );
+    this.config = this.mailchimpConfig();
   }
   connectedCallback() {
     this.hide(this.sectionState);
@@ -101,8 +104,9 @@ class UnifiedForm extends window.HTMLElement {
 
   getAudienceID = (data) => {
     const audienceID = Object.values(data).some((value) => value === "state");
-    const config = this.mailchimpConfig();
-    return audienceID ? config.state.audience_id : config.engca.audience_id;
+    return audienceID
+      ? this.config.state.audience_id
+      : this.config.engca.audience_id;
   };
 
   getInterests = (data) => {
@@ -110,7 +114,7 @@ class UnifiedForm extends window.HTMLElement {
 
     for (const [key, value] of Object.entries(data)) {
       if (key.includes("interest-")) {
-        const interestId = this.mailchimpConfig.interests[value];
+        const interestId = this.config.interests[value];
         interests[interestId] = true;
       }
     }
