@@ -38,6 +38,10 @@ class CanvasOutlineDrawer {
         // window.addEventListener('scroll', () => this.draw());
         window.addEventListener('resize', () => {
             this.setupCanvas();
+            init_narrative_backgrounds_step_1();
+            init_narrative_backgrounds_step_2();
+            init_narrative_backgrounds_step_3();
+            this.canvas.style.opacity = 0;
             this.draw();
         });
     }
