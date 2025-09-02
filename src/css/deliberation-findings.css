@@ -201,6 +201,7 @@ section#findings-top-options {
   text-wrap: balance;
   margin: 0;
   text-align: center;
+  min-width: 62px;
   max-width: 220px; 
 
   font-weight: 600;
@@ -697,7 +698,18 @@ canvas#ring chart-canvas {
 /* RESPONSE SECTION */
 .response-indent {
   padding-left: 80px;
+  @media (max-width: 720px) {
+    padding-left: 50px;
+  }
 }
+.response-indent-desktop {
+  padding-left: 80px;
+  @media (max-width: 720px) {
+    padding-left: 0px;
+  }
+}
+
+
 .response-item-title-container {
   display: flex;
   flex-direction: column;
