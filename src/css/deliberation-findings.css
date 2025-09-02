@@ -203,6 +203,7 @@ section#findings-top-options {
   margin: 0;
   text-align: center;
   max-width: 220px; 
+  min-width: 62px;
 
   font-weight: 600;
   font-size: 18px;
