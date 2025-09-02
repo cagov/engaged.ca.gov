@@ -34,21 +34,25 @@ class UnifiedForm extends window.HTMLElement {
     this.config = this.mailchimpConfig();
 
     // Submission.
-    this.sectionState = this.querySelector('[data-form-section="state"]');
+    this.sectionEmployee = this.querySelector('[data-form-section="employee"]');
     this.sectionFires = this.querySelector('[data-form-section="fires"]');
     this.email = this.querySelector("input[type='email']");
     this.discussionCheckboxes = this.querySelectorAll(
       '[data-form-section="discussion"] input',
     );
+    this.employeeCheckboxes = this.querySelectorAll(
+      '[data-form-section="employee"] input',
+    );
 
     // Messages.
     this.apiError = this.querySelector("#apiError");
     this.errorEmail = this.querySelector("#emailError");
+    this.errorEmployee = this.querySelector("#errorEmployee");
     this.successTemplate = this.querySelector("template#form-success-msg");
     this.successLiveArea = this.querySelector("engca-form-success");
   }
   connectedCallback() {
-    this.hide(this.sectionState);
+    this.hide(this.sectionEmployee);
     this.hide(this.sectionFires);
 
     // Email event listener.
@@ -56,7 +60,7 @@ class UnifiedForm extends window.HTMLElement {
       this.validateEmail(e);
     });
 
-    // Checkbox event listeners.
+    // Discussion checkbox event listeners.
     for (const checkbox of this.discussionCheckboxes) {
       checkbox.addEventListener("change", (e) => {
         this.handleCheckboxChange(e);
@@ -80,15 +84,15 @@ class UnifiedForm extends window.HTMLElement {
       audience_name: "Engaged California",
       audience_id: "61200a6dda",
     },
-    state: {
+    employee: {
       audience_name: "EngCA - State Employees",
       audience_id: "417d16b2c0",
     },
     interests: {
       eaton: "1552878c1b",
       palisades: "40c0f946cd",
-      stateNo: "",
-      stateYes: "0f531f3ce0",
+      employeeNo: "",
+      employeeYes: "0f531f3ce0",
     },
   };
   testConfig = {
@@ -96,20 +100,20 @@ class UnifiedForm extends window.HTMLElement {
       audience_name: "Engaged California(sandbox)",
       audience_id: "23461fc80f",
     },
-    state: {
+    employee: {
       audience_name: "EngCA - State Employees(sandbox)",
       audience_id: "23461fc80f",
     },
     categories: {
-      state: "29534fdf65",
+      employee: "29534fdf65",
       fires: "02b58955d5",
     },
     interests: {
       eaton: "22329966e2",
       palisades: "f6c04a4be0",
       nope: "36bcda8f6f",
-      stateYes: "3f58175db3",
-      stateNo: "eb7da3ee1e",
+      employeeYes: "3f58175db3",
+      employeeNo: "eb7da3ee1e",
     },
   };
 
@@ -118,9 +122,11 @@ class UnifiedForm extends window.HTMLElement {
     this.isTest() ? this.testConfig : this.defaultConfig;
 
   getAudienceID = (data) => {
-    const audienceID = Object.values(data).some((value) => value === "state");
+    const audienceID = Object.values(data).some(
+      (value) => value === "employee",
+    );
     return audienceID
-      ? this.config.state.audience_id
+      ? this.config.employee.audience_id
       : this.config.engca.audience_id;
   };
 
@@ -148,8 +154,10 @@ class UnifiedForm extends window.HTMLElement {
     const { checked, value } = e.target;
 
     switch (value) {
-      case "state":
-        checked ? this.show(this.sectionState) : this.hide(this.sectionState);
+      case "employee":
+        checked
+          ? this.show(this.sectionEmployee)
+          : this.hide(this.sectionEmployee);
         break;
       case "fires":
         checked ? this.show(this.sectionFires) : this.hide(this.sectionFires);
