@@ -33,9 +33,10 @@ buttonText: Skip to the action plan
 
 # LA aligns on recovery plans
 
-In a unique two-phase community engagement process, more than 900 community members gathered in virtual town halls to develop an action plan to recover from the devastating Los Angeles wildfires in January 2025. 
+In a first-of-its-kind 2-phase community engagement process, more than 900 community members gathered in virtual town halls to develop an action plan to recover from the devastating Los Angeles wildfires in January 2025. 
 
 The action plan, developed through online deliberation sessions over a 7-month period, reflects priorities directly from those who lost homes and businesses. The priorities they set – focusing on immediate community support and long-term infrastructure improvements – will guide state and local officials toward full recovery.
+
 
 ----
 id: findings_narrative_step_1
@@ -307,7 +308,11 @@ icon: construction-orange.svg
 ----
 id: response_step_1_action_now
 ----
-Crews are working to bury more than 150 miles of power lines within the burn scar. The **County** and **State** are teaming up with power and telecom companies to plan for undergrounding. **Governor Gavin Newsom** signed an executive order in March 2025 to fast-track this work. The **Blueprint for Rebuilding** says undergrounding is central to cutting wildfire risks.
+Crews are working to bury more than 150 miles of power lines within the burn scar. The **County** and **State** are teaming up with power and telecom companies to plan for undergrounding. **Governor Gavin Newsom** signed an executive order in March 2025 to fast-track this work. 
+
+Additionally, Los Angeles Mayor Karen Bass issued an executive order to help Palisades residents expedite rebuilding with fire-resistant materials and climate-resilient infrastructure. This includes hardening utilities for power reliability during severe weather.
+
+The **Blueprint for Rebuilding** says undergrounding is central to cutting wildfire risks.
 
 ----
 id: response_step_1_coming_soon
@@ -329,8 +334,11 @@ icon: hydrant-orange.svg
 ----
 id: response_step_2_action_now
 ----
-The **Los Angeles County Fire Department** is working with the **Department of Public Works** and **6 local water companies**. Together, they are assessing the availability of fire flow in the fire areas. A new process has been created to streamline the fire flow form. It will speed up the timeline, let homeowners stay out of the process, and save them money. The **water companies**, **Building and Safety**, and **LA County Fire** will handle this new process. The **Fire Department** will update the fire code to meet current state standards. The **water companies** will upgrade their systems. All this will help homeowners rebuild.
+The **Los Angeles Department of Water and Power** has filled over 80 water storage facilities to their highest level. Backup pumps are fueled and ready at each pumping station as a backup to the main pumps. They have filled their five water tenders, each with at least 4,000 gallons, and have them on standby for the LAFD if needed. Four reservoirs hold billions of gallons of non-potable water for aerial firefighting.
 
+In the Pacific Palisades area, two local reservoirs are dedicated to aerial firefighting: the Encino Reservoir and the Lower Stone Canyon Reservoir.
+
+The **Los Angeles County Fire Department** is working with the **Department of Public Works** and **6 local water companies** to assess the availability of fire flow in the fire areas. A newly created process will speed up the timeline. It will not require homeowners to be part of the process. And it will save them money. The **water companies**, the **Department of Building and Safety**, and **LA County Fire** will handle this new process. The **Fire Department** will update the fire code to meet current state standards. The **water companies** will upgrade their systems.
 ----
 id: response_step_2_coming_soon
 ----
@@ -349,12 +357,18 @@ icon: communication-orange.svg
 ----
 id: response_step_3_action_now
 ----
-There are new rules that require towers to have 72 hours of backup power. The rule was set by the **California Public Utilities Commission**. It applies to towers in zones where fire is a high threat. This kept most towers online during the January fires. **County first responders** used their FirstNet network, backed by AT&T's mobile towers.
+There are new rules that require towers to have 72 hours of backup power. The rule was set by the **California Public Utilities Commission**. It applies to towers in zones where fire is a high threat. This kept most towers online during the January fires. **County first responders** used their FirstNet network, backed by AT&T's mobile towers. Telecommunication providers' continued investment in their infrastructure will improve emergency communication during disasters.There are new rules that require towers to have 72 hours of backup power.
+
+A steering committee focused on emergency communication will meet biweekly to discuss blockers and progress. The group is made up of representatives from the **Los Angeles Department of Water and Power**, the **Department of Emergency Management**, the **Department of Planning** and the **Los Angeles Fire Department**.
+
+The steering committee will coordinate with stakeholders from from **California State Parks**, **Los Angeles City Planning**, **Los Angeles Housing Department**, and **CalFire**. 
 
 ----
-id: response_sidebar_3
+id: response_step_3_coming_soon
 ----
-The wildfires in 2017 left thousands without phone service. This led to the **California Public Utilities Commission's** policy requiring backup power. Telecom providers had to install backup batteries at towers that would last 72 hours. That rule kept residents connected during the 2025 fires.
+Water supply system GIS layers will include water treatment plants, pump stations, tanks, and trunk lines. Evacuation information will feature the **Los Angeles Police Department’s** evacuation plans and tactics, along with specific Palisades plans and maps if available. Grid infrastructure and restoration data from the **Los Angeles Department of Water and Power** will be provided.
+
+Finally, **Los Angeles County**, with local, state, and federal partners, will continue to review emergency notification systems. The focus will be on improving effectiveness. This includes implementing recommendations from 3rd party reviewers.
 
 ----
 id: response_step_4
