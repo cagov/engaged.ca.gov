@@ -33,13 +33,23 @@ class UnifiedForm extends window.HTMLElement {
     this.env = this.form.getAttribute("data-env");
     this.config = this.mailchimpConfig();
 
-    // Submission.
-    this.sectionEmployee = this.querySelector('[data-form-section="employee"]');
-    this.sectionFires = this.querySelector('[data-form-section="fires"]');
-    this.email = this.querySelector("input[type='email']");
+    // All discussions.
     this.discussionCheckboxes = this.querySelectorAll(
       '[data-form-section="discussion"] input',
     );
+
+    // Email.
+    this.email = this.querySelector("input[type='email']");
+
+    // Fires.
+    this.sectionFires = this.querySelector('[data-form-section="fires"]');
+    this.discussionFireCheckbox = this.querySelector('input[value="fires"]');
+    this.checkboxFireEaton = this.querySelector('input[value="eaton"]');
+    this.checkboxFirePalisades = this.querySelector('input[value="palisades"]');
+    this.checkboxFireNo = this.querySelector('input[value="no"]');
+
+    // Employee.
+    this.sectionEmployee = this.querySelector('[data-form-section="employee"]');
     this.discussionEmployeeCheckbox = this.querySelector(
       'input[value="employee"]',
     );
@@ -50,6 +60,7 @@ class UnifiedForm extends window.HTMLElement {
     this.apiError = this.querySelector("#apiError");
     this.errorEmail = this.querySelector("#emailError");
     this.errorEmployee = this.querySelector("#errorEmployee");
+    this.errorFire = this.querySelector("#errorFire");
     this.successTemplate = this.querySelector("template#form-success-msg");
     this.successLiveArea = this.querySelector("engca-form-success");
   }
@@ -156,10 +167,28 @@ class UnifiedForm extends window.HTMLElement {
 
   validationQueue = () => {
     let count = 0;
-    if (this.validateEmployeeRequired() !== "ok") {
+    if (
+      this.validateEmployeeRequired() !== "ok" ||
+      this.validateFireRequired() !== "ok"
+    ) {
       count++;
     }
     return count;
+  };
+  validateFireRequired = () => {
+    let ok = "ok";
+    if (
+      this.discussionFireCheckbox.checked &&
+      this.checkboxFireEaton.checked === false &&
+      this.checkboxFirePalisades.checked === false &&
+      this.checkboxFireNo.checked === false
+    ) {
+      ok = "not okay";
+      this.show(this.errorFire);
+    } else {
+      this.hide(this.errorFire);
+    }
+    return ok;
   };
   validateEmployeeRequired = () => {
     let ok = "ok";

@@ -49,6 +49,9 @@
       {{ radio.data('interest-fire', 'palisades','topic-los-angeles-fires-recovery-evacuation-palisades' | i18n, "required") }}
       {{ radio.data('interest-fire', 'no','topic-los-angeles-fires-recovery-no-evacuation' | i18n , "required" ) }}
     </ul>
+      <engca-form-error id="errorFire" hidden>
+        <strong>{{ formVars.label_fire_error }}</strong>
+      </engca-form-error>
     </div>
     {# - #}
 
@@ -62,6 +65,9 @@
         <li>{{ radio.data('interest-employee', 'employeeYes', formVars.label_yes, "required") }}</li>
         <li>{{ radio.data('interest-employee', 'employeeNo', formVars.label_no, "required") }}</li>
       </ul>
+      <engca-form-error id="errorEmployee" hidden>
+        <strong>{{ 'form-problem-state-employee-not-checked' | i18n }}</strong>
+      </engca-form-error>
     </div>
     {# - #}
 
@@ -70,9 +76,7 @@
       <strong>{{ 'form-problem-message' | i18n }}</strong>
       {{ 'form-problem-message-2' | i18n }}
     </engca-form-error>
-    <engca-form-error id="errorEmployee" hidden>
-      <strong>{{ 'form-problem-state-employee-not-checked' | i18n }}</strong>
-    </engca-form-error>
+
     {# - #}
 
     {# Submit. #}
