@@ -39,11 +39,11 @@
 
     {# Fires options. #}
     <div data-form-section="fires">
-    <label class="form-control-label" for="radio-group-label">
+    <legend class="form-control-label">
       <span aria-hidden="true">*</span>
       <span class="sr-only">{{ 'required-label' | i18n }}:</span>
       {{ 'topic-los-angeles-fires-recovery-evacuation-label' | i18n }}
-    </label>
+    </legend>
     <ul class="form-radio-list">
       {{ radio.merge_field_data('interest-fire', 'eaton', 'topic-los-angeles-fires-recovery-evacuation-eaton' | i18n, "required" ) }}
       {{ radio.merge_field_data('interest-fire', 'palisades','topic-los-angeles-fires-recovery-evacuation-palisades' | i18n, "required") }}
@@ -54,11 +54,11 @@
 
     {# State employee option. #}
     <div data-form-section="state">
-    <label class="form-control-label" for="radio-group-label">
+    <legend class="form-control-label">
       <span aria-hidden="true">*</span>
       <span class="sr-only">{{ formVars.label_state_question }}:</span>
       {{ formVars.label_state_question }}
-    </label>
+    </legend>
       <ul class="form-checkbox-list">
         <li>{{ checkbox.data('interest-stateYes', 'stateYes', formVars.label_yes) }}</li>
         <li>{{ checkbox.data('interest-stateNo', 'stateNo', formVars.label_no) }}</li>

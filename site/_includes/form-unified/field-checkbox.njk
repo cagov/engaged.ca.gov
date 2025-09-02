@@ -6,8 +6,8 @@ attributes - (String) Add a space separated list of attributes such as "checked 
 #}
 
 {% macro data(formKey, formValue, i8nkey, attributes) %}
-    <label class="form-control-label form-checkbox-label" for="{{ formKey }}">
-        <input type="checkbox" class="form-check-input" id="{{ formKey }}" name="{{ formKey }}" value="{{ formValue }}" {{ attributes }}>
+    <label class="form-control-label form-checkbox-label" for="{{ formValue }}">
+        <input type="checkbox" class="form-check-input" id="{{ formValue }}" name="{{ formKey }}" value="{{ formValue }}" {{ attributes }} >
         {{ i8nkey }}
     </label>
 {% endmacro %}
