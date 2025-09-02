@@ -40,9 +40,11 @@ class UnifiedForm extends window.HTMLElement {
     this.discussionCheckboxes = this.querySelectorAll(
       '[data-form-section="discussion"] input',
     );
-    this.employeeCheckboxes = this.querySelectorAll(
-      '[data-form-section="employee"] input',
+    this.discussionEmployeeCheckbox = this.querySelector(
+      'input[value="employee"]',
     );
+    this.employeeYesCheckbox = this.querySelector('input[value="employeeYes"]');
+    this.employeeNoCheckbox = this.querySelector('input[value="employeeNo"]');
 
     // Messages.
     this.apiError = this.querySelector("#apiError");
@@ -70,7 +72,9 @@ class UnifiedForm extends window.HTMLElement {
     // Submit event listener.
     this.form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      this.handleFormSubmit(e);
+      if (this.validationQueue() === 0) {
+        this.handleFormSubmit(e);
+      }
     });
   }
 
@@ -148,6 +152,28 @@ class UnifiedForm extends window.HTMLElement {
 
   show = (element) => {
     element.removeAttribute("hidden");
+  };
+
+  validationQueue = () => {
+    let count = 0;
+    if (this.validateEmployeeRequired() !== "ok") {
+      count++;
+    }
+    return count;
+  };
+  validateEmployeeRequired = () => {
+    let ok = "ok";
+    if (
+      this.discussionEmployeeCheckbox.checked &&
+      this.employeeYesCheckbox.checked === false &&
+      this.employeeNoCheckbox.checked === false
+    ) {
+      ok = "not okay";
+      this.show(this.errorEmployee);
+    } else {
+      this.hide(this.errorEmployee);
+    }
+    return ok;
   };
 
   handleCheckboxChange = (e) => {
