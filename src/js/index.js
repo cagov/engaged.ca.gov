@@ -175,9 +175,6 @@ class UnifiedForm extends window.HTMLElement {
   };
 
   handleFormSubmit = async (e) => {
-    if (this.validateEmail(e) === false) {
-      return;
-    }
     // Convert submission to mailchimp friendly format.
     const formData = new FormData(e.target);
     const calculatedData = Object.fromEntries(formData);
