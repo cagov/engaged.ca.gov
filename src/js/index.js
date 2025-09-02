@@ -27,32 +27,47 @@ Note: audienceId is referred to as list_id in the mailchimp API docs
 class UnifiedForm extends window.HTMLElement {
   constructor() {
     super();
+
+    // Config.
     this.form = this.querySelector("form");
     this.env = this.form.getAttribute("data-env");
+    this.config = this.mailchimpConfig();
+
+    // Submission.
     this.sectionState = this.querySelector('[data-form-section="state"]');
     this.sectionFires = this.querySelector('[data-form-section="fires"]');
     this.email = this.querySelector("input[type='email']");
     this.discussionCheckboxes = this.querySelectorAll(
       '[data-form-section="discussion"] input',
     );
-    this.config = this.mailchimpConfig();
+
+    // Messages.
+    this.apiError = this.querySelector("#apiError");
+    this.errorEmail = this.querySelector("#emailError");
+    this.successTemplate = this.querySelector("template#form-success-msg");
+    this.successLiveArea = this.querySelector("engca-form-success");
   }
   connectedCallback() {
     this.hide(this.sectionState);
     this.hide(this.sectionFires);
 
-    if (this.form) {
-      this.form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        this.handleFormSubmit(e);
-      });
-    }
+    // Email event listener.
+    this.email.addEventListener("focusout", (e) => {
+      this.validateEmail(e);
+    });
 
+    // Checkbox event listeners.
     for (const checkbox of this.discussionCheckboxes) {
       checkbox.addEventListener("change", (e) => {
         this.handleCheckboxChange(e);
       });
     }
+
+    // Submit event listener.
+    this.form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      this.handleFormSubmit(e);
+    });
   }
 
   // Configuration settings.
@@ -122,11 +137,11 @@ class UnifiedForm extends window.HTMLElement {
   };
 
   hide = (element) => {
-    element.classList.add("hidden");
+    element.setAttribute("hidden", "hidden");
   };
 
   show = (element) => {
-    element.classList.remove("hidden");
+    element.removeAttribute("hidden");
   };
 
   handleCheckboxChange = (e) => {
@@ -142,21 +157,43 @@ class UnifiedForm extends window.HTMLElement {
     }
   };
 
+  validateEmail = (e) => {
+    const email = e.target;
+
+    const emailIsValid = email.checkValidity();
+    if (emailIsValid) {
+      this.hide(this.errorEmail);
+      email.removeAttribute("aria-describedby");
+      email.removeAttribute("aria-invalid");
+    } else {
+      email.setAttribute("aria-describedby", "emailError");
+      email.setAttribute("aria-invalid", "true");
+      this.show(this.errorEmail);
+      email.focus();
+    }
+    return emailIsValid;
+  };
+
   handleFormSubmit = async (e) => {
+    if (this.validateEmail(e) === false) {
+      return;
+    }
+    // Convert submission to mailchimp friendly format.
     const formData = new FormData(e.target);
     const calculatedData = Object.fromEntries(formData);
     const dataToSend = {};
     dataToSend.audienceID = this.getAudienceID(calculatedData);
     dataToSend.email = this.email.value;
     dataToSend.interests = this.getInterests(calculatedData);
-
     const submitString = JSON.stringify(dataToSend);
 
+    // Check environment.
     console.log("istest", this.isTest());
     const postJsonUrl = this.isTest
       ? "http://127.0.0.1:3001/api/subscribe"
       : "https://engaged.ca.gov/api/subscribe";
 
+    // Send data and receive response.
     const response = await fetch(postJsonUrl, {
       method: "POST",
       headers: {
@@ -166,6 +203,14 @@ class UnifiedForm extends window.HTMLElement {
       body: submitString,
       mode: "cors",
     });
+
+    if (response.ok) {
+      this.successLiveArea.appendChild(this.successTemplate.content);
+      this.hide(this.form);
+    } else {
+      this.show(this.apiError);
+      this.apiError.focus();
+    }
   };
 }
 
@@ -180,7 +225,7 @@ customElements.define("engca-form-unified", UnifiedForm);
  * itself whenever contents are updated.
  *
  * The error messages use hide-and-show techniques with the "hidden"
- * attribute, auto-focus, and other aria attributes.
+ * attribute, autofocus, and other aria attributes.
  */
 class JoinConversationForm extends window.HTMLElement {
   connectedCallback() {
