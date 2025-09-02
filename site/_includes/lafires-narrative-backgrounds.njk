@@ -169,6 +169,8 @@ class CanvasOutlineDrawer {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("initialing narrativeDrawer");
+
     narrativeDrawer = new CanvasOutlineDrawer();
 });
 
@@ -242,6 +244,9 @@ function shuffled_order(nbr_particles) {
 
 function init_narrative_backgrounds_step_1() {
     const canvas = narrativeDrawer.canvas;
+    if (canvas == null) {
+        return;
+    }
     // console.log("init 1, canvas size", canvas.width, canvas.height);
 
     // Get the width and height in pixels of div#narrative-wrapper-1 and set canvas size to match
@@ -249,11 +254,13 @@ function init_narrative_backgrounds_step_1() {
     let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
     let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
 
+    let menuHeight = window.innerWidth < 992? 60 : 180;
+
     particles_1 = [];
     let ellipse_radius_x = canvas_width * 0.4;
     let ellipse_radius_y = (canvas_height-180) * 0.4;
     let ellipse_center_x = canvas_width / 2;
-    let ellipse_center_y = canvas_height / 2 + 90;
+    let ellipse_center_y = (canvas_height+menuHeight) / 2;
     let balloon_colors = ['#98B8C8', '#E6F0F5', '#EFB389'];
     let text_color = '#868686';
     // produce order array (integers from 0->nbr_particles) which is shuffled.
@@ -408,6 +415,7 @@ function init_narrative_backgrounds_step_1() {
 }
 
 function animate_step_1(t, ctx) {
+    let menuHeight = window.innerWidth < 992? 60 : 180;
 
     particles_1.forEach(particle => {
       particle.options.opacity = mapv(t,0,1,0,1); // Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
@@ -418,15 +426,16 @@ function animate_step_1(t, ctx) {
     if (t < 0.1) {
         alpha = mapv(t, 0, 0.1, 0, 1);
     } else {
-        alpha = 1;
+        alpha = 1 * (window.innerWidth < 992? 0.7 : 1);
     }
+    
     ctx.canvas.style.opacity = alpha;
     canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
     canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
 
     particles_1.forEach(particle => {
         let center_x = canvas_width/2;
-        let center_y = canvas_height/2 + 90;
+        let center_y = (canvas_height+menuHeight) / 2;
         let tx = particle.x + particle.options.x_offset;
         let ty = particle.y + particle.options.y_offset;
         let sx = center_x + (tx - center_x) * 1.5;
@@ -546,6 +555,7 @@ function animate_step_1(t, ctx) {
 }
 
 function init_narrative_backgrounds_step_2() {
+    let menuHeight = window.innerWidth < 992? 60 : 180;
     let scale = 1;
     let canvas = narrativeDrawer.canvas;
     let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
@@ -565,10 +575,13 @@ function init_narrative_backgrounds_step_2() {
     let min_ellipse_radius_y = (canvas_height-180) * 0.4;
     let max_ellipse_radius_y = (canvas_height-180) * 0.45;
     let ellipse_center_x = canvas_width / 2;
-    let ellipse_center_y = canvas_height / 2 + 90;
+    let ellipse_center_y = (canvas_height+menuHeight) / 2;
     let text_index = 0;
     let order = shuffled_order(nbr_particles);
     let order2 = shuffled_order(nbr_particles);
+    let circle_size_adjust = window.innerWidth < 992? 0.5 : 1;
+
+
     for (let i = 0; i < nbr_particles; i++) {
         let angle = i * 2 * Math.PI / nbr_particles;
         let ellipse_radius_x = mapv(Math.random(),0,1,min_ellipse_radius_x,max_ellipse_radius_x);
@@ -589,7 +602,7 @@ function init_narrative_backgrounds_step_2() {
 
         let options = {
             'phase': order[i] / nbr_particles,
-            'circle_size': circle_size,
+            'circle_size': circle_size*circle_size_adjust,
             'circle_type': circle_type,
             'text': text,
             'bg_color': bg_color,
@@ -612,7 +625,7 @@ function animate_step_2(t, ctx) {
     } else {
         alpha = 1;
     }
-    alpha = 1;
+    alpha = 1 * (window.innerWidth < 992? 0.7 : 1);
     ctx.canvas.style.opacity = alpha;
 
     particles_2.forEach(particle => {
@@ -666,6 +679,7 @@ let first_topic_particle = 0;
 
 function init_narrative_backgrounds_step_3() {
     let scale = 1;
+    let menuHeight = window.innerWidth < 992? 60 : 180;
 
     let canvas = narrativeDrawer.canvas;
     let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
@@ -678,15 +692,17 @@ function init_narrative_backgrounds_step_3() {
     let nbr_particles = 31;
     let min_ellipse_radius_x = canvas_width * 0.35;
     let max_ellipse_radius_x = canvas_width * 0.4;
-    let min_ellipse_radius_y = (canvas_height-180) * 0.35;
-    let max_ellipse_radius_y = (canvas_height-180) * 0.4;
+    let min_ellipse_radius_y = (canvas_height-menuHeight) * 0.35;
+    let max_ellipse_radius_y = (canvas_height-menuHeight) * 0.4;
     let ellipse_center_x = canvas_width / 2;
-    let ellipse_center_y = canvas_height / 2 + 90;
+    let ellipse_center_y = (canvas_height+menuHeight) / 2;
     let nbr_icons = 20;
     let order = shuffled_order(nbr_particles);
     let order2 = shuffled_order(nbr_particles);
     let nbr_topics = 19;
     first_topic_particle = nbr_particles;
+
+    let circle_size_adjust = window.innerWidth < 992? 0.5 : 1;
 
     for (let i = 0; i < nbr_particles; i++) {
         let angle = i * 2 * Math.PI / nbr_particles;
@@ -701,7 +717,7 @@ function init_narrative_backgrounds_step_3() {
         let bg_color = dot_colors[Math.floor(Math.random()*dot_colors.length)];
         let options = {
             'phase': order[i] / nbr_particles,
-            'circle_size': circle_size,
+            'circle_size': circle_size*circle_size_adjust,
             'circle_type': circle_type,
             'bg_color': bg_color,
         }
@@ -721,7 +737,7 @@ function init_narrative_backgrounds_step_3() {
         icon_index += 1;
         let options = {
             'phase': Math.floor(Math.random()*3),
-            'circle_size': circle_size,
+            'circle_size': circle_size*circle_size_adjust,
             'circle_type': circle_type,
             'icon_index': icon_index,
             'bg_color': bg_color,
@@ -755,16 +771,13 @@ function animate_step_3(t, ctx) {
     // TODO: implement animation for step 3
    // TODO: implement animation for step 2
     // console.log("animate_step_3", t, "nbr particles", particles_3.length);
+    let menuHeight = window.innerWidth < 992? 60 : 180;
+
     let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
     let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
+    let circle_size_adjust = window.innerWidth < 992? 0.5 : 1;
 
-    let alpha;
-    if (t < 0.1) {
-        alpha = mapv(t, 0, 0.1, 0, 1);
-    } else {
-        alpha = 1;
-    }
-    alpha = 1;
+    let alpha = window.innerWidth < 992? 0.7 : 1;
     ctx.canvas.style.opacity = alpha;
 
     let opacity_peak = 0.6;
@@ -780,7 +793,7 @@ function animate_step_3(t, ctx) {
             let phase_t = clamp(mapv(t, begin_t, end_t, 0, 1), 0, 1);
 
             let center_x = canvas_width/2;
-            let center_y = canvas_height/2 + 90;
+            let center_y = (canvas_height+menuHeight) / 2;
 
 
             let tx = particles_3[first_topic_particle + particle.options.closest_topic].x;
@@ -813,7 +826,7 @@ function animate_step_3(t, ctx) {
         ctx.globalAlpha = particle.options.opacity;
 
         ctx.translate(x, y);
-        ctx.scale(particle.options.scale, particle.options.scale);
+        ctx.scale(particle.options.scale*circle_size_adjust, particle.options.scale*circle_size_adjust);
 
         ctx.beginPath();
         ctx.arc(0, 0, circle_size, 0, 2 * Math.PI);
@@ -859,8 +872,13 @@ function refresh_narrative_backgrounds(ctx) {
 
 function animate_narrative(t, step_index) {
     // console.log("animating narrative for step", step_index, t);
-
+    if (narrativeDrawer == null) {
+        return;
+    }
     canvas = narrativeDrawer.canvas;
+    if (canvas == null) {
+        return;
+    }
     let canvas_width = narrativeDrawer.canvas.width / narrativeDrawer.retinaScale;
     let canvas_height = narrativeDrawer.canvas.height / narrativeDrawer.retinaScale;
 
