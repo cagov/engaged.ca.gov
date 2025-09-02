@@ -45,9 +45,9 @@
       {{ 'topic-los-angeles-fires-recovery-evacuation-label' | i18n }}
     </legend>
     <ul class="form-radio-list">
-      {{ radio.merge_field_data('interest-fire', 'eaton', 'topic-los-angeles-fires-recovery-evacuation-eaton' | i18n, "required" ) }}
-      {{ radio.merge_field_data('interest-fire', 'palisades','topic-los-angeles-fires-recovery-evacuation-palisades' | i18n, "required") }}
-      {{ radio.merge_field_data('interest-fire', 'no','topic-los-angeles-fires-recovery-no-evacuation' | i18n , "required" ) }}
+      {{ radio.data('interest-fire', 'eaton', 'topic-los-angeles-fires-recovery-evacuation-eaton' | i18n, "required" ) }}
+      {{ radio.data('interest-fire', 'palisades','topic-los-angeles-fires-recovery-evacuation-palisades' | i18n, "required") }}
+      {{ radio.data('interest-fire', 'no','topic-los-angeles-fires-recovery-no-evacuation' | i18n , "required" ) }}
     </ul>
     </div>
     {# - #}
@@ -58,9 +58,9 @@
       <span aria-hidden="true">*</span>
       {{ formVars.label_employee_question }}
     </legend>
-      <ul class="form-checkbox-list">
-        <li>{{ checkbox.data('interest-employeeYes', 'employeeYes', formVars.label_yes) }}</li>
-        <li>{{ checkbox.data('interest-employeeNo', 'employeeNo', formVars.label_no) }}</li>
+      <ul class="form-radio-list">
+        <li>{{ radio.data('interest-employee', 'employeeYes', formVars.label_yes, "required") }}</li>
+        <li>{{ radio.data('interest-employee', 'employeeNo', formVars.label_no, "required") }}</li>
       </ul>
     </div>
     {# - #}

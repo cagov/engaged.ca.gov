@@ -5,7 +5,7 @@ i18nkey - (String) The key of the text string as definited in i18n.js
 attributes - (String) Add a space separated list of attributes such as "checked required"
 #}
 
-{% macro merge_field_data(formKey, formValue, i8nkey, attributes) %}
+{% macro data(formKey, formValue, i8nkey, attributes) %}
   <li>
   <input type="radio" class="form-radio-input" id="{{ formKey }}-{{ formValue }}" name="{{ formKey }}" value="{{ formValue }}" {{ attributes }}>
   <label class="form-control-label form-radio-label" for="{{ formKey }}-{{ formValue }}">

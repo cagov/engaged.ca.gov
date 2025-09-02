@@ -43,8 +43,8 @@ class UnifiedForm extends window.HTMLElement {
     this.discussionEmployeeCheckbox = this.querySelector(
       'input[value="employee"]',
     );
-    this.employeeYesCheckbox = this.querySelector('input[value="employeeYes"]');
-    this.employeeNoCheckbox = this.querySelector('input[value="employeeNo"]');
+    this.radioEmployeeYes = this.querySelector('input[value="employeeYes"]');
+    this.radioEmployeeNo = this.querySelector('input[value="employeeNo"]');
 
     // Messages.
     this.apiError = this.querySelector("#apiError");
@@ -165,8 +165,8 @@ class UnifiedForm extends window.HTMLElement {
     let ok = "ok";
     if (
       this.discussionEmployeeCheckbox.checked &&
-      this.employeeYesCheckbox.checked === false &&
-      this.employeeNoCheckbox.checked === false
+      this.radioEmployeeYes.checked === false &&
+      this.radioEmployeeNo.checked === false
     ) {
       ok = "not okay";
       this.show(this.errorEmployee);
