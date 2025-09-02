@@ -709,6 +709,13 @@ canvas#ring chart-canvas {
     padding-left: 0px;
   }
 }
+.response-indent-mobile {
+  @media (max-width: 720px) {
+    padding-left: 60px;
+  }
+}
+
+
 
 .response-item-title-container {
   display: flex;
@@ -751,7 +758,7 @@ canvas#ring chart-canvas {
 .response-intro {
   margin-bottom: 2rem;
 }
-.response-small-title {
+.response-small-title, .response-very-small-title {
   margin-bottom: 0.5rem;
 }
 .response-item-title {

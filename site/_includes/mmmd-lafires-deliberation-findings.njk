@@ -345,7 +345,7 @@
                           <div class="response-item-title response-indent"><h3>{{ modules['response_step_' + i].title }}</h3></div>
                     </div>
                     <div class="col-lg-8">
-                      <div class="response-indent-desktop">
+                      <div class="response-indent">
                           <div class="response-small-title style-strong-body-text">{{modules.response_steps.action_now}}</div>
                           <div class="response-item-text">{{ modules['response_step_' + i + "_action_now"].content | safe }}</div>
                       {% if modules['response_step_' + i + "_coming_soon"] %}
@@ -354,7 +354,7 @@
                       {% endif %}
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 response-indent-mobile">
                       {% if modules['response_sidebar_' + i] %}
                       <div class="response-sidebar">
                           <div class="response-very-small-title style-strong-small-body-text">{{modules.response_steps.did_you_know}}</div>
@@ -372,15 +372,19 @@
 <section id="other-efforts">
   <div class="container">
     <div class="row">
-        <div class="col-lg-8">
+      <div class="response-step-list">
+        <div class="row response-step-container">
           <div class="col-lg-12 response-item-title-container icon icon-6">
-                <div class="response-item-title response-indent"><h3>{{ modules.other_efforts.title }}</h3></div>
+                  <div class="response-item-title response-indent"><h3>{{ modules.other_efforts.title }}</h3></div>
           </div>
-            <div class="response-indent">
-                <div class="response-small-title style-strong-body-text">{{modules.other_efforts.mental_health}}</div>
-                <div class="response-item-text">{{ modules.other_efforts.content | safe }}</div>
-            </div>
+          <div class="col-lg-8">
+              <div class="response-indent">
+                  <div class="response-small-title style-strong-body-text">{{modules.other_efforts.mental_health}}</div>
+                  <div class="response-item-text">{{ modules.other_efforts.content | safe }}</div>
+              </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 
