@@ -36,6 +36,7 @@ function switch_topic(topic_nbr) {
   }
   switch_alignment('all');
   populate_comments(current_topic_index, current_mood_filter);
+  {# ScrollTrigger.refresh() #}
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -55,12 +56,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // populate it...
     populate_comments(current_topic_index, current_mood_filter);
     container.classList.remove('collapsed');
+    {# ScrollTrigger.refresh(); #}
   });
   document.querySelectorAll('.deliberation-comment-expander-button.close').forEach(function(item) {
     item.addEventListener('click', function() {
         console.log('Comment hider clicked');
         let container = document.getElementById('topics-deliberation-comments-container');
         container.classList.add('collapsed');
+        {# ScrollTrigger.refresh(); #}
     });
   });
 
@@ -68,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     item.addEventListener('click', function() {
       switch_alignment(this.dataset.filter);
       populate_comments(current_topic_index, current_mood_filter);
+      {# ScrollTrigger.refresh(); #}
     });
   });
 

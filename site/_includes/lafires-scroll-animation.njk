@@ -3,6 +3,23 @@ const use_LENIS = true;
 const use_MARKERS = false;
 
 const pin_extend = 1000; // was 600
+let lenis = null;
+    // Store scroll position before refresh/unload
+if (use_LENIS) {
+    window.addEventListener('beforeunload', () => {
+        localStorage.setItem('lenisScrollPos', lenis.scroll);
+    });
+
+    // Restore scroll position on page load
+    window.addEventListener('load', () => {
+            let scrollPos = localStorage.getItem('lenisScrollPos');
+            if (lenis && lenis.scroll && scrollPos) {
+                lenis.scrollTo(parseFloat(scrollPos), { immediate: true });
+                localStorage.removeItem('lenisScrollPos');
+            }
+    });
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
   // IMPORTANT - if not in DOMContentLoaded, scroll aniimation is very unreliable due to potentially missing elements
@@ -14,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Init Lenis
   if (use_LENIS) {
-    const lenis = new Lenis({
+    lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
     });
@@ -41,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
       },
       pinType: document.body.style.transform ? "transform" : "fixed"
     });
+
+
   }
 
   gsap.to({}, {
