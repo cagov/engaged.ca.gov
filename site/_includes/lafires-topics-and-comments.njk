@@ -30,7 +30,7 @@ function switch_topic(topic_nbr) {
   let discussion_container = document.getElementById('findings-top-discussions-topic-' + topic_nbr);
   discussion_container.classList.add('active');
   let learn_more_link = document.getElementById('learn-more-link');
-  learn_more_link.href = "#response-step-" + topic_nbr;
+  // learn_more_link.href = "#response-step-" + topic_nbr;
   if (topicsChart) {
       topicsChart.select_topic_chart(parseInt(option_box.dataset.chartTopicIndex, 10));
   }
