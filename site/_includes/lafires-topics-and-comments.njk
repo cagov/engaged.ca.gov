@@ -17,35 +17,34 @@ function switch_alignment(requested_alignment) {
     current_mood_time_ms = new Date().getTime();
 }
 
-
+function switch_topic(topic_nbr) {
+  current_topic_index = topic_nbr;
+  document.querySelectorAll('.findings-top-options-option-box').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('.findings-top-discussion-container').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  let option_box = document.getElementById('findings-top-options-option-box-' + topic_nbr);
+  option_box.classList.add('active');
+  let discussion_container = document.getElementById('findings-top-discussions-topic-' + topic_nbr);
+  discussion_container.classList.add('active');
+  let learn_more_link = document.getElementById('learn-more-link');
+  learn_more_link.href = "#response-step-" + topic_nbr;
+  if (topicsChart) {
+      topicsChart.select_topic_chart(parseInt(option_box.dataset.chartTopicIndex, 10));
+  }
+  switch_alignment('all');
+  populate_comments(current_topic_index, current_mood_filter);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   // Set up event handler for clicks on .findings-top-options-option-box
   document.querySelectorAll('.findings-top-options-option-box').forEach(function(box) {
     box.addEventListener('click', function() {
       // Remove 'active' from all option boxes
-      document.querySelectorAll('.findings-top-options-option-box').forEach(function(el) {
-        el.classList.remove('active');
-      });
-      document.querySelectorAll('.findings-top-discussion-container').forEach(function(el) {
-        el.classList.remove('active');
-      });
-      // Add 'active' to the clicked box
-      this.classList.add('active');
-
-      let topic_number = this.dataset.topicNumber;
-      console.log("loading topic_number", topic_number);
-      let learn_more_link = document.getElementById('learn-more-link');
-      learn_more_link.href = "#response-step-" + topic_number;
-
-      // Add 'active' to the corresponding discussion container
-      document.getElementById('findings-top-discussions-topic-' + this.dataset.topicNumber).classList.add('active');
-      if (topicsChart) {
-        topicsChart.select_topic_chart(parseInt(this.dataset.chartTopicIndex, 10));
-      }
-      current_topic_index = parseInt(this.dataset.chartTopicIndex, 10);
-      switch_alignment('all');
-      populate_comments(current_topic_index, current_mood_filter);
+      let topic_number = parseInt(this.dataset.topicNumber, 10);
+      switch_topic(topic_number);
     });
   });
 
@@ -69,6 +68,20 @@ document.addEventListener('DOMContentLoaded', function() {
     item.addEventListener('click', function() {
       switch_alignment(this.dataset.filter);
       populate_comments(current_topic_index, current_mood_filter);
+    });
+  });
+
+  document.querySelectorAll('.response-anchor-link').forEach(function(item) {
+    item.addEventListener('click', function() {
+      let topic_nbr = this.dataset.topic;
+      current_topic_index = parseInt(topic_nbr, 10);
+      console.log("Response anchor link clicked", topic_nbr);
+      switch_topic(current_topic_index);
+      window.location.hash = '#findings-top-discussions-topic-' + topic_nbr;
+      const target = document.getElementById('findings-top-discussions-topic-' + topic_nbr);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 });
