@@ -731,28 +731,29 @@ canvas#ring chart-canvas {
 }
 
 .response-item-title-container.icon {
-  background-image: url("/public/images/construction-orange.svg");
+  background-image: url("/public/images/construction-orange.png");
   background-size: 60px 60px;
   background-position: left center;
   background-repeat: no-repeat;
 }
+
 .response-item-title-container.icon-1 {
-  background-image: url("/public/images/construction-orange.svg");
+  background-image: url("/public/images/construction-orange.png");
 }
 .response-item-title-container.icon-2 {
-  background-image: url("/public/images/hydrant-orange.svg");
+  background-image: url("/public/images/hydrant-orange.png");
 }
 .response-item-title-container.icon-3 {
-  background-image: url("/public/images/communication-orange.svg");
+  background-image: url("/public/images/communication-orange.png");
 }
 .response-item-title-container.icon-4 {
-  background-image: url("/public/images/currency-orange.svg");
+  background-image: url("/public/images/currency-orange.png");
 }
 .response-item-title-container.icon-5 {
-  background-image: url("/public/images/house-orange.svg");
+  background-image: url("/public/images/house-orange.png");
 }
 .response-item-title-container.icon-6 {
-  background-image: url("/public/images/handheart-orange.svg");
+  background-image: url("/public/images/handheart-orange.png");
 }
 
 .response-intro {
