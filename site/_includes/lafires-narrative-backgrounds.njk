@@ -17,6 +17,8 @@ class CanvasOutlineDrawer {
         this.canvas.style.opacity = 0;
         this.scrollableDiv = document.getElementById('narrative-wrapper-1');
         this.currentRenderFunction = null;
+
+        console.log("initialize narrative background canvas");
         
         // Retina scaling control - set to 1 to disable, 2 to enable
         this.retinaScale = 2;
@@ -50,7 +52,7 @@ class CanvasOutlineDrawer {
 
         this.init_narrative_backgrounds_step_3();
 
-        this.draw();
+        // this.draw();
 
         ScrollTrigger.refresh();
 
@@ -166,6 +168,7 @@ class CanvasOutlineDrawer {
 
     init_narrative_backgrounds_step_1() {
         const canvas = this.canvas;
+        console.log("init step 1");
 
         let canvas_width = this.canvas.width / this.retinaScale;
         let canvas_height = this.canvas.height / this.retinaScale;
@@ -827,6 +830,7 @@ class CanvasOutlineDrawer {
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     narrativeDisplay = new CanvasOutlineDrawer();
+    // setup_scroll_animation();
 });
 
 

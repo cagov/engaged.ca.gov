@@ -21,6 +21,7 @@ if (use_LENIS) {
 }
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
   // IMPORTANT - if not in DOMContentLoaded, scroll aniimation is very unreliable due to potentially missing elements
 
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         anticipatePin: true,
         markers: use_MARKERS, // Enable markers for debugging
         onUpdate: (self) => {
+          console.log("updating step 1");
           {# if (narrativeDisplay && narrativeDisplay.canvas.style.opacity == 0) {
             narrativeDisplay.fadeIn();
           } #}

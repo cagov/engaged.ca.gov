@@ -258,9 +258,6 @@ section#findings-top-options {
 
 .option-label {
   text-align: center;
-  @media (max-width: 720px) {
-    display: none;
-  }
 }
 
 img.findings-option-icon.png-icon {
