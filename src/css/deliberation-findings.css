@@ -732,7 +732,7 @@ canvas#ring chart-canvas {
 
 .response-item-title-container.icon {
   background-image: url("/public/images/construction-orange.svg");
-  background-size: 60px;
+  background-size: 60px 60px;
   background-position: left center;
   background-repeat: no-repeat;
 }
