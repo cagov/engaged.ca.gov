@@ -518,6 +518,10 @@ div.topics-alignment-switcher-list {
   justify-content: left;
   align-items: center;
   padding: 1rem;
+  @media (max-width: 720px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .comments-caveat {
