@@ -300,7 +300,7 @@ class CanvasOutlineDrawer {
             let angle = pio.ang_idx * 2 * Math.PI / nbr_angles + Math.PI/nbr_angles;
             let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle);
             let y = ellipse_center_y + ellipse_radius_y * Math.sin(angle);
-            let scale = 1;
+            let scale = clamp(mapv(window.innerWidth,600,992,.5,1),.5,1);
             let balloon_size = width * 0.4;
             let has_text_lines = nbr_text_lines > 0;
             let tail_reverse = (pio.hasOwnProperty('tail_reverse')) ? pio.tail_reverse : 0;
@@ -524,6 +524,7 @@ class CanvasOutlineDrawer {
 
     animate_step_2(t) {
         let ctx = this.ctx;
+        let textScale = clamp(mapv(window.innerWidth,600,992,.5,1),.5,1);
 
         this.particles_2.forEach(particle => {
             particle.options.opacity = 0.8; // Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*this.cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
@@ -566,7 +567,7 @@ class CanvasOutlineDrawer {
                     let y = i*50 - 20;
                     ctx.save();
                     ctx.translate(x,y);
-                    ctx.scale(0.5,0.5);
+                    ctx.scale(0.5*textScale,0.5*textScale);
                     ctx.fillText(lines[i], 0, 0);
                     ctx.restore();
                 }
