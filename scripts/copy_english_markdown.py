@@ -1,6 +1,6 @@
 import glob, os, subprocess
 
-wildpaths = ['./site/en/lafires-recovery/*.mmmd']
+wildpaths = ['./site/en/lafires-recovery/action*.mmmd']
 
 languages = ['es', 'fa', 'hy', 'ko', 'tl', 'vi','zh-hans', 'zh-hant']
 
