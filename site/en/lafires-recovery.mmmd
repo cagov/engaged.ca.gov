@@ -33,6 +33,7 @@ buttonText: See what we found in agenda setting
 statusPlanningTextV2: Deliberations are happening now
 statusDeliberationsClosedText: Community deliberations are closed
 buttonTextV2: Sign up now
+buttonText_actionplan: See the action plan
 ----
 
 People affected by the wildfires in Los Angeles should have a say in planning its recovery. So the State of California is bringing them together with government in a new way.
@@ -67,6 +68,8 @@ phaseCurrentText: Current phase
 phasePendingText: Upcoming phase
 resourcesTitle: Resources
 resourcesLinkTitle: See what we found in agenda setting
+resourcesLinkTitle_actionplan: See the action plan
+resourcesLinkTitle_agendasettingfindings: See what we found in agenda setting
 ----
 
 ### General information

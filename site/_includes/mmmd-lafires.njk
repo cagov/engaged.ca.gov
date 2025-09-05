@@ -8,9 +8,9 @@
       <p class="status-pill">{{ modules.hero_2.statusDeliberationsClosedText }}</p>
       <h1>{{ title }}</h1>
       {{ modules.hero_2.content | safe }}
-      {# <p>
-        <a data-appearance="button" data-theme="orange" href="{{ "#sign-up" }}" class="m-t">{{ modules.hero_2.buttonTextV2 }}</a>
-      </p> #}
+      <p>
+        <a data-appearance="button" data-theme="orange" href="{{ "#sign-up" }}" class="m-t">{{ modules.hero_2.buttonText_actionplan }}</a>
+      </p>
     </engca-banner-content>
     <img src="/public/images/fires-about-bubbles.png" aria-hidden="true" class="desktop-only" alt=""/>
   </div>
@@ -60,15 +60,18 @@
           {{ phase(modules.phase2, "complete", "complete") }}
           {{ phase(modules.phase3, "complete", "complete") }}
           {{ phase(modules.phase4, "complete", "complete") }}
-          {{ phase(modules.phase5, "complete", "pending") }}
-          {{ phase(modules.phase6, "current", "none") }}
+          {{ phase(modules.phase5, "complete", "complete") }}
+          {{ phase(modules.phase6, "complete", "none") }}
         </div>
       </div>
       <div class="col-lg-4">
         <div class="phase-sidebar">
           <h3>{{ modules.phaseGeneral.resourcesTitle }}</h3>
+          <a href="{{ "/lafires-recovery/deliberation-findings/" | locale_url }}" data-appearance="button" data-theme="off-white" class="findings-link-icon">
+            {{ modules.phaseGeneral.resourcesLinkTitle_actionplan }}
+          </a>
           <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" data-appearance="button" data-theme="off-white" class="findings-link-icon">
-            {{ modules.phaseGeneral.resourcesLinkTitle }}
+            {{ modules.phaseGeneral.resourcesLinkTitle_agendasettingfindings }}
           </a>
           {{ modules.phaseGeneral.content | safe }}
         </div>

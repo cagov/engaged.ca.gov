@@ -12,10 +12,12 @@ layout: mmmd-homepage
 ----
 id: hero
 buttonText: Sign up now
+buttonText_actionplan: See the action plan
 ----
 
 # Tell your government how you feel about pressing issues
 
+See the results of our first engagement: Los Angeles wildfires recovery.
 
 ----
 id: about
@@ -65,3 +67,11 @@ id: partners
 ## Our partners
 
 We designed this platform to be non-partisan. The state's Government Operations Agency and Office of Data and Innovation developed it. Other partners and advisors for this initiative are:
+
+----
+id: action_plan
+buttonText: See the action plan
+----
+## LA aligns on recovery plan
+
+More than 900 community members came together in town halls for the digital age. They shared what is most important to them to make recovery happen.
