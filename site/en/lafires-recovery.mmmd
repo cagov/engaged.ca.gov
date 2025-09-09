@@ -31,7 +31,7 @@ statusReviewText: Agenda setting outcomes are being reviewed
 statusPlanningText: We are planning deliberations
 buttonText: See what we found in agenda setting
 statusPlanningTextV2: Deliberations are happening now
-statusDeliberationsClosedText: Community deliberations are closed
+statusDeliberationsClosedText: This conversation is closed
 buttonTextV2: Sign up now
 buttonText_actionplan: See the action plan
 ----
@@ -66,8 +66,8 @@ title: What happens in each phase
 phaseCompleteText: Completed phase
 phaseCurrentText: Current phase
 phasePendingText: Upcoming phase
-resourcesTitle: Resources
 resourcesLinkTitle: See what we found in agenda setting
+resourcesTitle: Resources
 resourcesLinkTitle_actionplan: See the action plan
 resourcesLinkTitle_agendasettingfindings: See what we found in agenda setting
 ----
