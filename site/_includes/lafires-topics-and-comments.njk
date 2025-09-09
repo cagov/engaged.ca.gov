@@ -3,7 +3,7 @@
 let current_topic_index = 19;
 let current_mood_filter = 'all';
 let current_mood_time_ms = new Date().getTime();
-
+let global_chart_data = null;
 
 function switch_alignment(requested_alignment) {
     document.querySelectorAll('.topics-alignment-switcher-item').forEach(function(el) {
@@ -40,6 +40,25 @@ function switch_topic(topic_nbr) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // load the chart data
+    fetch("/public/data/lafires_voting_data_v3.json", {})
+    .then(response => response.json())
+    .then(data => {
+      // console.log("Data fetched:", data);
+      let chart_data = data;
+      global_chart_data = chart_data;
+      // setup_topic_chart(chart_data); // consensus chart wants to be loaded second, otherwise it doesn't render -- need to figure out why
+      consensusChart = new ConsensusChart(chart_data);
+      consensusProgressBar = new ConsensusProgressBar();
+      topicsChart = new TopicsChart(chart_data);
+      // init_ringchart();
+      ScrollTrigger.refresh();
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+    });
+
+
   // Set up event handler for clicks on .findings-top-options-option-box
   document.querySelectorAll('.findings-top-options-option-box').forEach(function(box) {
     box.addEventListener('click', function() {
