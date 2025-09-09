@@ -2,11 +2,12 @@
 {% extends "layout.njk" %}
 {% block content %}
 
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
-<script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="/css/lenis.css">
+<script>
+  {% include "lenis.min.js" %}
+  {% include "gsap.min.js" %}
+  {% include "ScrollTrigger.min.js" %}
+</script>
 
 <link rel="stylesheet" href="/css/action-plan.css" />
 

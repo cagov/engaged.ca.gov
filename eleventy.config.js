@@ -31,7 +31,8 @@ function buildLog(srcPath, distPath, assetType) {
 async function buildCSS() {
   const cssFiles = [
     { src: "src/css/index.css", dist: "_dist/css/index.css" },
-    { src: "src/css/action-plan.css", dist: "_dist/css/action-plan.css" }
+    { src: "src/css/action-plan.css", dist: "_dist/css/action-plan.css" },
+    { src: "src/css/lenis.css", dist: "_dist/css/lenis.css" }
   ];
 
   for (const file of cssFiles) {
