@@ -1,3 +1,19 @@
+/* 9-5-2025 - patches */
+
+.comment-replies .comment-item-container .list-group-item-text {
+  font-size: 1.5rem !important;
+}
+
+.comment-replies .list-group-item {
+  padding-right: 0px;
+}
+
+.comment-replies .list-group .list-group-item .row-content  {
+      width: calc(100% - 10px);
+}
+
+
+
 /* 8-14-2025 - patches */
 html :has(.signon) {
   background-color: #fff4eb;
@@ -36,7 +52,7 @@ html :has(.signon) {
 }
 
 .comment-item .row-content small {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .list-group-item.comment-item-container .comment-item a {
@@ -1579,7 +1595,23 @@ textarea.ember-text-area.form-control,
 }
 
 .list-group-item.new-comment-container .btn {
-  margin: 10px 24px;
+    margin: calc(1vh - 96px) 0 0 calc(100% - 100px);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .list-group-item.new-comment-container .btn {
+      margin: calc(1vh - 115px) 0 0 calc(100% - 100px);
+  }
+}
+
+/* Change position of post button and make it bigger */
+.form-comment-container-inner .help-block {
+      width: calc(100% - 150px);
+      font-size: 1.5rem !important;
+      border-radius: 6px;
 }
 
 .comments > .comment-item-container > .comment-item {
@@ -1641,21 +1673,21 @@ button.comment-section-btns,
   border-radius: 20px;
 }
 
-.comment-item-container:nth-child(3n + 1) .comment-item:before,
+
 .comment-replies
-  .comment-item-container:nth-child(3n + 1)
+  .comment-item-container:nth-child(1)
   .comment-item:before {
   background-color: #ffcda4;
 }
 
-.comment-item-container:nth-child(3n + 2) .comment-item:before,
+/* .comment-item-container:nth-child(3n + 2) .comment-item:before,
 .comment-replies
   .comment-item-container:nth-child(3n + 2)
   .comment-item:before {
   background-color: #fff4eb;
-}
+} */
 
-.comment-item-container:nth-child(3n + 3) .comment-item:before {
+.comment-item-container > .comment-item:before {
   background-color: #91bdd3;
 }
 
