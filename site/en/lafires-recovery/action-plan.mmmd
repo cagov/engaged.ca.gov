@@ -33,7 +33,7 @@ buttonText: Skip to the action plan
 
 # LA aligns on recovery plans
 
-In a first-of-its-kind 2-phase community engagement process, more than 900 community members gathered in town halls for the digital age to develop an action plan to recover from the devastating Los Angeles wildfires in January 2025. 
+In a first-of-its-kind community engagement process, more than 900 community members gathered in town halls for the digital age to develop an action plan to recover from the devastating Los Angeles wildfires in January 2025. 
 
 The action plan, developed through online deliberation sessions over a 7-month period, reflects priorities directly from those who lost homes and businesses. The priorities they set – focusing on immediate community support and long-term infrastructure improvements – will guide state and local officials toward full recovery.
 
@@ -106,7 +106,7 @@ value_2: 3,977
 nbr_options: 5
 ----
 
-The engagement was notable. Neighbors were able to share their thoughts and replied to one another. The 1,504 participant comments received didn’t vanish into a black box. People talked about the solutions, effectively working together to refine priorities.
+The engagement was notable. Neighbors were able to share their thoughts and replied to one another. The 1,504 participant comments received didn’t vanish into a black box. People talked about the solutions, effectively working together to define priorities.
 
 ----
 id: findings_narrative_top_options
@@ -214,7 +214,7 @@ desc: Scroll to see the comments about this topic (shown in their original langu
 id: topic_data_vis
 title: Explore the votes
 learn_button_label: Learn about the actions being taken
-desc: Each dot represents one vote made on this topic. Similar votes have their own color.
+desc: Each dot is one person’s vote. The total dots represent all votes cast on a topic.
 download_text: Download a CSV of participant comments
 ----
 
@@ -356,9 +356,9 @@ icon: communication-orange.svg
 ----
 id: response_step_3_action_now
 ----
-The **California Public Utilities Commission** requires cell towers to have 72 hours of backup power. The rules apply to towers in zones where fire is a high threat. This kept most towers online during the January fires. **County first responders** used their FirstNet network, backed by AT&T's mobile towers. Telecommunication providers' continued investment in their infrastructure will improve emergency communication during disasters. There are new rules that require towers to have 72 hours of backup power.
+The **California Public Utilities Commission** requires cell towers to have 72 hours of backup power. The rules apply to towers in zones where fire is a high threat. This kept most towers online during the January fires. **County first responders** used their FirstNet network, backed by AT&T's mobile towers. Telecommunication providers' continued investment in their infrastructure will improve emergency communication during disasters.
 
-The **city** is coordinating a biweekly steering committee focused on emergency communication to discuss blockers and progress. The group is made up of representatives from city departments, including the: 
+The **city** is coordinating a biweekly steering committee focused on emergency communication to discuss blockers and progress. The group is made up of representatives from city departments, including: 
 
   * **Los Angeles Department of Water and Power**  
   * **Los Angeles Department of Emergency Management** 
@@ -367,7 +367,7 @@ The **city** is coordinating a biweekly steering committee focused on emergency 
 
 This group is reviewing evacuation materials, mapping roadways, and modeling traffic evacuation routes. 
 
-The steering committee will coordinate with stakeholders from from **California State Parks**, **Los Angeles City Planning**, **Los Angeles Housing Department**, and **CalFire**. 
+The steering committee will coordinate with stakeholders from **California State Parks**, **Los Angeles City Planning**, **Los Angeles Housing Department**, and **CalFire**. 
 
 ----
 id: response_step_3_coming_soon
@@ -438,7 +438,7 @@ id: response_sidebar_5
 **Federal**, **state**, and **local** teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history. This is thanks to unprecedented partnership among **city**, **county**, **state**, and **federal** agencies, including the **U.S. Army Corps of Engineers**, and facilitated by emergency orders signed by **Governor Newsom**.
 
 
-The Blueprint for Rebuilding applauds this work. The publication said the unprecedented pace is the foundation for rapid rebuilding
+The Blueprint for Rebuilding applauds this work. The publication said the unprecedented pace is the foundation for rapid rebuilding.
 
 
 ----
