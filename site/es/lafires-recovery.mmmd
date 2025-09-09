@@ -30,6 +30,7 @@ buttonText: Vea lo que encontramos respecto al establecimiento de la agenda
 statusPlanningTextV2: Deliberaciones están sucediendo ahora
 statusDeliberationsClosedText: Las deliberaciones de la comunidad están cerradas
 buttonTextV2: Regístrese ahora
+buttonText_actionplan: Ver el plan de acción
 ----
 
 Las personas afectadas por los incendios forestales en Los Ángeles deberían tener voz y voto en la planificación de su recuperación. Así que el estado de California los está acercando al gobierno de una manera nueva.
@@ -64,6 +65,9 @@ phaseCompleteText: Fase completada
 resourcesLinkTitle: Vea lo que encontramos respecto al establecimiento de la agenda
 phaseCurrentText: Fase actual
 phasePendingText: Próxima fase
+resourcesTitle: Recursos
+resourcesLinkTitle_actionplan: Ver el plan de acción
+resourcesLinkTitle_agendasettingfindings: Vea lo que encontramos respecto al establecimiento de la agenda
 ----
 
 ### Información general
@@ -133,6 +137,7 @@ title: Informes
 ----
 
 Revisaremos y analizaremos los resultados de la fase de deliberación. Trabajaremos con funcionarios del gobierno para encontrar medidas que respondan a la deliberación. Publicaremos un informe de los hallazgos y acciones en este sitio web.
+[Vea el plan de acción](/es/lafires-recovery/action-plan)
 
 ----
 id: signup
