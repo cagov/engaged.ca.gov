@@ -243,3 +243,31 @@ section h2 {
 .ca-gov-icon-caret-down::before {
   font-family: 'CaGov';
 }
+
+.footer-line-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (max-width: 767px) {
+  .footer-line-1 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.footer-social-media-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social-media-links a {
+  color: #000;
+  text-decoration: none;
+}
+
