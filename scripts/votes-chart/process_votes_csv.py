@@ -89,7 +89,7 @@ for record in records:
         topic_index_set.add((record["TOPIC"], topic_name, record["CONSENSUS"], record["SUPPORT"]))
         topic_index += 1
 
-topic_index_list = sorted(list(topic_index_set), key=lambda x: x[2])
+topic_index_list = sorted(list(topic_index_set), key=lambda x: x[3])
 topic_index_dict = {topic[0]: index for index, topic in enumerate(topic_index_list)}
 for record in records:
     record["TOPIC_INDEX"] = topic_index_dict[record["TOPIC"]]
