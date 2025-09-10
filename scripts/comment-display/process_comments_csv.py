@@ -77,6 +77,20 @@ with open(args.input_file, "r") as f:
     
     # sort records by POSTED_ON
     records.sort(key=lambda x: x["SORT_KEY"])
+
+    for record in records:
+        if record["REPLY_TO_ID"] is not None:
+            # Set PVOTE to the prior record's VOTE_NUMBER
+            idx = records.index(record)
+            if idx > 0:
+                record["PVOTE"] = records[idx - 1]["VOTE_NUMBER"]
+            else:
+                record["PVOTE"] = None
+        else:
+            # Set PVOTE to current VOTE_NUMBER
+            record["PVOTE"] = record["VOTE_NUMBER"]
+
+
     # for each record with a non-none reply-to-id, reposition it just below the comment whose comment_id matches  the reply-_to_id
     # for record in records:
     #     if record["REPLY_TO_ID"] is not None:
@@ -95,7 +109,8 @@ with open(args.input_file, "r") as f:
     comment_list = [{"tidx": record["TOPIC_IDX"], 
                     "cid": record["COMMENT_ID"], 
                     "rid": record["REPLY_TO_ID"], 
-                    "vote": record["VOTE_NUMBER"],
+                    "v": record["VOTE_NUMBER"],
+                    "pv": record["PVOTE"],
                     "content": record["COMMENT_CONTENT"]} for record in records]
 
     # output the comment_list to a JSON file

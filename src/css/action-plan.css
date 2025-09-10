@@ -636,6 +636,10 @@ div.deliberation-comment-item:nth-child(odd) {
   border-left: 4px solid #777777;
 }
 
+.deliberation-comment-item.vote-null .comment-fill {
+  border-left: none;
+}
+
 .deliberation-comment-item.vote-1 .comment-fill {
   border-left-color: hsl(27, 60%, 61%);
 }

@@ -136,14 +136,17 @@ function populate_comments(topic_index, filter) {
     let comment_data = global_comment_data;
     // console.log("chart_data", chart_data);
     let fCommentRecords = comment_data.filter(rec => rec.tidx == topic_index);
+
+
+
     if (filter == 'support') {
-      fCommentRecords = fCommentRecords.filter(rec => rec.vote >= 6);
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv >= 6);
     } else if (filter == 'neutral') {
-      fCommentRecords = fCommentRecords.filter(rec => rec.vote >= 3 && rec.vote <= 5);
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv >= 3 && rec.pv <= 5);
     } else if (filter == 'oppose') {
-      fCommentRecords = fCommentRecords.filter(rec => rec.vote <= 2);
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv <= 2);
     } else if (filter == 'novote') {
-      fCommentRecords = fCommentRecords.filter(rec => rec.vote == null);
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv == null);
     }
     console.log("fCommentRecords found:", fCommentRecords.length);
     let current_indent = 0;
@@ -156,7 +159,7 @@ function populate_comments(topic_index, filter) {
         } else {
           current_indent += 1;
         }
-        cmarkup += `<div class="deliberation-comment-item vote-${rec.vote} indent-${current_indent}"><div class="comment-fill indent-${current_indent}">`;
+        cmarkup += `<div class="deliberation-comment-item vote-${rec.v} indent-${current_indent}"><div class="comment-fill indent-${current_indent}">`;
         cmarkup += '“' + comment + '”';
         cmarkup += '</div></div>';
       }
