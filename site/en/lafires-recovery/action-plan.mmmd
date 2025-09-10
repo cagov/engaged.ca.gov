@@ -215,6 +215,7 @@ id: topic_data_vis
 title: Explore the votes
 learn_button_label: Learn about the actions being taken
 desc: Each dot represents an individual’s vote. The total number of dots corresponds to the total number of votes cast on a particular topic. 
+download_text: Download a CSV of participant comments
 ----
 
 ----

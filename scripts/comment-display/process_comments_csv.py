@@ -81,10 +81,15 @@ with open(args.input_file, "r") as f:
         if record["REPLY_TO_ID"] is not None:
             for other_record in records:
                 if other_record["COMMENT_ID"] == record["REPLY_TO_ID"]:
-                    record["POSTED_ON"] = other_record["POSTED_ON"] + 1
+                    record["COMMENT_ID"] = other_record["COMMENT_ID"] + 0.5
+                    record["VOTE_NUMBER"] = other_record["VOTE_NUMBER"]
                     break
     # sort records by POSTED_ON
-    records.sort(key=lambda x: x["POSTED_ON"])
+    records.sort(key=lambda x: x["COMMENT_ID"])
+
+    # convert all COMMENT_IDs to integer floor
+    for record in records:
+        record["COMMENT_ID"] = int(record["COMMENT_ID"])
 
     comment_list = [{"tidx": record["TOPIC_IDX"], 
                     "cid": record["COMMENT_ID"], 

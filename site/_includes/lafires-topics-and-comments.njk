@@ -1,9 +1,10 @@
 <script>
 
-let current_topic_index = 19;
+let current_topic_index = 1;
 let current_mood_filter = 'all';
 let current_mood_time_ms = new Date().getTime();
 let global_chart_data = null;
+let global_comment_data = null;
 
 function switch_alignment(requested_alignment) {
     document.querySelectorAll('.topics-alignment-switcher-item').forEach(function(el) {
@@ -55,8 +56,22 @@ document.addEventListener('DOMContentLoaded', function() {
       ScrollTrigger.refresh();
     })
     .catch(error => {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching chart data:", error);
     });
+
+    fetch("/public/data/lafires_actionplan_display_comments_v3.json", {})
+    .then(response => response.json())
+    .then(data => {
+      // console.log("Data fetched:", data);
+      global_comment_data = data;
+      populate_comments(current_topic_index, current_mood_filter);
+      // setup_topic_chart(chart_data); // consensus chart wants to be loaded second, otherwise it doesn't render -- need to figure out why
+    })
+    .catch(error => {
+      console.error("Error fetching comment data:", error);
+    });
+
+
 
 
   // Set up event handler for clicks on .findings-top-options-option-box
@@ -110,23 +125,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function populate_comments(topic_index, filter) {
-    let cmarkup = '';
-    let chart_data = global_chart_data;
-    // console.log("chart_data", chart_data);
-    let fUserRecords = chart_data.user_recs.filter(rec => rec.tid == topic_index-1);
-    if (filter == 'support') {
-      fUserRecords = fUserRecords.filter(rec => rec.v >= 6);
-    } else if (filter == 'neutral') {
-      fUserRecords = fUserRecords.filter(rec => rec.v >= 3 && rec.v <= 5);
-    } else if (filter == 'oppose') {
-      fUserRecords = fUserRecords.filter(rec => rec.v <= 2);
+
+    console.log("populating comments", topic_index, filter);
+    if (global_comment_data == null) {
+       console.log("  comment data not loaded yet");
+      return;
     }
-    console.log("fUserRecords found:", fUserRecords.length);
-    fUserRecords.forEach(rec => {
-      let cid = rec.cid;
-      if (cid >= 0 && cid < chart_data.comments.length) {
-        let comment = chart_data.comments[cid];
-        cmarkup += `<div class="deliberation-comment-item vote-${rec.v}"><div class="comment-fill">`;
+    console.log("# global comments", global_comment_data.length)
+    let cmarkup = '';
+    let comment_data = global_comment_data;
+    // console.log("chart_data", chart_data);
+    let fCommentRecords = comment_data.filter(rec => rec.tidx == topic_index);
+    if (filter == 'support') {
+      fCommentRecords = fCommentRecords.filter(rec => rec.vote >= 6);
+    } else if (filter == 'neutral') {
+      fCommentRecords = fCommentRecords.filter(rec => rec.vote >= 3 && rec.vote <= 5);
+    } else if (filter == 'oppose') {
+      fCommentRecords = fCommentRecords.filter(rec => rec.vote <= 2);
+    } else if (filter == 'novote') {
+      fCommentRecords = fCommentRecords.filter(rec => rec.vote == null);
+    }
+    console.log("fCommentRecords found:", fCommentRecords.length);
+    let current_indent = 0;
+    let last_comment_id = 0;
+    fCommentRecords.forEach(rec => {
+      let comment = rec.content;
+      if (comment != "") {
+        if (rec.rid == null) {
+          current_indent = 0;
+        } else {
+          current_indent += 1;
+        }
+        cmarkup += `<div class="deliberation-comment-item vote-${rec.vote} indent-${current_indent}"><div class="comment-fill indent-${current_indent}">`;
         cmarkup += '“' + comment + '”';
         cmarkup += '</div></div>';
       }
@@ -136,7 +166,7 @@ function populate_comments(topic_index, filter) {
     // ScrollTrigger.refresh();
 }
 
-function legendItemHandler(e) {
+{# function legendItemHandler(e) {
   const legendItem = this;
   let is_collapsed = legendItem.classList.contains('collapsed');
   const expansionBlock = legendItem.querySelector('.legend-item-expansion-block');
@@ -175,7 +205,7 @@ function legendItemHandler(e) {
   } else {
     legendItemContent.innerHTML = '';
   }
-}
+} #}
 
 {# function setLegendFade(elem, childElement) {
     // Remove both classes first

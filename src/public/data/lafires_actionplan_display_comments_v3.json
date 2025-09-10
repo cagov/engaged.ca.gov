@@ -7,20 +7,6 @@
   "content": "I'm skeptical of the ability of governments to find staff and have them there off-hours when people need them."
  },
  {
-  "tidx": 4,
-  "cid": 2030,
-  "rid": null,
-  "vote": 7,
-  "content": "This is a needed resource, and it should be done in such a way that approvals and payments can be done within hours/days. We are mired in enough paperwork as it is and going through a lengthy approval and disbursement process might add frustration."
- },
- {
-  "tidx": 4,
-  "cid": 2029,
-  "rid": null,
-  "vote": 7,
-  "content": "This makes basic sense. No good reason not to do this."
- },
- {
   "tidx": 5,
   "cid": 2022,
   "rid": null,
@@ -36,17 +22,24 @@
  },
  {
   "tidx": 4,
-  "cid": 3075,
+  "cid": 2029,
+  "rid": null,
+  "vote": 7,
+  "content": "This makes basic sense. No good reason not to do this."
+ },
+ {
+  "tidx": 4,
+  "cid": 2030,
+  "rid": null,
+  "vote": 7,
+  "content": "This is a needed resource, and it should be done in such a way that approvals and payments can be done within hours/days. We are mired in enough paperwork as it is and going through a lengthy approval and disbursement process might add frustration."
+ },
+ {
+  "tidx": 4,
+  "cid": 2030,
   "rid": 2030,
   "vote": 7,
   "content": "Maybe we can push the money out fast by treating it initially as a loan, so there's much less need to qualify everyone in detail on the front end. Get people money in days. Then, when things cool down, go through and figure out who really deserved the money and who didn't, and forgive the loans for everyone who deserved the money. Everyone who tried to cheat the system is on the hook to pay it back, but everyone who genuinely needed the help gets the help free & clear."
- },
- {
-  "tidx": 3,
-  "cid": 2038,
-  "rid": null,
-  "vote": 7,
-  "content": "This is a no brainer."
  },
  {
   "tidx": 1,
@@ -57,10 +50,10 @@
  },
  {
   "tidx": 3,
-  "cid": 2048,
+  "cid": 2038,
   "rid": null,
   "vote": 7,
-  "content": "This is an absolute necessity and the cost would be minimal in the grand scheme of things."
+  "content": "This is a no brainer."
  },
  {
   "tidx": 2,
@@ -70,18 +63,25 @@
   "content": "Agree 100%"
  },
  {
-  "tidx": 5,
-  "cid": 2051,
-  "rid": null,
-  "vote": 7,
-  "content": "Yes, strongly agree. Please make this available also to Woolsey Fire survivors still struggling and Franklin Fire survivors. Please be prepared to make this available for years, reflecting the long time it can take for people to gather the financing and professional teams to proceed."
- },
- {
   "tidx": 1,
   "cid": 2047,
   "rid": null,
   "vote": 7,
   "content": "As long as this can be done without adding expense to rate payers.  Private power companies like PGE and So Cal Edison should completely cover this cost with existing profits."
+ },
+ {
+  "tidx": 3,
+  "cid": 2048,
+  "rid": null,
+  "vote": 7,
+  "content": "This is an absolute necessity and the cost would be minimal in the grand scheme of things."
+ },
+ {
+  "tidx": 5,
+  "cid": 2051,
+  "rid": null,
+  "vote": 7,
+  "content": "Yes, strongly agree. Please make this available also to Woolsey Fire survivors still struggling and Franklin Fire survivors. Please be prepared to make this available for years, reflecting the long time it can take for people to gather the financing and professional teams to proceed."
  },
  {
   "tidx": 1,
@@ -98,13 +98,6 @@
   "content": "Decrease the likelihood of a buildings catching on fire with better design and annual inspections."
  },
  {
-  "tidx": 4,
-  "cid": 2062,
-  "rid": null,
-  "vote": 4,
-  "content": "Helping people choose slightly beter choices is better than nothing but weak. Invent the better options."
- },
- {
   "tidx": 5,
   "cid": 2061,
   "rid": null,
@@ -112,11 +105,11 @@
   "content": "Without better house design this is pointless.\nSo get better at house design. Not simple,\nbut technically and economically doable."
  },
  {
-  "tidx": 1,
-  "cid": 2148,
+  "tidx": 4,
+  "cid": 2062,
   "rid": null,
-  "vote": 7,
-  "content": "Well duh. No brainer. Requires telecoms to do it also."
+  "vote": 4,
+  "content": "Helping people choose slightly beter choices is better than nothing but weak. Invent the better options."
  },
  {
   "tidx": 1,
@@ -161,11 +154,11 @@
   "content": "Definitely a worthwhile investment since most building departments already struggle with a backlog of permit reviews before a major disaster."
  },
  {
-  "tidx": 2,
-  "cid": 2100,
+  "tidx": 5,
+  "cid": 2088,
   "rid": null,
-  "vote": 4,
-  "content": "Maintain what we have and make sure it works.  That would be a great start."
+  "vote": 7,
+  "content": "Human one-on-one contact is always the best way to resolve concerns, get to answers and solutions."
  },
  {
   "tidx": 2,
@@ -175,13 +168,6 @@
   "content": "Sure.  This is a great idea.  I hope somewhere in this deliberation we talk about what we do about what is causing this increase in fires - human induced climate change."
  },
  {
-  "tidx": 5,
-  "cid": 2088,
-  "rid": null,
-  "vote": 7,
-  "content": "Human one-on-one contact is always the best way to resolve concerns, get to answers and solutions."
- },
- {
   "tidx": 1,
   "cid": 2099,
   "rid": null,
@@ -189,25 +175,18 @@
   "content": "This would be amazing!"
  },
  {
+  "tidx": 2,
+  "cid": 2100,
+  "rid": null,
+  "vote": 4,
+  "content": "Maintain what we have and make sure it works.  That would be a great start."
+ },
+ {
   "tidx": 4,
   "cid": 2107,
   "rid": null,
   "vote": 4,
   "content": "This is the beauty of the internet and AI.  Prefer not to have government do this."
- },
- {
-  "tidx": 5,
-  "cid": 2126,
-  "rid": null,
-  "vote": 5,
-  "content": "Would these specialized teams have experience in permitting for condominiums, townhomes, mobile homes, and apartment buildings?"
- },
- {
-  "tidx": 3,
-  "cid": 2115,
-  "rid": null,
-  "vote": 7,
-  "content": "Tbh ere should be emergency FM radio in all parts of the city.. and backup mesh network or cellular to at least send text messages, notifications, etc if not full two way audio and text."
  },
  {
   "tidx": 5,
@@ -224,11 +203,18 @@
   "content": "And make sure that when lines are going to be buried that electric utilities invite and coordinate with low volt line users to also bury cable, fiber optic, and cellular lines. In Topanga they didn\u201a\u00c4\u00f4t\u201a\u00c4\u00b6 so after spending millions to underground electric lines we still have chopped off poles with low volt lines everywhere."
  },
  {
-  "tidx": 5,
-  "cid": 2133,
+  "tidx": 3,
+  "cid": 2115,
   "rid": null,
   "vote": 7,
-  "content": "There should be a single cooperative agency managing the Balkanized mass of 20 different agencies offering support. The support centers were just like a Kafka nightmare of bureaucratic, idiocy and lack of coordination.\n\nIt was embarrassing to see how poorly executed and organized this was and what a great hassle they put every person who lost property, business, or work"
+  "content": "Tbh ere should be emergency FM radio in all parts of the city.. and backup mesh network or cellular to at least send text messages, notifications, etc if not full two way audio and text."
+ },
+ {
+  "tidx": 5,
+  "cid": 2126,
+  "rid": null,
+  "vote": 5,
+  "content": "Would these specialized teams have experience in permitting for condominiums, townhomes, mobile homes, and apartment buildings?"
  },
  {
   "tidx": 1,
@@ -239,10 +225,24 @@
  },
  {
   "tidx": 1,
-  "cid": 3116,
+  "cid": 2131,
   "rid": 2131,
-  "vote": 6,
+  "vote": 7,
   "content": "\"Paid for by the government\" eventually means paid for by all of us."
+ },
+ {
+  "tidx": 5,
+  "cid": 2133,
+  "rid": null,
+  "vote": 7,
+  "content": "There should be a single cooperative agency managing the Balkanized mass of 20 different agencies offering support. The support centers were just like a Kafka nightmare of bureaucratic, idiocy and lack of coordination.\n\nIt was embarrassing to see how poorly executed and organized this was and what a great hassle they put every person who lost property, business, or work"
+ },
+ {
+  "tidx": 4,
+  "cid": 2136,
+  "rid": null,
+  "vote": 6,
+  "content": "Financial support programs should not be so fragmented. They need to work together so disaster victims don't have to jump through so many in hoops, often providing the same information, just to be turned down for assistance because they had some insurance or they earn more than the county average household income."
  },
  {
   "tidx": 1,
@@ -259,11 +259,11 @@
   "content": "It is clear that we simply did not have enough water or fire engines for the massive fires in January. Usually for a single home on fire, two to three engines are required. If you have 1,000 homes on fire, you need more than 3,000 fire engines. We must retrofit homes to be more fire resistant. We should also promote more water efficiency, water recycling and water capture. Although there are some water incentives from Metropolitan Water District, the vast majority of residents are unaware. Plus receiving the rebates is very tricky too."
  },
  {
-  "tidx": 4,
-  "cid": 2136,
+  "tidx": 1,
+  "cid": 2148,
   "rid": null,
-  "vote": 6,
-  "content": "Financial support programs should not be so fragmented. They need to work together so disaster victims don't have to jump through so many in hoops, often providing the same information, just to be turned down for assistance because they had some insurance or they earn more than the county average household income."
+  "vote": 7,
+  "content": "Well duh. No brainer. Requires telecoms to do it also."
  },
  {
   "tidx": 4,
@@ -274,7 +274,7 @@
  },
  {
   "tidx": 4,
-  "cid": 2707,
+  "cid": 2160,
   "rid": 2160,
   "vote": 7,
   "content": "Absolutely. A giant database is too much -- we need real live humans who are working with us directly, asking us about our needs, and finding the programs, resources, and funding to help."
@@ -287,11 +287,11 @@
   "content": "Essential for ongoing safety"
  },
  {
-  "tidx": 5,
-  "cid": 2184,
+  "tidx": 2,
+  "cid": 2176,
   "rid": null,
-  "vote": 4,
-  "content": "any streamlining should be productive, well staffed, and efficient. More nonsense is not needed."
+  "vote": 5,
+  "content": "I'm in favor of this but the cost should not impact the homeowners"
  },
  {
   "tidx": 3,
@@ -301,11 +301,11 @@
   "content": "This should have been in place since 9-11. Fires have been a yearly occurrence for decades. To now place this cost onto the rebuilding public is unnecessary"
  },
  {
-  "tidx": 2,
-  "cid": 2176,
+  "tidx": 5,
+  "cid": 2184,
   "rid": null,
-  "vote": 5,
-  "content": "I'm in favor of this but the cost should not impact the homeowners"
+  "vote": 4,
+  "content": "any streamlining should be productive, well staffed, and efficient. More nonsense is not needed."
  },
  {
   "tidx": 5,
@@ -329,6 +329,13 @@
   "content": "There will be billions spent on this. And comparatively little spent on brush and forest management. We spend billions per year on airplanes dropping retardant onto fires. Fires the retardant has no hope stopping. Had we only spent millions on managing our open spaces, so these raging fires had a lot less fuel...\n\nYes, people need an alert system. So, set up a Tsunami style siren. Don't pay some tech company millions for a system soon to be obsolete anyway."
  },
  {
+  "tidx": 3,
+  "cid": 2209,
+  "rid": 2209,
+  "vote": 5,
+  "content": "It's a fair point that if we send this out for a traditional bid, we'll just get giants like Oracle and Microsoft and end up locked in to incredibly expensive contracts. Maybe the city and the county need more tech experts on staff so that we can have better accountability and better incentives."
+ },
+ {
   "tidx": 5,
   "cid": 2215,
   "rid": null,
@@ -336,11 +343,11 @@
   "content": "no need for more bureaucracy. This has happened to countless communities. Ask them to share their findings in a basic Wikipedia type setting and do not pay someone $4300k per year with full pension to 'manage' that...the knowledge is no longer secretive. It simply needs to be centralized and shared."
  },
  {
-  "tidx": 3,
-  "cid": 3114,
-  "rid": 2209,
+  "tidx": 1,
+  "cid": 2225,
+  "rid": null,
   "vote": 7,
-  "content": "It's a fair point that if we send this out for a traditional bid, we'll just get giants like Oracle and Microsoft and end up locked in to incredibly expensive contracts. Maybe the city and the county need more tech experts on staff so that we can have better accountability and better incentives."
+  "content": "This should be done in ALL high fire zones!!"
  },
  {
   "tidx": 3,
@@ -357,20 +364,6 @@
   "content": "Need to find a way for every fire truck to have portable pool pumps. Lots of full pools and burned down homes\u201a\u00c4\u00b6."
  },
  {
-  "tidx": 3,
-  "cid": 2244,
-  "rid": null,
-  "vote": 7,
-  "content": "Start small and don't turn it into a spiraling cost. I think Code for America is a good role model"
- },
- {
-  "tidx": 1,
-  "cid": 2225,
-  "rid": null,
-  "vote": 7,
-  "content": "This should be done in ALL high fire zones!!"
- },
- {
   "tidx": 5,
   "cid": 2238,
   "rid": null,
@@ -378,11 +371,11 @@
   "content": "So long as they are there to helping build and less to be a gatekeeper"
  },
  {
-  "tidx": 2,
-  "cid": 2253,
+  "tidx": 3,
+  "cid": 2244,
   "rid": null,
-  "vote": 5,
-  "content": "Not at the expense of homeowners. Already have to pay a $400 fee to my water company for a \u201a\u00c4\u00faWill Serve\u201a\u00c4\u00f9 letter to get permits when my water was never turned off at my property and my water was not available during the fire."
+  "vote": 7,
+  "content": "Start small and don't turn it into a spiraling cost. I think Code for America is a good role model"
  },
  {
   "tidx": 4,
@@ -392,25 +385,11 @@
   "content": "I\u201a\u00c4\u00f4ve missed grants because I didn\u201a\u00c4\u00f4t know they existed."
  },
  {
-  "tidx": 3,
-  "cid": 2292,
-  "rid": null,
-  "vote": 7,
-  "content": "Of course."
- },
- {
   "tidx": 2,
-  "cid": 2293,
+  "cid": 2253,
   "rid": null,
-  "vote": 7,
-  "content": "Of course."
- },
- {
-  "tidx": 1,
-  "cid": 2291,
-  "rid": null,
-  "vote": 7,
-  "content": "Yes, yes and yes. Finally needs to happen. The longer we wait the more expensive it's going to get. Get this done now and avoid future fires being impacted by power lines."
+  "vote": 5,
+  "content": "Not at the expense of homeowners. Already have to pay a $400 fee to my water company for a \u201a\u00c4\u00faWill Serve\u201a\u00c4\u00f9 letter to get permits when my water was never turned off at my property and my water was not available during the fire."
  },
  {
   "tidx": 5,
@@ -418,13 +397,6 @@
   "rid": null,
   "vote": 2,
   "content": "We have this and have found it not very useful. Permitting delays are random and no one has ever helped me after a few visits."
- },
- {
-  "tidx": 2,
-  "cid": 2265,
-  "rid": null,
-  "vote": 7,
-  "content": "There should be a way to use ocean water that is being filtered before being used to maintain fires ."
  },
  {
   "tidx": 1,
@@ -435,7 +407,14 @@
  },
  {
   "tidx": 2,
-  "cid": 2552,
+  "cid": 2265,
+  "rid": null,
+  "vote": 7,
+  "content": "There should be a way to use ocean water that is being filtered before being used to maintain fires ."
+ },
+ {
+  "tidx": 2,
+  "cid": 2265,
   "rid": 2265,
   "vote": 7,
   "content": "I think using ocean water to put out fires is a good idea, but I don't think you would need to filter it.  I believe you can use it as is to put out a fire.  Unless your referring to filtering out any possible fish or seaweed, but thinking there's probably a simple fix for that.  we are so close to the ocean, just wish there was a way to utilize it as a resource in an emergency - so good idea!"
@@ -462,6 +441,27 @@
   "content": "Increase value of properties over time."
  },
  {
+  "tidx": 1,
+  "cid": 2291,
+  "rid": null,
+  "vote": 7,
+  "content": "Yes, yes and yes. Finally needs to happen. The longer we wait the more expensive it's going to get. Get this done now and avoid future fires being impacted by power lines."
+ },
+ {
+  "tidx": 3,
+  "cid": 2292,
+  "rid": null,
+  "vote": 7,
+  "content": "Of course."
+ },
+ {
+  "tidx": 2,
+  "cid": 2293,
+  "rid": null,
+  "vote": 7,
+  "content": "Of course."
+ },
+ {
   "tidx": 4,
   "cid": 2296,
   "rid": null,
@@ -476,11 +476,11 @@
   "content": "Doing so, but only in full transparency, disclosing all direct & indirect financial interests those organizations have to political or corporate (private & public) individuals and organizations"
  },
  {
-  "tidx": 3,
-  "cid": 2312,
+  "tidx": 5,
+  "cid": 2309,
   "rid": null,
   "vote": 7,
-  "content": "More cell towers would be helpful too. The Wi-Fi in the palisades is abysmal at best."
+  "content": "A \u201a\u00c4\u00faone stop shop\u201a\u00c4\u00f9 for permitting, architecture and building would be very helpful."
  },
  {
   "tidx": 2,
@@ -490,13 +490,6 @@
   "content": "This is obvious. We need an infrastructure that can support a fire in the future. We were already failed once, this is detrimental."
  },
  {
-  "tidx": 5,
-  "cid": 2309,
-  "rid": null,
-  "vote": 7,
-  "content": "A \u201a\u00c4\u00faone stop shop\u201a\u00c4\u00f9 for permitting, architecture and building would be very helpful."
- },
- {
   "tidx": 1,
   "cid": 2311,
   "rid": null,
@@ -504,25 +497,11 @@
   "content": "Obviously. This has to be done, non negotiable."
  },
  {
-  "tidx": 2,
-  "cid": 2335,
+  "tidx": 3,
+  "cid": 2312,
   "rid": null,
   "vote": 7,
-  "content": "these are such obvious questions. I cant imagine this survey is going to change anything, sorry"
- },
- {
-  "tidx": 4,
-  "cid": 2340,
-  "rid": null,
-  "vote": 7,
-  "content": "Yes 100%"
- },
- {
-  "tidx": 5,
-  "cid": 2338,
-  "rid": null,
-  "vote": 7,
-  "content": "of course"
+  "content": "More cell towers would be helpful too. The Wi-Fi in the palisades is abysmal at best."
  },
  {
   "tidx": 4,
@@ -537,6 +516,27 @@
   "rid": null,
   "vote": 7,
   "content": "of course"
+ },
+ {
+  "tidx": 2,
+  "cid": 2335,
+  "rid": null,
+  "vote": 7,
+  "content": "these are such obvious questions. I cant imagine this survey is going to change anything, sorry"
+ },
+ {
+  "tidx": 5,
+  "cid": 2338,
+  "rid": null,
+  "vote": 7,
+  "content": "of course"
+ },
+ {
+  "tidx": 4,
+  "cid": 2340,
+  "rid": null,
+  "vote": 7,
+  "content": "Yes 100%"
  },
  {
   "tidx": 5,
@@ -568,9 +568,9 @@
  },
  {
   "tidx": 4,
-  "cid": 3074,
+  "cid": 2358,
   "rid": 2358,
-  "vote": 7,
+  "vote": null,
   "content": "When they check for fraud in detail, everyone's yelling about how money isn't going out fast enough... when they push out money fast, everyone yells about fraud. What a catch-22!"
  },
  {
@@ -582,45 +582,10 @@
  },
  {
   "tidx": 4,
-  "cid": 2706,
+  "cid": 2362,
   "rid": 2362,
   "vote": 7,
   "content": "Well said! If the government cannot help us navigate the labyrinth of trying to find resources and assistance, who else can? We need more than just a database of trusted programs -- we need people who are actually communicating with us about what we need and looking for ways to find us help."
- },
- {
-  "tidx": 5,
-  "cid": 2399,
-  "rid": null,
-  "vote": 7,
-  "content": "More competent staff with problem solving skills needed."
- },
- {
-  "tidx": 3,
-  "cid": 2389,
-  "rid": null,
-  "vote": 7,
-  "content": "More cell phone towers."
- },
- {
-  "tidx": 2,
-  "cid": 2391,
-  "rid": null,
-  "vote": 7,
-  "content": "I strongly support the merit of the idea presented here; however, implementation is a different question."
- },
- {
-  "tidx": 1,
-  "cid": 2390,
-  "rid": null,
-  "vote": 7,
-  "content": "Mandate underground powerlines."
- },
- {
-  "tidx": 2,
-  "cid": 2369,
-  "rid": null,
-  "vote": 1,
-  "content": "seriously? wheres the context, infrastructure, cost... these questions are so random"
  },
  {
   "tidx": 4,
@@ -628,6 +593,13 @@
   "rid": null,
   "vote": 1,
   "content": "Trusted by WHOM????\nCreate a comprehensive catalog of financial support programs and organizations available to help with rebuilding efforts. This directory would connect fire-affected residents with grants, loans, and aid programs, WITHOUT the partnership. Too much loss , unaccounted for missing funds, not getting into the hands of survivors... How do you mesure Trusted?"
+ },
+ {
+  "tidx": 2,
+  "cid": 2369,
+  "rid": null,
+  "vote": 1,
+  "content": "seriously? wheres the context, infrastructure, cost... these questions are so random"
  },
  {
   "tidx": 2,
@@ -651,11 +623,60 @@
   "content": "What does \"trusted\" financial organizations mean?  Very subjective."
  },
  {
-  "tidx": 2,
-  "cid": 2411,
+  "tidx": 3,
+  "cid": 2389,
   "rid": null,
-  "vote": 2,
-  "content": "This will not save us if we have freakishly powerful Santa Ana winds like Jan 7. Will ratepayers who do not live in high fire severity zones have to front the cost for this?"
+  "vote": 7,
+  "content": "More cell phone towers."
+ },
+ {
+  "tidx": 1,
+  "cid": 2390,
+  "rid": null,
+  "vote": 7,
+  "content": "Mandate underground powerlines."
+ },
+ {
+  "tidx": 2,
+  "cid": 2391,
+  "rid": null,
+  "vote": 7,
+  "content": "I strongly support the merit of the idea presented here; however, implementation is a different question."
+ },
+ {
+  "tidx": 5,
+  "cid": 2399,
+  "rid": null,
+  "vote": 7,
+  "content": "More competent staff with problem solving skills needed."
+ },
+ {
+  "tidx": 2,
+  "cid": 2401,
+  "rid": null,
+  "vote": 1,
+  "content": "question is vague"
+ },
+ {
+  "tidx": 4,
+  "cid": 2403,
+  "rid": null,
+  "vote": 7,
+  "content": "Yes, this assistance must be flexible to accomodate all types of socioeconomic backgrounds with an emphasis on fire survivors that have overlapping vulnerabilities. Fire recovery should support all kinds of residents (i.e. renters, local business owners), not just homeowners."
+ },
+ {
+  "tidx": 4,
+  "cid": 2404,
+  "rid": null,
+  "vote": 7,
+  "content": "There needs to be a structure put in place for accountability - perhaps a citizen advisory board with locals to ensure that dollars are going to those with the most critical situations."
+ },
+ {
+  "tidx": 4,
+  "cid": 2404,
+  "rid": 2404,
+  "vote": 7,
+  "content": "I like the idea of an advisory board, but isn't that going to slow everything to a crawl? It's all slow enough already..."
  },
  {
   "tidx": 5,
@@ -666,17 +687,17 @@
  },
  {
   "tidx": 1,
-  "cid": 2416,
+  "cid": 2409,
   "rid": null,
-  "vote": 5,
-  "content": "Only in high fire severity zones where it makes the most sense (i.e. dense forest growth, hillsides with a lot of brush). Otherwise it will take too long / too expensive for ratepayers across the state. The burden should be on utility companies, not residents. How long has it taken/how expensive has it been PG&E to underground even 1 mile of power lines?"
+  "vote": 7,
+  "content": "While this would remove one ignition source, I do believe that the better option would be to utilize solar panels. This would eliminate the need for power lines."
  },
  {
   "tidx": 2,
-  "cid": 2401,
+  "cid": 2411,
   "rid": null,
-  "vote": 1,
-  "content": "question is vague"
+  "vote": 2,
+  "content": "This will not save us if we have freakishly powerful Santa Ana winds like Jan 7. Will ratepayers who do not live in high fire severity zones have to front the cost for this?"
  },
  {
   "tidx": 3,
@@ -707,39 +728,18 @@
   "content": "While more resilient water systems are important, the reality is that the fire was moving too quickly. No amount of water or firefighters would have stopped those flames. I believe a better solution would be to assign all emergency personnel to evacuating people."
  },
  {
-  "tidx": 4,
-  "cid": 2404,
-  "rid": null,
-  "vote": 7,
-  "content": "There needs to be a structure put in place for accountability - perhaps a citizen advisory board with locals to ensure that dollars are going to those with the most critical situations."
- },
- {
-  "tidx": 4,
-  "cid": 2403,
-  "rid": null,
-  "vote": 7,
-  "content": "Yes, this assistance must be flexible to accomodate all types of socioeconomic backgrounds with an emphasis on fire survivors that have overlapping vulnerabilities. Fire recovery should support all kinds of residents (i.e. renters, local business owners), not just homeowners."
- },
- {
   "tidx": 1,
-  "cid": 2409,
-  "rid": null,
-  "vote": 7,
-  "content": "While this would remove one ignition source, I do believe that the better option would be to utilize solar panels. This would eliminate the need for power lines."
- },
- {
-  "tidx": 4,
-  "cid": 3073,
-  "rid": 2404,
-  "vote": 7,
-  "content": "I like the idea of an advisory board, but isn't that going to slow everything to a crawl? It's all slow enough already..."
- },
- {
-  "tidx": 5,
-  "cid": 2428,
+  "cid": 2416,
   "rid": null,
   "vote": 5,
-  "content": "Yeah, and also: how about we make permitting processes less arcane? It's like our tax system \u201a\u00c4\u00ee\u00ac\u2020it doesn't have to be this hard!"
+  "content": "Only in high fire severity zones where it makes the most sense (i.e. dense forest growth, hillsides with a lot of brush). Otherwise it will take too long / too expensive for ratepayers across the state. The burden should be on utility companies, not residents. How long has it taken/how expensive has it been PG&E to underground even 1 mile of power lines?"
+ },
+ {
+  "tidx": 3,
+  "cid": 2425,
+  "rid": null,
+  "vote": 6,
+  "content": "No idea what this looks like\u201a\u00c4\u00eeis there a particular technology that is being considered?\u201a\u00c4\u00eebut it sounds reasonable."
  },
  {
   "tidx": 1,
@@ -749,11 +749,11 @@
   "content": "Again, yes, yes, yes! It's expensive but it's the most important things we can do. Some of those power company executives and shareholders can cut back on their pay packets and dividends. This should be mandated if you wish to operate in California."
  },
  {
-  "tidx": 3,
-  "cid": 2425,
+  "tidx": 5,
+  "cid": 2428,
   "rid": null,
-  "vote": 6,
-  "content": "No idea what this looks like\u201a\u00c4\u00eeis there a particular technology that is being considered?\u201a\u00c4\u00eebut it sounds reasonable."
+  "vote": 5,
+  "content": "Yeah, and also: how about we make permitting processes less arcane? It's like our tax system \u201a\u00c4\u00ee\u00ac\u2020it doesn't have to be this hard!"
  },
  {
   "tidx": 5,
@@ -770,18 +770,18 @@
   "content": "This is a great idea! I would also encourage this to be virtual as well! And if this can be implemented with Artificial Assistance this would be a great idea (i.e. online quiz that then identifies what assistance can be utilized)"
  },
  {
+  "tidx": 4,
+  "cid": 2440,
+  "rid": 2440,
+  "vote": 7,
+  "content": "I love the idea of having a handy questionaire that asks you a few questions and tells you what you probably qualify for. Just please don't try to put ChatGPT into it! You don't need an LLM to run a multiple-choice quiz, and let's keep so-called \"AI hallucinations\" away from our government services."
+ },
+ {
   "tidx": 1,
   "cid": 2444,
   "rid": null,
   "vote": 7,
   "content": "This is long overdue and much needed!"
- },
- {
-  "tidx": 4,
-  "cid": 3072,
-  "rid": 2440,
-  "vote": 7,
-  "content": "I love the idea of having a handy questionaire that asks you a few questions and tells you what you probably qualify for. Just please don't try to put ChatGPT into it! You don't need an LLM to run a multiple-choice quiz, and let's keep so-called \"AI hallucinations\" away from our government services."
  },
  {
   "tidx": 2,
@@ -812,13 +812,6 @@
   "content": "If and only if these people are truly there to navigate the system, solve problems and meet fire victims at their specific level of need. No more civil servants who shrug while acting as roadblocks."
  },
  {
-  "tidx": 3,
-  "cid": 2465,
-  "rid": null,
-  "vote": 5,
-  "content": "How about public address systems / sirens on poles for one-way notification in the event of emergency / evacuation?"
- },
- {
   "tidx": 1,
   "cid": 2464,
   "rid": null,
@@ -826,18 +819,11 @@
   "content": "Yes, and Edison should pay for it."
  },
  {
-  "tidx": 4,
-  "cid": 2491,
+  "tidx": 3,
+  "cid": 2465,
   "rid": null,
-  "vote": null,
-  "content": "If this is only intended for fire affected resident - I\u201a\u00c4\u00f4m all for it! If this is another loop hole to tax more (like CA tends to do for EVERYTHING) then no! Just another cash scheme for Gavin to fill his pockets"
- },
- {
-  "tidx": 2,
-  "cid": 2483,
-  "rid": null,
-  "vote": null,
-  "content": "Nope! Just make sure you don\u201a\u00c4\u00f4t shut the water off so we can have access to water when we need it. We have enough hydrants- just no water in them. Fix that! That\u201a\u00c4\u00f4s the issue !"
+  "vote": 5,
+  "content": "How about public address systems / sirens on poles for one-way notification in the event of emergency / evacuation?"
  },
  {
   "tidx": 3,
@@ -847,11 +833,11 @@
   "content": "I don\u201a\u00c4\u00f4t think emergency communication is an issue. Transparency would be appreciated and we don\u201a\u00c4\u00f4t have that with our current political leaders here in CA. Hope Gavin can understand that we need him to do good by us and not for his pockets and business partners"
  },
  {
-  "tidx": 5,
-  "cid": 2486,
+  "tidx": 2,
+  "cid": 2483,
   "rid": null,
   "vote": null,
-  "content": "This is great- as long as our political team isn\u201a\u00c4\u00f4t selecting them for their own personal gain and benefit. Perhaps someone else can take over this task? Don\u201a\u00c4\u00f4t trust our current Governor or mayor , such a disgrace"
+  "content": "Nope! Just make sure you don\u201a\u00c4\u00f4t shut the water off so we can have access to water when we need it. We have enough hydrants- just no water in them. Fix that! That\u201a\u00c4\u00f4s the issue !"
  },
  {
   "tidx": 1,
@@ -859,6 +845,27 @@
   "rid": null,
   "vote": null,
   "content": "Need more info- pretty vague"
+ },
+ {
+  "tidx": 5,
+  "cid": 2486,
+  "rid": null,
+  "vote": null,
+  "content": "This is great- as long as our political team isn\u201a\u00c4\u00f4t selecting them for their own personal gain and benefit. Perhaps someone else can take over this task? Don\u201a\u00c4\u00f4t trust our current Governor or mayor , such a disgrace"
+ },
+ {
+  "tidx": 4,
+  "cid": 2491,
+  "rid": null,
+  "vote": null,
+  "content": "If this is only intended for fire affected resident - I\u201a\u00c4\u00f4m all for it! If this is another loop hole to tax more (like CA tends to do for EVERYTHING) then no! Just another cash scheme for Gavin to fill his pockets"
+ },
+ {
+  "tidx": 5,
+  "cid": 2503,
+  "rid": null,
+  "vote": 7,
+  "content": "I'd  be first in line to take advantage of that type of service. I think it could be very helpful."
  },
  {
   "tidx": 4,
@@ -869,24 +876,10 @@
  },
  {
   "tidx": 5,
-  "cid": 2503,
-  "rid": null,
-  "vote": 7,
-  "content": "I'd  be first in line to take advantage of that type of service. I think it could be very helpful."
- },
- {
-  "tidx": 5,
   "cid": 2512,
   "rid": null,
   "vote": 5,
   "content": "Is it possible to use AI for this purpose?"
- },
- {
-  "tidx": 3,
-  "cid": 2516,
-  "rid": null,
-  "vote": 7,
-  "content": "Yes we need any communications improvements that we can get."
  },
  {
   "tidx": 2,
@@ -903,11 +896,11 @@
   "content": "Yes it is imperative to bury the electrical lines. It will be expensive but not nearly as expensive (or destructive) as the fires caused by power lines."
  },
  {
-  "tidx": 1,
-  "cid": 2522,
+  "tidx": 3,
+  "cid": 2516,
   "rid": null,
   "vote": 7,
-  "content": "Power companies have been sides stepping this option for years and it has cost Californians billions of dollars in property losses and hundreds of lost lives. Enough is enough put the power lines underground. Utility companies have been responsible for 7 of 10 of the biggest fires in California history. Aesthetically it would be a tremendous improvement to the beautification of California too"
+  "content": "Yes we need any communications improvements that we can get."
  },
  {
   "tidx": 4,
@@ -917,11 +910,11 @@
   "content": "I have tried to utilize many of the available  sources to help us get our life back on track. Several of the programs have been very helpful in providing some funds to replace some of our more basic needs after we lost almost everything in the fire.   But funds to rebuild our home have been woefully underwhelming. Granted it going to take a significant amount of money to rebuild,  but we feel like we're on an island adrift right now. When it comes to rebuilding our house."
  },
  {
-  "tidx": 4,
-  "cid": 2525,
+  "tidx": 1,
+  "cid": 2522,
   "rid": null,
-  "vote": 4,
-  "content": "First get the incentives correct.  Carbon economics applies everywhere.  LA is the natural financial center of the carbon economy.  You can also share with the rest of us new ways of making  the shift that work for the people most exposed to the downside of the transition to the carbon economy. \n\nWe're California.  We made this beautiful mess, and we're addressing the polycrisis together.\n\nGo Bears!"
+  "vote": 7,
+  "content": "Power companies have been sides stepping this option for years and it has cost Californians billions of dollars in property losses and hundreds of lost lives. Enough is enough put the power lines underground. Utility companies have been responsible for 7 of 10 of the biggest fires in California history. Aesthetically it would be a tremendous improvement to the beautification of California too"
  },
  {
   "tidx": 2,
@@ -931,53 +924,18 @@
   "content": "I believed a major factor of the palisades fire destructive results was directly related to miss management of our water resources. Two major water sources were empty prior to the fire for maintenance.   It was ridiculous doing repairs to reservoirs during the height of fire season. Those repairs should have been done in the winter when fire risk was significantly reduced. Our house was destroyed in Malibu as a direct result of the fire department not being able to extinguishing the palisades fire prior to it reaching Malibu. Poor water management and not utilizing the fire departments resources was a much to blame as the high winds for the destruction of Malibu homes and businesses after the fire wasn't controlled in palisades."
  },
  {
+  "tidx": 4,
+  "cid": 2525,
+  "rid": null,
+  "vote": 4,
+  "content": "First get the incentives correct.  Carbon economics applies everywhere.  LA is the natural financial center of the carbon economy.  You can also share with the rest of us new ways of making  the shift that work for the people most exposed to the downside of the transition to the carbon economy. \n\nWe're California.  We made this beautiful mess, and we're addressing the polycrisis together.\n\nGo Bears!"
+ },
+ {
   "tidx": 3,
   "cid": 2526,
   "rid": null,
   "vote": 6,
   "content": "Communication during the fires was poorly handled. In addition, Edison preemptively shut the power off to many communities before the fire even started making communication even harder. There was no Internet, phone or cable service available in our community.  Having an alternative communication network should be critical."
- },
- {
-  "tidx": 3,
-  "cid": 2551,
-  "rid": null,
-  "vote": 1,
-  "content": "I don't think this is necessary.  Our current technology may or may not work at the time of the disaster and in the area of the disaster, but the people wouldn't be in that area anyway.  They would have fled the disaster area, and would have gone to a safer area which will have communication services.  Additionally, first responders and other emergency workers currently  seem to have adequate lines of communications now, so I do not see the need for this upgrade at this time when there are other priorities."
- },
- {
-  "tidx": 3,
-  "cid": 2560,
-  "rid": null,
-  "vote": 7,
-  "content": "Communications can save lives in an emergency"
- },
- {
-  "tidx": 2,
-  "cid": 2563,
-  "rid": null,
-  "vote": 7,
-  "content": "Absolutely, this lack of updates and old fire hydrants that weren\u201a\u00c4\u00f4t working or with no water pressure is what lead to the catastrophic losses in the Palisades"
- },
- {
-  "tidx": 2,
-  "cid": 2553,
-  "rid": null,
-  "vote": 7,
-  "content": "This initiative is imperative. Everyone should really read the articles/links about water systems provided at the top of this section, b/c it explains how there was water, just the demand for it was too high, & it came all at the same time. Also, the heat from the fires melted & broke main water pipes, which then released pressure in the water lines, & since pressure is required for water to travel through pipes, this is why water wasn't getting to the fire hydrants. The same water that comes out of your faucets is the same water that comes through the fire hydrants, so if there was \"no water\" you would've known it when you woke up to take a shower or brush your teeth. There was water. The system was simply not set up to support the demand."
- },
- {
-  "tidx": 4,
-  "cid": 2572,
-  "rid": null,
-  "vote": 7,
-  "content": "Would be a welcomed resource and a time saver for people. It would also help residents from feeling overwhelmed"
- },
- {
-  "tidx": 4,
-  "cid": 2547,
-  "rid": null,
-  "vote": 7,
-  "content": "Let's make it easier for people to get the resources available."
  },
  {
   "tidx": 5,
@@ -987,11 +945,25 @@
   "content": "Yes, please."
  },
  {
-  "tidx": 1,
-  "cid": 2561,
+  "tidx": 4,
+  "cid": 2547,
   "rid": null,
   "vote": 7,
-  "content": "We need to prevent fires from starting as much as possible"
+  "content": "Let's make it easier for people to get the resources available."
+ },
+ {
+  "tidx": 3,
+  "cid": 2551,
+  "rid": null,
+  "vote": 1,
+  "content": "I don't think this is necessary.  Our current technology may or may not work at the time of the disaster and in the area of the disaster, but the people wouldn't be in that area anyway.  They would have fled the disaster area, and would have gone to a safer area which will have communication services.  Additionally, first responders and other emergency workers currently  seem to have adequate lines of communications now, so I do not see the need for this upgrade at this time when there are other priorities."
+ },
+ {
+  "tidx": 2,
+  "cid": 2553,
+  "rid": null,
+  "vote": 7,
+  "content": "This initiative is imperative. Everyone should really read the articles/links about water systems provided at the top of this section, b/c it explains how there was water, just the demand for it was too high, & it came all at the same time. Also, the heat from the fires melted & broke main water pipes, which then released pressure in the water lines, & since pressure is required for water to travel through pipes, this is why water wasn't getting to the fire hydrants. The same water that comes out of your faucets is the same water that comes through the fire hydrants, so if there was \"no water\" you would've known it when you woke up to take a shower or brush your teeth. There was water. The system was simply not set up to support the demand."
  },
  {
   "tidx": 1,
@@ -1009,6 +981,48 @@
  },
  {
   "tidx": 3,
+  "cid": 2560,
+  "rid": null,
+  "vote": 7,
+  "content": "Communications can save lives in an emergency"
+ },
+ {
+  "tidx": 1,
+  "cid": 2561,
+  "rid": null,
+  "vote": 7,
+  "content": "We need to prevent fires from starting as much as possible"
+ },
+ {
+  "tidx": 2,
+  "cid": 2563,
+  "rid": null,
+  "vote": 7,
+  "content": "Absolutely, this lack of updates and old fire hydrants that weren\u201a\u00c4\u00f4t working or with no water pressure is what lead to the catastrophic losses in the Palisades"
+ },
+ {
+  "tidx": 4,
+  "cid": 2572,
+  "rid": null,
+  "vote": 7,
+  "content": "Would be a welcomed resource and a time saver for people. It would also help residents from feeling overwhelmed"
+ },
+ {
+  "tidx": 4,
+  "cid": 2579,
+  "rid": null,
+  "vote": 6,
+  "content": "Electronic app version to keep updated.\n\nIt would be helpful if bulletpoints of qualifications/limits were posted too, to avoid wasting time. Often you don't find that out until you're through applying.\n\nInclude funeral and legal resources/hotlines would help. \n\nClear citing of laws about who is responsible for doing what after a fire (i.e. landlords paying for ash, smoke, water, fire cleanup) would help too.\n\nEncourage people to contact utility, cc, other companies they deal with to ask for help.\n\nAs well as help with receiving mail. Mail for legal, financial, or state/fed assistance triples after a disaster but is marked \"do not forward.\" How ridiculous. It's a natural disaster we have to be able to forward mail."
+ },
+ {
+  "tidx": 4,
+  "cid": 2581,
+  "rid": null,
+  "vote": 7,
+  "content": "Encourage alternate non electronic means of application, i.e. telephone conversations, ol FC fashion mail and/or local in person.  As survivor, it requires extra effort to get documentation, access to scanner, etc."
+ },
+ {
+  "tidx": 3,
   "cid": 2588,
   "rid": null,
   "vote": 7,
@@ -1020,34 +1034,6 @@
   "rid": null,
   "vote": 7,
   "content": "We could look into a warning system for fires that are put in place similar to SAN Luis Obispo for the Diablo Canyon emergency plan."
- },
- {
-  "tidx": 4,
-  "cid": 2581,
-  "rid": null,
-  "vote": 7,
-  "content": "Encourage alternate non electronic means of application, i.e. telephone conversations, ol FC fashion mail and/or local in person.  As survivor, it requires extra effort to get documentation, access to scanner, etc."
- },
- {
-  "tidx": 4,
-  "cid": 2579,
-  "rid": null,
-  "vote": 6,
-  "content": "Electronic app version to keep updated.\n\nIt would be helpful if bulletpoints of qualifications/limits were posted too, to avoid wasting time. Often you don't find that out until you're through applying.\n\nInclude funeral and legal resources/hotlines would help. \n\nClear citing of laws about who is responsible for doing what after a fire (i.e. landlords paying for ash, smoke, water, fire cleanup) would help too.\n\nEncourage people to contact utility, cc, other companies they deal with to ask for help.\n\nAs well as help with receiving mail. Mail for legal, financial, or state/fed assistance triples after a disaster but is marked \"do not forward.\" How ridiculous. It's a natural disaster we have to be able to forward mail."
- },
- {
-  "tidx": 4,
-  "cid": 2600,
-  "rid": null,
-  "vote": 4,
-  "content": "I'm also very weary of anything actually happening - a catalog of programs really means nothing - it's more work for everyone to chase down a possible check that likely won't cover one mortgage payment.  Either get in with 2 feet and support the residents or get out of the way."
- },
- {
-  "tidx": 3,
-  "cid": 2601,
-  "rid": null,
-  "vote": 7,
-  "content": "I relied on the Watch Duty app more than anything, and it made a huge difference in me getting alerts, but I could do that because I had cell service. \n\nElectricity and WiFi are non-existent in a disaster.\n\nWe ABSOLUTELY need better comms."
  },
  {
   "tidx": 2,
@@ -1078,6 +1064,20 @@
   "content": "I don't know how this works with earthquakes, since LA is on a fault line and after an earthquake fire is the main concern so that issue matters. But it does seem most of our fires start from power line sparks in wind.\n\nIn terms of wind events especially in areas that are on hilltops or have a history of getting stronger gusts, yes definitely bury as much as possible.\n\nUpdating equipment is important. Moving towards renewable energy as much as possible."
  },
  {
+  "tidx": 4,
+  "cid": 2600,
+  "rid": null,
+  "vote": 4,
+  "content": "I'm also very weary of anything actually happening - a catalog of programs really means nothing - it's more work for everyone to chase down a possible check that likely won't cover one mortgage payment.  Either get in with 2 feet and support the residents or get out of the way."
+ },
+ {
+  "tidx": 3,
+  "cid": 2601,
+  "rid": null,
+  "vote": 7,
+  "content": "I relied on the Watch Duty app more than anything, and it made a huge difference in me getting alerts, but I could do that because I had cell service. \n\nElectricity and WiFi are non-existent in a disaster.\n\nWe ABSOLUTELY need better comms."
+ },
+ {
   "tidx": 2,
   "cid": 2611,
   "rid": null,
@@ -1097,6 +1097,20 @@
   "rid": null,
   "vote": 7,
   "content": "Transparency around the cost of permitting!"
+ },
+ {
+  "tidx": 5,
+  "cid": 2642,
+  "rid": null,
+  "vote": 4,
+  "content": "Due diligence requires many agencies to review plans.  One or more centralized agency may or may not be the answer, especially with current electronic technology.   Recommend serious efficiency study to streamline the process instead of current PROPOSED SB as the solution."
+ },
+ {
+  "tidx": 5,
+  "cid": 2645,
+  "rid": null,
+  "vote": 7,
+  "content": "Absolutely. This is the bottleneck.\n\nThe average person needs help things are so complex."
  },
  {
   "tidx": 2,
@@ -1120,11 +1134,11 @@
   "content": "Yes! It shouldn't take an act of congress to rebuild your home like for like where one stood pre-fire!"
  },
  {
-  "tidx": 5,
-  "cid": 2645,
+  "tidx": 4,
+  "cid": 2656,
   "rid": null,
-  "vote": 7,
-  "content": "Absolutely. This is the bottleneck.\n\nThe average person needs help things are so complex."
+  "vote": 5,
+  "content": "If they are programs that actual help victims of the fire and not every other non profit under the sun in the County of Los Angeles."
  },
  {
   "tidx": 3,
@@ -1132,13 +1146,6 @@
   "rid": null,
   "vote": 5,
   "content": "I don't know about more electronic communication.  This is where recommending or mandatory emergency planning by individual household may b e helpful."
- },
- {
-  "tidx": 4,
-  "cid": 2656,
-  "rid": null,
-  "vote": 5,
-  "content": "If they are programs that actual help victims of the fire and not every other non profit under the sun in the County of Los Angeles."
  },
  {
   "tidx": 1,
@@ -1162,6 +1169,20 @@
   "content": "Preparedness and planning is key. It is shocking that LA City has so few employees in their EMD. The state should assist with coordination and education."
  },
  {
+  "tidx": 5,
+  "cid": 2673,
+  "rid": null,
+  "vote": 6,
+  "content": "Pros: convenience, humanity\ncons: none that I can think of.\nconsiderations: opening hours, prioritization, languages, accessibility, scaled support depending on familiarity (contractor vs novice homeowner).\nQuestion: what would dedicated staff do when not at triage centers? What would be deprioritized, or how would they get up to speed if contracted for role?"
+ },
+ {
+  "tidx": 5,
+  "cid": 2673,
+  "rid": 2673,
+  "vote": 6,
+  "content": "Let's make sure we have open hours that are NOT during regular business hours. I have a job!!!"
+ },
+ {
   "tidx": 2,
   "cid": 2675,
   "rid": null,
@@ -1176,24 +1197,10 @@
   "content": "Make sure the systems are open source."
  },
  {
-  "tidx": 5,
-  "cid": 2673,
-  "rid": null,
-  "vote": 6,
-  "content": "Pros: convenience, humanity\ncons: none that I can think of.\nconsiderations: opening hours, prioritization, languages, accessibility, scaled support depending on familiarity (contractor vs novice homeowner).\nQuestion: what would dedicated staff do when not at triage centers? What would be deprioritized, or how would they get up to speed if contracted for role?"
- },
- {
-  "tidx": 5,
-  "cid": 3092,
-  "rid": 2673,
-  "vote": 7,
-  "content": "Let's make sure we have open hours that are NOT during regular business hours. I have a job!!!"
- },
- {
   "tidx": 3,
-  "cid": 3113,
+  "cid": 2677,
   "rid": 2677,
-  "vote": 7,
+  "vote": 6,
   "content": "Yes please! Use open standards and open software. Make sure to include language in the bids to ensure this."
  },
  {
@@ -1239,6 +1246,27 @@
   "content": "I still don\u201a\u00c4\u00f4t understand why the Santa Ynez reservoir was not fixed and why the head of LADWP still has a job there"
  },
  {
+  "tidx": 2,
+  "cid": 2711,
+  "rid": 2711,
+  "vote": 7,
+  "content": "There was probably a good reason that it wasn't filled. Government agency staff can't just \"snap their fingers\" and solve every problem. We deserve a full accounting of what happened, but we should also be understanding that these are systemic failures and not just one person being bad at their job. (If only the real world were so simple that every problem could be blamed on one person!)"
+ },
+ {
+  "tidx": 1,
+  "cid": 2714,
+  "rid": null,
+  "vote": 7,
+  "content": "Yes for safety and aesthetics."
+ },
+ {
+  "tidx": 5,
+  "cid": 2717,
+  "rid": null,
+  "vote": 7,
+  "content": "The resource that would be most helpful to me right now is a case worker who knows me and my situation and can provide resources and guidance. Ideally, this person could act as a liaison with insurance, my mortgage company, my contractor/architect, LA county permitting, and nonprofit organizations that are providing grants and other sources of funding. Rebuilding is a full time job that I cannot do without help."
+ },
+ {
   "tidx": 4,
   "cid": 2718,
   "rid": null,
@@ -1251,27 +1279,6 @@
   "rid": null,
   "vote": 7,
   "content": "Do this, then keep them on staff to unlock the citywide permitting backlog. Win-win."
- },
- {
-  "tidx": 5,
-  "cid": 2717,
-  "rid": null,
-  "vote": 7,
-  "content": "The resource that would be most helpful to me right now is a case worker who knows me and my situation and can provide resources and guidance. Ideally, this person could act as a liaison with insurance, my mortgage company, my contractor/architect, LA county permitting, and nonprofit organizations that are providing grants and other sources of funding. Rebuilding is a full time job that I cannot do without help."
- },
- {
-  "tidx": 1,
-  "cid": 2714,
-  "rid": null,
-  "vote": 7,
-  "content": "Yes for safety and aesthetics."
- },
- {
-  "tidx": 2,
-  "cid": 3118,
-  "rid": 2711,
-  "vote": 6,
-  "content": "There was probably a good reason that it wasn't filled. Government agency staff can't just \"snap their fingers\" and solve every problem. We deserve a full accounting of what happened, but we should also be understanding that these are systemic failures and not just one person being bad at their job. (If only the real world were so simple that every problem could be blamed on one person!)"
  },
  {
   "tidx": 3,
@@ -1288,13 +1295,6 @@
   "content": "(What happened to the 3 day fast track permit approval?)"
  },
  {
-  "tidx": 3,
-  "cid": 2739,
-  "rid": null,
-  "vote": 7,
-  "content": "I very much appreciate improved level of communications available during the LA Fires relative to the Wolsey Fire. Especially value the timely communicating of Watch Duty - an outstanding service."
- },
- {
   "tidx": 2,
   "cid": 2734,
   "rid": null,
@@ -1309,25 +1309,18 @@
   "content": "A very high priority against future fires and needs to be systemically linked with moving to renewable energy."
  },
  {
+  "tidx": 3,
+  "cid": 2739,
+  "rid": null,
+  "vote": 7,
+  "content": "I very much appreciate improved level of communications available during the LA Fires relative to the Wolsey Fire. Especially value the timely communicating of Watch Duty - an outstanding service."
+ },
+ {
   "tidx": 2,
   "cid": 2745,
   "rid": null,
   "vote": 5,
   "content": "We do need systems that are relevant to today and tomorrow. Yet, given the kind of water shortages we have seen under drought conditions, I find myself asking will there ever be enough water? We need to find ways to get smart and get ahead of ourselves in the firefighting cycle - prevention through prescribed burns, goats etc. Using water to fight fires as if it is an endless resource is problematic to me: shutting the stable door after the horse has already bolted."
- },
- {
-  "tidx": 2,
-  "cid": 2760,
-  "rid": null,
-  "vote": 5,
-  "content": "This is something that should be left to the fire experts. I don't know to what extent this matters."
- },
- {
-  "tidx": 1,
-  "cid": 2761,
-  "rid": null,
-  "vote": 7,
-  "content": "This is something that should be left to the fire experts, but my understanding is that this is correct, power lines are causing many of the fires."
  },
  {
   "tidx": 1,
@@ -1345,10 +1338,31 @@
  },
  {
   "tidx": 2,
+  "cid": 2760,
+  "rid": null,
+  "vote": 5,
+  "content": "This is something that should be left to the fire experts. I don't know to what extent this matters."
+ },
+ {
+  "tidx": 1,
+  "cid": 2761,
+  "rid": null,
+  "vote": 7,
+  "content": "This is something that should be left to the fire experts, but my understanding is that this is correct, power lines are causing many of the fires."
+ },
+ {
+  "tidx": 2,
   "cid": 2765,
   "rid": null,
   "vote": 7,
   "content": "Probably would require an upgrade of water main lines- could be combined with additional underground utility work if coordinated correctly."
+ },
+ {
+  "tidx": 2,
+  "cid": 2765,
+  "rid": 2765,
+  "vote": 7,
+  "content": "The waterlines are in need of upgrades, so this would be a good idea for both regular usage and for firefighters"
  },
  {
   "tidx": 1,
@@ -1356,13 +1370,6 @@
   "rid": null,
   "vote": 7,
   "content": "Mandatory. Edison needs to get its infrastructure out of the late 19th century."
- },
- {
-  "tidx": 2,
-  "cid": 2819,
-  "rid": 2765,
-  "vote": 7,
-  "content": "The waterlines are in need of upgrades, so this would be a good idea for both regular usage and for firefighters"
  },
  {
   "tidx": 1,
@@ -1387,24 +1394,10 @@
  },
  {
   "tidx": 5,
-  "cid": 3091,
+  "cid": 2800,
   "rid": 2800,
-  "vote": 7,
-  "content": "The \"free market\" would let Altadena into an urban jungle with even less fireproofing that will be even harder to evacuate. We need government because we need oversight. There is no real oversight in the \"free market,\" only profit motive."
- },
- {
-  "tidx": 5,
-  "cid": 2844,
-  "rid": null,
-  "vote": 4,
-  "content": "This could be great or useless depending on how it is done."
- },
- {
-  "tidx": 3,
-  "cid": 2813,
-  "rid": null,
   "vote": 2,
-  "content": "Let free market infrastructure satisfy technologic demands."
+  "content": "The \"free market\" would let Altadena into an urban jungle with even less fireproofing that will be even harder to evacuate. We need government because we need oversight. There is no real oversight in the \"free market,\" only profit motive."
  },
  {
   "tidx": 4,
@@ -1414,6 +1407,20 @@
   "content": "This can be best done by free market. Government has already proven is helplessness in their civic responsibility to residents."
  },
  {
+  "tidx": 4,
+  "cid": 2804,
+  "rid": 2804,
+  "vote": 2,
+  "content": "Government is stifled by decades of stricter and stricter rules that prevent even the best-intentioned bureaucrats from doing anything to really help people. For anyone who wants to understand how this plays out in practice and what fixing it would look like, go to your local library and check out Jennifer Pahlka's \"Recoding America.\" Really cool stuff from one of the people who fixed California's unemployment system when it shattered during COVID."
+ },
+ {
+  "tidx": 3,
+  "cid": 2813,
+  "rid": null,
+  "vote": 2,
+  "content": "Let free market infrastructure satisfy technologic demands."
+ },
+ {
   "tidx": 1,
   "cid": 2814,
   "rid": null,
@@ -1421,11 +1428,18 @@
   "content": "Let free market balance above-ground v. below ground needs, including costs of their poor choices."
  },
  {
-  "tidx": 3,
-  "cid": 2827,
+  "tidx": 2,
+  "cid": 2815,
   "rid": null,
-  "vote": 5,
-  "content": "Sounds like a good idea but I don\u201a\u00c4\u00f4t know that much about how it would work."
+  "vote": 6,
+  "content": "Just let the water flow (and be stored in reservoirs) where it's needed instead of discarding out to sea."
+ },
+ {
+  "tidx": 4,
+  "cid": 2824,
+  "rid": null,
+  "vote": 6,
+  "content": "Seems to be already being done at the grass roots, it wouldn't take much to formalize but needs to be done sooner\nComment: what about people in other situations that need support (renters, standing structures, etc?)"
  },
  {
   "tidx": 2,
@@ -1435,11 +1449,11 @@
   "content": "Lack of water was a major contributor to our community burning down"
  },
  {
-  "tidx": 2,
-  "cid": 2815,
+  "tidx": 3,
+  "cid": 2827,
   "rid": null,
-  "vote": 6,
-  "content": "Just let the water flow (and be stored in reservoirs) where it's needed instead of discarding out to sea."
+  "vote": 5,
+  "content": "Sounds like a good idea but I don\u201a\u00c4\u00f4t know that much about how it would work."
  },
  {
   "tidx": 4,
@@ -1456,25 +1470,11 @@
   "content": "I'm supportive.. I've just also given up on any of this applying to me or my neighbors. Which is wild, because I'm from a very middle class neighborhood for the Palisades, full of elderly people. You'd think we'd qualify for something. Does losing our home of nearly 50 years not count?"
  },
  {
-  "tidx": 4,
-  "cid": 2824,
-  "rid": null,
-  "vote": 6,
-  "content": "Seems to be already being done at the grass roots, it wouldn't take much to formalize but needs to be done sooner\nComment: what about people in other situations that need support (renters, standing structures, etc?)"
- },
- {
-  "tidx": 4,
-  "cid": 3071,
-  "rid": 2804,
-  "vote": 7,
-  "content": "Government is stifled by decades of stricter and stricter rules that prevent even the best-intentioned bureaucrats from doing anything to really help people. For anyone who wants to understand how this plays out in practice and what fixing it would look like, go to your local library and check out Jennifer Pahlka's \"Recoding America.\" Really cool stuff from one of the people who fixed California's unemployment system when it shattered during COVID."
- },
- {
   "tidx": 5,
-  "cid": 2865,
+  "cid": 2844,
   "rid": null,
-  "vote": 5,
-  "content": "I'm supportive, but so disillusioned right now. Why is the process so bad that we need triage centers?! Where is the money coming from? I feel like you need to just give us all the funding from programs like this. Then it can make a difference by actually allowing us to rebuild in the first place?"
+  "vote": 4,
+  "content": "This could be great or useless depending on how it is done."
  },
  {
   "tidx": 2,
@@ -1482,6 +1482,27 @@
   "rid": null,
   "vote": 7,
   "content": "There was no water when my lifelong home burned. It was not during the initial windstorm. Nobody was there because the reservoir and hydrants were dry."
+ },
+ {
+  "tidx": 1,
+  "cid": 2853,
+  "rid": null,
+  "vote": 7,
+  "content": "Absolutely. This shouldn't even be up for discussion. Please just make it happen and make sure negligent utilities companies foot the bill."
+ },
+ {
+  "tidx": 1,
+  "cid": 2853,
+  "rid": 2853,
+  "vote": 7,
+  "content": "As of now, SCE has stated property owners are likely to foot the bill to be connected to the underground system. It's been posted online that could be $8-10K."
+ },
+ {
+  "tidx": 3,
+  "cid": 2854,
+  "rid": null,
+  "vote": 6,
+  "content": "Not sure what this is, but I'm for it. Needs to work if power etc is down too."
  },
  {
   "tidx": 4,
@@ -1498,32 +1519,11 @@
   "content": "This is absolutely needed. My limited experience with building permits was stressful and complicated and it was for fairly simple projects. Trying to rebuild or repair an entire home post-fire feels daunting enough without having to navigate this process on your own."
  },
  {
-  "tidx": 1,
-  "cid": 2853,
-  "rid": null,
-  "vote": 7,
-  "content": "Absolutely. This shouldn't even be up for discussion. Please just make it happen and make sure negligent utilities companies foot the bill."
- },
- {
-  "tidx": 3,
-  "cid": 2854,
-  "rid": null,
-  "vote": 6,
-  "content": "Not sure what this is, but I'm for it. Needs to work if power etc is down too."
- },
- {
-  "tidx": 1,
-  "cid": 3058,
-  "rid": 2853,
-  "vote": 6,
-  "content": "As of now, SCE has stated property owners are likely to foot the bill to be connected to the underground system. It's been posted online that could be $8-10K."
- },
- {
-  "tidx": 2,
-  "cid": 2874,
+  "tidx": 5,
+  "cid": 2865,
   "rid": null,
   "vote": 5,
-  "content": "I think this would be great -- but given the issues LA County has with water as a whole, is it feasible? We have consistent water main breaks due to age and disrepair. How much money and time would it require to upgrade our systems? That feels like a much longer-term project when we have such immediate need in two major communities."
+  "content": "I'm supportive, but so disillusioned right now. Why is the process so bad that we need triage centers?! Where is the money coming from? I feel like you need to just give us all the funding from programs like this. Then it can make a difference by actually allowing us to rebuild in the first place?"
  },
  {
   "tidx": 3,
@@ -1531,6 +1531,13 @@
   "rid": null,
   "vote": 7,
   "content": "I'm fairly stunned we don't already have this. Cell towers feel very vulnerable in a disaster -- and fiber lines -- now that we have people attacking satellites and cable lines because they think people are controlling the weather -- we need to know communications can survive disruption in a major incident."
+ },
+ {
+  "tidx": 2,
+  "cid": 2874,
+  "rid": null,
+  "vote": 5,
+  "content": "I think this would be great -- but given the issues LA County has with water as a whole, is it feasible? We have consistent water main breaks due to age and disrepair. How much money and time would it require to upgrade our systems? That feels like a much longer-term project when we have such immediate need in two major communities."
  },
  {
   "tidx": 1,
@@ -1541,17 +1548,17 @@
  },
  {
   "tidx": 4,
+  "cid": 2881,
+  "rid": null,
+  "vote": 6,
+  "content": "I support this idea, but hasn't it been done already? Sure, it would be great to have 1 or 2 reputable, regularly updated sites that contain up to date information and links to grants, loans and aid.\n\nLA County should have something on their Recovery website. Maybe it's fine as is and just needs to be pushed out to the community via different platforms."
+ },
+ {
+  "tidx": 4,
   "cid": 2888,
   "rid": null,
   "vote": 4,
   "content": "Need financial assistance immediately, like grants,  not loans"
- },
- {
-  "tidx": 3,
-  "cid": 2891,
-  "rid": null,
-  "vote": 7,
-  "content": "If we don't learn from this tragedy, then it's an even bigger tragedy.  Fix what is broken."
  },
  {
   "tidx": 2,
@@ -1561,11 +1568,11 @@
   "content": "The state would need to become a power broker to push the local mutual water companies to merge for the community's own good. \nLas Flores is hurting, the other two are doing better. \nThere's a power struggle between them. Water is this generation's gold."
  },
  {
-  "tidx": 4,
-  "cid": 2881,
+  "tidx": 3,
+  "cid": 2891,
   "rid": null,
-  "vote": 6,
-  "content": "I support this idea, but hasn't it been done already? Sure, it would be great to have 1 or 2 reputable, regularly updated sites that contain up to date information and links to grants, loans and aid.\n\nLA County should have something on their Recovery website. Maybe it's fine as is and just needs to be pushed out to the community via different platforms."
+  "vote": 7,
+  "content": "If we don't learn from this tragedy, then it's an even bigger tragedy.  Fix what is broken."
  },
  {
   "tidx": 1,
@@ -1573,13 +1580,6 @@
   "rid": null,
   "vote": 6,
   "content": "SCE needed to take down the decommissioned tower in Eaton Canyon decades ago. They didn't and this is at the center of the start of the fire. \nEnforcing what was in place (taking down the tower) didn't happen. \nWe cannot allow utilities to be neglectful. Proper oversight is needed. The CPUC isn't overly helpful.\n\nI'm for undergrounded electric but we've already been told it could cost each property $10K to connect. \nCan't SCE insulated the lines?\n\nPlease use goats and create firebreaks. Spend an ounce of prevention instead of a pound of cure."
- },
- {
-  "tidx": 4,
-  "cid": 2909,
-  "rid": null,
-  "vote": 3,
-  "content": "Cataloging available resources is fine."
  },
  {
   "tidx": 4,
@@ -1596,11 +1596,11 @@
   "content": "What about the 3 day fast tracking? The wait periods for grading, an requirement to notify non existent neighboring homes is a joke."
  },
  {
-  "tidx": 5,
-  "cid": 2919,
+  "tidx": 4,
+  "cid": 2909,
   "rid": null,
-  "vote": 7,
-  "content": "This is already in place for the Eaton fire victims"
+  "vote": 3,
+  "content": "Cataloging available resources is fine."
  },
  {
   "tidx": 1,
@@ -1611,10 +1611,17 @@
  },
  {
   "tidx": 1,
-  "cid": 3057,
+  "cid": 2915,
   "rid": 2915,
-  "vote": 6,
+  "vote": 7,
   "content": "Interesting as the fire started at the transmission tower in the canyon vs. overhead electrical wires. We were at the mercy of the winds after that."
+ },
+ {
+  "tidx": 5,
+  "cid": 2919,
+  "rid": null,
+  "vote": 7,
+  "content": "This is already in place for the Eaton fire victims"
  },
  {
   "tidx": 3,
@@ -1638,18 +1645,18 @@
   "content": "All lines must be buried including phone and cable"
  },
  {
+  "tidx": 1,
+  "cid": 2936,
+  "rid": 2936,
+  "vote": 7,
+  "content": "Is this more for aesthetics or safety? Asking as cable and phone are not electrical safety issues."
+ },
+ {
   "tidx": 4,
   "cid": 2940,
   "rid": null,
   "vote": 6,
   "content": "Sure... If you can account for the money. Seems California keeps losing our tax dollars with no accountability"
- },
- {
-  "tidx": 1,
-  "cid": 3056,
-  "rid": 2936,
-  "vote": 6,
-  "content": "Is this more for aesthetics or safety? Asking as cable and phone are not electrical safety issues."
  },
  {
   "tidx": 2,
@@ -1659,18 +1666,18 @@
   "content": "You mean what was supposed with our tax dollars and DIDN'T??"
  },
  {
-  "tidx": 4,
-  "cid": 2960,
-  "rid": null,
-  "vote": 6,
-  "content": "Just make a good website."
- },
- {
   "tidx": 5,
   "cid": 2953,
   "rid": null,
   "vote": 6,
   "content": "Pasadena and maybe LA also already have young Parks and Recreation hires who could be trained to support resident victims navigate the front end of the rebuilding burocracy.  Review of blueprints would be another different, higher level of expertise."
+ },
+ {
+  "tidx": 4,
+  "cid": 2960,
+  "rid": null,
+  "vote": 6,
+  "content": "Just make a good website."
  },
  {
   "tidx": 2,
@@ -1694,18 +1701,18 @@
   "content": "Incredibly important for those dealing with homes in the VHFHZ and hillside ordinance properties"
  },
  {
-  "tidx": 5,
-  "cid": 2980,
-  "rid": null,
-  "vote": 7,
-  "content": "I assume the state or county would take responsibility?  How can we reduce redundancy?"
- },
- {
   "tidx": 1,
   "cid": 2978,
   "rid": null,
   "vote": 6,
   "content": "Define whenever possible - when does the cost become too much?"
+ },
+ {
+  "tidx": 5,
+  "cid": 2980,
+  "rid": null,
+  "vote": 7,
+  "content": "I assume the state or county would take responsibility?  How can we reduce redundancy?"
  },
  {
   "tidx": 1,
@@ -1715,18 +1722,11 @@
   "content": "I think it depends on the ares. For example, my area is mostly weak adobe and is prone to movement. Undergroynding utilities works better on more stable land."
  },
  {
-  "tidx": 4,
-  "cid": 3021,
+  "tidx": 3,
+  "cid": 3016,
   "rid": null,
-  "vote": 4,
-  "content": "Please collaborate with others who are already working on this and not duplicate efforts, which ultimately causes confusion for survivors."
- },
- {
-  "tidx": 2,
-  "cid": 3046,
-  "rid": null,
-  "vote": 3,
-  "content": "The Santa Ynez reservoir was constructed in the 1960\u201a\u00c4\u00f4s for the purposes of fire protection. We can build, construct, upgrade and everything else to improve our water system, but unless we have an effective administrative structure to manage these resources, they will continue to fail us. LADWP has informed us that the reservoir is back in service. But they STILL have not fully refilled it. So we are STILL in the same situation with inadequate water resources available if a fire breaks out tomorrow. And LAFD did not act on the fact that it did not have enough water resources to fight a fire in the Palisades then, and they are not publicly commenting that they are only in a slightly better position today. Administration has failed us."
+  "vote": 6,
+  "content": "This might not be the mode of communication; however, emergency comms should be reevaluated and the community must be able to trust the government officials who make the emergency call."
  },
  {
   "tidx": 2,
@@ -1737,10 +1737,10 @@
  },
  {
   "tidx": 4,
-  "cid": 3040,
+  "cid": 3021,
   "rid": null,
-  "vote": 7,
-  "content": "We need programs that are funded first , then we can catalogue them. Step one before step two."
+  "vote": 4,
+  "content": "Please collaborate with others who are already working on this and not duplicate efforts, which ultimately causes confusion for survivors."
  },
  {
   "tidx": 5,
@@ -1750,11 +1750,11 @@
   "content": "I think this is needed, otherwise you have 6,000+ projects all trying to figure it out"
  },
  {
-  "tidx": 3,
-  "cid": 3016,
+  "tidx": 4,
+  "cid": 3040,
   "rid": null,
-  "vote": 6,
-  "content": "This might not be the mode of communication; however, emergency comms should be reevaluated and the community must be able to trust the government officials who make the emergency call."
+  "vote": 7,
+  "content": "We need programs that are funded first , then we can catalogue them. Step one before step two."
  },
  {
   "tidx": 1,
@@ -1765,10 +1765,17 @@
  },
  {
   "tidx": 1,
-  "cid": 3055,
+  "cid": 3044,
   "rid": 3044,
-  "vote": 6,
+  "vote": null,
   "content": "So true. Residents keep pointing to the lines on the poles. Makes me think they're more concerned about aesthetics."
+ },
+ {
+  "tidx": 2,
+  "cid": 3046,
+  "rid": null,
+  "vote": 3,
+  "content": "The Santa Ynez reservoir was constructed in the 1960\u201a\u00c4\u00f4s for the purposes of fire protection. We can build, construct, upgrade and everything else to improve our water system, but unless we have an effective administrative structure to manage these resources, they will continue to fail us. LADWP has informed us that the reservoir is back in service. But they STILL have not fully refilled it. So we are STILL in the same situation with inadequate water resources available if a fire breaks out tomorrow. And LAFD did not act on the fact that it did not have enough water resources to fight a fire in the Palisades then, and they are not publicly commenting that they are only in a slightly better position today. Administration has failed us."
  },
  {
   "tidx": 5,
@@ -1799,18 +1806,18 @@
   "content": "Yes. And we should have connectivity offered everywhere by municipal ISPs we can trust, not just telecom giants like AT&T and Spectrum. We should have high quality, free, and pervasive internet connectivity in homes, businesses, and on the streets for all residents and visitors."
  },
  {
-  "tidx": 2,
-  "cid": 3117,
-  "rid": null,
-  "vote": 6,
-  "content": "We should also run regular stress tests to make sure that the system works as designed."
- },
- {
   "tidx": 1,
   "cid": 3115,
   "rid": null,
   "vote": 6,
   "content": "Why do we have to rip up the streets every time we need to update a power line? We should have understreet conduits accessible from manholes that can be shared between power and fiber. If a power line goes bad, just send someone down to run a new cable!\n\nPay for this with bonds and then repay the bonds using fees paid by the companies that use the conduits.\n\nI know it would be expensive to do this all at once, so focus on the areas where the risk of sparking fires is highest."
+ },
+ {
+  "tidx": 2,
+  "cid": 3117,
+  "rid": null,
+  "vote": 6,
+  "content": "We should also run regular stress tests to make sure that the system works as designed."
  },
  {
   "tidx": 1,
@@ -1841,13 +1848,6 @@
   "content": "better to spend staff time on streamlining the approvals and permitting process to enable."
  },
  {
-  "tidx": 4,
-  "cid": 3144,
-  "rid": null,
-  "vote": 4,
-  "content": "As far as I know, for many aid programs, including SBA loans, the problem isn't people not knowing about them. It's actually having the programs executed and the grants or loans funded. Also immediately after the fire there were too many things for people to apply for, and each one promising only a small amount, at a moment when people had no time or energy to fill in so many different applications. More important that aid is administered through a small number of programs that can deliver meaningful help without too much required on the part of the disaster victims. Or to centralize the application process so victims could register in one place (FEMA?) and be considered for everything they are eligible for based on that one application."
- },
- {
   "tidx": 2,
   "cid": 3141,
   "rid": null,
@@ -1855,11 +1855,18 @@
   "content": "our infrastructure is aging and needs better attention than our political leaders have given it."
  },
  {
-  "tidx": 5,
-  "cid": 3154,
+  "tidx": 4,
+  "cid": 3144,
   "rid": null,
   "vote": 4,
-  "content": "Don't we already have this. Isn't that what the \"one stop permitting\" center is? Maybe I'm not understanding the proposal..."
+  "content": "As far as I know, for many aid programs, including SBA loans, the problem isn't people not knowing about them. It's actually having the programs executed and the grants or loans funded. Also immediately after the fire there were too many things for people to apply for, and each one promising only a small amount, at a moment when people had no time or energy to fill in so many different applications. More important that aid is administered through a small number of programs that can deliver meaningful help without too much required on the part of the disaster victims. Or to centralize the application process so victims could register in one place (FEMA?) and be considered for everything they are eligible for based on that one application."
+ },
+ {
+  "tidx": 5,
+  "cid": 3147,
+  "rid": null,
+  "vote": 7,
+  "content": "Shouldn't this exist as a county service for anyone? Is this question just about increasing the staff? That's clearly needed given the volume."
  },
  {
   "tidx": 2,
@@ -1870,17 +1877,10 @@
  },
  {
   "tidx": 5,
-  "cid": 3147,
+  "cid": 3154,
   "rid": null,
-  "vote": 7,
-  "content": "Shouldn't this exist as a county service for anyone? Is this question just about increasing the staff? That's clearly needed given the volume."
- },
- {
-  "tidx": 5,
-  "cid": 3162,
-  "rid": null,
-  "vote": 3,
-  "content": "Having been lucky enough to build, and been through the building process, I do not see how this could be rolled out at the needed scale."
+  "vote": 4,
+  "content": "Don't we already have this. Isn't that what the \"one stop permitting\" center is? Maybe I'm not understanding the proposal..."
  },
  {
   "tidx": 4,
@@ -1888,6 +1888,13 @@
   "rid": null,
   "vote": 7,
   "content": "Maybe a way for a single application could then be routed to all applicable programs, grants, and loans."
+ },
+ {
+  "tidx": 5,
+  "cid": 3162,
+  "rid": null,
+  "vote": 3,
+  "content": "Having been lucky enough to build, and been through the building process, I do not see how this could be rolled out at the needed scale."
  },
  {
   "tidx": 1,
@@ -1968,13 +1975,6 @@
  },
  {
   "tidx": 5,
-  "cid": 2642,
-  "rid": null,
-  "vote": 4,
-  "content": "Due diligence requires many agencies to review plans.  One or more centralized agency may or may not be the answer, especially with current electronic technology.   Recommend serious efficiency study to streamline the process instead of current PROPOSED SB as the solution."
- },
- {
-  "tidx": 5,
   "cid": 3203,
   "rid": null,
   "vote": 5,
@@ -2009,6 +2009,13 @@
   "content": "So long as it does not delay the rebuilding of homes.  This kind of project would have these homes build in 2040!!"
  },
  {
+  "tidx": 5,
+  "cid": 3227,
+  "rid": null,
+  "vote": 6,
+  "content": "Yes. Assist fire victims negotiating the permitting process."
+ },
+ {
   "tidx": 3,
   "cid": 3228,
   "rid": null,
@@ -2037,18 +2044,88 @@
   "content": "A central list would be helpful but more helpful would be streamlining the process which, to date, had been difficult & onerous"
  },
  {
-  "tidx": 5,
-  "cid": 3227,
-  "rid": null,
-  "vote": 6,
-  "content": "Yes. Assist fire victims negotiating the permitting process."
- },
- {
   "tidx": 1,
   "cid": 3246,
   "rid": null,
   "vote": 7,
   "content": "Just seeing power lines causes me PTSD from the night we had to evacuate. Because of the strong winds Altadena experiences on an annual basis, I believe this should be a safety requirement."
+ },
+ {
+  "tidx": 3,
+  "cid": 3247,
+  "rid": null,
+  "vote": 4,
+  "content": "Yes, I do think this is important as long it can be done efficiently without waste. However at the moment helping Altadena rebuild and stay in the area is my top priority."
+ },
+ {
+  "tidx": 1,
+  "cid": 3252,
+  "rid": null,
+  "vote": 7,
+  "content": "Also reduce overhead lighting and the color temperature of any lighting installed. This should be a \"dark sky\" neighborhood, in keeping with its rural character."
+ },
+ {
+  "tidx": 5,
+  "cid": 3256,
+  "rid": null,
+  "vote": 7,
+  "content": "Various people at the permit office are misinformed or ignorant about fire resistant materials, assemblies and principles, title 24 energy requirements, the ins and outs of the inspection process including whether a plan check and engineering analysis is or is not needed. There is a serious lack of understanding among some at the office about homeowners ability to afford rebuilding and retrofitting after the fire and no ability to help homeowners navigate the process. Most importantly, there is not a single person who seems to have final say and authority, you get different answers from different people, the result is extra costs, angry contractors, doubt, confusion, delays and frustration in rebuilding and fire hardening."
+ },
+ {
+  "tidx": 3,
+  "cid": 3257,
+  "rid": null,
+  "vote": null,
+  "content": "Independent communication is of course very important for first responders. Residents usually overwhelm cell towers"
+ },
+ {
+  "tidx": 1,
+  "cid": 3258,
+  "rid": null,
+  "vote": 7,
+  "content": "We should learn the lessons from Lahaina. High winds forecast should trigger mandatory power cutoffs in high risk areas. Residents should be responsible to have own backup generators"
+ },
+ {
+  "tidx": 4,
+  "cid": 3278,
+  "rid": null,
+  "vote": 5,
+  "content": "Devil is in the details."
+ },
+ {
+  "tidx": 4,
+  "cid": 3290,
+  "rid": null,
+  "vote": 5,
+  "content": "Does this not already exist?!?"
+ },
+ {
+  "tidx": 3,
+  "cid": 3291,
+  "rid": null,
+  "vote": 5,
+  "content": "Good idea"
+ },
+ {
+  "tidx": 1,
+  "cid": 3292,
+  "rid": null,
+  "vote": 4,
+  "content": "Underground installation is expensive, and even more expensive if repairs are needed"
+ },
+ {
+  "tidx": 2,
+  "cid": 3293,
+  "rid": null,
+  "vote": 7,
+  "content": "Ummm, yeah. Water is important"
+ },
+ {
+  "tidx": 1,
+  "cid": 3298,
+  "rid": null,
+  "vote": 7,
+  "content": "This is obvious. With the new fire maps, my main north/south escape route is now going through a very high severity fire zone which is completely lined with old power lines on both sides of the street. Having seen the massive amount of downed lines during the fire and now knowing that they were indeed live and in many cases blocked the roads, I feel constantly worried about being blocked in by downed lines or poles when trying to evacuate and concerned that we will have to flee on foot. The power pole outside my house leans at a 75deg angle. Also really tall palm trees are a surprisingly bad wind/fire hazard."
  },
  {
   "tidx": 3,
@@ -2065,83 +2142,6 @@
   "content": "Yes."
  },
  {
-  "tidx": 1,
-  "cid": 3298,
-  "rid": null,
-  "vote": 7,
-  "content": "This is obvious. With the new fire maps, my main north/south escape route is now going through a very high severity fire zone which is completely lined with old power lines on both sides of the street. Having seen the massive amount of downed lines during the fire and now knowing that they were indeed live and in many cases blocked the roads, I feel constantly worried about being blocked in by downed lines or poles when trying to evacuate and concerned that we will have to flee on foot. The power pole outside my house leans at a 75deg angle. Also really tall palm trees are a surprisingly bad wind/fire hazard."
- },
- {
-  "tidx": 3,
-  "cid": 3247,
-  "rid": null,
-  "vote": 4,
-  "content": "Yes, I do think this is important as long it can be done efficiently without waste. However at the moment helping Altadena rebuild and stay in the area is my top priority."
- },
- {
-  "tidx": 5,
-  "cid": 3256,
-  "rid": null,
-  "vote": 7,
-  "content": "Various people at the permit office are misinformed or ignorant about fire resistant materials, assemblies and principles, title 24 energy requirements, the ins and outs of the inspection process including whether a plan check and engineering analysis is or is not needed. There is a serious lack of understanding among some at the office about homeowners ability to afford rebuilding and retrofitting after the fire and no ability to help homeowners navigate the process. Most importantly, there is not a single person who seems to have final say and authority, you get different answers from different people, the result is extra costs, angry contractors, doubt, confusion, delays and frustration in rebuilding and fire hardening."
- },
- {
-  "tidx": 1,
-  "cid": 3252,
-  "rid": null,
-  "vote": 7,
-  "content": "Also reduce overhead lighting and the color temperature of any lighting installed. This should be a \"dark sky\" neighborhood, in keeping with its rural character."
- },
- {
-  "tidx": 1,
-  "cid": 3258,
-  "rid": null,
-  "vote": 7,
-  "content": "We should learn the lessons from Lahaina. High winds forecast should trigger mandatory power cutoffs in high risk areas. Residents should be responsible to have own backup generators"
- },
- {
-  "tidx": 3,
-  "cid": 3257,
-  "rid": null,
-  "vote": null,
-  "content": "Independent communication is of course very important for first responders. Residents usually overwhelm cell towers"
- },
- {
-  "tidx": 1,
-  "cid": 3292,
-  "rid": null,
-  "vote": 4,
-  "content": "Underground installation is expensive, and even more expensive if repairs are needed"
- },
- {
-  "tidx": 3,
-  "cid": 3291,
-  "rid": null,
-  "vote": 5,
-  "content": "Good idea"
- },
- {
-  "tidx": 4,
-  "cid": 3290,
-  "rid": null,
-  "vote": 5,
-  "content": "Does this not already exist?!?"
- },
- {
-  "tidx": 4,
-  "cid": 3278,
-  "rid": null,
-  "vote": 5,
-  "content": "Devil is in the details."
- },
- {
-  "tidx": 2,
-  "cid": 3293,
-  "rid": null,
-  "vote": 7,
-  "content": "Ummm, yeah. Water is important"
- },
- {
   "tidx": 2,
   "cid": 3303,
   "rid": null,
@@ -2154,20 +2154,6 @@
   "rid": null,
   "vote": 7,
   "content": "If they don't do this, shame on them.  Asking for more problems down the line."
- },
- {
-  "tidx": 1,
-  "cid": 3318,
-  "rid": null,
-  "vote": 5,
-  "content": "Costs benefits ratios necessary.  Very quick response to an ignition might be as effective but cheaper. Distance from urban areas is also a consideration. Some fires periodically should be allowed in this historic \"land of smokes\". ..Procedures already in place under \"fire management\" may just need review."
- },
- {
-  "tidx": 3,
-  "cid": 3314,
-  "rid": null,
-  "vote": 7,
-  "content": "I have friends in the fire zone who did not get informed in a timely manner.  They were lucky to survive ...and more time to take a few belongings would have been important"
  },
  {
   "tidx": 3,
@@ -2191,18 +2177,32 @@
   "content": "High up front cost, but beneficial in the long term and will help prevent power outages in high wind events."
  },
  {
+  "tidx": 4,
+  "cid": 3312,
+  "rid": null,
+  "vote": 6,
+  "content": "Would be more helpful if it were a nonprofit group that compiled the list. This would help prevent fear of \"govt tracking\" if following the links."
+ },
+ {
+  "tidx": 3,
+  "cid": 3314,
+  "rid": null,
+  "vote": 7,
+  "content": "I have friends in the fire zone who did not get informed in a timely manner.  They were lucky to survive ...and more time to take a few belongings would have been important"
+ },
+ {
+  "tidx": 1,
+  "cid": 3318,
+  "rid": null,
+  "vote": 5,
+  "content": "Costs benefits ratios necessary.  Very quick response to an ignition might be as effective but cheaper. Distance from urban areas is also a consideration. Some fires periodically should be allowed in this historic \"land of smokes\". ..Procedures already in place under \"fire management\" may just need review."
+ },
+ {
   "tidx": 1,
   "cid": 3321,
   "rid": null,
   "vote": 7,
   "content": "Most important issue so far. Why rebuild third world technology. So much safer and more beautiful underground."
- },
- {
-  "tidx": 1,
-  "cid": 3330,
-  "rid": null,
-  "vote": 7,
-  "content": "We've paid for them to do this over and over again. Make it mandatory, don't subsidize this anymore."
  },
  {
   "tidx": 2,
@@ -2212,11 +2212,11 @@
   "content": "Obviously a cost that only gets ROI in an emergency, but we're seeing that we're more likely than not to have emergencies. So do it, spread the cost, the sooner the cheaper."
  },
  {
-  "tidx": 4,
-  "cid": 3312,
+  "tidx": 1,
+  "cid": 3330,
   "rid": null,
-  "vote": 6,
-  "content": "Would be more helpful if it were a nonprofit group that compiled the list. This would help prevent fear of \"govt tracking\" if following the links."
+  "vote": 7,
+  "content": "We've paid for them to do this over and over again. Make it mandatory, don't subsidize this anymore."
  },
  {
   "tidx": 1,
@@ -2233,6 +2233,13 @@
   "content": "There would need to be transparency with this to assure residents that their best interests are being kept in mind and that they're not being funneled to \"sponsored\" organizations."
  },
  {
+  "tidx": 2,
+  "cid": 3358,
+  "rid": null,
+  "vote": 6,
+  "content": "As both communities are in the WUI it makes sense to prep them for future incursions of fire"
+ },
+ {
   "tidx": 3,
   "cid": 3359,
   "rid": null,
@@ -2247,25 +2254,11 @@
   "content": "I would encourage the state to ensure that the privatized power companies do not waste/fraud their way out of doing this or return the funds to share holders as opposed to actually performing the maintenance or line burying when given state funds"
  },
  {
-  "tidx": 2,
-  "cid": 3358,
-  "rid": null,
-  "vote": 6,
-  "content": "As both communities are in the WUI it makes sense to prep them for future incursions of fire"
- },
- {
   "tidx": 4,
   "cid": 3372,
   "rid": null,
   "vote": 7,
   "content": "This seems reasonable."
- },
- {
-  "tidx": 3,
-  "cid": 3378,
-  "rid": null,
-  "vote": 7,
-  "content": "This seems reasonable, surprised its not already in place."
  },
  {
   "tidx": 2,
@@ -2282,6 +2275,20 @@
   "content": "I support this though know that rates will go up as a result. Mitigation strategies to prevent ignition like what happened with Eaton Fire seem like a no brainer and bear no additional cost, just the shut down of transmission lines."
  },
  {
+  "tidx": 3,
+  "cid": 3378,
+  "rid": null,
+  "vote": 7,
+  "content": "This seems reasonable, surprised its not already in place."
+ },
+ {
+  "tidx": 5,
+  "cid": 3384,
+  "rid": null,
+  "vote": 7,
+  "content": "This seems reasonable."
+ },
+ {
   "tidx": 5,
   "cid": 3393,
   "rid": null,
@@ -2294,20 +2301,6 @@
   "rid": null,
   "vote": 7,
   "content": "Seems obvious.  It's the least we can do."
- },
- {
-  "tidx": 5,
-  "cid": 3384,
-  "rid": null,
-  "vote": 7,
-  "content": "This seems reasonable."
- },
- {
-  "tidx": 3,
-  "cid": 3405,
-  "rid": null,
-  "vote": 4,
-  "content": "It sounds like a good idea, but don\u201a\u00c4\u00f4t have enough information on what the impacts of this would be."
  },
  {
   "tidx": 4,
@@ -2324,18 +2317,11 @@
   "content": "only if it is at no cost to the homeowner and done with full transparency and information."
  },
  {
-  "tidx": 4,
-  "cid": 3412,
+  "tidx": 3,
+  "cid": 3405,
   "rid": null,
-  "vote": 7,
-  "content": "Financial support and resources is most needed to rebuild."
- },
- {
-  "tidx": 4,
-  "cid": 3415,
-  "rid": null,
-  "vote": 7,
-  "content": "In addition to supporting our seniors and low income families who lost their homes, please don't forget about regular families who lost everything, meaning middle class households too."
+  "vote": 4,
+  "content": "It sounds like a good idea, but don\u201a\u00c4\u00f4t have enough information on what the impacts of this would be."
  },
  {
   "tidx": 5,
@@ -2345,6 +2331,13 @@
   "content": "This is much needed!"
  },
  {
+  "tidx": 4,
+  "cid": 3412,
+  "rid": null,
+  "vote": 7,
+  "content": "Financial support and resources is most needed to rebuild."
+ },
+ {
   "tidx": 1,
   "cid": 3413,
   "rid": null,
@@ -2352,25 +2345,11 @@
   "content": "I agree.  My hesitation is cost and if that cost would be past on to us as residence."
  },
  {
-  "tidx": 3,
-  "cid": 3429,
-  "rid": null,
-  "vote": 5,
-  "content": "Sounds interesting, but I'm not clear on infrastructure needs or costs for this type of option."
- },
- {
   "tidx": 4,
-  "cid": 3428,
-  "rid": null,
-  "vote": 5,
-  "content": "There is already a glut of information coming from a plethora of sources. Not sure how you would centralize this effectively and weed out the redundancies"
- },
- {
-  "tidx": 1,
-  "cid": 3427,
+  "cid": 3415,
   "rid": null,
   "vote": 7,
-  "content": "How many bills have already been passed, how many tax dollars and bond dollars have already been appropriated to handle this? The issue seems to be non-compliance, so the focus should be mandating timelines and associated penalties for public/private agencies such as PG&E, LADWP, SoCal Edison, etc. to execute rather than squandering public money elsewhere on their balance sheets."
+  "content": "In addition to supporting our seniors and low income families who lost their homes, please don't forget about regular families who lost everything, meaning middle class households too."
  },
  {
   "tidx": 1,
@@ -2380,11 +2359,25 @@
   "content": "We also lost our home in the Woolsey fire, and all utilities were underground, but that didn't save us. So I don't rely on buried cables as a complete solution."
  },
  {
-  "tidx": 5,
-  "cid": 3435,
+  "tidx": 1,
+  "cid": 3427,
+  "rid": null,
+  "vote": 7,
+  "content": "How many bills have already been passed, how many tax dollars and bond dollars have already been appropriated to handle this? The issue seems to be non-compliance, so the focus should be mandating timelines and associated penalties for public/private agencies such as PG&E, LADWP, SoCal Edison, etc. to execute rather than squandering public money elsewhere on their balance sheets."
+ },
+ {
+  "tidx": 4,
+  "cid": 3428,
   "rid": null,
   "vote": 5,
-  "content": "Isn't this the idea behind the One Stop Rebuilding Center already in place? The problem seems to be that not every agency is represented regularly (e.g. LADWP), nor are any singular individuals informed to answer questions beyond their own narrow scope of focus, so it's not very feasible to get comprehensive responses easily. Still, better than nothing or having to go all the way to DTLA!"
+  "content": "There is already a glut of information coming from a plethora of sources. Not sure how you would centralize this effectively and weed out the redundancies"
+ },
+ {
+  "tidx": 3,
+  "cid": 3429,
+  "rid": null,
+  "vote": 5,
+  "content": "Sounds interesting, but I'm not clear on infrastructure needs or costs for this type of option."
  },
  {
   "tidx": 2,
@@ -2392,6 +2385,13 @@
   "rid": null,
   "vote": 7,
   "content": "Similar to the question about burying power lines, it's not about the necessity for doing so - that's obvious. The question is about how effectively agencies can follow through on these goals and how much more money is it going to cost taxpayers beyond the billions already appropriated for similar goals."
+ },
+ {
+  "tidx": 5,
+  "cid": 3435,
+  "rid": null,
+  "vote": 5,
+  "content": "Isn't this the idea behind the One Stop Rebuilding Center already in place? The problem seems to be that not every agency is represented regularly (e.g. LADWP), nor are any singular individuals informed to answer questions beyond their own narrow scope of focus, so it's not very feasible to get comprehensive responses easily. Still, better than nothing or having to go all the way to DTLA!"
  },
  {
   "tidx": 4,
@@ -2422,18 +2422,18 @@
   "content": "It\u201a\u00c4\u00f4s a good start but we need to be sure there is access to enough water so the hydrants don\u201a\u00c4\u00f4t run dry from a massive simultaneous usage that happens during a fire."
  },
  {
-  "tidx": 3,
-  "cid": 3465,
-  "rid": null,
-  "vote": 7,
-  "content": "Yes. In this day and age communications blackouts for emergency responders are unacceptable. Please put in whatever system they need to be able to communicate under any circumstances."
- },
- {
   "tidx": 5,
   "cid": 3462,
   "rid": null,
   "vote": 7,
   "content": "This is exactly the kind of help homeowners need, and exactly what government should be doing."
+ },
+ {
+  "tidx": 3,
+  "cid": 3465,
+  "rid": null,
+  "vote": 7,
+  "content": "Yes. In this day and age communications blackouts for emergency responders are unacceptable. Please put in whatever system they need to be able to communicate under any circumstances."
  },
  {
   "tidx": 1,
@@ -2458,6 +2458,41 @@
  },
  {
   "tidx": 3,
+  "cid": 3472,
+  "rid": null,
+  "vote": 3,
+  "content": "During the Bobcat Fire in 2020, I received a loud, clear emergency alert on my phone well before evacuation was needed. During the Eaton Canyon fire, no such alert came. First Watch never notified us, and we weren\u201a\u00c4\u00f4t told to evacuate until 1:30am by police using a megaphone despite having power until 11pm. Would mesh networks really solve this basic failure? We need to focus on using the systems we already have, consistently and effectively, before overcomplicating things."
+ },
+ {
+  "tidx": 2,
+  "cid": 3474,
+  "rid": null,
+  "vote": 7,
+  "content": "Upgrading systems is vital, but if there are no firefighters on the ground to use the water or protect homes, those upgrades mean very little. Many of us had defensible space and working hydrants, but nobody showed up. Technology alone can't replace a coordinated, timely human response. We need commitments to staffing and boots on the ground when it counts."
+ },
+ {
+  "tidx": 4,
+  "cid": 3479,
+  "rid": null,
+  "vote": 4,
+  "content": "A catalog of financial support programs already exists in various forms, and many of us have spent countless hours navigating them. Unless this directory offers truly new resources or significantly streamlines access, it risks being just another list. What survivors need most is actual funding, clear guidance, and advocates who can help cut through red tape, not more directories to sort through on our own."
+ },
+ {
+  "tidx": 1,
+  "cid": 3486,
+  "rid": null,
+  "vote": 5,
+  "content": "By all means, underground and do it all at once with other infrastructure that needs to be replaced (water, sewage, stormdrain, communications). If possible, a micro-grid installation that serves the community and backs up power outages should be installed."
+ },
+ {
+  "tidx": 2,
+  "cid": 3487,
+  "rid": null,
+  "vote": 6,
+  "content": "Needs to be an integrated, failsafe system and include removal and replacement of all materials that have health impacts."
+ },
+ {
+  "tidx": 3,
   "cid": 3488,
   "rid": null,
   "vote": 7,
@@ -2478,48 +2513,6 @@
   "content": "These teams should be able to navigate all rebuilt-relevant systems and resources."
  },
  {
-  "tidx": 2,
-  "cid": 3487,
-  "rid": null,
-  "vote": 6,
-  "content": "Needs to be an integrated, failsafe system and include removal and replacement of all materials that have health impacts."
- },
- {
-  "tidx": 4,
-  "cid": 3479,
-  "rid": null,
-  "vote": 4,
-  "content": "A catalog of financial support programs already exists in various forms, and many of us have spent countless hours navigating them. Unless this directory offers truly new resources or significantly streamlines access, it risks being just another list. What survivors need most is actual funding, clear guidance, and advocates who can help cut through red tape, not more directories to sort through on our own."
- },
- {
-  "tidx": 3,
-  "cid": 3472,
-  "rid": null,
-  "vote": 3,
-  "content": "During the Bobcat Fire in 2020, I received a loud, clear emergency alert on my phone well before evacuation was needed. During the Eaton Canyon fire, no such alert came. First Watch never notified us, and we weren\u201a\u00c4\u00f4t told to evacuate until 1:30am by police using a megaphone despite having power until 11pm. Would mesh networks really solve this basic failure? We need to focus on using the systems we already have, consistently and effectively, before overcomplicating things."
- },
- {
-  "tidx": 1,
-  "cid": 3486,
-  "rid": null,
-  "vote": 5,
-  "content": "By all means, underground and do it all at once with other infrastructure that needs to be replaced (water, sewage, stormdrain, communications). If possible, a micro-grid installation that serves the community and backs up power outages should be installed."
- },
- {
-  "tidx": 2,
-  "cid": 3474,
-  "rid": null,
-  "vote": 7,
-  "content": "Upgrading systems is vital, but if there are no firefighters on the ground to use the water or protect homes, those upgrades mean very little. Many of us had defensible space and working hydrants, but nobody showed up. Technology alone can't replace a coordinated, timely human response. We need commitments to staffing and boots on the ground when it counts."
- },
- {
-  "tidx": 5,
-  "cid": 3507,
-  "rid": null,
-  "vote": 3,
-  "content": "the permitting process itself is the problem, not the navigation."
- },
- {
   "tidx": 4,
   "cid": 3505,
   "rid": null,
@@ -2527,11 +2520,11 @@
   "content": "needs based, only."
  },
  {
-  "tidx": 2,
-  "cid": 3522,
+  "tidx": 5,
+  "cid": 3507,
   "rid": null,
-  "vote": 5,
-  "content": "If there's no water in the reservoirs, what's the point of this?"
+  "vote": 3,
+  "content": "the permitting process itself is the problem, not the navigation."
  },
  {
   "tidx": 5,
@@ -2548,18 +2541,11 @@
   "content": "include Community Land Trusts that have helped with insurance gap funding like with Lahaina fire."
  },
  {
-  "tidx": 3,
-  "cid": 3564,
+  "tidx": 2,
+  "cid": 3522,
   "rid": null,
   "vote": 5,
-  "content": "Communication infrastructure should not be dependent on internet networks alone."
- },
- {
-  "tidx": 2,
-  "cid": 3563,
-  "rid": null,
-  "vote": 7,
-  "content": "Long overdue"
+  "content": "If there's no water in the reservoirs, what's the point of this?"
  },
  {
   "tidx": 4,
@@ -2570,17 +2556,31 @@
  },
  {
   "tidx": 5,
+  "cid": 3548,
+  "rid": null,
+  "vote": 7,
+  "content": "Absolutely yes! That would speed up the process and ensure that things were done correctly, both by the residents and the agencies."
+ },
+ {
+  "tidx": 5,
   "cid": 3556,
   "rid": null,
   "vote": 7,
   "content": "Need dedicated staff that are knowledgeable otherwise it just another layer that will add to delays"
  },
  {
-  "tidx": 5,
-  "cid": 3548,
+  "tidx": 2,
+  "cid": 3563,
   "rid": null,
   "vote": 7,
-  "content": "Absolutely yes! That would speed up the process and ensure that things were done correctly, both by the residents and the agencies."
+  "content": "Long overdue"
+ },
+ {
+  "tidx": 3,
+  "cid": 3564,
+  "rid": null,
+  "vote": 5,
+  "content": "Communication infrastructure should not be dependent on internet networks alone."
  },
  {
   "tidx": 1,
@@ -2588,6 +2588,13 @@
   "rid": null,
   "vote": 7,
   "content": "Agree, but there should be no cost to the homeowner to do this."
+ },
+ {
+  "tidx": 1,
+  "cid": 3567,
+  "rid": null,
+  "vote": 7,
+  "content": "In the North East, natural gas utility companies are required to excavate and replace old and dangerous cast iron gas lines. Old power lines in fire zones should be treated the same way. We should not be letting the utility companies off the hook to never update their infrastructure. Since there is no profit motive to do so, the only way forward is through regulating them to do this. Utility payers shouldn't be penalized for utility company negligence."
  },
  {
   "tidx": 2,
@@ -2604,13 +2611,6 @@
   "content": "This is a great idea. I'd hope they can be fully staffed and fully paid."
  },
  {
-  "tidx": 1,
-  "cid": 3567,
-  "rid": null,
-  "vote": 7,
-  "content": "In the North East, natural gas utility companies are required to excavate and replace old and dangerous cast iron gas lines. Old power lines in fire zones should be treated the same way. We should not be letting the utility companies off the hook to never update their infrastructure. Since there is no profit motive to do so, the only way forward is through regulating them to do this. Utility payers shouldn't be penalized for utility company negligence."
- },
- {
   "tidx": 4,
   "cid": 3583,
   "rid": null,
@@ -2625,18 +2625,18 @@
   "content": "Agree, needs based only."
  },
  {
-  "tidx": 2,
-  "cid": 3621,
-  "rid": null,
-  "vote": 4,
-  "content": "Are there any rainwater collection solutions that could help these efforts (whether to source the fire hydrants and/or offer water solutions on properties)?"
- },
- {
   "tidx": 1,
   "cid": 3620,
   "rid": null,
   "vote": 7,
   "content": "Yes, please!"
+ },
+ {
+  "tidx": 2,
+  "cid": 3621,
+  "rid": null,
+  "vote": 4,
+  "content": "Are there any rainwater collection solutions that could help these efforts (whether to source the fire hydrants and/or offer water solutions on properties)?"
  },
  {
   "tidx": 3,

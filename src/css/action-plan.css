@@ -561,11 +561,14 @@ div.deliberation-comment-expander-label {
   background: url("/public/images/arrow-up.svg") no-repeat right center;
   cursor: pointer;
 }
-.download-buton-div {
+.download-button-div {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
-
+.download-button-div a {
+  padding-right: 2.2em;
+  background: url("/public/images/icon-download.svg") no-repeat right 0.5rem center;
+}
 
 /*
  * ALIGNMENT PICKER SECTION
@@ -614,6 +617,9 @@ div.deliberation-comment-item {
     font-size: 18px;
     padding: 1rem;
 }
+div.deliberation-comment-item.indent-1 {
+    padding-left: 3rem;
+}
 div.deliberation-comment-item:nth-child(odd) {
   background-color: #F6F7FA;
 }
@@ -625,6 +631,9 @@ div.deliberation-comment-item:nth-child(odd) {
 }
 .deliberation-comment-item .comment-fill {
   padding-left: 1rem;
+}
+.deliberation-comment-item .comment-fill.indent-1 {
+  border-left: none;
 }
 .deliberation-comment-item .comment-fill {
   border-left: 4px solid #777777;

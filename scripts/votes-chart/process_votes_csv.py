@@ -125,7 +125,7 @@ for record in records:
         'tid': record['TOPIC_INDEX'],
         'eid': record['EVAC_ZONE_INDEX'],
         'v': int(record['VOTE_NUMBER']),
-        'cid': record['COMMENT_IDX']
+        # 'cid': record['COMMENT_IDX']
         })
 
 vote_colors = ['#777777', '#d62728', '#ff7f0e', '#ffbb78', '#bcbd22', '#98df8a', '#2ca02c', '#1f77b4']
@@ -155,7 +155,7 @@ output_dict = {
     'vote_colors': vote_colors,
     'vote_colors_hsl': vote_colors_hsl,
     'user_recs': user_recs,
-    'comments': comment_array
+    # 'comments': comment_array
 }
 
 
