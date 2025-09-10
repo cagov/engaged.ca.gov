@@ -1,7 +1,11 @@
 /* 9-5-2025 - patches */
-
+.comment-item .list-group-item-text,
 .comment-replies .comment-item-container .list-group-item-text {
-  font-size: 1.5rem !important;
+  font-size: 1.6rem !important;
+}
+
+.comment-item .row-content small {
+  font-size: 1.6rem !important;
 }
 
 .comment-replies .list-group-item {
@@ -49,10 +53,6 @@ html :has(.signon) {
 
 .comment-item {
   margin-bottom: 16px;
-}
-
-.comment-item .row-content small {
-  font-size: 16px;
 }
 
 .list-group-item.comment-item-container .comment-item a {
@@ -596,8 +596,8 @@ Change #balance-bar to #balance-bar2 for second balance bar
 .prompt-box {
   background-color: #f0e6dc;
   margin: 20px 0px;
-  padding: 40px;
-  border-radius: 20px;
+  padding: 32px;
+  border-radius: 6px;
 }
 
 span.bigger-emoji {
@@ -1524,6 +1524,7 @@ div:not(.modal-body) .ethelo-likert-label.visible-md.visible-lg {
   line-height: 170% !important;
   font-size: 2rem;
 }
+
 .content-col .panel-body p {
   margin-bottom: calc(0.7rem + 0.1vw);
 }
@@ -1595,15 +1596,57 @@ textarea.ember-text-area.form-control,
 }
 
 .list-group-item.new-comment-container .btn {
-    margin: calc(1vh - 96px) 0 0 calc(100% - 100px);
+    margin: calc(1vh - 99px) 0 0 calc(100% - 100px);
     padding: 10px 25px;
     border-radius: 5px;
     font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1130px) {
   .list-group-item.new-comment-container .btn {
-      margin: calc(1vh - 115px) 0 0 calc(100% - 100px);
+      margin: calc(1vh - 151px) 0 0 calc(100% - 100px);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .list-group-item.new-comment-container .btn {
+      margin: calc(1vh - 99px) 0 0 calc(100% - 100px);
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .list-group-item.new-comment-container .btn {
+      margin: calc(1vh - 151px) 0 0 calc(100% - 100px);
+  }
+}
+
+@media only screen and (max-width: 838px) {
+  .list-group-item.new-comment-container .btn {
+      margin: calc(1vh - 203px) 0 0 calc(100% - 100px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .list-group-item.new-comment-container .btn {
+      margin: calc(1vh - 99px) 0 0 calc(100% - 100px);
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  .list-group-item.new-comment-container .btn {
+      margin: calc(1vh - 151px) 0 0 calc(100% - 100px);
+  }
+}
+
+@media only screen and (max-width: 458px) {
+  .list-group-item.new-comment-container .btn {
+      margin: calc(1vh - 203px) 0 0 calc(100% - 100px);
+  }
+}
+
+@media only screen and (max-width: 405px) {
+  .list-group-item.new-comment-container .btn {
+      margin: 10px 0 10px 69px;
   }
 }
 
@@ -1613,6 +1656,14 @@ textarea.ember-text-area.form-control,
       font-size: 1.5rem !important;
       border-radius: 6px;
 }
+
+@media only screen and (max-width: 458px) {
+  .form-comment-container-inner .help-block {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
 
 .comments > .comment-item-container > .comment-item {
   padding-right: 2em;
@@ -1675,7 +1726,7 @@ button.comment-section-btns,
 
 
 .comment-replies
-  .comment-item-container:nth-child(1)
+  .comment-item-container
   .comment-item:before {
   background-color: #ffcda4;
 }
@@ -1714,8 +1765,17 @@ button.comment-section-btns,
   color: #585858;
   margin: 10px 24px;
   padding: 10px 32px;
-  border-radius: 20px;
+  border-radius: 6px;
 }
+
+
+@media only screen and (max-width: 458px) {
+.help-block,
+.form-group .help-block {
+    margin: 10px 0;
+  }
+}
+
 
 /*---- Radio and Checkbox ----*/
 .form-group .checkbox label,
