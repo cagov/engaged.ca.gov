@@ -65,31 +65,32 @@ with open(args.input_file, "r") as f:
                 "REPLY_TO_ID": int(row[field_indices["REPLY_TO_ID"]]) if row[field_indices["REPLY_TO_ID"]] != "" else None,
                 "COMMENT_CONTENT": row[field_indices["COMMENT_CONTENT"]],
                 # Convert timestamp string to integer (seconds since epoch, UTC)
-                "POSTED_ON": int(
-                    datetime.datetime.strptime(
-                        row[field_indices["POSTED_ON"]].replace(" Z", ""), "%Y-%m-%d %H:%M:%S.%f"
-                    ).timestamp()
-                ),
+                "SORT_KEY":  int(row[field_indices["COMMENT_ID"]]) if row[field_indices["REPLY_TO_ID"]] == "" else int(row[field_indices["REPLY_TO_ID"]]) + 0.5,
+                # "POSTED_ON": int(
+                #     datetime.datetime.strptime(
+                #         row[field_indices["POSTED_ON"]].replace(" Z", ""), "%Y-%m-%d %H:%M:%S.%f"
+                #     ).timestamp()
+                # ),
             })
         else:
             print(f"Row {row} has {len(row)} fields, expected {len(field_indices)}")
     
     # sort records by POSTED_ON
-    records.sort(key=lambda x: x["POSTED_ON"])
+    records.sort(key=lambda x: x["SORT_KEY"])
     # for each record with a non-none reply-to-id, reposition it just below the comment whose comment_id matches  the reply-_to_id
-    for record in records:
-        if record["REPLY_TO_ID"] is not None:
-            for other_record in records:
-                if other_record["COMMENT_ID"] == record["REPLY_TO_ID"]:
-                    record["COMMENT_ID"] = other_record["COMMENT_ID"] + 0.5
-                    record["VOTE_NUMBER"] = other_record["VOTE_NUMBER"]
-                    break
+    # for record in records:
+    #     if record["REPLY_TO_ID"] is not None:
+    #         for other_record in records:
+    #             if other_record["COMMENT_ID"] == record["REPLY_TO_ID"]:
+    #                 record["COMMENT_ID"] = other_record["COMMENT_ID"] + 0.5
+    #                 record["VOTE_NUMBER"] = other_record["VOTE_NUMBER"]
+    #                 break
     # sort records by POSTED_ON
-    records.sort(key=lambda x: x["COMMENT_ID"])
+    # records.sort(key=lambda x: x["COMMENT_ID"])
 
     # convert all COMMENT_IDs to integer floor
-    for record in records:
-        record["COMMENT_ID"] = int(record["COMMENT_ID"])
+    # for record in records:
+    #     record["COMMENT_ID"] = int(record["COMMENT_ID"])
 
     comment_list = [{"tidx": record["TOPIC_IDX"], 
                     "cid": record["COMMENT_ID"], 

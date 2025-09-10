@@ -632,9 +632,6 @@ div.deliberation-comment-item:nth-child(odd) {
 .deliberation-comment-item .comment-fill {
   padding-left: 1rem;
 }
-.deliberation-comment-item .comment-fill.indent-1 {
-  border-left: none;
-}
 .deliberation-comment-item .comment-fill {
   border-left: 4px solid #777777;
 }
