@@ -234,10 +234,10 @@
           <div id="explore-the-comments">
 
             <div class="style-strong-small-body-text">
-              Explore the commments
+              {{ modules.findings_top_discussions.explore_the_comments | safe }}
             </div>
             <div class="style-small-body-text italic">
-              Comments can be filtered by how people voted on a topic: support, neutral, oppose, or no vote. Note: The comments themselves may not reflect how a person voted on a topic. In some cases, people commented on a topic without casting a vote.
+              {{ modules.findings_top_discussions.filter_the_comments | safe }}
             </div>
           </div>
 
@@ -251,26 +251,26 @@
 
             <div class="topics-alignment-switcher-list">
               <div class="topic-alignment-switcher-item-label style-strong-small-body-text">
-                Viewpoint:
+                {{ modules.findings_top_discussions.label_viewpoint | safe }}
               </div>
               <div class="topics-alignment-switcher-item selected" data-filter="all">
-                All comments
+                {{ modules.findings_top_discussions.label_all_comments | safe }}
               </div>
               <div class="topics-alignment-switcher-item" data-filter="oppose">
-                Oppose
+                {{ modules.findings_top_discussions.label_oppose | safe }}
               </div>
               <div class="topics-alignment-switcher-item" data-filter="neutral">
-                Neutral
+                {{ modules.findings_top_discussions.label_neutral | safe }}
               </div>
               <div class="topics-alignment-switcher-item" data-filter="support">
-                Support
+                {{ modules.findings_top_discussions.label_support | safe }}
               </div>
               <div class="topics-alignment-switcher-item" data-filter="novote">
-                No vote
+                {{ modules.findings_top_discussions.label_novote | safe }}
               </div>
             </div>
             <div class="comments-caveat style-small-body-text italic">
-              Filter comments by their corresponding votes. We do not translate comments; they are displayed in their original language. 
+              {{ modules.findings_top_discussions.filter_comments_by_vote | safe }}
            </div>
             <div class="legend-item-expansion-block" id="legends-scroll-content" role="region" aria-hidden="true">
               <div id="topics-deliberation-comments-container-content" class="legend-item-content" dir="ltr" role="log" aria-live="polite"></div>

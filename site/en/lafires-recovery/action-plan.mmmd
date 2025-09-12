@@ -16,15 +16,20 @@ id: translator_instructions
 example_quoted_text: "this is quoted text:"
 ----
 (don't translate this section - these are instructions for the translator)
-NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
-If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
-If the text following a label contains a colon, please use quote marks, as in the example_quoted_text above
-(Especially important for Armenian, where colons are added as sentence-ending punctuation)
-When text contains words inside double asterisks, that text is intended to be printed in bold-face.  
-When text contains words inside single asterisks, that text is intended to be printed in italics. 
-In either case, preserve the asterisks.
-Text preceded by a one-or-more hash symbols are headings.  Preserve the hash-symbols.
-This is typically used for templates that insert numbers into a sentence.
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.  
+   When text contains words inside single asterisks, that text is intended to be printed in italics. 
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols are headings.  Preserve the hash-symbols.
+   This is typically used for templates that insert numbers into a sentence.
 
 ----
 id: findings_overview
@@ -52,7 +57,17 @@ After the severe wildfires in Los Angeles, more than 750 community members met o
 id: findings_narrative_step_2
 title: Review and planning
 button_text: Learn about our partners
+nbr_phrases: 6
+translator_note: USE slash symbol for line breaks, keep these phrases to two lines!
+phrase_1: Utilities
+phrase_2: Community/Support
+phrase_3: Financial/support
+phrase_4: Emergency/preparedness
+phrase_5: Fire/proofing
+phrase_6: Building/permits
 ----
+
+
 
 ## Individual ideas turned into shared data
 
@@ -66,6 +81,30 @@ title: Deliberation
 ## The community voted on all 19 options
 
 Over 400 new and returning participants ranked these options, again using an online platform where they could discuss and collaborate.
+
+----
+id: consensus_chart_topics
+nbr_topics: 19
+topic_1: Increased housing density and expedited permits
+topic_2: Temporary housing
+topic_3: Prioritize families
+topic_4: Fire-resistant and water-friendly demonstration gardens
+topic_5: Mandatory home ember protection standards
+topic_6: Accelerated ADU and duplex permitting
+topic_7: Mandatory greywater systems for new buildings
+topic_8: Comprehensive homeowner education program
+topic_9: Emergency communication hubs in communities
+topic_10: Defensible space tax incentives
+topic_11: Expanded construction training programs
+topic_12: Pre-approved fire-resistant building designs
+topic_13: Enhanced fire detection infrastructure
+topic_14: Give financial assistance to long-term residents
+topic_15: Accelerating permitting and inspections
+topic_16: Rebuilding help
+topic_17: Stronger emergency notifications and alerts
+topic_18: Water for firefighting
+topic_19: Undergrounding power lines and improving equipment safety
+----
 
 
 ----
@@ -142,17 +181,21 @@ label_3: Strongly support
 ----
 id: findings_top_discussions
 title_h2: Analyze the top 5 from all angles
-picker_instructions: Select a fire zone from this panel to view and compare voting results.
-nbr_picker_items: 3
-picker_label_1: Overall
-picker_label_2: Eaton
-picker_label_3: Palisades
 solution_details_label: "Solution details"
 show_comments_button: Show comments
 hide_comments_button: Hide comments
 nbr_tally_items: 2
 label_1: Support
 label_2: Comments
+explore_the_comments: Explore the comments
+filter_the_comments: "Comments can be filtered by how people voted on a topic: support, neutral, oppose, or no vote. Note: The comments themselves may not reflect how a person voted on a topic. In some cases, people commented on a topic without casting a vote."
+label_viewpoint: "Viewpoint:"
+label_all_comments: "All comments"
+label_oppose: "Oppose"
+label_neutral: "Neutral"
+label_support: "Support"
+label_novote: "No vote"
+filter_comments_by_vote: Filter comments by their corresponding votes. We do not translate comments; they are displayed in their original language. 
 ----
 
 Every vote was counted and weighted to achieve consensus on the top 5 solutions California should explore. Between the fire zones, votes and comments looked a little different, use the toggle to see how opinons from the Palisades differed from those in the Eaton fire zone.
@@ -258,23 +301,6 @@ While participants arrived with mixed feelings—only 24% started optimistic whi
 More than a quarter of participants (27%) emerged more optimistic about LA fires recovery.
 
 ----
-id: ring_chart
-nbr_labels: 3
-label_1: Support
-label_2: Not sure
-label_3: Oppose
-tally_1: 55
-tally_2: 35
-tally_3: 10
-legend_header: Building momentum on what we agreed to.
-legend_copy: This chart shows the breakdown of support of the top 5 solutions. While some topics received less support, our focus now will be on the areas where we reached agreement. By prioritizing the measures that gained majority backing, we can direct our energy toward concrete next steps and make visible progress.
-----
-
-## This is deliberative democracy in action.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-----
 id: signup_plea
 button_text: Sign up
 ----
@@ -337,14 +363,13 @@ The **Los Angeles Department of Water and Power** has filled over 80 water stora
 In the Pacific Palisades area, two local reservoirs are dedicated to aerial firefighting: the Encino Reservoir and the Lower Stone Canyon Reservoir.
 
 The **Los Angeles County Fire Department** is working with the **Los Angeles County Department of Public Works** and **6 local water companies** to assess the availability of fire flow in the fire areas. A new streamlined process will speed up the timeline. It will not require homeowners to be part of the process, and it will save them money. The **water companies**, **Los Angeles County Building and Safety**, and **LA County Fire** will handle this new process. The **fire department** will update the fire code to meet current state standards. The water companies will upgrade their systems.
+
 ----
 id: response_step_2_coming_soon
 ----
 Water districts have identified damages and applied for funding (e.g., FEMA PA) to rebuild. The **state** and **county** have committed to helping districts rebuild and improve systems.
 
 The Blueprint for Rebuilding says these upgrades are critical infrastructure investments for long-term safety.
-
-
 
 ----
 id: response_step_3

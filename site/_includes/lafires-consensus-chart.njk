@@ -210,18 +210,24 @@ class ConsensusChart {
         clearInterval(this.render_handle);
       }
 
+      let translated_topics_names = [
+        {% for i in range(1, modules.consensus_chart_topics.nbr_topics + 1) %}
+          '{{ modules.consensus_chart_topics["topic_" + i] }}',
+        {% endfor %}
+      ];
+
 
       this.reset_user_dots(topic_index);
-      let topic_names = this.voteData['topics'];
+      let original_topic_names = this.voteData['topics'];
       let topic_number_template = '{{ modules.findings_consensus_watch_explore.topic_number_template | safe}}';
-      let topic_number_string = topic_number_template.replace('<NUM>', topic_index + 1).replace('<TOTAL>', topic_names.length);
+      let topic_number_string = topic_number_template.replace('<NUM>', topic_index + 1).replace('<TOTAL>', original_topic_names.length);
 
       let topic_perecent_template = '{{ modules.findings_consensus_watch_explore.percent_template | safe}}';
-      let topic_percent_string = topic_perecent_template.replace('<PERCENT>', Math.round(topic_names[topic_index][3]*100))
+      let topic_percent_string = topic_perecent_template.replace('<PERCENT>', Math.round(original_topic_names[topic_index][3]*100))
 
       document.getElementById('findings-consensus-sentiment-chart-topic-number').innerHTML = topic_number_string;
       // let topic_number_label = f'Topic {topic_index + 1} of {topic_names.length}'; // TRANSLATION!!!
-      let long_topic_name = topic_names[topic_index][1];
+      let long_topic_name = translated_topics_names[topic_index];
       document.getElementById('findings-consensus-sentiment-chart-title').innerHTML = long_topic_name;
       document.getElementById('findings-consensus-sentiment-chart-subtitle').innerHTML = topic_percent_string;
 

@@ -471,8 +471,12 @@ class CanvasOutlineDrawer {
         let canvas_width = this.canvas.width / this.retinaScale;
         let canvas_height = this.canvas.height / this.retinaScale;
 
-        let phrases = ['Utilities', 'Community/Support', "Financial/support",   
-        "Emergency/preparedness", "Fire/proofing", "Building/permits"];
+        let phrases = [
+        {% for i in range(1, modules.findings_narrative_step_2.nbr_phrases + 1) %}
+            '{{ modules.findings_narrative_step_2["phrase_" + i] }}',
+        {% endfor %}
+        ];
+        console.log("phrases", phrases);
 
         let dot_colors = ['#98B8C8', '#EFB389'];
 
