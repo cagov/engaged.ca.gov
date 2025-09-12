@@ -30,6 +30,7 @@ buttonText: Tingnan ang napag-alaman namin sa pagtatakda ng agenda
 statusPlanningTextV2: Ang mga deliberasyon ay nangyayari na
 statusDeliberationsClosedText: Tapos na ang mga deliberasyon ng komunidad
 buttonTextV2: Mag-sign up ngayon
+buttonText_actionplan: Tingnan ang plano ng aksyon
 ----
 
 Ang mga tao na apektado ng mga wildfire sa Los Angeles ay dapat na makapagpahayag ng opinyon sa pagpaplano sa pagbangon nito. Kaya sila at ang gobyerno ay ipinagtatagpo ng Estado ng California sa bagong paraan.
@@ -64,6 +65,9 @@ phaseCompleteText: Nakumpletong yugto
 phaseCurrentText: Kasalukuyang yugto
 phasePendingText: Paparating na yugto
 resourcesLinkTitle: Tingnan ang napag-alaman namin sa pagtatakda ng agenda
+resourcesTitle: Mga Impormasyon
+resourcesLinkTitle_actionplan: Tingnan ang plano ng aksyon
+resourcesLinkTitle_agendasettingfindings: Tingnan ang napag-alaman namin sa pagtatakda ng agenda
 ----
 
 ### Pangkalahatang Impormasyon
@@ -131,6 +135,7 @@ title: Pag-uulat
 ----
 
 Susuriin at susuriin namin ang mga kinalabasan ng yugto ng deliberasyon. Makikipagtulungan kami sa mga opisyal ng gobyerno para maghanap ng mga aksyon na tumutugon sa deliberasyon. Magpo-post kami ng ulat ng mga natuklasan at aksyon sa website na ito.
+[Tingnan ang mga natuklasan at aksyon](/tl/lafires-recovery/action-plan)
 
 ----
 id: signup

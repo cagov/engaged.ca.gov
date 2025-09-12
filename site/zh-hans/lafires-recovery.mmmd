@@ -30,6 +30,7 @@ buttonText: 看看我们在工作计划中发现了什么
 statusPlanningTextV2: 审议正在进行中
 statusDeliberationsClosedText: 社区协商已经结束
 buttonTextV2: 注册以随时了解情况
+buttonText_actionplan: 查看行动计划
 ----
 
 受洛杉矶野火影响的人们，应该在灾后恢复的规划中拥有发言权。因此，加利福尼亚州通过一种新的方式，将他们与政府联系在一起。
@@ -64,6 +65,9 @@ phaseCompleteText: 已完成阶段
 phaseCurrentText: 当前阶段
 phasePendingText: 后续阶段
 resourcesLinkTitle: 看看我们在工作计划中发现了什么
+resourcesTitle: 资源
+resourcesLinkTitle_actionplan: 查看行动计划
+resourcesLinkTitle_agendasettingfindings: 看看我们在议程设置中发现的内容
 ----
 
 ### 一般信息
@@ -132,6 +136,7 @@ title: 报告
 ----
 
 我们将审查和分析审议阶段的结果。我们将与政府官员合作，寻找对审议做出回应的行动。我们将在本网站上发布调查结果和行动报告。
+[查看行动计划](/lafires-recovery/action-plan)
 
 ----
 id: signup
