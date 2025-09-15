@@ -21,14 +21,14 @@ example_quoted_text: "this is quoted text:"
 
 2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
 
-3. If the text following a label contains a colon, please use quote marks, as in the example_quoted_text above
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
    This is especially important for Armenian, where colons are added as sentence-ending punctuation.
 
 4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.  
    When text contains words inside single asterisks, that text is intended to be printed in italics. 
    In either case, preserve the asterisks.
 
-5. Text preceded by a one-or-more hash symbols are headings.  Preserve the hash-symbols.
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
    This is typically used for templates that insert numbers into a sentence.
 
 ----

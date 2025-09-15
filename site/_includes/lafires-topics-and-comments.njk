@@ -22,12 +22,16 @@ function switch_topic(topic_nbr) {
   current_topic_index = topic_nbr;
   document.querySelectorAll('.findings-top-options-option-box').forEach(function(el) {
     el.classList.remove('active');
+    el.setAttribute('aria-selected', 'false');
+    el.setAttribute('tabindex', '-1');
   });
   document.querySelectorAll('.findings-top-discussion-container').forEach(function(el) {
     el.classList.remove('active');
   });
   let option_box = document.getElementById('findings-top-options-option-box-' + topic_nbr);
   option_box.classList.add('active');
+  option_box.setAttribute('aria-selected', 'true');
+  option_box.setAttribute('tabindex', '0');
   let discussion_container = document.getElementById('findings-top-discussions-topic-' + topic_nbr);
   discussion_container.classList.add('active');
   let learn_more_link = document.getElementById('learn-more-link');
@@ -80,6 +84,56 @@ document.addEventListener('DOMContentLoaded', function() {
       // Remove 'active' from all option boxes
       let topic_number = parseInt(this.dataset.topicNumber, 10);
       switch_topic(topic_number);
+    });
+  });
+
+  // Add keyboard navigation support for tabs
+  document.querySelectorAll('.findings-top-options-option-box').forEach(function(box) {
+    box.addEventListener('keydown', function(e) {
+      const tabs = Array.from(document.querySelectorAll('.findings-top-options-option-box'));
+      const currentIndex = tabs.indexOf(this);
+      let targetIndex = currentIndex;
+
+      switch(e.key) {
+        case 'ArrowRight':
+        case 'ArrowDown':
+          e.preventDefault();
+          targetIndex = (currentIndex + 1) % tabs.length;
+          break;
+        case 'ArrowLeft':
+        case 'ArrowUp':
+          e.preventDefault();
+          targetIndex = currentIndex === 0 ? tabs.length - 1 : currentIndex - 1;
+          break;
+        case 'Home':
+          e.preventDefault();
+          targetIndex = 0;
+          break;
+        case 'End':
+          e.preventDefault();
+          targetIndex = tabs.length - 1;
+          break;
+        case 'Enter':
+        case ' ':
+          e.preventDefault();
+          let topic_number = parseInt(this.dataset.topicNumber, 10);
+          switch_topic(topic_number);
+          return;
+        default:
+          return; // Don't prevent default for other keys
+      }
+
+      // Update focus and selection
+      tabs.forEach((tab, index) => {
+        if (index === targetIndex) {
+          tab.focus();
+          tab.setAttribute('tabindex', '0');
+          tab.setAttribute('aria-selected', 'true');
+        } else {
+          tab.setAttribute('tabindex', '-1');
+          tab.setAttribute('aria-selected', 'false');
+        }
+      });
     });
   });
 
