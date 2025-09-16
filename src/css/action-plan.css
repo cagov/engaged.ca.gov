@@ -494,6 +494,7 @@ canvas#findings-top-topics-dataviz-canvas {
 }
 
 .data-viz-2-label {
+  font-size: 18px;
   flex: 1;
   text-align: center;
 }
