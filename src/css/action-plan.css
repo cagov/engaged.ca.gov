@@ -799,6 +799,7 @@ section#findings-signup-section {
   h2 {
     color: #FFF4EB;
   }
+  padding-block: 4rem;
 }
 
 
@@ -807,6 +808,7 @@ section#findings-signup-section {
 section#partners.deliberation-partners {
   color: #444;
   background: var(--off-white);
+  padding-block: 2rem;
 }
 
 section#partners.deliberation-partners .findings-partners-content {
