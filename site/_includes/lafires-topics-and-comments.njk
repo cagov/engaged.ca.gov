@@ -151,6 +151,17 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Comment hider clicked');
         let container = document.getElementById('topics-deliberation-comments-container');
         container.classList.add('collapsed');
+        // INSERT_YOUR_CODE
+        // Scroll to the #explore-the-comments section when comments are hidden
+        let autoscroll = this.dataset.autoscroll;
+        console.log('Autoscroll:', autoscroll);
+        if (autoscroll == 'true') {
+          console.log('Autoscrolling to explore-the-comments');
+          const exploreComments = document.getElementById('explore-the-comments');
+          if (exploreComments) {
+            exploreComments.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
         {# ScrollTrigger.refresh(); #}
     });
   });
