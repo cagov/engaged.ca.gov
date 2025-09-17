@@ -194,11 +194,11 @@ function populate_comments(topic_index, filter) {
 
 
     if (filter == 'support') {
-      fCommentRecords = fCommentRecords.filter(rec => rec.pv >= 6);
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv >= 6 && rec.pv <= 7);
     } else if (filter == 'neutral') {
       fCommentRecords = fCommentRecords.filter(rec => rec.pv >= 3 && rec.pv <= 5);
     } else if (filter == 'oppose') {
-      fCommentRecords = fCommentRecords.filter(rec => rec.pv <= 2);
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv >= 1 && rec.pv <= 2);
     } else if (filter == 'novote') {
       fCommentRecords = fCommentRecords.filter(rec => rec.pv == null);
     }

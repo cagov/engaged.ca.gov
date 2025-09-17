@@ -160,6 +160,32 @@ class TopicsChart {
     });
   }
 
+compute_color(r) {
+    let hue,sat,val;
+
+    let left_sat = 76;
+    let mid_sat = 0;
+    let right_sat = 32;
+
+    let left_val = 61;
+    let mid_val = 85;
+    let right_val = 48;
+
+    let left_hue = 27;
+    let right_hue = 200;
+
+
+    if (r < 0.5) {
+      sat = Math.round(clamp(mapv(r, 0, 0.5, left_sat, mid_sat),left_sat, mid_sat)*100)/100;
+      val = Math.round(clamp(mapv(r, 0, 0.5, left_val, mid_val),left_val,mid_val)*100)/100;
+    } else {
+      sat = Math.round(clamp(mapv(r, 0.5, 1, mid_sat, right_sat),mid_sat, right_sat)*100)/100;
+      val = Math.round(clamp(mapv(r, 0.5, 1, mid_val, right_val),mid_val, right_val)*100)/100;
+    }
+    hue = Math.round(clamp(mapv(r,0.45, 0.55, left_hue, right_hue), left_hue, right_hue)*100)/100;
+    return "hsl(" + hue + ", " + sat + "%, " + val + "%)";
+  }
+
   render_dots() {
     let ctx = this.ctx;
     let canvas = this.canvas;
@@ -185,7 +211,7 @@ class TopicsChart {
 
         let x = dot.cx;
         let y = dot.cy;
-        let color = compute_color(clamp((dot.cx-20)/(1200-40),0,1));
+        let color = this.compute_color(clamp((dot.cx-20)/(1200-40),0,1));
 
         // let er = this.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
         let er = this.ellipse_radius;

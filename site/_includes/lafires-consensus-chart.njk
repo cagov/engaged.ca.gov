@@ -16,6 +16,7 @@ class ConsensusChart {
     this.topic_number = 0;
     this.canvas = null;
     this.ctx = null;
+    this.is_playing = true;
 
     const canvas = document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
     canvas.width = 1500;
@@ -101,6 +102,32 @@ class ConsensusChart {
     }      
   }
 
+  compute_color(r) {
+    let hue,sat,val;
+
+    let left_sat = 76;
+    let mid_sat = 0;
+    let right_sat = 32;
+
+    let left_val = 61;
+    let mid_val = 85;
+    let right_val = 48;
+
+    let left_hue = 27;
+    let right_hue = 200;
+
+
+    if (r < 0.5) {
+      sat = Math.round(clamp(mapv(r, 0, 0.5, left_sat, mid_sat),left_sat, mid_sat)*100)/100;
+      val = Math.round(clamp(mapv(r, 0, 0.5, left_val, mid_val),left_val,mid_val)*100)/100;
+    } else {
+      sat = Math.round(clamp(mapv(r, 0.5, 1, mid_sat, right_sat),mid_sat, right_sat)*100)/100;
+      val = Math.round(clamp(mapv(r, 0.5, 1, mid_val, right_val),mid_val, right_val)*100)/100;
+    }
+    hue = Math.round(clamp(mapv(r,0.45, 0.55, left_hue, right_hue), left_hue, right_hue)*100)/100;
+    return "hsl(" + hue + ", " + sat + "%, " + val + "%)";
+  }
+
 
   apply_consensus_forces() {
     let activeDots = this.user_dots.filter(d => d.active);
@@ -179,7 +206,7 @@ class ConsensusChart {
 
         let x = dot.cx;
         let y = dot.cy;
-        let color = compute_color(clamp((dot.cx-20)/(1200-40),0,1));
+        let color = this.compute_color(clamp((dot.cx-20)/(1200-40),0,1));
 
         // let er = this.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
         let er = this.ellipse_radius;
@@ -273,7 +300,9 @@ class ConsensusChart {
         this.change_consensus_topic((this.topic_number + 1 ) % this.voteData.topics.length);
         clearInterval(this.phase_handle);
         this.phase_handle = setInterval(() => {
-            this.change_consensus_topic((this.topic_number + 1 ) % this.voteData.topics.length);
+            if (this.is_playing) {
+              this.change_consensus_topic((this.topic_number + 1 ) % this.voteData.topics.length);
+            }
         }, 5000);
       }, 1000);
       break;
@@ -320,6 +349,7 @@ class ConsensusProgressBar {
       console.log("clicked on step", step_index, x, this.hmargin, this.gap, this.canvas.width);
       if (consensusChart) {
         consensusChart.change_consensus_topic(step_index);
+        consensusChart.is_playing = false;
       }
     });
 
@@ -343,7 +373,7 @@ class ConsensusProgressBar {
     for (let i = 0; i < n; i++) {
       let x = this.hmargin + i * gap;
       let y = h / 2;
-      let clr = compute_color(clamp((x-20)/(1200-40),0,1));
+      let clr = consensusChart.compute_color(clamp((x-20)/(1200-40),0,1));
       let fill_color = step_index == i? '#000' : clr;
       ctx.save();
       if (i < n-1) {
