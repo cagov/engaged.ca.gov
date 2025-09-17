@@ -185,7 +185,7 @@ solution_details_label: "Solution details"
 show_comments_button: Show comments
 hide_comments_button: Hide comments
 nbr_tally_items: 2
-label_1: Support
+label_1: Average support
 label_2: Comments
 explore_the_comments: Explore the comments
 filter_the_comments: "Comments can be filtered by how people voted on a topic: support, neutral, oppose, or no vote. Note: The comments themselves may not reflect how a person voted on a topic. In some cases, people commented on a topic without casting a vote."
