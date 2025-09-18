@@ -339,8 +339,7 @@ canvas#findings-consensus-progressbar-canvas {
 }
 
 div#explore-the-comments {
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+  margin: 0 1rem 1rem 1rem;
 }
 
 div#findings-deliberation-comments-container {
@@ -646,22 +645,22 @@ div.deliberation-comment-item:nth-child(odd) {
 }
 
 .deliberation-comment-item.vote-2 .comment-fill {
-  border-left-color: hsl(27, 40%, 69%);
+  border-left-color: hsl(27, 40%, 61%);
 }
 
 .deliberation-comment-item.vote-3 .comment-fill {
-  border-left-color: hsl(27, 20%, 77%);
+  border-left-color: hsl(27, 20%, 61%);
 }
 
 .deliberation-comment-item.vote-4 .comment-fill {
-  border-left-color: hsl(116, 0%, 85%);
+  border-left-color: hsl(116, 0%, 60%);
 }
 
 .deliberation-comment-item.vote-5 .comment-fill {
-  border-left-color: hsl(205, 20%, 78%); 
+  border-left-color: hsl(205, 20%, 62%); 
 }
 .deliberation-comment-item.vote-6 .comment-fill {
-  border-left-color: hsl(205, 40%, 71%); 
+  border-left-color: hsl(205, 40%, 63%); 
 }
 .deliberation-comment-item.vote-7 .comment-fill {
   border-left-color: hsl(205, 60%, 64%); 
