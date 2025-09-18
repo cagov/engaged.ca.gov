@@ -157,6 +157,9 @@ section#findings-top-options {
   padding-bottom: 0;
   /* background-color: #FFF4EB; */
 }
+#findings-top-options-intro .col-lg-8 {
+  padding-right: 0;
+}
 #findings-top-options-intro h3 {
   margin-top: 0.5rem;
 }
