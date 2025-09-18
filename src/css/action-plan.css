@@ -157,13 +157,16 @@ section#findings-top-options {
   padding-bottom: 0;
   /* background-color: #FFF4EB; */
 }
+#findings-top-options-intro h3 {
+  margin-top: 0.5rem;
+}
 
 .findings-top-options-tally-list {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   @media (max-width: 720px) {
     gap: 1rem;
   }
