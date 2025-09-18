@@ -799,8 +799,23 @@ section#findings-signup-section {
     color: #FFF4EB;
   }
   padding-block: 4rem;
+  background-image: url("/public/images/action-signup-adornment.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  /* from 768 to 1400, scale between 100px and 273px */
+  background-size: 273px;
+  @media (max-width: 900px) {
+    background-size: 200px;
+  }
+  @media (max-width: 768px) {
+    background-size: 140px;
+  }
 }
 
+section#findings-signup-section h2 {
+  width: 80%;
+  text-wrap: balance;
+}
 
 /* PARTNERS SECTION */
 
