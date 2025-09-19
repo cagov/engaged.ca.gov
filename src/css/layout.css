@@ -70,7 +70,7 @@ html {
  */
 
 a {
-  color: #1F3B83;
+  color: #0D5D90; /* was #1f3b83 */
 }
 
 a[data-appearance="button"], button:not(.nav-header), input[type="submit"] {
