@@ -529,10 +529,19 @@ div.topics-alignment-switcher-list {
   justify-content: left;
   align-items: center;
   padding: 1rem;
+  padding-bottom: 2rem;
   @media (max-width: 720px) {
     flex-direction: column;
     gap: 0.5rem;
+    align-items: flex-start;
   }
+}
+
+.topic-alignment-switcher-button-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .comments-caveat {

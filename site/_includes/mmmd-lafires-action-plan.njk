@@ -253,20 +253,22 @@
               <div class="topic-alignment-switcher-item-label style-strong-small-body-text">
                 {{ modules.findings_top_discussions.label_viewpoint | safe }}
               </div>
-              <div class="topics-alignment-switcher-item selected" data-filter="all">
-                {{ modules.findings_top_discussions.label_all_comments | safe }}
-              </div>
-              <div class="topics-alignment-switcher-item" data-filter="oppose">
-                {{ modules.findings_top_discussions.label_oppose | safe }}
-              </div>
-              <div class="topics-alignment-switcher-item" data-filter="neutral">
-                {{ modules.findings_top_discussions.label_neutral | safe }}
-              </div>
-              <div class="topics-alignment-switcher-item" data-filter="support">
-                {{ modules.findings_top_discussions.label_support | safe }}
-              </div>
-              <div class="topics-alignment-switcher-item" data-filter="novote">
-                {{ modules.findings_top_discussions.label_novote | safe }}
+              <div class="topic-alignment-switcher-button-list">
+                <div class="topics-alignment-switcher-item selected" data-filter="all">
+                  {{ modules.findings_top_discussions.label_all_comments | safe }}
+                </div>
+                <div class="topics-alignment-switcher-item" data-filter="oppose">
+                  {{ modules.findings_top_discussions.label_oppose | safe }}
+                </div>
+                <div class="topics-alignment-switcher-item" data-filter="neutral">
+                  {{ modules.findings_top_discussions.label_neutral | safe }}
+                </div>
+                <div class="topics-alignment-switcher-item" data-filter="support">
+                  {{ modules.findings_top_discussions.label_support | safe }}
+                </div>
+                <div class="topics-alignment-switcher-item" data-filter="novote">
+                  {{ modules.findings_top_discussions.label_novote | safe }}
+                </div>
               </div>
             </div>
             <div class="comments-caveat style-small-body-text italic">
