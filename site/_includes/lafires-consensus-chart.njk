@@ -7,7 +7,6 @@ class ConsensusChart {
     this.user_dots = [];
     this.bandWidth = 0;
     this.adj_band = 0;
-    this.ellipse_radius = 10;
     this.vert_margin = 11;
     this.voteData = voteData;
     this.render_handle = null;
@@ -19,6 +18,7 @@ class ConsensusChart {
     this.is_playing = true;
 
     let is_mobile = window.innerWidth < 768;
+    this.ellipse_radius = is_mobile? 12 : 10;
 
     const canvas = document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
     canvas.width = 1500;
