@@ -6,7 +6,7 @@ const pin_extend = 1000; // was 600
 let lenis = null;
     // Store scroll position before refresh/unload
 if (use_LENIS) {
-    window.addEventListener('beforeunload', () => {
+    {# window.addEventListener('beforeunload', () => {
         localStorage.setItem('lenisScrollPos', lenis.scroll);
     });
 
@@ -17,7 +17,8 @@ if (use_LENIS) {
                 lenis.scrollTo(parseFloat(scrollPos), { immediate: true });
                 localStorage.removeItem('lenisScrollPos');
             }
-    });
+    }); #}
+    ScrollTrigger.normalizeScroll(true);
 }
 
 
