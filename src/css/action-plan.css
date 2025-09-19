@@ -747,12 +747,23 @@ canvas#ring chart-canvas {
   }
 }
 .response-indent-mobile {
-  @media (max-width: 720px) {
-    padding-left: 60px;
+  @media (max-width: 1199720px) {
+    padding-left: 1.75rem;
   }
 }
 
-
+.response-sidebar .style-strong-body-text {
+  @media (min-width: 1200px) {
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+.response-sidebar .style-body-text {
+  @media (min-width: 1200px) {
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
 
 .response-item-title-container {
   display: flex;
@@ -823,6 +834,9 @@ canvas#ring chart-canvas {
 }
 .response-sidebar p {
   font-size: 18px;
+  @media (max-width: 1199px) {
+    font-size: inherit;
+  }
 }
 
 /* SIGN UP SECTION */

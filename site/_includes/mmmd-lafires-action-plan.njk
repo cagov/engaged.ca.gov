@@ -363,11 +363,13 @@
                       {% endif %}
                       </div>
                     </div>
-                    <div class="col-lg-4 response-indent-mobile">
+                    <div class="col-lg-4">
                       {% if modules['response_sidebar_' + i] %}
-                      <div class="response-sidebar">
-                          <div class="response-very-small-title style-strong-small-body-text">{{modules.response_steps.did_you_know}}</div>
-                          <div class="findings-responding-item-sidebar-content style-small-body-text">{{ modules['response_sidebar_' + i].content | safe }}</div>
+                      <div class="response-indent">
+                        <div class="response-sidebar">
+                            <div class="response-small-title style-strong-body-text">{{modules.response_steps.did_you_know}}</div>
+                            <div class="findings-responding-item-sidebar-content style-body-text">{{ modules['response_sidebar_' + i].content | safe }}</div>
+                        </div>
                       </div>
                       {% endif %}
                     </div>
