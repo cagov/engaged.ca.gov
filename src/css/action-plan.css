@@ -262,14 +262,20 @@ section#findings-top-options {
   }
 }
 
-.option-label {
+.findings-top-options-tally-box .option-label {
+  text-align: center;
+}
+
+.findings-top-discussions-tally-box .option-label {
+  text-align: center;
+}
+
+.findings-top-options-option-box .option-label {
   text-align: center;
   @media (max-width: 1199px) {
     display: none;
   }
 }
-
-
 
 img.findings-option-icon.png-icon {
   width: 60px;
