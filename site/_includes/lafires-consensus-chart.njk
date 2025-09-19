@@ -320,18 +320,19 @@ class ConsensusChart {
 
 class ConsensusProgressBar {
   constructor() {
-    this.ellipse_radius = 7.91;
     this.step_number = 0;
     this.nbr_topics = 19;
     this.canvas = null;
     this.ctx = null;
+
+    let is_mobile = window.innerWidth < 768;
+    this.ellipse_radius = is_mobile ? 16 : 8;
     this.dot_grow = 24/16;
     this.hmargin = this.ellipse_radius*this.dot_grow; // maximum dot radius
 
     const canvas = document.getElementById('findings-consensus-progressbar-canvas');
     canvas.width = 1500;
-    canvas.height = 24;
-
+    canvas.height = is_mobile ? 50 : 26;
 
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
