@@ -18,11 +18,13 @@ class TopicsChart {
     this.canvas = null;
     this.ctx = null;
 
+    let is_mobile = window.innerWidth < 768;
+
 
     {# console.log("voteData record 0", this.voteData['user_recs'][0]); #}
     const canvas = document.getElementById('findings-top-topics-dataviz-canvas');
     canvas.width = 1500;
-    canvas.height = 400;
+    canvas.height = is_mobile ? 600 : 400;
 
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');

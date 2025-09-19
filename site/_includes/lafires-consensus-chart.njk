@@ -18,9 +18,11 @@ class ConsensusChart {
     this.ctx = null;
     this.is_playing = true;
 
+    let is_mobile = window.innerWidth < 768;
+
     const canvas = document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
     canvas.width = 1500;
-    canvas.height = 400;
+    canvas.height = is_mobile ? 600 : 400;
 
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
