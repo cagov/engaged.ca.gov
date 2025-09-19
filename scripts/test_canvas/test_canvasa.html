@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinned Canvas with Scrollable Div Outline</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 200vh; /* Make body tall enough to scroll */
+        }
+
+        #background-canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1; /* Behind everything */
+            pointer-events: none; /* Don't interfere with interactions */
+        }
+
+        #background-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        #scrollable-div {
+            width: 300px;
+            height: 200px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 10px;
+            margin: 100px auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        #scrollable-div:hover {
+            transform: scale(1.05);
+        }
+
+        .spacer {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.8);
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            z-index: 100;
+        }
+
+        .retina-toggle {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 100;
+        }
+
+        .retina-toggle button {
+            background: #4ecdc4;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .retina-toggle button:hover {
+            background: #45b7aa;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background canvas container (pinned) -->
+    <div id="background-canvas-container">
+        <canvas id="background-canvas"></canvas>
+    </div>
+
+    <!-- Scrollable content -->
+    <div class="content">
+        <div class="spacer">
+            <h2>Scroll down to see the outlined div move</h2>
+        </div>
+
+        <div id="scrollable-div">
+            This div is outlined on the canvas!
+        </div>
+
+        <div class="spacer">
+            <h3>More content below...</h3>
+        </div>
+
+        <div class="spacer">
+            <h3>Keep scrolling...</h3>
+        </div>
+
+        <div class="spacer">
+            <h3>The outline follows the div position</h3>
+        </div>
+    </div>
+
+    <!-- Retina toggle control -->
+    <div class="retina-toggle">
+        Retina Scale: <span id="retina-scale-display">2</span>
+        <button onclick="canvasDrawer.toggleRetinaScale()">Toggle (1x/2x)</button>
+    </div>
+
+    <!-- Debug information -->
+    <div class="debug-info" id="debug-info">
+        Canvas: <span id="canvas-size"></span><br>
+        Window: <span id="window-size"></span><br>
+        Div Position: <span id="div-position"></span><br>
+        Device Pixel Ratio: <span id="dpr"></span><br>
+        Retina Scale: <span id="retina-scale-debug">2</span>
+    </div>
+
+    <script>
+        class CanvasOutlineDrawer {
+            constructor() {
+                this.canvas = document.getElementById('background-canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.scrollableDiv = document.getElementById('scrollable-div');
+                
+                // Retina scaling control - set to 1 to disable, 2 to enable
+                this.retinaScale = 2;
+                
+                // Get device pixel ratio for reference
+                this.devicePixelRatio = window.devicePixelRatio || 1;
+                
+                this.setupCanvas();
+                this.setupEventListeners();
+                this.draw();
+            }
+
+            setupCanvas() {
+                // Set canvas size based on retina scale setting
+                const rect = this.canvas.getBoundingClientRect();
+                this.canvas.width = rect.width * this.retinaScale;
+                this.canvas.height = rect.height * this.retinaScale;
+                
+                // Scale context to match the retina scaling
+                this.ctx.scale(this.retinaScale, this.retinaScale);
+                
+                // Update debug info
+                this.updateDebugInfo();
+            }
+
+            setupEventListeners() {
+                // Redraw on scroll and resize
+                window.addEventListener('scroll', () => this.draw());
+                window.addEventListener('resize', () => {
+                    this.setupCanvas();
+                    this.draw();
+                });
+            }
+
+            getDivBounds() {
+                const rect = this.scrollableDiv.getBoundingClientRect();
+                return {
+                    x: rect.left,
+                    y: rect.top,
+                    width: rect.width,
+                    height: rect.height,
+                    right: rect.right,
+                    bottom: rect.bottom,
+                    visible: rect.bottom > 0 && rect.top < window.innerHeight && 
+                            rect.right > 0 && rect.left < window.innerWidth
+                };
+            }
+
+            draw() {
+                // Clear canvas (use actual canvas dimensions divided by retina scale)
+                this.ctx.clearRect(0, 0, this.canvas.width / this.retinaScale, this.canvas.height / this.retinaScale);
+                
+                // Draw fixed red circle
+                this.drawRedCircle();
+                
+                // Get div bounds
+                const bounds = this.getDivBounds();
+                
+                // Only draw if at least partially visible
+                if (bounds.visible) {
+                    this.drawOutline(bounds);
+                }
+                
+                this.updateDebugInfo(bounds);
+            }
+
+            drawRedCircle() {
+                const ctx = this.ctx;
+                
+                // Circle properties
+                const centerX = 50;
+                const centerY = window.innerHeight / 2;
+                const radius = 40;
+                
+                // Draw filled red circle
+                ctx.fillStyle = '#ff0000';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Optional: Add a subtle border
+                ctx.strokeStyle = '#cc0000';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+
+            drawOutline(bounds) {
+                const ctx = this.ctx;
+                
+                // Draw main outline
+                ctx.strokeStyle = '#ff6b6b';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([]);
+                
+                ctx.beginPath();
+                ctx.rect(bounds.x, bounds.y, bounds.width, bounds.height);
+                ctx.stroke();
+                
+                // Draw corner markers
+                const cornerSize = 15;
+                ctx.strokeStyle = '#4ecdc4';
+                ctx.lineWidth = 2;
+                
+                // Top-left corner
+                ctx.beginPath();
+                ctx.moveTo(bounds.x, bounds.y + cornerSize);
+                ctx.lineTo(bounds.x, bounds.y);
+                ctx.lineTo(bounds.x + cornerSize, bounds.y);
+                ctx.stroke();
+                
+                // Top-right corner
+                ctx.beginPath();
+                ctx.moveTo(bounds.right - cornerSize, bounds.y);
+                ctx.lineTo(bounds.right, bounds.y);
+                ctx.lineTo(bounds.right, bounds.y + cornerSize);
+                ctx.stroke();
+                
+                // Bottom-right corner
+                ctx.beginPath();
+                ctx.moveTo(bounds.right, bounds.bottom - cornerSize);
+                ctx.lineTo(bounds.right, bounds.bottom);
+                ctx.lineTo(bounds.right - cornerSize, bounds.bottom);
+                ctx.stroke();
+                
+                // Bottom-left corner
+                ctx.beginPath();
+                ctx.moveTo(bounds.x + cornerSize, bounds.bottom);
+                ctx.lineTo(bounds.x, bounds.bottom);
+                ctx.lineTo(bounds.x, bounds.bottom - cornerSize);
+                ctx.stroke();
+                
+                // Draw center crosshair
+                ctx.save();
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 1;
+                ctx.setLineDash([5, 5]);
+                
+                const centerX = bounds.x + bounds.width / 2;
+                const centerY = bounds.y + bounds.height / 2;
+                const crossSize = 20;
+                
+                ctx.beginPath();
+                ctx.moveTo(centerX - crossSize, centerY);
+                ctx.lineTo(centerX + crossSize, centerY);
+                ctx.moveTo(centerX, centerY - crossSize);
+                ctx.lineTo(centerX, centerY + crossSize);
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            updateDebugInfo(bounds = null) {
+                document.getElementById('canvas-size').textContent = 
+                    `${this.canvas.width}×${this.canvas.height}`;
+                document.getElementById('window-size').textContent = 
+                    `${window.innerWidth}×${window.innerHeight}`;
+                document.getElementById('dpr').textContent = this.devicePixelRatio;
+                document.getElementById('retina-scale-debug').textContent = this.retinaScale;
+                
+                if (bounds) {
+                    document.getElementById('div-position').textContent = 
+                        `(${Math.round(bounds.x)}, ${Math.round(bounds.y)}) ${Math.round(bounds.width)}×${Math.round(bounds.height)}`;
+                }
+            }
+
+            toggleRetinaScale() {
+                // Toggle between 1x and 2x scaling
+                this.retinaScale = this.retinaScale === 2 ? 1 : 2;
+                
+                // Update display
+                document.getElementById('retina-scale-display').textContent = this.retinaScale;
+                
+                // Recreate canvas with new scaling
+                this.setupCanvas();
+                this.draw();
+            }
+        }
+
+        // Global reference for button access
+        let canvasDrawer;
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            canvasDrawer = new CanvasOutlineDrawer();
+        });
+    </script>
+</body>
+</html>
