@@ -571,7 +571,7 @@ class CanvasOutlineDrawer {
                 ctx.textBaseline = "middle";
                 for (let i = 0; i < lines.length; i++) {
                     let x = 0;
-                    let y = i*40 - 20;
+                    let y = i*40*textScale - 20*textScale;
                     ctx.save();
                     ctx.translate(x,y);
                     ctx.scale(0.5*textScale,0.5*textScale);
