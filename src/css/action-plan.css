@@ -722,7 +722,7 @@ canvas#ring chart-canvas {
 .response-indent {
   padding-left: 80px;
   @media (max-width: 720px) {
-    padding-left: 50px;
+    padding-left: 1rem;
   }
 }
 .response-indent-desktop {
@@ -757,6 +757,9 @@ canvas#ring chart-canvas {
   background-size: 60px 60px;
   background-position: left center;
   background-repeat: no-repeat;
+  @media (max-width: 767px) {
+    background-position: left 1rem center;
+  }
 }
 
 .response-item-title-container.icon-1 {
@@ -792,6 +795,12 @@ canvas#ring chart-canvas {
 }
 .response-item-text {
   margin-bottom: 1rem;
+}
+
+.response-item-title {
+  @media (max-width: 767px) {
+    margin-left: 4rem;
+  }
 }
 
 .response-item-text p {
