@@ -1,15 +1,16 @@
 {% set active_page = 'lafires-recovery' %}
 {% extends "layout.njk" %}
 {% block content %}
-
+<link rel="stylesheet" href="/css/fires.css" />
+<link rel="stylesheet" href="/css/fires-summary.css" />
+<link rel="stylesheet" href="/css/action-plan.css" />
 <link rel="stylesheet" href="/css/lenis.css">
+
 <script>
   {% include "lenis.min.js" %}
   {% include "gsap.min.js" %}
   {% include "ScrollTrigger.min.js" %}
 </script>
-
-<link rel="stylesheet" href="/css/action-plan.css" />
 
 <div id="narrative-canvas-container">
     <canvas id="narrative-canvas"></canvas>

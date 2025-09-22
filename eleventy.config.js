@@ -32,7 +32,10 @@ async function buildCSS() {
   const cssFiles = [
     { src: "src/css/index.css", dist: "_dist/css/index.css" },
     { src: "src/css/action-plan.css", dist: "_dist/css/action-plan.css" },
-    { src: "src/css/lenis.css", dist: "_dist/css/lenis.css" }
+    { src: "src/css/lenis.css", dist: "_dist/css/lenis.css" },
+    { src: "src/css/fires.css", dist: "_dist/css/fires.css" },
+    { src: "src/css/fires-summary.css", dist: "_dist/css/fires-summary.css" },
+    { src: "src/css/state-employees.css", dist: "_dist/css/state-employees.css" }
   ];
 
   for (const file of cssFiles) {
