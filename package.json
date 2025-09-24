@@ -13,6 +13,9 @@
     "test:serve": "npm run build && npx http-server _dist/",
     "test:setup": "npx playwright install-deps chromium && npx playwright install"
   },
+  "overrides": {
+    "tar-fs": "3.1.1"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@biomejs/biome": "^1.9.4",

@@ -1,17 +1,29 @@
+/* Temporary patches */
+/* Padding  fix */
+.new-comment .instruct {
+  padding-bottom: 40px;
+}
+
+/* Engaged CA stylesheet */
+
 /* Instance specific CSS */
 .panel-body.signin-form::before,
 .invited-panel .panel-body::before {
-  content: "You have been invited to tell us your Los Angeles fires recovery priorities." !important;
+  /* content: "You have been invited to LA Fires Recovery Phase 2" !important; */
 }
 
-/* Demo mode UX improvements */
+.main {
+  padding: 8px;
+}
+
+/* Demo mode UX improvements - Hide comment input box  */
 .new-comment .form-comment-container-outer {
-  display: none !important;
+  /* display: none !important; */
 }
 
 /* New styles to organize into rest of stylesheet */
 .nav-item-container.list-group-item ul.list-group .nav-item-container a {
-  padding-left: 40px !important;
+  /* padding-left: 40px !important; */
 }
 
 .prompt {
@@ -29,9 +41,17 @@ span.bigger-emoji {
   font-size: 4.4rem;
 }
 
+.drawer-toggle {
+  color: #000000;
+}
+
+.drawer-toggle:hover {
+  color: #1c2745;
+}
+
 /* remove client feedback button */
 a.client-feedback {
-  display: none;
+  /* display: none; */
 }
 
 .top-navigation-btn {
@@ -101,6 +121,7 @@ li.navbar-user-dropdown {
   font-size: 2.2rem !important;
   padding-bottom: 60px;
 }
+
 .panel-body.signin-form p:first-child,
 .invited-panel .panel-footer {
   display: none;
@@ -263,7 +284,7 @@ h3,
 }
 
 .nav-item.active {
-  background-color: #FFCDA4;
+  background-color: #ffcda4;
 }
 
 .list-group-item .material-icons-outlined.half-complete {
@@ -276,9 +297,10 @@ h3,
 #page-header {
   width: 100%;
   text-align: left;
-  margin: 0;
+  margin: 0px;
   vertical-align: middle;
   padding-bottom: 0px;
+  padding-left: 8px;
 }
 
 b,
@@ -613,7 +635,7 @@ button.btn.btn-raised.navigation-button.btn-primary:focus {
 
 /* Fix page padding */
 .main {
-  padding: 8px;
+  /*  padding: 8px; */
 }
 
 a {
@@ -732,6 +754,7 @@ div:has(> .form-group) + div {
 .progress-bar-voting .progress-bar-voting__fill {
   background-color: #1c2745;
   border-radius: 0px;
+  min-width: 69px;
 }
 
 .progress-bar-voting span {
@@ -1135,4 +1158,3 @@ label.checkbox-inline .checkbox-material {
   display: flex;
   flex-direction: row;
 }
-
