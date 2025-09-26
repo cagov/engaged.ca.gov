@@ -22,15 +22,7 @@ section#los-angeles-fires-recovery img {
   }
 }
 
-.status-pill {
-  display: inline-block;
-  font-size: 1.125rem;
-  border: 1px solid var(--off-white);
-  padding: .25rem 1.25rem;
-  border-radius: 3rem;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-}
+
 
 section#overview {
   background: #FFF4EB;

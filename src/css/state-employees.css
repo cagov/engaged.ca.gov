@@ -1,3 +1,20 @@
+section#overview {
+    background: #FFF4EB;
+}
+section#overview .row {
+  --bs-gutter-x: 3.75rem;
+  --bs-gutter-y: 2rem;
+}
+
+div.about-the-process > h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.4375rem;
+}
+  
+div.about-the-process > *:not(h3) {
+    font-size: 1.125rem;
+}
+
 .hiw.ge-hiw {
     row-gap: 4rem;
     font-size: 1rem;

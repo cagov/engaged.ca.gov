@@ -1,0 +1,841 @@
+<script>
+// Global reference for button access
+let narrativeDisplay;
+
+class Particle {
+    constructor(x, y, options = {}) {
+        this.x = x;
+        this.y = y;
+        this.options = options;
+    }
+}
+
+class CanvasOutlineDrawer {
+    constructor() {
+        this.canvas = document.getElementById('narrative-canvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.canvas.style.opacity = 0;
+        this.scrollableDiv = document.getElementById('narrative-wrapper-1');
+        this.currentRenderFunction = null;
+
+        console.log("initialize narrative background canvas");
+        
+        // Retina scaling control - set to 1 to disable, 2 to enable
+        this.retinaScale = 2;
+
+        this.particles_1 = [];
+        this.particles_2 = [];
+        this.particles_3 = [];
+        this.report_icons_canvas = null;
+        this.report_icons_ctx = null;
+        this.cycle_frequency = 0.2;
+        this.k_minZoom = 0.925;
+        this.k_maxZoom = 1.1; // 1.075;
+        this.first_topic_particle = 0;
+        this.current_animation_time = 0;
+        this.current_animation_step_index = 0;
+        this.scrollBack = false;
+
+
+
+        // Get device pixel ratio for reference
+        this.devicePixelRatio = window.devicePixelRatio || 1;
+        
+        this.setupCanvas();
+        this.setupEventListeners();
+
+        this.load_icons();
+
+        this.init_narrative_backgrounds_step_1();
+
+        this.init_narrative_backgrounds_step_2();
+
+        this.init_narrative_backgrounds_step_3();
+
+        // this.draw();
+
+        ScrollTrigger.refresh();
+
+    }
+
+    setupCanvas() {
+        // Set canvas size based on retina scale setting
+        const rect = this.canvas.getBoundingClientRect();
+        this.canvas.width = rect.width * this.retinaScale;
+        this.canvas.height = rect.height * this.retinaScale;
+        
+        // Scale context to match the retina scaling
+        this.ctx.scale(this.retinaScale, this.retinaScale);
+        
+    }
+
+    setupEventListeners() {
+        // Redraw on scroll and resize
+        // window.addEventListener('scroll', () => this.draw());
+        window.addEventListener('resize', () => {
+            this.setupCanvas();
+            this.init_narrative_backgrounds_step_1();
+            this.init_narrative_backgrounds_step_2();
+            this.init_narrative_backgrounds_step_3();
+            this.draw();
+        });
+    }
+
+    getDivBounds() {
+        const rect = this.scrollableDiv.getBoundingClientRect();
+        return {
+            x: rect.left,
+            y: rect.top,
+            width: rect.width,
+            height: rect.height,
+            right: rect.right,
+            bottom: rect.bottom,
+            visible: rect.bottom > 0 && rect.top < window.innerHeight && 
+                    rect.right > 0 && rect.left < window.innerWidth
+        };
+    }
+
+    setRenderFunction(render_function) {
+        this.currentRenderFunction = render_function.bind(this);
+    }
+
+    clear() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+
+    fadeOut() {
+        // Set up a fade out transition for the canvas
+        this.canvas.style.transition = 'opacity 0.5s';
+        this.canvas.style.opacity = 0;
+    }
+
+    fadeIn() {
+        // Set up a fade in transition for the canvas
+        this.canvas.style.transition = 'opacity 0.5s';
+        this.canvas.style.opacity = 1;
+    }
+
+    draw() {
+        if (this.currentRenderFunction) {
+            this.currentRenderFunction(this.ctx);
+        }
+    }
+
+    shuffled_order(nbr_particles) {
+        let order = [];
+        for (let i = 0; i < nbr_particles; i++) {
+            order.push(i);
+        }
+        // Fisher-Yates shuffle
+        for (let i = order.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [order[i], order[j]] = [order[j], order[i]];
+        }
+        return order;
+    }
+
+    icon_images_loaded() {
+        this.report_icons_ctx.clearRect(0, 0, this.report_icons_canvas.width, this.report_icons_canvas.height);
+        this.report_icons_ctx.drawImage(this.report_icons_img, 0, 0, 4000, 200);
+    }
+
+    load_icons() {
+        this.report_icons_canvas = document.createElement('canvas');
+        this.report_icons_canvas.width = 4000;
+        this.report_icons_canvas.height = 200;
+        this.report_icons_ctx = this.report_icons_canvas.getContext('2d');
+        this.report_icons_img = new Image();
+        this.report_icons_img.src = '/public/images/report_icons.png';
+        this.report_icons_img.onload = this.icon_images_loaded.bind(this);
+    }
+
+    render_icon(icon_index) {
+        let ctx = this.ctx;
+        ctx.save();
+            ctx.scale(0.5, 0.5);
+            // Draw an orange circle around the icon image
+            ctx.beginPath();
+            ctx.arc(0, 0, 83, 0, 2 * Math.PI);
+            ctx.lineWidth = 1.73*2;
+            ctx.fillStyle = 'white';
+            ctx.strokeStyle = '#E6883B';
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.drawImage(this.report_icons_canvas, icon_index * 200, 0, 200, 200, -100, -100, 200, 200);
+        ctx.restore();
+    }
+
+    init_narrative_backgrounds_step_1() {
+        const canvas = this.canvas;
+        console.log("init step 1");
+
+        let canvas_width = this.canvas.width / this.retinaScale;
+        let canvas_height = this.canvas.height / this.retinaScale;
+        let menuHeight = window.innerWidth < 992? 60 : 180;
+
+        this.particles_1 = [];
+        let ellipse_radius_x = canvas_width * 0.4;
+        let ellipse_radius_y = (canvas_height-menuHeight) * 0.4;
+        let ellipse_center_x = canvas_width / 2;
+        let ellipse_center_y = (canvas_height+menuHeight) / 2;
+        let balloon_colors = ['#98B8C8', '#E6F0F5', '#EFB389'];
+        let text_color = '#868686';
+        // produce order array (integers from 0->nbr_particles) which is shuffled.
+        let particle_init = [
+            {
+                'ang_idx': 0,
+                'width': 359,
+                'color': 1,
+                'balloon_type': 0,
+                'nbr_text_lines': 2,
+                'tail_upper': 1,
+            },
+            {
+                'ang_idx': 1,
+                'width': 300,
+                'color': 2,
+                'balloon_type': 0,
+                'nbr_text_lines': 0,
+                'tail_upper': 1,
+            },
+            {
+                'ang_idx': 2,
+                'width': 376,
+                'color': 0,
+                'balloon_type': 0,
+                'nbr_text_lines': 2,
+                'tail_upper': 1,
+                'tail_reverse': 1,
+            },
+            {
+                'ang_idx': 2, // secondary
+                'x_offset': -75,
+                'y_offset': 42,
+                'width': 282,
+                'color': 2,
+                'balloon_type': 0,
+                'nbr_text_lines': 0,
+                'tail_upper': 0,
+            },
+            {
+                'ang_idx': 3,
+                'width': 282,
+                'color': 1,
+                'balloon_type': 1,
+                'nbr_text_lines': 3,
+                'tail_upper': 1,
+                'tail_reverse': 1,
+            },
+            {
+                'ang_idx': 4,
+                'width': 269,
+                'x_offset': 45,
+                'y_offset': 0,
+                'color': 2,
+                'balloon_type': 0,
+                'nbr_text_lines': 0,
+                'tail_upper': 0,
+                'tail_reverse': 1,
+            },
+            {
+                'ang_idx': 4, // secondary
+                'x_offset': 45-75,
+                'y_offset': 42,
+                'width': 269,
+                'color': 0,
+                'balloon_type': 0,
+                'nbr_text_lines': 0,
+                'tail_upper': 0,
+            },
+            {
+                'ang_idx': 5,
+                'width': 378,
+                'color': 1,
+                'balloon_type': 0,
+                'nbr_text_lines': 2,
+                'tail_upper': 0,
+                'tail_reverse': 1,
+            },
+            {
+                'ang_idx': 6,
+                'width': 261,
+                'color': 1,
+                'balloon_type': 0,
+                'nbr_text_lines': 2,
+                'tail_upper': 0,
+                'tail_reverse': 1,
+            },
+            {
+                'ang_idx': 6, // secondary
+                'x_offset': -75,
+                'y_offset': -42,
+                'width': 262,
+                'color': 0,
+                'balloon_type': 0,
+                'nbr_text_lines': 0,
+                'tail_upper': 0,
+            },
+            {
+                'ang_idx': 7,
+                'x_offset': 0,
+                'y_offset': -100,
+                'width': 445,
+                'color': 2,
+                'balloon_type': 1,
+                'nbr_text_lines': 3,
+                'tail_upper': 0,
+            },
+        ];
+        let nbr_particles = particle_init.length;
+        let order = this.shuffled_order(nbr_particles);
+        let order2 = this.shuffled_order(nbr_particles);
+        let nbr_angles = 8;
+
+        for (let i = 0; i < nbr_particles; i++) {
+            let pio = particle_init[i]; // particle init options
+            let x_offset = (pio.hasOwnProperty('x_offset')) ? pio.x_offset : 0;
+            let y_offset = (pio.hasOwnProperty('y_offset')) ? pio.y_offset : 0;
+            let width = pio.width;
+            let bg_color = balloon_colors[pio.color];
+            let balloon_type = pio.balloon_type;
+            let nbr_text_lines = pio.nbr_text_lines;
+            let angle = pio.ang_idx * 2 * Math.PI / nbr_angles + Math.PI/nbr_angles;
+            let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle);
+            let y = ellipse_center_y + ellipse_radius_y * Math.sin(angle);
+            let scale = clamp(mapv(window.innerWidth,600,992,.5,1),.5,1);
+            let balloon_size = width * 0.4;
+            let has_text_lines = nbr_text_lines > 0;
+            let tail_reverse = (pio.hasOwnProperty('tail_reverse')) ? pio.tail_reverse : 0;
+            let tail_upper = (pio.hasOwnProperty('tail_upper')) ? pio.tail_upper : 0;
+            let aspect_ratio = balloon_type == 0? 544/312 : 922/685;
+            let balloon_width = balloon_size * scale;
+            let balloon_height = balloon_size * scale / aspect_ratio;
+            let options = {
+                'scale': scale,
+                'x_offset': x_offset,
+                'y_offset': y_offset,
+                'ellipse_yw': ellipse_radius_y,
+                'ellipse_xw': ellipse_radius_x,
+                'body_width': balloon_width,
+                'body_height': balloon_height,
+                'balloon_corner_radius': 4*scale,
+                'bg_color': bg_color,
+                'text_color': text_color,
+                'has_text_lines': has_text_lines,
+                'tail_reverse': tail_reverse,
+                'tail_upper': tail_upper,
+                'nbr_text_lines': nbr_text_lines,
+            }
+            this.particles_1.push(new Particle(x, y, options));
+        }
+        // animate_step_1(0, ctx);
+    }
+
+    animate_step_1(t) {
+        let ctx = this.ctx;
+        let adjT = clamp(mapv(t,0,.5,0,1),0,1);
+
+        this.particles_1.forEach(particle => {
+        particle.options.opacity = mapv(adjT,0,1,0,1); 
+        particle.options.scale = mapv(ease_out(t),0,1,0.1,1);
+        });
+
+        let canvas_width = this.canvas.width / this.retinaScale;
+        let canvas_height = this.canvas.height / this.retinaScale;
+
+        this.particles_1.forEach(particle => {
+            let center_x = canvas_width/2;
+            let center_y = canvas_height/2 + 90;
+            let tx = particle.x + particle.options.x_offset;
+            let ty = particle.y + particle.options.y_offset;
+            let sx = center_x + (tx - center_x) * 1.5;
+            let sy = center_y + (ty - center_y) * 1.5;
+            let x = mapv(adjT,0,1,sx,tx);
+            let y = mapv(adjT,0,1,sy,ty);
+            let scale = particle.options.scale;
+            let balloon_size = particle.options.balloon_size;
+            let bg_color = particle.options.bg_color;
+            let text_color = particle.options.text_color;
+            let text_size = particle.options.text_size;
+            let has_text_lines = particle.options.has_text_lines;
+            let tail_reverse = particle.options.tail_reverse;
+            let tail_upper = particle.options.tail_upper;
+            // Draw balloon body (rounded rect)
+            const bodyWidth = particle.options.body_width;
+            const bodyHeight = particle.options.body_height;
+            const radius = particle.options.balloon_corner_radius;
+
+            // Balloon body center
+            const bx = x;
+            const by = y;
+
+            ctx.save();
+            ctx.translate(bx, by);
+            ctx.scale(scale, scale);
+            if (tail_reverse) {
+                ctx.scale(-1, 1);
+            }
+            if (tail_upper) {
+                ctx.scale(1, -1);
+            }
+
+            // Balloon body rect
+            const rectX = 0 - bodyWidth / 2;
+            const rectY = 0 - bodyHeight / 2;
+            const rectW = bodyWidth;
+            const rectH = bodyHeight;
+
+            ctx.globalAlpha = particle.options.opacity;
+
+            ctx.beginPath();
+            ctx.moveTo(rectX + radius, rectY);
+            ctx.lineTo(rectX + rectW - radius, rectY);
+            ctx.quadraticCurveTo(rectX + rectW, rectY, rectX + rectW, rectY + radius);
+            ctx.lineTo(rectX + rectW, rectY + rectH - radius);
+            ctx.quadraticCurveTo(rectX + rectW, rectY + rectH, rectX + rectW - radius, rectY + rectH);
+            ctx.lineTo(rectX + radius, rectY + rectH);
+            ctx.quadraticCurveTo(rectX, rectY + rectH, rectX, rectY + rectH - radius);
+            ctx.lineTo(rectX, rectY + radius);
+            ctx.quadraticCurveTo(rectX, rectY, rectX + radius, rectY);
+
+
+            ctx.closePath();
+            ctx.fillStyle = bg_color;
+            ctx.strokeStyle = bg_color;
+            ctx.fill();
+
+            // Tail base (on bottom edge of rect, offset horizontally)
+            let tailBaseX1 = rectX + bodyWidth*0.147; // bx + particle.options.tail_offset;
+            let tailBaseY1 = rectY + bodyHeight; // rectY + rectH;
+            let tailBaseX2 = rectX + bodyWidth*0.378;
+            let tailBaseY2 = rectY + bodyHeight;
+
+            // Tail tip (downward, at randomized angle and length)
+            let tailTipX1 = tailBaseX1;
+            let tailTipY1 = tailBaseY1 + bodyHeight * 0.23;
+            let tailTipX2 = tailBaseX1 + bodyHeight * 0.05;
+            let tailTipY2 = tailBaseY2 + bodyHeight * 0.24;
+
+            // Draw tail (triangle)
+            ctx.beginPath();
+            ctx.moveTo(tailBaseX1-bodyWidth*0.05, tailBaseY1);
+            ctx.quadraticCurveTo(tailBaseX1, tailBaseY1,
+                                tailBaseX1, tailBaseY1 + bodyHeight*0.05);
+            // Draw to just above the tip for a smoother curve
+            ctx.lineTo(tailTipX1, tailTipY1);
+            // Use quadratic curve for rounded tip
+            ctx.quadraticCurveTo(
+                tailTipX1, tailTipY1 + (bodyHeight * 0.05), // control point below tip for more roundness
+                tailTipX2, tailTipY2
+            );
+            ctx.lineTo(tailBaseX2, tailBaseY2);
+            ctx.lineWidth = 4*scale;
+            ctx.fill();
+
+
+            // Draw centered text
+            if (has_text_lines) {
+                let nbr_text_lines = particle.options.nbr_text_lines;
+                let line_vert_margin = bodyHeight * 62/685;
+                let line_gap_y = (bodyHeight - line_vert_margin * 2) / (nbr_text_lines + 1);
+                let top_line_y = rectY + line_vert_margin + line_gap_y;
+                let left_line_x = rectX + bodyWidth * 0.137;
+                let right_line_x = rectX + bodyWidth - bodyWidth * 0.137;
+
+                ctx.save();
+                ctx.strokeStyle = text_color;
+                ctx.lineWidth = 4;
+
+                for (let i = 0; i < nbr_text_lines; i++) {
+                    let line_y = top_line_y + i * line_gap_y;
+                    ctx.beginPath();
+                    ctx.moveTo(left_line_x, line_y);
+                    ctx.lineTo(right_line_x, line_y);
+                    ctx.stroke();
+                }
+                ctx.restore();
+            }
+            ctx.restore();
+            ctx.globalAlpha = 1;
+
+        });
+
+
+    }
+
+    init_narrative_backgrounds_step_2() {
+        let scale = 1;
+        const canvas = this.canvas;
+        let menuHeight = window.innerWidth < 992? 60 : 180;
+        let canvas_width = this.canvas.width / this.retinaScale;
+        let canvas_height = this.canvas.height / this.retinaScale;
+
+        let phrases = [
+        {% for i in range(1, modules.findings_narrative_step_2.nbr_phrases + 1) %}
+            '{{ modules.findings_narrative_step_2["phrase_" + i] }}',
+        {% endfor %}
+        ];
+        console.log("phrases", phrases);
+
+        let dot_colors = ['#98B8C8', '#EFB389'];
+
+
+        this.particles_2 = [];
+        let nbr_particles = 23;
+        let min_ellipse_radius_x = canvas_width * 0.4;
+        let max_ellipse_radius_x = canvas_width * 0.45;
+        let min_ellipse_radius_y = (canvas_height-menuHeight) * 0.4;
+        let max_ellipse_radius_y = (canvas_height-menuHeight) * 0.45;
+        let ellipse_center_x = canvas_width / 2;
+        let ellipse_center_y = (canvas_height+menuHeight) / 2;
+        let text_index = 0;
+        let order = this.shuffled_order(nbr_particles);
+        let order2 = this.shuffled_order(nbr_particles);
+        let circle_size_adjust = window.innerWidth < 992? 0.5 : 1;
+
+
+        for (let i = 0; i < nbr_particles; i++) {
+            let angle = i * 2 * Math.PI / nbr_particles;
+            let ellipse_radius_x = mapv(Math.random(),0,1,min_ellipse_radius_x,max_ellipse_radius_x);
+            let ellipse_radius_y = mapv(Math.random(),0,1,min_ellipse_radius_y,max_ellipse_radius_y);
+            let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle);
+            let y = ellipse_center_y + ellipse_radius_y * Math.sin(angle);
+            let min_circle_size = 18*scale;
+            let max_circle_size = 60*scale;
+            let circle_size = mapv(Math.random(),0,1,min_circle_size,max_circle_size);
+            let circle_type = Math.floor(Math.random()*2);
+            let text = '';
+            let bg_color = dot_colors[Math.floor(Math.random()*dot_colors.length)];
+            if (i % 4 == 0) {
+                circle_type = 2;
+                text = phrases[text_index];
+                text_index = (text_index + 1) % phrases.length;
+            }
+
+            let options = {
+                'phase': order[i] / nbr_particles,
+                'circle_size': circle_size*circle_size_adjust,
+                'circle_type': circle_type,
+                'text': text,
+                'bg_color': bg_color,
+                'ox': x,
+                'oy': y,
+                'travel_angle': Math.PI*2*Math.random(),
+                'vx': 0,
+                'vy': 0,
+            }
+            this.particles_2.push(new Particle(x, y, options));
+        }
+    }
+
+    animate_step_2(t) {
+        let ctx = this.ctx;
+        let textScale = clamp(mapv(window.innerWidth,600,992,.5,1),.5,1);
+
+        this.particles_2.forEach(particle => {
+            particle.options.opacity = 0.8; // Math.pow(mapv(Math.sin(ease_in_out(t*0)*Math.PI*2*this.cycle_frequency + Math.PI*2*particle.options.phase), -1, 1, 0.5, 1), 2);
+            particle.options.scale = mapv(t,0,1,this.k_minZoom,this.k_maxZoom)*0.8;
+            let dist = t*50;
+            let angle = particle.options.travel_angle;
+            particle.x = particle.options.ox + dist * Math.cos(angle);
+            particle.y = particle.options.oy + dist * Math.sin(angle);
+
+            let x = particle.x;
+            let y = particle.y;
+
+
+            let circle_size = particle.options.circle_size;
+
+            ctx.save();
+            ctx.globalAlpha = particle.options.opacity;
+
+            ctx.translate(x, y);
+            ctx.scale(particle.options.scale, particle.options.scale);
+
+            ctx.beginPath();
+            ctx.arc(0, 0, circle_size, 0, 2 * Math.PI);
+            ctx.closePath();
+            ctx.lineWidth = 1.73*particle.options.scale;
+            switch (particle.options.circle_type) {
+            case 0:
+            case 1:
+                ctx.fillStyle = particle.options.bg_color;
+                ctx.fill();
+                break;
+            case 2: // TEXT - we use a larger font at 1/2 scale which produces slightly better looking text
+                let lines = particle.options.text.split('/');
+                ctx.font = "italic 600 64px Noto Sans Display";
+                ctx.textAlign = "center";
+                ctx.fillStyle = '#868686';
+                ctx.textBaseline = "middle";
+                for (let i = 0; i < lines.length; i++) {
+                    let x = 0;
+                    let y = i*40*textScale - 20*textScale;
+                    ctx.save();
+                    ctx.translate(x,y);
+                    ctx.scale(0.5*textScale,0.5*textScale);
+                    ctx.fillText(lines[i], 0, 0);
+                    ctx.restore();
+                }
+                break;
+            }
+            ctx.globalAlpha = 1;
+            ctx.restore();
+        });
+
+    }
+
+    init_narrative_backgrounds_step_3() {
+        let scale = 1;
+        let menuHeight = window.innerWidth < 992? 60 : 180;
+
+        const canvas = this.canvas;
+        let canvas_width = this.canvas.width / this.retinaScale;
+        let canvas_height = this.canvas.height / this.retinaScale;
+
+        let dot_colors = ['#98B8C8', '#EFB389'];
+
+        this.particles_3 = [];
+        let nbr_particles = 31;
+        let min_ellipse_radius_x = canvas_width * 0.35;
+        let max_ellipse_radius_x = canvas_width * 0.4;
+        let min_ellipse_radius_y = (canvas_height-menuHeight) * 0.35;
+        let max_ellipse_radius_y = (canvas_height-menuHeight) * 0.4;
+        let ellipse_center_x = canvas_width / 2;
+        let ellipse_center_y = (canvas_height+menuHeight) / 2;
+        let nbr_icons = 20;
+        let order = this.shuffled_order(nbr_particles);
+        let order2 = this.shuffled_order(nbr_particles);
+        let nbr_topics = 19;
+        this.first_topic_particle = nbr_particles;
+        let circle_size_adjust = window.innerWidth < 992? 0.5 : 1;
+
+        for (let i = 0; i < nbr_particles; i++) {
+            let angle = i * 2 * Math.PI / nbr_particles;
+            let ellipse_radius_x = mapv(Math.random(),0,1,min_ellipse_radius_x,max_ellipse_radius_x);
+            let ellipse_radius_y = mapv(Math.random(),0,1,min_ellipse_radius_y,max_ellipse_radius_y);
+            let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle);
+            let y = ellipse_center_y + ellipse_radius_y * Math.sin(angle);
+            let min_circle_size = 15*scale;
+            let max_circle_size = 50*scale;
+            let circle_size = max_circle_size; // mapv(Math.random(),0,1,min_circle_size,max_circle_size);
+            let circle_type = Math.floor(Math.random()*Math.random()*2);
+            let bg_color = dot_colors[Math.floor(Math.random()*dot_colors.length)];
+            let options = {
+                'phase': order[i] / nbr_particles,
+                'circle_size': circle_size*circle_size_adjust,
+                'circle_type': circle_type,
+                'bg_color': bg_color,
+                'vx': 0,
+                'vy': 0,
+            }
+            this.particles_3.push(new Particle(x, y, options));
+        }
+        let icon_index = 0;
+        for (let i = 0; i < nbr_topics; i++) {
+            let angle = i * 2 * Math.PI / nbr_topics;
+            let ellipse_radius_x = mapv(Math.random(),0,1,min_ellipse_radius_x,max_ellipse_radius_x);
+            let ellipse_radius_y = mapv(Math.random(),0,1,min_ellipse_radius_y,max_ellipse_radius_y);
+            let x = ellipse_center_x + ellipse_radius_x * Math.cos(angle) * (i % 2 == 0? 1.12 : 0.85);
+            let y = ellipse_center_y + ellipse_radius_y * Math.sin(angle) * (i % 2 == 0? 1.12 : 0.85);
+            let circle_size = 30*scale;
+            let circle_type = 2;
+            let bg_color = dot_colors[Math.floor(Math.random()*dot_colors.length)];
+            icon_index = icon_index % nbr_icons;
+            icon_index += 1;
+            let options = {
+                'phase': Math.floor(Math.random()*3),
+                'circle_size': circle_size*circle_size_adjust,
+                'circle_type': circle_type,
+                'icon_index': icon_index,
+                'bg_color': bg_color,
+                'ox': x,
+                'oy': y,
+                'travel_angle': Math.PI*2*Math.random(),
+                'uid': i,
+                'vx': 0,
+                'vy': 0,
+            }
+            this.particles_3.push(new Particle(x, y, options));
+        }
+        for (let i = 0; i < nbr_particles; i++) {
+            let closest_topic = null;
+            let min_distance = 1000000;
+            for (let j = 0; j < nbr_topics; j++) {
+                let distance = Math.sqrt((this.particles_3[i].x - this.particles_3[this.first_topic_particle + j].x)**2 + (this.particles_3[i].y - this.particles_3[this.first_topic_particle + j].y)**2);
+                if (distance < min_distance) {
+                    min_distance = distance;
+                    closest_topic = j;
+                }
+            }
+            this.particles_3[i].options.closest_topic = closest_topic;
+            this.particles_3[i].tx = this.particles_3[this.first_topic_particle + closest_topic].x;
+            this.particles_3[i].ty = this.particles_3[this.first_topic_particle + closest_topic].y;
+        }
+    }
+
+    tdot_distance(da, db) {
+        let dx = da.x - db.x;
+        let dy = da.y - db.y;
+        return Math.sqrt(dx*dx + dy*dy);
+    }
+    tdot_angle(da, db) {
+        let dx = db.x - da.x;
+        let dy = db.y - da.y;
+        return Math.atan2(dy, dx);
+    }
+
+
+    animate_step_3(t) {
+        let ctx = this.ctx;
+        let canvas_width = this.canvas.width / this.retinaScale;
+        let canvas_height = this.canvas.height / this.retinaScale;
+        let circle_size_adjust = window.innerWidth < 992? 0.5 : 1;
+
+        const opacity_peak = 0.6;
+
+        const maxRepelForce = 0.1;
+        const repelScale = 1.2; // 1.1
+
+
+        /****
+
+        let topic_particles = this.particles_3.slice(this.first_topic_particle);
+        let topic_particles_count = topic_particles.length;
+        let min_distance = 60 * repelScale;
+        console.log("topic_particles_count", topic_particles_count);
+        // apply forces
+        topic_particles.forEach(dot => {
+            dot.options.vx *= 0.95;
+            dot.options.vy *= 0.95;
+            let fx = 0;
+            let fy = 0;
+            let neighbors = topic_particles.filter(d => d.uid != dot.uid && this.tdot_distance(d, dot) < min_distance);
+            neighbors.forEach(neb => {
+                console.log("push");
+                let dist = this.tdot_distance(neb, dot);
+                let angle = this.tdot_angle(neb, dot);
+                // To make force 0 at d = min_distance, and increase as d gets smaller:
+                // We'll use: force = (min_distance - d) / min_distance, but clamp to >= 0
+                let force = clamp((min_distance - dist) / min_distance, 0, maxRepelForce);
+                fx += force * Math.cos(angle);
+                fy += force * Math.sin(angle);
+            });
+            dot.options.vx += fx;
+            dot.options.vy += fy;
+            dot.x += dot.options.vx;
+            dot.y += dot.options.vy;
+        });
+        ***/
+
+        this.particles_3.forEach(particle => {
+            let x = particle.x;
+            let y = particle.y;
+            let opacity = 1;
+
+            if (particle.options.circle_type < 2) {
+                let begin_t = particle.options.phase * 1/4;
+                let end_t = begin_t + 1/2;
+                let phase_t = clamp(mapv(t, begin_t, end_t, 0, 1), 0, 1);
+
+                let center_x = canvas_width/2;
+                let center_y = canvas_height/2 + 90;
+
+
+                let tx = this.particles_3[this.first_topic_particle + particle.options.closest_topic].x;
+                let ty = this.particles_3[this.first_topic_particle + particle.options.closest_topic].y;
+
+
+                let sx = center_x + (particle.x - center_x) * 2;
+                let sy = center_y + (particle.y - center_y) * 2;
+                x = mapv(phase_t,0,1,sx,tx);
+                y = mapv(phase_t,0,1,sy,ty);
+                particle.options.scale = mapv(phase_t,0,1,0.1,1);
+                if (phase_t > opacity_peak) {
+                    particle.options.opacity = mapv(phase_t,opacity_peak,1,1,0);
+                } else {
+                    particle.options.opacity = mapv(phase_t,0,opacity_peak,0,1);
+                }
+            } else {
+                particle.options.opacity = 1;
+                let dist = t*50;
+                let angle = particle.options.travel_angle;
+                particle.x = particle.options.ox + dist * Math.cos(angle);
+                particle.y = particle.options.oy + dist * Math.sin(angle);
+                particle.options.scale = mapv(t,0,1,1,1.2);
+            }
+
+            let circle_size = particle.options.circle_size;
+
+
+            ctx.save();
+            ctx.globalAlpha = particle.options.opacity;
+
+            ctx.translate(x, y);
+            ctx.scale(particle.options.scale*circle_size_adjust, particle.options.scale*circle_size_adjust);
+
+            ctx.beginPath();
+            ctx.arc(0, 0, circle_size, 0, 2 * Math.PI);
+            ctx.closePath();
+            ctx.lineWidth = 1.73*2;
+            switch (particle.options.circle_type) {
+            case 0:
+            case 1:
+                ctx.fillStyle = particle.options.bg_color;
+                ctx.fill();
+                break;
+            case 2:
+                this.render_icon(particle.options.icon_index);
+                break;
+            }
+            ctx.globalAlpha = 1;
+            ctx.restore();
+        });
+    }
+
+    refresh_narrative_backgrounds(ctx) {
+      ctx = this.ctx;
+      this.animate_narrative(this.current_animation_time, this.current_animation_step_index);
+    }
+
+    animate_narrative(t, step_index) {
+        if (narrativeDisplay == null || this.canvas == null) {
+            return;
+        }
+        const canvas = this.canvas;
+        let canvas_width = this.canvas.width / this.retinaScale;
+        let canvas_height = this.canvas.height / this.retinaScale;
+
+        let ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas_width, canvas_height);
+
+        this.current_animation_time = t;
+        this.current_animation_step_index = step_index;
+
+        this.setRenderFunction(this.refresh_narrative_backgrounds);
+
+        // ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        switch (step_index) {
+        case 1:
+            this.animate_step_1(t);
+            break;
+        case 2:
+            this.animate_step_2(t);
+            break;
+        case 3:
+            this.animate_step_3(t);
+            break;
+        }
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    narrativeDisplay = new CanvasOutlineDrawer();
+    // setup_scroll_animation();
+});
+
+
+</script>
