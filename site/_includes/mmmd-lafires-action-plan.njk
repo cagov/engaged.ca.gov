@@ -101,7 +101,7 @@
           <canvas id="findings-consensus-sentiment-chart-dataviz-canvas" width="1200" height="400"></canvas>
         </div>
         <div class="findings-consensus-sentiment-chart">
-          <div class="data-viz-1-labels ">
+          <div class="data-viz-1-labels" style="direction: ltr;">
             {% for i in range(1, modules.findings_consensus_sentiment_chart.nbr_labels + 1) %}
               <div class="data-viz-1-label style-small-body-text">
                 {{ modules.findings_consensus_sentiment_chart["label_" + i] }}
@@ -219,7 +219,7 @@
             <div id="findings-top-topics-dataviz-container" class="findings-top-topics-data-viz">
               <canvas id="findings-top-topics-dataviz-canvas" width="1200" height="400"></canvas>
             </div>
-            <div class="data-viz-2-labels">
+            <div class="data-viz-2-labels" style="direction: ltr;">
               {% for i in range(1, modules.findings_topic_chart.nbr_labels + 1) %}
               <div class="data-viz-2-label">
                 {{ modules.findings_topic_chart["label_" + i] }}
