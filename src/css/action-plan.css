@@ -740,6 +740,15 @@ canvas#ring chart-canvas {
     padding-left: 1rem;
   }
 }
+.response-indent:dir(rtl) {
+  padding-left: inherit;
+  padding-right: 80px;
+  @media (max-width: 720px) {
+    padding-right: 1rem;
+  }
+}
+
+
 .response-indent-desktop {
   padding-left: 80px;
   @media (max-width: 720px) {
@@ -785,6 +794,13 @@ canvas#ring chart-canvas {
   background-repeat: no-repeat;
   @media (max-width: 767px) {
     background-position: left 1rem center;
+  }
+}
+
+.response-item-title-container.icon:dir(rtl) {
+  background-position: right center;
+  @media (max-width: 767px) {
+    background-position: right 1rem center;
   }
 }
 
