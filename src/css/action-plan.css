@@ -829,6 +829,11 @@ canvas#ring chart-canvas {
 .response-small-title, .response-very-small-title {
   margin-bottom: 0.5rem;
 }
+
+.response-small-title:not(:first-child) {
+  margin-top: 2rem;
+}
+
 .response-item-title {
   margin-bottom: 1rem;
 }
