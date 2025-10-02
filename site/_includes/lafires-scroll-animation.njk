@@ -6,18 +6,6 @@ const pin_extend = 1000; // was 600
 let lenis = null;
     // Store scroll position before refresh/unload
 if (use_LENIS) {
-    {# window.addEventListener('beforeunload', () => {
-        localStorage.setItem('lenisScrollPos', lenis.scroll);
-    });
-
-    // Restore scroll position on page load
-    window.addEventListener('load', () => {
-            let scrollPos = localStorage.getItem('lenisScrollPos');
-            if (lenis && lenis.scroll && scrollPos) {
-                lenis.scrollTo(parseFloat(scrollPos), { immediate: true });
-                localStorage.removeItem('lenisScrollPos');
-            }
-    }); #}
     ScrollTrigger.normalizeScroll(true);
 }
 
@@ -75,9 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         markers: use_MARKERS, // Enable markers for debugging
         onUpdate: (self) => {
           console.log("updating step 1");
-          {# if (narrativeDisplay && narrativeDisplay.canvas.style.opacity == 0) {
-            narrativeDisplay.fadeIn();
-          } #}
+
           const t = self.progress; // 0 to 1
           if (narrativeDisplay) {
             narrativeDisplay.animate_narrative(narrativeDisplay.scrollBack ? 1 : t, 1);

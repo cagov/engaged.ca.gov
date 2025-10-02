@@ -175,14 +175,6 @@ class ConsensusChart {
       } else if (dot.ty <= this.ellipse_radius) {
         fy += borderForce;
       }
-      {# // compute weak forces from gravity to center line - UNUSED
-      let center_y = ctx.canvas.height/2;
-      let dy = dot.ty - center_y;
-      if (dy > 2) {
-        fy -= gravityForce;
-      } else if (dy < -2) {
-        fy += gravityForce;
-      } #}
       dot.vx += fx;
       dot.vy += fy;
       dot.tx += dot.vx;

@@ -41,7 +41,6 @@ function switch_topic(topic_nbr) {
   }
   switch_alignment('all');
   populate_comments(current_topic_index, current_mood_filter);
-  {# ScrollTrigger.refresh() #}
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -144,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // populate it...
     populate_comments(current_topic_index, current_mood_filter);
     container.classList.remove('collapsed');
-    {# ScrollTrigger.refresh(); #}
   });
   document.querySelectorAll('.deliberation-comment-expander-button.close').forEach(function(item) {
     item.addEventListener('click', function() {
@@ -162,7 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
             exploreComments.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         }
-        {# ScrollTrigger.refresh(); #}
     });
   });
 
@@ -170,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
     item.addEventListener('click', function() {
       switch_alignment(this.dataset.filter);
       populate_comments(current_topic_index, current_mood_filter);
-      {# ScrollTrigger.refresh(); #}
     });
   });
 
@@ -233,78 +229,5 @@ function populate_comments(topic_index, filter) {
     comment_container.innerHTML = cmarkup;
     // ScrollTrigger.refresh();
 }
-
-{# function legendItemHandler(e) {
-  const legendItem = this;
-  let is_collapsed = legendItem.classList.contains('collapsed');
-  const expansionBlock = legendItem.querySelector('.legend-item-expansion-block');
-
-  if (is_collapsed) {
-    legendItem.classList.remove('collapsed');
-    legendItem.setAttribute('aria-expanded', 'true');
-    expansionBlock.setAttribute('aria-hidden', 'false');
-  } else {
-    legendItem.classList.add('collapsed');
-    legendItem.setAttribute('aria-expanded', 'false');
-    expansionBlock.setAttribute('aria-hidden', 'true');
-  }
-  is_collapsed = !is_collapsed;
-  const nbrComments = legendItem.getAttribute('data-nbr-comments');
-  const commentIds = legendItem.getAttribute('data-comment-ids');
-  console.log('Legend item clicked:', nbrComments, commentIds);
-
-  const legendItemContent = legendItem.querySelector('.legend-item-content');
-  const parentElement = legendItemContent.parentElement;
-  if (!is_collapsed) {
-    let comment_list = '';
-    const commentIdsArray = commentIds.split(',');
-    for (let i = 0; i < nbrComments; i++) {
-      comment_list += '<div class="deliberation-comment-item">';
-      const cid = parseInt(commentIdsArray[i]);
-      console.log("Looking up quote with comment id ", cid);
-      const quote = quoteData.find(q => q.COMMENT_ID === cid);
-      comment_list += '“' + quote.CONTENT + '”';
-      comment_list += '</div>';
-    }
-    legendItemContent.innerHTML = comment_list;
-    if (parentElement) {
-      setLegendFade(parentElement, legendItemContent);
-    }
-  } else {
-    legendItemContent.innerHTML = '';
-  }
-} #}
-
-{# function setLegendFade(elem, childElement) {
-    // Remove both classes first
-    elem.classList.remove('fade-top', 'fade-bottom');
-    // If not at the very top, add fade-top
-    if (childElement.scrollTop > 0) {
-      console.log('Adding fade-top');
-      elem.classList.add('fade-top');
-    }
-    // If not at the very bottom, add fade-bottom
-    if (childElement.scrollTop + childElement.clientHeight < childElement.scrollHeight - 1) {
-      console.log('Adding fade-bottom');
-      elem.classList.add('fade-bottom');
-    }
-
-}
-
-function handleLegendItemContentScroll(e) {
-  const el = e.target;
-  const parentElement = el.parentElement;
-  if (parentElement) {
-    setLegendFade(parentElement, el);
-  }
-}
-
-const legendContents = document.querySelectorAll('#topics-deliberation-comments-container-content');
-  legendContents.forEach(el => {
-    el.addEventListener('scroll', handleLegendItemContentScroll);
-    // Initial check in case content is already scrolled
-    handleLegendItemContentScroll({target: el});
-  }); #}
-
 
 </script>

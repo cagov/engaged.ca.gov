@@ -21,7 +21,6 @@ class TopicsChart {
     let is_mobile = window.innerWidth < 768;
 
 
-    {# console.log("voteData record 0", this.voteData['user_recs'][0]); #}
     const canvas = document.getElementById('findings-top-topics-dataviz-canvas');
     canvas.width = 1500;
     canvas.height = is_mobile ? 600 : 400;
@@ -191,8 +190,6 @@ compute_color(r) {
   render_dots() {
     let ctx = this.ctx;
     let canvas = this.canvas;
-    {# ctx.fillStyle = 'rgba(255,255,255,0.8)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height); #}
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     let nbr_applications = 6;
@@ -263,22 +260,6 @@ compute_color(r) {
     this.topic_number = topic_number;
     this.change_topic(topic_number-1);
   }
-
-  {# topic_chart_phase(phase)
-  {
-    this.phase = phase;
-    console.log("topic_chart_phase", phase);
-    switch (phase) {
-    case 1:
-    case 2:
-    case 3:
-      if (this.phase_handle) {
-        clearInterval(this.phase_handle);
-        this.phase_handle = null;
-      }
-      break;
-    }
-  } #}
 
 }
 
