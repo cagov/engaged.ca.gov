@@ -1,6 +1,6 @@
 ---
-title: لس آنجلس در مورد برنامه‌های احیاء هماهنگ می‌شود
-description: کالیفرنیای مشارکتی یک پلتفرم آنلاین است که مشارکت کالیفرنیایی‌ها در دولت را آسان‌تر می‌کند. اولین موضوع کالیفرنیای مشارکتی، احیاء پس از آتش‌سوزی‌های لس آنجلس است. این صفحه مهم‌ترین مسائل برای بازسازی لس آنجلس را نشان می‌دهد.
+title: LA aligns on recovery plans
+description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
 layout: mmmd-lafires-action-plan
 parentid: lafires-recovery
 keywords:
@@ -21,107 +21,107 @@ example_quoted_text: "this is quoted text:"
 
 2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
 
-3. If the text following a label contains a colon, please use quote marks, as in the example_quoted_text above
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
    This is especially important for Armenian, where colons are added as sentence-ending punctuation.
 
 4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.  
    When text contains words inside single asterisks, that text is intended to be printed in italics. 
    In either case, preserve the asterisks.
 
-5. Text preceded by a one-or-more hash symbols are headings.  Preserve the hash-symbols.
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
    This is typically used for templates that insert numbers into a sentence.
 
 ----
 id: findings_overview
-buttonText: برو به برنامه عمل
+buttonText: Skip to the action plan
 ----
 
-# لس آنجلس در مورد برنامه‌های احیاء هماهنگ می‌شود
+# LA aligns on recovery plans
 
-در یک فرآیند مشارکت جامعه‌ای بی‌سابقه، بیش از 900 عضو جامعه در تالارهای شهر برای عصر دیجیتال گرد هم آمدند. شرکت‌کنندگان در 2 مرحله مشارکت کردند تا برنامه‌ای برای احیاء پس از آتش‌سوزی‌های ویرانگر لس آنجلس در ژانویه 2025 تهیه کنند.
+In a first-of-its-kind community engagement process, more than 3,000 community members were invited to town halls for the digital age. Participants contributed across 2 phases to produce an action plan to recover from the devastating Los Angeles wildfires in January 2025. 
 
-برنامه عمل، که از طریق جلسات مشاوره آنلاین در یک دوره 7 ماهه توسعه یافته، اولویت‌های مستقیم کسانی را که خانه و کسب‌وکار خود را از دست داده‌اند منعکس می‌کند. اولویت‌هایی که آنها تعیین کردند - با تمرکز بر حمایت فوری جامعه و بهبودهای زیرساختی بلندمدت - مقامات ایالتی و محلی را به سمت احیاء کامل هدایت خواهد کرد.
+The action plan, developed through online deliberation sessions over a 6-month period, reflects priorities from those who were affected by the Eaton and Palisades fires. The priorities they set – focusing on immediate community support and long-term infrastructure improvements – will guide state and local officials toward full recovery.
 
 
 ----
 id: findings_narrative_step_1
-title: تعیین دستور کار
-button_text: درباره مرحله تعیین دستور کار بخوانید
+title: Agenda setting
+button_text: Read about the agenda setting phase
 ----
 
-## ساکنان نگرانی‌ها و ایده‌های خود را به اشتراک گذاشتند
+## Residents shared their concerns and ideas
 
-پس از آتش‌سوزی‌های شدید در لس آنجلس، بیش از 750 عضو جامعه به صورت آنلاین ملاقات کردند تا در مورد اولویت‌های احیاء بحث کنند.
+After the severe wildfires in Los Angeles, hundreds of community members met online to discuss recovery priorities.
 
 ----
 id: findings_narrative_step_2
-title: بررسی و برنامه‌ریزی
-button_text: درباره شرکای ما بیاموزید
+title: Review and planning
+button_text: Learn about our partners
 nbr_phrases: 6
 translator_note: USE slash symbol for line breaks, keep these phrases to two lines!
-phrase_1: خدمات/عمومی
-phrase_2: جامعه/حمایت
-phrase_3: مالی/حمایت
-phrase_4: اضطراری/آمادگی
-phrase_5: آتش/مقاوم‌سازی
-phrase_6: ساختمان/مجوزها
+phrase_1: Utilities
+phrase_2: Community/Support
+phrase_3: Financial/support
+phrase_4: Emergency/preparedness
+phrase_5: Fire/proofing
+phrase_6: Building/permits
 ----
 
 
 
-## ایده‌های فردی به داده‌های مشترک تبدیل شدند
+## Individual ideas turned into shared data
 
-گروهی از رهبران سیاست، امداد بلایا و جامعه از تخصص خود و هوش مصنوعی تولیدی استفاده کردند تا 1,289 نظر ارائه شده در تعیین دستور کار را به 19 گزینه سیاستی قابل اجرا تبدیل کنند.
+A group of policy, disaster relief, and community leaders used their expertise and generative AI to turn the 1,289 comments submitted in agenda setting into 19 actionable policy options.
 
 ----
 id: findings_narrative_step_3
-title: مشاوره
+title: Deliberation
 ----
 
-## جامعه بر روی همه 19 گزینه رأی داد
+## The community voted on all 19 options
 
-بیش از 400 شرکت‌کننده جدید و بازگشته این گزینه‌ها را رتبه‌بندی کردند، دوباره از پلتفرم آنلاینی استفاده کردند که در آن می‌توانستند بحث و همکاری کنند.
+New and returning participants ranked these options, again using an online platform where they could discuss and collaborate.
 
 ----
 id: consensus_chart_topics
 nbr_topics: 19
-topic_1: افزایش تراکم مسکن و تسریع مجوزها
-topic_2: مسکن موقت
-topic_3: اولویت دادن به خانواده‌ها
-topic_4: باغ‌های نمایشی مقاوم در برابر آتش و سازگار با آب
-topic_5: استانداردهای اجباری محافظت از خانه در برابر جرقه
-topic_6: تسریع مجوزدهی واحدهای جانبی و دوپلکس
-topic_7: سیستم‌های اجباری آب خاکستری برای ساختمان‌های جدید
-topic_8: برنامه جامع آموزش صاحبان خانه
-topic_9: مراکز ارتباط اضطراری در جوامع
-topic_10: مشوق‌های مالیاتی فضای قابل دفاع
-topic_11: برنامه‌های آموزش ساخت‌وساز گسترش یافته
-topic_12: طراحی‌های از پیش تأیید شده مقاوم در برابر آتش
-topic_13: زیرساخت پیشرفته تشخیص آتش
-topic_14: ارائه کمک مالی به ساکنان بلندمدت
-topic_15: تسریع مجوزدهی و بازرسی‌ها
-topic_16: کمک بازسازی
-topic_17: اعلان‌ها و هشدارهای اضطراری قوی‌تر
-topic_18: آب برای اطفاء حریق
-topic_19: دفن خطوط برق و بهبود ایمنی تجهیزات
+topic_1: Increased housing density and expedited permits
+topic_2: Temporary housing
+topic_3: Prioritize families
+topic_4: Fire-resistant and water-friendly demonstration gardens
+topic_5: Mandatory home ember protection standards
+topic_6: Accelerated ADU and duplex permitting
+topic_7: Mandatory greywater systems for new buildings
+topic_8: Comprehensive homeowner education program
+topic_9: Emergency communication hubs in communities
+topic_10: Defensible space tax incentives
+topic_11: Expanded construction training programs
+topic_12: Pre-approved fire-resistant building designs
+topic_13: Enhanced fire detection infrastructure
+topic_14: Give financial assistance to long-term residents
+topic_15: Accelerating permitting and inspections
+topic_16: Rebuilding help
+topic_17: Stronger emergency notifications and alerts
+topic_18: Water for firefighting
+topic_19: Undergrounding power lines and improving equipment safety
 ----
 
 
 ----
 id: findings_consensus_watch_intro
-title_h2: هماهنگی جامعه
-caveat: "حمایت میانگین امتیاز رأی‌ها است، جایی که امتیاز حمایت قوی از یک گزینه 100 است و امتیاز مخالفت قوی با یک گزینه 0 است."
+title_h2: Community alignment
+caveat: "Support is the average score of the votes, where the score of strongly supporting an option is 100, and the score of strongly opposing an option is 0."
 ----
-هر نقطه یک رأی را نشان می‌دهد. با تغییر تجسم، می‌توانید سطح میانگین حمایت برای هر موضوع را دنبال کنید. موضوعات از کمترین حمایت جامعه (چپ) تا بیشترین حمایت جامعه (راست) مرتب شده‌اند.
+Each dot represents one vote. As the visualization changes, you can track the average level of support for each issue. Topics are arranged from least community support (left) to most community support (right).
 
 ----
 id: findings_consensus_watch_explore
-topic_number_template: "موضوع <NUM> از <TOTAL>"
+topic_number_template: "Topic <NUM> of <TOTAL>"
 translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to insert numbers into the phrase
 translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
-label_1: افزایش تراکم مسکن و تسریع مجوزها
-percent_default: 92% از شرکت‌کنندگان از این موضوع حمایت کردند
-percent_template: <PERCENT>% حمایت میانگین
+label_1: Increased housing density and expedited permits
+percent_default: 92% of participants supported this topic
+percent_template: <PERCENT>% average support
 translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
 ----
 
@@ -129,34 +129,34 @@ translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the 
 ----
 id: findings_consensus_sentiment_chart
 nbr_labels: 3
-label_1: مخالفت قوی
-label_2: خنثی
-label_3: حمایت قوی
+label_1: Strongly oppose
+label_2: Neutral
+label_3: Strongly support
 ----
 
 ----
 id: findings_narrative_top_options_intro
-title: ساکنان برای یافتن توافق بر روی 5 راه‌حل برتر مشارکت کردند
+title: Residents weighed in to find agreement on the top 5 solutions
 nbr_values: 2
-label_1: نظرات و پاسخ‌ها
-label_2: رأی‌ها
+label_1: Comments and replies
+label_2: Votes
 value_1: 1,504
 value_2: 3,977
 nbr_options: 5
 ----
 
-مشارکت قابل توجه بود. همسایگان توانستند افکار خود را به اشتراک بگذارند و به یکدیگر پاسخ دهند. 1,504 نظر شرکت‌کننده دریافت شده در جعبه سیاه ناپدید نشد. مردم در مورد راه‌حل‌ها صحبت کردند و به طور مؤثر برای تعریف اولویت‌ها با یکدیگر کار کردند.
+The engagement was notable. Neighbors were able to share their thoughts and replied to one another. The 1,504 participant comments received didn’t vanish into a black box. People talked about the solutions, effectively working together to define priorities.
 
 ----
 id: findings_narrative_top_options
-results_header: برنامه عمل
-results_description: "این برنامه که شامل 5 حوزه تمرکز برای احیاء است - جامعه‌ای متحد را در اطراف ساخت زیرساخت مقاوم در برابر آتش برای آینده و ارائه حمایت به جامعه در حال حاضر نشان می‌دهد:"
+results_header: Action plan
+results_description: "The plan, which includes 5 focus areas for recovery – reveals a community united around building fire-resilient infrastructure for the future and providing support to the community now:"
 nbr_options: 5
-option_label_1: دفن خطوط برق و اقدامات ایمنی تجهیزات
-option_label_2: بهبود سیستم‌های آب برای اطفاء حریق
-option_label_3: تقویت شبکه‌های ارتباط اضطراری
-option_label_4: کمک به مردم برای یافتن برنامه‌های حمایت مالی
-option_label_5: اختصاص تیم‌ها برای حمایت از مجوزدهی
+option_label_1: Bury power lines and equipment safety measures
+option_label_2: Improve water systems for firefighting
+option_label_3: Strengthen emergency communication networks
+option_label_4: Help people find financial support programs
+option_label_5: Dedicate teams to support permitting
 option_icon_1: circle-blue-1.png
 option_icon_2: circle-blue-2.png
 option_icon_3: circle-blue-3.png
@@ -171,39 +171,39 @@ option_icon_5: circle-blue-5.png
 ----
 id: findings_topic_chart
 nbr_labels: 3
-label_1: مخالفت قوی
-label_2: خنثی
-label_3: حمایت قوی
+label_1: Strongly oppose
+label_2: Neutral
+label_3: Strongly support
 ----
 
 
 
 ----
 id: findings_top_discussions
-title_h2: تحلیل 5 مورد برتر از همه زوایا
-solution_details_label: "جزئیات راه‌حل"
-show_comments_button: نمایش نظرات
-hide_comments_button: مخفی کردن نظرات
+title_h2: Analyze the top 5 from all angles
+solution_details_label: "Solution details"
+show_comments_button: Show comments
+hide_comments_button: Hide comments
 nbr_tally_items: 2
-label_1: حمایت
-label_2: نظرات
-explore_the_comments: کاوش در نظرات
-filter_the_comments: "نظرات را می‌توان بر اساس نحوه رأی دادن مردم به یک موضوع فیلتر کرد: حمایت، خنثی، مخالفت، یا عدم رأی. توجه: خود نظرات ممکن است نحوه رأی دادن یک شخص به یک موضوع را منعکس نکند. در برخی موارد، مردم بدون دادن رأی در مورد یک موضوع نظر داده‌اند."
-label_viewpoint: "نقطه نظر:"
-label_all_comments: "همه نظرات"
-label_oppose: "مخالفت"
-label_neutral: "خنثی"
-label_support: "حمایت"
-label_novote: "عدم رأی"
-filter_comments_by_vote: فیلتر نظرات بر اساس رأی‌های مربوطه. ما نظرات را ترجمه نمی‌کنیم؛ آنها به زبان اصلی نمایش داده می‌شوند.
+label_1: Average support
+label_2: Comments
+explore_the_comments: Explore the comments
+filter_the_comments: "Comments can be filtered by how people voted on a topic: support, neutral, oppose, or no vote. Note: The comments themselves may not reflect how a person voted on a topic. In some cases, people commented on a topic without casting a vote."
+label_viewpoint: "Viewpoint:"
+label_all_comments: "All comments"
+label_oppose: "Oppose"
+label_neutral: "Neutral"
+label_support: "Support"
+label_novote: "No vote"
+filter_comments_by_vote: Filter comments by their corresponding votes. We do not translate comments; they are displayed in their original language. 
 ----
 
-هر رأی شمارش و وزن‌دهی شد تا توافق بر روی 5 راه‌حل برتری که کالیفرنیا باید بررسی کند حاصل شود. بین مناطق آتش‌سوزی، رأی‌ها و نظرات کمی متفاوت به نظر می‌رسید، از تغییر وضعیت استفاده کنید تا ببینید نظرات از پالیسیدز چگونه با منطقه آتش‌سوزی ایتون متفاوت بود.
+Every vote was counted and weighted to achieve consensus on the top 5 solutions California should explore. Between the fire zones, votes and comments looked a little different, use the toggle to see how opinons from the Palisades differed from those in the Eaton fire zone.
 
 ----
 id: discussion_1
-title: دفن خطوط برق و اقدامات ایمنی تجهیزات
-topic_description: خطوط برق را تا حد امکان دفن کنید و استراتژی‌های کاهش را برای جلوگیری از اشتعال ناشی از خرابی تجهیزات به کار بگیرید. این رویکرد جامع یکی از علل اصلی اشتعال آتش‌سوزی در کالیفرنیا را مورد توجه قرار می‌دهد.
+title: Bury power lines and equipment safety measures
+topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
 nbr_comments: 3
 value_1: 92%
 value_2: 90
@@ -212,8 +212,8 @@ chart_topic_index: 19
 
 ----
 id: discussion_2
-title: بهبود سیستم‌های آب برای اطفاء حریق
-topic_description: سیستم‌های آب را برای برآورده کردن نیازهای جریان آتش مدرن ارتقا دهید و اطمینان حاصل کنید که در همه مناطق هیدرانت‌های کافی وجود دارد. این امر منبع آب و فشار مورد نیاز برای عملیات مؤثر اطفاء حریق را بهبود می‌بخشد.
+title: Improve water systems for firefighting
+topic_description: Upgrade water systems to meet modern fire flow requirements and ensure there are enough fire hydrants in all areas. This would improve the water supply and pressure needed for effective firefighting operations.
 value_1: 87%
 value_2: 74
 chart_topic_index: 18
@@ -221,8 +221,8 @@ chart_topic_index: 18
 
 ----
 id: discussion_3
-title: تقویت شبکه‌های ارتباط اضطراری
-topic_description: زیرساخت ارتباطی را ترویج دهید که به امدادگران اولیه و ساکنان اجازه می‌دهد حتی زمانی که دکل‌های سلولی یا خطوط فیبر نوری خراب می‌شوند، متصل بمانند، مانند شبکه‌های اینترنت مش که می‌توانند در طول بلایا مستقل عمل کنند.
+title: Strengthen emergency communication networks
+topic_description: Promote communication infrastructure that allows first responders and residents to stay connected even when cell towers or fiber lines fail, such as mesh internet networks that can operate independently during disasters.
 value_1: 86%
 value_2: 59
 chart_topic_index: 17
@@ -230,8 +230,8 @@ chart_topic_index: 17
 
 ----
 id: discussion_4
-title: کمک به مردم برای یافتن برنامه‌های حمایت مالی
-topic_description: یک کاتالوگ جامع از برنامه‌ها و سازمان‌های حمایت مالی موجود برای کمک به تلاش‌های بازسازی ایجاد کنید. این فهرست ساکنان متأثر از آتش‌سوزی را با کمک‌های مالی، وام‌ها و برنامه‌های کمک متصل می‌کند، در حالی که با سازمان‌های مالی مورد اعتماد که مایل به کمک در تأمین مالی احیاء هستند نیز مشارکت می‌کند.
+title: Help people find financial support programs
+topic_description: Create a comprehensive catalog of financial support programs and organizations available to help with rebuilding efforts. This directory would connect fire-affected residents with grants, loans, and aid programs, while also partnering with trusted financial organizations willing to assist with recovery funding.
 value_1: 82%
 value_2: 59
 chart_topic_index: 16
@@ -239,8 +239,8 @@ chart_topic_index: 16
 
 ----
 id: discussion_5
-title: اختصاص تیم‌ها برای حمایت از مجوزدهی
-topic_description: تیم‌هایی از کارکنان اختصاصی در مراکز تریاژ ایجاد کنید تا جوامع متأثر از آتش‌سوزی را به سرعت از طریق فرآیندهای مجوزدهی راهنمایی کنند. این تیم‌های تخصصی کمک شخصی‌سازی شده به ساکنانی که در حال پیمایش نیازهای پیچیده بازسازی هستند ارائه می‌دهند.
+title: Dedicate teams to support permitting
+topic_description: Establish teams of dedicated staff at triage centers to quickly guide fire-affected communities through permitting processes. These specialized teams would provide personalized assistance to residents navigating complex rebuilding requirements.
 value_1: 82%
 value_2: 73
 chart_topic_index: 15
@@ -249,256 +249,256 @@ chart_topic_index: 15
 
 ----
 id: topic_comments_scroller 
-label: نظرات در مورد این موضوع
-desc: برای دیدن نظرات در مورد این موضوع اسکرول کنید (به زبان اصلی نمایش داده می‌شوند)
+label: Comments on this topic
+desc: Scroll to see the comments about this topic (shown in their original language)
 ----
 
 ----
 id: topic_data_vis
-title: کاوش در رأی‌ها
-learn_button_label: درباره اقدامات در حال انجام بیاموزید
-desc: هر نقطه یک رأی فردی را نشان می‌دهد. تعداد کل نقاط با تعداد کل رأی‌های داده شده در مورد یک موضوع خاص مطابقت دارد.
-download_text: دانلود CSV نظرات شرکت‌کنندگان
+title: Explore the votes
+learn_button_label: Learn about the actions being taken
+desc: Each dot represents an individual’s vote. The total number of dots corresponds to the total number of votes cast on a particular topic. 
+download_text: Download a CSV of participant comments
 ----
 
 ----
 id: conversation_groups
 nbr_groups: 7
-group_label_1: مخالفت قوی
-group_label_2: مخالف
-group_label_3: تا حدودی مخالف
-group_label_4: خنثی
-group_label_5: تا حدودی حمایت‌کننده
-group_label_6: حمایت‌کننده
-group_label_7: حمایت قوی
+group_label_1: Strongly opposed
+group_label_2: Opposed
+group_label_3: Somewhat opposed
+group_label_4: Neutral
+group_label_5: Somewhat supportive
+group_label_6: Supportive
+group_label_7: Strongly supportive
 ----
 
 ----
 id: findings_alignment_section
 ----
-## هماهنگی قابل توجه
+## Noteworthy alignment 
 
-مردم از مناطق مختلف آتش‌سوزی سازگاری شگفت‌انگیزی نشان دادند. ساکنان متأثر از ایتون و پالیسیدز نیازهای برتر را یکسان رتبه‌بندی کردند: دفن خطوط برق زیرزمین، بهبود سیستم‌های آب برای اطفاء حریق، و اطمینان از ارتباطات در مواقع اضطراری.
+People from different fire zones showed surprising consistency. Residents impacted by Eaton and Palisades ranked the top needs the same: bury power lines underground, improve local water systems for firefighting, and ensure timely alerts when there is an emergency.
 
-این نشان می‌دهد که صرف نظر از جدایی جغرافیایی، توافق جامعه‌ای گسترده در مورد اولویت‌های اساسی احیاء وجود دارد.
 
-**این گروه از اولویت‌ها داستان روشنی می‌گوید.**
+This shows that regardless of geographic separation, there is community-wide agreement on essential recovery priorities.
 
-ساکنان هم حمایت فوری برای احیاء و هم سرمایه‌گذاری‌های بلندمدت در زیرساخت مقاوم در برابر آتش می‌خواهند. آنها همچنین نیاز دارند که خدمات حمایتی برای خدمت به نیازهای فوری بازسازی جامعه ساده‌سازی شوند.
+**This group of priorities tells a clear story.**
 
-این مشارکت به ما اجازه داد تا تجربیات شخصی را به راهنمای سیاست واقعی تبدیل کنیم.
+Residents want both immediate support for recovery and long-term investments in fire-resistant infrastructure. They also need support services to be streamlined to serve the community's urgent rebuilding needs.
+
+This engagement allowed us to turn personal experiences into real policy guidance.
 
 ----
 id: findings_alignment_section_sidebar
 ----
 
-**ساخت بر اساس حمایت مشترک**
+**Building on shared support**
 
-این فرآیند فقط نظرات را جمع‌آوری نکرد؛ بلکه اعتماد و شتاب ایجاد کرد در حالی که با هم پیش می‌رویم.
+The process didn't just gather opinions; it built confidence and momentum as we move forward together.
 
-در حالی که شرکت‌کنندگان با احساسات مختلط وارد شدند - فقط 24% خوشبین شروع کردند در حالی که 48% بدبین بودند - چشم‌انداز از طریق فرآیند تغییر کرد.
+While participants arrived with mixed feelings—only 24% started optimistic while 48% felt pessimistic—the outlook shifted through the process. 
 
-بیش از یک چهارم شرکت‌کنندگان (27%) خوشبین‌تر نسبت به احیاء آتش‌سوزی‌های لس آنجلس ظاهر شدند.
+More than a quarter of participants (27%) emerged more optimistic about LA fires recovery.
 
 ----
 id: signup_plea
-button_text: ثبت نام
+button_text: Sign up
 ----
-## ثبت نام کنید تا در کار مهم مشارکت داشته باشید
+## Sign up to remain engaged in important work
 
-ایمیل خود را به ما بدهید تا از فرصت‌های آینده مطلع شوید. 
+Give us your email to learn about upcoming opportunities. 
 
 ----
 id: response_intro
 ----
 
-## چگونه به نیازهای جامعه پاسخ می‌دهیم
+## How we’re responding to community needs
 
-ساکنان در هر دو مرحله تعیین دستور کار و مشاوره‌های بعدی ما صحبت کردند. **ایالت**، **شهرستان**، **شهر**، **خدمات عمومی**، و **شرکای فدرال** با اقدامات ملموس پاسخ داده‌اند. و موارد بیشتری در راه است.
+Residents spoke up during both the agenda setting phase and our later deliberations. **State**, **county**, **city**, **utilities**, and **federal partners** have responded with tangible actions. And more are on the way.
 
 ----
 id: response_steps
-action_now: اقدام اکنون
-coming_soon: به زودی
-did_you_know: آیا می‌دانستید؟
+action_now: Action now
+coming_soon: Coming soon
+did_you_know: Did you know?
 nbr_steps: 5
-anchor_link_text: "مرا به رأی‌ها و نظرات مردم در مورد این موضوع ببرید"
+anchor_link_text: "Take me to people’s votes and comments on this topic"
 ----
 
 
 ----
 id: response_step_1
-title: دفن خطوط برق و بهبود ایمنی تجهیزات
+title: Undergrounding power lines and improving equipment safety
 icon: construction-orange.svg
 ----
 
 ----
 id: response_step_1_action_now
 ----
-**شهرستان** و **ایالت** با شرکت‌های برق و مخابرات همکاری می‌کنند تا برنامه‌ریزی کنند خدمات عمومی بیشتری را زیرزمین قرار دهند. **فرماندار گاوین نیوسام** در مارس 2025 دستور اجرایی امضا کرد تا این کار را تسریع کند.
+The **county** and **state** are working with power and telecommunications companies to plan to put more utilities underground. **Governor Gavin Newsom** signed an executive order in March 2025 to fast-track this work.  
 
-علاوه بر این، **شهردار لس آنجلس** کارن باس دستور اجرایی صادر کرد تا به ساکنان پالیسیدز کمک کند بازسازی را با مواد مقاوم در برابر آتش و زیرساخت مقاوم در برابر آب و هوا تسریع کنند. این شامل سخت‌سازی خدمات عمومی برای قابلیت اطمینان برق در طول آب و هوای شدید است.
+Additionally, **Los Angeles Mayor Karen Bass** issued an executive order to help Palisades residents expedite rebuilding with fire-resistant materials and climate-resilient infrastructure. This includes hardening utilities for power reliability during severe weather.
 
 ----
 id: response_step_1_coming_soon
 ----
-خدمات عمومی به طور نزدیک با رهبران محلی از **شهرستان لس آنجلس** و **شهر** همکاری می‌کنند. ساخت‌وساز در حال حاضر در مالیبو، آلتادنا و پاسیفیک پالیسیدز در جریان است. احتمالاً برای چندین سال دیگر ادامه خواهد داشت. **شهرستان** رویکرد هماهنگ برای دفن خطوط برق و مخابرات را رهبری می‌کند که پول صرفه‌جویی می‌کند، زمان را کاهش می‌دهد و اختلالات از چندین تیم کاری را به حداقل می‌رساند.
+Utilities are working closely with local leaders from **Los Angeles County** and the **city**. Construction is already underway in Malibu, Altadena, and Pacific Palisades. It is expected to continue for several more years. The **state** and **county** are calling for a coordinated approach to undergrounding power and telecom lines that will save money, cut down on time, and minimize disruptions from multiple work crews.
+
+Beyond undergrounding, additional strategies are important to mitigate fire hazards, such as vegetation management and resilient rebuilding. Property owners and design/building professionals can look to the **county’s** [Resilient Rebuild Resource Guide](https://recovery.lacounty.gov/resilient-rebuilding/) for information and resources for planning, designing, and constructing a high-performance building more resilient to fire risks.
 
 ----
 id: response_sidebar_1_unused
 ----
-وقتی **شهر پارادایس** بازسازی شد، با **PG&E**، **ارائه‌دهندگان مخابرات**، و **مقررات‌گذاران ایالتی** همکاری کرد تا خطوط برق در معرض خطر را زیرزمین قرار دهد. لس آنجلس از این و بهبودهای ایمنی مشابه به عنوان الگو و راهنما برای احیاء خود استفاده می‌کند.
+When the **Town of Paradise** was rebuilt, it worked with **PG&E**, **telecom providers**, and **state regulators** to put at-risk power lines underground. Los Angeles is using this and similar safety improvements as a model and guide for its own recovery.
 
 ----
 id: response_step_2
-title: آب برای اطفاء حریق
+title: Water for firefighting
 icon: hydrant-orange.svg
 ----
 
 ----
 id: response_step_2_action_now
 ----
-**اداره آب و برق لس آنجلس** بیش از 80 تأسیسات ذخیره آب را تا بالاترین سطح پر کرده است. پمپ‌های پشتیبان سوخت‌گیری شده و در هر ایستگاه پمپاژ به عنوان پشتیبان پمپ‌های اصلی آماده هستند. آنها پنج تانکر آب خود را پر کرده‌اند، هر کدام حداقل 4,000 گالن، و آنها را برای **اداره آتش‌نشانی لس آنجلس** (LAFD) در صورت نیاز در حالت آماده‌باش قرار داده‌اند. چهار مخزن میلیاردها گالن آب غیرقابل شرب برای اطفاء حریق هوایی نگه می‌دارند.
+The **Los Angeles Department of Water and Power** has filled over 80 water storage facilities to their highest level. Backup pumps are fueled and ready at each pumping station as a backup to the main pumps. They have filled their five water tenders, each with at least 4,000 gallons, and have them on standby for the **Los Angeles Fire Department** (LAFD) if needed. Four reservoirs hold billions of gallons of non-potable water for aerial firefighting.
 
-در منطقه پاسیفیک پالیسیدز، دو مخزن محلی به اطفاء حریق هوایی اختصاص داده شده‌اند: مخزن انسینو و مخزن پایین کانیون استون.
+In the Pacific Palisades area, two local reservoirs are dedicated to aerial firefighting: the Encino Reservoir and the Lower Stone Canyon Reservoir.
 
-**اداره آتش‌نشانی شهرستان لس آنجلس** با **اداره کارهای عمومی شهرستان لس آنجلس** و **6 شرکت آب محلی** همکاری می‌کند تا در دسترس بودن جریان آتش در مناطق آتش‌سوزی را ارزیابی کند. فرآیند جدید ساده‌سازی شده جدول زمانی را تسریع خواهد کرد. نیازی نیست صاحبان خانه بخشی از فرآیند باشند، و این پول آنها را صرفه‌جویی می‌کند. **شرکت‌های آب**، **ساختمان و ایمنی شهرستان لس آنجلس**، و **آتش‌نشانی شهرستان لس آنجلس** این فرآیند جدید را مدیریت خواهند کرد. **اداره آتش‌نشانی** کد آتش‌نشانی را برای برآورده کردن استانداردهای فعلی ایالت به‌روزرسانی خواهد کرد. شرکت‌های آب سیستم‌های خود را ارتقا خواهند داد.
+The **Los Angeles County Fire Department** has worked with the **Los Angeles County Department of Public Works** and **7 local water companies** to assess the fire flow from the existing water systems in the fire areas. To facilitate the rebuilding process, **LA County Fire** will amend the 2026 Los Angeles County Fire Code to meet the current State Fire Code requirements. This code amendment will allow people to rebuild their homes while the water system is upgraded and improved. **LA County Fire** will continue to regularly staff and strategically place county-owned pre-positioned engines during high-fire risk periods.
+
+Additionally, a new streamlined process has been developed that eliminates the need for homeowners to be involved in the fire flow form process. The **water companies**, **LA County Public Works**, and **LA County Fire** will handle this new process, which will streamline the timeline, eliminate the need for homeowners to complete the process, and save homeowners money.
 
 ----
 id: response_step_2_coming_soon
 ----
-مناطق آب خسارات را شناسایی کرده‌اند و برای تأمین مالی (مثل FEMA PA) برای بازسازی درخواست کرده‌اند. **ایالت** و **شهرستان** متعهد شده‌اند که به مناطق کمک کنند تا سیستم‌ها را بازسازی و بهبود دهند.
+Water districts have identified damages and applied for funding (e.g., FEMA PA) to rebuild. The **state** and **county** have committed to supporting the districts to rebuild and improve systems.
 
-نقشه راه بازسازی می‌گوید این ارتقاها سرمایه‌گذاری‌های زیرساختی حیاتی برای ایمنی بلندمدت هستند.
+The [LA County Forward: Blueprint for Rebuilding](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) says these upgrades are critical infrastructure investments for long-term safety.
 
 ----
 id: response_step_3
-title: اعلان‌ها و هشدارهای اضطراری قوی‌تر
+title: Stronger emergency notifications and alerts
 icon: communication-orange.svg
 ----
 
 ----
 id: response_step_3_action_now
 ----
-**کمیسیون خدمات عمومی کالیفرنیا** از دکل‌های سلولی می‌خواهد 72 ساعت برق پشتیبان داشته باشند. قوانین برای دکل‌هایی در مناطق با تهدید بالای آتش اعمال می‌شود. این بیشتر دکل‌ها را در طول آتش‌سوزی‌های ژانویه آنلاین نگه داشت. **امدادگران اولیه شهرستان** از شبکه FirstNet خود استفاده کردند که توسط دکل‌های موبایل AT&T پشتیبانی می‌شد. سرمایه‌گذاری مداوم ارائه‌دهندگان مخابرات در زیرساخت آنها ارتباط اضطراری در طول بلایا را بهبود خواهد بخشید.
+Local officials in **Los Angeles City** and **County** have taken several concrete steps to improve how emergency alerts are issued following widespread confusion during the Eaton and Palisades fires. The **Los Angeles County Board of Supervisors** ordered an independent, external review of the emergency alert and evacuation notification systems, retaining outside experts to conduct a comprehensive after-action analysis and report back every 90 days.
 
-**شهر** یک کمیته راهبری دوهفته‌ای متمرکز بر ارتباط اضطراری را هماهنگ می‌کند تا در مورد موانع و پیشرفت بحث کند. این گروه از نمایندگان ادارات شهر تشکیل شده است، شامل:
+The **city's Emergency Management Department** and **County Coordinated Joint Information Center** are now prioritizing enhanced training, more rigorous system tests, improved geographic targeting, clearer message wording, and stronger coordination for future life-safety emergencies.
 
-  * **اداره آب و برق لس آنجلس**  
-  * **اداره مدیریت اضطراری لس آنجلس** 
-  * **اداره برنامه‌ریزی لس آنجلس**
-  * **اداره آتش‌نشانی لس آنجلس**
+The **city** is coordinating a biweekly steering committee focused on emergency communication to discuss blockers and progress. The group is made up of representatives from city departments, including the:  
 
-این گروه مواد تخلیه را بررسی می‌کند، جاده‌ها را نقشه‌برداری می‌کند و مسیرهای تخلیه ترافیک را مدل‌سازی می‌کند.
-
-کمیته راهبری با ذینفعان از **پارک‌های ایالتی کالیفرنیا**، **برنامه‌ریزی شهر لس آنجلس**، **اداره مسکن لس آنجلس**، و **CalFire** هماهنگ خواهد کرد. 
+  * **Los Angeles Department of Water and Power**  
+  * **Los Angeles Department of Emergency Management** 
+  * **Los Angeles Department of Planning**
+  * **Los Angeles Fire Department**
 
 ----
 id: response_step_3_coming_soon
 ----
-مقامات محلی در حال کار برای بهبود اثربخشی سیستم هشدار و اعلان اضطراری هستند. این شامل اجرای توصیه‌های بررسی‌های طرف مستقل، شامل گروه مک‌کریستال، مؤسسه تحقیقات ایمنی آتش، و کنگره آمریکا است.
+County officials, in partnership with local, state, and federal partners, are working to improve emergency alert and warning system effectiveness countywide. This includes implementing recommendations from independent party reviews, including the McChrystal Group, the Fire Safety Research Institute, and the U.S. Congress.
 
-سیستم‌های اعلان اضطراری به طور مداوم بررسی و بهبود خواهند یافت. با تمرکز بر دقیق‌تر و منطقه‌ای‌تر کردن پیام‌های هشدار، استانداردسازی زبان هشدار، بهبود قابلیت‌های اعلان چندلایه، و تقویت هماهنگی و آموزش بین سازمان‌ها برای اطمینان از هشدارهای به‌موقع، واضح و جغرافیایی دقیق در بلایای آینده. این بهبودها شامل بررسی‌های خارجی اعلان‌های اخیر آتش‌سوزی، درخواست‌های افزایش بودجه فدرال، و تلاش‌های آموزش عمومی در مورد خدمات اعلان اختیاری است.
+Local emergency notification systems will continue to be reviewed and improved. By focusing on making alert messages more precise and area-specific, standardizing alert language, improving multilayered notification capabilities, and enhancing coordination and training among agencies to ensure timely, clear, and geographically accurate warnings in future disasters. These improvements include outside reviews of recent wildfire alerts, increased federal funding requests, and public education efforts around opt-in notification services.
 
 ----
 id: response_sidebar_3_unused
 ----
-قوانین نیازمند 72 ساعت برق پشتیبان در دکل‌های سلولی در مناطق با تهدید بالای آتش پس از آتش‌سوزی‌های 2017 اجرا شدند که هزاران نفر را بدون خدمات تلفن رها کرد.
+The rules requiring 72 hours of backup power at cell towers in high fire-threat zones were implemented following the 2017 wildfires, which left thousands without phone service.
 
 ----
 id: response_step_4
-title: کمک بازسازی
+title: Rebuilding help
 icon: currency-orange.svg
 ----
 
 ----
 id: response_step_4_action_now
 ----
-دولت برای کمک به ساکنان پیشقدم شده است، شامل کمک برای تأمین 3 میلیارد دلار کمک و وام فدرال. **صندوق وام مسکن CalAssist ایالت** بیش از 100 میلیون دلار کمک وام مسکن هدایت می‌کند. **فرماندار نیوسام** تعهد وام‌دهندگان برتر برای ارائه تحمل در وام‌های مسکن را تضمین کرده است.
+The government has mobilized to support residents, including helping to secure $3 billion in federal assistance and loans. The **state’s CalAssist Mortgage Fund** is directing over $100 million in mortgage relief. **Governor Newsom** has secured a commitment by top lenders to offer forbearance on mortgages and signed legislation to expand forbearance to 12 months and create enforceable legal requirements. 
 
-**شهرستان** بیش از 50 میلیون دلار برای حمایت از خانواده‌ها و کسب‌وکارهای کوچک بسیج کرده است. این کمک از **صندوق کمک آتش‌سوزی شهرستان لس آنجلس** می‌آید. **شهرستان** همچنین هزینه‌های منطقه‌بندی، بررسی طرح‌ها و مجوزها را به تعویق انداخته یا بازپرداخت کرده است. این به صاحبان خانه کمک می‌کند هزینه‌ها را کاهش دهند. این برای سازمان‌های کلیدی مثل **کارهای عمومی**، **برنامه‌ریزی منطقه‌ای**، **بهداشت عمومی**، و **آتش‌نشانی** اعمال می‌شود. این هزینه‌ها می‌تواند بیش از 20,000 دلار برای هر خانوار باشد. حمایت بیشتری نیز ارائه شده است. کوپن‌های بخش 8 برای مستأجران جابجا شده در دسترس است. وجوه کمک اضطراری پناهگاه برای افراد بی‌خانمان در منطقه وجود دارد. کارگاه‌های تسهیل شده برای سالمندان با وام‌های مسکن معکوس در دسترس است.
+The **county** has mobilized over $50 million to support families and small businesses through the **LA County Wildfire Relief Fund**. To reduce permitting costs for homeowners, the **county** has also deferred or refunded specific fees for zoning, plan checks, and permits across key agencies like **Public Works**, **Regional Planning**, **Public Health**, and **Fire**. These fees can exceed $20,000 per household. The county is expediting permit plan reviews with 14-day turnaround times for initial reviews, 7-day turnaround for additional reviews, and a goal to issue the permit in 30 days. More support has been provided as well. Section 8 vouchers are available for displaced renters. There are emergency shelter grant funds for persons experiencing homelessness in the area. Workshops have been facilitated for seniors with reverse mortgages. 
+ 
 
-علاوه بر این، **شهردار لس آنجلس** کارن باس چندین دستور اجرایی برای ساده‌سازی بازسازی و کاهش هزینه‌ها صادر کرده است. این شامل ایجاد مرکز بازسازی یک‌پارچه، هدایت ادارات شهر برای تسریع بررسی مجوزهای ساختمانی در 30 روز یا کمتر، معاف کردن مالیات کسب‌وکار 2025 برای شرکت‌های متأثر، هدایت **اداره ساختمان و ایمنی لس آنجلس** برای آزمایش بررسی‌های پیش‌طرح با هوش مصنوعی (Archistar eCheck AI)، تعلیق هزینه‌های مجوز و بررسی طرح، و راه‌اندازی کتابخانه طراحی‌های از پیش تأیید شده و مطابق با کد برای تسریع بازسازی‌ها است. بیش از 4,000 ساکن در مرکز بازسازی یک‌پارچه شهر کمک دریافت کرده‌اند.
+Further, **Los Angeles Mayor Karen Bass** has issued several executive orders to streamline rebuilding and reduce costs. This includes creating the One-Stop Rebuilding Center, directing city departments to expedite building permit reviews in 30 days or less, and waiving 2025 business taxes for impacted companies.
 
 ----
 id: response_step_4_coming_soon
 ----
-**شهرستان لس آنجلس** با ایالت و خیریه‌ها همکاری می‌کند تا برنامه‌ای برای کمک به مردم در پیمایش فرآیندهای احیاء راه‌اندازی کند. خانواده‌ها کمک شخصی‌سازی شده با بیمه، تأمین مالی و مجوزها دریافت خواهند کرد. نقشه راه بازسازی می‌گوید راهنماها یک نوآوری بزرگ در کاهش موانع هستند.
+**Los Angeles County** is coordinating with the state, philanthropy, and the private sector to connect residents to services that help people navigate recovery processes, where families can receive personalized help with financing, permitting, and building to reduce barriers to recovery.
 
-علاوه بر این، ما به مستأجران گوش دادیم وقتی از ما خواستند آنها را نادیده نگیریم. **صندوق احیاء آتش‌سوزی شهرستان لس آنجلس** شامل کمک مستقیم اجاره است. **ناظران شهرستان** محافظت‌های قوی‌تر ضد گران‌فروشی برای مستأجران در مناطق آتش‌سوزی را بررسی می‌کنند.
+Additionally, we listened to renters when they asked us to not leave them out. The **Los Angeles County’s Fire Recovery Fund** includes direct rental assistance. **County supervisors** are reviewing stronger anti-gouging protections for tenants in fire zones.
 
-**شهرستان**، **ایالت**، و **خیریه‌ها** با هم همکاری می‌کنند تا ساکنان را با "تأمین مالی پل" برای پوشش هزینه‌های کوتاه‌مدت برای بقا و شروع بازسازی که توسط سایر منابع تأمین مالی پوشش داده نمی‌شوند، تأمین کنند.
+The **county** is working to coordinate with the **state** and **philanthropy** to identify “bridge funding” for residents to cover near-term costs to survive and begin rebuilding that are not covered by other funding sources.
 
 
 ----
-id: response_sidebar_4
+id: response_sidebar_4_unused
 ----
-ساکنان در مرحله تعیین دستور کار این مشارکت کمک بدون موانع خواستند. **شهرستان لس آنجلس** سپس پشتیبانی درخواست زبان و پرداخت‌های مستقیم از طریق صندوق کمک کارگران منطقه لس آنجلس، شامل ساکنان بدون مدارک، ارائه داد. شهرستان، با حمایت از گروه‌های جامعه، اطمینان حاصل کرد که مردم را حذف نکند. همچنین، **اداره بیمه کالیفرنیا** یک ممنوعیت یک‌ساله را اجرا می‌کند. این یعنی که بیمه‌گران نمی‌توانند پوشش را پس از یک فاجعه اعلام شده لغو کنند. همچنین دو سال پوشش برای کسانی که خانه‌هایشان خسارت کامل دیده‌اند نیاز دارد.
+Residents asked for aid without barriers during the agenda-setting phase of this engagement. **Los Angeles County** then provided language application support and direct payments through the LA Region Worker Relief Fund, including to undocumented residents. The county, with support from community groups, made sure not to exclude people. Also, the **California Department of Insurance** enforces a one-year moratorium. This means that insurers cannot cancel coverage after a declared disaster. It also requires two years of coverage for those whose homes suffered a total loss. 
 
-نقشه راه بازسازی پرداخت‌ها را به عنوان یک نقطه عطف در احیاء عادلانه برجسته می‌کند.
+The Blueprint for Rebuilding highlights the payments as a milestone in equitable recovery.
 
 ----
 id: response_step_5
-title: تسریع مجوزدهی و بازرسی‌ها
+title: Accelerating permitting and inspections
 icon: house-orange.svg
 ----
 
 ----
 id: response_step_5_action_now
 ----
-**فرماندار نیوسام** چندین دستور اجرایی صادر کرده است که نیازهای مجوزدهی ایالتی را برای ساده‌سازی بازسازی لغو می‌کند. **شهر** و **شهرستان** مراکز یک‌پارچه در مناطق متأثر از آتش برای حمایت از فعالیت‌های بازسازی ایجاد کردند. این شامل آلتادنا و پاسیفیک پالیسیدز است. در **شهرستان**، مراکز مجوز یک‌پارچه کمک حضوری از **ادارات مختلف شهرستان** به ساکنان ارائه می‌دهند. در **شهر**، بیش از 4,000 نفر تا کنون در مرکز بازسازی یک‌پارچه کمک دریافت کرده‌اند. ساکنان شهرستان می‌توانند با استفاده از پلتفرم EPIC-LA به صورت آنلاین برای مجوزها درخواست دهند. این پلتفرم فرآیند درخواست و بررسی یکپارچه ارائه می‌دهد. هدف آسان‌تر کردن پیمایش است. **شهرستان** همچنین برنامه افزایش خود را شروع کرده است. کارکنان را برای برآورده کردن جدول زمانی بررسی طرح و منطقه‌بندی خود تخصیص مجدد می‌دهد.
+**Governor Newsom** has issued numerous executive orders waiving state permitting requirements to streamline rebuilding. The **city** and **county** created one-stop centers in areas hit by fire to support rebuilding activities. This includes Altadena, Calabasas, and Pacific Palisades.
+
+In the **county**, the Calabasas and Altadena One-Stop Permit Centers offer residents in-person help from various county agencies, where more than 8,500 residents have been helped so far. In the city, more than 4,000 people have been helped at a One-Stop Rebuilding Center so far. County residents can apply for permits online using the EPIC-LA platform, which offers a unified application and review process to simplify navigation. The **county** is working quickly to meet growing permit demand by reallocating staff and bringing on additional contract workers as needed, as well as rolling out the AI eCheck pilot with Archistar. The county also offers a [pre-approved plan catalog](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) with designs that are in compliance with current zoning and building code requirements. Pre-approved plans and streamlined permitting processes can help homeowners rebuild more efficiently, safely, and affordably.
+
+In a parallel effort, **Los Angeles Mayor Karen Bass** has issued executive orders directing **LA Department of Building and Safety** to pilot AI-powered pre-plan checks (Archistar eCheck AI), suspending permit and plan check fees, and launching a library of pre-approved, code-compliant designs to fast-track rebuilds in the city. More than 4,000 city residents have already been helped at the city’s One-Stop Rebuilding Center.
 
 ----
 id: response_step_5_coming_soon
 ----
-**شهرستان** راه‌هایی برای تسریع فرآیندهای مجوزدهی و بازرسی ایجاد می‌کند. **شهرستان** همچنین ایمنی و انطباق کد را در حالی که بازسازی‌ها را تسریع می‌کند حفظ می‌کند. این شامل گسترش کاتالوگ طرح‌های از پیش تأیید شده است. بررسی‌ها را برای پروژه‌های مشابه دسته‌بندی می‌کند. همچنین خود-تأیید برای معماران و مهندسان مجاز را افزایش می‌دهد.
+The **county** is accelerating the permitting and inspection processes through “fast-tracks”, which are streamlined lanes to expedite rebuilding while maintaining safety and code compliance. This includes expanding the pre-approved plan catalog and bundling reviews for similar projects.
 
-**شهرستان** ظرفیت افزایش را بالا می‌برد. آزمایش eCheck هوش مصنوعی با Archistar را گسترش می‌دهند. همچنین بازرسی‌های دیجیتال و از راه دور را رشد می‌دهند. علاوه بر این، بررسی‌کنندگان طرح و بازرسان را برای مدیریت حجم‌های بالاتر اضافه می‌کنند.
-
+The **county** is also increasing surge capacity by expanding the AI eCheck pilot with Archistar, growing digital and remote inspections, and adding plan checkers and inspectors to handle higher volumes.
 
 ----
 id: response_sidebar_5
 ----
-تیم‌های **فدرال**، **ایالتی**، و **محلی** آوار آتش‌سوزی‌های 2025 را در تنها شش ماه پاک کردند. این سریع‌ترین حذف آوار پس از فاجعه در تاریخ کالیفرنیا بود. این به لطف مشارکت بی‌سابقه بین **ایالت** و **سپاه مهندسان ارتش آمریکا** است.
-
-نقشه راه بازسازی این کار را تحسین می‌کند. این نشریه گفت که سرعت بی‌سابقه پایه‌ای برای بازسازی سریع است.
+**Federal**, **state**, and **local** teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history. This is thanks to unprecedented partnership between the **state** and the **U.S. Army Corps of Engineers**.
 
 ----
 id: other_efforts
-title: تلاش‌های دیگر
-mental_health: سلامت روان
+title: Other efforts
+mental_health: Mental health
 ----
-**اداره سلامت روان شهرستان لس آنجلس** به بازماندگان کمک می‌کند تا حمایت مورد نیاز خود را دریافت کنند. آنها با شرکای محلی همکاری می‌کنند تا فضاهای مشترک ایجاد کنند. در اینجا، مردم می‌توانند مشاوره رایگان دریافت کنند و به گروه‌های حمایت از تروما بپیوندند.
-
-نقشه راه بازسازی می‌گوید خدمات سلامت روان برای انعطاف‌پذیری جامعه حیاتی هستند.
-
-
-
+The **LA County Department of Mental Health** and local partners are helping survivors get the support they need, funding shared spaces where people can get free counseling and join trauma support groups.
 
 ----
 id: findings_how_we_did_the_analysis
 ----
 
-### چگونه تحلیل را انجام دادیم
+### How we did the analysis
 
-<div class="sub-head">برای نگاه عمیق‌تر، <a href="/lafires-recovery/agenda-setting-data-insights/">روش‌شناسی تفصیلی و تحلیل نظرات ما را بررسی کنید</a>.</div>
+<div class="sub-head">For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">check out our detailed methodology and comments analysis</a>.</div>
 
-ما از مدل هوش مصنوعی تولیدی Claude 3.5 Sonnet برای کمک به یافتن مضامین و روندها در نظرات استفاده کردیم. مدل را با سوالاتی راهنمایی کردیم تا به ما کمک کند بفهمیم مردم چه فکر می‌کردند. این راه مؤثری برای دیدن اینکه مردم چگونه در مورد موضوعات مهم موافق یا مخالف بودند.
+We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
 
-ما راه‌های مختلف نوشتن راهنمایی‌ها را آزمایش کردیم. روی پاسخ‌هایی که اغلب ظاهر می‌شدند تمرکز کردیم، صرف نظر از اینکه چگونه سوالات را می‌پرسیدیم.
+We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
 
-**نمونه راهنمایی‌ها**
+**Sample prompts**
 
-"می‌خواهم مجموعه‌ای از پاسخ‌های نظرسنجی کیفی را با استفاده از تفکر گسترده تحلیل کنید."
+“I would like you to analyze a set of qualitative survey responses using extended thinking.” 
 
-"با انجام یک کاوش اولیه از داده‌ها شروع کنید: ابتدا، کل مجموعه داده را بدون دسته‌بندی یا برچسب‌زنی بخوانید. مشاهدات و برداشت‌های فوری خود را در مورد آنچه برای شما برجسته است یادداشت کنید. کلمات، عبارات و احساسات تکراری که در چندین پاسخ ظاهر می‌شوند را شناسایی کنید. آنچه شما را متعجب کرد یا توجه شما را جلب کرد در این بررسی اولیه به اشتراک بگذارید."
+“Start by doing an initial exploration of the data: First, read through the entire dataset without categorizing or labeling. Note your immediate observations and impressions about what stands out to you. Identify recurring words, phrases, and sentiments that appear across multiple responses. Share what surprised you or caught your attention in this initial review.”
 
 ----
 id: partners
 ----
 
-## شرکای ما
+## Our partners
 
-اداره داده و نوآوری کالیفرنیا با متخصصان احیاء بلایا و مدافعان دموکراسی مشاوره‌ای برای انجام این کار همکاری کرد. شرکای ما همچنین به شکل‌دهی اقداماتی که از این کار حاصل خواهد شد کمک کردند.
+California’s Office of Data and Innovation partnered with disaster recovery experts and advocates for deliberative democracy to carry out this work. Our partners also helped shape the actions that will come from this work. 
 
-شرکا و مشاوران ما برای این ابتکار شامل:
+Our partners and advisors for this initiative include:
