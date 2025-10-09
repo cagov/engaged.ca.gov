@@ -15,7 +15,7 @@
   },
   "overrides": {
     "mailchimp_marketing": {
-      "form-data": "^2.5.4"
+      "form-data": ">=2.5.4"
     }
   }
 }
