@@ -1,6 +1,6 @@
 ---
-title: LA aligns on recovery plans
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
+title: LA se alinea en los planes de recuperación
+description: Engaged California es una plataforma en línea que facilita a los californianos tener voz en el gobierno. El primer tema de Engaged California es la recuperación de los incendios forestales de Los Ángeles. Esta página muestra los principales problemas para reconstruir LA.
 layout: mmmd-lafires-action-plan
 parentid: lafires-recovery
 keywords:
@@ -33,95 +33,95 @@ example_quoted_text: "this is quoted text:"
 
 ----
 id: findings_overview
-buttonText: Skip to the action plan
+buttonText: Saltar al plan de acción
 ----
 
-# LA aligns on recovery plans
+# LA se alinea en los planes de recuperación
 
-In a first-of-its-kind community engagement process, more than 3,000 community members were invited to town halls for the digital age. Participants contributed across 2 phases to produce an action plan to recover from the devastating Los Angeles wildfires in January 2025. 
+En un proceso de participación comunitaria sin precedentes, más de 3,000 miembros de la comunidad fueron invitados a asambleas municipales para la era digital. Los participantes contribuyeron a través de 2 fases para producir un plan de acción para recuperarse de los devastadores incendios forestales de Los Ángeles en enero de 2025.
 
-The action plan, developed through online deliberation sessions over a 6-month period, reflects priorities from those who were affected by the Eaton and Palisades fires. The priorities they set – focusing on immediate community support and long-term infrastructure improvements – will guide state and local officials toward full recovery.
+El plan de acción, desarrollado a través de sesiones de deliberación en línea durante un período de 6 meses, refleja las prioridades de aquellos que fueron afectados por los incendios de Eaton y Palisades. Las prioridades que establecieron – enfocándose en el apoyo inmediato a la comunidad y las mejoras de infraestructura a largo plazo – guiarán a los funcionarios estatales y locales hacia la recuperación completa.
 
 
 ----
 id: findings_narrative_step_1
-title: Agenda setting
-button_text: Read about the agenda setting phase
+title: Establecimiento de agenda
+button_text: Leer sobre la fase de establecimiento de agenda
 ----
 
-## Residents shared their concerns and ideas
+## Los residentes compartieron sus preocupaciones e ideas
 
-After the severe wildfires in Los Angeles, hundreds of community members met online to discuss recovery priorities.
+Después de los severos incendios forestales en Los Ángeles, cientos de miembros de la comunidad se reunieron en línea para discutir las prioridades de recuperación.
 
 ----
 id: findings_narrative_step_2
-title: Review and planning
-button_text: Learn about our partners
+title: Revisión y planificación
+button_text: Conoce a nuestros socios
 nbr_phrases: 6
 translator_note: USE slash symbol for line breaks, keep these phrases to two lines!
-phrase_1: Utilities
-phrase_2: Community/Support
-phrase_3: Financial/support
-phrase_4: Emergency/preparedness
-phrase_5: Fire/proofing
-phrase_6: Building/permits
+phrase_1: Servicios públicos
+phrase_2: Comunidad/Apoyo
+phrase_3: Financiero/apoyo
+phrase_4: Emergencia/preparación
+phrase_5: Resistencia al fuego
+phrase_6: Construcción/permisos
 ----
 
 
 
-## Individual ideas turned into shared data
+## Las ideas individuales se convirtieron en datos compartidos
 
-A group of policy, disaster relief, and community leaders used their expertise and generative AI to turn the 1,289 comments submitted in agenda setting into 19 actionable policy options.
+Un grupo de líderes de políticas, socorro en desastres y comunidad utilizó su experiencia e IA generativa para convertir los 1,289 comentarios presentados en el establecimiento de agenda en 19 opciones de política accionables.
 
 ----
 id: findings_narrative_step_3
-title: Deliberation
+title: Deliberación
 ----
 
-## The community voted on all 19 options
+## La comunidad votó sobre las 19 opciones
 
-New and returning participants ranked these options, again using an online platform where they could discuss and collaborate.
+Los participantes nuevos y recurrentes clasificaron estas opciones, nuevamente utilizando una plataforma en línea donde podían discutir y colaborar.
 
 ----
 id: consensus_chart_topics
 nbr_topics: 19
-topic_1: Increased housing density and expedited permits
-topic_2: Temporary housing
-topic_3: Prioritize families
-topic_4: Fire-resistant and water-friendly demonstration gardens
-topic_5: Mandatory home ember protection standards
-topic_6: Accelerated ADU and duplex permitting
-topic_7: Mandatory greywater systems for new buildings
-topic_8: Comprehensive homeowner education program
-topic_9: Emergency communication hubs in communities
-topic_10: Defensible space tax incentives
-topic_11: Expanded construction training programs
-topic_12: Pre-approved fire-resistant building designs
-topic_13: Enhanced fire detection infrastructure
-topic_14: Give financial assistance to long-term residents
-topic_15: Accelerating permitting and inspections
-topic_16: Rebuilding help
-topic_17: Stronger emergency notifications and alerts
-topic_18: Water for firefighting
-topic_19: Undergrounding power lines and improving equipment safety
+topic_1: Mayor densidad de vivienda y permisos acelerados
+topic_2: Vivienda temporal
+topic_3: Priorizar familias
+topic_4: Jardines de demostración resistentes al fuego y amigables con el agua
+topic_5: Estándares obligatorios de protección contra brasas en el hogar
+topic_6: Permisos acelerados para ADU y dúplex
+topic_7: Sistemas obligatorios de aguas grises para nuevos edificios
+topic_8: Programa integral de educación para propietarios
+topic_9: Centros de comunicación de emergencia en comunidades
+topic_10: Incentivos fiscales para espacios defendibles
+topic_11: Programas ampliados de capacitación en construcción
+topic_12: Diseños de construcción resistentes al fuego preaprobados
+topic_13: Infraestructura mejorada de detección de incendios
+topic_14: Proporcionar asistencia financiera a residentes de largo plazo
+topic_15: Acelerar permisos e inspecciones
+topic_16: Ayuda para reconstrucción
+topic_17: Notificaciones y alertas de emergencia más fuertes
+topic_18: Agua para combatir incendios
+topic_19: Enterrar líneas eléctricas y mejorar la seguridad del equipo
 ----
 
 
 ----
 id: findings_consensus_watch_intro
-title_h2: Community alignment
-caveat: "Support is the average score of the votes, where the score of strongly supporting an option is 100, and the score of strongly opposing an option is 0."
+title_h2: Alineación comunitaria
+caveat: "El apoyo es la puntuación promedio de los votos, donde la puntuación de apoyar fuertemente una opción es 100, y la puntuación de oponerse fuertemente a una opción es 0."
 ----
-Each dot represents one vote. As the visualization changes, you can track the average level of support for each issue. Topics are arranged from least community support (left) to most community support (right).
+Cada punto representa un voto. A medida que cambia la visualización, puedes rastrear el nivel promedio de apoyo para cada tema. Los temas están organizados desde el menor apoyo comunitario (izquierda) hasta el mayor apoyo comunitario (derecha).
 
 ----
 id: findings_consensus_watch_explore
-topic_number_template: "Topic <NUM> of <TOTAL>"
+topic_number_template: "Tema <NUM> de <TOTAL>"
 translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to insert numbers into the phrase
 translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
-label_1: Increased housing density and expedited permits
-percent_default: 92% of participants supported this topic
-percent_template: <PERCENT>% average support
+label_1: Mayor densidad de vivienda y permisos acelerados
+percent_default: 92% de los participantes apoyaron este tema
+percent_template: <PERCENT>% apoyo promedio
 translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
 ----
 
@@ -129,34 +129,34 @@ translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the 
 ----
 id: findings_consensus_sentiment_chart
 nbr_labels: 3
-label_1: Strongly oppose
+label_1: Fuertemente en contra
 label_2: Neutral
-label_3: Strongly support
+label_3: Fuertemente a favor
 ----
 
 ----
 id: findings_narrative_top_options_intro
-title: Residents weighed in to find agreement on the top 5 solutions
+title: Los residentes participaron para encontrar acuerdo en las 5 mejores soluciones
 nbr_values: 2
-label_1: Comments and replies
-label_2: Votes
+label_1: Comentarios y respuestas
+label_2: Votos
 value_1: 1,504
 value_2: 3,977
 nbr_options: 5
 ----
 
-The engagement was notable. Neighbors were able to share their thoughts and replied to one another. The 1,504 participant comments received didn’t vanish into a black box. People talked about the solutions, effectively working together to define priorities.
+La participación fue notable. Los vecinos pudieron compartir sus pensamientos y responderse unos a otros. Los 1,504 comentarios de participantes recibidos no desaparecieron en una caja negra. La gente habló sobre las soluciones, trabajando efectivamente juntos para definir prioridades.
 
 ----
 id: findings_narrative_top_options
-results_header: Action plan
-results_description: "The plan, which includes 5 focus areas for recovery – reveals a community united around building fire-resilient infrastructure for the future and providing support to the community now:"
+results_header: Plan de acción
+results_description: "El plan, que incluye 5 áreas de enfoque para la recuperación – revela una comunidad unida alrededor de construir infraestructura resistente al fuego para el futuro y proporcionar apoyo a la comunidad ahora:"
 nbr_options: 5
-option_label_1: Bury power lines and equipment safety measures
-option_label_2: Improve water systems for firefighting
-option_label_3: Strengthen emergency communication networks
-option_label_4: Help people find financial support programs
-option_label_5: Dedicate teams to support permitting
+option_label_1: Enterrar líneas eléctricas y medidas de seguridad del equipo
+option_label_2: Mejorar sistemas de agua para combatir incendios
+option_label_3: Fortalecer redes de comunicación de emergencia
+option_label_4: Ayudar a las personas a encontrar programas de apoyo financiero
+option_label_5: Dedicar equipos para apoyar permisos
 option_icon_1: circle-blue-1.png
 option_icon_2: circle-blue-2.png
 option_icon_3: circle-blue-3.png
@@ -171,39 +171,39 @@ option_icon_5: circle-blue-5.png
 ----
 id: findings_topic_chart
 nbr_labels: 3
-label_1: Strongly oppose
+label_1: Fuertemente en contra
 label_2: Neutral
-label_3: Strongly support
+label_3: Fuertemente a favor
 ----
 
 
 
 ----
 id: findings_top_discussions
-title_h2: Analyze the top 5 from all angles
-solution_details_label: "Solution details"
-show_comments_button: Show comments
-hide_comments_button: Hide comments
+title_h2: Analizar los 5 principales desde todos los ángulos
+solution_details_label: "Detalles de la solución"
+show_comments_button: Mostrar comentarios
+hide_comments_button: Ocultar comentarios
 nbr_tally_items: 2
-label_1: Average support
-label_2: Comments
-explore_the_comments: Explore the comments
-filter_the_comments: "Comments can be filtered by how people voted on a topic: support, neutral, oppose, or no vote. Note: The comments themselves may not reflect how a person voted on a topic. In some cases, people commented on a topic without casting a vote."
-label_viewpoint: "Viewpoint:"
-label_all_comments: "All comments"
-label_oppose: "Oppose"
+label_1: Apoyo promedio
+label_2: Comentarios
+explore_the_comments: Explorar los comentarios
+filter_the_comments: "Los comentarios se pueden filtrar por cómo las personas votaron en un tema: apoyo, neutral, oposición, o sin voto. Nota: Los comentarios en sí mismos pueden no reflejar cómo una persona votó en un tema. En algunos casos, las personas comentaron en un tema sin emitir un voto."
+label_viewpoint: "Punto de vista:"
+label_all_comments: "Todos los comentarios"
+label_oppose: "En contra"
 label_neutral: "Neutral"
-label_support: "Support"
-label_novote: "No vote"
-filter_comments_by_vote: Filter comments by their corresponding votes. We do not translate comments; they are displayed in their original language. 
+label_support: "Apoyo"
+label_novote: "Sin voto"
+filter_comments_by_vote: Filtrar comentarios por sus votos correspondientes. No traducimos comentarios; se muestran en su idioma original. 
 ----
 
-Every vote was counted and weighted to achieve consensus on the top 5 solutions California should explore. Between the fire zones, votes and comments looked a little different, use the toggle to see how opinons from the Palisades differed from those in the Eaton fire zone.
+Cada voto fue contado y ponderado para lograr consenso en las 5 mejores soluciones que California debería explorar. Entre las zonas de incendio, los votos y comentarios se vieron un poco diferentes, usa el interruptor para ver cómo las opiniones de Palisades difirieron de las de la zona de incendio de Eaton.
 
 ----
 id: discussion_1
-title: Bury power lines and equipment safety measures
-topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
+title: Enterrar líneas eléctricas y medidas de seguridad del equipo
+topic_description: Enterrar líneas eléctricas cuando sea posible y desplegar estrategias de mitigación para prevenir ignición por fallas de equipo. Este enfoque integral abordaría una de las principales causas de ignición de incendios forestales en California.
 nbr_comments: 3
 value_1: 92%
 value_2: 90
@@ -212,8 +212,8 @@ chart_topic_index: 19
 
 ----
 id: discussion_2
-title: Improve water systems for firefighting
-topic_description: Upgrade water systems to meet modern fire flow requirements and ensure there are enough fire hydrants in all areas. This would improve the water supply and pressure needed for effective firefighting operations.
+title: Mejorar sistemas de agua para combatir incendios
+topic_description: Actualizar sistemas de agua para cumplir con los requisitos modernos de flujo de incendio y asegurar que haya suficientes hidrantes en todas las áreas. Esto mejoraría el suministro de agua y la presión necesaria para operaciones efectivas de combate de incendios.
 value_1: 87%
 value_2: 74
 chart_topic_index: 18
@@ -221,8 +221,8 @@ chart_topic_index: 18
 
 ----
 id: discussion_3
-title: Strengthen emergency communication networks
-topic_description: Promote communication infrastructure that allows first responders and residents to stay connected even when cell towers or fiber lines fail, such as mesh internet networks that can operate independently during disasters.
+title: Fortalecer redes de comunicación de emergencia
+topic_description: Promover infraestructura de comunicación que permita a los primeros respondedores y residentes mantenerse conectados incluso cuando las torres celulares o líneas de fibra fallen, como redes de internet en malla que pueden operar independientemente durante desastres.
 value_1: 86%
 value_2: 59
 chart_topic_index: 17
@@ -230,8 +230,8 @@ chart_topic_index: 17
 
 ----
 id: discussion_4
-title: Help people find financial support programs
-topic_description: Create a comprehensive catalog of financial support programs and organizations available to help with rebuilding efforts. This directory would connect fire-affected residents with grants, loans, and aid programs, while also partnering with trusted financial organizations willing to assist with recovery funding.
+title: Ayudar a las personas a encontrar programas de apoyo financiero
+topic_description: Crear un catálogo integral de programas de apoyo financiero y organizaciones disponibles para ayudar con los esfuerzos de reconstrucción. Este directorio conectaría a los residentes afectados por incendios con subvenciones, préstamos y programas de ayuda, mientras también se asocia con organizaciones financieras confiables dispuestas a asistir con fondos de recuperación.
 value_1: 82%
 value_2: 59
 chart_topic_index: 16
@@ -239,8 +239,8 @@ chart_topic_index: 16
 
 ----
 id: discussion_5
-title: Dedicate teams to support permitting
-topic_description: Establish teams of dedicated staff at triage centers to quickly guide fire-affected communities through permitting processes. These specialized teams would provide personalized assistance to residents navigating complex rebuilding requirements.
+title: Dedicar equipos para apoyar permisos
+topic_description: Establecer equipos de personal dedicado en centros de triaje para guiar rápidamente a las comunidades afectadas por incendios a través de los procesos de permisos. Estos equipos especializados proporcionarían asistencia personalizada a los residentes navegando los complejos requisitos de reconstrucción.
 value_1: 82%
 value_2: 73
 chart_topic_index: 15
@@ -249,256 +249,254 @@ chart_topic_index: 15
 
 ----
 id: topic_comments_scroller 
-label: Comments on this topic
-desc: Scroll to see the comments about this topic (shown in their original language)
+label: Comentarios sobre este tema
+desc: Desplázate para ver los comentarios sobre este tema (mostrados en su idioma original)
 ----
 
 ----
 id: topic_data_vis
-title: Explore the votes
-learn_button_label: Learn about the actions being taken
-desc: Each dot represents an individual’s vote. The total number of dots corresponds to the total number of votes cast on a particular topic. 
-download_text: Download a CSV of participant comments
+title: Explorar los votos
+learn_button_label: Aprende sobre las acciones que se están tomando
+desc: Cada punto representa el voto de un individuo. El número total de puntos corresponde al número total de votos emitidos en un tema particular.
+download_text: Descargar un CSV de comentarios de participantes
 ----
 
 ----
 id: conversation_groups
 nbr_groups: 7
-group_label_1: Strongly opposed
-group_label_2: Opposed
-group_label_3: Somewhat opposed
+group_label_1: Fuertemente en contra
+group_label_2: En contra
+group_label_3: Algo en contra
 group_label_4: Neutral
-group_label_5: Somewhat supportive
-group_label_6: Supportive
-group_label_7: Strongly supportive
+group_label_5: Algo a favor
+group_label_6: A favor
+group_label_7: Fuertemente a favor
 ----
 
 ----
 id: findings_alignment_section
 ----
-## Noteworthy alignment 
+## Alineación notable
 
-People from different fire zones showed surprising consistency. Residents impacted by Eaton and Palisades ranked the top needs the same: bury power lines underground, improve local water systems for firefighting, and ensure timely alerts when there is an emergency.
+Las personas de diferentes zonas de incendio mostraron una consistencia sorprendente. Los residentes afectados por Eaton y Palisades clasificaron las principales necesidades de la misma manera: enterrar líneas eléctricas bajo tierra, mejorar los sistemas locales de agua para combatir incendios, y asegurar alertas oportunas cuando hay una emergencia.
 
+Esto muestra que independientemente de la separación geográfica, hay un acuerdo comunitario amplio sobre las prioridades esenciales de recuperación.
 
-This shows that regardless of geographic separation, there is community-wide agreement on essential recovery priorities.
+**Este grupo de prioridades cuenta una historia clara.**
 
-**This group of priorities tells a clear story.**
+Los residentes quieren tanto apoyo inmediato para la recuperación como inversiones a largo plazo en infraestructura resistente al fuego. También necesitan que los servicios de apoyo se simplifiquen para servir las necesidades urgentes de reconstrucción de la comunidad.
 
-Residents want both immediate support for recovery and long-term investments in fire-resistant infrastructure. They also need support services to be streamlined to serve the community's urgent rebuilding needs.
-
-This engagement allowed us to turn personal experiences into real policy guidance.
+Esta participación nos permitió convertir experiencias personales en orientación política real.
 
 ----
 id: findings_alignment_section_sidebar
 ----
 
-**Building on shared support**
+**Construyendo sobre apoyo compartido**
 
-The process didn't just gather opinions; it built confidence and momentum as we move forward together.
+El proceso no solo recopiló opiniones; construyó confianza e impulso mientras avanzamos juntos.
 
-While participants arrived with mixed feelings—only 24% started optimistic while 48% felt pessimistic—the outlook shifted through the process. 
+Mientras que los participantes llegaron con sentimientos mixtos—solo el 24% comenzó optimista mientras que el 48% se sintió pesimista—la perspectiva cambió a través del proceso.
 
-More than a quarter of participants (27%) emerged more optimistic about LA fires recovery.
+Más de un cuarto de los participantes (27%) emergieron más optimistas sobre la recuperación de los incendios de LA.
 
 ----
 id: signup_plea
-button_text: Sign up
+button_text: Registrarse
 ----
-## Sign up to remain engaged in important work
+## Regístrate para mantenerte comprometido en trabajo importante
 
-Give us your email to learn about upcoming opportunities. 
+Danos tu correo electrónico para aprender sobre oportunidades próximas. 
 
 ----
 id: response_intro
 ----
 
-## How we’re responding to community needs
+## Cómo estamos respondiendo a las necesidades de la comunidad
 
-Residents spoke up during both the agenda setting phase and our later deliberations. **State**, **county**, **city**, **utilities**, and **federal partners** have responded with tangible actions. And more are on the way.
+Los residentes se expresaron durante tanto la fase de establecimiento de agenda como nuestras deliberaciones posteriores. Los **socios estatales**, **del condado**, **de la ciudad**, **de servicios públicos** y **federales** han respondido con acciones tangibles. Y más están en camino.
 
 ----
 id: response_steps
-action_now: Action now
-coming_soon: Coming soon
-did_you_know: Did you know?
+action_now: Acción ahora
+coming_soon: Próximamente
+did_you_know: ¿Sabías?
 nbr_steps: 5
-anchor_link_text: "Take me to people’s votes and comments on this topic"
+anchor_link_text: "Llévame a los votos y comentarios de las personas sobre este tema"
 ----
 
 
 ----
 id: response_step_1
-title: Undergrounding power lines and improving equipment safety
+title: Enterrar líneas eléctricas y mejorar la seguridad del equipo
 icon: construction-orange.svg
 ----
 
 ----
 id: response_step_1_action_now
 ----
-The **county** and **state** are working with power and telecommunications companies to plan to put more utilities underground. **Governor Gavin Newsom** signed an executive order in March 2025 to fast-track this work.  
+El **condado** y el **estado** están trabajando con empresas de energía y telecomunicaciones para planificar poner más servicios públicos bajo tierra. El **Gobernador Gavin Newsom** firmó una orden ejecutiva en marzo de 2025 para acelerar este trabajo.
 
-Additionally, **Los Angeles Mayor Karen Bass** issued an executive order to help Palisades residents expedite rebuilding with fire-resistant materials and climate-resilient infrastructure. This includes hardening utilities for power reliability during severe weather.
+Además, la **Alcaldesa de Los Ángeles Karen Bass** emitió una orden ejecutiva para ayudar a los residentes de Palisades a acelerar la reconstrucción con materiales resistentes al fuego e infraestructura resiliente al clima. Esto incluye endurecer los servicios públicos para la confiabilidad de energía durante el clima severo.
 
 ----
 id: response_step_1_coming_soon
 ----
-Utilities are working closely with local leaders from **Los Angeles County** and the **city**. Construction is already underway in Malibu, Altadena, and Pacific Palisades. It is expected to continue for several more years. The **state** and **county** are calling for a coordinated approach to undergrounding power and telecom lines that will save money, cut down on time, and minimize disruptions from multiple work crews.
+Los servicios públicos están trabajando estrechamente con líderes locales del **Condado de Los Ángeles** y la **ciudad**. La construcción ya está en marcha en Malibu, Altadena y Pacific Palisades. Se espera que continúe por varios años más. El **estado** y el **condado** están pidiendo un enfoque coordinado para enterrar líneas de energía y telecomunicaciones que ahorrará dinero, reducirá el tiempo y minimizará las interrupciones de múltiples equipos de trabajo.
 
-Beyond undergrounding, additional strategies are important to mitigate fire hazards, such as vegetation management and resilient rebuilding. Property owners and design/building professionals can look to the **county’s** [Resilient Rebuild Resource Guide](https://recovery.lacounty.gov/resilient-rebuilding/) for information and resources for planning, designing, and constructing a high-performance building more resilient to fire risks.
+Más allá del enterramiento, estrategias adicionales son importantes para mitigar los peligros de incendio, como la gestión de vegetación y la reconstrucción resiliente. Los propietarios y profesionales de diseño/construcción pueden consultar la [Guía de Recursos de Reconstrucción Resiliente](https://recovery.lacounty.gov/resilient-rebuilding/) del **condado** para obtener información y recursos para planificar, diseñar y construir un edificio de alto rendimiento más resiliente a los riesgos de incendio.
 
 ----
 id: response_sidebar_1_unused
 ----
-When the **Town of Paradise** was rebuilt, it worked with **PG&E**, **telecom providers**, and **state regulators** to put at-risk power lines underground. Los Angeles is using this and similar safety improvements as a model and guide for its own recovery.
+Cuando se reconstruyó la **Ciudad de Paradise**, trabajó con **PG&E**, **proveedores de telecomunicaciones** y **reguladores estatales** para poner las líneas eléctricas en riesgo bajo tierra. Los Ángeles está usando esto y mejoras de seguridad similares como modelo y guía para su propia recuperación.
 
 ----
 id: response_step_2
-title: Water for firefighting
+title: Agua para combatir incendios
 icon: hydrant-orange.svg
 ----
 
 ----
 id: response_step_2_action_now
 ----
-The **Los Angeles Department of Water and Power** has filled over 80 water storage facilities to their highest level. Backup pumps are fueled and ready at each pumping station as a backup to the main pumps. They have filled their five water tenders, each with at least 4,000 gallons, and have them on standby for the **Los Angeles Fire Department** (LAFD) if needed. Four reservoirs hold billions of gallons of non-potable water for aerial firefighting.
+El **Departamento de Agua y Energía de Los Ángeles** ha llenado más de 80 instalaciones de almacenamiento de agua a su nivel más alto. Las bombas de respaldo están alimentadas y listas en cada estación de bombeo como respaldo para las bombas principales. Han llenado sus cinco camiones cisterna, cada uno con al menos 4,000 galones, y los tienen en espera para el **Departamento de Bomberos de Los Ángeles** (LAFD) si es necesario. Cuatro embalses contienen miles de millones de galones de agua no potable para combate aéreo de incendios.
 
-In the Pacific Palisades area, two local reservoirs are dedicated to aerial firefighting: the Encino Reservoir and the Lower Stone Canyon Reservoir.
+En el área de Pacific Palisades, dos embalses locales están dedicados al combate aéreo de incendios: el Embalse de Encino y el Embalse de Lower Stone Canyon.
 
-The **Los Angeles County Fire Department** has worked with the **Los Angeles County Department of Public Works** and **7 local water companies** to assess the fire flow from the existing water systems in the fire areas. To facilitate the rebuilding process, **LA County Fire** will amend the 2026 Los Angeles County Fire Code to meet the current State Fire Code requirements. This code amendment will allow people to rebuild their homes while the water system is upgraded and improved. **LA County Fire** will continue to regularly staff and strategically place county-owned pre-positioned engines during high-fire risk periods.
+El **Departamento de Bomberos del Condado de Los Ángeles** ha trabajado con el **Departamento de Obras Públicas del Condado de Los Ángeles** y **7 empresas de agua locales** para evaluar el flujo de fuego de los sistemas de agua existentes en las áreas de incendio. Para facilitar el proceso de reconstrucción, **Bomberos del Condado de LA** enmendará el Código de Bomberos del Condado de Los Ángeles 2026 para cumplir con los requisitos actuales del Código de Bomberos del Estado. Esta enmienda del código permitirá a las personas reconstruir sus hogares mientras el sistema de agua se actualiza y mejora. **Bomberos del Condado de LA** continuará dotando regularmente y colocando estratégicamente motores preposicionados propiedad del condado durante períodos de alto riesgo de incendio.
 
-Additionally, a new streamlined process has been developed that eliminates the need for homeowners to be involved in the fire flow form process. The **water companies**, **LA County Public Works**, and **LA County Fire** will handle this new process, which will streamline the timeline, eliminate the need for homeowners to complete the process, and save homeowners money.
+Además, se ha desarrollado un nuevo proceso simplificado que elimina la necesidad de que los propietarios participen en el proceso del formulario de flujo de fuego. Las **empresas de agua**, **Obras Públicas del Condado de LA** y **Bomberos del Condado de LA** manejarán este nuevo proceso, que simplificará el cronograma, eliminará la necesidad de que los propietarios completen el proceso y ahorrará dinero a los propietarios.
 
 ----
 id: response_step_2_coming_soon
 ----
-Water districts have identified damages and applied for funding (e.g., FEMA PA) to rebuild. The **state** and **county** have committed to supporting the districts to rebuild and improve systems.
+Los distritos de agua han identificado daños y solicitado financiamiento (por ejemplo, FEMA PA) para reconstruir. El **estado** y el **condado** se han comprometido a apoyar a los distritos para reconstruir y mejorar los sistemas.
 
-The [LA County Forward: Blueprint for Rebuilding](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) says these upgrades are critical infrastructure investments for long-term safety.
+El [Condado de LA Adelante: Plan para Reconstruir](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) dice que estas mejoras son inversiones críticas de infraestructura para la seguridad a largo plazo.
 
 ----
 id: response_step_3
-title: Stronger emergency notifications and alerts
+title: Notificaciones y alertas de emergencia más fuertes
 icon: communication-orange.svg
 ----
 
 ----
 id: response_step_3_action_now
 ----
-Local officials in **Los Angeles City** and **County** have taken several concrete steps to improve how emergency alerts are issued following widespread confusion during the Eaton and Palisades fires. The **Los Angeles County Board of Supervisors** ordered an independent, external review of the emergency alert and evacuation notification systems, retaining outside experts to conduct a comprehensive after-action analysis and report back every 90 days.
+Los funcionarios locales de la **Ciudad de Los Ángeles** y el **Condado** han tomado varios pasos concretos para mejorar cómo se emiten las alertas de emergencia después de la confusión generalizada durante los incendios de Eaton y Palisades. La **Junta de Supervisores del Condado de Los Ángeles** ordenó una revisión independiente y externa de los sistemas de alerta de emergencia y notificación de evacuación, reteniendo expertos externos para realizar un análisis integral posterior a la acción e informar cada 90 días.
 
-The **city's Emergency Management Department** and **County Coordinated Joint Information Center** are now prioritizing enhanced training, more rigorous system tests, improved geographic targeting, clearer message wording, and stronger coordination for future life-safety emergencies.
+El **Departamento de Gestión de Emergencias de la ciudad** y el **Centro de Información Conjunta Coordinado del Condado** ahora están priorizando capacitación mejorada, pruebas de sistema más rigurosas, orientación geográfica mejorada, redacción de mensajes más clara y coordinación más fuerte para futuras emergencias de seguridad de vida.
 
-The **city** is coordinating a biweekly steering committee focused on emergency communication to discuss blockers and progress. The group is made up of representatives from city departments, including the:  
+La **ciudad** está coordinando un comité directivo quincenal enfocado en la comunicación de emergencia para discutir obstáculos y progreso. El grupo está compuesto por representantes de departamentos de la ciudad, incluyendo:
 
-  * **Los Angeles Department of Water and Power**  
-  * **Los Angeles Department of Emergency Management** 
-  * **Los Angeles Department of Planning**
-  * **Los Angeles Fire Department**
+  * **Departamento de Agua y Energía de Los Ángeles**
+  * **Departamento de Gestión de Emergencias de Los Ángeles**
+  * **Departamento de Planificación de Los Ángeles**
+  * **Departamento de Bomberos de Los Ángeles**
 
 ----
 id: response_step_3_coming_soon
 ----
-County officials, in partnership with local, state, and federal partners, are working to improve emergency alert and warning system effectiveness countywide. This includes implementing recommendations from independent party reviews, including the McChrystal Group, the Fire Safety Research Institute, and the U.S. Congress.
+Los funcionarios del condado, en asociación con socios locales, estatales y federales, están trabajando para mejorar la efectividad del sistema de alerta y advertencia de emergencia en todo el condado. Esto incluye implementar recomendaciones de revisiones de terceros independientes, incluyendo el Grupo McChrystal, el Instituto de Investigación de Seguridad contra Incendios y el Congreso de los Estados Unidos.
 
-Local emergency notification systems will continue to be reviewed and improved. By focusing on making alert messages more precise and area-specific, standardizing alert language, improving multilayered notification capabilities, and enhancing coordination and training among agencies to ensure timely, clear, and geographically accurate warnings in future disasters. These improvements include outside reviews of recent wildfire alerts, increased federal funding requests, and public education efforts around opt-in notification services.
+Los sistemas de notificación de emergencia local continuarán siendo revisados y mejorados. Al enfocarse en hacer los mensajes de alerta más precisos y específicos del área, estandarizar el lenguaje de alerta, mejorar las capacidades de notificación multicapa y mejorar la coordinación y capacitación entre agencias para asegurar advertencias oportunas, claras y geográficamente precisas en futuros desastres. Estas mejoras incluyen revisiones externas de alertas recientes de incendios forestales, solicitudes aumentadas de financiamiento federal y esfuerzos de educación pública en torno a servicios de notificación opcionales.
 
 ----
 id: response_sidebar_3_unused
 ----
-The rules requiring 72 hours of backup power at cell towers in high fire-threat zones were implemented following the 2017 wildfires, which left thousands without phone service.
+Las reglas que requieren 72 horas de energía de respaldo en torres de telefonía celular en zonas de alta amenaza de incendio se implementaron después de los incendios forestales de 2017, que dejaron a miles sin servicio telefónico.
 
 ----
 id: response_step_4
-title: Rebuilding help
+title: Ayuda para reconstrucción
 icon: currency-orange.svg
 ----
 
 ----
 id: response_step_4_action_now
 ----
-The government has mobilized to support residents, including helping to secure $3 billion in federal assistance and loans. The **state’s CalAssist Mortgage Fund** is directing over $100 million in mortgage relief. **Governor Newsom** has secured a commitment by top lenders to offer forbearance on mortgages and signed legislation to expand forbearance to 12 months and create enforceable legal requirements. 
+El gobierno se ha movilizado para apoyar a los residentes, incluyendo ayudar a asegurar $3 mil millones en asistencia federal y préstamos. El **Fondo de Hipotecas CalAssist del estado** está dirigiendo más de $100 millones en alivio hipotecario. El **Gobernador Newsom** ha asegurado un compromiso de los principales prestamistas para ofrecer indulgencia en hipotecas y firmó legislación para expandir la indulgencia a 12 meses y crear requisitos legales exigibles.
 
-The **county** has mobilized over $50 million to support families and small businesses through the **LA County Wildfire Relief Fund**. To reduce permitting costs for homeowners, the **county** has also deferred or refunded specific fees for zoning, plan checks, and permits across key agencies like **Public Works**, **Regional Planning**, **Public Health**, and **Fire**. These fees can exceed $20,000 per household. The county is expediting permit plan reviews with 14-day turnaround times for initial reviews, 7-day turnaround for additional reviews, and a goal to issue the permit in 30 days. More support has been provided as well. Section 8 vouchers are available for displaced renters. There are emergency shelter grant funds for persons experiencing homelessness in the area. Workshops have been facilitated for seniors with reverse mortgages. 
- 
+El **condado** ha movilizado más de $50 millones para apoyar a familias y pequeñas empresas a través del **Fondo de Alivio de Incendios Forestales del Condado de LA**. Para reducir los costos de permisos para propietarios, el **condado** también ha diferido o reembolsado tarifas específicas para zonificación, verificaciones de plan y permisos en agencias clave como **Obras Públicas**, **Planificación Regional**, **Salud Pública** y **Bomberos**. Estas tarifas pueden exceder $20,000 por hogar. El condado está acelerando las revisiones de planes de permisos con tiempos de respuesta de 14 días para revisiones iniciales, 7 días de respuesta para revisiones adicionales, y un objetivo de emitir el permiso en 30 días. También se ha proporcionado más apoyo. Los vales de la Sección 8 están disponibles para inquilinos desplazados. Hay fondos de subvención de refugio de emergencia para personas que experimentan falta de vivienda en el área. Se han facilitado talleres para personas mayores con hipotecas inversas.
 
-Further, **Los Angeles Mayor Karen Bass** has issued several executive orders to streamline rebuilding and reduce costs. This includes creating the One-Stop Rebuilding Center, directing city departments to expedite building permit reviews in 30 days or less, and waiving 2025 business taxes for impacted companies.
+Además, la **Alcaldesa de Los Ángeles Karen Bass** ha emitido varias órdenes ejecutivas para agilizar la reconstrucción y reducir costos. Esto incluye crear el Centro de Reconstrucción de Una Parada, dirigir a los departamentos de la ciudad para acelerar las revisiones de permisos de construcción en 30 días o menos, y eximir los impuestos comerciales de 2025 para empresas afectadas.
 
 ----
 id: response_step_4_coming_soon
 ----
-**Los Angeles County** is coordinating with the state, philanthropy, and the private sector to connect residents to services that help people navigate recovery processes, where families can receive personalized help with financing, permitting, and building to reduce barriers to recovery.
+El **Condado de Los Ángeles** está coordinando con el estado, la filantropía y el sector privado para conectar a los residentes con servicios que ayudan a las personas a navegar los procesos de recuperación, donde las familias pueden recibir ayuda personalizada con financiamiento, permisos y construcción para reducir las barreras a la recuperación.
 
-Additionally, we listened to renters when they asked us to not leave them out. The **Los Angeles County’s Fire Recovery Fund** includes direct rental assistance. **County supervisors** are reviewing stronger anti-gouging protections for tenants in fire zones.
+Además, escuchamos a los inquilinos cuando nos pidieron que no los dejáramos fuera. El **Fondo de Recuperación de Incendios del Condado de Los Ángeles** incluye asistencia de alquiler directa. Los **supervisores del condado** están revisando protecciones más fuertes contra la especulación para inquilinos en zonas de incendio.
 
-The **county** is working to coordinate with the **state** and **philanthropy** to identify “bridge funding” for residents to cover near-term costs to survive and begin rebuilding that are not covered by other funding sources.
+El **condado** está trabajando para coordinar con el **estado** y la **filantropía** para identificar "financiamiento puente" para residentes para cubrir costos a corto plazo para sobrevivir y comenzar a reconstruir que no están cubiertos por otras fuentes de financiamiento.
 
 
 ----
 id: response_sidebar_4_unused
 ----
-Residents asked for aid without barriers during the agenda-setting phase of this engagement. **Los Angeles County** then provided language application support and direct payments through the LA Region Worker Relief Fund, including to undocumented residents. The county, with support from community groups, made sure not to exclude people. Also, the **California Department of Insurance** enforces a one-year moratorium. This means that insurers cannot cancel coverage after a declared disaster. It also requires two years of coverage for those whose homes suffered a total loss. 
+Los residentes pidieron ayuda sin barreras durante la fase de establecimiento de agenda de este compromiso. El **Condado de Los Ángeles** luego proporcionó apoyo de aplicación de idioma y pagos directos a través del Fondo de Alivio de Trabajadores de la Región de LA, incluyendo a residentes indocumentados. El condado, con el apoyo de grupos comunitarios, se aseguró de no excluir a las personas. También, el **Departamento de Seguros de California** hace cumplir una moratoria de un año. Esto significa que las aseguradoras no pueden cancelar la cobertura después de un desastre declarado. También requiere dos años de cobertura para aquellos cuyas casas sufrieron una pérdida total.
 
-The Blueprint for Rebuilding highlights the payments as a milestone in equitable recovery.
+El Plan para Reconstruir destaca los pagos como un hito en la recuperación equitativa.
 
 ----
 id: response_step_5
-title: Accelerating permitting and inspections
+title: Acelerar permisos e inspecciones
 icon: house-orange.svg
 ----
 
 ----
 id: response_step_5_action_now
 ----
-**Governor Newsom** has issued numerous executive orders waiving state permitting requirements to streamline rebuilding. The **city** and **county** created one-stop centers in areas hit by fire to support rebuilding activities. This includes Altadena, Calabasas, and Pacific Palisades.
+El **Gobernador Newsom** ha emitido numerosas órdenes ejecutivas eximiendo los requisitos de permisos estatales para agilizar la reconstrucción. La **ciudad** y el **condado** crearon centros de una parada en áreas afectadas por incendios para apoyar las actividades de reconstrucción. Esto incluye Altadena, Calabasas y Pacific Palisades.
 
-In the **county**, the Calabasas and Altadena One-Stop Permit Centers offer residents in-person help from various county agencies, where more than 8,500 residents have been helped so far. In the city, more than 4,000 people have been helped at a One-Stop Rebuilding Center so far. County residents can apply for permits online using the EPIC-LA platform, which offers a unified application and review process to simplify navigation. The **county** is working quickly to meet growing permit demand by reallocating staff and bringing on additional contract workers as needed, as well as rolling out the AI eCheck pilot with Archistar. The county also offers a [pre-approved plan catalog](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) with designs that are in compliance with current zoning and building code requirements. Pre-approved plans and streamlined permitting processes can help homeowners rebuild more efficiently, safely, and affordably.
+En el **condado**, los Centros de Permisos de Una Parada de Calabasas y Altadena ofrecen a los residentes ayuda en persona de varias agencias del condado, donde más de 8,500 residentes han sido ayudados hasta ahora. En la ciudad, más de 4,000 personas han sido ayudadas en un Centro de Reconstrucción de Una Parada hasta ahora. Los residentes del condado pueden solicitar permisos en línea usando la plataforma EPIC-LA, que ofrece un proceso de aplicación y revisión unificado para simplificar la navegación. El **condado** está trabajando rápidamente para satisfacer la creciente demanda de permisos reasignando personal y trayendo trabajadores contratistas adicionales según sea necesario, así como implementando el piloto AI eCheck con Archistar. El condado también ofrece un [catálogo de planes preaprobados](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) con diseños que cumplen con los requisitos actuales de zonificación y código de construcción. Los planes preaprobados y los procesos de permisos simplificados pueden ayudar a los propietarios a reconstruir de manera más eficiente, segura y asequible.
 
-In a parallel effort, **Los Angeles Mayor Karen Bass** has issued executive orders directing **LA Department of Building and Safety** to pilot AI-powered pre-plan checks (Archistar eCheck AI), suspending permit and plan check fees, and launching a library of pre-approved, code-compliant designs to fast-track rebuilds in the city. More than 4,000 city residents have already been helped at the city’s One-Stop Rebuilding Center.
+En un esfuerzo paralelo, la **Alcaldesa de Los Ángeles Karen Bass** ha emitido órdenes ejecutivas dirigiendo al **Departamento de Construcción y Seguridad de LA** para pilotar verificaciones de plan previo impulsadas por IA (Archistar eCheck AI), suspendiendo las tarifas de permisos y verificaciones de plan, y lanzando una biblioteca de diseños preaprobados y compatibles con el código para acelerar las reconstrucciones en la ciudad. Más de 4,000 residentes de la ciudad ya han sido ayudados en el Centro de Reconstrucción de Una Parada de la ciudad.
 
 ----
 id: response_step_5_coming_soon
 ----
-The **county** is accelerating the permitting and inspection processes through “fast-tracks”, which are streamlined lanes to expedite rebuilding while maintaining safety and code compliance. This includes expanding the pre-approved plan catalog and bundling reviews for similar projects.
+El **condado** está acelerando los procesos de permisos e inspecciones a través de "vías rápidas", que son carriles simplificados para acelerar la reconstrucción mientras mantiene la seguridad y el cumplimiento del código. Esto incluye expandir el catálogo de planes preaprobados y agrupar revisiones para proyectos similares.
 
-The **county** is also increasing surge capacity by expanding the AI eCheck pilot with Archistar, growing digital and remote inspections, and adding plan checkers and inspectors to handle higher volumes.
+El **condado** también está aumentando la capacidad de sobrecarga expandiendo el piloto AI eCheck con Archistar, creciendo las inspecciones digitales y remotas, y agregando verificadores de plan e inspectores para manejar volúmenes más altos.
 
 ----
 id: response_sidebar_5
 ----
-**Federal**, **state**, and **local** teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history. This is thanks to unprecedented partnership between the **state** and the **U.S. Army Corps of Engineers**.
+Los equipos **federales**, **estatales** y **locales** limpiaron los escombros de los incendios de 2025 en solo seis meses. Esta fue la eliminación de escombros post-desastre más rápida en la historia de California. Esto se debe a una asociación sin precedentes entre el **estado** y el **Cuerpo de Ingenieros del Ejército de los Estados Unidos**.
 
 ----
 id: other_efforts
-title: Other efforts
-mental_health: Mental health
+title: Otros esfuerzos
+mental_health: Salud mental
 ----
-The **LA County Department of Mental Health** and local partners are helping survivors get the support they need, funding shared spaces where people can get free counseling and join trauma support groups.
+El **Departamento de Salud Mental del Condado de LA** y los socios locales están ayudando a los sobrevivientes a obtener el apoyo que necesitan, financiando espacios compartidos donde las personas pueden obtener asesoramiento gratuito y unirse a grupos de apoyo para el trauma.
 
 ----
 id: findings_how_we_did_the_analysis
 ----
 
-### How we did the analysis
+### Cómo hicimos el análisis
 
-<div class="sub-head">For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">check out our detailed methodology and comments analysis</a>.</div>
+<div class="sub-head">Para una mirada más profunda, <a href="/es/lafires-recovery/agenda-setting-data-insights/">consulta nuestra metodología detallada y análisis de comentarios</a>.</div>
 
-We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
+Utilizamos el modelo de IA generativa Claude 3.5 Sonnet para ayudar a encontrar temas y tendencias en los comentarios. Solicitamos al modelo con preguntas para ayudarnos a entender lo que pensaba la gente. Esta fue una forma eficiente de ver cómo las personas estuvieron de acuerdo o en desacuerdo sobre temas importantes.
 
-We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
+Probamos diferentes formas de escribir las solicitudes. Nos enfocamos en las respuestas que surgieron frecuentemente, independientemente de cómo hicimos las preguntas.
 
-**Sample prompts**
+**Solicitudes de muestra**
 
-“I would like you to analyze a set of qualitative survey responses using extended thinking.” 
+"Me gustaría que analices un conjunto de respuestas de encuesta cualitativas usando pensamiento extendido."
 
-“Start by doing an initial exploration of the data: First, read through the entire dataset without categorizing or labeling. Note your immediate observations and impressions about what stands out to you. Identify recurring words, phrases, and sentiments that appear across multiple responses. Share what surprised you or caught your attention in this initial review.”
+"Comienza haciendo una exploración inicial de los datos: Primero, lee todo el conjunto de datos sin categorizar o etiquetar. Nota tus observaciones inmediatas e impresiones sobre lo que te llama la atención. Identifica palabras, frases y sentimientos recurrentes que aparecen en múltiples respuestas. Comparte lo que te sorprendió o llamó tu atención en esta revisión inicial."
 
 ----
 id: partners
 ----
 
-## Our partners
+## Nuestros socios
 
-California’s Office of Data and Innovation partnered with disaster recovery experts and advocates for deliberative democracy to carry out this work. Our partners also helped shape the actions that will come from this work. 
+La Oficina de Datos e Innovación de California se asoció con expertos en recuperación de desastres y defensores de la democracia deliberativa para llevar a cabo este trabajo. Nuestros socios también ayudaron a dar forma a las acciones que vendrán de este trabajo. 
 
-Our partners and advisors for this initiative include:
+Nuestros socios y asesores para esta iniciativa incluyen:

@@ -1,6 +1,6 @@
 ---
-title: LA aligns on recovery plans
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
+title: LA-ն համաձայնվում է վերականգնման ծրագրերի հետ
+description: "Engaged California-ն առցանց հարթակ է, որը հեշտացնում է կալիֆորնիացիների համար ձայն ունենալ կառավարությունում: Engaged California-ի առաջին թեման Լոս Անջելեսի անտառային հրդեհներից վերականգնումն է: Այս էջը ցույց է տալիս LA-ի վերակառուցման հիմնական խնդիրները:"
 layout: mmmd-lafires-action-plan
 parentid: lafires-recovery
 keywords:
@@ -33,95 +33,95 @@ example_quoted_text: "this is quoted text:"
 
 ----
 id: findings_overview
-buttonText: Skip to the action plan
+buttonText: Անցնել գործողությունների ծրագրին
 ----
 
-# LA aligns on recovery plans
+# LA-ն համաձայնվում է վերականգնման ծրագրերի հետ
 
-In a first-of-its-kind community engagement process, more than 3,000 community members were invited to town halls for the digital age. Participants contributed across 2 phases to produce an action plan to recover from the devastating Los Angeles wildfires in January 2025. 
+Առաջին անգամ համայնքային ներգրավման գործընթացում ավելի քան 3,000 համայնքի անդամներ հրավիրվեցին թվային դարաշրջանի քաղաքային դահլիճներ: Մասնակիցները ներդրում ունեցան 2 փուլերում՝ 2025 թվականի հունվարին Լոս Անջելեսի աղետալի անտառային հրդեհներից վերականգնվելու գործողությունների ծրագիր ստեղծելու համար:
 
-The action plan, developed through online deliberation sessions over a 6-month period, reflects priorities from those who were affected by the Eaton and Palisades fires. The priorities they set – focusing on immediate community support and long-term infrastructure improvements – will guide state and local officials toward full recovery.
+Գործողությունների ծրագիրը, որը մշակվել է 6 ամսվա ընթացքում առցանց քննարկման նիստերի միջոցով, արտացոլում է նրանց առաջնահերթությունները, ովքեր տուժել են Իթոնի և Պալիսադեսի հրդեհներից: Նրանց սահմանած առաջնահերթությունները՝ կենտրոնանալով անմիջական համայնքային աջակցության և երկարաժամկետ ենթակառուցվածքային բարելավումների վրա, կառաջնորդեն նահանգային և տեղական պաշտոնյաներին դեպի լիակատար վերականգնում:
 
 
 ----
 id: findings_narrative_step_1
-title: Agenda setting
-button_text: Read about the agenda setting phase
+title: Արարողակարգի սահմանում
+button_text: Կարդալ արարողակարգի սահմանման փուլի մասին
 ----
 
-## Residents shared their concerns and ideas
+## Բնակիչները կիսվեցին իրենց մտահոգություններով և գաղափարներով
 
-After the severe wildfires in Los Angeles, hundreds of community members met online to discuss recovery priorities.
+Լոս Անջելեսի ծանր անտառային հրդեհներից հետո հարյուրավոր համայնքի անդամներ հանդիպեցին առցանց՝ քննարկելու վերականգնման առաջնահերթությունները:
 
 ----
 id: findings_narrative_step_2
-title: Review and planning
-button_text: Learn about our partners
+title: Վերանայում և պլանավորում
+button_text: Իմացեք մեր գործընկերների մասին
 nbr_phrases: 6
 translator_note: USE slash symbol for line breaks, keep these phrases to two lines!
-phrase_1: Utilities
-phrase_2: Community/Support
-phrase_3: Financial/support
-phrase_4: Emergency/preparedness
-phrase_5: Fire/proofing
-phrase_6: Building/permits
+phrase_1: Կոմունալ ծառայություններ
+phrase_2: Համայնք/Աջակցություն
+phrase_3: Ֆինանսական/աջակցություն
+phrase_4: Արտակարգ/պատրաստվածություն
+phrase_5: Հրդեհակայունություն
+phrase_6: Շինարարություն/արտոնագրեր
 ----
 
 
 
-## Individual ideas turned into shared data
+## Անհատական գաղափարները դարձան ընդհանուր տվյալներ
 
-A group of policy, disaster relief, and community leaders used their expertise and generative AI to turn the 1,289 comments submitted in agenda setting into 19 actionable policy options.
+Քաղաքականության, աղետներից վերականգնման և համայնքի ղեկավարների խումբը օգտագործեց իրենց փորձագիտությունը և գեներատիվ AI-ն՝ 1,289 մեկնաբանությունները, որոնք ներկայացվել էին օրակարգի սահմանման փուլում, վերածելու 19 գործնական քաղաքականության տարբերակների:
 
 ----
 id: findings_narrative_step_3
-title: Deliberation
+title: Խորհրդակցություն
 ----
 
-## The community voted on all 19 options
+## Համայնքը քվեարկեց բոլոր 19 տարբերակների համար
 
-New and returning participants ranked these options, again using an online platform where they could discuss and collaborate.
+Նոր և վերադարձող մասնակիցները դասակարգեցին այս տարբերակները, կրկին օգտագործելով առցանց հարթակ, որտեղ նրանք կարող էին քննարկել և համագործակցել:
 
 ----
 id: consensus_chart_topics
 nbr_topics: 19
-topic_1: Increased housing density and expedited permits
-topic_2: Temporary housing
-topic_3: Prioritize families
-topic_4: Fire-resistant and water-friendly demonstration gardens
-topic_5: Mandatory home ember protection standards
-topic_6: Accelerated ADU and duplex permitting
-topic_7: Mandatory greywater systems for new buildings
-topic_8: Comprehensive homeowner education program
-topic_9: Emergency communication hubs in communities
-topic_10: Defensible space tax incentives
-topic_11: Expanded construction training programs
-topic_12: Pre-approved fire-resistant building designs
-topic_13: Enhanced fire detection infrastructure
-topic_14: Give financial assistance to long-term residents
-topic_15: Accelerating permitting and inspections
-topic_16: Rebuilding help
-topic_17: Stronger emergency notifications and alerts
-topic_18: Water for firefighting
-topic_19: Undergrounding power lines and improving equipment safety
+topic_1: Բնակարանային խտության ավելացում և արագացված արտոնագրեր
+topic_2: Ժամանակավոր բնակարան
+topic_3: Նախապատվություն ընտանիքներին
+topic_4: Հրդեհակայուն և ջրի համար բարեկամ ցուցադրական այգիներ
+topic_5: Պարտադիր տնային կայծերի պաշտպանության ստանդարտներ
+topic_6: Արագացված ADU և դուպլեքս արտոնագրում
+topic_7: Պարտադիր մոխրագույն ջրի համակարգեր նոր շենքերի համար
+topic_8: Համապարփակ տնատերերի կրթական ծրագիր
+topic_9: Արտակարգ հաղորդակցության հանգույցներ համայնքներում
+topic_10: Պաշտպանելի տարածքի հարկային խթաններ
+topic_11: Ընդլայնված շինարարական ուսուցման ծրագրեր
+topic_12: Նախապես հաստատված հրդեհակայուն շենքերի նախագծեր
+topic_13: Բարելավված հրդեհի հայտնաբերման ենթակառուցվածք
+topic_14: Տրամադրել ֆինանսական օգնություն երկարաժամկետ բնակիչներին
+topic_15: Արագացնել արտոնագրումը և ստուգումները
+topic_16: Վերակառուցման օգնություն
+topic_17: Ավելի ուժեղ արտակարգ ծանուցումներ և ահազանգեր
+topic_18: Ջուր հրդեհաշիջման համար
+topic_19: Էլեկտրական գծերի հողի տակ տեղադրում և սարքավորումների անվտանգության բարելավում
 ----
 
 
 ----
 id: findings_consensus_watch_intro
-title_h2: Community alignment
-caveat: "Support is the average score of the votes, where the score of strongly supporting an option is 100, and the score of strongly opposing an option is 0."
+title_h2: Համայնքի հավասարեցում
+caveat: "Աջակցությունը քվեարկությունների միջին միավորն է, որտեղ տարբերակին ուժեղ աջակցելու միավորը 100 է, իսկ տարբերակին ուժեղ դեմ լինելու միավորը 0 է:"
 ----
-Each dot represents one vote. As the visualization changes, you can track the average level of support for each issue. Topics are arranged from least community support (left) to most community support (right).
+Յուրաքանչյուր կետ ներկայացնում է մեկ քվե: Երբ վիզուալիզացիան փոխվում է, դուք կարող եք հետևել յուրաքանչյուր հարցի աջակցության միջին մակարդակին: Թեմաները դասավորված են ամենաքիչ համայնքի աջակցությունից (ձախ) մինչև ամենաշատ համայնքի աջակցությունը (աջ):
 
 ----
 id: findings_consensus_watch_explore
-topic_number_template: "Topic <NUM> of <TOTAL>"
+topic_number_template: "Թեմա <NUM> <TOTAL>-ից"
 translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to insert numbers into the phrase
 translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
-label_1: Increased housing density and expedited permits
-percent_default: 92% of participants supported this topic
-percent_template: <PERCENT>% average support
+label_1: Բնակարանային խտության ավելացում և արագացված արտոնագրեր
+percent_default: 92% մասնակիցները աջակցեցին այս թեմային
+percent_template: <PERCENT>% միջին աջակցություն
 translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
 ----
 
@@ -129,34 +129,34 @@ translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the 
 ----
 id: findings_consensus_sentiment_chart
 nbr_labels: 3
-label_1: Strongly oppose
-label_2: Neutral
-label_3: Strongly support
+label_1: Ուժեղ դեմ
+label_2: Չեզոք
+label_3: Ուժեղ աջակցություն
 ----
 
 ----
 id: findings_narrative_top_options_intro
-title: Residents weighed in to find agreement on the top 5 solutions
+title: Բնակիչները մասնակցեցին՝ համաձայնություն գտնելու համար լավագույն 5 լուծումների վերաբերյալ
 nbr_values: 2
-label_1: Comments and replies
-label_2: Votes
+label_1: Մեկնաբանություններ և պատասխաններ
+label_2: Քվեներ
 value_1: 1,504
 value_2: 3,977
 nbr_options: 5
 ----
 
-The engagement was notable. Neighbors were able to share their thoughts and replied to one another. The 1,504 participant comments received didn’t vanish into a black box. People talked about the solutions, effectively working together to define priorities.
+Մասնակցությունը ուշագրավ էր: Հարեւանները կարողացան կիսվել իրենց մտքերով և պատասխանել միմյանց: Ստացված 1,504 մասնակցի մեկնաբանությունները չվերացան սեւ արկղի մեջ: Մարդիկ խոսեցին լուծումների մասին, արդյունավետորեն աշխատելով միասին՝ սահմանելու առաջնահերթությունները:
 
 ----
 id: findings_narrative_top_options
-results_header: Action plan
-results_description: "The plan, which includes 5 focus areas for recovery – reveals a community united around building fire-resilient infrastructure for the future and providing support to the community now:"
+results_header: Գործողությունների ծրագիր
+results_description: "Ծրագիրը, որը ներառում է վերականգնման 5 կենտրոնական ոլորտներ – բացահայտում է համայնք, որը միավորված է ապագայի համար հրդեհակայուն ենթակառուցվածք կառուցելու և այժմ համայնքին աջակցություն ցուցաբերելու շուրջ:"
 nbr_options: 5
-option_label_1: Bury power lines and equipment safety measures
-option_label_2: Improve water systems for firefighting
-option_label_3: Strengthen emergency communication networks
-option_label_4: Help people find financial support programs
-option_label_5: Dedicate teams to support permitting
+option_label_1: Էլեկտրական գծերի հողի տակ տեղադրում և սարքավորումների անվտանգության միջոցներ
+option_label_2: Ջրային համակարգերի բարելավում հրդեհաշիջման համար
+option_label_3: Արտակարգ հաղորդակցության ցանցերի ամրապնդում
+option_label_4: Մարդկանց օգնել գտնել ֆինանսական աջակցության ծրագրեր
+option_label_5: Թիմեր նվիրել արտոնագրումը աջակցելու համար
 option_icon_1: circle-blue-1.png
 option_icon_2: circle-blue-2.png
 option_icon_3: circle-blue-3.png
@@ -171,39 +171,39 @@ option_icon_5: circle-blue-5.png
 ----
 id: findings_topic_chart
 nbr_labels: 3
-label_1: Strongly oppose
-label_2: Neutral
-label_3: Strongly support
+label_1: Ուժեղ դեմ
+label_2: Չեզոք
+label_3: Ուժեղ աջակցություն
 ----
 
 
 
 ----
 id: findings_top_discussions
-title_h2: Analyze the top 5 from all angles
-solution_details_label: "Solution details"
-show_comments_button: Show comments
-hide_comments_button: Hide comments
+title_h2: Վերլուծել լավագույն 5-ը բոլոր անկյուններից
+solution_details_label: "Լուծման մանրամասներ"
+show_comments_button: Ցույց տալ մեկնաբանությունները
+hide_comments_button: Թաքցնել մեկնաբանությունները
 nbr_tally_items: 2
-label_1: Average support
-label_2: Comments
-explore_the_comments: Explore the comments
-filter_the_comments: "Comments can be filtered by how people voted on a topic: support, neutral, oppose, or no vote. Note: The comments themselves may not reflect how a person voted on a topic. In some cases, people commented on a topic without casting a vote."
-label_viewpoint: "Viewpoint:"
-label_all_comments: "All comments"
-label_oppose: "Oppose"
-label_neutral: "Neutral"
-label_support: "Support"
-label_novote: "No vote"
-filter_comments_by_vote: Filter comments by their corresponding votes. We do not translate comments; they are displayed in their original language. 
+label_1: Միջին աջակցություն
+label_2: Մեկնաբանություններ
+explore_the_comments: Ուսումնասիրել մեկնաբանությունները
+filter_the_comments: "Մեկնաբանությունները կարող են ֆիլտրվել ըստ այն բանի, թե ինչպես են մարդիկ քվեարկել թեմայի վերաբերյալ: աջակցություն, չեզոք, դեմ, կամ քվե չկա: Նշում: Մեկնաբանությունները իրենք կարող են չարտացոլել, թե ինչպես է մարդը քվեարկել թեմայի վերաբերյալ: Որոշ դեպքերում մարդիկ մեկնաբանել են թեմայի վերաբերյալ՝ քվե չտալով:"
+label_viewpoint: "Կարծիք:"
+label_all_comments: "Բոլոր մեկնաբանությունները"
+label_oppose: "Դեմ"
+label_neutral: "Չեզոք"
+label_support: "Աջակցություն"
+label_novote: "Քվե չկա"
+filter_comments_by_vote: "Ֆիլտրել մեկնաբանությունները ըստ դրանց համապատասխան քվեների: Մենք չենք թարգմանում մեկնաբանությունները; դրանք ցուցադրվում են իրենց բնօրինակ լեզվով: "
 ----
 
-Every vote was counted and weighted to achieve consensus on the top 5 solutions California should explore. Between the fire zones, votes and comments looked a little different, use the toggle to see how opinons from the Palisades differed from those in the Eaton fire zone.
+Յուրաքանչյուր քվե հաշվվեց և կշռադատվեց՝ հասնելու համաձայնության լավագույն 5 լուծումների վերաբերյալ, որոնք Կալիֆոռնիան պետք է ուսումնասիրի: Հրդեհային գոտիների միջև քվեներն ու մեկնաբանությունները մի փոքր տարբեր էին, օգտագործեք անջատիչը՝ տեսնելու համար, թե ինչպես էին Պալիսադների կարծիքները տարբերվում Իթոնի հրդեհային գոտու կարծիքներից:
 
 ----
 id: discussion_1
-title: Bury power lines and equipment safety measures
-topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
+title: Էլեկտրական գծերի հողի տակ տեղադրում և սարքավորումների անվտանգության միջոցներ
+topic_description: "Էլեկտրական գծերը հողի տակ տեղադրել, երբ հնարավոր է, և կիրառել մեղմացման ռազմավարություններ՝ կանխելու համար բռնկումը սարքավորումների խափանումներից: Այս համապարփակ մոտեցումը կլուծի Կալիֆոռնիայում վայրի հրդեհների բռնկման հիմնական պատճառներից մեկը:"
 nbr_comments: 3
 value_1: 92%
 value_2: 90
@@ -212,8 +212,8 @@ chart_topic_index: 19
 
 ----
 id: discussion_2
-title: Improve water systems for firefighting
-topic_description: Upgrade water systems to meet modern fire flow requirements and ensure there are enough fire hydrants in all areas. This would improve the water supply and pressure needed for effective firefighting operations.
+title: Ջրային համակարգերի բարելավում հրդեհաշիջման համար
+topic_description: "Ջրային համակարգերի արդիականացում՝ ժամանակակից հրդեհի հոսքի պահանջները բավարարելու և ապահովելու համար, որ բոլոր տարածքներում բավարար հրդեհային հիդրանտներ կան: Սա կբարելավի ջրամատակարարումը և ճնշումը, որն անհրաժեշտ է արդյունավետ հրդեհաշիջման գործողությունների համար:"
 value_1: 87%
 value_2: 74
 chart_topic_index: 18
@@ -221,8 +221,8 @@ chart_topic_index: 18
 
 ----
 id: discussion_3
-title: Strengthen emergency communication networks
-topic_description: Promote communication infrastructure that allows first responders and residents to stay connected even when cell towers or fiber lines fail, such as mesh internet networks that can operate independently during disasters.
+title: Արտակարգ հաղորդակցության ցանցերի ամրապնդում
+topic_description: "Հաղորդակցության ենթակառուցվածքի խթանում, որը թույլ է տալիս առաջին արձագանքողներին և բնակիչներին մնալ կապված, նույնիսկ երբ բջջային աշտարակները կամ մանրաթելային գծերը խափանվում են, ինչպիսիք են ցանցային ինտերնետ ցանցերը, որոնք կարող են անկախ գործել աղետների ժամանակ:"
 value_1: 86%
 value_2: 59
 chart_topic_index: 17
@@ -230,8 +230,8 @@ chart_topic_index: 17
 
 ----
 id: discussion_4
-title: Help people find financial support programs
-topic_description: Create a comprehensive catalog of financial support programs and organizations available to help with rebuilding efforts. This directory would connect fire-affected residents with grants, loans, and aid programs, while also partnering with trusted financial organizations willing to assist with recovery funding.
+title: Մարդկանց օգնել գտնել ֆինանսական աջակցության ծրագրեր
+topic_description: "Ֆինանսական աջակցության ծրագրերի և կազմակերպությունների համապարփակ կատալոգի ստեղծում, որոնք հասանելի են վերակառուցման ջանքերին օգնելու համար: Այս տեղեկատուն կկապի հրդեհից տուժած բնակիչներին դրամաշնորհների, վարկերի և օգնության ծրագրերի հետ, միաժամանակ համագործակցելով վստահելի ֆինանսական կազմակերպությունների հետ, որոնք պատրաստ են օգնել վերականգնման ֆինանսավորման հարցում:"
 value_1: 82%
 value_2: 59
 chart_topic_index: 16
@@ -239,8 +239,8 @@ chart_topic_index: 16
 
 ----
 id: discussion_5
-title: Dedicate teams to support permitting
-topic_description: Establish teams of dedicated staff at triage centers to quickly guide fire-affected communities through permitting processes. These specialized teams would provide personalized assistance to residents navigating complex rebuilding requirements.
+title: Թիմեր նվիրել արտոնագրումը աջակցելու համար
+topic_description: "Նվիրված անձնակազմի թիմերի ստեղծում տրիաժի կենտրոններում՝ արագ ուղղորդելու հրդեհից տուժած համայնքներին արտոնագրային գործընթացների միջով: Այս մասնագիտացված թիմերը կտրամադրեն անհատականացված օգնություն բնակիչներին՝ բարդ վերակառուցման պահանջների միջով նավարկելիս:"
 value_1: 82%
 value_2: 73
 chart_topic_index: 15
@@ -249,256 +249,255 @@ chart_topic_index: 15
 
 ----
 id: topic_comments_scroller 
-label: Comments on this topic
-desc: Scroll to see the comments about this topic (shown in their original language)
+label: Մեկնաբանություններ այս թեմայի վերաբերյալ
+desc: Ոլորել՝ տեսնելու այս թեմայի մասին մեկնաբանությունները (ցուցադրված իրենց բնօրինակ լեզվով)
 ----
 
 ----
 id: topic_data_vis
-title: Explore the votes
-learn_button_label: Learn about the actions being taken
-desc: Each dot represents an individual’s vote. The total number of dots corresponds to the total number of votes cast on a particular topic. 
-download_text: Download a CSV of participant comments
+title: Ուսումնասիրել քվեները
+learn_button_label: Իմացեք կատարվող գործողությունների մասին
+desc: "Յուրաքանչյուր կետ ներկայացնում է անհատի քվեն: Կետերի ընդհանուր թիվը համապատասխանում է կոնկրետ թեմայի վրա տրված քվեների ընդհանուր թվին:"
+download_text: Ներբեռնել մասնակիցների մեկնաբանությունների CSV ֆայլը
 ----
 
 ----
 id: conversation_groups
 nbr_groups: 7
-group_label_1: Strongly opposed
-group_label_2: Opposed
-group_label_3: Somewhat opposed
-group_label_4: Neutral
-group_label_5: Somewhat supportive
-group_label_6: Supportive
-group_label_7: Strongly supportive
+group_label_1: Ուժեղ դեմ
+group_label_2: Դեմ
+group_label_3: Մասամբ դեմ
+group_label_4: Չեզոք
+group_label_5: Մասամբ աջակցող
+group_label_6: Աջակցող
+group_label_7: Ուժեղ աջակցող
 ----
 
 ----
 id: findings_alignment_section
 ----
-## Noteworthy alignment 
+## Ուշագրավ հավասարեցում
 
-People from different fire zones showed surprising consistency. Residents impacted by Eaton and Palisades ranked the top needs the same: bury power lines underground, improve local water systems for firefighting, and ensure timely alerts when there is an emergency.
+Տարբեր հրդեհային գոտիներից մարդիկ ցույց տվեցին զարմանալի հետևողականություն: Իթոնից և Պալիսադներից տուժած բնակիչները նույն կերպ դասակարգեցին գլխավոր կարիքները: էլեկտրական գծերը հողի տակ տեղադրել, բարելավել տեղական ջրային համակարգերը հրդեհաշիջման համար և ապահովել ժամանակին ահազանգեր, երբ արտակարգ իրավիճակ է:
 
+Սա ցույց է տալիս, որ անկախ աշխարհագրական բաժանումից, կա համայնքային համաձայնություն վերականգնման հիմնական առաջնահերթությունների վերաբերյալ:
 
-This shows that regardless of geographic separation, there is community-wide agreement on essential recovery priorities.
+**Առաջնահերթությունների այս խումբը պատմում է հստակ պատմություն:**
 
-**This group of priorities tells a clear story.**
+Բնակիչները ցանկանում են և՛ անմիջական աջակցություն վերականգնման համար, և՛ երկարաժամկետ ներդրումներ հրդեհակայուն ենթակառուցվածքի մեջ: Նրանք նաև կարիք ունեն, որ աջակցության ծառայությունները հարթակվեն՝ ծառայելու համայնքի հրատապ վերակառուցման կարիքներին:
 
-Residents want both immediate support for recovery and long-term investments in fire-resistant infrastructure. They also need support services to be streamlined to serve the community's urgent rebuilding needs.
-
-This engagement allowed us to turn personal experiences into real policy guidance.
+Այս ներգրավվածությունը թույլ տվեց մեզ անհատական փորձերը վերածել իրական քաղաքականության ուղեցույցի:
 
 ----
 id: findings_alignment_section_sidebar
 ----
 
-**Building on shared support**
+**Կառուցելով ընդհանուր աջակցության վրա**
 
-The process didn't just gather opinions; it built confidence and momentum as we move forward together.
+Գործընթացը միայն կարծիքներ չէր հավաքում; այն ստեղծում էր վստահություն և թափ, երբ մենք առաջ ենք շարժվում միասին:
 
-While participants arrived with mixed feelings—only 24% started optimistic while 48% felt pessimistic—the outlook shifted through the process. 
+Մինչ մասնակիցները ժամանում էին խառը զգացմունքներով՝ միայն 24%-ը սկսեց լավատեսորեն, մինչ 48%-ը զգում էր հոռետեսորեն, տեսլականը փոխվեց գործընթացի ընթացքում:
 
-More than a quarter of participants (27%) emerged more optimistic about LA fires recovery.
+Մասնակիցների քառորդից ավելին (27%) դուրս եկավ ավելի լավատեսորեն LA հրդեհների վերականգնման վերաբերյալ:
 
 ----
 id: signup_plea
-button_text: Sign up
+button_text: Գրանցվել
 ----
-## Sign up to remain engaged in important work
+## Գրանցվեք՝ մնալու կարևոր աշխատանքում ներգրավված
 
-Give us your email to learn about upcoming opportunities. 
+Տվեք մեզ ձեր էլ. փոստի հասցեն՝ իմանալու համար ապագա հնարավորությունների մասին: 
 
 ----
 id: response_intro
 ----
 
-## How we’re responding to community needs
+## Ինչպես ենք արձագանքում համայնքի կարիքներին
 
-Residents spoke up during both the agenda setting phase and our later deliberations. **State**, **county**, **city**, **utilities**, and **federal partners** have responded with tangible actions. And more are on the way.
+Բնակիչները խոսեցին և՛ օրակարգի սահմանման փուլում, և՛ մեր հետագա խորհրդակցությունների ժամանակ: **Պետությունը**, **շրջանը**, **քաղաքը**, **կոմունալ ծառայությունները** և **ֆեդերալ գործընկերները** արձագանքեցին կոնկրետ գործողություններով: Եվ ավելին ճանապարհին է:
 
 ----
 id: response_steps
-action_now: Action now
-coming_soon: Coming soon
-did_you_know: Did you know?
+action_now: Գործողություն հիմա
+coming_soon: Շուտով
+did_you_know: "Գիտեի՞ք:"
 nbr_steps: 5
-anchor_link_text: "Take me to people’s votes and comments on this topic"
+anchor_link_text: "Տանել ինձ մարդկանց քվեներին և մեկնաբանություններին այս թեմայի վերաբերյալ"
 ----
 
 
 ----
 id: response_step_1
-title: Undergrounding power lines and improving equipment safety
+title: Էլեկտրական գծերի հողի տակ տեղադրում և սարքավորումների անվտանգության բարելավում
 icon: construction-orange.svg
 ----
 
 ----
 id: response_step_1_action_now
 ----
-The **county** and **state** are working with power and telecommunications companies to plan to put more utilities underground. **Governor Gavin Newsom** signed an executive order in March 2025 to fast-track this work.  
+**Շրջանը** և **պետությունը** աշխատում են էներգետիկ և հեռահաղորդակցության ընկերությունների հետ՝ պլանավորելու ավելի շատ կոմունալ ծառայություններ հողի տակ տեղադրելը: **Նահանգապետ Գավին Նյուսոմը** 2025 թվականի մարտին ստորագրեց գործադիր հրաման՝ այս աշխատանքը արագացնելու համար:
 
-Additionally, **Los Angeles Mayor Karen Bass** issued an executive order to help Palisades residents expedite rebuilding with fire-resistant materials and climate-resilient infrastructure. This includes hardening utilities for power reliability during severe weather.
+Բացի այդ, **Լոս Անջելեսի քաղաքապետ Կարեն Բասը** հրաման արձակեց՝ օգնելու Պալիսադների բնակիչներին արագացնել վերակառուցումը հրդեհակայուն նյութերով և կլիմայական դիմացկուն ենթակառուցվածքով: Սա ներառում է կոմունալ ծառայությունների կարծրացում՝ էներգիայի հուսալիության համար ծանր եղանակային պայմանների ժամանակ:
 
 ----
 id: response_step_1_coming_soon
 ----
-Utilities are working closely with local leaders from **Los Angeles County** and the **city**. Construction is already underway in Malibu, Altadena, and Pacific Palisades. It is expected to continue for several more years. The **state** and **county** are calling for a coordinated approach to undergrounding power and telecom lines that will save money, cut down on time, and minimize disruptions from multiple work crews.
+Կոմունալ ծառայությունները սերտորեն աշխատում են տեղական ղեկավարների հետ **Լոս Անջելեսի շրջանից** և **քաղաքից**: Շինարարությունն արդեն ընթանում է Մալիբուում, Ալտադենայում և Պասիֆիկ Պալիսադներում: Ակնկալվում է, որ այն կշարունակվի ևս մի քանի տարի: **Պետությունը** և **շրջանը** կոչ են անում համակարգված մոտեցման՝ էներգետիկ և հեռահաղորդակցության գծերը հողի տակ տեղադրելու համար, ինչը կխնայի գումար, կկրճատի ժամանակը և կնվազեցնի խափանումները բազմաթիվ աշխատանքային խմբերից:
 
-Beyond undergrounding, additional strategies are important to mitigate fire hazards, such as vegetation management and resilient rebuilding. Property owners and design/building professionals can look to the **county’s** [Resilient Rebuild Resource Guide](https://recovery.lacounty.gov/resilient-rebuilding/) for information and resources for planning, designing, and constructing a high-performance building more resilient to fire risks.
+Հողի տակ տեղադրումից բացի, լրացուցիչ ռազմավարություններ կարևոր են հրդեհային վտանգները մեղմացնելու համար, ինչպիսիք են բուսականության կառավարումը և դիմացկուն վերակառուցումը: Գույքի սեփականատերերը և նախագծման/շինարարության մասնագետները կարող են դիմել **շրջանի** [Դիմացկուն Վերակառուցման Ռեսուրսների Ուղեցույցին](https://recovery.lacounty.gov/resilient-rebuilding/) տեղեկությունների և ռեսուրսների համար՝ պլանավորելու, նախագծելու և կառուցելու բարձր արդյունավետության շենք, որը ավելի դիմացկուն է հրդեհային ռիսկերի նկատմամբ:
 
 ----
 id: response_sidebar_1_unused
 ----
-When the **Town of Paradise** was rebuilt, it worked with **PG&E**, **telecom providers**, and **state regulators** to put at-risk power lines underground. Los Angeles is using this and similar safety improvements as a model and guide for its own recovery.
+Երբ **Պարադայս քաղաքը** վերակառուցվեց, այն աշխատեց **PG&E**-ի, **հեռահաղորդակցության մատակարարների** և **պետական կարգավորողների** հետ՝ ռիսկային էլեկտրական գծերը հողի տակ տեղադրելու համար: Լոս Անջելեսը օգտագործում է սա և նմանատիպ անվտանգության բարելավումները որպես մոդել և ուղեցույց իր սեփական վերականգնման համար:
 
 ----
 id: response_step_2
-title: Water for firefighting
+title: Ջուր հրդեհաշիջման համար
 icon: hydrant-orange.svg
 ----
 
 ----
 id: response_step_2_action_now
 ----
-The **Los Angeles Department of Water and Power** has filled over 80 water storage facilities to their highest level. Backup pumps are fueled and ready at each pumping station as a backup to the main pumps. They have filled their five water tenders, each with at least 4,000 gallons, and have them on standby for the **Los Angeles Fire Department** (LAFD) if needed. Four reservoirs hold billions of gallons of non-potable water for aerial firefighting.
+**Լոս Անջելեսի Ջրի և Էներգիայի Դեպարտամենտը** լցրել է 80-ից ավելի ջրի պահեստավորման հաստատություններ իրենց ամենաբարձր մակարդակին: Պահեստային պոմպերը վառելիքավորված են և պատրաստ են յուրաքանչյուր պոմպակայանում՝ որպես հիմնական պոմպերի պահեստային: Նրանք լցրել են իրենց հինգ ջրի տանկերը, յուրաքանչյուրը առնվազն 4,000 գալոնով, և դրանք պատրաստ են **Լոս Անջելեսի Հրշեջների Դեպարտամենտի** (LAFD) համար, եթե անհրաժեշտ լինի: Չորս ջրամբարներ պահում են միլիարդավոր գալոններ ոչ խմելու ջրի՝ օդային հրդեհաշիջման համար:
 
-In the Pacific Palisades area, two local reservoirs are dedicated to aerial firefighting: the Encino Reservoir and the Lower Stone Canyon Reservoir.
+Պասիֆիկ Պալիսադների տարածքում երկու տեղական ջրամբարներ նվիրված են օդային հրդեհաշիջմանը: Էնսինո ջրամբարը և Ստոուն Կանյոնի Ստորին ջրամբարը:
 
-The **Los Angeles County Fire Department** has worked with the **Los Angeles County Department of Public Works** and **7 local water companies** to assess the fire flow from the existing water systems in the fire areas. To facilitate the rebuilding process, **LA County Fire** will amend the 2026 Los Angeles County Fire Code to meet the current State Fire Code requirements. This code amendment will allow people to rebuild their homes while the water system is upgraded and improved. **LA County Fire** will continue to regularly staff and strategically place county-owned pre-positioned engines during high-fire risk periods.
+**Լոս Անջելեսի շրջանի Հրշեջների Դեպարտամենտը** աշխատել է **Լոս Անջելեսի շրջանի Հանրային Աշխատանքների Դեպարտամենտի** և **7 տեղական ջրային ընկերությունների** հետ՝ գնահատելու հրդեհի հոսքը հրդեհային տարածքների գոյություն ունեցող ջրային համակարգերից: Վերակառուցման գործընթացը հեշտացնելու համար **LA շրջանի Հրշեջները** կփոփոխեն 2026 թվականի Լոս Անջելեսի շրջանի Հրդեհային Կոդը՝ բավարարելու ներկայիս Պետական Հրդեհային Կոդի պահանջները: Այս կոդի փոփոխությունը թույլ կտա մարդկանց վերակառուցել իրենց տները, մինչ ջրային համակարգը արդիականացվում և բարելավվում է: **LA շրջանի Հրշեջները** կշարունակեն կանոնավոր կադրավորում և ռազմավարական տեղադրում շրջանին պատկանող նախապես տեղադրված շարժիչներ բարձր հրդեհային ռիսկի ժամանակաշրջաններում:
 
-Additionally, a new streamlined process has been developed that eliminates the need for homeowners to be involved in the fire flow form process. The **water companies**, **LA County Public Works**, and **LA County Fire** will handle this new process, which will streamline the timeline, eliminate the need for homeowners to complete the process, and save homeowners money.
+Բացի այդ, մշակվել է նոր հարթակված գործընթաց, որը վերացնում է տնատերերի անհրաժեշտությունը ներգրավվելու հրդեհի հոսքի ձևի գործընթացում: **Ջրային ընկերությունները**, **LA շրջանի Հանրային Աշխատանքները** և **LA շրջանի Հրշեջները** կկառավարեն այս նոր գործընթացը, որը կհարթակի ժամանակացույցը, կվերացնի տնատերերի անհրաժեշտությունը գործընթացն ավարտելու և կխնա տնատերերի գումարը:
 
 ----
 id: response_step_2_coming_soon
 ----
-Water districts have identified damages and applied for funding (e.g., FEMA PA) to rebuild. The **state** and **county** have committed to supporting the districts to rebuild and improve systems.
+Ջրային շրջանները նույնականացրել են վնասները և դիմել են ֆինանսավորման (օրինակ, FEMA PA) վերակառուցման համար: **Պետությունը** և **շրջանը** պարտավորվել են աջակցել շրջաններին՝ վերակառուցելու և բարելավելու համակարգերը:
 
-The [LA County Forward: Blueprint for Rebuilding](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) says these upgrades are critical infrastructure investments for long-term safety.
+[LA շրջան առաջ: Վերակառուցման Նախագիծը](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) ասում է, որ այս արդիականացումները կարևոր ենթակառուցվածքային ներդրումներ են երկարաժամկետ անվտանգության համար:
 
 ----
 id: response_step_3
-title: Stronger emergency notifications and alerts
+title: Ավելի ուժեղ արտակարգ ծանուցումներ և ահազանգեր
 icon: communication-orange.svg
 ----
 
 ----
 id: response_step_3_action_now
 ----
-Local officials in **Los Angeles City** and **County** have taken several concrete steps to improve how emergency alerts are issued following widespread confusion during the Eaton and Palisades fires. The **Los Angeles County Board of Supervisors** ordered an independent, external review of the emergency alert and evacuation notification systems, retaining outside experts to conduct a comprehensive after-action analysis and report back every 90 days.
+**Լոս Անջելեսի քաղաքի** և **շրջանի** տեղական պաշտոնյաները ձեռնարկել են մի քանի կոնկրետ քայլեր՝ բարելավելու արտակարգ ահազանգերի թողարկման եղանակը՝ Իթոնի և Պալիսադների հրդեհների ժամանակ տարածված շփոթությունից հետո: **Լոս Անջելեսի շրջանի Վերահսկիչների խորհուրդը** հրամայեց անկախ, արտաքին վերանայում արտակարգ ահազանգերի և տարհանման ծանուցման համակարգերի, պահելով արտաքին փորձագետներ՝ անցկացնելու համապարփակ հետագա գործողությունների վերլուծություն և զեկուցել ամեն 90 օրը:
 
-The **city's Emergency Management Department** and **County Coordinated Joint Information Center** are now prioritizing enhanced training, more rigorous system tests, improved geographic targeting, clearer message wording, and stronger coordination for future life-safety emergencies.
+**Քաղաքի Արտակարգ իրավիճակների կառավարման դեպարտամենտը** և **Շրջանի համակարգված համատեղ տեղեկատվական կենտրոնը** այժմ առաջնահերթություն են տալիս բարելավված ուսուցմանը, ավելի խիստ համակարգային թեստերին, բարելավված աշխարհագրական թիրախավորմանը, ավելի հստակ հաղորդագրությունների ձևակերպմանը և ավելի ուժեղ համակարգմանը ապագա կյանքի անվտանգության արտակարգ իրավիճակների համար:
 
-The **city** is coordinating a biweekly steering committee focused on emergency communication to discuss blockers and progress. The group is made up of representatives from city departments, including the:  
+**Քաղաքը** համակարգում է երկշաբաթյա ղեկավարող կոմիտե՝ կենտրոնացած արտակարգ հաղորդակցության վրա՝ քննարկելու արգելակիչները և առաջընթացը: Խումբը կազմված է քաղաքային դեպարտամենտների ներկայացուցիչներից, ներառյալ:
 
-  * **Los Angeles Department of Water and Power**  
-  * **Los Angeles Department of Emergency Management** 
-  * **Los Angeles Department of Planning**
-  * **Los Angeles Fire Department**
+  * **Լոս Անջելեսի Ջրի և Էներգիայի դեպարտամենտը**
+  * **Լոս Անջելեսի Արտակարգ իրավիճակների կառավարման դեպարտամենտը**
+  * **Լոս Անջելեսի Պլանավորման դեպարտամենտը**
+  * **Լոս Անջելեսի Հրշեջների դեպարտամենտը**
 
 ----
 id: response_step_3_coming_soon
 ----
-County officials, in partnership with local, state, and federal partners, are working to improve emergency alert and warning system effectiveness countywide. This includes implementing recommendations from independent party reviews, including the McChrystal Group, the Fire Safety Research Institute, and the U.S. Congress.
+Շրջանի պաշտոնյաները, համագործակցելով տեղական, պետական և ֆեդերալ գործընկերների հետ, աշխատում են բարելավելու արտակարգ ահազանգերի և զգուշացման համակարգի արդյունավետությունը ամբողջ շրջանում: Սա ներառում է անկախ կողմերի վերանայումների առաջարկությունների իրականացում, ներառյալ ՄակՔրիստալ խումբը, Հրդեհային Անվտանգության Հետազոտական ինստիտուտը և ԱՄՆ Կոնգրեսը:
 
-Local emergency notification systems will continue to be reviewed and improved. By focusing on making alert messages more precise and area-specific, standardizing alert language, improving multilayered notification capabilities, and enhancing coordination and training among agencies to ensure timely, clear, and geographically accurate warnings in future disasters. These improvements include outside reviews of recent wildfire alerts, increased federal funding requests, and public education efforts around opt-in notification services.
+Տեղական արտակարգ ծանուցման համակարգերը կշարունակեն վերանայվել և բարելավվել: Կենտրոնանալով ահազանգերի հաղորդագրությունները ավելի ճշգրիտ և տարածքային-հատուկ դարձնելու, ահազանգերի լեզուն ստանդարտացնելու, բազմաշերտ ծանուցման հնարավորությունները բարելավելու և գործակալությունների միջև համակարգումն ու ուսուցումը բարելավելու վրա՝ ապահովելու ժամանակին, հստակ և աշխարհագրական ճշգրիտ զգուշացումներ ապագա աղետների համար: Այս բարելավումները ներառում են վերջին վայրի հրդեհների ահազանգերի արտաքին վերանայումներ, ավելացված ֆեդերալ ֆինանսավորման խնդրանքներ և հանրային կրթական ջանքեր ներգրավման ծանուցման ծառայությունների շուրջ:
 
 ----
 id: response_sidebar_3_unused
 ----
-The rules requiring 72 hours of backup power at cell towers in high fire-threat zones were implemented following the 2017 wildfires, which left thousands without phone service.
+Կանոնները, որոնք պահանջում են 72 ժամ պահեստային էներգիա բջջային աշտարակներում բարձր հրդեհային վտանգի գոտիներում, իրականացվեցին 2017 թվականի վայրի հրդեհներից հետո, որոնք հազարավոր մարդկանց թողեցին առանց հեռախոսային ծառայության:
 
 ----
 id: response_step_4
-title: Rebuilding help
+title: Վերակառուցման օգնություն
 icon: currency-orange.svg
 ----
 
 ----
 id: response_step_4_action_now
 ----
-The government has mobilized to support residents, including helping to secure $3 billion in federal assistance and loans. The **state’s CalAssist Mortgage Fund** is directing over $100 million in mortgage relief. **Governor Newsom** has secured a commitment by top lenders to offer forbearance on mortgages and signed legislation to expand forbearance to 12 months and create enforceable legal requirements. 
+Կառավարությունը մոբիլիզացրել է բնակիչներին աջակցելու համար, ներառյալ օգնելով ապահովել 3 միլիարդ դոլար ֆեդերալ օգնություն և վարկեր: **Պետության CalAssist Հիփոթեքային ֆոնդը** ուղղորդում է 100 միլիարդ դոլարից ավելի հիփոթեքային օգնություն: **Նահանգապետ Նյուսոմը** ապահովել է գլխավոր վարկատուների պարտավորությունը՝ առաջարկելու հիփոթեքների համար հանդուրժողականություն և ստորագրել է օրենսդրություն՝ ընդլայնելու հանդուրժողականությունը 12 ամսով և ստեղծելու իրագործելի իրավական պահանջներ: 
 
-The **county** has mobilized over $50 million to support families and small businesses through the **LA County Wildfire Relief Fund**. To reduce permitting costs for homeowners, the **county** has also deferred or refunded specific fees for zoning, plan checks, and permits across key agencies like **Public Works**, **Regional Planning**, **Public Health**, and **Fire**. These fees can exceed $20,000 per household. The county is expediting permit plan reviews with 14-day turnaround times for initial reviews, 7-day turnaround for additional reviews, and a goal to issue the permit in 30 days. More support has been provided as well. Section 8 vouchers are available for displaced renters. There are emergency shelter grant funds for persons experiencing homelessness in the area. Workshops have been facilitated for seniors with reverse mortgages. 
+**Շրջանը** մոբիլիզացրել է 50 միլիոն դոլարից ավելի՝ աջակցելու ընտանիքներին և փոքր բիզնեսներին **LA շրջանի Վայրի հրդեհների օգնության ֆոնդի** միջոցով: Տնատերերի համար արտոնագրային ծախսերը նվազեցնելու համար **շրջանը** նաև հետաձգել կամ վերադարձրել է կոնկրետ վճարներ գոտիների, պլանների ստուգումների և արտոնագրերի համար հիմնական գործակալություններում, ինչպիսիք են **Հանրային աշխատանքները**, **Տարածաշրջանային պլանավորումը**, **Հանրային առողջությունը** և **Հրշեջները**: Այս վճարները կարող են գերազանցել 20,000 դոլարը յուրաքանչյուր տնային տնտեսության համար: Շրջանը արագացնում է արտոնագրային պլանների վերանայումը 14-օրյա շրջադարձային ժամանակով նախնական վերանայումների համար, 7-օրյա շրջադարձային ժամանակով լրացուցիչ վերանայումների համար և նպատակ՝ արտոնագիրը թողարկել 30 օրում: Ավելի շատ աջակցություն է նույնպես տրամադրվել: Սեկցիա 8-ի վաուչերները հասանելի են տեղահանված վարձակալների համար: Արտակարգ ապաստանի դրամաշնորհային ֆոնդեր կան տարածքում անտուն մարդկանց համար: Աշխատասենյակներ են կազմակերպվել հակադարձ հիփոթեք ունեցող տարեցների համար: 
  
 
-Further, **Los Angeles Mayor Karen Bass** has issued several executive orders to streamline rebuilding and reduce costs. This includes creating the One-Stop Rebuilding Center, directing city departments to expedite building permit reviews in 30 days or less, and waiving 2025 business taxes for impacted companies.
+Ավելին, **Լոս Անջելեսի քաղաքապետ Կարեն Բասը** հրամաններ է արձակել՝ հարթակելու վերակառուցումը և նվազեցնելու ծախսերը: Սա ներառում է Միականգամյա Վերակառուցման Կենտրոնի ստեղծումը, քաղաքային դեպարտամենտներին ուղղորդելը՝ արագացնելու շինարարական արտոնագրերի վերանայումը 30 օրում կամ ավելի քիչ, և 2025 թվականի բիզնես հարկերի ազատումը տուժած ընկերությունների համար:
 
 ----
 id: response_step_4_coming_soon
 ----
-**Los Angeles County** is coordinating with the state, philanthropy, and the private sector to connect residents to services that help people navigate recovery processes, where families can receive personalized help with financing, permitting, and building to reduce barriers to recovery.
+**Լոս Անջելեսի շրջանը** համակարգում է պետության, բարեգործության և մասնավոր սեկտորի հետ՝ կապելու բնակիչներին ծառայությունների հետ, որոնք օգնում են մարդկանց նավարկել վերականգնման գործընթացները, որտեղ ընտանիքները կարող են ստանալ անհատականացված օգնություն ֆինանսավորման, արտոնագրային և շինարարության հարցերում՝ նվազեցնելու վերականգնման արգելակիչները:
 
-Additionally, we listened to renters when they asked us to not leave them out. The **Los Angeles County’s Fire Recovery Fund** includes direct rental assistance. **County supervisors** are reviewing stronger anti-gouging protections for tenants in fire zones.
+Բացի այդ, մենք լսեցինք վարձակալներին, երբ նրանք խնդրեցին մեզ չթողնել նրանց դուրս: **Լոս Անջելեսի շրջանի Հրդեհի Վերականգնման ֆոնդը** ներառում է ուղղակի վարձակալության օգնություն: **Շրջանի վերահսկիչները** վերանայում են ավելի ուժեղ հակա-շահագործման պաշտպանություններ վարձակալների համար հրդեհային գոտիներում:
 
-The **county** is working to coordinate with the **state** and **philanthropy** to identify “bridge funding” for residents to cover near-term costs to survive and begin rebuilding that are not covered by other funding sources.
+**Շրջանը** աշխատում է համակարգել **պետության** և **բարեգործության** հետ՝ նույնականացնելու "կամուրջի ֆինանսավորում" բնակիչների համար՝ ծածկելու համար կարճաժամկետ ծախսերը գոյատևելու և սկսելու վերակառուցումը, որոնք չեն ծածկվում այլ ֆինանսավորման աղբյուրներով:
 
 
 ----
 id: response_sidebar_4_unused
 ----
-Residents asked for aid without barriers during the agenda-setting phase of this engagement. **Los Angeles County** then provided language application support and direct payments through the LA Region Worker Relief Fund, including to undocumented residents. The county, with support from community groups, made sure not to exclude people. Also, the **California Department of Insurance** enforces a one-year moratorium. This means that insurers cannot cancel coverage after a declared disaster. It also requires two years of coverage for those whose homes suffered a total loss. 
+Բնակիչները խնդրեցին օգնություն առանց արգելակիչների այս ներգրավվածության օրակարգի սահմանման փուլի ընթացքում: **Լոս Անջելեսի շրջանը** այնուհետև տրամադրեց լեզվական դիմումի աջակցություն և ուղղակի վճարումներ LA տարածաշրջանի Աշխատողների օգնության ֆոնդի միջոցով, ներառյալ փաստաթղթավորված բնակիչներին: Շրջանը, համայնքային խմբերի աջակցությամբ, համոզվեց չբացառել մարդկանց: Նաև, **Կալիֆոռնիայի ապահովագրության դեպարտամենտը** կիրառում է մեկ տարվա մորատորիում: Սա նշանակում է, որ ապահովագրողները չեն կարող չեղարկել ծածկույթը աղետի հայտարարումից հետո: Այն նաև պահանջում է երկու տարվա ծածկույթ նրանց համար, ում տները կրել են ամբողջական կորուստ:
 
-The Blueprint for Rebuilding highlights the payments as a milestone in equitable recovery.
+Վերակառուցման նախագիծը ընդգծում է վճարումները որպես հավասար վերականգնման հենակետ:
 
 ----
 id: response_step_5
-title: Accelerating permitting and inspections
+title: Արտոնագրումների և ստուգումների արագացում
 icon: house-orange.svg
 ----
 
 ----
 id: response_step_5_action_now
 ----
-**Governor Newsom** has issued numerous executive orders waiving state permitting requirements to streamline rebuilding. The **city** and **county** created one-stop centers in areas hit by fire to support rebuilding activities. This includes Altadena, Calabasas, and Pacific Palisades.
+**Նահանգապետ Նյուսոմը** հրամաններ է արձակել՝ ազատելով պետական արտոնագրային պահանջները՝ հարթակելու վերակառուցումը: **Քաղաքը** և **շրջանը** ստեղծել են միականգամյա կենտրոններ հրդեհից տուժած տարածքներում՝ աջակցելու վերակառուցման գործունեությանը: Սա ներառում է Ալտադենան, Կալաբասասը և Պասիֆիկ Պալիսադները:
 
-In the **county**, the Calabasas and Altadena One-Stop Permit Centers offer residents in-person help from various county agencies, where more than 8,500 residents have been helped so far. In the city, more than 4,000 people have been helped at a One-Stop Rebuilding Center so far. County residents can apply for permits online using the EPIC-LA platform, which offers a unified application and review process to simplify navigation. The **county** is working quickly to meet growing permit demand by reallocating staff and bringing on additional contract workers as needed, as well as rolling out the AI eCheck pilot with Archistar. The county also offers a [pre-approved plan catalog](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) with designs that are in compliance with current zoning and building code requirements. Pre-approved plans and streamlined permitting processes can help homeowners rebuild more efficiently, safely, and affordably.
+**Շրջանում** Կալաբասասի և Ալտադենայի Միականգամյա Արտոնագրային Կենտրոնները առաջարկում են բնակիչներին անձնական օգնություն տարբեր շրջանային գործակալություններից, որտեղ արդեն օգնել են 8,500-ից ավելի բնակիչների: Քաղաքում արդեն օգնել են 4,000-ից ավելի մարդկանց քաղաքի Միականգամյա Վերակառուցման Կենտրոնում: Շրջանի բնակիչները կարող են դիմել արտոնագրերի համար առցանց՝ օգտագործելով EPIC-LA հարթակը, որը առաջարկում է միասնական դիմում և վերանայման գործընթաց՝ պարզեցնելու նավարկումը: **Շրջանը** արագ աշխատում է բավարարելու արտոնագրային պահանջների աճը՝ վերաբաշխելով անձնակազմը և ավելացնելով լրացուցիչ պայմանագրային աշխատողներ՝ ըստ անհրաժեշտության, ինչպես նաև գործարկելով AI eCheck փորձարկումը Archistar-ի հետ: Շրջանը նաև առաջարկում է [նախապես հաստատված պլանների կատալոգ](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) նախագծերով, որոնք համապատասխանում են ներկայիս գոտիների և շինարարական կոդի պահանջներին: Նախապես հաստատված պլանները և հարթակված արտոնագրային գործընթացները կարող են օգնել տնատերերին վերակառուցել ավելի արդյունավետ, անվտանգ և մատչելի:
 
-In a parallel effort, **Los Angeles Mayor Karen Bass** has issued executive orders directing **LA Department of Building and Safety** to pilot AI-powered pre-plan checks (Archistar eCheck AI), suspending permit and plan check fees, and launching a library of pre-approved, code-compliant designs to fast-track rebuilds in the city. More than 4,000 city residents have already been helped at the city’s One-Stop Rebuilding Center.
+Զուգահեռ ջանքերում **Լոս Անջելեսի քաղաքապետ Կարեն Բասը** հրամաններ է արձակել՝ ուղղորդելով **LA շինարարության և անվտանգության դեպարտամենտը** փորձարկելու AI-ով աշխատող նախապես պլանային ստուգումները (Archistar eCheck AI), կասեցնելով արտոնագրային և պլանային ստուգման վճարները, և գործարկելով նախապես հաստատված, կոդին համապատասխան նախագծերի գրադարան՝ արագացնելու վերակառուցումները քաղաքում: Ավելի քան 4,000 քաղաքի բնակիչներ արդեն օգնություն են ստացել քաղաքի Միականգամյա Վերակառուցման Կենտրոնում:
 
 ----
 id: response_step_5_coming_soon
 ----
-The **county** is accelerating the permitting and inspection processes through “fast-tracks”, which are streamlined lanes to expedite rebuilding while maintaining safety and code compliance. This includes expanding the pre-approved plan catalog and bundling reviews for similar projects.
+**Շրջանը** արագացնում է արտոնագրային և ստուգման գործընթացները "արագ ուղիների" միջոցով, որոնք հարթակված ուղիներ են՝ արագացնելու վերակառուցումը՝ պահպանելով անվտանգությունը և կոդի համապատասխանությունը: Սա ներառում է նախապես հաստատված պլանների կատալոգի ընդլայնումը և նմանատիպ նախագծերի վերանայումների խմբավորումը:
 
-The **county** is also increasing surge capacity by expanding the AI eCheck pilot with Archistar, growing digital and remote inspections, and adding plan checkers and inspectors to handle higher volumes.
+**Շրջանը** նաև ավելացնում է ալիքի հզորությունը՝ ընդլայնելով AI eCheck փորձարկումը Archistar-ի հետ, աճեցնելով թվային և հեռակա ստուգումները, և ավելացնելով պլանային ստուգողներ և տեսուչներ՝ կառավարելու բարձր ծավալները:
 
 ----
 id: response_sidebar_5
 ----
-**Federal**, **state**, and **local** teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history. This is thanks to unprecedented partnership between the **state** and the **U.S. Army Corps of Engineers**.
+**Ֆեդերալ**, **պետական** և **տեղական** թիմերը մաքրեցին 2025 թվականի հրդեհների աղբը միայն վեց ամսում: Սա ամենաարագ հետ-աղետային աղբի հեռացումն էր Կալիֆոռնիայի պատմության մեջ: Սա պայմանավորված է աննախադեպ համագործակցությամբ **պետության** և **ԱՄՆ-ի ճարտարագիտական կորպուսի** միջև:
 
 ----
 id: other_efforts
-title: Other efforts
-mental_health: Mental health
+title: Այլ ջանքեր
+mental_health: Հոգեկան առողջություն
 ----
-The **LA County Department of Mental Health** and local partners are helping survivors get the support they need, funding shared spaces where people can get free counseling and join trauma support groups.
+**LA շրջանի Հոգեկան առողջության դեպարտամենտը** և տեղական գործընկերները օգնում են վերապրողներին ստանալ անհրաժեշտ աջակցությունը՝ ֆինանսավորելով ընդհանուր տարածքներ, որտեղ մարդիկ կարող են անվճար խորհրդատվություն ստանալ և միանալ տրավմայի աջակցության խմբերին:
 
 ----
 id: findings_how_we_did_the_analysis
 ----
 
-### How we did the analysis
+### Ինչպես կատարեցինք վերլուծությունը
 
-<div class="sub-head">For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">check out our detailed methodology and comments analysis</a>.</div>
+<div class="sub-head">Ավելի խորը նայելու համար, <a href="/hy/lafires-recovery/agenda-setting-data-insights/">դիտեք մեր մանրամասն մեթոդաբանությունը և մեկնաբանությունների վերլուծությունը</a>:</div>
 
-We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
+Մենք օգտագործեցինք Claude 3.5 Sonnet գեներատիվ AI մոդելը՝ օգնելու գտնել թեմաներ և միտումներ մեկնաբանություններում: Մենք հարցերով խթանեցինք մոդելը՝ օգնելու մեզ հասկանալ, թե ինչ էին մտածում մարդիկ: Սա արդյունավետ միջոց էր տեսնելու, թե ինչպես են մարդիկ համաձայնվել կամ չհամաձայնվել կարևոր թեմաների վերաբերյալ:
 
-We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
+Մենք փորձարկեցինք տարբեր եղանակներ հարցերի գրելու համար: Մենք կենտրոնացանք այն պատասխանների վրա, որոնք հաճախ էին հայտնվում, անկախ նրանից, թե ինչպես էինք հարցեր տալիս:
 
-**Sample prompts**
+**Նմուշային հարցեր**
 
-“I would like you to analyze a set of qualitative survey responses using extended thinking.” 
+"Ես կցանկանայի, որ դուք վերլուծեք որակական հարցման պատասխանների մի շարք՝ օգտագործելով ընդլայնված մտածողություն:"
 
-“Start by doing an initial exploration of the data: First, read through the entire dataset without categorizing or labeling. Note your immediate observations and impressions about what stands out to you. Identify recurring words, phrases, and sentiments that appear across multiple responses. Share what surprised you or caught your attention in this initial review.”
+"Սկսեք տվյալների նախնական ուսումնասիրությամբ: Նախ, կարդացեք ամբողջ տվյալների հավաքածուն՝ առանց դասակարգելու կամ պիտակավորելու: Նշեք ձեր անմիջական դիտարկումները և տպավորությունները այն մասին, ինչը ձեզ աչքի է ընկնում: Նույնականացրեք կրկնվող բառեր, արտահայտություններ և զգացմունքներ, որոնք հայտնվում են բազմաթիվ պատասխաններում: Կիսվեք այն մասին, ինչը ձեզ զարմացրեց կամ գրավեց ձեր ուշադրությունը այս նախնական վերանայման ժամանակ:"
 
 ----
 id: partners
 ----
 
-## Our partners
+## Մեր գործընկերները
 
-California’s Office of Data and Innovation partnered with disaster recovery experts and advocates for deliberative democracy to carry out this work. Our partners also helped shape the actions that will come from this work. 
+Կալիֆոռնիայի Տվյալների և Նորարարության գրասենյակը համագործակցել է աղետների վերականգնման փորձագետների և խորհրդակցական ժողովրդավարության պաշտպանների հետ՝ իրականացնելու այս աշխատանքը: Մեր գործընկերները նաև օգնել են ձևավորել այն գործողությունները, որոնք կգան այս աշխատանքից:
 
-Our partners and advisors for this initiative include:
+Այս նախաձեռնության մեր գործընկերները և խորհրդատուները ներառում են:

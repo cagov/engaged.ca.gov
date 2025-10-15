@@ -1,6 +1,6 @@
 ---
-title: LA aligns on recovery plans
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA.
+title: 洛杉磯就復原計劃達成一致
+description: 參與加州是一個線上平台，讓加州人更容易在政府中發聲。參與加州的第一個主題是從洛杉磯野火中復原。此頁面顯示重建洛杉磯的關鍵議題。
 layout: mmmd-lafires-action-plan
 parentid: lafires-recovery
 keywords:
@@ -33,95 +33,95 @@ example_quoted_text: "this is quoted text:"
 
 ----
 id: findings_overview
-buttonText: Skip to the action plan
+buttonText: 跳轉到行動計劃
 ----
 
-# LA aligns on recovery plans
+# 洛杉磯就復原計劃達成一致
 
-In a first-of-its-kind community engagement process, more than 3,000 community members were invited to town halls for the digital age. Participants contributed across 2 phases to produce an action plan to recover from the devastating Los Angeles wildfires in January 2025. 
+在首創的社區參與過程中，超過3,000名社區成員被邀請參加數位時代的市政廳會議。參與者在兩個階段中貢獻，制定從2025年1月毀滅性洛杉磯野火中復原的行動計劃。
 
-The action plan, developed through online deliberation sessions over a 6-month period, reflects priorities from those who were affected by the Eaton and Palisades fires. The priorities they set – focusing on immediate community support and long-term infrastructure improvements – will guide state and local officials toward full recovery.
+這個行動計劃通過為期6個月的線上審議會議制定，反映了受伊頓和帕利塞茲火災影響者的優先事項。他們設定的優先事項——專注於即時社區支持和長期基礎設施改善——將指導州和地方官員實現完全復原。
 
 
 ----
 id: findings_narrative_step_1
-title: Agenda setting
-button_text: Read about the agenda setting phase
+title: 議程設定
+button_text: 閱讀議程設定階段
 ----
 
-## Residents shared their concerns and ideas
+## 居民分享他們的關切和想法
 
-After the severe wildfires in Los Angeles, hundreds of community members met online to discuss recovery priorities.
+在洛杉磯嚴重的野火之後，數百名社區成員在線上會面討論復原優先事項。
 
 ----
 id: findings_narrative_step_2
-title: Review and planning
-button_text: Learn about our partners
+title: 審查和規劃
+button_text: 了解我們的合作夥伴
 nbr_phrases: 6
 translator_note: USE slash symbol for line breaks, keep these phrases to two lines!
-phrase_1: Utilities
-phrase_2: Community/Support
-phrase_3: Financial/support
-phrase_4: Emergency/preparedness
-phrase_5: Fire/proofing
-phrase_6: Building/permits
+phrase_1: 公用事業
+phrase_2: 社區/支持
+phrase_3: 金融/支持
+phrase_4: 緊急/準備
+phrase_5: 防火
+phrase_6: 建築/許可
 ----
 
 
 
-## Individual ideas turned into shared data
+## 個人想法轉化為共享數據
 
-A group of policy, disaster relief, and community leaders used their expertise and generative AI to turn the 1,289 comments submitted in agenda setting into 19 actionable policy options.
+一組政策、救災和社區領導者利用他們的專業知識和生成式AI將議程設定階段提交的1,289條評論轉化為19個可操作的政策選項。
 
 ----
 id: findings_narrative_step_3
-title: Deliberation
+title: 審議
 ----
 
-## The community voted on all 19 options
+## 社區對所有19個選項進行了投票
 
-New and returning participants ranked these options, again using an online platform where they could discuss and collaborate.
+新參與者和回歸參與者對這些選項進行了排名，再次使用在線平台進行討論和協作。
 
 ----
 id: consensus_chart_topics
 nbr_topics: 19
-topic_1: Increased housing density and expedited permits
-topic_2: Temporary housing
-topic_3: Prioritize families
-topic_4: Fire-resistant and water-friendly demonstration gardens
-topic_5: Mandatory home ember protection standards
-topic_6: Accelerated ADU and duplex permitting
-topic_7: Mandatory greywater systems for new buildings
-topic_8: Comprehensive homeowner education program
-topic_9: Emergency communication hubs in communities
-topic_10: Defensible space tax incentives
-topic_11: Expanded construction training programs
-topic_12: Pre-approved fire-resistant building designs
-topic_13: Enhanced fire detection infrastructure
-topic_14: Give financial assistance to long-term residents
-topic_15: Accelerating permitting and inspections
-topic_16: Rebuilding help
-topic_17: Stronger emergency notifications and alerts
-topic_18: Water for firefighting
-topic_19: Undergrounding power lines and improving equipment safety
+topic_1: 增加住房密度和快速許可
+topic_2: 臨時住房
+topic_3: 家庭優先
+topic_4: 防火和親水示範花園
+topic_5: 房屋強制餘燼保護標準
+topic_6: 快速ADU和雙拼房許可
+topic_7: 新建築強制灰水系統
+topic_8: 房主綜合教育計劃
+topic_9: 社區緊急通信中心
+topic_10: 防禦空間稅收激勵
+topic_11: 擴展建築培訓計劃
+topic_12: 預批准防火建築設計
+topic_13: 增強火災檢測基礎設施
+topic_14: 為長期居民提供金融援助
+topic_15: 加速許可和檢查
+topic_16: 重建幫助
+topic_17: 更強的緊急通知和警報
+topic_18: 消防用水
+topic_19: 地下化電力線路和改善設備安全
 ----
 
 
 ----
 id: findings_consensus_watch_intro
-title_h2: Community alignment
-caveat: "Support is the average score of the votes, where the score of strongly supporting an option is 100, and the score of strongly opposing an option is 0."
+title_h2: 社區對齊
+caveat: "支持是投票的平均分數，其中強烈支持選項的分數是100，強烈反對選項的分數是0。"
 ----
-Each dot represents one vote. As the visualization changes, you can track the average level of support for each issue. Topics are arranged from least community support (left) to most community support (right).
+每個點代表一票。隨著可視化變化，您可以跟踪每個問題的平均支持水平。主題按從最少社區支持（左）到最多社區支持（右）排列。
 
 ----
 id: findings_consensus_watch_explore
-topic_number_template: "Topic <NUM> of <TOTAL>"
+topic_number_template: "主題 <NUM> 共 <TOTAL>"
 translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to insert numbers into the phrase
 translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
-label_1: Increased housing density and expedited permits
-percent_default: 92% of participants supported this topic
-percent_template: <PERCENT>% average support
+label_1: 增加住房密度和快速許可
+percent_default: 92%的參與者支持這個主題
+percent_template: <PERCENT>%平均支持
 translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
 ----
 
@@ -129,34 +129,34 @@ translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the 
 ----
 id: findings_consensus_sentiment_chart
 nbr_labels: 3
-label_1: Strongly oppose
-label_2: Neutral
-label_3: Strongly support
+label_1: 強烈反對
+label_2: 中性
+label_3: 強烈支持
 ----
 
 ----
 id: findings_narrative_top_options_intro
-title: Residents weighed in to find agreement on the top 5 solutions
+title: 居民參與尋找前5個解決方案的共識
 nbr_values: 2
-label_1: Comments and replies
-label_2: Votes
+label_1: 評論和回覆
+label_2: 投票
 value_1: 1,504
 value_2: 3,977
 nbr_options: 5
 ----
 
-The engagement was notable. Neighbors were able to share their thoughts and replied to one another. The 1,504 participant comments received didn’t vanish into a black box. People talked about the solutions, effectively working together to define priorities.
+參與度值得注意。鄰居們能夠分享他們的想法並相互回覆。收到的1,504條參與者評論沒有消失在黑盒子中。人們談論解決方案，有效地合作定義優先事項。
 
 ----
 id: findings_narrative_top_options
-results_header: Action plan
-results_description: "The plan, which includes 5 focus areas for recovery – reveals a community united around building fire-resilient infrastructure for the future and providing support to the community now:"
+results_header: 行動計劃
+results_description: "該計劃包括5個恢復重點領域——揭示了一個圍繞為未來建設防火基礎設施和現在為社區提供支持而團結的社區："
 nbr_options: 5
-option_label_1: Bury power lines and equipment safety measures
-option_label_2: Improve water systems for firefighting
-option_label_3: Strengthen emergency communication networks
-option_label_4: Help people find financial support programs
-option_label_5: Dedicate teams to support permitting
+option_label_1: 埋設電力線路和設備安全措施
+option_label_2: 改善消防用水系統
+option_label_3: 加強緊急通信網絡
+option_label_4: 幫助人們找到金融支持計劃
+option_label_5: 專門團隊支持許可
 option_icon_1: circle-blue-1.png
 option_icon_2: circle-blue-2.png
 option_icon_3: circle-blue-3.png
@@ -171,39 +171,39 @@ option_icon_5: circle-blue-5.png
 ----
 id: findings_topic_chart
 nbr_labels: 3
-label_1: Strongly oppose
-label_2: Neutral
-label_3: Strongly support
+label_1: 強烈反對
+label_2: 中性
+label_3: 強烈支持
 ----
 
 
 
 ----
 id: findings_top_discussions
-title_h2: Analyze the top 5 from all angles
-solution_details_label: "Solution details"
-show_comments_button: Show comments
-hide_comments_button: Hide comments
+title_h2: 從各個角度分析前5名
+solution_details_label: "解決方案詳情"
+show_comments_button: 顯示評論
+hide_comments_button: 隱藏評論
 nbr_tally_items: 2
-label_1: Average support
-label_2: Comments
-explore_the_comments: Explore the comments
-filter_the_comments: "Comments can be filtered by how people voted on a topic: support, neutral, oppose, or no vote. Note: The comments themselves may not reflect how a person voted on a topic. In some cases, people commented on a topic without casting a vote."
-label_viewpoint: "Viewpoint:"
-label_all_comments: "All comments"
-label_oppose: "Oppose"
-label_neutral: "Neutral"
-label_support: "Support"
-label_novote: "No vote"
-filter_comments_by_vote: Filter comments by their corresponding votes. We do not translate comments; they are displayed in their original language. 
+label_1: 平均支持
+label_2: 評論
+explore_the_comments: 探索評論
+filter_the_comments: "評論可以按人們對主題的投票方式過濾：支持、中性、反對或無投票。注意：評論本身可能不反映一個人對主題的投票方式。在某些情況下，人們對主題發表評論而沒有投票。"
+label_viewpoint: "觀點："
+label_all_comments: "所有評論"
+label_oppose: "反對"
+label_neutral: "中性"
+label_support: "支持"
+label_novote: "無投票"
+filter_comments_by_vote: 按相應投票過濾評論。我們不翻譯評論；它們以其原始語言顯示。 
 ----
 
-Every vote was counted and weighted to achieve consensus on the top 5 solutions California should explore. Between the fire zones, votes and comments looked a little different, use the toggle to see how opinons from the Palisades differed from those in the Eaton fire zone.
+每一票都被計算和加權，以就加利福尼亞應該探索的前5個解決方案達成共識。在火災區域之間，投票和評論看起來略有不同，使用切換開關查看帕利塞茲的觀點與伊頓火災區域的觀點有何不同。
 
 ----
 id: discussion_1
-title: Bury power lines and equipment safety measures
-topic_description: Bury power lines whenever possible and deploy mitigation strategies to prevent ignition from equipment failures. This comprehensive approach would address one of the major causes of wildfire ignition in California.
+title: 埋設電力線路和設備安全措施
+topic_description: 盡可能埋設電力線路並部署緩解策略以防止設備故障引發火災。這種綜合方法將解決加利福尼亞野火起火的主要原因之一。
 nbr_comments: 3
 value_1: 92%
 value_2: 90
@@ -212,8 +212,8 @@ chart_topic_index: 19
 
 ----
 id: discussion_2
-title: Improve water systems for firefighting
-topic_description: Upgrade water systems to meet modern fire flow requirements and ensure there are enough fire hydrants in all areas. This would improve the water supply and pressure needed for effective firefighting operations.
+title: 改善消防用水系統
+topic_description: 升級水系統以滿足現代消防流量要求，並確保所有區域都有足夠的消防栓。這將改善有效消防作業所需的水供應和壓力。
 value_1: 87%
 value_2: 74
 chart_topic_index: 18
@@ -221,8 +221,8 @@ chart_topic_index: 18
 
 ----
 id: discussion_3
-title: Strengthen emergency communication networks
-topic_description: Promote communication infrastructure that allows first responders and residents to stay connected even when cell towers or fiber lines fail, such as mesh internet networks that can operate independently during disasters.
+title: 加強緊急通信網絡
+topic_description: 推廣通信基礎設施，使第一響應者和居民即使在蜂窩塔或光纖線路故障時也能保持連接，例如在災難期間可以獨立運行的網狀互聯網網絡。
 value_1: 86%
 value_2: 59
 chart_topic_index: 17
@@ -230,8 +230,8 @@ chart_topic_index: 17
 
 ----
 id: discussion_4
-title: Help people find financial support programs
-topic_description: Create a comprehensive catalog of financial support programs and organizations available to help with rebuilding efforts. This directory would connect fire-affected residents with grants, loans, and aid programs, while also partnering with trusted financial organizations willing to assist with recovery funding.
+title: 幫助人們找到金融支持計劃
+topic_description: 創建一個全面的金融支持計劃和組織目錄，以幫助重建工作。這個目錄將把受火災影響的居民與贈款、貸款和援助計劃聯繫起來，同時與願意協助恢復資金的可信金融組織合作。
 value_1: 82%
 value_2: 59
 chart_topic_index: 16
@@ -239,8 +239,8 @@ chart_topic_index: 16
 
 ----
 id: discussion_5
-title: Dedicate teams to support permitting
-topic_description: Establish teams of dedicated staff at triage centers to quickly guide fire-affected communities through permitting processes. These specialized teams would provide personalized assistance to residents navigating complex rebuilding requirements.
+title: 專門團隊支持許可
+topic_description: 在分診中心建立專門工作人員團隊，快速指導受火災影響的社區通過許可程序。這些專業團隊將為導航複雜重建要求的居民提供個性化協助。
 value_1: 82%
 value_2: 73
 chart_topic_index: 15
@@ -249,256 +249,255 @@ chart_topic_index: 15
 
 ----
 id: topic_comments_scroller 
-label: Comments on this topic
-desc: Scroll to see the comments about this topic (shown in their original language)
+label: 關於此主題的評論
+desc: 滾動查看關於此主題的評論（以其原始語言顯示）
 ----
 
 ----
 id: topic_data_vis
-title: Explore the votes
-learn_button_label: Learn about the actions being taken
-desc: Each dot represents an individual’s vote. The total number of dots corresponds to the total number of votes cast on a particular topic. 
-download_text: Download a CSV of participant comments
+title: 探索投票
+learn_button_label: 了解正在採取的行動
+desc: 每個點代表個人的投票。點的總數對應於特定主題上的投票總數。
+download_text: 下載參與者評論的CSV文件
 ----
 
 ----
 id: conversation_groups
 nbr_groups: 7
-group_label_1: Strongly opposed
-group_label_2: Opposed
-group_label_3: Somewhat opposed
-group_label_4: Neutral
-group_label_5: Somewhat supportive
-group_label_6: Supportive
-group_label_7: Strongly supportive
+group_label_1: 強烈反對
+group_label_2: 反對
+group_label_3: 有些反對
+group_label_4: 中性
+group_label_5: 有些支持
+group_label_6: 支持
+group_label_7: 強烈支持
 ----
 
 ----
 id: findings_alignment_section
 ----
-## Noteworthy alignment 
+## 值得注意的對齊
 
-People from different fire zones showed surprising consistency. Residents impacted by Eaton and Palisades ranked the top needs the same: bury power lines underground, improve local water systems for firefighting, and ensure timely alerts when there is an emergency.
+來自不同火災區域的人們表現出驚人的一致性。受伊頓和帕利塞茲影響的居民對頂級需求排名相同：將電力線路埋入地下，改善當地消防用水系統，並確保緊急情況時及時警報。
 
+這表明，無論地理分離如何，社區對基本恢復優先事項都有廣泛共識。
 
-This shows that regardless of geographic separation, there is community-wide agreement on essential recovery priorities.
+**這組優先事項講述了一個清晰的故事。**
 
-**This group of priorities tells a clear story.**
+居民既需要恢復的即時支持，也需要防火基礎設施的長期投資。他們還需要支持服務簡化，以滿足社區的緊急重建需求。
 
-Residents want both immediate support for recovery and long-term investments in fire-resistant infrastructure. They also need support services to be streamlined to serve the community's urgent rebuilding needs.
-
-This engagement allowed us to turn personal experiences into real policy guidance.
+這種參與使我們能夠將個人經驗轉化為真正的政策指導。
 
 ----
 id: findings_alignment_section_sidebar
 ----
 
-**Building on shared support**
+**建立在共同支持的基礎上**
 
-The process didn't just gather opinions; it built confidence and momentum as we move forward together.
+這個過程不僅僅是收集意見；它建立了信心和動力，讓我們一起前進。
 
-While participants arrived with mixed feelings—only 24% started optimistic while 48% felt pessimistic—the outlook shifted through the process. 
+雖然參與者帶著複雜的感情到達——只有24%開始樂觀，而48%感到悲觀——但通過這個過程，前景發生了轉變。
 
-More than a quarter of participants (27%) emerged more optimistic about LA fires recovery.
+超過四分之一的參與者（27%）對洛杉磯火災恢復變得更加樂觀。
 
 ----
 id: signup_plea
-button_text: Sign up
+button_text: 註冊
 ----
-## Sign up to remain engaged in important work
+## 註冊以繼續參與重要工作
 
-Give us your email to learn about upcoming opportunities. 
+給我們您的電子郵件以了解即將到來的機會。 
 
 ----
 id: response_intro
 ----
 
-## How we’re responding to community needs
+## 我們如何回應社區需求
 
-Residents spoke up during both the agenda setting phase and our later deliberations. **State**, **county**, **city**, **utilities**, and **federal partners** have responded with tangible actions. And more are on the way.
+居民在議程設定階段和後來的審議中都發聲了。**州**、**縣**、**市**、**公用事業**和**聯邦合作夥伴**已經用具體行動回應。還有更多正在路上。
 
 ----
 id: response_steps
-action_now: Action now
-coming_soon: Coming soon
-did_you_know: Did you know?
+action_now: 現在行動
+coming_soon: 即將到來
+did_you_know: 你知道嗎？
 nbr_steps: 5
-anchor_link_text: "Take me to people’s votes and comments on this topic"
+anchor_link_text: "帶我去看人們對此主題的投票和評論"
 ----
 
 
 ----
 id: response_step_1
-title: Undergrounding power lines and improving equipment safety
+title: 地下化電力線路和改善設備安全
 icon: construction-orange.svg
 ----
 
 ----
 id: response_step_1_action_now
 ----
-The **county** and **state** are working with power and telecommunications companies to plan to put more utilities underground. **Governor Gavin Newsom** signed an executive order in March 2025 to fast-track this work.  
+**縣**和**州**正在與電力和電信公司合作，計劃將更多公用設施埋入地下。**州長加文·紐森**於2025年3月簽署了一項行政命令，以加快這項工作。
 
-Additionally, **Los Angeles Mayor Karen Bass** issued an executive order to help Palisades residents expedite rebuilding with fire-resistant materials and climate-resilient infrastructure. This includes hardening utilities for power reliability during severe weather.
+此外，**洛杉磯市長卡倫·巴斯**發布了一項行政命令，幫助帕利塞茲居民使用防火材料和氣候適應性基礎設施加快重建。這包括在惡劣天氣期間加強公用事業以確保電力可靠性。
 
 ----
 id: response_step_1_coming_soon
 ----
-Utilities are working closely with local leaders from **Los Angeles County** and the **city**. Construction is already underway in Malibu, Altadena, and Pacific Palisades. It is expected to continue for several more years. The **state** and **county** are calling for a coordinated approach to undergrounding power and telecom lines that will save money, cut down on time, and minimize disruptions from multiple work crews.
+公用事業公司正在與**洛杉磯縣**和**市**的當地領導人密切合作。建設已經在馬里布、阿爾塔德納和太平洋帕利塞茲進行。預計將持續數年。**州**和**縣**正在呼籲協調方法將電力和電信線路地下化，這將節省資金、減少時間並最大限度地減少多個工作隊伍造成的干擾。
 
-Beyond undergrounding, additional strategies are important to mitigate fire hazards, such as vegetation management and resilient rebuilding. Property owners and design/building professionals can look to the **county’s** [Resilient Rebuild Resource Guide](https://recovery.lacounty.gov/resilient-rebuilding/) for information and resources for planning, designing, and constructing a high-performance building more resilient to fire risks.
+除了地下化之外，其他策略對於減輕火災危險也很重要，如植被管理和彈性重建。物業所有者和設計/建築專業人員可以參考**縣**的[彈性重建資源指南](https://recovery.lacounty.gov/resilient-rebuilding/)獲取規劃、設計和建造更能抵禦火災風險的高性能建築的信息和資源。
 
 ----
 id: response_sidebar_1_unused
 ----
-When the **Town of Paradise** was rebuilt, it worked with **PG&E**, **telecom providers**, and **state regulators** to put at-risk power lines underground. Los Angeles is using this and similar safety improvements as a model and guide for its own recovery.
+當**天堂鎮**重建時，它與**PG&E**、**電信提供商**和**州監管機構**合作，將處於危險中的電力線路埋入地下。洛杉磯正在使用這種和類似的安全改進作為自己恢復的模型和指南。
 
 ----
 id: response_step_2
-title: Water for firefighting
+title: 消防用水
 icon: hydrant-orange.svg
 ----
 
 ----
 id: response_step_2_action_now
 ----
-The **Los Angeles Department of Water and Power** has filled over 80 water storage facilities to their highest level. Backup pumps are fueled and ready at each pumping station as a backup to the main pumps. They have filled their five water tenders, each with at least 4,000 gallons, and have them on standby for the **Los Angeles Fire Department** (LAFD) if needed. Four reservoirs hold billions of gallons of non-potable water for aerial firefighting.
+**洛杉磯水電部**已將80多個儲水設施填滿至最高水位。備用泵已加滿燃料並在每個泵站準備就緒，作為主泵的備用。他們已填滿五輛水車，每輛至少4,000加侖，並在需要時為**洛杉磯消防局**(LAFD)待命。四個水庫儲存數十億加侖的非飲用水用於空中消防。
 
-In the Pacific Palisades area, two local reservoirs are dedicated to aerial firefighting: the Encino Reservoir and the Lower Stone Canyon Reservoir.
+在太平洋帕利塞茲地區，兩個當地水庫專門用於空中消防：恩西諾水庫和下石峽谷水庫。
 
-The **Los Angeles County Fire Department** has worked with the **Los Angeles County Department of Public Works** and **7 local water companies** to assess the fire flow from the existing water systems in the fire areas. To facilitate the rebuilding process, **LA County Fire** will amend the 2026 Los Angeles County Fire Code to meet the current State Fire Code requirements. This code amendment will allow people to rebuild their homes while the water system is upgraded and improved. **LA County Fire** will continue to regularly staff and strategically place county-owned pre-positioned engines during high-fire risk periods.
+**洛杉磯縣消防局**與**洛杉磯縣公共工程部**和**7家當地水務公司**合作，評估火災區域現有水系統的消防流量。為了促進重建過程，**LA縣消防局**將修訂2026年洛杉磯縣消防法規，以滿足當前州消防法規要求。這一法規修訂將允許人們在升級和改進水系統的同時重建家園。**LA縣消防局**將在高火災風險期間繼續定期配備人員並戰略性地部署縣擁有的預置發動機。
 
-Additionally, a new streamlined process has been developed that eliminates the need for homeowners to be involved in the fire flow form process. The **water companies**, **LA County Public Works**, and **LA County Fire** will handle this new process, which will streamline the timeline, eliminate the need for homeowners to complete the process, and save homeowners money.
+此外，已開發了一個新的簡化流程，消除了房主參與消防流量表單流程的需要。**水務公司**、**LA縣公共工程部**和**LA縣消防局**將處理這個新流程，這將簡化時間表，消除房主完成流程的需要，並為房主節省資金。
 
 ----
 id: response_step_2_coming_soon
 ----
-Water districts have identified damages and applied for funding (e.g., FEMA PA) to rebuild. The **state** and **county** have committed to supporting the districts to rebuild and improve systems.
+水務區已確定損害並申請資金（如FEMA PA）進行重建。**州**和**縣**已承諾支持各區重建和改進系統。
 
-The [LA County Forward: Blueprint for Rebuilding](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) says these upgrades are critical infrastructure investments for long-term safety.
+[LA縣前進：重建藍圖](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/)表示這些升級是長期安全的關鍵基礎設施投資。
 
 ----
 id: response_step_3
-title: Stronger emergency notifications and alerts
+title: 更強的緊急通知和警報
 icon: communication-orange.svg
 ----
 
 ----
 id: response_step_3_action_now
 ----
-Local officials in **Los Angeles City** and **County** have taken several concrete steps to improve how emergency alerts are issued following widespread confusion during the Eaton and Palisades fires. The **Los Angeles County Board of Supervisors** ordered an independent, external review of the emergency alert and evacuation notification systems, retaining outside experts to conduct a comprehensive after-action analysis and report back every 90 days.
+**洛杉磯市**和**縣**的當地官員已採取多項具體措施，改善在伊頓和帕利塞茲火災期間廣泛混亂後如何發布緊急警報。**洛杉磯縣監事會**下令對緊急警報和疏散通知系統進行獨立的外部審查，聘請外部專家進行全面的事後分析並每90天報告一次。
 
-The **city's Emergency Management Department** and **County Coordinated Joint Information Center** are now prioritizing enhanced training, more rigorous system tests, improved geographic targeting, clearer message wording, and stronger coordination for future life-safety emergencies.
+**市應急管理部**和**縣協調聯合信息中心**現在優先考慮加強培訓、更嚴格的系統測試、改進地理定位、更清晰的消息措辭，以及為未來生命安全緊急情況提供更強的協調。
 
-The **city** is coordinating a biweekly steering committee focused on emergency communication to discuss blockers and progress. The group is made up of representatives from city departments, including the:  
+**市**正在協調一個專注於緊急通信的雙週指導委員會，討論障礙和進展。該小組由市各部門的代表組成，包括：
 
-  * **Los Angeles Department of Water and Power**  
-  * **Los Angeles Department of Emergency Management** 
-  * **Los Angeles Department of Planning**
-  * **Los Angeles Fire Department**
+  * **洛杉磯水電部**  
+  * **洛杉磯應急管理部** 
+  * **洛杉磯規劃部**
+  * **洛杉磯消防局**
 
 ----
 id: response_step_3_coming_soon
 ----
-County officials, in partnership with local, state, and federal partners, are working to improve emergency alert and warning system effectiveness countywide. This includes implementing recommendations from independent party reviews, including the McChrystal Group, the Fire Safety Research Institute, and the U.S. Congress.
+縣官員與地方、州和聯邦合作夥伴合作，正在努力改善全縣緊急警報和警告系統的有效性。這包括實施獨立方審查的建議，包括麥克克里斯塔爾集團、消防安全研究所和美國國會。
 
-Local emergency notification systems will continue to be reviewed and improved. By focusing on making alert messages more precise and area-specific, standardizing alert language, improving multilayered notification capabilities, and enhancing coordination and training among agencies to ensure timely, clear, and geographically accurate warnings in future disasters. These improvements include outside reviews of recent wildfire alerts, increased federal funding requests, and public education efforts around opt-in notification services.
+地方緊急通知系統將繼續審查和改進。通過專注於使警報消息更加精確和針對特定區域、標準化警報語言、改進多層通知能力，以及加強機構間的協調和培訓，以確保在未來災難中及時、清晰和地理上準確的警告。這些改進包括對最近野火警報的外部審查、增加的聯邦資金請求，以及圍繞選擇加入通知服務的公共教育工作。
 
 ----
 id: response_sidebar_3_unused
 ----
-The rules requiring 72 hours of backup power at cell towers in high fire-threat zones were implemented following the 2017 wildfires, which left thousands without phone service.
+要求高火災威脅區域蜂窩塔72小時備用電源的規則是在2017年野火後實施的，那次野火使數千人失去電話服務。
 
 ----
 id: response_step_4
-title: Rebuilding help
+title: 重建幫助
 icon: currency-orange.svg
 ----
 
 ----
 id: response_step_4_action_now
 ----
-The government has mobilized to support residents, including helping to secure $3 billion in federal assistance and loans. The **state’s CalAssist Mortgage Fund** is directing over $100 million in mortgage relief. **Governor Newsom** has secured a commitment by top lenders to offer forbearance on mortgages and signed legislation to expand forbearance to 12 months and create enforceable legal requirements. 
+政府已動員支持居民，包括幫助獲得30億美元的聯邦援助和貸款。**州的CalAssist抵押貸款基金**正在指導超過1億美元的抵押貸款減免。**州長紐森**已獲得頂級貸款機構的承諾，提供抵押貸款寬限期，並簽署立法將寬限期延長至12個月並創建可執行的法律要求。 
 
-The **county** has mobilized over $50 million to support families and small businesses through the **LA County Wildfire Relief Fund**. To reduce permitting costs for homeowners, the **county** has also deferred or refunded specific fees for zoning, plan checks, and permits across key agencies like **Public Works**, **Regional Planning**, **Public Health**, and **Fire**. These fees can exceed $20,000 per household. The county is expediting permit plan reviews with 14-day turnaround times for initial reviews, 7-day turnaround for additional reviews, and a goal to issue the permit in 30 days. More support has been provided as well. Section 8 vouchers are available for displaced renters. There are emergency shelter grant funds for persons experiencing homelessness in the area. Workshops have been facilitated for seniors with reverse mortgages. 
+**縣**已動員超過5000萬美元通過**LA縣野火救濟基金**支持家庭和小企業。為了減少房主的許可成本，**縣**還推遲或退還了分區、計劃檢查和許可的特定費用，涉及**公共工程**、**區域規劃**、**公共衛生**和**消防**等關鍵機構。這些費用可能超過每戶20,000美元。縣正在加快許可計劃審查，初步審查14天週轉時間，額外審查7天週轉時間，目標是在30天內頒發許可。還提供了更多支持。第8節代金券可供流離失所的租戶使用。該地區有無家可歸者的緊急庇護所補助資金。為有反向抵押貸款的老年人舉辦了研討會。 
  
 
-Further, **Los Angeles Mayor Karen Bass** has issued several executive orders to streamline rebuilding and reduce costs. This includes creating the One-Stop Rebuilding Center, directing city departments to expedite building permit reviews in 30 days or less, and waiving 2025 business taxes for impacted companies.
+此外，**洛杉磯市長卡倫·巴斯**已發布多項行政命令，以簡化重建並降低成本。這包括創建一站式重建中心，指示市部門在30天或更短時間內加快建築許可審查，並免除受影響公司的2025年營業稅。
 
 ----
 id: response_step_4_coming_soon
 ----
-**Los Angeles County** is coordinating with the state, philanthropy, and the private sector to connect residents to services that help people navigate recovery processes, where families can receive personalized help with financing, permitting, and building to reduce barriers to recovery.
+**洛杉磯縣**正在與州、慈善機構和私營部門協調，將居民與服務聯繫起來，幫助人們導航恢復過程，家庭可以獲得融資、許可和建設的個性化幫助，以減少恢復障礙。
 
-Additionally, we listened to renters when they asked us to not leave them out. The **Los Angeles County’s Fire Recovery Fund** includes direct rental assistance. **County supervisors** are reviewing stronger anti-gouging protections for tenants in fire zones.
+此外，當租戶要求我們不要忽視他們時，我們聽取了他們的意見。**洛杉磯縣的火災恢復基金**包括直接租金援助。**縣監事**正在審查火災區域租戶的更強反哄抬價格保護措施。
 
-The **county** is working to coordinate with the **state** and **philanthropy** to identify “bridge funding” for residents to cover near-term costs to survive and begin rebuilding that are not covered by other funding sources.
+**縣**正在與**州**和**慈善機構**協調，為居民確定"橋樑資金"，以支付其他資金來源未涵蓋的生存和開始重建的近期成本。
 
 
 ----
 id: response_sidebar_4_unused
 ----
-Residents asked for aid without barriers during the agenda-setting phase of this engagement. **Los Angeles County** then provided language application support and direct payments through the LA Region Worker Relief Fund, including to undocumented residents. The county, with support from community groups, made sure not to exclude people. Also, the **California Department of Insurance** enforces a one-year moratorium. This means that insurers cannot cancel coverage after a declared disaster. It also requires two years of coverage for those whose homes suffered a total loss. 
+居民在此參與的議程設定階段要求無障礙援助。**洛杉磯縣**然後通過LA地區工人救濟基金提供語言申請支持和直接付款，包括對無證居民。縣在社區團體的支持下，確保不排除任何人。此外，**加州保險部**執行一年的暫停期。這意味著保險公司不能在宣布災難後取消承保。它還要求那些房屋遭受完全損失的人提供兩年的承保。
 
-The Blueprint for Rebuilding highlights the payments as a milestone in equitable recovery.
+重建藍圖強調這些付款是公平恢復的里程碑。
 
 ----
 id: response_step_5
-title: Accelerating permitting and inspections
+title: 加速許可和檢查
 icon: house-orange.svg
 ----
 
 ----
 id: response_step_5_action_now
 ----
-**Governor Newsom** has issued numerous executive orders waiving state permitting requirements to streamline rebuilding. The **city** and **county** created one-stop centers in areas hit by fire to support rebuilding activities. This includes Altadena, Calabasas, and Pacific Palisades.
+**州長紐森**已發布多項行政命令，免除州許可要求以簡化重建。**市**和**縣**在受火災影響的地區創建了一站式中心以支持重建活動。這包括阿爾塔德納、卡拉巴薩斯和太平洋帕利塞茲。
 
-In the **county**, the Calabasas and Altadena One-Stop Permit Centers offer residents in-person help from various county agencies, where more than 8,500 residents have been helped so far. In the city, more than 4,000 people have been helped at a One-Stop Rebuilding Center so far. County residents can apply for permits online using the EPIC-LA platform, which offers a unified application and review process to simplify navigation. The **county** is working quickly to meet growing permit demand by reallocating staff and bringing on additional contract workers as needed, as well as rolling out the AI eCheck pilot with Archistar. The county also offers a [pre-approved plan catalog](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) with designs that are in compliance with current zoning and building code requirements. Pre-approved plans and streamlined permitting processes can help homeowners rebuild more efficiently, safely, and affordably.
+在**縣**，卡拉巴薩斯和阿爾塔德納一站式許可中心為居民提供來自各個縣機構的親自幫助，迄今為止已幫助超過8,500名居民。在市裡，迄今為止已在一站式重建中心幫助了超過4,000人。縣居民可以使用EPIC-LA平台在線申請許可，該平台提供統一的申請和審查流程以簡化導航。**縣**正在快速工作以滿足不斷增長的許可需求，通過重新分配工作人員並根據需要增加合同工人，以及與Archistar推出AI eCheck試點。縣還提供[預批准計劃目錄](https://recovery.lacounty.gov/rebuilding/preapproved-plans/)，其中包含符合當前分區和建築規範要求的設計。預批准計劃和簡化的許可流程可以幫助房主更高效、安全且經濟地重建。
 
-In a parallel effort, **Los Angeles Mayor Karen Bass** has issued executive orders directing **LA Department of Building and Safety** to pilot AI-powered pre-plan checks (Archistar eCheck AI), suspending permit and plan check fees, and launching a library of pre-approved, code-compliant designs to fast-track rebuilds in the city. More than 4,000 city residents have already been helped at the city’s One-Stop Rebuilding Center.
+在並行努力中，**洛杉磯市長卡倫·巴斯**已發布行政命令，指示**LA建築和安全部**試點AI驅動的預計劃檢查（Archistar eCheck AI），暫停許可和計劃檢查費用，並啟動預批准、符合規範的設計庫以加快城市重建。超過4,000名城市居民已在城市的一站式重建中心得到幫助。
 
 ----
 id: response_step_5_coming_soon
 ----
-The **county** is accelerating the permitting and inspection processes through “fast-tracks”, which are streamlined lanes to expedite rebuilding while maintaining safety and code compliance. This includes expanding the pre-approved plan catalog and bundling reviews for similar projects.
+**縣**正在通過"快速通道"加速許可和檢查流程，這是簡化的通道，在保持安全和規範合規的同時加快重建。這包括擴大預批准計劃目錄和捆綁類似項目的審查。
 
-The **county** is also increasing surge capacity by expanding the AI eCheck pilot with Archistar, growing digital and remote inspections, and adding plan checkers and inspectors to handle higher volumes.
+**縣**還通過與Archistar擴大AI eCheck試點、增加數字和遠程檢查，以及增加計劃檢查員和檢查員來處理更高量來增加激增能力。
 
 ----
 id: response_sidebar_5
 ----
-**Federal**, **state**, and **local** teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history. This is thanks to unprecedented partnership between the **state** and the **U.S. Army Corps of Engineers**.
+**聯邦**、**州**和**地方**團隊在僅六個月內清除了2025年火災的碎片。這是加利福尼亞歷史上最快的災後碎片清除。這要歸功於**州**和**美國陸軍工程兵團**之間前所未有的合作夥伴關係。
 
 ----
 id: other_efforts
-title: Other efforts
-mental_health: Mental health
+title: 其他努力
+mental_health: 心理健康
 ----
-The **LA County Department of Mental Health** and local partners are helping survivors get the support they need, funding shared spaces where people can get free counseling and join trauma support groups.
+**LA縣心理健康部**和當地合作夥伴正在幫助倖存者獲得他們需要的支持，資助共享空間，人們可以在那裡獲得免費諮詢並加入創傷支持小組。
 
 ----
 id: findings_how_we_did_the_analysis
 ----
 
-### How we did the analysis
+### 我們如何進行分析
 
-<div class="sub-head">For a deeper look, <a href="/lafires-recovery/agenda-setting-data-insights/">check out our detailed methodology and comments analysis</a>.</div>
+<div class="sub-head">要深入了解，<a href="/zh-hant/lafires-recovery/agenda-setting-data-insights/">查看我們的詳細方法和評論分析</a>。</div>
 
-We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics. 
+我們使用Claude 3.5 Sonnet生成式AI模型來幫助在評論中找到主題和趨勢。我們用問題提示模型，以幫助我們理解人們的想法。這是查看人們在重要主題上如何同意或不同意的有效方法。
 
-We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
+我們測試了不同的提示寫作方式。我們專注於經常出現的答案，無論我們如何提問。
 
-**Sample prompts**
+**示例提示**
 
-“I would like you to analyze a set of qualitative survey responses using extended thinking.” 
+"我希望您使用擴展思維分析一組定性調查響應。"
 
-“Start by doing an initial exploration of the data: First, read through the entire dataset without categorizing or labeling. Note your immediate observations and impressions about what stands out to you. Identify recurring words, phrases, and sentiments that appear across multiple responses. Share what surprised you or caught your attention in this initial review.”
+"首先對數據進行初步探索：首先，閱讀整個數據集而不進行分類或標記。注意您對突出內容的即時觀察和印象。識別在多個響應中出現的重複單詞、短語和情感。分享在這個初步審查中讓您驚訝或引起您注意的內容。"
 
 ----
 id: partners
 ----
 
-## Our partners
+## 我們的合作夥伴
 
-California’s Office of Data and Innovation partnered with disaster recovery experts and advocates for deliberative democracy to carry out this work. Our partners also helped shape the actions that will come from this work. 
+加利福尼亞數據與創新辦公室與災難恢復專家和協商民主倡導者合作開展這項工作。我們的合作夥伴也幫助塑造了這項工作將產生的行動。
 
-Our partners and advisors for this initiative include:
+我們這項倡議的合作夥伴和顧問包括：
