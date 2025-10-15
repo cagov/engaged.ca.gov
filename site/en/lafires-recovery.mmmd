@@ -31,8 +31,9 @@ statusReviewText: Agenda setting outcomes are being reviewed
 statusPlanningText: We are planning deliberations
 buttonText: See what we found in agenda setting
 statusPlanningTextV2: Deliberations are happening now
-statusDeliberationsClosedText: Community deliberations are closed
+statusDeliberationsClosedText: This conversation is closed
 buttonTextV2: Sign up now
+buttonText_actionplan: See the action plan
 ----
 
 People affected by the wildfires in Los Angeles should have a say in planning its recovery. So the State of California is bringing them together with government in a new way.
@@ -65,8 +66,10 @@ title: What happens in each phase
 phaseCompleteText: Completed phase
 phaseCurrentText: Current phase
 phasePendingText: Upcoming phase
-resourcesTitle: Resources
 resourcesLinkTitle: See what we found in agenda setting
+resourcesTitle: Resources
+resourcesLinkTitle_actionplan: See the action plan
+resourcesLinkTitle_agendasettingfindings: See what we found in agenda setting
 ----
 
 ### General information
@@ -134,7 +137,7 @@ id: phase6
 title: Reporting
 ----
 
-We will review and analyze the outcomes of the deliberation phase. We'll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website.
+We will review and analyze the outcomes of the deliberation phase. We'll work with government officials to find actions that respond to the deliberation. We will post a report of findings and actions on this website. [See the action plan](/lafires-recovery/action-plan)
 
 ----
 id: signup

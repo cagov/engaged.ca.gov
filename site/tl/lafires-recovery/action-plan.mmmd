@@ -1,0 +1,502 @@
+---
+title: LA ay nagkakaisa sa mga plano ng pagbawi
+description: Ang Engaged California ay isang online platform na ginagawang mas madali para sa mga Californian na magkaroon ng boses sa gobyerno. Ang unang paksa ng Engaged California ay ang pagbawi mula sa mga wildfire ng Los Angeles. Ipinapakita ng pahinang ito ang mga nangungunang isyu para sa muling pagtatayo ng LA.
+layout: mmmd-lafires-action-plan
+parentid: lafires-recovery
+keywords:
+  - Los Angeles
+  - fires
+  - recovery
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.  
+   When text contains words inside single asterisks, that text is intended to be printed in italics. 
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+   This is typically used for templates that insert numbers into a sentence.
+
+----
+id: findings_overview
+buttonText: Lumaktaw sa plano ng aksyon
+----
+
+# LA ay nagkakaisa sa mga plano ng pagbawi
+
+Sa isang proseso ng pakikipag-ugnayan sa komunidad na walang katulad, mahigit 3,000 miyembro ng komunidad ay inanyayahan sa mga town hall para sa digital age. Ang mga kalahok ay nag-ambag sa 2 yugto upang makagawa ng isang plano ng aksyon upang makabawi mula sa mga nagwawasak na wildfire ng Los Angeles noong Enero 2025.
+
+Ang plano ng aksyon, na binuo sa pamamagitan ng mga online deliberation session sa loob ng 6-buwan na panahon, ay sumasalamin sa mga priyoridad mula sa mga naapektuhan ng mga sunog sa Eaton at Palisades. Ang mga priyoridad na kanilang itinakda – na nakatuon sa agarang suporta ng komunidad at pangmatagalang pagpapabuti ng imprastraktura – ay gagabay sa mga opisyal ng estado at lokal patungo sa buong pagbawi.
+
+
+----
+id: findings_narrative_step_1
+title: Pagtatakda ng agenda
+button_text: Basahin ang tungkol sa yugto ng pagtatakda ng agenda
+----
+
+## Ang mga residente ay nagbahagi ng kanilang mga alalahanin at ideya
+
+Pagkatapos ng malubhang wildfire sa Los Angeles, daan-daang miyembro ng komunidad ay nagkita online upang talakayin ang mga priyoridad ng pagbawi.
+
+----
+id: findings_narrative_step_2
+title: Pagsusuri at pagpaplano
+button_text: Alamin ang tungkol sa aming mga kasosyo
+nbr_phrases: 6
+translator_note: USE slash symbol for line breaks, keep these phrases to two lines!
+phrase_1: Mga utility
+phrase_2: Komunidad/Suporta
+phrase_3: Pinansyal/suporta
+phrase_4: Emergency/handaan
+phrase_5: Sunog-proteksyon
+phrase_6: Gusali/permiso
+----
+
+
+
+## Mga indibidwal na ideya na naging shared data
+
+Isang grupo ng mga pinuno sa patakaran, disaster relief, at komunidad ay gumamit ng kanilang expertise at generative AI upang gawing 19 actionable policy options ang 1,289 komento na isinumite sa agenda setting.
+
+----
+id: findings_narrative_step_3
+title: Pagdadalumat
+----
+
+## Bumoto ang komunidad sa lahat ng 19 opsyon
+
+Ang mga bagong at bumalik na kalahok ay nag-rank sa mga opsyon na ito, muli gamit ang online platform kung saan maaari silang mag-usap at mag-collaborate.
+
+----
+id: consensus_chart_topics
+nbr_topics: 19
+topic_1: Dagdag na housing density at expedited permits
+topic_2: Pansamantalang pabahay
+topic_3: Unahin ang mga pamilya
+topic_4: Fire-resistant at water-friendly demonstration gardens
+topic_5: Mandatory home ember protection standards
+topic_6: Accelerated ADU at duplex permitting
+topic_7: Mandatory greywater systems para sa mga bagong gusali
+topic_8: Comprehensive homeowner education program
+topic_9: Emergency communication hubs sa mga komunidad
+topic_10: Defensible space tax incentives
+topic_11: Expanded construction training programs
+topic_12: Pre-approved fire-resistant building designs
+topic_13: Enhanced fire detection infrastructure
+topic_14: Magbigay ng financial assistance sa long-term residents
+topic_15: Accelerating permitting at inspections
+topic_16: Rebuilding help
+topic_17: Mas malakas na emergency notifications at alerts
+topic_18: Tubig para sa firefighting
+topic_19: Undergrounding power lines at pagpapabuti ng equipment safety
+----
+
+
+----
+id: findings_consensus_watch_intro
+title_h2: Community alignment
+caveat: "Ang suporta ay ang average score ng mga boto, kung saan ang score ng malakas na pagsuporta sa isang opsyon ay 100, at ang score ng malakas na pagtutol sa isang opsyon ay 0."
+----
+Ang bawat tuldok ay kumakatawan sa isang boto. Habang nagbabago ang visualization, maaari mong subaybayan ang average na antas ng suporta para sa bawat isyu. Ang mga paksa ay nakaayos mula sa pinakamababang suporta ng komunidad (kaliwa) hanggang sa pinakamataas na suporta ng komunidad (kanan).
+
+----
+id: findings_consensus_watch_explore
+topic_number_template: "Paksa <NUM> ng <TOTAL>"
+translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to insert numbers into the phrase
+translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
+label_1: Dagdag na housing density at expedited permits
+percent_default: 92% ng mga kalahok ang sumuporta sa paksang ito
+percent_template: <PERCENT>% average support
+translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
+----
+
+
+----
+id: findings_consensus_sentiment_chart
+nbr_labels: 3
+label_1: Malakas na tutol
+label_2: Neutral
+label_3: Malakas na suporta
+----
+
+----
+id: findings_narrative_top_options_intro
+title: Ang mga residente ay nagbigay ng kanilang opinyon upang makahanap ng kasunduan sa top 5 solusyon
+nbr_values: 2
+label_1: Mga komento at tugon
+label_2: Mga boto
+value_1: 1,504
+value_2: 3,977
+nbr_options: 5
+----
+
+Ang engagement ay kapansin-pansin. Ang mga kapitbahay ay nakapagbahagi ng kanilang mga kaisipan at nagtugon sa isa't isa. Ang 1,504 komento ng mga kalahok na natanggap ay hindi nawala sa isang black box. Ang mga tao ay nag-usap tungkol sa mga solusyon, epektibong nagtrabaho nang magkasama upang tukuyin ang mga priyoridad.
+
+----
+id: findings_narrative_top_options
+results_header: Action plan
+results_description: "Ang plano, na kinabibilangan ng 5 focus areas para sa recovery – nagpapakita ng isang komunidad na nagkakaisa sa paligid ng pagbuo ng fire-resilient infrastructure para sa hinaharap at pagbibigay ng suporta sa komunidad ngayon:"
+nbr_options: 5
+option_label_1: Ilibing ang power lines at equipment safety measures
+option_label_2: Pagbutihin ang water systems para sa firefighting
+option_label_3: Palakasin ang emergency communication networks
+option_label_4: Tulungan ang mga tao na makahanap ng financial support programs
+option_label_5: Maglaan ng mga team para sa suporta sa permitting
+option_icon_1: circle-blue-1.png
+option_icon_2: circle-blue-2.png
+option_icon_3: circle-blue-3.png
+option_icon_4: circle-blue-4.png
+option_icon_5: circle-blue-5.png
+----
+
+
+
+
+
+----
+id: findings_topic_chart
+nbr_labels: 3
+label_1: Malakas na tutol
+label_2: Neutral
+label_3: Malakas na suporta
+----
+
+
+
+----
+id: findings_top_discussions
+title_h2: Suriin ang top 5 mula sa lahat ng anggulo
+solution_details_label: "Mga detalye ng solusyon"
+show_comments_button: Ipakita ang mga komento
+hide_comments_button: Itago ang mga komento
+nbr_tally_items: 2
+label_1: Average support
+label_2: Mga komento
+explore_the_comments: Tuklasin ang mga komento
+filter_the_comments: "Ang mga komento ay maaaring i-filter ayon sa kung paano bumoto ang mga tao sa isang paksa: suporta, neutral, tutol, o walang boto. Tala: Ang mga komento mismo ay maaaring hindi sumasalamin sa kung paano bumoto ang isang tao sa isang paksa. Sa ilang mga kaso, ang mga tao ay nagkomento sa isang paksa nang hindi nagboboto."
+label_viewpoint: "Pananaw:"
+label_all_comments: "Lahat ng komento"
+label_oppose: "Tutol"
+label_neutral: "Neutral"
+label_support: "Suporta"
+label_novote: "Walang boto"
+filter_comments_by_vote: I-filter ang mga komento ayon sa kanilang kaukulang mga boto. Hindi namin isinasalin ang mga komento; ipinapakita ang mga ito sa kanilang orihinal na wika. 
+----
+
+Ang bawat boto ay binilang at binigyan ng timbang upang makamit ang consensus sa top 5 solusyon na dapat tuklasin ng California. Sa pagitan ng mga fire zones, ang mga boto at komento ay medyo naiiba, gamitin ang toggle upang makita kung paano naiiba ang mga opinyon mula sa Palisades sa mga nasa Eaton fire zone.
+
+----
+id: discussion_1
+title: Ilibing ang power lines at equipment safety measures
+topic_description: Ilibing ang power lines kung maaari at mag-deploy ng mitigation strategies upang maiwasan ang ignition mula sa equipment failures. Ang komprehensibong diskarte na ito ay tutugon sa isa sa mga pangunahing sanhi ng wildfire ignition sa California.
+nbr_comments: 3
+value_1: 92%
+value_2: 90
+chart_topic_index: 19
+----
+
+----
+id: discussion_2
+title: Pagbutihin ang water systems para sa firefighting
+topic_description: I-upgrade ang water systems upang matugunan ang modern fire flow requirements at tiyakin na may sapat na fire hydrants sa lahat ng lugar. Ito ay magpapabuti sa water supply at pressure na kailangan para sa epektibong firefighting operations.
+value_1: 87%
+value_2: 74
+chart_topic_index: 18
+----
+
+----
+id: discussion_3
+title: Palakasin ang emergency communication networks
+topic_description: Itaguyod ang communication infrastructure na nagpapahintulot sa mga first responders at residente na manatiling konektado kahit na mabigo ang cell towers o fiber lines, tulad ng mesh internet networks na maaaring gumana nang nakapag-iisa sa panahon ng mga sakuna.
+value_1: 86%
+value_2: 59
+chart_topic_index: 17
+----
+
+----
+id: discussion_4
+title: Tulungan ang mga tao na makahanap ng financial support programs
+topic_description: Lumikha ng komprehensibong katalogo ng mga financial support programs at organisasyon na magagamit upang tumulong sa mga pagsisikap sa pagtatayo. Ang direktoryo na ito ay magkokonekta sa mga residenteng apektado ng sunog sa mga grants, loans, at aid programs, habang nakikipagsosyo rin sa mga pinagkakatiwalaang financial organisations na handang tumulong sa recovery funding.
+value_1: 82%
+value_2: 59
+chart_topic_index: 16
+----
+
+----
+id: discussion_5
+title: Maglaan ng mga team para sa suporta sa permitting
+topic_description: Magtatag ng mga team ng mga dedikadong staff sa mga triage centers upang mabilis na gabayan ang mga komunidad na apektado ng sunog sa pamamagitan ng mga proseso ng permitting. Ang mga espesyalisadong team na ito ay magbibigay ng personalisadong tulong sa mga residente na nag-navigate sa mga kumplikadong kinakailangan sa pagtatayo.
+value_1: 82%
+value_2: 73
+chart_topic_index: 15
+----
+
+
+----
+id: topic_comments_scroller 
+label: Mga komento sa paksang ito
+desc: Mag-scroll upang makita ang mga komento tungkol sa paksang ito (ipinapakita sa kanilang orihinal na wika)
+----
+
+----
+id: topic_data_vis
+title: Tuklasin ang mga boto
+learn_button_label: Alamin ang tungkol sa mga aksyon na ginagawa
+desc: Ang bawat tuldok ay kumakatawan sa boto ng isang indibidwal. Ang kabuuang bilang ng mga tuldok ay tumutugma sa kabuuang bilang ng mga boto na ibinoto sa isang partikular na paksa.
+download_text: I-download ang CSV ng mga komento ng mga kalahok
+----
+
+----
+id: conversation_groups
+nbr_groups: 7
+group_label_1: Malakas na tutol
+group_label_2: Tutol
+group_label_3: Medyo tutol
+group_label_4: Neutral
+group_label_5: Medyo sumusuporta
+group_label_6: Sumusuporta
+group_label_7: Malakas na sumusuporta
+----
+
+----
+id: findings_alignment_section
+----
+## Kapansin-pansing pagkakaisa
+
+Ang mga tao mula sa iba't ibang fire zones ay nagpakita ng nakakagulat na pagkakapareho. Ang mga residenteng apektado ng Eaton at Palisades ay nag-rank sa parehong top needs: ilibing ang power lines sa ilalim ng lupa, pagbutihin ang mga lokal na water systems para sa firefighting, at tiyakin ang napapanahong mga alerto kapag may emergency.
+
+Ipinapakita nito na anuman ang heograpikong paghihiwalay, may pagkakaisa sa buong komunidad sa mga mahahalagang priyoridad sa recovery.
+
+**Ang pangkat ng mga priyoridad na ito ay nagsasabi ng malinaw na kwento.**
+
+Gusto ng mga residente ang parehong agarang suporta para sa recovery at pangmatagalang pamumuhunan sa fire-resistant infrastructure. Kailangan din nila na ang mga serbisyong suporta ay maging streamlined upang maglingkod sa mga pangangailangan ng komunidad sa pagtatayo.
+
+Ang engagement na ito ay nagpapahintulot sa amin na gawing tunay na gabay sa patakaran ang mga personal na karanasan.
+
+----
+id: findings_alignment_section_sidebar
+----
+
+**Pagbuo sa shared support**
+
+Ang proseso ay hindi lamang nagtipon ng mga opinyon; nagtayo ito ng kumpiyansa at momentum habang sumusulong tayo nang magkasama.
+
+Habang ang mga kalahok ay dumating na may magkahalong damdamin—24% lamang ang nagsimulang optimistic habang 48% ang nakaramdam ng pessimistic—ang pananaw ay nagbago sa pamamagitan ng proseso.
+
+Mahigit sa isang-kapat ng mga kalahok (27%) ay lumabas na mas optimistic tungkol sa LA fires recovery.
+
+----
+id: signup_plea
+button_text: Mag-sign up
+----
+## Mag-sign up upang manatiling nakikibahagi sa mahalagang gawain
+
+Ibigay ang inyong email upang matuto tungkol sa mga darating na pagkakataon. 
+
+----
+id: response_intro
+----
+
+## Paano namin tinutugunan ang mga pangangailangan ng komunidad
+
+Ang mga residente ay nagsalita sa parehong agenda setting phase at sa aming mga susunod na deliberations. Ang **State**, **county**, **city**, **utilities**, at **federal partners** ay tumugon ng mga kongkretong aksyon. At marami pa ang darating.
+
+----
+id: response_steps
+action_now: Aksyon ngayon
+coming_soon: Darating na
+did_you_know: "Alam mo ba?"
+nbr_steps: 5
+anchor_link_text: "Dalhin ako sa mga boto at komento ng mga tao sa paksang ito"
+----
+
+
+----
+id: response_step_1
+title: Paglilibing ng power lines at pagpapabuti ng equipment safety
+icon: construction-orange.svg
+----
+
+----
+id: response_step_1_action_now
+----
+Ang **county** at **state** ay nakikipagtulungan sa mga power at telecommunications companies upang magplano na ilagay ang mas maraming utilities sa ilalim ng lupa. Si **Governor Gavin Newsom** ay pumirma ng executive order noong Marso 2025 upang mapabilis ang gawaing ito.
+
+Bilang karagdagan, si **Los Angeles Mayor Karen Bass** ay nag-isyu ng executive order upang tulungan ang mga residente ng Palisades na mapabilis ang pagtatayo gamit ang fire-resistant materials at climate-resilient infrastructure. Kasama rito ang pagpapatibay ng utilities para sa power reliability sa panahon ng matinding panahon.
+
+----
+id: response_step_1_coming_soon
+----
+Ang mga utilities ay nakikipagtulungan nang malapit sa mga lokal na lider mula sa **Los Angeles County** at sa **city**. Ang konstruksyon ay nagsisimula na sa Malibu, Altadena, at Pacific Palisades. Inaasahang magpapatuloy ito sa loob ng ilang taon pa. Ang **state** at **county** ay nananawagan para sa isang coordinated approach sa paglilibing ng power at telecom lines na magtitipid ng pera, magbabawas ng oras, at magbabawas ng mga pagkagambala mula sa maraming work crews.
+
+Bukod sa paglilibing, ang mga karagdagang estratehiya ay mahalaga upang mabawasan ang mga panganib sa sunog, tulad ng vegetation management at resilient rebuilding. Ang mga may-ari ng ari-arian at mga propesyonal sa disenyo/pagtatayo ay maaaring tumingin sa **county's** [Resilient Rebuild Resource Guide](https://recovery.lacounty.gov/resilient-rebuilding/) para sa impormasyon at mga mapagkukunan para sa pagpaplano, pagdidisenyo, at pagtatayo ng isang high-performance building na mas matibay sa mga panganib sa sunog.
+
+----
+id: response_sidebar_1_unused
+----
+Nang muling itinayo ang **Town of Paradise**, nakipagtulungan ito sa **PG&E**, **telecom providers**, at **state regulators** upang ilagay sa ilalim ng lupa ang mga power lines na nasa panganib. Ginagamit ng Los Angeles ito at mga katulad na pagpapabuti sa kaligtasan bilang modelo at gabay para sa sarili nitong recovery.
+
+----
+id: response_step_2
+title: Tubig para sa firefighting
+icon: hydrant-orange.svg
+----
+
+----
+id: response_step_2_action_now
+----
+Ang **Los Angeles Department of Water and Power** ay napuno ang mahigit 80 water storage facilities sa kanilang pinakamataas na antas. Ang mga backup pumps ay may gasolina at handa sa bawat pumping station bilang backup sa mga pangunahing pumps. Napuno nila ang kanilang limang water tenders, bawat isa ay may hindi bababa sa 4,000 gallons, at inilagay sa standby para sa **Los Angeles Fire Department** (LAFD) kung kailangan. Ang apat na reservoir ay naglalaman ng bilyun-bilyong gallons ng non-potable water para sa aerial firefighting.
+
+Sa Pacific Palisades area, dalawang lokal na reservoir ang nakalaan para sa aerial firefighting: ang Encino Reservoir at ang Lower Stone Canyon Reservoir.
+
+Ang **Los Angeles County Fire Department** ay nakipagtulungan sa **Los Angeles County Department of Public Works** at **7 local water companies** upang suriin ang fire flow mula sa mga umiiral na water systems sa mga fire areas. Upang mapadali ang proseso ng pagtatayo, ang **LA County Fire** ay sususugan ang 2026 Los Angeles County Fire Code upang matugunan ang mga kasalukuyang State Fire Code requirements. Ang pagbabago sa code na ito ay magpapahintulot sa mga tao na muling itayo ang kanilang mga tahanan habang ang water system ay ina-upgrade at pinapabuti. Ang **LA County Fire** ay magpapatuloy na regular na mag-staff at strategically na maglalagay ng county-owned pre-positioned engines sa panahon ng mataas na panganib sa sunog.
+
+Bilang karagdagan, isang bagong streamlined process ang nabuo na nag-aalis ng pangangailangan para sa mga may-ari ng bahay na makilahok sa fire flow form process. Ang **water companies**, **LA County Public Works**, at **LA County Fire** ang hahawak sa bagong prosesong ito, na magpapabilis sa timeline, mag-aalis ng pangangailangan para sa mga may-ari ng bahay na kumpletuhin ang proseso, at magtitipid ng pera para sa mga may-ari ng bahay.
+
+----
+id: response_step_2_coming_soon
+----
+Ang mga water districts ay nakilala ang mga pinsala at nag-apply para sa pondo (hal., FEMA PA) upang muling itayo. Ang **state** at **county** ay nangako na susuportahan ang mga distrito upang muling itayo at pagbutihin ang mga sistema.
+
+Ang [LA County Forward: Blueprint for Rebuilding](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) ay nagsasabi na ang mga upgrade na ito ay kritikal na infrastructure investments para sa pangmatagalang kaligtasan.
+
+----
+id: response_step_3
+title: Mas malakas na emergency notifications at alerts
+icon: communication-orange.svg
+----
+
+----
+id: response_step_3_action_now
+----
+Ang mga lokal na opisyal sa **Los Angeles City** at **County** ay gumawa ng ilang kongkretong hakbang upang pagbutihin kung paano inisyu ang mga emergency alerts kasunod ng malawakang pagkakagulo sa panahon ng Eaton at Palisades fires. Ang **Los Angeles County Board of Supervisors** ay nag-utos ng isang independiyente, panlabas na pagsusuri ng emergency alert at evacuation notification systems, na nagpapanatili ng mga panlabas na eksperto upang magsagawa ng komprehensibong after-action analysis at mag-ulat bawat 90 araw.
+
+Ang **city's Emergency Management Department** at **County Coordinated Joint Information Center** ay ngayon ay nagbibigay-priyoridad sa enhanced training, mas mahigpit na system tests, pinabuting geographic targeting, mas malinaw na message wording, at mas malakas na koordinasyon para sa mga hinaharap na life-safety emergencies.
+
+Ang **city** ay nagko-koordina ng isang biweekly steering committee na nakatuon sa emergency communication upang talakayin ang mga blockers at pag-unlad. Ang grupo ay binubuo ng mga kinatawan mula sa mga departamento ng lungsod, kabilang ang:
+
+  * **Los Angeles Department of Water and Power**  
+  * **Los Angeles Department of Emergency Management** 
+  * **Los Angeles Department of Planning**
+  * **Los Angeles Fire Department**
+
+----
+id: response_step_3_coming_soon
+----
+Ang mga opisyal ng county, sa pakikipagsosyo sa mga lokal, estado, at pederal na kasosyo, ay nagtatrabaho upang pagbutihin ang pagiging epektibo ng emergency alert at warning system sa buong county. Kasama rito ang pagpapatupad ng mga rekomendasyon mula sa mga independiyenteng party reviews, kabilang ang McChrystal Group, ang Fire Safety Research Institute, at ang U.S. Congress.
+
+Ang mga lokal na emergency notification systems ay patuloy na susuriin at pagbutihin. Sa pamamagitan ng pagtuon sa paggawa ng mga alert message na mas tumpak at area-specific, pag-standardize ng alert language, pagpapabuti ng multilayered notification capabilities, at pagpapahusay ng koordinasyon at pagsasanay sa mga ahensya upang matiyak ang napapanahon, malinaw, at heograpikong tumpak na mga babala sa mga hinaharap na sakuna. Ang mga pagpapabuting ito ay kinabibilangan ng panlabas na pagsusuri ng mga kamakailang wildfire alerts, nadagdagan na mga pederal na kahilingan sa pondo, at mga pagsisikap sa pampublikong edukasyon sa paligid ng opt-in notification services.
+
+----
+id: response_sidebar_3_unused
+----
+Ang mga patakaran na nangangailangan ng 72 oras na backup power sa mga cell towers sa mga high fire-threat zones ay ipinatupad kasunod ng 2017 wildfires, na nag-iwan ng libu-libong walang serbisyo sa telepono.
+
+----
+id: response_step_4
+title: Tulong sa pagtatayo
+icon: currency-orange.svg
+----
+
+----
+id: response_step_4_action_now
+----
+Ang gobyerno ay nag-mobilize upang suportahan ang mga residente, kabilang ang pagtulong na makakuha ng $3 bilyon sa pederal na tulong at mga pautang. Ang **state's CalAssist Mortgage Fund** ay nagdidirekta ng mahigit $100 milyon sa mortgage relief. Si **Governor Newsom** ay nakakuha ng pangako mula sa mga nangungunang nagpapautang na mag-alok ng forbearance sa mga mortgage at pumirma ng batas upang palawakin ang forbearance sa 12 buwan at lumikha ng mga maipapatupad na legal na kinakailangan.
+
+Ang **county** ay nag-mobilize ng mahigit $50 milyon upang suportahan ang mga pamilya at maliliit na negosyo sa pamamagitan ng **LA County Wildfire Relief Fund**. Upang mabawasan ang mga gastos sa permitting para sa mga may-ari ng bahay, ang **county** ay nag-defer o nag-refund din ng mga tiyak na bayad para sa zoning, plan checks, at permits sa mga pangunahing ahensya tulad ng **Public Works**, **Regional Planning**, **Public Health**, at **Fire**. Ang mga bayad na ito ay maaaring lumampas sa $20,000 bawat sambahayan. Ang county ay nagpapabilis ng permit plan reviews na may 14-araw na turnaround times para sa mga unang review, 7-araw na turnaround para sa mga karagdagang review, at isang layunin na mag-isyu ng permit sa loob ng 30 araw. Maraming suporta rin ang naibigay. Ang mga Section 8 vouchers ay magagamit para sa mga displaced renters. May mga emergency shelter grant funds para sa mga taong nakakaranas ng kawalan ng tahanan sa lugar. Ang mga workshop ay na-facilitate para sa mga senior na may reverse mortgages.
+
+Dagdag pa, si **Los Angeles Mayor Karen Bass** ay nag-isyu ng ilang executive orders upang mapabilis ang pagtatayo at mabawasan ang mga gastos. Kasama rito ang paglikha ng One-Stop Rebuilding Center, pagdidirekta sa mga departamento ng lungsod na mapabilis ang mga review ng building permit sa loob ng 30 araw o mas mababa, at pag-waive ng 2025 business taxes para sa mga apektadong kumpanya.
+
+----
+id: response_step_4_coming_soon
+----
+Ang **Los Angeles County** ay nagko-koordina sa estado, philanthropy, at pribadong sektor upang ikonekta ang mga residente sa mga serbisyo na tumutulong sa mga tao na mag-navigate sa mga proseso ng recovery, kung saan ang mga pamilya ay maaaring makatanggap ng personalisadong tulong sa financing, permitting, at pagtatayo upang mabawasan ang mga hadlang sa recovery.
+
+Bilang karagdagan, nakinig kami sa mga renters nang hilingin nila sa amin na huwag silang iwanan. Ang **Los Angeles County's Fire Recovery Fund** ay kinabibilangan ng direktang tulong sa rental. Ang **County supervisors** ay nagsusuri ng mas malakas na anti-gouging protections para sa mga tenant sa mga fire zones.
+
+Ang **county** ay nagtatrabaho upang makipag-koordina sa **state** at **philanthropy** upang makilala ang "bridge funding" para sa mga residente upang masakop ang mga malapit na gastos upang mabuhay at magsimulang magtayo na hindi sakop ng ibang mga mapagkukunan ng pondo.
+
+
+----
+id: response_sidebar_4_unused
+----
+Ang mga residente ay humiling ng tulong na walang mga hadlang sa panahon ng agenda-setting phase ng engagement na ito. Ang **Los Angeles County** ay nagbigay ng suporta sa language application at direktang mga pagbabayad sa pamamagitan ng LA Region Worker Relief Fund, kabilang ang mga undocumented residents. Ang county, sa suporta ng mga community groups, ay tiniyak na hindi ibukod ang mga tao. Gayundin, ang **California Department of Insurance** ay nagpapatupad ng isang taong moratorium. Nangangahulugan ito na ang mga insurer ay hindi maaaring kanselahin ang coverage pagkatapos ng isang idineklarang sakuna. Nangangailangan din ito ng dalawang taong coverage para sa mga ang mga tahanan ay nagdusa ng kabuuang pagkawala.
+
+Ang Blueprint for Rebuilding ay nag-highlight ng mga pagbabayad bilang isang milestone sa pantay na recovery.
+
+----
+id: response_step_5
+title: Pagpapabilis ng permitting at inspections
+icon: house-orange.svg
+----
+
+----
+id: response_step_5_action_now
+----
+Si **Governor Newsom** ay nag-isyu ng maraming executive orders na nag-waive ng mga state permitting requirements upang mapabilis ang pagtatayo. Ang **city** at **county** ay lumikha ng mga one-stop centers sa mga lugar na tinamaan ng sunog upang suportahan ang mga aktibidad sa pagtatayo. Kasama rito ang Altadena, Calabasas, at Pacific Palisades.
+
+Sa **county**, ang Calabasas at Altadena One-Stop Permit Centers ay nag-aalok sa mga residente ng personal na tulong mula sa iba't ibang county agencies, kung saan mahigit 8,500 residente ang natulungan na. Sa lungsod, mahigit 4,000 tao ang natulungan sa One-Stop Rebuilding Center. Ang mga residente ng county ay maaaring mag-apply para sa permits online gamit ang EPIC-LA platform, na nag-aalok ng unified application at review process upang mapadali ang navigation. Ang **county** ay mabilis na nagtatrabaho upang matugunan ang lumalaking demand sa permit sa pamamagitan ng pag-reallocate ng staff at pagdadala ng mga karagdagang contract workers kung kinakailangan, pati na rin ang pag-roll out ng AI eCheck pilot kasama ang Archistar. Ang county ay nag-aalok din ng [pre-approved plan catalog](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) na may mga disenyo na sumusunod sa kasalukuyang zoning at building code requirements. Ang mga pre-approved plans at streamlined permitting processes ay maaaring tumulong sa mga may-ari ng bahay na magtayo nang mas epektibo, ligtas, at abot-kaya.
+
+Sa isang parallel effort, si **Los Angeles Mayor Karen Bass** ay nag-isyu ng executive orders na nagdidirekta sa **LA Department of Building and Safety** na mag-pilot ng AI-powered pre-plan checks (Archistar eCheck AI), nag-suspend ng permit at plan check fees, at nag-launch ng isang library ng pre-approved, code-compliant designs upang mapabilis ang mga pagtatayo sa lungsod. Mahigit 4,000 residente ng lungsod ang natulungan na sa One-Stop Rebuilding Center ng lungsod.
+
+----
+id: response_step_5_coming_soon
+----
+Ang **county** ay nagpapabilis ng mga proseso ng permitting at inspection sa pamamagitan ng "fast-tracks", na mga streamlined lanes upang mapabilis ang pagtatayo habang pinapanatili ang kaligtasan at code compliance. Kasama rito ang pagpapalawak ng pre-approved plan catalog at pag-bundle ng mga review para sa mga katulad na proyekto.
+
+Ang **county** ay nagdaragdag din ng surge capacity sa pamamagitan ng pagpapalawak ng AI eCheck pilot kasama ang Archistar, paglaki ng digital at remote inspections, at pagdaragdag ng mga plan checkers at inspectors upang hawakan ang mas mataas na volume.
+
+----
+id: response_sidebar_5
+----
+Ang mga **Federal**, **state**, at **local** teams ay naglinis ng mga debris mula sa 2025 fires sa loob lamang ng anim na buwan. Ito ang pinakamabilis na post-disaster debris removal sa kasaysayan ng California. Ito ay salamat sa walang katulad na pakikipagsosyo sa pagitan ng **state** at **U.S. Army Corps of Engineers**.
+
+----
+id: other_efforts
+title: Iba pang mga pagsisikap
+mental_health: Kalusugan ng isip
+----
+Ang **LA County Department of Mental Health** at mga lokal na kasosyo ay tumutulong sa mga survivors na makuha ang suporta na kailangan nila, nagpopondo ng mga shared spaces kung saan ang mga tao ay maaaring makakuha ng libreng counseling at sumali sa mga trauma support groups.
+
+----
+id: findings_how_we_did_the_analysis
+----
+
+### Paano namin ginawa ang analysis
+
+<div class="sub-head">Para sa mas malalim na pagtingin, <a href="/tl/lafires-recovery/agenda-setting-data-insights/">tingnan ang aming detalyadong methodology at comments analysis</a>.</div>
+
+Ginamit namin ang Claude 3.5 Sonnet generative AI model upang tumulong na makahanap ng mga tema at trend sa mga komento. Nag-prompt kami sa model ng mga tanong upang matulungan kaming maunawaan kung ano ang iniisip ng mga tao. Ito ay isang epektibong paraan upang makita kung paano sumang-ayon o hindi sumang-ayon ang mga tao sa mga mahahalagang paksa.
+
+Nag-test kami ng iba't ibang paraan upang isulat ang mga prompt. Nakatuon kami sa mga sagot na madalas na lumabas, anuman ang paraan ng pagtatanong namin.
+
+**Mga sample prompts**
+
+"Gusto kong suriin mo ang isang set ng qualitative survey responses gamit ang extended thinking."
+
+"Magsimula sa pamamagitan ng paggawa ng initial exploration ng data: Una, basahin ang buong dataset nang walang pag-categorize o pag-label. Tandaan ang iyong mga agarang obserbasyon at impression tungkol sa kung ano ang nakita mo. Kilalanin ang mga paulit-ulit na salita, parirala, at sentimento na lumilitaw sa maraming mga tugon. Ibahagi kung ano ang nagulat sa iyo o nakakuha ng iyong atensyon sa initial review na ito."
+
+----
+id: partners
+----
+
+## Ang aming mga kasosyo
+
+Ang California's Office of Data and Innovation ay nakipagsosyo sa mga disaster recovery experts at advocates para sa deliberative democracy upang isakatuparan ang gawaing ito. Ang aming mga kasosyo ay tumulong din sa paghubog ng mga aksyon na magmumula sa gawaing ito.
+
+Ang aming mga kasosyo at advisors para sa inisyatibong ito ay kinabibilangan ng:
