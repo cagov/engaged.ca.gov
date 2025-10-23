@@ -1435,6 +1435,19 @@ const translations = {
         "hy": "Փոփոխություն",
         "location": "Status",
         "status": "human_translated"
+    },
+    "status-pill-5": {
+        "en": "This engagement has closed",
+        "es": "Esta participación ha cerrado",
+        "ko": "이 참여가 종료되었습니다",
+        "tl": "Ang engagement na ito ay nagtatapos",
+        "vi": "Sự tham gia này đã kết thúc",
+        "zh-hans": "此参与已结束",
+        "zh-hant": "此參與已結束",
+        "fa": "این همکاری به پایان رسیده است",
+        "hy": "Այս ներգրավվածությունը ավարտվել է",
+        "location": "Status",
+        "status": "machine_translated"
     }
 };
 // add default export

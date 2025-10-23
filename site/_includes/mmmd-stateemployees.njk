@@ -6,13 +6,13 @@
     <section id="ge-hero" class="engca-hero engca-hero-person">
         <div class="container banner-flex">
             <engca-banner-content>
-                <p class="status-pill">{{ 'status-pill-1' | i18n }}</p>
+                <p class="status-pill">{{ 'status-pill-3' | i18n }}</p>
                 <h1>{{ modules.hero.title  }}</h1>
                 <p><strong>{{ modules.hero.subtitle }}</strong></p>
                 {{ modules.hero.content | safe }}
-                <p>
+                {# <p>
                     <a data-appearance="button" data-theme="orange" href="#sign-up" class="m-t">{{ modules.hero.buttonText }}</a>
-                </p>
+                </p> #}
             </engca-banner-content>
             <img src="/public/images/bubbles-exclamation.png" aria-hidden="true" class="desktop-only" alt=""/>
         </div>
@@ -45,7 +45,7 @@
         </div>
     </section>
 
-    <section id="sign-up" class="sign-up-ge">
+    {# <section id="sign-up" class="sign-up-ge">
         <div class="container form-flex">
             <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt=""/>
             <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt=""/>
@@ -53,7 +53,7 @@
             {% include "form-stateemployees.njk" %}
 
         </div>
-    </section>
+    </section> #}
 
     <section id="overview" class="overview-ge">
         <div class="container overview-ge-title">
