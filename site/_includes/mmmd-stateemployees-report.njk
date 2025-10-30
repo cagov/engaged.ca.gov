@@ -5,82 +5,453 @@
 <link rel="stylesheet" href="/css/state-employees.css" />
 <link rel="stylesheet" href="/css/state-employees-report.css" />
 
+{%- macro render_circle_text(theme_module, x, y, base_font_size) -%}
+  {%- set circle_title = theme_module.theme_circle_title if theme_module.theme_circle_title else theme_module.theme_title -%}
+  {%- set lines = circle_title.split('<LF>') -%}
+  {%- set line_height = base_font_size * 1.2 -%}
+  {%- set start_y = y - ((lines.length - 1) * line_height / 2) -%}
+  {%- for line in lines -%}
+    <tspan x="{{ x }}" dy="{% if loop.first %}0{% else %}{{ line_height }}{% endif %}">{{ line }}</tspan>
+  {%- endfor -%}
+{%- endmacro -%}
 
 <section id="e3-report-hero" class="hero">
   <div class="container hero-container">
     <div class="row">
       <div class="col-lg-8">
-        Hero content
+        {{ modules.hero.content | safe }}
         <p>
-            <a data-appearance="button" data-theme="orange" href="#findings-top-options" class="m-t">Button text</a>
+            <a data-appearance="button" data-theme="orange" href="#findings-and-analysis" class="m-t">{{ modules.hero.buttonText }}</a>
         </p>
-
       </div>
     </div>
-    <img class="findings-adornment" src="/public/images/findings-adornment.png" aria-hidden="true" alt="" />
+    <img class="e3-hero-adornment" src="/public/images/findings-adornment.png" aria-hidden="true" alt="" />
   </div>
 </section>
 
-<section id="e3-report-stats">
+<section id="background-and-context">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-            <div class="stats-intro">
-             <h2>Title</h2>
-            </div>
+        <div class="section-header">
+          {{ modules.background_context.content | safe }}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="context-section">
+          <h3>{{ modules.what_we_did.title }}</h3>
+          {{ modules.what_we_did.content | safe }}
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="context-section">
+          <h3>{{ modules.why_we_did_it.title }}</h3>
+          {{ modules.why_we_did_it.content | safe }}
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="e3-report-sharings">
+<section id="what-we-heard">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="what-we-heard-content">
+          {{ modules.what_we_heard.content | safe }}
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="participation-sidebar">
+          <h3>{{ modules.participation_numbers.title }}</h3>
+          <div class="participation-stat">
+            <div class="stat-number">{{ modules.participation_numbers.participants_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.participants_label }}</div>
+          </div>
+          <div class="participation-stat">
+            <div class="stat-number">{{ modules.participation_numbers.insights_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.insights_label }}</div>
+          </div>
+          <p class="participation-note">{{ modules.participation_numbers.staff_note }}</p>
+          <div class="participation-quote">
+            <p>{{ modules.participation_numbers.quote }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="findings-and-analysis">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-            <div class="stats-intro">
-             <h2>What staff shared</h2>
-            </div>
+        <div class="section-header">
+          {{ modules.findings_analysis.content | safe }}
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="e3-themes">
+<section id="themes-we-found">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-            <div class="stats-intro">
-             <h2>Themes</h2>
-            </div>
+        <div class="themes-intro">
+          <h2>{{ modules.themes_we_found.title }}</h2>
+          <p>{{ modules.themes_we_found.intro_text }}</p>
+        </div>
+        <div id="themes-bubble-chart" class="themes-bubble-chart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+            <!-- Background -->
+            <rect width="800" height="600" fill="#F6F7FA"/>
+            
+            <!-- Theme 1: Recruitment, hiring, and retention (Large) -->
+            <g class="theme-circle" data-theme="1" style="cursor: pointer;">
+              <circle cx="250" cy="200" r="120" fill="#5489A3" opacity="0.8"/>
+              <text x="250" y="190" text-anchor="middle" fill="#0f152f" font-size="15" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title1 = modules.theme_1.theme_circle_title if modules.theme_1.theme_circle_title else modules.theme_1.theme_title -%}
+                {%- set lines1 = title1.split('<LF>') -%}
+                {%- for line in lines1 -%}
+                  <tspan x="250" dy="{% if loop.first %}0{% else %}18{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+            
+            <!-- Theme 2: Process improvement (Large) -->
+            <g class="theme-circle" data-theme="2" style="cursor: pointer;">
+              <circle cx="550" cy="250" r="110" fill="#5489A3" opacity="0.8"/>
+              <text x="550" y="245" text-anchor="middle" fill="#0f152f" font-size="15" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title2 = modules.theme_2.theme_circle_title if modules.theme_2.theme_circle_title else modules.theme_2.theme_title -%}
+                {%- set lines2 = title2.split('<LF>') -%}
+                {%- for line in lines2 -%}
+                  <tspan x="550" dy="{% if loop.first %}0{% else %}18{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+            
+            <!-- Theme 3: Technology and digital innovation (Medium) -->
+            <g class="theme-circle" data-theme="3" style="cursor: pointer;">
+              <circle cx="150" cy="350" r="85" fill="#7BA8BC" opacity="0.75"/>
+              <text x="150" y="340" text-anchor="middle" fill="#0f152f" font-size="14" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title3 = modules.theme_3.theme_circle_title if modules.theme_3.theme_circle_title else modules.theme_3.theme_title -%}
+                {%- set lines3 = title3.split('<LF>') -%}
+                {%- for line in lines3 -%}
+                  <tspan x="150" dy="{% if loop.first %}0{% else %}16{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+            
+            <!-- Theme 4: Organizational structure and culture (Medium) -->
+            <g class="theme-circle" data-theme="4" style="cursor: pointer;">
+              <circle cx="400" cy="180" r="90" fill="#7BA8BC" opacity="0.75"/>
+              <text x="400" y="170" text-anchor="middle" fill="#0f152f" font-size="13" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title4 = modules.theme_4.theme_circle_title if modules.theme_4.theme_circle_title else modules.theme_4.theme_title -%}
+                {%- set lines4 = title4.split('<LF>') -%}
+                {%- for line in lines4 -%}
+                  <tspan x="400" dy="{% if loop.first %}0{% else %}15{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+            
+            <!-- Theme 5: Management culture and leadership (Medium) -->
+            <g class="theme-circle" data-theme="5" style="cursor: pointer;">
+              <circle cx="650" cy="180" r="85" fill="#7BA8BC" opacity="0.75"/>
+              <text x="650" y="170" text-anchor="middle" fill="#0f152f" font-size="13" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title5 = modules.theme_5.theme_circle_title if modules.theme_5.theme_circle_title else modules.theme_5.theme_title -%}
+                {%- set lines5 = title5.split('<LF>') -%}
+                {%- for line in lines5 -%}
+                  <tspan x="650" dy="{% if loop.first %}0{% else %}15{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+            
+            <!-- Theme 6: Communication and knowledge sharing (Medium) -->
+            <g class="theme-circle" data-theme="6" style="cursor: pointer;">
+              <circle cx="300" cy="380" r="80" fill="#7BA8BC" opacity="0.75"/>
+              <text x="300" y="370" text-anchor="middle" fill="#0f152f" font-size="13" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title6 = modules.theme_6.theme_circle_title if modules.theme_6.theme_circle_title else modules.theme_6.theme_title -%}
+                {%- set lines6 = title6.split('<LF>') -%}
+                {%- for line in lines6 -%}
+                  <tspan x="300" dy="{% if loop.first %}0{% else %}15{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+            
+            <!-- Theme 7: Budget and resources (Medium) -->
+            <g class="theme-circle" data-theme="7" style="cursor: pointer;">
+              <circle cx="500" cy="420" r="85" fill="#7BA8BC" opacity="0.75"/>
+              <text x="500" y="410" text-anchor="middle" fill="#0f152f" font-size="14" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title7 = modules.theme_7.theme_circle_title if modules.theme_7.theme_circle_title else modules.theme_7.theme_title -%}
+                {%- set lines7 = title7.split('<LF>') -%}
+                {%- for line in lines7 -%}
+                  <tspan x="500" dy="{% if loop.first %}0{% else %}16{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+            
+            <!-- Theme 8: Public-facing services and resident experience (Small) -->
+            <g class="theme-circle" data-theme="8" style="cursor: pointer;">
+              <circle cx="200" cy="480" r="70" fill="#9BC4D4" opacity="0.7"/>
+              <text x="200" y="470" text-anchor="middle" fill="#0f152f" font-size="11" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title8 = modules.theme_8.theme_circle_title if modules.theme_8.theme_circle_title else modules.theme_8.theme_title -%}
+                {%- set lines8 = title8.split('<LF>') -%}
+                {%- for line in lines8 -%}
+                  <tspan x="200" dy="{% if loop.first %}0{% else %}14{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+            
+            <!-- Theme 9: Governance and oversight (Small) -->
+            <g class="theme-circle" data-theme="9" style="cursor: pointer;">
+              <circle cx="450" cy="320" r="65" fill="#9BC4D4" opacity="0.7"/>
+              <text x="450" y="310" text-anchor="middle" fill="#0f152f" font-size="12" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title9 = modules.theme_9.theme_circle_title if modules.theme_9.theme_circle_title else modules.theme_9.theme_title -%}
+                {%- set lines9 = title9.split('<LF>') -%}
+                {%- for line in lines9 -%}
+                  <tspan x="450" dy="{% if loop.first %}0{% else %}14{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+            
+            <!-- Theme 10: Workplace operations (Small) -->
+            <g class="theme-circle" data-theme="10" style="cursor: pointer;">
+              <circle cx="680" cy="380" r="65" fill="#9BC4D4" opacity="0.7"/>
+              <text x="680" y="370" text-anchor="middle" fill="#0f152f" font-size="12" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                {%- set title10 = modules.theme_10.theme_circle_title if modules.theme_10.theme_circle_title else modules.theme_10.theme_title -%}
+                {%- set lines10 = title10.split('<LF>') -%}
+                {%- for line in lines10 -%}
+                  <tspan x="680" dy="{% if loop.first %}0{% else %}14{% endif %}">{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+            </g>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="e3-comment-explorer">
+<section id="themes-deep-dive">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-            <div class="stats-intro">
-             <h2>Comment explorer</h2>
-            </div>
+        <div class="section-header">
+          <h2>{{ modules.themes_deep_dive.title }}</h2>
+        </div>
       </div>
     </div>
+    {% for i in range(1, 11) %}
+      <div id="theme-{{ i }}-content" class="theme-content{% if i == 1 %} active{% endif %}" data-theme="{{ i }}">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="theme-header">
+              <span class="theme-number">Theme {{ i }}</span>
+              <h3>{{ modules["theme_" + i].theme_title }}</h3>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="theme-description">
+              <p>{{ modules["theme_" + i].theme_description }}</p>
+              {% if modules["theme_" + i].theme_quote %}
+                <div class="theme-quote">
+                  <p>{{ modules["theme_" + i].theme_quote }}</p>
+                </div>
+              {% endif %}
+              <a href="#comment-explorer" class="theme-link">{{ modules["theme_" + i].see_more_link }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </section>
 
-<section id="e3-response">
+<section id="suggested-solutions">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-            <div class="stats-intro">
-             <h2>Response</h2>
+        <div class="solutions-header">
+          <h2>{{ modules.suggested_solutions.title }}</h2>
+          <p>{{ modules.suggested_solutions.intro_text }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="solution-card">
+          <div class="solution-icon"></div>
+          <h4>{{ modules.solution_1.title }}</h4>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="solution-card">
+          <div class="solution-icon"></div>
+          <h4>{{ modules.solution_2.title }}</h4>
+          {% if modules.solution_2.description %}
+            <p>{{ modules.solution_2.description }}</p>
+          {% endif %}
+          {% if modules.solution_2.quote %}
+            <div class="solution-quote">
+              <p>{{ modules.solution_2.quote }}</p>
             </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="solution-card">
+          <div class="solution-icon"></div>
+          <h4>{{ modules.solution_3.title }}</h4>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="solution-card">
+          <div class="solution-icon"></div>
+          <h4>{{ modules.solution_4.title }}</h4>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="solution-card">
+          <div class="solution-icon"></div>
+          <h4>{{ modules.solution_5.title }}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="solutions-pagination">
+          <div class="pagination-dots">
+            {% for i in range(1, 11) %}
+              <span class="dot{% if i == 1 %} active{% endif %}"></span>
+            {% endfor %}
+          </div>
+          <button class="view-more-button">View more</button>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<section id="comment-explorer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="comment-explorer-header">
+          <h2>{{ modules.comment_explorer.title }}</h2>
+          <p>{{ modules.comment_explorer.intro_text }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="comment-explorer-controls">
+          <select class="theme-selector">
+            <option>Recruitment, hiring, and retention</option>
+            <option>Process improvement</option>
+            <option>Technology and digital innovation</option>
+            <option>Organizational structure and culture</option>
+            <option>Management culture and leadership</option>
+            <option>Communication and knowledge sharing</option>
+            <option>Budget and resources</option>
+            <option>Public-facing services and resident experience</option>
+            <option>Governance and oversight</option>
+            <option>Workplace operations</option>
+          </select>
+          <button class="filter-button">Filter</button>
+          <input type="text" class="search-input" placeholder="Search">
+          <button class="sort-button">Sort v</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="comments-container">
+          <!-- Comments will be populated here from JSON -->
+        </div>
+        <div class="download-comments">
+          <button class="download-button">Download all comments</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section id="other-efforts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-header">
+          <h2>{{ modules.other_efforts.title }}</h2>
+        </div>
+        {% if modules.other_efforts.content %}
+        <div class="style-body-text">
+          {{ modules.other_efforts.content | safe }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="current-actions">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="actions-header">
+          <h2>{{ modules.current_actions.title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="action-item">
+          <div class="action-icon"></div>
+          <h4>{{ modules.current_actions.action_1_title }}</h4>
+          {% if modules.current_actions.action_1_description %}
+            <p>{{ modules.current_actions.action_1_description }}</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="action-item">
+          <div class="action-icon"></div>
+          <h4>{{ modules.current_actions.action_2_title }}</h4>
+          {% if modules.current_actions.action_2_description %}
+            <p>{{ modules.current_actions.action_2_description }}</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="action-item">
+          <div class="action-icon"></div>
+          {% if modules.current_actions.action_3_title %}
+            <h4>{{ modules.current_actions.action_3_title }}</h4>
+          {% endif %}
+          {% if modules.current_actions.action_3_description %}
+            <p>{{ modules.current_actions.action_3_description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stay-informed">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="stay-informed-content">
+          <h2>{{ modules.stay_informed.title }}</h2>
+          <a data-appearance="button" data-theme="orange" href="/#sign-up" class="signup-button">{{ modules.stay_informed.button_text }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "e3-theme-navigation.njk" %}
 
 {% endblock %}

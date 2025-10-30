@@ -1,1 +1,467 @@
 /* state-employees-report.css */
+
+section#e3-report-hero {
+    background: #1C2745;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    color: #FFF4EB;
+    padding: 4rem 0;
+}
+
+.hero-container {
+    position: relative;
+}
+
+.e3-hero-adornment {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 247px; 
+    @media (width <= 991px) {
+        width: 169px; 
+        top: inherit;
+        bottom: -105px;
+        right: -44px;
+    }
+}
+
+/* Section Headers */
+.section-header {
+    margin: 3rem 0 2rem 0;
+}
+
+.section-header h2 {
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Background and Context Section */
+section#background-and-context {
+    background: #FFF4EB;
+    padding: 3rem 0;
+}
+
+.context-section {
+    padding: 1.5rem 0;
+}
+
+.context-section h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #0f152f;
+    margin-bottom: 1rem;
+}
+
+/* What We Heard Section */
+section#what-we-heard {
+    padding: 3rem 0;
+}
+
+.what-we-heard-content {
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.participation-sidebar {
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.participation-sidebar h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #0f152f;
+    margin-bottom: 1.5rem;
+}
+
+.participation-stat {
+    margin-bottom: 2rem;
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+    color: #2d3a4a;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+}
+
+.participation-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+
+.participation-quote {
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #5489A3;
+    margin-top: 1.5rem;
+}
+
+.participation-quote p {
+    margin: 0;
+    font-style: italic;
+    color: #333;
+}
+
+/* Findings and Analysis */
+section#findings-and-analysis {
+    padding: 2rem 0;
+}
+
+/* Themes We Found Section */
+section#themes-we-found {
+    padding: 3rem 0;
+    background: #FFF4EB;
+}
+
+.themes-intro h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #0f152f;
+    margin-bottom: 1rem;
+}
+
+.themes-intro p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.themes-bubble-chart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.themes-bubble-chart img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Themes Deep Dive Section */
+section#themes-deep-dive {
+    padding: 3rem 0;
+}
+
+/* Theme navigation removed - using SVG circles instead */
+
+.theme-content {
+    display: none;
+    padding: 2rem 0;
+}
+
+.theme-content.active {
+    display: block;
+}
+
+.theme-header {
+    margin-bottom: 2rem;
+}
+
+.theme-number {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.theme-header h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #0f152f;
+    margin-top: 0.5rem;
+}
+
+.theme-description p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+.theme-quote {
+    background: #F6F7FA;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #5489A3;
+    margin: 1.5rem 0;
+}
+
+.theme-quote p {
+    margin: 0;
+    font-style: italic;
+    color: #333;
+}
+
+.theme-link {
+    color: #5489A3;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Suggested Solutions Section */
+section#suggested-solutions {
+    padding: 3rem 0;
+    background: #FFF4EB;
+}
+
+.solutions-header h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #0f152f;
+    margin-bottom: 1rem;
+}
+
+.solutions-header p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.solution-card {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    min-height: 200px;
+}
+
+.solution-icon {
+    width: 60px;
+    height: 60px;
+    background: #F6F7FA;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.solution-card h4 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #0f152f;
+    margin-bottom: 1rem;
+}
+
+.solution-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.solution-quote {
+    background: #F6F7FA;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    border-left: 3px solid #5489A3;
+}
+
+.solution-quote p {
+    margin: 0;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.solutions-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pagination-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #D9D9D9;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #5489A3;
+}
+
+.view-more-button {
+    padding: 0.75rem 1.5rem;
+    background: #FFFFFF;
+    border: 2px solid #5489A3;
+    border-radius: 8px;
+    color: #5489A3;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Comment Explorer Section */
+section#comment-explorer {
+    padding: 3rem 0;
+}
+
+.comment-explorer-header h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #0f152f;
+    margin-bottom: 1rem;
+}
+
+.comment-explorer-header p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.comment-explorer-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.theme-selector,
+.filter-button,
+.sort-button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #D9D9D9;
+    border-radius: 8px;
+    background: #FFFFFF;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.theme-selector {
+    flex: 1;
+    min-width: 250px;
+}
+
+.filter-button,
+.sort-button {
+    background: #F6F7FA;
+}
+
+.search-input {
+    flex: 2;
+    padding: 0.75rem 1rem;
+    border: 2px solid #D9D9D9;
+    border-radius: 8px;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.comments-container {
+    min-height: 300px;
+    padding: 2rem;
+    background: #F6F7FA;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.download-comments {
+    text-align: center;
+}
+
+.download-button {
+    padding: 1rem 2rem;
+    background: #5489A3;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Other Efforts Section */
+section#other-efforts {
+    padding: 2rem 0;
+}
+
+/* Current Actions Section */
+section#current-actions {
+    padding: 3rem 0;
+}
+
+.actions-header h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #0f152f;
+    margin-bottom: 2rem;
+}
+
+.action-item {
+    padding: 1.5rem 0;
+}
+
+.action-icon {
+    width: 60px;
+    height: 60px;
+    background: #F6F7FA;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.action-item h4 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #0f152f;
+    margin-bottom: 1rem;
+}
+
+.action-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Stay Informed Section */
+section#stay-informed {
+    padding: 3rem 0;
+    background: #FFF4EB;
+    text-align: center;
+}
+
+.stay-informed-content h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #0f152f;
+    margin-bottom: 2rem;
+}
+
+.signup-button {
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .comment-explorer-controls {
+        flex-direction: column;
+    }
+    
+    .theme-selector,
+    .search-input {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .participation-sidebar {
+        margin-top: 2rem;
+    }
+    
+    .solution-card {
+        margin-bottom: 1.5rem;
+    }
+}

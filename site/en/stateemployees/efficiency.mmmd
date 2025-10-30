@@ -1,6 +1,6 @@
 ---
 title: Efficiency report
-description: "Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.  This page shows the top issues for rebuilding LA."
+description: "Engaged California asked state employees to share ideas to better serve residents. The initiative sought to identify barriers to efficiency and ways to improve."
 layout: mmmd-stateemployees-report
 parentid: stateemployees
 keywords:
@@ -11,3 +11,240 @@ tags:
   - pages
 ---
 
+----
+id: hero
+buttonText: Jump to the findings
+----
+
+# Report title
+
+Engaged California asked state employees to share ideas to better serve residents. The initiative sought to identify barriers to efficiency and ways to improve.
+
+We're proud to say that over 1,800 state employees took part!
+
+Their contributions drew from their experiences as state workers and Californians.
+
+----
+id: background_context
+----
+
+## Background and context
+
+----
+id: what_we_did
+title: What we did
+----
+
+We used the Engaged California platform to connect with over 1,600 state employees. We gathered more than 1,900 ideas to improve government operations.
+
+----
+id: why_we_did_it
+title: Why we did it
+----
+
+To build a better government, we need to engage directly with those who know it best: state employees. They are the experts on how the government works, how it doesn't, and how it should.
+
+----
+id: what_we_heard
+----
+
+## What we heard
+
+California state employees are deeply committed to public service. They were grateful for the chance to share their knowledge. They took the engagement seriously and showed they care about their work and the communities they support.
+
+The main problem areas are clear. People cited hiring practices, employee training, and complex purchasing processes most often.
+
+**But the greatest value this engagement offers is the thoughtful solutions shared.**
+
+The collective submissions reveal a clear vision. One where efficiency drives both growth and inclusivity.
+
+People underscored the importance of organizational culture. They suggested ways to boost employee morale. They called out ways to improve customer service. And they outlined paths to save time by building on lessons learned.
+
+----
+id: participation_numbers
+title: Participation by the numbers
+participants_count: 1,653
+participants_label: Participants
+insights_count: 1,919
+insights_label: Insights
+staff_note: Staff from all levels of seniority and tenure
+quote: It's also to be able to share my opinions and to broaden my perspective on what it means to be a public servant.
+----
+
+----
+id: findings_analysis
+----
+
+## Findings and analysis
+
+----
+id: themes_we_found
+title: Themes we found
+intro_text: Larger circles had the most discussion. Clicking a theme will take you to a deep dive of the theme.
+----
+
+----
+id: theme_1
+theme_number: 1
+theme_title: Recruitment, hiring, and retention
+theme_circle_title: "Recruitment,<LF>hiring, and<LF>retention"
+theme_description: California state employees identify systemic problems with talent management, training programs, and professional development across multiple departments. Issues include outdated hiring practices, inadequate mentorship programs, misaligned role assignments, and lack of standardized policies.
+theme_quote: Some people are promoted without meeting minimum qualifications while others are told they can't promote due to not meeting them despite experience and relevant education.
+see_more_link: See more comments on this theme
+----
+
+----
+id: theme_2
+theme_number: 2
+theme_title: Process improvement
+theme_circle_title: "Process<LF>improvement"
+theme_description: State employees identified numerous inefficiencies in workflows, approval processes, and administrative procedures that slow down government operations and reduce effectiveness.
+theme_quote: 
+see_more_link: See more comments on this theme
+----
+
+----
+id: theme_3
+theme_number: 3
+theme_title: Technology and digital innovation
+theme_circle_title: "Technology and<LF>digital innovation"
+theme_description: Employees highlighted the need for modernization of IT systems, better training on digital tools, and streamlined technology adoption processes.
+theme_quote: 
+see_more_link: See more comments on this theme
+----
+
+----
+id: theme_4
+theme_number: 4
+theme_title: Organizational structure and culture
+theme_circle_title: "Organizational<LF>structure and<LF>culture"
+theme_description: Participants discussed how organizational hierarchies, communication channels, and workplace culture impact efficiency and employee satisfaction.
+theme_quote: 
+see_more_link: See more comments on this theme
+----
+
+----
+id: theme_5
+theme_number: 5
+theme_title: Management culture and leadership
+theme_circle_title: "Management<LF>culture and<LF>leadership"
+theme_description: State employees emphasized the importance of effective leadership, management training, and supportive supervision in creating efficient work environments.
+theme_quote: 
+see_more_link: See more comments on this theme
+----
+
+----
+id: theme_6
+theme_number: 6
+theme_title: Communication and knowledge sharing
+theme_circle_title: "Communication and<LF>knowledge sharing"
+theme_description: Workers identified gaps in information sharing, collaboration tools, and interdepartmental communication that hinder efficiency.
+theme_quote: 
+see_more_link: See more comments on this theme
+----
+
+----
+id: theme_7
+theme_number: 7
+theme_title: Budget and resources
+theme_circle_title: "Budget and<LF>resources"
+theme_description: Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
+theme_quote: 
+see_more_link: See more comments on this theme
+----
+
+----
+id: theme_8
+theme_number: 8
+theme_title: Public-facing services and resident experience
+theme_circle_title: "Public-facing<LF>services and<LF>resident experience"
+theme_description: State workers shared ideas on improving customer service, streamlining public-facing processes, and enhancing the resident experience.
+theme_quote: 
+see_more_link: See more comments on this theme
+----
+
+----
+id: theme_9
+theme_number: 9
+theme_title: Governance and oversight
+theme_circle_title: "Governance<LF>and oversight"
+theme_description: Participants discussed regulatory processes, compliance requirements, and oversight mechanisms that impact efficiency.
+theme_quote: 
+see_more_link: See more comments on this theme
+----
+
+----
+id: theme_10
+theme_number: 10
+theme_title: Workplace operations
+theme_circle_title: "Workplace<LF>operations"
+theme_description: State employees identified operational challenges related to facilities, remote work policies, and day-to-day workplace logistics.
+theme_quote: 
+see_more_link: See more comments on this theme
+----
+
+----
+id: themes_deep_dive
+title: Themes deep dive
+----
+
+----
+id: suggested_solutions
+title: Suggested solutions
+intro_text: Here's a selection of staff suggestions aimed at improving the efficiency of our government.
+----
+
+----
+id: solution_1
+title: Ensure all managers attend a 1-year training program
+----
+
+----
+id: solution_2
+title: Create succession plans for all roles
+description: "We're on our way, though we have more work to do, to make this a reality. One staff shared this example:"
+quote: I have created employee instructions manuals for roles I have been in to pass along to those who would come into the role.
+----
+
+----
+id: solution_3
+title: Base salary increases on performance reviews
+----
+
+----
+id: solution_4
+title: Pair newer staff with experienced mentors
+----
+
+----
+id: solution_5
+title: Better enable pathways for upward mobility
+----
+
+----
+id: comment_explorer
+title: Comment explorer
+intro_text: Read state employees' own words on these topics
+----
+
+----
+id: other_efforts
+title: Other efforts
+----
+
+----
+id: current_actions
+title: Current actions we're taking
+action_1_title: Refer to Innovation Fellows program to show how audiences staff are involved in improvements
+action_1_description: 
+action_2_title: Join our Innovation Community of Practice
+action_2_description: 
+action_3_title: 
+action_3_description: 
+----
+
+----
+id: stay_informed
+title: Stay informed
+button_text: Sign up for Engaged California
+----
