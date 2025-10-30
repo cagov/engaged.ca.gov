@@ -1,8 +1,164 @@
 <script>
 
 let current_theme_index = 1;
+let global_comment_data = null;
+let current_search_term = '';
+let current_sort = 'date'; // Default to date sort
 
-function switch_theme(theme_number) {
+// Function to escape HTML and highlight search terms
+function highlightSearchText(text, searchTerm) {
+  if (!searchTerm || searchTerm.length < 2) {
+    return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  
+  // Escape HTML first
+  let escapedText = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  
+  // Create a regex to match the search term (case-insensitive)
+  let regex = new RegExp('(' + searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  
+  // Replace matches with highlighted version
+  return escapedText.replace(regex, '<mark>$1</mark>');
+}
+
+function populate_comments(theme_number_or_all) {
+  if (global_comment_data == null) {
+    console.log("Comment data not loaded yet");
+    return;
+  }
+  
+  let filtered_comments;
+  
+  // Handle "all" vs specific theme
+  if (theme_number_or_all === 'all' || theme_number_or_all === null) {
+    // Show all comments
+    filtered_comments = global_comment_data.comments.filter(function(comment) {
+      return comment.content && comment.content.trim() !== '';
+    });
+  } else {
+    // Convert theme number (1-10) to mipid (0-9)
+    let target_mipid = parseInt(theme_number_or_all, 10) - 1;
+    
+    // Filter comments by mipid
+    filtered_comments = global_comment_data.comments.filter(function(comment) {
+      return comment.mipid === target_mipid && comment.content && comment.content.trim() !== '';
+    });
+  }
+  
+  // Apply search filter if there's a search term
+  if (current_search_term && current_search_term.length >= 2) {
+    let search_lower = current_search_term.toLowerCase();
+    filtered_comments = filtered_comments.filter(function(comment) {
+      return comment.content.toLowerCase().includes(search_lower);
+    });
+  }
+  
+  // Store original index for date sort (preserve original order)
+  // Note: We need to map back to original position in the full comment array
+  let all_comments = global_comment_data.comments;
+  filtered_comments.forEach(function(comment) {
+    comment._originalIndex = all_comments.findIndex(function(c) {
+      return c.cid === comment.cid;
+    });
+  });
+  
+  // Apply sorting based on current_sort option
+  filtered_comments.sort(function(a, b) {
+    // Always keep top-level comments before replies
+    if (a.rid === '' && b.rid !== '') return -1;
+    if (a.rid !== '' && b.rid === '') return 1;
+    
+    // If both are replies to the same parent, keep their relative order
+    if (a.rid !== '' && b.rid !== '' && a.rid === b.rid) {
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+    }
+    
+    // Apply the selected sort method
+    if (current_sort === 'date') {
+      // Date sort: use original order (originalIndex)
+      return a._originalIndex - b._originalIndex;
+    } else if (current_sort === 'alpha') {
+      // Alpha sort: use lowercase content
+      let aText = (a.content || '').toLowerCase();
+      let bText = (b.content || '').toLowerCase();
+      if (aText < bText) return -1;
+      if (aText > bText) return 1;
+      return 0;
+    } else if (current_sort === 'theme') {
+      // Theme sort: sort by mipid first, then by original index within theme
+      if (a.mipid !== b.mipid) {
+        return a.mipid - b.mipid;
+      }
+      // Within same theme, maintain original order
+      return a._originalIndex - b._originalIndex;
+    }
+    
+    // Default fallback
+    return 0;
+  });
+  
+  console.log(`Found ${filtered_comments.length} comments for ${theme_number_or_all === 'all' ? 'all themes' : 'theme ' + theme_number_or_all}`);
+  
+  // Build comment markup with highlighting
+  let cmarkup = '';
+  let comments_by_cid = {};
+  
+  // Create a map of comments by cid for easy lookup
+  filtered_comments.forEach(function(comment) {
+    comments_by_cid[comment.cid] = comment;
+  });
+  
+  // Function to get indent level for replies
+  function getIndentLevel(comment) {
+    if (comment.rid === '') return 0;
+    let parent = comments_by_cid[comment.rid];
+    if (parent) return getIndentLevel(parent) + 1;
+    return 0;
+  }
+  
+  filtered_comments.forEach(function(comment) {
+    let indent = getIndentLevel(comment);
+    let indent_class = indent > 0 ? ` indent-${Math.min(indent, 3)}` : '';
+    
+    let comment_text = comment.content.replace(/\n/g, ' ');
+    let highlighted_text = highlightSearchText(comment_text, current_search_term);
+    
+    cmarkup += `<div class="comment-item${indent_class}">`;
+    cmarkup += '<div class="comment-content">';
+    cmarkup += '"' + highlighted_text + '"';
+    cmarkup += '</div>';
+    cmarkup += '</div>';
+  });
+  
+  // Update the comments container
+  let comment_container = document.querySelector('.comments-container');
+  if (comment_container) {
+    if (filtered_comments.length === 0) {
+      comment_container.innerHTML = '<p class="no-comments">No comments found.</p>';
+    } else {
+      comment_container.innerHTML = cmarkup;
+    }
+  }
+  
+  // Update theme selector dropdown
+  let theme_selector = document.querySelector('.theme-selector');
+  if (theme_selector) {
+    if (theme_number_or_all === 'all') {
+      theme_selector.value = 'all';
+    } else {
+      theme_selector.value = theme_number_or_all.toString();
+    }
+  }
+}
+
+function switch_theme(theme_number, should_scroll = false) {
+  // Handle "all" option
+  if (theme_number === 'all' || theme_number === null) {
+    current_theme_index = 'all';
+    populate_comments('all');
+    return;
+  }
+  
   // Update current theme index
   current_theme_index = parseInt(theme_number, 10);
   
@@ -16,8 +172,10 @@ function switch_theme(theme_number) {
   if (selected_content) {
     selected_content.classList.add('active');
     
-    // Smooth scroll to the theme content section
-    selected_content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Only scroll if explicitly requested (e.g., from hash navigation or direct link)
+    if (should_scroll) {
+      selected_content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
   
   // Update SVG circle highlighting
@@ -48,6 +206,9 @@ function switch_theme(theme_number) {
       }
     }
   });
+  
+  // Update comments for the new theme
+  populate_comments(theme_number);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -62,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click handler
     circleGroup.addEventListener('click', function() {
       let theme_number = parseInt(this.dataset.theme, 10);
-      switch_theme(theme_number);
+      switch_theme(theme_number, false); // Don't scroll when clicking circles
     });
     
     // Add keyboard support
@@ -70,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         let theme_number = parseInt(this.dataset.theme, 10);
-        switch_theme(theme_number);
+        switch_theme(theme_number, false); // Don't scroll when using keyboard
       }
     });
     
@@ -98,32 +259,111 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Handle hash navigation (e.g., #theme-3-content)
+  // Handle hash navigation (e.g., #theme-3-content) - scroll when hash is present
   window.addEventListener('hashchange', function() {
     let hash = window.location.hash;
     let match = hash.match(/^#theme-(\d+)-content$/);
     if (match) {
       let theme_number = parseInt(match[1], 10);
       if (theme_number >= 1 && theme_number <= 10) {
-        switch_theme(theme_number);
+        switch_theme(theme_number, true); // Scroll when navigating via hash
       }
     }
   });
   
-  // Check for initial hash on page load
+  // Check for initial hash on page load - scroll if hash is present
   if (window.location.hash) {
     let hash = window.location.hash;
     let match = hash.match(/^#theme-(\d+)-content$/);
     if (match) {
       let theme_number = parseInt(match[1], 10);
       if (theme_number >= 1 && theme_number <= 10) {
-        switch_theme(theme_number);
+        switch_theme(theme_number, true); // Scroll when page loads with hash
       }
     }
   }
   
-  // Initialize first theme as active
-  switch_theme(1);
+  // Load comment data
+  fetch("/public/data/E3_data_v1.json")
+    .then(response => response.json())
+    .then(data => {
+      console.log("Comment data loaded:", data.comments.length, "comments");
+      global_comment_data = data;
+      // Populate comments for initial theme
+      populate_comments(current_theme_index);
+    })
+    .catch(error => {
+      console.error("Error fetching comment data:", error);
+    });
+  
+  // Set up theme selector dropdown
+  let theme_selector = document.querySelector('.theme-selector');
+  if (theme_selector) {
+    theme_selector.addEventListener('change', function() {
+      let value = this.value;
+      if (value === 'all') {
+        switch_theme('all', false); // Don't scroll when changing dropdown
+      } else {
+        let theme_number = parseInt(value, 10);
+        switch_theme(theme_number, false); // Don't scroll when changing dropdown
+      }
+    });
+  }
+  
+  // Set up search input
+  let search_input = document.querySelector('.search-input');
+  if (search_input) {
+    let search_timeout;
+    search_input.addEventListener('input', function() {
+      clearTimeout(search_timeout);
+      let search_value = search_input.value.trim();
+      
+      // If search term is 2+ characters, automatically switch to "All"
+      if (search_value.length >= 2) {
+        if (current_theme_index !== 'all') {
+          current_theme_index = 'all';
+          if (theme_selector) {
+            theme_selector.value = 'all';
+          }
+        }
+        current_search_term = search_value;
+        populate_comments('all');
+      } else {
+        // Clear search and use current theme
+        current_search_term = '';
+        if (current_theme_index === 'all') {
+          // If we were on "all", switch back to theme 1
+          current_theme_index = 1;
+          if (theme_selector) {
+            theme_selector.value = '1';
+          }
+          switch_theme(1, false);
+        } else {
+          populate_comments(current_theme_index);
+        }
+      }
+    });
+  }
+  
+  // Set up sort selector dropdown
+  let sort_selector = document.querySelector('.sort-selector');
+  if (sort_selector) {
+    sort_selector.value = 'date'; // Set default to date
+    sort_selector.addEventListener('change', function() {
+      current_sort = this.value;
+      // Repopulate comments with new sort
+      if (current_theme_index === 'all') {
+        populate_comments('all');
+      } else {
+        populate_comments(current_theme_index);
+      }
+    });
+  }
+  
+  // Initialize first theme as active (don't scroll on initial load unless there's a hash)
+  if (!window.location.hash) {
+    switch_theme(1, false); // Don't scroll on initial page load
+  }
 });
 
 </script>
