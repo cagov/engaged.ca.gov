@@ -2,7 +2,11 @@
 
 import argparse
 import csv
+import io
 import json
+
+from known_themes import known_themes
+
 
 current_version = 1
 
@@ -23,10 +27,47 @@ unique_main_ideas = set()
 unique_main_idea_primary_themes = set()
 unique_main_idea_subthemes = set()
 
-with open(args.input_file, "r", encoding="utf-8-sig") as f:
+# Try to detect the encoding of the CSV file
+# Common encodings to try: cp1252 (Windows-1252 - most common for Excel exports), utf-8-sig (UTF-8 with BOM), latin-1, utf-8
+# Prioritize cp1252 since ‚Äô characters typically indicate Windows-1252 being misread as UTF-8
+encodings_to_try = ["cp1252", "utf-8-sig", "latin-1", "utf-8"]
+csv_encoding = None
+csv_content = None
+
+for encoding in encodings_to_try:
+    try:
+        with open(args.input_file, "r", encoding=encoding) as f:
+            csv_content = f.read()
+        # Check if we see mojibake characters that suggest wrong encoding
+        if "‚Äô" in csv_content or "â€™" in csv_content:
+            if args.verbose:
+                print(f"Found mojibake characters with {encoding}, trying next encoding...")
+            continue
+        csv_encoding = encoding
+        if args.verbose:
+            print(f"Successfully read CSV with encoding: {encoding}")
+        break
+    except (UnicodeDecodeError, UnicodeError):
+        if args.verbose:
+            print(f"Failed to read with {encoding}, trying next encoding...")
+        continue
+
+if csv_encoding is None:
+    # Fallback to utf-8-sig if all else fails
+    csv_encoding = "utf-8-sig"
+    if args.verbose:
+        print(f"Using fallback encoding: {csv_encoding}")
+    with open(args.input_file, "r", encoding=csv_encoding) as f:
+        csv_content = f.read()
+
+# Now parse the CSV content
+with io.StringIO(csv_content) as f:
     reader = csv.reader(f)
     # get the first line of the CSV to determine field order
     headers = next(reader)
+    # Strip BOM characters from headers (appears as ï»¿ when UTF-8 BOM is read as cp1252)
+    # Also handle other BOM variations
+    headers = [h.lstrip('\ufeff').lstrip('ï»¿').strip() for h in headers]
     if args.verbose:
         print(f"Headers: {headers}")
     # create a dictionary of field names to indices
@@ -68,29 +109,43 @@ output_data = {
     "unique_main_ideas": unique_main_ideas,
     "unique_main_idea_primary_themes": unique_main_idea_primary_themes,
     "unique_main_idea_subthemes": unique_main_idea_subthemes,
+    "known_themes": known_themes,
 }
 
 comments = []
 for record in records:
     if record["CONTENT"] != "":
-        # print("Processing comment:", record)
+        # Clean up content: replace newlines with spaces and fix any encoding issues
         content = record["CONTENT"].replace("\n", " ")
-        # replace \u201a\u00c4\u00f4 with '
-        content = content.replace("‚Äô", "'") # not working...
+        # Fix common mojibake issues if they exist
+        # These are common Windows-1252 to UTF-8 mis-encodings
+        content = content.replace("‚Äô", "'")  # Windows-1252 right single quotation mark
+        content = content.replace("‚Äò", "'")  # Windows-1252 left single quotation mark
+        content = content.replace("‚Äú", '"')  # Windows-1252 left double quotation mark
+        content = content.replace("‚Äù", '"')  # Windows-1252 right double quotation mark
+        content = content.replace("‚Äì", "-")  # Windows-1252 en dash
+        content = content.replace("‚Äî", "—")  # Windows-1252 em dash
+        content = content.replace("‚Ä¶", "...")  # Windows-1252 ellipsis
         crec = {
             "cid": record["COMMENT_ID"],
             "rid": record["REPLY_TO_ID"],
             "pid": record["PARTICIPANT_ID"],
-            "content": record["CONTENT"],
+            "content": content,  # Use cleaned content
         }
         # add ids for questions, main ideas, and subthemes
+        mipid = -1
+        for tindex,theme in enumerate(known_themes):
+            if theme["csv_name"] == record["MAIN_IDEA_PRIMARY_THEME"]:
+                mipid = tindex
+                break
         crec["qid"] = unique_questions.index(record["QUESTION"])
         crec["miid"] = unique_main_ideas.index(record["MAIN_IDEA_TYPE"])
-        crec["mipid"] = unique_main_idea_primary_themes.index(record["MAIN_IDEA_PRIMARY_THEME"])
+        crec["mipid"] = mipid
         crec["midsid"] = unique_main_idea_subthemes.index(record["MAIN_IDEA_SUBTHEMES"])
         comments.append(crec)
 
 output_data["comments"] = comments
 
-with open(args.output_file, "w") as f:
-    json.dump(output_data, f, indent=2)
+# Write JSON file with UTF-8 encoding
+with open(args.output_file, "w", encoding="utf-8") as f:
+    json.dump(output_data, f, indent=2, ensure_ascii=False)
