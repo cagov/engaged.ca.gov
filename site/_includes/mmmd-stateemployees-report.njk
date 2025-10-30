@@ -105,129 +105,39 @@
           <p>{{ modules.themes_we_found.intro_text }}</p>
         </div>
         <div id="themes-bubble-chart" class="themes-bubble-chart">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
             <!-- Background -->
-            <rect width="800" height="600" fill="#F6F7FA"/>
+            <rect width="1000" height="600" fill="#F6F7FA"/>
             
-            <!-- Theme 1: Recruitment, hiring, and retention (Large) -->
-            <g class="theme-circle" data-theme="1" style="cursor: pointer;">
-              <circle cx="250" cy="200" r="120" fill="#5489A3" opacity="0.8"/>
-              <text x="250" y="190" text-anchor="middle" fill="#0f152f" font-size="15" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title1 = modules.theme_1.theme_circle_title if modules.theme_1.theme_circle_title else modules.theme_1.theme_title -%}
-                {%- set lines1 = title1.split('<LF>') -%}
-                {%- for line in lines1 -%}
-                  <tspan x="250" dy="{% if loop.first %}0{% else %}18{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
-            
-            <!-- Theme 2: Process improvement (Large) -->
-            <g class="theme-circle" data-theme="2" style="cursor: pointer;">
-              <circle cx="550" cy="250" r="110" fill="#5489A3" opacity="0.8"/>
-              <text x="550" y="245" text-anchor="middle" fill="#0f152f" font-size="15" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title2 = modules.theme_2.theme_circle_title if modules.theme_2.theme_circle_title else modules.theme_2.theme_title -%}
-                {%- set lines2 = title2.split('<LF>') -%}
-                {%- for line in lines2 -%}
-                  <tspan x="550" dy="{% if loop.first %}0{% else %}18{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
-            
-            <!-- Theme 3: Technology and digital innovation (Medium) -->
-            <g class="theme-circle" data-theme="3" style="cursor: pointer;">
-              <circle cx="150" cy="350" r="85" fill="#7BA8BC" opacity="0.75"/>
-              <text x="150" y="340" text-anchor="middle" fill="#0f152f" font-size="14" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title3 = modules.theme_3.theme_circle_title if modules.theme_3.theme_circle_title else modules.theme_3.theme_title -%}
-                {%- set lines3 = title3.split('<LF>') -%}
-                {%- for line in lines3 -%}
-                  <tspan x="150" dy="{% if loop.first %}0{% else %}16{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
-            
-            <!-- Theme 4: Organizational structure and culture (Medium) -->
-            <g class="theme-circle" data-theme="4" style="cursor: pointer;">
-              <circle cx="400" cy="180" r="90" fill="#7BA8BC" opacity="0.75"/>
-              <text x="400" y="170" text-anchor="middle" fill="#0f152f" font-size="13" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title4 = modules.theme_4.theme_circle_title if modules.theme_4.theme_circle_title else modules.theme_4.theme_title -%}
-                {%- set lines4 = title4.split('<LF>') -%}
-                {%- for line in lines4 -%}
-                  <tspan x="400" dy="{% if loop.first %}0{% else %}15{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
-            
-            <!-- Theme 5: Management culture and leadership (Medium) -->
-            <g class="theme-circle" data-theme="5" style="cursor: pointer;">
-              <circle cx="650" cy="180" r="85" fill="#7BA8BC" opacity="0.75"/>
-              <text x="650" y="170" text-anchor="middle" fill="#0f152f" font-size="13" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title5 = modules.theme_5.theme_circle_title if modules.theme_5.theme_circle_title else modules.theme_5.theme_title -%}
-                {%- set lines5 = title5.split('<LF>') -%}
-                {%- for line in lines5 -%}
-                  <tspan x="650" dy="{% if loop.first %}0{% else %}15{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
-            
-            <!-- Theme 6: Communication and knowledge sharing (Medium) -->
-            <g class="theme-circle" data-theme="6" style="cursor: pointer;">
-              <circle cx="300" cy="380" r="80" fill="#7BA8BC" opacity="0.75"/>
-              <text x="300" y="370" text-anchor="middle" fill="#0f152f" font-size="13" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title6 = modules.theme_6.theme_circle_title if modules.theme_6.theme_circle_title else modules.theme_6.theme_title -%}
-                {%- set lines6 = title6.split('<LF>') -%}
-                {%- for line in lines6 -%}
-                  <tspan x="300" dy="{% if loop.first %}0{% else %}15{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
-            
-            <!-- Theme 7: Budget and resources (Medium) -->
-            <g class="theme-circle" data-theme="7" style="cursor: pointer;">
-              <circle cx="500" cy="420" r="85" fill="#7BA8BC" opacity="0.75"/>
-              <text x="500" y="410" text-anchor="middle" fill="#0f152f" font-size="14" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title7 = modules.theme_7.theme_circle_title if modules.theme_7.theme_circle_title else modules.theme_7.theme_title -%}
-                {%- set lines7 = title7.split('<LF>') -%}
-                {%- for line in lines7 -%}
-                  <tspan x="500" dy="{% if loop.first %}0{% else %}16{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
-            
-            <!-- Theme 8: Public-facing services and resident experience (Small) -->
-            <g class="theme-circle" data-theme="8" style="cursor: pointer;">
-              <circle cx="200" cy="480" r="70" fill="#9BC4D4" opacity="0.7"/>
-              <text x="200" y="470" text-anchor="middle" fill="#0f152f" font-size="11" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title8 = modules.theme_8.theme_circle_title if modules.theme_8.theme_circle_title else modules.theme_8.theme_title -%}
-                {%- set lines8 = title8.split('<LF>') -%}
-                {%- for line in lines8 -%}
-                  <tspan x="200" dy="{% if loop.first %}0{% else %}14{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
-            
-            <!-- Theme 9: Governance and oversight (Small) -->
-            <g class="theme-circle" data-theme="9" style="cursor: pointer;">
-              <circle cx="450" cy="320" r="65" fill="#9BC4D4" opacity="0.7"/>
-              <text x="450" y="310" text-anchor="middle" fill="#0f152f" font-size="12" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title9 = modules.theme_9.theme_circle_title if modules.theme_9.theme_circle_title else modules.theme_9.theme_title -%}
-                {%- set lines9 = title9.split('<LF>') -%}
-                {%- for line in lines9 -%}
-                  <tspan x="450" dy="{% if loop.first %}0{% else %}14{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
-            
-            <!-- Theme 10: Workplace operations (Small) -->
-            <g class="theme-circle" data-theme="10" style="cursor: pointer;">
-              <circle cx="680" cy="380" r="65" fill="#9BC4D4" opacity="0.7"/>
-              <text x="680" y="370" text-anchor="middle" fill="#0f152f" font-size="12" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
-                {%- set title10 = modules.theme_10.theme_circle_title if modules.theme_10.theme_circle_title else modules.theme_10.theme_title -%}
-                {%- set lines10 = title10.split('<LF>') -%}
-                {%- for line in lines10 -%}
-                  <tspan x="680" dy="{% if loop.first %}0{% else %}14{% endif %}">{{ line }}</tspan>
-                {%- endfor -%}
-              </text>
-            </g>
+            {%- for i in range(1, 11) -%}
+              {%- set theme_module = "theme_" + i -%}
+              {%- if modules[theme_module] -%}
+                {%- set color = modules[theme_module].theme_circle_color if modules[theme_module].theme_circle_color else "#5489A3" -%}
+                {%- set title = modules[theme_module].theme_circle_title if modules[theme_module].theme_circle_title else modules[theme_module].theme_title -%}
+                {%- set lines = title.split('<LF>') -%}
+                {%- set positions = [
+                  {"cx": 200, "cy": 200, "r": 120, "fontSize": 15, "yOffset": 190, "dy": 18},
+                  {"cx": 450, "cy": 200, "r": 110, "fontSize": 15, "yOffset": 190, "dy": 18},
+                  {"cx": 660, "cy": 220, "r": 85, "fontSize": 14, "yOffset": 205, "dy": 16},
+                  {"cx": 330, "cy": 370, "r": 90, "fontSize": 13, "yOffset": 360, "dy": 15},
+                  {"cx": 565, "cy": 380, "r": 85, "fontSize": 13, "yOffset": 370, "dy": 15},
+                  {"cx": 770, "cy": 360, "r": 80, "fontSize": 13, "yOffset": 350, "dy": 15},
+                  {"cx": 140, "cy": 430, "r": 85, "fontSize": 14, "yOffset": 420, "dy": 16},
+                  {"cx": 270, "cy": 530, "r": 70, "fontSize": 11, "yOffset": 520, "dy": 14},
+                  {"cx": 520, "cy": 530, "r": 65, "fontSize": 12, "yOffset": 520, "dy": 14},
+                  {"cx": 680, "cy": 530, "r": 65, "fontSize": 12, "yOffset": 520, "dy": 14}
+                ] -%}
+                {%- set pos = positions[i - 1] -%}
+                <g class="theme-circle" data-theme="{{ i }}" style="cursor: pointer; pointer-events: all; -webkit-user-select: none; user-select: none;">
+                  <circle cx="{{ pos.cx }}" cy="{{ pos.cy }}" r="{{ pos.r }}" fill="{{ color }}" pointer-events="all"/>
+                  <text x="{{ pos.cx }}" y="{{ pos.yOffset }}" text-anchor="middle" fill="#FFFFFF" font-size="{{ pos.fontSize }}" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                    {%- for line in lines -%}
+                      <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ pos.dy }}{% endif %}">{{ line }}</tspan>
+                    {%- endfor -%}
+                  </text>
+                </g>
+              {%- endif -%}
+            {%- endfor -%}
           </svg>
         </div>
       </div>

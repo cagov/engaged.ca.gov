@@ -88,6 +88,7 @@ id: theme_1
 theme_number: 1
 theme_title: Recruitment, hiring, and retention
 theme_circle_title: "Recruitment,<LF>hiring, and<LF>retention"
+theme_circle_color: "#4A90A4"
 theme_description: California state employees identify systemic problems with talent management, training programs, and professional development across multiple departments. Issues include outdated hiring practices, inadequate mentorship programs, misaligned role assignments, and lack of standardized policies.
 theme_quote: Some people are promoted without meeting minimum qualifications while others are told they can't promote due to not meeting them despite experience and relevant education.
 see_more_link: See more comments on this theme
@@ -98,6 +99,7 @@ id: theme_2
 theme_number: 2
 theme_title: Process improvement
 theme_circle_title: "Process<LF>improvement"
+theme_circle_color: "#8B6F47"
 theme_description: State employees identified numerous inefficiencies in workflows, approval processes, and administrative procedures that slow down government operations and reduce effectiveness.
 theme_quote: 
 see_more_link: See more comments on this theme
@@ -108,6 +110,7 @@ id: theme_3
 theme_number: 3
 theme_title: Technology and digital innovation
 theme_circle_title: "Technology and<LF>digital innovation"
+theme_circle_color: "#5B7FA5"
 theme_description: Employees highlighted the need for modernization of IT systems, better training on digital tools, and streamlined technology adoption processes.
 theme_quote: 
 see_more_link: See more comments on this theme
@@ -118,6 +121,7 @@ id: theme_4
 theme_number: 4
 theme_title: Organizational structure and culture
 theme_circle_title: "Organizational<LF>structure and<LF>culture"
+theme_circle_color: "#C46B3F"
 theme_description: Participants discussed how organizational hierarchies, communication channels, and workplace culture impact efficiency and employee satisfaction.
 theme_quote: 
 see_more_link: See more comments on this theme
@@ -128,6 +132,7 @@ id: theme_5
 theme_number: 5
 theme_title: Management culture and leadership
 theme_circle_title: "Management<LF>culture and<LF>leadership"
+theme_circle_color: "#4A4A4A"
 theme_description: State employees emphasized the importance of effective leadership, management training, and supportive supervision in creating efficient work environments.
 theme_quote: 
 see_more_link: See more comments on this theme
@@ -138,6 +143,7 @@ id: theme_6
 theme_number: 6
 theme_title: Communication and knowledge sharing
 theme_circle_title: "Communication and<LF>knowledge sharing"
+theme_circle_color: "#E07A5F"
 theme_description: Workers identified gaps in information sharing, collaboration tools, and interdepartmental communication that hinder efficiency.
 theme_quote: 
 see_more_link: See more comments on this theme
@@ -148,6 +154,7 @@ id: theme_7
 theme_number: 7
 theme_title: Budget and resources
 theme_circle_title: "Budget and<LF>resources"
+theme_circle_color: "#D4AF37"
 theme_description: Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
 theme_quote: 
 see_more_link: See more comments on this theme
@@ -158,6 +165,7 @@ id: theme_8
 theme_number: 8
 theme_title: Public-facing services and resident experience
 theme_circle_title: "Public-facing<LF>services and<LF>resident experience"
+theme_circle_color: "#D494B8"
 theme_description: State workers shared ideas on improving customer service, streamlining public-facing processes, and enhancing the resident experience.
 theme_quote: 
 see_more_link: See more comments on this theme
@@ -168,6 +176,7 @@ id: theme_9
 theme_number: 9
 theme_title: Governance and oversight
 theme_circle_title: "Governance<LF>and oversight"
+theme_circle_color: "#7B68EE"
 theme_description: Participants discussed regulatory processes, compliance requirements, and oversight mechanisms that impact efficiency.
 theme_quote: 
 see_more_link: See more comments on this theme
@@ -178,6 +187,7 @@ id: theme_10
 theme_number: 10
 theme_title: Workplace operations
 theme_circle_title: "Workplace<LF>operations"
+theme_circle_color: "#4ECDC4"
 theme_description: State employees identified operational challenges related to facilities, remote work policies, and day-to-day workplace logistics.
 theme_quote: 
 see_more_link: See more comments on this theme

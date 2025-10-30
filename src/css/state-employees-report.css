@@ -143,6 +143,43 @@ section#themes-we-found {
     align-items: center;
 }
 
+.themes-bubble-chart svg {
+    display: block;
+}
+
+.themes-bubble-chart .theme-circle circle {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.themes-bubble-chart .theme-circle {
+    outline: none;
+}
+
+.themes-bubble-chart .theme-circle:focus {
+    outline: none;
+}
+
+.themes-bubble-chart .theme-circle:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+.themes-bubble-chart .theme-circle circle {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.themes-bubble-chart .theme-circle text {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .themes-bubble-chart img {
     max-width: 100%;
     height: auto;

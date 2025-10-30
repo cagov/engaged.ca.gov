@@ -178,28 +178,21 @@ function switch_theme(theme_number, should_scroll = false) {
     }
   }
   
-  // Update SVG circle highlighting
+  // Update SVG circle highlighting - use stroke for selection instead of opacity
   document.querySelectorAll('.theme-circle').forEach(function(group) {
     let circle = group.querySelector('circle');
     let theme_num = parseInt(group.dataset.theme, 10);
     
     if (circle) {
       if (theme_num === theme_number) {
-        // Highlight selected circle
+        // Highlight selected circle with white stroke
         circle.style.opacity = '1';
-        circle.style.stroke = 'none';
-        circle.style.strokeWidth = '0';
+        circle.style.stroke = '#FFFFFF';
+        circle.style.strokeWidth = '4';
         group.setAttribute('aria-selected', 'true');
       } else {
-        // Reset to original state
-        let fillColor = circle.getAttribute('fill');
-        if (fillColor === '#5489A3') {
-          circle.style.opacity = '0.8';
-        } else if (fillColor === '#7BA8BC') {
-          circle.style.opacity = '0.75';
-        } else {
-          circle.style.opacity = '0.7';
-        }
+        // Reset to original state - full opacity, no stroke
+        circle.style.opacity = '1';
         circle.style.stroke = 'none';
         circle.style.strokeWidth = '0';
         group.setAttribute('aria-selected', 'false');
@@ -212,7 +205,50 @@ function switch_theme(theme_number, should_scroll = false) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Set up event handlers for clicks on theme circles in SVG
+  // Use event delegation on the SVG container for better Safari compatibility
+  let svgContainer = document.querySelector('#themes-bubble-chart svg');
+  if (svgContainer) {
+    svgContainer.addEventListener('click', function(e) {
+      let target = e.target;
+      
+      // Traverse up the DOM to find the theme-circle group
+      let current = target;
+      let themeGroup = null;
+      
+      // Check if target itself is a circle or group
+      if (current.classList && current.classList.contains('theme-circle')) {
+        themeGroup = current;
+      } else if (current.tagName === 'circle' && current.parentElement) {
+        themeGroup = current.parentElement;
+      } else {
+        // Traverse up to find parent group
+        while (current && current !== svgContainer) {
+          if (current.classList && current.classList.contains('theme-circle')) {
+            themeGroup = current;
+            break;
+          }
+          current = current.parentElement;
+        }
+      }
+      
+      if (themeGroup && themeGroup.dataset && themeGroup.dataset.theme) {
+        let theme_number = parseInt(themeGroup.dataset.theme, 10);
+        if (theme_number) {
+          e.preventDefault();
+          e.stopPropagation();
+          // Clear any text selection to prevent blue rectangle
+          if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+          } else if (document.selection) {
+            document.selection.empty();
+          }
+          switch_theme(theme_number, true); // Scroll when explicitly clicking
+        }
+      }
+    });
+  }
+  
+  // Set up event handlers for theme circles in SVG
   document.querySelectorAll('.theme-circle').forEach(function(circleGroup) {
     // Make the group focusable for accessibility
     circleGroup.setAttribute('tabindex', '0');
@@ -220,43 +256,31 @@ document.addEventListener('DOMContentLoaded', function() {
     let themeTitle = circleGroup.querySelector('text tspan')?.textContent || 'Theme ' + circleGroup.dataset.theme;
     circleGroup.setAttribute('aria-label', 'View ' + themeTitle);
     
-    // Add click handler
-    circleGroup.addEventListener('click', function() {
-      let theme_number = parseInt(this.dataset.theme, 10);
-      switch_theme(theme_number, false); // Don't scroll when clicking circles
-    });
-    
     // Add keyboard support
     circleGroup.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         let theme_number = parseInt(this.dataset.theme, 10);
-        switch_theme(theme_number, false); // Don't scroll when using keyboard
+        switch_theme(theme_number, true); // Scroll when using keyboard navigation
       }
     });
     
-    // Add hover effect - just change opacity, no border
+    // Add hover effect - slightly darker on hover
     let circle = circleGroup.querySelector('circle');
-    circleGroup.addEventListener('mouseenter', function() {
-      let theme_num = parseInt(this.dataset.theme, 10);
-      if (circle && current_theme_index !== theme_num) {
-        circle.style.opacity = '1';
-      }
-    });
-    circleGroup.addEventListener('mouseleave', function() {
-      let theme_num = parseInt(this.dataset.theme, 10);
-      if (circle && current_theme_index !== theme_num) {
-        // Reset to original opacity
-        let fillColor = circle.getAttribute('fill');
-        if (fillColor === '#5489A3') {
-          circle.style.opacity = '0.8';
-        } else if (fillColor === '#7BA8BC') {
-          circle.style.opacity = '0.75';
-        } else {
-          circle.style.opacity = '0.7';
+    if (circle) {
+      circleGroup.addEventListener('mouseenter', function() {
+        let theme_num = parseInt(this.dataset.theme, 10);
+        if (circle && current_theme_index !== theme_num) {
+          circle.style.opacity = '0.9';
         }
-      }
-    });
+      });
+      circleGroup.addEventListener('mouseleave', function() {
+        let theme_num = parseInt(this.dataset.theme, 10);
+        if (circle && current_theme_index !== theme_num) {
+          circle.style.opacity = '1';
+        }
+      });
+    }
   });
   
   // Handle hash navigation (e.g., #theme-3-content) - scroll when hash is present
