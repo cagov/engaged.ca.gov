@@ -112,25 +112,24 @@
             {%- for i in range(1, 11) -%}
               {%- set theme_module = "theme_" + i -%}
               {%- if modules[theme_module] -%}
-                {%- set color = modules[theme_module].theme_circle_color if modules[theme_module].theme_circle_color else "#5489A3" -%}
                 {%- set title = modules[theme_module].theme_circle_title if modules[theme_module].theme_circle_title else modules[theme_module].theme_title -%}
                 {%- set lines = title.split('<LF>') -%}
                 {%- set positions = [
-                  {"cx": 200, "cy": 200, "r": 120, "fontSize": 15, "yOffset": 190, "dy": 18},
-                  {"cx": 450, "cy": 200, "r": 110, "fontSize": 15, "yOffset": 190, "dy": 18},
-                  {"cx": 660, "cy": 220, "r": 85, "fontSize": 14, "yOffset": 205, "dy": 16},
-                  {"cx": 330, "cy": 370, "r": 90, "fontSize": 13, "yOffset": 360, "dy": 15},
-                  {"cx": 565, "cy": 380, "r": 85, "fontSize": 13, "yOffset": 370, "dy": 15},
-                  {"cx": 770, "cy": 360, "r": 80, "fontSize": 13, "yOffset": 350, "dy": 15},
-                  {"cx": 140, "cy": 430, "r": 85, "fontSize": 14, "yOffset": 420, "dy": 16},
-                  {"cx": 270, "cy": 530, "r": 70, "fontSize": 11, "yOffset": 520, "dy": 14},
-                  {"cx": 520, "cy": 530, "r": 65, "fontSize": 12, "yOffset": 520, "dy": 14},
-                  {"cx": 680, "cy": 530, "r": 65, "fontSize": 12, "yOffset": 520, "dy": 14}
+                  {"cx": 200, "cy": 200, "r": 120, "fontSize": 15, "yOffset": 190, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
+                  {"cx": 450, "cy": 200, "r": 110, "fontSize": 15, "yOffset": 190, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
+                  {"cx": 660, "cy": 220, "r": 85, "fontSize": 14, "yOffset": 205, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 330, "cy": 370, "r": 90, "fontSize": 13, "yOffset": 360, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 565, "cy": 380, "r": 85, "fontSize": 13, "yOffset": 370, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 770, "cy": 360, "r": 80, "fontSize": 13, "yOffset": 350, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 140, "cy": 430, "r": 85, "fontSize": 14, "yOffset": 420, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 270, "cy": 530, "r": 70, "fontSize": 11, "yOffset": 520, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"},
+                  {"cx": 520, "cy": 530, "r": 65, "fontSize": 12, "yOffset": 520, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"},
+                  {"cx": 680, "cy": 530, "r": 65, "fontSize": 12, "yOffset": 520, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"}
                 ] -%}
                 {%- set pos = positions[i - 1] -%}
                 <g class="theme-circle" data-theme="{{ i }}" style="cursor: pointer; pointer-events: all; -webkit-user-select: none; user-select: none;">
-                  <circle cx="{{ pos.cx }}" cy="{{ pos.cy }}" r="{{ pos.r }}" fill="{{ color }}" pointer-events="all"/>
-                  <text x="{{ pos.cx }}" y="{{ pos.yOffset }}" text-anchor="middle" fill="#FFFFFF" font-size="{{ pos.fontSize }}" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
+                  <circle cx="{{ pos.cx }}" cy="{{ pos.cy }}" r="{{ pos.r }}" fill="{{ pos.color }}" opacity="{{ pos.opacity }}" pointer-events="all"/>
+                  <text x="{{ pos.cx }}" y="{{ pos.yOffset }}" text-anchor="middle" fill="#0f152f" font-size="{{ pos.fontSize }}" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
                     {%- for line in lines -%}
                       <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ pos.dy }}{% endif %}">{{ line }}</tspan>
                     {%- endfor -%}

@@ -191,8 +191,14 @@ function switch_theme(theme_number, should_scroll = false) {
         circle.style.strokeWidth = '4';
         group.setAttribute('aria-selected', 'true');
       } else {
-        // Reset to original state - full opacity, no stroke
-        circle.style.opacity = '1';
+        // Reset to original state - restore original opacity, no stroke
+        let fillColor = circle.getAttribute('fill');
+        let originalOpacity = circle.getAttribute('opacity');
+        if (originalOpacity) {
+          circle.style.opacity = originalOpacity;
+        } else {
+          circle.style.opacity = '1';
+        }
         circle.style.stroke = 'none';
         circle.style.strokeWidth = '0';
         group.setAttribute('aria-selected', 'false');
@@ -277,7 +283,13 @@ document.addEventListener('DOMContentLoaded', function() {
       circleGroup.addEventListener('mouseleave', function() {
         let theme_num = parseInt(this.dataset.theme, 10);
         if (circle && current_theme_index !== theme_num) {
-          circle.style.opacity = '1';
+          // Restore original opacity
+          let originalOpacity = circle.getAttribute('opacity');
+          if (originalOpacity) {
+            circle.style.opacity = originalOpacity;
+          } else {
+            circle.style.opacity = '1';
+          }
         }
       });
     }
