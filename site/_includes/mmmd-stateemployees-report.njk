@@ -105,9 +105,9 @@
           <p>{{ modules.themes_we_found.intro_text }}</p>
         </div>
         <div id="themes-bubble-chart" class="themes-bubble-chart">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540">
             <!-- Background -->
-            <rect width="1000" height="600" fill="#F6F7FA"/>
+            <rect width="1000" height="540" fill="#F6F7FA"/>
             
             {%- for i in range(1, 11) -%}
               {%- set theme_module = "theme_" + i -%}
@@ -115,16 +115,16 @@
                 {%- set title = modules[theme_module].theme_circle_title if modules[theme_module].theme_circle_title else modules[theme_module].theme_title -%}
                 {%- set lines = title.split('<LF>') -%}
                 {%- set positions = [
-                  {"cx": 200, "cy": 200, "r": 120, "fontSize": 15, "yOffset": 190, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
-                  {"cx": 450, "cy": 200, "r": 110, "fontSize": 15, "yOffset": 190, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
-                  {"cx": 660, "cy": 220, "r": 85, "fontSize": 14, "yOffset": 205, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 330, "cy": 370, "r": 90, "fontSize": 13, "yOffset": 360, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 565, "cy": 380, "r": 85, "fontSize": 13, "yOffset": 370, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 770, "cy": 360, "r": 80, "fontSize": 13, "yOffset": 350, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 140, "cy": 430, "r": 85, "fontSize": 14, "yOffset": 420, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 270, "cy": 530, "r": 70, "fontSize": 11, "yOffset": 520, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"},
-                  {"cx": 520, "cy": 530, "r": 65, "fontSize": 12, "yOffset": 520, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"},
-                  {"cx": 680, "cy": 530, "r": 65, "fontSize": 12, "yOffset": 520, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"}
+                  {"cx": 200, "cy": 130, "r": 120, "fontSize": 15, "yOffset": 120, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
+                  {"cx": 450, "cy": 130, "r": 110, "fontSize": 15, "yOffset": 120, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
+                  {"cx": 660, "cy": 150, "r": 85, "fontSize": 14, "yOffset": 135, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 330, "cy": 300, "r": 90, "fontSize": 13, "yOffset": 290, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 565, "cy": 310, "r": 85, "fontSize": 13, "yOffset": 300, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 770, "cy": 290, "r": 80, "fontSize": 13, "yOffset": 280, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 140, "cy": 360, "r": 85, "fontSize": 14, "yOffset": 350, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 270, "cy": 460, "r": 70, "fontSize": 11, "yOffset": 450, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"},
+                  {"cx": 520, "cy": 460, "r": 65, "fontSize": 12, "yOffset": 450, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"},
+                  {"cx": 680, "cy": 460, "r": 65, "fontSize": 12, "yOffset": 450, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"}
                 ] -%}
                 {%- set pos = positions[i - 1] -%}
                 <g class="theme-circle" data-theme="{{ i }}" style="cursor: pointer; pointer-events: all; -webkit-user-select: none; user-select: none;">
@@ -150,6 +150,23 @@
       <div class="col-lg-12">
         <div class="section-header">
           <h2>{{ modules.themes_deep_dive.title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="theme-navigation-widget">
+          <button class="theme-nav-prev" id="theme-nav-prev" disabled>
+            <span>←</span> Previous theme
+          </button>
+          <div class="theme-nav-dots">
+            {% for i in range(1, 11) %}
+              <span class="theme-dot{% if i == 1 %} active{% endif %}" data-theme="{{ i }}"></span>
+            {% endfor %}
+          </div>
+          <button class="theme-nav-next" id="theme-nav-next">
+            Next theme <span>→</span>
+          </button>
         </div>
       </div>
     </div>
@@ -229,18 +246,6 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="solutions-pagination">
-          <div class="pagination-dots">
-            {% for i in range(1, 11) %}
-              <span class="dot{% if i == 1 %} active{% endif %}"></span>
-            {% endfor %}
-          </div>
-          <button class="view-more-button">View more</button>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -269,6 +274,8 @@
             <option value="date" selected>Date</option>
             <option value="alpha">Alpha</option>
             <option value="theme">Theme</option>
+            <option value="likes">Likes</option>
+            <option value="replies">Replies</option>
           </select>
         </div>
       </div>

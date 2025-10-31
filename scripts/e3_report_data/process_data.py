@@ -117,7 +117,12 @@ for record in records:
     if record["CONTENT"] != "":
         # Clean up content: replace newlines with spaces and fix any encoding issues
         content = record["CONTENT"].replace("\n", " ")
-        # Fix common mojibake issues if they exist
+        # Fix double-encoded UTF-8 patterns first (these occur when UTF-8 was read as cp1252, then saved and read again)
+        content = content.replace("â€šÃ„Ãº", '"')  # Double-encoded left double quotation mark
+        content = content.replace("â€šÃ„Ã¹", '"')  # Double-encoded right double quotation mark
+        content = content.replace("â€šÃ„Ã´", "'")  # Double-encoded right single quotation mark / apostrophe
+        content = content.replace("â€šÃ„Ã®", "-")  # Double-encoded en dash
+        # Fix common mojibake issues (single encoding errors)
         # These are common Windows-1252 to UTF-8 mis-encodings
         content = content.replace("‚Äô", "'")  # Windows-1252 right single quotation mark
         content = content.replace("‚Äò", "'")  # Windows-1252 left single quotation mark
@@ -138,10 +143,19 @@ for record in records:
             if theme["csv_name"] == record["MAIN_IDEA_PRIMARY_THEME"]:
                 mipid = tindex
                 break
-        crec["qid"] = unique_questions.index(record["QUESTION"])
-        crec["miid"] = unique_main_ideas.index(record["MAIN_IDEA_TYPE"])
+        # crec["qid"] = unique_questions.index(record["QUESTION"])
+        # crec["miid"] = unique_main_ideas.index(record["MAIN_IDEA_TYPE"])
         crec["mipid"] = mipid
-        crec["midsid"] = unique_main_idea_subthemes.index(record["MAIN_IDEA_SUBTHEMES"])
+        # crec["midsid"] = unique_main_idea_subthemes.index(record["MAIN_IDEA_SUBTHEMES"])
+        # Add like and reply counts as integers
+        try:
+            crec["likes"] = int(record["LIKE_COUNT"]) if record["LIKE_COUNT"] else 0
+        except (ValueError, TypeError):
+            crec["likes"] = 0
+        try:
+            crec["replies"] = int(record["REPLY_COUNT"]) if record["REPLY_COUNT"] else 0
+        except (ValueError, TypeError):
+            crec["replies"] = 0
         comments.append(crec)
 
 output_data["comments"] = comments

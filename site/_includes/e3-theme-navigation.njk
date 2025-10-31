@@ -91,6 +91,24 @@ function populate_comments(theme_number_or_all) {
       }
       // Within same theme, maintain original order
       return a._originalIndex - b._originalIndex;
+    } else if (current_sort === 'likes') {
+      // Likes sort: descending order (most likes first)
+      let aLikes = a.likes || 0;
+      let bLikes = b.likes || 0;
+      if (aLikes !== bLikes) {
+        return bLikes - aLikes; // Descending
+      }
+      // If likes are equal, maintain original order
+      return a._originalIndex - b._originalIndex;
+    } else if (current_sort === 'replies') {
+      // Replies sort: descending order (most replies first)
+      let aReplies = a.replies || 0;
+      let bReplies = b.replies || 0;
+      if (aReplies !== bReplies) {
+        return bReplies - aReplies; // Descending
+      }
+      // If replies are equal, maintain original order
+      return a._originalIndex - b._originalIndex;
     }
     
     // Default fallback
@@ -206,8 +224,34 @@ function switch_theme(theme_number, should_scroll = false) {
     }
   });
   
+  // Update navigation widget dots and buttons
+  update_navigation_widget(theme_number);
+  
   // Update comments for the new theme
   populate_comments(theme_number);
+}
+
+function update_navigation_widget(theme_number) {
+  // Update dots
+  document.querySelectorAll('.theme-dot').forEach(function(dot) {
+    let dot_theme = parseInt(dot.dataset.theme, 10);
+    if (dot_theme === theme_number) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+  
+  // Update Previous/Next buttons
+  let prev_button = document.getElementById('theme-nav-prev');
+  let next_button = document.getElementById('theme-nav-next');
+  
+  if (prev_button) {
+    prev_button.disabled = (theme_number === 1);
+  }
+  if (next_button) {
+    next_button.disabled = (theme_number === 10);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -395,6 +439,36 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+  
+  // Set up navigation widget buttons
+  let prev_button = document.getElementById('theme-nav-prev');
+  let next_button = document.getElementById('theme-nav-next');
+  
+  if (prev_button) {
+    prev_button.addEventListener('click', function() {
+      if (current_theme_index !== 'all' && current_theme_index > 1) {
+        switch_theme(current_theme_index - 1, false); // Don't scroll when using nav widget
+      }
+    });
+  }
+  
+  if (next_button) {
+    next_button.addEventListener('click', function() {
+      if (current_theme_index !== 'all' && current_theme_index < 10) {
+        switch_theme(current_theme_index + 1, false); // Don't scroll when using nav widget
+      }
+    });
+  }
+  
+  // Set up navigation widget dots - make them clickable
+  document.querySelectorAll('.theme-dot').forEach(function(dot) {
+    dot.addEventListener('click', function() {
+      let theme_number = parseInt(this.dataset.theme, 10);
+      if (theme_number) {
+        switch_theme(theme_number, false); // Don't scroll when clicking dots
+      }
+    });
+  });
   
   // Initialize first theme as active (don't scroll on initial load unless there's a hash)
   if (!window.location.hash) {
