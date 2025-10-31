@@ -108,8 +108,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540">
             <!-- Background -->
             <rect width="1000" height="540" fill="#F6F7FA"/>
-            
-            {%- for i in range(1, 11) -%}
+            {%- set nbr_themes = modules.themes_we_found.nbr_themes | default(10) -%}
+            {%- for i in range(1, nbr_themes + 1) -%}
               {%- set theme_module = "theme_" + i -%}
               {%- if modules[theme_module] -%}
                 {%- set title = modules[theme_module].theme_circle_title if modules[theme_module].theme_circle_title else modules[theme_module].theme_title -%}
@@ -160,7 +160,8 @@
             <span>←</span> Previous theme
           </button>
           <div class="theme-nav-dots">
-            {% for i in range(1, 11) %}
+            {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+            {% for i in range(1, nbr_themes + 1) %}
               <span class="theme-dot{% if i == 1 %} active{% endif %}" data-theme="{{ i }}"></span>
             {% endfor %}
           </div>
@@ -170,12 +171,13 @@
         </div>
       </div>
     </div>
-    {% for i in range(1, 11) %}
+    {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+    {% for i in range(1, nbr_themes + 1) %}
       <div id="theme-{{ i }}-content" class="theme-content{% if i == 1 %} active{% endif %}" data-theme="{{ i }}">
         <div class="row">
           <div class="col-lg-12">
             <div class="theme-header">
-              <span class="theme-number">Theme {{ i }}</span>
+              <span class="theme-number">Theme {{ i }} of {{ nbr_themes }}</span>
               <h3>{{ modules["theme_" + i].theme_title }}</h3>
             </div>
           </div>
@@ -264,7 +266,8 @@
         <div class="comment-explorer-controls">
           <select class="theme-selector">
             <option value="all">All</option>
-            {% for i in range(1, 11) %}
+            {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+            {% for i in range(1, nbr_themes + 1) %}
               {% set theme_module = "theme_" + i %}
               <option value="{{ i }}"{% if i == 1 %} selected{% endif %}>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}Theme {{ i }}{% endif %}</option>
             {% endfor %}

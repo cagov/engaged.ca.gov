@@ -194,10 +194,11 @@ section#themes-deep-dive {
 /* Theme Navigation Widget */
 .theme-navigation-widget {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin: 2rem 0;
+    margin: 0 15% 6rem 15%;
     padding: 1.5rem 0;
+    position: relative;
 }
 
 .theme-nav-prev,
@@ -212,6 +213,17 @@ section#themes-deep-dive {
     background: white;
     color: #333;
     border-color: #FF6B35;
+    position: absolute;
+    top: 100%;
+    margin-top: 1rem;
+}
+
+.theme-nav-prev {
+    left: 0;
+}
+
+.theme-nav-next {
+    right: 0;
 }
 
 .theme-nav-prev:disabled,
@@ -233,9 +245,8 @@ section#themes-deep-dive {
     display: flex;
     align-items: center;
     position: relative;
-    flex: 1;
+    width: 100%;
     justify-content: space-between;
-    margin: 0 4rem;
 }
 
 .theme-nav-dots::before {

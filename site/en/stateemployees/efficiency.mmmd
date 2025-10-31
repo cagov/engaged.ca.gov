@@ -81,6 +81,7 @@ id: findings_analysis
 id: themes_we_found
 title: Themes we found
 intro_text: Larger circles had the most discussion. Clicking a theme will take you to a deep dive of the theme.
+nbr_themes: 10
 ----
 
 ----
