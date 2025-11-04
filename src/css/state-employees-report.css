@@ -502,19 +502,9 @@ section#comment-explorer {
     border-left: 3px solid #5489A3;
 }
 
-.comment-item.indent-1 {
+.comment-item.indent-reply {
     margin-left: 2rem;
     border-left-color: #7BA8BC;
-}
-
-.comment-item.indent-2 {
-    margin-left: 4rem;
-    border-left-color: #9BC4D4;
-}
-
-.comment-item.indent-3 {
-    margin-left: 6rem;
-    border-left-color: #B8D4E0;
 }
 
 .comment-content {
@@ -528,6 +518,35 @@ section#comment-explorer {
     color: #333;
     padding: 0;
     font-weight: inherit;
+}
+
+.comment-meta {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: #666;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.comment-date {
+    font-style: italic;
+    color: #444;
+}
+
+.comment-likes {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.comment-likes .like-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
 }
 
 .no-comments {

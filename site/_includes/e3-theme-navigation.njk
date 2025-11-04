@@ -53,30 +53,27 @@ function populate_comments(theme_number_or_all) {
     });
   }
   
-  // Store original index for date sort (preserve original order)
-  // Note: We need to map back to original position in the full comment array
-  let all_comments = global_comment_data.comments;
-  filtered_comments.forEach(function(comment) {
-    comment._originalIndex = all_comments.findIndex(function(c) {
-      return c.cid === comment.cid;
-    });
-  });
-  
-  // Apply sorting based on current_sort option
-  filtered_comments.sort(function(a, b) {
-    // Always keep top-level comments before replies
-    if (a.rid === '' && b.rid !== '') return -1;
-    if (a.rid !== '' && b.rid === '') return 1;
-    
-    // If both are replies to the same parent, keep their relative order
-    if (a.rid !== '' && b.rid !== '' && a.rid === b.rid) {
-      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+  // Function to parse date string to timestamp for comparison
+  function parseDate(dateString) {
+    if (!dateString) return 0;
+    try {
+      return new Date(dateString).getTime();
+    } catch (e) {
+      return 0;
     }
-    
-    // Apply the selected sort method
+  }
+  
+  // Function to compare two comments based on current sort
+  function compareComments(a, b) {
     if (current_sort === 'date') {
-      // Date sort: use original order (originalIndex)
-      return a._originalIndex - b._originalIndex;
+      // Date sort: sort by timestamp ascending
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      // If dates are equal, use cid as tiebreaker
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
     } else if (current_sort === 'alpha') {
       // Alpha sort: use lowercase content
       let aText = (a.content || '').toLowerCase();
@@ -85,12 +82,17 @@ function populate_comments(theme_number_or_all) {
       if (aText > bText) return 1;
       return 0;
     } else if (current_sort === 'theme') {
-      // Theme sort: sort by mipid first, then by original index within theme
+      // Theme sort: sort by mipid first, then by date
       if (a.mipid !== b.mipid) {
         return a.mipid - b.mipid;
       }
-      // Within same theme, maintain original order
-      return a._originalIndex - b._originalIndex;
+      // Within same theme, sort by date
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
     } else if (current_sort === 'likes') {
       // Likes sort: descending order (most likes first)
       let aLikes = a.likes || 0;
@@ -98,8 +100,13 @@ function populate_comments(theme_number_or_all) {
       if (aLikes !== bLikes) {
         return bLikes - aLikes; // Descending
       }
-      // If likes are equal, maintain original order
-      return a._originalIndex - b._originalIndex;
+      // If likes are equal, sort by date ascending
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
     } else if (current_sort === 'replies') {
       // Replies sort: descending order (most replies first)
       let aReplies = a.replies || 0;
@@ -107,44 +114,158 @@ function populate_comments(theme_number_or_all) {
       if (aReplies !== bReplies) {
         return bReplies - aReplies; // Descending
       }
-      // If replies are equal, maintain original order
-      return a._originalIndex - b._originalIndex;
+      // If replies are equal, sort by date ascending
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
     }
     
     // Default fallback
     return 0;
+  }
+  
+  // Build a map of comments by cid for easy lookup
+  let comments_by_cid = {};
+  filtered_comments.forEach(function(comment) {
+    comments_by_cid[comment.cid] = comment;
   });
+  
+  // Separate top-level comments and replies
+  let top_level = [];
+  let replies = [];
+  
+  filtered_comments.forEach(function(comment) {
+    if (comment.rid === '' || comment.rid === null || !comments_by_cid[comment.rid]) {
+      top_level.push(comment);
+    } else {
+      replies.push(comment);
+    }
+  });
+  
+  // Sort top-level comments
+  top_level.sort(compareComments);
+  
+  // Sort replies by date (chronological) - all replies will be sorted chronologically
+  replies.sort(function(a, b) {
+    let aDate = parseDate(a.date);
+    let bDate = parseDate(b.date);
+    if (aDate !== bDate) {
+      return aDate - bDate;
+    }
+    return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+  });
+  
+  // Function to find all replies (direct and indirect) for a given comment
+  function getAllReplies(parentCid, allReplies) {
+    let result = [];
+    allReplies.forEach(function(reply) {
+      // Check if this reply is a direct or indirect child of parentCid
+      let current = reply;
+      let isDescendant = false;
+      while (current.rid && current.rid !== '') {
+        if (current.rid === parentCid) {
+          isDescendant = true;
+          break;
+        }
+        current = comments_by_cid[current.rid];
+        if (!current) break;
+      }
+      if (isDescendant) {
+        result.push(reply);
+      }
+    });
+    return result;
+  }
+  
+  // Build ordered list: for each top-level comment, add it followed by its replies
+  let ordered_comments = [];
+  top_level.forEach(function(parent) {
+    ordered_comments.push(parent);
+    // Get all replies (direct and indirect) for this parent
+    let parentReplies = getAllReplies(parent.cid, replies);
+    // Sort replies chronologically by date
+    parentReplies.sort(function(a, b) {
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+    });
+    // Add replies after parent
+    ordered_comments = ordered_comments.concat(parentReplies);
+  });
+  
+  // Update filtered_comments to the ordered list
+  filtered_comments = ordered_comments;
   
   console.log(`Found ${filtered_comments.length} comments for ${theme_number_or_all === 'all' ? 'all themes' : 'theme ' + theme_number_or_all}`);
   
   // Build comment markup with highlighting
   let cmarkup = '';
-  let comments_by_cid = {};
   
-  // Create a map of comments by cid for easy lookup
+  // Rebuild comments_by_cid map from ordered filtered_comments (in case we need it)
+  // Note: comments_by_cid was already created earlier, but we'll update it with the ordered list
   filtered_comments.forEach(function(comment) {
     comments_by_cid[comment.cid] = comment;
   });
   
-  // Function to get indent level for replies
-  function getIndentLevel(comment) {
-    if (comment.rid === '') return 0;
-    let parent = comments_by_cid[comment.rid];
-    if (parent) return getIndentLevel(parent) + 1;
-    return 0;
+  // Function to check if a comment is a reply (has a parent)
+  function isReply(comment) {
+    return comment.rid !== '' && comment.rid !== null && comments_by_cid[comment.rid];
+  }
+  
+  // Function to format date from ISO 8601 to "Month Day at HH:MMam/pm" format
+  function formatDate(dateString) {
+    if (!dateString) return '';
+    try {
+      let date = new Date(dateString);
+      let months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+      let month = months[date.getMonth()];
+      let day = date.getDate();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let ampm = hours >= 12 ? 'pm' : 'am';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // 0 should be 12
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      return month + ' ' + day + ' at ' + hours + ':' + minutes + ampm;
+    } catch (e) {
+      return dateString; // Return original if parsing fails
+    }
   }
   
   filtered_comments.forEach(function(comment) {
-    let indent = getIndentLevel(comment);
-    let indent_class = indent > 0 ? ` indent-${Math.min(indent, 3)}` : '';
+    // Use single indent for all replies (no nested indentation)
+    let indent_class = isReply(comment) ? ' indent-reply' : '';
     
     let comment_text = comment.content.replace(/\n/g, ' ');
     let highlighted_text = highlightSearchText(comment_text, current_search_term);
+    let formatted_date = formatDate(comment.date);
+    let likes = comment.likes !== undefined ? comment.likes : 0;
+    let has_likes = 'likes' in comment;
     
     cmarkup += `<div class="comment-item${indent_class}">`;
     cmarkup += '<div class="comment-content">';
     cmarkup += '"' + highlighted_text + '"';
     cmarkup += '</div>';
+    if (formatted_date || has_likes) {
+      cmarkup += '<div class="comment-meta">';
+      if (formatted_date) {
+        cmarkup += '<span class="comment-date">' + formatted_date + '</span>';
+      }
+      if (has_likes) {
+        cmarkup += '<span class="comment-likes">';
+        cmarkup += '<img src="/public/images/like-icon.svg" alt="likes" class="like-icon" />';
+        cmarkup += ' ' + likes;
+        cmarkup += '</span>';
+      }
+      cmarkup += '</div>';
+    }
     cmarkup += '</div>';
   });
   

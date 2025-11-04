@@ -136,6 +136,7 @@ for record in records:
             "rid": record["REPLY_TO_ID"],
             "pid": record["PARTICIPANT_ID"],
             "content": content,  # Use cleaned content
+            "date": record["POSTED_ON"],  # Date from POSTED_ON field
         }
         # add ids for questions, main ideas, and subthemes
         mipid = -1
