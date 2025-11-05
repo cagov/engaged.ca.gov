@@ -522,6 +522,7 @@ section#comment-explorer {
 .comment-content {
     font-size: 1rem;
     line-height: 1.6;
+    font-style: italic;
     color: #333;
 }
 
@@ -542,7 +543,7 @@ section#comment-explorer {
 }
 
 .comment-date {
-    font-style: italic;
+    font-style: normal;
     color: #444;
 }
 
