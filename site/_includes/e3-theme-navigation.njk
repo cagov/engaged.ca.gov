@@ -249,6 +249,7 @@ function populate_comments(theme_number_or_all) {
     let likes = comment.likes !== undefined ? comment.likes : 0;
     let has_likes = 'likes' in comment;
     
+    cmarkup += `<div class="comment-item-container">`;
     cmarkup += `<div class="comment-item${indent_class}">`;
     cmarkup += '<div class="comment-content">';
     cmarkup += '"' + highlighted_text + '"';
@@ -266,6 +267,7 @@ function populate_comments(theme_number_or_all) {
       }
       cmarkup += '</div>';
     }
+    cmarkup += '</div>';
     cmarkup += '</div>';
   });
   
