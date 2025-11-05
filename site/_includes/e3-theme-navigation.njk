@@ -297,6 +297,11 @@ function switch_theme(theme_number, should_scroll = false) {
   if (theme_number === 'all' || theme_number === null) {
     current_theme_index = 'all';
     populate_comments('all');
+    // Reset scroll position of comments container to top
+    let comment_container = document.querySelector('.comments-container');
+    if (comment_container) {
+      comment_container.scrollTop = 0;
+    }
     return;
   }
   
@@ -352,6 +357,12 @@ function switch_theme(theme_number, should_scroll = false) {
   
   // Update comments for the new theme
   populate_comments(theme_number);
+  
+  // Reset scroll position of comments container to top
+  let comment_container = document.querySelector('.comments-container');
+  if (comment_container) {
+    comment_container.scrollTop = 0;
+  }
 }
 
 function update_navigation_widget(theme_number) {

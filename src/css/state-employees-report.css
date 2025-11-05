@@ -490,6 +490,9 @@ section#comment-explorer {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: 0;
+    margin-bottom: 2rem;
+    max-height: 800px;
+    overflow-y: scroll;
 }
 
 
