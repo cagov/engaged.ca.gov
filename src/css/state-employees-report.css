@@ -576,19 +576,15 @@ section#comment-explorer {
     padding: 2rem;
 }
 
-.download-comments {
+.download-button-div {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
-.download-button {
-    padding: 1rem 2rem;
-    background: #5489A3;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    size: 23px;
-    cursor: pointer;
+.download-button-div a {
+    padding-right: 2.2em;
+    background: url("/public/images/icon-download.svg") no-repeat right 0.5rem center;
 }
 
 /* Other Efforts Section */
