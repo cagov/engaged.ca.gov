@@ -242,6 +242,27 @@ title: Comment explorer
 intro_text: Read state employees' own words on these topics
 ----
 
+----
+id: theme_navigation
+prev_button_text: Previous theme
+next_button_text: Next theme
+theme_label: Theme
+theme_of: of
+----
+
+----
+id: comment_explorer_ui
+all_option: All
+theme_fallback: Theme
+search_placeholder: Search
+sort_date: Date
+sort_alpha: Alpha
+sort_theme: Theme
+sort_likes: Likes
+sort_replies: Replies
+download_button_text: Download all comments
+----
+
 
 ----
 id: current_actions
@@ -261,7 +282,16 @@ Stay tuned for updates on our progress.
 2. Soil safety testingResidents want soil testing to make sure they are safe from toxic chemicals after the fires. Some universities offer free soil testing, but federal agencies won't do full testing. There's no state program that covers this need completely.
 
 ----
-id: stay_informed
-title: Stay informed
-button_text: Sign up for Engaged California
+id: download_data
+title: Download the data
+text_1: The comments dataset does not contain personally identifying information.
+text_2: We have not edited or modified the comments in any way.
+button_text: Download the full dataset
+----
+
+----
+id: signup_engaged
+title: Sign up to remain engaged in important work
+text: Give us your email to learn about upcoming opportunities.
+button_text: Sign up
 ----

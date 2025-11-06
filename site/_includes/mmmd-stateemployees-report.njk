@@ -127,7 +127,7 @@
       <div class="col-lg-12">
         <div class="theme-navigation-widget">
           <button class="theme-nav-prev" id="theme-nav-prev" disabled>
-            <span>←</span> Previous theme
+            <span>←</span> {{ modules.theme_navigation.prev_button_text }}
           </button>
           <div class="theme-nav-dots">
             {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
@@ -136,7 +136,7 @@
             {% endfor %}
           </div>
           <button class="theme-nav-next" id="theme-nav-next">
-            Next theme <span>→</span>
+            {{ modules.theme_navigation.next_button_text }} <span>→</span>
           </button>
         </div>
       </div>
@@ -147,7 +147,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="theme-header">
-              <span class="theme-number">Theme {{ i }} of {{ nbr_themes }}</span>
+              <span class="theme-number">{{ modules.theme_navigation.theme_label }} {{ i }} {{ modules.theme_navigation.theme_of }} {{ nbr_themes }}</span>
               <h3>{{ modules["theme_" + i].theme_title }}</h3>
             </div>
           </div>
@@ -236,20 +236,20 @@
       <div class="col-lg-12">
         <div class="comment-explorer-controls">
           <select class="theme-selector">
-            <option value="all">All</option>
+            <option value="all">{{ modules.comment_explorer_ui.all_option }}</option>
             {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
             {% for i in range(1, nbr_themes + 1) %}
               {% set theme_module = "theme_" + i %}
-              <option value="{{ i }}"{% if i == 1 %} selected{% endif %}>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}Theme {{ i }}{% endif %}</option>
+              <option value="{{ i }}"{% if i == 1 %} selected{% endif %}>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</option>
             {% endfor %}
           </select>
-          <input type="text" class="search-input" placeholder="Search">
+          <input type="text" class="search-input" placeholder="{{ modules.comment_explorer_ui.search_placeholder }}">
           <select class="sort-selector">
-            <option value="date" selected>Date</option>
-            <option value="alpha">Alpha</option>
-            <option value="theme">Theme</option>
-            <option value="likes">Likes</option>
-            <option value="replies">Replies</option>
+            <option value="date" selected>{{ modules.comment_explorer_ui.sort_date }}</option>
+            <option value="alpha">{{ modules.comment_explorer_ui.sort_alpha }}</option>
+            <option value="theme">{{ modules.comment_explorer_ui.sort_theme }}</option>
+            <option value="likes">{{ modules.comment_explorer_ui.sort_likes }}</option>
+            <option value="replies">{{ modules.comment_explorer_ui.sort_replies }}</option>
           </select>
         </div>
       </div>
@@ -260,7 +260,7 @@
           <!-- Comments will be populated here from JSON -->
         </div>
         <div class="download-comments">
-          <button class="download-button">Download all comments</button>
+          <button class="download-button">{{ modules.comment_explorer_ui.download_button_text }}</button>
         </div>
       </div>
     </div>
@@ -285,10 +285,23 @@
 <section id="stay-informed">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <div class="stay-informed-content">
-          <h2>🚧 {{ modules.stay_informed.title }}</h2>
-          <a data-appearance="button" data-theme="orange" href="/#sign-up" class="signup-button">{{ modules.stay_informed.button_text }}</a>
+      <div class="col-lg-8">
+        <div class="download-data-section">
+          <h2>{{ modules.download_data.title }}</h2>
+          <p>{{ modules.download_data.text_1 }}</p>
+          <p>{{ modules.download_data.text_2 }}</p>
+          <a href="/public/data/e3_comments.csv" download data-appearance="button" data-theme="orange">
+            {{ modules.download_data.button_text }}
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="signup-engaged-section">
+          <h2>{{ modules.signup_engaged.title }}</h2>
+          <p>{{ modules.signup_engaged.text }}</p>
+          <a data-appearance="button" data-theme="orange" href="/#sign-up">
+            {{ modules.signup_engaged.button_text }}
+          </a>
         </div>
       </div>
     </div>

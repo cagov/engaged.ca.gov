@@ -632,17 +632,48 @@ section#current-actions {
 
 /* Stay Informed Section */
 section#stay-informed {
-    padding: 3rem 0;
-    background: #FFF4EB;
-    text-align: center;
+    background-color: #1C2745;
+    color: #FFF4EB;
+    padding-block: 4rem;
+    background-image: url("/public/images/action-signup-adornment.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 273px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+    @media (max-width: 900px) {
+        background-size: 200px;
+    }
+    @media (max-width: 768px) {
+        background-size: 140px;
+    }
 }
 
-.stay-informed-content h2 {
-    color: #0f152f;
+section#stay-informed h2 {
+    color: #FFF4EB;
+    margin-bottom: 1.5rem;
+    width: 80%;
+    text-wrap: balance;
+}
+
+section#stay-informed p {
+    color: #FFF4EB;
+    margin-bottom: 1rem;
+}
+
+.download-data-section {
+    margin-bottom: 6rem;
+}
+
+.signup-engaged-section {
     margin-bottom: 2rem;
 }
 
-.signup-button {
+
+.download-data-section a,
+.signup-engaged-section a {
+    margin-top: 1rem;
     display: inline-block;
 }
 
