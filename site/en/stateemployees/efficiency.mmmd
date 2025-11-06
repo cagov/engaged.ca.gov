@@ -13,14 +13,14 @@ tags:
 
 ----
 id: hero
-buttonText: Jump to the findings
+buttonText: Jump to themes
 ----
 
-# Report title
+# 🚧 Report title
 
-Engaged California asked state employees to share ideas to better serve residents. The initiative sought to identify barriers to efficiency and ways to improve.
+Engaged California asked state employees to share ideas to better serve residents. The initiative sought to identify barriers to efficiency and ways to improve. 
 
-We're proud to say that over 1,800 state employees took part!
+We’re proud to say that over 1,600 state employees took part!
 
 Their contributions drew from their experiences as state workers and Californians.
 
@@ -35,12 +35,16 @@ id: what_we_did
 title: What we did
 ----
 
-We used the Engaged California platform to connect with over 1,600 state employees. We gathered more than 1,900 ideas to improve government operations.
+## What we did
+
+We used the Engage California platform to connect with over 1,600 state employees. We gathered more than 1,900 ideas to improve government operations.
 
 ----
 id: why_we_did_it
 title: Why we did it
 ----
+
+## Why we did it
 
 To build a better government, we need to engage directly with those who know it best: state employees. They are the experts on how the government works, how it doesn't, and how it should.
 
@@ -52,7 +56,7 @@ id: what_we_heard
 
 California state employees are deeply committed to public service. They were grateful for the chance to share their knowledge. They took the engagement seriously and showed they care about their work and the communities they support.
 
-The main problem areas are clear. People cited hiring practices, employee training, and complex purchasing processes most often.
+**The main problem areas are clear. People cited hiring practices, employee training, and complex purchasing processes most often.**
 
 **But the greatest value this engagement offers is the thoughtful solutions shared.**
 
@@ -80,7 +84,7 @@ id: findings_analysis
 ----
 id: themes_we_found
 title: Themes we found
-intro_text: Larger circles had the most discussion. Clicking a theme will take you to a deep dive of the theme.
+intro_text: "By and large, the ideas that people shared fell into the following categories:"
 nbr_themes: 10
 ----
 
@@ -238,21 +242,23 @@ title: Comment explorer
 intro_text: Read state employees' own words on these topics
 ----
 
-----
-id: other_efforts
-title: Other efforts
-----
 
 ----
 id: current_actions
 title: Current actions we're taking
-action_1_title: Refer to Innovation Fellows program to show how audiences staff are involved in improvements
-action_1_description: 
-action_2_title: Join our Innovation Community of Practice
-action_2_description: 
-action_3_title: 
-action_3_description: 
 ----
+
+Residents shared what they need most to recover and rebuild their communities. We found that some issues need more discussion. However, we also found issues we can act on now.
+
+Below is a summary of how we are responding to what residents said they need most. 
+
+Stay tuned for updates on our progress.
+
+**Opportunities to create new support programs**
+
+1. Community mental health support Residents said they needed community support and places to gather after the fire. This would help them cope with being displaced.
+
+2. Soil safety testingResidents want soil testing to make sure they are safe from toxic chemicals after the fires. Some universities offer free soil testing, but federal agencies won't do full testing. There's no state program that covers this need completely.
 
 ----
 id: stay_informed

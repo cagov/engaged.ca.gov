@@ -58,9 +58,13 @@ section#what-we-heard {
     padding: 3rem 0;
 }
 
-.what-we-heard-content {
+.what-we-heard-content, .what-we-did-content, .why-we-did-it-content {
     font-size: 1.125rem;
     line-height: 1.75;
+}
+
+.what-we-did-content, .why-we-did-it-content {
+    margin-bottom: 4rem;
 }
 
 .participation-sidebar {
@@ -77,11 +81,12 @@ section#what-we-heard {
 
 .participation-stat {
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .stat-number {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 47px;
     line-height: 1;
     color: #2d3a4a;
     margin-bottom: 0.5rem;
@@ -121,6 +126,10 @@ section#findings-and-analysis {
 section#themes-we-found {
     padding: 3rem 0;
     background: #F6F7FA;
+}
+
+.themes-intro {
+    text-align: center;
 }
 
 .themes-intro h2 {
@@ -186,8 +195,9 @@ section#themes-we-found {
 
 /* Themes Deep Dive Section */
 section#themes-deep-dive {
-    padding: 3rem 0;
     background: #FFF4EB;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* Theme Navigation Widget */
@@ -319,7 +329,6 @@ section#themes-deep-dive {
 .theme-quote {
     background: #F6F7FA;
     padding: 1.5rem;
-    border-radius: 8px;
     border-left: 4px solid #5489A3;
     margin: 1.5rem 0;
 }
@@ -341,10 +350,12 @@ section#suggested-solutions {
     padding: 3rem 0;
     background: #FFF4EB;
 }
-
+.solutions-header {
+    text-align: center;
+}
 .solutions-header h2 {
-    font-weight: 700;
-    font-size: 2.25rem;
+    font-weight: 600;
+    font-size: 23px;
     color: #0f152f;
     margin-bottom: 1rem;
 }
@@ -592,6 +603,7 @@ section#other-efforts {
 /* Current Actions Section */
 section#current-actions {
     padding: 3rem 0;
+    background: #F6F7FA
 }
 
 .actions-header h2 {

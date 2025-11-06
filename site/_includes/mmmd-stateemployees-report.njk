@@ -29,52 +29,33 @@
   </div>
 </section>
 
-<section id="background-and-context">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-header">
-          {{ modules.background_context.content | safe }}
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="context-section">
-          <h3>{{ modules.what_we_did.title }}</h3>
-          {{ modules.what_we_did.content | safe }}
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="context-section">
-          <h3>{{ modules.why_we_did_it.title }}</h3>
-          {{ modules.why_we_did_it.content | safe }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="what-we-heard">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
+        <div class="what-we-did-content">
+          {{ modules.what_we_did.content | safe }}
+        </div>
+        <div class="why-we-did-it-content">
+          {{ modules.why_we_did_it.content | safe }}
+        </div>
         <div class="what-we-heard-content">
           {{ modules.what_we_heard.content | safe }}
         </div>
       </div>
       <div class="col-lg-4">
         <div class="participation-sidebar">
-          <h3>{{ modules.participation_numbers.title }}</h3>
           <div class="participation-stat">
+            <img src="/public/images/staff-icon.svg" alt="Staff icon" />
             <div class="stat-number">{{ modules.participation_numbers.participants_count }}</div>
             <div class="stat-label">{{ modules.participation_numbers.participants_label }}</div>
+            <p class="participation-note">{{ modules.participation_numbers.staff_note }}</p>
           </div>
           <div class="participation-stat">
+            <img src="/public/images/ideas-icon.svg" alt="Ideas icon" />
             <div class="stat-number">{{ modules.participation_numbers.insights_count }}</div>
             <div class="stat-label">{{ modules.participation_numbers.insights_label }}</div>
           </div>
-          <p class="participation-note">{{ modules.participation_numbers.staff_note }}</p>
           <div class="participation-quote">
             <p>{{ modules.participation_numbers.quote }}</p>
           </div>
@@ -84,17 +65,6 @@
   </div>
 </section>
 
-<section id="findings-and-analysis">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-header">
-          {{ modules.findings_analysis.content | safe }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="themes-we-found">
   <div class="container">
@@ -183,14 +153,15 @@
           </div>
           <div class="col-lg-8">
             <div class="theme-description">
-              <p>{{ modules["theme_" + i].theme_description }}</p>
+              <p>🚧 {{ modules["theme_" + i].theme_description }}</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
               {% if modules["theme_" + i].theme_quote %}
                 <div class="theme-quote">
                   <p>{{ modules["theme_" + i].theme_quote }}</p>
                 </div>
               {% endif %}
-              <a href="#comment-explorer" class="theme-link">{{ modules["theme_" + i].see_more_link }}</a>
-            </div>
           </div>
         </div>
       </div>
@@ -296,23 +267,6 @@
   </div>
 </section>
 
-<section id="other-efforts">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-header">
-          <h2>{{ modules.other_efforts.title }}</h2>
-        </div>
-        {% if modules.other_efforts.content %}
-        <div class="style-body-text">
-          {{ modules.other_efforts.content | safe }}
-        </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="current-actions">
   <div class="container">
     <div class="row">
@@ -320,36 +274,8 @@
         <div class="actions-header">
           <h2>{{ modules.current_actions.title }}</h2>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="action-item">
-          <div class="action-icon"></div>
-          <h4>{{ modules.current_actions.action_1_title }}</h4>
-          {% if modules.current_actions.action_1_description %}
-            <p>{{ modules.current_actions.action_1_description }}</p>
-          {% endif %}
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="action-item">
-          <div class="action-icon"></div>
-          <h4>{{ modules.current_actions.action_2_title }}</h4>
-          {% if modules.current_actions.action_2_description %}
-            <p>{{ modules.current_actions.action_2_description }}</p>
-          {% endif %}
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="action-item">
-          <div class="action-icon"></div>
-          {% if modules.current_actions.action_3_title %}
-            <h4>{{ modules.current_actions.action_3_title }}</h4>
-          {% endif %}
-          {% if modules.current_actions.action_3_description %}
-            <p>{{ modules.current_actions.action_3_description }}</p>
-          {% endif %}
+        <div class="actions-content">
+          🚧 {{ modules.current_actions.content | safe }}
         </div>
       </div>
     </div>
@@ -361,7 +287,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="stay-informed-content">
-          <h2>{{ modules.stay_informed.title }}</h2>
+          <h2>🚧 {{ modules.stay_informed.title }}</h2>
           <a data-appearance="button" data-theme="orange" href="/#sign-up" class="signup-button">{{ modules.stay_informed.button_text }}</a>
         </div>
       </div>
