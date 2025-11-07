@@ -644,12 +644,19 @@ section#comment-explorer {
 }
 
 .comment-tag {
-    background-color: #5489A3;
-    color: #FFFFFF;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     font-size: 0.875rem;
+    color: #333;
     white-space: nowrap;
+}
+
+.comment-tag:nth-child(1) {
+    background-color: #FAD8D3;
+}
+
+.comment-tag:nth-child(2) {
+    background-color: #DDF4EF;
 }
 
 .comment-meta {
