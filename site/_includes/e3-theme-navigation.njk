@@ -373,7 +373,7 @@ function switch_theme(theme_number, should_scroll = false) {
 }
 
 function update_navigation_widget(theme_number) {
-  // Update dots
+  // Update dots (if they exist)
   document.querySelectorAll('.theme-dot').forEach(function(dot) {
     let dot_theme = parseInt(dot.dataset.theme, 10);
     if (dot_theme === theme_number) {
@@ -383,8 +383,14 @@ function update_navigation_widget(theme_number) {
     }
   });
   
-  // Get the total number of themes by counting dots
-  let total_themes = document.querySelectorAll('.theme-dot').length;
+  // Get the total number of themes by counting theme content divs or dots
+  let total_themes = document.querySelectorAll('.theme-content').length || document.querySelectorAll('.theme-dot').length;
+  
+  // Update theme number indicator
+  let theme_number_span = document.querySelector('.current-theme-number');
+  if (theme_number_span) {
+    theme_number_span.textContent = theme_number;
+  }
   
   // Update Previous/Next buttons
   let prev_button = document.getElementById('theme-nav-prev');
@@ -602,8 +608,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (next_button) {
     next_button.addEventListener('click', function() {
-      // Get the total number of themes by counting dots
-      let total_themes = document.querySelectorAll('.theme-dot').length;
+      // Get the total number of themes by counting theme content divs or dots
+      let total_themes = document.querySelectorAll('.theme-content').length || document.querySelectorAll('.theme-dot').length;
       if (current_theme_index !== 'all' && current_theme_index < total_themes) {
         switch_theme(current_theme_index + 1, false); // Don't scroll when using nav widget
       }

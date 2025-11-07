@@ -182,7 +182,7 @@ section#themes-we-found {
 
 /* Themes Deep Dive Section */
 section#themes-deep-dive {
-    background: #FFF4EB;
+    background: #FFFFFF;
     margin-top: 0;
     padding-top: 0;
 }
@@ -190,10 +190,11 @@ section#themes-deep-dive {
 /* Theme Navigation Widget */
 .theme-navigation-widget {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin: 0 15% 6rem 15%;
-    padding: 1.5rem 0;
+    justify-content: space-between;
+    margin: 0 15% 2rem 15%;
+    padding: 1.5rem 0 0 0;
     position: relative;
 }
 
@@ -209,17 +210,25 @@ section#themes-deep-dive {
     background: white;
     color: #333;
     border-color: #FF6B35;
-    position: absolute;
-    top: 100%;
-    margin-top: 1rem;
+    position: relative;
+    flex-shrink: 0;
 }
 
-.theme-nav-prev {
-    left: 0;
+.theme-section-indicator {
+    flex: 1;
+    text-align: center;
 }
 
-.theme-nav-next {
-    right: 0;
+.theme-indicator-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+
+.theme-divider {
+    /* margin: 2rem 15% 2rem 15%; */
+    border: none;
+    border-top: 1px solid #E0E0E0;
 }
 
 .theme-nav-prev:disabled,
@@ -281,7 +290,7 @@ section#themes-deep-dive {
 
 .theme-content {
     display: none;
-    padding: 2rem 0;
+    padding: 0 0 2rem 0;
 }
 
 .theme-content.active {
@@ -312,10 +321,15 @@ section#themes-deep-dive {
 }
 
 .theme-quote {
-    background: #F6F7FA;
-    padding: 1.5rem;
-    border-left: 4px solid #5489A3;
-    margin: 1.5rem 0;
+    background: #FFFFFF;
+    padding: 0 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 23px;
+    padding-left: 3.5rem;
+    background-image: url('/public/images/little-dialog-balloon.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 45px 46px;
 }
 
 .theme-quote p {
@@ -576,15 +590,19 @@ section#comment-explorer {
     padding: 2rem;
 }
 
-.download-button-div {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+.download-comments {
     text-align: center;
 }
 
-.download-button-div a {
-    padding-right: 2.2em;
-    background: url("/public/images/icon-download.svg") no-repeat right 0.5rem center;
+.download-button {
+    padding: 1rem 2rem;
+    background: #5489A3;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    size: 23px;
+    cursor: pointer;
 }
 
 /* Other Efforts Section */

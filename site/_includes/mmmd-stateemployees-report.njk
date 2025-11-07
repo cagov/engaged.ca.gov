@@ -118,22 +118,13 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="section-header">
-          <h2>{{ modules.themes_deep_dive.title }}</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
         <div class="theme-navigation-widget">
           <button class="theme-nav-prev" id="theme-nav-prev" disabled>
             <span>←</span> {{ modules.theme_navigation.prev_button_text }}
           </button>
-          <div class="theme-nav-dots">
+          <div class="theme-section-indicator">
             {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
-            {% for i in range(1, nbr_themes + 1) %}
-              <span class="theme-dot{% if i == 1 %} active{% endif %}" data-theme="{{ i }}"></span>
-            {% endfor %}
+            <span class="theme-indicator-text">{{ modules.theme_navigation.theme_label }} <span class="current-theme-number">1</span> {{ modules.theme_navigation.theme_of }} {{ nbr_themes }}</span>
           </div>
           <button class="theme-nav-next" id="theme-nav-next">
             {{ modules.theme_navigation.next_button_text }} <span>→</span>
@@ -141,13 +132,13 @@
         </div>
       </div>
     </div>
+    <hr class="theme-divider">
     {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
     {% for i in range(1, nbr_themes + 1) %}
       <div id="theme-{{ i }}-content" class="theme-content{% if i == 1 %} active{% endif %}" data-theme="{{ i }}">
         <div class="row">
           <div class="col-lg-12">
             <div class="theme-header">
-              <span class="theme-number">{{ modules.theme_navigation.theme_label }} {{ i }} {{ modules.theme_navigation.theme_of }} {{ nbr_themes }}</span>
               <h3>{{ modules["theme_" + i].theme_title }}</h3>
             </div>
           </div>
@@ -259,8 +250,8 @@
         <div class="comments-container display-flex-column-gap">
           <!-- Comments will be populated here from JSON -->
         </div>
-        <div class="download-button-div">
-          <a class="style-strong-small-body" data-appearance="button" data-theme="off-white" href="/public/data/e3_comments.csv" download>{{ modules.comment_explorer_ui.download_button_text }}</a>
+        <div class="download-comments">
+          <button class="download-button">{{ modules.comment_explorer_ui.download_button_text }}</button>
         </div>
       </div>
     </div>
