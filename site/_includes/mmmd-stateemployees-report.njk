@@ -88,7 +88,7 @@
                   {"cx": 200, "cy": 130, "r": 120, "fontSize": 15, "yOffset": 120, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
                   {"cx": 450, "cy": 130, "r": 110, "fontSize": 15, "yOffset": 120, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
                   {"cx": 660, "cy": 150, "r": 85, "fontSize": 14, "yOffset": 135, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 330, "cy": 300, "r": 90, "fontSize": 13, "yOffset": 290, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 330, "cy": 304, "r": 90, "fontSize": 13, "yOffset": 294, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
                   {"cx": 565, "cy": 310, "r": 85, "fontSize": 13, "yOffset": 300, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
                   {"cx": 770, "cy": 290, "r": 80, "fontSize": 13, "yOffset": 280, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
                   {"cx": 140, "cy": 360, "r": 85, "fontSize": 14, "yOffset": 350, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
@@ -97,8 +97,10 @@
                   {"cx": 680, "cy": 460, "r": 65, "fontSize": 12, "yOffset": 450, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"}
                 ] -%}
                 {%- set pos = positions[i - 1] -%}
-                <g class="theme-circle" data-theme="{{ i }}" style="cursor: pointer; pointer-events: all; -webkit-user-select: none; user-select: none;">
-                  <circle cx="{{ pos.cx }}" cy="{{ pos.cy }}" r="{{ pos.r }}" fill="{{ pos.color }}" opacity="{{ pos.opacity }}" pointer-events="all"/>
+                {%- set stroke_color = modules[theme_module].stroke_color | default("#5489A3") -%}
+                {%- set hilite_fill_color = modules[theme_module].hilite_fill_color | default("rgba(84, 137, 163, 0.20)") -%}
+                <g class="theme-circle" data-theme="{{ i }}" data-hilite-fill="{{ hilite_fill_color }}" style="cursor: pointer; pointer-events: all; -webkit-user-select: none; user-select: none;">
+                  <circle cx="{{ pos.cx }}" cy="{{ pos.cy }}" r="{{ pos.r }}" fill="#FFFFFF" stroke="{{ stroke_color }}" stroke-width="2" pointer-events="all"/>
                   <text x="{{ pos.cx }}" y="{{ pos.yOffset }}" text-anchor="middle" fill="#0f152f" font-size="{{ pos.fontSize }}" font-weight="600" font-family="Arial, sans-serif" pointer-events="none">
                     {%- for line in lines -%}
                       <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ pos.dy }}{% endif %}">{{ line }}</tspan>
@@ -276,17 +278,7 @@
 <section id="stay-informed">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">
-        <div class="download-data-section">
-          <h2>{{ modules.download_data.title }}</h2>
-          <p>{{ modules.download_data.text_1 }}</p>
-          <p>{{ modules.download_data.text_2 }}</p>
-          <a href="/public/data/e3_comments.csv" download data-appearance="button" data-theme="orange">
-            {{ modules.download_data.button_text }}
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-8">
+      <div class="col-lg-12">
         <div class="signup-engaged-section">
           <h2>{{ modules.signup_engaged.title }}</h2>
           <p>{{ modules.signup_engaged.text }}</p>

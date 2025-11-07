@@ -525,6 +525,88 @@ section#comment-explorer {
     border-left-color: #7BA8BC;
 }
 
+/* Theme-specific border colors based on stroke_color */
+.comment-item.theme-1 {
+    border-left-color: #5F4171;
+}
+
+.comment-item.theme-2 {
+    border-left-color: #6C8043;
+}
+
+.comment-item.theme-3 {
+    border-left-color: #65ADE1;
+}
+
+.comment-item.theme-4 {
+    border-left-color: #E73C21;
+}
+
+.comment-item.theme-5 {
+    border-left-color: #53CAB0;
+}
+
+.comment-item.theme-6 {
+    border-left-color: #B07FC4;
+}
+
+.comment-item.theme-7 {
+    border-left-color: #DABD48;
+}
+
+.comment-item.theme-8 {
+    border-left-color: #A9D4F2;
+}
+
+.comment-item.theme-9 {
+    border-left-color: #F5E555;
+}
+
+.comment-item.theme-10 {
+    border-left-color: #F2C3C7;
+}
+
+/* Theme-specific border colors for replies */
+.comment-item.indent-reply.theme-1 {
+    border-left-color: #5F4171;
+}
+
+.comment-item.indent-reply.theme-2 {
+    border-left-color: #6C8043;
+}
+
+.comment-item.indent-reply.theme-3 {
+    border-left-color: #65ADE1;
+}
+
+.comment-item.indent-reply.theme-4 {
+    border-left-color: #E73C21;
+}
+
+.comment-item.indent-reply.theme-5 {
+    border-left-color: #53CAB0;
+}
+
+.comment-item.indent-reply.theme-6 {
+    border-left-color: #B07FC4;
+}
+
+.comment-item.indent-reply.theme-7 {
+    border-left-color: #DABD48;
+}
+
+.comment-item.indent-reply.theme-8 {
+    border-left-color: #A9D4F2;
+}
+
+.comment-item.indent-reply.theme-9 {
+    border-left-color: #F5E555;
+}
+
+.comment-item.indent-reply.theme-10 {
+    border-left-color: #F2C3C7;
+}
+
 .comment-content {
     size: 18px;
     line-height: 1.6;

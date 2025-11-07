@@ -249,8 +249,16 @@ function populate_comments(theme_number_or_all) {
     let likes = comment.likes !== undefined ? comment.likes : 0;
     let has_likes = 'likes' in comment;
     
+    // Add theme class based on mipid (mipid + 1 = theme number)
+    // Don't add theme class if mipid is -1
+    let theme_class = '';
+    if (comment.mipid !== undefined && comment.mipid !== null && comment.mipid !== -1) {
+      let theme_number = parseInt(comment.mipid, 10) + 1;
+      theme_class = ` theme-${theme_number}`;
+    }
+    
     cmarkup += `<div class="comment-item-container">`;
-    cmarkup += `<div class="comment-item${indent_class}">`;
+    cmarkup += `<div class="comment-item${indent_class}${theme_class}">`;
     cmarkup += '<div class="comment-content">';
     cmarkup += '"' + highlighted_text + '"';
     cmarkup += '</div>';
@@ -331,29 +339,29 @@ function switch_theme(theme_number, should_scroll = false) {
     }
   }
   
-  // Update SVG circle highlighting - use stroke for selection instead of opacity
+  // Update SVG circle highlighting - use hilite_fill_color for selected circles
   document.querySelectorAll('.theme-circle').forEach(function(group) {
     let circle = group.querySelector('circle');
     let theme_num = parseInt(group.dataset.theme, 10);
     
     if (circle) {
+      // Store original stroke color if not already stored
+      if (!circle.dataset.originalStroke) {
+        circle.dataset.originalStroke = circle.getAttribute('stroke') || '';
+      }
+      
       if (theme_num === theme_number) {
-        // Highlight selected circle with white stroke
-        circle.style.opacity = '1';
-        circle.style.stroke = '#FFFFFF';
-        circle.style.strokeWidth = '4';
+        // Highlight selected circle with hilite_fill_color
+        let hiliteFill = group.dataset.hiliteFill || 'rgba(84, 137, 163, 0.20)';
+        circle.style.fill = hiliteFill;
+        circle.style.stroke = circle.dataset.originalStroke;
+        circle.style.strokeWidth = '2';
         group.setAttribute('aria-selected', 'true');
       } else {
-        // Reset to original state - restore original opacity, no stroke
-        let fillColor = circle.getAttribute('fill');
-        let originalOpacity = circle.getAttribute('opacity');
-        if (originalOpacity) {
-          circle.style.opacity = originalOpacity;
-        } else {
-          circle.style.opacity = '1';
-        }
-        circle.style.stroke = 'none';
-        circle.style.strokeWidth = '0';
+        // Reset to original state - white fill with original stroke
+        circle.style.fill = '#FFFFFF';
+        circle.style.stroke = circle.dataset.originalStroke;
+        circle.style.strokeWidth = '2';
         group.setAttribute('aria-selected', 'false');
       }
     }
@@ -465,25 +473,29 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Add hover effect - slightly darker on hover
+    // Add hover effect - use hilite_fill_color on hover
     let circle = circleGroup.querySelector('circle');
     if (circle) {
+      // Store original stroke color if not already stored
+      if (!circle.dataset.originalStroke) {
+        circle.dataset.originalStroke = circle.getAttribute('stroke') || '';
+      }
+      
       circleGroup.addEventListener('mouseenter', function() {
+        let hoverCircle = this.querySelector('circle');
         let theme_num = parseInt(this.dataset.theme, 10);
-        if (circle && current_theme_index !== theme_num) {
-          circle.style.opacity = '0.9';
+        if (hoverCircle && current_theme_index !== theme_num) {
+          // Apply hilite_fill_color on hover
+          let hiliteFill = this.dataset.hiliteFill || 'rgba(84, 137, 163, 0.20)';
+          hoverCircle.style.fill = hiliteFill;
         }
       });
       circleGroup.addEventListener('mouseleave', function() {
+        let hoverCircle = this.querySelector('circle');
         let theme_num = parseInt(this.dataset.theme, 10);
-        if (circle && current_theme_index !== theme_num) {
-          // Restore original opacity
-          let originalOpacity = circle.getAttribute('opacity');
-          if (originalOpacity) {
-            circle.style.opacity = originalOpacity;
-          } else {
-            circle.style.opacity = '1';
-          }
+        if (hoverCircle && current_theme_index !== theme_num) {
+          // Restore white fill when not selected
+          hoverCircle.style.fill = '#FFFFFF';
         }
       });
     }
