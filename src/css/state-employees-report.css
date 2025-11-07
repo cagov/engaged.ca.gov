@@ -347,7 +347,6 @@ section#themes-deep-dive {
 /* Suggested Solutions Section */
 section#suggested-solutions {
     padding: 3rem 0;
-    background: #FFF4EB;
 }
 .solutions-header {
     text-align: center;
@@ -365,36 +364,52 @@ section#suggested-solutions {
 }
 
 .solution-card {
-    background: #FFFFFF;
-    padding: 2rem;
+    background: transparent;
+    border: none;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
     margin-bottom: 2rem;
-    min-height: 200px;
+    display: flex;
+    flex-direction: column;
 }
 
-.solution-icon {
-    width: 60px;
-    height: 60px;
-    background: #F6F7FA;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+.solution-title {
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px 8px 0 0;
 }
 
-.solution-card h4 {
+.solution-title h4 {
     color: #0f152f;
-    margin-bottom: 1rem;
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.solution-card p {
-    size: 23px;
+.solution-content {
+    background: #F6F7FA;
+    padding: 1.5rem;
+    flex: 1;
+    /* border: 1px solid #E0E0E0;
+    border-top: none; */
+    border-radius: 0 0 8px 8px;
+}
+
+.solution-content p {
+    font-size: 18px;
     line-height: 1.6;
-    color: #666;
+    color: #333;
+    margin: 0 0 1rem 0;
+}
+
+.solution-content p:last-child {
+    margin-bottom: 0;
 }
 
 .solution-quote {
-    background: #F6F7FA;
-    padding: 1rem;
+    background: #FFFFFF;
+    padding: 1rem 1.5rem;
     margin-top: 1rem;
     border-left: 3px solid #5489A3;
 }
@@ -402,7 +417,8 @@ section#suggested-solutions {
 .solution-quote p {
     margin: 0;
     font-style: italic;
-    font-size: 18px;
+    color: #333;
+    font-size: 16px;
 }
 
 .solutions-pagination {
