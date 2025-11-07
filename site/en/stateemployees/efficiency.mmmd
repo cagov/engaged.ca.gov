@@ -101,6 +101,12 @@ hilite_fill_color: "rgba(95, 65, 113, 0.20)"
 see_more_link: See more comments on this theme
 ----
 
+California state employees identified systemic problems with talent management, training programs, and professional development across multiple departments. 
+
+They cited outdated hiring methods and ineffective mentorship programs. People said that mismatched roles and the absence of standard policies hindered growth.
+
+
+
 ----
 id: theme_2
 theme_number: 2
@@ -113,6 +119,8 @@ stroke_color: "#6C8043"
 hilite_fill_color: "rgba(108, 128, 67, 0.20)"
 see_more_link: See more comments on this theme
 ----
+
+State employees found many inefficiencies in workflows, approval processes, and admin procedures. These issues slow down government operations and lower effectiveness. 
 
 ----
 id: theme_3
@@ -127,6 +135,8 @@ hilite_fill_color: "rgba(101, 173, 225, 0.20)"
 see_more_link: See more comments on this theme
 ----
 
+Employees expressed a strong desire to modernize IT systems. They called for better training on digital tools and streamlined technology adoption processes.
+
 ----
 id: theme_4
 theme_number: 4
@@ -139,6 +149,8 @@ stroke_color: "#E73C21"
 hilite_fill_color: "rgba(231, 60, 33, 0.20)"
 see_more_link: See more comments on this theme
 ----
+
+Participants discussed how hierarchy, communication, and workplace culture impact efficiency and employee satisfaction.
 
 ----
 id: theme_5
@@ -153,6 +165,8 @@ hilite_fill_color: "rgba(83, 202, 176, 0.20)"
 see_more_link: See more comments on this theme
 ----
 
+State employees highlighted the need for strong leadership. They want better management training and supportive supervision. These changes can help create efficient work environments.
+
 ----
 id: theme_6
 theme_number: 6
@@ -165,6 +179,8 @@ stroke_color: "#B07FC4"
 hilite_fill_color: "rgba(176, 127, 196, 0.20)"
 see_more_link: See more comments on this theme
 ----
+
+Strong leadership is vital. However, employees stressed that communication and knowledge sharing are also important. They suggested that California should address gaps in information sharing, collaboration tools, and interdepartmental communication to enhance operational efficiency.
 
 ----
 id: theme_7
@@ -179,6 +195,8 @@ hilite_fill_color: "rgba(218, 189, 72, 0.20)"
 see_more_link: See more comments on this theme
 ----
 
+Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
+
 ----
 id: theme_8
 theme_number: 8
@@ -191,6 +209,8 @@ stroke_color: "#A9D4F2"
 hilite_fill_color: "rgba(169, 212, 242, 0.20)"
 see_more_link: See more comments on this theme
 ----
+
+State workers shared ideas to improve customer service. They also suggested ways to streamline public processes and enhance the resident experience.
 
 ----
 id: theme_9
@@ -205,6 +225,8 @@ hilite_fill_color: "rgba(245, 229, 85, 0.20)"
 see_more_link: See more comments on this theme
 ----
 
+Participants discussed regulatory processes, compliance requirements, and oversight mechanisms that impact efficiency.
+
 ----
 id: theme_10
 theme_number: 10
@@ -217,6 +239,8 @@ stroke_color: "#F2C3C7"
 hilite_fill_color: "rgba(242, 195, 199, 0.20)"
 see_more_link: See more comments on this theme
 ----
+
+State employees noted issues with facilities, remote work policies, and workplace logistics.
 
 ----
 id: themes_deep_dive

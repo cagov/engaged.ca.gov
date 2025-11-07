@@ -146,7 +146,7 @@
           </div>
           <div class="col-lg-8">
             <div class="theme-description">
-              <p>🚧 {{ modules["theme_" + i].theme_description }}</p>
+              <p>{{ modules["theme_" + i].content | safe }}</p>
             </div>
           </div>
           <div class="col-lg-4">
