@@ -72,7 +72,7 @@ participants_label: Participants
 insights_count: 1,919
 insights_label: Insights
 staff_note: Staff from all levels of seniority and tenure
-quote: It's also to be able to share my opinions and to broaden my perspective on what it means to be a public servant.
+quote: "It's nice to be able to share my opinions and to broaden my perspectives on what it means to be a public servant."
 ----
 
 ----
@@ -84,7 +84,7 @@ id: findings_analysis
 ----
 id: themes_we_found
 title: Themes we found
-intro_text: "By and large, the ideas that people shared fell into the following categories:"
+intro_text: "Click on a theme to learn more about it:"
 nbr_themes: 10
 ----
 
@@ -249,8 +249,8 @@ title: Themes deep dive
 
 ----
 id: suggested_solutions
-title: Suggested solutions
-intro_text: Here's a selection of staff suggestions aimed at improving the efficiency of our government.
+title: Employee suggested solutions
+intro_text: Here's a selection of employee ideas on how to improve the efficiency of our state government.
 ----
 
 ----
@@ -291,7 +291,7 @@ quote: I have created employee instructions manuals for roles I have been in to 
 ----
 id: comment_explorer
 title: Comment explorer
-intro_text: Read state employees' own words on these topics
+intro_text: Read state employees’ own words on this topic
 ----
 
 ----
@@ -312,7 +312,7 @@ sort_alpha: Alpha
 sort_theme: Theme
 sort_likes: Likes
 sort_replies: Replies
-download_button_text: Download all comments
+download_button_text: Download all the comments
 ----
 
 
@@ -321,17 +321,17 @@ id: current_actions
 title: Current actions we're taking
 ----
 
-Residents shared what they need most to recover and rebuild their communities. We found that some issues need more discussion. However, we also found issues we can act on now.
+**Governor’s Innovation Fellows**
 
-Below is a summary of how we are responding to what residents said they need most. 
+One way the state is making government more efficient, effective, and responsive to the public is through the [Governor’s Innovation Fellows program](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/). The first cohort began in July 2025 with 21 California state employees working on priority projects at departments across the state. The second cohort begins in December 2025.
 
-Stay tuned for updates on our progress.
+**Join the Innovation Community of Practice**
 
-**Opportunities to create new support programs**
+The Innovation Community of Practice connects state employees who want to try new ways of doing things. It spotlights and amplifies the innovation happening throughout the state. The Community is open to all state employees. Learn more and sign up today.
 
-1. Community mental health support Residents said they needed community support and places to gather after the fire. This would help them cope with being displaced.
+**Track our progress on results.ca.gov**
 
-2. Soil safety testingResidents want soil testing to make sure they are safe from toxic chemicals after the fires. Some universities offer free soil testing, but federal agencies won't do full testing. There's no state program that covers this need completely.
+Visit results.ca.gov to learn more about how the Administration is saving time, money, and lives by redesigning services around real people. 
 
 ----
 id: download_data
@@ -343,7 +343,7 @@ button_text: Download the full dataset
 
 ----
 id: signup_engaged
-title: Sign up to remain engaged in important work
+title: Sign up to stay engaged
 text: Give us your email to learn about upcoming opportunities.
 button_text: Sign up
 ----
