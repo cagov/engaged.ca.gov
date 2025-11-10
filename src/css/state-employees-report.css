@@ -182,9 +182,13 @@ section#themes-we-found {
 
 /* Themes Deep Dive Section */
 section#themes-deep-dive {
-    background: #FFFFFF;
+    background: #F6F7FA;
     margin-top: 0;
     padding-top: 0;
+}
+section#themes-deep-dive .container {
+    background: white;
+    border-radius: 8px;
 }
 
 /* Theme Navigation Widget */
