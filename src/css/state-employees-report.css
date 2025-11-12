@@ -197,25 +197,39 @@ section#themes-deep-dive .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0 15% 2rem 15%;
-    padding: 1.5rem 0 0 0;
+    margin: 0 15% 0rem 15%;
+    padding: 1rem 0 0 0;
     position: relative;
 }
 
 .theme-nav-prev,
 .theme-nav-next {
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-size: 18px !important;
+    padding: 0rem 1.5rem !important;
+    border-radius: 20px !important;
+    border: none !important;
+    font-size: 16px !important;
     font-weight: 400 !important;
     cursor: pointer;
     transition: all 0.2s ease;
-    border: 1px solid;
-    background: white;
-    color: #333;
-    border-color: #FF6B35;
+    background: #5E5E6A;
+    color: #FFFFFF;
     position: relative;
     flex-shrink: 0;
+    height: 2.5rem;
+}
+
+
+.theme-nav-prev:disabled,
+.theme-nav-next:disabled {
+    background: #EDEDEF;
+    color: rgba(68, 68, 68, 0.50);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.theme-nav-prev:hover:not(:disabled),
+.theme-nav-next:hover:not(:disabled) {
+    background: #6E6E7A;
 }
 
 .theme-section-indicator {
@@ -235,20 +249,6 @@ section#themes-deep-dive .container {
     border-top: 1px solid #E0E0E0;
 }
 
-.theme-nav-prev:disabled,
-.theme-nav-next:disabled {
-    background: #F5F5F5;
-    color: #999;
-    border-color: #E0E0E0;
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-.theme-nav-prev:hover:not(:disabled),
-.theme-nav-next:hover:not(:disabled) {
-    background: #FFF4EB;
-    border-color: #FF6B35;
-}
 
 .theme-nav-dots {
     display: flex;
@@ -294,7 +294,7 @@ section#themes-deep-dive .container {
 
 .theme-content {
     display: none;
-    padding: 0 0 2rem 0;
+    padding: 0 0 2rem 1rem;
 }
 
 .theme-content.active {
@@ -315,7 +315,7 @@ section#themes-deep-dive .container {
 
 .theme-header h3 {
     color: #0f152f;
-    margin-top: 0.5rem;
+    margin-top: 0;
 }
 
 .theme-description p {
@@ -352,6 +352,12 @@ section#themes-deep-dive .container {
 section#suggested-solutions {
     padding: 3rem 0;
 }
+
+div#suggested-solutions {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .solutions-header {
     text-align: center;
 }
