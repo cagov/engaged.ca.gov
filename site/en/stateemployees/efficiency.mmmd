@@ -91,12 +91,29 @@ nbr_themes: 10
 ----
 id: theme_1
 theme_number: 1
+theme_title: Process improvement
+theme_circle_title: "Process<LF>improvement"
+theme_circle_color: "#8B6F47"
+theme_description: State employees identified numerous inefficiencies in workflows, approval processes, and administrative procedures that slow down government operations and reduce effectiveness.
+theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+stroke_color: "#6C8043"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.20)"
+see_more_link: See more comments on this theme
+----
+
+State employees found many inefficiencies in workflows, approval processes, and admin procedures. These issues slow down government operations and lower effectiveness. 
+
+----
+id: theme_2
+theme_number: 2
 theme_title: Recruitment, hiring, and retention
 theme_circle_title: "Recruitment,<LF>hiring, and<LF>retention"
 theme_circle_color: "#4A90A4"
 theme_description: California state employees identify systemic problems with talent management, training programs, and professional development across multiple departments. Issues include outdated hiring practices, inadequate mentorship programs, misaligned role assignments, and lack of standardized policies.
 theme_quote: Some people are promoted without meeting minimum qualifications while others are told they can't promote due to not meeting them despite experience and relevant education.
 stroke_color: "#5F4171"
+light_color: "rgba(95, 65, 113, 0.50)"
 hilite_fill_color: "rgba(95, 65, 113, 0.20)"
 see_more_link: See more comments on this theme
 ----
@@ -108,104 +125,15 @@ They cited outdated hiring methods and ineffective mentorship programs. People s
 
 
 ----
-id: theme_2
-theme_number: 2
-theme_title: Process improvement
-theme_circle_title: "Process<LF>improvement"
-theme_circle_color: "#8B6F47"
-theme_description: State employees identified numerous inefficiencies in workflows, approval processes, and administrative procedures that slow down government operations and reduce effectiveness.
-theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-stroke_color: "#6C8043"
-hilite_fill_color: "rgba(108, 128, 67, 0.20)"
-see_more_link: See more comments on this theme
-----
-
-State employees found many inefficiencies in workflows, approval processes, and admin procedures. These issues slow down government operations and lower effectiveness. 
-
-----
 id: theme_3
 theme_number: 3
-theme_title: Technology and digital innovation
-theme_circle_title: "Technology and<LF>digital innovation"
-theme_circle_color: "#5B7FA5"
-theme_description: Employees highlighted the need for modernization of IT systems, better training on digital tools, and streamlined technology adoption processes.
-theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-stroke_color: "#65ADE1"
-hilite_fill_color: "rgba(101, 173, 225, 0.20)"
-see_more_link: See more comments on this theme
-----
-
-Employees expressed a strong desire to modernize IT systems. They called for better training on digital tools and streamlined technology adoption processes.
-
-----
-id: theme_4
-theme_number: 4
-theme_title: Organizational structure and culture
-theme_circle_title: "Organizational<LF>structure and<LF>culture"
-theme_circle_color: "#C46B3F"
-theme_description: Participants discussed how organizational hierarchies, communication channels, and workplace culture impact efficiency and employee satisfaction.
-theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-stroke_color: "#E73C21"
-hilite_fill_color: "rgba(231, 60, 33, 0.20)"
-see_more_link: See more comments on this theme
-----
-
-Participants discussed how hierarchy, communication, and workplace culture impact efficiency and employee satisfaction.
-
-----
-id: theme_5
-theme_number: 5
-theme_title: Management culture and leadership
-theme_circle_title: "Management<LF>culture and<LF>leadership"
-theme_circle_color: "#4A4A4A"
-theme_description: State employees emphasized the importance of effective leadership, management training, and supportive supervision in creating efficient work environments.
-theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-stroke_color: "#53CAB0"
-hilite_fill_color: "rgba(83, 202, 176, 0.20)"
-see_more_link: See more comments on this theme
-----
-
-State employees highlighted the need for strong leadership. They want better management training and supportive supervision. These changes can help create efficient work environments.
-
-----
-id: theme_6
-theme_number: 6
-theme_title: Communication and knowledge sharing
-theme_circle_title: "Communication and<LF>knowledge sharing"
-theme_circle_color: "#E07A5F"
-theme_description: Workers identified gaps in information sharing, collaboration tools, and interdepartmental communication that hinder efficiency.
-theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-stroke_color: "#B07FC4"
-hilite_fill_color: "rgba(176, 127, 196, 0.20)"
-see_more_link: See more comments on this theme
-----
-
-Strong leadership is vital. However, employees stressed that communication and knowledge sharing are also important. They suggested that California should address gaps in information sharing, collaboration tools, and interdepartmental communication to enhance operational efficiency.
-
-----
-id: theme_7
-theme_number: 7
-theme_title: Budget and resources
-theme_circle_title: "Budget and<LF>resources"
-theme_circle_color: "#D4AF37"
-theme_description: Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
-theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-stroke_color: "#DABD48"
-hilite_fill_color: "rgba(218, 189, 72, 0.20)"
-see_more_link: See more comments on this theme
-----
-
-Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
-
-----
-id: theme_8
-theme_number: 8
 theme_title: Public-facing services and resident experience
 theme_circle_title: "Public-facing<LF>services and<LF>resident experience"
 theme_circle_color: "#D494B8"
 theme_description: State workers shared ideas on improving customer service, streamlining public-facing processes, and enhancing the resident experience.
 theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 stroke_color: "#A9D4F2"
+light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.20)"
 see_more_link: See more comments on this theme
 ----
@@ -213,19 +141,100 @@ see_more_link: See more comments on this theme
 State workers shared ideas to improve customer service. They also suggested ways to streamline public processes and enhance the resident experience.
 
 ----
-id: theme_9
-theme_number: 9
+id: theme_4
+theme_number: 4
+theme_title: Communication and knowledge sharing
+theme_circle_title: "Communication and<LF>knowledge sharing"
+theme_circle_color: "#E07A5F"
+theme_description: Workers identified gaps in information sharing, collaboration tools, and interdepartmental communication that hinder efficiency.
+theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+stroke_color: "#B07FC4"
+light_color: "rgba(176, 127, 196, 0.50)"
+hilite_fill_color: "rgba(176, 127, 196, 0.20)"
+see_more_link: See more comments on this theme
+----
+
+Strong leadership is vital. However, employees stressed that communication and knowledge sharing are also important. They suggested that California should address gaps in information sharing, collaboration tools, and interdepartmental communication to enhance operational efficiency.
+
+----
+id: theme_5
+theme_number: 5
+theme_title: Budget and resources
+theme_circle_title: "Budget and<LF>resources"
+theme_circle_color: "#D4AF37"
+theme_description: Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
+theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+stroke_color: "#DABD48"
+light_color: "rgba(218, 189, 72, 0.50)"
+hilite_fill_color: "rgba(218, 189, 72, 0.20)"
+see_more_link: See more comments on this theme
+----
+
+Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
+
+----
+id: theme_6
+theme_number: 6
+theme_title: Technology and digital innovation
+theme_circle_title: "Technology and<LF>digital innovation"
+theme_circle_color: "#5B7FA5"
+theme_description: Employees highlighted the need for modernization of IT systems, better training on digital tools, and streamlined technology adoption processes.
+theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+stroke_color: "#65ADE1"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.20)"
+see_more_link: See more comments on this theme
+----
+
+Employees expressed a strong desire to modernize IT systems. They called for better training on digital tools and streamlined technology adoption processes.
+
+----
+id: theme_7
+theme_number: 7
 theme_title: Governance and oversight
 theme_circle_title: "Governance<LF>and oversight"
 theme_circle_color: "#7B68EE"
 theme_description: Participants discussed regulatory processes, compliance requirements, and oversight mechanisms that impact efficiency.
 theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 stroke_color: "#F5E555"
+light_color: "rgba(245, 229, 85, 0.50)"
 hilite_fill_color: "rgba(245, 229, 85, 0.20)"
 see_more_link: See more comments on this theme
 ----
 
 Participants discussed regulatory processes, compliance requirements, and oversight mechanisms that impact efficiency.
+
+----
+id: theme_8
+theme_number: 8
+theme_title: Organizational structure and culture
+theme_circle_title: "Organizational<LF>structure and<LF>culture"
+theme_circle_color: "#C46B3F"
+theme_description: Participants discussed how organizational hierarchies, communication channels, and workplace culture impact efficiency and employee satisfaction.
+theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+stroke_color: "#E73C21"
+light_color: "rgba(231, 60, 33, 0.50)"
+hilite_fill_color: "rgba(231, 60, 33, 0.20)"
+see_more_link: See more comments on this theme
+----
+
+Participants discussed how hierarchy, communication, and workplace culture impact efficiency and employee satisfaction.
+
+----
+id: theme_9
+theme_number: 9
+theme_title: Management culture and leadership
+theme_circle_title: "Management<LF>culture and<LF>leadership"
+theme_circle_color: "#4A4A4A"
+theme_description: State employees emphasized the importance of effective leadership, management training, and supportive supervision in creating efficient work environments.
+theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+stroke_color: "#53CAB0"
+light_color: "rgba(83, 202, 176, 0.50)"
+hilite_fill_color: "rgba(83, 202, 176, 0.20)"
+see_more_link: See more comments on this theme
+----
+
+State employees highlighted the need for strong leadership. They want better management training and supportive supervision. These changes can help create efficient work environments.
 
 ----
 id: theme_10
@@ -236,6 +245,7 @@ theme_circle_color: "#4ECDC4"
 theme_description: State employees identified operational challenges related to facilities, remote work policies, and day-to-day workplace logistics.
 theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 stroke_color: "#F2C3C7"
+light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.20)"
 see_more_link: See more comments on this theme
 ----

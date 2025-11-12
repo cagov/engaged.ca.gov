@@ -5,6 +5,10 @@ let global_comment_data = null;
 let current_search_term = '';
 let current_sort = 'date'; // Default to date sort
 
+// Maps for subthemes and themes
+let subthemeMap = {}; // Maps subtheme_id -> {name, parent_theme_id}
+let themeColorMap = {}; // Maps theme_id -> {stroke, light}
+
 // Function to escape HTML and highlight search terms
 function highlightSearchText(text, searchTerm) {
   if (!searchTerm || searchTerm.length < 2) {
@@ -36,12 +40,13 @@ function populate_comments(theme_number_or_all) {
       return comment.content && comment.content.trim() !== '';
     });
   } else {
-    // Convert theme number (1-10) to mipid (0-9)
-    let target_mipid = parseInt(theme_number_or_all, 10) - 1;
+    // Theme number (1-10) matches theme ID in v2 data
+    let target_theme_id = parseInt(theme_number_or_all, 10);
     
-    // Filter comments by mipid
+    // Filter comments by checking if the theme ID is in the tids array
     filtered_comments = global_comment_data.comments.filter(function(comment) {
-      return comment.mipid === target_mipid && comment.content && comment.content.trim() !== '';
+      let tids = comment.tids || [];
+      return tids.indexOf(target_theme_id) !== -1 && comment.content && comment.content.trim() !== '';
     });
   }
   
@@ -82,9 +87,13 @@ function populate_comments(theme_number_or_all) {
       if (aText > bText) return 1;
       return 0;
     } else if (current_sort === 'theme') {
-      // Theme sort: sort by mipid first, then by date
-      if (a.mipid !== b.mipid) {
-        return a.mipid - b.mipid;
+      // Theme sort: sort by first theme ID from tids array, then by date
+      let aTids = a.tids || [];
+      let bTids = b.tids || [];
+      let aFirstTheme = aTids.length > 0 ? aTids[0] : 0;
+      let bFirstTheme = bTids.length > 0 ? bTids[0] : 0;
+      if (aFirstTheme !== bFirstTheme) {
+        return aFirstTheme - bFirstTheme;
       }
       // Within same theme, sort by date
       let aDate = parseDate(a.date);
@@ -249,12 +258,13 @@ function populate_comments(theme_number_or_all) {
     let likes = comment.likes !== undefined ? comment.likes : 0;
     let has_likes = 'likes' in comment;
     
-    // Add theme class based on mipid (mipid + 1 = theme number)
-    // Don't add theme class if mipid is -1
+    // Add theme classes based on tids array (theme IDs are 1-10 in v2)
+    // Add all theme classes for comments with multiple themes
     let theme_class = '';
-    if (comment.mipid !== undefined && comment.mipid !== null && comment.mipid !== -1) {
-      let theme_number = parseInt(comment.mipid, 10) + 1;
-      theme_class = ` theme-${theme_number}`;
+    if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
+      comment.tids.forEach(function(tid) {
+        theme_class += ` theme-${tid}`;
+      });
     }
     
     cmarkup += `<div class="comment-item-container">`;
@@ -275,9 +285,19 @@ function populate_comments(theme_number_or_all) {
       }
       cmarkup += '</div>';
     }
+    // Generate sub-theme tags
     cmarkup += '<div class="comment-tags">';
-      cmarkup += '<div class="comment-tag">Example tag</div>'
-      cmarkup += '<div class="comment-tag">Example tag</div>'
+    if (comment.stids && Array.isArray(comment.stids) && comment.stids.length > 0) {
+      comment.stids.forEach(function(stid) {
+        let subtheme = subthemeMap[stid];
+        if (subtheme) {
+          let parentThemeId = subtheme.parent_theme_id;
+          let themeColorObj = themeColorMap[parentThemeId];
+          let themeColor = themeColorObj && themeColorObj.light ? themeColorObj.light : 'rgba(84, 137, 163, 0.50)';
+          cmarkup += `<div class="comment-tag" style="background-color: ${themeColor};">${subtheme.name}</div>`;
+        }
+      });
+    }
     cmarkup += '</div>';
 
 
@@ -538,11 +558,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
   
   // Load comment data
-  fetch("/public/data/E3_data_v1.json")
+  fetch("/public/data/E3_data_v2.json")
     .then(response => response.json())
     .then(data => {
       console.log("Comment data loaded:", data.comments.length, "comments");
       global_comment_data = data;
+      
+      // Build subtheme map
+      if (data.subthemes) {
+        data.subthemes.forEach(function(subtheme) {
+          subthemeMap[subtheme.id] = {
+            name: subtheme.name,
+            parent_theme_id: subtheme.parent_theme_id
+          };
+        });
+      }
+      
+      // Build theme color map from window.themeColors (set in template)
+      if (window.themeColors) {
+        themeColorMap = window.themeColors;
+      } else {
+        // Fallback: build from themes array if available
+        if (data.themes) {
+          data.themes.forEach(function(theme) {
+            // Use a default color scheme if themeColors not available
+            themeColorMap[theme.id] = {
+              stroke: '#5489A3',
+              light: 'rgba(84, 137, 163, 0.50)'
+            };
+          });
+        }
+      }
+      
       // Populate comments for initial theme
       populate_comments(current_theme_index);
     })

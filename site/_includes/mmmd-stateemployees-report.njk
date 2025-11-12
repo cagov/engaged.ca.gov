@@ -291,4 +291,18 @@
 
 {% include "e3-theme-navigation.njk" %}
 
+<script>
+// Pass theme colors to JavaScript
+window.themeColors = {
+  {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+  {% for i in range(1, nbr_themes + 1) %}
+  {% set theme_module = "theme_" + i %}
+  {{ i }}: {
+    stroke: "{{ modules[theme_module].stroke_color | default('#5489A3') }}",
+    light: "{{ modules[theme_module].light_color | default('rgba(84, 137, 163, 0.50)') }}"
+  }{% if not loop.last %},{% endif %}
+  {% endfor %}
+};
+</script>
+
 {% endblock %}

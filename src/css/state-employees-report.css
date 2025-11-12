@@ -548,6 +548,7 @@ section#comment-explorer {
 
 .comment-item-container {
     padding: 1rem 2rem;
+    overflow-x: hidden;
 }
 
 .comment-item-container:not(:has(> .comment-item.indent-reply)) {
@@ -667,6 +668,7 @@ section#comment-explorer {
 
 .comment-tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 0.75rem;
 }
