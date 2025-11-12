@@ -75,9 +75,9 @@
           <p>{{ modules.themes_we_found.intro_text }}</p>
         </div>
         <div id="themes-bubble-chart" class="themes-bubble-chart">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1167 540" width="1167" height="540">
             <!-- Background -->
-            <rect width="1000" height="540" fill="#F6F7FA"/>
+            <rect width="1167" height="540" fill="#F6F7FA"/>
             {%- set nbr_themes = modules.themes_we_found.nbr_themes | default(10) -%}
             {%- for i in range(1, nbr_themes + 1) -%}
               {%- set theme_module = "theme_" + i -%}
@@ -85,16 +85,16 @@
                 {%- set title = modules[theme_module].theme_circle_title if modules[theme_module].theme_circle_title else modules[theme_module].theme_title -%}
                 {%- set lines = title.split('<LF>') -%}
                 {%- set positions = [
-                  {"cx": 200, "cy": 130, "r": 120, "fontSize": 15, "yOffset": 120, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
-                  {"cx": 450, "cy": 130, "r": 110, "fontSize": 15, "yOffset": 120, "dy": 18, "color": "#5489A3", "opacity": "0.8"},
-                  {"cx": 660, "cy": 150, "r": 85, "fontSize": 14, "yOffset": 135, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 330, "cy": 304, "r": 90, "fontSize": 13, "yOffset": 294, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 565, "cy": 310, "r": 85, "fontSize": 13, "yOffset": 300, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 770, "cy": 290, "r": 80, "fontSize": 13, "yOffset": 280, "dy": 15, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 140, "cy": 360, "r": 85, "fontSize": 14, "yOffset": 350, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 270, "cy": 460, "r": 70, "fontSize": 11, "yOffset": 450, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"},
-                  {"cx": 520, "cy": 460, "r": 65, "fontSize": 12, "yOffset": 450, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"},
-                  {"cx": 680, "cy": 460, "r": 65, "fontSize": 12, "yOffset": 450, "dy": 14, "color": "#9BC4D4", "opacity": "0.7"}
+                  {"cx": 192, "cy": 130, "r": 120, "fontSize": 18, "yOffset": 120, "dy": 22, "color": "#5489A3", "opacity": "0.8"},
+                  {"cx": 576, "cy": 130, "r": 111, "fontSize": 18, "yOffset": 120, "dy": 22, "color": "#5489A3", "opacity": "0.8"},
+                  {"cx": 898, "cy": 150, "r": 91, "fontSize": 17, "yOffset": 135, "dy": 19, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 392, "cy": 304, "r": 81, "fontSize": 14, "yOffset": 294, "dy": 16, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 752, "cy": 310, "r": 74, "fontSize": 16, "yOffset": 300, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 1067, "cy": 290, "r": 73, "fontSize": 16, "yOffset": 280, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 100, "cy": 360, "r": 72, "fontSize": 17, "yOffset": 350, "dy": 19, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 300, "cy": 460, "r": 71, "fontSize": 16, "yOffset": 450, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"},
+                  {"cx": 683, "cy": 460, "r": 66, "fontSize": 14, "yOffset": 450, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"},
+                  {"cx": 929, "cy": 460, "r": 65, "fontSize": 14, "yOffset": 450, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"}
                 ] -%}
                 {%- set pos = positions[i - 1] -%}
                 {%- set stroke_color = modules[theme_module].stroke_color | default("#5489A3") -%}
