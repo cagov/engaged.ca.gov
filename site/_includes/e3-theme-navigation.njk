@@ -296,6 +296,14 @@ function populate_comments(theme_number_or_all) {
     }
   }
   
+  // Update comment count
+  let comment_count_element = document.querySelector('.comment-count');
+  if (comment_count_element) {
+    let template = comment_count_element.dataset.template || '<N> comments';
+    let count_text = template.replace('<N>', filtered_comments.length);
+    comment_count_element.textContent = count_text;
+  }
+  
   // Update theme selector dropdown
   let theme_selector = document.querySelector('.theme-selector');
   if (theme_selector) {

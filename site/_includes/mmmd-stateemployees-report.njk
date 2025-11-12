@@ -141,7 +141,10 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="theme-header">
-              <h3>{{ modules["theme_" + i].theme_title }}</h3>
+              <h3>
+                <span class="theme-bullet" style="background-color: {{ modules['theme_' + i].stroke_color | default('#5489A3') }};"></span>
+                {{ modules["theme_" + i].theme_title }}
+              </h3>
             </div>
           </div>
           <div class="col-lg-8">
@@ -175,32 +178,12 @@
           <div class="solution-title">
             <h4>{{ modules.solution_1.title }}</h4>
           </div>
-          <div class="solution-content">
-            {% if modules.solution_1.description %}
-              <p>{{ modules.solution_1.description }}</p>
-            {% endif %}
-            {% if modules.solution_1.quote %}
-              <div class="solution-quote">
-                <p>{{ modules.solution_1.quote }}</p>
-              </div>
-            {% endif %}
-          </div>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="solution-card">
           <div class="solution-title">
             <h4>{{ modules.solution_2.title }}</h4>
-          </div>
-          <div class="solution-content">
-            {% if modules.solution_2.description %}
-              <p>{{ modules.solution_2.description }}</p>
-            {% endif %}
-            {% if modules.solution_2.quote %}
-              <div class="solution-quote">
-                <p>{{ modules.solution_2.quote }}</p>
-              </div>
-            {% endif %}
           </div>
         </div>
       </div>
@@ -209,16 +192,6 @@
           <div class="solution-title">
             <h4>{{ modules.solution_3.title }}</h4>
           </div>
-          <div class="solution-content">
-            {% if modules.solution_3.description %}
-              <p>{{ modules.solution_3.description }}</p>
-            {% endif %}
-            {% if modules.solution_3.quote %}
-              <div class="solution-quote">
-                <p>{{ modules.solution_3.quote }}</p>
-              </div>
-            {% endif %}
-          </div>
         </div>
       </div>
       <div class="col-lg-4">
@@ -226,32 +199,12 @@
           <div class="solution-title">
             <h4>{{ modules.solution_4.title }}</h4>
           </div>
-          <div class="solution-content">
-            {% if modules.solution_4.description %}
-              <p>{{ modules.solution_4.description }}</p>
-            {% endif %}
-            {% if modules.solution_4.quote %}
-              <div class="solution-quote">
-                <p>{{ modules.solution_4.quote }}</p>
-              </div>
-            {% endif %}
-          </div>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="solution-card">
           <div class="solution-title">
             <h4>{{ modules.solution_5.title }}</h4>
-          </div>
-          <div class="solution-content">
-            {% if modules.solution_5.description %}
-              <p>{{ modules.solution_5.description }}</p>
-            {% endif %}
-            {% if modules.solution_5.quote %}
-              <div class="solution-quote">
-                <p>{{ modules.solution_5.quote }}</p>
-              </div>
-            {% endif %}
           </div>
         </div>
       </div>
@@ -293,6 +246,7 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
+        <div class="comment-count" data-template="{{ modules.comment_explorer_ui.comment_count }}">{{ modules.comment_explorer_ui.comment_count }}</div>
         <div class="comments-container display-flex-column-gap">
           <!-- Comments will be populated here from JSON -->
         </div>

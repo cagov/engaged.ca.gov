@@ -218,6 +218,12 @@ section#themes-deep-dive .container {
     height: 2.5rem;
 }
 
+#theme-nav-next span,
+#theme-nav-prev span {
+    font-size: 18px;
+    position: relative;
+    top: 0.05rem;
+}
 
 .theme-nav-prev:disabled,
 .theme-nav-next:disabled {
@@ -302,7 +308,7 @@ section#themes-deep-dive .container {
 }
 
 .theme-header {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .theme-number {
@@ -316,6 +322,18 @@ section#themes-deep-dive .container {
 .theme-header h3 {
     color: #0f152f;
     margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.theme-bullet {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .theme-description p {
@@ -369,7 +387,7 @@ div#suggested-solutions {
 }
 
 .solutions-header p {
-    font-size: 23px;
+    font-size: 16px;
     margin-bottom: 2rem;
 }
 
@@ -386,8 +404,8 @@ div#suggested-solutions {
 .solution-title {
     background: #FFFFFF;
     padding: 1.5rem;
-    border: 1px solid #E0E0E0;
-    border-radius: 8px 8px 0 0;
+    border: 1px solid #BCBBC1;
+    border-radius: 16px;
 }
 
 .solution-title h4 {
