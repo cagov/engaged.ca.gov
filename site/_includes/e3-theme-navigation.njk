@@ -9,6 +9,9 @@ let current_sort = 'date'; // Default to date sort
 let subthemeMap = {}; // Maps subtheme_id -> {name, parent_theme_id}
 let themeColorMap = {}; // Maps theme_id -> {stroke, light}
 
+// Track active sub-themes (Set of active subtheme IDs)
+let activeSubthemes = new Set();
+
 // Function to escape HTML and highlight search terms
 function highlightSearchText(text, searchTerm) {
   if (!searchTerm || searchTerm.length < 2) {
@@ -112,7 +115,23 @@ function populate_comments(theme_number_or_all) {
       // Only include top-level comments (no parent)
       let isTopLevel = !comment.rid || comment.rid === '';
       let tids = comment.tids || [];
-      return isTopLevel && tids.indexOf(target_theme_id) !== -1 && comment.content && comment.content.trim() !== '';
+      let matchesTheme = tids.indexOf(target_theme_id) !== -1;
+      
+      // If sub-theme filtering is active, also check if comment has any active sub-themes
+      if (matchesTheme && activeSubthemes.size > 0) {
+        let stids = comment.stids || [];
+        // Comment must have at least one active sub-theme
+        let hasActiveSubtheme = false;
+        for (let i = 0; i < stids.length; i++) {
+          if (activeSubthemes.has(stids[i])) {
+            hasActiveSubtheme = true;
+            break;
+          }
+        }
+        matchesTheme = hasActiveSubtheme;
+      }
+      
+      return isTopLevel && matchesTheme && comment.content && comment.content.trim() !== '';
     });
     
     // Find all replies to these parent comments (replies don't need matching theme IDs)
@@ -410,10 +429,118 @@ function showCommentCountLoading() {
   }
 }
 
+// Function to populate sub-theme filter for a given theme
+function populateSubthemeFilter(themeId) {
+  let subthemeFilter = document.getElementById('subtheme-filter');
+  let subthemeFilterTags = document.getElementById('subtheme-filter-tags');
+  
+  if (!subthemeFilter || !subthemeFilterTags) return;
+  
+  // Hide filter for "all" and "other"
+  if (themeId === 'all' || themeId === 'other') {
+    subthemeFilter.style.display = 'none';
+    activeSubthemes.clear();
+    return;
+  }
+  
+  // Get all sub-themes for this theme
+  let themeSubthemes = [];
+  for (let stid in subthemeMap) {
+    if (subthemeMap[stid].parent_theme_id === themeId) {
+      themeSubthemes.push({
+        id: parseInt(stid, 10),
+        name: subthemeMap[stid].name
+      });
+    }
+  }
+  
+  // Sort by ID for consistent ordering
+  themeSubthemes.sort(function(a, b) {
+    return a.id - b.id;
+  });
+  
+  // If no sub-themes, hide the filter
+  if (themeSubthemes.length === 0) {
+    subthemeFilter.style.display = 'none';
+    activeSubthemes.clear();
+    return;
+  }
+  
+  // Show the filter
+  subthemeFilter.style.display = 'block';
+  
+  // Get theme color
+  let themeColorObj = themeColorMap[themeId];
+  let themeColor = themeColorObj && themeColorObj.light ? themeColorObj.light : 'rgba(84, 137, 163, 0.50)';
+  
+  // Clear existing tags
+  subthemeFilterTags.innerHTML = '';
+  
+  // Initialize all sub-themes as active
+  activeSubthemes.clear();
+  themeSubthemes.forEach(function(subtheme) {
+    activeSubthemes.add(subtheme.id);
+  });
+  
+  // Create tags for each sub-theme
+  themeSubthemes.forEach(function(subtheme) {
+    let tag = document.createElement('div');
+    tag.className = 'subtheme-filter-tag';
+    tag.dataset.subthemeId = subtheme.id;
+    tag.style.backgroundColor = themeColor;
+    
+    let tagText = document.createElement('span');
+    tagText.textContent = subtheme.name;
+    
+    let tagClose = document.createElement('span');
+    tagClose.className = 'subtheme-filter-tag-close';
+    tagClose.textContent = '×';
+    tagClose.setAttribute('aria-label', 'Toggle ' + subtheme.name);
+    
+    tag.appendChild(tagText);
+    tag.appendChild(tagClose);
+    
+    // Handle click on tag (both the tag itself and the X button)
+    tag.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleSubtheme(subtheme.id);
+    });
+    
+    subthemeFilterTags.appendChild(tag);
+  });
+}
+
+// Function to toggle a sub-theme's active state
+function toggleSubtheme(subthemeId) {
+  if (activeSubthemes.has(subthemeId)) {
+    activeSubthemes.delete(subthemeId);
+  } else {
+    activeSubthemes.add(subthemeId);
+  }
+  
+  // Update visual state
+  let tag = document.querySelector(`.subtheme-filter-tag[data-subtheme-id="${subthemeId}"]`);
+  if (tag) {
+    if (activeSubthemes.has(subthemeId)) {
+      tag.classList.remove('inactive');
+    } else {
+      tag.classList.add('inactive');
+    }
+  }
+  
+  // Repopulate comments with new filter
+  if (current_theme_index === 'all' || current_theme_index === 'other') {
+    populate_comments(current_theme_index);
+  } else {
+    populate_comments(current_theme_index);
+  }
+}
+
 function switch_theme(theme_number, should_scroll = false) {
   // Handle "all" option
   if (theme_number === 'all' || theme_number === null) {
     current_theme_index = 'all';
+    populateSubthemeFilter('all');
     populate_comments('all');
     // Reset scroll position of comments container to top
     let comment_container = document.querySelector('.comments-container');
@@ -426,6 +553,7 @@ function switch_theme(theme_number, should_scroll = false) {
   // Handle "other" option
   if (theme_number === 'other') {
     current_theme_index = 'other';
+    populateSubthemeFilter('other');
     populate_comments('other');
     // Reset scroll position of comments container to top
     let comment_container = document.querySelector('.comments-container');
@@ -456,6 +584,9 @@ function switch_theme(theme_number, should_scroll = false) {
   
   // Update current theme index
   current_theme_index = parseInt(theme_number, 10);
+  
+  // Populate sub-theme filter for this theme
+  populateSubthemeFilter(current_theme_index);
   
   // Remove 'active' class from all theme content sections
   document.querySelectorAll('.theme-content').forEach(function(content) {
@@ -695,6 +826,9 @@ document.addEventListener('DOMContentLoaded', function() {
           });
         }
       }
+      
+      // Populate sub-theme filter for initial theme
+      populateSubthemeFilter(current_theme_index);
       
       // Populate comments for initial theme
       populate_comments(current_theme_index);
