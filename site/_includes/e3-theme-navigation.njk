@@ -31,29 +31,89 @@ function populate_comments(theme_number_or_all) {
     return;
   }
   
+  // Build a map of ALL comments by cid for easy lookup (needed for finding replies)
+  let all_comments_by_cid = {};
+  global_comment_data.comments.forEach(function(comment) {
+    all_comments_by_cid[comment.cid] = comment;
+  });
+  
+  // Function to find all replies (direct and indirect) for a given parent comment CID
+  function getAllRepliesForParent(parentCid) {
+    let result = [];
+    // Search through ALL comments to find replies
+    global_comment_data.comments.forEach(function(comment) {
+      // Skip if no content
+      if (!comment.content || comment.content.trim() === '') {
+        return;
+      }
+      // Check if this comment is a reply (has a rid)
+      if (comment.rid && comment.rid !== '') {
+        // Check if this reply is a direct or indirect child of parentCid
+        let current = comment;
+        let isDescendant = false;
+        while (current.rid && current.rid !== '') {
+          if (current.rid === parentCid) {
+            isDescendant = true;
+            break;
+          }
+          current = all_comments_by_cid[current.rid];
+          if (!current) break;
+        }
+        if (isDescendant) {
+          result.push(comment);
+        }
+      }
+    });
+    return result;
+  }
+  
   let filtered_comments;
   
   // Handle "all" vs specific theme vs "other"
   if (theme_number_or_all === 'all' || theme_number_or_all === null) {
-    // Show all comments
+    // Show all comments (already working correctly)
     filtered_comments = global_comment_data.comments.filter(function(comment) {
       return comment.content && comment.content.trim() !== '';
     });
   } else if (theme_number_or_all === 'other') {
-    // Show comments with no themes (empty tids array)
-    filtered_comments = global_comment_data.comments.filter(function(comment) {
+    // Filter parent comments with no themes (empty tids array)
+    let filtered_parents = global_comment_data.comments.filter(function(comment) {
+      // Only include top-level comments (no parent)
+      let isTopLevel = !comment.rid || comment.rid === '';
       let tids = comment.tids || [];
-      return tids.length === 0 && comment.content && comment.content.trim() !== '';
+      return isTopLevel && tids.length === 0 && comment.content && comment.content.trim() !== '';
     });
+    
+    // Find all replies to these parent comments
+    let all_replies = [];
+    filtered_parents.forEach(function(parent) {
+      let parentReplies = getAllRepliesForParent(parent.cid);
+      all_replies = all_replies.concat(parentReplies);
+    });
+    
+    // Combine parents and their replies
+    filtered_comments = filtered_parents.concat(all_replies);
   } else {
     // Theme number (1-10) matches theme ID in v2 data
     let target_theme_id = parseInt(theme_number_or_all, 10);
     
-    // Filter comments by checking if the theme ID is in the tids array
-    filtered_comments = global_comment_data.comments.filter(function(comment) {
+    // Filter parent comments by checking if the theme ID is in the tids array
+    let filtered_parents = global_comment_data.comments.filter(function(comment) {
+      // Only include top-level comments (no parent)
+      let isTopLevel = !comment.rid || comment.rid === '';
       let tids = comment.tids || [];
-      return tids.indexOf(target_theme_id) !== -1 && comment.content && comment.content.trim() !== '';
+      return isTopLevel && tids.indexOf(target_theme_id) !== -1 && comment.content && comment.content.trim() !== '';
     });
+    
+    // Find all replies to these parent comments (replies don't need matching theme IDs)
+    let all_replies = [];
+    filtered_parents.forEach(function(parent) {
+      let parentReplies = getAllRepliesForParent(parent.cid);
+      all_replies = all_replies.concat(parentReplies);
+    });
+    
+    // Combine parents and their replies
+    filtered_comments = filtered_parents.concat(all_replies);
   }
   
   // Apply search filter if there's a search term
@@ -142,7 +202,7 @@ function populate_comments(theme_number_or_all) {
     return 0;
   }
   
-  // Build a map of comments by cid for easy lookup
+  // Build a map of filtered comments by cid for easy lookup
   let comments_by_cid = {};
   filtered_comments.forEach(function(comment) {
     comments_by_cid[comment.cid] = comment;
