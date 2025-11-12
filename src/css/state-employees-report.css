@@ -753,94 +753,40 @@ section#comment-explorer {
 .comment-item {
     margin: 0;
     padding: 1rem;
-    border-left: 3px solid #5489A3;
+    border-left: 3px solid #898891;
 }
 
 .comment-item.indent-reply {
     margin-left: 2rem;
-    border-left-color: #7BA8BC;
+    border-left-color: #BCBBC1;
 }
 
-/* Theme-specific border colors based on stroke_color */
-.comment-item.theme-1 {
-    border-left-color: #5F4171;
-}
-
-.comment-item.theme-2 {
-    border-left-color: #6C8043;
-}
-
-.comment-item.theme-3 {
-    border-left-color: #65ADE1;
-}
-
-.comment-item.theme-4 {
-    border-left-color: #E73C21;
-}
-
-.comment-item.theme-5 {
-    border-left-color: #53CAB0;
-}
-
-.comment-item.theme-6 {
-    border-left-color: #B07FC4;
-}
-
-.comment-item.theme-7 {
-    border-left-color: #DABD48;
-}
-
-.comment-item.theme-8 {
-    border-left-color: #A9D4F2;
-}
-
-.comment-item.theme-9 {
-    border-left-color: #F5E555;
-}
-
+/* Theme-specific border colors for parent comments - overridden to use #898891 */
+.comment-item.theme-1,
+.comment-item.theme-2,
+.comment-item.theme-3,
+.comment-item.theme-4,
+.comment-item.theme-5,
+.comment-item.theme-6,
+.comment-item.theme-7,
+.comment-item.theme-8,
+.comment-item.theme-9,
 .comment-item.theme-10 {
-    border-left-color: #F2C3C7;
+    border-left-color: #898891;
 }
 
-/* Theme-specific border colors for replies */
-.comment-item.indent-reply.theme-1 {
-    border-left-color: #5F4171;
-}
-
-.comment-item.indent-reply.theme-2 {
-    border-left-color: #6C8043;
-}
-
-.comment-item.indent-reply.theme-3 {
-    border-left-color: #65ADE1;
-}
-
-.comment-item.indent-reply.theme-4 {
-    border-left-color: #E73C21;
-}
-
-.comment-item.indent-reply.theme-5 {
-    border-left-color: #53CAB0;
-}
-
-.comment-item.indent-reply.theme-6 {
-    border-left-color: #B07FC4;
-}
-
-.comment-item.indent-reply.theme-7 {
-    border-left-color: #DABD48;
-}
-
-.comment-item.indent-reply.theme-8 {
-    border-left-color: #A9D4F2;
-}
-
-.comment-item.indent-reply.theme-9 {
-    border-left-color: #F5E555;
-}
-
+/* All replies use #BCBBC1, regardless of theme */
+.comment-item.indent-reply.theme-1,
+.comment-item.indent-reply.theme-2,
+.comment-item.indent-reply.theme-3,
+.comment-item.indent-reply.theme-4,
+.comment-item.indent-reply.theme-5,
+.comment-item.indent-reply.theme-6,
+.comment-item.indent-reply.theme-7,
+.comment-item.indent-reply.theme-8,
+.comment-item.indent-reply.theme-9,
 .comment-item.indent-reply.theme-10 {
-    border-left-color: #F2C3C7;
+    border-left-color: #BCBBC1;
 }
 
 .comment-content {
