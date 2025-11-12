@@ -225,22 +225,72 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="comment-explorer-controls">
-          <select class="theme-selector">
-            <option value="all">{{ modules.comment_explorer_ui.all_option }}</option>
-            {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
-            {% for i in range(1, nbr_themes + 1) %}
-              {% set theme_module = "theme_" + i %}
-              <option value="{{ i }}"{% if i == 1 %} selected{% endif %}>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</option>
-            {% endfor %}
-            <option value="other">Other</option>
-          </select>
+          <div class="theme-selector-wrapper">
+            <select class="theme-selector" id="theme-selector-native">
+              <option value="all">{{ modules.comment_explorer_ui.all_option }}</option>
+              {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+              {% for i in range(1, nbr_themes + 1) %}
+                {% set theme_module = "theme_" + i %}
+                <option value="{{ i }}" data-theme-color="{{ modules[theme_module].stroke_color | default('#5489A3') }}"{% if i == 1 %} selected{% endif %}>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</option>
+              {% endfor %}
+              <option value="other">Other</option>
+            </select>
+            <div class="theme-selector-custom" id="theme-selector-custom" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox">
+              <div class="theme-selector-selected">
+                {% set first_theme_module = "theme_1" %}
+                <span class="theme-selector-circle" id="theme-selector-circle" style="background-color: {{ modules[first_theme_module].stroke_color | default('#5489A3') }};"></span>
+                <span class="theme-selector-text" id="theme-selector-text">{% if modules[first_theme_module] %}{{ modules[first_theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} 1{% endif %}</span>
+                <span class="theme-selector-arrow">▼</span>
+              </div>
+              <ul class="theme-selector-options" id="theme-selector-options" role="listbox">
+                <li class="theme-selector-option" data-value="all" role="option">
+                  <span class="theme-selector-circle" style="display: none;"></span>
+                  <span>{{ modules.comment_explorer_ui.all_option }}</span>
+                </li>
+                {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+                {% for i in range(1, nbr_themes + 1) %}
+                  {% set theme_module = "theme_" + i %}
+                  <li class="theme-selector-option" data-value="{{ i }}" data-theme-color="{{ modules[theme_module].stroke_color | default('#5489A3') }}" role="option"{% if i == 1 %} data-selected="true"{% endif %}>
+                    <span class="theme-selector-circle" style="background-color: {{ modules[theme_module].stroke_color | default('#5489A3') }};"></span>
+                    <span>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</span>
+                  </li>
+                {% endfor %}
+                <li class="theme-selector-option" data-value="other" role="option">
+                  <span class="theme-selector-circle" style="display: none;"></span>
+                  <span>Other</span>
+                </li>
+              </ul>
+            </div>
+          </div>
           <input type="text" class="search-input" placeholder="{{ modules.comment_explorer_ui.search_placeholder }}">
-          <select class="sort-selector">
-            <option value="date" selected>{{ modules.comment_explorer_ui.sort_date }}</option>
-            <option value="theme">{{ modules.comment_explorer_ui.sort_theme }}</option>
-            <option value="likes">{{ modules.comment_explorer_ui.sort_likes }}</option>
-            <option value="replies">{{ modules.comment_explorer_ui.sort_replies }}</option>
-          </select>
+          <div class="sort-selector-wrapper">
+            <select class="sort-selector" id="sort-selector-native">
+              <option value="date" selected>{{ modules.comment_explorer_ui.sort_date }}</option>
+              <option value="theme">{{ modules.comment_explorer_ui.sort_theme }}</option>
+              <option value="likes">{{ modules.comment_explorer_ui.sort_likes }}</option>
+              <option value="replies">{{ modules.comment_explorer_ui.sort_replies }}</option>
+            </select>
+            <div class="sort-selector-custom" id="sort-selector-custom" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox">
+              <div class="sort-selector-selected">
+                <span class="sort-selector-text" id="sort-selector-text">{{ modules.comment_explorer_ui.sort_date }}</span>
+                <span class="sort-selector-arrow">▼</span>
+              </div>
+              <ul class="sort-selector-options" id="sort-selector-options" role="listbox">
+                <li class="sort-selector-option" data-value="date" role="option" data-selected="true">
+                  <span>{{ modules.comment_explorer_ui.sort_date }}</span>
+                </li>
+                <li class="sort-selector-option" data-value="theme" role="option">
+                  <span>{{ modules.comment_explorer_ui.sort_theme }}</span>
+                </li>
+                <li class="sort-selector-option" data-value="likes" role="option">
+                  <span>{{ modules.comment_explorer_ui.sort_likes }}</span>
+                </li>
+                <li class="sort-selector-option" data-value="replies" role="option">
+                  <span>{{ modules.comment_explorer_ui.sort_replies }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

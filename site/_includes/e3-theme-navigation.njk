@@ -37,34 +37,44 @@ function populate_comments(theme_number_or_all) {
     all_comments_by_cid[comment.cid] = comment;
   });
   
+  // Build a map of replies by parent CID (much more efficient than searching each time)
+  // This maps parent CID -> array of all descendant replies
+  let replies_by_parent = {};
+  
+  // First pass: collect all replies and build direct parent relationships
+  let direct_replies = {};
+  global_comment_data.comments.forEach(function(comment) {
+    if (comment.content && comment.content.trim() !== '' && comment.rid && comment.rid !== '') {
+      if (!direct_replies[comment.rid]) {
+        direct_replies[comment.rid] = [];
+      }
+      direct_replies[comment.rid].push(comment);
+    }
+  });
+  
+  // Second pass: recursively build full descendant lists
+  function getAllDescendants(parentCid) {
+    if (replies_by_parent[parentCid]) {
+      return replies_by_parent[parentCid];
+    }
+    
+    let descendants = [];
+    if (direct_replies[parentCid]) {
+      direct_replies[parentCid].forEach(function(reply) {
+        descendants.push(reply);
+        // Recursively get descendants of this reply
+        let replyDescendants = getAllDescendants(reply.cid);
+        descendants = descendants.concat(replyDescendants);
+      });
+    }
+    
+    replies_by_parent[parentCid] = descendants;
+    return descendants;
+  }
+  
   // Function to find all replies (direct and indirect) for a given parent comment CID
   function getAllRepliesForParent(parentCid) {
-    let result = [];
-    // Search through ALL comments to find replies
-    global_comment_data.comments.forEach(function(comment) {
-      // Skip if no content
-      if (!comment.content || comment.content.trim() === '') {
-        return;
-      }
-      // Check if this comment is a reply (has a rid)
-      if (comment.rid && comment.rid !== '') {
-        // Check if this reply is a direct or indirect child of parentCid
-        let current = comment;
-        let isDescendant = false;
-        while (current.rid && current.rid !== '') {
-          if (current.rid === parentCid) {
-            isDescendant = true;
-            break;
-          }
-          current = all_comments_by_cid[current.rid];
-          if (!current) break;
-        }
-        if (isDescendant) {
-          result.push(comment);
-        }
-      }
-    });
-    return result;
+    return getAllDescendants(parentCid);
   }
   
   let filtered_comments;
@@ -390,17 +400,13 @@ function populate_comments(theme_number_or_all) {
     let count_text = template.replace('<N>', filtered_comments.length);
     comment_count_element.textContent = count_text;
   }
-  
-  // Update theme selector dropdown
-  let theme_selector = document.querySelector('.theme-selector');
-  if (theme_selector) {
-    if (theme_number_or_all === 'all') {
-      theme_selector.value = 'all';
-    } else if (theme_number_or_all === 'other') {
-      theme_selector.value = 'other';
-    } else {
-      theme_selector.value = theme_number_or_all.toString();
-    }
+}
+
+// Function to show loading state in comment count
+function showCommentCountLoading() {
+  let comment_count_element = document.querySelector('.comment-count');
+  if (comment_count_element) {
+    comment_count_element.textContent = 'Loading...';
   }
 }
 
@@ -697,10 +703,135 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error("Error fetching comment data:", error);
     });
   
-  // Set up theme selector dropdown
-  let theme_selector = document.querySelector('.theme-selector');
+  // Set up custom theme selector dropdown
+  function initCustomThemeSelector() {
+    const nativeSelect = document.getElementById('theme-selector-native');
+    const customSelect = document.getElementById('theme-selector-custom');
+    const selectedText = document.getElementById('theme-selector-text');
+    const selectedCircle = document.getElementById('theme-selector-circle');
+    const optionsList = document.getElementById('theme-selector-options');
+    const options = optionsList.querySelectorAll('.theme-selector-option');
+    
+    if (!nativeSelect || !customSelect) return;
+    
+    // Update custom dropdown display based on native select value
+    function updateCustomDisplay() {
+      const selectedOption = nativeSelect.options[nativeSelect.selectedIndex];
+      const value = nativeSelect.value;
+      
+      // Update text
+      selectedText.textContent = selectedOption.textContent;
+      
+      // Update circle
+      if (value === 'all' || value === 'other') {
+        selectedCircle.style.display = 'none';
+      } else {
+        const themeColor = selectedOption.getAttribute('data-theme-color') || '#5489A3';
+        selectedCircle.style.display = 'inline-block';
+        selectedCircle.style.backgroundColor = themeColor;
+      }
+      
+      // Update selected state in options
+      options.forEach(opt => {
+        opt.removeAttribute('data-selected');
+        if (opt.getAttribute('data-value') === value) {
+          opt.setAttribute('data-selected', 'true');
+        }
+      });
+    }
+    
+    // Initialize display
+    updateCustomDisplay();
+    
+    // Toggle dropdown - only when clicking on the selected area, not on options
+    const selectedArea = customSelect.querySelector('.theme-selector-selected');
+    if (selectedArea) {
+      selectedArea.addEventListener('click', function(e) {
+        e.stopPropagation();
+        customSelect.classList.toggle('active');
+      });
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('active');
+      }
+    });
+    
+    // Handle option selection
+    options.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const value = this.getAttribute('data-value');
+        
+        // Close dropdown immediately for better UX
+        customSelect.classList.remove('active');
+        
+        // Show loading state immediately
+        showCommentCountLoading();
+        
+        // Update native select and custom display
+        nativeSelect.value = value;
+        updateCustomDisplay();
+        
+        // Trigger change event on native select to maintain existing functionality
+        // Use setTimeout to allow UI to update before heavy processing
+        setTimeout(function() {
+          const event = new Event('change', { bubbles: true });
+          nativeSelect.dispatchEvent(event);
+        }, 0);
+      });
+    });
+    
+    // Keyboard navigation
+    customSelect.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        customSelect.classList.toggle('active');
+      } else if (e.key === 'Escape') {
+        customSelect.classList.remove('active');
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!customSelect.classList.contains('active')) {
+          customSelect.classList.add('active');
+        } else {
+          const current = optionsList.querySelector('.theme-selector-option[data-selected="true"]');
+          const next = current ? current.nextElementSibling : options[0];
+          if (next) {
+            options.forEach(opt => opt.removeAttribute('data-selected'));
+            next.setAttribute('data-selected', 'true');
+            next.scrollIntoView({ block: 'nearest' });
+          }
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const current = optionsList.querySelector('.theme-selector-option[data-selected="true"]');
+        const prev = current ? current.previousElementSibling : options[options.length - 1];
+        if (prev) {
+          options.forEach(opt => opt.removeAttribute('data-selected'));
+          prev.setAttribute('data-selected', 'true');
+          prev.scrollIntoView({ block: 'nearest' });
+        }
+      }
+    });
+    
+    // Sync with native select changes (for programmatic changes)
+    nativeSelect.addEventListener('change', function() {
+      updateCustomDisplay();
+    });
+  }
+  
+  // Initialize custom theme selector
+  initCustomThemeSelector();
+  
+  // Set up theme selector dropdown (for native select fallback)
+  let theme_selector = document.getElementById('theme-selector-native');
   if (theme_selector) {
     theme_selector.addEventListener('change', function() {
+      // Show loading state when theme changes
+      showCommentCountLoading();
+      
       let value = this.value;
       if (value === 'all') {
         switch_theme('all', false); // Don't scroll when changing dropdown
@@ -748,8 +879,114 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Set up sort selector dropdown
-  let sort_selector = document.querySelector('.sort-selector');
+  // Set up custom sort selector dropdown
+  function initCustomSortSelector() {
+    const nativeSelect = document.getElementById('sort-selector-native');
+    const customSelect = document.getElementById('sort-selector-custom');
+    const selectedText = document.getElementById('sort-selector-text');
+    const optionsList = document.getElementById('sort-selector-options');
+    const options = optionsList.querySelectorAll('.sort-selector-option');
+    
+    if (!nativeSelect || !customSelect) return;
+    
+    // Update custom dropdown display based on native select value
+    function updateCustomDisplay() {
+      const selectedOption = nativeSelect.options[nativeSelect.selectedIndex];
+      const value = nativeSelect.value;
+      
+      // Update text
+      selectedText.textContent = selectedOption.textContent;
+      
+      // Update selected state in options
+      options.forEach(opt => {
+        opt.removeAttribute('data-selected');
+        if (opt.getAttribute('data-value') === value) {
+          opt.setAttribute('data-selected', 'true');
+        }
+      });
+    }
+    
+    // Initialize display
+    updateCustomDisplay();
+    
+    // Toggle dropdown - only when clicking on the selected area, not on options
+    const selectedArea = customSelect.querySelector('.sort-selector-selected');
+    if (selectedArea) {
+      selectedArea.addEventListener('click', function(e) {
+        e.stopPropagation();
+        customSelect.classList.toggle('active');
+      });
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('active');
+      }
+    });
+    
+    // Handle option selection
+    options.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const value = this.getAttribute('data-value');
+        
+        // Close dropdown immediately
+        customSelect.classList.remove('active');
+        
+        // Update native select and custom display
+        nativeSelect.value = value;
+        updateCustomDisplay();
+        
+        // Trigger change event on native select to maintain existing functionality
+        const event = new Event('change', { bubbles: true });
+        nativeSelect.dispatchEvent(event);
+      });
+    });
+    
+    // Keyboard navigation
+    customSelect.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        customSelect.classList.toggle('active');
+      } else if (e.key === 'Escape') {
+        customSelect.classList.remove('active');
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!customSelect.classList.contains('active')) {
+          customSelect.classList.add('active');
+        } else {
+          const current = optionsList.querySelector('.sort-selector-option[data-selected="true"]');
+          const next = current ? current.nextElementSibling : options[0];
+          if (next) {
+            options.forEach(opt => opt.removeAttribute('data-selected'));
+            next.setAttribute('data-selected', 'true');
+            next.scrollIntoView({ block: 'nearest' });
+          }
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const current = optionsList.querySelector('.sort-selector-option[data-selected="true"]');
+        const prev = current ? current.previousElementSibling : options[options.length - 1];
+        if (prev) {
+          options.forEach(opt => opt.removeAttribute('data-selected'));
+          prev.setAttribute('data-selected', 'true');
+          prev.scrollIntoView({ block: 'nearest' });
+        }
+      }
+    });
+    
+    // Sync with native select changes (for programmatic changes)
+    nativeSelect.addEventListener('change', function() {
+      updateCustomDisplay();
+    });
+  }
+  
+  // Initialize custom sort selector
+  initCustomSortSelector();
+  
+  // Set up sort selector dropdown (for native select fallback)
+  let sort_selector = document.getElementById('sort-selector-native');
   if (sort_selector) {
     sort_selector.value = 'date'; // Set default to date
     sort_selector.addEventListener('change', function() {
