@@ -232,6 +232,7 @@
               {% set theme_module = "theme_" + i %}
               <option value="{{ i }}"{% if i == 1 %} selected{% endif %}>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</option>
             {% endfor %}
+            <option value="other">Other</option>
           </select>
           <input type="text" class="search-input" placeholder="{{ modules.comment_explorer_ui.search_placeholder }}">
           <select class="sort-selector">

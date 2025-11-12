@@ -534,6 +534,10 @@ section#comment-explorer {
     min-width: 200px;
 }
 
+.comment-count {
+    margin-bottom: 1rem;
+}
+
 .comments-container {
     min-height: 300px;
     border-radius: 8px;
