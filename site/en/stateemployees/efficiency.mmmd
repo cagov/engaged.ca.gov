@@ -144,7 +144,7 @@ State workers shared ideas to improve customer service. They also suggested ways
 id: theme_4
 theme_number: 4
 theme_title: Communication and knowledge sharing
-theme_circle_title: "Communication and<LF>knowledge sharing"
+theme_circle_title: "Communication<LF>and<LF>knowledge sharing"
 theme_circle_color: "#E07A5F"
 theme_description: Workers identified gaps in information sharing, collaboration tools, and interdepartmental communication that hinder efficiency.
 theme_quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
