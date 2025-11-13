@@ -749,7 +749,7 @@ section#comment-explorer {
     opacity: 1;
 }
 
-.subtheme-filter-tag-close {
+/* .subtheme-filter-tag-close {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -767,7 +767,7 @@ section#comment-explorer {
 
 .subtheme-filter-tag-close:hover {
     background-color: rgba(0, 0, 0, 0.2);
-}
+} */
 
 .comment-count {
     margin-bottom: 1rem;

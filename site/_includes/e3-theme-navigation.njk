@@ -490,13 +490,13 @@ function populateSubthemeFilter(themeId) {
     let tagText = document.createElement('span');
     tagText.textContent = subtheme.name;
     
-    let tagClose = document.createElement('span');
+    {# let tagClose = document.createElement('span');
     tagClose.className = 'subtheme-filter-tag-close';
     tagClose.textContent = '×';
-    tagClose.setAttribute('aria-label', 'Toggle ' + subtheme.name);
+    tagClose.setAttribute('aria-label', 'Toggle ' + subtheme.name); #}
     
     tag.appendChild(tagText);
-    tag.appendChild(tagClose);
+    {# tag.appendChild(tagClose); #}
     
     // Handle click on tag (both the tag itself and the X button)
     tag.addEventListener('click', function(e) {
