@@ -9,8 +9,8 @@ let current_sort = 'date'; // Default to date sort
 let subthemeMap = {}; // Maps subtheme_id -> {name, parent_theme_id}
 let themeColorMap = {}; // Maps theme_id -> {stroke, light}
 
-// Track active sub-themes (Set of active subtheme IDs)
-let activeSubthemes = new Set();
+// Track selected sub-themes (Set of selected subtheme IDs)
+let selectedSubthemes = new Set();
 
 // Function to escape HTML and highlight search terms
 function highlightSearchText(text, searchTerm) {
@@ -117,19 +117,20 @@ function populate_comments(theme_number_or_all) {
       let tids = comment.tids || [];
       let matchesTheme = tids.indexOf(target_theme_id) !== -1;
       
-      // If sub-theme filtering is active, also check if comment has any active sub-themes
-      if (matchesTheme && activeSubthemes.size > 0) {
+      // If sub-theme filtering is active (one or more selected), filter by selected sub-themes
+      if (matchesTheme && selectedSubthemes.size > 0) {
         let stids = comment.stids || [];
-        // Comment must have at least one active sub-theme
-        let hasActiveSubtheme = false;
+        // Comment must have at least one selected sub-theme
+        let hasSelectedSubtheme = false;
         for (let i = 0; i < stids.length; i++) {
-          if (activeSubthemes.has(stids[i])) {
-            hasActiveSubtheme = true;
+          if (selectedSubthemes.has(stids[i])) {
+            hasSelectedSubtheme = true;
             break;
           }
         }
-        matchesTheme = hasActiveSubtheme;
+        matchesTheme = hasSelectedSubtheme;
       }
+      // If no sub-themes are selected, show all comments (matchesTheme remains true)
       
       return isTopLevel && matchesTheme && comment.content && comment.content.trim() !== '';
     });
@@ -439,7 +440,7 @@ function populateSubthemeFilter(themeId) {
   // Hide filter for "all" and "other"
   if (themeId === 'all' || themeId === 'other') {
     subthemeFilter.style.display = 'none';
-    activeSubthemes.clear();
+    selectedSubthemes.clear();
     return;
   }
   
@@ -462,7 +463,7 @@ function populateSubthemeFilter(themeId) {
   // If no sub-themes, hide the filter
   if (themeSubthemes.length === 0) {
     subthemeFilter.style.display = 'none';
-    activeSubthemes.clear();
+    selectedSubthemes.clear();
     return;
   }
   
@@ -476,11 +477,8 @@ function populateSubthemeFilter(themeId) {
   // Clear existing tags
   subthemeFilterTags.innerHTML = '';
   
-  // Initialize all sub-themes as active
-  activeSubthemes.clear();
-  themeSubthemes.forEach(function(subtheme) {
-    activeSubthemes.add(subtheme.id);
-  });
+  // Initialize all sub-themes as unselected (default state)
+  selectedSubthemes.clear();
   
   // Create tags for each sub-theme
   themeSubthemes.forEach(function(subtheme) {
@@ -510,21 +508,21 @@ function populateSubthemeFilter(themeId) {
   });
 }
 
-// Function to toggle a sub-theme's active state
+// Function to toggle a sub-theme's selected state
 function toggleSubtheme(subthemeId) {
-  if (activeSubthemes.has(subthemeId)) {
-    activeSubthemes.delete(subthemeId);
+  if (selectedSubthemes.has(subthemeId)) {
+    selectedSubthemes.delete(subthemeId);
   } else {
-    activeSubthemes.add(subthemeId);
+    selectedSubthemes.add(subthemeId);
   }
   
   // Update visual state
   let tag = document.querySelector(`.subtheme-filter-tag[data-subtheme-id="${subthemeId}"]`);
   if (tag) {
-    if (activeSubthemes.has(subthemeId)) {
-      tag.classList.remove('inactive');
+    if (selectedSubthemes.has(subthemeId)) {
+      tag.classList.add('selected');
     } else {
-      tag.classList.add('inactive');
+      tag.classList.remove('selected');
     }
   }
   
