@@ -978,11 +978,27 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set up search input
   let search_input = document.getElementById('search-input');
+  let search_clear = document.getElementById('search-clear');
+  
+  // Function to update clear button visibility
+  function updateClearButton() {
+    if (search_clear && search_input) {
+      if (search_input.value.trim().length > 0) {
+        search_clear.style.display = 'flex';
+      } else {
+        search_clear.style.display = 'none';
+      }
+    }
+  }
+  
   if (search_input) {
     let search_timeout;
     search_input.addEventListener('input', function() {
       clearTimeout(search_timeout);
       let search_value = search_input.value.trim();
+      
+      // Update clear button visibility
+      updateClearButton();
       
       // If search term is 2+ characters, automatically switch to "All"
       if (search_value.length >= 2) {
@@ -1007,6 +1023,21 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           populate_comments(current_theme_index);
         }
+      }
+    });
+  }
+  
+  // Set up clear button
+  if (search_clear) {
+    search_clear.addEventListener('click', function() {
+      if (search_input) {
+        search_input.value = '';
+        search_input.focus();
+        updateClearButton();
+        
+        // Trigger input event to handle clearing
+        const event = new Event('input', { bubbles: true });
+        search_input.dispatchEvent(event);
       }
     });
   }

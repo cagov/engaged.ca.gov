@@ -529,6 +529,23 @@ section#comment-explorer {
     flex-direction: column;
 }
 
+.search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 21px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 1;
+}
+
 .sort-selector-wrapper {
     position: relative;
     min-width: 150px;
@@ -738,11 +755,44 @@ section#comment-explorer {
 
 .search-input {
     flex: 1;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 2.5rem 0.75rem 3rem;
     border: 2px solid #D9D9D9;
     border-radius: 8px;
     size: 23px;
     min-width: 200px;
+}
+
+.search-input:focus {
+    border-color: #5489A3;
+    outline: 2px solid rgba(84, 137, 163, 0.2);
+    outline-offset: 2px;
+}
+
+.search-clear {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    color: #666;
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: color 0.2s ease;
+}
+
+.search-clear:hover {
+    color: #333;
+}
+
+.search-clear:focus {
+    outline: 2px solid rgba(84, 137, 163, 0.2);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .subtheme-filter {
