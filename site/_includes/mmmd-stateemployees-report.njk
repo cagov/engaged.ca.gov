@@ -226,6 +226,7 @@
       <div class="col-lg-12">
         <div class="comment-explorer-controls">
           <div class="theme-selector-wrapper">
+            <label class="control-label" for="theme-selector-native">Select a theme</label>
             <select class="theme-selector" id="theme-selector-native">
               <option value="all">{{ modules.comment_explorer_ui.all_option }}</option>
               {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
@@ -235,7 +236,7 @@
               {% endfor %}
               <option value="other">Other</option>
             </select>
-            <div class="theme-selector-custom" id="theme-selector-custom" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox">
+            <div class="theme-selector-custom" id="theme-selector-custom" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="theme-selector-label">
               <div class="theme-selector-selected">
                 {% set first_theme_module = "theme_1" %}
                 <span class="theme-selector-circle" id="theme-selector-circle" style="background-color: {{ modules[first_theme_module].stroke_color | default('#5489A3') }};"></span>
@@ -262,15 +263,19 @@
               </ul>
             </div>
           </div>
-          <input type="text" class="search-input" placeholder="{{ modules.comment_explorer_ui.search_placeholder }}">
+          <div class="search-input-wrapper">
+            <label class="control-label" for="search-input">Search the comments</label>
+            <input type="text" class="search-input" id="search-input" placeholder="{{ modules.comment_explorer_ui.search_placeholder }}">
+          </div>
           <div class="sort-selector-wrapper">
+            <label class="control-label" for="sort-selector-native">Sort by</label>
             <select class="sort-selector" id="sort-selector-native">
               <option value="date" selected>{{ modules.comment_explorer_ui.sort_date }}</option>
               <option value="theme">{{ modules.comment_explorer_ui.sort_theme }}</option>
               <option value="likes">{{ modules.comment_explorer_ui.sort_likes }}</option>
               <option value="replies">{{ modules.comment_explorer_ui.sort_replies }}</option>
             </select>
-            <div class="sort-selector-custom" id="sort-selector-custom" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox">
+            <div class="sort-selector-custom" id="sort-selector-custom" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="sort-selector-label">
               <div class="sort-selector-selected">
                 <span class="sort-selector-text" id="sort-selector-text">{{ modules.comment_explorer_ui.sort_date }}</span>
                 <span class="sort-selector-arrow">▼</span>
@@ -297,6 +302,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="subtheme-filter" id="subtheme-filter" style="display: none;">
+          <label class="control-label">Refine by theme tags</label>
           <div class="subtheme-filter-tags" id="subtheme-filter-tags">
             <!-- Sub-theme tags will be populated here dynamically -->
           </div>

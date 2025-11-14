@@ -506,10 +506,34 @@ section#comment-explorer {
     flex-wrap: wrap;
 }
 
+.control-label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f152f;
+    margin-bottom: 0.5rem;
+}
+
 .theme-selector-wrapper {
     position: relative;
     flex: 2;
     min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input-wrapper {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sort-selector-wrapper {
+    position: relative;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
 }
 
 .theme-selector-wrapper .theme-selector {
@@ -723,6 +747,10 @@ section#comment-explorer {
 
 .subtheme-filter {
     margin-bottom: 1.5rem;
+}
+
+.subtheme-filter .control-label {
+    margin-bottom: 0.75rem;
 }
 
 .subtheme-filter-tags {
@@ -1018,7 +1046,7 @@ section#stay-informed p {
     }
     
     .theme-selector-wrapper,
-    .search-input,
+    .search-input-wrapper,
     .sort-selector-wrapper {
         width: 100%;
         min-width: auto;
