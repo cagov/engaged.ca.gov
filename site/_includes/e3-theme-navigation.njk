@@ -12,6 +12,9 @@ let themeColorMap = {}; // Maps theme_id -> {stroke, light}
 // Track selected sub-themes (Set of selected subtheme IDs)
 let selectedSubthemes = new Set();
 
+// Function to update custom theme selector display (will be set during initialization)
+let updateCustomThemeDisplay = null;
+
 // Function to escape HTML and highlight search terms
 function highlightSearchText(text, searchTerm) {
   if (!searchTerm || searchTerm.length < 2) {
@@ -367,7 +370,7 @@ function populate_comments(theme_number_or_all) {
     cmarkup += `<div class="comment-item-container">`;
     cmarkup += `<div class="comment-item${indent_class}${theme_class}">`;
     cmarkup += '<div class="comment-content">';
-    cmarkup += '"' + highlighted_text + '"';
+    cmarkup += '“' + highlighted_text + '”';
     cmarkup += '</div>';
     if (formatted_date || has_likes) {
       cmarkup += '<div class="comment-meta">';
@@ -535,9 +538,19 @@ function toggleSubtheme(subthemeId) {
 }
 
 function switch_theme(theme_number, should_scroll = false) {
+  // Get theme selector elements
+  let theme_selector = document.getElementById('theme-selector-native');
+  
   // Handle "all" option
   if (theme_number === 'all' || theme_number === null) {
     current_theme_index = 'all';
+    // Update theme selector
+    if (theme_selector) {
+      theme_selector.value = 'all';
+    }
+    if (updateCustomThemeDisplay) {
+      updateCustomThemeDisplay();
+    }
     populateSubthemeFilter('all');
     populate_comments('all');
     // Reset scroll position of comments container to top
@@ -551,6 +564,13 @@ function switch_theme(theme_number, should_scroll = false) {
   // Handle "other" option
   if (theme_number === 'other') {
     current_theme_index = 'other';
+    // Update theme selector
+    if (theme_selector) {
+      theme_selector.value = 'other';
+    }
+    if (updateCustomThemeDisplay) {
+      updateCustomThemeDisplay();
+    }
     populateSubthemeFilter('other');
     populate_comments('other');
     // Reset scroll position of comments container to top
@@ -582,6 +602,14 @@ function switch_theme(theme_number, should_scroll = false) {
   
   // Update current theme index
   current_theme_index = parseInt(theme_number, 10);
+  
+  // Update theme selector
+  if (theme_selector) {
+    theme_selector.value = theme_number.toString();
+  }
+  if (updateCustomThemeDisplay) {
+    updateCustomThemeDisplay();
+  }
   
   // Populate sub-theme filter for this theme
   populateSubthemeFilter(current_theme_index);
@@ -647,7 +675,8 @@ function update_navigation_widget(theme_number) {
   // Update dots (if they exist)
   document.querySelectorAll('.theme-dot').forEach(function(dot) {
     let dot_theme = parseInt(dot.dataset.theme, 10);
-    if (dot_theme === theme_number) {
+    // Only mark dots as active if theme_number is numeric and matches
+    if (typeof theme_number === 'number' && dot_theme === theme_number) {
       dot.classList.add('active');
     } else {
       dot.classList.remove('active');
@@ -660,7 +689,11 @@ function update_navigation_widget(theme_number) {
   // Update theme number indicator
   let theme_number_span = document.querySelector('.current-theme-number');
   if (theme_number_span) {
-    theme_number_span.textContent = theme_number;
+    if (theme_number === 'all' || theme_number === 'other' || theme_number === null) {
+      theme_number_span.textContent = '';
+    } else {
+      theme_number_span.textContent = theme_number;
+    }
   }
   
   // Update Previous/Next buttons
@@ -668,10 +701,20 @@ function update_navigation_widget(theme_number) {
   let next_button = document.getElementById('theme-nav-next');
   
   if (prev_button) {
-    prev_button.disabled = (theme_number === 1);
+    // Disable prev button if on "all", "other", or theme 1
+    if (theme_number === 'all' || theme_number === 'other' || theme_number === null) {
+      prev_button.disabled = true;
+    } else {
+      prev_button.disabled = (theme_number === 1);
+    }
   }
   if (next_button) {
-    next_button.disabled = (theme_number === total_themes);
+    // Disable next button if on "all", "other", or last theme
+    if (theme_number === 'all' || theme_number === 'other' || theme_number === null) {
+      next_button.disabled = false; // Enable it so it can go to theme 1
+    } else {
+      next_button.disabled = (theme_number === total_themes);
+    }
   }
 }
 
@@ -847,7 +890,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!nativeSelect || !customSelect) return;
     
     // Update custom dropdown display based on native select value
-    function updateCustomDisplay() {
+    updateCustomThemeDisplay = function() {
       const selectedOption = nativeSelect.options[nativeSelect.selectedIndex];
       const value = nativeSelect.value;
       
@@ -870,10 +913,10 @@ document.addEventListener('DOMContentLoaded', function() {
           opt.setAttribute('data-selected', 'true');
         }
       });
-    }
+    };
     
     // Initialize display
-    updateCustomDisplay();
+    updateCustomThemeDisplay();
     
     // Toggle dropdown - only when clicking on the selected area, not on options
     const selectedArea = customSelect.querySelector('.theme-selector-selected');
@@ -905,7 +948,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update native select and custom display
         nativeSelect.value = value;
-        updateCustomDisplay();
+        updateCustomThemeDisplay();
         
         // Trigger change event on native select to maintain existing functionality
         // Use setTimeout to allow UI to update before heavy processing
@@ -950,7 +993,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Sync with native select changes (for programmatic changes)
     nativeSelect.addEventListener('change', function() {
-      updateCustomDisplay();
+      updateCustomThemeDisplay();
     });
   }
   
@@ -1007,6 +1050,12 @@ document.addEventListener('DOMContentLoaded', function() {
           if (theme_selector) {
             theme_selector.value = 'all';
           }
+          // Update custom theme selector display
+          if (updateCustomThemeDisplay) {
+            updateCustomThemeDisplay();
+          }
+          // Hide sub-theme filter
+          populateSubthemeFilter('all');
         }
         current_search_term = search_value;
         populate_comments('all');
@@ -1053,7 +1102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!nativeSelect || !customSelect) return;
     
     // Update custom dropdown display based on native select value
-    function updateCustomDisplay() {
+    function updateCustomThemeDisplay() {
       const selectedOption = nativeSelect.options[nativeSelect.selectedIndex];
       const value = nativeSelect.value;
       
@@ -1070,7 +1119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Initialize display
-    updateCustomDisplay();
+    updateCustomThemeDisplay();
     
     // Toggle dropdown - only when clicking on the selected area, not on options
     const selectedArea = customSelect.querySelector('.sort-selector-selected');
@@ -1099,7 +1148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update native select and custom display
         nativeSelect.value = value;
-        updateCustomDisplay();
+        updateCustomThemeDisplay();
         
         // Trigger change event on native select to maintain existing functionality
         const event = new Event('change', { bubbles: true });
@@ -1141,7 +1190,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Sync with native select changes (for programmatic changes)
     nativeSelect.addEventListener('change', function() {
-      updateCustomDisplay();
+      updateCustomThemeDisplay();
     });
   }
   
@@ -1169,7 +1218,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (prev_button) {
     prev_button.addEventListener('click', function() {
-      if (current_theme_index !== 'all' && current_theme_index > 1) {
+      // Prev button is disabled for "all" and "other", so we only handle numeric themes
+      if (current_theme_index !== 'all' && current_theme_index !== 'other' && current_theme_index > 1) {
         switch_theme(current_theme_index - 1, false); // Don't scroll when using nav widget
       }
     });
@@ -1179,7 +1229,11 @@ document.addEventListener('DOMContentLoaded', function() {
     next_button.addEventListener('click', function() {
       // Get the total number of themes by counting theme content divs or dots
       let total_themes = document.querySelectorAll('.theme-content').length || document.querySelectorAll('.theme-dot').length;
-      if (current_theme_index !== 'all' && current_theme_index < total_themes) {
+      
+      // If on "all" or "other", go to theme 1
+      if (current_theme_index === 'all' || current_theme_index === 'other') {
+        switch_theme(1, false); // Don't scroll when using nav widget
+      } else if (current_theme_index < total_themes) {
         switch_theme(current_theme_index + 1, false); // Don't scroll when using nav widget
       }
     });
