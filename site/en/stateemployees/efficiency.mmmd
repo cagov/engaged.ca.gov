@@ -13,7 +13,7 @@ tags:
 
 ----
 id: hero
-buttonText: Skip to themes
+buttonText: Explore all themes
 ----
 
 # State employees are shaping a better California
@@ -70,10 +70,10 @@ The collective submissions reveal a clear vision. One where efficiency drives bo
 id: participation_numbers
 title: Participation by the numbers
 participants_count: 1,653
-participants_label: Participants
+participants_label: Staff
 insights_count: 1,919
 insights_label: Insights
-staff_note: Staff from all levels of seniority and tenure
+staff_note: from all levels of seniority and tenure
 quote: "It's nice to be able to share my opinions and to broaden my perspectives on what it means to be a public servant."
 ----
 
