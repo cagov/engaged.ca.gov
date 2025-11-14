@@ -918,7 +918,7 @@ section#comment-explorer {
 .comment-content {
     size: 18px;
     line-height: 1.6;
-    font-style: italic;
+    /* font-style: italic; */
     color: #333;
 }
 
