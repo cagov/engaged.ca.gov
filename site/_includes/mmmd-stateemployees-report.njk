@@ -85,20 +85,21 @@
                 {%- set title = modules[theme_module].theme_circle_title if modules[theme_module].theme_circle_title else modules[theme_module].theme_title -%}
                 {%- set lines = title.split('<LF>') -%}
                 {%- set positions = [
-                  {"cx": 192, "cy": 130, "r": 120, "fontSize": 20, "yOffset": 120-24*0.6, "dy": 24, "color": "#5489A3", "opacity": "0.8"},
-                  {"cx": 576, "cy": 124, "r": 114, "fontSize": 20, "yOffset": 114-24*0.6, "dy": 24, "color": "#5489A3", "opacity": "0.8"},
-                  {"cx": 898, "cy": 110, "r": 100, "fontSize": 17, "yOffset": 95-19*0.6, "dy": 19, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 192, "cy": 130, "r": 120, "fontSize": 20, "yOffset": 106, "dy": 24, "color": "#5489A3", "opacity": "0.8"},
+                  {"cx": 576, "cy": 124, "r": 114, "fontSize": 20, "yOffset": 100, "dy": 24, "color": "#5489A3", "opacity": "0.8"},
+                  {"cx": 898, "cy": 110, "r": 100, "fontSize": 17, "yOffset": 84, "dy": 19, "color": "#7BA8BC", "opacity": "0.75"},
 
-                  {"cx": 392, "cy": 250, "r": 91, "fontSize": 16, "yOffset": 235-18*0.6, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 752, "cy": 255, "r": 86, "fontSize": 16, "yOffset": 250-18*0.6, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 1037, "cy": 270, "r": 85, "fontSize": 16, "yOffset": 260-18*0.6, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 392, "cy": 250, "r": 91, "fontSize": 16, "yOffset": 228, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 752, "cy": 255, "r": 86, "fontSize": 16, "yOffset": 239, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 1037, "cy": 270, "r": 85, "fontSize": 16, "yOffset": 249, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
 
-                  {"cx": 220, "cy": 360, "r": 85, "fontSize": 17, "yOffset": 350-19*0.6, "dy": 19, "color": "#7BA8BC", "opacity": "0.75"},
-                  {"cx": 525, "cy": 390, "r": 83, "fontSize": 16, "yOffset": 380-17*0.6, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"},
-                  {"cx": 700, "cy": 440, "r": 78, "fontSize": 14, "yOffset": 430-17*0.6, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"},
-                  {"cx": 890, "cy": 390, "r": 77, "fontSize": 14, "yOffset": 380-17*0.6, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"}
+                  {"cx": 220, "cy": 360, "r": 85, "fontSize": 17, "yOffset": 344, "dy": 19, "color": "#7BA8BC", "opacity": "0.75"},
+                  {"cx": 525, "cy": 390, "r": 83, "fontSize": 16, "yOffset": 370, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"},
+                  {"cx": 700, "cy": 440, "r": 78, "fontSize": 14, "yOffset": 420, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"},
+                  {"cx": 890, "cy": 390, "r": 77, "fontSize": 14, "yOffset": 370, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"}
                 ] -%}
                 {%- set pos = positions[i - 1] -%}
+                {%- set caption_offset = 26 -%}
                 {%- set stroke_color = modules[theme_module].stroke_color | default("#5489A3") -%}
                 {%- set hilite_fill_color = modules[theme_module].hilite_fill_color | default("rgba(84, 137, 163, 0.20)") -%}
                 <g class="theme-circle" data-theme="{{ i }}" data-hilite-fill="{{ hilite_fill_color }}" style="cursor: pointer; pointer-events: all; -webkit-user-select: none; user-select: none;">
@@ -107,7 +108,7 @@
                     {%- for line in lines -%}
                       <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ pos.dy }}{% endif %}">{{ line }}</tspan>
                     {%- endfor -%}
-                    <tspan x="{{ pos.cx }}" dy="{{ pos.dy*1.5 }}" font-size="13px">{{ modules[theme_module].nbr_root_comments }} Comments</tspan>
+                    <tspan x="{{ pos.cx }}" dy="{{ caption_offset }}" font-size="13px">{{ modules[theme_module].nbr_root_comments }} Comments</tspan>
                   </text>
                 </g>
               {%- endif -%}
