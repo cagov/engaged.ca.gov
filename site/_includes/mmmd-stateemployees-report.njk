@@ -80,37 +80,38 @@
             <rect width="1167" height="520" fill="#F6F7FA"/>
             {%- set nbr_themes = modules.themes_we_found.nbr_themes | default(10) -%}
             {%- set positions = [
-              {"cx": 192, "cy": 130, "r": 120, "fontSize": 20, "yOffset": 106, "dy": 24, "color": "#5489A3", "opacity": "0.8"},
-              {"cx": 576, "cy": 124, "r": 114, "fontSize": 20, "yOffset": 100, "dy": 24, "color": "#5489A3", "opacity": "0.8"},
-              {"cx": 898, "cy": 110, "r": 100, "fontSize": 17, "yOffset": 84, "dy": 19, "color": "#7BA8BC", "opacity": "0.75"},
+              {"cx": 192, "cy": 130, "r": 120, "fontSize": 20},
+              {"cx": 576, "cy": 124, "r": 114, "fontSize": 20},
+              {"cx": 898, "cy": 110, "r": 100, "fontSize": 17},
 
-              {"cx": 392, "cy": 250, "r": 91, "fontSize": 16, "yOffset": 228, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
-              {"cx": 752, "cy": 255, "r": 86, "fontSize": 16, "yOffset": 239, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
-              {"cx": 1037, "cy": 270, "r": 85, "fontSize": 16, "yOffset": 249, "dy": 18, "color": "#7BA8BC", "opacity": "0.75"},
+              {"cx": 392,  "cy": 250, "r": 91, "fontSize": 16},
+              {"cx": 752,  "cy": 255, "r": 86, "fontSize": 16},
+              {"cx": 1037, "cy": 270, "r": 85, "fontSize": 16},
 
-              {"cx": 220, "cy": 360, "r": 85, "fontSize": 17, "yOffset": 344, "dy": 19, "color": "#7BA8BC", "opacity": "0.75"},
-              {"cx": 525, "cy": 390, "r": 83, "fontSize": 16, "yOffset": 370, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"},
-              {"cx": 700, "cy": 440, "r": 78, "fontSize": 14, "yOffset": 420, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"},
-              {"cx": 890, "cy": 390, "r": 77, "fontSize": 14, "yOffset": 370, "dy": 17, "color": "#9BC4D4", "opacity": "0.7"}
+              {"cx": 220, "cy": 360, "r": 85, "fontSize": 17},
+              {"cx": 525, "cy": 390, "r": 83, "fontSize": 16},
+              {"cx": 700, "cy": 440, "r": 78, "fontSize": 14},
+              {"cx": 890, "cy": 390, "r": 77, "fontSize": 14}
             ] -%}
             {%- set caption_offset = 26 -%}
             {%- set caption_font_size = 13 -%}
             {%- for i in range(1, nbr_themes + 1) -%}
               {%- set theme_module = "theme_" + i -%}
               {%- if modules[theme_module] -%}
-                {%- set title = modules[theme_module].theme_circle_title if modules[theme_module].theme_circle_title else modules[theme_module].theme_title -%}
+                {%- set title = modules[theme_module].theme_circle_title -%}
                 {%- set lines = title.split('<LF>') -%}
 
                 {%- set pos = positions[i - 1] -%}
                 {%- set stroke_color = modules[theme_module].stroke_color | default("#5489A3") -%}
                 {%- set hilite_fill_color = modules[theme_module].hilite_fill_color | default("rgba(84, 137, 163, 0.20)") -%}
+                {%- set lineHeight = pos.fontSize *1.2 -%}
                 {%- set text_adjust = pos.fontSize*0.66 -%}
-                {%- set top_y = pos.cy-((lines.length-1)*pos.dy+caption_offset+caption_font_size)/2+text_adjust -%}
+                {%- set top_y = pos.cy-((lines.length-1)*lineHeight+caption_offset+caption_font_size)/2+text_adjust -%}
                 <g class="theme-circle" data-theme="{{ i }}" data-hilite-fill="{{ hilite_fill_color }}" style="cursor: pointer; pointer-events: all; -webkit-user-select: none; user-select: none;">
                   <circle cx="{{ pos.cx }}" cy="{{ pos.cy }}" r="{{ pos.r }}" fill="#FFFFFF" stroke="{{ stroke_color }}" stroke-width="" pointer-events="all"/>
                   <text class="theme-circle-label" x="{{ pos.cx }}" y="{{ top_y }}" text-anchor="middle" fill="#0f152f" font-size="{{ pos.fontSize }}" font-weight="400" font-family="Noto Sans Display, sans-serif" pointer-events="none">
                     {%- for line in lines -%}
-                      <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ pos.dy }}{% endif %}">{{ line }}</tspan>
+                      <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ lineHeight }}{% endif %}">{{ line }}</tspan>
                     {%- endfor -%}
                     <tspan x="{{ pos.cx }}" dy="{{ caption_offset }}" font-size="13px">{{ modules[theme_module].nbr_root_comments }} Comments {{ lines.length }}</tspan>
                   </text>
