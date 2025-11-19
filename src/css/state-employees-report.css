@@ -155,6 +155,7 @@ section#themes-we-found {
     outline: none;
 }
 
+
 .themes-bubble-chart .theme-circle:focus-visible {
     outline: 2px solid #FFFFFF;
     outline-offset: 2px;

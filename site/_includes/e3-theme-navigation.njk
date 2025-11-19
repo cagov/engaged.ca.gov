@@ -633,6 +633,7 @@ function switch_theme(theme_number, should_scroll = false) {
   // Update SVG circle highlighting - use hilite_fill_color for selected circles
   document.querySelectorAll('.theme-circle').forEach(function(group) {
     let circle = group.querySelector('circle');
+    let circle_text = group.querySelector('text');
     let theme_num = parseInt(group.dataset.theme, 10);
     
     if (circle) {
@@ -646,14 +647,16 @@ function switch_theme(theme_number, should_scroll = false) {
         let hiliteFill = group.dataset.hiliteFill || 'rgba(84, 137, 163, 0.20)';
         circle.style.fill = hiliteFill;
         circle.style.stroke = circle.dataset.originalStroke;
-        circle.style.strokeWidth = '2';
+        circle.style.strokeWidth = '5';
         group.setAttribute('aria-selected', 'true');
+        circle_text.style.fontWeight = 600;
       } else {
         // Reset to original state - white fill with original stroke
         circle.style.fill = '#FFFFFF';
         circle.style.stroke = circle.dataset.originalStroke;
-        circle.style.strokeWidth = '2';
+        circle.style.strokeWidth = '5';
         group.setAttribute('aria-selected', 'false');
+        circle_text.style.fontWeight = 400;
       }
     }
   });
