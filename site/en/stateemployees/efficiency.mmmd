@@ -99,7 +99,7 @@ theme_description: State employees identified numerous inefficiencies in workflo
 theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
 stroke_color: "#65ADE1"
 light_color: "rgba(101, 173, 225, 0.50)"
-hilite_fill_color: "rgba(101, 173, 225, 0.20)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
 nbr_root_comments: 828
 see_more_link: See more comments on this theme
 ----
@@ -115,7 +115,7 @@ theme_description: California state employees identify systemic problems with ta
 theme_quote: "“Some people are promoted without meeting minimum qualifications while others are told they can't promote due to not meeting them despite experience and relevant education.”"
 stroke_color: "#C591DA"
 light_color: "rgba(197, 145, 218, 0.50)"
-hilite_fill_color: "rgba(197, 145, 218, 0.20)"
+hilite_fill_color: "rgba(197, 145, 218, 0.10)"
 nbr_root_comments: 751
 see_more_link: See more comments on this theme
 ----
@@ -135,7 +135,7 @@ theme_description: State workers shared ideas on improving customer service, str
 theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
 stroke_color: "#6C8043"
 light_color: "rgba(108, 128, 67, 0.50)"
-hilite_fill_color: "rgba(108, 128, 67, 0.20)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
 nbr_root_comments: 573
 see_more_link: See more comments on this theme
 ----
@@ -151,7 +151,7 @@ theme_description: Workers identified gaps in information sharing, collaboration
 theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
 stroke_color: "#53CAB0"
 light_color: "rgba(83, 202, 176, 0.50)"
-hilite_fill_color: "rgba(83, 202, 176, 0.20)"
+hilite_fill_color: "rgba(83, 202, 176, 0.10)"
 nbr_root_comments: 477
 see_more_link: See more comments on this theme
 ----
@@ -167,7 +167,7 @@ theme_description: Employees discussed resource constraints, funding allocation,
 theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
 stroke_color: "#DABD48"
 light_color: "rgba(218, 189, 72, 0.50)"
-hilite_fill_color: "rgba(218, 189, 72, 0.20)"
+hilite_fill_color: "rgba(218, 189, 72, 0.10)"
 nbr_root_comments: 421
 see_more_link: See more comments on this theme
 ----
@@ -183,7 +183,7 @@ theme_description: Employees highlighted the need for modernization of IT system
 theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
 stroke_color: "#A9D4F2"
 light_color: "rgba(169, 212, 242, 0.50)"
-hilite_fill_color: "rgba(169, 212, 242, 0.20)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
 nbr_root_comments: 414
 see_more_link: See more comments on this theme
 ----
@@ -199,7 +199,7 @@ theme_description: Participants discussed regulatory processes, compliance requi
 theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
 stroke_color: "#EE9930"
 light_color: "rgba(238, 153, 48, 0.50)"
-hilite_fill_color: "rgba(238, 153, 48, 0.20)"
+hilite_fill_color: "rgba(238, 153, 48, 0.10)"
 nbr_root_comments: 400
 see_more_link: See more comments on this theme
 ----
@@ -215,7 +215,7 @@ theme_description: Participants discussed how organizational hierarchies, commun
 theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
 stroke_color: "#E45D48"
 light_color: "rgba(228, 93, 72, 0.50)"
-hilite_fill_color: "rgba(228, 93, 72, 0.20)"
+hilite_fill_color: "rgba(228, 93, 72, 0.10)"
 nbr_root_comments: 396
 see_more_link: See more comments on this theme
 ----
@@ -231,7 +231,7 @@ theme_description: State employees emphasized the importance of effective leader
 theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
 stroke_color: "#6D4884"
 light_color: "rgba(109, 72, 132, 0.50)"
-hilite_fill_color: "rgba(109, 72, 132, 0.20)"
+hilite_fill_color: "rgba(109, 72, 132, 0.10)"
 nbr_root_comments: 352
 see_more_link: See more comments on this theme
 ----
@@ -247,7 +247,7 @@ theme_description: State employees identified operational challenges related to 
 theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
 stroke_color: "#F2C3C7"
 light_color: "rgba(242, 195, 199, 0.50)"
-hilite_fill_color: "rgba(242, 195, 199, 0.20)"
+hilite_fill_color: "rgba(242, 195, 199, 0.10)"
 nbr_root_comments: 339
 see_more_link: See more comments on this theme
 ----
