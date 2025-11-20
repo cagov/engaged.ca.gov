@@ -20,9 +20,9 @@
     <div class="row">
       <div class="col-lg-8">
         {{ modules.hero.content | safe }}
-        <p>
+        {# <p>
             <a data-appearance="button" data-theme="orange" href="#themes-we-found" class="m-t">{{ modules.hero.buttonText }}</a>
-        </p>
+        </p> #}
       </div>
     </div>
     <img class="e3-hero-adornment" src="/public/images/efficiency-adornment.png" aria-hidden="true" alt="" />
@@ -33,15 +33,18 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <div class="what-we-did-content">
-          {{ modules.what_we_did.content | safe }}
+        <div class="what-we-heard-content">
+          {{ modules.what_we_heard.content | safe }}
         </div>
-        <div class="why-we-did-it-content">
+        <div class="participation-quote">
+          <p>{{ modules.participation_numbers.quote }}</p>
+        </div>
+        {# <div class="why-we-did-it-content">
           {{ modules.why_we_did_it.content | safe }}
         </div>
         <div class="what-we-heard-content">
           {{ modules.what_we_heard.content | safe }}
-        </div>
+        </div> #}
       </div>
       <div class="col-lg-4">
         <div class="participation-sidebar">
@@ -55,9 +58,6 @@
             <img src="/public/images/ideas-icon.svg" alt="Ideas icon" />
             <div class="stat-number">{{ modules.participation_numbers.insights_count }}</div>
             <div class="stat-label">{{ modules.participation_numbers.insights_label }}</div>
-          </div>
-          <div class="participation-quote">
-            <p>{{ modules.participation_numbers.quote }}</p>
           </div>
         </div>
       </div>

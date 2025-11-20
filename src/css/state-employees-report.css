@@ -490,6 +490,10 @@ section#comment-explorer {
     padding: 3rem 0;
 }
 
+.comment-explorer-header {
+    text-align: center;
+}
+
 .comment-explorer-header h2 {
     color: #0f152f;
     margin-bottom: 1rem;
@@ -968,7 +972,7 @@ section#comment-explorer {
 }
 
 .comment-likes {
-    color: #666;
+    color: #444;
     display: flex;
     align-items: center;
     gap: 0.25rem;

@@ -379,8 +379,9 @@ function populate_comments(theme_number_or_all) {
       }
       if (has_likes) {
         cmarkup += '<span class="comment-likes">';
-        cmarkup += '<img src="/public/images/like-icon.svg" alt="likes" class="like-icon" />';
-        cmarkup += ' ' + likes;
+        // cmarkup += '<img src="/public/images/like-icon.svg" alt="likes" class="like-icon" />';
+        cmarkup += likes;
+        cmarkup += ' likes';
         cmarkup += '</span>';
       }
       cmarkup += '</div>';
@@ -419,7 +420,7 @@ function populate_comments(theme_number_or_all) {
   // Update comment count
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
-    let template = comment_count_element.dataset.template || '<N> comments';
+    let template = comment_count_element.dataset.template || '<N> comments submitted';
     let count_text = template.replace('<N>', filtered_comments.length);
     comment_count_element.textContent = count_text;
   }

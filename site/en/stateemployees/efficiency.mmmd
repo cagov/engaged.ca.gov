@@ -18,17 +18,17 @@ buttonText: Explore all themes
 
 # State employees are shaping a better California
 
-Engaged California asked state employees to share ideas to make government more efficient and better serve residents.
+In the fall of 2025 we invited more than 6,900 state employees to our engagement platform. The goal was to hear from employees on how to make California’s government more efficient. 
 
-Over 1,600 state employees shared more than 1,800 ideas. They sent a clear message: skilled public servants want to enhance government operations. But they need leadership support to update outdated processes.
+Over a 10-week period, 1,600 state employees discussed ideas with each other through 2,400 comments. The ideas fell into 10 key themes and 65 sub-themes. 
 
-The ideas fell into 10 key themes and 65 sub-themes. The following 3 themes stood out because of the number of related ideas shared:
+The most frequent themes were:
 
-- Process design and improvement
-- Public-facing services and resident experience
-- Management culture and leadership
+ - Process improvement
+ - Recruitment, hiring, and retention
+ - Public-facing services
 
-The link between these themes tells a key story. Improving government efficiency isn’t only about updating tech or cutting costs. It requires a management culture that empowers and supports employees to redesign processes.
+We heard a clear story. Improving government efficiency isn’t only about updating tech or cutting costs. It requires a management culture that empowers employees and harnesses innovation. 
 
 ----
 id: background_context
@@ -37,43 +37,24 @@ id: background_context
 ## Background and context
 
 ----
-id: what_we_did
-title: What we did
-----
-
-## What we did
-
-We used the Engaged California platform to connect with over 1,600 state employees. From this, we gathered more than 1,800 ideas. These ideas span 10 key themes and 64 sub-themes aimed at improving government operations.
-
-----
-id: why_we_did_it
-title: Why we did it
-----
-
-## Why we did it
-
-To build a better government, we need to engage directly with those who know it best: state employees. They are the experts on how government works, how it doesn't, and how it should.
-
-----
 id: what_we_heard
+title: What we heard
 ----
 
 ## What we heard
 
 California state employees are deeply committed to public service. They appreciated the chance to share their knowledge. Their responses show they care about their work and the communities they support.
 
-Employees identified specific barriers. They pointed to slow hiring practices and limited training opportunities. They also underscored complex procurement processes, and management approaches that don't support innovation. However, rather than merely identifying problems, they provided thoughtful and actionable solutions.
-
-The collective submissions reveal a clear vision. One where efficiency drives both growth and inclusivity.
+They shared great ideas for solutions that deserve our attention. You can explore their ideas and all of their comments below.
 
 ----
 id: participation_numbers
 title: Participation by the numbers
 participants_count: 1,653
-participants_label: Staff
-insights_count: 1,919
+participants_label: Participants
+insights_count: 2,477
 insights_label: Insights
-staff_note: from all levels of seniority and tenure
+staff_note: Staff from all levels of seniority and tenure
 quote: "“It's nice to be able to share my opinions and to broaden my perspectives on what it means to be a public servant.”"
 ----
 
@@ -303,7 +284,7 @@ quote: I have created employee instructions manuals for roles I have been in to 
 ----
 id: comment_explorer
 title: Comment explorer
-intro_text: Read state employees’ own words on this topic
+intro_text: Read state employees’ own words on this topic. Comments are now closed.
 ----
 
 ----
@@ -325,7 +306,7 @@ sort_theme: Theme
 sort_likes: Likes
 sort_replies: Replies
 download_button_text: Download all the comments
-comment_count: <N> comments
+comment_count: <N> comments submitted
 ----
 
 
