@@ -392,6 +392,11 @@ div#suggested-solutions {
     margin-bottom: 2rem;
 }
 
+.solution-cards {
+    display: flex;
+    align-items: stretch;
+}
+
 .solution-card {
     background: transparent;
     border: none;
@@ -400,6 +405,7 @@ div#suggested-solutions {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
 }
 
 .solution-title {
@@ -407,6 +413,7 @@ div#suggested-solutions {
     padding: 1.5rem;
     border: 1px solid #BCBBC1;
     border-radius: 16px;
+    min-height: 108.5px;
 }
 
 .solution-title h4 {
