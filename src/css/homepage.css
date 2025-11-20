@@ -53,6 +53,9 @@ section#partners p {
   margin-block-end: 5.4rem;
 }
 
+section#homepage-action-plan {
+  background: #5489A3;
+}
 engca-partner-flex {
   display: flex;
   flex-direction: row;

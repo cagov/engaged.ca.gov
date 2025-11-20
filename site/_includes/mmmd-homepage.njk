@@ -6,9 +6,9 @@
   <div class="container banner-flex">
     <engca-banner-content>
       {{ modules.hero.content | safe }}
-      {# <a href="{{ "/lafires-recovery" | locale_url }}#sign-up" data-appearance="button" data-theme="orange">
-        {{ modules.hero.buttonText }}
-      </a> #}
+      <a href="{{ "/lafires-recovery/action-plan" | locale_url }}#sign-up" data-appearance="button" data-theme="orange">
+        {{ modules.hero.buttonText_actionplan }}
+      </a>
     </engca-banner-content>
     <img src="/public/images/hero-bubbles.png" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header' | i18n }}" />
   </div>
@@ -24,14 +24,15 @@
     <img src="/public/images/about-bubbles.svg" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header-about' | i18n }}" />
   </div>
 </section>
-{# <section id="our-first-engagement" class="action-hero">
+
+<section id="homepage-action-plan" class="action-hero">
   <div class="container first-eng-content">
-    {{ modules.deliberations_are_happening.content | safe }}
-    <a href="{{ "/lafires-recovery/" | locale_url }}" data-appearance="button" data-theme="orange">
-      {{ modules.deliberations_are_happening.buttonText }}
+    {{ modules.action_plan.content | safe }}
+    <a href="{{ "/lafires-recovery/action-plan/" | locale_url }}" data-appearance="button" data-theme="orange">
+      {{ modules.action_plan.buttonText }}
     </a>
   </div>
-</section> #}
+</section>
 <section id="how-it-works" class="action-hero">
   <div class="container">
     <h2>{{ 'how-it-works' | i18n }}</h2>

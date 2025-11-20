@@ -1,0 +1,471 @@
+{% set active_page = 'lafires-recovery' %}
+{% extends "layout.njk" %}
+{% block content %}
+<link rel="stylesheet" href="/css/fires.css" />
+<link rel="stylesheet" href="/css/fires-summary.css" />
+<link rel="stylesheet" href="/css/action-plan.css" />
+<link rel="stylesheet" href="/css/lenis.css">
+
+<script>
+  {% include "lenis.min.js" %}
+  {% include "gsap.min.js" %}
+  {% include "ScrollTrigger.min.js" %}
+</script>
+
+<div id="narrative-canvas-container">
+    <canvas id="narrative-canvas"></canvas>
+</div>
+
+<section id="findings-overview" class="hero">
+  <div class="container findings-overview-container">
+    <div class="row">
+      <div class="col-lg-8">
+        {{ modules.findings_overview.content | safe }}
+        <p>
+            <a data-appearance="button" data-theme="orange" href="#findings-top-options" class="m-t">{{ modules.findings_overview.buttonText }}</a>
+        </p>
+
+      </div>
+    </div>
+    <img class="findings-adornment" src="/public/images/findings-adornment.png" aria-hidden="true" alt="" />
+  </div>
+</section>
+
+<section id="findings-narrative-steps">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="narrative-wrapper-1" class="narrative-wrapper">
+          <div class="findings-narrative-step-1 findings-narrative-step ">
+            <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_1.title }}</div>
+            {{ modules.findings_narrative_step_1.content | safe }}
+            <p>
+              <a class="style-small-body-text" href="{{'/lafires-recovery/agenda-setting-findings/' | locale_url }}" class="m-t">{{ modules.findings_narrative_step_1.button_text | safe }}</a>
+            </p>
+          </div>
+        </div>
+        <div id="narrative-wrapper-2" class="narrative-wrapper">
+          <div class="findings-narrative-step-2 findings-narrative-step ">
+            <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_2.title }}</div>
+            {{ modules.findings_narrative_step_2.content | safe }}
+            <p>
+              <a class="style-small-body-text" href="#partners" class="m-t">{{ modules.findings_narrative_step_2.button_text | safe }}</a>
+            </p>
+          </div>
+        </div>
+        <div id="narrative-wrapper-3" class="narrative-wrapper">
+          <div class="findings-narrative-step-3 findings-narrative-step ">
+            <div class="style-strong-small-body-text">{{ modules.findings_narrative_step_3.title }}</div>
+            {{ modules.findings_narrative_step_3.content | safe }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="findings-consensus">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+            <div class="findings-consensus-intro">
+             <h2>{{ modules.findings_consensus_watch_intro.title_h2 | safe }}</h2>
+            </div>
+      </div>
+      <div class="col-lg-8">
+            <div class="findings-consensus-intro">
+             {{ modules.findings_consensus_watch_intro.content | safe }}
+            </div>
+      </div>
+      {# <div class="col-lg-4">
+            <div class="findings-consensus-intro-caveat style-small-body-text italic">
+             *{{ modules.findings_consensus_watch_intro.caveat | safe }}
+            </div>
+      </div> #}
+      <div class="col-lg-12">
+        <div id="findings-consensus-progressbar-container">
+          <canvas id="findings-consensus-progressbar-canvas" width="1200" height="16"></canvas>
+        </div>
+
+        <div id="findings-consensus-sentiment-chart-topic-number" class="style-small-body-text">
+          Topic 1 of 19
+        </div>
+        <div id="findings-consensus-sentiment-chart-title" class="findings-consensus-sentiment-chart-title style-strong-body-text">
+        {{ modules.findings_consensus_watch_explore.label_1 | safe }}
+        </div>
+        <div id="findings-consensus-sentiment-chart-subtitle" class="findings-consensus-sentiment-chart-subtitle style-small-body-text">
+        {{ modules.findings_consensus_watch_explore.percent_default | safe }}
+        </div>
+
+        <div id="findings-consensus-sentiment-chart-dataviz-container">
+          <canvas id="findings-consensus-sentiment-chart-dataviz-canvas" width="1200" height="400"></canvas>
+        </div>
+        <div class="findings-consensus-sentiment-chart">
+          <div class="data-viz-1-labels" style="direction: ltr;">
+            {% for i in range(1, modules.findings_consensus_sentiment_chart.nbr_labels + 1) %}
+              <div class="data-viz-1-label style-small-body-text">
+                {{ modules.findings_consensus_sentiment_chart["label_" + i] }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        {# <div class="findings-consensus-outro">
+          <p>{{ modules.findings_consensus_watch_explore.outro | safe }}</p>
+        </div> #}
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="findings-top-options-intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="findings-top-options-title">
+          <h3 class="style-h3">{{ modules.findings_narrative_top_options_intro.title | safe }}</h3>
+        </div>
+        <div class="findings-top-options-tally-list">
+          {% for i in range(1, modules.findings_narrative_top_options_intro.nbr_values + 1) %}
+            <div class="findings-top-options-tally-box">
+              <div class="option-total">{{ modules.findings_narrative_top_options_intro["value_" + i] }}</div>
+              <div class="option-label">{{ modules.findings_narrative_top_options_intro["label_" + i] }}</div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="top-options-description style-body-text">
+          {{ modules.findings_narrative_top_options_intro.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="findings-top-options">
+  <div class="container">
+
+   {# display of the topic selector-tabs #}
+
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="findings-top-options-subtitle">
+          <div class="style-h2">{{ modules.findings_narrative_top_options.results_header | safe }}</div>
+          <div class="style-h3">{{ modules.findings_narrative_top_options.results_description | safe }}</div>
+        </div>
+
+        <div class="findings-top-options-options-list" role="tablist" aria-label="Topic selection tabs">
+          {% for i in range(1, modules.findings_narrative_top_options.nbr_options + 1) %}
+          <!-- this will mimic the other report -->
+          <div id="findings-top-options-option-box-{{ i }}" class="findings-top-options-option-box{% if i == 1 %} active{% endif %}" data-topic-number="{{ i }}" data-chart-topic-index="{{ modules["discussion_" + i].chart_topic_index }}" role="tab" tabindex="{% if i == 1 %}0{% else %}-1{% endif %}" aria-selected="{% if i == 1 %}true{% else %}false{% endif %}" aria-controls="findings-top-discussions-topic-{{ i }}">
+            <img class="findings-option-icon png-icon" src="/public/images/{{ modules.findings_narrative_top_options["option_icon_" + i] }}" aria-hidden="true" alt="{{ modules.findings_narrative_top_options["option_label_" + i] }}">
+            <div class="option-label">{{ modules.findings_narrative_top_options["option_label_" + i] }}</div>
+          </div>
+          {% endfor %}
+        </div>
+
+
+      </div>
+    </div>
+
+   {# display of the topic title and stats #}
+
+    <div id="findings-top-discussions">
+      <div class="topic-section">
+        {% for i in range(1, 5 + 1) %}
+          <div id="findings-top-discussions-topic-{{ i }}" class="findings-top-discussion-container row {% if i == 1 %} active{% endif %}" data-topic-number="{{ i }}">
+            <div class="col-lg-12">
+              <div class="findings-discussions-topic-title-container">
+                <div class="findings-discussions-topic-title style-h2">
+                  <h2>{{ modules["discussion_" + i].title | safe }}</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              {# <div class="findings-discussions-topic-solution-details-label style-strong-small-body-text">
+                xx{{ modules.findings_top_discussions.solution_details_label | safe }}
+              </div> #}
+              <div class="findings-discussions-topic-description style-small-body-text">
+                {{ modules["discussion_" + i].topic_description | safe }}
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="findings-top-discussions-tally-list">
+                {% for j in range(1, modules.findings_top_discussions.nbr_tally_items + 1) %}
+                  <div class="findings-top-discussions-tally-box">
+                    <div class="option-total style-h1">{{ modules["discussion_" + i]["value_" + j] }}</div>
+                    <div class="option-label style-small-body-text">{{ modules.findings_top_discussions["label_" + j] }}</div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+
+          </div>
+        {% endfor %}
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="deliberations-learn-link">
+              <a id="learn-more-link"class="style-small-body-text" href="#response-step-1">{{ modules.topic_data_vis.learn_button_label }}</a>
+            </div>
+            <div class="style-strong-small-body-text">
+              {{ modules.topic_data_vis.title }}
+            </div>
+            <div class="style-small-body-text italic">
+              {{ modules.topic_data_vis.desc }}
+            </div>
+            <div id="findings-top-topics-dataviz-container" class="findings-top-topics-data-viz">
+              <canvas id="findings-top-topics-dataviz-canvas" width="1200" height="400"></canvas>
+            </div>
+            <div class="data-viz-2-labels" style="direction: ltr;">
+              {% for i in range(1, modules.findings_topic_chart.nbr_labels + 1) %}
+              <div class="data-viz-2-label">
+                {{ modules.findings_topic_chart["label_" + i] }}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="topics-deliberation-comments-container" class="collapsed">
+
+          <div id="explore-the-comments">
+
+            <div class="style-strong-small-body-text">
+              {{ modules.findings_top_discussions.explore_the_comments | safe }}
+            </div>
+            <div class="style-small-body-text italic">
+              {{ modules.findings_top_discussions.filter_the_comments | safe }}
+            </div>
+          </div>
+
+          <div id="topics-deliberation-comments-container-expandable" class="expandible">
+
+
+
+          <button id="findings-deliberation-comments-hide-button" data-autoscroll="false"class="deliberation-comment-expander-button button-reset close" aria-expanded="false" aria-controls="findings-responding-list-container">
+                <div class="deliberation-comment-expander-label">{{ modules.findings_top_discussions.hide_comments_button | safe }}</div>
+          </button>
+
+            <div class="topics-alignment-switcher-list">
+              <div class="topic-alignment-switcher-item-label style-strong-small-body-text">
+                {{ modules.findings_top_discussions.label_viewpoint | safe }}
+              </div>
+              <div class="topic-alignment-switcher-button-list">
+                <div class="topics-alignment-switcher-item selected" data-filter="all">
+                  {{ modules.findings_top_discussions.label_all_comments | safe }}
+                </div>
+                <div class="topics-alignment-switcher-item" data-filter="oppose">
+                  {{ modules.findings_top_discussions.label_oppose | safe }}
+                </div>
+                <div class="topics-alignment-switcher-item" data-filter="neutral">
+                  {{ modules.findings_top_discussions.label_neutral | safe }}
+                </div>
+                <div class="topics-alignment-switcher-item" data-filter="support">
+                  {{ modules.findings_top_discussions.label_support | safe }}
+                </div>
+                <div class="topics-alignment-switcher-item" data-filter="novote">
+                  {{ modules.findings_top_discussions.label_novote | safe }}
+                </div>
+              </div>
+            </div>
+            <div class="comments-caveat style-small-body-text italic">
+              {{ modules.findings_top_discussions.filter_comments_by_vote | safe }}
+           </div>
+            <div class="legend-item-expansion-block" id="legends-scroll-content" role="region" aria-hidden="true">
+              <div id="topics-deliberation-comments-container-content" class="legend-item-content" dir="ltr" role="log" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <button id="findings-deliberation-comments-show-button" data-autoscroll="false" class="deliberation-comment-expander-button button-reset open" aria-expanded="false" aria-controls="findings-responding-list-container">
+                <div class="deliberation-comment-expander-label">{{ modules.findings_top_discussions.show_comments_button | safe }}</div>
+          </button>
+          <button id="findings-deliberation-comments-hide-button-2" data-autoscroll="true" class="deliberation-comment-expander-button button-reset close" aria-expanded="false" aria-controls="findings-responding-list-container">
+                <div class="deliberation-comment-expander-label">{{ modules.findings_top_discussions.hide_comments_button | safe }}</div>
+          </button>
+
+      </div>
+
+
+
+    </div>
+    <div class="download-button-div">
+      <a class="style-strong-small-body" data-appearance="button" data-theme="off-white" href="/public/data/lafires_deliberation_all_comments.csv">{{ modules.topic_data_vis.download_text | safe }}</a>
+    </div>
+  </div>
+
+</section>
+
+<section id="findings-alignment-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="findings-alignment-section-content">
+          {{ modules.findings_alignment_section.content | safe }}
+        </div>
+      </div>
+      {# <div class="col-lg-4">
+        <div class="findings-alignment-section-sidebar">
+          <div class="findings-alignment-section-sidebar-content">
+            {{ modules.findings_alignment_section_sidebar.content | safe }}
+          </div>
+        </div>
+      </div> #}
+    </div>
+  </div>
+</section>
+{# <section id="findings-ring-chart-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 ringchart-chart">
+        <div id="ringchart-canvas-container">
+            <canvas id="ringchart-canvas" width="570" height="500"></canvas>
+        </div>
+      </div>
+      <div class="col-lg-6 ringchart-legend">
+        <div class="ring-chart-legend-header style-h2">
+          {{ modules.ring_chart.legend_header | safe }}
+        </div>
+        <div class="ring-chart-legend-explain">
+          {{ modules.ring_chart.legend_copy | safe }}
+        </div>
+      </div>
+      <div class="col-lg-12 ring-chart-followup-text">
+         {{ modules.ring_chart.content | safe }}
+      </div>
+    </div>
+  </div>
+</section> #}
+
+<section id="response">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="response-intro">
+                    {{ modules.response_intro.content | safe }}
+                </div>
+            </div>
+            <div class="response-step-list">
+              {% for i in range(1, modules.response_steps.nbr_steps + 1) %}  
+                  <div id="response-step-{{ i }}" class="row response-step-container">
+                    <div class="col-lg-12 response-item-title-container icon icon-{{ i }}">
+                          <div class="response-item-title response-indent"><h3 class="style-h3">{{ modules['response_step_' + i].title }}</h3></div>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="response-indent">
+                          <div class="response-small-title style-strong-body-text">{{modules.response_steps.action_now}}</div>
+                          <div class="response-item-text">{{ modules['response_step_' + i + "_action_now"].content | safe }}</div>
+                      {% if modules['response_step_' + i + "_coming_soon"] %}
+                          <div class="response-small-title style-strong-body-text">{{modules.response_steps.coming_soon}}</div>
+                          <div class="response-item-text">{{ modules['response_step_' + i + "_coming_soon"].content | safe }}</div>
+                      {% endif %}
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      {% if modules['response_sidebar_' + i] %}
+                      <div class="response-indent">
+                        <div class="response-sidebar">
+                            <div class="response-small-title style-strong-body-text">{{modules.response_steps.did_you_know}}</div>
+                            <div class="findings-responding-item-sidebar-content style-body-text">{{ modules['response_sidebar_' + i].content | safe }}</div>
+                        </div>
+                      </div>
+                      {% endif %}
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="response-indent">
+                        <a class="response-anchor-link" data-topic="{{i}}" href="#findings-top-discussions-topic-{{i}}">{{modules.response_steps.anchor_link_text}}</a>
+                      </div>
+                    </div>
+                  </div>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="other-efforts">
+  <div class="container">
+    <div class="row">
+      <div class="response-step-list">
+        <div class="row response-step-container">
+          <div class="col-lg-12 response-item-title-container icon icon-6">
+                  <div class="response-item-title response-indent"><h3 class="style-h3">{{ modules.other_efforts.title }}</h3></div>
+          </div>
+          <div class="col-lg-8">
+              <div class="response-indent">
+                  <div class="response-small-title style-strong-body-text">{{modules.other_efforts.mental_health}}</div>
+                  <div class="response-item-text">{{ modules.other_efforts.content | safe }}</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+ 
+
+<section id="findings-signup-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          {{ modules.signup_plea.content | safe }}
+      </div>
+      <div class="col-lg-12">
+        <div class="signup-button">
+          <a data-appearance="button" data-theme="orange" href="/#sign-up">{{ modules.signup_plea.button_text | safe }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="partners" class="action-hero deliberation-partners">
+  <div class="container">
+    <div class="findings-partners-content">{{ modules.partners.content | safe }}</div>
+    <engca-partner-flex>
+      <img src="/public/images/logo-afterthefire.png" alt="After the Fire" />
+      <img src="/public/images/berggruen.svg" alt="Berggruen Institute" />
+      {# <img src="/public/images/logo-bostonconsultinggroup.svg" alt="Boston Consulting Group (BCG)" /> #}
+      <img src="/public/images/carnegie.svg" alt="Carnegie Endowment for International Peace" />
+      <img src="/public/images/logo-mayorkarenbass.svg" alt="City of Los Angeles / Office of Mayor Karen Bass" />
+      <img src="/public/images/logo-connectuscalifornia.png" alt="Connect us California" />
+      <img src="/public/images/logo-lacounty.png" alt="LA County" />
+      <img src="/public/images/logo-supervisorbarger.png" alt="Supervisor Barger, County of Los Angeles" />
+      <img src="/public/images/logo-supervisorhorvath.png" alt="Supervisor Horvath, County of Los Angeles" />
+      <img src="/public/images/logo-departmentofangels.png" alt="Department of Angels" />
+      <img src="/public/images/logo-facela.png" alt="Faith and Community Empowerment (FACE LA)" />
+      <img src="/public/images/logo-naacpaltadena.png" alt="NAACP Altadena Chapter" />
+      <img src="/public/images/logo-sideporch.png" alt="SidePorch" />
+      <img src="/public/images/logo-tidalbasin.png" alt="Tidal Basin" />
+    </engca-partner-flex>
+  </div>
+</section>
+
+
+
+{# <section id="findings-how-we-did">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="findings-no-indent-container">
+                    {{ modules.findings_how_we_did_the_analysis.content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section> #}
+
+{% include "lafires-animation-utils.njk" %}
+{% include "lafires-consensus-chart.njk" %}
+{% include "lafires-topics-chart.njk" %}
+{% include "lafires-scroll-animation.njk" %}
+{% include "lafires-narrative-backgrounds.njk" %}
+{% include "lafires-topics-and-comments.njk" %}
+
+{% endblock %}

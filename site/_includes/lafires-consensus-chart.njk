@@ -1,0 +1,399 @@
+<script>
+
+let consensusChart, consensusProgressBar;
+
+class ConsensusChart {
+  constructor(voteData) {
+    this.user_dots = [];
+    this.bandWidth = 0;
+    this.adj_band = 0;
+    this.vert_margin = 11;
+    this.voteData = voteData;
+    this.render_handle = null;
+    this.phase_handle = null;
+    this.phase = -1;
+    this.topic_number = 0;
+    this.canvas = null;
+    this.ctx = null;
+    this.is_playing = true;
+
+    let is_mobile = window.innerWidth < 768;
+    this.ellipse_radius = is_mobile? 12 : 10;
+
+    const canvas = document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
+    canvas.width = 1500;
+    canvas.height = is_mobile ? 600 : 400;
+
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
+
+    let userRecs = this.voteData['user_recs'];
+
+    this.user_dots = [];
+
+    const row_size = Math.round(Math.sqrt(this.voteData.nbr_users));
+    const masonry_incx = 0.5 / row_size;
+
+    for (let uid = 0; uid < this.voteData.nbr_users; uid++) {
+      let ryi = Math.floor(uid / row_size);
+      let initRX = (uid % row_size) / row_size + ((ryi % 2) * masonry_incx);
+      let initRY = (uid / row_size) / row_size;
+      let initCY = this.vert_margin + initRY * (canvas.height-this.vert_margin*2);
+        this.user_dots.push({
+            uid: uid,
+            rx:  initRX,         // Math.random(),
+            ry:  initRY,         // uid / this.voteData.nbr_users,
+            cx: canvas.width/2,
+            tx: 0,
+            cy: initCY,
+            ty: initCY,
+            vx: 0,
+            vy: 0,
+            copacity: 0, // current opacity
+            topacity: 0, // target opacity
+        });
+    }
+
+    this.change_consensus_topic(0);
+    this.consensus_chart_phase(0);
+
+  }
+
+  reset_user_dots(topic_index) {
+    let userRecs = this.voteData['user_recs'];
+    let fUserRecords = userRecs.filter(rec => rec.tid == topic_index);
+
+    let encountered_uids = {};
+    let ctx = this.ctx;
+    fUserRecords.forEach(rec => {
+      let uid = rec.uid;
+      encountered_uids[uid] = true;
+      let user_dot = this.user_dots[uid];
+
+      let likert = rec.v;
+      // Clamp likert to [1,7]
+      if (likert < 1) likert = 1;
+      if (likert > 7) likert = 7;
+      let dot_x = this.bandWidth * (likert - 0.5);
+      let x_offset = user_dot.rx * this.adj_band - this.adj_band / 2;
+      dot_x += x_offset;
+      user_dot.min_x = this.bandWidth * (likert - 0.5) - this.adj_band / 2;
+      user_dot.max_x = this.bandWidth * (likert - 0.5) + this.adj_band / 2;
+      user_dot.tx = dot_x;
+      user_dot.topacity = 1;
+      user_dot.active = true;
+
+      let dot_y = this.vert_margin + user_dot.ry * (ctx.canvas.height-this.vert_margin*2);
+      user_dot.ty = dot_y;
+      user_dot.vx = 0;
+      user_dot.vy = 0;
+
+      /* coord forcing, if used, goes here... */
+
+      if (user_dot.copacity < 0.1) {
+        user_dot.cx = user_dot.tx;
+      }
+    });
+
+    // For each user that is not in the fUserRecords, set the opacity to 0
+    for (let uid = 0; uid < this.voteData.nbr_users; uid++) {
+      if (!encountered_uids[uid]) {
+        this.user_dots[uid].topacity = 0;
+        this.user_dots[uid].tx = this.user_dots[uid].cx;
+      }
+    }      
+  }
+
+  compute_color(r) {
+    let hue,sat,val;
+
+    let left_sat = 76;
+    let mid_sat = 0;
+    let right_sat = 32;
+
+    let left_val = 61;
+    let mid_val = 85-15;
+    let right_val = 48;
+
+    let left_hue = 27;
+    let right_hue = 200;
+
+
+    if (r < 0.5) {
+      sat = Math.round(clamp(mapv(r, 0, 0.5, left_sat, mid_sat),left_sat, mid_sat)*100)/100;
+      val = Math.round(clamp(mapv(r, 0, 0.5, left_val, mid_val),left_val,mid_val)*100)/100;
+    } else {
+      sat = Math.round(clamp(mapv(r, 0.5, 1, mid_sat, right_sat),mid_sat, right_sat)*100)/100;
+      val = Math.round(clamp(mapv(r, 0.5, 1, mid_val, right_val),mid_val, right_val)*100)/100;
+    }
+    hue = Math.round(clamp(mapv(r,0.45, 0.55, left_hue, right_hue), left_hue, right_hue)*100)/100;
+    return "hsl(" + hue + ", " + sat + "%, " + val + "%)";
+  }
+
+
+  apply_consensus_forces() {
+    let activeDots = this.user_dots.filter(d => d.active);
+    let canvas = this.canvas;
+    let gravityForce = 0.025;
+    let borderForce = 0.2;
+    let maxRepelForce = 0.1;
+    let repelScale = 1.2; // 1.1
+
+
+
+    activeDots.forEach(dot => {
+      dot.vx *= 0.95;
+      dot.vy *= 0.95;
+      let fx = 0;
+      let fy = 0;
+      // compute forces from neighbors
+      let min_distance = this.ellipse_radius*2 * repelScale;
+      let neighbors = activeDots.filter(d => d.uid != dot.uid && dot_distance(d, dot) < min_distance);
+      neighbors.forEach(neb => {
+        let dist = dot_distance(neb, dot);
+        let angle = dot_angle(neb, dot);
+        // To make force 0 at d = min_distance, and increase as d gets smaller:
+        // We'll use: force = (min_distance - d) / min_distance, but clamp to >= 0
+        let force = clamp((min_distance - dist) / min_distance, 0, maxRepelForce);
+        fx += force * Math.cos(angle);
+        fy += force * Math.sin(angle);
+      });
+      // contain within rectangle
+      if (dot.tx >= canvas.width - this.ellipse_radius*2) {
+        fx -= borderForce;
+      } else if (dot.tx <= this.ellipse_radius*2) {
+        fx += borderForce;
+      }
+      if (dot.tx >= dot.max_x) {
+        fx -= borderForce;
+      } else if (dot.tx <= dot.min_x) {
+        fx += borderForce;
+      }
+
+      if (dot.ty >= canvas.height - this.ellipse_radius) {
+        fy -= borderForce;
+      } else if (dot.ty <= this.ellipse_radius) {
+        fy += borderForce;
+      }
+      dot.vx += fx;
+      dot.vy += fy;
+      dot.tx += dot.vx;
+      dot.ty += dot.vy;
+    });
+  }
+
+  render_dots() {
+    let ctx = this.ctx;
+    let canvas = this.canvas;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    let nbr_applications = 6;
+    for (let a = 0; a < nbr_applications; ++a) {
+      this.apply_consensus_forces();
+    }
+
+    this.user_dots.forEach(dot => {
+      if (true) {
+        dot.cx += (dot.tx - dot.cx) * 0.05;
+        dot.cy += (dot.ty - dot.cy) * 0.1;
+        dot.copacity += (dot.topacity - dot.copacity) * 0.1;
+
+        let x = dot.cx;
+        let y = dot.cy;
+        let color = this.compute_color(clamp((dot.cx-20)/(1200-40),0,1));
+
+        // let er = this.ellipse_radius * (1 + 1-dot.copacity); // grow as we fade out
+        let er = this.ellipse_radius;
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.ellipse(x, y, er, er, 0, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.globalAlpha = dot.copacity;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.restore();
+      }
+
+    });
+    // ! clear the render handle if the amount of movement is neglible
+  }
+
+  change_consensus_topic(topic_index) {
+      // console.log("render_topic", topic_index);
+      let canvas = this.canvas;
+      this.topic_number = topic_index;
+      let ctx = canvas.getContext('2d');
+      this.bandWidth = ctx.canvas.width / 7;
+      this.adj_band = this.bandWidth - this.ellipse_radius*2;
+
+      if (this.render_handle) {
+        clearInterval(this.render_handle);
+      }
+
+      let translated_topics_names = [
+        {% for i in range(1, modules.consensus_chart_topics.nbr_topics + 1) %}
+          '{{ modules.consensus_chart_topics["topic_" + i] }}',
+        {% endfor %}
+      ];
+
+
+      this.reset_user_dots(topic_index);
+      let original_topic_names = this.voteData['topics'];
+      let topic_number_template = '{{ modules.findings_consensus_watch_explore.topic_number_template | safe}}';
+      let topic_number_string = topic_number_template.replace('<NUM>', topic_index + 1).replace('<TOTAL>', original_topic_names.length);
+
+      let topic_perecent_template = '{{ modules.findings_consensus_watch_explore.percent_template | safe}}';
+      let topic_percent_string = topic_perecent_template.replace('<PERCENT>', Math.round(original_topic_names[topic_index][3]*100))
+
+      document.getElementById('findings-consensus-sentiment-chart-topic-number').innerHTML = topic_number_string;
+      // let topic_number_label = f'Topic {topic_index + 1} of {topic_names.length}'; // TRANSLATION!!!
+      let long_topic_name = translated_topics_names[topic_index];
+      document.getElementById('findings-consensus-sentiment-chart-title').innerHTML = long_topic_name;
+      document.getElementById('findings-consensus-sentiment-chart-subtitle').innerHTML = topic_percent_string;
+
+
+
+      console.log("beginning to render dots");
+      this.render_dots();
+      this.render_handle = setInterval(this.render_dots.bind(this), 40);
+      if (consensusProgressBar) {
+        consensusProgressBar.draw_consensus_progress_bar(topic_index);
+      }
+
+  }
+
+
+
+
+  consensus_chart_phase(phase)
+  {
+    const canvas = this.canvas; //  document.getElementById('findings-consensus-sentiment-chart-dataviz-canvas');
+    this.phase = phase;
+    console.log("consensus_chart_phase", phase);
+    if (canvas == null) {
+      return;
+    }
+    switch (phase) {
+    case 1:
+      if (this.phase_handle) {
+        clearInterval(this.phase_handle);
+        this.phase_handle = null;
+      }
+      break;
+    case 3:
+      if (this.phase_handle) {
+        clearInterval(this.phase_handle);
+        this.phase_handle = null;
+      }
+      break;
+    case 2:
+      console.log("Setting up phase 2 timers");
+      setTimeout(() => {
+        console.log("Setting up phase 2 timeout");
+        this.change_consensus_topic((this.topic_number + 1 ) % this.voteData.topics.length);
+        clearInterval(this.phase_handle);
+        this.phase_handle = setInterval(() => {
+            if (this.is_playing) {
+              this.change_consensus_topic((this.topic_number + 1 ) % this.voteData.topics.length);
+            }
+        }, 5000);
+      }, 1000);
+      break;
+    }
+
+
+  }
+
+
+};
+
+
+
+class ConsensusProgressBar {
+  constructor() {
+    this.step_number = 0;
+    this.nbr_topics = 19;
+    this.canvas = null;
+    this.ctx = null;
+
+    let is_mobile = window.innerWidth < 768;
+    this.ellipse_radius = is_mobile ? 16 : 8;
+    this.dot_grow = 24/16;
+    this.hmargin = this.ellipse_radius*this.dot_grow; // maximum dot radius
+
+    const canvas = document.getElementById('findings-consensus-progressbar-canvas');
+    canvas.width = 1500;
+    canvas.height = is_mobile ? 50 : 26;
+
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
+    this.gap = (canvas.width - this.hmargin*2) / (this.nbr_topics - 1);
+
+    this.draw_consensus_progress_bar(0);
+
+    canvas.addEventListener('click', (e) => {
+      let x = e.clientX;
+      // Scale x to canvas coordinates in case the display width is narrower than the canvas width
+      // Get the bounding rectangle of the canvas
+      const rect = canvas.getBoundingClientRect();
+      // Calculate the relative x position within the canvas
+      x = ((e.clientX - rect.left) / rect.width) * canvas.width;
+      let step_index = Math.round((x - this.hmargin) / this.gap);
+      this.draw_consensus_progress_bar(step_index);
+      console.log("clicked on step", step_index, x, this.hmargin, this.gap, this.canvas.width);
+      if (consensusChart) {
+        consensusChart.change_consensus_topic(step_index);
+        consensusChart.is_playing = false;
+      }
+    });
+
+  }
+
+  draw_consensus_progress_bar(step_index) {
+    let ctx = this.ctx;
+    if (ctx == null) {
+      return;
+    }
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.fillStyle = "#000";
+
+    // Draw a series of ellipses across the bar, one per topic
+    let n = this.nbr_topics;
+    let w = ctx.canvas.width;
+    let h = ctx.canvas.height;
+    let r = this.ellipse_radius;
+    let gap = (w - 2 * this.hmargin) / (n - 1);
+
+    for (let i = 0; i < n; i++) {
+      let x = this.hmargin + i * gap;
+      let y = h / 2;
+      let clr = consensusChart.compute_color(clamp((x-20)/(1200-40),0,1));
+      let fill_color = step_index == i? '#000' : clr;
+      ctx.save();
+      if (i < n-1) {
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x + gap, y);
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = clr;
+        ctx.stroke();
+      }
+      ctx.beginPath();
+      let radius = (step_index == i)? r*this.dot_grow : r;
+      ctx.ellipse(x, y, radius, radius, 0, 0, 2 * Math.PI);
+      ctx.fillStyle = fill_color;
+      ctx.globalAlpha = 1;
+      ctx.fill();
+      ctx.restore();
+    }
+  }
+
+}
+
+
+
+
+
+
+</script>

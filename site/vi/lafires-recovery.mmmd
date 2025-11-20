@@ -30,6 +30,7 @@ buttonText: Xem những phát hiện của chúng tôi trong việc thiết lậ
 statusPlanningTextV2: Các cuộc thảo luận đang diễn ra
 statusDeliberationsClosedText: Các cuộc thảo luận của cộng đồng đã kết thúc
 buttonTextV2: Đăng ký ngay
+buttonText_actionplan: Xem kế hoạch hành động
 ----
 
 Những người bị ảnh hưởng bởi các vụ cháy rừng ở Los Angeles phải có tiếng nói trong việc lập kế hoạch phục hồi. Vì vậy, Tiểu Bang California đang đưa họ lại gần với chính quyền theo một cách mới.
@@ -64,6 +65,9 @@ phaseCompleteText: Giai đoạn đã hoàn thành
 phaseCurrentText: Giai đoạn hiện tại
 phasePendingText: Giai đoạn sắp tới
 resourcesLinkTitle: Xem những phát hiện của chúng tôi trong việc thiết lập chương trình nghị sự
+resourcesTitle: Tài nguyên
+resourcesLinkTitle_actionplan: Xem kế hoạch hành động
+resourcesLinkTitle_agendasettingfindings: Xem những phát hiện của chúng tôi trong việc thiết lập chương trình nghị sự
 ----
 
 ### Thông tin chung
@@ -131,6 +135,7 @@ title: Báo cáo
 ----
 
 Chúng tôi sẽ đánh giá và phân tích kết quả của giai đoạn thảo luận. Chúng tôi sẽ làm việc với các viên chức chính phủ để tìm ra các hành động phù hợp với nội dung thảo luận. Chúng tôi sẽ đăng một báo cáo về những phát hiện và hành động trên trang web này.
+[Xem kế hoạch hành động](/lafires-recovery/action-plan)
 
 ----
 id: signup

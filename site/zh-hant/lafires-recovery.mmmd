@@ -30,6 +30,7 @@ buttonText: 看看我們在工作計畫中發現了什麼
 statusPlanningTextV2: 協商正在進行中
 statusDeliberationsClosedText: 社區商議已經結束
 buttonTextV2: 註冊以隨時瞭解情況
+buttonText_actionplan: 查看行動計畫
 ----
 
 受洛杉磯野火影響的民眾，應該在災後恢復的規劃中擁有發言權。因此，加利福尼亞州透過全新的方式，將其與政府緊密聯繫在一起。
@@ -64,6 +65,9 @@ phaseCompleteText: 已完成階段
 phaseCurrentText: 當前階段
 phasePendingText: 後續階段
 resourcesLinkTitle: 看看我們在工作計畫中發現了什麼
+resourcesTitle: 資源
+resourcesLinkTitle_actionplan: 查看行動計畫
+resourcesLinkTitle_agendasettingfindings: 看看我們在議程設定中所發現的內容
 ----
 
 ### 一般資訊
@@ -131,6 +135,7 @@ title: 報告
 ----
 
 我們將審查和分析審議階段的結果。我們將與政府官員合作，尋找對審議做出回應的行動。我們將在本網站上發佈調查結果和行動報告。
+[查看行動計畫](/lafires-recovery/action-plan)
 
 ----
 id: signup

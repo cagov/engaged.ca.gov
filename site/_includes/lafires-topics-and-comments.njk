@@ -1,0 +1,233 @@
+<script>
+
+let current_topic_index = 1;
+let current_mood_filter = 'all';
+let current_mood_time_ms = new Date().getTime();
+let global_chart_data = null;
+let global_comment_data = null;
+
+function switch_alignment(requested_alignment) {
+    document.querySelectorAll('.topics-alignment-switcher-item').forEach(function(el) {
+    el.classList.remove('selected');
+    let itsFilter = el.dataset.filter;
+    if (itsFilter == requested_alignment) {
+        el.classList.add('selected');
+    }
+    });
+    current_mood_filter = requested_alignment;
+    current_mood_time_ms = new Date().getTime();
+}
+
+function switch_topic(topic_nbr) {
+  current_topic_index = topic_nbr;
+  document.querySelectorAll('.findings-top-options-option-box').forEach(function(el) {
+    el.classList.remove('active');
+    el.setAttribute('aria-selected', 'false');
+    el.setAttribute('tabindex', '-1');
+  });
+  document.querySelectorAll('.findings-top-discussion-container').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  let option_box = document.getElementById('findings-top-options-option-box-' + topic_nbr);
+  option_box.classList.add('active');
+  option_box.setAttribute('aria-selected', 'true');
+  option_box.setAttribute('tabindex', '0');
+  let discussion_container = document.getElementById('findings-top-discussions-topic-' + topic_nbr);
+  discussion_container.classList.add('active');
+  let learn_more_link = document.getElementById('learn-more-link');
+  // learn_more_link.href = "#response-step-" + topic_nbr;
+  if (topicsChart) {
+      topicsChart.select_topic_chart(parseInt(option_box.dataset.chartTopicIndex, 10));
+  }
+  switch_alignment('all');
+  populate_comments(current_topic_index, current_mood_filter);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // load the chart data
+    fetch("/public/data/lafires_voting_data_v3.json", {})
+    .then(response => response.json())
+    .then(data => {
+      // console.log("Data fetched:", data);
+      let chart_data = data;
+      global_chart_data = chart_data;
+      // setup_topic_chart(chart_data); // consensus chart wants to be loaded second, otherwise it doesn't render -- need to figure out why
+      consensusChart = new ConsensusChart(chart_data);
+      consensusProgressBar = new ConsensusProgressBar();
+      topicsChart = new TopicsChart(chart_data);
+      // init_ringchart();
+      ScrollTrigger.refresh();
+    })
+    .catch(error => {
+      console.error("Error fetching chart data:", error);
+    });
+
+    fetch("/public/data/lafires_actionplan_display_comments_v3.json", {})
+    .then(response => response.json())
+    .then(data => {
+      // console.log("Data fetched:", data);
+      global_comment_data = data;
+      populate_comments(current_topic_index, current_mood_filter);
+      // setup_topic_chart(chart_data); // consensus chart wants to be loaded second, otherwise it doesn't render -- need to figure out why
+    })
+    .catch(error => {
+      console.error("Error fetching comment data:", error);
+    });
+
+
+
+
+  // Set up event handler for clicks on .findings-top-options-option-box
+  document.querySelectorAll('.findings-top-options-option-box').forEach(function(box) {
+    box.addEventListener('click', function() {
+      // Remove 'active' from all option boxes
+      let topic_number = parseInt(this.dataset.topicNumber, 10);
+      switch_topic(topic_number);
+    });
+  });
+
+  // Add keyboard navigation support for tabs
+  document.querySelectorAll('.findings-top-options-option-box').forEach(function(box) {
+    box.addEventListener('keydown', function(e) {
+      const tabs = Array.from(document.querySelectorAll('.findings-top-options-option-box'));
+      const currentIndex = tabs.indexOf(this);
+      let targetIndex = currentIndex;
+
+      switch(e.key) {
+        case 'ArrowRight':
+        case 'ArrowDown':
+          e.preventDefault();
+          targetIndex = (currentIndex + 1) % tabs.length;
+          break;
+        case 'ArrowLeft':
+        case 'ArrowUp':
+          e.preventDefault();
+          targetIndex = currentIndex === 0 ? tabs.length - 1 : currentIndex - 1;
+          break;
+        case 'Home':
+          e.preventDefault();
+          targetIndex = 0;
+          break;
+        case 'End':
+          e.preventDefault();
+          targetIndex = tabs.length - 1;
+          break;
+        case 'Enter':
+        case ' ':
+          e.preventDefault();
+          let topic_number = parseInt(this.dataset.topicNumber, 10);
+          switch_topic(topic_number);
+          return;
+        default:
+          return; // Don't prevent default for other keys
+      }
+
+      // Update focus and selection
+      tabs.forEach((tab, index) => {
+        if (index === targetIndex) {
+          tab.focus();
+          tab.setAttribute('tabindex', '0');
+          tab.setAttribute('aria-selected', 'true');
+        } else {
+          tab.setAttribute('tabindex', '-1');
+          tab.setAttribute('aria-selected', 'false');
+        }
+      });
+    });
+  });
+
+  let commentExpander = document.getElementById('findings-deliberation-comments-show-button');
+  commentExpander.addEventListener('click', function() {
+    console.log('Comment expander clicked');
+    let container = document.getElementById('topics-deliberation-comments-container');
+    // populate it...
+    populate_comments(current_topic_index, current_mood_filter);
+    container.classList.remove('collapsed');
+  });
+  document.querySelectorAll('.deliberation-comment-expander-button.close').forEach(function(item) {
+    item.addEventListener('click', function() {
+        console.log('Comment hider clicked');
+        let container = document.getElementById('topics-deliberation-comments-container');
+        container.classList.add('collapsed');
+        // INSERT_YOUR_CODE
+        // Scroll to the #explore-the-comments section when comments are hidden
+        let autoscroll = this.dataset.autoscroll;
+        console.log('Autoscroll:', autoscroll);
+        if (autoscroll == 'true') {
+          console.log('Autoscrolling to explore-the-comments');
+          const exploreComments = document.getElementById('explore-the-comments');
+          if (exploreComments) {
+            exploreComments.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+    });
+  });
+
+  document.querySelectorAll('.topics-alignment-switcher-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      switch_alignment(this.dataset.filter);
+      populate_comments(current_topic_index, current_mood_filter);
+    });
+  });
+
+  document.querySelectorAll('.response-anchor-link').forEach(function(item) {
+    item.addEventListener('click', function() {
+      let topic_nbr = this.dataset.topic;
+      current_topic_index = parseInt(topic_nbr, 10);
+      console.log("Response anchor link clicked", topic_nbr);
+      switch_topic(current_topic_index);
+      window.location.hash = '#findings-top-discussions-topic-' + topic_nbr;
+      const target = document.getElementById('findings-top-discussions-topic-' + topic_nbr);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
+
+function populate_comments(topic_index, filter) {
+
+    console.log("populating comments", topic_index, filter);
+    if (global_comment_data == null) {
+       console.log("  comment data not loaded yet");
+      return;
+    }
+    console.log("# global comments", global_comment_data.length)
+    let cmarkup = '';
+    let comment_data = global_comment_data;
+    // console.log("chart_data", chart_data);
+    let fCommentRecords = comment_data.filter(rec => rec.tidx == topic_index);
+
+
+
+    if (filter == 'support') {
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv >= 6 && rec.pv <= 7);
+    } else if (filter == 'neutral') {
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv >= 3 && rec.pv <= 5);
+    } else if (filter == 'oppose') {
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv >= 1 && rec.pv <= 2);
+    } else if (filter == 'novote') {
+      fCommentRecords = fCommentRecords.filter(rec => rec.pv == null);
+    }
+    console.log("fCommentRecords found:", fCommentRecords.length);
+    let current_indent = 0;
+    let last_comment_id = 0;
+    fCommentRecords.forEach(rec => {
+      let comment = rec.content;
+      if (comment != "") {
+        if (rec.rid == null) {
+          current_indent = 0;
+        } else {
+          current_indent += 1;
+        }
+        cmarkup += `<div class="deliberation-comment-item vote-${rec.v} indent-${current_indent}"><div class="comment-fill indent-${current_indent}">`;
+        cmarkup += '“' + comment + '”';
+        cmarkup += '</div></div>';
+      }
+    });
+    let comment_container = document.getElementById('topics-deliberation-comments-container-content');  
+    comment_container.innerHTML = cmarkup;
+    // ScrollTrigger.refresh();
+}
+
+</script>

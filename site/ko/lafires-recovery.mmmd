@@ -30,6 +30,7 @@ buttonText: 의제 설정에서 찾은 내용을 확인하십시오
 statusPlanningTextV2: 심의가 진행 중입니다
 statusDeliberationsClosedText: 커뮤니티의 심의가 종료되었습니다
 buttonTextV2: 등록하십시오
+buttonText_actionplan: 복구 계획에 대해 자세히 알아보기
 ----
 
 로스앤젤레스 산불로 피해를 입은 사람들은 복구 계획에 관한 발언권이 있습니다. 그렇기에 캘리포니아 주는 새로운 방식으로 정부와 함께하고 있습니다.
@@ -64,6 +65,9 @@ phaseCompleteText: 완료된 단계
 phaseCurrentText: 현재 단계
 phasePendingText: 향후 단계
 resourcesLinkTitle: 의제 설정에서 찾은 내용을 확인하십시오
+resourcesTitle: 자료
+resourcesLinkTitle_actionplan: 복구 계획에 대해 자세히 알아보기
+resourcesLinkTitle_agendasettingfindings: 의제 설정에서 찾은 내용을 확인하십시오
 ----
 
 ### 일반 정보
@@ -132,6 +136,7 @@ title: 보고
 ----
 
 우리는 심의 과정의 결과를 검토하고 분석할 것입니다. 정부 공무원들과 협력하여 심의에 대응하는 조치를 하는지 확인할 것입니다. 그리고 차후 본 웹사이트에 조사 결과 및 조치에 대한 보고서를 게시할 것입니다.
+[보고서 보기](/ko/lafires-recovery/action-plan)
 
 ----
 id: signup

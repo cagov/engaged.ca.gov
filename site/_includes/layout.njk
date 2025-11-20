@@ -185,10 +185,10 @@
               <div class="sub-nav">
                 <ul class="second-level-nav">
                   <li class="unit1">
-                    <a class="second-level-link" tabindex="-1" href="{{ '/lafires-recovery' | localizedPath(locale) }}">{{ 'los-angeles-fires-recovery' | i18n }}</a>
+                    <a class="second-level-link  {% if active_page == 'lafires-recovery' %}active{% endif %}" tabindex="-1" href="{{ '/lafires-recovery' | localizedPath(locale) }}">{{ 'los-angeles-fires-recovery' | i18n }}</a>
                   </li>
                   <li class="unit1">
-                    <a class="second-level-link" tabindex="-1" href="{{ '/stateemployees' | localizedPath(locale) }}">{{ 'state-employees' | i18n }}</a>
+                    <a class="second-level-link {% if active_page == 'stateemployees' %}active{% endif %}" tabindex="-1" href="{{ '/stateemployees' | localizedPath(locale) }}">{{ 'state-employees' | i18n }}</a>
                   </li>
                 </ul>
               </div>
@@ -227,7 +227,7 @@
     </aside>
     <!-- Global Footer -->
     <footer id="footer" class="global-footer">
-      <div class="container">
+      <div class="container footer-line-1">
         <div class="d-flex">
           <a
             href="https://www.ca.gov?utm_campaign=state_template_link&amp;utm_medium=footer&amp;utm_source=external"
@@ -256,6 +256,24 @@
               <a href="/sitemap">{{ 'sitemap' | i18n }}</a>
             </li>
           </ul>
+        </div>
+        <div class="footer-social-media-links">
+          <a href=" https://www.instagram.com/california_odi/" target="_blank" rel="noopener noreferrer">
+            <span class="sr-only">Instagram</span>
+            {% include "images/logo-instagram.svg" %}
+          </a>
+          <a href="https://www.facebook.com/EngagedCalifornia" target="_blank" rel="noopener noreferrer">
+            <span class="sr-only">Facebook</span>
+            {% include "images/logo-facebook.svg" %}
+          </a>
+          <a href="https://bsky.app/profile/engaged-california.bsky.social" target="_blank" rel="noopener noreferrer">
+            <span class="sr-only">BlueSky</span>
+            {% include "images/logo-bluesky.svg" %}
+          </a>
+          <a href="https://www.youtube.com/@California_ODI" target="_blank" rel="noopener noreferrer">
+            <span class="sr-only">YouTube</span>
+            {% include "images/logo-youtube.svg" %}
+          </a>
         </div>
       </div>
       <!-- Copyright Statement -->

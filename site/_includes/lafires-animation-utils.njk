@@ -1,0 +1,37 @@
+<script>
+// UTILS
+function mapv(v, in_min, in_max, out_min, out_max) {
+  return (v-in_min) * (out_max-out_min) / (in_max-in_min) + out_min;
+}
+
+function clamp(v, a, b) {
+  let min = Math.min(a, b);
+  let max = Math.max(a, b);
+  return Math.max(min, Math.min(v, max));
+}
+
+function dot_distance(da, db) {
+  let dx = da.tx - db.tx;
+  let dy = da.ty - db.ty;
+  return Math.sqrt(dx*dx + dy*dy);
+}
+function dot_angle(da, db) {
+  let dx = db.tx - da.tx;
+  let dy = db.ty - da.ty;
+  return Math.atan2(dy, dx);
+}
+
+function ease_in_out(t) {
+  let k = t*t*(3-2*t);
+  return k;
+}
+
+function ease_in(t) {
+  return t*t;
+}
+
+function ease_out(t) {
+  return 1-ease_in(1-t);
+}
+
+</script>
