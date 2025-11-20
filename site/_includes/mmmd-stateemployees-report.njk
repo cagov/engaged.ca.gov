@@ -113,7 +113,7 @@
                     {%- for line in lines -%}
                       <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ lineHeight }}{% endif %}">{{ line }}</tspan>
                     {%- endfor -%}
-                    <tspan x="{{ pos.cx }}" dy="{{ caption_offset }}" font-size="13px">{{ modules[theme_module].nbr_root_comments }} Comments</tspan>
+                    <tspan x="{{ pos.cx }}" dy="{{ caption_offset }}" font-size="13px">{{ modules[theme_module].nbr_root_comments }} comments</tspan>
                   </text>
                 </g>
               {%- endif -%}
