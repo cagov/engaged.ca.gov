@@ -82,6 +82,7 @@ stroke_color: "#65ADE1"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
 nbr_root_comments: 828
+nbr_comments: 931
 see_more_link: See more comments on this theme
 ----
 
@@ -98,6 +99,7 @@ stroke_color: "#C591DA"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
 nbr_root_comments: 751
+nbr_comments: 906
 see_more_link: See more comments on this theme
 ----
 
@@ -118,6 +120,7 @@ stroke_color: "#6C8043"
 light_color: "rgba(108, 128, 67, 0.50)"
 hilite_fill_color: "rgba(108, 128, 67, 0.10)"
 nbr_root_comments: 573
+nbr_comments: 634
 see_more_link: See more comments on this theme
 ----
 
@@ -134,6 +137,7 @@ stroke_color: "#53CAB0"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
 nbr_root_comments: 477
+nbr_comments: 585
 see_more_link: See more comments on this theme
 ----
 
@@ -150,6 +154,7 @@ stroke_color: "#DABD48"
 light_color: "rgba(218, 189, 72, 0.50)"
 hilite_fill_color: "rgba(218, 189, 72, 0.10)"
 nbr_root_comments: 421
+nbr_comments: 477
 see_more_link: See more comments on this theme
 ----
 
@@ -166,6 +171,7 @@ stroke_color: "#A9D4F2"
 light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.10)"
 nbr_root_comments: 414
+nbr_comments: 435
 see_more_link: See more comments on this theme
 ----
 
@@ -182,6 +188,7 @@ stroke_color: "#EE9930"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
 nbr_root_comments: 400
+nbr_comments: 441
 see_more_link: See more comments on this theme
 ----
 
@@ -198,6 +205,7 @@ stroke_color: "#E45D48"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
 nbr_root_comments: 396
+nbr_comments: 451
 see_more_link: See more comments on this theme
 ----
 
@@ -214,6 +222,7 @@ stroke_color: "#6D4884"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
 nbr_root_comments: 352
+nbr_comments: 413
 see_more_link: See more comments on this theme
 ----
 
@@ -230,6 +239,7 @@ stroke_color: "#F2C3C7"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
 nbr_root_comments: 339
+nbr_comments: 402
 see_more_link: See more comments on this theme
 ----
 
