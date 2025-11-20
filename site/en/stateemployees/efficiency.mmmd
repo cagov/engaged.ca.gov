@@ -76,8 +76,7 @@ id: theme_1
 theme_number: 1
 theme_title: Process improvement
 theme_circle_title: "Process<LF>improvement"
-theme_description: State employees identified numerous inefficiencies in workflows, approval processes, and administrative procedures that slow down government operations and reduce effectiveness.
-theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
+theme_quote: "“A primary problem is the number of antiquated and inefficient statewide processes still in place across departments.”"
 stroke_color: "#65ADE1"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
@@ -86,15 +85,14 @@ nbr_comments: 931
 see_more_link: See more comments on this theme
 ----
 
-State employees found many inefficiencies in workflows, approval processes, and admin procedures. These issues slow down government operations and lower effectiveness. 
+The state can work faster by looking at how work flows and finding better ways. Using proven methods and cutting steps saves time. Removing red tape and delays helps the state serve people faster. Using digital tools instead of paper helps staff work more efficiently.
 
 ----
 id: theme_2
 theme_number: 2
-theme_title: Recruitment, hiring, and retention
-theme_circle_title: "Recruitment,<LF>hiring, and<LF>retention"
-theme_description: California state employees identify systemic problems with talent management, training programs, and professional development across multiple departments. Issues include outdated hiring practices, inadequate mentorship programs, misaligned role assignments, and lack of standardized policies.
-theme_quote: "“Some people are promoted without meeting minimum qualifications while others are told they can't promote due to not meeting them despite experience and relevant education.”"
+theme_title: Workforce hiring and talent management
+theme_circle_title: "Workforce hiring,<LF>and<LF>talent management"
+theme_quote: "“We need more pathways to promote so employees don't feel stuck…”"
 stroke_color: "#C591DA"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
@@ -103,10 +101,7 @@ nbr_comments: 906
 see_more_link: See more comments on this theme
 ----
 
-California state employees identified systemic problems with talent management, training programs, and professional development across multiple departments. 
-
-They cited outdated hiring methods and ineffective mentorship programs. People said that mismatched roles and the absence of standard policies hindered growth.
-
+The state needs talented workers to accomplish its mission. Making hiring easier and faster helps get good people in jobs. New workers should get solid training to succeed in their roles. The state should also pay workers fairly, support their growth, and keep quality staff from leaving.
 
 
 ----
@@ -114,8 +109,7 @@ id: theme_3
 theme_number: 3
 theme_title: Public-facing services and resident experience
 theme_circle_title: "Public-facing<LF>services and<LF>resident experience"
-theme_description: State workers shared ideas on improving customer service, streamlining public-facing processes, and enhancing the resident experience.
-theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
+theme_quote: "“There are too many road blocks in communication between the public… and the State offices…so few points of contact for the public to obtain information and services.”"
 stroke_color: "#6C8043"
 light_color: "rgba(108, 128, 67, 0.50)"
 hilite_fill_color: "rgba(108, 128, 67, 0.10)"
@@ -124,15 +118,14 @@ nbr_comments: 634
 see_more_link: See more comments on this theme
 ----
 
-State workers shared ideas to improve customer service. They also suggested ways to streamline public processes and enhance the resident experience.
+The majority of comments said that state services not being fast and easy to use. Secondly, they said State services should be easy and fast for people who need them. The state should ask residents what they need and use that input to design better services. Good online tools and help desks make it simple for people to get help. The state should also think about access to transit and focus on public programs that serve real needs.
 
 ----
 id: theme_4
 theme_number: 4
 theme_title: Communication and knowledge sharing
 theme_circle_title: "Communication<LF>and<LF>knowledge sharing"
-theme_description: Workers identified gaps in information sharing, collaboration tools, and interdepartmental communication that hinder efficiency.
-theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
+theme_quote: "“Silos within and across organizations are contributing to inefficiencies and decreased productivity.”"
 stroke_color: "#53CAB0"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
@@ -141,15 +134,14 @@ nbr_comments: 585
 see_more_link: See more comments on this theme
 ----
 
-Strong leadership is vital. However, employees stressed that communication and knowledge sharing are also important. They suggested that California should address gaps in information sharing, collaboration tools, and interdepartmental communication to enhance operational efficiency.
+Good communication helps all state agencies work as one team. When agencies share facts and talk openly, work gets done better. Clear words and translation help all people understand state work. Breaking down walls between groups helps the whole state work well.
 
 ----
 id: theme_5
 theme_number: 5
 theme_title: Budget and resources
 theme_circle_title: "Budget and<LF>resources"
-theme_description: Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
-theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
+theme_quote: "“Why are we frequently using out of state vendors to do work that we should be paying state employees to do?”"
 stroke_color: "#DABD48"
 light_color: "rgba(218, 189, 72, 0.50)"
 hilite_fill_color: "rgba(218, 189, 72, 0.10)"
@@ -158,15 +150,14 @@ nbr_comments: 477
 see_more_link: See more comments on this theme
 ----
 
-Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
+States can spend money better by looking at how they purchase goods and pay vendors. Tracking spending helps find waste and cut costs. Agencies can team up to share staff and tools. Public input on how money is spent makes people trust state government more.
 
 ----
 id: theme_6
 theme_number: 6
 theme_title: Technology and digital innovation
 theme_circle_title: "Technology and<LF>digital innovation"
-theme_description: Employees highlighted the need for modernization of IT systems, better training on digital tools, and streamlined technology adoption processes.
-theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
+theme_quote: "“...we can move from a system of isolated, inefficient solutions to a collaborative, and cohesive government that is truly focused on better serving the people of California.”"
 stroke_color: "#A9D4F2"
 light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.10)"
@@ -175,15 +166,14 @@ nbr_comments: 435
 see_more_link: See more comments on this theme
 ----
 
-Employees expressed a strong desire to modernize IT systems. They called for better training on digital tools and streamlined technology adoption processes.
+Modern tools help the state work better and serve people well. The state should update old systems and move to cloud storage for better data care. Using AI and new tools can boost how well employees do their jobs. The state should also make sure all digital tools work for people with different abilities.
 
 ----
 id: theme_7
 theme_number: 7
 theme_title: Governance and oversight
 theme_circle_title: "Governance<LF>and oversight"
-theme_description: Participants discussed regulatory processes, compliance requirements, and oversight mechanisms that impact efficiency.
-theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
+theme_quote: "“The strict hierarchy in the state does not allow for innovation. Supervisors preserve the status quo instead of encouraging staff to find streamlined solutions to problems that affect the lower staff levels.”"
 stroke_color: "#EE9930"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
@@ -192,15 +182,14 @@ nbr_comments: 441
 see_more_link: See more comments on this theme
 ----
 
-Participants discussed regulatory processes, compliance requirements, and oversight mechanisms that impact efficiency.
+Strong governance means clear rules for how policies are made and how the state holds itself accountable. The state must make sure laws and rules are followed and that the public can see how money is spent and decisions are made. Leaders should check that policies are actually carried out as planned. The state should also review its structure to make sure it works fairly and efficiently.
 
 ----
 id: theme_8
 theme_number: 8
 theme_title: Organizational structure and culture
 theme_circle_title: "Organizational<LF>structure and<LF>culture"
-theme_description: Participants discussed how organizational hierarchies, communication channels, and workplace culture impact efficiency and employee satisfaction.
-theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
+theme_quote: "“Giving my team more ownership has been a total game-changer! I've watched my employees transform from just doing their jobs to being real innovation champions.”"
 stroke_color: "#E45D48"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
@@ -209,15 +198,14 @@ nbr_comments: 451
 see_more_link: See more comments on this theme
 ----
 
-Participants discussed how hierarchy, communication, and workplace culture impact efficiency and employee satisfaction.
+A healthy work culture helps the state succeed. The state should build trust, respect, and open talk across the workplace. It should also support new ideas and learning instead of fear. The state should push for a diverse and fair workplace where all workers can grow and make real connections with colleagues.
 
 ----
 id: theme_9
 theme_number: 9
 theme_title: Management culture and leadership
 theme_circle_title: "Management<LF>culture and<LF>leadership"
-theme_description: State employees emphasized the importance of effective leadership, management training, and supportive supervision in creating efficient work environments.
-theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
+theme_quote: "“The level of safety for staff to communicate ideas and have them be heard objectively and considered operationally is often low.”"
 stroke_color: "#6D4884"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
@@ -226,15 +214,14 @@ nbr_comments: 413
 see_more_link: See more comments on this theme
 ----
 
-State employees highlighted the need for strong leadership. They want better management training and supportive supervision. These changes can help create efficient work environments.
+Good leaders are key to making state work better. The state should train managers and hold them accountable for doing their job well. Leaders should use styles that help teams work together and make smart choices. When managers get the right support and training, the whole organization works better.
 
 ----
 id: theme_10
 theme_number: 10
 theme_title: Workplace operations
 theme_circle_title: "Workplace<LF>operations"
-theme_description: State employees identified operational challenges related to facilities, remote work policies, and day-to-day workplace logistics.
-theme_quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"
+theme_quote: "“Everyone performs better in an environment that they are comfortable in…”"
 stroke_color: "#F2C3C7"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
@@ -243,7 +230,7 @@ nbr_comments: 402
 see_more_link: See more comments on this theme
 ----
 
-State employees noted issues with facilities, remote work policies, and workplace logistics.
+A good work space helps staff do their best. The state should offer choices like remote work and flexible schedules that work for its people. Managing office space well keeps staff happy and saves money. The state should also create green practices and clear rules for travel so work runs smoothly.
 
 ----
 id: themes_deep_dive

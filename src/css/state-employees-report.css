@@ -1065,6 +1065,7 @@ section#stay-informed {
     @media (max-width: 768px) {
         background-size: 140px;
     }
+    border-bottom: 0.5px solid #5489A3;
 }
 
 section#stay-informed h2 {
