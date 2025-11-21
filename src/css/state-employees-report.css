@@ -510,8 +510,8 @@ section#comment-explorer {
     margin-bottom: 1rem;
 }
 
-.comment-explorer-header p {
-    font-size: 23px;
+.comment-explorer-header p.comment-explorer-intro-text2 {
+    font-size: 20px;
     margin-bottom: 2rem;
 }
 
