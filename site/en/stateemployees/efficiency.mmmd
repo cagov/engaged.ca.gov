@@ -83,6 +83,13 @@ hilite_fill_color: "rgba(101, 173, 225, 0.10)"
 nbr_root_comments: 828
 nbr_comments: 931
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Eliminate mandatory printing requirements for electronic documents
+solution_2: Transition paper processes to digital systems
+solution_3: Reduce middle management layers to streamline decisions
+solution_4: Simplify existing programs rather than create new ones
+solution_5: Standardize contract templates and writing style guides
+solution_6: Create documented procedures and comprehensive resource directory
 ----
 
 State employees found many inefficiencies in workflows, approval processes, and admin procedures. These issues slow down government operations and lower effectiveness. 
@@ -99,6 +106,13 @@ hilite_fill_color: "rgba(197, 145, 218, 0.10)"
 nbr_root_comments: 751
 nbr_comments: 906
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Implement reward systems for creativity and innovation
+solution_2: Implement regular staff recognition through events and acknowledgments
+solution_3: Prioritize upskilling staff over hiring consultants
+solution_4: Provide basic process improvement training to all employees
+solution_5: Provide employee choice in retirement contribution allocation
+solution_6: Implement innovative hiring process with competitive salaries
 ----
 
 California state employees identified systemic problems with talent management, training programs, and professional development across multiple departments. 
@@ -119,6 +133,13 @@ hilite_fill_color: "rgba(108, 128, 67, 0.10)"
 nbr_root_comments: 573
 nbr_comments: 634
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Prioritize recently homeless individuals for permanent reintegration
+solution_2: Enhance clean energy incentives for solar installation
+solution_3: Forward inquiries to correct departments with contact details
+solution_4: Simplify public benefits paperwork and application process
+solution_5: Design programs around resident needs through client input
+solution_6: Establish participatory budgeting programs for the public
 ----
 
 State workers shared ideas to improve customer service. They also suggested ways to streamline public processes and enhance the resident experience.
@@ -135,6 +156,13 @@ hilite_fill_color: "rgba(83, 202, 176, 0.10)"
 nbr_root_comments: 477
 nbr_comments: 585
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Establish cross-departmental data sharing system
+solution_2: Promote collaborative cross-divisional work towards shared goals
+solution_3: Implement mandatory overlap period for knowledge transfer
+solution_4: Create organized internal directories and onboarding hubs
+solution_5: Communicate with front-line employees before procurement decisions
+solution_6: Create inclusive information sharing practices for teams
 ----
 
 Strong leadership is vital. However, employees stressed that communication and knowledge sharing are also important. They suggested that California should address gaps in information sharing, collaboration tools, and interdepartmental communication to enhance operational efficiency.
@@ -151,6 +179,13 @@ hilite_fill_color: "rgba(218, 189, 72, 0.10)"
 nbr_root_comments: 421
 nbr_comments: 477
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Purchase buildings instead of leasing
+solution_2: Reform DGS Internal Service Fund structure
+solution_3: Eliminate or reform prison industries purchasing requirement
+solution_4: Streamline procurement by reducing approval levels
+solution_5: Implement independent third-party audits with public findings
+solution_6: Conduct deep dive analysis of long-running programs
 ----
 
 Employees discussed resource constraints, funding allocation, and how budget limitations affect operational efficiency.
@@ -167,6 +202,13 @@ hilite_fill_color: "rgba(169, 212, 242, 0.10)"
 nbr_root_comments: 414
 nbr_comments: 435
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Invest in modern user-friendly technology tools
+solution_2: Create statewide standardized IT systems for departments
+solution_3: Centralize IT asset inventory with a single dashboard system
+solution_4: Implement statewide master service agreements for software
+solution_5: Utilize online resources instead of forms and mail
+solution_6: Better organize websites to improve usability
 ----
 
 Employees expressed a strong desire to modernize IT systems. They called for better training on digital tools and streamlined technology adoption processes.
@@ -183,6 +225,13 @@ hilite_fill_color: "rgba(238, 153, 48, 0.10)"
 nbr_root_comments: 400
 nbr_comments: 441
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Empower teams with creative problem-solving ownership
+solution_2: Build culture of accountability and employee support
+solution_3: Consolidate government agencies with similar missions
+solution_4: Reduce middle management layers to streamline decisions
+solution_5: Centralize standardized statewide policy development
+solution_6: Conduct agency-wide cross-check of all policies and procedures
 ----
 
 Participants discussed regulatory processes, compliance requirements, and oversight mechanisms that impact efficiency.
@@ -199,6 +248,13 @@ hilite_fill_color: "rgba(228, 93, 72, 0.10)"
 nbr_root_comments: 396
 nbr_comments: 451
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Create workplace culture initiatives for employee retention
+solution_2: Create atmosphere encouraging employee ideas and improvements
+solution_3: Create safe communication channels for staff ideas
+solution_4: Establish pathways for staff input in decisions
+solution_5: Consolidate agencies performing duplicate functions
+solution_6: Cancel private leases and consolidate departments into state buildings
 ----
 
 Participants discussed how hierarchy, communication, and workplace culture impact efficiency and employee satisfaction.
@@ -215,6 +271,13 @@ hilite_fill_color: "rgba(109, 72, 132, 0.10)"
 nbr_root_comments: 352
 nbr_comments: 413
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Implement leadership development focused on emotional intelligence
+solution_2: Require management to model commitment to efficiency
+solution_3: Implement leadership assessment and mandatory training for appointees
+solution_4: Implement regular manager feedback sessions for process improvement
+solution_5: Establish comprehensive leadership development program
+solution_6: Establish formal process for reporting leadership conduct concerns
 ----
 
 State employees highlighted the need for strong leadership. They want better management training and supportive supervision. These changes can help create efficient work environments.
@@ -232,6 +295,13 @@ hilite_fill_color: "rgba(242, 195, 199, 0.10)"
 nbr_root_comments: 339
 nbr_comments: 402
 see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Make backend roles telework first to reduce costs
+solution_2: Establish shared office spaces and virtual teams
+solution_3: Use goats to clear undergrowth for wildfire prevention
+solution_4: Reduce car registration fees for electric vehicles
+solution_5: Implement shared parking reservation system for employees
+solution_6: Restore monthly voucher system for transportation expenses
 ----
 
 State employees noted issues with facilities, remote work policies, and workplace logistics.
@@ -249,37 +319,27 @@ intro_text: Here's a selection of employee ideas on how to improve the efficienc
 
 ----
 id: solution_1
-title: Ensure all managers attend a 1-year training program
-description: "We're on our way, though we have more work to do to make this statewide. One staff shared this example:"
-quote: I have created employee instructions manuals for roles I have been in to pass down to those who would come into the role.
+title: Create documented procedures and comprehensive resource directory
 ----
 
 ----
 id: solution_2
 title: Create succession plans for all roles
-description: "We're on our way, though we have more work to do to make this statewide. One staff shared this example:"
-quote: I have created employee instructions manuals for roles I have been in to pass down to those who would come into the role.
 ----
 
 ----
 id: solution_3
 title: Base salary increases on performance reviews
-description: "We're on our way, though we have more work to do to make this statewide. One staff shared this example:"
-quote: I have created employee instructions manuals for roles I have been in to pass down to those who would come into the role.
 ----
 
 ----
 id: solution_4
 title: Pair newer staff with experienced mentors
-description: "We're on our way, though we have more work to do to make this statewide. One staff shared this example:"
-quote: I have created employee instructions manuals for roles I have been in to pass down to those who would come into the role.
 ----
 
 ----
 id: solution_5
 title: Better enable pathways for upward mobility
-description: "We're on our way, though we have more work to do to make this statewide. One staff shared this example:"
-quote: I have created employee instructions manuals for roles I have been in to pass down to those who would come into the role.
 ----
 
 ----

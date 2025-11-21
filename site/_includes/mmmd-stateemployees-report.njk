@@ -169,55 +169,36 @@
               {% endif %}
           </div>
         </div>
+        {% set theme_module = "theme_" + i %}
+        {% set nbr_solutions = modules[theme_module].nbr_solutions | default(0) %}
+        {% if nbr_solutions > 0 %}
+          <div id="suggested-solutions-theme-{{ i }}" class="suggested-solutions-theme container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="solutions-header">
+                  <h2>{{ modules.suggested_solutions.title }}</h2>
+                  <p>{{ modules.suggested_solutions.intro_text }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="row solution-cards">
+              {% for j in range(1, nbr_solutions + 1) %}
+                {% set solution_key = "solution_" + j %}
+                {% if modules[theme_module][solution_key] %}
+                  <div class="col-lg-4">
+                    <div class="solution-card">
+                      <div class="solution-title">
+                        <h4>{{ modules[theme_module][solution_key] }}</h4>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
       </div>
     {% endfor %}
-  </div>
-  <div id="suggested-solutions" class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="solutions-header">
-          <h2>{{ modules.suggested_solutions.title }}</h2>
-          <p>{{ modules.suggested_solutions.intro_text }}</p>
-        </div>
-      </div>
-    </div>
-    <div class="row solution-cards">
-      <div class="col-lg-4">
-        <div class="solution-card">
-          <div class="solution-title">
-            <h4>{{ modules.solution_1.title }}</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="solution-card">
-          <div class="solution-title">
-            <h4>{{ modules.solution_2.title }}</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="solution-card">
-          <div class="solution-title">
-            <h4>{{ modules.solution_3.title }}</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="solution-card">
-          <div class="solution-title">
-            <h4>{{ modules.solution_4.title }}</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="solution-card">
-          <div class="solution-title">
-            <h4>{{ modules.solution_5.title }}</h4>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 

@@ -190,6 +190,7 @@ section#themes-deep-dive {
 section#themes-deep-dive .container {
     background: white;
     border-radius: 8px;
+    padding-bottom: 0;
 }
 
 /* Theme Navigation Widget */
@@ -373,6 +374,12 @@ section#suggested-solutions {
 }
 
 div#suggested-solutions {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.suggested-solutions-theme {
+    padding: 3rem 0;
     padding-left: 1rem;
     padding-right: 1rem;
 }
