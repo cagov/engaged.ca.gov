@@ -1,3 +1,5 @@
+// v1.0.3 jbum - fixing some redirect issues which were stripping parameters
+
 function handler(event) {
   const request = event.request; // use uri to see incoming url
   const uri_lc = request.uri.toLowerCase();
@@ -14,15 +16,21 @@ function handler(event) {
      uri_lc.endsWith('/stateemployee')   || uri_lc.endsWith('/stateemployee/') ||   
      uri_lc.endsWith('/statemployee')    || uri_lc.endsWith('/statemployee/') ||   
      uri_lc.endsWith('/state-employees') || uri_lc.endsWith('/state-employees/')) {
-   redirect_location = 'https://engaged.ca.gov/stateemployees';
+   redirect_location = 'https://engaged.ca.gov/stateemployees/';
   } 
   // case correction
   else if (
      (uri_lc.endsWith('/stateemployees')   || uri_lc.endsWith('/stateemployees/')) && 
      !(request.uri.endsWith('/stateemployees')   || request.uri.endsWith('/stateemployees/')))
   {
-    redirect_location = 'https://engaged.ca.gov/stateemployees';
-  } 
+    redirect_location = 'https://engaged.ca.gov/stateemployees/';
+  }
+  // add slash
+  else if (
+     uri_lc.endsWith('/stateemployees')  )
+  {
+    redirect_location = 'https://engaged.ca.gov/stateemployees/';
+  }
   if (redirect_location) {
     // Convert querystring object to proper query string format
     let queryString_str = '';
