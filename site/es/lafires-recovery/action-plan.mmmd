@@ -1,14 +1,14 @@
 ---
-title: LA se alinea en los planes de recuperación
-description: Engaged California es una plataforma en línea que facilita a los californianos tener voz en el gobierno. El primer tema de Engaged California es la recuperación de los incendios forestales de Los Ángeles. Esta página muestra los principales problemas para reconstruir LA.
+title: Los Ángeles se pone de acuerdo en los planes de recuperación
+description: Engaged California es una plataforma en línea que facilita que los californianos tengan voz en el gobierno. El primer tema de Engaged California es la recuperación de los incendios forestales de Los Ángeles.  Esta página muestra los principales problemas para la reconstrucción de Los Ángeles.
 layout: mmmd-lafires-action-plan
 parentid: lafires-recovery
 keywords:
-  - Los Angeles
-  - fires
-  - recovery
+  - Los Ángeles
+  - incendios
+  - recuperación
 tags:
-  - pages
+  - páginas
 ---
 
 ----
@@ -22,36 +22,36 @@ example_quoted_text: "this is quoted text:"
 2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
 
 3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
-   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+  This is especially important for Armenian, where colons are added as sentence-ending punctuation.
 
 4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.  
-   When text contains words inside single asterisks, that text is intended to be printed in italics. 
-   In either case, preserve the asterisks.
+  When text contains words inside single asterisks, that text is intended to be printed in italics. 
+  In either case, preserve the asterisks.
 
 5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
-   This is typically used for templates that insert numbers into a sentence.
+  This is typically used for templates that insert numbers into a sentence.
 
 ----
 id: findings_overview
-buttonText: Saltar al plan de acción
+buttonText: Ir directo al plan de acción
 ----
 
-# LA se alinea en los planes de recuperación
+# Los Ángeles se pone de acuerdo en los planes de recuperación
 
-En un proceso de participación comunitaria sin precedentes, más de 3,000 miembros de la comunidad fueron invitados a asambleas municipales para la era digital. Los participantes contribuyeron a través de 2 fases para producir un plan de acción para recuperarse de los devastadores incendios forestales de Los Ángeles en enero de 2025.
+En un proceso de participación comunitaria sin precedentes, más de 3,000 miembros fueron invitados a reuniones públicas para la era digital. Los participantes contribuyeron a lo largo de 2 fases para elaborar un plan de acción para recuperarse de los devastadores incendios forestales de Los Ángeles en enero de 2025. 
 
-El plan de acción, desarrollado a través de sesiones de deliberación en línea durante un período de 6 meses, refleja las prioridades de aquellos que fueron afectados por los incendios de Eaton y Palisades. Las prioridades que establecieron – enfocándose en el apoyo inmediato a la comunidad y las mejoras de infraestructura a largo plazo – guiarán a los funcionarios estatales y locales hacia la recuperación completa.
+El plan de acción, desarrollado mediante sesiones de deliberación en línea durante un periodo de 6 meses, refleja las prioridades de quienes se vieron afectados por los incendios de Eaton y Palisades. Las prioridades que establezcan —centradas en el apoyo inmediato de la comunidad y mejoras a largo plazo en infraestructuras— guiarán a los responsables estatales y locales hacia una recuperación total.
 
 
 ----
 id: findings_narrative_step_1
-title: Establecimiento de agenda
-button_text: Leer sobre la fase de establecimiento de agenda
+title: Establecimiento de la agenda
+button_text: Lea sobre la fase de establecimiento de la agenda
 ----
 
 ## Los residentes compartieron sus preocupaciones e ideas
 
-Después de los severos incendios forestales en Los Ángeles, cientos de miembros de la comunidad se reunieron en línea para discutir las prioridades de recuperación.
+Tras los graves incendios forestales en Los Ángeles, cientos de miembros de la comunidad se reunieron en línea para debatir las prioridades de recuperación.
 
 ----
 id: findings_narrative_step_2
@@ -60,59 +60,59 @@ button_text: Conoce a nuestros socios
 nbr_phrases: 6
 translator_note: USE slash symbol for line breaks, keep these phrases to two lines!
 phrase_1: Servicios públicos
-phrase_2: Comunidad/Apoyo
-phrase_3: Financiero/apoyo
-phrase_4: Emergencia/preparación
-phrase_5: Resistencia al fuego
-phrase_6: Construcción/permisos
+phrase_2: Apoyo/comunitario
+phrase_3: Apoyo/financiero
+phrase_4: Preparación/de emergencias
+phrase_5: Protección/contra incendios/
+phrase_6: Permisos/para construir
 ----
 
 
 
 ## Las ideas individuales se convirtieron en datos compartidos
 
-Un grupo de líderes de políticas, socorro en desastres y comunidad utilizó su experiencia e IA generativa para convertir los 1,289 comentarios presentados en el establecimiento de agenda en 19 opciones de política accionables.
+Un grupo de líderes políticos, de ayuda en desastres y comunitarios utilizaron su experiencia e inteligencia artificial generativa para convertir los 1.289 comentarios presentados en la definición de la agenda en 19 opciones políticas accionables.1
 
 ----
 id: findings_narrative_step_3
 title: Deliberación
 ----
 
-## La comunidad votó sobre las 19 opciones
+## La comunidad votó las 19 opciones
 
-Los participantes nuevos y recurrentes clasificaron estas opciones, nuevamente utilizando una plataforma en línea donde podían discutir y colaborar.
+Los participantes, tanto nuevos como recurrentes, clasificaron estas opciones, utilizando nuevamente una plataforma en línea donde podían debatir y colaborar.
 
 ----
 id: consensus_chart_topics
 nbr_topics: 19
 topic_1: Mayor densidad de vivienda y permisos acelerados
 topic_2: Vivienda temporal
-topic_3: Priorizar familias
-topic_4: Jardines de demostración resistentes al fuego y amigables con el agua
-topic_5: Estándares obligatorios de protección contra brasas en el hogar
-topic_6: Permisos acelerados para ADU y dúplex
-topic_7: Sistemas obligatorios de aguas grises para nuevos edificios
-topic_8: Programa integral de educación para propietarios
+topic_3: Prioridad a las familias
+topic_4: Jardines demostrativos resistentes al fuego y respetuosos con el agua
+topic_5: Normas obligatorias de protección contra brasas en el hogar
+topic_6: Permisos acelerados de unidades de viviendas accesorias y dúplex
+topic_7: Sistemas obligatorios de aguas grises para edificios nuevos
+topic_8: Programa de educación integral para propietarios
 topic_9: Centros de comunicación de emergencia en comunidades
 topic_10: Incentivos fiscales para espacios defendibles
-topic_11: Programas ampliados de capacitación en construcción
-topic_12: Diseños de construcción resistentes al fuego preaprobados
+topic_11: Ampliación de programas de formación en construcción
+topic_12: Diseños preaprobados de edificios resistentes al fuego
 topic_13: Infraestructura mejorada de detección de incendios
-topic_14: Proporcionar asistencia financiera a residentes de largo plazo
+topic_14: Proporcionar ayuda financiera a residentes de largo plazo
 topic_15: Acelerar permisos e inspecciones
-topic_16: Ayuda para reconstrucción
+topic_16: Ayuda para la reconstrucción
 topic_17: Notificaciones y alertas de emergencia más fuertes
 topic_18: Agua para combatir incendios
-topic_19: Enterrar líneas eléctricas y mejorar la seguridad del equipo
+topic_19: Poner líneas eléctricas bajo tierra y mejorar la seguridad de los equipos
 ----
 
 
 ----
 id: findings_consensus_watch_intro
-title_h2: Alineación comunitaria
-caveat: "El apoyo es la puntuación promedio de los votos, donde la puntuación de apoyar fuertemente una opción es 100, y la puntuación de oponerse fuertemente a una opción es 0."
+title_h2: Advertencia de alineación
+caveat: "El apoyo es la puntuación media de los votos, donde la puntuación de apoyar firmemente una opción es 100, y la puntuación de oponerse firmemente a una opción es 0."  
 ----
-Cada punto representa un voto. A medida que cambia la visualización, puedes rastrear el nivel promedio de apoyo para cada tema. Los temas están organizados desde el menor apoyo comunitario (izquierda) hasta el mayor apoyo comunitario (derecha).
+Cada punto representa un voto. A medida que cambia la visualización, puedes seguir el nivel medio de soporte para cada número. Los temas están organizados desde el menor apoyo comunitario (izquierda) hasta el máximo apoyo comunitario (derecha).
 
 ----
 id: findings_consensus_watch_explore
@@ -120,8 +120,8 @@ topic_number_template: "Tema <NUM> de <TOTAL>"
 translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to insert numbers into the phrase
 translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
 label_1: Mayor densidad de vivienda y permisos acelerados
-percent_default: 92% de los participantes apoyaron este tema
-percent_template: <PERCENT>% apoyo promedio
+percent_default: 92% de los participantes apoyó este tema
+percent_template: Apoyo promedio de <PERCENT>% 
 translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
 ----
 
@@ -129,14 +129,14 @@ translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the 
 ----
 id: findings_consensus_sentiment_chart
 nbr_labels: 3
-label_1: Fuertemente en contra
-label_2: Neutral
-label_3: Fuertemente a favor
+label_1: Firmemente en contra
+label_2: Imparcial
+label_3: Firme apoyo
 ----
 
 ----
 id: findings_narrative_top_options_intro
-title: Los residentes participaron para encontrar acuerdo en las 5 mejores soluciones
+title: Los residentes opinaron para encontrar acuerdo sobre las 5 soluciones principales
 nbr_values: 2
 label_1: Comentarios y respuestas
 label_2: Votos
@@ -145,18 +145,18 @@ value_2: 3,977
 nbr_options: 5
 ----
 
-La participación fue notable. Los vecinos pudieron compartir sus pensamientos y responderse unos a otros. Los 1,504 comentarios de participantes recibidos no desaparecieron en una caja negra. La gente habló sobre las soluciones, trabajando efectivamente juntos para definir prioridades.
+El enfrentamiento fue notable. Los vecinos pudieron compartir sus pensamientos y se respondieron entre ellos. Los 1,504 comentarios de los participantes recibidos no desaparecieron en una caja negra. La gente habló de las soluciones, trabajando juntos para definir prioridades.
 
 ----
 id: findings_narrative_top_options
 results_header: Plan de acción
-results_description: "El plan, que incluye 5 áreas de enfoque para la recuperación – revela una comunidad unida alrededor de construir infraestructura resistente al fuego para el futuro y proporcionar apoyo a la comunidad ahora:"
+results_description: "El plan, que incluye 5 áreas de enfoque para la recuperación, muestra una comunidad unida en torno a la construcción de infraestructuras resistentes al fuego para el futuro y en proporcionar apoyo a la comunidad ahora:"
 nbr_options: 5
-option_label_1: Enterrar líneas eléctricas y medidas de seguridad del equipo
-option_label_2: Mejorar sistemas de agua para combatir incendios
-option_label_3: Fortalecer redes de comunicación de emergencia
+option_label_1: Poner líneas eléctricas bajo tierra y medidas de seguridad de equipos
+option_label_2: Mejorar los sistemas de agua para combatir incendios 
+option_label_3: Fortalecer las redes de comunicación de emergencia
 option_label_4: Ayudar a las personas a encontrar programas de apoyo financiero
-option_label_5: Dedicar equipos para apoyar permisos
+option_label_5: Dedicar equipos para apoyar la obtención de permisos
 option_icon_1: circle-blue-1.png
 option_icon_2: circle-blue-2.png
 option_icon_3: circle-blue-3.png
@@ -172,8 +172,8 @@ option_icon_5: circle-blue-5.png
 id: findings_topic_chart
 nbr_labels: 3
 label_1: Fuertemente en contra
-label_2: Neutral
-label_3: Fuertemente a favor
+label_2: Imparcial
+label_3: Firme apoyo
 ----
 
 
@@ -188,22 +188,22 @@ nbr_tally_items: 2
 label_1: Apoyo promedio
 label_2: Comentarios
 explore_the_comments: Explorar los comentarios
-filter_the_comments: "Los comentarios se pueden filtrar por cómo las personas votaron en un tema: apoyo, neutral, oposición, o sin voto. Nota: Los comentarios en sí mismos pueden no reflejar cómo una persona votó en un tema. En algunos casos, las personas comentaron en un tema sin emitir un voto."
+filter_the_comments: "Los comentarios pueden filtrarse según cómo votaron las personas sobre un tema: Apoya, imparcial, en contra o no votó. Nota: Los comentarios en sí pueden no reflejar cómo votó una persona sobre un tema. En algunos casos, las personas comentaron sobre un tema sin emitir voto."
 label_viewpoint: "Punto de vista:"
 label_all_comments: "Todos los comentarios"
 label_oppose: "En contra"
-label_neutral: "Neutral"
+label_neutral: "Imparcial"
 label_support: "Apoyo"
-label_novote: "Sin voto"
-filter_comments_by_vote: Filtrar comentarios por sus votos correspondientes. No traducimos comentarios; se muestran en su idioma original. 
-----
+label_novote: "No votó"
+filter_comments_by_vote: "Filtra los comentarios por sus votos correspondientes. No traducimos comentarios; se muestran en su idioma original."
+ ----
 
-Cada voto fue contado y ponderado para lograr consenso en las 5 mejores soluciones que California debería explorar. Entre las zonas de incendio, los votos y comentarios se vieron un poco diferentes, usa el interruptor para ver cómo las opiniones de Palisades difirieron de las de la zona de incendio de Eaton.
+Cada voto fue contado y ponderado para lograr consenso sobre las 5 principales soluciones que California debería explorar. Entre las zonas de incendio, los votos y comentarios se veían un poco diferentes. Use el interruptor para ver cómo diferían las opiniones de los Palisades de las de la zona de incendio de Eaton.
 
 ----
 id: discussion_1
-title: Enterrar líneas eléctricas y medidas de seguridad del equipo
-topic_description: Enterrar líneas eléctricas cuando sea posible y desplegar estrategias de mitigación para prevenir ignición por fallas de equipo. Este enfoque integral abordaría una de las principales causas de ignición de incendios forestales en California.
+title: Enterrar líneas eléctricas y medidas de seguridad de equipos
+topic_description: "Enterrar líneas eléctricas siempre que sea posible y desplegar estrategias de mitigación para evitar la ignición por fallos de equipo. Este enfoque integral abordaría una de las principales causas de la ignición de incendios forestales en California."
 nbr_comments: 3
 value_1: 92%
 value_2: 90
@@ -212,8 +212,8 @@ chart_topic_index: 19
 
 ----
 id: discussion_2
-title: Mejorar sistemas de agua para combatir incendios
-topic_description: Actualizar sistemas de agua para cumplir con los requisitos modernos de flujo de incendio y asegurar que haya suficientes hidrantes en todas las áreas. Esto mejoraría el suministro de agua y la presión necesaria para operaciones efectivas de combate de incendios.
+title: Mejorar los sistemas de agua para combatir incendios
+topic_description: "Actualizar los sistemas de agua para cumplir con los requisitos modernos de caudal de incendios y asegurar que haya suficientes hidrantes en todas las áreas. Esto mejoraría el suministro de agua y la presión necesarios para operaciones efectivas para combatir incendios."
 value_1: 87%
 value_2: 74
 chart_topic_index: 18
@@ -221,8 +221,8 @@ chart_topic_index: 18
 
 ----
 id: discussion_3
-title: Fortalecer redes de comunicación de emergencia
-topic_description: Promover infraestructura de comunicación que permita a los primeros respondedores y residentes mantenerse conectados incluso cuando las torres celulares o líneas de fibra fallen, como redes de internet en malla que pueden operar independientemente durante desastres.
+title: Fortalecer las redes de comunicación de emergencia
+topic_description: "Promover infraestructuras de comunicación que permitan a los primeros intervinientes y residentes mantenerse conectados incluso cuando fallan las antenas de telefonía o las líneas de fibra, como redes de internet mallado que puedan operar de forma independiente durante desastres."
 value_1: 86%
 value_2: 59
 chart_topic_index: 17
@@ -230,8 +230,8 @@ chart_topic_index: 17
 
 ----
 id: discussion_4
-title: Ayudar a las personas a encontrar programas de apoyo financiero
-topic_description: Crear un catálogo integral de programas de apoyo financiero y organizaciones disponibles para ayudar con los esfuerzos de reconstrucción. Este directorio conectaría a los residentes afectados por incendios con subvenciones, préstamos y programas de ayuda, mientras también se asocia con organizaciones financieras confiables dispuestas a asistir con fondos de recuperación.
+title: Ayuda a las personas a encontrar programas de apoyo financiero
+topic_description: "Crear un catálogo completo de programas y organizaciones de apoyo financiero disponibles para ayudar en los esfuerzos de reconstrucción. Este directorio conectaría a los residentes afectados por incendios con subvenciones, préstamos y programas de ayuda, además de colaborar con organizaciones financieras de confianza dispuestas a ayudar con la financiación de la recuperación."
 value_1: 82%
 value_2: 59
 chart_topic_index: 16
@@ -239,8 +239,8 @@ chart_topic_index: 16
 
 ----
 id: discussion_5
-title: Dedicar equipos para apoyar permisos
-topic_description: Establecer equipos de personal dedicado en centros de triaje para guiar rápidamente a las comunidades afectadas por incendios a través de los procesos de permisos. Estos equipos especializados proporcionarían asistencia personalizada a los residentes navegando los complejos requisitos de reconstrucción.
+title: Dedicar equipos para apoyar la obtención de permisos
+topic_description: "Establecer equipos de personal dedicado en los centros de triaje para guiar rápidamente a las comunidades afectadas por incendios a través de los procesos de permisos. Estos equipos especializados proporcionarían asistencia personalizada a los residentes que afrontan requisitos complejos de reconstrucción."
 value_1: 82%
 value_2: 73
 chart_topic_index: 15
@@ -250,16 +250,15 @@ chart_topic_index: 15
 ----
 id: topic_comments_scroller 
 label: Comentarios sobre este tema
-desc: Desplázate para ver los comentarios sobre este tema (mostrados en su idioma original)
+desc: Desplácese para ver los comentarios sobre este tema (mostrados en su idioma original)
 ----
 
 ----
 id: topic_data_vis
-title: Explorar los votos
-learn_button_label: Aprende sobre las acciones que se están tomando
-desc: Cada punto representa el voto de un individuo. El número total de puntos corresponde al número total de votos emitidos en un tema particular.
-download_text: Descargar un CSV de comentarios de participantes
-----
+title: Explore los votos
+learn_button_label: Infórmese sobre las acciones que se están realizando
+desc: "Cada punto representa el voto de una persona. El número total de puntos corresponde al número total de votos emitidos sobre un tema concreto."
+download_text: Descarga un archivo CSV con los comentarios de los participantes----
 
 ----
 id: conversation_groups
@@ -267,46 +266,47 @@ nbr_groups: 7
 group_label_1: Fuertemente en contra
 group_label_2: En contra
 group_label_3: Algo en contra
-group_label_4: Neutral
+group_label_4: Imparcial
 group_label_5: Algo a favor
 group_label_6: A favor
-group_label_7: Fuertemente a favor
+group_label_7: Firmemente a favor
 ----
 
 ----
 id: findings_alignment_section
 ----
-## Alineación notable
+## Alineación notable 
 
-Las personas de diferentes zonas de incendio mostraron una consistencia sorprendente. Los residentes afectados por Eaton y Palisades clasificaron las principales necesidades de la misma manera: enterrar líneas eléctricas bajo tierra, mejorar los sistemas locales de agua para combatir incendios, y asegurar alertas oportunas cuando hay una emergencia.
+Personas de diferentes zonas de incendio mostraron una sorprendente constancia. Los residentes afectados por Eaton y Palisades calificaron las principales necesidades de la misma manera: enterrar las líneas eléctricas bajo tierra, mejorar los sistemas locales de agua para la extinción de incendios y garantizar alertas oportunas en caso de emergencia.
 
-Esto muestra que independientemente de la separación geográfica, hay un acuerdo comunitario amplio sobre las prioridades esenciales de recuperación.
+
+Esto demuestra que, independientemente de la separación geográfica, existe un acuerdo comunitario sobre las prioridades esenciales de recuperación.
 
 **Este grupo de prioridades cuenta una historia clara.**
 
-Los residentes quieren tanto apoyo inmediato para la recuperación como inversiones a largo plazo en infraestructura resistente al fuego. También necesitan que los servicios de apoyo se simplifiquen para servir las necesidades urgentes de reconstrucción de la comunidad.
+Los residentes quieren tanto apoyo inmediato para la recuperación como inversiones a largo plazo en infraestructuras resistentes al fuego. También necesitan que los servicios de apoyo se agilicen para atender las urgentes necesidades de reconstrucción de la comunidad.
 
-Esta participación nos permitió convertir experiencias personales en orientación política real.
+Esta colaboración nos permitió convertir experiencias personales en una verdadera orientación política.
 
 ----
 id: findings_alignment_section_sidebar
 ----
 
-**Construyendo sobre apoyo compartido**
+**Construyendo sobre el apoyo compartido**
 
-El proceso no solo recopiló opiniones; construyó confianza e impulso mientras avanzamos juntos.
+El proceso no solo recogía opiniones, sino que también generó confianza y impulso a medida que avanzamos juntos.
 
-Mientras que los participantes llegaron con sentimientos mixtos—solo el 24% comenzó optimista mientras que el 48% se sintió pesimista—la perspectiva cambió a través del proceso.
+Aunque los participantes llegaron con sentimientos encontrados—solo el 24% empezó con optimismo y el 48% pesimista—la perspectiva cambió a lo largo del proceso. 
 
-Más de un cuarto de los participantes (27%) emergieron más optimistas sobre la recuperación de los incendios de LA.
+Más de una cuarta parte de los participantes (27%) salieron más optimistas respecto a la recuperación de los incendios en Los Ángeles.
 
 ----
 id: signup_plea
-button_text: Registrarse
+button_text: Apúntese
 ----
-## Regístrate para mantenerte comprometido en trabajo importante
+## Apúntese para seguir ocupado con un trabajo importante
 
-Danos tu correo electrónico para aprender sobre oportunidades próximas. 
+Envíenos su correo electrónico para conocer las próximas oportunidades. 
 
 ----
 id: response_intro
@@ -314,66 +314,67 @@ id: response_intro
 
 ## Cómo estamos respondiendo a las necesidades de la comunidad
 
-Los residentes se expresaron durante tanto la fase de establecimiento de agenda como nuestras deliberaciones posteriores. Los **socios estatales**, **del condado**, **de la ciudad**, **de servicios públicos** y **federales** han respondido con acciones tangibles. Y más están en camino.
+Los residentes se expresaron tanto durante la fase de establecimiento de la agenda como en nuestras posteriores deliberaciones. **Estado**, **condado**, **ciudad**, **servicios públicos** y **socios federales** han respondido con acciones tangibles. Y más están en camino.
 
 ----
 id: response_steps
 action_now: Acción ahora
 coming_soon: Próximamente
-did_you_know: ¿Sabías?
+did_you_know: "¿Lo sabía?"
 nbr_steps: 5
-anchor_link_text: "Llévame a los votos y comentarios de las personas sobre este tema"
+anchor_link_text: "Llévame a las votaciones y comentarios de la gente sobre este tema"
 ----
+
 
 
 ----
 id: response_step_1
-title: Enterrar líneas eléctricas y mejorar la seguridad del equipo
+title: Poner líneas eléctricas bajo tierra y mejorar la seguridad del equipo
 icon: construction-orange.svg
 ----
 
 ----
 id: response_step_1_action_now
 ----
-El **condado** y el **estado** están trabajando con empresas de energía y telecomunicaciones para planificar poner más servicios públicos bajo tierra. El **Gobernador Gavin Newsom** firmó una orden ejecutiva en marzo de 2025 para acelerar este trabajo.
+El **condado** y el **estado** están trabajando con las compañías eléctricas y de telecomunicaciones para planear la colocación de más servicios públicos bajo tierra. **El gobernador Gavin Newsom** firmó una orden ejecutiva en marzo de 2025 para acelerar este trabajo.  
 
-Además, la **Alcaldesa de Los Ángeles Karen Bass** emitió una orden ejecutiva para ayudar a los residentes de Palisades a acelerar la reconstrucción con materiales resistentes al fuego e infraestructura resiliente al clima. Esto incluye endurecer los servicios públicos para la confiabilidad de energía durante el clima severo.
+Además, **la alcaldesa de Los Ángeles, Karen Bass**, emitió una orden ejecutiva para ayudar a los residentes de Palisades a acelerar la reconstrucción con materiales resistentes al fuego e infraestructuras resilientes al clima. Esto incluye reforzar las compañías eléctricas para garantizar la fiabilidad energética durante condiciones meteorológicas extremas.
 
 ----
 id: response_step_1_coming_soon
 ----
-Los servicios públicos están trabajando estrechamente con líderes locales del **Condado de Los Ángeles** y la **ciudad**. La construcción ya está en marcha en Malibu, Altadena y Pacific Palisades. Se espera que continúe por varios años más. El **estado** y el **condado** están pidiendo un enfoque coordinado para enterrar líneas de energía y telecomunicaciones que ahorrará dinero, reducirá el tiempo y minimizará las interrupciones de múltiples equipos de trabajo.
+Las compañías eléctricas están trabajando estrechamente con los líderes locales del **condado de Los Ángeles** y de la **ciudad**. La construcción ya está en marcha en Malibu, Altadena y Pacific Palisades. Se espera que continúe durante varios años más. El **estado** y el **condado** están pidiendo un enfoque coordinado para enterrar las líneas eléctricas y de telecomunicaciones que ahorre dinero, reduzca el tiempo y minimice las interrupciones causadas por múltiples equipos de trabajo.
 
-Más allá del enterramiento, estrategias adicionales son importantes para mitigar los peligros de incendio, como la gestión de vegetación y la reconstrucción resiliente. Los propietarios y profesionales de diseño/construcción pueden consultar la [Guía de Recursos de Reconstrucción Resiliente](https://recovery.lacounty.gov/resilient-rebuilding/) del **condado** para obtener información y recursos para planificar, diseñar y construir un edificio de alto rendimiento más resiliente a los riesgos de incendio.
+Más allá de enterrar las líneas, también son importantes estrategias adicionales para mitigar los riesgos de incendio, como la gestión de la vegetación y la reconstrucción resiliente. Los propietarios y profesionales del diseño/construcción pueden consultar la [Guía de Recursos de Reconstrucción Resiliente](https://recovery.lacounty.gov/resilient-rebuilding/) del **condado** para obtener información y recursos que permitan planificar, diseñar y construir un edificio de alto rendimiento más resistente a riesgos de incendio.
 
 ----
 id: response_sidebar_1_unused
 ----
-Cuando se reconstruyó la **Ciudad de Paradise**, trabajó con **PG&E**, **proveedores de telecomunicaciones** y **reguladores estatales** para poner las líneas eléctricas en riesgo bajo tierra. Los Ángeles está usando esto y mejoras de seguridad similares como modelo y guía para su propia recuperación.
+Cuando se reconstruyó la **Ciudad de Paradise**, se trabajó con **PG&E**, **proveedores de telecomunicaciones** y **reguladores estatales** para colocar las líneas eléctricas en riesgo bajo tierra. Los Ángeles está utilizando esta y otras mejoras similares de seguridad como modelo y guía para su propia recuperación.
 
 ----
 id: response_step_2
-title: Agua para combatir incendios
+title: Agua para bomberos
 icon: hydrant-orange.svg
 ----
 
 ----
 id: response_step_2_action_now
 ----
-El **Departamento de Agua y Energía de Los Ángeles** ha llenado más de 80 instalaciones de almacenamiento de agua a su nivel más alto. Las bombas de respaldo están alimentadas y listas en cada estación de bombeo como respaldo para las bombas principales. Han llenado sus cinco camiones cisterna, cada uno con al menos 4,000 galones, y los tienen en espera para el **Departamento de Bomberos de Los Ángeles** (LAFD) si es necesario. Cuatro embalses contienen miles de millones de galones de agua no potable para combate aéreo de incendios.
+El **Departamento de Agua y Energía de Los Ángeles** ha llenado más de 80 instalaciones de almacenamiento de agua hasta su nivel más alto. Las bombas de respaldo se alimentan y están listas en cada estación de bombeo como respaldo de las bombas principales. Han llenado sus cinco camiones de cisterna de agua, cada uno con al menos 4,000 galones, y los tienen en espera para el **Departamento de Bomberos de Los Ángeles** (LAFD) si es necesario. Cuatro embalses contienen miles de millones de galones de agua no potable para la lucha aérea contra incendios.
 
-En el área de Pacific Palisades, dos embalses locales están dedicados al combate aéreo de incendios: el Embalse de Encino y el Embalse de Lower Stone Canyon.
+En la zona de Pacific Palisades, dos embalses locales están dedicados a la lucha aérea contra incendios: el embalse Encino y el embalse Lower Stone Canyon.
 
-El **Departamento de Bomberos del Condado de Los Ángeles** ha trabajado con el **Departamento de Obras Públicas del Condado de Los Ángeles** y **7 empresas de agua locales** para evaluar el flujo de fuego de los sistemas de agua existentes en las áreas de incendio. Para facilitar el proceso de reconstrucción, **Bomberos del Condado de LA** enmendará el Código de Bomberos del Condado de Los Ángeles 2026 para cumplir con los requisitos actuales del Código de Bomberos del Estado. Esta enmienda del código permitirá a las personas reconstruir sus hogares mientras el sistema de agua se actualiza y mejora. **Bomberos del Condado de LA** continuará dotando regularmente y colocando estratégicamente motores preposicionados propiedad del condado durante períodos de alto riesgo de incendio.
+El **Departamento de Bomberos del Condado de Los Ángeles** ha colaborado con el **Departamento de Obras Públicas del Condado de Los Ángeles** y **7 compañías locales de agua** para evaluar el flujo de incendios de los sistemas de agua existentes en las zonas de incendio. Para facilitar el proceso de reconstrucción, el **Departamento de Bomberos del Condado de Los Ángeles** modificarán el Código de Incendios del Condado de Los Ángeles 2026 para cumplir con los requisitos actuales del Código Estatal de Incendios. Esta modificación del código permitirá a los residentes reconstruir sus viviendas mientras se moderniza y mejora el sistema de agua. El **Departamento de Bomberos del Condado de Los Ángeles** continuará contratando personal y desplegando camiones de bomberos a posiciones estratégicas del condado durante los periodos de alto riesgo de incendios.
 
-Además, se ha desarrollado un nuevo proceso simplificado que elimina la necesidad de que los propietarios participen en el proceso del formulario de flujo de fuego. Las **empresas de agua**, **Obras Públicas del Condado de LA** y **Bomberos del Condado de LA** manejarán este nuevo proceso, que simplificará el cronograma, eliminará la necesidad de que los propietarios completen el proceso y ahorrará dinero a los propietarios.
+Además, se ha desarrollado un nuevo proceso simplificado que elimina la necesidad de que los propietarios participen en el proceso de flujo de fuego. Las **compañías de agua**, **Obras Públicas del Condado de Los Ángeles** y el **Departamento de Bomberos del Condado de Los Ángeles** se encargarán de este nuevo proceso, lo que agilizará el calendario, eliminará la necesidad de que los propietarios lo completen y ahorrará dinero a los propietarios.
 
 ----
 id: response_step_2_coming_soon
 ----
-Los distritos de agua han identificado daños y solicitado financiamiento (por ejemplo, FEMA PA) para reconstruir. El **estado** y el **condado** se han comprometido a apoyar a los distritos para reconstruir y mejorar los sistemas.
+Los distritos de agua han identificado daños y solicitado financiación (por ejemplo, FEMA PA) para reconstruir. El **estado** y el **condado** se han comprometido a apoyar a los distritos para reconstruir y mejorar los sistemas.
 
-El [Condado de LA Adelante: Plan para Reconstruir](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) dice que estas mejoras son inversiones críticas de infraestructura para la seguridad a largo plazo.
+El [LA County Forward: Blueprint for Reconstruction](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) indica que estas mejoras son inversiones críticas en infraestructuras para la seguridad a largo plazo.
 
 ----
 id: response_step_3
@@ -384,112 +385,113 @@ icon: communication-orange.svg
 ----
 id: response_step_3_action_now
 ----
-Los funcionarios locales de la **Ciudad de Los Ángeles** y el **Condado** han tomado varios pasos concretos para mejorar cómo se emiten las alertas de emergencia después de la confusión generalizada durante los incendios de Eaton y Palisades. La **Junta de Supervisores del Condado de Los Ángeles** ordenó una revisión independiente y externa de los sistemas de alerta de emergencia y notificación de evacuación, reteniendo expertos externos para realizar un análisis integral posterior a la acción e informar cada 90 días.
+Las autoridades locales de **la ciudad** y el **condado de Los Ángeles** han tomado varias medidas concretas para mejorar la forma en que se emiten las alertas de emergencia tras la confusión generalizada durante los incendios de Eaton y Palisades. La **Junta de Supervisores del Condado de Los Ángeles** ordenó una revisión independiente y externa de los sistemas de alerta de emergencia y notificación de evacuación, contratando a expertos externos para realizar un análisis exhaustivo posterior a la acción y presentar informes cada 90 días.
 
-El **Departamento de Gestión de Emergencias de la ciudad** y el **Centro de Información Conjunta Coordinado del Condado** ahora están priorizando capacitación mejorada, pruebas de sistema más rigurosas, orientación geográfica mejorada, redacción de mensajes más clara y coordinación más fuerte para futuras emergencias de seguridad de vida.
+El **Departamento de Gestión de Emergencias de la ciudad** y el **Centro Coordinado de Información Conjunta del Condado** están priorizando ahora una formación mejorada, pruebas de sistemas más rigurosas, mejor segmentación geográfica, redacción de mensajes más clara y una coordinación más sólida para futuras emergencias de seguridad vital.
 
-La **ciudad** está coordinando un comité directivo quincenal enfocado en la comunicación de emergencia para discutir obstáculos y progreso. El grupo está compuesto por representantes de departamentos de la ciudad, incluyendo:
+La **ciudad** está coordinando un comité directivo quincenal centrado en la comunicación de emergencia para debatir los bloqueos y el progreso. El grupo está formado por representantes de departamentos municipales, incluyendo:  
 
-  * **Departamento de Agua y Energía de Los Ángeles**
-  * **Departamento de Gestión de Emergencias de Los Ángeles**
+  * **Departamento de Agua y Energía de Los Ángeles**  
+  * **Departamento de Gestión de Emergencias de Los Ángeles** 
   * **Departamento de Planificación de Los Ángeles**
   * **Departamento de Bomberos de Los Ángeles**
 
 ----
 id: response_step_3_coming_soon
 ----
-Los funcionarios del condado, en asociación con socios locales, estatales y federales, están trabajando para mejorar la efectividad del sistema de alerta y advertencia de emergencia en todo el condado. Esto incluye implementar recomendaciones de revisiones de terceros independientes, incluyendo el Grupo McChrystal, el Instituto de Investigación de Seguridad contra Incendios y el Congreso de los Estados Unidos.
+Las autoridades del condado, en colaboración con socios locales, estatales y federales, están trabajando para mejorar la eficacia de los sistemas de alerta y alerta de emergencia en todo el condado. Esto incluye implementar recomendaciones de revisiones independientes, incluyendo el Grupo McChrystal, el Instituto de Investigación en Seguridad contra Incendios y el Congreso de EE. UU.
 
-Los sistemas de notificación de emergencia local continuarán siendo revisados y mejorados. Al enfocarse en hacer los mensajes de alerta más precisos y específicos del área, estandarizar el lenguaje de alerta, mejorar las capacidades de notificación multicapa y mejorar la coordinación y capacitación entre agencias para asegurar advertencias oportunas, claras y geográficamente precisas en futuros desastres. Estas mejoras incluyen revisiones externas de alertas recientes de incendios forestales, solicitudes aumentadas de financiamiento federal y esfuerzos de educación pública en torno a servicios de notificación opcionales.
+Los sistemas locales de notificación de emergencia seguirán siendo revisados y mejorados. Al centrarse en hacer que los mensajes de alerta sean más precisos y específicos para cada área, estandarizar el lenguaje de las alertas, mejorar las capacidades de notificación multietapa y mejorar la coordinación y la capacitación entre las agencias para garantizar advertencias oportunas, claras y geográficamente precisas en futuras catástrofes. Estas mejoras incluyen revisiones externas de alertas recientes de incendios forestales, aumento de solicitudes de financiación federal y esfuerzos de educación pública sobre servicios de notificación voluntaria.
 
 ----
 id: response_sidebar_3_unused
 ----
-Las reglas que requieren 72 horas de energía de respaldo en torres de telefonía celular en zonas de alta amenaza de incendio se implementaron después de los incendios forestales de 2017, que dejaron a miles sin servicio telefónico.
+Las normas que exigen 72 horas de energía de respaldo en las antenas de telefonía móvil en zonas de alto riesgo de incendio se implementaron tras los incendios de 2017, que dejaron a miles de personas sin servicio telefónico.
 
 ----
 id: response_step_4
-title: Ayuda para reconstrucción
+title: Ayuda para reconstruir
 icon: currency-orange.svg
 ----
 
 ----
 id: response_step_4_action_now
 ----
-El gobierno se ha movilizado para apoyar a los residentes, incluyendo ayudar a asegurar $3 mil millones en asistencia federal y préstamos. El **Fondo de Hipotecas CalAssist del estado** está dirigiendo más de $100 millones en alivio hipotecario. El **Gobernador Newsom** ha asegurado un compromiso de los principales prestamistas para ofrecer indulgencia en hipotecas y firmó legislación para expandir la indulgencia a 12 meses y crear requisitos legales exigibles.
+El gobierno se ha movilizado para apoyar a los residentes, incluyendo ayudar a asegurar 3 mil millones de dólares en ayuda y préstamos federales. El **Fondo Hipotecario CalAssist del estado** está destinando más de 100 millones de dólares en alivio hipotecario. **El gobernador Newsom** ha asegurado un compromiso por parte de los principales prestamistas de ofrecer tolerancia en hipotecas y ha firmado una legislación para ampliar la tolerancia a 12 meses y crear requisitos legales exigibles. 
 
-El **condado** ha movilizado más de $50 millones para apoyar a familias y pequeñas empresas a través del **Fondo de Alivio de Incendios Forestales del Condado de LA**. Para reducir los costos de permisos para propietarios, el **condado** también ha diferido o reembolsado tarifas específicas para zonificación, verificaciones de plan y permisos en agencias clave como **Obras Públicas**, **Planificación Regional**, **Salud Pública** y **Bomberos**. Estas tarifas pueden exceder $20,000 por hogar. El condado está acelerando las revisiones de planes de permisos con tiempos de respuesta de 14 días para revisiones iniciales, 7 días de respuesta para revisiones adicionales, y un objetivo de emitir el permiso en 30 días. También se ha proporcionado más apoyo. Los vales de la Sección 8 están disponibles para inquilinos desplazados. Hay fondos de subvención de refugio de emergencia para personas que experimentan falta de vivienda en el área. Se han facilitado talleres para personas mayores con hipotecas inversas.
+El **condado** ha movilizado más de 50 millones de dólares para apoyar a familias y pequeñas empresas a través del **Fondo de Ayuda contra Incendios Forestales del Condado de Los Ángeles**. Para reducir los costes de permisos para los propietarios, el **condado** también ha aplazado o reembolsado tasas específicas para zonificación, revisiones de planes y permisos en agencias clave como **Obras Públicas**, **Planificación Regional**, **Salud Pública** y **Bomberos**. Estas tasas pueden superar los 20.000 dólares por hogar. El condado está acelerando las revisiones de los planes de permisos con plazos de entrega de 14 días para revisiones iniciales, 7 días para revisiones adicionales y un objetivo de emitir el permiso en 30 días. También se ha proporcionado más apoyo. Hay vales de la Sección 8 disponibles para inquilinos desplazados. Existen fondos de subvenciones de emergencia para refugios dirigidos a personas sin hogar en la zona. Se han facilitado talleres para personas mayores con hipotecas inversas. 
+ 
 
-Además, la **Alcaldesa de Los Ángeles Karen Bass** ha emitido varias órdenes ejecutivas para agilizar la reconstrucción y reducir costos. Esto incluye crear el Centro de Reconstrucción de Una Parada, dirigir a los departamentos de la ciudad para acelerar las revisiones de permisos de construcción en 30 días o menos, y eximir los impuestos comerciales de 2025 para empresas afectadas.
+Además, **la alcaldesa de Los Ángeles, Karen Bass**, ha emitido varias órdenes ejecutivas para agilizar la reconstrucción y reducir costes. Esto incluye la creación del Centro de Reconstrucción Único para Todos, la instrucción de los departamentos municipales para acelerar la revisión de los permisos de construcción en 30 días o menos, y la exención de impuestos empresariales de 2025 para las empresas afectadas.
 
 ----
 id: response_step_4_coming_soon
 ----
-El **Condado de Los Ángeles** está coordinando con el estado, la filantropía y el sector privado para conectar a los residentes con servicios que ayudan a las personas a navegar los procesos de recuperación, donde las familias pueden recibir ayuda personalizada con financiamiento, permisos y construcción para reducir las barreras a la recuperación.
+**El condado de Los Ángeles** está coordinando con el estado, la filantropía y el sector privado para conectar a los residentes con servicios que ayuden a las personas a navegar los procesos de recuperación, donde las familias pueden recibir ayuda personalizada con financiación, permisos y construcción para reducir las barreras a la recuperación.
 
-Además, escuchamos a los inquilinos cuando nos pidieron que no los dejáramos fuera. El **Fondo de Recuperación de Incendios del Condado de Los Ángeles** incluye asistencia de alquiler directa. Los **supervisores del condado** están revisando protecciones más fuertes contra la especulación para inquilinos en zonas de incendio.
+Además, escuchamos a los inquilinos cuando nos pidieron que no los dejáramos fuera. El **Fondo de Recuperación contra Incendios del Condado de Los Ángeles** incluye asistencia directa para el alquiler. **Los supervisores del condado** están revisando las protecciones más estrictas contra la exasperación para los inquilinos en zonas de incendio.
 
-El **condado** está trabajando para coordinar con el **estado** y la **filantropía** para identificar "financiamiento puente" para residentes para cubrir costos a corto plazo para sobrevivir y comenzar a reconstruir que no están cubiertos por otras fuentes de financiamiento.
+El **condado** está trabajando para coordinar con el **estado** y la **filantropía** para identificar "financiación puente" para que los residentes cubran los costes a corto plazo de sobrevivir y comenzar la reconstrucción que no están cubiertos por otras fuentes de financiación.
 
 
 ----
 id: response_sidebar_4_unused
 ----
-Los residentes pidieron ayuda sin barreras durante la fase de establecimiento de agenda de este compromiso. El **Condado de Los Ángeles** luego proporcionó apoyo de aplicación de idioma y pagos directos a través del Fondo de Alivio de Trabajadores de la Región de LA, incluyendo a residentes indocumentados. El condado, con el apoyo de grupos comunitarios, se aseguró de no excluir a las personas. También, el **Departamento de Seguros de California** hace cumplir una moratoria de un año. Esto significa que las aseguradoras no pueden cancelar la cobertura después de un desastre declarado. También requiere dos años de cobertura para aquellos cuyas casas sufrieron una pérdida total.
+Los residentes solicitaron ayuda sin barreras durante la fase de establecimiento de la agenda de este acuerdo. **El condado de Los Ángeles** proporcionó entonces apoyo en la aplicación del idioma y pagos directos a través del Fondo de Alivio para Trabajadores de la Región de Los Ángeles, incluyendo a residentes indocumentados. El condado, con el apoyo de grupos comunitarios, se aseguró de no excluir a la gente. Además, el **Departamento de Seguros de California** aplica una moratoria de un año. Esto significa que las aseguradoras no pueden cancelar la cobertura tras un desastre declarado. También exige dos años de cobertura para quienes hayan sufrido una pérdida total de vivienda. 
 
-El Plan para Reconstruir destaca los pagos como un hito en la recuperación equitativa.
+El Plan para la Reconstrucción destaca los pagos como un hito en la recuperación equitativa.
 
 ----
 id: response_step_5
-title: Acelerar permisos e inspecciones
+title: Acelerar los permisos e inspecciones
 icon: house-orange.svg
 ----
 
 ----
 id: response_step_5_action_now
 ----
-El **Gobernador Newsom** ha emitido numerosas órdenes ejecutivas eximiendo los requisitos de permisos estatales para agilizar la reconstrucción. La **ciudad** y el **condado** crearon centros de una parada en áreas afectadas por incendios para apoyar las actividades de reconstrucción. Esto incluye Altadena, Calabasas y Pacific Palisades.
+**El gobernador Newsom** ha emitido numerosas órdenes ejecutivas que eximen de los requisitos estatales de permisos para agilizar la reconstrucción. La **ciudad** y el **condado** crearon centros únicos en las zonas afectadas por incendios para apoyar las actividades de reconstrucción. Esto incluye Altadena, Calabasas y Pacific Palisades.
 
-En el **condado**, los Centros de Permisos de Una Parada de Calabasas y Altadena ofrecen a los residentes ayuda en persona de varias agencias del condado, donde más de 8,500 residentes han sido ayudados hasta ahora. En la ciudad, más de 4,000 personas han sido ayudadas en un Centro de Reconstrucción de Una Parada hasta ahora. Los residentes del condado pueden solicitar permisos en línea usando la plataforma EPIC-LA, que ofrece un proceso de aplicación y revisión unificado para simplificar la navegación. El **condado** está trabajando rápidamente para satisfacer la creciente demanda de permisos reasignando personal y trayendo trabajadores contratistas adicionales según sea necesario, así como implementando el piloto AI eCheck con Archistar. El condado también ofrece un [catálogo de planes preaprobados](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) con diseños que cumplen con los requisitos actuales de zonificación y código de construcción. Los planes preaprobados y los procesos de permisos simplificados pueden ayudar a los propietarios a reconstruir de manera más eficiente, segura y asequible.
+En el **condado**, los Centros de Permisos Únicos de Calabasas y Altadena ofrecen ayuda presencial a los residentes de diversas agencias del condado, donde hasta ahora se ha ayudado a más de 8,500 residentes. En la ciudad, más de 4,000 personas han recibido ayuda hasta ahora en un Centro de Reconstrucción Integral (One-Stop Reconstruction). Los residentes del condado pueden solicitar permisos en línea utilizando la plataforma EPIC-LA, que ofrece un proceso unificado de solicitud y revisión para simplificar la navegación. El **condado** está trabajando rápidamente para satisfacer la creciente demanda de permisos reasignando personal y incorporando más trabajadores contratados según sea necesario, además de desplegar el piloto de AI eCheck con Archistar. El condado también ofrece un [catálogo de planos preaprobados](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) con diseños que cumplen con los requisitos actuales de zonificación y códigos de construcción. Los planes preaprobados y los procesos de permisos simplificados pueden ayudar a los propietarios a reconstruir de forma más eficiente, segura y asequible.
 
-En un esfuerzo paralelo, la **Alcaldesa de Los Ángeles Karen Bass** ha emitido órdenes ejecutivas dirigiendo al **Departamento de Construcción y Seguridad de LA** para pilotar verificaciones de plan previo impulsadas por IA (Archistar eCheck AI), suspendiendo las tarifas de permisos y verificaciones de plan, y lanzando una biblioteca de diseños preaprobados y compatibles con el código para acelerar las reconstrucciones en la ciudad. Más de 4,000 residentes de la ciudad ya han sido ayudados en el Centro de Reconstrucción de Una Parada de la ciudad.
+En un esfuerzo paralelo, la **alcaldesa de Los Ángeles, Karen Bass**, ha emitido órdenes ejecutivas que instruyen al **Departamento de Edificios y Seguridad de Los Ángeles** a implementar un programa piloto de revisiones previas de planos impulsadas por IA (Archistar eCheck AI), suspender las tarifas de permisos y revisión de planos, y lanzar una biblioteca de diseños preaprobados y que cumplen con el código para acelerar las reconstrucciones en la ciudad. Más de 4.000 residentes de la ciudad ya han recibido ayuda en el Centro de Reconstrucción Integral de la ciudad.
 
 ----
 id: response_step_5_coming_soon
 ----
-El **condado** está acelerando los procesos de permisos e inspecciones a través de "vías rápidas", que son carriles simplificados para acelerar la reconstrucción mientras mantiene la seguridad y el cumplimiento del código. Esto incluye expandir el catálogo de planes preaprobados y agrupar revisiones para proyectos similares.
+El **condado** está acelerando los procesos de permisos e inspección mediante "vías rápidas", que son carriles optimizados para agilizar la reconstrucción manteniendo la seguridad y el cumplimiento del código. Esto incluye ampliar el catálogo de planes preaprobados y agrupar revisiones para proyectos similares.
 
-El **condado** también está aumentando la capacidad de sobrecarga expandiendo el piloto AI eCheck con Archistar, creciendo las inspecciones digitales y remotas, y agregando verificadores de plan e inspectores para manejar volúmenes más altos.
+El **condado** también está aumentando la capacidad de aumento de energía ampliando el piloto de eCheck con IA con Archistar, ampliando las inspecciones digitales y remotas, y añadiendo verificadores de planos e inspectores para manejar mayores volúmenes.
 
 ----
 id: response_sidebar_5
 ----
-Los equipos **federales**, **estatales** y **locales** limpiaron los escombros de los incendios de 2025 en solo seis meses. Esta fue la eliminación de escombros post-desastre más rápida en la historia de California. Esto se debe a una asociación sin precedentes entre el **estado** y el **Cuerpo de Ingenieros del Ejército de los Estados Unidos**.
+**Los equipos federales**, **estatales** y **locales** retiraron los escombros de los incendios de 2025 en solo seis meses. Esta fue la retirada de escombros más rápida tras una catástrofe en la historia de California. Esto se debe a una colaboración sin precedentes entre el **estado** y el **Cuerpo de Ingenieros del Ejército de EE. UU**.
 
 ----
 id: other_efforts
 title: Otros esfuerzos
 mental_health: Salud mental
 ----
-El **Departamento de Salud Mental del Condado de LA** y los socios locales están ayudando a los sobrevivientes a obtener el apoyo que necesitan, financiando espacios compartidos donde las personas pueden obtener asesoramiento gratuito y unirse a grupos de apoyo para el trauma.
+El **Departamento de Salud Mental del Condado de Los Ángeles** y socios locales están ayudando a las supervivientes a obtener el apoyo que necesitan, financiando espacios compartidos donde las personas pueden recibir asesoramiento gratuito y unirse a grupos de apoyo para traumatismos.
 
 ----
 id: findings_how_we_did_the_analysis
 ----
 
-### Cómo hicimos el análisis
+## Cómo hicimos el análisis
 
-<div class="sub-head">Para una mirada más profunda, <a href="/es/lafires-recovery/agenda-setting-data-insights/">consulta nuestra metodología detallada y análisis de comentarios</a>.</div>
+<div class="sub-head">Para información más detallada, <a href="/lafires-recovery/agenda-setting-data-insights/">consulte nuestra metodología detallada y análisis de comentarios</a>.</div>
 
-Utilizamos el modelo de IA generativa Claude 3.5 Sonnet para ayudar a encontrar temas y tendencias en los comentarios. Solicitamos al modelo con preguntas para ayudarnos a entender lo que pensaba la gente. Esta fue una forma eficiente de ver cómo las personas estuvieron de acuerdo o en desacuerdo sobre temas importantes.
+Utilizamos el modelo de inteligencia artificial generativa Claude 3.5 Sonnet para ayudar a encontrar temas y tendencias en los comentarios. Le dimos indicaciones al modelo para que nos ayude a comprender lo que pensaba la gente. Esta fue una manera eficiente de ver cómo la gente estaba de acuerdo o en desacuerdo sobre temas importantes. 
 
-Probamos diferentes formas de escribir las solicitudes. Nos enfocamos en las respuestas que surgieron frecuentemente, independientemente de cómo hicimos las preguntas.
+Revisamos diferentes formas de escribir las indicaciones. Nos enfocamos en las respuestas que surgieron con frecuencia, independientemente de cómo hicimos las preguntas.
 
-**Solicitudes de muestra**
+**Ejemplos de indicaciones**
 
-"Me gustaría que analices un conjunto de respuestas de encuesta cualitativas usando pensamiento extendido."
+“Me gustaría que analizaras un conjunto de respuestas de una encuesta cualitativa utilizando el pensamiento extendido”. 
 
-"Comienza haciendo una exploración inicial de los datos: Primero, lee todo el conjunto de datos sin categorizar o etiquetar. Nota tus observaciones inmediatas e impresiones sobre lo que te llama la atención. Identifica palabras, frases y sentimientos recurrentes que aparecen en múltiples respuestas. Comparte lo que te sorprendió o llamó tu atención en esta revisión inicial."
+“Comienza haciendo una exploración inicial de los datos: primero, lee todo el conjunto de datos sin categorizar ni etiquetar. Toma nota de tus observaciones e impresiones inmediatas sobre lo que te llama la atención. Identifica palabras, frases y sentimientos recurrentes que aparecen en múltiples respuestas. Comparte lo que te sorprendió o lo que te llamó la atención en esta revisión inicial”.
 
 ----
 id: partners
@@ -497,6 +499,6 @@ id: partners
 
 ## Nuestros socios
 
-La Oficina de Datos e Innovación de California se asoció con expertos en recuperación de desastres y defensores de la democracia deliberativa para llevar a cabo este trabajo. Nuestros socios también ayudaron a dar forma a las acciones que vendrán de este trabajo. 
+La Oficina de Datos e Innovación de California se asoció con expertos en recuperación ante catástrofes y defensores de la democracia deliberativa para llevar a cabo este trabajo. Nuestros socios también ayudaron a moldear las acciones que surgirán de este trabajo. 
 
 Nuestros socios y asesores para esta iniciativa incluyen:

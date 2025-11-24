@@ -1,14 +1,14 @@
 ---
-title: LA thống nhất về các kế hoạch phục hồi
-description: Engaged California là một nền tảng trực tuyến giúp người California dễ dàng có tiếng nói trong chính phủ. Chủ đề đầu tiên của Engaged California là phục hồi từ các vụ cháy rừng ở Los Angeles. Trang này hiển thị các vấn đề hàng đầu để tái thiết LA.
+title: LA thống nhất các kế hoạch phục hồi
+description: "Engaged California  là một nền tảng trực tuyến giúp người dân California đóng góp ý kiến cho chính quyền dễ dàng hơn. Chủ đề đầu tiên của Engaged California là phục hồi sau các đám cháy rừng ở Los Angeles.  Trang này nêu lên những vấn đề quan trọng nhất trong việc xây dựng lại LA."
 layout: mmmd-lafires-action-plan
 parentid: lafires-recovery
 keywords:
   - Los Angeles
-  - fires
-  - recovery
+  - cháy
+  - phục hồi
 tags:
-  - pages
+  - trang
 ---
 
 ----
@@ -22,106 +22,106 @@ example_quoted_text: "this is quoted text:"
 2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
 
 3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
-   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+  This is especially important for Armenian, where colons are added as sentence-ending punctuation.
 
 4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.  
-   When text contains words inside single asterisks, that text is intended to be printed in italics. 
-   In either case, preserve the asterisks.
+  When text contains words inside single asterisks, that text is intended to be printed in italics. 
+  In either case, preserve the asterisks.
 
 5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
-   This is typically used for templates that insert numbers into a sentence.
+  This is typically used for templates that insert numbers into a sentence.
 
 ----
 id: findings_overview
 buttonText: Chuyển đến kế hoạch hành động
 ----
 
-# LA thống nhất về các kế hoạch phục hồi
+# LA thống nhất các kế hoạch phục hồi
 
-Trong một quá trình tham gia cộng đồng chưa từng có, hơn 3,000 thành viên cộng đồng được mời đến các tòa thị chính cho thời đại kỹ thuật số. Những người tham gia đóng góp qua 2 giai đoạn để tạo ra một kế hoạch hành động phục hồi từ các vụ cháy rừng tàn khốc ở Los Angeles vào tháng 1 năm 2025.
+Trong quá trình gắn kết cộng đồng chưa từng được triển khai trước đây, hơn 3,000 thành viên cộng đồng đã được mời đến các cuộc hỏi đáp trong thời đại kỹ thuật số. Những người tham gia đã đóng góp trong 2 giai đoạn để lập kế hoạch hành động phục hồi sau các vụ cháy rừng tàn khốc ở Los Angeles vào tháng 1 năm 2025. 
 
-Kế hoạch hành động, được phát triển thông qua các phiên thảo luận trực tuyến trong khoảng thời gian 6 tháng, phản ánh các ưu tiên từ những người bị ảnh hưởng bởi các vụ cháy Eaton và Palisades. Các ưu tiên họ đặt ra – tập trung vào hỗ trợ cộng đồng ngay lập tức và cải thiện cơ sở hạ tầng dài hạn – sẽ hướng dẫn các quan chức tiểu bang và địa phương hướng tới phục hồi hoàn toàn.
+Được phát triển thông qua các phiên nghị luận trực tuyến trong khoảng thời gian 6 tháng, kế hoạch hành động phản ánh các mục ưu tiên của những người bị ảnh hưởng bởi các đám cháy Eaton và Palisades. Những ưu tiên mà họ đặt ra tập trung vào hỗ trợ cộng đồng tức thì và cải thiện cơ sở hạ tầng lâu dài, từ đó sẽ định hướng cho các quan chức tiểu bang và địa phương hướng tới phục hồi hoàn toàn.
 
 
 ----
 id: findings_narrative_step_1
-title: Thiết lập chương trình nghị sự
-button_text: Đọc về giai đoạn thiết lập chương trình nghị sự
+title: Xây dựng chương trình nghị sự
+button_text: Tìm hiểu về giai đoạn xây dựng chương trình nghị sự
 ----
 
-## Cư dân chia sẻ mối quan tâm và ý tưởng của họ
+## Cư dân đã chia sẻ các mối quan ngại và ý tưởng của họ
 
-Sau các vụ cháy rừng nghiêm trọng ở Los Angeles, hàng trăm thành viên cộng đồng đã gặp nhau trực tuyến để thảo luận về các ưu tiên phục hồi.
+Sau các vụ cháy rừng nghiêm trọng ở Los Angeles, hàng trăm thành viên cộng đồng đã họp mặt trực tuyến để thảo luận về các ưu tiên phục hồi.
 
 ----
 id: findings_narrative_step_2
-title: Xem xét và lập kế hoạch
+title: Đánh giá và lập kế hoạch
 button_text: Tìm hiểu về các đối tác của chúng tôi
 nbr_phrases: 6
 translator_note: USE slash symbol for line breaks, keep these phrases to two lines!
 phrase_1: Tiện ích
 phrase_2: Cộng đồng/Hỗ trợ
 phrase_3: Tài chính/hỗ trợ
-phrase_4: Khẩn cấp/sẵn sàng
-phrase_5: Chống cháy
+phrase_4: Tình trạng khẩn cấp/chuẩn bị sẵn sàng
+phrase_5: Hỏa hoạn/chống cháy nổ
 phrase_6: Xây dựng/giấy phép
 ----
 
 
 
-## Ý tưởng cá nhân trở thành dữ liệu chung
+## Các ý tưởng riêng lẻ được chuyển thành dữ liệu chung
 
-Một nhóm các nhà lãnh đạo chính sách, cứu trợ thảm họa và cộng đồng đã sử dụng chuyên môn và AI tạo sinh của họ để biến 1,289 bình luận được gửi trong việc thiết lập chương trình nghị sự thành 19 tùy chọn chính sách có thể thực hiện.
+Một nhóm các nhà lãnh đạo về chính sách, cứu trợ thảm họa và cộng đồng đã tận dụng chuyên môn của mình và trí tuệ nhân tạo (artificial intelligence, AI) tạo sinh để đưa 1,289 ý kiến đóng góp đã được gửi đến trong giai đoạn xây dựng chương trình nghị sự vào 19 phương án chính sách thiết thực.
 
 ----
 id: findings_narrative_step_3
-title: Thảo luận
+title: Nghị luận
 ----
 
-## Cộng đồng đã bỏ phiếu cho tất cả 19 tùy chọn
+## Cộng đồng đã bầu chọn cho tất cả 19 phương án
 
-Những người tham gia mới và quay lại đã xếp hạng các tùy chọn này, một lần nữa sử dụng nền tảng trực tuyến nơi họ có thể thảo luận và hợp tác.
+Những người mới tham gia và những người tham gia nhiều lần đã xếp hạng các phương án này và một lần nữa thông qua nền tảng trực tuyến nơi họ có thể thảo luận và cộng tác.
 
 ----
 id: consensus_chart_topics
 nbr_topics: 19
-topic_1: Tăng mật độ nhà ở và cấp phép nhanh chóng
+topic_1: Tăng mật độ nhà ở và cấp phép nhanh
 topic_2: Nhà ở tạm thời
-topic_3: Ưu tiên gia đình
-topic_4: Vườn trình diễn chống cháy và thân thiện với nước
-topic_5: Tiêu chuẩn bảo vệ tàn lửa nhà bắt buộc
-topic_6: Cấp phép ADU và nhà đôi nhanh chóng
-topic_7: Hệ thống nước xám bắt buộc cho các tòa nhà mới
-topic_8: Chương trình giáo dục toàn diện cho chủ nhà
-topic_9: Trung tâm liên lạc khẩn cấp trong cộng đồng
-topic_10: Ưu đãi thuế cho không gian phòng thủ
-topic_11: Mở rộng chương trình đào tạo xây dựng
+topic_3: Ưu tiên cho các gia đình
+topic_4: Các khu vườn chống cháy và tiết kiệm nước
+topic_5: Tiêu chuẩn bắt buộc về bảo vệ nhà khỏi tro tàn
+topic_6: Cấp phép nhanh cho nhà ở phụ (accessory dwelling unit, ADU) và căn hộ thông 2 tầng
+topic_7: Hệ thống nước thải sinh hoạt bắt buộc đối với các tòa nhà mới xây
+topic_8: Chương trình giáo dục toàn diện cho chủ sở hữu nhà
+topic_9: Trung tâm liên lạc khẩn cấp trong cộng đồng 
+topic_10: Ưu đãi thuế cho không gian có thể chống hỏa hoạn
+topic_11: Các chương trình đào tạo xây dựng mở rộng
 topic_12: Thiết kế tòa nhà chống cháy được phê duyệt trước
 topic_13: Cơ sở hạ tầng phát hiện cháy nâng cao
-topic_14: Hỗ trợ tài chính cho cư dân lâu dài
-topic_15: Tăng tốc cấp phép và thanh tra
-topic_16: Hỗ trợ tái thiết
-topic_17: Thông báo và cảnh báo khẩn cấp mạnh mẽ hơn
-topic_18: Nước cho chữa cháy
-topic_19: Chôn ngầm đường dây điện và cải thiện an toàn thiết bị
+topic_14: Hỗ trợ tài chính cho các cư dân ở lâu dài
+topic_15: Cấp phép và kiểm tra nhanh
+topic_16: Trợ giúp xây dựng lại
+topic_17: Thông báo và cảnh báo về tình trạng khẩn cấp hiệu quả hơn
+topic_18: Nước để chữa cháy
+topic_19: Đường dây điện ngầm và cải thiện độ an toàn của thiết bị
 ----
 
 
 ----
 id: findings_consensus_watch_intro
-title_h2: Sự liên kết cộng đồng
-caveat: "Hỗ trợ là điểm trung bình của các phiếu bầu, trong đó điểm hỗ trợ mạnh mẽ một tùy chọn là 100, và điểm phản đối mạnh mẽ một tùy chọn là 0."
+title_h2: Sự đồng thuận của cộng đồng
+caveat: "Mức độ ủng hộ là số điểm trung bình của các lượt bầu chọn, trong đó ý kiến ủng hộ mạnh mẽ một phương án được 100 điểm, còn ý kiến phản đối mạnh mẽ một phương án được 0 điểm."  
 ----
-Mỗi chấm đại diện cho một phiếu bầu. Khi hình ảnh thay đổi, bạn có thể theo dõi mức độ hỗ trợ trung bình cho mỗi vấn đề. Các chủ đề được sắp xếp từ ít hỗ trợ cộng đồng nhất (trái) đến nhiều hỗ trợ cộng đồng nhất (phải).
+Mỗi dấu chấm đại diện cho một lượt bầu chọn. Khi phần trực quan hóa thay đổi, quý vị có thể theo dõi mức độ ủng hộ trung bình cho mỗi vấn đề. Các chủ đề được sắp xếp theo thứ tự từ ít được cộng đồng ủng hộ nhất (bên trái) đến được cộng đồng ủng hộ nhiều nhất (bên phải).
 
 ----
 id: findings_consensus_watch_explore
-topic_number_template: "Chủ đề <NUM> của <TOTAL>"
+topic_number_template: "Chủ đề số <NUM>/<TOTAL>"
 translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to insert numbers into the phrase
 translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
-label_1: Tăng mật độ nhà ở và cấp phép nhanh chóng
-percent_default: 92% người tham gia hỗ trợ chủ đề này
-percent_template: <PERCENT>% hỗ trợ trung bình
+label_1: Tăng mật độ nhà ở và cấp phép nhanh
+percent_default: 92% người tham gia ủng hộ chủ đề này
+percent_template: <PERCENT>% ủng hộ trung bình
 translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
 ----
 
@@ -130,33 +130,33 @@ translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the 
 id: findings_consensus_sentiment_chart
 nbr_labels: 3
 label_1: Phản đối mạnh mẽ
-label_2: Trung lập
-label_3: Hỗ trợ mạnh mẽ
+label_2: Không có ý kiến
+label_3: Ủng hộ mạnh mẽ
 ----
 
 ----
 id: findings_narrative_top_options_intro
-title: Cư dân đã cân nhắc để tìm sự đồng thuận về 5 giải pháp hàng đầu
+title: Cư dân tham gia đóng góp ý kiến để thống nhất về 5 giải pháp hàng đầu
 nbr_values: 2
-label_1: Bình luận và phản hồi
+label_1: Ý kiến đóng góp và phản hồi
 label_2: Phiếu bầu
 value_1: 1,504
 value_2: 3,977
 nbr_options: 5
 ----
 
-Sự tham gia rất đáng chú ý. Hàng xóm có thể chia sẻ suy nghĩ của họ và trả lời lẫn nhau. 1,504 bình luận của người tham gia nhận được không biến mất vào hộp đen. Mọi người đã thảo luận về các giải pháp, làm việc hiệu quả cùng nhau để xác định ưu tiên.
+Mức độ tham gia khá đáng kể. Những người hàng xóm có thể chia sẻ suy nghĩ và đã phản hồi cho nhau. 1,504 ý kiến đóng góp của người tham gia đã được công khai. Mọi người đã trao đổi về các giải pháp, cùng hợp tác hiệu quả để xác định các mục ưu tiên.
 
 ----
 id: findings_narrative_top_options
 results_header: Kế hoạch hành động
-results_description: "Kế hoạch, bao gồm 5 lĩnh vực trọng tâm cho phục hồi – tiết lộ một cộng đồng đoàn kết xung quanh việc xây dựng cơ sở hạ tầng chống cháy cho tương lai và cung cấp hỗ trợ cho cộng đồng ngay bây giờ:"
+results_description: "Kế hoạch bao gồm 5 lĩnh vực trọng tâm để phục hồi, qua đó cho thấy một cộng đồng đoàn kết xoay quanh việc xây dựng cơ sở hạ tầng chống chịu hỏa hoạn cho tương lai và hỗ trợ cho cộng đồng ngay bây giờ:"
 nbr_options: 5
-option_label_1: Chôn ngầm đường dây điện và các biện pháp an toàn thiết bị
-option_label_2: Cải thiện hệ thống nước cho chữa cháy
-option_label_3: Tăng cường mạng lưới liên lạc khẩn cấp
-option_label_4: Giúp mọi người tìm các chương trình hỗ trợ tài chính
-option_label_5: Dành các nhóm để hỗ trợ cấp phép
+option_label_1: Chôn đường dây điện xuống đất và các biện pháp bảo đảm an toàn cho thiết bị
+option_label_2: Cải thiện hệ thống nước để chữa cháy
+option_label_3: Tăng cường mạng lưới liên lạc trong tình trạng khẩn cấp
+option_label_4: Giúp mọi người tìm chương trình hỗ trợ tài chính 
+option_label_5: Nhóm chuyên trách hỗ trợ cấp phép
 option_icon_1: circle-blue-1.png
 option_icon_2: circle-blue-2.png
 option_icon_3: circle-blue-3.png
@@ -172,38 +172,38 @@ option_icon_5: circle-blue-5.png
 id: findings_topic_chart
 nbr_labels: 3
 label_1: Phản đối mạnh mẽ
-label_2: Trung lập
-label_3: Hỗ trợ mạnh mẽ
+label_2: Không có ý kiến
+label_3: Ủng hộ mạnh mẽ
 ----
 
 
 
 ----
 id: findings_top_discussions
-title_h2: Phân tích 5 hàng đầu từ mọi góc độ
-solution_details_label: "Chi tiết giải pháp"
-show_comments_button: Hiển thị bình luận
-hide_comments_button: Ẩn bình luận
+title_h2: Phân tích toàn diện đối với 5 giải pháp hàng đầu
+solution_details_label: "Chi tiết về giải pháp"
+show_comments_button: Hiển thị ý kiến đóng góp
+hide_comments_button: Ẩn  ý kiến đóng góp
 nbr_tally_items: 2
-label_1: Hỗ trợ trung bình
-label_2: Bình luận
-explore_the_comments: Khám phá các bình luận
-filter_the_comments: "Bình luận có thể được lọc theo cách mọi người bỏ phiếu về một chủ đề: hỗ trợ, trung lập, phản đối, hoặc không bỏ phiếu. Lưu ý: Bản thân các bình luận có thể không phản ánh cách một người bỏ phiếu về một chủ đề. Trong một số trường hợp, mọi người bình luận về một chủ đề mà không bỏ phiếu."
+label_1: Mức độ ủng hộ trung bình
+label_2: Ý kiến đóng góp
+explore_the_comments: Xem ý kiến đóng góp
+filter_the_comments: "Có thể lọc ý kiến đóng góp theo mức độ ủng hộ về một chủ đề: ủng hộ, không có ý kiến, phản đối hoặc không bỏ phiếu. Lưu ý: Ý kiến đóng góp có thể không phản ánh cách người đó bầu chọn về một chủ đề. Trong một số trường hợp, mọi người đã đóng góp ý kiến về một chủ đề nhưng không bầu chọn."
 label_viewpoint: "Quan điểm:"
-label_all_comments: "Tất cả bình luận"
+label_all_comments: "Tất cả ý kiến đóng góp"
 label_oppose: "Phản đối"
-label_neutral: "Trung lập"
-label_support: "Hỗ trợ"
-label_novote: "Không bỏ phiếu"
-filter_comments_by_vote: Lọc bình luận theo phiếu bầu tương ứng của họ. Chúng tôi không dịch bình luận; chúng được hiển thị bằng ngôn ngữ gốc. 
+label_neutral: "Không có ý kiến"
+label_support: "Ủng hộ"
+label_novote: "Không bầu chọn"
+filter_comments_by_vote: "Lọc ý kiến đóng góp theo bầu chọn tương ứng. Chúng tôi không dịch các ý kiến đóng góp mà hiển thị theo ngôn ngữ gốc tương ứng."
 ----
 
-Mỗi phiếu bầu đã được đếm và cân nhắc để đạt được sự đồng thuận về 5 giải pháp hàng đầu mà California nên khám phá. Giữa các vùng cháy, phiếu bầu và bình luận có vẻ hơi khác nhau, sử dụng công tắc để xem ý kiến từ Palisades khác với những ý kiến từ vùng cháy Eaton như thế nào.
+Mỗi lượt bầu chọn đều được đếm và tính để đạt được sự đồng thuận đối với 5 giải pháp hàng đầu mà California cần nghiên cứu. Các lượt bầu chọn và ý kiến đóng góp giữa các khu vực cháy dường như có chút khác biệt. Sử dụng tính năng chuyển đổi để xem ý kiến của người dân từ Palisades khác với những người trong khu vực có nguy cơ cháy cao Eaton như thế nào.
 
 ----
 id: discussion_1
-title: Chôn ngầm đường dây điện và các biện pháp an toàn thiết bị
-topic_description: Chôn ngầm đường dây điện bất cứ khi nào có thể và triển khai các chiến lược giảm thiểu để ngăn chặn cháy từ lỗi thiết bị. Cách tiếp cận toàn diện này sẽ giải quyết một trong những nguyên nhân chính gây cháy rừng ở California.
+title: Chôn đường dây điện xuống đất và các biện pháp bảo đảm an toàn cho thiết bị
+topic_description: "Chôn đường dây điện xuống đất mỗi khi có thể và triển khai các chiến lược giảm nhẹ để ngăn chặn lửa bốc lên do thiết bị hỏng hóc. Phương pháp tiếp cận toàn diện này sẽ giải quyết một trong những nguyên nhân chính gây cháy rừng ở California."
 nbr_comments: 3
 value_1: 92%
 value_2: 90
@@ -212,8 +212,8 @@ chart_topic_index: 19
 
 ----
 id: discussion_2
-title: Cải thiện hệ thống nước cho chữa cháy
-topic_description: Nâng cấp hệ thống nước để đáp ứng các yêu cầu dòng chảy hiện đại và đảm bảo có đủ vòi nước chữa cháy ở tất cả các khu vực. Điều này sẽ cải thiện nguồn cung cấp nước và áp lực cần thiết cho các hoạt động chữa cháy hiệu quả.
+title: Cải thiện hệ thống nước để chữa cháy
+topic_description: "Nâng cấp hệ thống nước để đáp ứng yêu cầu về lưu lượng phòng cháy chữa cháy hiện đại và đảm bảo có đủ trụ nước cứu hỏa ở mọi khu vực. Điều này sẽ cải thiện nguồn cấp nước và áp lực nước cần thiết để hoạt động chữa cháy có hiệu quả."
 value_1: 87%
 value_2: 74
 chart_topic_index: 18
@@ -221,8 +221,8 @@ chart_topic_index: 18
 
 ----
 id: discussion_3
-title: Tăng cường mạng lưới liên lạc khẩn cấp
-topic_description: Thúc đẩy cơ sở hạ tầng liên lạc cho phép những người phản ứng đầu tiên và cư dân duy trì kết nối ngay cả khi tháp di động hoặc đường cáp quang bị lỗi, chẳng hạn như mạng internet mesh có thể hoạt động độc lập trong thảm họa.
+title: Tăng cường mạng lưới liên lạc trong tình trạng khẩn cấp
+topic_description: "Thúc đẩy cơ sở hạ tầng truyền thông để tạo điều kiện cho lực lượng ứng phó khẩn cấp và cư dân duy trì kết nối ngay cả khi tháp di động hoặc đường cáp quang không hoạt động, ví dụ như mạng Internet gồm nhiều điểm truy cập không dây có thể hoạt động độc lập trong thời gian diễn ra thảm họa."
 value_1: 86%
 value_2: 59
 chart_topic_index: 17
@@ -230,8 +230,8 @@ chart_topic_index: 17
 
 ----
 id: discussion_4
-title: Giúp mọi người tìm các chương trình hỗ trợ tài chính
-topic_description: Tạo một danh mục toàn diện về các chương trình hỗ trợ tài chính và tổ chức có sẵn để giúp đỡ các nỗ lực tái thiết. Thư mục này sẽ kết nối cư dân bị ảnh hưởng bởi cháy với các khoản tài trợ, vay và chương trình hỗ trợ, đồng thời hợp tác với các tổ chức tài chính đáng tin cậy sẵn sàng hỗ trợ tài trợ phục hồi.
+title: Giúp mọi người tìm chương trình hỗ trợ tài chính
+topic_description: "Tạo một danh mục toàn diện gồm các chương trình và tổ chức hỗ trợ tài chính sẵn có để giúp đỡ các nỗ lực xây dựng lại. Danh mục này sẽ kết nối những cư dân chịu ảnh hưởng vì hỏa hoạn với các khoản trợ cấp, khoản vay và chương trình hỗ trợ, đồng thời cũng hợp tác với các tổ chức tài chính đáng tin cậy sẵn sàng hỗ trợ quỹ phục hồi."
 value_1: 82%
 value_2: 59
 chart_topic_index: 16
@@ -239,8 +239,8 @@ chart_topic_index: 16
 
 ----
 id: discussion_5
-title: Dành các nhóm để hỗ trợ cấp phép
-topic_description: Thành lập các nhóm nhân viên chuyên trách tại các trung tâm phân loại để nhanh chóng hướng dẫn các cộng đồng bị ảnh hưởng bởi cháy qua các quy trình cấp phép. Các nhóm chuyên biệt này sẽ cung cấp hỗ trợ cá nhân hóa cho cư dân điều hướng các yêu cầu tái thiết phức tạp.
+title: Nhóm chuyên trách hỗ trợ cấp phép
+topic_description: "Thành lập các nhóm nhân viên chuyên trách tại các trung tâm phân loại để nhanh chóng hướng dẫn các cộng đồng chịu ảnh hưởng vì hỏa hoạn hoàn tất quy trình cấp phép. Các nhóm chuyên trách này sẽ hỗ trợ tùy theo nhu cầu của cư dân để đáp ứng các yêu cầu phức tạp về xây dựng lại."
 value_1: 82%
 value_2: 73
 chart_topic_index: 15
@@ -249,16 +249,16 @@ chart_topic_index: 15
 
 ----
 id: topic_comments_scroller 
-label: Bình luận về chủ đề này
-desc: Cuộn để xem các bình luận về chủ đề này (hiển thị bằng ngôn ngữ gốc)
+label: Ý kiến đóng góp về chủ đề này
+desc: Cuộn để xem ý kiến đóng góp về chủ đề này (được hiển thị bằng ngôn ngữ gốc tương ứng)
 ----
 
 ----
 id: topic_data_vis
-title: Khám phá các phiếu bầu
+title: Tìm hiểu về các lượt bầu chọn
 learn_button_label: Tìm hiểu về các hành động đang được thực hiện
-desc: Mỗi chấm đại diện cho phiếu bầu của một cá nhân. Tổng số chấm tương ứng với tổng số phiếu bầu được bỏ cho một chủ đề cụ thể.
-download_text: Tải xuống CSV các bình luận của người tham gia
+desc: "Mỗi dấu chấm đại diện cho lượt bầu chọn của một cá nhân. Tổng số dấu chấm tương ứng với tổng số lượt bầu chọn về một chủ đề cụ thể."
+download_text: Tải xuống ý kiến đóng góp của người tham gia dưới dạng tệp CSV
 ----
 
 ----
@@ -266,237 +266,239 @@ id: conversation_groups
 nbr_groups: 7
 group_label_1: Phản đối mạnh mẽ
 group_label_2: Phản đối
-group_label_3: Hơi phản đối
-group_label_4: Trung lập
-group_label_5: Hơi hỗ trợ
-group_label_6: Hỗ trợ
-group_label_7: Hỗ trợ mạnh mẽ
+group_label_3: Có phần phản đối
+group_label_4: Không có ý kiến
+group_label_5: Có phần ủng hộ
+group_label_6: Ủng hộ
+group_label_7: Ủng hộ mạnh mẽ
 ----
 
 ----
 id: findings_alignment_section
 ----
-## Sự liên kết đáng chú ý
+## Sự thống nhất đáng chú ý 
 
-Những người từ các vùng cháy khác nhau cho thấy sự nhất quán đáng ngạc nhiên. Cư dân bị ảnh hưởng bởi Eaton và Palisades đã xếp hạng các nhu cầu hàng đầu giống nhau: chôn ngầm đường dây điện, cải thiện hệ thống nước địa phương cho chữa cháy, và đảm bảo cảnh báo kịp thời khi có tình huống khẩn cấp.
+Những người đến từ các khu vực có nguy cơ cháy khác nhau lại cho thấy sự nhất quán đáng ngạc nhiên. Cư dân bị ảnh hưởng bởi các đám cháy Eaton và Palisades xếp hạng các nhu cầu hàng đầu giống nhau: chôn đường dây điện xuống đất, cải thiện hệ thống nước của địa phương để chữa cháy và đảm bảo cảnh báo kịp thời khi xảy ra trường hợp khẩn cấp.
 
-Điều này cho thấy rằng bất kể sự tách biệt địa lý, có sự đồng thuận toàn cộng đồng về các ưu tiên phục hồi thiết yếu.
 
-**Nhóm ưu tiên này kể một câu chuyện rõ ràng.**
+Điều này cho thấy vẫn có sự thống nhất trên toàn cộng đồng về các mục ưu tiên phục hồi thiết yếu, cho dù ở những khu vực địa lý tách biệt.
 
-Cư dân muốn cả hỗ trợ ngay lập tức cho phục hồi và đầu tư dài hạn vào cơ sở hạ tầng chống cháy. Họ cũng cần các dịch vụ hỗ trợ được tinh gọn để phục vụ nhu cầu tái thiết khẩn cấp của cộng đồng.
+**Nhóm các mục ưu tiên này đã thể hiện rõ ràng.**
 
-Sự tham gia này cho phép chúng tôi biến trải nghiệm cá nhân thành hướng dẫn chính sách thực tế.
+Cư dân muốn được hỗ trợ tức thì để phục hồi và đầu tư dài hạn vào cơ sở hạ tầng chống cháy. Họ cũng cần các dịch vụ hỗ trợ tinh giản để phục vụ các nhu cầu xây dựng lại khẩn cấp của cộng đồng.
+
+Với sự tham gia của cộng đồng, chúng tôi có thể đưa trải nghiệm cá nhân vào hướng dẫn chính sách thực tế.
 
 ----
 id: findings_alignment_section_sidebar
 ----
 
-**Xây dựng trên sự hỗ trợ chung**
+**Xây dựng trên cơ sở ủng hộ chung**
 
-Quá trình này không chỉ thu thập ý kiến; nó xây dựng sự tự tin và động lực khi chúng ta tiến lên cùng nhau.
+Quy trình này không chỉ thu thập ý kiến mà còn gây dựng sự tự tin và động lực khi chúng ta cùng nhau hướng đến tương lai.
 
-Trong khi những người tham gia đến với cảm xúc hỗn hợp—chỉ 24% bắt đầu lạc quan trong khi 48% cảm thấy bi quan—triển vọng đã thay đổi qua quá trình.
+Mặc dù những người tham gia có cảm xúc lẫn lộn khi chỉ có 24% bắt đầu cảm thấy lạc quan trong khi 48% vẫn cảm thấy bi quan, thì triển vọng đã thay đổi thông quy trình này. 
 
-Hơn một phần tư người tham gia (27%) trở nên lạc quan hơn về phục hồi từ các vụ cháy LA.
+Hơn một phần tư người tham gia (27%) tỏ ra lạc quan hơn về tình hình phục hồi sau các đám cháy ở LA.
 
 ----
 id: signup_plea
 button_text: Đăng ký
 ----
-## Đăng ký để tiếp tục tham gia vào công việc quan trọng
+## Đăng ký để tiếp tục tham gia công việc quan trọng
 
-Cung cấp email của bạn để tìm hiểu về các cơ hội sắp tới. 
+Cung cấp cho chúng tôi email của quý vị để tìm hiểu về các cơ hội sắp tới. 
 
 ----
 id: response_intro
 ----
 
-## Cách chúng tôi phản hồi nhu cầu cộng đồng
+## Hoạt động của chúng tôi nhằm đáp ứng nhu cầu của cộng đồng
 
-Cư dân đã lên tiếng trong cả giai đoạn thiết lập chương trình nghị sự và các cuộc thảo luận sau đó. **Tiểu bang**, **quận**, **thành phố**, **tiện ích**, và **các đối tác liên bang** đã phản hồi bằng các hành động cụ thể. Và còn nhiều hơn nữa đang đến.
+Cư dân đã nêu lên ý kiến trong giai đoạn xây dựng chương trình nghị sự và trong các buổi nghị luận sau này. **Tiểu bang**, **quận*, **thành phố**, **tiện ích** và **đối tác liên bang** đều đã phản hồi thông qua những hành động rõ ràng. Và sắp tới còn nhiều nội dung nữa.
 
 ----
 id: response_steps
 action_now: Hành động ngay
-coming_soon: Sắp tới
-did_you_know: Bạn có biết?
+coming_soon: Sắp có
+did_you_know: Quý vị có biết?
 nbr_steps: 5
-anchor_link_text: "Đưa tôi đến phiếu bầu và bình luận của mọi người về chủ đề này"
+anchor_link_text: "Chuyển đến phần bầu chọn và ý kiến đóng góp của mọi người về chủ đề này"
 ----
 
 
 ----
 id: response_step_1
-title: Chôn ngầm đường dây điện và cải thiện an toàn thiết bị
+title: Đường dây điện ngầm và cải thiện an toàn cho thiết bị
 icon: construction-orange.svg
 ----
 
 ----
 id: response_step_1_action_now
 ----
-**Quận** và **tiểu bang** đang làm việc với các công ty điện và viễn thông để lập kế hoạch đưa nhiều tiện ích xuống dưới lòng đất. **Thống đốc Gavin Newsom** đã ký một sắc lệnh hành pháp vào tháng 3 năm 2025 để tăng tốc công việc này.
+**Quận** và **tiểu bang** đang làm việc với các công ty điện và viễn thông để lên kế hoạch tăng thêm tỷ lệ tiện ích ngầm. **Thống Đốc Gavin Newsom** đã ký một sắc lệnh hành pháp vào tháng 3 năm 2025 để đẩy nhanh công việc này.  
 
-Ngoài ra, **Thị trưởng Los Angeles Karen Bass** đã ban hành một sắc lệnh hành pháp để giúp cư dân Palisades tăng tốc tái thiết với vật liệu chống cháy và cơ sở hạ tầng chống biến đổi khí hậu. Điều này bao gồm tăng cường tiện ích để đảm bảo độ tin cậy điện trong thời tiết khắc nghiệt.
+Ngoài ra, **Thị Trưởng Los Angeles Karen Bass** đã ban hành một sắc lệnh hành pháp để giúp cư dân Palisades nhanh chóng xây dựng lại bằng vật liệu chống cháy và cơ sở hạ tầng có khả năng chống chịu. Trong đó bao gồm gia cố các tiện ích để đảm bảo điện ổn định trong thời tiết khắc nghiệt.
 
 ----
 id: response_step_1_coming_soon
 ----
-Các tiện ích đang làm việc chặt chẽ với các nhà lãnh đạo địa phương từ **Quận Los Angeles** và **thành phố**. Xây dựng đã bắt đầu ở Malibu, Altadena, và Pacific Palisades. Dự kiến sẽ tiếp tục trong vài năm nữa. **Tiểu bang** và **quận** đang kêu gọi một cách tiếp cận phối hợp để chôn ngầm đường dây điện và viễn thông sẽ tiết kiệm tiền, giảm thời gian, và giảm thiểu gián đoạn từ nhiều nhóm công nhân.
+Các công ty tiện ích hiện đang phối hợp chặt chẽ với các lãnh đạo địa phương từ **Quận Los Angeles** và **thành phố**. Quá trình xây dựng đang được tiến hành tại Malibu, Altadena và Pacific Palisades. Dự kiến công việc này sẽ kéo dài vài năm nữa. **Tiểu bang** và **quận** đang kêu gọi một phương pháp tiếp cận phối hợp để chôn các đường dây điện và cáp viễn thông xuống đất, nhờ đó tiết kiệm tiền, cắt giảm thời gian và giảm thiểu tình trạng gián đoạn do có nhiều đội ngũ làm việc.
 
-Ngoài việc chôn ngầm, các chiến lược bổ sung rất quan trọng để giảm thiểu nguy cơ cháy, chẳng hạn như quản lý thực vật và tái thiết bền vững. Chủ sở hữu tài sản và các chuyên gia thiết kế/xây dựng có thể tham khảo [Hướng dẫn Tài nguyên Tái thiết Bền vững](https://recovery.lacounty.gov/resilient-rebuilding/) của **quận** để biết thông tin và tài nguyên cho việc lập kế hoạch, thiết kế, và xây dựng một tòa nhà hiệu suất cao bền vững hơn với rủi ro cháy.
+Ngoài việc chôn đường dây, các chiến lược bổ sung rất quan trọng để giảm thiểu các nguy cơ hỏa hoạn, ví dụ như quản lý thảm thực vật và xây dựng lại đảm bảo khả năng chống chịu. Chủ sở hữu bất động sản và các chuyên gia thiết kế/xây dựng có thể xem [Hướng Dẫn về Nguồn Tài Nguyên Xây Dựng Lại Có Khả Năng Chống Chịu](https://recovery.lacounty.gov/resilient-rebuilding/) **của quận** để biết thông tin và các nguồn tài nguyên để lập kế hoạch, thiết kế và xây dựng tòa nhà có hiệu suất cao và có khả năng chống chịu tốt hơn trước nguy cơ hỏa hoạn.
 
 ----
 id: response_sidebar_1_unused
 ----
-When the **Town of Paradise** was rebuilt, it worked with **PG&E**, **telecom providers**, and **state regulators** to put at-risk power lines underground. Los Angeles is using this and similar safety improvements as a model and guide for its own recovery.
+Khi được xây dựng lại, **Thị Trấn Paradise** đã hợp tác với **PG&E*, **nhà cung cấp dịch vụ viễn thông*, và **các cơ quan quản lý của tiểu bang** để chôn các đường dây điện có nguy cơ xuống đất. Los Angeles đang sử dụng phương án này và các phương án cải thiện an toàn tương tự như một mô hình và định hướng cho quá trình phục hồi của mình.
 
 ----
 id: response_step_2
-title: Nước cho chữa cháy
+title: Nước để chữa cháy
 icon: hydrant-orange.svg
 ----
 
 ----
 id: response_step_2_action_now
 ----
-**Sở Nước và Điện Los Angeles** đã lấp đầy hơn 80 cơ sở lưu trữ nước đến mức cao nhất. Các máy bơm dự phòng đã được tiếp nhiên liệu và sẵn sàng tại mỗi trạm bơm như một dự phòng cho các máy bơm chính. Họ đã lấp đầy năm xe chở nước của họ, mỗi xe ít nhất 4,000 gallon, và để chúng ở chế độ chờ cho **Sở Cứu hỏa Los Angeles** (LAFD) nếu cần. Bốn hồ chứa giữ hàng tỷ gallon nước không uống được cho chữa cháy trên không.
+**Sở Nước và Điện Los Angeles** đã đổ đầy hơn 80 cơ sở lưu trữ nước lên mức cao nhất. Bơm dự phòng có đủ nhiên liệu và sẵn sàng tại mỗi trạm bơm để dự phòng cho các máy bơm chính. Họ đã đổ đầy năm xi-téc nước với mỗi xi-téc chứa ít nhất 4,000 gallon và yêu cầu sẵn sàng dự phòng cho **Sở Cứu Hỏa Los Angeles** (Los Angeles Fire Department, LAFD) nếu cần. Bốn hồ chứa này chứa hàng tỷ gallon nước không uống được dùng để chữa cháy bằng máy bay.
 
-Ở khu vực Pacific Palisades, hai hồ chứa địa phương được dành riêng cho chữa cháy trên không: Hồ chứa Encino và Hồ chứa Lower Stone Canyon.
+Tại khu vực Pacific Palisades, có hai hồ chứa địa phương chuyên dành để chữa cháy bằng máy bay: Hồ Chứa Encino và Hồ Chứa Lower Stone Canyon.
 
-**Sở Cứu hỏa Quận Los Angeles** đã làm việc với **Sở Công trình Công cộng Quận Los Angeles** và **7 công ty nước địa phương** để đánh giá dòng chảy cháy từ các hệ thống nước hiện có trong các khu vực cháy. Để tạo thuận lợi cho quá trình tái thiết, **Cứu hỏa Quận LA** sẽ sửa đổi Bộ luật Cứu hỏa Quận Los Angeles 2026 để đáp ứng các yêu cầu Bộ luật Cứu hỏa Tiểu bang hiện tại. Sửa đổi luật này sẽ cho phép mọi người tái thiết nhà của họ trong khi hệ thống nước được nâng cấp và cải thiện. **Cứu hỏa Quận LA** sẽ tiếp tục thường xuyên bố trí nhân viên và đặt chiến lược các xe cứu hỏa sở hữu quận được đặt trước trong các giai đoạn rủi ro cháy cao.
+**Sở Cứu Hỏa Quận Los Angeles** đã hợp tác với **Sở Công Trình Công Cộng Quận Los Angeles** và **7 công ty nước địa phương** để đánh giá lưu lượng nước chữa cháy từ các hệ thống nước hiện có trong các khu vực cứu hỏa. Để tạo điều kiện thuận lợi cho quá trình xây dựng lại, **Sở Cứu Hỏa Quận LA** sẽ sửa đổi Bộ Luật Cứu Hỏa Quận Los Angeles năm 2026 để đáp ứng các yêu cầu trong Bộ Luật Cứu Hỏa của Tiểu Bang hiện hành. Việc sửa đổi bộ luật này sẽ cho phép mọi người xây dựng lại nhà, đồng thời hệ thống nước được nâng cấp và cải thiện. **Sở Cứu Hỏa Quận LA** sẽ thường xuyên bố trí nhân viên và sắp xếp các xe cứu hỏa ở vị trí định sẵn do quận sở hữu một cách chiến lược trong những khoảng thời gian có nguy cơ cháy cao.
 
-Ngoài ra, một quy trình mới được tinh gọn đã được phát triển loại bỏ nhu cầu chủ nhà tham gia vào quy trình biểu mẫu dòng chảy cháy. **Các công ty nước**, **Công trình Công cộng Quận LA**, và **Cứu hỏa Quận LA** sẽ xử lý quy trình mới này, điều này sẽ tinh gọn thời gian, loại bỏ nhu cầu chủ nhà hoàn thành quy trình, và tiết kiệm tiền cho chủ nhà.
+Ngoài ra, một quy trình tinh giản mới đã được xây dựng, nhờ đó chủ sở hữu nhà không cần tham gia quá trình chuẩn bị lưu lượng nước chữa cháy. **Các công ty nước**, **Sở Công Trình Công Cộng Quận LA** và **Sở Cứu Hỏa Quận LA** sẽ xử lý quy trình mới này, qua đó hợp lý hóa tiến độ thực hiện, để chủ sở hữu nhà không cần hoàn thành quy trình và tiết kiệm tiền cho họ.
 
 ----
 id: response_step_2_coming_soon
 ----
-Các quận nước đã xác định thiệt hại và nộp đơn xin tài trợ (ví dụ: FEMA PA) để tái thiết. **Tiểu bang** và **quận** đã cam kết hỗ trợ các quận tái thiết và cải thiện hệ thống.
+Các khu vực quản lý nước đã xác định thiệt hại và đã nộp đơn xin tài trợ (ví dụ: Chương Trình Hỗ Trợ Công Cộng (Public Assistance, PA) của Cơ Quan Quản Lý Tình Trạng Khẩn Cấp Liên Bang (Federal Emergency Management Agency, FEMA)) để xây dựng lại. **Tiểu bang** và **quận** đã cam kết hỗ trợ các khu vực này xây dựng lại và cải thiện hệ thống.
 
-[LA County Forward: Kế hoạch Tái thiết](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) nói rằng những nâng cấp này là các khoản đầu tư cơ sở hạ tầng quan trọng cho an toàn dài hạn.
+[Quận LA Hướng Đến Tương Lai: Kế Hoạch Chi Tiết Để Xây Dựng Lại](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) cho biết những nâng cấp này là các khoản đầu tư cơ sở hạ tầng quan trọng để đảm bảo an toàn lâu dài.
 
 ----
 id: response_step_3
-title: Thông báo và cảnh báo khẩn cấp mạnh mẽ hơn
+title: Thông báo và cảnh báo về tình trạng khẩn cấp hiệu quả hơn
 icon: communication-orange.svg
 ----
 
 ----
 id: response_step_3_action_now
 ----
-Các quan chức địa phương ở **Thành phố Los Angeles** và **Quận** đã thực hiện một số bước cụ thể để cải thiện cách phát cảnh báo khẩn cấp sau sự nhầm lẫn lan rộng trong các vụ cháy Eaton và Palisades. **Hội đồng Giám sát Quận Los Angeles** đã ra lệnh xem xét độc lập, bên ngoài về hệ thống cảnh báo khẩn cấp và thông báo sơ tán, giữ lại các chuyên gia bên ngoài để thực hiện phân tích sau hành động toàn diện và báo cáo lại mỗi 90 ngày.
+Các quan chức địa phương tại **Thành Phố Los Angeles** và **Quận** đã thực hiện một số bước cụ thể để cải thiện cách thức đưa ra cảnh báo về tình trạng khẩn cấp sau khi tình trạng hỗn loạn lan rộng trong các vụ cháy Eaton và Palisades. **Hội Đồng Giám Sát Quận Los Angeles** đã yêu cầu đánh giá độc lập bên ngoài đối với hệ thống cảnh báo tình trạng khẩn cấp và thông báo sơ tán, qua đó thuê các chuyên gia bên ngoài để tiến hành phân tích toàn diện sau hành động và báo cáo lại 90 ngày một lần.
 
-**Sở Quản lý Khẩn cấp của thành phố** và **Trung tâm Thông tin Liên kết Phối hợp Quận** hiện đang ưu tiên đào tạo nâng cao, kiểm tra hệ thống nghiêm ngặt hơn, nhắm mục tiêu địa lý cải thiện, từ ngữ thông điệp rõ ràng hơn, và phối hợp mạnh mẽ hơn cho các tình huống khẩn cấp an toàn tính mạng trong tương lai.
+**Sở Quản Lý Tình Trạng Khẩn Cấp của thành phố** và **Trung Tâm Thông Tin Phối Hợp Quận** hiện đang ưu tiên tiến hành đào tạo nâng cao, kiểm tra hệ thống nghiêm ngặt hơn, cải thiện theo mục tiêu địa lý, truyền đi thông điệp rõ ràng hơn và điều phối hiệu quả hơn trong các trường hợp khẩn cấp về an toàn tính mạng trong tương lai.
 
-**Thành phố** đang phối hợp một ủy ban điều hành hai tuần một lần tập trung vào liên lạc khẩn cấp để thảo luận về các rào cản và tiến bộ. Nhóm bao gồm đại diện từ các sở thành phố, bao gồm:
+**Thành phố** đang điều phối một ủy ban thường trực hai tuần họp một lần, tập trung vào liên lạc trong tình trạng khẩn cấp để thảo luận về các biện pháp ngăn chặn và diễn biến. Nhóm này gồm các đại diện đến từ các sở của thành phố, bao gồm:  
 
-  * **Sở Nước và Điện Los Angeles**
-  * **Sở Quản lý Khẩn cấp Los Angeles**
-  * **Sở Quy hoạch Los Angeles**
-  * **Sở Cứu hỏa Los Angeles**
+  * **Sở Nước và Điện Los Angeles**  
+  * **Sở Quản Lý Tình Trạng Khẩn Cấp Los Angeles** 
+  * **Sở Quy Hoạch Los Angeles**
+  * **Sở Cứu Hỏa Los Angeles**
 
 ----
 id: response_step_3_coming_soon
 ----
-Các quan chức quận, hợp tác với các đối tác địa phương, tiểu bang và liên bang, đang làm việc để cải thiện hiệu quả hệ thống cảnh báo và cảnh báo khẩn cấp trên toàn quận. Điều này bao gồm thực hiện các khuyến nghị từ các đánh giá của bên thứ ba độc lập, bao gồm Nhóm McChrystal, Viện Nghiên cứu An toàn Cháy, và Quốc hội Hoa Kỳ.
+Thông qua hợp tác cùng các đối tác của địa phương, tiểu bang và liên bang, các quan chức quận đang nỗ lực cải thiện tính hiệu quả của hệ thống thông báo và cảnh báo tình trạng khẩn cấp trên toàn quận. Trong đó bao gồm thực hiện các khuyến nghị từ đánh giá của các bên độc lập, bao gồm McChrystal Group, Viện Nghiên Cứu An Toàn Cháy và Quốc Hội Hoa Kỳ.
 
-Các hệ thống thông báo khẩn cấp địa phương sẽ tiếp tục được xem xét và cải thiện. Bằng cách tập trung vào việc làm cho thông điệp cảnh báo chính xác hơn và cụ thể theo khu vực, chuẩn hóa ngôn ngữ cảnh báo, cải thiện khả năng thông báo đa lớp, và tăng cường phối hợp và đào tạo giữa các cơ quan để đảm bảo cảnh báo kịp thời, rõ ràng và chính xác về mặt địa lý trong các thảm họa tương lai. Những cải thiện này bao gồm đánh giá bên ngoài về các cảnh báo cháy rừng gần đây, tăng yêu cầu tài trợ liên bang, và nỗ lực giáo dục công chúng về các dịch vụ thông báo tùy chọn.
+Hệ thống thông báo tình trạng khẩn cấp của địa phương sẽ tiếp tục được đánh giá và cải thiện. Bằng cách tập trung cải thiện thông báo cảnh báo chính xác hơn và cụ thể theo khu vực, chuẩn hóa ngôn ngữ cảnh báo, cải thiện khả năng thông báo đa lớp, đồng thời tăng cường phối hợp và đào tạo giữa các cơ quan để đảm bảo cảnh báo kịp thời, rõ ràng và chính xác về mặt địa lý trong các thảm họa trong tương lai. Những cải thiện này bao gồm đánh giá bên ngoài đối với các cảnh báo cháy rừng gần đây, gia tăng yêu cầu tài trợ từ liên bang và nỗ lực giáo dục cộng đồng liên quan đến dịch vụ thông báo chọn tham gia.
 
 ----
 id: response_sidebar_3_unused
 ----
-The rules requiring 72 hours of backup power at cell towers in high fire-threat zones were implemented following the 2017 wildfires, which left thousands without phone service.
+Các quy tắc yêu cầu điện dự phòng trong 72 giờ tại tháp di động trong khu vực có nguy cơ cao xảy ra hỏa hoạn đã được triển khai sau khi xảy ra các vụ cháy rừng năm 2017 khiến hàng nghìn người không có sóng điện thoại.
 
 ----
 id: response_step_4
-title: Hỗ trợ tái thiết
+title: Trợ giúp xây dựng lại
 icon: currency-orange.svg
 ----
 
 ----
 id: response_step_4_action_now
 ----
-Chính phủ đã huy động để hỗ trợ cư dân, bao gồm giúp đảm bảo 3 tỷ đô la hỗ trợ và vay liên bang. **Quỹ Thế chấp CalAssist của tiểu bang** đang hướng hơn 100 triệu đô la để giảm thế chấp. **Thống đốc Newsom** đã đảm bảo cam kết từ các ngân hàng hàng đầu để cung cấp khoan dung cho thế chấp và ký luật để mở rộng khoan dung lên 12 tháng và tạo ra các yêu cầu pháp lý có thể thực thi.
+Chính phủ đã huy động tiền để hỗ trợ cư dân, trong đó bao gồm giúp đảm bảo $3 tỷ tiền hỗ trợ và các khoản vay liên bang. **Quỹ Thế Chấp CalAssist của tiểu bang** đang chuyển hơn $100 triệu để cứu trợ trả nợ khoản vay thế chấp. **Thống Đốc Newsom** đã đảm bảo cam kết với các bên cho vay hàng đầu về việc hoãn trả nợ khoản vay thế chấp, đồng thời ký duyệt luật để kéo dài thời gian hoãn trả nợ lên 12 tháng và lập ra các yêu cầu pháp lý có thể thực thi. 
 
-**Quận** đã huy động hơn 50 triệu đô la để hỗ trợ gia đình và doanh nghiệp nhỏ thông qua **Quỹ Cứu trợ Cháy rừng Quận LA**. Để giảm chi phí cấp phép cho chủ nhà, **quận** cũng đã hoãn hoặc hoàn lại các phí cụ thể cho phân vùng, kiểm tra kế hoạch, và giấy phép qua các cơ quan chính như **Công trình Công cộng**, **Quy hoạch Vùng**, **Y tế Công cộng**, và **Cứu hỏa**. Những phí này có thể vượt quá 20,000 đô la mỗi hộ gia đình. Quận đang tăng tốc xem xét kế hoạch giấy phép với thời gian xử lý 14 ngày cho xem xét ban đầu, 7 ngày xử lý cho xem xét bổ sung, và mục tiêu cấp giấy phép trong 30 ngày. Hỗ trợ thêm cũng đã được cung cấp. Phiếu Section 8 có sẵn cho người thuê bị di dời. Có quỹ tài trợ nơi trú ẩn khẩn cấp cho những người vô gia cư trong khu vực. Các hội thảo đã được tạo điều kiện cho người cao tuổi với thế chấp ngược.
+**Quận** đã huy động hơn $50 triệu để hỗ trợ các gia đình và doanh nghiệp nhỏ thông qua chương trình **Quỹ Cứu Trợ Cháy Rừng Quận LA**. Để giảm chi phí cấp phép cho chủ sở hữu nhà, **quận** cũng đã hoãn hoặc hoàn trả các khoản phí cụ thể đối với việc quy hoạch, kiểm tra mặt bằng và cấp phép tại các cơ quan chủ chốt như **Sở Công Trình Công Cộng*, **Sở Quy Hoạch Khu Vực**, **Sở Y Tế Công Cộng** và **Sở Cứu Hỏa*. Những khoản phí này có thể vượt quá $20,000 mỗi hộ gia đình. Quận đang đẩy nhanh quá trình duyệt xét kế hoạch cấp phép với thời gian phản hồi 14 ngày đối với duyệt xét lần đầu, 7 ngày đối với duyệt xét bổ sung và mục tiêu cấp giấy phép trong 30 ngày. Ngoài ra còn có hỗ trợ khác. Phiếu giảm giá theo Phần 8 sẽ được cung cấp cho người thuê nhà phải di dời. Có các quỹ trợ cấp nơi tạm trú khẩn cấp cho người vô gia cư trong khu vực. Các hội thảo cũng được tổ chức dành cho người cao tuổi có khoản thế chấp tài sản ngược. 
+ 
 
-Hơn nữa, **Thị trưởng Los Angeles Karen Bass** đã ban hành một số sắc lệnh hành pháp để tinh gọn tái thiết và giảm chi phí. Điều này bao gồm tạo Trung tâm Tái thiết Một cửa, chỉ đạo các sở thành phố tăng tốc xem xét giấy phép xây dựng trong 30 ngày hoặc ít hơn, và miễn thuế kinh doanh 2025 cho các công ty bị ảnh hưởng.
+Hơn nữa, **Thị Trưởng Los Angeles Karen Bass** đã ban hành một số sắc lệnh hành pháp để tinh giản công việc xây dựng lại và giảm chi phí. Trong đó bao gồm việc lập Trung Tâm Tái Thiết Một Cửa để chỉ đạo các sở của thành phố duyệt xét nhanh giấy phép xây dựng sau 30 ngày trở xuống và miễn thuế kinh doanh năm 2025 đối với các công ty bị ảnh hưởng.
 
 ----
 id: response_step_4_coming_soon
 ----
-**Quận Los Angeles** đang phối hợp với tiểu bang, từ thiện, và khu vực tư nhân để kết nối cư dân với các dịch vụ giúp mọi người điều hướng quy trình phục hồi, nơi các gia đình có thể nhận hỗ trợ cá nhân hóa với tài chính, cấp phép, và xây dựng để giảm rào cản phục hồi.
+**Quận Los Angeles** đang phối hợp với tiểu bang, tổ chức từ thiện và khu vực tư nhân để kết nối cư dân với các dịch vụ giúp mọi người thực hiện quá trình phục hồi, trong đó các gia đình có thể nhận được trợ giúp cá nhân về tài chính, cấp phép và xây dựng để giảm bớt các rào cản đối với việc phục hồi.
 
-Ngoài ra, chúng tôi đã lắng nghe người thuê khi họ yêu cầu chúng tôi không bỏ rơi họ. **Quỹ Phục hồi Cháy của Quận Los Angeles** bao gồm hỗ trợ thuê trực tiếp. **Các giám sát viên quận** đang xem xét các biện pháp bảo vệ chống tăng giá mạnh hơn cho người thuê trong các vùng cháy.
+Ngoài ra, chúng tôi đã lắng nghe những người thuê nhà khi họ yêu cầu chúng tôi không bỏ rơi họ. **Quỹ Phục Hồi Sau Hỏa Hoạn của Quận Los Angeles** bao gồm hỗ trợ tiền thuê nhà trực tiếp. **Giám sát viên quận** đang xem xét các biện pháp mạnh mẽ hơn chống tăng giá quá mức để bảo vệ người thuê nhà trong khu vực có nguy cơ cháy cao.
 
-**Quận** đang làm việc để phối hợp với **tiểu bang** và **từ thiện** để xác định "tài trợ cầu nối" cho cư dân để trang trải chi phí ngắn hạn để sống sót và bắt đầu tái thiết không được bao phủ bởi các nguồn tài trợ khác.
+**Quận** hiện đang phối hợp với **tiểu bang** và **quỹ từ thiện** để xác định “tài trợ bắc cầu” để cư dân trang trải các chi phí trước mắt để sinh hoạt và bắt đầu xây dựng lại mà không được chi trả bởi các nguồn tài trợ khác.
 
 
 ----
 id: response_sidebar_4_unused
 ----
-Residents asked for aid without barriers during the agenda-setting phase of this engagement. **Los Angeles County** then provided language application support and direct payments through the LA Region Worker Relief Fund, including to undocumented residents. The county, with support from community groups, made sure not to exclude people. Also, the **California Department of Insurance** enforces a one-year moratorium. This means that insurers cannot cancel coverage after a declared disaster. It also requires two years of coverage for those whose homes suffered a total loss. 
+Cư dân đã yêu cầu viện trợ không có rào cản trong giai đoạn xây dựng chương trình nghị sự của quá trình tham gia này. Sau đó, **Quận Los Angeles** đã cung cấp dịch vụ hỗ trợ ngôn ngữ nộp đơn và thanh toán trực tiếp thông qua Quỹ Cứu Trợ Người Lao Động Khu Vực LA, bao gồm cả cho những cư dân không có giấy tờ. Với sự hỗ trợ từ các nhóm cộng đồng, quận đảm bảo không ai bị loại trừ. Ngoài ra, **Sở Bảo Hiểm California** cũng thi hành lệnh hoãn nợ trong một năm. Điều này có nghĩa là các công ty bảo hiểm không được phép hủy bảo hiểm sau khi một thảm họa được tuyên bố. Lệnh này cũng yêu cầu hai năm bảo hiểm cho những người có nhà phải chịu tổn thất hoàn toàn. 
 
-The Blueprint for Rebuilding highlights the payments as a milestone in equitable recovery.
+Kế Hoạch Chi Tiết Để Xây Dựng Lại nhấn mạnh các khoản thanh toán là một mốc quan trọng trong quá trình phục hồi công bằng.
 
 ----
 id: response_step_5
-title: Tăng tốc cấp phép và thanh tra
+title: Cấp phép và kiểm tra nhanh
 icon: house-orange.svg
 ----
 
 ----
 id: response_step_5_action_now
 ----
-**Thống đốc Newsom** đã ban hành nhiều sắc lệnh hành pháp miễn các yêu cầu cấp phép của tiểu bang để tinh gọn tái thiết. **Thành phố** và **quận** đã tạo các trung tâm một cửa ở các khu vực bị cháy để hỗ trợ các hoạt động tái thiết. Điều này bao gồm Altadena, Calabasas, và Pacific Palisades.
+**Thống Đốc Newsom** đã ban hành nhiều sắc lệnh hành pháp miễn trừ các yêu cầu cấp phép của tiểu bang để tinh giản quá trình xây dựng lại. **Thành phố** và **quận** đã xây dựng các trung tâm một cửa trong những khu vực bị hỏa hoạn để hỗ trợ các hoạt động xây dựng lại. Trong đó bao gồm Altadena, Calabasas và Pacific Palisades.
 
-Ở **quận**, các Trung tâm Giấy phép Một cửa Calabasas và Altadena cung cấp hỗ trợ trực tiếp cho cư dân từ các cơ quan quận khác nhau, nơi hơn 8,500 cư dân đã được giúp đỡ cho đến nay. Ở thành phố, hơn 4,000 người đã được giúp đỡ tại Trung tâm Tái thiết Một cửa cho đến nay. Cư dân quận có thể nộp đơn xin giấy phép trực tuyến bằng nền tảng EPIC-LA, cung cấp quy trình đơn đăng ký và xem xét thống nhất để đơn giản hóa điều hướng. **Quận** đang làm việc nhanh chóng để đáp ứng nhu cầu giấy phép ngày càng tăng bằng cách tái phân bổ nhân viên và đưa thêm công nhân hợp đồng khi cần thiết, cũng như triển khai thí điểm AI eCheck với Archistar. Quận cũng cung cấp [danh mục kế hoạch được phê duyệt trước](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) với các thiết kế tuân thủ các yêu cầu phân vùng và mã xây dựng hiện tại. Các kế hoạch được phê duyệt trước và quy trình cấp phép tinh gọn có thể giúp chủ nhà tái thiết hiệu quả, an toàn và tiết kiệm hơn.
+Trong **quận**, các Trung Tâm Cấp Giấy Phép Một Cửa Calabasas và Altadena cung cấp dịch vụ trợ giúp trực tiếp cho cư dân từ các cơ quan khác nhau của quận và tính đến nay đã hỗ trợ hơn 8,500 cư dân. Trong thành phố, tính đến nay đã có hơn 4,000 người được hỗ trợ tại Trung Tâm Tái Thiết Một Cửa. Cư dân quận có thể nộp đơn xin cấp phép trực tuyến thông qua nền tảng EPIC-LA, với quy trình nộp đơn và duyệt xét thống nhất để đơn giản hóa việc điều hướng. **Quận** đang nỗ lực nhanh chóng để đáp ứng nhu cầu ngày càng tăng về giấy phép bằng cách sắp xếp lại nhân viên và bổ sung nhân viên hợp đồng khi cần thiết, cũng như triển khai thí điểm AI eCheck với Archistar. Quận cũng cung cấp một [danh mục mặt bằng được phê duyệt trước](https://recovery.lacounty.gov/rebuilding/preapproved-plans/) với các thiết kế tuân thủ các yêu cầu trong bộ luật quy hoạch và xây dựng hiện hành. Các mặt bằng được phê duyệt trước và các quy trình cấp phép tinh giản có thể giúp chủ sở hữu nhà xây dựng lại hiệu quả, an toàn và với giá cả phải chăng hơn.
 
-Trong một nỗ lực song song, **Thị trưởng Los Angeles Karen Bass** đã ban hành sắc lệnh hành pháp chỉ đạo **Sở Xây dựng và An toàn LA** thí điểm kiểm tra kế hoạch trước được hỗ trợ bởi AI (Archistar eCheck AI), tạm dừng phí giấy phép và kiểm tra kế hoạch, và ra mắt thư viện các thiết kế được phê duyệt trước, tuân thủ mã để tăng tốc tái thiết trong thành phố. Hơn 4,000 cư dân thành phố đã được giúp đỡ tại Trung tâm Tái thiết Một cửa của thành phố.
+Trong một nỗ lực song song, **Thị Trưởng Los Angeles Karen Bass** đã ban hành các sắc lệnh hành pháp để chỉ đạo **Sở Xây Dựng và An Toàn LA** về việc thí điểm kiểm tra trước mặt bằng với AI (Archistar eCheck AI), tạm dừng áp dụng phí cấp phép và kiểm tra mặt bằng, cũng như triển khai thư viện thiết kế tuân thủ bộ luật đã được phê duyệt trước để nhanh chóng xây dựng lại trong thành phố. Hơn 4,000 cư dân thành phố đã được trợ giúp tại Trung Tâm Tái Thiết Một Cửa của thành phố.
 
 ----
 id: response_step_5_coming_soon
 ----
-**Quận** đang tăng tốc quy trình cấp phép và thanh tra thông qua "đường nhanh", là các làn tinh gọn để tăng tốc tái thiết trong khi duy trì an toàn và tuân thủ mã. Điều này bao gồm mở rộng danh mục kế hoạch được phê duyệt trước và nhóm các đánh giá cho các dự án tương tự.
+**Quận** đang đẩy nhanh quá trình cấp phép và kiểm tra thông qua “quy trình cấp tốc”, là các làn được sắp xếp hợp lý để đẩy nhanh quá trình xây dựng lại, nhưng đồng thời vẫn duy trì an toàn và tuân thủ quy tắc. Trong đó bao gồm mở rộng danh mục mặt bằng đã được phê duyệt trước và các đánh giá chung cho các dự án tương tự.
 
-**Quận** cũng đang tăng năng lực đột biến bằng cách mở rộng thí điểm AI eCheck với Archistar, phát triển thanh tra kỹ thuật số và từ xa, và thêm người kiểm tra kế hoạch và thanh tra viên để xử lý khối lượng cao hơn.
+**Quận** cũng đang tăng mạnh năng suất bằng cách mở rộng thí điểm AI eCheck với Archistar, gia tăng kiểm tra kỹ thuật số và từ xa, đồng thời bổ sung người kiểm tra và thanh tra mặt bằng để xử lý khối lượng công việc lớn hơn.
 
 ----
 id: response_sidebar_5
 ----
-**Federal**, **state**, and **local** teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history. This is thanks to unprecedented partnership between the **state** and the **U.S. Army Corps of Engineers**.
+Các nhóm của **liên bang**, **tiểu bang*, và **địa phương** đã dọn sạch đống đổ nát từ các đám cháy năm 2025 chỉ trong sáu tháng. Đây là kỷ lục dọn sạch đống đổ nát sau thảm họa nhanh nhất trong lịch sử California. Kết quả này là nhờ có sự hợp tác chưa từng có giữa **tiểu bang** và **Công Binh Lục Quân Hoa Kỳ**.
 
 ----
 id: other_efforts
-title: Các nỗ lực khác
+title: Những nỗ lực khác
 mental_health: Sức khỏe tâm thần
 ----
-**Sở Sức khỏe Tâm thần Quận LA** và các đối tác địa phương đang giúp những người sống sót nhận được hỗ trợ họ cần, tài trợ các không gian chung nơi mọi người có thể nhận tư vấn miễn phí và tham gia các nhóm hỗ trợ chấn thương.
+**Sở Sức Khỏe Tâm Thần Quận LA** và các đối tác địa phương đang giúp đỡ nạn nhân nhận được hỗ trợ mà họ cần, tài trợ cho các không gian chung để mọi người có thể được tư vấn miễn phí và tham gia các nhóm hỗ trợ chấn thương.
 
 ----
 id: findings_how_we_did_the_analysis
 ----
 
-### Cách chúng tôi thực hiện phân tích
+### Hoạt động phân tích chúng tôi đã thực hiện
 
-<div class="sub-head">Để hiểu sâu hơn, <a href="/vi/lafires-recovery/agenda-setting-data-insights/">xem phương pháp luận chi tiết và phân tích bình luận của chúng tôi</a>.</div>
+<div class="sub-head">Để hiểu sâu hơn, <a href="/lafires-recovery/agenda-setting-data-insights/">hãy xem phương pháp luận chi tiết và phân tích ý kiến đóng góp của chúng tôi</a>.</div>
 
-Chúng tôi đã sử dụng mô hình AI tạo sinh Claude 3.5 Sonnet để giúp tìm các chủ đề và xu hướng trong các bình luận. Chúng tôi đã nhắc nhở mô hình với các câu hỏi để giúp chúng tôi hiểu mọi người nghĩ gì. Đây là một cách hiệu quả để xem mọi người đồng ý hay không đồng ý về các chủ đề quan trọng. 
+Chúng tôi đã sử dụng mô hình AI tạo sinh Claude 3.5 Sonnet để tìm chủ đề và xu hướng trong các ý kiến. Chúng tôi hướng dẫn mô hình bằng những câu hỏi để hiểu được suy nghĩ của mọi người. Đây là một cách hiệu quả để xem mọi người đồng ý hay không đồng ý về các chủ đề quan trọng. 
 
-Chúng tôi đã thử nghiệm các cách khác nhau để viết các lời nhắc. Chúng tôi tập trung vào các câu trả lời xuất hiện thường xuyên, bất kể chúng tôi hỏi câu hỏi như thế nào.
+Chúng tôi đã thử nghiệm nhiều cách khác nhau để viết hướng dẫn. Chúng tôi tập trung vào những câu trả lời xuất hiện thường xuyên, bất kể chúng tôi đặt câu hỏi như thế nào.
 
-**Các lời nhắc mẫu**
+**Hướng dẫn mẫu**
 
-"Tôi muốn bạn phân tích một bộ phản hồi khảo sát định tính bằng cách suy nghĩ mở rộng."
+“Tôi muốn bạn phân tích một tập hợp các câu trả lời khảo sát định tính bằng tư duy mở rộng.” 
 
-"Hãy bắt đầu bằng cách khám phá ban đầu dữ liệu: Đầu tiên, đọc qua toàn bộ tập dữ liệu mà không phân loại hoặc gắn nhãn. Ghi chú các quan sát và ấn tượng ngay lập tức của bạn về những gì nổi bật. Xác định các từ, cụm từ và cảm xúc lặp lại xuất hiện qua nhiều phản hồi. Chia sẻ những gì làm bạn ngạc nhiên hoặc thu hút sự chú ý của bạn trong đánh giá ban đầu này."
+“Bắt đầu bằng cách thực hiện khám phá dữ liệu lần đầu: Trước tiên, đọc toàn bộ bộ dữ liệu mà không phân loại hoặc gắn nhãn. Lưu ý những quan sát và ấn tượng ban đầu của bạn về những gì nổi bật đối với bạn. Xác định các từ, cụm từ và thái độ lặp đi lặp lại xuất hiện trên nhiều câu trả lời. Chia sẻ điều khiến bạn ngạc nhiên hoặc thu hút sự chú ý của bạn trong lần đầu xem xét này.”
 
 ----
 id: partners
 ----
 
-## Các đối tác của chúng tôi
+## Đối tác của chúng tôi
 
-Văn phòng Dữ liệu và Đổi mới California đã hợp tác với các chuyên gia phục hồi thảm họa và những người ủng hộ dân chủ thảo luận để thực hiện công việc này. Các đối tác của chúng tôi cũng đã giúp định hình các hành động sẽ đến từ công việc này.
+Văn Phòng Dữ Liệu và Đổi Mới của California đã hợp tác với các chuyên gia phục hồi sau thảm họa và những người ủng hộ chế độ dân chủ tranh luận để thực hiện công việc này. Các đối tác của chúng tôi cũng giúp định hình những hành động sẽ được thực hiện từ công việc này. 
 
 Các đối tác và cố vấn của chúng tôi cho sáng kiến này bao gồm:

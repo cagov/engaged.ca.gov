@@ -1,69 +1,69 @@
 ---
-title: 洛杉矶在恢复计划上达成一致
-description: 参与的加利福尼亚是一个在线平台，让加利福尼亚人更容易在政府中发声。参与的加利福尼亚的第一个主题是从洛杉矶野火中恢复。此页面显示了重建洛杉矶的主要问题。
+title: LA 确定恢复计划
+description: “Engaged California 是一个在线平台，旨在帮助加州居民更便捷地向政府传达心声。Engaged California 的首个议题聚焦洛杉矶野火后的恢复重建工作， 本页面展示了洛杉矶重建过程中的首要议题。”
 layout: mmmd-lafires-action-plan
 parentid: lafires-recovery
 keywords:
-  - Los Angeles
-  - fires
-  - recovery
-tags:
-  - pages
+  - 洛杉矶
+  - 火灾
+  - 恢复
+tags: 
+  - 页面
 ---
 
 ----
 id: translator_instructions
-example_quoted_text: "this is quoted text:"
-----
+example_quoted_text: "this is quoted text:"----
+
 (don't translate this section - these are instructions for the translator)
 
 1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
 
-2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+2. If a label begins with "translator" it is further instructions for the translator. Do not translate the instructions.
 
 3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
-   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+  This is especially important for Armenian, where colons are added as sentence-ending punctuation.
 
 4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.  
-   When text contains words inside single asterisks, that text is intended to be printed in italics. 
-   In either case, preserve the asterisks.
+  When text contains words inside single asterisks, that text is intended to be printed in italics. 
+  In either case, preserve the asterisks.
 
-5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
-   This is typically used for templates that insert numbers into a sentence.
+5. Text preceded by a one-or-more hash symbols (#) are headings. Preserve the hash-symbols.
+  This is typically used for templates that insert numbers into a sentence.
 
 ----
 id: findings_overview
-buttonText: 跳转到行动计划
+buttonText: 跳到行动计划
 ----
 
-# 洛杉矶在恢复计划上达成一致
+# LA 确定恢复计划
 
-在首次社区参与过程中，超过3,000名社区成员被邀请参加数字时代的市政厅会议。参与者通过2个阶段贡献，制定了从2025年1月毁灭性洛杉矶野火中恢复的行动计划。
+在一次首创的社区参与流程中，3,000 多名社区成员受邀参加数字时代的市政厅会议。参与者分两个阶段贡献意见，共同制定了从 2025 年 1 月毁灭性洛杉矶野火中恢复的行动计划。 
 
-该行动计划通过6个月期间的在线审议会议制定，反映了受伊顿和帕利塞兹火灾影响者的优先事项。他们设定的优先事项——专注于即时社区支持和长期基础设施改善——将指导州和地方官员实现全面恢复。
+该行动计划通过为期 6 个月的在线审议会议制定，反映了受 Eaton 和 Palisades 火灾影响民众的优先事项。他们确定的优先事项——聚焦即时社区支持和长期基础设施改善——将指导州和地方官员实现全面恢复。
 
 
 ----
 id: findings_narrative_step_1
-title: 议程设定
-button_text: 阅读议程设定阶段
+title: 议程制定
+button_text: 了解议程制定阶段
 ----
 
-## 居民分享了他们的关切和想法
+## 居民分享了他们的担忧和想法
 
-在洛杉矶严重野火之后，数百名社区成员在线会面讨论恢复优先事项。
+在洛杉矶发生严重野火后，数百名社区成员在线会面，讨论恢复工作的优先事项。
 
 ----
 id: findings_narrative_step_2
-title: 审查和规划
+title: 审议与规划
 button_text: 了解我们的合作伙伴
 nbr_phrases: 6
 translator_note: USE slash symbol for line breaks, keep these phrases to two lines!
-phrase_1: 公用事业
+phrase_1: 公共事业
 phrase_2: 社区/支持
-phrase_3: 金融/支持
-phrase_4: 紧急/准备
-phrase_5: 防火
+phrase_3: 财政/援助
+phrase_4: 应急/准备
+phrase_5: 防火/措施
 phrase_6: 建筑/许可
 ----
 
@@ -71,57 +71,57 @@ phrase_6: 建筑/许可
 
 ## 个人想法转化为共享数据
 
-一组政策、救灾和社区领导者利用他们的专业知识和生成式AI将议程设定阶段提交的1,289条评论转化为19个可操作的政策选项。
+由政策制定者、救灾专家和社区领袖组成的团队运用专业知识和生成式 AI，将议程制定阶段提交的 1,289 条意见转化为 19 项可执行的政策选项。
 
 ----
 id: findings_narrative_step_3
 title: 审议
 ----
 
-## 社区对所有19个选项进行了投票
+##社区对全部19个选项进行投票
 
-新参与者和回归参与者对这些选项进行了排名，再次使用在线平台进行讨论和协作。
+新参与者和回访参与者通过在线平台对这些选项进行排序，该平台也支持讨论与协作功能。
 
 ----
 id: consensus_chart_topics
 nbr_topics: 19
-topic_1: 增加住房密度和加快许可
+topic_1: 提高住房密度与加快审批流程
 topic_2: 临时住房
-topic_3: 优先考虑家庭
-topic_4: 防火和节水示范花园
-topic_5: 强制性家庭余烬保护标准
-topic_6: 加快ADU和双拼房许可
-topic_7: 新建筑强制性灰水系统
-topic_8: 全面的房主教育计划
-topic_9: 社区紧急通信中心
-topic_10: 防御空间税收激励
-topic_11: 扩大建筑培训计划
-topic_12: 预先批准的防火建筑设计
-topic_13: 增强火灾检测基础设施
-topic_14: 为长期居民提供经济援助
-topic_15: 加快许可和检查
-topic_16: 重建帮助
-topic_17: 加强紧急通知和警报
-topic_18: 消防用水
-topic_19: 地下化电力线路和改善设备安全
+topic_3: 家庭优先
+topic_4: 耐火与节水型示范花园
+topic_5: 强制性住宅余火防护标准 
+topic_6: 加速附属住宅单元和双拼住宅审批 
+topic_7: 新建筑强制灰水系统
+topic_8: 全面的业主教育计划
+topic_9: 社区应急通讯枢纽
+topic_10: 防火间距税收激励
+topic_11: 扩大的施工培训计划
+topic_12: 预审通过的防火建筑设计方案
+topic_13: 增强型火灾探测基础设施
+topic_14: 向长期居民提供财政援助
+topic_15: 加速审批与验收
+topic_16: 重建援助
+topic_17: 强化应急通知与警报系统
+topic_18: 消防供水系统
+topic_19: 电力线路地下化与设备安全升级
 ----
 
 
 ----
 id: findings_consensus_watch_intro
-title_h2: 社区一致性
-caveat: "支持是投票的平均分数，其中强烈支持一个选项的分数是100，强烈反对一个选项的分数是0。"
+title_h2: 社区共识
+caveat: “支持度是投票的平均分值，其中强烈支持选项的分值为 100，强烈反对选项的分值为 0。”  
 ----
-每个点代表一票。随着可视化的变化，您可以跟踪每个问题的平均支持水平。主题按社区支持最少（左）到最多（右）排列。
+每个圆点代表一次投票。随着可视化效果的变化，您可以追踪每个议题的平均支持水平。议题按社区支持度从最低（左侧）到最高（右侧）排列。
 
 ----
 id: findings_consensus_watch_explore
-topic_number_template: "主题 <NUM> 共 <TOTAL>"
+topic_number_template: "第 <NUM> 项（共 <TOTAL> 项）"
 translator_explanation: DO NOT TRANSLATE <NUM> or <TOTAL> - these are used to insert numbers into the phrase
 translator_sample_spanish_translation: "Tema <NUM> de <TOTAL>"
-label_1: 增加住房密度和加快许可
-percent_default: 92%的参与者支持这个主题
-percent_template: <PERCENT>% 平均支持
+label_1: 提高住房密度与加快审批流程
+percent_default: 92% 的参与者支持此议题
+percent_template: <PERCENT>% 平均支持度
 translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the appropriate place.
 ----
 
@@ -130,33 +130,33 @@ translator_instruction: DO NOT TRANSLATE the tag <PERCENT>, but leave it in the 
 id: findings_consensus_sentiment_chart
 nbr_labels: 3
 label_1: 强烈反对
-label_2: 中性
+label_2: 中立
 label_3: 强烈支持
 ----
 
 ----
 id: findings_narrative_top_options_intro
-title: 居民权衡以就前5个解决方案达成一致
+title: 居民就前 5 项解决方案达成共识
 nbr_values: 2
-label_1: 评论和回复
-label_2: 投票
+label_1: 评论与回复
+label_2: 投票数
 value_1: 1,504
 value_2: 3,977
 nbr_options: 5
 ----
 
-参与度值得注意。邻居们能够分享他们的想法并相互回复。收到的1,504条参与者评论没有消失在黑盒中。人们讨论解决方案，有效地合作定义优先事项。
+此次公众参与成效显著。社区居民得以畅所欲言并积极互动。1,504 条参与者建言并未湮没无闻。民众围绕解决方案展开讨论，通过高效协作确立了优先事项。
 
 ----
 id: findings_narrative_top_options
 results_header: 行动计划
-results_description: "该计划包括5个恢复重点领域——揭示了一个围绕建设防火基础设施为未来和现在为社区提供支持而团结的社区："
+results_description: “该计划包含5个灾后重建重点领域——展现出社区就以下方面达成共识：既要为未来建设防火韧性基础设施，也需立即为社区提供支持：”
 nbr_options: 5
-option_label_1: 地下化电力线路和设备安全措施
-option_label_2: 改善消防用水系统
-option_label_3: 加强紧急通信网络
-option_label_4: 帮助人们找到经济支持计划
-option_label_5: 专门团队支持许可
+option_label_1: 埋设电力线路与设备安全措施
+option_label_2: 完善消防供水系统
+option_label_3: 强化应急通信网络
+option_label_4: 协助民众申领财政援助计划
+option_label_5: 组建专项团队加速审批流程
 option_icon_1: circle-blue-1.png
 option_icon_2: circle-blue-2.png
 option_icon_3: circle-blue-3.png
@@ -172,7 +172,7 @@ option_icon_5: circle-blue-5.png
 id: findings_topic_chart
 nbr_labels: 3
 label_1: 强烈反对
-label_2: 中性
+label_2: 中立
 label_3: 强烈支持
 ----
 
@@ -180,30 +180,30 @@ label_3: 强烈支持
 
 ----
 id: findings_top_discussions
-title_h2: 从各个角度分析前5名
-solution_details_label: "解决方案详情"
-show_comments_button: 显示评论
-hide_comments_button: 隐藏评论
+title_h2: 全方位分析前5名方案
+solution_details_label: “解决方案详情”
+show_comments_button: 显示评论 
+hide_comments_button: 隐藏评论 
 nbr_tally_items: 2
-label_1: 平均支持
-label_2: 评论
-explore_the_comments: 探索评论
-filter_the_comments: "评论可以按人们对主题的投票方式过滤：支持、中性、反对或无投票。注意：评论本身可能不反映一个人对主题的投票方式。在某些情况下，人们评论了主题但没有投票。"
-label_viewpoint: "观点："
-label_all_comments: "所有评论"
-label_oppose: "反对"
-label_neutral: "中性"
-label_support: "支持"
-label_novote: "无投票"
-filter_comments_by_vote: 按相应投票过滤评论。我们不翻译评论；它们以原始语言显示。 
+label_1: 平均支持度 
+label_2: 评论数 
+explore_the_comments: 探索评论内容 
+filter_the_comments: “可依据参与者的投票态度筛选评论：支持、中立、反对或未投票。注意：评论内容本身未必反映该用户对议题的投票倾向。 部分情况下用户仅发表评论而未参与投票。”
+label_viewpoint: “观点分类：”
+label_all_comments: “全部评论”
+label_oppose: “反对”
+label_neutral: “中立”
+label_support: “支持”
+label_novote: “未投票”
+filter_comments_by_vote: “按对应投票结果筛选评论。我们不对评论进行翻译，均按原始语言显示。”
 ----
 
-每一票都被计算和加权，以就加利福尼亚应该探索的前5个解决方案达成共识。在火灾区域之间，投票和评论看起来略有不同，使用切换开关查看帕利塞兹的观点与伊顿火灾区域的观点有何不同。
+每张选票均经过精确统计与加权计算，最终就加州应重点推进的 5 项解决方案达成共识。不同火情区域的投票数据与评论特征存在差异，可通过切换功能对比 Palisades 与 Eaton 火灾区的意见分布。
 
 ----
 id: discussion_1
-title: 地下化电力线路和设备安全措施
-topic_description: 尽可能地下化电力线路并部署缓解策略以防止设备故障引发火灾。这种综合方法将解决加利福尼亚野火起火的主要原因之一。
+title: 埋设电力线路与设备安全措施
+topic_description: “在条件允许的区域埋设电力线路，并部署防护策略预防设备故障引发的火灾。这一综合方案将着力解决加州野火的主要诱因之一。”
 nbr_comments: 3
 value_1: 92%
 value_2: 90
@@ -212,8 +212,8 @@ chart_topic_index: 19
 
 ----
 id: discussion_2
-title: 改善消防用水系统
-topic_description: 升级水系统以满足现代消防流量要求，并确保所有区域都有足够的消防栓。这将改善有效消防作业所需的水供应和压力。
+title: 完善消防供水系统
+topic_description: “升级供水系统以满足现代消防流量要求，并确保所有区域配备充足的消防栓。此举将提升有效消防作业所需的供水量与水压。”
 value_1: 87%
 value_2: 74
 chart_topic_index: 18
@@ -221,8 +221,8 @@ chart_topic_index: 18
 
 ----
 id: discussion_3
-title: 加强紧急通信网络
-topic_description: 推广通信基础设施，使第一响应者和居民即使在蜂窝塔或光纤线路故障时也能保持连接，例如在灾难期间可以独立运行的网状互联网网络。
+title: 强化应急通信网络
+topic_description: “建设具备抗灾韧性的通信基础设施，确保在蜂窝基站或光纤中断时救援人员与居民仍能保持联络，例如配置可在灾难期间独立运行的网状互联网网络。”
 value_1: 86%
 value_2: 59
 chart_topic_index: 17
@@ -230,8 +230,8 @@ chart_topic_index: 17
 
 ----
 id: discussion_4
-title: 帮助人们找到经济支持计划
-topic_description: 创建一个全面的经济支持计划和组织目录，以帮助重建工作。该目录将把受火灾影响的居民与赠款、贷款和援助计划联系起来，同时与愿意协助恢复资金的受信任金融机构合作。
+title: 协助民众申领财政援助计划
+topic_description: “编制全面的财政援助计划与机构名录，为重建工作提供支持。该目录将帮助受灾居民对接补助金、贷款与援助计划，同时与值得信赖的金融机构合作提供灾后重建资金支持。”
 value_1: 82%
 value_2: 59
 chart_topic_index: 16
@@ -239,8 +239,8 @@ chart_topic_index: 16
 
 ----
 id: discussion_5
-title: 专门团队支持许可
-topic_description: 在分诊中心建立专门工作人员团队，快速指导受火灾影响的社区完成许可流程。这些专业团队将为居民提供个性化协助，帮助他们应对复杂的重建要求。
+title: 组建专项团队加速审批流程
+topic_description: “应急服务中心配置专职团队，快速引导受灾社区完成审批流程。这些专业团队将为面临复杂重建要求的居民提供个性化协助。”
 value_1: 82%
 value_2: 73
 chart_topic_index: 15
@@ -249,16 +249,16 @@ chart_topic_index: 15
 
 ----
 id: topic_comments_scroller 
-label: 关于此主题的评论
-desc: 滚动查看关于此主题的评论（以原始语言显示）
+label: 本议题评论
+desc: 滚动查看本议题相关评论（以原始语言显示）
 ----
 
 ----
 id: topic_data_vis
-title: 探索投票
-learn_button_label: 了解正在采取的行动
-desc: 每个点代表一个人的投票。点的总数对应于特定主题的投票总数。
-download_text: 下载参与者评论的CSV文件
+title: 探索投票数据
+learn_button_label: 了解已采取的措施
+desc: “每个圆点代表个人投票。圆点总数对应特定议题所获总票数。”
+download_text: 下载参与者评论 CSV 文件
 ----
 
 ----
@@ -266,9 +266,9 @@ id: conversation_groups
 nbr_groups: 7
 group_label_1: 强烈反对
 group_label_2: 反对
-group_label_3: 有些反对
-group_label_4: 中性
-group_label_5: 有些支持
+group_label_3: 略有反对
+group_label_4: 中立
+group_label_5: 略有支持
 group_label_6: 支持
 group_label_7: 强烈支持
 ----
@@ -276,228 +276,229 @@ group_label_7: 强烈支持
 ----
 id: findings_alignment_section
 ----
-## 值得注意的一致性
+## 值得关注的共识 
 
-来自不同火灾区域的人们表现出令人惊讶的一致性。受伊顿和帕利塞兹影响的居民对最高需求排名相同：地下化电力线路、改善当地消防用水系统，以及确保紧急情况时的及时警报。
+不同火灾区域的民众展现出惊人的一致性。受 Eaton 和 Palisades 火灾影响的居民对首要需求的排序完全相同：埋设地下电力线路、改善当地消防供水系统，以及确保紧急情况下的及时警报。
 
-这表明，无论地理分离如何，社区对基本恢复优先事项都有广泛共识。
 
-**这组优先事项讲述了一个清晰的故事。**
+这表明尽管地理位置不同，社区在关键恢复重点上达成了广泛共识。
 
-居民既需要恢复的即时支持，也需要防火基础设施的长期投资。他们还需要支持服务得到精简，以服务于社区的紧急重建需求。
+**这组优先事项清晰地反映了民众诉求。**
 
-这种参与使我们能够将个人经验转化为真正的政策指导。
+居民既需要获得及时的恢复支持，也要求对防火基础设施进行长期投资。同时需要简化支持服务流程，以满足社区紧迫的重建需求。
+
+此次公众参与让我们得以将个人经验转化为切实的政策指引。
 
 ----
 id: findings_alignment_section_sidebar
 ----
 
-**建立在共同支持的基础上**
+**凝聚共同支持**
 
-这个过程不仅仅是收集意见；它在我们共同前进的过程中建立了信心和动力。
+此过程不仅收集意见，更在共同前进中建立了信心与动力。
 
-虽然参与者带着复杂的情感到达——只有24%的人开始乐观，而48%的人感到悲观——但通过这个过程，前景发生了变化。
+尽管参与者初始态度各异——仅 24% 持乐观态度，48% 感到悲观——但随着进程推进，他们的态度发生了转变。 
 
-超过四分之一的参与者（27%）对洛杉矶火灾恢复变得更加乐观。
+超过四分之一 (27%) 的参与者对洛杉矶火灾恢复工作转为更加乐观。
 
 ----
 id: signup_plea
 button_text: 注册
 ----
-## 注册以继续参与重要工作
+## 注册参与重要工作
 
-提供您的电子邮件以了解即将到来的机会。 
+留下邮箱地址，获取最新参与机会。 
 
 ----
 id: response_intro
 ----
 
-## 我们如何响应社区需求
+##我们如何回应社区需求
 
-居民在议程设定阶段和后来的审议中都发表了意见。**州**、**县**、**市**、**公用事业**和**联邦合作伙伴**已经用具体行动做出了回应。还有更多正在路上。
+居民在议程制定阶段及后续审议期间积极建言。**州**、**县**、**市**、**公用事业公司**和**联邦合作伙伴**均已采取具体行动予以回应。更多措施正在推进中。
 
 ----
 id: response_steps
-action_now: 现在行动
-coming_soon: 即将到来
-did_you_know: 你知道吗？
+action_now: 当前行动
+coming_soon: 即将实施
+did_you_know: 您知道吗？
 nbr_steps: 5
-anchor_link_text: "带我到人们对此主题的投票和评论"
+anchor_link_text: “查看民众对此议题的投票与评论”
 ----
 
 
 ----
 id: response_step_1
-title: 地下化电力线路和改善设备安全
+title: 埋设电力线路与提升设备安全
 icon: construction-orange.svg
 ----
 
 ----
 id: response_step_1_action_now
 ----
-**县**和**州**正在与电力和电信公司合作，计划将更多公用设施埋入地下。**州长加文·纽森**于2025年3月签署了一项行政命令，以加快这项工作。  
+**县**与**州**政府正与电力和通信公司合作，规划将更多公用设施转入地下。**州长 Gavin Newsom** 于 2025 年 3 月签署行政命令加速此项工作。  
 
-此外，**洛杉矶市长卡伦·巴斯**发布了一项行政命令，帮助帕利塞兹居民使用防火材料和气候适应性基础设施加快重建。这包括在恶劣天气期间加强公用事业以确保电力可靠性。
+此外，**洛杉矶市长 Karen Bass**发布行政命令，帮助 Palisades 居民使用防火材料和气候适应性基础设施加速重建。包括强化公用设施以确保恶劣天气下的供电可靠性。
 
 ----
 id: response_step_1_coming_soon
 ----
-公用事业公司正在与**洛杉矶县**和**市**的当地领导人密切合作。建设已经在马里布、阿尔塔德纳和太平洋帕利塞兹进行。预计将持续数年。**州**和**县**正在呼吁协调方法将电力和电信线路地下化，这将节省资金、减少时间并最大限度地减少多个工作队伍造成的干扰。
+公用事业公司正与 **洛杉矶县**及**市政府**紧密合作。Malin、Altadena 和 Pacific Palisades 已启动施工。预计工程将持续数年。**州**和**县**政府呼吁采用协同推进模式实施电力和通信线路地下化，从而节约成本、缩短工期，并减少多施工队造成的干扰。
 
-除了地下化之外，其他策略对于减轻火灾危险也很重要，如植被管理和弹性重建。物业所有者和设计/建筑专业人员可以参考**县**的[弹性重建资源指南](https://recovery.lacounty.gov/resilient-rebuilding/)获取规划、设计和建造更能抵御火灾风险的高性能建筑的信息和资源。
+除地下化外，植被管理等补充策略对降低火灾风险同样重要。业主和设计/建造专业人士可参考**县**发布的[韧性重建资源指南](https://recovery.lacounty.gov/resilient-rebuilding/)，获取规划、设计和建造更高防火性能建筑的信息与资源。
 
 ----
 id: response_sidebar_1_unused
 ----
-当**天堂镇**重建时，它与**PG&E**、**电信提供商**和**州监管机构**合作，将处于危险中的电力线路埋入地下。洛杉矶正在使用这种和类似的安全改进作为自己恢复的模型和指南。
+当** Paradise 镇**进行重建时，曾与**PG&E**、**电信运营商**及**州监管机构**合作，将高风险输电线转入地下。洛杉矶正以此及其他类似安全改进措施为范本，指导本地恢复重建工作。
 
 ----
 id: response_step_2
-title: 消防用水
+title: 消防供水系统
 icon: hydrant-orange.svg
 ----
 
 ----
 id: response_step_2_action_now
 ----
-**洛杉矶水电部**已将80多个储水设施填满至最高水位。备用泵已加满燃料并在每个泵站准备就绪，作为主泵的备用。他们已填满五辆水车，每辆至少4,000加仑，并在需要时为**洛杉矶消防局**(LAFD)待命。四个水库储存数十亿加仑的非饮用水用于空中消防。
+**洛杉矶水电局**已将 80 余处蓄水设施补至最高水位。各泵站备用泵已完成燃料加注，作为主泵系统的后备保障。五辆供水车已完成注水（单辆容量不低于 4,000 加仑），随时待命供**洛杉矶消防局** (Los Angeles Fire Department, LAFD) 调度。四座水库储备了数十亿加仑非饮用水专用于空中灭火。
 
-在太平洋帕利塞兹地区，两个当地水库专门用于空中消防：恩西诺水库和下石峡谷水库。
+Pacific Palisades 区域特设两座本地水库支持空中消防：Encino 水库与 Lower Stone Canyon 水库。
 
-**洛杉矶县消防局**与**洛杉矶县公共工程部**和**7家当地水务公司**合作，评估火灾区域现有水系统的消防流量。为了促进重建过程，**LA县消防局**将修订2026年洛杉矶县消防法规，以满足当前州消防法规要求。这一法规修订将允许人们在升级和改进水系统的同时重建家园。**LA县消防局**将在高火灾风险期间继续定期配备人员并战略性地部署县拥有的预置发动机。
+**洛杉矶县消防局**联合**洛杉矶县公共工程局** 与 **7 家本地供水企业**，已完成火区现有供水系统消防流量的评估。为推进重建进程，**洛杉矶县消防局**将修订 2026 版消防规范，使其符合现行州消防规范标准。此项规范修订可确保民众在供水系统升级期间仍能开展住宅重建。**洛杉矶县消防局**将在高火险时段持续配备人员，并战略部署县属预置消防车辆。
 
-此外，已开发了一个新的简化流程，消除了房主参与消防流量表单流程的需要。**水务公司**、**LA县公共工程部**和**LA县消防局**将处理这个新流程，这将简化时间表，消除房主完成流程的需要，并为房主节省资金。
+此外，新推行的简化流程免除了业主参与消防流量申报环节。**供水企业**、**洛杉矶县公共工程局**与**洛杉矶县消防局**将协同实施新流程，通过简化时间线、免除业主办理手续，切实减轻民众经济负担。
 
 ----
 id: response_step_2_coming_soon
 ----
-水务区已确定损害并申请资金（如FEMA PA）进行重建。**州**和**县**已承诺支持各区重建和改进系统。
+各供水区已完成损毁评估并申请重建资金。（例如，联邦应急管理局 (Federal Emergency Management Agency, FEMA) 的公共援助计划 (Public Assistance Programs, PA)） **州**与**县**政府已承诺支持区域系统重建与升级。
 
-[LA县前进：重建蓝图](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/)表示这些升级是长期安全的关键基础设施投资。
+[洛杉矶县振兴蓝图：重建行动纲领](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) 明确指出，这些系统升级是保障长期安全的核心基础设施投资。
 
 ----
 id: response_step_3
-title: 加强紧急通知和警报
+title: 强化应急通知与警报系统
 icon: communication-orange.svg
 ----
 
 ----
 id: response_step_3_action_now
 ----
-**洛杉矶市**和**县**的当地官员已采取多项具体措施，改善在伊顿和帕利塞兹火灾期间广泛混乱后如何发布紧急警报。**洛杉矶县监事会**下令对紧急警报和疏散通知系统进行独立的外部审查，聘请外部专家进行全面的事后分析并每90天报告一次。
+**洛杉矶市**与**县政府**针对 Eaton 和 Palisades 火灾期间暴露的警报混乱问题，已落实多项具体改进措施： **洛杉矶县监督委员会 **委托第三方独立机构对应急警报与疏散通知系统开展审查，聘请外部专家进行全流程处置评估并实行 90 日定期汇报机制。
 
-**市应急管理部**和**县协调联合信息中心**现在优先考虑加强培训、更严格的系统测试、改进地理定位、更清晰的消息措辞，以及为未来生命安全紧急情况提供更强的协调。
+**市应急管理局**与**县联合信息协调中心**正在重点推进强化培训、系统压力测试、地理定位精度提升、警报信息表述优化及生命安全保障协同机制建设。
 
-**市**正在协调一个专注于应急通信的双周指导委员会，讨论障碍和进展。该小组由市各部门的代表组成，包括：  
+**市政府**牵头成立双周例会制应急通信指导委员会，持续跟进实施障碍与阶段进展。该工作组由市政部门代表组成，包括：  
 
-  * **洛杉矶水电部**  
-  * **洛杉矶应急管理部** 
-  * **洛杉矶规划部**
+  * **洛杉矶水电局**  
+  * **洛杉矶应急管理局** 
+  * **洛杉矶规划局**
   * **洛杉矶消防局**
 
 ----
 id: response_step_3_coming_soon
 ----
-县官员与地方、州和联邦合作伙伴合作，正在努力改善全县紧急警报和警告系统的有效性。这包括实施独立方审查的建议，包括麦克克里斯塔尔集团、消防安全研究所和美国国会。
+县政官员正与地方、州及联邦合作伙伴协同提升全县紧急警报系统效能。包括落实第三方评估建议（含 McChrystal Group、消防安全研究所及美国国会所提方案）。
 
-地方紧急通知系统将继续审查和改进。通过专注于使警报消息更加精确和针对特定区域、标准化警报语言、改进多层通知能力，以及加强机构间的协调和培训，以确保在未来灾难中及时、清晰和地理上准确的警告。这些改进包括对最近野火警报的外部审查、增加的联邦资金请求，以及围绕选择加入通知服务的公共教育工作。
+将持续优化本地应急通知系统。通过重点提升警报信息精准度与区域针对性、统一警报用语标准、增强多层级通知能力、强化跨部门协同培训，确保未来灾害中能提供及时、清晰且地理定位准确的预警。改进措施还包括：近期野火警报系统外部评审、增加联邦资金申请额度、推进订阅式通知服务的公众教育。
 
 ----
 id: response_sidebar_3_unused
 ----
-要求高火灾威胁区域蜂窝塔72小时备用电源的规则是在2017年野火后实施的，那次野火使数千人失去电话服务。
+当前高火险区通信基站须配备 72 小时备用电源的规定，系基于 2017 年野火导致数万人通信中断的教训而制定。
 
 ----
 id: response_step_4
-title: 重建帮助
+title: 重建援助
 icon: currency-orange.svg
 ----
 
 ----
 id: response_step_4_action_now
 ----
-政府已动员支持居民，包括帮助获得30亿美元的联邦援助和贷款。**州的CalAssist抵押贷款基金**正在指导超过1亿美元的抵押贷款减免。**州长纽森**已获得顶级贷款机构的承诺，提供抵押贷款宽限期，并签署立法将宽限期延长至12个月并创建可执行的法律要求。 
+政府已动员资源支持居民，包括协助获取 30 亿美元联邦援助与贷款。**州政府加州援助抵押基金**已拨付超 1 亿美元抵押贷款减免。**Newsom 州长**已确保大型贷款机构提供还款宽限，并签署法案将宽限期延至 12 个月且具法律效力。 
 
-**县**已动员超过5000万美元通过**LA县野火救济基金**支持家庭和小企业。为了减少房主的许可成本，**县**还推迟或退还了分区、计划检查和许可的特定费用，涉及**公共工程**、**区域规划**、**公共卫生**和**消防**等关键机构。这些费用可能超过每户20,000美元。县正在加快许可计划审查，初步审查14天周转时间，额外审查7天周转时间，目标是在30天内颁发许可。还提供了更多支持。第8节代金券可供流离失所的租户使用。该地区有无家可归者的紧急庇护所补助资金。为有反向抵押贷款的老年人举办了研讨会。 
+**县**通过**洛杉矶县野火救济基金**投放逾 5000 万美元支持家庭与小企业。为降低业主审批成本，**县**还推迟或退还**公共工程局**、**区域规划局**、**公共卫生局**及**消防局**等关键部门的区划审查、方案审核及许可费用。此类费用每户可能超过 2 万美元。县府正加速许可审查流程：初审 14 个工作日、补充材料复审 7 个工作日，目标 30 日内核发许可。另有多项支持措施：为流离失所租客提供第 8 条住房券；为本地无家可归者设立紧急庇护补助金；为持有反向抵押贷款的老年人举办专项讲座。 
  
 
-此外，**洛杉矶市长卡伦·巴斯**已发布多项行政命令，以简化重建并降低成本。这包括创建一站式重建中心，指示市部门在30天或更短时间内加快建筑许可审查，并免除受影响公司的2025年营业税。
+此外，**洛杉矶市长 Karen Bass** 已签发多项行政令简化重建流程，包括创立一站式重建中心、要求市部门 30 日内完成建筑许可审核、减免受灾企业 2025 年度营业税。
 
 ----
 id: response_step_4_coming_soon
 ----
-**洛杉矶县**正在与州、慈善机构和私营部门协调，将居民与服务联系起来，帮助人们导航恢复过程，家庭可以获得融资、许可和建设的个性化帮助，以减少恢复障碍。
+**洛杉矶县**正联合州政府、慈善组织与私营部门，为居民提供重建导航服务，家庭可获得资金、许可及建造方面的个性化支持以降低重建障碍。
 
-此外，当租户要求我们不要忽视他们时，我们听取了他们的意见。**洛杉矶县火灾恢复基金**包括直接租金援助。**县监事**正在审查火灾区域租户的更强反哄抬价格保护措施。
+我们特别关注租户诉求。**洛杉矶县火灾复苏基金**包含直接租金援助，**县政委员**正在审议加强火区租客反价格欺诈保护。
 
-**县**正在与**州**和**慈善机构**协调，为居民确定"桥梁资金"，以支付其他资金来源未涵盖的生存和开始重建的近期成本。
+**县政府**正协同**州**与**慈善机构**设立“过渡性资金”，帮助居民支付其他资金来源未覆盖的短期生存与重建启动费用。
 
 
 ----
 id: response_sidebar_4_unused
 ----
-Residents asked for aid without barriers during the agenda-setting phase of this engagement. **Los Angeles County** then provided language application support and direct payments through the LA Region Worker Relief Fund, including to undocumented residents. The county, with support from community groups, made sure not to exclude people. Also, the **California Department of Insurance** enforces a one-year moratorium. This means that insurers cannot cancel coverage after a declared disaster. It also requires two years of coverage for those whose homes suffered a total loss. 
+在本轮议程设定阶段，民众呼吁无障碍援助。**洛杉矶县**随即通过“洛杉矶地区工人救济基金”提供多语言申请支持与直接付款（含无身份居民）。在社区组织协助下确保援助覆盖全体民众。另据**加州保险局**强制令，灾后一年内保险公司不得取消保单；全损房屋业主可获得两年续保期。 
 
-The Blueprint for Rebuilding highlights the payments as a milestone in equitable recovery.
+《重建蓝图》将此类支付列为公平复苏的重要里程碑。
 
 ----
 id: response_step_5
-title: 加快许可和检查
+title: 加速审批与验收
 icon: house-orange.svg
 ----
 
 ----
 id: response_step_5_action_now
 ----
-**州长纽森**已发布多项行政命令，免除州许可要求以简化重建。**市**和**县**在受火灾影响的地区创建了一站式中心以支持重建活动。这包括阿尔塔德纳、卡拉巴萨斯和太平洋帕利塞兹。
+**Newsom 州长**已签发多项行政命令，豁免州级审批要求以简化重建流程。**市**和**县** 政府在火灾影响区域设立一站式服务中心支持重建工作，其中包括 Altana、Calabasas 和 Pacific Palisades。
 
-在**县**，卡拉巴萨斯和阿尔塔德纳一站式许可中心为居民提供来自各个县机构的面对面帮助，迄今为止已帮助超过8,500名居民。在市里，迄今为止已在一站式重建中心帮助了超过4,000人。县居民可以使用EPIC-LA平台在线申请许可，该平台提供统一的申请和审查流程以简化导航。**县**正在快速工作以满足不断增长的许可需求，通过重新分配工作人员并根据需要增加合同工人，以及与Archistar推出AI eCheck试点。县还提供[预批准计划目录](https://recovery.lacounty.gov/rebuilding/preapproved-plans/)，其中包含符合当前分区和建筑规范要求的设计。预批准计划和简化的许可流程可以帮助房主更高效、安全和经济地重建。
+**县**级层面，Calabasas 与 Altadena 一站式许可中心为居民提供多部门现场协助，迄今已服务超 8,500 人。市级一站式重建中心已援助超 4,000 名市民。县居民可通过 EPIC-LA 平台在线申请许可，该平台提供统一申请与审查流程以简化操作。**县**政府通过人员调配、增聘合同工及推行 Archistar AI 电子审查试点项目，全力提升审批效能。县政府同步推出[预审方案目录](https://recovery.lacounty.gov/rebuilding/preapproved-plans/)，收录符合现行区划与建筑规范的标准化设计。预审方案与简化审批流程可助力业主实现更高效、安全、经济的重建。
 
-在并行努力中，**洛杉矶市长卡伦·巴斯**已发布行政命令，指示**LA建筑和安全部**试点AI驱动的预计划检查（Archistar eCheck AI），暂停许可和计划检查费用，并启动预批准、符合规范的设计库，以加快城市重建。超过4,000名城市居民已在城市的一站式重建中心得到帮助。
+与此同时，**洛杉矶市长 Karen Bass** 已颁布行政令，要求**洛杉矶建筑安全局**试点 AI 预审系统（Archistar eCheck AI）、暂停许可与图纸审查费用，并建立规范合规的标准化设计方案库以加速城市重建。市级一站式重建中心迄今已服务超 4,000 名居民。
 
 ----
 id: response_step_5_coming_soon
 ----
-**县**正在通过"快速通道"加速许可和检查流程，这是简化的通道，在保持安全和规范合规的同时加快重建。这包括扩大预批准计划目录和捆绑类似项目的审查。
+**县**政府通过“快速通道”机制加速审批验收流程，在保障安全合规的前提下简化重建路径，包括扩充预审方案库与推行同类项目集中审查。
 
-**县**还通过与Archistar扩大AI eCheck试点、增加数字和远程检查，以及增加计划检查员和检查员来处理更高量来增加激增能力。
+通过扩展 Archistar AI 电子审查试点、增加数字化远程验收、增派审查员与验收员等措施，**县政府**持续提升业务处理能力。
 
 ----
 id: response_sidebar_5
 ----
-**联邦**、**州**和**地方**团队在仅六个月内清除了2025年火灾的碎片。这是加利福尼亚历史上最快的灾后碎片清除。这要归功于**州**和**美国陆军工程兵团**之间前所未有的合作伙伴关系。
+**联邦**、**州**和**地方**团队仅用六个月即完成 2025 年火灾废墟清理，创下加州灾后废墟清理最快纪录。这得益于**州政府**与**美国陆军工程兵团**史无前例的协作。
 
 ----
 id: other_efforts
-title: 其他努力
+title: 其他举措
 mental_health: 心理健康
 ----
-**洛杉矶县心理健康部**和当地合作伙伴正在帮助幸存者获得他们需要的支持，资助共享空间，人们可以在那里获得免费咨询并加入创伤支持小组。
+**洛杉矶县心理健康局**与当地合作伙伴通过资助共享空间，为灾民提供免费咨询与创伤支持小组服务，助力幸存者获取所需心理支持。
 
 ----
 id: findings_how_we_did_the_analysis
 ----
 
-### 我们如何进行分析
+### 分析方法说明
 
-<div class="sub-head">要深入了解，<a href="/zh-hans/lafires-recovery/agenda-setting-data-insights/">查看我们的详细方法和评论分析</a>。</div>
+<div class="sub-head">欲深入了解，<a href="/lafires-recovery/agenda-setting-data-insights/">请参阅详细方法论与评论分析</a>。</div>
 
-我们使用Claude 3.5 Sonnet生成式AI模型来帮助在评论中找到主题和趋势。我们用问题提示模型，以帮助我们理解人们的想法。这是查看人们在重要主题上如何同意或不同意的有效方法。
+我们使用 Claude 3.5 Sonnet 生成式 AI 模型，来帮助识别评论中的主题和趋势。我们向模型提出了一系列问题，以帮助我们了解居民的想法。这是一种高效方式，能够快速掌握公众在关键议题上的共识与分歧。 
 
-我们测试了不同的提示写作方式。我们专注于经常出现的答案，无论我们如何提问。
+我们还尝试了多种 prompt 编写方式。我们主要关注那些无论用哪种提问方式都频繁出现的观点。 
 
-**示例提示**
+**示例prompt**
 
-"我希望您使用扩展思维分析一组定性调查响应。"
+“我希望你使用扩展思维来分析一组定性调查回答。” 
 
-"首先对数据进行初步探索：首先，阅读整个数据集而不进行分类或标记。注意您对突出内容的即时观察和印象。识别在多个响应中出现的重复单词、短语和情感。分享在这个初步审查中让您惊讶或引起您注意的内容。"
+“首先对数据进行初步探索：通读整个数据集，不进行分类或标记。记录你最直接的观察和印象，注意哪些内容特别突出。找出在多条评论中反复出现的关键词、短语和情绪。在这轮初步审阅中，分享让你感到惊讶或引起注意的内容。”  
 
 ----
 id: partners
 ----
 
-## 我们的合作伙伴
+## 合作伙伴
 
-加利福尼亚数据与创新办公室与灾难恢复专家和协商民主倡导者合作开展这项工作。我们的合作伙伴也帮助塑造了这项工作将产生的行动。
+加州数据与创新办公室联合灾后恢复专家及协商民主倡导者共同推进此项工作。我们的合作伙伴还协助制定了后续行动方案。 
 
-我们这项倡议的合作伙伴和顾问包括：
+本项目合作伙伴与顾问包括：
