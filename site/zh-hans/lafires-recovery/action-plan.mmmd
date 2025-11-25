@@ -304,6 +304,7 @@ id: findings_alignment_section_sidebar
 ----
 id: signup_plea
 button_text: 注册
+dest_url: "/zh-hans/#sign-up"
 ----
 ## 注册参与重要工作
 
@@ -345,7 +346,7 @@ id: response_step_1_coming_soon
 ----
 公用事业公司正与 **洛杉矶县**及**市政府**紧密合作。Malin、Altadena 和 Pacific Palisades 已启动施工。预计工程将持续数年。**州**和**县**政府呼吁采用协同推进模式实施电力和通信线路地下化，从而节约成本、缩短工期，并减少多施工队造成的干扰。
 
-除地下化外，植被管理等补充策略对降低火灾风险同样重要。业主和设计/建造专业人士可参考**县**发布的[韧性重建资源指南](https://recovery.lacounty.gov/resilient-rebuilding/)，获取规划、设计和建造更高防火性能建筑的信息与资源。
+除地下化外，植被管理等补充策略对降低火灾风险同样重要。业主和设计/建造专业人士可参考**县**发布的<a href="https://recovery.lacounty.gov/resilient-rebuilding/" target="_blank">韧性重建资源指南</a>，获取规划、设计和建造更高防火性能建筑的信息与资源。
 
 ----
 id: response_sidebar_1_unused
@@ -374,7 +375,7 @@ id: response_step_2_coming_soon
 ----
 各供水区已完成损毁评估并申请重建资金。（例如，联邦应急管理局 (Federal Emergency Management Agency, FEMA) 的公共援助计划 (Public Assistance Programs, PA)） **州**与**县**政府已承诺支持区域系统重建与升级。
 
-[洛杉矶县振兴蓝图：重建行动纲领](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) 明确指出，这些系统升级是保障长期安全的核心基础设施投资。
+<a href="https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/" target="_blank">洛杉矶县振兴蓝图：重建行动纲领</a> 明确指出，这些系统升级是保障长期安全的核心基础设施投资。
 
 ----
 id: response_step_3
@@ -452,7 +453,7 @@ id: response_step_5_action_now
 ----
 **Newsom 州长**已签发多项行政命令，豁免州级审批要求以简化重建流程。**市**和**县** 政府在火灾影响区域设立一站式服务中心支持重建工作，其中包括 Altana、Calabasas 和 Pacific Palisades。
 
-**县**级层面，Calabasas 与 Altadena 一站式许可中心为居民提供多部门现场协助，迄今已服务超 8,500 人。市级一站式重建中心已援助超 4,000 名市民。县居民可通过 EPIC-LA 平台在线申请许可，该平台提供统一申请与审查流程以简化操作。**县**政府通过人员调配、增聘合同工及推行 Archistar AI 电子审查试点项目，全力提升审批效能。县政府同步推出[预审方案目录](https://recovery.lacounty.gov/rebuilding/preapproved-plans/)，收录符合现行区划与建筑规范的标准化设计。预审方案与简化审批流程可助力业主实现更高效、安全、经济的重建。
+**县**级层面，Calabasas 与 Altadena 一站式许可中心为居民提供多部门现场协助，迄今已服务超 8,500 人。市级一站式重建中心已援助超 4,000 名市民。县居民可通过 EPIC-LA 平台在线申请许可，该平台提供统一申请与审查流程以简化操作。**县**政府通过人员调配、增聘合同工及推行 Archistar AI 电子审查试点项目，全力提升审批效能。县政府同步推出<a href="https://recovery.lacounty.gov/rebuilding/preapproved-plans/" target="_blank">预审方案目录</a>，收录符合现行区划与建筑规范的标准化设计。预审方案与简化审批流程可助力业主实现更高效、安全、经济的重建。
 
 与此同时，**洛杉矶市长 Karen Bass** 已颁布行政令，要求**洛杉矶建筑安全局**试点 AI 预审系统（Archistar eCheck AI）、暂停许可与图纸审查费用，并建立规范合规的标准化设计方案库以加速城市重建。市级一站式重建中心迄今已服务超 4,000 名居民。
 
