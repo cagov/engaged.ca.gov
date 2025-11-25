@@ -304,6 +304,7 @@ id: findings_alignment_section_sidebar
 ----
 id: signup_plea
 button_text: 등록
+dest_url: "/ko/#sign-up"
 ----
 ## 등록하고 중요한 일에 계속 참석하기
 

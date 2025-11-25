@@ -304,6 +304,7 @@ id: findings_alignment_section_sidebar
 ----
 id: signup_plea
 button_text: Գրանցվել
+dest_url: "/hy/#sign-up"
 ----
 ## Գրանցվեք՝ կարևոր աշխատանքում ներգրավված մնալու համար
 
@@ -374,7 +375,7 @@ id: response_step_2_coming_soon
 ----
 Ջրամատակարարման տարածքները հայտնաբերել են վնասներ և ֆինանսավորման հայտեր ներկայացրել (օրինակ՝ FEMA PA) վերականգնման համար: **Նահանգը** և **գավառը** պարտավորվել են աջակցել շրջաններին՝ համակարգերը վերակառուցելու և բարելավելու համար։
 
-[ԼԱ շրջանը դեպի առաջընթաց․ Վերակառուցման նախագիծն (LA County Forward: Blueprint for Reconstruction)](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) ասում է, որ այս արդիականացումները ենթակառուցվածքների կարևոր ներդրում են երկարաժամկետ անվտանգության ապահովման համար:
+[ԼԱ շրջանը դեպի առաջընթաց․ Վերակառուցման նախագիծ](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) ասում է, որ այս արդիականացումները ենթակառուցվածքների կարևոր ներդրում են երկարաժամկետ անվտանգության ապահովման համար:
 
 ----
 id: response_step_3

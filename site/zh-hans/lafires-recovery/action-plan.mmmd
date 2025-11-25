@@ -304,6 +304,7 @@ id: findings_alignment_section_sidebar
 ----
 id: signup_plea
 button_text: 注册
+dest_url: "/zh-hans/#sign-up"
 ----
 ## 注册参与重要工作
 

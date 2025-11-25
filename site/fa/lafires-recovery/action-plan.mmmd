@@ -324,6 +324,7 @@ id: findings_alignment_section_sidebar
 ----
 id: signup_plea
 button_text: ثبت نام کنید
+dest_url: "/fa/#sign-up"
 ----
 ## برای ادامه مشارکت در کارهای مهم ثبت نام کنید
 

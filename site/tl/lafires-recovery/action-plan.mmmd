@@ -304,6 +304,7 @@ Mahigit isang quarter ng mga kalahok (27%) ang nagkaroon ng positibong pananaw t
 ----
 id: signup_plea
 button_text: Mag-sign up
+dest_url: "/tl/#sign-up"
 ----
 ## Mag-sign up para magpatuloy sa mahalagang trabaho
 
@@ -374,7 +375,7 @@ id: response_step_2_coming_soon
 ----
 Natukoy ng mga distrito ng tubig ang mga pinsala at nag-apply ang mga ito para sa pagpopondo (hal., FEMA PA) para muling makapagtayo. Nakatuon ang **estado** at **county** sa pagsuporta sa mga distrito na muling itayo at pahusayin ang mga sistema.
 
-Sinasabi ng [LA County Forward: Blueprint for Rebuilding](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) na mga kritikal na pamumuhunan sa imprastruktura ang mga upgrade na ito para sa pangmatagalang kaligtasan.
+Sinasabi ng [Pasulong LA County: Plano ng Pagbangon](https://recovery.lacounty.gov/2025/08/04/los-angeles-county-accelerates-wildfire-recovery-with-bold-blueprint-to-rebuild-safer-stronger-communities/) na mga kritikal na pamumuhunan sa imprastruktura ang mga upgrade na ito para sa pangmatagalang kaligtasan.
 
 ----
 id: response_step_3

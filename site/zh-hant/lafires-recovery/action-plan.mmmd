@@ -304,6 +304,7 @@ id: findings_alignment_section_sidebar
 ----
 id: signup_plea
 button_text: 註冊
+dest_url: "/zh-hant/#sign-up"
 ----
 ## 註冊參與重要工作
 

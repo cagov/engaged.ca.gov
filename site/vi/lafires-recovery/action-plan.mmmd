@@ -304,6 +304,7 @@ Hơn một phần tư người tham gia (27%) tỏ ra lạc quan hơn về tình
 ----
 id: signup_plea
 button_text: Đăng ký
+dest_url: "/vi/#sign-up"
 ----
 ## Đăng ký để tiếp tục tham gia công việc quan trọng
 
