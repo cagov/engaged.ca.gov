@@ -210,11 +210,16 @@ function populate_solutions(theme_number_or_all) {
       let solutionText = solution.text || '';
       let solutionMatches = solutionText.toLowerCase().includes(search_lower);
       
+      // Only check comments if solution text doesn't match (optimization)
       // Also check comment text if solution has a comment ID
       let commentMatches = false;
       let commentId = solution.cid || solution.comment_id || '';
-      if (commentId && global_comment_data && global_comment_data.comments) {
-        let comments = getAllCommentsForSolution(commentId);
+      if (!solutionMatches && commentId && global_comment_data && global_comment_data.comments) {
+        // Cache comments on solution object to avoid re-fetching during auto-expansion
+        if (!solution._cachedComments) {
+          solution._cachedComments = getAllCommentsForSolution(commentId);
+        }
+        let comments = solution._cachedComments;
         commentMatches = comments.some(function(comment) {
           let commentText = comment.content || '';
           return commentText.toLowerCase().includes(search_lower);
@@ -230,9 +235,10 @@ function populate_solutions(theme_number_or_all) {
       return solutionMatches || commentMatches;
     });
   } else {
-    // Clear any previous auto-expand flags when search is cleared
+    // Clear any previous auto-expand flags and cached comments when search is cleared
     filtered_solutions.forEach(function(solution) {
       solution._commentMatchesSearch = false;
+      solution._cachedComments = null;
     });
   }
   
@@ -348,7 +354,21 @@ function populate_solutions(theme_number_or_all) {
           } else {
             // Expand - load and display comments
             if (!contentDiv.dataset.loaded) {
-              let comments = getAllCommentsForSolution(commentId);
+              // Try to use cached comments if available (from search filtering)
+              let solutionContainer = widget.closest('.solution-item-container');
+              let solutionIndex = solutionContainer ? solutionContainer.dataset.solutionIndex : null;
+              let comments = null;
+              
+              if (solutionIndex !== null && filtered_solutions[solutionIndex] && filtered_solutions[solutionIndex]._cachedComments) {
+                comments = filtered_solutions[solutionIndex]._cachedComments;
+              } else {
+                comments = getAllCommentsForSolution(commentId);
+                // Cache for future use
+                if (solutionIndex !== null && filtered_solutions[solutionIndex]) {
+                  filtered_solutions[solutionIndex]._cachedComments = comments;
+                }
+              }
+              
               console.log("Found", comments.length, "comments");
               let commentsMarkup = '';
               
@@ -437,8 +457,18 @@ function populate_solutions(theme_number_or_all) {
           let contentDiv = widget ? widget.querySelector('.original-comments-content') : null;
           if (!contentDiv) return;
           
-          // Load and display comments
-          let comments = getAllCommentsForSolution(commentId);
+          // Find the solution object to get cached comments
+          let solutionContainer = widget.closest('.solution-item-container');
+          let solutionIndex = solutionContainer ? solutionContainer.dataset.solutionIndex : null;
+          let comments = null;
+          
+          // Try to use cached comments from filtering phase
+          if (solutionIndex !== null && filtered_solutions[solutionIndex] && filtered_solutions[solutionIndex]._cachedComments) {
+            comments = filtered_solutions[solutionIndex]._cachedComments;
+          } else {
+            // Fallback: load comments if cache not available
+            comments = getAllCommentsForSolution(commentId);
+          }
           let commentsMarkup = '';
           
           if (comments.length === 0) {
