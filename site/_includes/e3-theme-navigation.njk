@@ -295,7 +295,7 @@ function populate_solutions(theme_number_or_all) {
       let shouldAutoExpand = solution._commentMatchesSearch === true;
       smarkup += '<div class="original-comments-widget">';
       smarkup += `<a href="#" class="original-comments-toggle" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" data-auto-expand="${shouldAutoExpand}">`;
-      smarkup += 'Original comments<span class="toggle-arrow">' + (shouldAutoExpand ? '▲' : '▼') + '</span>';
+      smarkup += '<span class="toggle-text">Original comments</span><span class="toggle-arrow">' + (shouldAutoExpand ? '▲' : '▼') + '</span>';
       smarkup += '</a>';
       smarkup += `<div class="original-comments-content" style="display: ${shouldAutoExpand ? 'block' : 'none'}"></div>`;
       smarkup += '</div>';
@@ -417,7 +417,7 @@ function populate_solutions(theme_number_or_all) {
               }
               
               // Add close comment link at the end
-              commentsMarkup += '<a href="#" class="close-comment-link">Close comment<span class="close-arrow">▲</span></a>';
+              commentsMarkup += '<a href="#" class="close-comment-link"><span class="close-text">Close comment</span><span class="close-arrow">▲</span></a>';
               
               contentDiv.innerHTML = commentsMarkup;
               contentDiv.dataset.loaded = 'true';

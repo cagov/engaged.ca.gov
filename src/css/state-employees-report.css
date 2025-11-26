@@ -1062,16 +1062,15 @@ section#comment-explorer {
 
 .original-comments-toggle {
     color: #5489A3;
-    text-decoration: underline;
     font-size: 18px;
     cursor: pointer;
     display: inline-block;
     margin-top: 0.5rem;
+    text-decoration: none;
 }
 
 .original-comments-toggle:hover {
     color: #3d6a7f;
-    text-decoration-color: #3d6a7f;
 }
 
 .original-comments-toggle:focus {
@@ -1080,14 +1079,24 @@ section#comment-explorer {
     border-radius: 2px;
 }
 
+.toggle-text {
+    text-decoration: underline;
+}
+
+.original-comments-toggle:hover .toggle-text {
+    text-decoration-color: #3d6a7f;
+}
+
 .toggle-arrow {
     margin-left: 0.25rem;
     font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .close-comment-link {
     color: #5489A3;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 18px;
     cursor: pointer;
     display: inline-block;
@@ -1096,12 +1105,21 @@ section#comment-explorer {
 
 .close-comment-link:hover {
     color: #3d6a7f;
+}
+
+.close-text {
+    text-decoration: underline;
+}
+
+.close-comment-link:hover .close-text {
     text-decoration-color: #3d6a7f;
 }
 
 .close-arrow {
     margin-left: 0.25rem;
     font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .original-comments-content {
