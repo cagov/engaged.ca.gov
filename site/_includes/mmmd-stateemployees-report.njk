@@ -1,0 +1,368 @@
+{% set active_page = 'stateemployees' %}
+{% extends "layout.njk" %}
+{% block content %}
+
+<link rel="stylesheet" href="/css/state-employees.css" />
+<link rel="stylesheet" href="/css/state-employees-report.css" />
+
+{%- macro render_circle_text(theme_module, x, y, base_font_size) -%}
+  {%- set circle_title = theme_module.theme_circle_title if theme_module.theme_circle_title else theme_module.theme_title -%}
+  {%- set lines = circle_title.split('<LF>') -%}
+  {%- set line_height = base_font_size * 1.2 -%}
+  {%- set start_y = y - ((lines.length - 1) * line_height / 2) -%}
+  {%- for line in lines -%}
+    <tspan x="{{ x }}" dy="{% if loop.first %}0{% else %}{{ line_height }}{% endif %}">{{ line }}</tspan>
+  {%- endfor -%}
+{%- endmacro -%}
+
+<section id="e3-report-hero" class="hero">
+  <div class="container hero-container">
+    <div class="row">
+      <div class="col-lg-8">
+        {{ modules.hero.content | safe }}
+        {# <p>
+            <a data-appearance="button" data-theme="orange" href="#themes-we-found" class="m-t">{{ modules.hero.buttonText }}</a>
+        </p> #}
+      </div>
+    </div>
+    <img class="e3-hero-adornment" src="/public/images/efficiency-adornment.png" aria-hidden="true" alt="" />
+  </div>
+</section>
+
+<section id="what-we-heard">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="what-we-heard-content">
+          {{ modules.what_we_heard.content | safe }}
+        </div>
+        <div class="participation-quote">
+          <p>{{ modules.participation_numbers.quote }}</p>
+        </div>
+        {# <div class="why-we-did-it-content">
+          {{ modules.why_we_did_it.content | safe }}
+        </div>
+        <div class="what-we-heard-content">
+          {{ modules.what_we_heard.content | safe }}
+        </div> #}
+      </div>
+      <div class="col-lg-4">
+        <div class="participation-sidebar">
+          <div class="participation-stat">
+            <img src="/public/images/staff-icon.svg" alt="Staff icon" />
+            <div class="stat-number">{{ modules.participation_numbers.participants_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.participants_label }}</div>
+            <p class="participation-note">{{ modules.participation_numbers.staff_note }}</p>
+          </div>
+          <div class="participation-stat">
+            <img src="/public/images/ideas-icon.svg" alt="Ideas icon" />
+            <div class="stat-number">{{ modules.participation_numbers.insights_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.insights_label }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="themes-we-found">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="themes-intro">
+          <h2>{{ modules.themes_we_found.title }}</h2>
+          <p>{{ modules.themes_we_found.intro_text }}</p>
+        </div>
+        <div id="themes-bubble-chart" class="themes-bubble-chart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1167 520" width="1167" height="520">
+            <!-- Background -->
+            <rect width="1167" height="520" fill="#F6F7FA"/>
+            {%- set nbr_themes = modules.themes_we_found.nbr_themes | default(10) -%}
+            {%- set positions = [
+              {"cx": 192, "cy": 130, "r": 120, "fontSize": 20},
+              {"cx": 576, "cy": 124, "r": 114, "fontSize": 20},
+              {"cx": 898, "cy": 110, "r": 100, "fontSize": 17},
+
+              {"cx": 392,  "cy": 250, "r": 91, "fontSize": 16},
+              {"cx": 752,  "cy": 262, "r": 86, "fontSize": 16},
+              {"cx": 1037, "cy": 270, "r": 85, "fontSize": 16},
+
+              {"cx": 220, "cy": 360, "r": 85, "fontSize": 17},
+              {"cx": 525, "cy": 390, "r": 83, "fontSize": 16},
+              {"cx": 700, "cy": 440, "r": 78, "fontSize": 14},
+              {"cx": 890, "cy": 390, "r": 77, "fontSize": 14}
+            ] -%}
+            {%- set caption_offset = 26 -%}
+            {%- set caption_font_size = 13 -%}
+            {%- for i in range(1, nbr_themes + 1) -%}
+              {%- set theme_module = "theme_" + i -%}
+              {%- if modules[theme_module] -%}
+                {%- set title = modules[theme_module].theme_circle_title -%}
+                {%- set lines = title.split('<LF>') -%}
+
+                {%- set pos = positions[i - 1] -%}
+                {%- set stroke_color = modules[theme_module].stroke_color | default("#5489A3") -%}
+                {%- set hilite_fill_color = modules[theme_module].hilite_fill_color | default("rgba(84, 137, 163, 0.20)") -%}
+                {%- set lineHeight = pos.fontSize *1.2 -%}
+                {%- set text_adjust = pos.fontSize*0.66 -%}
+                {%- set top_y = pos.cy-((lines.length-1)*lineHeight+caption_offset+caption_font_size)/2+text_adjust -%}
+                <g class="theme-circle" data-theme="{{ i }}" data-hilite-fill="{{ hilite_fill_color }}" style="cursor: pointer; pointer-events: all; -webkit-user-select: none; user-select: none;">
+                  <circle cx="{{ pos.cx }}" cy="{{ pos.cy }}" r="{{ pos.r }}" fill="#FFFFFF" stroke="{{ stroke_color }}" stroke-width="" pointer-events="all"/>
+                  <text class="theme-circle-label" x="{{ pos.cx }}" y="{{ top_y }}" text-anchor="middle" fill="#0f152f" font-size="{{ pos.fontSize }}" font-weight="400" font-family="Noto Sans Display, sans-serif" pointer-events="none">
+                    {%- for line in lines -%}
+                      <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ lineHeight }}{% endif %}">{{ line }}</tspan>
+                    {%- endfor -%}
+                    <tspan x="{{ pos.cx }}" dy="{{ caption_offset }}" font-size="13px">{{ modules[theme_module].nbr_comments }} comments</tspan>
+                  </text>
+                </g>
+              {%- endif -%}
+            {%- endfor -%}
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="themes-deep-dive">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="theme-navigation-widget">
+          <button class="theme-nav-prev" id="theme-nav-prev" disabled>
+            <span>←</span> {{ modules.theme_navigation.prev_button_text }}
+          </button>
+          <div class="theme-section-indicator">
+            {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+            <span class="theme-indicator-text">{{ modules.theme_navigation.theme_label }} <span class="current-theme-number">1</span> {{ modules.theme_navigation.theme_of }} {{ nbr_themes }}</span>
+          </div>
+          <button class="theme-nav-next" id="theme-nav-next">
+            {{ modules.theme_navigation.next_button_text }} <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr class="theme-divider">
+    {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+    {% for i in range(1, nbr_themes + 1) %}
+      <div id="theme-{{ i }}-content" class="theme-content{% if i == 1 %} active{% endif %}" data-theme="{{ i }}">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="theme-header">
+              <h3>
+                <span class="theme-bullet" style="background-color: {{ modules['theme_' + i].stroke_color | default('#5489A3') }};"></span>
+                {{ modules["theme_" + i].theme_title }}
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="theme-description">
+              <p>{{ modules["theme_" + i].content | safe }}</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+              {% if modules["theme_" + i].theme_quote %}
+                <div class="theme-quote">
+                  <p>{{ modules["theme_" + i].theme_quote }}</p>
+                </div>
+              {% endif %}
+          </div>
+        </div>
+        {% set theme_module = "theme_" + i %}
+        {% set nbr_solutions = modules[theme_module].nbr_solutions | default(0) %}
+        {% if nbr_solutions > 0 %}
+          <div id="suggested-solutions-theme-{{ i }}" class="suggested-solutions-theme container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="solutions-header">
+                  <h2>{{ modules.suggested_solutions.title }}</h2>
+                  <p>{{ modules.suggested_solutions.intro_text }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="row solution-cards">
+              {% for j in range(1, nbr_solutions + 1) %}
+                {% set solution_key = "solution_" + j %}
+                {% if modules[theme_module][solution_key] %}
+                  <div class="col-lg-4">
+                    <div class="solution-card">
+                      <div class="solution-title">
+                        <h4>{{ modules[theme_module][solution_key] }}</h4>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="comment-explorer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="comment-explorer-header">
+          <h2>{{ modules.comment_explorer.title }}</h2>
+          <p class="comment-explorer-intro-text">{{ modules.comment_explorer.intro_text }}</p>
+          <p class="comment-explorer-intro-text2">{{ modules.comment_explorer.intro_text2 }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="comment-explorer-controls">
+          <div class="theme-selector-wrapper">
+            <label class="control-label" for="theme-selector-native">Select a theme</label>
+            <select class="theme-selector" id="theme-selector-native">
+              <option value="all">{{ modules.comment_explorer_ui.all_option }}</option>
+              {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+              {% for i in range(1, nbr_themes + 1) %}
+                {% set theme_module = "theme_" + i %}
+                <option value="{{ i }}" data-theme-color="{{ modules[theme_module].stroke_color | default('#5489A3') }}"{% if i == 1 %} selected{% endif %}>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</option>
+              {% endfor %}
+              <option value="other">Other</option>
+            </select>
+            <div class="theme-selector-custom" id="theme-selector-custom" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="theme-selector-label">
+              <div class="theme-selector-selected">
+                {% set first_theme_module = "theme_1" %}
+                <span class="theme-selector-circle" id="theme-selector-circle" style="background-color: {{ modules[first_theme_module].stroke_color | default('#5489A3') }};"></span>
+                <span class="theme-selector-text" id="theme-selector-text">{% if modules[first_theme_module] %}{{ modules[first_theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} 1{% endif %}</span>
+                <span class="theme-selector-arrow">▼</span>
+              </div>
+              <ul class="theme-selector-options" id="theme-selector-options" role="listbox">
+                <li class="theme-selector-option" data-value="all" role="option">
+                  <span class="theme-selector-circle" style="display: none;"></span>
+                  <span>{{ modules.comment_explorer_ui.all_option }}</span>
+                </li>
+                {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+                {% for i in range(1, nbr_themes + 1) %}
+                  {% set theme_module = "theme_" + i %}
+                  <li class="theme-selector-option" data-value="{{ i }}" data-theme-color="{{ modules[theme_module].stroke_color | default('#5489A3') }}" role="option"{% if i == 1 %} data-selected="true"{% endif %}>
+                    <span class="theme-selector-circle" style="background-color: {{ modules[theme_module].stroke_color | default('#5489A3') }};"></span>
+                    <span>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</span>
+                  </li>
+                {% endfor %}
+                <li class="theme-selector-option" data-value="other" role="option">
+                  <span class="theme-selector-circle" style="display: none;"></span>
+                  <span>Other</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="search-input-wrapper">
+            <label class="control-label" for="search-input">{{ modules.comment_explorer_ui.search_label }}</label>
+            <div class="search-input-container">
+              <img src="/public/images/magnifying_glass.svg" alt="" class="search-icon" aria-hidden="true">
+              <input type="text" class="search-input" id="search-input" placeholder="{{ modules.comment_explorer_ui.search_placeholder }}">
+              <button type="button" class="search-clear" id="search-clear" aria-label="Clear search" style="display: none;">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+          </div>
+          {# Sort selector temporarily disabled for Solutions Explorer
+          <div class="sort-selector-wrapper">
+            <label class="control-label" for="sort-selector-native">Sort by</label>
+            <select class="sort-selector" id="sort-selector-native">
+              <option value="date" selected>{{ modules.comment_explorer_ui.sort_date }}</option>
+              <option value="theme">{{ modules.comment_explorer_ui.sort_theme }}</option>
+              <option value="likes">{{ modules.comment_explorer_ui.sort_likes }}</option>
+              <option value="replies">{{ modules.comment_explorer_ui.sort_replies }}</option>
+            </select>
+            <div class="sort-selector-custom" id="sort-selector-custom" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="sort-selector-label">
+              <div class="sort-selector-selected">
+                <span class="sort-selector-text" id="sort-selector-text">{{ modules.comment_explorer_ui.sort_date }}</span>
+                <span class="sort-selector-arrow">▼</span>
+              </div>
+              <ul class="sort-selector-options" id="sort-selector-options" role="listbox">
+                <li class="sort-selector-option" data-value="date" role="option" data-selected="true">
+                  <span>{{ modules.comment_explorer_ui.sort_date }}</span>
+                </li>
+                <li class="sort-selector-option" data-value="theme" role="option">
+                  <span>{{ modules.comment_explorer_ui.sort_theme }}</span>
+                </li>
+                <li class="sort-selector-option" data-value="likes" role="option">
+                  <span>{{ modules.comment_explorer_ui.sort_likes }}</span>
+                </li>
+                <li class="sort-selector-option" data-value="replies" role="option">
+                  <span>{{ modules.comment_explorer_ui.sort_replies }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          #}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="subtheme-filter" id="subtheme-filter" style="display: none;">
+          <label class="control-label">Refine by theme tags</label>
+          <div class="subtheme-filter-tags" id="subtheme-filter-tags">
+            <!-- Sub-theme tags will be populated here dynamically -->
+          </div>
+        </div>
+        <div class="comment-count" data-template="{{ modules.comment_explorer_ui.comment_count }}">{{ modules.comment_explorer_ui.comment_count }}</div>
+        <div class="comments-container display-flex-column-gap">
+          <!-- Comments will be populated here from JSON -->
+        </div>
+        <div class="download-comments">
+          <button class="download-button">{{ modules.comment_explorer_ui.download_button_text }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="current-actions">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="actions-header">
+          <h2>{{ modules.current_actions.title }}</h2>
+        </div>
+        <div class="actions-content">
+          {{ modules.current_actions.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stay-informed">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="signup-engaged-section">
+          <h2>{{ modules.signup_engaged.title }}</h2>
+          <p>{{ modules.signup_engaged.text }}</p>
+          <a data-appearance="button" data-theme="orange" href="/#sign-up">
+            {{ modules.signup_engaged.button_text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "e3-theme-navigation.njk" %}
+
+<script>
+// Pass theme colors to JavaScript
+window.themeColors = {
+  {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+  {% for i in range(1, nbr_themes + 1) %}
+  {% set theme_module = "theme_" + i %}
+  {{ i }}: {
+    stroke: "{{ modules[theme_module].stroke_color | default('#5489A3') }}",
+    light: "{{ modules[theme_module].light_color | default('rgba(84, 137, 163, 0.50)') }}"
+  }{% if not loop.last %},{% endif %}
+  {% endfor %}
+};
+</script>
+
+{% endblock %}

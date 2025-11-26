@@ -9,6 +9,7 @@ site/es_old
 .autoenv*
 .venv*
 *venv
+*-MT.mmmd
 .idea
 local_settings.js
 __pycache__
