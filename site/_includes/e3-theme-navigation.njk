@@ -4,6 +4,10 @@ let current_theme_index = 1;
 let global_comment_data = null;
 let current_search_term = '';
 let current_sort = 'date'; // Default to date sort
+// Cache for comment text lookup (comment ID -> all text in thread including replies)
+let commentTextCache = null;
+// Pre-computed search index: solution index -> combined lowercase text (solution + comments)
+let solutionSearchIndex = null;
 
 // Maps for subthemes and themes
 let subthemeMap = {}; // Maps subtheme_id -> {name, parent_theme_id}
@@ -34,7 +38,7 @@ function highlightSearchText(text, searchTerm) {
 // Function to get all comments for a given comment ID (handles parent/reply cases)
 function getAllCommentsForSolution(commentId) {
   if (!global_comment_data || !global_comment_data.comments) {
-    console.log("getAllCommentsForSolution: No comment data available");
+    // console.log("getAllCommentsForSolution: No comment data available");
     return [];
   }
   
@@ -50,11 +54,11 @@ function getAllCommentsForSolution(commentId) {
   // Find the comment
   let comment = all_comments_by_cid[commentId];
   if (!comment) {
-    console.log("getAllCommentsForSolution: Comment not found for ID:", commentId);
+    // console.log("getAllCommentsForSolution: Comment not found for ID:", commentId);
     return [];
   }
   
-  console.log("getAllCommentsForSolution: Found comment:", comment.cid, "isReply:", comment.rid && comment.rid !== '');
+  // console.log("getAllCommentsForSolution: Found comment:", comment.cid, "isReply:", comment.rid && comment.rid !== '');
   
   // If this is a reply, find its parent first
   let parentComment = comment;
@@ -126,7 +130,7 @@ function getAllCommentsForSolution(commentId) {
   
   // Return parent comment followed by all replies
   let result = [parentComment].concat(allReplies);
-  console.log("getAllCommentsForSolution: Returning", result.length, "comments (1 parent +", allReplies.length, "replies)");
+  // console.log("getAllCommentsForSolution: Returning", result.length, "comments (1 parent +", allReplies.length, "replies)");
   return result;
 }
 
@@ -152,15 +156,107 @@ function formatDate(dateString) {
   }
 }
 
+// Helper function to build comment markup
+function buildCommentMarkup(comments) {
+  if (comments.length === 0) {
+    return '<p class="no-comments">No comments found.</p>';
+  }
+  
+  let markup = '';
+  comments.forEach(function(comment) {
+    let isReply = comment.rid && comment.rid !== '';
+    let indent_class = isReply ? ' indent-reply' : '';
+    
+    let comment_text = comment.content.replace(/\n/g, ' ');
+    let highlighted_comment_text = highlightSearchText(comment_text, current_search_term);
+    let formatted_date = formatDate(comment.date);
+    let likes = comment.likes !== undefined ? comment.likes : 0;
+    let has_likes = 'likes' in comment;
+    
+    let comment_theme_class = '';
+    if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
+      comment.tids.forEach(function(tid) {
+        comment_theme_class += ` theme-${tid}`;
+      });
+    }
+    
+    markup += `<div class="comment-item-container">`;
+    markup += `<div class="comment-item${indent_class}${comment_theme_class}">`;
+    markup += '<div class="comment-content">';
+    markup += '"' + highlighted_comment_text + '"';
+    markup += '</div>';
+    if (formatted_date || has_likes) {
+      markup += '<div class="comment-meta">';
+      if (formatted_date) {
+        markup += '<span class="comment-date">' + formatted_date + '</span>';
+      }
+      if (has_likes) {
+        markup += '<span class="comment-likes">' + likes + ' Likes</span>';
+      }
+      markup += '</div>';
+    }
+    markup += '</div>';
+    markup += '</div>';
+  });
+  
+  // Add close comment link at the end
+  markup += '<a href="#" class="close-comment-link"><span class="close-text">Close comment</span><span class="close-arrow">▲</span></a>';
+  
+  return markup;
+}
+
+// Helper function to expand a comment widget
+function expandCommentWidget(toggle, solutionsArray) {
+  let commentId = toggle.dataset.commentId || toggle.getAttribute('data-comment-id');
+  if (!commentId) return;
+  
+  let widget = toggle.closest('.original-comments-widget');
+  let contentDiv = widget ? widget.querySelector('.original-comments-content') : null;
+  if (!contentDiv) return;
+  
+  // Load content if not already loaded
+  if (!contentDiv.dataset.loaded) {
+    let solutionContainer = widget.closest('.solution-item-container');
+    let solutionIndex = solutionContainer ? solutionContainer.dataset.solutionIndex : null;
+    let comments = null;
+    
+    if (solutionIndex !== null && solutionsArray && solutionsArray[solutionIndex] && solutionsArray[solutionIndex]._cachedComments) {
+      comments = solutionsArray[solutionIndex]._cachedComments;
+    } else {
+      comments = getAllCommentsForSolution(commentId);
+    }
+    
+    contentDiv.innerHTML = buildCommentMarkup(comments);
+    contentDiv.dataset.loaded = 'true';
+  }
+  
+  contentDiv.style.display = 'block';
+  toggle.setAttribute('aria-expanded', 'true');
+  toggle.style.display = 'none';
+  let arrow = toggle.querySelector('.toggle-arrow');
+  if (arrow) arrow.textContent = '▲';
+}
+
+// Helper function to collapse a comment widget
+function collapseCommentWidget(toggle) {
+  let widget = toggle.closest('.original-comments-widget');
+  let contentDiv = widget ? widget.querySelector('.original-comments-content') : null;
+  if (!contentDiv) return;
+  
+  contentDiv.style.display = 'none';
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.style.display = 'block';
+  let arrow = toggle.querySelector('.toggle-arrow');
+  if (arrow) arrow.textContent = '▼';
+}
+
 // Function to populate solutions instead of comments
 function populate_solutions(theme_number_or_all) {
   if (global_comment_data == null) {
-    console.log("Solution data not loaded yet");
     return;
   }
   
   if (!global_comment_data.solutions) {
-    console.log("No solutions data available");
     return;
   }
   
@@ -206,31 +302,19 @@ function populate_solutions(theme_number_or_all) {
   // Apply search filter if there's a search term
   if (current_search_term && current_search_term.length >= 2) {
     let search_lower = current_search_term.toLowerCase();
+    
+    // Use pre-built search index for fast filtering (O(1) lookup via object properties)
     filtered_solutions = filtered_solutions.filter(function(solution) {
-      let solutionText = solution.text || '';
-      let solutionMatches = solutionText.toLowerCase().includes(search_lower);
-      
-      // Only check comments if solution text doesn't match (optimization)
-      // Also check comment text if solution has a comment ID
+      // Fast lookup using pre-computed lowercase text stored directly on solution
+      let solutionMatches = solution._searchText ? solution._searchText.includes(search_lower) : false;
       let commentMatches = false;
-      let commentId = solution.cid || solution.comment_id || '';
-      if (!solutionMatches && commentId && global_comment_data && global_comment_data.comments) {
-        // Cache comments on solution object to avoid re-fetching during auto-expansion
-        if (!solution._cachedComments) {
-          solution._cachedComments = getAllCommentsForSolution(commentId);
-        }
-        let comments = solution._cachedComments;
-        commentMatches = comments.some(function(comment) {
-          let commentText = comment.content || '';
-          return commentText.toLowerCase().includes(search_lower);
-        });
+      
+      if (!solutionMatches && solution._commentSearchText) {
+        commentMatches = solution._commentSearchText.includes(search_lower);
       }
       
       // Mark solution for auto-expansion if comment matches but solution doesn't
-      // (if solution matches, we don't need to auto-expand since the match is already visible)
-      if (commentMatches && !solutionMatches) {
-        solution._commentMatchesSearch = true;
-      }
+      solution._commentMatchesSearch = (commentMatches && !solutionMatches);
       
       return solutionMatches || commentMatches;
     });
@@ -247,9 +331,6 @@ function populate_solutions(theme_number_or_all) {
     let commentId = solution.cid || solution.comment_id || '';
     return commentId && commentId.trim() !== '';
   });
-  
-  let theme_label = theme_number_or_all === 'all' ? 'all themes' : (theme_number_or_all === 'other' ? 'other (no theme)' : 'theme ' + theme_number_or_all);
-  console.log(`Found ${filtered_solutions.length} solutions for ${theme_label}`);
   
   // Build solution markup
   let smarkup = '';
@@ -313,235 +394,14 @@ function populate_solutions(theme_number_or_all) {
     } else {
       comment_container.innerHTML = smarkup;
       
-      // Set up expand/collapse handlers for each solution
-      document.querySelectorAll('.original-comments-toggle').forEach(function(button) {
-        button.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          // Get comment ID - try both dataset and getAttribute
-          let commentId = this.dataset.commentId || this.getAttribute('data-comment-id');
-          
-          // Don't proceed if commentId is empty
-          if (!commentId || commentId.trim() === '') {
-            console.warn("No comment ID found for this solution");
-            return;
-          }
-          
-          // Find the content div - it's the next sibling after the button
-          let widget = this.closest('.original-comments-widget');
-          let contentDiv = widget ? widget.querySelector('.original-comments-content') : null;
-          
-          if (!contentDiv) {
-            // Fallback: try nextElementSibling
-            contentDiv = this.nextElementSibling;
-            // Make sure it's the right element
-            if (!contentDiv || !contentDiv.classList.contains('original-comments-content')) {
-              console.error("Could not find content div for comment ID:", commentId);
-              return;
-            }
-          }
-          
-          let isExpanded = this.getAttribute('aria-expanded') === 'true';
-          
-          if (isExpanded) {
-            // Collapse
-            contentDiv.style.display = 'none';
-            this.setAttribute('aria-expanded', 'false');
-            this.style.display = 'block'; // Show the "Original comments" link again
-            let arrow = this.querySelector('.toggle-arrow');
-            if (arrow) arrow.textContent = '▼';
-          } else {
-            // Expand - load and display comments
-            if (!contentDiv.dataset.loaded) {
-              // Try to use cached comments if available (from search filtering)
-              let solutionContainer = widget.closest('.solution-item-container');
-              let solutionIndex = solutionContainer ? solutionContainer.dataset.solutionIndex : null;
-              let comments = null;
-              
-              if (solutionIndex !== null && filtered_solutions[solutionIndex] && filtered_solutions[solutionIndex]._cachedComments) {
-                comments = filtered_solutions[solutionIndex]._cachedComments;
-              } else {
-                comments = getAllCommentsForSolution(commentId);
-                // Cache for future use
-                if (solutionIndex !== null && filtered_solutions[solutionIndex]) {
-                  filtered_solutions[solutionIndex]._cachedComments = comments;
-                }
-              }
-              
-              console.log("Found", comments.length, "comments");
-              let commentsMarkup = '';
-              
-              if (comments.length === 0) {
-                commentsMarkup = '<p class="no-comments">No comments found.</p>';
-              } else {
-                comments.forEach(function(comment) {
-                  let isReply = comment.rid && comment.rid !== '';
-                  let indent_class = isReply ? ' indent-reply' : '';
-                  
-                  let comment_text = comment.content.replace(/\n/g, ' ');
-                  let highlighted_comment_text = highlightSearchText(comment_text, current_search_term);
-                  let formatted_date = formatDate(comment.date);
-                  let likes = comment.likes !== undefined ? comment.likes : 0;
-                  let has_likes = 'likes' in comment;
-                  
-                  // Add theme classes
-                  let comment_theme_class = '';
-                  if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
-                    comment.tids.forEach(function(tid) {
-                      comment_theme_class += ` theme-${tid}`;
-                    });
-                  }
-                  
-                  commentsMarkup += `<div class="comment-item-container">`;
-                  commentsMarkup += `<div class="comment-item${indent_class}${comment_theme_class}">`;
-                  commentsMarkup += '<div class="comment-content">';
-                  commentsMarkup += '“' + highlighted_comment_text + '”';
-                  commentsMarkup += '</div>';
-                  if (formatted_date || has_likes) {
-                    commentsMarkup += '<div class="comment-meta">';
-                    if (formatted_date) {
-                      commentsMarkup += '<span class="comment-date">' + formatted_date + '</span>';
-                    }
-                    if (has_likes) {
-                      commentsMarkup += '<span class="comment-likes">';
-                      commentsMarkup += likes;
-                      commentsMarkup += ' likes';
-                      commentsMarkup += '</span>';
-                    }
-                    commentsMarkup += '</div>';
-                  }
-                  commentsMarkup += '</div>';
-                  commentsMarkup += '</div>';
-                });
-              }
-              
-              // Add close comment link at the end
-              commentsMarkup += '<a href="#" class="close-comment-link"><span class="close-text">Close comment</span><span class="close-arrow">▲</span></a>';
-              
-              contentDiv.innerHTML = commentsMarkup;
-              contentDiv.dataset.loaded = 'true';
-              
-              // Set up close link click handler
-              let closeLink = contentDiv.querySelector('.close-comment-link');
-              let toggleLink = this; // Store reference to toggle link
-              if (closeLink) {
-                closeLink.addEventListener('click', function(e) {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  contentDiv.style.display = 'none';
-                  toggleLink.setAttribute('aria-expanded', 'false');
-                  toggleLink.style.display = 'block';
-                  let arrow = toggleLink.querySelector('.toggle-arrow');
-                  if (arrow) arrow.textContent = '▼';
-                });
-              }
-            }
-            
-            contentDiv.style.display = 'block';
-            this.setAttribute('aria-expanded', 'true');
-            this.style.display = 'none'; // Hide the "Original comments" link when expanded
-            let arrow = this.querySelector('.toggle-arrow');
-            if (arrow) arrow.textContent = '▲';
-          }
-        });
-      });
-      
-      // Auto-expand comments that match the search
+      // Auto-expand comments that match the search (limit to first 20 to avoid performance issues)
       if (current_search_term && current_search_term.length >= 2) {
-        document.querySelectorAll('.original-comments-toggle[data-auto-expand="true"]').forEach(function(toggle) {
-          let commentId = toggle.dataset.commentId || toggle.getAttribute('data-comment-id');
-          if (!commentId) return;
-          
-          let widget = toggle.closest('.original-comments-widget');
-          let contentDiv = widget ? widget.querySelector('.original-comments-content') : null;
-          if (!contentDiv) return;
-          
-          // Find the solution object to get cached comments
-          let solutionContainer = widget.closest('.solution-item-container');
-          let solutionIndex = solutionContainer ? solutionContainer.dataset.solutionIndex : null;
-          let comments = null;
-          
-          // Try to use cached comments from filtering phase
-          if (solutionIndex !== null && filtered_solutions[solutionIndex] && filtered_solutions[solutionIndex]._cachedComments) {
-            comments = filtered_solutions[solutionIndex]._cachedComments;
-          } else {
-            // Fallback: load comments if cache not available
-            comments = getAllCommentsForSolution(commentId);
-          }
-          let commentsMarkup = '';
-          
-          if (comments.length === 0) {
-            commentsMarkup = '<p class="no-comments">No comments found.</p>';
-          } else {
-            comments.forEach(function(comment) {
-              let isReply = comment.rid && comment.rid !== '';
-              let indent_class = isReply ? ' indent-reply' : '';
-              
-              let comment_text = comment.content.replace(/\n/g, ' ');
-              let highlighted_comment_text = highlightSearchText(comment_text, current_search_term);
-              let formatted_date = formatDate(comment.date);
-              let likes = comment.likes !== undefined ? comment.likes : 0;
-              let has_likes = 'likes' in comment;
-              
-              // Add theme classes
-              let comment_theme_class = '';
-              if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
-                comment.tids.forEach(function(tid) {
-                  comment_theme_class += ` theme-${tid}`;
-                });
-              }
-              
-              commentsMarkup += `<div class="comment-item-container">`;
-              commentsMarkup += `<div class="comment-item${indent_class}${comment_theme_class}">`;
-              commentsMarkup += '<div class="comment-content">';
-              commentsMarkup += '"' + highlighted_comment_text + '"';
-              commentsMarkup += '</div>';
-              if (formatted_date || has_likes) {
-                commentsMarkup += '<div class="comment-meta">';
-                if (formatted_date) {
-                  commentsMarkup += '<span class="comment-date">' + formatted_date + '</span>';
-                }
-                if (has_likes) {
-                  commentsMarkup += '<span class="comment-likes">';
-                  commentsMarkup += likes;
-                  commentsMarkup += ' likes';
-                  commentsMarkup += '</span>';
-                }
-                commentsMarkup += '</div>';
-              }
-              commentsMarkup += '</div>';
-              commentsMarkup += '</div>';
-            });
-          }
-          
-          // Add close comment link at the end
-          commentsMarkup += '<a href="#" class="close-comment-link">Close comment<span class="close-arrow">▲</span></a>';
-          
-          contentDiv.innerHTML = commentsMarkup;
-          contentDiv.dataset.loaded = 'true';
-          contentDiv.style.display = 'block';
-          
-          // Set up close link click handler
-          let closeLink = contentDiv.querySelector('.close-comment-link');
-          if (closeLink) {
-            closeLink.addEventListener('click', function(e) {
-              e.preventDefault();
-              e.stopPropagation();
-              contentDiv.style.display = 'none';
-              toggle.setAttribute('aria-expanded', 'false');
-              toggle.style.display = 'block';
-              let arrow = toggle.querySelector('.toggle-arrow');
-              if (arrow) arrow.textContent = '▼';
-            });
-          }
-          
-          // Update toggle state
-          toggle.setAttribute('aria-expanded', 'true');
-          toggle.style.display = 'none';
-          let arrow = toggle.querySelector('.toggle-arrow');
-          if (arrow) arrow.textContent = '▲';
-        });
+        const MAX_AUTO_EXPAND = 20;
+        let toggles = comment_container.querySelectorAll('.original-comments-toggle[data-auto-expand="true"]');
+        let count = Math.min(toggles.length, MAX_AUTO_EXPAND);
+        for (let i = 0; i < count; i++) {
+          expandCommentWidget(toggles[i], filtered_solutions);
+        }
       }
     }
   }
@@ -557,7 +417,6 @@ function populate_solutions(theme_number_or_all) {
 
 function populate_comments(theme_number_or_all) {
   if (global_comment_data == null) {
-    console.log("Comment data not loaded yet");
     return;
   }
   
@@ -833,9 +692,6 @@ function populate_comments(theme_number_or_all) {
   
   // Update filtered_comments to the ordered list
   filtered_comments = ordered_comments;
-  
-  let theme_label = theme_number_or_all === 'all' ? 'all themes' : (theme_number_or_all === 'other' ? 'other (no theme)' : 'theme ' + theme_number_or_all);
-  console.log(`Found ${filtered_comments.length} comments for ${theme_label}`);
   
   // Build comment markup with highlighting
   let cmarkup = '';
@@ -1226,6 +1082,41 @@ function update_navigation_widget(theme_number) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Event delegation for comments container - single handler for all expand/collapse
+  let commentsContainer = document.querySelector('.comments-container');
+  if (commentsContainer) {
+    commentsContainer.addEventListener('click', function(e) {
+      // Handle "Original comments" toggle clicks
+      let toggle = e.target.closest('.original-comments-toggle');
+      if (toggle) {
+        e.preventDefault();
+        e.stopPropagation();
+        let isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+          collapseCommentWidget(toggle);
+        } else {
+          expandCommentWidget(toggle, null); // filtered_solutions not available here, uses fallback
+        }
+        return;
+      }
+      
+      // Handle "Close comment" link clicks
+      let closeLink = e.target.closest('.close-comment-link');
+      if (closeLink) {
+        e.preventDefault();
+        e.stopPropagation();
+        let widget = closeLink.closest('.original-comments-widget');
+        if (widget) {
+          let toggle = widget.querySelector('.original-comments-toggle');
+          if (toggle) {
+            collapseCommentWidget(toggle);
+          }
+        }
+        return;
+      }
+    });
+  }
+  
   // Use event delegation on the SVG container for better Safari compatibility
   let svgContainer = document.querySelector('#themes-bubble-chart svg');
   if (svgContainer) {
@@ -1348,6 +1239,62 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       console.log("Data loaded:", data.comments ? data.comments.length : 0, "comments,", data.solutions ? data.solutions.length : 0, "solutions");
       global_comment_data = data;
+      
+      // Build comment text cache for fast searching
+      commentTextCache = {};
+      if (data.comments) {
+        // Build a map of all comments by cid
+        let all_comments_by_cid = {};
+        data.comments.forEach(function(comment) {
+          all_comments_by_cid[String(comment.cid)] = comment;
+        });
+        
+        // For each comment, collect all text in its thread (parent + all replies)
+        data.comments.forEach(function(comment) {
+          let cidStr = String(comment.cid);
+          
+          // Find root parent (go up the chain)
+          let rootParent = comment;
+          let current = comment;
+          while (current.rid && current.rid !== '' && all_comments_by_cid[String(current.rid)]) {
+            current = all_comments_by_cid[String(current.rid)];
+          }
+          rootParent = current;
+          let rootCidStr = String(rootParent.cid);
+          
+          // If we haven't built the cache for this root parent yet, build it
+          if (!commentTextCache[rootCidStr]) {
+            let allText = [];
+            // Add root parent text
+            if (rootParent.content) {
+              allText.push(rootParent.content.toLowerCase());
+            }
+            // Add all reply texts
+            data.comments.forEach(function(c) {
+              if (c.rid && String(c.rid) === rootCidStr && c.content) {
+                allText.push(c.content.toLowerCase());
+              }
+            });
+            commentTextCache[rootCidStr] = allText.join(' ');
+          }
+          
+          // Map this comment ID to the same cache entry (so any comment in thread uses same cache)
+          commentTextCache[cidStr] = commentTextCache[rootCidStr];
+        });
+      }
+      
+      // Build solution search index (pre-compute lowercase text for fast searching)
+      solutionSearchIndex = new Map();
+      if (data.solutions) {
+        data.solutions.forEach(function(solution) {
+          let solutionText = (solution.text || '').toLowerCase();
+          let commentId = solution.cid || solution.comment_id || '';
+          let commentText = commentId && commentTextCache ? (commentTextCache[String(commentId)] || '') : '';
+          // Store search data directly on solution object for fastest access
+          solution._searchText = solutionText;
+          solution._commentSearchText = commentText;
+        });
+      }
       
       // Build subtheme map
       if (data.subthemes) {
