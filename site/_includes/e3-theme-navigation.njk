@@ -31,6 +31,500 @@ function highlightSearchText(text, searchTerm) {
   return escapedText.replace(regex, '<mark>$1</mark>');
 }
 
+// Function to get all comments for a given comment ID (handles parent/reply cases)
+function getAllCommentsForSolution(commentId) {
+  if (!global_comment_data || !global_comment_data.comments) {
+    console.log("getAllCommentsForSolution: No comment data available");
+    return [];
+  }
+  
+  // Convert commentId to string for consistent comparison
+  commentId = String(commentId);
+  
+  // Build a map of all comments by cid
+  let all_comments_by_cid = {};
+  global_comment_data.comments.forEach(function(comment) {
+    all_comments_by_cid[String(comment.cid)] = comment;
+  });
+  
+  // Find the comment
+  let comment = all_comments_by_cid[commentId];
+  if (!comment) {
+    console.log("getAllCommentsForSolution: Comment not found for ID:", commentId);
+    return [];
+  }
+  
+  console.log("getAllCommentsForSolution: Found comment:", comment.cid, "isReply:", comment.rid && comment.rid !== '');
+  
+  // If this is a reply, find its parent first
+  let parentComment = comment;
+  if (comment.rid && comment.rid !== '' && all_comments_by_cid[comment.rid]) {
+    // This is a reply, so find the parent
+    parentComment = all_comments_by_cid[comment.rid];
+    
+    // Also need to check if parent has a parent (go up the chain to find root)
+    let current = parentComment;
+    while (current.rid && current.rid !== '' && all_comments_by_cid[current.rid]) {
+      current = all_comments_by_cid[current.rid];
+    }
+    parentComment = current; // This is now the root parent
+  }
+  
+  // Get all replies to the parent comment (direct and indirect descendants)
+  let allReplies = [];
+  let processed = new Set();
+  let parentCidStr = String(parentComment.cid);
+  
+  function collectReplies(parentCid) {
+    global_comment_data.comments.forEach(function(c) {
+      let cidStr = String(c.cid);
+      if (c.content && c.content.trim() !== '' && !processed.has(cidStr) && cidStr !== parentCid) {
+        // Check if this comment is a reply to parentCid (direct or indirect)
+        let current = c;
+        let isDescendant = false;
+        let depth = 0;
+        const maxDepth = 100; // Prevent infinite loops
+        
+        while (current.rid && String(current.rid) !== '' && depth < maxDepth) {
+          if (String(current.rid) === parentCid) {
+            isDescendant = true;
+            break;
+          }
+          current = all_comments_by_cid[String(current.rid)];
+          if (!current) break;
+          depth++;
+        }
+        
+        if (isDescendant) {
+          allReplies.push(c);
+          processed.add(cidStr);
+        }
+      }
+    });
+  }
+  
+  collectReplies(parentCidStr);
+  
+  // Sort replies by date
+  function parseDate(dateString) {
+    if (!dateString) return 0;
+    try {
+      return new Date(dateString).getTime();
+    } catch (e) {
+      return 0;
+    }
+  }
+  
+  allReplies.sort(function(a, b) {
+    let aDate = parseDate(a.date);
+    let bDate = parseDate(b.date);
+    if (aDate !== bDate) {
+      return aDate - bDate;
+    }
+    return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+  });
+  
+  // Return parent comment followed by all replies
+  let result = [parentComment].concat(allReplies);
+  console.log("getAllCommentsForSolution: Returning", result.length, "comments (1 parent +", allReplies.length, "replies)");
+  return result;
+}
+
+// Function to format date from ISO 8601 to "Month Day at HH:MMam/pm" format
+function formatDate(dateString) {
+  if (!dateString) return '';
+  try {
+    let date = new Date(dateString);
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+    let month = months[date.getMonth()];
+    let day = date.getDate();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let ampm = hours >= 12 ? 'pm' : 'am';
+    let year = date.getFullYear();
+    hours = hours % 12;
+    hours = hours ? hours : 12; // 0 should be 12
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    return month + ' ' + day  + ', ' + year + ' at ' + hours + ':' + minutes + ampm;
+  } catch (e) {
+    return dateString; // Return original if parsing fails
+  }
+}
+
+// Function to populate solutions instead of comments
+function populate_solutions(theme_number_or_all) {
+  if (global_comment_data == null) {
+    console.log("Solution data not loaded yet");
+    return;
+  }
+  
+  if (!global_comment_data.solutions) {
+    console.log("No solutions data available");
+    return;
+  }
+  
+  let filtered_solutions;
+  
+  // Handle "all" vs specific theme vs "other"
+  if (theme_number_or_all === 'all' || theme_number_or_all === null) {
+    // Show all solutions
+    filtered_solutions = global_comment_data.solutions;
+  } else if (theme_number_or_all === 'other') {
+    // Filter solutions with no themes (empty tids array)
+    filtered_solutions = global_comment_data.solutions.filter(function(solution) {
+      let tids = solution.tids || [];
+      return tids.length === 0;
+    });
+  } else {
+    // Theme number (1-10) matches theme ID
+    let target_theme_id = parseInt(theme_number_or_all, 10);
+    
+    // Filter solutions by checking if the theme ID is in the tids array
+    filtered_solutions = global_comment_data.solutions.filter(function(solution) {
+      let tids = solution.tids || [];
+      let matchesTheme = tids.indexOf(target_theme_id) !== -1;
+      
+      // If sub-theme filtering is active (one or more selected), filter by selected sub-themes
+      if (matchesTheme && selectedSubthemes.size > 0) {
+        let stids = solution.stids || [];
+        // Solution must have at least one selected sub-theme
+        let hasSelectedSubtheme = false;
+        for (let i = 0; i < stids.length; i++) {
+          if (selectedSubthemes.has(stids[i])) {
+            hasSelectedSubtheme = true;
+            break;
+          }
+        }
+        matchesTheme = hasSelectedSubtheme;
+      }
+      
+      return matchesTheme;
+    });
+  }
+  
+  // Apply search filter if there's a search term
+  if (current_search_term && current_search_term.length >= 2) {
+    let search_lower = current_search_term.toLowerCase();
+    filtered_solutions = filtered_solutions.filter(function(solution) {
+      let solutionText = solution.text || '';
+      let solutionMatches = solutionText.toLowerCase().includes(search_lower);
+      
+      // Also check comment text if solution has a comment ID
+      let commentMatches = false;
+      let commentId = solution.cid || solution.comment_id || '';
+      if (commentId && global_comment_data && global_comment_data.comments) {
+        let comments = getAllCommentsForSolution(commentId);
+        commentMatches = comments.some(function(comment) {
+          let commentText = comment.content || '';
+          return commentText.toLowerCase().includes(search_lower);
+        });
+      }
+      
+      // Mark solution for auto-expansion if comment matches but solution doesn't
+      // (if solution matches, we don't need to auto-expand since the match is already visible)
+      if (commentMatches && !solutionMatches) {
+        solution._commentMatchesSearch = true;
+      }
+      
+      return solutionMatches || commentMatches;
+    });
+  } else {
+    // Clear any previous auto-expand flags when search is cleared
+    filtered_solutions.forEach(function(solution) {
+      solution._commentMatchesSearch = false;
+    });
+  }
+  
+  // Filter out solutions with empty comment IDs
+  filtered_solutions = filtered_solutions.filter(function(solution) {
+    let commentId = solution.cid || solution.comment_id || '';
+    return commentId && commentId.trim() !== '';
+  });
+  
+  let theme_label = theme_number_or_all === 'all' ? 'all themes' : (theme_number_or_all === 'other' ? 'other (no theme)' : 'theme ' + theme_number_or_all);
+  console.log(`Found ${filtered_solutions.length} solutions for ${theme_label}`);
+  
+  // Build solution markup
+  let smarkup = '';
+  
+  filtered_solutions.forEach(function(solution, index) {
+    // Use the full text (favor long text)
+    let solution_text = solution.text || '';
+    let highlighted_text = highlightSearchText(solution_text, current_search_term);
+    
+    // Add theme classes based on tids array
+    let theme_class = '';
+    if (solution.tids && Array.isArray(solution.tids) && solution.tids.length > 0) {
+      solution.tids.forEach(function(tid) {
+        theme_class += ` theme-${tid}`;
+      });
+    }
+    
+    smarkup += `<div class="solution-item-container" data-solution-index="${index}">`;
+    smarkup += `<div class="solution-item${theme_class}">`;
+    smarkup += '<div class="solution-content">';
+    smarkup += highlighted_text;
+    smarkup += '</div>';
+    
+    // Generate sub-theme tags
+    smarkup += '<div class="comment-tags">';
+    if (solution.stids && Array.isArray(solution.stids) && solution.stids.length > 0) {
+      solution.stids.forEach(function(stid) {
+        let subtheme = subthemeMap[stid];
+        if (subtheme) {
+          let parentThemeId = subtheme.parent_theme_id;
+          let themeColorObj = themeColorMap[parentThemeId];
+          let themeColor = themeColorObj && themeColorObj.light ? themeColorObj.light : 'rgba(84, 137, 163, 0.50)';
+          smarkup += `<div class="comment-tag" style="background-color: ${themeColor};">${subtheme.name}</div>`;
+        }
+      });
+    }
+    smarkup += '</div>';
+    
+    // Original comments expandable widget (only show if solution has a comment ID)
+    let commentId = solution.cid || solution.comment_id || '';
+    if (commentId) {
+      // Check if this solution should be auto-expanded (comment matches search)
+      let shouldAutoExpand = solution._commentMatchesSearch === true;
+      smarkup += '<div class="original-comments-widget">';
+      smarkup += `<a href="#" class="original-comments-toggle" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" data-auto-expand="${shouldAutoExpand}">`;
+      smarkup += 'Original comments<span class="toggle-arrow">' + (shouldAutoExpand ? '▲' : '▼') + '</span>';
+      smarkup += '</a>';
+      smarkup += `<div class="original-comments-content" style="display: ${shouldAutoExpand ? 'block' : 'none'}"></div>`;
+      smarkup += '</div>';
+    }
+    
+    smarkup += '</div>';
+    smarkup += '</div>';
+  });
+  
+  // Update the comments container (reusing same container class)
+  let comment_container = document.querySelector('.comments-container');
+  if (comment_container) {
+    if (filtered_solutions.length === 0) {
+      comment_container.innerHTML = '<p class="no-comments">No solutions found.</p>';
+    } else {
+      comment_container.innerHTML = smarkup;
+      
+      // Set up expand/collapse handlers for each solution
+      document.querySelectorAll('.original-comments-toggle').forEach(function(button) {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Get comment ID - try both dataset and getAttribute
+          let commentId = this.dataset.commentId || this.getAttribute('data-comment-id');
+          
+          // Don't proceed if commentId is empty
+          if (!commentId || commentId.trim() === '') {
+            console.warn("No comment ID found for this solution");
+            return;
+          }
+          
+          // Find the content div - it's the next sibling after the button
+          let widget = this.closest('.original-comments-widget');
+          let contentDiv = widget ? widget.querySelector('.original-comments-content') : null;
+          
+          if (!contentDiv) {
+            // Fallback: try nextElementSibling
+            contentDiv = this.nextElementSibling;
+            // Make sure it's the right element
+            if (!contentDiv || !contentDiv.classList.contains('original-comments-content')) {
+              console.error("Could not find content div for comment ID:", commentId);
+              return;
+            }
+          }
+          
+          let isExpanded = this.getAttribute('aria-expanded') === 'true';
+          
+          if (isExpanded) {
+            // Collapse
+            contentDiv.style.display = 'none';
+            this.setAttribute('aria-expanded', 'false');
+            this.style.display = 'block'; // Show the "Original comments" link again
+            let arrow = this.querySelector('.toggle-arrow');
+            if (arrow) arrow.textContent = '▼';
+          } else {
+            // Expand - load and display comments
+            if (!contentDiv.dataset.loaded) {
+              let comments = getAllCommentsForSolution(commentId);
+              console.log("Found", comments.length, "comments");
+              let commentsMarkup = '';
+              
+              if (comments.length === 0) {
+                commentsMarkup = '<p class="no-comments">No comments found.</p>';
+              } else {
+                comments.forEach(function(comment) {
+                  let isReply = comment.rid && comment.rid !== '';
+                  let indent_class = isReply ? ' indent-reply' : '';
+                  
+                  let comment_text = comment.content.replace(/\n/g, ' ');
+                  let highlighted_comment_text = highlightSearchText(comment_text, current_search_term);
+                  let formatted_date = formatDate(comment.date);
+                  let likes = comment.likes !== undefined ? comment.likes : 0;
+                  let has_likes = 'likes' in comment;
+                  
+                  // Add theme classes
+                  let comment_theme_class = '';
+                  if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
+                    comment.tids.forEach(function(tid) {
+                      comment_theme_class += ` theme-${tid}`;
+                    });
+                  }
+                  
+                  commentsMarkup += `<div class="comment-item-container">`;
+                  commentsMarkup += `<div class="comment-item${indent_class}${comment_theme_class}">`;
+                  commentsMarkup += '<div class="comment-content">';
+                  commentsMarkup += '“' + highlighted_comment_text + '”';
+                  commentsMarkup += '</div>';
+                  if (formatted_date || has_likes) {
+                    commentsMarkup += '<div class="comment-meta">';
+                    if (formatted_date) {
+                      commentsMarkup += '<span class="comment-date">' + formatted_date + '</span>';
+                    }
+                    if (has_likes) {
+                      commentsMarkup += '<span class="comment-likes">';
+                      commentsMarkup += likes;
+                      commentsMarkup += ' likes';
+                      commentsMarkup += '</span>';
+                    }
+                    commentsMarkup += '</div>';
+                  }
+                  commentsMarkup += '</div>';
+                  commentsMarkup += '</div>';
+                });
+              }
+              
+              // Add close comment link at the end
+              commentsMarkup += '<a href="#" class="close-comment-link">Close comment<span class="close-arrow">▲</span></a>';
+              
+              contentDiv.innerHTML = commentsMarkup;
+              contentDiv.dataset.loaded = 'true';
+              
+              // Set up close link click handler
+              let closeLink = contentDiv.querySelector('.close-comment-link');
+              let toggleLink = this; // Store reference to toggle link
+              if (closeLink) {
+                closeLink.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  contentDiv.style.display = 'none';
+                  toggleLink.setAttribute('aria-expanded', 'false');
+                  toggleLink.style.display = 'block';
+                  let arrow = toggleLink.querySelector('.toggle-arrow');
+                  if (arrow) arrow.textContent = '▼';
+                });
+              }
+            }
+            
+            contentDiv.style.display = 'block';
+            this.setAttribute('aria-expanded', 'true');
+            this.style.display = 'none'; // Hide the "Original comments" link when expanded
+            let arrow = this.querySelector('.toggle-arrow');
+            if (arrow) arrow.textContent = '▲';
+          }
+        });
+      });
+      
+      // Auto-expand comments that match the search
+      if (current_search_term && current_search_term.length >= 2) {
+        document.querySelectorAll('.original-comments-toggle[data-auto-expand="true"]').forEach(function(toggle) {
+          let commentId = toggle.dataset.commentId || toggle.getAttribute('data-comment-id');
+          if (!commentId) return;
+          
+          let widget = toggle.closest('.original-comments-widget');
+          let contentDiv = widget ? widget.querySelector('.original-comments-content') : null;
+          if (!contentDiv) return;
+          
+          // Load and display comments
+          let comments = getAllCommentsForSolution(commentId);
+          let commentsMarkup = '';
+          
+          if (comments.length === 0) {
+            commentsMarkup = '<p class="no-comments">No comments found.</p>';
+          } else {
+            comments.forEach(function(comment) {
+              let isReply = comment.rid && comment.rid !== '';
+              let indent_class = isReply ? ' indent-reply' : '';
+              
+              let comment_text = comment.content.replace(/\n/g, ' ');
+              let highlighted_comment_text = highlightSearchText(comment_text, current_search_term);
+              let formatted_date = formatDate(comment.date);
+              let likes = comment.likes !== undefined ? comment.likes : 0;
+              let has_likes = 'likes' in comment;
+              
+              // Add theme classes
+              let comment_theme_class = '';
+              if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
+                comment.tids.forEach(function(tid) {
+                  comment_theme_class += ` theme-${tid}`;
+                });
+              }
+              
+              commentsMarkup += `<div class="comment-item-container">`;
+              commentsMarkup += `<div class="comment-item${indent_class}${comment_theme_class}">`;
+              commentsMarkup += '<div class="comment-content">';
+              commentsMarkup += '"' + highlighted_comment_text + '"';
+              commentsMarkup += '</div>';
+              if (formatted_date || has_likes) {
+                commentsMarkup += '<div class="comment-meta">';
+                if (formatted_date) {
+                  commentsMarkup += '<span class="comment-date">' + formatted_date + '</span>';
+                }
+                if (has_likes) {
+                  commentsMarkup += '<span class="comment-likes">';
+                  commentsMarkup += likes;
+                  commentsMarkup += ' likes';
+                  commentsMarkup += '</span>';
+                }
+                commentsMarkup += '</div>';
+              }
+              commentsMarkup += '</div>';
+              commentsMarkup += '</div>';
+            });
+          }
+          
+          // Add close comment link at the end
+          commentsMarkup += '<a href="#" class="close-comment-link">Close comment<span class="close-arrow">▲</span></a>';
+          
+          contentDiv.innerHTML = commentsMarkup;
+          contentDiv.dataset.loaded = 'true';
+          contentDiv.style.display = 'block';
+          
+          // Set up close link click handler
+          let closeLink = contentDiv.querySelector('.close-comment-link');
+          if (closeLink) {
+            closeLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              contentDiv.style.display = 'none';
+              toggle.setAttribute('aria-expanded', 'false');
+              toggle.style.display = 'block';
+              let arrow = toggle.querySelector('.toggle-arrow');
+              if (arrow) arrow.textContent = '▼';
+            });
+          }
+          
+          // Update toggle state
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.style.display = 'none';
+          let arrow = toggle.querySelector('.toggle-arrow');
+          if (arrow) arrow.textContent = '▲';
+        });
+      }
+    }
+  }
+  
+  // Update solution count (reusing comment-count element)
+  let comment_count_element = document.querySelector('.comment-count');
+  if (comment_count_element) {
+    let template = comment_count_element.dataset.template || '<N> solutions';
+    let count_text = template.replace('<N>', filtered_solutions.length);
+    comment_count_element.textContent = count_text;
+  }
+}
+
 function populate_comments(theme_number_or_all) {
   if (global_comment_data == null) {
     console.log("Comment data not loaded yet");
@@ -327,28 +821,6 @@ function populate_comments(theme_number_or_all) {
     return comment.rid !== '' && comment.rid !== null && comments_by_cid[comment.rid];
   }
   
-  // Function to format date from ISO 8601 to "Month Day at HH:MMam/pm" format
-  function formatDate(dateString) {
-    if (!dateString) return '';
-    try {
-      let date = new Date(dateString);
-      let months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                    'July', 'August', 'September', 'October', 'November', 'December'];
-      let month = months[date.getMonth()];
-      let day = date.getDate();
-      let hours = date.getHours();
-      let minutes = date.getMinutes();
-      let ampm = hours >= 12 ? 'pm' : 'am';
-      let year = date.getFullYear();
-      hours = hours % 12;
-      hours = hours ? hours : 12; // 0 should be 12
-      minutes = minutes < 10 ? '0' + minutes : minutes;
-      return month + ' ' + day  + ', ' + year + ' at ' + hours + ':' + minutes + ampm;
-    } catch (e) {
-      return dateString; // Return original if parsing fails
-    }
-  }
-  
   filtered_comments.forEach(function(comment) {
     // Use single indent for all replies (no nested indentation)
     let indent_class = isReply(comment) ? ' indent-reply' : '';
@@ -427,7 +899,7 @@ function populate_comments(theme_number_or_all) {
   }
 }
 
-// Function to show loading state in comment count
+// Function to show loading state in solution count
 function showCommentCountLoading() {
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
@@ -531,11 +1003,11 @@ function toggleSubtheme(subthemeId) {
     }
   }
   
-  // Repopulate comments with new filter
+  // Repopulate solutions with new filter
   if (current_theme_index === 'all' || current_theme_index === 'other') {
-    populate_comments(current_theme_index);
+    populate_solutions(current_theme_index);
   } else {
-    populate_comments(current_theme_index);
+    populate_solutions(current_theme_index);
   }
 }
 
@@ -554,7 +1026,7 @@ function switch_theme(theme_number, should_scroll = false) {
       updateCustomThemeDisplay();
     }
     populateSubthemeFilter('all');
-    populate_comments('all');
+    populate_solutions('all');
     // Reset scroll position of comments container to top
     let comment_container = document.querySelector('.comments-container');
     if (comment_container) {
@@ -574,7 +1046,7 @@ function switch_theme(theme_number, should_scroll = false) {
       updateCustomThemeDisplay();
     }
     populateSubthemeFilter('other');
-    populate_comments('other');
+    populate_solutions('other');
     // Reset scroll position of comments container to top
     let comment_container = document.querySelector('.comments-container');
     if (comment_container) {
@@ -666,8 +1138,8 @@ function switch_theme(theme_number, should_scroll = false) {
   // Update navigation widget dots and buttons
   update_navigation_widget(theme_number);
   
-  // Update comments for the new theme
-  populate_comments(theme_number);
+  // Update solutions for the new theme
+  populate_solutions(theme_number);
   
   // Reset scroll position of comments container to top
   let comment_container = document.querySelector('.comments-container');
@@ -841,10 +1313,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
   
   // Load comment data
-  fetch("/public/data/E3_data_v2.json")
+  fetch("/public/data/E3_data_v3.json")
     .then(response => response.json())
     .then(data => {
-      console.log("Comment data loaded:", data.comments.length, "comments");
+      console.log("Data loaded:", data.comments ? data.comments.length : 0, "comments,", data.solutions ? data.solutions.length : 0, "solutions");
       global_comment_data = data;
       
       // Build subtheme map
@@ -876,8 +1348,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Populate sub-theme filter for initial theme
       populateSubthemeFilter(current_theme_index);
       
-      // Populate comments for initial theme
-      populate_comments(current_theme_index);
+      // Populate solutions for initial theme
+      populate_solutions(current_theme_index);
     })
     .catch(error => {
       console.error("Error fetching comment data:", error);
@@ -1063,7 +1535,7 @@ document.addEventListener('DOMContentLoaded', function() {
           populateSubthemeFilter('all');
         }
         current_search_term = search_value;
-        populate_comments('all');
+        populate_solutions('all');
       } else {
         // Clear search and use current theme
         current_search_term = '';
@@ -1075,7 +1547,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           switch_theme(1, false);
         } else {
-          populate_comments(current_theme_index);
+          populate_solutions(current_theme_index);
         }
       }
     });
@@ -1102,9 +1574,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const customSelect = document.getElementById('sort-selector-custom');
     const selectedText = document.getElementById('sort-selector-text');
     const optionsList = document.getElementById('sort-selector-options');
-    const options = optionsList.querySelectorAll('.sort-selector-option');
     
-    if (!nativeSelect || !customSelect) return;
+    if (!nativeSelect || !customSelect || !optionsList) return;
+    
+    const options = optionsList.querySelectorAll('.sort-selector-option');
     
     // Update custom dropdown display based on native select value
     function updateCustomThemeDisplay() {
@@ -1199,23 +1672,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Initialize custom sort selector
-  initCustomSortSelector();
+  // Initialize custom sort selector (commented out - sort selector disabled for solutions)
+  // initCustomSortSelector();
   
-  // Set up sort selector dropdown (for native select fallback)
-  let sort_selector = document.getElementById('sort-selector-native');
-  if (sort_selector) {
-    sort_selector.value = 'date'; // Set default to date
-    sort_selector.addEventListener('change', function() {
-      current_sort = this.value;
-      // Repopulate comments with new sort
-      if (current_theme_index === 'all') {
-        populate_comments('all');
-      } else {
-        populate_comments(current_theme_index);
-      }
-    });
-  }
+  // Set up sort selector dropdown (for native select fallback) - commented out
+  // let sort_selector = document.getElementById('sort-selector-native');
+  // if (sort_selector) {
+  //   sort_selector.value = 'date'; // Set default to date
+  //   sort_selector.addEventListener('change', function() {
+  //     current_sort = this.value;
+  //     // Repopulate solutions with new sort (sorting disabled for solutions)
+  //     if (current_theme_index === 'all') {
+  //       populate_solutions('all');
+  //     } else {
+  //       populate_solutions(current_theme_index);
+  //     }
+  //   });
+  // }
   
   // Set up navigation widget buttons
   let prev_button = document.getElementById('theme-nav-prev');
