@@ -1,0 +1,413 @@
+---
+title: Efficiency report
+description: "Engaged California asked state employees to share ideas to better serve residents. The initiative sought to identify barriers to efficiency and ways to improve."
+layout: mmmd-stateemployees-report
+parentid: stateemployees
+keywords:
+  - California
+  - state employees
+  - efficiency
+tags:
+  - pages
+---
+
+----
+id: hero
+buttonText: Explore all themes
+----
+
+# State employees are shaping a better California
+
+Every day, more than 245,000 Californians go to work to serve other Californians. They are subject matter experts on what it takes to operate state government. They drive business decisions that deliver exceptional, equitable services. They also understand where the inefficiencies are.
+
+Engaged California invited state employees to discuss how to shape a more effective government over a 10-week period.
+
+Here are just a few examples of the ideas employees shared:
+
+ - Mentorship programs for young leaders to improve employee retention 
+ - Simplifying how people log in to and access necessary IT systems 
+ - Adopting or improving governance to increase compliance.
+
+We heard a clear story. Improving government efficiency involves more than just updating technology or cutting costs. It requires a management culture that empowers employees and fosters innovation.
+
+----
+id: background_context
+----
+
+## Background and context
+
+----
+id: what_we_heard
+title: What we heard
+----
+
+## What we heard
+
+Many state employees expressed appreciation for the opportunity to share their ideas. The responses reflect their dedication to their work and their communities.
+
+You can explore their ideas and comments below.
+
+----
+id: participation_numbers
+title: Participation by the numbers
+participants_count: 1,653
+participants_label: Participants
+insights_count: 2,477
+insights_label: Insights
+staff_note: Staff from all levels of seniority and tenure
+quote: "“It's nice to be able to share my opinions and to broaden my perspectives on what it means to be a public servant.”"
+----
+
+----
+id: findings_analysis
+----
+
+## Findings and analysis
+
+----
+id: themes_we_found
+title: Themes we found
+intro_text: "Larger circles had more discussion. Click on a theme to learn more about it."
+nbr_themes: 10
+----
+
+----
+id: theme_1
+theme_number: 1
+theme_title: Process improvement
+theme_circle_title: "Process<LF>improvement"
+theme_quote: "“A primary problem is the number of antiquated and inefficient statewide processes still in place across departments.”"
+stroke_color: "#65ADE1"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_root_comments: 828
+nbr_comments: 931
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Eliminate mandatory printing requirements for electronic documents
+solution_2: Transition paper processes to digital systems
+solution_3: Reduce middle management layers to streamline decisions
+solution_4: Simplify existing programs rather than create new ones
+solution_5: Standardize contract templates and writing style guides
+solution_6: Create documented procedures and comprehensive resource directory
+----
+
+This theme covers basic government operations. Comments covered approvals, spending, and excessive paperwork.
+
+----
+id: theme_2
+theme_number: 2
+theme_title: Recruitment, hiring, and retention
+theme_circle_title: "Recruitment,<LF>hiring, and<LF>retention"
+theme_quote: "“We need more pathways to promote so employees don't feel stuck…”"
+stroke_color: "#C591DA"
+light_color: "rgba(197, 145, 218, 0.50)"
+hilite_fill_color: "rgba(197, 145, 218, 0.10)"
+nbr_root_comments: 751
+nbr_comments: 906
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Implement reward systems for creativity and innovation
+solution_2: Implement regular staff recognition through events and acknowledgments
+solution_3: Prioritize upskilling staff over hiring consultants
+solution_4: Provide basic process improvement training to all employees
+solution_5: Provide employee choice in retirement contribution allocation
+solution_6: Implement innovative hiring process with competitive salaries
+----
+
+This theme focuses on hiring and keeping good employees. Topics included employee turnover, career growth, and mentorship programs.
+
+----
+id: theme_3
+theme_number: 3
+theme_title: Public-facing services and resident experience
+theme_circle_title: "Public-facing<LF>services and<LF>resident experience"
+theme_quote: "“There are too many road blocks in communication between the public… and the State offices…so few points of contact for the public to obtain information and services.”"
+stroke_color: "#6C8043"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_root_comments: 573
+nbr_comments: 634
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Prioritize recently homeless individuals for permanent reintegration
+solution_2: Enhance clean energy incentives for solar installation
+solution_3: Forward inquiries to correct departments with contact details
+solution_4: Simplify public benefits paperwork and application process
+solution_5: Design programs around resident needs through client input
+solution_6: Establish participatory budgeting programs for the public
+----
+
+This theme's comments highlight the issues that slow down state services and make them hard to use. 
+
+----
+id: theme_4
+theme_number: 4
+theme_title: Communication and knowledge sharing
+theme_circle_title: "Communication<LF>and<LF>knowledge sharing"
+theme_quote: "“Silos within and across organizations are contributing to inefficiencies and decreased productivity.”"
+stroke_color: "#53CAB0"
+light_color: "rgba(83, 202, 176, 0.50)"
+hilite_fill_color: "rgba(83, 202, 176, 0.10)"
+nbr_root_comments: 477
+nbr_comments: 585
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Establish cross-departmental data sharing system
+solution_2: Promote collaborative cross-divisional work towards shared goals
+solution_3: Implement mandatory overlap period for knowledge transfer
+solution_4: Create organized internal directories and onboarding hubs
+solution_5: Communicate with front-line employees before procurement decisions
+solution_6: Create inclusive information sharing practices for teams
+----
+
+The comments noted that there are siloed departments and that communication between leadership and staff is poor. Employees also said there’s a need to improve training materials, cross-agency collaboration, and to retain essential knowledge.
+
+----
+id: theme_5
+theme_number: 5
+theme_title: Budget and resources
+theme_circle_title: "Budget and<LF>resources"
+theme_quote: "“Why are we frequently using out of state vendors to do work that we should be paying state employees to do?”"
+stroke_color: "#DABD48"
+light_color: "rgba(218, 189, 72, 0.50)"
+hilite_fill_color: "rgba(218, 189, 72, 0.10)"
+nbr_root_comments: 421
+nbr_comments: 477
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Purchase buildings instead of leasing
+solution_2: Reform DGS Internal Service Fund structure
+solution_3: Eliminate or reform prison industries purchasing requirement
+solution_4: Streamline procurement by reducing approval levels
+solution_5: Implement independent third-party audits with public findings
+solution_6: Conduct deep dive analysis of long-running programs
+----
+
+This theme's comments center on contractor spending and money management.
+
+----
+id: theme_6
+theme_number: 6
+theme_title: Technology and digital innovation
+theme_circle_title: "Technology and<LF>digital innovation"
+theme_quote: "“...we can move from a system of isolated, inefficient solutions to a collaborative, and cohesive government that is truly focused on better serving the people of California.”"
+stroke_color: "#A9D4F2"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_root_comments: 414
+nbr_comments: 435
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Invest in modern user-friendly technology tools
+solution_2: Create statewide standardized IT systems for departments
+solution_3: Centralize IT asset inventory with a single dashboard system
+solution_4: Implement statewide master service agreements for software
+solution_5: Utilize online resources instead of forms and mail
+solution_6: Better organize websites to improve usability
+----
+
+This theme highlights issues with outdated IT systems. People discussed poor mobile experiences. They also talked about AI, centralized platforms, and digitizing processes.
+
+----
+id: theme_7
+theme_number: 7
+theme_title: Governance and oversight
+theme_circle_title: "Governance<LF>and oversight"
+theme_quote: "“The strict hierarchy in the state does not allow for innovation. Supervisors preserve the status quo instead of encouraging staff to find streamlined solutions to problems that affect the lower staff levels.”"
+stroke_color: "#EE9930"
+light_color: "rgba(238, 153, 48, 0.50)"
+hilite_fill_color: "rgba(238, 153, 48, 0.10)"
+nbr_root_comments: 400
+nbr_comments: 441
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Empower teams with creative problem-solving ownership
+solution_2: Build culture of accountability and employee support
+solution_3: Consolidate government agencies with similar missions
+solution_4: Reduce middle management layers to streamline decisions
+solution_5: Centralize standardized statewide policy development
+solution_6: Conduct agency-wide cross-check of all policies and procedures
+----
+
+This theme's comments highlight the need for guidelines and policies. People also talked about how to enforce these policies and ensure accountability.
+
+----
+id: theme_8
+theme_number: 8
+theme_title: Organizational structure and culture
+theme_circle_title: "Organizational<LF>structure and<LF>culture"
+theme_quote: "“Giving my team more ownership has been a total game-changer! I've watched my employees transform from just doing their jobs to being real innovation champions.”"
+stroke_color: "#E45D48"
+light_color: "rgba(228, 93, 72, 0.50)"
+hilite_fill_color: "rgba(228, 93, 72, 0.10)"
+nbr_root_comments: 396
+nbr_comments: 451
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Create workplace culture initiatives for employee retention
+solution_2: Create atmosphere encouraging employee ideas and improvements
+solution_3: Create safe communication channels for staff ideas
+solution_4: Establish pathways for staff input in decisions
+solution_5: Consolidate agencies performing duplicate functions
+solution_6: Cancel private leases and consolidate departments into state buildings
+----
+
+This theme's comments address issues with management layers, redundant workflows, and decision-making. Employees also discussed ways to build a more inclusive and welcoming workplace culture.
+
+----
+id: theme_9
+theme_number: 9
+theme_title: Management culture and leadership
+theme_circle_title: "Management<LF>culture and<LF>leadership"
+theme_quote: "“The level of safety for staff to communicate ideas and have them be heard objectively and considered operationally is often low.”"
+stroke_color: "#6D4884"
+light_color: "rgba(109, 72, 132, 0.50)"
+hilite_fill_color: "rgba(109, 72, 132, 0.10)"
+nbr_root_comments: 352
+nbr_comments: 413
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Implement leadership development focused on emotional intelligence
+solution_2: Require management to model commitment to efficiency
+solution_3: Implement leadership assessment and mandatory training for appointees
+solution_4: Implement regular manager feedback sessions for process improvement
+solution_5: Establish comprehensive leadership development program
+solution_6: Establish formal process for reporting leadership conduct concerns
+----
+
+This theme's comments discuss the need for better leadership training and the benefits of varying management approaches.
+
+----
+id: theme_10
+theme_number: 10
+theme_title: Workplace operations
+theme_circle_title: "Workplace<LF>operations"
+theme_description: State employees identified operational challenges related to facilities, remote work policies, and day-to-day workplace logistics.
+theme_quote: "“Everyone performs better in an environment that they are comfortable in…”"
+stroke_color: "#F2C3C7"
+light_color: "rgba(242, 195, 199, 0.50)"
+hilite_fill_color: "rgba(242, 195, 199, 0.10)"
+nbr_root_comments: 339
+nbr_comments: 402
+see_more_link: See more comments on this theme
+nbr_solutions: 6
+solution_1: Make backend roles telework first to reduce costs
+solution_2: Establish shared office spaces and virtual teams
+solution_3: Use goats to clear undergrowth for wildfire prevention
+solution_4: Reduce car registration fees for electric vehicles
+solution_5: Implement shared parking reservation system for employees
+solution_6: Restore monthly voucher system for transportation expenses
+----
+
+This theme's comments mainly covered remote work and return-to-office policies. Employees also discussed flexible work options, work-life balance, and related hiring policies.
+
+----
+id: themes_deep_dive
+title: Themes deep dive
+----
+
+----
+id: suggested_solutions
+title: Employee suggested solutions
+intro_text: Here's a selection of employee ideas on how to improve the efficiency of our state government.
+----
+
+----
+id: solution_1
+title: Create documented procedures and comprehensive resource directory
+----
+
+----
+id: solution_2
+title: Create succession plans for all roles
+----
+
+----
+id: solution_3
+title: Base salary increases on performance reviews
+----
+
+----
+id: solution_4
+title: Pair newer staff with experienced mentors
+----
+
+----
+id: solution_5
+title: Better enable pathways for upward mobility
+----
+
+----
+id: comment_explorer
+title: Comment explorer
+intro_text: We collected 2,400 comments that fell into 10 key themes and 65 sub-themes. 
+intro_text2: Read state employees’ own words on this topic. Comments are now closed.
+----
+
+----
+id: theme_navigation
+prev_button_text: Previous theme
+next_button_text: Next theme
+theme_label: Theme
+theme_of: of
+----
+
+----
+id: comment_explorer_ui
+all_option: All
+theme_fallback: Theme
+search_placeholder: Search
+sort_date: Date
+sort_alpha: Alpha
+sort_theme: Theme
+sort_likes: Likes
+sort_replies: Replies
+download_button_text: Download all the comments
+comment_count: <N> comments submitted
+----
+
+
+----
+id: current_actions
+title: What we're doing
+----
+
+The great ideas that people have shared are important and deserve our support. We want to put into action practical suggestions that help remove roadblocks caused by too much red tape, old technology, and a leadership style that focuses too much on rank and titles. Our aim is to be organized, open, and effective with our time and resources from the beginning.
+
+### Governor’s Innovation Fellows
+
+As a first step, the state is harnessing innovation in a human-centered, results-driven way.
+
+In July 2025, we launched the [Governor’s Innovation Fellows](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/) program. This program aims to make the government more efficient, effective, and responsive to the public.
+
+The fellows will continue to build on what we’ve already learned from state employees.
+
+### Results&period;ca&period;gov
+
+There are ongoing efforts across the State to meet the need for efficiencies in government. These wins are showcased on the website, results.ca.gov. Visitors to the site will see measurable accomplishments that are delivering real impacts.
+
+### Innovation Showcases
+
+The State has innovated a new way to do business: [Innovation Showcases](https://innovation.ca.gov/our-work/innovation-showcases/). This is a new model and approach to bringing the private sector to the table with government staff to co-create at the point of problem definition, resulting in no-cost and low-cost prototypes.
+
+
+### Innovation Community of Practice
+
+The Innovation Community of Practice connects state employees who want to try new ways of doing things. It spotlights and amplifies the innovation happening throughout the state. The Community is open to all state employees. Learn more and [sign up](https://innovation.ca.gov/our-work/innovation-community-of-practice/) today.
+
+
+----
+id: download_data
+title: Download the data
+text_1: The comments dataset does not contain personally identifying information.
+text_2: We have not edited or modified the comments in any way.
+button_text: Download the full dataset
+----
+
+----
+id: signup_engaged
+title: Sign up to stay engaged
+text: Give us your email to learn about upcoming opportunities.
+button_text: Sign up
+----

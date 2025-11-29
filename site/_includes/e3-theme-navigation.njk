@@ -1,0 +1,1263 @@
+<script>
+
+let current_theme_index = 1;
+let global_comment_data = null;
+let current_search_term = '';
+let current_sort = 'date'; // Default to date sort
+
+// Maps for subthemes and themes
+let subthemeMap = {}; // Maps subtheme_id -> {name, parent_theme_id}
+let themeColorMap = {}; // Maps theme_id -> {stroke, light}
+
+// Track selected sub-themes (Set of selected subtheme IDs)
+let selectedSubthemes = new Set();
+
+// Function to update custom theme selector display (will be set during initialization)
+let updateCustomThemeDisplay = null;
+
+// Function to escape HTML and highlight search terms
+function highlightSearchText(text, searchTerm) {
+  if (!searchTerm || searchTerm.length < 2) {
+    return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  
+  // Escape HTML first
+  let escapedText = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  
+  // Create a regex to match the search term (case-insensitive)
+  let regex = new RegExp('(' + searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  
+  // Replace matches with highlighted version
+  return escapedText.replace(regex, '<mark>$1</mark>');
+}
+
+function populate_comments(theme_number_or_all) {
+  if (global_comment_data == null) {
+    console.log("Comment data not loaded yet");
+    return;
+  }
+  
+  // Build a map of ALL comments by cid for easy lookup (needed for finding replies)
+  let all_comments_by_cid = {};
+  global_comment_data.comments.forEach(function(comment) {
+    all_comments_by_cid[comment.cid] = comment;
+  });
+  
+  // Build a map of replies by parent CID (much more efficient than searching each time)
+  // This maps parent CID -> array of all descendant replies
+  let replies_by_parent = {};
+  
+  // First pass: collect all replies and build direct parent relationships
+  let direct_replies = {};
+  global_comment_data.comments.forEach(function(comment) {
+    if (comment.content && comment.content.trim() !== '' && comment.rid && comment.rid !== '') {
+      if (!direct_replies[comment.rid]) {
+        direct_replies[comment.rid] = [];
+      }
+      direct_replies[comment.rid].push(comment);
+    }
+  });
+  
+  // Second pass: recursively build full descendant lists
+  function getAllDescendants(parentCid) {
+    if (replies_by_parent[parentCid]) {
+      return replies_by_parent[parentCid];
+    }
+    
+    let descendants = [];
+    if (direct_replies[parentCid]) {
+      direct_replies[parentCid].forEach(function(reply) {
+        descendants.push(reply);
+        // Recursively get descendants of this reply
+        let replyDescendants = getAllDescendants(reply.cid);
+        descendants = descendants.concat(replyDescendants);
+      });
+    }
+    
+    replies_by_parent[parentCid] = descendants;
+    return descendants;
+  }
+  
+  // Function to find all replies (direct and indirect) for a given parent comment CID
+  function getAllRepliesForParent(parentCid) {
+    return getAllDescendants(parentCid);
+  }
+  
+  let filtered_comments;
+  
+  // Handle "all" vs specific theme vs "other"
+  if (theme_number_or_all === 'all' || theme_number_or_all === null) {
+    // Show all comments (already working correctly)
+    filtered_comments = global_comment_data.comments.filter(function(comment) {
+      return comment.content && comment.content.trim() !== '';
+    });
+  } else if (theme_number_or_all === 'other') {
+    // Filter parent comments with no themes (empty tids array)
+    let filtered_parents = global_comment_data.comments.filter(function(comment) {
+      // Only include top-level comments (no parent)
+      let isTopLevel = !comment.rid || comment.rid === '';
+      let tids = comment.tids || [];
+      return isTopLevel && tids.length === 0 && comment.content && comment.content.trim() !== '';
+    });
+    
+    // Find all replies to these parent comments
+    let all_replies = [];
+    filtered_parents.forEach(function(parent) {
+      let parentReplies = getAllRepliesForParent(parent.cid);
+      all_replies = all_replies.concat(parentReplies);
+    });
+    
+    // Combine parents and their replies
+    filtered_comments = filtered_parents.concat(all_replies);
+  } else {
+    // Theme number (1-10) matches theme ID in v2 data
+    let target_theme_id = parseInt(theme_number_or_all, 10);
+    
+    // Filter parent comments by checking if the theme ID is in the tids array
+    let filtered_parents = global_comment_data.comments.filter(function(comment) {
+      // Only include top-level comments (no parent)
+      let isTopLevel = !comment.rid || comment.rid === '';
+      let tids = comment.tids || [];
+      let matchesTheme = tids.indexOf(target_theme_id) !== -1;
+      
+      // If sub-theme filtering is active (one or more selected), filter by selected sub-themes
+      if (matchesTheme && selectedSubthemes.size > 0) {
+        let stids = comment.stids || [];
+        // Comment must have at least one selected sub-theme
+        let hasSelectedSubtheme = false;
+        for (let i = 0; i < stids.length; i++) {
+          if (selectedSubthemes.has(stids[i])) {
+            hasSelectedSubtheme = true;
+            break;
+          }
+        }
+        matchesTheme = hasSelectedSubtheme;
+      }
+      // If no sub-themes are selected, show all comments (matchesTheme remains true)
+      
+      return isTopLevel && matchesTheme && comment.content && comment.content.trim() !== '';
+    });
+    
+    // Find all replies to these parent comments (replies don't need matching theme IDs)
+    let all_replies = [];
+    filtered_parents.forEach(function(parent) {
+      let parentReplies = getAllRepliesForParent(parent.cid);
+      all_replies = all_replies.concat(parentReplies);
+    });
+    
+    // Combine parents and their replies
+    filtered_comments = filtered_parents.concat(all_replies);
+  }
+  
+  // Apply search filter if there's a search term
+  if (current_search_term && current_search_term.length >= 2) {
+    let search_lower = current_search_term.toLowerCase();
+    filtered_comments = filtered_comments.filter(function(comment) {
+      return comment.content.toLowerCase().includes(search_lower);
+    });
+  }
+  
+  // Function to parse date string to timestamp for comparison
+  function parseDate(dateString) {
+    if (!dateString) return 0;
+    try {
+      return new Date(dateString).getTime();
+    } catch (e) {
+      return 0;
+    }
+  }
+  
+  // Function to compare two comments based on current sort
+  function compareComments(a, b) {
+    if (current_sort === 'date') {
+      // Date sort: sort by timestamp ascending
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      // If dates are equal, use cid as tiebreaker
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+    } else if (current_sort === 'alpha') {
+      // Alpha sort: use lowercase content
+      let aText = (a.content || '').toLowerCase();
+      let bText = (b.content || '').toLowerCase();
+      if (aText < bText) return -1;
+      if (aText > bText) return 1;
+      return 0;
+    } else if (current_sort === 'theme') {
+      // Theme sort: sort by first theme ID from tids array, then by date
+      let aTids = a.tids || [];
+      let bTids = b.tids || [];
+      let aFirstTheme = aTids.length > 0 ? aTids[0] : 0;
+      let bFirstTheme = bTids.length > 0 ? bTids[0] : 0;
+      if (aFirstTheme !== bFirstTheme) {
+        return aFirstTheme - bFirstTheme;
+      }
+      // Within same theme, sort by date
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+    } else if (current_sort === 'likes') {
+      // Likes sort: descending order (most likes first)
+      let aLikes = a.likes || 0;
+      let bLikes = b.likes || 0;
+      if (aLikes !== bLikes) {
+        return bLikes - aLikes; // Descending
+      }
+      // If likes are equal, sort by date ascending
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+    } else if (current_sort === 'replies') {
+      // Replies sort: descending order (most replies first)
+      let aReplies = a.replies || 0;
+      let bReplies = b.replies || 0;
+      if (aReplies !== bReplies) {
+        return bReplies - aReplies; // Descending
+      }
+      // If replies are equal, sort by date ascending
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+    }
+    
+    // Default fallback
+    return 0;
+  }
+  
+  // Build a map of filtered comments by cid for easy lookup
+  let comments_by_cid = {};
+  filtered_comments.forEach(function(comment) {
+    comments_by_cid[comment.cid] = comment;
+  });
+  
+  // Separate top-level comments and replies
+  let top_level = [];
+  let replies = [];
+  
+  filtered_comments.forEach(function(comment) {
+    if (comment.rid === '' || comment.rid === null || !comments_by_cid[comment.rid]) {
+      top_level.push(comment);
+    } else {
+      replies.push(comment);
+    }
+  });
+  
+  // Sort top-level comments
+  top_level.sort(compareComments);
+  
+  // Sort replies by date (chronological) - all replies will be sorted chronologically
+  replies.sort(function(a, b) {
+    let aDate = parseDate(a.date);
+    let bDate = parseDate(b.date);
+    if (aDate !== bDate) {
+      return aDate - bDate;
+    }
+    return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+  });
+  
+  // Function to find all replies (direct and indirect) for a given comment
+  function getAllReplies(parentCid, allReplies) {
+    let result = [];
+    allReplies.forEach(function(reply) {
+      // Check if this reply is a direct or indirect child of parentCid
+      let current = reply;
+      let isDescendant = false;
+      while (current.rid && current.rid !== '') {
+        if (current.rid === parentCid) {
+          isDescendant = true;
+          break;
+        }
+        current = comments_by_cid[current.rid];
+        if (!current) break;
+      }
+      if (isDescendant) {
+        result.push(reply);
+      }
+    });
+    return result;
+  }
+  
+  // Build ordered list: for each top-level comment, add it followed by its replies
+  let ordered_comments = [];
+  top_level.forEach(function(parent) {
+    ordered_comments.push(parent);
+    // Get all replies (direct and indirect) for this parent
+    let parentReplies = getAllReplies(parent.cid, replies);
+    // Sort replies chronologically by date
+    parentReplies.sort(function(a, b) {
+      let aDate = parseDate(a.date);
+      let bDate = parseDate(b.date);
+      if (aDate !== bDate) {
+        return aDate - bDate;
+      }
+      return parseInt(a.cid, 10) - parseInt(b.cid, 10);
+    });
+    // Add replies after parent
+    ordered_comments = ordered_comments.concat(parentReplies);
+  });
+  
+  // Update filtered_comments to the ordered list
+  filtered_comments = ordered_comments;
+  
+  let theme_label = theme_number_or_all === 'all' ? 'all themes' : (theme_number_or_all === 'other' ? 'other (no theme)' : 'theme ' + theme_number_or_all);
+  console.log(`Found ${filtered_comments.length} comments for ${theme_label}`);
+  
+  // Build comment markup with highlighting
+  let cmarkup = '';
+  
+  // Rebuild comments_by_cid map from ordered filtered_comments (in case we need it)
+  // Note: comments_by_cid was already created earlier, but we'll update it with the ordered list
+  filtered_comments.forEach(function(comment) {
+    comments_by_cid[comment.cid] = comment;
+  });
+  
+  // Function to check if a comment is a reply (has a parent)
+  function isReply(comment) {
+    return comment.rid !== '' && comment.rid !== null && comments_by_cid[comment.rid];
+  }
+  
+  // Function to format date from ISO 8601 to "Month Day at HH:MMam/pm" format
+  function formatDate(dateString) {
+    if (!dateString) return '';
+    try {
+      let date = new Date(dateString);
+      let months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+      let month = months[date.getMonth()];
+      let day = date.getDate();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let ampm = hours >= 12 ? 'pm' : 'am';
+      let year = date.getFullYear();
+      hours = hours % 12;
+      hours = hours ? hours : 12; // 0 should be 12
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      return month + ' ' + day  + ', ' + year + ' at ' + hours + ':' + minutes + ampm;
+    } catch (e) {
+      return dateString; // Return original if parsing fails
+    }
+  }
+  
+  filtered_comments.forEach(function(comment) {
+    // Use single indent for all replies (no nested indentation)
+    let indent_class = isReply(comment) ? ' indent-reply' : '';
+    
+    let comment_text = comment.content.replace(/\n/g, ' ');
+    let highlighted_text = highlightSearchText(comment_text, current_search_term);
+    let formatted_date = formatDate(comment.date);
+    let likes = comment.likes !== undefined ? comment.likes : 0;
+    let has_likes = 'likes' in comment;
+    
+    // Add theme classes based on tids array (theme IDs are 1-10 in v2)
+    // Add all theme classes for comments with multiple themes
+    let theme_class = '';
+    if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
+      comment.tids.forEach(function(tid) {
+        theme_class += ` theme-${tid}`;
+      });
+    }
+    
+    cmarkup += `<div class="comment-item-container">`;
+    cmarkup += `<div class="comment-item${indent_class}${theme_class}">`;
+    cmarkup += '<div class="comment-content">';
+    cmarkup += '“' + highlighted_text + '”';
+    cmarkup += '</div>';
+    if (formatted_date || has_likes) {
+      cmarkup += '<div class="comment-meta">';
+      if (formatted_date) {
+        cmarkup += '<span class="comment-date">' + formatted_date + '</span>';
+      }
+      if (has_likes) {
+        cmarkup += '<span class="comment-likes">';
+        // cmarkup += '<img src="/public/images/like-icon.svg" alt="likes" class="like-icon" />';
+        cmarkup += likes;
+        cmarkup += ' likes';
+        cmarkup += '</span>';
+      }
+      cmarkup += '</div>';
+    }
+    // Generate sub-theme tags
+    cmarkup += '<div class="comment-tags">';
+    if (comment.stids && Array.isArray(comment.stids) && comment.stids.length > 0) {
+      comment.stids.forEach(function(stid) {
+        let subtheme = subthemeMap[stid];
+        if (subtheme) {
+          let parentThemeId = subtheme.parent_theme_id;
+          let themeColorObj = themeColorMap[parentThemeId];
+          let themeColor = themeColorObj && themeColorObj.light ? themeColorObj.light : 'rgba(84, 137, 163, 0.50)';
+          cmarkup += `<div class="comment-tag" style="background-color: ${themeColor};">${subtheme.name}</div>`;
+        }
+      });
+    }
+    cmarkup += '</div>';
+
+
+
+    cmarkup += '</div>';
+    cmarkup += '</div>';
+  });
+  
+  // Update the comments container
+  let comment_container = document.querySelector('.comments-container');
+  if (comment_container) {
+    if (filtered_comments.length === 0) {
+      comment_container.innerHTML = '<p class="no-comments">No comments found.</p>';
+    } else {
+      comment_container.innerHTML = cmarkup;
+    }
+  }
+  
+  // Update comment count
+  let comment_count_element = document.querySelector('.comment-count');
+  if (comment_count_element) {
+    let template = comment_count_element.dataset.template || '<N> comments submitted';
+    let count_text = template.replace('<N>', filtered_comments.length);
+    comment_count_element.textContent = count_text;
+  }
+}
+
+// Function to show loading state in comment count
+function showCommentCountLoading() {
+  let comment_count_element = document.querySelector('.comment-count');
+  if (comment_count_element) {
+    comment_count_element.textContent = 'Loading...';
+  }
+}
+
+// Function to populate sub-theme filter for a given theme
+function populateSubthemeFilter(themeId) {
+  let subthemeFilter = document.getElementById('subtheme-filter');
+  let subthemeFilterTags = document.getElementById('subtheme-filter-tags');
+  
+  if (!subthemeFilter || !subthemeFilterTags) return;
+  
+  // Hide filter for "all" and "other"
+  if (themeId === 'all' || themeId === 'other') {
+    subthemeFilter.style.display = 'none';
+    selectedSubthemes.clear();
+    return;
+  }
+  
+  // Get all sub-themes for this theme
+  let themeSubthemes = [];
+  for (let stid in subthemeMap) {
+    if (subthemeMap[stid].parent_theme_id === themeId) {
+      themeSubthemes.push({
+        id: parseInt(stid, 10),
+        name: subthemeMap[stid].name
+      });
+    }
+  }
+  
+  // Sort by ID for consistent ordering
+  themeSubthemes.sort(function(a, b) {
+    return a.id - b.id;
+  });
+  
+  // If no sub-themes, hide the filter
+  if (themeSubthemes.length === 0) {
+    subthemeFilter.style.display = 'none';
+    selectedSubthemes.clear();
+    return;
+  }
+  
+  // Show the filter
+  subthemeFilter.style.display = 'block';
+  
+  // Get theme color
+  let themeColorObj = themeColorMap[themeId];
+  let themeColor = themeColorObj && themeColorObj.light ? themeColorObj.light : 'rgba(84, 137, 163, 0.50)';
+  
+  // Clear existing tags
+  subthemeFilterTags.innerHTML = '';
+  
+  // Initialize all sub-themes as unselected (default state)
+  selectedSubthemes.clear();
+  
+  // Create tags for each sub-theme
+  themeSubthemes.forEach(function(subtheme) {
+    let tag = document.createElement('div');
+    tag.className = 'subtheme-filter-tag';
+    tag.dataset.subthemeId = subtheme.id;
+    tag.style.backgroundColor = themeColor;
+    
+    let tagText = document.createElement('span');
+    tagText.textContent = subtheme.name;
+    
+    {# let tagClose = document.createElement('span');
+    tagClose.className = 'subtheme-filter-tag-close';
+    tagClose.textContent = '×';
+    tagClose.setAttribute('aria-label', 'Toggle ' + subtheme.name); #}
+    
+    tag.appendChild(tagText);
+    {# tag.appendChild(tagClose); #}
+    
+    // Handle click on tag (both the tag itself and the X button)
+    tag.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleSubtheme(subtheme.id);
+    });
+    
+    subthemeFilterTags.appendChild(tag);
+  });
+}
+
+// Function to toggle a sub-theme's selected state
+function toggleSubtheme(subthemeId) {
+  if (selectedSubthemes.has(subthemeId)) {
+    selectedSubthemes.delete(subthemeId);
+  } else {
+    selectedSubthemes.add(subthemeId);
+  }
+  
+  // Update visual state
+  let tag = document.querySelector(`.subtheme-filter-tag[data-subtheme-id="${subthemeId}"]`);
+  if (tag) {
+    if (selectedSubthemes.has(subthemeId)) {
+      tag.classList.add('selected');
+    } else {
+      tag.classList.remove('selected');
+    }
+  }
+  
+  // Repopulate comments with new filter
+  if (current_theme_index === 'all' || current_theme_index === 'other') {
+    populate_comments(current_theme_index);
+  } else {
+    populate_comments(current_theme_index);
+  }
+}
+
+function switch_theme(theme_number, should_scroll = false) {
+  // Get theme selector elements
+  let theme_selector = document.getElementById('theme-selector-native');
+  
+  // Handle "all" option
+  if (theme_number === 'all' || theme_number === null) {
+    current_theme_index = 'all';
+    // Update theme selector
+    if (theme_selector) {
+      theme_selector.value = 'all';
+    }
+    if (updateCustomThemeDisplay) {
+      updateCustomThemeDisplay();
+    }
+    populateSubthemeFilter('all');
+    populate_comments('all');
+    // Reset scroll position of comments container to top
+    let comment_container = document.querySelector('.comments-container');
+    if (comment_container) {
+      comment_container.scrollTop = 0;
+    }
+    return;
+  }
+  
+  // Handle "other" option
+  if (theme_number === 'other') {
+    current_theme_index = 'other';
+    // Update theme selector
+    if (theme_selector) {
+      theme_selector.value = 'other';
+    }
+    if (updateCustomThemeDisplay) {
+      updateCustomThemeDisplay();
+    }
+    populateSubthemeFilter('other');
+    populate_comments('other');
+    // Reset scroll position of comments container to top
+    let comment_container = document.querySelector('.comments-container');
+    if (comment_container) {
+      comment_container.scrollTop = 0;
+    }
+    // Remove 'active' class from all theme content sections
+    document.querySelectorAll('.theme-content').forEach(function(content) {
+      content.classList.remove('active');
+    });
+    // Reset SVG circle highlighting
+    document.querySelectorAll('.theme-circle').forEach(function(group) {
+      let circle = group.querySelector('circle');
+      if (circle) {
+        if (!circle.dataset.originalStroke) {
+          circle.dataset.originalStroke = circle.getAttribute('stroke') || '';
+        }
+        circle.style.fill = '#FFFFFF';
+        circle.style.stroke = circle.dataset.originalStroke;
+        circle.style.strokeWidth = '2';
+        group.setAttribute('aria-selected', 'false');
+      }
+    });
+    // Update navigation widget
+    update_navigation_widget(null);
+    return;
+  }
+  
+  // Update current theme index
+  current_theme_index = parseInt(theme_number, 10);
+  
+  // Update theme selector
+  if (theme_selector) {
+    theme_selector.value = theme_number.toString();
+  }
+  if (updateCustomThemeDisplay) {
+    updateCustomThemeDisplay();
+  }
+  
+  // Populate sub-theme filter for this theme
+  populateSubthemeFilter(current_theme_index);
+  
+  // Remove 'active' class from all theme content sections
+  document.querySelectorAll('.theme-content').forEach(function(content) {
+    content.classList.remove('active');
+  });
+  
+  // Add 'active' class to the selected theme content section
+  let selected_content = document.getElementById(`theme-${theme_number}-content`);
+  if (selected_content) {
+    selected_content.classList.add('active');
+    
+    // Only scroll if explicitly requested (e.g., from hash navigation or direct link)
+    if (should_scroll) {
+      selected_content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  
+  // Update SVG circle highlighting - use hilite_fill_color for selected circles
+  document.querySelectorAll('.theme-circle').forEach(function(group) {
+    let circle = group.querySelector('circle');
+    let circle_text = group.querySelector('text');
+    let theme_num = parseInt(group.dataset.theme, 10);
+    
+    if (circle) {
+      // Store original stroke color if not already stored
+      if (!circle.dataset.originalStroke) {
+        circle.dataset.originalStroke = circle.getAttribute('stroke') || '';
+      }
+      
+      if (theme_num === theme_number) {
+        // Highlight selected circle with hilite_fill_color
+        let hiliteFill = group.dataset.hiliteFill || 'rgba(84, 137, 163, 0.20)';
+        circle.style.fill = hiliteFill;
+        circle.style.stroke = circle.dataset.originalStroke;
+        circle.style.strokeWidth = '5';
+        group.setAttribute('aria-selected', 'true');
+        circle_text.style.fontWeight = 600;
+      } else {
+        // Reset to original state - white fill with original stroke
+        circle.style.fill = '#FFFFFF';
+        circle.style.stroke = circle.dataset.originalStroke;
+        circle.style.strokeWidth = '5';
+        group.setAttribute('aria-selected', 'false');
+        circle_text.style.fontWeight = 400;
+      }
+    }
+  });
+  
+  // Update navigation widget dots and buttons
+  update_navigation_widget(theme_number);
+  
+  // Update comments for the new theme
+  populate_comments(theme_number);
+  
+  // Reset scroll position of comments container to top
+  let comment_container = document.querySelector('.comments-container');
+  if (comment_container) {
+    comment_container.scrollTop = 0;
+  }
+}
+
+function update_navigation_widget(theme_number) {
+  // Update dots (if they exist)
+  document.querySelectorAll('.theme-dot').forEach(function(dot) {
+    let dot_theme = parseInt(dot.dataset.theme, 10);
+    // Only mark dots as active if theme_number is numeric and matches
+    if (typeof theme_number === 'number' && dot_theme === theme_number) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+  
+  // Get the total number of themes by counting theme content divs or dots
+  let total_themes = document.querySelectorAll('.theme-content').length || document.querySelectorAll('.theme-dot').length;
+  
+  // Update theme number indicator
+  let theme_number_span = document.querySelector('.current-theme-number');
+  if (theme_number_span) {
+    if (theme_number === 'all' || theme_number === 'other' || theme_number === null) {
+      theme_number_span.textContent = '';
+    } else {
+      theme_number_span.textContent = theme_number;
+    }
+  }
+  
+  // Update Previous/Next buttons
+  let prev_button = document.getElementById('theme-nav-prev');
+  let next_button = document.getElementById('theme-nav-next');
+  
+  if (prev_button) {
+    // Disable prev button if on "all", "other", or theme 1
+    if (theme_number === 'all' || theme_number === 'other' || theme_number === null) {
+      prev_button.disabled = true;
+    } else {
+      prev_button.disabled = (theme_number === 1);
+    }
+  }
+  if (next_button) {
+    // Disable next button if on "all", "other", or last theme
+    if (theme_number === 'all' || theme_number === 'other' || theme_number === null) {
+      next_button.disabled = false; // Enable it so it can go to theme 1
+    } else {
+      next_button.disabled = (theme_number === total_themes);
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Use event delegation on the SVG container for better Safari compatibility
+  let svgContainer = document.querySelector('#themes-bubble-chart svg');
+  if (svgContainer) {
+    svgContainer.addEventListener('click', function(e) {
+      let target = e.target;
+      
+      // Traverse up the DOM to find the theme-circle group
+      let current = target;
+      let themeGroup = null;
+      
+      // Check if target itself is a circle or group
+      if (current.classList && current.classList.contains('theme-circle')) {
+        themeGroup = current;
+      } else if (current.tagName === 'circle' && current.parentElement) {
+        themeGroup = current.parentElement;
+      } else {
+        // Traverse up to find parent group
+        while (current && current !== svgContainer) {
+          if (current.classList && current.classList.contains('theme-circle')) {
+            themeGroup = current;
+            break;
+          }
+          current = current.parentElement;
+        }
+      }
+      
+      if (themeGroup && themeGroup.dataset && themeGroup.dataset.theme) {
+        let theme_number = parseInt(themeGroup.dataset.theme, 10);
+        if (theme_number) {
+          e.preventDefault();
+          e.stopPropagation();
+          // Clear any text selection to prevent blue rectangle
+          if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+          } else if (document.selection) {
+            document.selection.empty();
+          }
+          switch_theme(theme_number, true); // Scroll when explicitly clicking
+        }
+      }
+    });
+  }
+  
+  // Set up event handlers for theme circles in SVG
+  document.querySelectorAll('.theme-circle').forEach(function(circleGroup) {
+    // Make the group focusable for accessibility
+    circleGroup.setAttribute('tabindex', '0');
+    circleGroup.setAttribute('role', 'button');
+    let themeTitle = circleGroup.querySelector('text tspan')?.textContent || 'Theme ' + circleGroup.dataset.theme;
+    circleGroup.setAttribute('aria-label', 'View ' + themeTitle);
+    
+    // Add keyboard support
+    circleGroup.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        let theme_number = parseInt(this.dataset.theme, 10);
+        switch_theme(theme_number, true); // Scroll when using keyboard navigation
+      }
+    });
+    
+    // Add hover effect - use hilite_fill_color on hover
+    let circle = circleGroup.querySelector('circle');
+    if (circle) {
+      // Store original stroke color if not already stored
+      if (!circle.dataset.originalStroke) {
+        circle.dataset.originalStroke = circle.getAttribute('stroke') || '';
+      }
+      
+      circleGroup.addEventListener('mouseenter', function() {
+        let hoverCircle = this.querySelector('circle');
+        let theme_num = parseInt(this.dataset.theme, 10);
+        if (hoverCircle && current_theme_index !== theme_num) {
+          // Apply hilite_fill_color on hover
+          let hiliteFill = this.dataset.hiliteFill || 'rgba(84, 137, 163, 0.20)';
+          hoverCircle.style.fill = hiliteFill;
+        }
+      });
+      circleGroup.addEventListener('mouseleave', function() {
+        let hoverCircle = this.querySelector('circle');
+        let theme_num = parseInt(this.dataset.theme, 10);
+        if (hoverCircle && current_theme_index !== theme_num) {
+          // Restore white fill when not selected
+          hoverCircle.style.fill = '#FFFFFF';
+        }
+      });
+    }
+  });
+  
+        // Handle hash navigation (e.g., #theme-3-content) - scroll when hash is present
+        window.addEventListener('hashchange', function() {
+          let hash = window.location.hash;
+          let match = hash.match(/^#theme-(\d+)-content$/);
+          if (match) {
+            let theme_number = parseInt(match[1], 10);
+            // Get the total number of themes by counting dots
+            let total_themes = document.querySelectorAll('.theme-dot').length;
+            if (theme_number >= 1 && theme_number <= total_themes) {
+              switch_theme(theme_number, true); // Scroll when navigating via hash
+            }
+          }
+        });
+  
+        // Check for initial hash on page load - scroll if hash is present
+        if (window.location.hash) {
+          let hash = window.location.hash;
+          let match = hash.match(/^#theme-(\d+)-content$/);
+          if (match) {
+            let theme_number = parseInt(match[1], 10);
+            // Get the total number of themes by counting dots
+            let total_themes = document.querySelectorAll('.theme-dot').length;
+            if (theme_number >= 1 && theme_number <= total_themes) {
+              switch_theme(theme_number, true); // Scroll when page loads with hash
+            }
+          }
+        }
+  
+  // Load comment data
+  fetch("/public/data/E3_data_v2.json")
+    .then(response => response.json())
+    .then(data => {
+      console.log("Comment data loaded:", data.comments.length, "comments");
+      global_comment_data = data;
+      
+      // Build subtheme map
+      if (data.subthemes) {
+        data.subthemes.forEach(function(subtheme) {
+          subthemeMap[subtheme.id] = {
+            name: subtheme.name,
+            parent_theme_id: subtheme.parent_theme_id
+          };
+        });
+      }
+      
+      // Build theme color map from window.themeColors (set in template)
+      if (window.themeColors) {
+        themeColorMap = window.themeColors;
+      } else {
+        // Fallback: build from themes array if available
+        if (data.themes) {
+          data.themes.forEach(function(theme) {
+            // Use a default color scheme if themeColors not available
+            themeColorMap[theme.id] = {
+              stroke: '#5489A3',
+              light: 'rgba(84, 137, 163, 0.50)'
+            };
+          });
+        }
+      }
+      
+      // Populate sub-theme filter for initial theme
+      populateSubthemeFilter(current_theme_index);
+      
+      // Populate comments for initial theme
+      populate_comments(current_theme_index);
+    })
+    .catch(error => {
+      console.error("Error fetching comment data:", error);
+    });
+  
+  // Set up custom theme selector dropdown
+  function initCustomThemeSelector() {
+    const nativeSelect = document.getElementById('theme-selector-native');
+    const customSelect = document.getElementById('theme-selector-custom');
+    const selectedText = document.getElementById('theme-selector-text');
+    const selectedCircle = document.getElementById('theme-selector-circle');
+    const optionsList = document.getElementById('theme-selector-options');
+    const options = optionsList.querySelectorAll('.theme-selector-option');
+    
+    if (!nativeSelect || !customSelect) return;
+    
+    // Update custom dropdown display based on native select value
+    updateCustomThemeDisplay = function() {
+      const selectedOption = nativeSelect.options[nativeSelect.selectedIndex];
+      const value = nativeSelect.value;
+      
+      // Update text
+      selectedText.textContent = selectedOption.textContent;
+      
+      // Update circle
+      if (value === 'all' || value === 'other') {
+        selectedCircle.style.display = 'none';
+      } else {
+        const themeColor = selectedOption.getAttribute('data-theme-color') || '#5489A3';
+        selectedCircle.style.display = 'inline-block';
+        selectedCircle.style.backgroundColor = themeColor;
+      }
+      
+      // Update selected state in options
+      options.forEach(opt => {
+        opt.removeAttribute('data-selected');
+        if (opt.getAttribute('data-value') === value) {
+          opt.setAttribute('data-selected', 'true');
+        }
+      });
+    };
+    
+    // Initialize display
+    updateCustomThemeDisplay();
+    
+    // Toggle dropdown - only when clicking on the selected area, not on options
+    const selectedArea = customSelect.querySelector('.theme-selector-selected');
+    if (selectedArea) {
+      selectedArea.addEventListener('click', function(e) {
+        e.stopPropagation();
+        customSelect.classList.toggle('active');
+      });
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('active');
+      }
+    });
+    
+    // Handle option selection
+    options.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const value = this.getAttribute('data-value');
+        
+        // Close dropdown immediately for better UX
+        customSelect.classList.remove('active');
+        
+        // Show loading state immediately
+        showCommentCountLoading();
+        
+        // Update native select and custom display
+        nativeSelect.value = value;
+        updateCustomThemeDisplay();
+        
+        // Trigger change event on native select to maintain existing functionality
+        // Use setTimeout to allow UI to update before heavy processing
+        setTimeout(function() {
+          const event = new Event('change', { bubbles: true });
+          nativeSelect.dispatchEvent(event);
+        }, 0);
+      });
+    });
+    
+    // Keyboard navigation
+    customSelect.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        customSelect.classList.toggle('active');
+      } else if (e.key === 'Escape') {
+        customSelect.classList.remove('active');
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!customSelect.classList.contains('active')) {
+          customSelect.classList.add('active');
+        } else {
+          const current = optionsList.querySelector('.theme-selector-option[data-selected="true"]');
+          const next = current ? current.nextElementSibling : options[0];
+          if (next) {
+            options.forEach(opt => opt.removeAttribute('data-selected'));
+            next.setAttribute('data-selected', 'true');
+            next.scrollIntoView({ block: 'nearest' });
+          }
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const current = optionsList.querySelector('.theme-selector-option[data-selected="true"]');
+        const prev = current ? current.previousElementSibling : options[options.length - 1];
+        if (prev) {
+          options.forEach(opt => opt.removeAttribute('data-selected'));
+          prev.setAttribute('data-selected', 'true');
+          prev.scrollIntoView({ block: 'nearest' });
+        }
+      }
+    });
+    
+    // Sync with native select changes (for programmatic changes)
+    nativeSelect.addEventListener('change', function() {
+      updateCustomThemeDisplay();
+    });
+  }
+  
+  // Initialize custom theme selector
+  initCustomThemeSelector();
+  
+  // Set up theme selector dropdown (for native select fallback)
+  let theme_selector = document.getElementById('theme-selector-native');
+  if (theme_selector) {
+    theme_selector.addEventListener('change', function() {
+      // Show loading state when theme changes
+      showCommentCountLoading();
+      
+      let value = this.value;
+      if (value === 'all') {
+        switch_theme('all', false); // Don't scroll when changing dropdown
+      } else if (value === 'other') {
+        switch_theme('other', false); // Don't scroll when changing dropdown
+      } else {
+        let theme_number = parseInt(value, 10);
+        switch_theme(theme_number, false); // Don't scroll when changing dropdown
+      }
+    });
+  }
+  
+  // Set up search input
+  let search_input = document.getElementById('search-input');
+  let search_clear = document.getElementById('search-clear');
+  
+  // Function to update clear button visibility
+  function updateClearButton() {
+    if (search_clear && search_input) {
+      if (search_input.value.trim().length > 0) {
+        search_clear.style.display = 'flex';
+      } else {
+        search_clear.style.display = 'none';
+      }
+    }
+  }
+  
+  if (search_input) {
+    let search_timeout;
+    search_input.addEventListener('input', function() {
+      clearTimeout(search_timeout);
+      let search_value = search_input.value.trim();
+      
+      // Update clear button visibility
+      updateClearButton();
+      
+      // If search term is 2+ characters, automatically switch to "All"
+      if (search_value.length >= 2) {
+        if (current_theme_index !== 'all') {
+          current_theme_index = 'all';
+          if (theme_selector) {
+            theme_selector.value = 'all';
+          }
+          // Update custom theme selector display
+          if (updateCustomThemeDisplay) {
+            updateCustomThemeDisplay();
+          }
+          // Hide sub-theme filter
+          populateSubthemeFilter('all');
+        }
+        current_search_term = search_value;
+        populate_comments('all');
+      } else {
+        // Clear search and use current theme
+        current_search_term = '';
+        if (current_theme_index === 'all') {
+          // If we were on "all", switch back to theme 1
+          current_theme_index = 1;
+          if (theme_selector) {
+            theme_selector.value = '1';
+          }
+          switch_theme(1, false);
+        } else {
+          populate_comments(current_theme_index);
+        }
+      }
+    });
+  }
+  
+  // Set up clear button
+  if (search_clear) {
+    search_clear.addEventListener('click', function() {
+      if (search_input) {
+        search_input.value = '';
+        search_input.focus();
+        updateClearButton();
+        
+        // Trigger input event to handle clearing
+        const event = new Event('input', { bubbles: true });
+        search_input.dispatchEvent(event);
+      }
+    });
+  }
+  
+  // Set up custom sort selector dropdown
+  function initCustomSortSelector() {
+    const nativeSelect = document.getElementById('sort-selector-native');
+    const customSelect = document.getElementById('sort-selector-custom');
+    const selectedText = document.getElementById('sort-selector-text');
+    const optionsList = document.getElementById('sort-selector-options');
+    const options = optionsList.querySelectorAll('.sort-selector-option');
+    
+    if (!nativeSelect || !customSelect) return;
+    
+    // Update custom dropdown display based on native select value
+    function updateCustomThemeDisplay() {
+      const selectedOption = nativeSelect.options[nativeSelect.selectedIndex];
+      const value = nativeSelect.value;
+      
+      // Update text
+      selectedText.textContent = selectedOption.textContent;
+      
+      // Update selected state in options
+      options.forEach(opt => {
+        opt.removeAttribute('data-selected');
+        if (opt.getAttribute('data-value') === value) {
+          opt.setAttribute('data-selected', 'true');
+        }
+      });
+    }
+    
+    // Initialize display
+    updateCustomThemeDisplay();
+    
+    // Toggle dropdown - only when clicking on the selected area, not on options
+    const selectedArea = customSelect.querySelector('.sort-selector-selected');
+    if (selectedArea) {
+      selectedArea.addEventListener('click', function(e) {
+        e.stopPropagation();
+        customSelect.classList.toggle('active');
+      });
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('active');
+      }
+    });
+    
+    // Handle option selection
+    options.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const value = this.getAttribute('data-value');
+        
+        // Close dropdown immediately
+        customSelect.classList.remove('active');
+        
+        // Update native select and custom display
+        nativeSelect.value = value;
+        updateCustomThemeDisplay();
+        
+        // Trigger change event on native select to maintain existing functionality
+        const event = new Event('change', { bubbles: true });
+        nativeSelect.dispatchEvent(event);
+      });
+    });
+    
+    // Keyboard navigation
+    customSelect.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        customSelect.classList.toggle('active');
+      } else if (e.key === 'Escape') {
+        customSelect.classList.remove('active');
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!customSelect.classList.contains('active')) {
+          customSelect.classList.add('active');
+        } else {
+          const current = optionsList.querySelector('.sort-selector-option[data-selected="true"]');
+          const next = current ? current.nextElementSibling : options[0];
+          if (next) {
+            options.forEach(opt => opt.removeAttribute('data-selected'));
+            next.setAttribute('data-selected', 'true');
+            next.scrollIntoView({ block: 'nearest' });
+          }
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const current = optionsList.querySelector('.sort-selector-option[data-selected="true"]');
+        const prev = current ? current.previousElementSibling : options[options.length - 1];
+        if (prev) {
+          options.forEach(opt => opt.removeAttribute('data-selected'));
+          prev.setAttribute('data-selected', 'true');
+          prev.scrollIntoView({ block: 'nearest' });
+        }
+      }
+    });
+    
+    // Sync with native select changes (for programmatic changes)
+    nativeSelect.addEventListener('change', function() {
+      updateCustomThemeDisplay();
+    });
+  }
+  
+  // Initialize custom sort selector
+  initCustomSortSelector();
+  
+  // Set up sort selector dropdown (for native select fallback)
+  let sort_selector = document.getElementById('sort-selector-native');
+  if (sort_selector) {
+    sort_selector.value = 'date'; // Set default to date
+    sort_selector.addEventListener('change', function() {
+      current_sort = this.value;
+      // Repopulate comments with new sort
+      if (current_theme_index === 'all') {
+        populate_comments('all');
+      } else {
+        populate_comments(current_theme_index);
+      }
+    });
+  }
+  
+  // Set up navigation widget buttons
+  let prev_button = document.getElementById('theme-nav-prev');
+  let next_button = document.getElementById('theme-nav-next');
+  
+  if (prev_button) {
+    prev_button.addEventListener('click', function() {
+      // Prev button is disabled for "all" and "other", so we only handle numeric themes
+      if (current_theme_index !== 'all' && current_theme_index !== 'other' && current_theme_index > 1) {
+        switch_theme(current_theme_index - 1, false); // Don't scroll when using nav widget
+      }
+    });
+  }
+  
+  if (next_button) {
+    next_button.addEventListener('click', function() {
+      // Get the total number of themes by counting theme content divs or dots
+      let total_themes = document.querySelectorAll('.theme-content').length || document.querySelectorAll('.theme-dot').length;
+      
+      // If on "all" or "other", go to theme 1
+      if (current_theme_index === 'all' || current_theme_index === 'other') {
+        switch_theme(1, false); // Don't scroll when using nav widget
+      } else if (current_theme_index < total_themes) {
+        switch_theme(current_theme_index + 1, false); // Don't scroll when using nav widget
+      }
+    });
+  }
+  
+  // Set up navigation widget dots - make them clickable
+  document.querySelectorAll('.theme-dot').forEach(function(dot) {
+    dot.addEventListener('click', function() {
+      let theme_number = parseInt(this.dataset.theme, 10);
+      if (theme_number) {
+        switch_theme(theme_number, false); // Don't scroll when clicking dots
+      }
+    });
+  });
+  
+  // Initialize first theme as active (don't scroll on initial load unless there's a hash)
+  if (!window.location.hash) {
+    switch_theme(1, false); // Don't scroll on initial page load
+  }
+});
+
+</script>
