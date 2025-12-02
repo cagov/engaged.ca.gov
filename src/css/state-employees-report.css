@@ -121,6 +121,10 @@ section#themes-we-found {
     text-align: center;
 }
 
+.themes-intro-text {
+    text-wrap: balance;
+}
+
 .themes-intro h2 {
     color: #0f152f;
     margin-bottom: 1rem;
@@ -510,6 +514,11 @@ section#comment-explorer {
 .comment-explorer-header h2 {
     color: #0f152f;
     margin-bottom: 1rem;
+}
+
+.comment-explorer-header p.comment-explorer-intro-text {
+    text-wrap: balance;
+    margin-bottom: 2rem;
 }
 
 .comment-explorer-header p.comment-explorer-intro-text2 {

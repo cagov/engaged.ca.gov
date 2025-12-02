@@ -416,7 +416,7 @@ function populate_solutions(theme_number_or_all) {
       let shouldAutoExpand = solution._commentMatchesSearch === true;
       smarkup += '<div class="original-comments-widget">';
       smarkup += `<a href="#" class="original-comments-toggle" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" data-auto-expand="${shouldAutoExpand}">`;
-      smarkup += '<span class="toggle-text">Original comments</span><span class="toggle-arrow">' + (shouldAutoExpand ? '▲' : '▼') + '</span>';
+      smarkup += '<span class="toggle-text">Related comments</span><span class="toggle-arrow">' + (shouldAutoExpand ? '▲' : '▼') + '</span>';
       smarkup += '</a>';
       smarkup += `<div class="original-comments-content" style="display: ${shouldAutoExpand ? 'block' : 'none'}"></div>`;
       smarkup += '</div>';
