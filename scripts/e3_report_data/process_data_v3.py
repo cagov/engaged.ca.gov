@@ -9,6 +9,7 @@ current_version = 3
 
 parser = argparse.ArgumentParser(description="Process votes CSV file and output as JSON.")
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
+parser.add_argument("-ors", "--omit_reply_solutions", action="store_true", help="Omit solutions that are associated with a reply to a comment")
 parser.add_argument("input_file", nargs="?", default=f"E3_data_v{current_version}.csv", help="Input CSV file (default: E3_data_v3.csv)")
 parser.add_argument("output_file", nargs="?", default=f"E3_data_v{current_version}.json", help="Output JSON file (default: E3_data_v3.json)")
 parser.add_argument("theme_map_file", nargs="?", default="E3_theme_map_v2.csv", help="Theme map CSV file (default: E3_theme_map_v2.csv)")
@@ -353,10 +354,25 @@ if solutions_content:
             if theme_id is not None or subtheme_id is not None:
                 solution_theme_subtheme_map[solution_id].add((theme_id, subtheme_id))
 
+# Build set of comment IDs that are replies (for --omit_reply_solutions filtering)
+reply_comment_ids = set()
+for record in records:
+    if record["REPLY_TO_ID"].strip():
+        reply_comment_ids.add(record["COMMENT_ID"])
+
+if args.verbose and args.omit_reply_solutions:
+    print(f"Found {len(reply_comment_ids)} comments that are replies")
+
 # Convert solutions to list format
 solutions = []  # Reset to empty list
+omitted_reply_solutions = 0
 for solution_id in sorted(solutions_dict.keys()):  # Sort for consistent ordering
     solution_data = solutions_dict[solution_id]
+    
+    # Skip solutions associated with reply comments if flag is set
+    if args.omit_reply_solutions and solution_data["comment_id"] in reply_comment_ids:
+        omitted_reply_solutions += 1
+        continue
     
     # Collect theme and subtheme IDs
     theme_ids = set()
@@ -384,6 +400,9 @@ for solution_id in sorted(solutions_dict.keys()):  # Sort for consistent orderin
         solution_obj["shortened"] = solution_data["shortened"]
     
     solutions.append(solution_obj)
+
+if args.verbose and args.omit_reply_solutions:
+    print(f"Omitted {omitted_reply_solutions} solutions associated with reply comments")
 
 # Output the records to a JSON file
 output_data = {

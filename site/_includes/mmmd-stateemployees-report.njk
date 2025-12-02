@@ -228,7 +228,7 @@
                 {% set theme_module = "theme_" + i %}
                 <option value="{{ i }}" data-theme-color="{{ modules[theme_module].stroke_color | default('#5489A3') }}"{% if i == 1 %} selected{% endif %}>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</option>
               {% endfor %}
-              <option value="other">Other</option>
+              {# <option value="other">Other</option> #}
             </select>
             <div class="theme-selector-custom" id="theme-selector-custom" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="theme-selector-label">
               <div class="theme-selector-selected">
@@ -250,10 +250,10 @@
                     <span>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</span>
                   </li>
                 {% endfor %}
-                <li class="theme-selector-option" data-value="other" role="option">
+                {# <li class="theme-selector-option" data-value="other" role="option">
                   <span class="theme-selector-circle" style="display: none;"></span>
                   <span>Other</span>
-                </li>
+                </li> #}
               </ul>
             </div>
           </div>
