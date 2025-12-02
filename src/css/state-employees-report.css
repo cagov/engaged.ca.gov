@@ -142,6 +142,7 @@ section#themes-we-found {
     display: block;
 }
 
+/* Theme circle interactive styles - COMMENTED OUT for static display
 .themes-bubble-chart .theme-circle circle {
     cursor: pointer;
     pointer-events: all;
@@ -175,6 +176,7 @@ section#themes-we-found {
     -ms-user-select: none;
     user-select: none;
 }
+END theme circle interactive styles */
 
 .themes-bubble-chart img {
     max-width: 100%;

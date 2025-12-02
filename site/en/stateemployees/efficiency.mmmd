@@ -72,7 +72,8 @@ id: findings_analysis
 ----
 id: themes_we_found
 title: Themes we found
-intro_text: "Larger circles had more discussion. Click on a theme to learn more about it."
+intro_text: "Larger circles had more discussion"
+intro_text_old: "Larger circles had more discussion. Click on a theme to learn more about it."
 nbr_themes: 10
 ----
 
