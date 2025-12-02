@@ -1269,12 +1269,23 @@ document.addEventListener('DOMContentLoaded', function() {
             if (rootParent.content) {
               allText.push(rootParent.content.toLowerCase());
             }
-            // Add all reply texts
-            data.comments.forEach(function(c) {
-              if (c.rid && String(c.rid) === rootCidStr && c.content) {
-                allText.push(c.content.toLowerCase());
-              }
-            });
+            
+            // Recursively collect ALL descendants (not just direct replies)
+            function collectAllDescendants(parentCid, visited) {
+              if (!visited) visited = new Set();
+              if (visited.has(parentCid)) return; // Prevent infinite loops
+              visited.add(parentCid);
+              
+              data.comments.forEach(function(c) {
+                if (c.rid && String(c.rid) === parentCid && c.content) {
+                  allText.push(c.content.toLowerCase());
+                  // Recursively get replies to this reply
+                  collectAllDescendants(String(c.cid), visited);
+                }
+              });
+            }
+            collectAllDescendants(rootCidStr, new Set());
+            
             commentTextCache[rootCidStr] = allText.join(' ');
           }
           
