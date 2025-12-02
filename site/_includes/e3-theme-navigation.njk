@@ -156,48 +156,88 @@ function formatDate(dateString) {
   }
 }
 
-// Helper function to build comment markup
+// Helper function to build a single comment's markup
+function buildSingleCommentMarkup(comment, isReply) {
+  let indent_class = isReply ? ' indent-reply' : '';
+  
+  let comment_text = comment.content.replace(/\n/g, ' ');
+  let highlighted_comment_text = highlightSearchText(comment_text, current_search_term);
+  let formatted_date = formatDate(comment.date);
+  let likes = comment.likes !== undefined ? comment.likes : 0;
+  let has_likes = 'likes' in comment;
+  
+  let comment_theme_class = '';
+  if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
+    comment.tids.forEach(function(tid) {
+      comment_theme_class += ` theme-${tid}`;
+    });
+  }
+  
+  let markup = `<div class="comment-item-container">`;
+  markup += `<div class="comment-item${indent_class}${comment_theme_class}">`;
+  markup += '<div class="comment-content">';
+  markup += '"' + highlighted_comment_text + '"';
+  markup += '</div>';
+  if (formatted_date || has_likes) {
+    markup += '<div class="comment-meta">';
+    if (formatted_date) {
+      markup += '<span class="comment-date">' + formatted_date + '</span>';
+    }
+    if (has_likes) {
+      markup += '<span class="comment-likes">' + likes + ' Likes</span>';
+    }
+    markup += '</div>';
+  }
+  markup += '</div>';
+  markup += '</div>';
+  
+  return markup;
+}
+
+// Helper function to build comment markup with collapsible replies
 function buildCommentMarkup(comments) {
   if (comments.length === 0) {
     return '<p class="no-comments">No comments found.</p>';
   }
   
+  // Separate parent comment from replies
+  let parentComment = comments[0];
+  let replies = comments.slice(1);
+  
   let markup = '';
-  comments.forEach(function(comment) {
-    let isReply = comment.rid && comment.rid !== '';
-    let indent_class = isReply ? ' indent-reply' : '';
+  
+  // Build parent comment markup
+  markup += buildSingleCommentMarkup(parentComment, false);
+  
+  // If there are replies, add expandable replies section
+  if (replies.length > 0) {
+    let replyLabel = replies.length === 1 ? '1 reply' : replies.length + ' replies';
     
-    let comment_text = comment.content.replace(/\n/g, ' ');
-    let highlighted_comment_text = highlightSearchText(comment_text, current_search_term);
-    let formatted_date = formatDate(comment.date);
-    let likes = comment.likes !== undefined ? comment.likes : 0;
-    let has_likes = 'likes' in comment;
-    
-    let comment_theme_class = '';
-    if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
-      comment.tids.forEach(function(tid) {
-        comment_theme_class += ` theme-${tid}`;
+    // Check if any reply matches the current search term
+    let shouldAutoExpandReplies = false;
+    if (current_search_term && current_search_term.length >= 2) {
+      let search_lower = current_search_term.toLowerCase();
+      shouldAutoExpandReplies = replies.some(function(reply) {
+        return reply.content && reply.content.toLowerCase().includes(search_lower);
       });
     }
     
-    markup += `<div class="comment-item-container">`;
-    markup += `<div class="comment-item${indent_class}${comment_theme_class}">`;
-    markup += '<div class="comment-content">';
-    markup += '"' + highlighted_comment_text + '"';
-    markup += '</div>';
-    if (formatted_date || has_likes) {
-      markup += '<div class="comment-meta">';
-      if (formatted_date) {
-        markup += '<span class="comment-date">' + formatted_date + '</span>';
-      }
-      if (has_likes) {
-        markup += '<span class="comment-likes">' + likes + ' Likes</span>';
-      }
-      markup += '</div>';
-    }
+    markup += '<div class="replies-widget">';
+    markup += `<a href="#" class="expand-replies-toggle" aria-expanded="${shouldAutoExpandReplies}" style="${shouldAutoExpandReplies ? 'display: none;' : ''}">`;
+    markup += `<span class="toggle-text">Expand ${replyLabel}</span><span class="toggle-arrow">▼</span>`;
+    markup += '</a>';
+    markup += `<div class="replies-content" style="display: ${shouldAutoExpandReplies ? 'block' : 'none'};">`;
+    
+    // Build reply markup
+    replies.forEach(function(reply) {
+      markup += buildSingleCommentMarkup(reply, true);
+    });
+    
+    // Add close replies link
+    markup += `<a href="#" class="close-replies-link"><span class="close-text">Close ${replyLabel}</span><span class="close-arrow">▲</span></a>`;
     markup += '</div>';
     markup += '</div>';
-  });
+  }
   
   // Add close comment link at the end
   markup += '<a href="#" class="close-comment-link"><span class="close-text">Close comment</span><span class="close-arrow">▲</span></a>';
@@ -1110,6 +1150,41 @@ document.addEventListener('DOMContentLoaded', function() {
           let toggle = widget.querySelector('.original-comments-toggle');
           if (toggle) {
             collapseCommentWidget(toggle);
+          }
+        }
+        return;
+      }
+      
+      // Handle "Expand replies" toggle clicks
+      let expandRepliesToggle = e.target.closest('.expand-replies-toggle');
+      if (expandRepliesToggle) {
+        e.preventDefault();
+        e.stopPropagation();
+        let repliesWidget = expandRepliesToggle.closest('.replies-widget');
+        let repliesContent = repliesWidget ? repliesWidget.querySelector('.replies-content') : null;
+        if (repliesContent) {
+          repliesContent.style.display = 'block';
+          expandRepliesToggle.setAttribute('aria-expanded', 'true');
+          expandRepliesToggle.style.display = 'none';
+        }
+        return;
+      }
+      
+      // Handle "Close replies" link clicks
+      let closeRepliesLink = e.target.closest('.close-replies-link');
+      if (closeRepliesLink) {
+        e.preventDefault();
+        e.stopPropagation();
+        let repliesWidget = closeRepliesLink.closest('.replies-widget');
+        if (repliesWidget) {
+          let repliesContent = repliesWidget.querySelector('.replies-content');
+          let expandToggle = repliesWidget.querySelector('.expand-replies-toggle');
+          if (repliesContent) {
+            repliesContent.style.display = 'none';
+          }
+          if (expandToggle) {
+            expandToggle.setAttribute('aria-expanded', 'false');
+            expandToggle.style.display = 'inline-block';
           }
         }
         return;

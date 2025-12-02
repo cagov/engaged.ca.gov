@@ -1127,6 +1127,64 @@ section#comment-explorer {
     padding-left: 0;
 }
 
+/* Replies Widget - Collapsible Reply Chain */
+.replies-widget {
+    margin-top: 0.75rem;
+    margin-left: 1.5rem;
+}
+
+.expand-replies-toggle {
+    color: #5489A3;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.expand-replies-toggle:hover {
+    color: #3d6a7f;
+}
+
+.expand-replies-toggle:focus {
+    outline: 2px solid rgba(84, 137, 163, 0.2);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.expand-replies-toggle .toggle-text {
+    text-decoration: underline;
+}
+
+.expand-replies-toggle:hover .toggle-text {
+    text-decoration-color: #3d6a7f;
+}
+
+.replies-content {
+    margin-top: 0.75rem;
+}
+
+.close-replies-link {
+    color: #5489A3;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0.75rem;
+    margin-left: 1.5rem;
+}
+
+.close-replies-link:hover {
+    color: #3d6a7f;
+}
+
+.close-replies-link .close-text {
+    text-decoration: underline;
+}
+
+.close-replies-link:hover .close-text {
+    text-decoration-color: #3d6a7f;
+}
+
 /* Other Efforts Section */
 section#other-efforts {
     padding: 2rem 0;
