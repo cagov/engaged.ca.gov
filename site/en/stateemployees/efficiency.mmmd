@@ -87,6 +87,7 @@ theme_quote: "“A primary problem is the number of antiquated and inefficient s
 stroke_color: "#65ADE1"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+circle_fill_color: "rgba(101, 173, 225, 0.30)"
 nbr_root_comments: 828
 nbr_comments: 931
 see_more_link: See more comments on this theme
@@ -110,6 +111,7 @@ theme_quote: "“We need more pathways to promote so employees don't feel stuck�
 stroke_color: "#C591DA"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
+circle_fill_color: "rgba(197, 145, 218, 0.30)"
 nbr_root_comments: 751
 nbr_comments: 906
 see_more_link: See more comments on this theme
@@ -133,6 +135,7 @@ theme_quote: "“There are too many road blocks in communication between the pub
 stroke_color: "#6C8043"
 light_color: "rgba(108, 128, 67, 0.50)"
 hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+circle_fill_color: "rgba(108, 128, 67, 0.30)"
 nbr_root_comments: 573
 nbr_comments: 634
 see_more_link: See more comments on this theme
@@ -156,6 +159,7 @@ theme_quote: "“Silos within and across organizations are contributing to ineff
 stroke_color: "#53CAB0"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
+circle_fill_color: "rgba(83, 202, 176, 0.30)"
 nbr_root_comments: 477
 nbr_comments: 585
 see_more_link: See more comments on this theme
@@ -179,6 +183,7 @@ theme_quote: "“Why are we frequently using out of state vendors to do work tha
 stroke_color: "#DABD48"
 light_color: "rgba(218, 189, 72, 0.50)"
 hilite_fill_color: "rgba(218, 189, 72, 0.10)"
+circle_fill_color: "rgba(218, 189, 72, 0.30)"
 nbr_root_comments: 421
 nbr_comments: 477
 see_more_link: See more comments on this theme
@@ -202,6 +207,7 @@ theme_quote: "“...we can move from a system of isolated, inefficient solutions
 stroke_color: "#A9D4F2"
 light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+circle_fill_color: "rgba(169, 212, 242, 0.30)"
 nbr_root_comments: 414
 nbr_comments: 435
 see_more_link: See more comments on this theme
@@ -225,6 +231,7 @@ theme_quote: "“The strict hierarchy in the state does not allow for innovation
 stroke_color: "#EE9930"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
+circle_fill_color: "rgba(238, 153, 48, 0.30)"
 nbr_root_comments: 400
 nbr_comments: 441
 see_more_link: See more comments on this theme
@@ -248,6 +255,7 @@ theme_quote: "“Giving my team more ownership has been a total game-changer! I'
 stroke_color: "#E45D48"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
+circle_fill_color: "rgba(228, 93, 72, 0.30)"
 nbr_root_comments: 396
 nbr_comments: 451
 see_more_link: See more comments on this theme
@@ -271,6 +279,7 @@ theme_quote: "“The level of safety for staff to communicate ideas and have the
 stroke_color: "#6D4884"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
+circle_fill_color: "rgba(109, 72, 132, 0.30)"
 nbr_root_comments: 352
 nbr_comments: 413
 see_more_link: See more comments on this theme
@@ -295,6 +304,7 @@ theme_quote: "“Everyone performs better in an environment that they are comfor
 stroke_color: "#F2C3C7"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
+circle_fill_color: "rgba(242, 195, 199, 0.30)"
 nbr_root_comments: 339
 nbr_comments: 402
 see_more_link: See more comments on this theme

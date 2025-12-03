@@ -256,6 +256,48 @@ section#themes-deep-dive .container {
     color: #333;
 }
 
+/* Theme Circles in Navigation */
+.theme-circles-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.theme-nav-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 5px solid;
+    background-color: transparent;
+    cursor: default;
+    transition: background-color 0.2s ease;
+}
+
+/* .theme-nav-circle.active - background-color is set dynamically via JavaScript */
+
+/* Theme Indicator Line above title */
+.theme-indicator-line {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.theme-number-text {
+    font-weight: 400;
+}
+
+.theme-indicator-separator {
+    margin: 0 0.5rem;
+    color: #666;
+}
+
+.theme-comment-count {
+    font-weight: 400;
+    color: #666;
+}
+
 .theme-divider {
     /* margin: 2rem 15% 2rem 15%; */
     border: none;
@@ -1026,14 +1068,24 @@ section#comment-explorer {
 }
 
 .download-button {
-    padding: 1rem 2rem;
-    background: #5489A3;
-    color: #FFFFFF;
-    border: none;
+    padding: 1rem 3rem;
+    background: #EE9930;
+    color: #0f152f;
+    border: 2px solid #0f152f;
     border-radius: 8px;
-    font-weight: 600;
-    size: 23px;
+    font-weight: 500;
+    font-size: 20px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.download-button:hover {
+    background: #d88a2a;
+}
+
+.download-button::after {
+    content: " ↓";
+    margin-left: 0.5rem;
 }
 
 /* Solution Items */

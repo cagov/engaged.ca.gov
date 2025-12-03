@@ -1079,7 +1079,7 @@ function switch_theme(theme_number, should_scroll = false) {
 }
 
 function update_navigation_widget(theme_number) {
-  // Update dots (if they exist)
+  // Update dots (if they exist - legacy)
   document.querySelectorAll('.theme-dot').forEach(function(dot) {
     let dot_theme = parseInt(dot.dataset.theme, 10);
     // Only mark dots as active if theme_number is numeric and matches
@@ -1090,10 +1090,25 @@ function update_navigation_widget(theme_number) {
     }
   });
   
+  // Update theme navigation circles
+  document.querySelectorAll('.theme-nav-circle').forEach(function(circle) {
+    let circle_theme = parseInt(circle.dataset.theme, 10);
+    let strokeColor = circle.dataset.strokeColor || '#5489A3';
+    let circleFill = circle.dataset.circleFill || 'rgba(84, 137, 163, 0.30)';
+    
+    if (typeof theme_number === 'number' && circle_theme === theme_number) {
+      circle.classList.add('active');
+      circle.style.backgroundColor = strokeColor;
+    } else {
+      circle.classList.remove('active');
+      circle.style.backgroundColor = circleFill;
+    }
+  });
+  
   // Get the total number of themes by counting theme content divs or dots
   let total_themes = document.querySelectorAll('.theme-content').length || document.querySelectorAll('.theme-dot').length;
   
-  // Update theme number indicator
+  // Update theme number indicator (legacy - now embedded in theme content)
   let theme_number_span = document.querySelector('.current-theme-number');
   if (theme_number_span) {
     if (theme_number === 'all' || theme_number === 'other' || theme_number === null) {
