@@ -382,7 +382,7 @@ sort_theme: Theme
 sort_likes: Likes
 sort_replies: Replies
 download_button_text: Download all the comments
-comment_count: <N> solutions
+comment_count: "Explore <N> ideas and solutions related to <THEME>"
 search_label: Search by keyword
 ----
 
