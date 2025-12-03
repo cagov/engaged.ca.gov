@@ -348,7 +348,7 @@ title: Better enable pathways for upward mobility
 ----
 id: comment_explorer
 title: Explore ideas and solutions
-intro_text: The discussion with state employees yielded 2,450 ideas to help the California state government be more efficient. You can explore those ideas and related comments below.
+intro_text: The discussion with state employees yielded 2,450 ideas to help the California state government be more efficient. Many of those ideas translate to actual solutions that can lead to a more efficient state government. Explore the comments, ideas, and potential solutions by theme below.
 intro_text_old: Employees shared 2,450 solutions through their comments. Explore them through these 10 themes and 65 sub-themes.  
 intro_text2: Comments are now closed.
 ----
@@ -373,7 +373,7 @@ sort_likes: Likes
 sort_replies: Replies
 download_button_text: Download all the comments
 comment_count: <N> solutions
-search_label: Search solutions or related comments
+search_label: Search by keyword
 ----
 
 
