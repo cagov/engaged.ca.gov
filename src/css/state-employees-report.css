@@ -507,7 +507,7 @@ section#comment-explorer {
 }
 
 .comment-explorer-header {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .comment-explorer-header h2 {
