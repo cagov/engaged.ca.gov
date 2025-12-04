@@ -329,12 +329,12 @@ section#themes-deep-dive .container {
 
 .theme-indicator-separator {
     margin: 0 0.5rem;
-    color: #666;
+    color: #444;
 }
 
 .theme-comment-count {
     font-weight: 400;
-    color: #666;
+    color: #444;
 }
 
 .theme-divider {
