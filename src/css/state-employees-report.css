@@ -386,6 +386,9 @@ section#themes-deep-dive .container {
     border-radius: 50%;
     flex-shrink: 0;
 }
+.theme-description {
+    min-height: 20rem;
+}
 
 .theme-description p {
     font-size: 23px;
