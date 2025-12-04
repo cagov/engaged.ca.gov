@@ -135,6 +135,9 @@ section#themes-we-found {
     margin-bottom: 2rem;
 }
 
+p.themes-intro-text {
+    font-size: 18px;
+}
 .themes-bubble-chart {
     width: 100%;
     display: flex;
@@ -384,7 +387,7 @@ section#themes-deep-dive .container {
 
 .theme-content {
     display: none;
-    padding: 0 0 2rem 1rem;
+    padding: 0 0 0 1rem;
 }
 
 .theme-content.active {
@@ -420,7 +423,7 @@ section#themes-deep-dive .container {
     flex-shrink: 0;
 }
 .theme-description {
-    min-height: 20rem;
+    min-height: 18rem;
 }
 
 .theme-description p {
@@ -445,6 +448,7 @@ section#themes-deep-dive .container {
     margin: 0;
     font-style: italic;
     color: #333;
+    line-height: 1.5;
 }
 
 .theme-link {
@@ -583,8 +587,7 @@ div#suggested-solutions {
 
 /* Comment Explorer Section */
 section#comment-explorer {
-    padding: 3rem 0;
-    padding-top: 0;
+    padding: 0 0 3rem;
 }
 
 .comment-explorer-header {
@@ -596,9 +599,15 @@ section#comment-explorer {
     margin-bottom: 1rem;
 }
 
+.comment-explorer-header h3 {
+    margin-top: 0;
+}
+
 .comment-explorer-header p.comment-explorer-intro-text {
     text-wrap: balance;
     margin-bottom: 2rem;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .comment-explorer-header p.comment-explorer-intro-text2 {
