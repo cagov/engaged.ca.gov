@@ -934,7 +934,7 @@ section#comment-explorer {
 .comments-container {
     min-height: 300px;
     border-radius: 8px;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
     padding-bottom: 1rem;
     margin: 0;
     margin-bottom: 2rem;
@@ -1076,7 +1076,8 @@ section#comment-explorer {
     padding: 1rem 3rem;
     background: #EE9930;
     color: #0f152f;
-    border: 2px solid #0f152f;
+    /* border: 2px solid #0f152f; */
+    border: none;
     border-radius: 8px;
     font-weight: 500;
     font-size: 20px;
