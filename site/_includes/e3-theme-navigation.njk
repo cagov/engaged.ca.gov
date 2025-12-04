@@ -449,22 +449,8 @@ function populate_solutions(theme_number_or_all) {
   // Update solution count (reusing comment-count element)
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
-    let template = comment_count_element.dataset.template || 'Explore <N> ideas and solutions related to <THEME>';
+    let template = comment_count_element.dataset.template || '<N> ideas and solutions';
     let count_text = template.replace('<N>', filtered_solutions.length);
-    
-    // Get theme name for the template
-    let themeName = 'all themes';
-    if (theme_number_or_all !== 'all' && theme_number_or_all !== null) {
-      let theme_selector = document.getElementById('theme-selector-native');
-      if (theme_selector) {
-        let selectedOption = theme_selector.options[theme_selector.selectedIndex];
-        if (selectedOption && selectedOption.value !== 'all') {
-          themeName = selectedOption.textContent.toLowerCase();
-        }
-      }
-    }
-    count_text = count_text.replace('<THEME>', themeName);
-    
     comment_count_element.textContent = count_text;
   }
 }
