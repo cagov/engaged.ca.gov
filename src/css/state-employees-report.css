@@ -388,7 +388,6 @@ section#themes-deep-dive .container {
 
 .theme-content {
     display: none;
-    padding: 0 0 0 1rem;
 }
 
 .theme-content.active {
@@ -530,7 +529,6 @@ div#suggested-solutions {
 
 .solution-content {
     background: #F6F7FA;
-    padding: 1.5rem;
     flex: 1;
     /* border: 1px solid #E0E0E0;
     border-top: none; */
@@ -616,7 +614,6 @@ section#comment-explorer {
 }
 
 .comment-explorer-header p.comment-explorer-intro-text {
-    text-wrap: balance;
     margin-bottom: 2rem;
     font-size: 18px;
     line-height: 1.5;
