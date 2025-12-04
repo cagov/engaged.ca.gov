@@ -424,7 +424,7 @@ section#themes-deep-dive .container {
     flex-shrink: 0;
 }
 .theme-description {
-    min-height: 18rem;
+    min-height: 12rem;
 }
 
 .theme-description p {
@@ -453,6 +453,15 @@ section#themes-deep-dive .container {
     line-height: 1.5;
     font-size: 23px;
 }
+
+.theme-quote.small p {
+    font-size: 20px;
+}
+
+.theme-quote.extra-small p {
+    font-size: 20px;
+}
+
 
 .theme-link {
     color: #5489A3;
