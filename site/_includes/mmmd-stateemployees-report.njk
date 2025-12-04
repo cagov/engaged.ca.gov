@@ -136,7 +136,8 @@
           <button class="theme-nav-prev" id="theme-nav-prev" disabled>
             <span>←</span> {{ modules.theme_navigation.prev_button_text }}
           </button>
-          <div class="theme-circles-container">
+          {# Desktop: show circles #}
+          <div class="theme-circles-container desktop-only">
             {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
             {% for i in range(1, nbr_themes + 1) %}
               {% set theme_module = "theme_" + i %}
@@ -145,15 +146,15 @@
               <div class="theme-nav-circle{% if i == 1 %} active{% endif %}" data-theme="{{ i }}" data-stroke-color="{{ stroke_color }}" data-circle-fill="{{ circle_fill }}" style="border-color: {{ stroke_color }}; background-color: {% if i == 1 %}{{ stroke_color }}{% else %}{{ circle_fill }}{% endif %};"></div>
             {% endfor %}
           </div>
+          {# Mobile: show theme counter text #}
+          <div class="theme-section-indicator mobile-only">
+            {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
+            <span class="theme-indicator-text">{{ modules.theme_navigation.theme_label }}<br><span class="current-theme-number">1</span> {{ modules.theme_navigation.theme_of }} {{ nbr_themes }}</span>
+          </div>
           <button class="theme-nav-next" id="theme-nav-next">
             {{ modules.theme_navigation.next_button_text }} <span>→</span>
           </button>
         </div>
-        {# Old theme indicator moved to theme content area
-        <div class="theme-section-indicator">
-          <span class="theme-indicator-text">{{ modules.theme_navigation.theme_label }} <span class="current-theme-number">1</span> {{ modules.theme_navigation.theme_of }} {{ nbr_themes }}</span>
-        </div>
-        #}
       </div>
     </div>
     <hr class="theme-divider">
