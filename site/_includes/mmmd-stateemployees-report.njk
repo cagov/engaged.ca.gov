@@ -140,7 +140,8 @@
             {% for i in range(1, nbr_themes + 1) %}
               {% set theme_module = "theme_" + i %}
               {% set stroke_color = modules[theme_module].stroke_color | default('#5489A3') %}
-              {% set circle_fill = modules[theme_module].circle_fill_color | default('rgba(84, 137, 163, 0.30)') %}
+              {# {% set circle_fill = modules[theme_module].circle_fill_color | default('rgba(84, 137, 163, 0.30)') %} #}
+              {% set circle_fill = 'white' %}
               <div class="theme-nav-circle{% if i == 1 %} active{% endif %}" data-theme="{{ i }}" data-stroke-color="{{ stroke_color }}" data-circle-fill="{{ circle_fill }}" style="border-color: {{ stroke_color }}; background-color: {% if i == 1 %}{{ stroke_color }}{% else %}{{ circle_fill }}{% endif %};"></div>
             {% endfor %}
           </div>
