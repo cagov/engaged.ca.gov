@@ -190,7 +190,9 @@ END theme circle interactive styles */
 /* Themes Deep Dive Section */
 section#themes-deep-dive {
     margin-top: 0;
+    margin-bottom: 0;
     padding-top: 0;
+    padding-bottom: 0;
 }
 section#themes-deep-dive .container {
     background: white;
@@ -546,6 +548,7 @@ div#suggested-solutions {
 /* Comment Explorer Section */
 section#comment-explorer {
     padding: 3rem 0;
+    padding-top: 0;
 }
 
 .comment-explorer-header {
