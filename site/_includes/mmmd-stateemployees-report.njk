@@ -181,7 +181,9 @@
           </div>
           <div class="col-lg-4">
               {% if modules["theme_" + i].theme_quote %}
-                <div class="theme-quote {{ modules["theme_" + i].theme_quote_class }}">
+                {% set quote_length = modules["theme_" + i].theme_quote | length %}
+                {% set quote_class = 'small' if quote_length > 140 else 'normal' %}
+                <div class="theme-quote {{ quote_class }}">
                   <p>{{ modules["theme_" + i].theme_quote }}</p>
                 </div>
               {% endif %}
