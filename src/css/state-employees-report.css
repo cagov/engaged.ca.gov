@@ -279,39 +279,6 @@ section#themes-deep-dive .container {
 
 /* .theme-nav-circle.active - background-color is set dynamically via JavaScript */
 
-/* Responsive: Desktop shows circles, Mobile shows text counter */
-.theme-circles-container.desktop-only {
-    display: flex;
-}
-
-.theme-section-indicator.mobile-only {
-    display: none;
-}
-
-@media (max-width: 991px) {
-    .theme-circles-container.desktop-only {
-        display: none;
-    }
-    
-    .theme-section-indicator.mobile-only {
-        display: block;
-        flex: 1;
-        text-align: center;
-    }
-    
-    .theme-section-indicator.mobile-only .theme-indicator-text {
-        font-size: 16px;
-        font-weight: 400;
-        color: #333;
-        line-height: 1.3;
-    }
-    
-    /* Hide the theme indicator line above title on mobile */
-    .theme-indicator-line {
-        display: none;
-    }
-}
-
 /* Theme Indicator Line above title */
 .theme-indicator-line {
     font-size: 16px;

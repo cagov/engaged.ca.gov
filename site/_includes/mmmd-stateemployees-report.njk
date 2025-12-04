@@ -76,23 +76,21 @@
           <p class="themes-intro-text">{{ modules.themes_we_found.intro_text }}</p>
         </div>
         <div id="themes-bubble-chart" class="themes-bubble-chart">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1167 520" width="1167" height="520">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1167 490" width="1167" height="490">
             <!-- Background -->
-            <rect width="1167" height="520" fill="#F6F7FA"/>
+            <rect width="1167" height="490" fill="#F6F7FA"/>
             {%- set nbr_themes = modules.themes_we_found.nbr_themes | default(10) -%}
             {%- set positions = [
-              {"cx": 192, "cy": 130, "r": 120, "fontSize": 20},
-              {"cx": 576, "cy": 124, "r": 114, "fontSize": 20},
-              {"cx": 898, "cy": 110, "r": 100, "fontSize": 17},
-
-              {"cx": 392,  "cy": 250, "r": 91, "fontSize": 16},
-              {"cx": 752,  "cy": 262, "r": 86, "fontSize": 16},
-              {"cx": 1037, "cy": 270, "r": 85, "fontSize": 16},
-
-              {"cx": 220, "cy": 360, "r": 85, "fontSize": 17},
-              {"cx": 525, "cy": 390, "r": 83, "fontSize": 16},
-              {"cx": 700, "cy": 440, "r": 78, "fontSize": 14},
-              {"cx": 890, "cy": 390, "r": 77, "fontSize": 14}
+              {"cx": 192+400, "cy": 130-10, "r": 120, "fontSize": 20},
+              {"cx": 576-235, "cy": 124+30, "r": 114, "fontSize": 20},
+              {"cx": 898-70, "cy": 110+50, "r": 100, "fontSize": 17},
+              {"cx": 392-235,  "cy": 250+120, "r": 91, "fontSize": 16},
+              {"cx": 752-400,  "cy": 262+130, "r": 86, "fontSize": 16},
+              {"cx": 1037-500, "cy": 270+70, "r": 85, "fontSize": 16},
+              {"cx": 220+515, "cy": 370, "r": 85, "fontSize": 17},
+              {"cx": 525+400, "cy": 390-50, "r": 83, "fontSize": 16},
+              {"cx": 700-580, "cy": 440-260, "r": 78, "fontSize": 14},
+              {"cx": 890+150, "cy": 390-200, "r": 77, "fontSize": 14}
             ] -%}
             {%- set caption_offset = 26 -%}
             {%- set caption_font_size = 13 -%}
@@ -136,8 +134,7 @@
           <button class="theme-nav-prev" id="theme-nav-prev" disabled>
             <span>←</span> {{ modules.theme_navigation.prev_button_text }}
           </button>
-          {# Desktop: show circles #}
-          <div class="theme-circles-container desktop-only">
+          <div class="theme-circles-container">
             {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
             {% for i in range(1, nbr_themes + 1) %}
               {% set theme_module = "theme_" + i %}
@@ -146,15 +143,15 @@
               <div class="theme-nav-circle{% if i == 1 %} active{% endif %}" data-theme="{{ i }}" data-stroke-color="{{ stroke_color }}" data-circle-fill="{{ circle_fill }}" style="border-color: {{ stroke_color }}; background-color: {% if i == 1 %}{{ stroke_color }}{% else %}{{ circle_fill }}{% endif %};"></div>
             {% endfor %}
           </div>
-          {# Mobile: show theme counter text #}
-          <div class="theme-section-indicator mobile-only">
-            {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
-            <span class="theme-indicator-text">{{ modules.theme_navigation.theme_label }}<br><span class="current-theme-number">1</span> {{ modules.theme_navigation.theme_of }} {{ nbr_themes }}</span>
-          </div>
           <button class="theme-nav-next" id="theme-nav-next">
             {{ modules.theme_navigation.next_button_text }} <span>→</span>
           </button>
         </div>
+        {# Old theme indicator moved to theme content area
+        <div class="theme-section-indicator">
+          <span class="theme-indicator-text">{{ modules.theme_navigation.theme_label }} <span class="current-theme-number">1</span> {{ modules.theme_navigation.theme_of }} {{ nbr_themes }}</span>
+        </div>
+        #}
       </div>
     </div>
     <hr class="theme-divider">

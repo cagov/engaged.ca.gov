@@ -449,7 +449,7 @@ function populate_solutions(theme_number_or_all) {
   // Update solution count (reusing comment-count element)
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
-    let template = comment_count_element.dataset.template || '<N> ideas and solutions';
+    let template = comment_count_element.dataset.template || '<N> solutions';
     let count_text = template.replace('<N>', filtered_solutions.length);
     comment_count_element.textContent = count_text;
   }
