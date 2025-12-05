@@ -1370,8 +1370,11 @@ section#stay-informed {
     border-bottom: 0.5px solid #5489A3;
 }
 
+section#methodology p {
+    font-size: 1.125rem !important;
+}
+
 section#methodology h3 {
-    font-size: 18pt !important;
 }
 
 section#stay-informed h2 {
