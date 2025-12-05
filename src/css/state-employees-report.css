@@ -1370,6 +1370,10 @@ section#stay-informed {
     border-bottom: 0.5px solid #5489A3;
 }
 
+section#methodology h3 {
+    font-size: 18pt !important;
+}
+
 section#stay-informed h2 {
     color: #FFF4EB;
     margin-bottom: 1.5rem;
