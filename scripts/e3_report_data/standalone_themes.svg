@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1167 550" width="1167" height="550">
+  <!-- Background -->
+  <rect width="1167" height="550" fill="#F6F7FA"/>
+  
+  <!-- Theme 1: Process improvement -->
+  <g class="theme-circle" data-theme="1">
+    <circle cx="192" cy="130" r="120" fill="#FFFFFF" stroke="#6C8043" stroke-width="2"/>
+    <text x="192" y="120" text-anchor="middle" fill="#0f152f" font-size="18" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="192" dy="0">Process</tspan>
+      <tspan x="192" dy="22">improvement</tspan>
+    </text>
+  </g>
+  
+  <!-- Theme 2: Recruitment, hiring, and retention -->
+  <g class="theme-circle" data-theme="2">
+    <circle cx="576" cy="130" r="114" fill="#FFFFFF" stroke="#5F4171" stroke-width="2"/>
+    <text x="576" y="120" text-anchor="middle" fill="#0f152f" font-size="18" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="576" dy="0">Recruitment,</tspan>
+      <tspan x="576" dy="22">hiring, and</tspan>
+      <tspan x="576" dy="22">retention</tspan>
+    </text>
+  </g>
+  
+  <!-- Theme 3: Public-facing services and resident experience -->
+  <g class="theme-circle" data-theme="3">
+    <circle cx="898" cy="150" r="100" fill="#FFFFFF" stroke="#A9D4F2" stroke-width="2"/>
+    <text x="898" y="135" text-anchor="middle" fill="#0f152f" font-size="17" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="898" dy="0">Public-facing</tspan>
+      <tspan x="898" dy="19">services and</tspan>
+      <tspan x="898" dy="19">resident experience</tspan>
+    </text>
+  </g>
+  
+  <!-- Theme 4: Communication and knowledge sharing -->
+  <g class="theme-circle" data-theme="4">
+    <circle cx="392" cy="290" r="91" fill="#FFFFFF" stroke="#B07FC4" stroke-width="2"/>
+    <text x="392" y="280" text-anchor="middle" fill="#0f152f" font-size="16" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="392" dy="0">Communication</tspan>
+      <tspan x="392" dy="18">and</tspan>
+      <tspan x="392" dy="18">knowledge sharing</tspan>
+    </text>
+  </g>
+  
+  <!-- Theme 5: Budget and resources -->
+  <g class="theme-circle" data-theme="5">
+    <circle cx="752" cy="290" r="86" fill="#FFFFFF" stroke="#DABD48" stroke-width="2"/>
+    <text x="752" y="285" text-anchor="middle" fill="#0f152f" font-size="16" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="752" dy="0">Budget and</tspan>
+      <tspan x="752" dy="18">resources</tspan>
+    </text>
+  </g>
+  
+  <!-- Theme 6: Technology and digital innovation -->
+  <g class="theme-circle" data-theme="6">
+    <circle cx="1067" cy="290" r="85" fill="#FFFFFF" stroke="#65ADE1" stroke-width="2"/>
+    <text x="1067" y="280" text-anchor="middle" fill="#0f152f" font-size="16" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="1067" dy="0">Technology and</tspan>
+      <tspan x="1067" dy="18">digital innovation</tspan>
+    </text>
+  </g>
+  
+  <!-- Theme 7: Governance and oversight -->
+  <g class="theme-circle" data-theme="7">
+    <circle cx="100" cy="360" r="85" fill="#FFFFFF" stroke="#F5E555" stroke-width="2"/>
+    <text x="100" y="350" text-anchor="middle" fill="#0f152f" font-size="17" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="100" dy="0">Governance</tspan>
+      <tspan x="100" dy="19">and oversight</tspan>
+    </text>
+  </g>
+  
+  <!-- Theme 8: Organizational structure and culture -->
+  <g class="theme-circle" data-theme="8">
+    <circle cx="300" cy="460" r="83" fill="#FFFFFF" stroke="#E73C21" stroke-width="2"/>
+    <text x="300" y="450" text-anchor="middle" fill="#0f152f" font-size="16" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="300" dy="0">Organizational</tspan>
+      <tspan x="300" dy="17">structure and</tspan>
+      <tspan x="300" dy="17">culture</tspan>
+    </text>
+  </g>
+  
+  <!-- Theme 9: Management culture and leadership -->
+  <g class="theme-circle" data-theme="9">
+    <circle cx="683" cy="460" r="78" fill="#FFFFFF" stroke="#53CAB0" stroke-width="2"/>
+    <text x="683" y="450" text-anchor="middle" fill="#0f152f" font-size="14" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="683" dy="0">Management</tspan>
+      <tspan x="683" dy="17">culture and</tspan>
+      <tspan x="683" dy="17">leadership</tspan>
+    </text>
+  </g>
+  
+  <!-- Theme 10: Workplace operations -->
+  <g class="theme-circle" data-theme="10">
+    <circle cx="929" cy="460" r="77" fill="#FFFFFF" stroke="#F2C3C7" stroke-width="2"/>
+    <text x="929" y="450" text-anchor="middle" fill="#0f152f" font-size="14" font-weight="600" font-family="Arial, sans-serif">
+      <tspan x="929" dy="0">Workplace</tspan>
+      <tspan x="929" dy="17">operations</tspan>
+    </text>
+  </g>
+</svg>
+
+
+
+
+
