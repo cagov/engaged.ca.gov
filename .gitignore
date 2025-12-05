@@ -15,3 +15,4 @@ local_settings.js
 __pycache__
 attic/
 scripts/e3_report_data/config_openai_local.py
+.playwright-mcp/
