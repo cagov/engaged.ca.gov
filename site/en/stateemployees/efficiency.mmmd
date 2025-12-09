@@ -417,6 +417,7 @@ month_nov: November
 month_dec: December
 solutions_count_template: <N> solutions
 comments_submitted_template: <N> comments submitted
+view_theme_prefix: "View "
 ----
 
 

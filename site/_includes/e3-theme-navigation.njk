@@ -982,7 +982,6 @@ function switch_theme(theme_number, should_scroll = false) {
     document.querySelectorAll('.theme-content').forEach(function(content) {
       content.classList.remove('active');
     });
-    /* SVG circle highlighting - COMMENTED OUT for static display
     // Reset SVG circle highlighting
     document.querySelectorAll('.theme-circle').forEach(function(group) {
       let circle = group.querySelector('circle');
@@ -992,11 +991,10 @@ function switch_theme(theme_number, should_scroll = false) {
         }
         circle.style.fill = '#FFFFFF';
         circle.style.stroke = circle.dataset.originalStroke;
-        circle.style.strokeWidth = '2';
+        circle.style.strokeWidth = '5';
         group.setAttribute('aria-selected', 'false');
       }
     });
-    END SVG circle highlighting */
     // Update navigation widget
     update_navigation_widget(null);
     return;
@@ -1032,7 +1030,6 @@ function switch_theme(theme_number, should_scroll = false) {
     }
   }
   
-  /* SVG circle highlighting - COMMENTED OUT for static display
   // Update SVG circle highlighting - use hilite_fill_color for selected circles
   document.querySelectorAll('.theme-circle').forEach(function(group) {
     let circle = group.querySelector('circle');
@@ -1063,7 +1060,6 @@ function switch_theme(theme_number, should_scroll = false) {
       }
     }
   });
-  END SVG circle highlighting */
   
   // Update navigation widget dots and buttons
   update_navigation_widget(theme_number);
@@ -1211,7 +1207,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  /* SVG click handler - COMMENTED OUT for static display
   // Use event delegation on the SVG container for better Safari compatibility
   let svgContainer = document.querySelector('#themes-bubble-chart svg');
   if (svgContainer) {
@@ -1254,16 +1249,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-  END SVG click handler */
   
-  /* Theme circle event handlers - COMMENTED OUT for static display
   // Set up event handlers for theme circles in SVG
   document.querySelectorAll('.theme-circle').forEach(function(circleGroup) {
     // Make the group focusable for accessibility
     circleGroup.setAttribute('tabindex', '0');
     circleGroup.setAttribute('role', 'button');
-    let themeTitle = circleGroup.querySelector('text tspan')?.textContent || 'Theme ' + circleGroup.dataset.theme;
-    circleGroup.setAttribute('aria-label', 'View ' + themeTitle);
+    let themeTitle = circleGroup.querySelector('text tspan')?.textContent || '{{ modules.comment_explorer_ui.theme_fallback }} ' + circleGroup.dataset.theme;
+    circleGroup.setAttribute('aria-label', '{{ modules.comment_explorer_ui.view_theme_prefix }}' + themeTitle);
     
     // Add keyboard support
     circleGroup.addEventListener('keydown', function(e) {
@@ -1301,7 +1294,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-  END theme circle event handlers */
   
         // Handle hash navigation (e.g., #theme-3-content) - scroll when hash is present
         window.addEventListener('hashchange', function() {

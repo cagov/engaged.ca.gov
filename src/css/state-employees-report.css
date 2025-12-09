@@ -151,27 +151,13 @@ p.themes-intro-text {
     height: auto;
 }
 
-/* Theme circle interactive styles - COMMENTED OUT for static display
-.themes-bubble-chart .theme-circle circle {
-    cursor: pointer;
-    pointer-events: all;
-}
-
 .themes-bubble-chart .theme-circle {
+    cursor: pointer;
     outline: none;
-}
-
-.themes-bubble-chart .theme-circle:focus {
-    outline: none;
-}
-
-
-.themes-bubble-chart .theme-circle:focus-visible {
-    outline: 2px solid #FFFFFF;
-    outline-offset: 2px;
 }
 
 .themes-bubble-chart .theme-circle circle {
+    pointer-events: all;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -179,13 +165,22 @@ p.themes-intro-text {
     -webkit-tap-highlight-color: transparent;
 }
 
+.themes-bubble-chart .theme-circle:focus {
+    outline: none;
+}
+
+.themes-bubble-chart .theme-circle:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
 .themes-bubble-chart .theme-circle text {
+    pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-END theme circle interactive styles */
 
 .themes-bubble-chart img {
     max-width: 100%;

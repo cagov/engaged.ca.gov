@@ -106,9 +106,7 @@
                 {%- set lineHeight = pos.fontSize *1.2 -%}
                 {%- set text_adjust = pos.fontSize*0.66 -%}
                 {%- set top_y = pos.cy-((lines.length-1)*lineHeight+caption_offset+caption_font_size)/2+text_adjust -%}
-                {# Interactive styles commented out for static display: style="cursor: pointer; pointer-events: all; -webkit-user-select: none; user-select: none;" #}
                 <g class="theme-circle" data-theme="{{ i }}" data-hilite-fill="{{ hilite_fill_color }}">
-                  {# pointer-events="all" removed for static display #}
                   <circle cx="{{ pos.cx }}" cy="{{ pos.cy }}" r="{{ pos.r }}" fill="#FFFFFF" stroke="{{ stroke_color }}" stroke-width="5"/>
                   <text class="theme-circle-label" x="{{ pos.cx }}" y="{{ top_y }}" text-anchor="middle" fill="#0f152f" font-size="{{ pos.fontSize }}" font-weight="400" font-family="Noto Sans Display, sans-serif">
                     {%- for line in lines -%}
