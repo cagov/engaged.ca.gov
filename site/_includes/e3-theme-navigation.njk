@@ -139,18 +139,18 @@ function formatDate(dateString) {
   if (!dateString) return '';
   try {
     let date = new Date(dateString);
-    let months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                  'July', 'August', 'September', 'October', 'November', 'December'];
+    let months = ['{{ modules.comment_explorer_ui.month_jan }}', '{{ modules.comment_explorer_ui.month_feb }}', '{{ modules.comment_explorer_ui.month_mar }}', '{{ modules.comment_explorer_ui.month_apr }}', '{{ modules.comment_explorer_ui.month_may }}', '{{ modules.comment_explorer_ui.month_jun }}', 
+                  '{{ modules.comment_explorer_ui.month_jul }}', '{{ modules.comment_explorer_ui.month_aug }}', '{{ modules.comment_explorer_ui.month_sep }}', '{{ modules.comment_explorer_ui.month_oct }}', '{{ modules.comment_explorer_ui.month_nov }}', '{{ modules.comment_explorer_ui.month_dec }}'];
     let month = months[date.getMonth()];
     let day = date.getDate();
     let hours = date.getHours();
     let minutes = date.getMinutes();
-    let ampm = hours >= 12 ? 'pm' : 'am';
+    let ampm = hours >= 12 ? '{{ modules.comment_explorer_ui.am_pm_pm }}' : '{{ modules.comment_explorer_ui.am_pm_am }}';
     let year = date.getFullYear();
     hours = hours % 12;
     hours = hours ? hours : 12; // 0 should be 12
     minutes = minutes < 10 ? '0' + minutes : minutes;
-    return month + ' ' + day  + ', ' + year + ' at ' + hours + ':' + minutes + ampm;
+    return month + ' ' + day + ', ' + year + ' {{ modules.comment_explorer_ui.date_at_text }} ' + hours + ':' + minutes + ampm;
   } catch (e) {
     return dateString; // Return original if parsing fails
   }
@@ -184,7 +184,7 @@ function buildSingleCommentMarkup(comment, isReply) {
       markup += '<span class="comment-date">' + formatted_date + '</span>';
     }
     if (has_likes) {
-      markup += '<span class="comment-likes">' + likes + ' Likes</span>';
+      markup += '<span class="comment-likes">' + likes + ' {{ modules.comment_explorer_ui.likes_label_capital }}</span>';
     }
     markup += '</div>';
   }
@@ -197,7 +197,7 @@ function buildSingleCommentMarkup(comment, isReply) {
 // Helper function to build comment markup with collapsible replies
 function buildCommentMarkup(comments) {
   if (comments.length === 0) {
-    return '<p class="no-comments">No comments found.</p>';
+    return '<p class="no-comments">{{ modules.comment_explorer_ui.no_comments_found }}</p>';
   }
   
   // Separate parent comment from replies
@@ -211,7 +211,7 @@ function buildCommentMarkup(comments) {
   
   // If there are replies, add expandable replies section
   if (replies.length > 0) {
-    let replyLabel = replies.length === 1 ? '1 reply' : replies.length + ' replies';
+    let replyLabel = replies.length === 1 ? '{{ modules.comment_explorer_ui.reply_count_singular }}' : '{{ modules.comment_explorer_ui.reply_count_plural }}'.replace('<N>', replies.length);
     
     // Check if any reply matches the current search term
     let shouldAutoExpandReplies = false;
@@ -224,7 +224,7 @@ function buildCommentMarkup(comments) {
     
     markup += '<div class="replies-widget">';
     markup += `<a href="#" class="expand-replies-toggle" aria-expanded="${shouldAutoExpandReplies}" style="${shouldAutoExpandReplies ? 'display: none;' : ''}">`;
-    markup += `<span class="toggle-text">Expand ${replyLabel}</span><span class="toggle-arrow">▼</span>`;
+    markup += `<span class="toggle-text">{{ modules.comment_explorer_ui.expand_prefix }}${replyLabel}</span><span class="toggle-arrow">▼</span>`;
     markup += '</a>';
     markup += `<div class="replies-content" style="display: ${shouldAutoExpandReplies ? 'block' : 'none'};">`;
     
@@ -234,13 +234,13 @@ function buildCommentMarkup(comments) {
     });
     
     // Add close replies link
-    markup += `<a href="#" class="close-replies-link"><span class="close-text">Close ${replyLabel}</span><span class="close-arrow">▲</span></a>`;
+    markup += `<a href="#" class="close-replies-link"><span class="close-text">{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}</span><span class="close-arrow">▲</span></a>`;
     markup += '</div>';
     markup += '</div>';
   }
   
   // Add close comment link at the end
-  markup += '<a href="#" class="close-comment-link"><span class="close-text">Close comment</span><span class="close-arrow">▲</span></a>';
+  markup += '<a href="#" class="close-comment-link"><span class="close-text">{{ modules.comment_explorer_ui.close_comment }}</span><span class="close-arrow">▲</span></a>';
   
   return markup;
 }
@@ -416,7 +416,7 @@ function populate_solutions(theme_number_or_all) {
       let shouldAutoExpand = solution._commentMatchesSearch === true;
       smarkup += '<div class="original-comments-widget">';
       smarkup += `<a href="#" class="original-comments-toggle" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" data-auto-expand="${shouldAutoExpand}">`;
-      smarkup += '<span class="toggle-text">Related comments</span><span class="toggle-arrow">' + (shouldAutoExpand ? '▲' : '▼') + '</span>';
+      smarkup += '<span class="toggle-text">{{ modules.comment_explorer_ui.related_comments }}</span><span class="toggle-arrow">' + (shouldAutoExpand ? '▲' : '▼') + '</span>';
       smarkup += '</a>';
       smarkup += `<div class="original-comments-content" style="display: ${shouldAutoExpand ? 'block' : 'none'}"></div>`;
       smarkup += '</div>';
@@ -430,7 +430,7 @@ function populate_solutions(theme_number_or_all) {
   let comment_container = document.querySelector('.comments-container');
   if (comment_container) {
     if (filtered_solutions.length === 0) {
-      comment_container.innerHTML = '<p class="no-comments">No solutions found.</p>';
+      comment_container.innerHTML = '<p class="no-comments">{{ modules.comment_explorer_ui.no_solutions_found }}</p>';
     } else {
       comment_container.innerHTML = smarkup;
       
@@ -449,7 +449,7 @@ function populate_solutions(theme_number_or_all) {
   // Update solution count (reusing comment-count element)
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
-    let template = comment_count_element.dataset.template || '<N> solutions';
+    let template = comment_count_element.dataset.template || '{{ modules.comment_explorer_ui.solutions_count_template }}';
     let count_text = template.replace('<N>', filtered_solutions.length);
     comment_count_element.textContent = count_text;
   }
@@ -780,7 +780,7 @@ function populate_comments(theme_number_or_all) {
         cmarkup += '<span class="comment-likes">';
         // cmarkup += '<img src="/public/images/like-icon.svg" alt="likes" class="like-icon" />';
         cmarkup += likes;
-        cmarkup += ' likes';
+        cmarkup += ' {{ modules.comment_explorer_ui.likes_label_lowercase }}';
         cmarkup += '</span>';
       }
       cmarkup += '</div>';
@@ -810,7 +810,7 @@ function populate_comments(theme_number_or_all) {
   let comment_container = document.querySelector('.comments-container');
   if (comment_container) {
     if (filtered_comments.length === 0) {
-      comment_container.innerHTML = '<p class="no-comments">No comments found.</p>';
+      comment_container.innerHTML = '<p class="no-comments">{{ modules.comment_explorer_ui.no_comments_found }}</p>';
     } else {
       comment_container.innerHTML = cmarkup;
     }
@@ -819,7 +819,7 @@ function populate_comments(theme_number_or_all) {
   // Update comment count
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
-    let template = comment_count_element.dataset.template || '<N> comments submitted';
+    let template = comment_count_element.dataset.template || '{{ modules.comment_explorer_ui.comments_submitted_template }}';
     let count_text = template.replace('<N>', filtered_comments.length);
     comment_count_element.textContent = count_text;
   }
@@ -829,7 +829,7 @@ function populate_comments(theme_number_or_all) {
 function showCommentCountLoading() {
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
-    comment_count_element.textContent = 'Loading...';
+    comment_count_element.textContent = '{{ modules.comment_explorer_ui.loading_text }}';
   }
 }
 

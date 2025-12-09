@@ -62,6 +62,8 @@ insights_count: 2,450
 insights_label: Insights
 staff_note: Employees from all levels of seniority and tenure
 quote: "“It's nice to be able to share my opinions and to broaden my perspectives on what it means to be a public servant.”"
+staff_icon_alt: Staff icon
+ideas_icon_alt: Ideas icon
 ----
 
 ----
@@ -382,7 +384,39 @@ sort_likes: Likes
 sort_replies: Replies
 download_button_text: Download all the comments
 comment_count: <N> ideas and solutions
+comments_label: comments
 search_label: Search by keyword
+theme_selector_label: Select a theme
+subtheme_filter_label: Filter by subtheme
+loading_text: Loading...
+clear_search_label: Clear search
+no_comments_found: No comments found.
+no_solutions_found: No solutions found.
+likes_label_capital: Likes
+likes_label_lowercase: likes
+reply_count_singular: 1 reply
+reply_count_plural: <N> replies
+expand_prefix: Expand 
+close_prefix: Close 
+close_comment: Close comment
+related_comments: Related comments
+date_at_text: at
+am_pm_am: am
+am_pm_pm: pm
+month_jan: January
+month_feb: February
+month_mar: March
+month_apr: April
+month_may: May
+month_jun: June
+month_jul: July
+month_aug: August
+month_sep: September
+month_oct: October
+month_nov: November
+month_dec: December
+solutions_count_template: <N> solutions
+comments_submitted_template: <N> comments submitted
 ----
 
 

@@ -46,13 +46,13 @@
       <div class="col-lg-4">
         <div class="participation-sidebar">
           <div class="participation-stat">
-            <img src="/public/images/staff-icon.svg" alt="Staff icon" />
+            <img src="/public/images/staff-icon.svg" alt="{{ modules.participation_numbers.staff_icon_alt }}" />
             <div class="stat-number">{{ modules.participation_numbers.participants_count }}</div>
             <div class="stat-label">{{ modules.participation_numbers.participants_label }}</div>
             <p class="participation-note">{{ modules.participation_numbers.staff_note }}</p>
           </div>
           <div class="participation-stat">
-            <img src="/public/images/ideas-icon.svg" alt="Ideas icon" />
+            <img src="/public/images/ideas-icon.svg" alt="{{ modules.participation_numbers.ideas_icon_alt }}" />
             <div class="stat-number">{{ modules.participation_numbers.insights_count }}</div>
             <div class="stat-label">{{ modules.participation_numbers.insights_label }}</div>
           </div>
@@ -114,7 +114,7 @@
                     {%- for line in lines -%}
                       <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ lineHeight }}{% endif %}">{{ line }}</tspan>
                     {%- endfor -%}
-                    <tspan x="{{ pos.cx }}" dy="{{ caption_offset }}" font-size="13px">{{ modules[theme_module].nbr_comments }} comments</tspan>
+                    <tspan x="{{ pos.cx }}" dy="{{ caption_offset }}" font-size="13px">{{ modules[theme_module].nbr_comments }} {{ modules.comment_explorer_ui.comments_label }}</tspan>
                   </text>
                 </g>
               {%- endif -%}
@@ -165,7 +165,7 @@
             <div class="theme-indicator-line">
               <span class="theme-number-text">{{ modules.theme_navigation.theme_label }} {{ i }} {{ modules.theme_navigation.theme_of }} {{ nbr_themes }}</span>
               <span class="theme-indicator-separator">•</span>
-              <span class="theme-comment-count">{{ modules["theme_" + i].nbr_comments | default(0) }} comments</span>
+              <span class="theme-comment-count">{{ modules["theme_" + i].nbr_comments | default(0) }} {{ modules.comment_explorer_ui.comments_label }}</span>
             </div>
             <div class="theme-header">
               <h3>
@@ -237,7 +237,7 @@
       <div class="col-lg-12">
         <div class="comment-explorer-controls">
           <div class="theme-selector-wrapper">
-            <label class="control-label" for="theme-selector-native">Select a theme</label>
+            <label class="control-label" for="theme-selector-native">{{ modules.comment_explorer_ui.theme_selector_label }}</label>
             <select class="theme-selector" id="theme-selector-native">
               <option value="all">{{ modules.comment_explorer_ui.all_option }}</option>
               {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
@@ -279,7 +279,7 @@
             <div class="search-input-container">
               <img src="/public/images/magnifying_glass.svg" alt="" class="search-icon" aria-hidden="true">
               <input type="text" class="search-input" id="search-input" placeholder="{{ modules.comment_explorer_ui.search_placeholder }}">
-              <button type="button" class="search-clear" id="search-clear" aria-label="Clear search" style="display: none;">
+              <button type="button" class="search-clear" id="search-clear" aria-label="{{ modules.comment_explorer_ui.clear_search_label }}" style="display: none;">
                 <span aria-hidden="true">×</span>
               </button>
             </div>
@@ -321,12 +321,12 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="subtheme-filter" id="subtheme-filter" style="display: none;">
-          <label class="control-label">Filter by subtheme</label>
+          <label class="control-label">{{ modules.comment_explorer_ui.subtheme_filter_label }}</label>
           <div class="subtheme-filter-tags" id="subtheme-filter-tags">
             <!-- Sub-theme tags will be populated here dynamically -->
           </div>
         </div>
-        <div class="comment-count" data-template="{{ modules.comment_explorer_ui.comment_count }}">Loading...</div>
+        <div class="comment-count" data-template="{{ modules.comment_explorer_ui.comment_count }}">{{ modules.comment_explorer_ui.loading_text }}</div>
         <div class="comments-container display-flex-column-gap">
           <!-- Comments will be populated here from JSON -->
         </div>
