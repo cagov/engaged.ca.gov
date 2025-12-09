@@ -141,13 +141,14 @@ p.themes-intro-text {
 }
 .themes-bubble-chart {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 1167px;
+    margin: 0 auto;
 }
 
 .themes-bubble-chart svg {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Theme circle interactive styles - COMMENTED OUT for static display
