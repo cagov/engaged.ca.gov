@@ -383,7 +383,7 @@ sort_theme: Theme
 sort_likes: Likes
 sort_replies: Replies
 download_button_text: Download all the comments
-comment_count: <N> ideas and solutions
+comment_count: __N__ ideas and solutions
 comments_label: comments
 search_label: Search by keyword
 theme_selector_label: Select a theme
@@ -394,10 +394,10 @@ no_comments_found: No comments found.
 no_solutions_found: No solutions found.
 likes_label_capital: Likes
 likes_label_lowercase: likes
-reply_count_singular: 1 reply
-reply_count_plural: <N> replies
-expand_prefix: Expand 
-close_prefix: Close 
+reply_count_singular: __N__ reply
+reply_count_plural: __N__ replies
+expand_prefix: "Expand "
+close_prefix: "Close "
 close_comment: Close comment
 related_comments: Related comments
 date_at_text: at
@@ -415,8 +415,8 @@ month_sep: September
 month_oct: October
 month_nov: November
 month_dec: December
-solutions_count_template: <N> solutions
-comments_submitted_template: <N> comments submitted
+solutions_count_template: __N__ solutions
+comments_submitted_template: __N__ comments submitted
 view_theme_prefix: "View "
 ----
 

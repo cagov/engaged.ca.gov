@@ -211,7 +211,8 @@ function buildCommentMarkup(comments) {
   
   // If there are replies, add expandable replies section
   if (replies.length > 0) {
-    let replyLabel = replies.length === 1 ? '{{ modules.comment_explorer_ui.reply_count_singular }}' : '{{ modules.comment_explorer_ui.reply_count_plural }}'.replace('<N>', replies.length);
+    let replyLabelTemplate = replies.length === 1 ? '{{ modules.comment_explorer_ui.reply_count_singular }}' : '{{ modules.comment_explorer_ui.reply_count_plural }}';
+    let replyLabel = replyLabelTemplate.replace('__N__', replies.length);
     
     // Check if any reply matches the current search term
     let shouldAutoExpandReplies = false;
@@ -450,7 +451,7 @@ function populate_solutions(theme_number_or_all) {
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
     let template = comment_count_element.dataset.template || '{{ modules.comment_explorer_ui.solutions_count_template }}';
-    let count_text = template.replace('<N>', filtered_solutions.length);
+    let count_text = template.replace('__N__', filtered_solutions.length);
     comment_count_element.textContent = count_text;
   }
 }
@@ -820,7 +821,7 @@ function populate_comments(theme_number_or_all) {
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
     let template = comment_count_element.dataset.template || '{{ modules.comment_explorer_ui.comments_submitted_template }}';
-    let count_text = template.replace('<N>', filtered_comments.length);
+    let count_text = template.replace('__N__', filtered_comments.length);
     comment_count_element.textContent = count_text;
   }
 }
