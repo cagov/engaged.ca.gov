@@ -1,0 +1,67 @@
+Main_theme,Subtheme,Subtheme_Description,Main_Theme_ID,Subtheme_ID
+Budget and resources,Procurement,"Comments about improving how the state purchases goods and services, including bidding, vendor selection, and purchasing efficiency.",1,1
+Budget and resources,Budgeting and funding,"Comments about how government funds are allocated, distributed, or prioritized.",1,2
+Budget and resources,State-spending audits,"Comments about how government spending is reviewed, tracked, or audited for efficiency or waste.",1,3
+Budget and resources,Contracts and vendors,"Comments about managing, evaluating, or selecting contracts with external vendors or partners.",1,4
+Budget and resources,Shared resources,"Comments about sharing or pooling staff, digital tools, equipment, or funding across agencies or departments to reduce costs.",1,5
+Budget and resources,Participatory budgeting,"Comments about involving employees, residents, or communities in deciding how funds are spent.",1,6
+Budget and resources,Expense reimbursement,"Comments about how employees submit, process, and receive reimbursements for work-related expenses.",1,7
+Budget and resources,"Permits, licensing, and fees","Comments about how permits, licenses, or related fee structures are managed, determined, eliminated or streamlined.",1,8
+Budget and resources,Physical infrastructure,"Comments about the importance and costs to maintain and steward physical state-owned resources such as office buildings, roads, and parks.",1,9
+Communication and knowledge sharing,Internal communication,Comments about communication within an agency or between teams.,2,10
+Communication and knowledge sharing,Cross-agency collaboration,"Comments about coordination and communication between state or federal government agencies or departments, including breaking down siloes.",2,11
+Communication and knowledge sharing,Knowledge management,"Comments about capturing, storing, and sharing institutional knowledge, best practices, and resources.",2,12
+Communication and knowledge sharing,Statewide directory,Comments about improving or maintaining a centralized directory of state employees or agencies.,2,13
+Communication and knowledge sharing,Internal feedback,"Comments about gathering, sharing, or acting on employee feedback within the organization.",2,14
+Communication and knowledge sharing,Plain language,"Comments about using clear, accessible, and jargon-free language in state communications.",2,15
+Communication and knowledge sharing,Translations,Comments about translation services or multilingual access for state materials or communications.,2,16
+Governance and oversight,Policymaking,"Comments about how policies are developed, reviewed, or improved to be more effective or inclusive.",3,17
+Governance and oversight,Accountability and transparency,"Comments about public or internal visibility into decisions, spending, or outcomes.",3,18
+Governance and oversight,Compliance,"Comments about adherence to laws, regulations, or internal policies.",3,19
+Governance and oversight,Org structure and hierarchy,"Comments about how leadership, staffing, or reporting structures could be adjusted for efficiency or fairness.",3,20
+Governance and oversight,Align policy and implementation,Comments about gaps between policy statutes and how they are carried out in practice.,3,21
+Management culture and leadership,Leadership review and oversight,Comments about evaluating or holding leaders accountable for performance or ethics.,4,22
+Management culture and leadership,Manager training,Comments about training and support for current or new managers or preparing employees for leadership roles.,4,23
+Management culture and leadership,Management culture and leadership approach,"Comments about leadership style, decision-making, or communication from management.",4,24
+Organizational structure and culture,Work culture,"Comments about improving workplace environment, morale, or team dynamics.",5,25
+Organizational structure and culture,Risk aversion,Comments about unnecessary caution or fear of innovation within government work.,5,26
+Organizational structure and culture,Growth mindset,"Comments about continuous learning, experimentation, and improvement among employees.",5,27
+Organizational structure and culture,Trust and openness,"Comments about respect, trust, and open dialogue across the workplace.",5,28
+Organizational structure and culture,Inclusion and diversity,"Comments about an equitable, diverse, and inclusive workplace.",5,29
+Organizational structure and culture,Networking,Comments about creating or strengthening professional connections among employees or across agencies.,5,30
+Organizational structure and culture,Consolidate government agencies,Comments about merging or reorganizing agencies for efficiency or better coordination.,5,31
+Process improvement,Process design and methodologies,"Comments about creating or improving processes, including using structured methods or best practices such as lean six sigma.",6,32
+Process improvement,Process documentation,Comments about creating or refining documentation of workflow processes.,6,33
+Process improvement,Bureaucracy,"Comments about unnecessary rules, paperwork, or administrative barriers.",6,34
+Process improvement,Process delays,Comments about bottlenecks and other types of delays in workflows.,6,35
+Process improvement,Digitize processes,Comments about improving manual or paper-based steps with digital tools or automation.,6,36
+Process improvement,Policy development process,"Comments about making the creation and revision of policies faster, more transparent or more effective.",6,37
+Public-facing services and resident experience,Public service delivery and responsiveness,"Comments about making government services faster, easier, or more responsive to residents, including help desks, call centers, and online resources.
+",7,38
+Public-facing services and resident experience,Public participation,Comments about resident engagement or input in government decisions.,7,39
+Public-facing services and resident experience,Public transportation,"Comments about public transit access, reliability, or affordability.",7,40
+Public-facing services and resident experience,HCD (Human-Centered Design),Comments about user research and design thinking to improve services or programs.,7,41
+Public-facing services and resident experience,Public policy initiatives,Comments and ideas related to public policies and public-facing governmental programs and action plans.,7,42
+Technology and digital innovation,Technology and data modernization,Comments about updating legacy data and technology systems or standardizing technology across departments.,8,43
+Technology and digital innovation,AI and LLMs,Comments about using artificial intelligence or large language models to improve government work.,8,44
+Technology and digital innovation,Software and tools,Comments about adopting or improving software tools used by employees.,8,45
+Technology and digital innovation,State cloud storage,"Comments about secure, efficient, or standardized cloud storage for state data.",8,46
+Technology and digital innovation,Shared data,Comments about sharing data across or between government agencies for efficiency.,8,47
+Technology and digital innovation,Accessibility,Comments about making government content and tools usable by people with disabilities.,8,48
+Technology and digital innovation,Digital services,Comments about creating or enhancing online services and platforms offered to residents of the state.,8,49
+Workforce hiring and talent management,Employee pay and benefits,"Comments about employee compensation, including pay, hours, and benefits such as health insurance or leave.",9,50
+Workforce hiring and talent management,Hiring and recruitment,Comments about simplifying or enhancing the processes for attracting and hiring talent for state positions.,9,51
+Workforce hiring and talent management,Onboarding new employees,Comments about improving the training and orientation of new hires.,9,52
+Workforce hiring and talent management,Understaffing,"Comments about staff shortages, the need for more staff, or workload imbalances.",9,53
+Workforce hiring and talent management,Career growth,Comments about creating opportunities for advancement or professional development.,9,54
+Workforce hiring and talent management,Mentorship programs,Comments about pairing employees for guidance and learning.,9,55
+Workforce hiring and talent management,Limited-term positions,Comments about addressing challenges or opportunities with temporary roles.,9,56
+Workforce hiring and talent management,Job classification,"Comments about updating or clarifying job titles, duties, or classifications.",9,57
+Workforce hiring and talent management,Employee performance reviews,Comments about how employee performance is measured and reviewed.,9,58
+Workforce hiring and talent management,Qualified staff,"Comments about hiring, utilizing, or retaining employees with the right and appropriate skills and expertise.",9,59
+Workforce hiring and talent management,Employee retention,Comments about reducing employee turnover or employees desire to stay at their jobs.,9,60
+Workforce hiring and talent management,Employee training,Comments about employee learning and development opportunities and ensuring employees are trained in the right skills.,9,61
+Workplace operations,Remote work and return to office,"Comments about flexible work options, telework, hybrid schedules, or office return policies.",10,62
+Workplace operations,Office management,"Comments about facilities, workspace organization, or other physical office-related management.",10,63
+Workplace operations,Employee travel,"Comments about streamlining or improving travel policies, approvals, and reimbursements for parking and other employee travel.",10,64
+Workplace operations,Environmental sustainability,"Comments about workplace practices relating to environmental stewardship, carbon emissions, and uses of natural resources",10,65
