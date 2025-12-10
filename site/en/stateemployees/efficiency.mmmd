@@ -92,6 +92,7 @@ hilite_fill_color: "rgba(101, 173, 225, 0.10)"
 circle_fill_color: "rgba(101, 173, 225, 0.30)"
 nbr_root_comments: 828
 nbr_comments: 931
+nbr_ideas: 672
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Eliminate mandatory printing requirements for electronic documents
@@ -116,6 +117,7 @@ hilite_fill_color: "rgba(197, 145, 218, 0.10)"
 circle_fill_color: "rgba(197, 145, 218, 0.30)"
 nbr_root_comments: 751
 nbr_comments: 906
+nbr_ideas: 698
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Implement reward systems for creativity and innovation
@@ -140,6 +142,7 @@ hilite_fill_color: "rgba(108, 128, 67, 0.10)"
 circle_fill_color: "rgba(108, 128, 67, 0.30)"
 nbr_root_comments: 573
 nbr_comments: 634
+nbr_ideas: 501
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Prioritize recently homeless individuals for permanent reintegration
@@ -163,6 +166,7 @@ hilite_fill_color: "rgba(83, 202, 176, 0.10)"
 circle_fill_color: "rgba(83, 202, 176, 0.30)"
 nbr_root_comments: 477
 nbr_comments: 585
+nbr_ideas: 481
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Establish cross-departmental data sharing system
@@ -187,6 +191,7 @@ hilite_fill_color: "rgba(218, 189, 72, 0.10)"
 circle_fill_color: "rgba(218, 189, 72, 0.30)"
 nbr_root_comments: 421
 nbr_comments: 477
+nbr_ideas: 424
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Purchase buildings instead of leasing
@@ -211,6 +216,7 @@ hilite_fill_color: "rgba(169, 212, 242, 0.10)"
 circle_fill_color: "rgba(169, 212, 242, 0.30)"
 nbr_root_comments: 414
 nbr_comments: 435
+nbr_ideas: 463
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Invest in modern user-friendly technology tools
@@ -235,6 +241,7 @@ hilite_fill_color: "rgba(238, 153, 48, 0.10)"
 circle_fill_color: "rgba(238, 153, 48, 0.30)"
 nbr_root_comments: 400
 nbr_comments: 441
+nbr_ideas: 277
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Empower teams with creative problem-solving ownership
@@ -259,6 +266,7 @@ hilite_fill_color: "rgba(228, 93, 72, 0.10)"
 circle_fill_color: "rgba(228, 93, 72, 0.30)"
 nbr_root_comments: 396
 nbr_comments: 451
+nbr_ideas: 406
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Create workplace culture initiatives for employee retention
@@ -283,6 +291,7 @@ hilite_fill_color: "rgba(109, 72, 132, 0.10)"
 circle_fill_color: "rgba(109, 72, 132, 0.30)"
 nbr_root_comments: 352
 nbr_comments: 413
+nbr_ideas: 323
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Implement leadership development focused on emotional intelligence
@@ -308,6 +317,7 @@ hilite_fill_color: "rgba(242, 195, 199, 0.10)"
 circle_fill_color: "rgba(242, 195, 199, 0.30)"
 nbr_root_comments: 339
 nbr_comments: 402
+nbr_ideas: 300
 see_more_link: See more comments on this theme
 nbr_solutions: 6
 solution_1: Make backend roles telework first to reduce costs
@@ -383,8 +393,9 @@ sort_theme: Theme
 sort_likes: Likes
 sort_replies: Replies
 download_button_text: Download all the comments
-comment_count: __N__ ideas and solutions
+comment_count: __N__ ideas
 comments_label: comments
+ideas_label: ideas
 search_label: Search by keyword
 theme_selector_label: Select a theme
 subtheme_filter_label: Filter by subtheme
