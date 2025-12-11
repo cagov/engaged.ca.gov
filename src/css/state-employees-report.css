@@ -208,6 +208,11 @@ section#themes-deep-dive .container {
 section#themes-deep-dive .theme-selector-wrapper {
 }
 
+section#themes-deep-dive .theme-selector-selected .theme-selector-circle {
+    width: 22px;
+    height: 22px;
+}
+
 /* Theme Navigation Widget */
 .theme-navigation-widget {
     display: flex;
@@ -706,7 +711,8 @@ section#comment-explorer {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 23px;
+    font-size: 30px;
+    font-weight: 700;
     user-select: none;
 }
 
