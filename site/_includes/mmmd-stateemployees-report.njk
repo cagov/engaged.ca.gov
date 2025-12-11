@@ -144,7 +144,7 @@
               {% set first_theme_module = "theme_1" %}
               <span class="theme-selector-circle" id="theme-selector-circle" style="background-color: {{ modules[first_theme_module].stroke_color | default('#5489A3') }};"></span>
               <span class="theme-selector-text" id="theme-selector-text">{% if modules[first_theme_module] %}{{ modules[first_theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} 1{% endif %}</span>
-              <span class="theme-selector-arrow">▼</span>
+              <span class="theme-selector-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none"><path d="M1.28516 1.28516L9.63126 8.33622L17.9766 1.28605" stroke="black" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <ul class="theme-selector-options" id="theme-selector-options" role="listbox">
               <li class="theme-selector-option" data-value="all" role="option">

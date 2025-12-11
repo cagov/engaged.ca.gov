@@ -703,7 +703,7 @@ section#comment-explorer {
 }
 
 .theme-selector-selected {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1rem 0.75rem 1rem;
     border: 2px solid #D9D9D9;
     border-radius: 8px;
     background: #FFFFFF;
@@ -734,12 +734,20 @@ section#comment-explorer {
 
 .theme-selector-text {
     flex: 1;
+    white-space: nowrap;
 }
 
 .theme-selector-arrow {
-    font-size: 12px;
-    color: #666;
+    display: flex;
+    align-items: center;
     transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 0.5rem;
+}
+
+.theme-selector-arrow svg {
+    display: block;
 }
 
 .theme-selector-custom.active .theme-selector-arrow {
