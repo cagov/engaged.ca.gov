@@ -836,14 +836,15 @@ function showCommentCountLoading() {
 
 // Function to populate sub-theme filter for a given theme
 function populateSubthemeFilter(themeId) {
+  let filterRow = document.getElementById('filter-row');
   let subthemeFilter = document.getElementById('subtheme-filter');
   let subthemeFilterTags = document.getElementById('subtheme-filter-tags');
   
   if (!subthemeFilter || !subthemeFilterTags) return;
   
-  // Hide filter for "all" and "other"
+  // Hide filter row for "all" and "other"
   if (themeId === 'all' || themeId === 'other') {
-    subthemeFilter.style.display = 'none';
+    if (filterRow) filterRow.style.display = 'none';
     selectedSubthemes.clear();
     return;
   }
@@ -864,15 +865,15 @@ function populateSubthemeFilter(themeId) {
     return a.id - b.id;
   });
   
-  // If no sub-themes, hide the filter
+  // If no sub-themes, hide the filter row
   if (themeSubthemes.length === 0) {
-    subthemeFilter.style.display = 'none';
+    if (filterRow) filterRow.style.display = 'none';
     selectedSubthemes.clear();
     return;
   }
   
-  // Show the filter
-  subthemeFilter.style.display = 'block';
+  // Show the filter row
+  if (filterRow) filterRow.style.display = 'flex';
   
   // Get theme color
   let themeColorObj = themeColorMap[themeId];

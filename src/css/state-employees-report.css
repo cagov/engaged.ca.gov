@@ -200,6 +200,14 @@ section#themes-deep-dive .container {
     padding-bottom: 0;
 }
 
+.explore-ideas-title {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+section#themes-deep-dive .theme-selector-wrapper {
+}
+
 /* Theme Navigation Widget */
 .theme-navigation-widget {
     display: flex;
@@ -419,7 +427,7 @@ section#themes-deep-dive .container {
     flex-shrink: 0;
 }
 .theme-description {
-    min-height: 12rem;
+    min-height: 9rem;
 }
 
 .theme-description p {
@@ -921,6 +929,65 @@ section#comment-explorer {
     outline: 2px solid rgba(84, 137, 163, 0.2);
     outline-offset: 2px;
     border-radius: 4px;
+}
+
+/* Filter Row - contains subtheme filter and search side by side */
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.filter-row .subtheme-filter {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 0;
+}
+
+.filter-row .search-and-methods {
+    flex: 0 0 auto;
+    min-width: 250px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-row .search-and-methods .search-input-wrapper {
+    flex: none;
+    min-width: auto;
+    max-width: none;
+}
+
+.methods-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.methods-text a {
+    color: #5489A3;
+    text-decoration: underline;
+}
+
+.methods-text a:hover {
+    color: #3d6a7f;
+}
+
+@media (max-width: 991px) {
+    .filter-row {
+        flex-direction: column;
+    }
+    
+    .filter-row .subtheme-filter,
+    .filter-row .search-and-methods {
+        width: 100%;
+        min-width: auto;
+        max-width: none;
+    }
 }
 
 .subtheme-filter {
