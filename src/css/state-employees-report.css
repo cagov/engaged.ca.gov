@@ -743,7 +743,7 @@ section#comment-explorer {
     transition: transform 0.2s ease;
     flex-shrink: 0;
     margin-left: auto;
-    padding-left: 0.5rem;
+    padding-left: 0.25rem;
 }
 
 .theme-selector-arrow svg {
