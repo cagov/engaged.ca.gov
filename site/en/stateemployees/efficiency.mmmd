@@ -92,7 +92,7 @@ hilite_fill_color: "rgba(197, 145, 218, 0.10)"
 circle_fill_color: "rgba(197, 145, 218, 0.30)"
 nbr_root_comments: 828
 nbr_comments: 931
-nbr_ideas: 672
+nbr_ideas: 720
 ----
 
 This theme covers basic government operations. Comments covered approvals, spending, and excessive paperwork.
@@ -109,7 +109,7 @@ hilite_fill_color: "rgba(101, 173, 225, 0.10)"
 circle_fill_color: "rgba(101, 173, 225, 0.30)"
 nbr_root_comments: 751
 nbr_comments: 906
-nbr_ideas: 698
+nbr_ideas: 709
 ----
 
 This theme focuses on hiring and keeping good employees. Topics included employee turnover, career growth, and mentorship programs.
@@ -126,7 +126,7 @@ hilite_fill_color: "rgba(108, 128, 67, 0.10)"
 circle_fill_color: "rgba(108, 128, 67, 0.30)"
 nbr_root_comments: 573
 nbr_comments: 634
-nbr_ideas: 501
+nbr_ideas: 521
 ----
 
 This theme's comments highlight the issues that slow down state services and make them hard to use. 
@@ -143,7 +143,7 @@ hilite_fill_color: "rgba(117, 188, 96, 0.10)"
 circle_fill_color: "rgba(117, 188, 96, 0.30)"
 nbr_root_comments: 477
 nbr_comments: 585
-nbr_ideas: 481
+nbr_ideas: 470
 ----
 
 The comments noted that there are siloed departments and that communication between leadership and staff is poor. Employees also said there’s a need to improve training materials, cross-agency collaboration, and to retain essential knowledge.
@@ -160,7 +160,7 @@ hilite_fill_color: "rgba(109, 72, 132, 0.10)"
 circle_fill_color: "rgba(109, 72, 132, 0.30)"
 nbr_root_comments: 421
 nbr_comments: 477
-nbr_ideas: 424
+nbr_ideas: 442
 ----
 
 This theme's comments center on contractor spending and money management.
@@ -177,7 +177,7 @@ hilite_fill_color: "rgba(228, 93, 72, 0.10)"
 circle_fill_color: "rgba(228, 93, 72, 0.30)"
 nbr_root_comments: 414
 nbr_comments: 435
-nbr_ideas: 463
+nbr_ideas: 433
 ----
 
 This theme highlights issues with outdated IT systems. People discussed poor mobile experiences. They also talked about AI, centralized platforms, and digitizing processes.
@@ -194,7 +194,7 @@ hilite_fill_color: "rgba(238, 153, 48, 0.10)"
 circle_fill_color: "rgba(238, 153, 48, 0.30)"
 nbr_root_comments: 396
 nbr_comments: 451
-nbr_ideas: 406
+nbr_ideas: 407
 ----
 
 This theme's comments address issues with management layers, redundant workflows, and decision-making. Employees also discussed ways to build a more inclusive and welcoming workplace culture.
@@ -211,7 +211,7 @@ hilite_fill_color: "rgba(83, 202, 176, 0.10)"
 circle_fill_color: "rgba(83, 202, 176, 0.30)"
 nbr_root_comments: 352
 nbr_comments: 413
-nbr_ideas: 323
+nbr_ideas: 322
 ----
 
 This theme's comments discuss the need for better leadership training and the benefits of varying management approaches.
@@ -229,7 +229,7 @@ hilite_fill_color: "rgba(242, 195, 199, 0.10)"
 circle_fill_color: "rgba(242, 195, 199, 0.30)"
 nbr_root_comments: 339
 nbr_comments: 402
-nbr_ideas: 300
+nbr_ideas: 308
 ----
 
 This theme's comments mainly covered remote work and return-to-office policies. Employees also discussed flexible work options, work-life balance, and related hiring policies.
@@ -246,7 +246,7 @@ hilite_fill_color: "rgba(169, 212, 242, 0.10)"
 circle_fill_color: "rgba(169, 212, 242, 0.30)"
 nbr_root_comments: 400
 nbr_comments: 441
-nbr_ideas: 277
+nbr_ideas: 285
 ----
 
 This theme's comments highlight the need for guidelines and policies. People also talked about how to enforce these policies and ensure accountability.
