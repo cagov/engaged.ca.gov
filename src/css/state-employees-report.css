@@ -1158,6 +1158,20 @@ section#comment-explorer {
     white-space: nowrap;
 }
 
+.comment-tag-interactive {
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.comment-tag-interactive:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.comment-tag-interactive:active {
+    transform: translateY(0);
+}
+
 .comment-tag:nth-child(1) {
     background-color: #FAD8D3;
 }

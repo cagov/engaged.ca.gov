@@ -389,13 +389,14 @@ function populate_solutions(theme_number_or_all) {
       });
     }
     
-    smarkup += `<div class="solution-item-container" data-solution-index="${index}">`;
+    let solutionId = solution.cid || solution.comment_id || '';
+    smarkup += `<div class="solution-item-container" data-solution-index="${index}" data-solution-id="${solutionId}">`;
     smarkup += `<div class="solution-item${theme_class}">`;
     smarkup += '<div class="solution-content">';
     smarkup += highlighted_text;
     smarkup += '</div>';
     
-    // Generate sub-theme tags
+    // Generate sub-theme tags (clickable for cross-theme navigation)
     smarkup += '<div class="comment-tags">';
     if (solution.stids && Array.isArray(solution.stids) && solution.stids.length > 0) {
       solution.stids.forEach(function(stid) {
@@ -404,7 +405,7 @@ function populate_solutions(theme_number_or_all) {
           let parentThemeId = subtheme.parent_theme_id;
           let themeColorObj = themeColorMap[parentThemeId];
           let themeColor = themeColorObj && themeColorObj.light ? themeColorObj.light : 'rgba(84, 137, 163, 0.50)';
-          smarkup += `<div class="comment-tag" style="background-color: ${themeColor};">${subtheme.name}</div>`;
+          smarkup += `<div class="comment-tag comment-tag-interactive" data-parent-theme-id="${parentThemeId}" data-subtheme-id="${stid}" data-solution-id="${solutionId}" style="background-color: ${themeColor};">${subtheme.name}</div>`;
         }
       });
     }
@@ -1143,6 +1144,56 @@ document.addEventListener('DOMContentLoaded', function() {
   let commentsContainer = document.querySelector('.comments-container');
   if (commentsContainer) {
     commentsContainer.addEventListener('click', function(e) {
+      // Handle interactive comment tag clicks for cross-theme navigation
+      let commentTag = e.target.closest('.comment-tag-interactive');
+      if (commentTag) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        let parentThemeId = parseInt(commentTag.dataset.parentThemeId, 10);
+        let solutionId = commentTag.dataset.solutionId;
+        
+        // If clicking a tag for the current theme, do nothing
+        if (parentThemeId === current_theme_index) {
+          return;
+        }
+        
+        // Get the current solution container and its position relative to the scroll container
+        let solutionContainer = commentTag.closest('.solution-item-container');
+        let scrollContainer = commentsContainer;
+        let relativeTop = 0;
+        
+        if (solutionContainer) {
+          // Calculate position of solution relative to scroll container's viewport
+          let containerRect = scrollContainer.getBoundingClientRect();
+          let solutionRect = solutionContainer.getBoundingClientRect();
+          relativeTop = solutionRect.top - containerRect.top;
+        }
+        
+        // Switch to the new theme (this repopulates solutions)
+        switch_theme(parentThemeId, false);
+        
+        // After DOM updates, find the matching solution and scroll to it
+        // Use requestAnimationFrame to ensure DOM has updated
+        requestAnimationFrame(function() {
+          // Find the solution with the same ID in the new theme's list
+          let matchingSolution = scrollContainer.querySelector(`.solution-item-container[data-solution-id="${solutionId}"]`);
+          
+          if (matchingSolution) {
+            // Calculate where we need to scroll to position this solution at the same relative position
+            let matchingRect = matchingSolution.getBoundingClientRect();
+            let containerRect = scrollContainer.getBoundingClientRect();
+            let currentRelativeTop = matchingRect.top - containerRect.top;
+            
+            // Adjust scroll to maintain relative position
+            let scrollAdjustment = currentRelativeTop - relativeTop;
+            scrollContainer.scrollTop = scrollContainer.scrollTop + scrollAdjustment;
+          }
+        });
+        
+        return;
+      }
+      
       // Handle "Original comments" toggle clicks
       let toggle = e.target.closest('.original-comments-toggle');
       if (toggle) {
