@@ -93,14 +93,6 @@ circle_fill_color: "rgba(197, 145, 218, 0.30)"
 nbr_root_comments: 828
 nbr_comments: 931
 nbr_ideas: 672
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Eliminate mandatory printing requirements for electronic documents
-solution_2: Transition paper processes to digital systems
-solution_3: Reduce middle management layers to streamline decisions
-solution_4: Simplify existing programs rather than create new ones
-solution_5: Standardize contract templates and writing style guides
-solution_6: Create documented procedures and comprehensive resource directory
 ----
 
 This theme covers basic government operations. Comments covered approvals, spending, and excessive paperwork.
@@ -118,14 +110,6 @@ circle_fill_color: "rgba(101, 173, 225, 0.30)"
 nbr_root_comments: 751
 nbr_comments: 906
 nbr_ideas: 698
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Implement reward systems for creativity and innovation
-solution_2: Implement regular staff recognition through events and acknowledgments
-solution_3: Prioritize upskilling staff over hiring consultants
-solution_4: Provide basic process improvement training to all employees
-solution_5: Provide employee choice in retirement contribution allocation
-solution_6: Implement innovative hiring process with competitive salaries
 ----
 
 This theme focuses on hiring and keeping good employees. Topics included employee turnover, career growth, and mentorship programs.
@@ -143,14 +127,6 @@ circle_fill_color: "rgba(108, 128, 67, 0.30)"
 nbr_root_comments: 573
 nbr_comments: 634
 nbr_ideas: 501
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Prioritize recently homeless individuals for permanent reintegration
-solution_2: Enhance clean energy incentives for solar installation
-solution_3: Forward inquiries to correct departments with contact details
-solution_4: Simplify public benefits paperwork and application process
-solution_5: Design programs around resident needs through client input
-solution_6: Establish participatory budgeting programs for the public
 ----
 
 This theme's comments highlight the issues that slow down state services and make them hard to use. 
@@ -161,21 +137,13 @@ theme_number: 4
 theme_title: Communication and knowledge sharing
 theme_circle_title: "Communication<LF>and<LF>knowledge sharing"
 theme_quote: "“Silos within and across organizations are contributing to inefficiencies and decreased productivity.”"
-stroke_color: "rgb(169 212 242)"
-light_color: "rgba(169, 212, 242, 0.50)"
-hilite_fill_color: "rgba(169, 212, 242, 0.10)"
-circle_fill_color: "rgba(169, 212, 242, 0.30)"
+stroke_color: "rgb(117 188 96)"
+light_color: "rgba(117, 188, 96, 0.50)"
+hilite_fill_color: "rgba(117, 188, 96, 0.10)"
+circle_fill_color: "rgba(117, 188, 96, 0.30)"
 nbr_root_comments: 477
 nbr_comments: 585
 nbr_ideas: 481
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Establish cross-departmental data sharing system
-solution_2: Promote collaborative cross-divisional work towards shared goals
-solution_3: Implement mandatory overlap period for knowledge transfer
-solution_4: Create organized internal directories and onboarding hubs
-solution_5: Communicate with front-line employees before procurement decisions
-solution_6: Create inclusive information sharing practices for teams
 ----
 
 The comments noted that there are siloed departments and that communication between leadership and staff is poor. Employees also said there’s a need to improve training materials, cross-agency collaboration, and to retain essential knowledge.
@@ -186,21 +154,13 @@ theme_number: 5
 theme_title: Budget and resources
 theme_circle_title: "Budget and<LF>resources"
 theme_quote: "“Why are we frequently using out of state vendors to do work that we should be paying state employees to do?”"
-stroke_color: "rgb(228 93 72)"
-light_color: "rgba(228, 93, 72, 0.50)"
-hilite_fill_color: "rgba(228, 93, 72, 0.10)"
-circle_fill_color: "rgba(228, 93, 72, 0.30)"
+stroke_color: "rgb(109 72 132)"
+light_color: "rgba(109, 72, 132, 0.50)"
+hilite_fill_color: "rgba(109, 72, 132, 0.10)"
+circle_fill_color: "rgba(109, 72, 132, 0.30)"
 nbr_root_comments: 421
 nbr_comments: 477
 nbr_ideas: 424
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Purchase buildings instead of leasing
-solution_2: Reform DGS Internal Service Fund structure
-solution_3: Eliminate or reform prison industries purchasing requirement
-solution_4: Streamline procurement by reducing approval levels
-solution_5: Implement independent third-party audits with public findings
-solution_6: Conduct deep dive analysis of long-running programs
 ----
 
 This theme's comments center on contractor spending and money management.
@@ -211,21 +171,13 @@ theme_number: 6
 theme_title: Technology and digital innovation
 theme_circle_title: "Technology and<LF>digital innovation"
 theme_quote: "“...we can move from a system of isolated, inefficient solutions to a collaborative, and cohesive government that is truly focused on better serving the people of California.”"
-stroke_color: "rgb(117 188 96)"
-light_color: "rgba(117, 188, 96, 0.50)"
-hilite_fill_color: "rgba(117, 188, 96, 0.10)"
-circle_fill_color: "rgba(117, 188, 96, 0.30)"
+stroke_color: "rgb(228 93 72)"
+light_color: "rgba(228, 93, 72, 0.50)"
+hilite_fill_color: "rgba(228, 93, 72, 0.10)"
+circle_fill_color: "rgba(228, 93, 72, 0.30)"
 nbr_root_comments: 414
 nbr_comments: 435
 nbr_ideas: 463
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Invest in modern user-friendly technology tools
-solution_2: Create statewide standardized IT systems for departments
-solution_3: Centralize IT asset inventory with a single dashboard system
-solution_4: Implement statewide master service agreements for software
-solution_5: Utilize online resources instead of forms and mail
-solution_6: Better organize websites to improve usability
 ----
 
 This theme highlights issues with outdated IT systems. People discussed poor mobile experiences. They also talked about AI, centralized platforms, and digitizing processes.
@@ -236,21 +188,13 @@ theme_number: 7
 theme_title: Governance and oversight
 theme_circle_title: "Governance<LF>and oversight"
 theme_quote: "“The strict hierarchy in the state does not allow for innovation. Supervisors preserve the status quo instead of encouraging staff to find streamlined solutions to problems that affect the lower staff levels.”"
-stroke_color: "rgb(109 72 132)"
-light_color: "rgba(109, 72, 132, 0.50)"
-hilite_fill_color: "rgba(109, 72, 132, 0.10)"
-circle_fill_color: "rgba(109, 72, 132, 0.30)"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+circle_fill_color: "rgba(169, 212, 242, 0.30)"
 nbr_root_comments: 400
 nbr_comments: 441
 nbr_ideas: 277
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Empower teams with creative problem-solving ownership
-solution_2: Build culture of accountability and employee support
-solution_3: Consolidate government agencies with similar missions
-solution_4: Reduce middle management layers to streamline decisions
-solution_5: Centralize standardized statewide policy development
-solution_6: Conduct agency-wide cross-check of all policies and procedures
 ----
 
 This theme's comments highlight the need for guidelines and policies. People also talked about how to enforce these policies and ensure accountability.
@@ -268,14 +212,6 @@ circle_fill_color: "rgba(238, 153, 48, 0.30)"
 nbr_root_comments: 396
 nbr_comments: 451
 nbr_ideas: 406
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Create workplace culture initiatives for employee retention
-solution_2: Create atmosphere encouraging employee ideas and improvements
-solution_3: Create safe communication channels for staff ideas
-solution_4: Establish pathways for staff input in decisions
-solution_5: Consolidate agencies performing duplicate functions
-solution_6: Cancel private leases and consolidate departments into state buildings
 ----
 
 This theme's comments address issues with management layers, redundant workflows, and decision-making. Employees also discussed ways to build a more inclusive and welcoming workplace culture.
@@ -293,14 +229,6 @@ circle_fill_color: "rgba(83, 202, 176, 0.30)"
 nbr_root_comments: 352
 nbr_comments: 413
 nbr_ideas: 323
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Implement leadership development focused on emotional intelligence
-solution_2: Require management to model commitment to efficiency
-solution_3: Implement leadership assessment and mandatory training for appointees
-solution_4: Implement regular manager feedback sessions for process improvement
-solution_5: Establish comprehensive leadership development program
-solution_6: Establish formal process for reporting leadership conduct concerns
 ----
 
 This theme's comments discuss the need for better leadership training and the benefits of varying management approaches.
@@ -319,14 +247,6 @@ circle_fill_color: "rgba(242, 195, 199, 0.30)"
 nbr_root_comments: 339
 nbr_comments: 402
 nbr_ideas: 300
-see_more_link: See more comments on this theme
-nbr_solutions: 6
-solution_1: Make backend roles telework first to reduce costs
-solution_2: Establish shared office spaces and virtual teams
-solution_3: Use goats to clear undergrowth for wildfire prevention
-solution_4: Reduce car registration fees for electric vehicles
-solution_5: Implement shared parking reservation system for employees
-solution_6: Restore monthly voucher system for transportation expenses
 ----
 
 This theme's comments mainly covered remote work and return-to-office policies. Employees also discussed flexible work options, work-life balance, and related hiring policies.
