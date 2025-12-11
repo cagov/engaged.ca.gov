@@ -230,10 +230,39 @@ for comment in comments:
         for theme_id in comment["tids"]:
             theme_comment_counts[theme_id] = theme_comment_counts.get(theme_id, 0) + 1
 
-# Sort themes by comment count (descending), then by original ID for tie-breaking
+# Count unique solutions per theme (early pass through solutions file)
+theme_solution_counts = {}
+solutions_count_content = None
+for encoding in encodings_to_try:
+    try:
+        with open(args.solutions_file, "r", encoding=encoding) as f:
+            solutions_count_content = f.read()
+        if "‚Äô" in solutions_count_content or "â€™" in solutions_count_content:
+            continue
+        break
+    except (UnicodeDecodeError, UnicodeError, FileNotFoundError):
+        continue
+
+if solutions_count_content:
+    with io.StringIO(solutions_count_content) as f:
+        reader = csv.DictReader(f)
+        solutions_seen_per_theme = {}  # Maps theme_id to set of solution_ids
+        for row in reader:
+            solution_id = row["SOLUTION_ID"].strip()
+            solution_main_theme = row.get("SOLUTION_MAIN_THEME", "").strip()
+            if solution_main_theme and solution_main_theme in theme_name_to_id:
+                theme_id = theme_name_to_id[solution_main_theme]
+                if theme_id not in solutions_seen_per_theme:
+                    solutions_seen_per_theme[theme_id] = set()
+                solutions_seen_per_theme[theme_id].add(solution_id)
+        # Convert sets to counts
+        for theme_id, solution_ids in solutions_seen_per_theme.items():
+            theme_solution_counts[theme_id] = len(solution_ids)
+
+# Sort themes by solution count (descending), then by original ID for tie-breaking
 sorted_theme_ids = sorted(
     theme_id_to_name.keys(),
-    key=lambda tid: (-theme_comment_counts.get(tid, 0), tid)
+    key=lambda tid: (-theme_solution_counts.get(tid, 0), tid)
 )
 
 # Create mapping from old theme ID to new theme ID (1-10)
@@ -242,11 +271,12 @@ for new_id, old_id in enumerate(sorted_theme_ids, start=1):
     old_to_new_theme_id[old_id] = new_id
 
 if args.verbose:
-    print("Theme reordering by comment count:")
+    print("Theme reordering by solution count:")
     for old_id in sorted_theme_ids:
-        count = theme_comment_counts.get(old_id, 0)
+        solution_count = theme_solution_counts.get(old_id, 0)
+        comment_count = theme_comment_counts.get(old_id, 0)
         new_id = old_to_new_theme_id[old_id]
-        print(f"  Theme {new_id} (was {old_id}): {theme_id_to_name[old_id]} - {count} comments")
+        print(f"  Theme {new_id} (was {old_id}): {theme_id_to_name[old_id]} - {solution_count} solutions, {comment_count} comments")
 
 # Update theme IDs in comments
 for comment in comments:

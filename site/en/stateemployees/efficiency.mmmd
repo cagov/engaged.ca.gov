@@ -185,23 +185,6 @@ This theme highlights issues with outdated IT systems. People discussed poor mob
 ----
 id: theme_7
 theme_number: 7
-theme_title: Governance and oversight
-theme_circle_title: "Governance<LF>and oversight"
-theme_quote: "“The strict hierarchy in the state does not allow for innovation. Supervisors preserve the status quo instead of encouraging staff to find streamlined solutions to problems that affect the lower staff levels.”"
-stroke_color: "rgb(169 212 242)"
-light_color: "rgba(169, 212, 242, 0.50)"
-hilite_fill_color: "rgba(169, 212, 242, 0.10)"
-circle_fill_color: "rgba(169, 212, 242, 0.30)"
-nbr_root_comments: 400
-nbr_comments: 441
-nbr_ideas: 277
-----
-
-This theme's comments highlight the need for guidelines and policies. People also talked about how to enforce these policies and ensure accountability.
-
-----
-id: theme_8
-theme_number: 8
 theme_title: Organizational structure and culture
 theme_circle_title: "Organizational<LF>structure and<LF>culture"
 theme_quote: "“Giving my team more ownership has been a total game-changer! I've watched my employees transform from just doing their jobs to being real innovation champions.”"
@@ -217,8 +200,8 @@ nbr_ideas: 406
 This theme's comments address issues with management layers, redundant workflows, and decision-making. Employees also discussed ways to build a more inclusive and welcoming workplace culture.
 
 ----
-id: theme_9
-theme_number: 9
+id: theme_8
+theme_number: 8
 theme_title: Management culture and leadership
 theme_circle_title: "Management<LF>culture and<LF>leadership"
 theme_quote: "“The level of safety for staff to communicate ideas and have them be heard objectively and considered operationally is often low.”"
@@ -234,8 +217,8 @@ nbr_ideas: 323
 This theme's comments discuss the need for better leadership training and the benefits of varying management approaches.
 
 ----
-id: theme_10
-theme_number: 10
+id: theme_9
+theme_number: 9
 theme_title: Workplace operations
 theme_circle_title: "Workplace<LF>operations"
 theme_description: State employees identified operational challenges related to facilities, remote work policies, and day-to-day workplace logistics.
@@ -250,6 +233,23 @@ nbr_ideas: 300
 ----
 
 This theme's comments mainly covered remote work and return-to-office policies. Employees also discussed flexible work options, work-life balance, and related hiring policies.
+
+----
+id: theme_10
+theme_number: 10
+theme_title: Governance and oversight
+theme_circle_title: "Governance<LF>and oversight"
+theme_quote: "“The strict hierarchy in the state does not allow for innovation. Supervisors preserve the status quo instead of encouraging staff to find streamlined solutions to problems that affect the lower staff levels.”"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+circle_fill_color: "rgba(169, 212, 242, 0.30)"
+nbr_root_comments: 400
+nbr_comments: 441
+nbr_ideas: 277
+----
+
+This theme's comments highlight the need for guidelines and policies. People also talked about how to enforce these policies and ensure accountability.
 
 ----
 id: themes_deep_dive
