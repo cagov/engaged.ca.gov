@@ -1246,7 +1246,7 @@ document.addEventListener('DOMContentLoaded', function() {
           } else if (document.selection) {
             document.selection.empty();
           }
-          switch_theme(theme_number, true); // Scroll when explicitly clicking
+          switch_theme(theme_number, false); // Don't scroll when clicking bubble chart
         }
       }
     });
@@ -1265,7 +1265,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         let theme_number = parseInt(this.dataset.theme, 10);
-        switch_theme(theme_number, true); // Scroll when using keyboard navigation
+        switch_theme(theme_number, false); // Don't scroll when using keyboard on bubble chart
       }
     });
     
