@@ -18,10 +18,7 @@ buttonText: Explore all themes
 
 # State employees are shaping a better California
 
-Every day, more than 200,000 Californians go to work to serve other Californians. They are subject matter experts on what it takes to operate state government. 
-
-Engaged California invited state employees to discuss how to shape a more effective government over a 10-week period.
-
+Over a 10-week engagement, more than 1,400 California state employees shared insights on how to make our government more efficient.
 
 ----
 id: background_context
@@ -57,11 +54,11 @@ Here are just a few examples of the ideas employees shared:
 id: participation_numbers
 title: Participation by the numbers
 participants_count: 1,469
-participants_label: Participants
+participants_label: participants
 comments_count: 2,450
-comments_label: Comments
+comments_label: comments
 ideas_count: 2,590
-ideas_label: Ideas
+ideas_label: ideas
 staff_note: Employees from all levels of seniority and tenure
 quote: "“It's nice to be able to share my opinions and to broaden my perspectives on what it means to be a public servant.”"
 staff_icon_alt: Staff icon
@@ -78,8 +75,7 @@ id: findings_analysis
 ----
 id: themes_we_found
 title: Discussion themes
-intro_text: "We categorized comments by theme. The circle sizes are relative to one another. The size of each circle indicates how often a theme came up in the discussion."
-intro_text_old: "Larger circles had more discussion. Click on a theme to learn more about it."
+intro_text: "The more ideas shared about a theme, the larger the circle will be."
 nbr_themes: 10
 ----
 
