@@ -940,6 +940,26 @@ function toggleSubtheme(subthemeId) {
   }
 }
 
+// Function to select a single subtheme (clearing all others)
+// Does NOT repopulate solutions - caller is responsible for that
+function selectSingleSubtheme(subthemeId) {
+  // Clear all selected subthemes
+  selectedSubthemes.clear();
+  
+  // Add the single subtheme
+  selectedSubthemes.add(subthemeId);
+  
+  // Update visual state - remove 'selected' from all, add to the target
+  document.querySelectorAll('.subtheme-filter-tag').forEach(function(tag) {
+    let tagSubthemeId = parseInt(tag.dataset.subthemeId, 10);
+    if (tagSubthemeId === subthemeId) {
+      tag.classList.add('selected');
+    } else {
+      tag.classList.remove('selected');
+    }
+  });
+}
+
 function switch_theme(theme_number, should_scroll = false) {
   // Get theme selector elements
   let theme_selector = document.getElementById('theme-selector-native');
@@ -1144,19 +1164,15 @@ document.addEventListener('DOMContentLoaded', function() {
   let commentsContainer = document.querySelector('.comments-container');
   if (commentsContainer) {
     commentsContainer.addEventListener('click', function(e) {
-      // Handle interactive comment tag clicks for cross-theme navigation
+      // Handle interactive comment tag clicks for cross-theme navigation and subtheme filtering
       let commentTag = e.target.closest('.comment-tag-interactive');
       if (commentTag) {
         e.preventDefault();
         e.stopPropagation();
         
         let parentThemeId = parseInt(commentTag.dataset.parentThemeId, 10);
+        let subthemeId = parseInt(commentTag.dataset.subthemeId, 10);
         let solutionId = commentTag.dataset.solutionId;
-        
-        // If clicking a tag for the current theme, do nothing
-        if (parentThemeId === current_theme_index) {
-          return;
-        }
         
         // Get the current solution container and its position relative to the scroll container
         let solutionContainer = commentTag.closest('.solution-item-container');
@@ -1170,26 +1186,44 @@ document.addEventListener('DOMContentLoaded', function() {
           relativeTop = solutionRect.top - containerRect.top;
         }
         
-        // Switch to the new theme (this repopulates solutions)
-        switch_theme(parentThemeId, false);
-        
-        // After DOM updates, find the matching solution and scroll to it
-        // Use requestAnimationFrame to ensure DOM has updated
-        requestAnimationFrame(function() {
-          // Find the solution with the same ID in the new theme's list
-          let matchingSolution = scrollContainer.querySelector(`.solution-item-container[data-solution-id="${solutionId}"]`);
+        if (parentThemeId !== current_theme_index) {
+          // Different theme: switch theme, then select subtheme and repopulate
+          switch_theme(parentThemeId, false);
           
-          if (matchingSolution) {
-            // Calculate where we need to scroll to position this solution at the same relative position
-            let matchingRect = matchingSolution.getBoundingClientRect();
-            let containerRect = scrollContainer.getBoundingClientRect();
-            let currentRelativeTop = matchingRect.top - containerRect.top;
+          // After theme switch, select the single subtheme and repopulate
+          selectSingleSubtheme(subthemeId);
+          populate_solutions(parentThemeId);
+          
+          // After DOM updates, scroll to matching solution maintaining relative position
+          requestAnimationFrame(function() {
+            let matchingSolution = scrollContainer.querySelector(`.solution-item-container[data-solution-id="${solutionId}"]`);
             
-            // Adjust scroll to maintain relative position
-            let scrollAdjustment = currentRelativeTop - relativeTop;
-            scrollContainer.scrollTop = scrollContainer.scrollTop + scrollAdjustment;
-          }
-        });
+            if (matchingSolution) {
+              let matchingRect = matchingSolution.getBoundingClientRect();
+              let containerRect = scrollContainer.getBoundingClientRect();
+              let currentRelativeTop = matchingRect.top - containerRect.top;
+              let scrollAdjustment = currentRelativeTop - relativeTop;
+              scrollContainer.scrollTop = scrollContainer.scrollTop + scrollAdjustment;
+            }
+          });
+        } else {
+          // Same theme: just select subtheme, repopulate, and maintain position
+          selectSingleSubtheme(subthemeId);
+          populate_solutions(parentThemeId);
+          
+          // After DOM updates, scroll to maintain position of current solution
+          requestAnimationFrame(function() {
+            let matchingSolution = scrollContainer.querySelector(`.solution-item-container[data-solution-id="${solutionId}"]`);
+            
+            if (matchingSolution) {
+              let matchingRect = matchingSolution.getBoundingClientRect();
+              let containerRect = scrollContainer.getBoundingClientRect();
+              let currentRelativeTop = matchingRect.top - containerRect.top;
+              let scrollAdjustment = currentRelativeTop - relativeTop;
+              scrollContainer.scrollTop = scrollContainer.scrollTop + scrollAdjustment;
+            }
+          });
+        }
         
         return;
       }
