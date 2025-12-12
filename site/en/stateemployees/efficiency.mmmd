@@ -403,17 +403,17 @@ id: methodology
 
 ### How we did the analysis
 
-We used a combination of human expertise and technology to report on the ideas employees shared in over 1,800 submissions.
+We used a combination of human expertise and technology to understand the ideas employees shared. Some of the submissions we received included multiple proposals to make the government more efficient. To view, categorize, and act on the complete list of ideas, we used AI to extract every specific, actionable solution from each main comment on the platform.  
 
-We synthesized the information using three approaches. First, our user research team read all of the comments that came in and then categorized a subset (400 comments) with a group of 10 themes we identified through our review. This process established our initial categories. 
+​We then analyzed the ideas employees shared using a three-step approach.
 
-Second, we used machine learning to discover patterns that naturally emerged from all the comments, and we synthesized these results into a unified framework of the 10 original main themes and 64 sub-themes. 
+​First, our user research team read and categorized a representative subset of comments into 10 main themes and more than 100 subthemes. This process established our initial categories.
 
-Finally, we applied this framework across all submissions using artificial intelligence, then refined it by checking which ideas weren't being captured and which categories were too broad or too narrow. This hybrid approach allowed us to work at scale while maintaining the context and nuance that matters to decision-makers.
+​Next, our data team used machine learning to conduct topic modeling to identify patterns across all comments. We compared these results with the user research team’s findings to refine and confirm the themes and subthemes. For example, we found that some of the subthemes from our initial review were too similar to each other, and that some themes were missing.
 
-To distill the proposed solutions from the comments, we used AI to extract specific, actionable solutions from each comment. We created two versions: one with full context for internal review and another condensed version to help us spot common themes. 
+Finally, we applied the themes across all submissions using AI, then iteratively refined the subthemes using human review. During our human review, we checked that the AI accurately assigned each theme and subtheme to at least one submission. We looked for any additional themes missed during the first two steps. Eventually, this process led us to a balanced set of 65 subthemes.
 
-We used both versions of the solutions to validate the AI output and ensure each solution could be tied back to a comment.
+​This hybrid approach, combining user research and modern analytics tools, allowed us to work at scale while maintaining the context and nuance that matter to decision-makers.
 
 
 ----
