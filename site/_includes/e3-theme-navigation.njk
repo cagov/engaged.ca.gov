@@ -867,9 +867,9 @@ function populateSubthemeFilter(themeId) {
     }
   }
   
-  // Sort by ID for consistent ordering
+  // Sort alphabetically by name
   themeSubthemes.sort(function(a, b) {
-    return a.id - b.id;
+    return a.name.localeCompare(b.name);
   });
   
   // If no sub-themes, hide just the subtheme filter contents (not entire filter row)
