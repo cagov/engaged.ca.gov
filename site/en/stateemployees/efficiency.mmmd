@@ -56,13 +56,16 @@ Here are just a few examples of the ideas employees shared:
 ----
 id: participation_numbers
 title: Participation by the numbers
-participants_count: 1,653
+participants_count: 1,469
 participants_label: Participants
-insights_count: 2,450
-insights_label: Insights
+comments_count: 2,450
+comments_label: Comments
+ideas_count: 2,590
+ideas_label: Ideas
 staff_note: Employees from all levels of seniority and tenure
 quote: "“It's nice to be able to share my opinions and to broaden my perspectives on what it means to be a public servant.”"
 staff_icon_alt: Staff icon
+comments_icon_alt: Comments icon
 ideas_icon_alt: Ideas icon
 ----
 

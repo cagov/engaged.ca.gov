@@ -49,16 +49,21 @@
             <img src="/public/images/staff-icon.svg" alt="{{ modules.participation_numbers.staff_icon_alt }}" />
             <div class="stat-number">{{ modules.participation_numbers.participants_count }}</div>
             <div class="stat-label">{{ modules.participation_numbers.participants_label }}</div>
-            <p class="participation-note">{{ modules.participation_numbers.staff_note }}</p>
+            {# <p class="participation-note">{{ modules.participation_numbers.staff_note }}</p> #}
+          </div>
+          <div class="participation-stat">
+            <img src="/public/images/comments-icon.svg" alt="{{ modules.participation_numbers.comments_icon_alt }}" />
+            <div class="stat-number">{{ modules.participation_numbers.comments_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.comments_label }}</div>
           </div>
           <div class="participation-stat">
             <img src="/public/images/ideas-icon.svg" alt="{{ modules.participation_numbers.ideas_icon_alt }}" />
-            <div class="stat-number">{{ modules.participation_numbers.insights_count }}</div>
-            <div class="stat-label">{{ modules.participation_numbers.insights_label }}</div>
+            <div class="stat-number">{{ modules.participation_numbers.ideas_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.ideas_label }}</div>
           </div>
-          <div class="participation-quote">
+          {# <div class="participation-quote">
             <p>{{ modules.participation_numbers.quote }}</p>
-          </div>
+          </div> #}
 
         </div>
       </div>
