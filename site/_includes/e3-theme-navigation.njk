@@ -840,12 +840,18 @@ function populateSubthemeFilter(themeId) {
   let filterRow = document.getElementById('filter-row');
   let subthemeFilter = document.getElementById('subtheme-filter');
   let subthemeFilterTags = document.getElementById('subtheme-filter-tags');
+  let subthemeFilterLabel = subthemeFilter ? subthemeFilter.querySelector('.control-label') : null;
   
   if (!subthemeFilter || !subthemeFilterTags) return;
   
-  // Hide filter row for "all" and "other"
+  // Always show the filter row (it contains search input too)
+  if (filterRow) filterRow.style.display = 'flex';
+  
+  // Hide subtheme filter contents (but keep container for layout) for "all" and "other"
   if (themeId === 'all' || themeId === 'other') {
-    if (filterRow) filterRow.style.display = 'none';
+    // Hide only the children, keep container visible to maintain layout
+    if (subthemeFilterLabel) subthemeFilterLabel.style.display = 'none';
+    subthemeFilterTags.style.display = 'none';
     selectedSubthemes.clear();
     return;
   }
@@ -866,15 +872,17 @@ function populateSubthemeFilter(themeId) {
     return a.id - b.id;
   });
   
-  // If no sub-themes, hide the filter row
+  // If no sub-themes, hide just the subtheme filter contents (not entire filter row)
   if (themeSubthemes.length === 0) {
-    if (filterRow) filterRow.style.display = 'none';
+    if (subthemeFilterLabel) subthemeFilterLabel.style.display = 'none';
+    subthemeFilterTags.style.display = 'none';
     selectedSubthemes.clear();
     return;
   }
   
-  // Show the filter row
-  if (filterRow) filterRow.style.display = 'flex';
+  // Show the subtheme filter contents
+  if (subthemeFilterLabel) subthemeFilterLabel.style.display = 'block';
+  subthemeFilterTags.style.display = 'flex';
   
   // Get theme color
   let themeColorObj = themeColorMap[themeId];
