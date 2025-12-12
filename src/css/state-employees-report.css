@@ -87,8 +87,7 @@ section#what-we-heard {
     text-wrap: balance;
 }
 
-.participation-quote {
-    background: #FFFFFF;
+.participation-quote, .quote {
     padding: 0 1.5rem;
     margin-top: 1.5rem;
 
@@ -98,6 +97,14 @@ section#what-we-heard {
     background-position: top left;
     background-size: 45px 46px;
 
+}
+
+.quote {
+    padding-bottom: 1rem;
+}
+
+.quote-container {
+    padding-bottom: 1.5rem;
 }
 
 .participation-quote p {
