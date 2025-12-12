@@ -1491,7 +1491,7 @@ section#about-the-data {
     padding-top: 0;
 }
 
-section#about-the-data p {
+section#about-the-data p, section#about-the-data li {
     font-size: 1.125rem !important;
 }
 
