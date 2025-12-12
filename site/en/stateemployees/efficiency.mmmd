@@ -86,10 +86,10 @@ theme_number: 1
 theme_title: Process improvement
 theme_circle_title: "Process<LF>improvement"
 theme_quote: "“A primary problem is the number of antiquated and inefficient statewide processes still in place across departments.”"
-stroke_color: "rgb(197 145 218)"
-light_color: "rgba(197, 145, 218, 0.50)"
-hilite_fill_color: "rgba(197, 145, 218, 0.10)"
-circle_fill_color: "rgba(197, 145, 218, 0.30)"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+circle_fill_color: "rgba(101, 173, 225, 0.30)"
 nbr_root_comments: 828
 nbr_comments: 931
 nbr_ideas: 720
@@ -103,10 +103,10 @@ theme_number: 2
 theme_title: Recruitment, hiring, and retention
 theme_circle_title: "Recruitment,<LF>hiring, and<LF>retention"
 theme_quote: "“We need more pathways to promote so employees don't feel stuck…”"
-stroke_color: "rgb(101 173 225)"
-light_color: "rgba(101, 173, 225, 0.50)"
-hilite_fill_color: "rgba(101, 173, 225, 0.10)"
-circle_fill_color: "rgba(101, 173, 225, 0.30)"
+stroke_color: "rgb(197 145 218)"
+light_color: "rgba(197, 145, 218, 0.50)"
+hilite_fill_color: "rgba(197, 145, 218, 0.10)"
+circle_fill_color: "rgba(197, 145, 218, 0.30)"
 nbr_root_comments: 751
 nbr_comments: 906
 nbr_ideas: 709
