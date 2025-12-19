@@ -35,13 +35,11 @@ title: What state employees said
 
 We heard a clear story. Improving government efficiency involves more than just updating technology or cutting costs. It requires a management culture that empowers employees and fosters innovation.
 
-State employees drive business decisions that deliver exceptional, equitable services. They also understand where the inefficiencies are.
+State employees drive business decisions that deliver exceptional, equitable services.
 
 They shared great ideas for solutions that deserve our attention.
 
 You can explore their ideas and comments below.
-
-Employees also expressed appreciation for the opportunity to share their ideas. The responses reflect their dedication to their work and their communities.
 
 Here are just a few examples of the ideas employees shared:
 
@@ -55,7 +53,7 @@ id: participation_numbers
 title: Participation by the numbers
 participants_count: 1,469
 participants_label: participants
-comments_count: 2,450
+comments_count: 2,477
 comments_label: comments
 ideas_count: 2,590
 ideas_label: ideas
@@ -398,18 +396,19 @@ id: methodology
 
 ### How we did the analysis
 
-We used a combination of human expertise and technology to understand the ideas employees shared. Some of the submissions we received included multiple proposals to make the government more efficient. To view, categorize, and act on the complete list of ideas, we used AI to extract every specific, actionable solution from each main comment on the platform.  
+We combined human expertise and technology to understand the ideas employees shared. Many people shared more than one idea per comment. We used AI to pull out all specific, actionable solutions from each main comment on the platform. This helped us view, categorize, and act on the complete list of ideas.
 
 ​We then analyzed the ideas employees shared using a three-step approach.
 
-​First, our user research team read and categorized a representative subset of comments into 10 main themes and more than 100 subthemes. This process established our initial categories.
+First, our user research team reviewed and sorted a subset of comments. They identified 10 main themes and over 100 subthemes. This process established our initial categories.
 
-​Next, our data team used machine learning to conduct topic modeling to identify patterns across all comments. We compared these results with the user research team’s findings to refine and confirm the themes and subthemes. For example, we found that some of the subthemes from our initial review were too similar to each other, and that some themes were missing.
+Our data team then used machine learning to do topic modeling. This helped us spot patterns across all comments. We compared these results with the user research team’s findings to refine and confirm the themes and subthemes. For example, we found that some of the subthemes from our initial review were similar to each other. We also found new or missing themes.
 
-Finally, we applied the themes across all submissions using AI, then iteratively refined the subthemes using human review. During our human review, we checked that the AI accurately assigned each theme and subtheme to at least one submission. We looked for any additional themes missed during the first two steps. Eventually, this process led us to a balanced set of 65 subthemes.
+We used AI to apply the themes to all submissions. Then, we refined the subthemes through human review. Our review checked that the AI accurately assigned each theme and subtheme to at least one submission. We also looked for any additional themes missed during the first two steps. The process ultimately resulted in a balanced set of 65 subthemes.
 
-​This hybrid approach, combining user research and modern analytics tools, allowed us to work at scale while maintaining the context and nuance that matter to decision-makers.
+This hybrid approach allowed us to work at scale. We were also able to maintain the context and nuance that decision-makers need.
 
+You can see the code, AI prompts, and the models we used [to process and analyze data for this engagement on GitHub](https://github.com/cagov/caldata-engaged-california).
 
 ----
 id: about_the_data
