@@ -13,7 +13,6 @@ tags:
 
 ----
 id: hero
-buttonText: Explore all themes
 ----
 
 # State employees are shaping a better California
@@ -22,7 +21,6 @@ Over a 10-week engagement, more than 1,400 California state employees shared ins
 
 ----
 id: what_we_heard
-title: What state employees said
 ----
 
 ## What state employees said
@@ -44,7 +42,6 @@ Here are just a few examples of the ideas employees shared:
 
 ----
 id: participation_numbers
-title: Participation by the numbers
 participants_count: 1,469
 participants_label: participants
 comments_count: 2,477
@@ -65,16 +62,11 @@ nbr_themes: 10
 
 ----
 id: theme_1
-theme_number: 1
 theme_title: Process improvement
 theme_circle_title: "Process<LF>improvement"
-theme_quote: "“A primary problem is the number of antiquated and inefficient statewide processes still in place across departments.”"
 stroke_color: "rgb(101 173 225)"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
-circle_fill_color: "rgba(101, 173, 225, 0.30)"
-nbr_root_comments: 828
-nbr_comments: 931
 nbr_ideas: 720
 ----
 
@@ -82,16 +74,11 @@ This theme covers basic government operations. Comments covered approvals, spend
 
 ----
 id: theme_2
-theme_number: 2
 theme_title: Recruitment, hiring, and retention
 theme_circle_title: "Recruitment,<LF>hiring, and<LF>retention"
-theme_quote: "“We need more pathways to promote so employees don't feel stuck…”"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
-circle_fill_color: "rgba(197, 145, 218, 0.30)"
-nbr_root_comments: 751
-nbr_comments: 906
 nbr_ideas: 709
 ----
 
@@ -99,16 +86,11 @@ This theme focuses on hiring and keeping good employees. Topics included employe
 
 ----
 id: theme_3
-theme_number: 3
 theme_title: Public-facing services and resident experience
 theme_circle_title: "Public-facing<LF>services and<LF>resident experience"
-theme_quote: "“There are too many road blocks in communication between the public… and the State offices…so few points of contact for the public to obtain information and services.”"
 stroke_color: "rgb(108 128 67)"
 light_color: "rgba(108, 128, 67, 0.50)"
 hilite_fill_color: "rgba(108, 128, 67, 0.10)"
-circle_fill_color: "rgba(108, 128, 67, 0.30)"
-nbr_root_comments: 573
-nbr_comments: 634
 nbr_ideas: 521
 ----
 
@@ -116,16 +98,11 @@ This theme's comments highlight the issues that slow down state services and mak
 
 ----
 id: theme_4
-theme_number: 4
 theme_title: Communication and knowledge sharing
 theme_circle_title: "Communication<LF>and<LF>knowledge sharing"
-theme_quote: "“Silos within and across organizations are contributing to inefficiencies and decreased productivity.”"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
-circle_fill_color: "rgba(117, 188, 96, 0.30)"
-nbr_root_comments: 477
-nbr_comments: 585
 nbr_ideas: 470
 ----
 
@@ -133,16 +110,11 @@ The comments noted that there are siloed departments and that communication betw
 
 ----
 id: theme_5
-theme_number: 5
 theme_title: Budget and resources
 theme_circle_title: "Budget and<LF>resources"
-theme_quote: "“Why are we frequently using out of state vendors to do work that we should be paying state employees to do?”"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
-circle_fill_color: "rgba(109, 72, 132, 0.30)"
-nbr_root_comments: 421
-nbr_comments: 477
 nbr_ideas: 442
 ----
 
@@ -150,16 +122,11 @@ This theme's comments center on contractor spending and money management.
 
 ----
 id: theme_6
-theme_number: 6
 theme_title: Technology and digital innovation
 theme_circle_title: "Technology and<LF>digital innovation"
-theme_quote: "“...we can move from a system of isolated, inefficient solutions to a collaborative, and cohesive government that is truly focused on better serving the people of California.”"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
-circle_fill_color: "rgba(228, 93, 72, 0.30)"
-nbr_root_comments: 414
-nbr_comments: 435
 nbr_ideas: 433
 ----
 
@@ -167,16 +134,11 @@ This theme highlights issues with outdated IT systems. People discussed poor mob
 
 ----
 id: theme_7
-theme_number: 7
 theme_title: Organizational structure and culture
 theme_circle_title: "Organizational<LF>structure and<LF>culture"
-theme_quote: "“Giving my team more ownership has been a total game-changer! I've watched my employees transform from just doing their jobs to being real innovation champions.”"
 stroke_color: "rgb(169 212 242)"
 light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.10)"
-circle_fill_color: "rgba(169, 212, 242, 0.30)"
-nbr_root_comments: 396
-nbr_comments: 451
 nbr_ideas: 407
 ----
 
@@ -184,16 +146,11 @@ This theme's comments address issues with management layers, redundant workflows
 
 ----
 id: theme_8
-theme_number: 8
 theme_title: Management culture and leadership
 theme_circle_title: "Management<LF>culture and<LF>leadership"
-theme_quote: "“The level of safety for staff to communicate ideas and have them be heard objectively and considered operationally is often low.”"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
-circle_fill_color: "rgba(238, 153, 48, 0.30)"
-nbr_root_comments: 352
-nbr_comments: 413
 nbr_ideas: 322
 ----
 
@@ -201,17 +158,11 @@ This theme's comments discuss the need for better leadership training and the be
 
 ----
 id: theme_9
-theme_number: 9
 theme_title: Workplace operations
 theme_circle_title: "Workplace<LF>operations"
-theme_description: State employees identified operational challenges related to facilities, remote work policies, and day-to-day workplace logistics.
-theme_quote: "“Everyone performs better in an environment that they are comfortable in…”"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
-circle_fill_color: "rgba(83, 202, 176, 0.30)"
-nbr_root_comments: 339
-nbr_comments: 402
 nbr_ideas: 308
 ----
 
@@ -219,16 +170,11 @@ This theme's comments mainly covered remote work and return-to-office policies. 
 
 ----
 id: theme_10
-theme_number: 10
 theme_title: Governance and oversight
 theme_circle_title: "Governance<LF>and oversight"
-theme_quote: "“The strict hierarchy in the state does not allow for innovation. Supervisors preserve the status quo instead of encouraging staff to find streamlined solutions to problems that affect the lower staff levels.”"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
-circle_fill_color: "rgba(242, 195, 199, 0.30)"
-nbr_root_comments: 400
-nbr_comments: 441
 nbr_ideas: 285
 ----
 
@@ -237,9 +183,6 @@ This theme's comments highlight the need for guidelines and policies. People als
 ----
 id: comment_explorer
 title: Explore the ideas
-intro_text: The discussion with state employees yielded 2,450 ideas to help the California state government be more efficient. Many of those ideas translate to actual solutions that can lead to a more efficient state government. Explore the comments, ideas, and potential solutions by theme below.
-intro_text_old: Employees shared 2,450 solutions through their comments. Explore them through these 10 themes and 65 sub-themes.  
-intro_text2: Comments are now closed.
 ----
 
 ----
