@@ -60,7 +60,9 @@
           <p class="themes-intro-text">{{ modules.themes_we_found.intro_text }}</p>
         </div>
         <div id="themes-bubble-chart" class="themes-bubble-chart">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1167 490">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1167 490" role="img" aria-labelledby="bubble-chart-title" aria-describedby="bubble-chart-desc">
+            <title id="bubble-chart-title">Discussion themes visualization</title>
+            <desc id="bubble-chart-desc">{{ modules.themes_we_found.intro_text }}</desc>
             <!-- Background -->
             <rect width="1167" height="490" fill="#F6F7FA"/>
             {%- set nbr_themes = modules.themes_we_found.nbr_themes | default(10) -%}
@@ -114,7 +116,7 @@
       <div class="col-lg-8">
         <h2 class="explore-ideas-title">{{ modules.comment_explorer.title }}</h2>
         <div class="theme-selector-wrapper">
-          <label class="control-label" for="theme-selector-native">{{ modules.comment_explorer_ui.theme_selector_label }}</label>
+          <label class="control-label" id="theme-selector-label" for="theme-selector-native">{{ modules.comment_explorer_ui.theme_selector_label }}</label>
           <select class="theme-selector" id="theme-selector-native">
             <option value="all">{{ modules.comment_explorer_ui.all_option }}</option>
             {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
@@ -131,14 +133,14 @@
               <span class="theme-selector-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none"><path d="M1.28516 1.28516L9.63126 8.33622L17.9766 1.28605" stroke="black" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <ul class="theme-selector-options" id="theme-selector-options" role="listbox">
-              <li class="theme-selector-option" data-value="all" role="option">
+              <li class="theme-selector-option" id="theme-option-all" data-value="all" role="option">
                 <span class="theme-selector-circle" style="display: none;"></span>
                 <span>{{ modules.comment_explorer_ui.all_option }}</span>
               </li>
               {% set nbr_themes = modules.themes_we_found.nbr_themes | default(10) %}
               {% for i in range(1, nbr_themes + 1) %}
                 {% set theme_module = "theme_" + i %}
-                <li class="theme-selector-option" data-value="{{ i }}" data-theme-color="{{ modules[theme_module].stroke_color | default('#5489A3') }}" role="option"{% if i == 1 %} data-selected="true"{% endif %}>
+                <li class="theme-selector-option" id="theme-option-{{ i }}" data-value="{{ i }}" data-theme-color="{{ modules[theme_module].stroke_color | default('#5489A3') }}" role="option"{% if i == 1 %} data-selected="true"{% endif %}>
                   <span class="theme-selector-circle" style="background-color: {{ modules[theme_module].stroke_color | default('#5489A3') }};"></span>
                   <span>{% if modules[theme_module] %}{{ modules[theme_module].theme_title }}{% else %}{{ modules.comment_explorer_ui.theme_fallback }} {{ i }}{% endif %}</span>
                 </li>
@@ -173,23 +175,23 @@
               <label class="control-label" for="search-input">{{ modules.comment_explorer_ui.search_label }}</label>
               <div class="search-input-container">
                 <img src="/public/images/magnifying_glass.svg" alt="" class="search-icon" aria-hidden="true">
-                <input type="text" class="search-input" id="search-input" placeholder="{{ modules.comment_explorer_ui.search_placeholder }}">
+                <input type="text" class="search-input" id="search-input" placeholder="{{ modules.comment_explorer_ui.search_placeholder }}" aria-describedby="search-methods-desc">
                 <button type="button" class="search-clear" id="search-clear" aria-label="{{ modules.comment_explorer_ui.clear_search_label }}" style="display: none;">
                   <span aria-hidden="true">×</span>
                 </button>
               </div>
             </div>
-            <p class="methods-text">{{ modules.comment_explorer_ui.methods_text }} <a href="#methodology">{{ modules.comment_explorer_ui.methods_link_text }}</a></p>
+            <p class="methods-text" id="search-methods-desc">{{ modules.comment_explorer_ui.methods_text }} <a href="#methodology">{{ modules.comment_explorer_ui.methods_link_text }}</a></p>
           </div>
           <div class="subtheme-filter" id="subtheme-filter">
             <label class="control-label">{{ modules.comment_explorer_ui.subtheme_filter_label }}</label>
-            <div class="subtheme-filter-tags" id="subtheme-filter-tags">
+            <div class="subtheme-filter-tags" id="subtheme-filter-tags" role="group" aria-label="Subtheme filters">
               <!-- Sub-theme tags will be populated here dynamically -->
             </div>
           </div>
         </div>
-        <div class="comment-count" data-template="{{ modules.comment_explorer_ui.comment_count }}">{{ modules.comment_explorer_ui.loading_text }}</div>
-        <div class="comments-container display-flex-column-gap">
+        <div class="comment-count" data-template="{{ modules.comment_explorer_ui.comment_count }}" aria-live="polite" aria-atomic="true">{{ modules.comment_explorer_ui.loading_text }}</div>
+        <div class="comments-container display-flex-column-gap" aria-live="polite" aria-atomic="false" role="region" aria-label="Ideas and comments">
           <!-- Comments will be populated here from JSON -->
         </div>
         <div class="download-comments">

@@ -220,11 +220,13 @@ function buildCommentMarkup(comments) {
       });
     }
     
+    let parentCommentId = parentComment.cid || '';
+    let repliesContentId = 'replies-content-' + parentCommentId;
     markup += '<div class="replies-widget">';
-    markup += `<a href="#" class="expand-replies-toggle" aria-expanded="${shouldAutoExpandReplies}" style="${shouldAutoExpandReplies ? 'display: none;' : ''}">`;
+    markup += `<a href="#" class="expand-replies-toggle" aria-expanded="${shouldAutoExpandReplies}" aria-controls="${repliesContentId}" style="${shouldAutoExpandReplies ? 'display: none;' : ''}">`;
     markup += `<span class="toggle-text">{{ modules.comment_explorer_ui.expand_prefix }}${replyLabel}</span><span class="toggle-arrow">▼</span>`;
     markup += '</a>';
-    markup += `<div class="replies-content" style="display: ${shouldAutoExpandReplies ? 'block' : 'none'};">`;
+    markup += `<div class="replies-content" id="${repliesContentId}" style="display: ${shouldAutoExpandReplies ? 'block' : 'none'};">`;
     
     // Build reply markup
     replies.forEach(function(reply) {
@@ -232,13 +234,13 @@ function buildCommentMarkup(comments) {
     });
     
     // Add close replies link
-    markup += `<a href="#" class="close-replies-link"><span class="close-text">{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}</span><span class="close-arrow">▲</span></a>`;
+    markup += `<a href="#" class="close-replies-link" aria-label="{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}"><span class="close-text">{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}</span><span class="close-arrow">▲</span></a>`;
     markup += '</div>';
     markup += '</div>';
   }
   
   // Add close comment link at the end
-  markup += '<a href="#" class="close-comment-link"><span class="close-text">{{ modules.comment_explorer_ui.close_comment }}</span><span class="close-arrow">▲</span></a>';
+  markup += '<a href="#" class="close-comment-link" aria-label="{{ modules.comment_explorer_ui.close_comment }}"><span class="close-text">{{ modules.comment_explorer_ui.close_comment }}</span><span class="close-arrow">▲</span></a>';
   
   return markup;
 }
@@ -402,7 +404,8 @@ function populate_solutions(theme_number_or_all) {
           let parentThemeId = subtheme.parent_theme_id;
           let themeColorObj = themeColorMap[parentThemeId];
           let themeColor = themeColorObj && themeColorObj.light ? themeColorObj.light : 'rgba(84, 137, 163, 0.50)';
-          smarkup += `<div class="comment-tag comment-tag-interactive" data-parent-theme-id="${parentThemeId}" data-subtheme-id="${stid}" data-solution-id="${solutionId}" style="background-color: ${themeColor};">${subtheme.name}</div>`;
+          let ariaLabel = 'Filter by ' + subtheme.name + ' subtheme and switch to theme ' + parentThemeId;
+          smarkup += `<div class="comment-tag comment-tag-interactive" role="button" tabindex="0" aria-label="${ariaLabel}" data-parent-theme-id="${parentThemeId}" data-subtheme-id="${stid}" data-solution-id="${solutionId}" style="background-color: ${themeColor};">${subtheme.name}</div>`;
         }
       });
     }
@@ -413,11 +416,12 @@ function populate_solutions(theme_number_or_all) {
     if (commentId) {
       // Check if this solution should be auto-expanded (comment matches search)
       let shouldAutoExpand = solution._commentMatchesSearch === true;
+      let originalCommentsContentId = 'original-comments-' + commentId;
       smarkup += '<div class="original-comments-widget">';
-      smarkup += `<a href="#" class="original-comments-toggle" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" data-auto-expand="${shouldAutoExpand}">`;
+      smarkup += `<a href="#" class="original-comments-toggle" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" aria-controls="${originalCommentsContentId}" data-auto-expand="${shouldAutoExpand}">`;
       smarkup += '<span class="toggle-text">{{ modules.comment_explorer_ui.related_comments }}</span><span class="toggle-arrow">' + (shouldAutoExpand ? '▲' : '▼') + '</span>';
       smarkup += '</a>';
-      smarkup += `<div class="original-comments-content" style="display: ${shouldAutoExpand ? 'block' : 'none'}"></div>`;
+      smarkup += `<div class="original-comments-content" id="${originalCommentsContentId}" style="display: ${shouldAutoExpand ? 'block' : 'none'}"></div>`;
       smarkup += '</div>';
     }
     
@@ -450,6 +454,7 @@ function populate_solutions(theme_number_or_all) {
   if (comment_count_element) {
     let template = comment_count_element.dataset.template || '{{ modules.comment_explorer_ui.solutions_count_template }}';
     let count_text = template.replace('__N__', filtered_solutions.length);
+    comment_count_element.setAttribute('aria-busy', 'false');
     comment_count_element.textContent = count_text;
   }
 }
@@ -458,6 +463,7 @@ function populate_solutions(theme_number_or_all) {
 function showCommentCountLoading() {
   let comment_count_element = document.querySelector('.comment-count');
   if (comment_count_element) {
+    comment_count_element.setAttribute('aria-busy', 'true');
     comment_count_element.textContent = '{{ modules.comment_explorer_ui.loading_text }}';
   }
 }
@@ -527,6 +533,10 @@ function populateSubthemeFilter(themeId) {
     tag.className = 'subtheme-filter-tag';
     tag.dataset.subthemeId = subtheme.id;
     tag.style.backgroundColor = themeColor;
+    tag.setAttribute('role', 'button');
+    tag.setAttribute('tabindex', '0');
+    tag.setAttribute('aria-pressed', 'false');
+    tag.setAttribute('aria-label', 'Filter by ' + subtheme.name + ' subtheme');
     
     let tagText = document.createElement('span');
     tagText.textContent = subtheme.name;
@@ -537,6 +547,15 @@ function populateSubthemeFilter(themeId) {
     tag.addEventListener('click', function(e) {
       e.stopPropagation();
       toggleSubtheme(subtheme.id);
+    });
+    
+    // Handle keyboard activation
+    tag.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleSubtheme(subtheme.id);
+      }
     });
     
     subthemeFilterTags.appendChild(tag);
@@ -556,8 +575,10 @@ function toggleSubtheme(subthemeId) {
   if (tag) {
     if (selectedSubthemes.has(subthemeId)) {
       tag.classList.add('selected');
+      tag.setAttribute('aria-pressed', 'true');
     } else {
       tag.classList.remove('selected');
+      tag.setAttribute('aria-pressed', 'false');
     }
   }
   
@@ -583,8 +604,10 @@ function selectSingleSubtheme(subthemeId) {
     let tagSubthemeId = parseInt(tag.dataset.subthemeId, 10);
     if (tagSubthemeId === subthemeId) {
       tag.classList.add('selected');
+      tag.setAttribute('aria-pressed', 'true');
     } else {
       tag.classList.remove('selected');
+      tag.setAttribute('aria-pressed', 'false');
     }
   });
 }
@@ -921,6 +944,74 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
     });
+    
+    // Add keyboard support for interactive comment tags
+    commentsContainer.addEventListener('keydown', function(e) {
+      // Handle interactive comment tag keyboard activation
+      let commentTag = e.target.closest('.comment-tag-interactive');
+      if (commentTag && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Trigger the same logic as click
+        let parentThemeId = parseInt(commentTag.dataset.parentThemeId, 10);
+        let subthemeId = parseInt(commentTag.dataset.subthemeId, 10);
+        let solutionId = commentTag.dataset.solutionId;
+        
+        // Get the current solution container and its position relative to the scroll container
+        let solutionContainer = commentTag.closest('.solution-item-container');
+        let scrollContainer = commentsContainer;
+        let relativeTop = 0;
+        
+        if (solutionContainer) {
+          // Calculate position of solution relative to scroll container's viewport
+          let containerRect = scrollContainer.getBoundingClientRect();
+          let solutionRect = solutionContainer.getBoundingClientRect();
+          relativeTop = solutionRect.top - containerRect.top;
+        }
+        
+        if (parentThemeId !== current_theme_index) {
+          // Different theme: switch theme, then select subtheme and repopulate
+          switch_theme(parentThemeId, false);
+          
+          // After theme switch, select the single subtheme and repopulate
+          selectSingleSubtheme(subthemeId);
+          populate_solutions(parentThemeId);
+          
+          // After DOM updates, scroll to matching solution maintaining relative position
+          requestAnimationFrame(function() {
+            let matchingSolution = scrollContainer.querySelector(`.solution-item-container[data-solution-id="${solutionId}"]`);
+            
+            if (matchingSolution) {
+              let matchingRect = matchingSolution.getBoundingClientRect();
+              let containerRect = scrollContainer.getBoundingClientRect();
+              let currentRelativeTop = matchingRect.top - containerRect.top;
+              let scrollAdjustment = currentRelativeTop - relativeTop;
+              scrollContainer.scrollTop = scrollContainer.scrollTop + scrollAdjustment;
+            }
+          });
+        } else {
+          // Same theme: just select subtheme, repopulate, and maintain position
+          selectSingleSubtheme(subthemeId);
+          populate_solutions(parentThemeId);
+          
+          // After DOM updates, scroll to maintain position of current solution
+          requestAnimationFrame(function() {
+            let matchingSolution = scrollContainer.querySelector(`.solution-item-container[data-solution-id="${solutionId}"]`);
+            
+            if (matchingSolution) {
+              let matchingRect = matchingSolution.getBoundingClientRect();
+              let containerRect = scrollContainer.getBoundingClientRect();
+              let currentRelativeTop = matchingRect.top - containerRect.top;
+              let scrollAdjustment = currentRelativeTop - relativeTop;
+              scrollContainer.scrollTop = scrollContainer.scrollTop + scrollAdjustment;
+            }
+          });
+        }
+        
+        return;
+      }
+    });
   }
   
   // Use event delegation on the SVG container for better Safari compatibility
@@ -973,6 +1064,7 @@ document.addEventListener('DOMContentLoaded', function() {
     circleGroup.setAttribute('role', 'button');
     let themeTitle = circleGroup.querySelector('text tspan')?.textContent || '{{ modules.comment_explorer_ui.theme_fallback }} ' + circleGroup.dataset.theme;
     circleGroup.setAttribute('aria-label', '{{ modules.comment_explorer_ui.view_theme_prefix }}' + themeTitle);
+    circleGroup.setAttribute('aria-controls', 'theme-' + circleGroup.dataset.theme + '-content');
     
     // Add keyboard support
     circleGroup.addEventListener('keydown', function(e) {
@@ -1181,6 +1273,10 @@ document.addEventListener('DOMContentLoaded', function() {
         opt.removeAttribute('data-selected');
         if (opt.getAttribute('data-value') === value) {
           opt.setAttribute('data-selected', 'true');
+          // Update aria-activedescendant when selection changes
+          if (opt.id) {
+            customSelect.setAttribute('aria-activedescendant', opt.id);
+          }
         }
       });
     };
@@ -1234,29 +1330,47 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         customSelect.classList.toggle('active');
+        if (customSelect.classList.contains('active')) {
+          // Set initial aria-activedescendant when opening
+          const current = optionsList.querySelector('.theme-selector-option[data-selected="true"]');
+          if (current && current.id) {
+            customSelect.setAttribute('aria-activedescendant', current.id);
+          }
+        } else {
+          customSelect.removeAttribute('aria-activedescendant');
+        }
       } else if (e.key === 'Escape') {
         customSelect.classList.remove('active');
+        customSelect.removeAttribute('aria-activedescendant');
       } else if (e.key === 'ArrowDown') {
         e.preventDefault();
         if (!customSelect.classList.contains('active')) {
           customSelect.classList.add('active');
-        } else {
-          const current = optionsList.querySelector('.theme-selector-option[data-selected="true"]');
-          const next = current ? current.nextElementSibling : options[0];
-          if (next) {
-            options.forEach(opt => opt.removeAttribute('data-selected'));
-            next.setAttribute('data-selected', 'true');
-            next.scrollIntoView({ block: 'nearest' });
+        }
+        const current = optionsList.querySelector('.theme-selector-option[data-selected="true"]');
+        const next = current ? current.nextElementSibling : options[0];
+        if (next) {
+          options.forEach(opt => opt.removeAttribute('data-selected'));
+          next.setAttribute('data-selected', 'true');
+          next.scrollIntoView({ block: 'nearest' });
+          if (next.id) {
+            customSelect.setAttribute('aria-activedescendant', next.id);
           }
         }
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
+        if (!customSelect.classList.contains('active')) {
+          customSelect.classList.add('active');
+        }
         const current = optionsList.querySelector('.theme-selector-option[data-selected="true"]');
         const prev = current ? current.previousElementSibling : options[options.length - 1];
         if (prev) {
           options.forEach(opt => opt.removeAttribute('data-selected'));
           prev.setAttribute('data-selected', 'true');
           prev.scrollIntoView({ block: 'nearest' });
+          if (prev.id) {
+            customSelect.setAttribute('aria-activedescendant', prev.id);
+          }
         }
       }
     });
