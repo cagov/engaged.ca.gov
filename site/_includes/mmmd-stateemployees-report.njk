@@ -61,7 +61,7 @@
         </div>
         <div id="themes-bubble-chart" class="themes-bubble-chart">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1167 490" role="img" aria-labelledby="bubble-chart-title" aria-describedby="bubble-chart-desc">
-            <title id="bubble-chart-title">Discussion themes visualization</title>
+            <title id="bubble-chart-title">{{ modules.comment_explorer_ui.bubble_chart_title }}</title>
             <desc id="bubble-chart-desc">{{ modules.themes_we_found.intro_text }}</desc>
             <!-- Background -->
             <rect width="1167" height="490" fill="#F6F7FA"/>
@@ -185,13 +185,13 @@
           </div>
           <div class="subtheme-filter" id="subtheme-filter">
             <label class="control-label">{{ modules.comment_explorer_ui.subtheme_filter_label }}</label>
-            <div class="subtheme-filter-tags" id="subtheme-filter-tags" role="group" aria-label="Subtheme filters">
+            <div class="subtheme-filter-tags" id="subtheme-filter-tags" role="group" aria-label="{{ modules.comment_explorer_ui.subtheme_filters_aria_label }}">
               <!-- Sub-theme tags will be populated here dynamically -->
             </div>
           </div>
         </div>
         <div class="comment-count" data-template="{{ modules.comment_explorer_ui.comment_count }}" aria-live="polite" aria-atomic="true">{{ modules.comment_explorer_ui.loading_text }}</div>
-        <div class="comments-container display-flex-column-gap" aria-live="polite" aria-atomic="false" role="region" aria-label="Ideas and comments">
+        <div class="comments-container display-flex-column-gap" aria-live="polite" aria-atomic="false" role="region" aria-label="{{ modules.comment_explorer_ui.ideas_and_comments_aria_label }}">
           <!-- Comments will be populated here from JSON -->
         </div>
         <div class="download-comments">

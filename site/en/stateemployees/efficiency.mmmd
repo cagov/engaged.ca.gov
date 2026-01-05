@@ -229,6 +229,12 @@ month_dec: December
 solutions_count_template: __N__ solutions
 comments_submitted_template: __N__ comments submitted
 view_theme_prefix: "View "
+bubble_chart_title: Discussion themes visualization
+subtheme_filters_aria_label: Subtheme filters
+ideas_and_comments_aria_label: Ideas and comments
+filter_by_prefix: "Filter by "
+subtheme_suffix: " subtheme"
+subtheme_and_switch_text: " subtheme and switch to theme "
 ----
 
 

@@ -404,7 +404,7 @@ function populate_solutions(theme_number_or_all) {
           let parentThemeId = subtheme.parent_theme_id;
           let themeColorObj = themeColorMap[parentThemeId];
           let themeColor = themeColorObj && themeColorObj.light ? themeColorObj.light : 'rgba(84, 137, 163, 0.50)';
-          let ariaLabel = 'Filter by ' + subtheme.name + ' subtheme and switch to theme ' + parentThemeId;
+          let ariaLabel = '{{ modules.comment_explorer_ui.filter_by_prefix }}' + subtheme.name + '{{ modules.comment_explorer_ui.subtheme_and_switch_text }}' + parentThemeId;
           smarkup += `<div class="comment-tag comment-tag-interactive" role="button" tabindex="0" aria-label="${ariaLabel}" data-parent-theme-id="${parentThemeId}" data-subtheme-id="${stid}" data-solution-id="${solutionId}" style="background-color: ${themeColor};">${subtheme.name}</div>`;
         }
       });
@@ -536,7 +536,7 @@ function populateSubthemeFilter(themeId) {
     tag.setAttribute('role', 'button');
     tag.setAttribute('tabindex', '0');
     tag.setAttribute('aria-pressed', 'false');
-    tag.setAttribute('aria-label', 'Filter by ' + subtheme.name + ' subtheme');
+    tag.setAttribute('aria-label', '{{ modules.comment_explorer_ui.filter_by_prefix }}' + subtheme.name + '{{ modules.comment_explorer_ui.subtheme_suffix }}');
     
     let tagText = document.createElement('span');
     tagText.textContent = subtheme.name;
