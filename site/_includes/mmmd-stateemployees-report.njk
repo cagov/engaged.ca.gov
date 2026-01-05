@@ -5,16 +5,6 @@
 <link rel="stylesheet" href="/css/state-employees.css" />
 <link rel="stylesheet" href="/css/state-employees-report.css" />
 
-{%- macro render_circle_text(theme_module, x, y, base_font_size) -%}
-  {%- set circle_title = theme_module.theme_circle_title if theme_module.theme_circle_title else theme_module.theme_title -%}
-  {%- set lines = circle_title.split('<LF>') -%}
-  {%- set line_height = base_font_size * 1.2 -%}
-  {%- set start_y = y - ((lines.length - 1) * line_height / 2) -%}
-  {%- for line in lines -%}
-    <tspan x="{{ x }}" dy="{% if loop.first %}0{% else %}{{ line_height }}{% endif %}">{{ line }}</tspan>
-  {%- endfor -%}
-{%- endmacro -%}
-
 <section id="e3-report-hero" class="hero">
   <div class="container hero-container">
     <div class="row">
@@ -36,12 +26,6 @@
         <div class="what-we-heard-content">
           {{ modules.what_we_heard.content | safe }}
         </div>
-        {# <div class="why-we-did-it-content">
-          {{ modules.why_we_did_it.content | safe }}
-        </div>
-        <div class="what-we-heard-content">
-          {{ modules.what_we_heard.content | safe }}
-        </div> #}
       </div>
       <div class="col-lg-4">
         <div class="participation-sidebar">
@@ -49,7 +33,6 @@
             <img src="/public/images/staff-icon.svg" alt="{{ modules.participation_numbers.staff_icon_alt }}" />
             <div class="stat-number">{{ modules.participation_numbers.participants_count }}</div>
             <div class="stat-label">{{ modules.participation_numbers.participants_label }}</div>
-            {# <p class="participation-note">{{ modules.participation_numbers.staff_note }}</p> #}
           </div>
           <div class="participation-stat">
             <img src="/public/images/comments-icon.svg" alt="{{ modules.participation_numbers.comments_icon_alt }}" />
@@ -61,10 +44,6 @@
             <div class="stat-number">{{ modules.participation_numbers.ideas_count }}</div>
             <div class="stat-label">{{ modules.participation_numbers.ideas_label }}</div>
           </div>
-          {# <div class="participation-quote">
-            <p>{{ modules.participation_numbers.quote }}</p>
-          </div> #}
-
         </div>
       </div>
     </div>
@@ -179,34 +158,6 @@
             </div>
           </div>
         </div>
-        {% set theme_module = "theme_" + i %}
-        {% set nbr_solutions = modules[theme_module].nbr_solutions | default(0) %}
-        {# {% if nbr_solutions > 0 %}
-          <div id="suggested-solutions-theme-{{ i }}" class="suggested-solutions-theme container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="solutions-header">
-                  <h2>{{ modules.suggested_solutions.title }}</h2>
-                  <p>{{ modules.suggested_solutions.intro_text }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="row solution-cards">
-              {% for j in range(1, nbr_solutions + 1) %}
-                {% set solution_key = "solution_" + j %}
-                {% if modules[theme_module][solution_key] %}
-                  <div class="col-lg-4">
-                    <div class="solution-card">
-                      <div class="solution-title">
-                        <h4>{{ modules[theme_module][solution_key] }}</h4>
-                      </div>
-                    </div>
-                  </div>
-                {% endif %}
-              {% endfor %}
-            </div>
-          </div>
-        {% endif %} #}
       </div>
     {% endfor %}
   </div>

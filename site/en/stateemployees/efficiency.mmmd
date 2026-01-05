@@ -21,12 +21,6 @@ buttonText: Explore all themes
 Over a 10-week engagement, more than 1,400 California state employees shared insights on how to make our government more efficient.
 
 ----
-id: background_context
-----
-
-## Background and context
-
-----
 id: what_we_heard
 title: What state employees said
 ----
@@ -57,18 +51,10 @@ comments_count: 2,477
 comments_label: comments
 ideas_count: 2,590
 ideas_label: ideas
-staff_note: Employees from all levels of seniority and tenure
-quote: "“It's nice to be able to share my opinions and to broaden my perspectives on what it means to be a public servant.”"
 staff_icon_alt: Staff icon
 comments_icon_alt: Comments icon
 ideas_icon_alt: Ideas icon
 ----
-
-----
-id: findings_analysis
-----
-
-## Findings and analysis
 
 ----
 id: themes_we_found
@@ -249,55 +235,11 @@ nbr_ideas: 285
 This theme's comments highlight the need for guidelines and policies. People also talked about how to enforce these policies and ensure accountability.
 
 ----
-id: themes_deep_dive
-title: Themes deep dive
-----
-
-----
-id: suggested_solutions
-title: Employee suggested solutions
-intro_text: Here's a selection of employee ideas on how to improve the efficiency of our state government.
-----
-
-----
-id: solution_1
-title: Create documented procedures and comprehensive resource directory
-----
-
-----
-id: solution_2
-title: Create succession plans for all roles
-----
-
-----
-id: solution_3
-title: Base salary increases on performance reviews
-----
-
-----
-id: solution_4
-title: Pair newer staff with experienced mentors
-----
-
-----
-id: solution_5
-title: Better enable pathways for upward mobility
-----
-
-----
 id: comment_explorer
 title: Explore the ideas
 intro_text: The discussion with state employees yielded 2,450 ideas to help the California state government be more efficient. Many of those ideas translate to actual solutions that can lead to a more efficient state government. Explore the comments, ideas, and potential solutions by theme below.
 intro_text_old: Employees shared 2,450 solutions through their comments. Explore them through these 10 themes and 65 sub-themes.  
 intro_text2: Comments are now closed.
-----
-
-----
-id: theme_navigation
-prev_button_text: Previous theme
-next_button_text: Next theme
-theme_label: Theme
-theme_of: of
 ----
 
 ----
@@ -307,11 +249,6 @@ theme_fallback: Theme
 search_placeholder: Search
 methods_text: We used both our expertise and AI technology to summarize the ideas employees shared.
 methods_link_text: Learn more about our methods.
-sort_date: Date
-sort_alpha: Alpha
-sort_theme: Theme
-sort_likes: Likes
-sort_replies: Replies
 download_button_text: Download all the comments
 comment_count: __N__ ideas
 comments_label: comments
@@ -435,15 +372,7 @@ The comments provided by employees range from having multiple ideas embedded int
 
 In total, our analysis identified 2,590 ideas.
 
-<small id=footnote1><sup>1</sup>482 participants of the total participants didn’t tell us how long they’ve worked for the state.</small>
-
-----
-id: download_data
-title: Download the data
-text_1: The comments dataset does not contain personally identifying information.
-text_2: We have not edited or modified the comments in any way.
-button_text: Download the full dataset
-----
+<small id=footnote1><sup>1</sup>482 participants of the total participants didn't tell us how long they've worked for the state.</small>
 
 ----
 id: signup_engaged

@@ -904,15 +904,9 @@ function populateSubthemeFilter(themeId) {
     let tagText = document.createElement('span');
     tagText.textContent = subtheme.name;
     
-    {# let tagClose = document.createElement('span');
-    tagClose.className = 'subtheme-filter-tag-close';
-    tagClose.textContent = '×';
-    tagClose.setAttribute('aria-label', 'Toggle ' + subtheme.name); #}
-    
     tag.appendChild(tagText);
-    {# tag.appendChild(tagClose); #}
     
-    // Handle click on tag (both the tag itself and the X button)
+    // Handle click on tag to toggle
     tag.addEventListener('click', function(e) {
       e.stopPropagation();
       toggleSubtheme(subtheme.id);
@@ -1844,24 +1838,6 @@ document.addEventListener('DOMContentLoaded', function() {
       updateCustomThemeDisplay();
     });
   }
-  
-  // Initialize custom sort selector (commented out - sort selector disabled for solutions)
-  // initCustomSortSelector();
-  
-  // Set up sort selector dropdown (for native select fallback) - commented out
-  // let sort_selector = document.getElementById('sort-selector-native');
-  // if (sort_selector) {
-  //   sort_selector.value = 'date'; // Set default to date
-  //   sort_selector.addEventListener('change', function() {
-  //     current_sort = this.value;
-  //     // Repopulate solutions with new sort (sorting disabled for solutions)
-  //     if (current_theme_index === 'all') {
-  //       populate_solutions('all');
-  //     } else {
-  //       populate_solutions(current_theme_index);
-  //     }
-  //   });
-  // }
   
   // Set up navigation widget buttons
   let prev_button = document.getElementById('theme-nav-prev');
