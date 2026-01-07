@@ -275,6 +275,18 @@ window.themeColors = {
   }{% if not loop.last %},{% endif %}
   {% endfor %}
 };
+
+// Pass subtheme translations to JavaScript
+window.subthemeTranslations = {};
+{% if modules.subthemes %}
+{% set nbr_subthemes = modules.subthemes.nbr_subthemes | default(65) %}
+{% for i in range(1, nbr_subthemes + 1) %}
+{% set subtheme_key = "subtheme_" + i %}
+{% if modules.subthemes[subtheme_key] %}
+window.subthemeTranslations[{{ i }}] = "{{ modules.subthemes[subtheme_key] }}";
+{% endif %}
+{% endfor %}
+{% endif %}
 </script>
 
 {% endblock %}

@@ -1207,8 +1207,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // Build subtheme map
       if (data.subthemes) {
         data.subthemes.forEach(function(subtheme) {
+          // Use translated name if available and non-empty, otherwise fall back to JSON name
+          let translatedName = (window.subthemeTranslations && window.subthemeTranslations[subtheme.id] && window.subthemeTranslations[subtheme.id].trim() !== '') 
+            ? window.subthemeTranslations[subtheme.id] 
+            : subtheme.name;
           subthemeMap[subtheme.id] = {
-            name: subtheme.name,
+            name: translatedName,
             parent_theme_id: subtheme.parent_theme_id
           };
         });

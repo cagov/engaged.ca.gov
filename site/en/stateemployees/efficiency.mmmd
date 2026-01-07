@@ -239,6 +239,76 @@ subtheme_and_switch_text: " subtheme and switch to theme "
 
 
 ----
+id: subthemes
+nbr_subthemes: 65
+subtheme_1: Procurement
+subtheme_2: Budgeting and funding
+subtheme_3: State-spending audits
+subtheme_4: Contracts and vendors
+subtheme_5: Shared resources
+subtheme_6: Participatory budgeting
+subtheme_7: Expense reimbursement
+subtheme_8: Permits, licensing, and fees
+subtheme_9: Physical infrastructure
+subtheme_10: Internal communication
+subtheme_11: Cross-agency collaboration
+subtheme_12: Knowledge management
+subtheme_13: Statewide directory
+subtheme_14: Internal feedback
+subtheme_15: Plain language
+subtheme_16: Translations
+subtheme_17: Policymaking
+subtheme_18: Accountability and transparency
+subtheme_19: Compliance
+subtheme_20: Org structure and hierarchy
+subtheme_21: Align policy and implementation
+subtheme_22: Leadership review and oversight
+subtheme_23: Manager training
+subtheme_24: Management culture and leadership approach
+subtheme_25: Work culture
+subtheme_26: Risk aversion
+subtheme_27: Growth mindset
+subtheme_28: Trust and openness
+subtheme_29: Inclusion and diversity
+subtheme_30: Networking
+subtheme_31: Consolidate government agencies
+subtheme_32: Process design and methodologies
+subtheme_33: Process documentation
+subtheme_34: Bureaucracy
+subtheme_35: Process delays
+subtheme_36: Digitize processes
+subtheme_37: Policy development process
+subtheme_38: Public service delivery and responsiveness
+subtheme_39: Public participation
+subtheme_40: Public transportation
+subtheme_41: HCD (Human-Centered Design)
+subtheme_42: Public policy initiatives
+subtheme_43: Technology and data modernization
+subtheme_44: AI and LLMs
+subtheme_45: Software and tools
+subtheme_46: State cloud storage
+subtheme_47: Shared data
+subtheme_48: Accessibility
+subtheme_49: Digital services
+subtheme_50: Employee pay and benefits
+subtheme_51: Hiring and recruitment
+subtheme_52: Onboarding new employees
+subtheme_53: Understaffing
+subtheme_54: Career growth
+subtheme_55: Mentorship programs
+subtheme_56: Limited-term positions
+subtheme_57: Job classification
+subtheme_58: Employee performance reviews
+subtheme_59: Qualified staff
+subtheme_60: Employee retention
+subtheme_61: Employee training
+subtheme_62: Remote work and return to office
+subtheme_63: Office management
+subtheme_64: Employee travel
+subtheme_65: Environmental sustainability
+----
+
+----
 id: current_actions
 title: What we're doing
 ----
