@@ -1,0 +1,402 @@
+---
+title: Ulat ng kahusayan
+description: "Hiniling ng Engaged California sa mga empleyado ng estado na magbahagi ng mga ideya upang mas mahusay na maglingkod sa mga residente. Layunin ng inisyatiba na tukuyin ang mga hadlang sa kahusayan at mga paraan upang mapabuti."
+layout: mmmd-stateemployees-report
+parentid: stateemployees
+keywords:
+  - California
+  - mga empleyado ng estado
+  - kahusayan
+tags:
+  - mga pahina
+---
+
+----
+id: hero
+----
+
+# Ang mga empleyado ng estado ay bumubuo ng mas mahusay na California
+
+Sa loob ng 10-linggong pakikipag-ugnayan, mahigit 1,400 na empleyado ng estado ng California ang nagbahagi ng mga pananaw kung paano gawing mas mahusay ang ating gobyerno.
+
+----
+id: what_we_heard
+----
+
+## Sinabi ng mga empleyado ng estado
+
+Narinig namin ang isang malinaw na kuwento. Ang pagpapabuti ng kahusayan ng gobyerno ay nagsasangkot ng higit pa sa pag-update lamang ng teknolohiya o pagbawas ng mga gastos. Nangangailangan ito ng kultura ng pamamahala na nagbibigay-kapangyarihan sa mga empleyado at nagtataguyod ng pagbabago.
+
+Ang mga empleyado ng estado ay nagtutulak ng mga desisyon sa negosyo na naghahatid ng pambihirang, patas na serbisyo. Sila ay mga eksperto sa paksa sa kung ano ang kailangan upang mapatakbo ang gobyerno ng estado.
+
+Nagbahagi sila ng mahusay na mga ideya para sa mga solusyon na karapat-dapat sa aming pansin.
+
+Maaari mong tuklasin ang kanilang mga ideya at komento sa ibaba.
+
+Narito ang ilang halimbawa lamang ng mga ideya na ibinahagi ng mga empleyado:
+
+ - Mga programa ng pagtuturo para sa mga batang pinuno upang mapabuti ang pagpapanatili ng empleyado 
+ - Pagpapasimple kung paano nag-log in at nag-access ang mga tao sa mga kinakailangang sistema ng IT 
+ - Pag-aampon o pagpapabuti ng pamamahala upang mapataas ang pagsunod
+
+
+----
+id: participation_numbers
+participants_count: 1,469
+participants_label: mga kalahok
+comments_count: 2,477
+comments_label: mga komento
+ideas_count: 2,590
+ideas_label: mga ideya
+staff_icon_alt: Icon ng kawani
+comments_icon_alt: Icon ng komento
+ideas_icon_alt: Icon ng ideya
+----
+
+----
+id: themes_we_found
+title: Mga tema ng talakayan
+intro_text: "Kung mas maraming ideya ang ibinahagi tungkol sa isang tema, mas malaki ang bilog."
+nbr_themes: 10
+----
+
+----
+id: theme_1
+theme_title: Pagpapabuti ng proseso
+theme_circle_title: "Pagpapabuti<LF>ng proseso"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 720
+----
+
+Sinasaklaw ng temang ito ang mga pangunahing operasyon ng gobyerno. Kasama sa mga komento ang mga pag-apruba, paggastos, at labis na papeles.
+
+----
+id: theme_2
+theme_title: Pag-rekrut, pagkuha, at pagpapanatili
+theme_circle_title: "Pag-rekrut,<LF>pagkuha, at<LF>pagpapanatili"
+stroke_color: "rgb(197 145 218)"
+light_color: "rgba(197, 145, 218, 0.50)"
+hilite_fill_color: "rgba(197, 145, 218, 0.10)"
+nbr_ideas: 709
+----
+
+Nakatuon ang temang ito sa pagkuha at pagpapanatili ng mahusay na mga empleyado. Kasama sa mga paksa ang pag-ikot ng empleyado, paglago ng karera, at mga programa ng pagtuturo.
+
+----
+id: theme_3
+theme_title: Mga serbisyong nakaharap sa publiko at karanasan ng residente
+theme_circle_title: "Mga serbisyong<LF>nakaharap sa<LF>publiko at<LF>karanasan ng<LF>residente"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 521
+----
+
+Binibigyang-diin ng mga komento ng temang ito ang mga isyu na nagpapabagal sa mga serbisyo ng estado at nagpapahirap sa paggamit ng mga ito. 
+
+----
+id: theme_4
+theme_title: Komunikasyon at pagbabahagi ng kaalaman
+theme_circle_title: "Komunikasyon at<LF>pagbabahagi ng<LF>kaalaman"
+stroke_color: "rgb(117 188 96)"
+light_color: "rgba(117, 188, 96, 0.50)"
+hilite_fill_color: "rgba(117, 188, 96, 0.10)"
+nbr_ideas: 470
+----
+
+Napansin ng mga komento na may mga hiwalay na departamento at na ang komunikasyon sa pagitan ng pamumuno at kawani ay mahina. Sinabi rin ng mga empleyado na may pangangailangan na mapabuti ang mga materyales sa pagsasanay, pakikipagtulungan sa pagitan ng ahensya, at mapanatili ang mahahalagang kaalaman.
+
+----
+id: theme_5
+theme_title: Badyet at mga mapagkukunan
+theme_circle_title: "Badyet at<LF>mga mapagkukunan"
+stroke_color: "rgb(109 72 132)"
+light_color: "rgba(109, 72, 132, 0.50)"
+hilite_fill_color: "rgba(109, 72, 132, 0.10)"
+nbr_ideas: 442
+----
+
+Nakasentro ang mga komento ng temang ito sa paggastos ng kontratista at pamamahala ng pera.
+
+----
+id: theme_6
+theme_title: Teknolohiya at digital na pagbabago
+theme_circle_title: "Teknolohiya at<LF>digital na<LF>pagbabago"
+stroke_color: "rgb(228 93 72)"
+light_color: "rgba(228, 93, 72, 0.50)"
+hilite_fill_color: "rgba(228, 93, 72, 0.10)"
+nbr_ideas: 433
+----
+
+Binibigyang-diin ng temang ito ang mga isyu sa mga lipas na sistema ng IT. Tinalakay ng mga tao ang mahinang karanasan sa mobile. Napag-usapan din nila ang AI, mga sentralisadong platform, at pag-digitize ng mga proseso.
+
+----
+id: theme_7
+theme_title: Estruktura ng organisasyon at kultura
+theme_circle_title: "Estruktura ng<LF>organisasyon at<LF>kultura"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 407
+----
+
+Tinalakay ng mga komento ng temang ito ang mga isyu sa mga layer ng pamamahala, mga redundant na workflow, at paggawa ng desisyon. Tinalakay din ng mga empleyado ang mga paraan upang bumuo ng mas inclusive at welcoming na kultura sa lugar ng trabaho.
+
+----
+id: theme_8
+theme_title: Kultura ng pamamahala at pamumuno
+theme_circle_title: "Kultura ng<LF>pamamahala at<LF>pamumuno"
+stroke_color: "rgb(238 153 48)"
+light_color: "rgba(238, 153, 48, 0.50)"
+hilite_fill_color: "rgba(238, 153, 48, 0.10)"
+nbr_ideas: 322
+----
+
+Tinalakay ng mga komento ng temang ito ang pangangailangan para sa mas mahusay na pagsasanay sa pamumuno at ang mga benepisyo ng iba't ibang mga diskarte sa pamamahala.
+
+----
+id: theme_9
+theme_title: Mga operasyon sa lugar ng trabaho
+theme_circle_title: "Mga operasyon<LF>sa lugar ng<LF>trabaho"
+stroke_color: "rgb(83 202 176)"
+light_color: "rgba(83, 202, 176, 0.50)"
+hilite_fill_color: "rgba(83, 202, 176, 0.10)"
+nbr_ideas: 308
+----
+
+Ang mga komento ng temang ito ay pangunahing sumasaklaw sa remote work at mga patakaran sa pagbabalik sa opisina. Tinalakay din ng mga empleyado ang mga flexible na opsyon sa trabaho, work-life balance, at mga kaugnay na patakaran sa pagkuha.
+
+----
+id: theme_10
+theme_title: Pamamahala at pangangasiwa
+theme_circle_title: "Pamamahala at<LF>pangangasiwa"
+stroke_color: "rgb(242 195 199)"
+light_color: "rgba(242, 195, 199, 0.50)"
+hilite_fill_color: "rgba(242, 195, 199, 0.10)"
+nbr_ideas: 285
+----
+
+Binibigyang-diin ng mga komento ng temang ito ang pangangailangan para sa mga alituntunin at patakaran. Napag-usapan din ng mga tao kung paano ipatupad ang mga patakarang ito at tiyakin ang pananagutan.
+
+----
+id: comment_explorer
+title: Tuklasin ang mga ideya
+----
+
+----
+id: comment_explorer_ui
+all_option: Lahat
+theme_fallback: Tema
+search_placeholder: Maghanap
+methods_text: Ginamit namin ang parehong aming kadalubhasaan at teknolohiya ng AI upang ibuod ang mga ideya na ibinahagi ng mga empleyado.
+methods_link_text: Matuto nang higit pa tungkol sa aming mga pamamaraan.
+download_button_text: I-download ang lahat ng komento
+comment_count: __N__ ideya
+comments_label: mga komento
+ideas_label: mga ideya
+search_label: Maghanap ayon sa keyword
+theme_selector_label: Pumili ng tema
+subtheme_filter_label: I-filter ayon sa subtema
+loading_text: Naglo-load...
+clear_search_label: I-clear ang paghahanap
+no_comments_found: Walang nahanap na komento.
+no_solutions_found: Walang nahanap na solusyon.
+likes_label_capital: Mga Like
+likes_label_lowercase: like
+reply_count_singular: __N__ tugon
+reply_count_plural: __N__ tugon
+expand_prefix: "Palawakin "
+close_prefix: "Isara "
+close_comment: Isara ang komento
+related_comments: Mga kaugnay na komento
+date_at_text: sa
+am_pm_am: ng umaga
+am_pm_pm: ng hapon
+month_jan: Enero
+month_feb: Pebrero
+month_mar: Marso
+month_apr: Abril
+month_may: Mayo
+month_jun: Hunyo
+month_jul: Hulyo
+month_aug: Agosto
+month_sep: Setyembre
+month_oct: Oktubre
+month_nov: Nobyembre
+month_dec: Disyembre
+solutions_count_template: __N__ solusyon
+comments_submitted_template: __N__ komento na isinumite
+view_theme_prefix: "Tingnan "
+bubble_chart_title: Visualization ng mga tema ng talakayan
+subtheme_filters_aria_label: Mga filter ng subtema
+ideas_and_comments_aria_label: Mga ideya at komento
+filter_by_prefix: "I-filter ayon sa "
+subtheme_suffix: " subtema"
+subtheme_and_switch_text: " subtema at lumipat sa tema "
+----
+
+
+----
+id: subthemes
+nbr_subthemes: 65
+subtheme_1: Pagbili
+subtheme_2: Pagbubudget at pagpopondo
+subtheme_3: Mga audit ng paggastos ng estado
+subtheme_4: Mga kontrata at vendor
+subtheme_5: Mga ibinahaging mapagkukunan
+subtheme_6: Participatory budgeting
+subtheme_7: Reimbursement ng gastos
+subtheme_8: Mga permit, lisensya, at bayad
+subtheme_9: Pisikal na imprastraktura
+subtheme_10: Panloob na komunikasyon
+subtheme_11: Pakikipagtulungan sa pagitan ng ahensya
+subtheme_12: Pamamahala ng kaalaman
+subtheme_13: Direktoryo sa buong estado
+subtheme_14: Panloob na feedback
+subtheme_15: Simpleng wika
+subtheme_16: Mga pagsasalin
+subtheme_17: Pagbuo ng patakaran
+subtheme_18: Pananagutan at transparency
+subtheme_19: Pagsunod
+subtheme_20: Estruktura ng org at hierarchy
+subtheme_21: I-align ang patakaran at pagpapatupad
+subtheme_22: Pagsusuri at pangangasiwa ng pamumuno
+subtheme_23: Pagsasanay ng manager
+subtheme_24: Kultura ng pamamahala at diskarte sa pamumuno
+subtheme_25: Kultura sa trabaho
+subtheme_26: Pag-iwas sa panganib
+subtheme_27: Growth mindset
+subtheme_28: Tiwala at pagiging bukas
+subtheme_29: Pagkakasama at pagkakaiba-iba
+subtheme_30: Networking
+subtheme_31: Pagsasama-sama ng mga ahensya ng gobyerno
+subtheme_32: Disenyo ng proseso at mga pamamaraan
+subtheme_33: Dokumentasyon ng proseso
+subtheme_34: Bureaucracy
+subtheme_35: Mga pagkaantala sa proseso
+subtheme_36: I-digitize ang mga proseso
+subtheme_37: Proseso ng pagbuo ng patakaran
+subtheme_38: Paghahatid ng serbisyo sa publiko at pagtugon
+subtheme_39: Pakikilahok ng publiko
+subtheme_40: Pampublikong transportasyon
+subtheme_41: HCD (Human-Centered Design)
+subtheme_42: Mga inisyatiba sa patakaran ng publiko
+subtheme_43: Modernisasyon ng teknolohiya at data
+subtheme_44: AI at LLM
+subtheme_45: Software at mga tool
+subtheme_46: Cloud storage ng estado
+subtheme_47: Ibinahaging data
+subtheme_48: Accessibility
+subtheme_49: Digital na serbisyo
+subtheme_50: Sahod at benepisyo ng empleyado
+subtheme_51: Pagkuha at pag-rekrut
+subtheme_52: Onboarding ng mga bagong empleyado
+subtheme_53: Kakulangan sa tauhan
+subtheme_54: Paglago ng karera
+subtheme_55: Mga programa ng pagtuturo
+subtheme_56: Mga posisyon na may limitadong termino
+subtheme_57: Pag-uuri ng trabaho
+subtheme_58: Mga pagsusuri sa pagganap ng empleyado
+subtheme_59: Kwalipikadong kawani
+subtheme_60: Pagpapanatili ng empleyado
+subtheme_61: Pagsasanay ng empleyado
+subtheme_62: Remote work at pagbabalik sa opisina
+subtheme_63: Pamamahala ng opisina
+subtheme_64: Paglalakbay ng empleyado
+subtheme_65: Pagpapanatili ng kapaligiran
+----
+
+----
+id: current_actions
+title: Ang ginagawa namin
+----
+Nagpapasalamat kami sa mga kontribusyon na ginawa ng mga empleyado ng estado sa pagsisikap na ito. Ang mga tugon mismo ay sumasalamin sa dedikasyon sa kanilang trabaho at sa kanilang mga komunidad.
+
+Maraming empleyado ang nagpahayag ng positibong damdamin na may kaugnayan sa pagtatrabaho para sa estado at pakikilahok sa pakikipag-ugnayan na ito. 
+
+Ibinahagi ng mga empleyado:
+<div class="quote-container">
+<div class="quote">"Maganda na makapagbahagi ng aking mga opinyon upang palawakin ang aking mga pananaw sa kung ano ang ibig sabihin ng maging isang lingkod-bayan."</div>
+<div class="quote">"Ipinagmamalaki kong maging bahagi ng isang bagay na mas malaki kaysa sa aking sarili, paglilingkod sa publiko sa pamamagitan ng makabuluhan at madalas na trabaho sa likod ng mga eksena na tumutulong na mapanatiling maayos ang mahahalagang operasyon."</div>
+<div class="quote">"Mahal ko ang mga relasyon na aking itinayo sa mga masisipag at tapat na empleyado ng estado na nagpapanatili ng mga programa sa estado na ito na magagamit para sa lahat. Patuloy akong namamangha sa aming kakayahang lumago at harapin ang mga hamon na darating sa amin araw-araw."</div>
+</div>
+
+Nais naming gabayan ang mga kontribusyong ito pasulong. Ang mga praktikal na mungkahi ay maaaring makatulong na alisin ang mga hadlang na sanhi ng labis na red tape, lumang teknolohiya, at isang istilo ng pamumuno na masyadong nakatuon sa ranggo at mga titulo. Ang aming layunin ay maging organisado, bukas, at epektibo sa aming oras at mapagkukunan mula sa simula upang ang lahat ng mga magagandang ideyang ito ay maaaring isaalang-alang.
+
+### Governor's Innovation Fellows
+
+Bilang unang hakbang, ang estado ay gumagamit ng pagbabago sa isang paraan na nakasentro sa tao at hinihimok ng resulta.
+
+Noong Hulyo 2025, inilunsad namin ang programa ng [Governor's Innovation Fellows](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/). Layunin ng programang ito na gawing mas mahusay, epektibo, at tumugon sa publiko ang gobyerno.
+
+Patuloy na bubuo ang mga fellows sa natutunan na namin mula sa mga empleyado ng estado.
+
+### Results&period;ca&period;gov
+
+May patuloy na pagsisikap sa buong Estado upang matugunan ang pangangailangan para sa mga kahusayan sa gobyerno. Ang mga tagumpay na ito ay ipinapakita sa website, results.ca.gov. Makikita ng mga bisita sa site ang mga nasusukat na tagumpay na naghahatid ng tunay na epekto.
+
+### Innovation Showcases
+
+Ang Estado ay nag-imbento ng bagong paraan ng paggawa ng negosyo: [Innovation Showcases](https://innovation.ca.gov/our-work/innovation-showcase/). Ito ay isang bagong modelo at diskarte sa pagdadala ng pribadong sektor sa mesa kasama ang kawani ng gobyerno upang mag-co-create sa punto ng kahulugan ng problema, na nagreresulta sa walang gastos at mababang gastos na mga prototype.
+
+
+### Innovation Community of Practice
+
+Ang Innovation Community of Practice ay nag-uugnay sa mga empleyado ng estado na nais subukan ang mga bagong paraan ng paggawa ng mga bagay. Binibigyang-diin at pinalalakas nito ang pagbabago na nangyayari sa buong estado. Bukas ang Community sa lahat ng empleyado ng estado. Matuto nang higit pa at [mag-sign up](https://innovation.ca.gov/our-work/innovation-community-of-practice/) ngayon.
+
+----
+id: methodology
+----
+
+### Paano namin ginawa ang pagsusuri
+
+Pinagsama namin ang kadalubhasaan ng tao at teknolohiya upang maunawaan ang mga ideya na ibinahagi ng mga empleyado. Maraming tao ang nagbahagi ng higit sa isang ideya bawat komento. Ginamit namin ang AI upang makuha ang lahat ng tiyak, maisasagawa na solusyon mula sa bawat pangunahing komento sa platform. Nakatulong ito sa amin na tingnan, i-categorize, at kumilos sa kumpletong listahan ng mga ideya.
+
+Pagkatapos ay sinuri namin ang mga ideya na ibinahagi ng mga empleyado gamit ang isang three-step na diskarte.
+
+Una, sinuri at inuri ng aming user research team ang isang subset ng mga komento. Natukoy nila ang 10 pangunahing tema at mahigit 100 subtema. Itinatag ng prosesong ito ang aming mga paunang kategorya.
+
+Pagkatapos ay gumamit ang aming data team ng machine learning upang gumawa ng topic modeling. Nakatulong ito sa amin na makita ang mga pattern sa lahat ng komento. Inihambing namin ang mga resultang ito sa mga natuklasan ng user research team upang pinuhin at kumpirmahin ang mga tema at subtema. Halimbawa, natuklasan namin na ang ilan sa mga subtema mula sa aming paunang pagsusuri ay magkatulad sa isa't isa. Natagpuan din namin ang mga bagong o nawawalang tema.
+
+Ginamit namin ang AI upang ilapat ang mga tema sa lahat ng pagsusumite. Pagkatapos, pinuhin namin ang mga subtema sa pamamagitan ng pagsusuri ng tao. Sinuri ng aming pagsusuri na tumpak na itinalaga ng AI ang bawat tema at subtema sa hindi bababa sa isang pagsusumite. Naghanap din kami ng anumang karagdagang tema na napalampas sa unang dalawang hakbang. Ang proseso ay sa huli ay nagresulta sa isang balanseng hanay ng 65 subtema.
+
+Ang hybrid na diskarte na ito ay nagpapahintulot sa amin na magtrabaho sa scale. Nagawa rin naming mapanatili ang konteksto at nuance na kailangan ng mga gumagawa ng desisyon.
+
+Maaari mong makita ang code, AI prompts, at mga modelo na ginamit namin [upang iproseso at suriin ang data para sa pakikipag-ugnayan na ito sa GitHub](https://github.com/cagov/caldata-engaged-california).
+
+----
+id: about_the_data
+----
+
+### Tungkol sa data
+
+1,469 na kalahok ang nagbahagi ng mga ideya sa amin sa panahon ng pakikipag-ugnayan na ito. Ang mga empleyadong ito ay pumili at nag-post ng hindi bababa sa isang komento.
+
+Ang mga kalahok ay mga empleyado na may iba't ibang tenures<sup>[1](#footnote1)</sup>:
+
+- 45% ng mga sumasagot ang nag-ulat ng 10 o higit pang taon ng tenure ng estado
+- 55% ng mga sumasagot ang nag-ulat ng mas mababa sa 10 taon ng tenure ng estado
+
+Sa mga empleyadong lumahok:
+
+- 42% ang nagsabing hindi sila supervisor o manager
+- 23% ang nagsabing sila ay mga manager o supervisor
+- Mas mababa sa 1% ang nagsabing sila ay director o mas mataas
+
+Maraming kalahok ang hindi sumagot sa tanong, pumili na huwag sabihin, o nagsabing hindi sila sigurado kung aling posisyon ang pipiliin.
+
+Ang mga komento na ibinigay ng mga empleyado ay mula sa pagkakaroon ng maraming ideya na naka-embed sa isang komento hanggang sa pagiging isang simpleng "+1" sa mga komento ng ibang kalahok.
+
+Sa kabuuan, natukoy ng aming pagsusuri ang 2,590 na ideya.
+
+<small id=footnote1><sup>1</sup>482 na kalahok ng kabuuang kalahok ang hindi sinabi sa amin kung gaano katagal sila nagtrabaho para sa estado.</small>
+
+----
+id: signup_engaged
+title: Mag-sign up upang manatiling nakikipag-ugnayan
+text: Bigyan kami ng iyong email upang matuto tungkol sa mga darating na pagkakataon.
+button_text: Mag-sign up
+----
+

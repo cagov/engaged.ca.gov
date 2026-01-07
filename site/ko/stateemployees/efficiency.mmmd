@@ -1,0 +1,402 @@
+---
+title: 효율성 보고서
+description: "Engaged California는 주 직원들에게 주민들에게 더 나은 서비스를 제공하기 위한 아이디어를 공유하도록 요청했습니다. 이 계획은 효율성의 장벽과 개선 방법을 식별하는 것을 목표로 했습니다."
+layout: mmmd-stateemployees-report
+parentid: stateemployees
+keywords:
+  - California
+  - 주 직원
+  - 효율성
+tags:
+  - 페이지
+---
+
+----
+id: hero
+----
+
+# 주 직원들이 더 나은 캘리포니아를 만들어가고 있습니다
+
+10주간의 참여 기간 동안 1,400명 이상의 캘리포니아 주 직원들이 정부를 더 효율적으로 만드는 방법에 대한 통찰을 공유했습니다.
+
+----
+id: what_we_heard
+----
+
+## 주 직원들이 말한 내용
+
+우리는 명확한 이야기를 들었습니다. 정부 효율성 향상은 단순히 기술을 업데이트하거나 비용을 절감하는 것 이상입니다. 직원들에게 권한을 부여하고 혁신을 촉진하는 관리 문화가 필요합니다.
+
+주 직원들은 탁월하고 공정한 서비스를 제공하는 비즈니스 결정을 주도합니다. 그들은 주 정부를 운영하는 데 필요한 것에 대한 주제 전문가입니다.
+
+그들은 우리의 주목을 받을 만한 솔루션에 대한 훌륭한 아이디어를 공유했습니다.
+
+아래에서 그들의 아이디어와 의견을 탐색할 수 있습니다.
+
+직원들이 공유한 아이디어의 몇 가지 예는 다음과 같습니다:
+
+ - 직원 유지를 개선하기 위한 젊은 리더를 위한 멘토십 프로그램 
+ - 사람들이 필요한 IT 시스템에 로그인하고 액세스하는 방법 단순화 
+ - 규정 준수를 높이기 위한 거버넌스 채택 또는 개선
+
+
+----
+id: participation_numbers
+participants_count: 1,469
+participants_label: 참가자
+comments_count: 2,477
+comments_label: 의견
+ideas_count: 2,590
+ideas_label: 아이디어
+staff_icon_alt: 직원 아이콘
+comments_icon_alt: 의견 아이콘
+ideas_icon_alt: 아이디어 아이콘
+----
+
+----
+id: themes_we_found
+title: 토론 주제
+intro_text: "주제에 대해 공유된 아이디어가 많을수록 원이 더 커집니다."
+nbr_themes: 10
+----
+
+----
+id: theme_1
+theme_title: 프로세스 개선
+theme_circle_title: "프로세스<LF>개선"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 720
+----
+
+이 주제는 기본적인 정부 운영을 다룹니다. 의견에는 승인, 지출 및 과도한 서류 작업이 포함되었습니다.
+
+----
+id: theme_2
+theme_title: 채용, 고용 및 유지
+theme_circle_title: "채용,<LF>고용 및<LF>유지"
+stroke_color: "rgb(197 145 218)"
+light_color: "rgba(197, 145, 218, 0.50)"
+hilite_fill_color: "rgba(197, 145, 218, 0.10)"
+nbr_ideas: 709
+----
+
+이 주제는 좋은 직원을 고용하고 유지하는 데 중점을 둡니다. 주제에는 직원 이직, 경력 성장 및 멘토십 프로그램이 포함되었습니다.
+
+----
+id: theme_3
+theme_title: 공공 서비스 및 주민 경험
+theme_circle_title: "공공 서비스 및<LF>주민 경험"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 521
+----
+
+이 주제의 의견은 주 서비스를 느리게 만들고 사용하기 어렵게 만드는 문제를 강조합니다. 
+
+----
+id: theme_4
+theme_title: 커뮤니케이션 및 지식 공유
+theme_circle_title: "커뮤니케이션 및<LF>지식 공유"
+stroke_color: "rgb(117 188 96)"
+light_color: "rgba(117, 188, 96, 0.50)"
+hilite_fill_color: "rgba(117, 188, 96, 0.10)"
+nbr_ideas: 470
+----
+
+의견은 고립된 부서가 있고 리더십과 직원 간의 커뮤니케이션이 열악하다고 지적했습니다. 직원들은 또한 교육 자료 개선, 기관 간 협력, 필수 지식 유지의 필요성을 말했습니다.
+
+----
+id: theme_5
+theme_title: 예산 및 자원
+theme_circle_title: "예산 및<LF>자원"
+stroke_color: "rgb(109 72 132)"
+light_color: "rgba(109, 72, 132, 0.50)"
+hilite_fill_color: "rgba(109, 72, 132, 0.10)"
+nbr_ideas: 442
+----
+
+이 주제의 의견은 계약자 지출 및 자금 관리에 중점을 둡니다.
+
+----
+id: theme_6
+theme_title: 기술 및 디지털 혁신
+theme_circle_title: "기술 및<LF>디지털 혁신"
+stroke_color: "rgb(228 93 72)"
+light_color: "rgba(228, 93, 72, 0.50)"
+hilite_fill_color: "rgba(228, 93, 72, 0.10)"
+nbr_ideas: 433
+----
+
+이 주제는 구식 IT 시스템의 문제를 강조합니다. 사람들은 열악한 모바일 경험에 대해 논의했습니다. 그들은 또한 AI, 중앙화된 플랫폼 및 프로세스 디지털화에 대해서도 이야기했습니다.
+
+----
+id: theme_7
+theme_title: 조직 구조 및 문화
+theme_circle_title: "조직 구조 및<LF>문화"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 407
+----
+
+이 주제의 의견은 관리 계층, 중복 워크플로우 및 의사 결정의 문제를 다룹니다. 직원들은 또한 더 포용적이고 환영하는 직장 문화를 구축하는 방법에 대해 논의했습니다.
+
+----
+id: theme_8
+theme_title: 관리 문화 및 리더십
+theme_circle_title: "관리 문화 및<LF>리더십"
+stroke_color: "rgb(238 153 48)"
+light_color: "rgba(238, 153, 48, 0.50)"
+hilite_fill_color: "rgba(238, 153, 48, 0.10)"
+nbr_ideas: 322
+----
+
+이 주제의 의견은 더 나은 리더십 교육의 필요성과 다양한 관리 접근 방식의 이점에 대해 논의합니다.
+
+----
+id: theme_9
+theme_title: 직장 운영
+theme_circle_title: "직장<LF>운영"
+stroke_color: "rgb(83 202 176)"
+light_color: "rgba(83, 202, 176, 0.50)"
+hilite_fill_color: "rgba(83, 202, 176, 0.10)"
+nbr_ideas: 308
+----
+
+이 주제의 의견은 주로 원격 근무 및 사무실 복귀 정책을 다뤘습니다. 직원들은 또한 유연한 근무 옵션, 일과 삶의 균형, 관련 고용 정책에 대해 논의했습니다.
+
+----
+id: theme_10
+theme_title: 거버넌스 및 감독
+theme_circle_title: "거버넌스 및<LF>감독"
+stroke_color: "rgb(242 195 199)"
+light_color: "rgba(242, 195, 199, 0.50)"
+hilite_fill_color: "rgba(242, 195, 199, 0.10)"
+nbr_ideas: 285
+----
+
+이 주제의 의견은 지침과 정책의 필요성을 강조합니다. 사람들은 또한 이러한 정책을 시행하고 책임을 보장하는 방법에 대해서도 이야기했습니다.
+
+----
+id: comment_explorer
+title: 아이디어 탐색
+----
+
+----
+id: comment_explorer_ui
+all_option: 모두
+theme_fallback: 주제
+search_placeholder: 검색
+methods_text: 우리는 전문 지식과 AI 기술을 모두 사용하여 직원들이 공유한 아이디어를 요약했습니다.
+methods_link_text: 우리의 방법에 대해 자세히 알아보세요.
+download_button_text: 모든 의견 다운로드
+comment_count: __N__ 아이디어
+comments_label: 의견
+ideas_label: 아이디어
+search_label: 키워드로 검색
+theme_selector_label: 주제 선택
+subtheme_filter_label: 하위 주제별 필터
+loading_text: 로딩 중...
+clear_search_label: 검색 지우기
+no_comments_found: 의견을 찾을 수 없습니다.
+no_solutions_found: 솔루션을 찾을 수 없습니다.
+likes_label_capital: 좋아요
+likes_label_lowercase: 좋아요
+reply_count_singular: __N__ 답변
+reply_count_plural: __N__ 답변
+expand_prefix: "확장 "
+close_prefix: "닫기 "
+close_comment: 의견 닫기
+related_comments: 관련 의견
+date_at_text: 에
+am_pm_am: 오전
+am_pm_pm: 오후
+month_jan: 1월
+month_feb: 2월
+month_mar: 3월
+month_apr: 4월
+month_may: 5월
+month_jun: 6월
+month_jul: 7월
+month_aug: 8월
+month_sep: 9월
+month_oct: 10월
+month_nov: 11월
+month_dec: 12월
+solutions_count_template: __N__ 솔루션
+comments_submitted_template: __N__ 의견 제출됨
+view_theme_prefix: "보기 "
+bubble_chart_title: 토론 주제 시각화
+subtheme_filters_aria_label: 하위 주제 필터
+ideas_and_comments_aria_label: 아이디어 및 의견
+filter_by_prefix: "필터링 기준: "
+subtheme_suffix: " 하위 주제"
+subtheme_and_switch_text: " 하위 주제 및 주제로 전환 "
+----
+
+
+----
+id: subthemes
+nbr_subthemes: 65
+subtheme_1: 조달
+subtheme_2: 예산 편성 및 자금 조달
+subtheme_3: 주 지출 감사
+subtheme_4: 계약 및 공급업체
+subtheme_5: 공유 자원
+subtheme_6: 참여형 예산 편성
+subtheme_7: 비용 상환
+subtheme_8: 허가, 라이선스 및 수수료
+subtheme_9: 물리적 인프라
+subtheme_10: 내부 커뮤니케이션
+subtheme_11: 기관 간 협력
+subtheme_12: 지식 관리
+subtheme_13: 주 전체 디렉토리
+subtheme_14: 내부 피드백
+subtheme_15: 쉬운 언어
+subtheme_16: 번역
+subtheme_17: 정책 수립
+subtheme_18: 책임 및 투명성
+subtheme_19: 규정 준수
+subtheme_20: 조직 구조 및 계층 구조
+subtheme_21: 정책과 구현 정렬
+subtheme_22: 리더십 검토 및 감독
+subtheme_23: 관리자 교육
+subtheme_24: 관리 문화 및 리더십 접근 방식
+subtheme_25: 직장 문화
+subtheme_26: 위험 회피
+subtheme_27: 성장 마인드셋
+subtheme_28: 신뢰와 개방성
+subtheme_29: 포용성과 다양성
+subtheme_30: 네트워킹
+subtheme_31: 정부 기관 통합
+subtheme_32: 프로세스 설계 및 방법론
+subtheme_33: 프로세스 문서화
+subtheme_34: 관료제
+subtheme_35: 프로세스 지연
+subtheme_36: 프로세스 디지털화
+subtheme_37: 정책 개발 프로세스
+subtheme_38: 공공 서비스 제공 및 대응성
+subtheme_39: 공공 참여
+subtheme_40: 대중 교통
+subtheme_41: HCD (인간 중심 설계)
+subtheme_42: 공공 정책 이니셔티브
+subtheme_43: 기술 및 데이터 현대화
+subtheme_44: AI 및 LLM
+subtheme_45: 소프트웨어 및 도구
+subtheme_46: 주 클라우드 스토리지
+subtheme_47: 공유 데이터
+subtheme_48: 접근성
+subtheme_49: 디지털 서비스
+subtheme_50: 직원 급여 및 혜택
+subtheme_51: 채용 및 모집
+subtheme_52: 신입 직원 온보딩
+subtheme_53: 인력 부족
+subtheme_54: 경력 성장
+subtheme_55: 멘토십 프로그램
+subtheme_56: 제한 기간 직책
+subtheme_57: 직무 분류
+subtheme_58: 직원 성과 평가
+subtheme_59: 자격을 갖춘 직원
+subtheme_60: 직원 유지
+subtheme_61: 직원 교육
+subtheme_62: 원격 근무 및 사무실 복귀
+subtheme_63: 사무실 관리
+subtheme_64: 직원 출장
+subtheme_65: 환경 지속 가능성
+----
+
+----
+id: current_actions
+title: 우리가 하고 있는 일
+----
+주 직원들이 이 노력에 기여한 것에 대해 감사드립니다. 응답 자체가 그들의 작업과 커뮤니티에 대한 헌신을 반영합니다.
+
+많은 직원들이 주를 위해 일하고 이 참여에 참여하는 것과 관련된 긍정적인 감정을 표현했습니다. 
+
+직원들이 공유한 내용:
+<div class="quote-container">
+<div class="quote">"공무원이 된다는 것이 무엇을 의미하는지에 대한 내 관점을 넓히기 위해 내 의견을 공유할 수 있어서 좋습니다."</div>
+<div class="quote">"나는 자신보다 더 큰 무언가의 일부가 되어 필수 운영을 원활하게 유지하는 데 도움이 되는 의미 있고 종종 무대 뒤에서의 작업을 통해 대중에게 봉사하는 것을 자랑스럽게 생각합니다."</div>
+<div class="quote">"나는 이 주의 프로그램을 모든 사람이 이용할 수 있도록 유지하는 열심히 일하고 헌신적인 주 직원들과 구축한 관계를 사랑합니다. 우리가 매일 다가오는 도전에 맞서 성장하고 대응할 수 있는 능력에 계속 놀라움을 느낍니다."</div>
+</div>
+
+우리는 이러한 기여를 앞으로 이끌어가고 싶습니다. 실용적인 제안은 너무 많은 규제, 오래된 기술, 계급과 직함에 너무 집중하는 리더십 스타일로 인한 장애물을 제거하는 데 도움이 될 수 있습니다. 우리의 목표는 처음부터 시간과 자원을 체계적이고 개방적이며 효과적으로 사용하여 이러한 모든 좋은 아이디어를 고려할 수 있도록 하는 것입니다.
+
+### 주지사 혁신 펠로우
+
+첫 번째 단계로, 주는 인간 중심적이고 결과 중심적인 방식으로 혁신을 활용하고 있습니다.
+
+2025년 7월, 우리는 [주지사 혁신 펠로우](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/) 프로그램을 시작했습니다. 이 프로그램은 정부를 더 효율적이고 효과적이며 대중에게 반응하도록 만드는 것을 목표로 합니다.
+
+펠로우들은 주 직원들로부터 이미 배운 것을 바탕으로 계속 구축할 것입니다.
+
+### Results&period;ca&period;gov
+
+정부의 효율성에 대한 필요를 충족시키기 위해 주 전역에서 지속적인 노력이 있습니다. 이러한 성과는 results.ca.gov 웹사이트에 전시되어 있습니다. 사이트 방문자는 실제 영향을 제공하는 측정 가능한 성과를 볼 수 있습니다.
+
+### 혁신 쇼케이스
+
+주는 비즈니스를 수행하는 새로운 방법을 혁신했습니다: [혁신 쇼케이스](https://innovation.ca.gov/our-work/innovation-showcase/). 이것은 문제 정의 시점에서 정부 직원과 함께 민간 부문을 테이블에 가져와 공동 창조하는 새로운 모델과 접근 방식으로, 무료 및 저비용 프로토타입을 만듭니다.
+
+
+### 혁신 실천 커뮤니티
+
+혁신 실천 커뮤니티는 새로운 방식으로 일을 시도하고 싶은 주 직원들을 연결합니다. 주 전역에서 일어나고 있는 혁신을 부각시키고 증폭시킵니다. 커뮤니티는 모든 주 직원에게 열려 있습니다. 오늘 더 알아보고 [가입하세요](https://innovation.ca.gov/our-work/innovation-community-of-practice/).
+
+----
+id: methodology
+----
+
+### 분석을 수행한 방법
+
+우리는 인간의 전문 지식과 기술을 결합하여 직원들이 공유한 아이디어를 이해했습니다. 많은 사람들이 댓글당 하나 이상의 아이디어를 공유했습니다. 우리는 AI를 사용하여 플랫폼의 각 주요 댓글에서 모든 구체적이고 실행 가능한 솔루션을 추출했습니다. 이것은 우리가 아이디어의 전체 목록을 보고, 분류하고, 행동하는 데 도움이 되었습니다.
+
+그런 다음 우리는 3단계 접근 방식을 사용하여 직원들이 공유한 아이디어를 분석했습니다.
+
+먼저, 우리의 사용자 연구 팀은 댓글의 하위 집합을 검토하고 분류했습니다. 그들은 10개의 주요 주제와 100개 이상의 하위 주제를 식별했습니다. 이 프로세스는 우리의 초기 범주를 확립했습니다.
+
+그런 다음 우리의 데이터 팀은 기계 학습을 사용하여 주제 모델링을 수행했습니다. 이것은 우리가 모든 댓글에서 패턴을 발견하는 데 도움이 되었습니다. 우리는 이러한 결과를 사용자 연구 팀의 결과와 비교하여 주제와 하위 주제를 정제하고 확인했습니다. 예를 들어, 우리는 초기 검토의 일부 하위 주제가 서로 유사하다는 것을 발견했습니다. 우리는 또한 새로운 또는 누락된 주제를 찾았습니다.
+
+우리는 AI를 사용하여 모든 제출물에 주제를 적용했습니다. 그런 다음 인간 검토를 통해 하위 주제를 정제했습니다. 우리의 검토는 AI가 각 주제와 하위 주제를 최소한 하나의 제출물에 정확하게 할당했는지 확인했습니다. 우리는 또한 처음 두 단계에서 놓친 추가 주제를 찾았습니다. 이 프로세스는 궁극적으로 65개의 하위 주제의 균형 잡힌 세트를 만들었습니다.
+
+이 하이브리드 접근 방식은 우리가 규모로 작업할 수 있게 했습니다. 우리는 또한 의사 결정권자가 필요로 하는 맥락과 뉘앙스를 유지할 수 있었습니다.
+
+우리가 사용한 코드, AI 프롬프트 및 모델을 [이 참여를 위한 데이터를 처리하고 분석하기 위해 GitHub에서](https://github.com/cagov/caldata-engaged-california) 볼 수 있습니다.
+
+----
+id: about_the_data
+----
+
+### 데이터 정보
+
+1,469명의 참가자가 이 참여 기간 동안 우리와 아이디어를 공유했습니다. 이러한 직원들은 선택하여 최소한 하나의 댓글을 게시했습니다.
+
+참가자들은 다양한 근속 기간을 가진 직원들이었습니다<sup>[1](#footnote1)</sup>:
+
+- 응답자의 45%가 10년 이상의 주 근속 기간을 보고했습니다
+- 응답자의 55%가 10년 미만의 주 근속 기간을 보고했습니다
+
+참여한 직원 중:
+
+- 42%는 감독자나 관리자가 아니라고 말했습니다
+- 23%는 관리자나 감독자라고 말했습니다
+- 1% 미만이 이사 이상이라고 말했습니다
+
+여러 참가자가 질문에 응답하지 않았거나, 말하지 않기로 선택했거나, 어떤 직책을 선택해야 할지 확실하지 않다고 말했습니다.
+
+직원들이 제공한 댓글은 하나의 댓글에 여러 아이디어가 포함된 것부터 다른 참가자의 댓글에 단순한 "+1"까지 다양합니다.
+
+전체적으로 우리의 분석은 2,590개의 아이디어를 식별했습니다.
+
+<small id=footnote1><sup>1</sup>총 참가자 중 482명이 주를 위해 얼마나 오래 일했는지 우리에게 말하지 않았습니다.</small>
+
+----
+id: signup_engaged
+title: 참여를 유지하려면 가입하세요
+text: 다가오는 기회에 대해 알아보려면 이메일을 제공해주세요.
+button_text: 가입
+----
+

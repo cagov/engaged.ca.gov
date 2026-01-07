@@ -1,0 +1,402 @@
+---
+title: Informe de eficiencia
+description: "Engaged California pidió a los empleados estatales que compartieran ideas para servir mejor a los residentes. La iniciativa buscó identificar barreras a la eficiencia y formas de mejorar."
+layout: mmmd-stateemployees-report
+parentid: stateemployees
+keywords:
+  - California
+  - empleados estatales
+  - eficiencia
+tags:
+  - páginas
+---
+
+----
+id: hero
+----
+
+# Los empleados estatales están dando forma a una mejor California
+
+Durante un compromiso de 10 semanas, más de 1,400 empleados estatales de California compartieron ideas sobre cómo hacer que nuestro gobierno sea más eficiente.
+
+----
+id: what_we_heard
+----
+
+## Lo que dijeron los empleados estatales
+
+Escuchamos una historia clara. Mejorar la eficiencia del gobierno implica más que solo actualizar la tecnología o reducir costos. Requiere una cultura de gestión que empodere a los empleados y fomente la innovación.
+
+Los empleados estatales impulsan decisiones comerciales que brindan servicios excepcionales y equitativos. Son expertos en la materia sobre lo que se necesita para operar el gobierno estatal.
+
+Compartieron excelentes ideas para soluciones que merecen nuestra atención.
+
+Puede explorar sus ideas y comentarios a continuación.
+
+Aquí hay solo algunos ejemplos de las ideas que compartieron los empleados:
+
+ - Programas de mentoría para jóvenes líderes para mejorar la retención de empleados 
+ - Simplificar cómo las personas inician sesión y acceden a los sistemas de TI necesarios 
+ - Adoptar o mejorar la gobernanza para aumentar el cumplimiento
+
+
+----
+id: participation_numbers
+participants_count: 1,469
+participants_label: participantes
+comments_count: 2,477
+comments_label: comentarios
+ideas_count: 2,590
+ideas_label: ideas
+staff_icon_alt: Icono de personal
+comments_icon_alt: Icono de comentarios
+ideas_icon_alt: Icono de ideas
+----
+
+----
+id: themes_we_found
+title: Temas de discusión
+intro_text: "Cuanto más ideas se compartan sobre un tema, más grande será el círculo."
+nbr_themes: 10
+----
+
+----
+id: theme_1
+theme_title: Mejora de procesos
+theme_circle_title: "Mejora de<LF>procesos"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 720
+----
+
+Este tema cubre las operaciones básicas del gobierno. Los comentarios cubrieron aprobaciones, gastos y papeleo excesivo.
+
+----
+id: theme_2
+theme_title: Reclutamiento, contratación y retención
+theme_circle_title: "Reclutamiento,<LF>contratación y<LF>retención"
+stroke_color: "rgb(197 145 218)"
+light_color: "rgba(197, 145, 218, 0.50)"
+hilite_fill_color: "rgba(197, 145, 218, 0.10)"
+nbr_ideas: 709
+----
+
+Este tema se centra en contratar y mantener buenos empleados. Los temas incluyeron rotación de empleados, crecimiento profesional y programas de mentoría.
+
+----
+id: theme_3
+theme_title: Servicios públicos y experiencia del residente
+theme_circle_title: "Servicios públicos<LF>y experiencia<LF>del residente"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 521
+----
+
+Los comentarios de este tema destacan los problemas que ralentizan los servicios estatales y los hacen difíciles de usar. 
+
+----
+id: theme_4
+theme_title: Comunicación e intercambio de conocimientos
+theme_circle_title: "Comunicación e<LF>intercambio de<LF>conocimientos"
+stroke_color: "rgb(117 188 96)"
+light_color: "rgba(117, 188, 96, 0.50)"
+hilite_fill_color: "rgba(117, 188, 96, 0.10)"
+nbr_ideas: 470
+----
+
+Los comentarios señalaron que hay departamentos aislados y que la comunicación entre el liderazgo y el personal es deficiente. Los empleados también dijeron que existe la necesidad de mejorar los materiales de capacitación, la colaboración entre agencias y retener el conocimiento esencial.
+
+----
+id: theme_5
+theme_title: Presupuesto y recursos
+theme_circle_title: "Presupuesto y<LF>recursos"
+stroke_color: "rgb(109 72 132)"
+light_color: "rgba(109, 72, 132, 0.50)"
+hilite_fill_color: "rgba(109, 72, 132, 0.10)"
+nbr_ideas: 442
+----
+
+Los comentarios de este tema se centran en el gasto de contratistas y la gestión del dinero.
+
+----
+id: theme_6
+theme_title: Tecnología e innovación digital
+theme_circle_title: "Tecnología e<LF>innovación digital"
+stroke_color: "rgb(228 93 72)"
+light_color: "rgba(228, 93, 72, 0.50)"
+hilite_fill_color: "rgba(228, 93, 72, 0.10)"
+nbr_ideas: 433
+----
+
+Este tema destaca los problemas con los sistemas de TI obsoletos. Las personas discutieron experiencias móviles deficientes. También hablaron sobre IA, plataformas centralizadas y digitalización de procesos.
+
+----
+id: theme_7
+theme_title: Estructura y cultura organizacional
+theme_circle_title: "Estructura y<LF>cultura<LF>organizacional"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 407
+----
+
+Los comentarios de este tema abordan problemas con capas de gestión, flujos de trabajo redundantes y toma de decisiones. Los empleados también discutieron formas de construir una cultura laboral más inclusiva y acogedora.
+
+----
+id: theme_8
+theme_title: Cultura de gestión y liderazgo
+theme_circle_title: "Cultura de<LF>gestión y<LF>liderazgo"
+stroke_color: "rgb(238 153 48)"
+light_color: "rgba(238, 153, 48, 0.50)"
+hilite_fill_color: "rgba(238, 153, 48, 0.10)"
+nbr_ideas: 322
+----
+
+Los comentarios de este tema discuten la necesidad de una mejor capacitación en liderazgo y los beneficios de variar los enfoques de gestión.
+
+----
+id: theme_9
+theme_title: Operaciones del lugar de trabajo
+theme_circle_title: "Operaciones del<LF>lugar de trabajo"
+stroke_color: "rgb(83 202 176)"
+light_color: "rgba(83, 202, 176, 0.50)"
+hilite_fill_color: "rgba(83, 202, 176, 0.10)"
+nbr_ideas: 308
+----
+
+Los comentarios de este tema cubrieron principalmente el trabajo remoto y las políticas de regreso a la oficina. Los empleados también discutieron opciones de trabajo flexibles, equilibrio entre trabajo y vida personal, y políticas de contratación relacionadas.
+
+----
+id: theme_10
+theme_title: Gobernanza y supervisión
+theme_circle_title: "Gobernanza y<LF>supervisión"
+stroke_color: "rgb(242 195 199)"
+light_color: "rgba(242, 195, 199, 0.50)"
+hilite_fill_color: "rgba(242, 195, 199, 0.10)"
+nbr_ideas: 285
+----
+
+Los comentarios de este tema destacan la necesidad de pautas y políticas. Las personas también hablaron sobre cómo hacer cumplir estas políticas y garantizar la responsabilidad.
+
+----
+id: comment_explorer
+title: Explora las ideas
+----
+
+----
+id: comment_explorer_ui
+all_option: Todos
+theme_fallback: Tema
+search_placeholder: Buscar
+methods_text: Utilizamos tanto nuestra experiencia como tecnología de IA para resumir las ideas que compartieron los empleados.
+methods_link_text: Obtenga más información sobre nuestros métodos.
+download_button_text: Descargar todos los comentarios
+comment_count: __N__ ideas
+comments_label: comentarios
+ideas_label: ideas
+search_label: Buscar por palabra clave
+theme_selector_label: Seleccionar un tema
+subtheme_filter_label: Filtrar por subtema
+loading_text: Cargando...
+clear_search_label: Limpiar búsqueda
+no_comments_found: No se encontraron comentarios.
+no_solutions_found: No se encontraron soluciones.
+likes_label_capital: Me gusta
+likes_label_lowercase: me gusta
+reply_count_singular: __N__ respuesta
+reply_count_plural: __N__ respuestas
+expand_prefix: "Expandir "
+close_prefix: "Cerrar "
+close_comment: Cerrar comentario
+related_comments: Comentarios relacionados
+date_at_text: a las
+am_pm_am: am
+am_pm_pm: pm
+month_jan: enero
+month_feb: febrero
+month_mar: marzo
+month_apr: abril
+month_may: mayo
+month_jun: junio
+month_jul: julio
+month_aug: agosto
+month_sep: septiembre
+month_oct: octubre
+month_nov: noviembre
+month_dec: diciembre
+solutions_count_template: __N__ soluciones
+comments_submitted_template: __N__ comentarios enviados
+view_theme_prefix: "Ver "
+bubble_chart_title: Visualización de temas de discusión
+subtheme_filters_aria_label: Filtros de subtemas
+ideas_and_comments_aria_label: Ideas y comentarios
+filter_by_prefix: "Filtrar por "
+subtheme_suffix: " subtema"
+subtheme_and_switch_text: " subtema y cambiar al tema "
+----
+
+
+----
+id: subthemes
+nbr_subthemes: 65
+subtheme_1: Adquisiciones
+subtheme_2: Presupuestación y financiamiento
+subtheme_3: Auditorías de gasto estatal
+subtheme_4: Contratos y proveedores
+subtheme_5: Recursos compartidos
+subtheme_6: Presupuesto participativo
+subtheme_7: Reembolso de gastos
+subtheme_8: Permisos, licencias y tarifas
+subtheme_9: Infraestructura física
+subtheme_10: Comunicación interna
+subtheme_11: Colaboración entre agencias
+subtheme_12: Gestión del conocimiento
+subtheme_13: Directorio estatal
+subtheme_14: Retroalimentación interna
+subtheme_15: Lenguaje claro
+subtheme_16: Traducciones
+subtheme_17: Formulación de políticas
+subtheme_18: Rendición de cuentas y transparencia
+subtheme_19: Cumplimiento
+subtheme_20: Estructura y jerarquía organizacional
+subtheme_21: Alinear política e implementación
+subtheme_22: Revisión y supervisión del liderazgo
+subtheme_23: Capacitación de gerentes
+subtheme_24: Cultura de gestión y enfoque de liderazgo
+subtheme_25: Cultura laboral
+subtheme_26: Aversión al riesgo
+subtheme_27: Mentalidad de crecimiento
+subtheme_28: Confianza y apertura
+subtheme_29: Inclusión y diversidad
+subtheme_30: Redes
+subtheme_31: Consolidar agencias gubernamentales
+subtheme_32: Diseño de procesos y metodologías
+subtheme_33: Documentación de procesos
+subtheme_34: Burocracia
+subtheme_35: Retrasos en procesos
+subtheme_36: Digitalizar procesos
+subtheme_37: Proceso de desarrollo de políticas
+subtheme_38: Prestación de servicios públicos y capacidad de respuesta
+subtheme_39: Participación pública
+subtheme_40: Transporte público
+subtheme_41: DCD (Diseño Centrado en el Ser Humano)
+subtheme_42: Iniciativas de política pública
+subtheme_43: Modernización tecnológica y de datos
+subtheme_44: IA y LLM
+subtheme_45: Software y herramientas
+subtheme_46: Almacenamiento en la nube estatal
+subtheme_47: Datos compartidos
+subtheme_48: Accesibilidad
+subtheme_49: Servicios digitales
+subtheme_50: Salario y beneficios de empleados
+subtheme_51: Contratación y reclutamiento
+subtheme_52: Incorporación de nuevos empleados
+subtheme_53: Escasez de personal
+subtheme_54: Crecimiento profesional
+subtheme_55: Programas de mentoría
+subtheme_56: Puestos de plazo limitado
+subtheme_57: Clasificación de trabajos
+subtheme_58: Evaluaciones de desempeño de empleados
+subtheme_59: Personal calificado
+subtheme_60: Retención de empleados
+subtheme_61: Capacitación de empleados
+subtheme_62: Trabajo remoto y regreso a la oficina
+subtheme_63: Gestión de oficina
+subtheme_64: Viajes de empleados
+subtheme_65: Sostenibilidad ambiental
+----
+
+----
+id: current_actions
+title: Lo que estamos haciendo
+----
+Estamos agradecidos por las contribuciones que los empleados estatales hicieron a este esfuerzo. Las respuestas mismas reflejan dedicación a su trabajo y sus comunidades.
+
+Varios empleados expresaron un sentimiento positivo relacionado con trabajar para el estado y participar en este compromiso. 
+
+Los empleados compartieron:
+<div class="quote-container">
+<div class="quote">"Es agradable poder compartir mis opiniones para ampliar mis perspectivas sobre lo que significa ser un servidor público."</div>
+<div class="quote">"Estoy orgulloso de ser parte de algo más grande que yo mismo, sirviendo al público a través de un trabajo significativo y a menudo detrás de escena que ayuda a mantener las operaciones esenciales funcionando sin problemas."</div>
+<div class="quote">"Amo las relaciones que he construido con los empleados estatales trabajadores y dedicados que mantienen los programas en este estado disponibles para todos. Continuamente me sorprende nuestra capacidad de crecer y enfrentar los desafíos que nos llegan todos los días."</div>
+</div>
+
+Queremos guiar estas contribuciones hacia adelante. Las sugerencias prácticas pueden ayudar a eliminar obstáculos causados por demasiada burocracia, tecnología antigua y un estilo de liderazgo que se enfoca demasiado en rango y títulos. Nuestro objetivo es ser organizados, abiertos y efectivos con nuestro tiempo y recursos desde el principio para que todas estas buenas ideas puedan ser consideradas.
+
+### Becarios de Innovación del Gobernador
+
+Como primer paso, el estado está aprovechando la innovación de una manera centrada en el ser humano y orientada a resultados.
+
+En julio de 2025, lanzamos el programa [Becarios de Innovación del Gobernador](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/). Este programa tiene como objetivo hacer que el gobierno sea más eficiente, efectivo y receptivo al público.
+
+Los becarios continuarán construyendo sobre lo que ya hemos aprendido de los empleados estatales.
+
+### Results&period;ca&period;gov
+
+Hay esfuerzos en curso en todo el estado para satisfacer la necesidad de eficiencias en el gobierno. Estos logros se muestran en el sitio web, results.ca.gov. Los visitantes del sitio verán logros medibles que están generando impactos reales.
+
+### Muestras de Innovación
+
+El estado ha innovado una nueva forma de hacer negocios: [Muestras de Innovación](https://innovation.ca.gov/our-work/innovation-showcase/). Este es un nuevo modelo y enfoque para llevar al sector privado a la mesa con el personal del gobierno para co-crear en el punto de definición del problema, resultando en prototipos sin costo y de bajo costo.
+
+
+### Comunidad de Práctica de Innovación
+
+La Comunidad de Práctica de Innovación conecta a los empleados estatales que quieren probar nuevas formas de hacer las cosas. Destaca y amplifica la innovación que está ocurriendo en todo el estado. La Comunidad está abierta a todos los empleados estatales. Obtenga más información y [regístrese](https://innovation.ca.gov/our-work/innovation-community-of-practice/) hoy.
+
+----
+id: methodology
+----
+
+### Cómo hicimos el análisis
+
+Combinamos experiencia humana y tecnología para entender las ideas que compartieron los empleados. Muchas personas compartieron más de una idea por comentario. Utilizamos IA para extraer todas las soluciones específicas y accionables de cada comentario principal en la plataforma. Esto nos ayudó a ver, categorizar y actuar sobre la lista completa de ideas.
+
+Luego analizamos las ideas que compartieron los empleados usando un enfoque de tres pasos.
+
+Primero, nuestro equipo de investigación de usuarios revisó y clasificó un subconjunto de comentarios. Identificaron 10 temas principales y más de 100 subtemas. Este proceso estableció nuestras categorías iniciales.
+
+Nuestro equipo de datos luego usó aprendizaje automático para hacer modelado de temas. Esto nos ayudó a detectar patrones en todos los comentarios. Comparamos estos resultados con los hallazgos del equipo de investigación de usuarios para refinar y confirmar los temas y subtemas. Por ejemplo, encontramos que algunos de los subtemas de nuestra revisión inicial eran similares entre sí. También encontramos temas nuevos o faltantes.
+
+Usamos IA para aplicar los temas a todas las presentaciones. Luego, refinamos los subtemas a través de revisión humana. Nuestra revisión verificó que la IA asignó con precisión cada tema y subtema a al menos una presentación. También buscamos cualquier tema adicional que se perdió durante los primeros dos pasos. El proceso finalmente resultó en un conjunto equilibrado de 65 subtemas.
+
+Este enfoque híbrido nos permitió trabajar a escala. También pudimos mantener el contexto y los matices que los tomadores de decisiones necesitan.
+
+Puede ver el código, los prompts de IA y los modelos que usamos [para procesar y analizar datos para este compromiso en GitHub](https://github.com/cagov/caldata-engaged-california).
+
+----
+id: about_the_data
+----
+
+### Acerca de los datos
+
+1,469 participantes compartieron ideas con nosotros durante este compromiso. Estos empleados optaron por participar y publicaron al menos un comentario.
+
+Los participantes eran empleados con diversas antigüedades<sup>[1](#footnote1)</sup>:
+
+- 45% de los encuestados reportaron 10 o más años de antigüedad estatal
+- 55% de los encuestados reportaron menos de 10 años de antigüedad estatal
+
+De los empleados que participaron:
+
+- 42% dijeron que no eran supervisores ni gerentes
+- 23% dijeron que eran gerentes o supervisores
+- Menos del 1% dijeron que eran directores o superiores
+
+Varios participantes no respondieron la pregunta, optaron por no decir, o dijeron que no estaban seguros de qué posición seleccionar.
+
+Los comentarios proporcionados por los empleados van desde tener múltiples ideas incorporadas en un comentario hasta ser un simple "+1" en los comentarios de otros participantes.
+
+En total, nuestro análisis identificó 2,590 ideas.
+
+<small id=footnote1><sup>1</sup>482 participantes del total de participantes no nos dijeron cuánto tiempo han trabajado para el estado.</small>
+
+----
+id: signup_engaged
+title: Regístrese para mantenerse comprometido
+text: Déjenos su correo electrónico para conocer las próximas oportunidades.
+button_text: Regístrese
+----
+

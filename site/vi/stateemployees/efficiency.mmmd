@@ -1,0 +1,402 @@
+---
+title: Báo cáo hiệu quả
+description: "Engaged California đã yêu cầu nhân viên nhà nước chia sẻ ý tưởng để phục vụ cư dân tốt hơn. Sáng kiến này nhằm xác định các rào cản đối với hiệu quả và cách cải thiện."
+layout: mmmd-stateemployees-report
+parentid: stateemployees
+keywords:
+  - California
+  - nhân viên nhà nước
+  - hiệu quả
+tags:
+  - trang
+---
+
+----
+id: hero
+----
+
+# Nhân viên nhà nước đang định hình một California tốt hơn
+
+Trong một cuộc tham gia kéo dài 10 tuần, hơn 1,400 nhân viên nhà nước California đã chia sẻ những hiểu biết về cách làm cho chính phủ của chúng ta hiệu quả hơn.
+
+----
+id: what_we_heard
+----
+
+## Những gì nhân viên nhà nước nói
+
+Chúng tôi đã nghe một câu chuyện rõ ràng. Cải thiện hiệu quả của chính phủ liên quan đến nhiều hơn là chỉ cập nhật công nghệ hoặc cắt giảm chi phí. Nó đòi hỏi một văn hóa quản lý trao quyền cho nhân viên và thúc đẩy đổi mới.
+
+Nhân viên nhà nước thúc đẩy các quyết định kinh doanh cung cấp dịch vụ xuất sắc và công bằng. Họ là các chuyên gia về những gì cần thiết để vận hành chính phủ nhà nước.
+
+Họ đã chia sẻ những ý tưởng tuyệt vời cho các giải pháp xứng đáng được chúng tôi chú ý.
+
+Bạn có thể khám phá ý tưởng và nhận xét của họ bên dưới.
+
+Đây chỉ là một vài ví dụ về các ý tưởng mà nhân viên đã chia sẻ:
+
+ - Chương trình cố vấn cho các nhà lãnh đạo trẻ để cải thiện việc giữ chân nhân viên 
+ - Đơn giản hóa cách mọi người đăng nhập và truy cập các hệ thống CNTT cần thiết 
+ - Áp dụng hoặc cải thiện quản trị để tăng tuân thủ
+
+
+----
+id: participation_numbers
+participants_count: 1,469
+participants_label: người tham gia
+comments_count: 2,477
+comments_label: nhận xét
+ideas_count: 2,590
+ideas_label: ý tưởng
+staff_icon_alt: Biểu tượng nhân viên
+comments_icon_alt: Biểu tượng nhận xét
+ideas_icon_alt: Biểu tượng ý tưởng
+----
+
+----
+id: themes_we_found
+title: Chủ đề thảo luận
+intro_text: "Càng nhiều ý tưởng được chia sẻ về một chủ đề, vòng tròn sẽ càng lớn."
+nbr_themes: 10
+----
+
+----
+id: theme_1
+theme_title: Cải thiện quy trình
+theme_circle_title: "Cải thiện<LF>quy trình"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 720
+----
+
+Chủ đề này bao gồm các hoạt động cơ bản của chính phủ. Các nhận xét bao gồm phê duyệt, chi tiêu và thủ tục giấy tờ quá mức.
+
+----
+id: theme_2
+theme_title: Tuyển dụng, thuê và giữ chân
+theme_circle_title: "Tuyển dụng,<LF>thuê và<LF>giữ chân"
+stroke_color: "rgb(197 145 218)"
+light_color: "rgba(197, 145, 218, 0.50)"
+hilite_fill_color: "rgba(197, 145, 218, 0.10)"
+nbr_ideas: 709
+----
+
+Chủ đề này tập trung vào việc thuê và giữ chân nhân viên tốt. Các chủ đề bao gồm tỷ lệ thay đổi nhân viên, tăng trưởng nghề nghiệp và chương trình cố vấn.
+
+----
+id: theme_3
+theme_title: Dịch vụ công và trải nghiệm cư dân
+theme_circle_title: "Dịch vụ công<LF>và trải nghiệm<LF>cư dân"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 521
+----
+
+Các nhận xét của chủ đề này làm nổi bật các vấn đề làm chậm dịch vụ nhà nước và khiến chúng khó sử dụng. 
+
+----
+id: theme_4
+theme_title: Giao tiếp và chia sẻ kiến thức
+theme_circle_title: "Giao tiếp và<LF>chia sẻ<LF>kiến thức"
+stroke_color: "rgb(117 188 96)"
+light_color: "rgba(117, 188, 96, 0.50)"
+hilite_fill_color: "rgba(117, 188, 96, 0.10)"
+nbr_ideas: 470
+----
+
+Các nhận xét lưu ý rằng có các bộ phận riêng biệt và giao tiếp giữa lãnh đạo và nhân viên kém. Nhân viên cũng nói rằng cần cải thiện tài liệu đào tạo, hợp tác giữa các cơ quan và giữ lại kiến thức thiết yếu.
+
+----
+id: theme_5
+theme_title: Ngân sách và tài nguyên
+theme_circle_title: "Ngân sách và<LF>tài nguyên"
+stroke_color: "rgb(109 72 132)"
+light_color: "rgba(109, 72, 132, 0.50)"
+hilite_fill_color: "rgba(109, 72, 132, 0.10)"
+nbr_ideas: 442
+----
+
+Các nhận xét của chủ đề này tập trung vào chi tiêu của nhà thầu và quản lý tiền.
+
+----
+id: theme_6
+theme_title: Công nghệ và đổi mới kỹ thuật số
+theme_circle_title: "Công nghệ và<LF>đổi mới<LF>kỹ thuật số"
+stroke_color: "rgb(228 93 72)"
+light_color: "rgba(228, 93, 72, 0.50)"
+hilite_fill_color: "rgba(228, 93, 72, 0.10)"
+nbr_ideas: 433
+----
+
+Chủ đề này làm nổi bật các vấn đề với hệ thống CNTT lỗi thời. Mọi người thảo luận về trải nghiệm di động kém. Họ cũng nói về AI, nền tảng tập trung và số hóa quy trình.
+
+----
+id: theme_7
+theme_title: Cấu trúc tổ chức và văn hóa
+theme_circle_title: "Cấu trúc tổ chức<LF>và văn hóa"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 407
+----
+
+Các nhận xét của chủ đề này giải quyết các vấn đề với các lớp quản lý, quy trình làm việc dư thừa và ra quyết định. Nhân viên cũng thảo luận về cách xây dựng văn hóa nơi làm việc toàn diện và chào đón hơn.
+
+----
+id: theme_8
+theme_title: Văn hóa quản lý và lãnh đạo
+theme_circle_title: "Văn hóa quản lý<LF>và lãnh đạo"
+stroke_color: "rgb(238 153 48)"
+light_color: "rgba(238, 153, 48, 0.50)"
+hilite_fill_color: "rgba(238, 153, 48, 0.10)"
+nbr_ideas: 322
+----
+
+Các nhận xét của chủ đề này thảo luận về nhu cầu đào tạo lãnh đạo tốt hơn và lợi ích của các cách tiếp cận quản lý khác nhau.
+
+----
+id: theme_9
+theme_title: Hoạt động nơi làm việc
+theme_circle_title: "Hoạt động<LF>nơi làm việc"
+stroke_color: "rgb(83 202 176)"
+light_color: "rgba(83, 202, 176, 0.50)"
+hilite_fill_color: "rgba(83, 202, 176, 0.10)"
+nbr_ideas: 308
+----
+
+Các nhận xét của chủ đề này chủ yếu bao gồm làm việc từ xa và chính sách quay lại văn phòng. Nhân viên cũng thảo luận về các tùy chọn làm việc linh hoạt, cân bằng công việc-cuộc sống và các chính sách tuyển dụng liên quan.
+
+----
+id: theme_10
+theme_title: Quản trị và giám sát
+theme_circle_title: "Quản trị và<LF>giám sát"
+stroke_color: "rgb(242 195 199)"
+light_color: "rgba(242, 195, 199, 0.50)"
+hilite_fill_color: "rgba(242, 195, 199, 0.10)"
+nbr_ideas: 285
+----
+
+Các nhận xét của chủ đề này làm nổi bật nhu cầu về hướng dẫn và chính sách. Mọi người cũng nói về cách thực thi các chính sách này và đảm bảo trách nhiệm giải trình.
+
+----
+id: comment_explorer
+title: Khám phá các ý tưởng
+----
+
+----
+id: comment_explorer_ui
+all_option: Tất cả
+theme_fallback: Chủ đề
+search_placeholder: Tìm kiếm
+methods_text: Chúng tôi đã sử dụng cả chuyên môn và công nghệ AI của mình để tóm tắt các ý tưởng mà nhân viên chia sẻ.
+methods_link_text: Tìm hiểu thêm về phương pháp của chúng tôi.
+download_button_text: Tải xuống tất cả nhận xét
+comment_count: __N__ ý tưởng
+comments_label: nhận xét
+ideas_label: ý tưởng
+search_label: Tìm kiếm theo từ khóa
+theme_selector_label: Chọn chủ đề
+subtheme_filter_label: Lọc theo chủ đề phụ
+loading_text: Đang tải...
+clear_search_label: Xóa tìm kiếm
+no_comments_found: Không tìm thấy nhận xét.
+no_solutions_found: Không tìm thấy giải pháp.
+likes_label_capital: Thích
+likes_label_lowercase: thích
+reply_count_singular: __N__ phản hồi
+reply_count_plural: __N__ phản hồi
+expand_prefix: "Mở rộng "
+close_prefix: "Đóng "
+close_comment: Đóng nhận xét
+related_comments: Nhận xét liên quan
+date_at_text: lúc
+am_pm_am: sáng
+am_pm_pm: chiều
+month_jan: Tháng Một
+month_feb: Tháng Hai
+month_mar: Tháng Ba
+month_apr: Tháng Tư
+month_may: Tháng Năm
+month_jun: Tháng Sáu
+month_jul: Tháng Bảy
+month_aug: Tháng Tám
+month_sep: Tháng Chín
+month_oct: Tháng Mười
+month_nov: Tháng Mười Một
+month_dec: Tháng Mười Hai
+solutions_count_template: __N__ giải pháp
+comments_submitted_template: __N__ nhận xét đã gửi
+view_theme_prefix: "Xem "
+bubble_chart_title: Trực quan hóa chủ đề thảo luận
+subtheme_filters_aria_label: Bộ lọc chủ đề phụ
+ideas_and_comments_aria_label: Ý tưởng và nhận xét
+filter_by_prefix: "Lọc theo "
+subtheme_suffix: " chủ đề phụ"
+subtheme_and_switch_text: " chủ đề phụ và chuyển sang chủ đề "
+----
+
+
+----
+id: subthemes
+nbr_subthemes: 65
+subtheme_1: Mua sắm
+subtheme_2: Lập ngân sách và tài trợ
+subtheme_3: Kiểm toán chi tiêu nhà nước
+subtheme_4: Hợp đồng và nhà cung cấp
+subtheme_5: Tài nguyên dùng chung
+subtheme_6: Lập ngân sách tham gia
+subtheme_7: Hoàn trả chi phí
+subtheme_8: Giấy phép, cấp phép và phí
+subtheme_9: Hạ tầng vật lý
+subtheme_10: Giao tiếp nội bộ
+subtheme_11: Hợp tác giữa các cơ quan
+subtheme_12: Quản lý kiến thức
+subtheme_13: Thư mục toàn tiểu bang
+subtheme_14: Phản hồi nội bộ
+subtheme_15: Ngôn ngữ đơn giản
+subtheme_16: Bản dịch
+subtheme_17: Hoạch định chính sách
+subtheme_18: Trách nhiệm giải trình và minh bạch
+subtheme_19: Tuân thủ
+subtheme_20: Cấu trúc tổ chức và hệ thống phân cấp
+subtheme_21: Căn chỉnh chính sách và triển khai
+subtheme_22: Xem xét và giám sát lãnh đạo
+subtheme_23: Đào tạo quản lý
+subtheme_24: Văn hóa quản lý và cách tiếp cận lãnh đạo
+subtheme_25: Văn hóa làm việc
+subtheme_26: Né tránh rủi ro
+subtheme_27: Tư duy tăng trưởng
+subtheme_28: Tin cậy và cởi mở
+subtheme_29: Hòa nhập và đa dạng
+subtheme_30: Kết nối mạng
+subtheme_31: Hợp nhất các cơ quan chính phủ
+subtheme_32: Thiết kế quy trình và phương pháp
+subtheme_33: Tài liệu quy trình
+subtheme_34: Quan liêu
+subtheme_35: Trì hoãn quy trình
+subtheme_36: Số hóa quy trình
+subtheme_37: Quy trình phát triển chính sách
+subtheme_38: Cung cấp dịch vụ công và phản ứng
+subtheme_39: Tham gia công cộng
+subtheme_40: Giao thông công cộng
+subtheme_41: HCD (Thiết kế lấy con người làm trung tâm)
+subtheme_42: Sáng kiến chính sách công
+subtheme_43: Hiện đại hóa công nghệ và dữ liệu
+subtheme_44: AI và LLM
+subtheme_45: Phần mềm và công cụ
+subtheme_46: Lưu trữ đám mây nhà nước
+subtheme_47: Dữ liệu dùng chung
+subtheme_48: Khả năng tiếp cận
+subtheme_49: Dịch vụ kỹ thuật số
+subtheme_50: Lương và phúc lợi nhân viên
+subtheme_51: Thuê và tuyển dụng
+subtheme_52: Đào tạo nhân viên mới
+subtheme_53: Thiếu nhân viên
+subtheme_54: Tăng trưởng nghề nghiệp
+subtheme_55: Chương trình cố vấn
+subtheme_56: Vị trí có thời hạn
+subtheme_57: Phân loại công việc
+subtheme_58: Đánh giá hiệu suất nhân viên
+subtheme_59: Nhân viên đủ tiêu chuẩn
+subtheme_60: Giữ chân nhân viên
+subtheme_61: Đào tạo nhân viên
+subtheme_62: Làm việc từ xa và quay lại văn phòng
+subtheme_63: Quản lý văn phòng
+subtheme_64: Đi công tác nhân viên
+subtheme_65: Bền vững môi trường
+----
+
+----
+id: current_actions
+title: Những gì chúng tôi đang làm
+----
+Chúng tôi biết ơn những đóng góp mà nhân viên nhà nước đã thực hiện cho nỗ lực này. Bản thân các phản hồi phản ánh sự cống hiến cho công việc và cộng đồng của họ.
+
+Một số nhân viên đã bày tỏ cảm xúc tích cực liên quan đến việc làm việc cho nhà nước và tham gia vào cuộc tham gia này. 
+
+Nhân viên chia sẻ:
+<div class="quote-container">
+<div class="quote">"Thật tuyệt khi có thể chia sẻ ý kiến của tôi để mở rộng quan điểm của tôi về ý nghĩa của việc trở thành một công chức."</div>
+<div class="quote">"Tôi tự hào là một phần của điều gì đó lớn hơn bản thân, phục vụ công chúng thông qua công việc có ý nghĩa và thường xuyên ở hậu trường giúp các hoạt động thiết yếu hoạt động trơn tru."</div>
+<div class="quote">"Tôi yêu những mối quan hệ mà tôi đã xây dựng với những nhân viên nhà nước chăm chỉ và tận tâm, những người giữ cho các chương trình trong tiểu bang này có sẵn cho mọi người. Tôi liên tục ngạc nhiên về khả năng của chúng tôi để phát triển và đáp ứng những thách thức đến với chúng tôi mỗi ngày."</div>
+</div>
+
+Chúng tôi muốn hướng dẫn những đóng góp này tiến lên phía trước. Các đề xuất thực tế có thể giúp loại bỏ các rào cản do quá nhiều thủ tục hành chính, công nghệ cũ và phong cách lãnh đạo tập trung quá nhiều vào cấp bậc và chức danh. Mục tiêu của chúng tôi là có tổ chức, cởi mở và hiệu quả với thời gian và tài nguyên của chúng tôi ngay từ đầu để tất cả những ý tưởng tốt này có thể được xem xét.
+
+### Nghiên cứu sinh Đổi mới của Thống đốc
+
+Bước đầu tiên, nhà nước đang tận dụng đổi mới theo cách lấy con người làm trung tâm và hướng đến kết quả.
+
+Vào tháng 7 năm 2025, chúng tôi đã khởi động chương trình [Nghiên cứu sinh Đổi mới của Thống đốc](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/). Chương trình này nhằm làm cho chính phủ hiệu quả hơn, hiệu quả hơn và phản ứng với công chúng.
+
+Các nghiên cứu sinh sẽ tiếp tục xây dựng dựa trên những gì chúng tôi đã học được từ nhân viên nhà nước.
+
+### Results&period;ca&period;gov
+
+Có những nỗ lực đang diễn ra trên toàn Tiểu bang để đáp ứng nhu cầu về hiệu quả trong chính phủ. Những thành công này được trưng bày trên trang web, results.ca.gov. Khách truy cập trang web sẽ thấy những thành tựu có thể đo lường đang mang lại tác động thực sự.
+
+### Triển lãm Đổi mới
+
+Tiểu bang đã đổi mới một cách mới để kinh doanh: [Triển lãm Đổi mới](https://innovation.ca.gov/our-work/innovation-showcase/). Đây là một mô hình và cách tiếp cận mới để đưa khu vực tư nhân đến bàn với nhân viên chính phủ để đồng sáng tạo tại điểm định nghĩa vấn đề, dẫn đến các nguyên mẫu không chi phí và chi phí thấp.
+
+
+### Cộng đồng Thực hành Đổi mới
+
+Cộng đồng Thực hành Đổi mới kết nối các nhân viên nhà nước muốn thử những cách mới để làm việc. Nó làm nổi bật và khuếch đại sự đổi mới đang diễn ra trên toàn tiểu bang. Cộng đồng mở cửa cho tất cả nhân viên nhà nước. Tìm hiểu thêm và [đăng ký](https://innovation.ca.gov/our-work/innovation-community-of-practice/) ngay hôm nay.
+
+----
+id: methodology
+----
+
+### Cách chúng tôi thực hiện phân tích
+
+Chúng tôi kết hợp chuyên môn của con người và công nghệ để hiểu các ý tưởng mà nhân viên chia sẻ. Nhiều người chia sẻ nhiều hơn một ý tưởng mỗi nhận xét. Chúng tôi đã sử dụng AI để rút ra tất cả các giải pháp cụ thể, có thể hành động từ mỗi nhận xét chính trên nền tảng. Điều này giúp chúng tôi xem, phân loại và hành động trên danh sách đầy đủ các ý tưởng.
+
+Sau đó chúng tôi phân tích các ý tưởng mà nhân viên chia sẻ bằng cách sử dụng cách tiếp cận ba bước.
+
+Đầu tiên, nhóm nghiên cứu người dùng của chúng tôi đã xem xét và phân loại một tập hợp con các nhận xét. Họ đã xác định 10 chủ đề chính và hơn 100 chủ đề phụ. Quá trình này thiết lập các danh mục ban đầu của chúng tôi.
+
+Sau đó nhóm dữ liệu của chúng tôi đã sử dụng học máy để mô hình hóa chủ đề. Điều này giúp chúng tôi phát hiện các mẫu trong tất cả các nhận xét. Chúng tôi đã so sánh những kết quả này với những phát hiện của nhóm nghiên cứu người dùng để tinh chỉnh và xác nhận các chủ đề và chủ đề phụ. Ví dụ, chúng tôi phát hiện ra rằng một số chủ đề phụ từ đánh giá ban đầu của chúng tôi tương tự nhau. Chúng tôi cũng tìm thấy các chủ đề mới hoặc bị thiếu.
+
+Chúng tôi đã sử dụng AI để áp dụng các chủ đề cho tất cả các bài nộp. Sau đó, chúng tôi tinh chỉnh các chủ đề phụ thông qua đánh giá của con người. Đánh giá của chúng tôi đã kiểm tra rằng AI đã gán chính xác mỗi chủ đề và chủ đề phụ cho ít nhất một bài nộp. Chúng tôi cũng tìm kiếm bất kỳ chủ đề bổ sung nào bị bỏ lỡ trong hai bước đầu tiên. Quá trình này cuối cùng dẫn đến một bộ cân bằng gồm 65 chủ đề phụ.
+
+Cách tiếp cận lai này cho phép chúng tôi làm việc ở quy mô. Chúng tôi cũng có thể duy trì ngữ cảnh và sắc thái mà những người ra quyết định cần.
+
+Bạn có thể xem mã, lời nhắc AI và các mô hình mà chúng tôi đã sử dụng [để xử lý và phân tích dữ liệu cho cuộc tham gia này trên GitHub](https://github.com/cagov/caldata-engaged-california).
+
+----
+id: about_the_data
+----
+
+### Về dữ liệu
+
+1,469 người tham gia đã chia sẻ ý tưởng với chúng tôi trong cuộc tham gia này. Những nhân viên này đã chọn tham gia và đăng ít nhất một nhận xét.
+
+Những người tham gia là nhân viên có thời gian phục vụ khác nhau<sup>[1](#footnote1)</sup>:
+
+- 45% người trả lời báo cáo 10 năm trở lên phục vụ nhà nước
+- 55% người trả lời báo cáo ít hơn 10 năm phục vụ nhà nước
+
+Trong số các nhân viên tham gia:
+
+- 42% nói rằng họ không phải là giám sát viên hoặc quản lý
+- 23% nói rằng họ là quản lý hoặc giám sát viên
+- Ít hơn 1% nói rằng họ là giám đốc trở lên
+
+Một số người tham gia không trả lời câu hỏi, chọn không nói, hoặc nói rằng họ không chắc chọn vị trí nào.
+
+Các nhận xét do nhân viên cung cấp dao động từ việc có nhiều ý tưởng được nhúng vào một nhận xét đến việc chỉ đơn giản là "+1" trên nhận xét của những người tham gia khác.
+
+Tổng cộng, phân tích của chúng tôi đã xác định 2,590 ý tưởng.
+
+<small id=footnote1><sup>1</sup>482 người tham gia trong tổng số người tham gia đã không cho chúng tôi biết họ đã làm việc cho nhà nước bao lâu.</small>
+
+----
+id: signup_engaged
+title: Đăng ký để tiếp tục tham gia
+text: Cung cấp email của bạn để tìm hiểu về các cơ hội sắp tới.
+button_text: Đăng ký
+----
+
