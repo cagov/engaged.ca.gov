@@ -185,7 +185,7 @@ section#themes-deep-dive .theme-selector-selected .theme-selector-circle {
 }
 
 .theme-description {
-    min-height: 9rem;
+    min-height: 2rem;
 }
 
 .theme-description p {
