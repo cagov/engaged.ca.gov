@@ -1,5 +1,56 @@
 /* state-employees-report.css */
 
+/* generic styles */
+.style-h1 {
+    font-weight: 900;
+    font-size: 47px;
+    @media (max-width: 720px) {
+      font-size: 37px;
+    }
+}
+.style-h2 {
+    font-weight: 900;
+    font-size: 37px;
+    color: #0f152f;
+    @media (max-width: 720px) {
+      font-size: 27px;
+    }
+}
+.style-h3 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #0f152f;
+    @media (max-width: 720px) {
+      font-size: 23px;
+    }
+}
+.style-body-text {
+    font-weight: 400;
+    font-size: 23px;
+    @media (max-width: 720px) {
+      font-size: 18px;
+    }
+}
+.style-strong-body-text,.style-body-text strong {
+    font-weight: 600;
+    font-size: 23px;
+    @media (max-width: 720px) {
+      font-size: 18px;
+    }
+}
+.style-small-body-text {
+    font-weight: 400;
+    font-size: 18px;
+}
+.style-strong-small-body-text,.style-small-body-text strong {
+    font-weight: 600;
+    font-size: 18px;
+}
+.style-callout-text {
+    font-weight: 600;
+    font-size: 20px;
+}
+
 section#e3-report-hero {
     background: #1C2745;
     overflow-y: hidden;
@@ -31,7 +82,6 @@ section#what-we-heard {
 }
 
 .what-we-heard-content {
-    font-size: 23px;
     line-height: 1.75;
 }
 
@@ -51,11 +101,17 @@ section#what-we-heard {
     line-height: 1;
     color: #2d3a4a;
     margin-bottom: 0.5rem;
+    @media (max-width: 720px) {
+        font-size: 33px;
+    }
 }
 
 .stat-label {
     font-size: 23px;
     color: #666;
+    @media (max-width: 720px) {
+        font-size: 18px;
+    }
 }
 
 .quote {
@@ -69,7 +125,6 @@ section#what-we-heard {
     padding-bottom: 1rem;
     font-style: italic;
     color: #333;
-    font-size: 23px;
 }
 
 .quote-container {
@@ -98,7 +153,6 @@ section#themes-we-found {
 }
 
 .themes-intro p {
-    font-size: 23px;
     margin-bottom: 2rem;
 }
 
@@ -189,7 +243,6 @@ section#themes-deep-dive .theme-selector-selected .theme-selector-circle {
 }
 
 .theme-description p {
-    font-size: 23px;
     line-height: 1.75;
     margin-bottom: 1.5rem;
 }
@@ -266,6 +319,9 @@ section#comment-explorer {
     font-size: 30px;
     font-weight: 700;
     user-select: none;
+    @media (max-width: 720px) {
+        font-size: 18px;
+    }
 }
 
 .theme-selector-custom:focus .theme-selector-selected,
@@ -336,7 +392,10 @@ section#comment-explorer {
     gap: 0.75rem;
     font-size: 23px;
     transition: background-color 0.2s ease;
-}
+    @media (max-width: 720px) {
+        font-size: 18px;
+    }
+  }
 
 .theme-selector-option:hover {
     background-color: #F6F7FA;
@@ -365,6 +424,9 @@ section#comment-explorer {
     line-height: 1.2;
     margin: 0;
     height: 62.5px; /* force to match neighboring containers */
+    @media (max-width: 720px) {
+        font-size: 18px;
+    }
 }
 
 .search-input:focus {

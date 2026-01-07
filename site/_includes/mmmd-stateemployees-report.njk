@@ -19,7 +19,7 @@
   </div>
 </section>
 
-<section id="what-we-heard">
+<section id="what-we-heard" class="style-body-text">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
@@ -55,7 +55,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="themes-intro">
+        <div class="themes-intro style-body-text">
           <h2>{{ modules.themes_we_found.title }}</h2>
           <p class="themes-intro-text">{{ modules.themes_we_found.intro_text }}</p>
         </div>
@@ -155,7 +155,7 @@
       <div id="theme-{{ i }}-content" class="theme-content{% if i == 1 %} active{% endif %}" data-theme="{{ i }}">
         <div class="row">
           <div class="col-lg-8">
-            <div class="theme-description">
+            <div class="theme-description style-body-text">
               <p>{{ modules["theme_" + i].content | safe }}</p>
             </div>
           </div>
