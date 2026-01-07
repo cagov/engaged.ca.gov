@@ -190,8 +190,8 @@ id: comment_explorer_ui
 all_option: Բոլորը
 theme_fallback: Թեմա
 search_placeholder: Որոնում
-methods_text: Մենք օգտագործեցինք և՛ մեր փորձագիտությունը, և՛ AI տեխնոլոգիան՝ աշխատակիցների կիսած գաղափարները ամփոփելու համար:
-methods_link_text: Իմացեք ավելին մեր մեթոդների մասին:
+methods_text: "Մենք օգտագործեցինք և՛ մեր փորձագիտությունը, և՛ AI տեխնոլոգիան՝ աշխատակիցների կիսած գաղափարները ամփոփելու համար:"
+methods_link_text: "Իմացեք ավելին մեր մեթոդների մասին:"
 download_button_text: Ներբեռնել բոլոր մեկնաբանությունները
 comment_count: __N__ գաղափար
 comments_label: մեկնաբանություններ
@@ -201,8 +201,8 @@ theme_selector_label: Ընտրել թեմա
 subtheme_filter_label: Զտել ըստ ենթաթեմայի
 loading_text: Բեռնվում է...
 clear_search_label: Մաքրել որոնումը
-no_comments_found: Մեկնաբանություններ չեն գտնվել:
-no_solutions_found: Լուծումներ չեն գտնվել:
+no_comments_found: "Մեկնաբանություններ չեն գտնվել:"
+no_solutions_found: "Լուծումներ չեն գտնվել:"
 likes_label_capital: Հավանումներ
 likes_label_lowercase: հավանում
 reply_count_singular: __N__ պատասխան
@@ -396,7 +396,7 @@ id: about_the_data
 ----
 id: signup_engaged
 title: Գրանցվեք՝ մնալու ներգրավված
-text: Տվեք մեզ ձեր էլ. փոստը՝ ապագա հնարավորությունների մասին իմանալու համար:
+text: "Տվեք մեզ ձեր էլ. փոստը՝ ապագա հնարավորությունների մասին իմանալու համար:"
 button_text: Գրանցվել
 ----
 

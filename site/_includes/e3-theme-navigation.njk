@@ -626,6 +626,11 @@ function switch_theme(theme_number, should_scroll = false) {
     if (updateCustomThemeDisplay) {
       updateCustomThemeDisplay();
     }
+    // Clear the theme description text (keep the element for spacing)
+    document.querySelectorAll('.theme-content .theme-description p').forEach(function(p) {
+      p.dataset.originalText = p.dataset.originalText || p.innerHTML;
+      p.innerHTML = '';
+    });
     populateSubthemeFilter('all');
     populate_solutions('all');
     // Reset scroll position of comments container to top
@@ -692,6 +697,13 @@ function switch_theme(theme_number, should_scroll = false) {
   // Remove 'active' class from all theme content sections
   document.querySelectorAll('.theme-content').forEach(function(content) {
     content.classList.remove('active');
+  });
+  
+  // Restore theme description text if it was cleared (when switching from "all")
+  document.querySelectorAll('.theme-content .theme-description p').forEach(function(p) {
+    if (p.dataset.originalText) {
+      p.innerHTML = p.dataset.originalText;
+    }
   });
   
   // Add 'active' class to the selected theme content section
@@ -1442,6 +1454,11 @@ document.addEventListener('DOMContentLoaded', function() {
           if (updateCustomThemeDisplay) {
             updateCustomThemeDisplay();
           }
+          // Clear the theme description text (keep the element for spacing)
+          document.querySelectorAll('.theme-content .theme-description p').forEach(function(p) {
+            p.dataset.originalText = p.dataset.originalText || p.innerHTML;
+            p.innerHTML = '';
+          });
           // Hide sub-theme filter
           populateSubthemeFilter('all');
         }
