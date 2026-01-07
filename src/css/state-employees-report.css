@@ -721,8 +721,14 @@ section#comment-explorer {
     border-radius: 2px;
 }
 
-.toggle-text {
-    text-decoration: underline;
+.original-comments-toggle:not(.expanded) .toggle-text {
+    padding-right: 24px;
+    background: url("/public/images/arrow-blue-down.svg") no-repeat right center;
+}
+
+.original-comments-toggle.expanded .toggle-text {
+    padding-right: 24px;
+    background: url("/public/images/arrow-blue-up.svg") no-repeat right center;
 }
 
 .original-comments-toggle:hover .toggle-text {
@@ -730,10 +736,7 @@ section#comment-explorer {
 }
 
 .toggle-arrow {
-    margin-left: 0.25rem;
-    font-size: 12px;
-    text-decoration: none;
-    display: inline-block;
+    display: none;
 }
 
 .close-comment-link {
@@ -749,8 +752,9 @@ section#comment-explorer {
     color: #3d6a7f;
 }
 
-.close-text {
-    text-decoration: underline;
+.close-comment-link .close-text {
+    padding-right: 24px;
+    background: url("/public/images/arrow-blue-up.svg") no-repeat right center;
 }
 
 .close-comment-link:hover .close-text {
@@ -758,10 +762,7 @@ section#comment-explorer {
 }
 
 .close-arrow {
-    margin-left: 0.25rem;
-    font-size: 12px;
-    text-decoration: none;
-    display: inline-block;
+    display: none;
 }
 
 .original-comments-content {
@@ -793,8 +794,14 @@ section#comment-explorer {
     border-radius: 2px;
 }
 
-.expand-replies-toggle .toggle-text {
-    text-decoration: underline;
+.expand-replies-toggle:not(.expanded) .toggle-text {
+    padding-right: 24px;
+    background: url("/public/images/arrow-blue-down.svg") no-repeat right center;
+}
+
+.expand-replies-toggle.expanded .toggle-text {
+    padding-right: 24px;
+    background: url("/public/images/arrow-blue-up.svg") no-repeat right center;
 }
 
 .expand-replies-toggle:hover .toggle-text {
@@ -820,7 +827,8 @@ section#comment-explorer {
 }
 
 .close-replies-link .close-text {
-    text-decoration: underline;
+    padding-right: 24px;
+    background: url("/public/images/arrow-blue-up.svg") no-repeat right center;
 }
 
 .close-replies-link:hover .close-text {

@@ -223,8 +223,8 @@ function buildCommentMarkup(comments) {
     let parentCommentId = parentComment.cid || '';
     let repliesContentId = 'replies-content-' + parentCommentId;
     markup += '<div class="replies-widget">';
-    markup += `<a href="#" class="expand-replies-toggle" aria-expanded="${shouldAutoExpandReplies}" aria-controls="${repliesContentId}" style="${shouldAutoExpandReplies ? 'display: none;' : ''}">`;
-    markup += `<span class="toggle-text">{{ modules.comment_explorer_ui.expand_prefix }}${replyLabel}</span><span class="toggle-arrow">▼</span>`;
+    markup += `<a href="#" class="expand-replies-toggle${shouldAutoExpandReplies ? ' expanded' : ''}" aria-expanded="${shouldAutoExpandReplies}" aria-controls="${repliesContentId}" style="${shouldAutoExpandReplies ? 'display: none;' : ''}">`;
+    markup += `<span class="toggle-text">{{ modules.comment_explorer_ui.expand_prefix }}${replyLabel}</span><span class="toggle-arrow"></span>`;
     markup += '</a>';
     markup += `<div class="replies-content" id="${repliesContentId}" style="display: ${shouldAutoExpandReplies ? 'block' : 'none'};">`;
     
@@ -234,13 +234,13 @@ function buildCommentMarkup(comments) {
     });
     
     // Add close replies link
-    markup += `<a href="#" class="close-replies-link" aria-label="{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}"><span class="close-text">{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}</span><span class="close-arrow">▲</span></a>`;
+    markup += `<a href="#" class="close-replies-link" aria-label="{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}"><span class="close-text">{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}</span><span class="close-arrow"></span></a>`;
     markup += '</div>';
     markup += '</div>';
   }
   
   // Add close comment link at the end
-  markup += '<a href="#" class="close-comment-link" aria-label="{{ modules.comment_explorer_ui.close_comment }}"><span class="close-text">{{ modules.comment_explorer_ui.close_comment }}</span><span class="close-arrow">▲</span></a>';
+  markup += '<a href="#" class="close-comment-link" aria-label="{{ modules.comment_explorer_ui.close_comment }}"><span class="close-text">{{ modules.comment_explorer_ui.close_comment }}</span><span class="close-arrow"></span></a>';
   
   return markup;
 }
@@ -272,9 +272,8 @@ function expandCommentWidget(toggle, solutionsArray) {
   
   contentDiv.style.display = 'block';
   toggle.setAttribute('aria-expanded', 'true');
+  toggle.classList.add('expanded');
   toggle.style.display = 'none';
-  let arrow = toggle.querySelector('.toggle-arrow');
-  if (arrow) arrow.textContent = '▲';
 }
 
 // Helper function to collapse a comment widget
@@ -285,9 +284,8 @@ function collapseCommentWidget(toggle) {
   
   contentDiv.style.display = 'none';
   toggle.setAttribute('aria-expanded', 'false');
+  toggle.classList.remove('expanded');
   toggle.style.display = 'block';
-  let arrow = toggle.querySelector('.toggle-arrow');
-  if (arrow) arrow.textContent = '▼';
 }
 
 // Function to populate solutions instead of comments
@@ -418,8 +416,8 @@ function populate_solutions(theme_number_or_all) {
       let shouldAutoExpand = solution._commentMatchesSearch === true;
       let originalCommentsContentId = 'original-comments-' + commentId;
       smarkup += '<div class="original-comments-widget">';
-      smarkup += `<a href="#" class="original-comments-toggle" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" aria-controls="${originalCommentsContentId}" data-auto-expand="${shouldAutoExpand}">`;
-      smarkup += '<span class="toggle-text">{{ modules.comment_explorer_ui.related_comments }}</span><span class="toggle-arrow">' + (shouldAutoExpand ? '▲' : '▼') + '</span>';
+      smarkup += `<a href="#" class="original-comments-toggle${shouldAutoExpand ? ' expanded' : ''}" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" aria-controls="${originalCommentsContentId}" data-auto-expand="${shouldAutoExpand}">`;
+      smarkup += '<span class="toggle-text">{{ modules.comment_explorer_ui.related_comments }}</span><span class="toggle-arrow"></span>';
       smarkup += '</a>';
       smarkup += `<div class="original-comments-content" id="${originalCommentsContentId}" style="display: ${shouldAutoExpand ? 'block' : 'none'}"></div>`;
       smarkup += '</div>';
@@ -931,6 +929,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (repliesContent) {
           repliesContent.style.display = 'block';
           expandRepliesToggle.setAttribute('aria-expanded', 'true');
+          expandRepliesToggle.classList.add('expanded');
           expandRepliesToggle.style.display = 'none';
         }
         return;
@@ -950,6 +949,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           if (expandToggle) {
             expandToggle.setAttribute('aria-expanded', 'false');
+            expandToggle.classList.remove('expanded');
             expandToggle.style.display = 'inline-block';
           }
         }
