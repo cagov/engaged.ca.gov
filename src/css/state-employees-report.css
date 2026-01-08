@@ -499,7 +499,7 @@ section#comment-explorer {
     cursor: pointer;
     transition: opacity 0.2s ease;
     user-select: none;
-    opacity: 0.4;
+    opacity: 0.7;
 }
 
 .subtheme-filter-tag.selected {

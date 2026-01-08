@@ -670,7 +670,6 @@ function switch_theme(theme_number, should_scroll = false) {
         circle.style.fill = '#FFFFFF';
         circle.style.stroke = circle.dataset.originalStroke;
         circle.style.strokeWidth = '5';
-        group.setAttribute('aria-selected', 'false');
       }
     });
     // Update navigation widget
@@ -733,14 +732,12 @@ function switch_theme(theme_number, should_scroll = false) {
         circle.style.fill = hiliteFill;
         circle.style.stroke = circle.dataset.originalStroke;
         circle.style.strokeWidth = '5';
-        group.setAttribute('aria-selected', 'true');
         circle_text.style.fontWeight = 600;
       } else {
         // Reset to original state - white fill with original stroke
         circle.style.fill = '#FFFFFF';
         circle.style.stroke = circle.dataset.originalStroke;
         circle.style.strokeWidth = '5';
-        group.setAttribute('aria-selected', 'false');
         circle_text.style.fontWeight = 400;
       }
     }
