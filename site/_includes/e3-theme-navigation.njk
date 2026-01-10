@@ -163,15 +163,8 @@ function buildSingleCommentMarkup(comment, isReply) {
   let likes = comment.likes !== undefined ? comment.likes : 0;
   let has_likes = 'likes' in comment;
   
-  let comment_theme_class = '';
-  if (comment.tids && Array.isArray(comment.tids) && comment.tids.length > 0) {
-    comment.tids.forEach(function(tid) {
-      comment_theme_class += ` theme-${tid}`;
-    });
-  }
-  
   let markup = `<div class="comment-item-container">`;
-  markup += `<div class="comment-item${indent_class}${comment_theme_class}">`;
+  markup += `<div class="comment-item${indent_class}">`;
   markup += '<div class="comment-content">';
   markup += '"' + highlighted_comment_text + '"';
   markup += '</div>';

@@ -205,8 +205,8 @@ for record in records:
             "pid": record["PARTICIPANT_ID"],
             "content": content,
             "date": record["POSTED_ON"],
-            "tids": theme_ids,
-            "stids": subtheme_ids,
+            # "tids": theme_ids,
+            # "stids": subtheme_ids,
         }
         
         # Add like count as integer
