@@ -127,8 +127,8 @@ with io.StringIO(csv_content) as f:
                 "QUESTION": row[field_indices["QUESTION"]],
                 "POSTED_ON": row[field_indices["POSTED_ON"]],
                 "LIKE_COUNT": row[field_indices["LIKE_COUNT"]],
-                "COMMENT_MAIN_THEMES": row[field_indices["COMMENT_MAIN_THEMES"]],
-                "COMMENT_SUBTHEMES": row[field_indices["COMMENT_SUBTHEMES"]],
+                # "COMMENT_MAIN_THEMES": row[field_indices["COMMENT_MAIN_THEMES"]],
+                # "COMMENT_SUBTHEMES": row[field_indices["COMMENT_SUBTHEMES"]],
             })
 
 # Collect unique values
@@ -165,39 +165,39 @@ for record in records:
         content = content.replace("‚Äî", "—")
         content = content.replace("‚Ä¶", "...")
         
-        # Parse COMMENT_MAIN_THEMES as JSON array
-        theme_ids = []
-        theme_names_str = record["COMMENT_MAIN_THEMES"].strip()
-        if theme_names_str:
-            try:
-                theme_names = json.loads(theme_names_str)
-                if isinstance(theme_names, list):
-                    for theme_name in theme_names:
-                        theme_name = theme_name.strip().strip('"')
-                        if theme_name in theme_name_to_id:
-                            theme_ids.append(theme_name_to_id[theme_name])
-                        elif args.verbose:
-                            print(f"Warning: Theme '{theme_name}' not found in theme map")
-            except json.JSONDecodeError as e:
-                if args.verbose:
-                    print(f"Warning: Failed to parse COMMENT_MAIN_THEMES for comment {record['COMMENT_ID']}: {e}")
+        # # Parse COMMENT_MAIN_THEMES as JSON array
+        # theme_ids = []
+        # theme_names_str = record["COMMENT_MAIN_THEMES"].strip()
+        # if theme_names_str:
+        #     try:
+        #         theme_names = json.loads(theme_names_str)
+        #         if isinstance(theme_names, list):
+        #             for theme_name in theme_names:
+        #                 theme_name = theme_name.strip().strip('"')
+        #                 if theme_name in theme_name_to_id:
+        #                     theme_ids.append(theme_name_to_id[theme_name])
+        #                 elif args.verbose:
+        #                     print(f"Warning: Theme '{theme_name}' not found in theme map")
+        #     except json.JSONDecodeError as e:
+        #         if args.verbose:
+        #             print(f"Warning: Failed to parse COMMENT_MAIN_THEMES for comment {record['COMMENT_ID']}: {e}")
         
-        # Parse COMMENT_SUBTHEMES as JSON array
-        subtheme_ids = []
-        subtheme_names_str = record["COMMENT_SUBTHEMES"].strip()
-        if subtheme_names_str:
-            try:
-                subtheme_names = json.loads(subtheme_names_str)
-                if isinstance(subtheme_names, list):
-                    for subtheme_name in subtheme_names:
-                        subtheme_name = subtheme_name.strip().strip('"')
-                        if subtheme_name in subtheme_name_to_id:
-                            subtheme_ids.append(subtheme_name_to_id[subtheme_name])
-                        elif args.verbose:
-                            print(f"Warning: Subtheme '{subtheme_name}' not found in theme map")
-            except json.JSONDecodeError as e:
-                if args.verbose:
-                    print(f"Warning: Failed to parse COMMENT_SUBTHEMES for comment {record['COMMENT_ID']}: {e}")
+        # # Parse COMMENT_SUBTHEMES as JSON array
+        # subtheme_ids = []
+        # subtheme_names_str = record["COMMENT_SUBTHEMES"].strip()
+        # if subtheme_names_str:
+        #     try:
+        #         subtheme_names = json.loads(subtheme_names_str)
+        #         if isinstance(subtheme_names, list):
+        #             for subtheme_name in subtheme_names:
+        #                 subtheme_name = subtheme_name.strip().strip('"')
+        #                 if subtheme_name in subtheme_name_to_id:
+        #                     subtheme_ids.append(subtheme_name_to_id[subtheme_name])
+        #                 elif args.verbose:
+        #                     print(f"Warning: Subtheme '{subtheme_name}' not found in theme map")
+        #     except json.JSONDecodeError as e:
+        #         if args.verbose:
+        #             print(f"Warning: Failed to parse COMMENT_SUBTHEMES for comment {record['COMMENT_ID']}: {e}")
         
         crec = {
             "cid": record["COMMENT_ID"],
