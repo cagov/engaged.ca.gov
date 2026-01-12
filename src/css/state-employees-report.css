@@ -550,19 +550,6 @@ section#comment-explorer {
     border-left-color: #BCBBC1;
 }
 
-/* Theme-specific border colors for parent comments - overridden to use #898891 */
-.comment-item.theme-1,
-.comment-item.theme-2,
-.comment-item.theme-3,
-.comment-item.theme-4,
-.comment-item.theme-5,
-.comment-item.theme-6,
-.comment-item.theme-7,
-.comment-item.theme-8,
-.comment-item.theme-9,
-.comment-item.theme-10 {
-    border-left-color: #898891;
-}
 
 /* All replies use #BCBBC1, regardless of theme */
 .comment-item.indent-reply.theme-1,
