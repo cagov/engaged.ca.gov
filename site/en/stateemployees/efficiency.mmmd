@@ -62,51 +62,51 @@ nbr_themes: 10
 
 ----
 id: theme_1
-theme_title: Process improvement
-theme_circle_title: "Process<LF>improvement"
-stroke_color: "rgb(101 173 225)"
-light_color: "rgba(101, 173, 225, 0.50)"
-hilite_fill_color: "rgba(101, 173, 225, 0.10)"
-nbr_ideas: 720
-----
-
-This theme covers basic government operations. Comments covered approvals, spending, and excessive paperwork.
-
-----
-id: theme_2
 theme_title: Recruitment, hiring, and retention
 theme_circle_title: "Recruitment,<LF>hiring, and<LF>retention"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
-nbr_ideas: 709
+nbr_ideas: 843
 ----
 
 This theme focuses on hiring and keeping good employees. Topics included employee turnover, career growth, and mentorship programs.
 
 ----
+id: theme_2
+theme_title: Process improvement
+theme_circle_title: "Process<LF>improvement"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 765
+----
+
+This theme covers basic government operations. Comments covered approvals, spending, and excessive paperwork.
+
+----
 id: theme_3
-theme_title: Public-facing services and resident experience
-theme_circle_title: "Public-facing<LF>services and<LF>resident experience"
-stroke_color: "rgb(108 128 67)"
-light_color: "rgba(108, 128, 67, 0.50)"
-hilite_fill_color: "rgba(108, 128, 67, 0.10)"
-nbr_ideas: 521
-----
-
-This theme's comments highlight the issues that slow down state services and make them hard to use. 
-
-----
-id: theme_4
 theme_title: Communication and knowledge sharing
 theme_circle_title: "Communication<LF>and<LF>knowledge sharing"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
-nbr_ideas: 470
+nbr_ideas: 706
 ----
 
 The comments noted that there are siloed departments and that communication between leadership and staff is poor. Employees also said there’s a need to improve training materials, cross-agency collaboration, and to retain essential knowledge.
+
+----
+id: theme_4
+theme_title: Public-facing services and resident experience
+theme_circle_title: "Public-facing<LF>services and<LF>resident experience"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 646
+----
+
+This theme's comments highlight the issues that slow down state services and make them hard to use. 
 
 ----
 id: theme_5
@@ -115,7 +115,7 @@ theme_circle_title: "Budget and<LF>resources"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
-nbr_ideas: 442
+nbr_ideas: 600
 ----
 
 This theme's comments center on contractor spending and money management.
@@ -127,46 +127,46 @@ theme_circle_title: "Technology and<LF>digital innovation"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
-nbr_ideas: 433
+nbr_ideas: 548
 ----
 
 This theme highlights issues with outdated IT systems. People discussed poor mobile experiences. They also talked about AI, centralized platforms, and digitizing processes.
 
 ----
 id: theme_7
-theme_title: Organizational structure and culture
-theme_circle_title: "Organizational<LF>structure and<LF>culture"
-stroke_color: "rgb(169 212 242)"
-light_color: "rgba(169, 212, 242, 0.50)"
-hilite_fill_color: "rgba(169, 212, 242, 0.10)"
-nbr_ideas: 407
-----
-
-This theme's comments address issues with management layers, redundant workflows, and decision-making. Employees also discussed ways to build a more inclusive and welcoming workplace culture.
-
-----
-id: theme_8
 theme_title: Management culture and leadership
 theme_circle_title: "Management<LF>culture and<LF>leadership"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
-nbr_ideas: 322
+nbr_ideas: 352
 ----
 
 This theme's comments discuss the need for better leadership training and the benefits of varying management approaches.
 
 ----
-id: theme_9
+id: theme_8
 theme_title: Workplace operations
 theme_circle_title: "Workplace<LF>operations"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
-nbr_ideas: 308
+nbr_ideas: 325
 ----
 
 This theme's comments mainly covered remote work and return-to-office policies. Employees also discussed flexible work options, work-life balance, and related hiring policies.
+
+----
+id: theme_9
+theme_title: Organizational structure and culture
+theme_circle_title: "Organizational<LF>structure and<LF>culture"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 318
+----
+
+This theme's comments address issues with management layers, redundant workflows, and decision-making. Employees also discussed ways to build a more inclusive and welcoming workplace culture.
 
 ----
 id: theme_10
@@ -175,7 +175,7 @@ theme_circle_title: "Governance<LF>and oversight"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
-nbr_ideas: 285
+nbr_ideas: 255
 ----
 
 This theme's comments highlight the need for guidelines and policies. People also talked about how to enforce these policies and ensure accountability.
@@ -241,71 +241,71 @@ subtheme_and_switch_text: " subtheme and switch to theme "
 ----
 id: subthemes
 nbr_subthemes: 65
-subtheme_1: Procurement
-subtheme_2: Budgeting and funding
-subtheme_3: State-spending audits
-subtheme_4: Contracts and vendors
-subtheme_5: Shared resources
-subtheme_6: Participatory budgeting
-subtheme_7: Expense reimbursement
-subtheme_8: Permits, licensing, and fees
-subtheme_9: Physical infrastructure
-subtheme_10: Internal communication
-subtheme_11: Cross-agency collaboration
-subtheme_12: Knowledge management
-subtheme_13: Statewide directory
-subtheme_14: Internal feedback
-subtheme_15: Plain language
-subtheme_16: Translations
-subtheme_17: Policymaking
-subtheme_18: Accountability and transparency
-subtheme_19: Compliance
-subtheme_20: Org structure and hierarchy
-subtheme_21: Align policy and implementation
-subtheme_22: Leadership review and oversight
-subtheme_23: Manager training
-subtheme_24: Management culture and leadership approach
-subtheme_25: Work culture
-subtheme_26: Risk aversion
-subtheme_27: Growth mindset
-subtheme_28: Trust and openness
-subtheme_29: Inclusion and diversity
-subtheme_30: Networking
-subtheme_31: Consolidate government agencies
-subtheme_32: Process design and methodologies
-subtheme_33: Process documentation
-subtheme_34: Bureaucracy
-subtheme_35: Process delays
-subtheme_36: Digitize processes
-subtheme_37: Policy development process
-subtheme_38: Public service delivery and responsiveness
-subtheme_39: Public participation
-subtheme_40: Public transportation
-subtheme_41: HCD (Human-Centered Design)
-subtheme_42: Public policy initiatives
-subtheme_43: Technology and data modernization
-subtheme_44: AI and LLMs
+subtheme_1: Qualified staff
+subtheme_2: Employee training
+subtheme_3: Onboarding new employees
+subtheme_4: Career growth
+subtheme_5: Employee pay and benefits
+subtheme_6: Employee performance reviews
+subtheme_7: Job classification
+subtheme_8: Hiring and recruitment
+subtheme_9: Employee retention
+subtheme_10: Mentorship programs
+subtheme_11: Understaffing
+subtheme_12: Limited-term positions
+subtheme_13: Digitize processes
+subtheme_14: Process design and methodologies
+subtheme_15: Process documentation
+subtheme_16: Process delays
+subtheme_17: Bureaucracy
+subtheme_18: Policy development process
+subtheme_19: Cross-agency collaboration
+subtheme_20: Internal communication
+subtheme_21: Internal feedback
+subtheme_22: Plain language
+subtheme_23: Translations
+subtheme_24: Knowledge management
+subtheme_25: Statewide directory
+subtheme_26: Public policy initiatives
+subtheme_27: Public service delivery and responsiveness
+subtheme_28: Public participation
+subtheme_29: Human-centered design
+subtheme_30: Public transportation
+subtheme_31: Physical infrastructure
+subtheme_32: Procurement
+subtheme_33: Contracts and vendors
+subtheme_34: Budgeting and funding
+subtheme_35: Permits, licensing, and fees
+subtheme_36: Shared resources
+subtheme_37: Expense reimbursement
+subtheme_38: State-spending audits
+subtheme_39: Participatory budgeting
+subtheme_40: Technology and data modernization
+subtheme_41: State cloud storage
+subtheme_42: Digital services
+subtheme_43: Shared data
+subtheme_44: AI and large language models
 subtheme_45: Software and tools
-subtheme_46: State cloud storage
-subtheme_47: Shared data
-subtheme_48: Accessibility
-subtheme_49: Digital services
-subtheme_50: Employee pay and benefits
-subtheme_51: Hiring and recruitment
-subtheme_52: Onboarding new employees
-subtheme_53: Understaffing
-subtheme_54: Career growth
-subtheme_55: Mentorship programs
-subtheme_56: Limited-term positions
-subtheme_57: Job classification
-subtheme_58: Employee performance reviews
-subtheme_59: Qualified staff
-subtheme_60: Employee retention
-subtheme_61: Employee training
-subtheme_62: Remote work and return to office
-subtheme_63: Office management
-subtheme_64: Employee travel
-subtheme_65: Environmental sustainability
+subtheme_46: Accessibility
+subtheme_47: Management culture and leadership approach
+subtheme_48: Leadership review and oversight
+subtheme_49: Manager training
+subtheme_50: Office management
+subtheme_51: Environmental sustainability
+subtheme_52: Remote work and return to office
+subtheme_53: Employee travel
+subtheme_54: Trust and openness
+subtheme_55: Work culture
+subtheme_56: Growth mindset
+subtheme_57: Consolidate government agencies
+subtheme_58: Risk aversion
+subtheme_59: Inclusion and diversity
+subtheme_60: Networking
+subtheme_61: Align policy and implementation
+subtheme_62: Compliance
+subtheme_63: Org structure and hierarchy
+subtheme_64: Accountability and transparency
+subtheme_65: Policymaking
 ----
 
 ----
