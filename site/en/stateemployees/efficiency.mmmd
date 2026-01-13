@@ -193,6 +193,7 @@ search_placeholder: Search
 methods_text: We used both our expertise and AI technology to summarize the ideas employees shared.
 methods_link_text: Learn more about our methods.
 download_button_text: Download all the comments
+download_ideas_text: Download all the ideas
 comment_count: __N__ ideas
 comments_label: comments
 ideas_label: ideas

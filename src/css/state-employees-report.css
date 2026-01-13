@@ -643,8 +643,12 @@ section#comment-explorer {
     padding: 2rem;
 }
 
-.download-comments {
+.download-comments, .download-ideas {
     text-align: center;
+}
+
+.download-ideas {
+    margin-top: 1rem;
 }
 
 .download-button {
