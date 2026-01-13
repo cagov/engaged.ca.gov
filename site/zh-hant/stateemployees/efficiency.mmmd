@@ -46,7 +46,7 @@ participants_count: 1,469
 participants_label: 參與者
 comments_count: 2,477
 comments_label: 評論
-ideas_count: 2,590
+ideas_count: 2,627
 ideas_label: 想法
 staff_icon_alt: 員工圖標
 comments_icon_alt: 評論圖標
@@ -62,51 +62,51 @@ nbr_themes: 10
 
 ----
 id: theme_1
-theme_title: 流程改進
-theme_circle_title: "流程<LF>改進"
-stroke_color: "rgb(101 173 225)"
-light_color: "rgba(101, 173, 225, 0.50)"
-hilite_fill_color: "rgba(101, 173, 225, 0.10)"
-nbr_ideas: 720
-----
-
-本主題涵蓋基本的政府運營。評論涉及審批、支出和過多的文書工作。
-
-----
-id: theme_2
 theme_title: 招聘、僱用和保留
 theme_circle_title: "招聘、<LF>僱用和<LF>保留"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
-nbr_ideas: 709
+nbr_ideas: 843
 ----
 
 本主題側重於僱用和留住優秀員工。主題包括員工流動、職業發展和指導計劃。
 
 ----
+id: theme_2
+theme_title: 流程改進
+theme_circle_title: "流程<LF>改進"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 765
+----
+
+本主題涵蓋基本的政府運營。評論涉及審批、支出和過多的文書工作。
+
+----
 id: theme_3
-theme_title: 面向公眾的服務和居民體驗
-theme_circle_title: "面向公眾的<LF>服務和<LF>居民體驗"
-stroke_color: "rgb(108 128 67)"
-light_color: "rgba(108, 128, 67, 0.50)"
-hilite_fill_color: "rgba(108, 128, 67, 0.10)"
-nbr_ideas: 521
-----
-
-本主題的評論突出了使州服務變慢並難以使用的問題。 
-
-----
-id: theme_4
 theme_title: 溝通和知識共享
 theme_circle_title: "溝通和<LF>知識共享"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
-nbr_ideas: 470
+nbr_ideas: 706
 ----
 
 評論指出，存在孤立的部門，領導層與員工之間的溝通不暢。員工還表示，需要改進培訓材料、跨機構協作並保留基本知識。
+
+----
+id: theme_4
+theme_title: 面向公眾的服務和居民體驗
+theme_circle_title: "面向公眾的<LF>服務和<LF>居民體驗"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 646
+----
+
+本主題的評論突出了使州服務變慢並難以使用的問題。 
 
 ----
 id: theme_5
@@ -115,7 +115,7 @@ theme_circle_title: "預算和<LF>資源"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
-nbr_ideas: 442
+nbr_ideas: 600
 ----
 
 本主題的評論集中在承包商支出和資金管理上。
@@ -127,46 +127,46 @@ theme_circle_title: "技術和<LF>數字創新"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
-nbr_ideas: 433
+nbr_ideas: 548
 ----
 
 本主題突出了過時 IT 系統的問題。人們討論了糟糕的移動體驗。他們還談到了人工智能、集中式平台和流程數字化。
 
 ----
 id: theme_7
-theme_title: 組織結構和文化
-theme_circle_title: "組織結構<LF>和文化"
-stroke_color: "rgb(169 212 242)"
-light_color: "rgba(169, 212, 242, 0.50)"
-hilite_fill_color: "rgba(169, 212, 242, 0.10)"
-nbr_ideas: 407
-----
-
-本主題的評論涉及管理層、冗餘工作流程和決策問題。員工還討論了如何建立更具包容性和歡迎的工作場所文化。
-
-----
-id: theme_8
 theme_title: 管理文化和領導力
 theme_circle_title: "管理文化<LF>和領導力"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
-nbr_ideas: 322
+nbr_ideas: 352
 ----
 
 本主題的評論討論了更好的領導力培訓需求以及不同管理方法的優勢。
 
 ----
-id: theme_9
+id: theme_8
 theme_title: 工作場所運營
 theme_circle_title: "工作場所<LF>運營"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
-nbr_ideas: 308
+nbr_ideas: 325
 ----
 
 本主題的評論主要涵蓋遠程工作和返回辦公室政策。員工還討論了靈活的工作選擇、工作與生活平衡以及相關的招聘政策。
+
+----
+id: theme_9
+theme_title: 組織結構和文化
+theme_circle_title: "組織結構<LF>和文化"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 318
+----
+
+本主題的評論涉及管理層、冗餘工作流程和決策問題。員工還討論了如何建立更具包容性和歡迎的工作場所文化。
 
 ----
 id: theme_10
@@ -175,7 +175,7 @@ theme_circle_title: "治理和<LF>監督"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
-nbr_ideas: 285
+nbr_ideas: 255
 ----
 
 本主題的評論突出了對指導方針和政策的需求。人們還討論了如何執行這些政策並確保問責制。
@@ -389,7 +389,7 @@ id: about_the_data
 
 員工提供的評論範圍從在一條評論中嵌入多個想法到在其他參與者的評論上簡單地 "+1"。
 
-總的來說，我們的分析確定了 2,590 個想法。
+總的來說，我們的分析確定了 2,627 個想法。
 
 <small id=footnote1><sup>1</sup>總參與者中有 482 名參與者沒有告訴我們他們為州工作了多長時間。</small>
 

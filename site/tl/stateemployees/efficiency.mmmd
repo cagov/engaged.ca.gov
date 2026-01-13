@@ -46,7 +46,7 @@ participants_count: 1,469
 participants_label: mga kalahok
 comments_count: 2,477
 comments_label: mga komento
-ideas_count: 2,590
+ideas_count: 2,627
 ideas_label: mga ideya
 staff_icon_alt: Icon ng kawani
 comments_icon_alt: Icon ng komento
@@ -62,51 +62,51 @@ nbr_themes: 10
 
 ----
 id: theme_1
-theme_title: Pagpapabuti ng proseso
-theme_circle_title: "Pagpapabuti<LF>ng proseso"
-stroke_color: "rgb(101 173 225)"
-light_color: "rgba(101, 173, 225, 0.50)"
-hilite_fill_color: "rgba(101, 173, 225, 0.10)"
-nbr_ideas: 720
-----
-
-Sinasaklaw ng temang ito ang mga pangunahing operasyon ng gobyerno. Kasama sa mga komento ang mga pag-apruba, paggastos, at labis na papeles.
-
-----
-id: theme_2
 theme_title: Pag-rekrut, pagkuha, at pagpapanatili
 theme_circle_title: "Pag-rekrut,<LF>pagkuha, at<LF>pagpapanatili"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
-nbr_ideas: 709
+nbr_ideas: 843
 ----
 
 Nakatuon ang temang ito sa pagkuha at pagpapanatili ng mahusay na mga empleyado. Kasama sa mga paksa ang pag-ikot ng empleyado, paglago ng karera, at mga programa ng pagtuturo.
 
 ----
+id: theme_2
+theme_title: Pagpapabuti ng proseso
+theme_circle_title: "Pagpapabuti<LF>ng proseso"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 765
+----
+
+Sinasaklaw ng temang ito ang mga pangunahing operasyon ng gobyerno. Kasama sa mga komento ang mga pag-apruba, paggastos, at labis na papeles.
+
+----
 id: theme_3
-theme_title: Mga serbisyong nakaharap sa publiko at karanasan ng residente
-theme_circle_title: "Mga serbisyong<LF>nakaharap sa<LF>publiko at<LF>karanasan ng<LF>residente"
-stroke_color: "rgb(108 128 67)"
-light_color: "rgba(108, 128, 67, 0.50)"
-hilite_fill_color: "rgba(108, 128, 67, 0.10)"
-nbr_ideas: 521
-----
-
-Binibigyang-diin ng mga komento ng temang ito ang mga isyu na nagpapabagal sa mga serbisyo ng estado at nagpapahirap sa paggamit ng mga ito. 
-
-----
-id: theme_4
 theme_title: Komunikasyon at pagbabahagi ng kaalaman
 theme_circle_title: "Komunikasyon at<LF>pagbabahagi ng<LF>kaalaman"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
-nbr_ideas: 470
+nbr_ideas: 706
 ----
 
 Napansin ng mga komento na may mga hiwalay na departamento at na ang komunikasyon sa pagitan ng pamumuno at kawani ay mahina. Sinabi rin ng mga empleyado na may pangangailangan na mapabuti ang mga materyales sa pagsasanay, pakikipagtulungan sa pagitan ng ahensya, at mapanatili ang mahahalagang kaalaman.
+
+----
+id: theme_4
+theme_title: Mga serbisyong nakaharap sa publiko at karanasan ng residente
+theme_circle_title: "Mga serbisyong<LF>nakaharap sa<LF>publiko at<LF>karanasan ng<LF>residente"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 646
+----
+
+Binibigyang-diin ng mga komento ng temang ito ang mga isyu na nagpapabagal sa mga serbisyo ng estado at nagpapahirap sa paggamit ng mga ito. 
 
 ----
 id: theme_5
@@ -115,7 +115,7 @@ theme_circle_title: "Badyet at<LF>mga mapagkukunan"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
-nbr_ideas: 442
+nbr_ideas: 600
 ----
 
 Nakasentro ang mga komento ng temang ito sa paggastos ng kontratista at pamamahala ng pera.
@@ -127,46 +127,46 @@ theme_circle_title: "Teknolohiya at<LF>digital na<LF>pagbabago"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
-nbr_ideas: 433
+nbr_ideas: 548
 ----
 
 Binibigyang-diin ng temang ito ang mga isyu sa mga lipas na sistema ng IT. Tinalakay ng mga tao ang mahinang karanasan sa mobile. Napag-usapan din nila ang AI, mga sentralisadong platform, at pag-digitize ng mga proseso.
 
 ----
 id: theme_7
-theme_title: Estruktura ng organisasyon at kultura
-theme_circle_title: "Estruktura ng<LF>organisasyon at<LF>kultura"
-stroke_color: "rgb(169 212 242)"
-light_color: "rgba(169, 212, 242, 0.50)"
-hilite_fill_color: "rgba(169, 212, 242, 0.10)"
-nbr_ideas: 407
-----
-
-Tinalakay ng mga komento ng temang ito ang mga isyu sa mga layer ng pamamahala, mga redundant na workflow, at paggawa ng desisyon. Tinalakay din ng mga empleyado ang mga paraan upang bumuo ng mas inclusive at welcoming na kultura sa lugar ng trabaho.
-
-----
-id: theme_8
 theme_title: Kultura ng pamamahala at pamumuno
 theme_circle_title: "Kultura ng<LF>pamamahala at<LF>pamumuno"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
-nbr_ideas: 322
+nbr_ideas: 352
 ----
 
 Tinalakay ng mga komento ng temang ito ang pangangailangan para sa mas mahusay na pagsasanay sa pamumuno at ang mga benepisyo ng iba't ibang mga diskarte sa pamamahala.
 
 ----
-id: theme_9
+id: theme_8
 theme_title: Mga operasyon sa lugar ng trabaho
 theme_circle_title: "Mga operasyon<LF>sa lugar ng<LF>trabaho"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
-nbr_ideas: 308
+nbr_ideas: 325
 ----
 
 Ang mga komento ng temang ito ay pangunahing sumasaklaw sa remote work at mga patakaran sa pagbabalik sa opisina. Tinalakay din ng mga empleyado ang mga flexible na opsyon sa trabaho, work-life balance, at mga kaugnay na patakaran sa pagkuha.
+
+----
+id: theme_9
+theme_title: Estruktura ng organisasyon at kultura
+theme_circle_title: "Estruktura ng<LF>organisasyon at<LF>kultura"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 318
+----
+
+Tinalakay ng mga komento ng temang ito ang mga isyu sa mga layer ng pamamahala, mga redundant na workflow, at paggawa ng desisyon. Tinalakay din ng mga empleyado ang mga paraan upang bumuo ng mas inclusive at welcoming na kultura sa lugar ng trabaho.
 
 ----
 id: theme_10
@@ -175,7 +175,7 @@ theme_circle_title: "Pamamahala at<LF>pangangasiwa"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
-nbr_ideas: 285
+nbr_ideas: 255
 ----
 
 Binibigyang-diin ng mga komento ng temang ito ang pangangailangan para sa mga alituntunin at patakaran. Napag-usapan din ng mga tao kung paano ipatupad ang mga patakarang ito at tiyakin ang pananagutan.
@@ -389,7 +389,7 @@ Maraming kalahok ang hindi sumagot sa tanong, pumili na huwag sabihin, o nagsabi
 
 Ang mga komento na ibinigay ng mga empleyado ay mula sa pagkakaroon ng maraming ideya na naka-embed sa isang komento hanggang sa pagiging isang simpleng "+1" sa mga komento ng ibang kalahok.
 
-Sa kabuuan, natukoy ng aming pagsusuri ang 2,590 na ideya.
+Sa kabuuan, natukoy ng aming pagsusuri ang 2,627 na ideya.
 
 <small id=footnote1><sup>1</sup>482 na kalahok ng kabuuang kalahok ang hindi sinabi sa amin kung gaano katagal sila nagtrabaho para sa estado.</small>
 

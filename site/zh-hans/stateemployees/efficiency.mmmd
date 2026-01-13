@@ -46,7 +46,7 @@ participants_count: 1,469
 participants_label: 参与者
 comments_count: 2,477
 comments_label: 评论
-ideas_count: 2,590
+ideas_count: 2,627
 ideas_label: 想法
 staff_icon_alt: 员工图标
 comments_icon_alt: 评论图标
@@ -62,51 +62,51 @@ nbr_themes: 10
 
 ----
 id: theme_1
-theme_title: 流程改进
-theme_circle_title: "流程<LF>改进"
-stroke_color: "rgb(101 173 225)"
-light_color: "rgba(101, 173, 225, 0.50)"
-hilite_fill_color: "rgba(101, 173, 225, 0.10)"
-nbr_ideas: 720
-----
-
-本主题涵盖基本的政府运营。评论涉及审批、支出和过多的文书工作。
-
-----
-id: theme_2
 theme_title: 招聘、雇用和保留
 theme_circle_title: "招聘、<LF>雇用和<LF>保留"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
-nbr_ideas: 709
+nbr_ideas: 843
 ----
 
 本主题侧重于雇用和留住优秀员工。主题包括员工流动、职业发展和指导计划。
 
 ----
+id: theme_2
+theme_title: 流程改进
+theme_circle_title: "流程<LF>改进"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 765
+----
+
+本主题涵盖基本的政府运营。评论涉及审批、支出和过多的文书工作。
+
+----
 id: theme_3
-theme_title: 面向公众的服务和居民体验
-theme_circle_title: "面向公众的<LF>服务和<LF>居民体验"
-stroke_color: "rgb(108 128 67)"
-light_color: "rgba(108, 128, 67, 0.50)"
-hilite_fill_color: "rgba(108, 128, 67, 0.10)"
-nbr_ideas: 521
-----
-
-本主题的评论突出了使州服务变慢并难以使用的问题。 
-
-----
-id: theme_4
 theme_title: 沟通和知识共享
 theme_circle_title: "沟通和<LF>知识共享"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
-nbr_ideas: 470
+nbr_ideas: 706
 ----
 
 评论指出，存在孤立的部门，领导层与员工之间的沟通不畅。员工还表示，需要改进培训材料、跨机构协作并保留基本知识。
+
+----
+id: theme_4
+theme_title: 面向公众的服务和居民体验
+theme_circle_title: "面向公众的<LF>服务和<LF>居民体验"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 646
+----
+
+本主题的评论突出了使州服务变慢并难以使用的问题。 
 
 ----
 id: theme_5
@@ -115,7 +115,7 @@ theme_circle_title: "预算和<LF>资源"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
-nbr_ideas: 442
+nbr_ideas: 600
 ----
 
 本主题的评论集中在承包商支出和资金管理上。
@@ -127,46 +127,46 @@ theme_circle_title: "技术和<LF>数字创新"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
-nbr_ideas: 433
+nbr_ideas: 548
 ----
 
 本主题突出了过时 IT 系统的问题。人们讨论了糟糕的移动体验。他们还谈到了人工智能、集中式平台和流程数字化。
 
 ----
 id: theme_7
-theme_title: 组织结构和文化
-theme_circle_title: "组织结构<LF>和文化"
-stroke_color: "rgb(169 212 242)"
-light_color: "rgba(169, 212, 242, 0.50)"
-hilite_fill_color: "rgba(169, 212, 242, 0.10)"
-nbr_ideas: 407
-----
-
-本主题的评论涉及管理层、冗余工作流程和决策问题。员工还讨论了如何建立更具包容性和欢迎的工作场所文化。
-
-----
-id: theme_8
 theme_title: 管理文化和领导力
 theme_circle_title: "管理文化<LF>和领导力"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
-nbr_ideas: 322
+nbr_ideas: 352
 ----
 
 本主题的评论讨论了更好的领导力培训需求以及不同管理方法的优势。
 
 ----
-id: theme_9
+id: theme_8
 theme_title: 工作场所运营
 theme_circle_title: "工作场所<LF>运营"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
-nbr_ideas: 308
+nbr_ideas: 325
 ----
 
 本主题的评论主要涵盖远程工作和返回办公室政策。员工还讨论了灵活的工作选择、工作与生活平衡以及相关的招聘政策。
+
+----
+id: theme_9
+theme_title: 组织结构和文化
+theme_circle_title: "组织结构<LF>和文化"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 318
+----
+
+本主题的评论涉及管理层、冗余工作流程和决策问题。员工还讨论了如何建立更具包容性和欢迎的工作场所文化。
 
 ----
 id: theme_10
@@ -175,7 +175,7 @@ theme_circle_title: "治理和<LF>监督"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
-nbr_ideas: 285
+nbr_ideas: 255
 ----
 
 本主题的评论突出了对指导方针和政策的需求。人们还讨论了如何执行这些政策并确保问责制。
@@ -389,7 +389,7 @@ id: about_the_data
 
 员工提供的评论范围从在一个评论中嵌入多个想法到在其他参与者的评论上简单地 "+1"。
 
-总的来说，我们的分析确定了 2,590 个想法。
+总的来说，我们的分析确定了 2,627 个想法。
 
 <small id=footnote1><sup>1</sup>总参与者中有 482 名参与者没有告诉我们他们为州工作了多长时间。</small>
 

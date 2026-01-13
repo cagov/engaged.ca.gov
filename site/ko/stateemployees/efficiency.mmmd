@@ -46,7 +46,7 @@ participants_count: 1,469
 participants_label: 참가자
 comments_count: 2,477
 comments_label: 의견
-ideas_count: 2,590
+ideas_count: 2,627
 ideas_label: 아이디어
 staff_icon_alt: 직원 아이콘
 comments_icon_alt: 의견 아이콘
@@ -62,51 +62,51 @@ nbr_themes: 10
 
 ----
 id: theme_1
-theme_title: 프로세스 개선
-theme_circle_title: "프로세스<LF>개선"
-stroke_color: "rgb(101 173 225)"
-light_color: "rgba(101, 173, 225, 0.50)"
-hilite_fill_color: "rgba(101, 173, 225, 0.10)"
-nbr_ideas: 720
-----
-
-이 주제는 기본적인 정부 운영을 다룹니다. 의견에는 승인, 지출 및 과도한 서류 작업이 포함되었습니다.
-
-----
-id: theme_2
 theme_title: 채용, 고용 및 유지
 theme_circle_title: "채용,<LF>고용 및<LF>유지"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
-nbr_ideas: 709
+nbr_ideas: 843
 ----
 
 이 주제는 좋은 직원을 고용하고 유지하는 데 중점을 둡니다. 주제에는 직원 이직, 경력 성장 및 멘토십 프로그램이 포함되었습니다.
 
 ----
+id: theme_2
+theme_title: 프로세스 개선
+theme_circle_title: "프로세스<LF>개선"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 765
+----
+
+이 주제는 기본적인 정부 운영을 다룹니다. 의견에는 승인, 지출 및 과도한 서류 작업이 포함되었습니다.
+
+----
 id: theme_3
-theme_title: 공공 서비스 및 주민 경험
-theme_circle_title: "공공 서비스 및<LF>주민 경험"
-stroke_color: "rgb(108 128 67)"
-light_color: "rgba(108, 128, 67, 0.50)"
-hilite_fill_color: "rgba(108, 128, 67, 0.10)"
-nbr_ideas: 521
-----
-
-이 주제의 의견은 주 서비스를 느리게 만들고 사용하기 어렵게 만드는 문제를 강조합니다. 
-
-----
-id: theme_4
 theme_title: 커뮤니케이션 및 지식 공유
 theme_circle_title: "커뮤니케이션 및<LF>지식 공유"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
-nbr_ideas: 470
+nbr_ideas: 706
 ----
 
 의견은 고립된 부서가 있고 리더십과 직원 간의 커뮤니케이션이 열악하다고 지적했습니다. 직원들은 또한 교육 자료 개선, 기관 간 협력, 필수 지식 유지의 필요성을 말했습니다.
+
+----
+id: theme_4
+theme_title: 공공 서비스 및 주민 경험
+theme_circle_title: "공공 서비스 및<LF>주민 경험"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 646
+----
+
+이 주제의 의견은 주 서비스를 느리게 만들고 사용하기 어렵게 만드는 문제를 강조합니다. 
 
 ----
 id: theme_5
@@ -115,7 +115,7 @@ theme_circle_title: "예산 및<LF>자원"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
-nbr_ideas: 442
+nbr_ideas: 600
 ----
 
 이 주제의 의견은 계약자 지출 및 자금 관리에 중점을 둡니다.
@@ -127,46 +127,46 @@ theme_circle_title: "기술 및<LF>디지털 혁신"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
-nbr_ideas: 433
+nbr_ideas: 548
 ----
 
 이 주제는 구식 IT 시스템의 문제를 강조합니다. 사람들은 열악한 모바일 경험에 대해 논의했습니다. 그들은 또한 AI, 중앙화된 플랫폼 및 프로세스 디지털화에 대해서도 이야기했습니다.
 
 ----
 id: theme_7
-theme_title: 조직 구조 및 문화
-theme_circle_title: "조직 구조 및<LF>문화"
-stroke_color: "rgb(169 212 242)"
-light_color: "rgba(169, 212, 242, 0.50)"
-hilite_fill_color: "rgba(169, 212, 242, 0.10)"
-nbr_ideas: 407
-----
-
-이 주제의 의견은 관리 계층, 중복 워크플로우 및 의사 결정의 문제를 다룹니다. 직원들은 또한 더 포용적이고 환영하는 직장 문화를 구축하는 방법에 대해 논의했습니다.
-
-----
-id: theme_8
 theme_title: 관리 문화 및 리더십
 theme_circle_title: "관리 문화 및<LF>리더십"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
-nbr_ideas: 322
+nbr_ideas: 352
 ----
 
 이 주제의 의견은 더 나은 리더십 교육의 필요성과 다양한 관리 접근 방식의 이점에 대해 논의합니다.
 
 ----
-id: theme_9
+id: theme_8
 theme_title: 직장 운영
 theme_circle_title: "직장<LF>운영"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
-nbr_ideas: 308
+nbr_ideas: 325
 ----
 
 이 주제의 의견은 주로 원격 근무 및 사무실 복귀 정책을 다뤘습니다. 직원들은 또한 유연한 근무 옵션, 일과 삶의 균형, 관련 고용 정책에 대해 논의했습니다.
+
+----
+id: theme_9
+theme_title: 조직 구조 및 문화
+theme_circle_title: "조직 구조 및<LF>문화"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 318
+----
+
+이 주제의 의견은 관리 계층, 중복 워크플로우 및 의사 결정의 문제를 다룹니다. 직원들은 또한 더 포용적이고 환영하는 직장 문화를 구축하는 방법에 대해 논의했습니다.
 
 ----
 id: theme_10
@@ -175,7 +175,7 @@ theme_circle_title: "거버넌스 및<LF>감독"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
-nbr_ideas: 285
+nbr_ideas: 255
 ----
 
 이 주제의 의견은 지침과 정책의 필요성을 강조합니다. 사람들은 또한 이러한 정책을 시행하고 책임을 보장하는 방법에 대해서도 이야기했습니다.
@@ -389,7 +389,7 @@ id: about_the_data
 
 직원들이 제공한 댓글은 하나의 댓글에 여러 아이디어가 포함된 것부터 다른 참가자의 댓글에 단순한 "+1"까지 다양합니다.
 
-전체적으로 우리의 분석은 2,590개의 아이디어를 식별했습니다.
+전체적으로 우리의 분석은 2,627개의 아이디어를 식별했습니다.
 
 <small id=footnote1><sup>1</sup>총 참가자 중 482명이 주를 위해 얼마나 오래 일했는지 우리에게 말하지 않았습니다.</small>
 

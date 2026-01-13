@@ -46,7 +46,7 @@ participants_count: 1,469
 participants_label: participantes
 comments_count: 2,477
 comments_label: comentarios
-ideas_count: 2,590
+ideas_count: 2,627
 ideas_label: ideas
 staff_icon_alt: Icono de personal
 comments_icon_alt: Icono de comentarios
@@ -62,51 +62,51 @@ nbr_themes: 10
 
 ----
 id: theme_1
-theme_title: Mejora de procesos
-theme_circle_title: "Mejora de<LF>procesos"
-stroke_color: "rgb(101 173 225)"
-light_color: "rgba(101, 173, 225, 0.50)"
-hilite_fill_color: "rgba(101, 173, 225, 0.10)"
-nbr_ideas: 720
-----
-
-Este tema cubre las operaciones básicas del gobierno. Los comentarios cubrieron aprobaciones, gastos y papeleo excesivo.
-
-----
-id: theme_2
 theme_title: Reclutamiento, contratación y retención
 theme_circle_title: "Reclutamiento,<LF>contratación y<LF>retención"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
-nbr_ideas: 709
+nbr_ideas: 843
 ----
 
 Este tema se centra en contratar y mantener buenos empleados. Los temas incluyeron rotación de empleados, crecimiento profesional y programas de mentoría.
 
 ----
+id: theme_2
+theme_title: Mejora de procesos
+theme_circle_title: "Mejora de<LF>procesos"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 765
+----
+
+Este tema cubre las operaciones básicas del gobierno. Los comentarios cubrieron aprobaciones, gastos y papeleo excesivo.
+
+----
 id: theme_3
-theme_title: Servicios públicos y experiencia del residente
-theme_circle_title: "Servicios públicos<LF>y experiencia<LF>del residente"
-stroke_color: "rgb(108 128 67)"
-light_color: "rgba(108, 128, 67, 0.50)"
-hilite_fill_color: "rgba(108, 128, 67, 0.10)"
-nbr_ideas: 521
-----
-
-Los comentarios de este tema destacan los problemas que ralentizan los servicios estatales y los hacen difíciles de usar. 
-
-----
-id: theme_4
 theme_title: Comunicación e intercambio de conocimientos
 theme_circle_title: "Comunicación e<LF>intercambio de<LF>conocimientos"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
-nbr_ideas: 470
+nbr_ideas: 706
 ----
 
 Los comentarios señalaron que hay departamentos aislados y que la comunicación entre el liderazgo y el personal es deficiente. Los empleados también dijeron que existe la necesidad de mejorar los materiales de capacitación, la colaboración entre agencias y retener el conocimiento esencial.
+
+----
+id: theme_4
+theme_title: Servicios públicos y experiencia del residente
+theme_circle_title: "Servicios públicos<LF>y experiencia<LF>del residente"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 646
+----
+
+Los comentarios de este tema destacan los problemas que ralentizan los servicios estatales y los hacen difíciles de usar. 
 
 ----
 id: theme_5
@@ -115,7 +115,7 @@ theme_circle_title: "Presupuesto y<LF>recursos"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
-nbr_ideas: 442
+nbr_ideas: 600
 ----
 
 Los comentarios de este tema se centran en el gasto de contratistas y la gestión del dinero.
@@ -127,46 +127,46 @@ theme_circle_title: "Tecnología e<LF>innovación digital"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
-nbr_ideas: 433
+nbr_ideas: 548
 ----
 
 Este tema destaca los problemas con los sistemas de TI obsoletos. Las personas discutieron experiencias móviles deficientes. También hablaron sobre IA, plataformas centralizadas y digitalización de procesos.
 
 ----
 id: theme_7
-theme_title: Estructura y cultura organizacional
-theme_circle_title: "Estructura y<LF>cultura<LF>organizacional"
-stroke_color: "rgb(169 212 242)"
-light_color: "rgba(169, 212, 242, 0.50)"
-hilite_fill_color: "rgba(169, 212, 242, 0.10)"
-nbr_ideas: 407
-----
-
-Los comentarios de este tema abordan problemas con capas de gestión, flujos de trabajo redundantes y toma de decisiones. Los empleados también discutieron formas de construir una cultura laboral más inclusiva y acogedora.
-
-----
-id: theme_8
 theme_title: Cultura de gestión y liderazgo
 theme_circle_title: "Cultura de<LF>gestión y<LF>liderazgo"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
-nbr_ideas: 322
+nbr_ideas: 352
 ----
 
 Los comentarios de este tema discuten la necesidad de una mejor capacitación en liderazgo y los beneficios de variar los enfoques de gestión.
 
 ----
-id: theme_9
+id: theme_8
 theme_title: Operaciones del lugar de trabajo
 theme_circle_title: "Operaciones del<LF>lugar de trabajo"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
-nbr_ideas: 308
+nbr_ideas: 325
 ----
 
 Los comentarios de este tema cubrieron principalmente el trabajo remoto y las políticas de regreso a la oficina. Los empleados también discutieron opciones de trabajo flexibles, equilibrio entre trabajo y vida personal, y políticas de contratación relacionadas.
+
+----
+id: theme_9
+theme_title: Estructura y cultura organizacional
+theme_circle_title: "Estructura y<LF>cultura<LF>organizacional"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 318
+----
+
+Los comentarios de este tema abordan problemas con capas de gestión, flujos de trabajo redundantes y toma de decisiones. Los empleados también discutieron formas de construir una cultura laboral más inclusiva y acogedora.
 
 ----
 id: theme_10
@@ -175,7 +175,7 @@ theme_circle_title: "Gobernanza y<LF>supervisión"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
-nbr_ideas: 285
+nbr_ideas: 255
 ----
 
 Los comentarios de este tema destacan la necesidad de pautas y políticas. Las personas también hablaron sobre cómo hacer cumplir estas políticas y garantizar la responsabilidad.
@@ -389,7 +389,7 @@ Varios participantes no respondieron la pregunta, optaron por no decir, o dijero
 
 Los comentarios proporcionados por los empleados van desde tener múltiples ideas incorporadas en un comentario hasta ser un simple "+1" en los comentarios de otros participantes.
 
-En total, nuestro análisis identificó 2,590 ideas.
+En total, nuestro análisis identificó 2,627 ideas.
 
 <small id=footnote1><sup>1</sup>482 participantes del total de participantes no nos dijeron cuánto tiempo han trabajado para el estado.</small>
 
