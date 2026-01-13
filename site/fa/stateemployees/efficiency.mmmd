@@ -241,71 +241,71 @@ subtheme_and_switch_text: " زیرموضوع و تغییر به موضوع "
 ----
 id: subthemes
 nbr_subthemes: 65
-subtheme_1: تدارکات
-subtheme_2: بودجه‌بندی و تأمین مالی
-subtheme_3: حسابرسی هزینه‌های ایالتی
-subtheme_4: قراردادها و فروشندگان
-subtheme_5: منابع مشترک
-subtheme_6: بودجه مشارکتی
-subtheme_7: بازپرداخت هزینه
-subtheme_8: مجوزها، مجوزها و هزینه‌ها
-subtheme_9: زیرساخت فیزیکی
-subtheme_10: ارتباطات داخلی
-subtheme_11: همکاری بین سازمانی
-subtheme_12: مدیریت دانش
-subtheme_13: فهرست سراسری
-subtheme_14: بازخورد داخلی
-subtheme_15: زبان ساده
-subtheme_16: ترجمه‌ها
-subtheme_17: سیاست‌گذاری
-subtheme_18: پاسخگویی و شفافیت
-subtheme_19: انطباق
-subtheme_20: ساختار و سلسله مراتب سازمانی
-subtheme_21: همسویی سیاست و اجرا
-subtheme_22: بررسی و نظارت رهبری
-subtheme_23: آموزش مدیران
-subtheme_24: فرهنگ مدیریت و رویکرد رهبری
-subtheme_25: فرهنگ کار
-subtheme_26: اجتناب از ریسک
-subtheme_27: ذهنیت رشد
-subtheme_28: اعتماد و باز بودن
-subtheme_29: شمول و تنوع
-subtheme_30: شبکه‌سازی
-subtheme_31: ادغام سازمان‌های دولتی
-subtheme_32: طراحی فرآیند و روش‌ها
-subtheme_33: مستندسازی فرآیند
-subtheme_34: بوروکراسی
-subtheme_35: تأخیر در فرآیند
-subtheme_36: دیجیتالی‌سازی فرآیندها
-subtheme_37: فرآیند توسعه سیاست
-subtheme_38: ارائه خدمات عمومی و پاسخگویی
-subtheme_39: مشارکت عمومی
-subtheme_40: حمل و نقل عمومی
-subtheme_41: DCD (طراحی محور انسان)
-subtheme_42: ابتکارات سیاست عمومی
-subtheme_43: مدرنیزه‌سازی فناوری و داده
+subtheme_1: کارکنان واجد شرایط
+subtheme_2: آموزش کارمندان
+subtheme_3: راه‌اندازی کارمندان جدید
+subtheme_4: رشد شغلی
+subtheme_5: حقوق و مزایای کارمندان
+subtheme_6: بررسی عملکرد کارمندان
+subtheme_7: طبقه‌بندی شغل
+subtheme_8: استخدام و جذب
+subtheme_9: حفظ کارمندان
+subtheme_10: برنامه‌های مربیگری
+subtheme_11: کمبود نیروی کار
+subtheme_12: موقعیت‌های محدود مدت
+subtheme_13: دیجیتالی‌سازی فرآیندها
+subtheme_14: طراحی فرآیند و روش‌ها
+subtheme_15: مستندسازی فرآیند
+subtheme_16: تأخیر در فرآیند
+subtheme_17: بوروکراسی
+subtheme_18: فرآیند توسعه سیاست
+subtheme_19: همکاری بین سازمانی
+subtheme_20: ارتباطات داخلی
+subtheme_21: بازخورد داخلی
+subtheme_22: زبان ساده
+subtheme_23: ترجمه‌ها
+subtheme_24: مدیریت دانش
+subtheme_25: فهرست سراسری
+subtheme_26: ابتکارات سیاست عمومی
+subtheme_27: ارائه خدمات عمومی و پاسخگویی
+subtheme_28: مشارکت عمومی
+subtheme_29: DCD (طراحی محور انسان)
+subtheme_30: حمل و نقل عمومی
+subtheme_31: زیرساخت فیزیکی
+subtheme_32: تدارکات
+subtheme_33: قراردادها و فروشندگان
+subtheme_34: بودجه‌بندی و تأمین مالی
+subtheme_35: مجوزها، مجوزها و هزینه‌ها
+subtheme_36: منابع مشترک
+subtheme_37: بازپرداخت هزینه
+subtheme_38: حسابرسی هزینه‌های ایالتی
+subtheme_39: بودجه مشارکتی
+subtheme_40: مدرنیزه‌سازی فناوری و داده
+subtheme_41: ذخیره‌سازی ابری ایالتی
+subtheme_42: خدمات دیجیتال
+subtheme_43: داده مشترک
 subtheme_44: هوش مصنوعی و LLM
 subtheme_45: نرم‌افزار و ابزارها
-subtheme_46: ذخیره‌سازی ابری ایالتی
-subtheme_47: داده مشترک
-subtheme_48: دسترسی
-subtheme_49: خدمات دیجیتال
-subtheme_50: حقوق و مزایای کارمندان
-subtheme_51: استخدام و جذب
-subtheme_52: راه‌اندازی کارمندان جدید
-subtheme_53: کمبود نیروی کار
-subtheme_54: رشد شغلی
-subtheme_55: برنامه‌های مربیگری
-subtheme_56: موقعیت‌های محدود مدت
-subtheme_57: طبقه‌بندی شغل
-subtheme_58: بررسی عملکرد کارمندان
-subtheme_59: کارکنان واجد شرایط
-subtheme_60: حفظ کارمندان
-subtheme_61: آموزش کارمندان
-subtheme_62: کار از راه دور و بازگشت به دفتر
-subtheme_63: مدیریت دفتر
-subtheme_64: سفر کارمندان
-subtheme_65: پایداری محیط زیست
+subtheme_46: دسترسی
+subtheme_47: فرهنگ مدیریت و رویکرد رهبری
+subtheme_48: بررسی و نظارت رهبری
+subtheme_49: آموزش مدیران
+subtheme_50: مدیریت دفتر
+subtheme_51: پایداری محیط زیست
+subtheme_52: کار از راه دور و بازگشت به دفتر
+subtheme_53: سفر کارمندان
+subtheme_54: اعتماد و باز بودن
+subtheme_55: فرهنگ کار
+subtheme_56: ذهنیت رشد
+subtheme_57: ادغام سازمان‌های دولتی
+subtheme_58: اجتناب از ریسک
+subtheme_59: شمول و تنوع
+subtheme_60: شبکه‌سازی
+subtheme_61: همسویی سیاست و اجرا
+subtheme_62: انطباق
+subtheme_63: ساختار و سلسله مراتب سازمانی
+subtheme_64: پاسخگویی و شفافیت
+subtheme_65: سیاست‌گذاری
 ----
 
 ----

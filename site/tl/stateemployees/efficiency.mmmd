@@ -241,71 +241,71 @@ subtheme_and_switch_text: " subtema at lumipat sa tema "
 ----
 id: subthemes
 nbr_subthemes: 65
-subtheme_1: Pagbili
-subtheme_2: Pagbubudget at pagpopondo
-subtheme_3: Mga audit ng paggastos ng estado
-subtheme_4: Mga kontrata at vendor
-subtheme_5: Mga ibinahaging mapagkukunan
-subtheme_6: Participatory budgeting
-subtheme_7: Reimbursement ng gastos
-subtheme_8: Mga permit, lisensya, at bayad
-subtheme_9: Pisikal na imprastraktura
-subtheme_10: Panloob na komunikasyon
-subtheme_11: Pakikipagtulungan sa pagitan ng ahensya
-subtheme_12: Pamamahala ng kaalaman
-subtheme_13: Direktoryo sa buong estado
-subtheme_14: Panloob na feedback
-subtheme_15: Simpleng wika
-subtheme_16: Mga pagsasalin
-subtheme_17: Pagbuo ng patakaran
-subtheme_18: Pananagutan at transparency
-subtheme_19: Pagsunod
-subtheme_20: Estruktura ng org at hierarchy
-subtheme_21: I-align ang patakaran at pagpapatupad
-subtheme_22: Pagsusuri at pangangasiwa ng pamumuno
-subtheme_23: Pagsasanay ng manager
-subtheme_24: Kultura ng pamamahala at diskarte sa pamumuno
-subtheme_25: Kultura sa trabaho
-subtheme_26: Pag-iwas sa panganib
-subtheme_27: Growth mindset
-subtheme_28: Tiwala at pagiging bukas
-subtheme_29: Pagkakasama at pagkakaiba-iba
-subtheme_30: Networking
-subtheme_31: Pagsasama-sama ng mga ahensya ng gobyerno
-subtheme_32: Disenyo ng proseso at mga pamamaraan
-subtheme_33: Dokumentasyon ng proseso
-subtheme_34: Bureaucracy
-subtheme_35: Mga pagkaantala sa proseso
-subtheme_36: I-digitize ang mga proseso
-subtheme_37: Proseso ng pagbuo ng patakaran
-subtheme_38: Paghahatid ng serbisyo sa publiko at pagtugon
-subtheme_39: Pakikilahok ng publiko
-subtheme_40: Pampublikong transportasyon
-subtheme_41: HCD (Human-Centered Design)
-subtheme_42: Mga inisyatiba sa patakaran ng publiko
-subtheme_43: Modernisasyon ng teknolohiya at data
+subtheme_1: Kwalipikadong kawani
+subtheme_2: Pagsasanay ng empleyado
+subtheme_3: Onboarding ng mga bagong empleyado
+subtheme_4: Paglago ng karera
+subtheme_5: Sahod at benepisyo ng empleyado
+subtheme_6: Mga pagsusuri sa pagganap ng empleyado
+subtheme_7: Pag-uuri ng trabaho
+subtheme_8: Pagkuha at pag-rekrut
+subtheme_9: Pagpapanatili ng empleyado
+subtheme_10: Mga programa ng pagtuturo
+subtheme_11: Kakulangan sa tauhan
+subtheme_12: Mga posisyon na may limitadong termino
+subtheme_13: I-digitize ang mga proseso
+subtheme_14: Disenyo ng proseso at mga pamamaraan
+subtheme_15: Dokumentasyon ng proseso
+subtheme_16: Mga pagkaantala sa proseso
+subtheme_17: Bureaucracy
+subtheme_18: Proseso ng pagbuo ng patakaran
+subtheme_19: Pakikipagtulungan sa pagitan ng ahensya
+subtheme_20: Panloob na komunikasyon
+subtheme_21: Panloob na feedback
+subtheme_22: Simpleng wika
+subtheme_23: Mga pagsasalin
+subtheme_24: Pamamahala ng kaalaman
+subtheme_25: Direktoryo sa buong estado
+subtheme_26: Mga inisyatiba sa patakaran ng publiko
+subtheme_27: Paghahatid ng serbisyo sa publiko at pagtugon
+subtheme_28: Pakikilahok ng publiko
+subtheme_29: HCD (Human-Centered Design)
+subtheme_30: Pampublikong transportasyon
+subtheme_31: Pisikal na imprastraktura
+subtheme_32: Pagbili
+subtheme_33: Mga kontrata at vendor
+subtheme_34: Pagbubudget at pagpopondo
+subtheme_35: Mga permit, lisensya, at bayad
+subtheme_36: Mga ibinahaging mapagkukunan
+subtheme_37: Reimbursement ng gastos
+subtheme_38: Mga audit ng paggastos ng estado
+subtheme_39: Participatory budgeting
+subtheme_40: Modernisasyon ng teknolohiya at data
+subtheme_41: Cloud storage ng estado
+subtheme_42: Digital na serbisyo
+subtheme_43: Ibinahaging data
 subtheme_44: AI at LLM
 subtheme_45: Software at mga tool
-subtheme_46: Cloud storage ng estado
-subtheme_47: Ibinahaging data
-subtheme_48: Accessibility
-subtheme_49: Digital na serbisyo
-subtheme_50: Sahod at benepisyo ng empleyado
-subtheme_51: Pagkuha at pag-rekrut
-subtheme_52: Onboarding ng mga bagong empleyado
-subtheme_53: Kakulangan sa tauhan
-subtheme_54: Paglago ng karera
-subtheme_55: Mga programa ng pagtuturo
-subtheme_56: Mga posisyon na may limitadong termino
-subtheme_57: Pag-uuri ng trabaho
-subtheme_58: Mga pagsusuri sa pagganap ng empleyado
-subtheme_59: Kwalipikadong kawani
-subtheme_60: Pagpapanatili ng empleyado
-subtheme_61: Pagsasanay ng empleyado
-subtheme_62: Remote work at pagbabalik sa opisina
-subtheme_63: Pamamahala ng opisina
-subtheme_64: Paglalakbay ng empleyado
-subtheme_65: Pagpapanatili ng kapaligiran
+subtheme_46: Accessibility
+subtheme_47: Kultura ng pamamahala at diskarte sa pamumuno
+subtheme_48: Pagsusuri at pangangasiwa ng pamumuno
+subtheme_49: Pagsasanay ng manager
+subtheme_50: Pamamahala ng opisina
+subtheme_51: Pagpapanatili ng kapaligiran
+subtheme_52: Remote work at pagbabalik sa opisina
+subtheme_53: Paglalakbay ng empleyado
+subtheme_54: Tiwala at pagiging bukas
+subtheme_55: Kultura sa trabaho
+subtheme_56: Growth mindset
+subtheme_57: Pagsasama-sama ng mga ahensya ng gobyerno
+subtheme_58: Pag-iwas sa panganib
+subtheme_59: Pagkakasama at pagkakaiba-iba
+subtheme_60: Networking
+subtheme_61: I-align ang patakaran at pagpapatupad
+subtheme_62: Pagsunod
+subtheme_63: Estruktura ng org at hierarchy
+subtheme_64: Pananagutan at transparency
+subtheme_65: Pagbuo ng patakaran
 ----
 
 ----
