@@ -81,9 +81,9 @@ def build_theme_mappings_from_solutions(solutions_filepath, verbose=False):
         appearance_order = 0
         
         for row in reader:
-            solution_id = row["SOLUTION_ID"].strip()
-            solution_main_theme = row.get("SOLUTION_MAIN_THEME", "").strip()
-            solution_subtheme = row.get("SOLUTION_SUBTHEME", "").strip()
+            solution_id = row["IDEA_ID"].strip()
+            solution_main_theme = row.get("IDEA_MAIN_THEME", "").strip()
+            solution_subtheme = row.get("IDEA_SUBTHEME", "").strip()
             
             if not solution_main_theme or not solution_subtheme:
                 continue
@@ -294,8 +294,8 @@ for subtheme_id in sorted(subtheme_id_to_name.keys()):
 
 # Process solutions CSV file
 solutions = []  # Will contain processed solutions
-solutions_dict = {}  # Maps SOLUTION_ID to solution data
-solution_theme_subtheme_map = {}  # Maps SOLUTION_ID to sets of (theme_id, subtheme_id) tuples
+solutions_dict = {}  # Maps IDEA_ID to solution data
+solution_theme_subtheme_map = {}  # Maps IDEA_ID to sets of (theme_id, subtheme_id) tuples
 
 # Read solutions file (already read during build_theme_mappings_from_solutions, but we need it again for full processing)
 try:
@@ -307,20 +307,20 @@ except FileNotFoundError:
 
 if solutions_content:
     # Parse solutions CSV
-    # v4 format columns: SOLUTION_ID,SOLUTION_COMMENT_ID,REPLY_TO_ID,SOURCE_COMMENT,SOLUTION_SEQUENCE,
-    #                    SOLUTION_TEXT,POLISHED_SOLUTION_SUBTHEMES_ARRAY,NUM_SOLUTION_SUBTHEMES,
-    #                    SOLUTION_SUBTHEME,SOLUTION_MAIN_THEME
+    # v4 format columns: IDEA_ID,IDEA_COMMENT_ID,REPLY_TO_ID,SOURCE_COMMENT,IDEA_SEQUENCE,
+    #                    IDEA_TEXT,POLISHED_IDEA_SUBTHEMES_ARRAY,NUM_IDEA_SUBTHEMES,
+    #                    IDEA_SUBTHEME,IDEA_MAIN_THEME
     with io.StringIO(solutions_content) as f:
         reader = csv.DictReader(f)
         for row in reader:
-            solution_id = row["SOLUTION_ID"].strip()
-            comment_id = row["SOLUTION_COMMENT_ID"].strip()
-            solution_text = row["SOLUTION_TEXT"].strip()
-            solution_main_theme = row.get("SOLUTION_MAIN_THEME", "").strip()
-            solution_subtheme = row.get("SOLUTION_SUBTHEME", "").strip()
+            solution_id = row["IDEA_ID"].strip()
+            comment_id = row["IDEA_COMMENT_ID"].strip()
+            solution_text = row["IDEA_TEXT"].strip()
+            solution_main_theme = row.get("IDEA_MAIN_THEME", "").strip()
+            solution_subtheme = row.get("IDEA_SUBTHEME", "").strip()
             
             # Initialize solution data if not seen before
-            # v4 format does not have SOLUTION_SHORTENED column
+            # v4 format does not have IDEA_SHORTENED column
             if solution_id not in solutions_dict:
                 solutions_dict[solution_id] = {
                     "comment_id": comment_id,
