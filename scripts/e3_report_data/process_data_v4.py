@@ -164,41 +164,7 @@ for record in records:
         content = content.replace("‚Äì", "-")
         content = content.replace("‚Äî", "—")
         content = content.replace("‚Ä¶", "...")
-        
-        # # Parse COMMENT_MAIN_THEMES as JSON array
-        # theme_ids = []
-        # theme_names_str = record["COMMENT_MAIN_THEMES"].strip()
-        # if theme_names_str:
-        #     try:
-        #         theme_names = json.loads(theme_names_str)
-        #         if isinstance(theme_names, list):
-        #             for theme_name in theme_names:
-        #                 theme_name = theme_name.strip().strip('"')
-        #                 if theme_name in theme_name_to_id:
-        #                     theme_ids.append(theme_name_to_id[theme_name])
-        #                 elif args.verbose:
-        #                     print(f"Warning: Theme '{theme_name}' not found in theme map")
-        #     except json.JSONDecodeError as e:
-        #         if args.verbose:
-        #             print(f"Warning: Failed to parse COMMENT_MAIN_THEMES for comment {record['COMMENT_ID']}: {e}")
-        
-        # # Parse COMMENT_SUBTHEMES as JSON array
-        # subtheme_ids = []
-        # subtheme_names_str = record["COMMENT_SUBTHEMES"].strip()
-        # if subtheme_names_str:
-        #     try:
-        #         subtheme_names = json.loads(subtheme_names_str)
-        #         if isinstance(subtheme_names, list):
-        #             for subtheme_name in subtheme_names:
-        #                 subtheme_name = subtheme_name.strip().strip('"')
-        #                 if subtheme_name in subtheme_name_to_id:
-        #                     subtheme_ids.append(subtheme_name_to_id[subtheme_name])
-        #                 elif args.verbose:
-        #                     print(f"Warning: Subtheme '{subtheme_name}' not found in theme map")
-        #     except json.JSONDecodeError as e:
-        #         if args.verbose:
-        #             print(f"Warning: Failed to parse COMMENT_SUBTHEMES for comment {record['COMMENT_ID']}: {e}")
-        
+
         crec = {
             "cid": record["COMMENT_ID"],
             "rid": record["REPLY_TO_ID"],
@@ -341,8 +307,7 @@ if solutions_encoding is None and solutions_content is None:
         with open(args.solutions_file, "r", encoding=solutions_encoding) as f:
             solutions_content = f.read()
     except FileNotFoundError:
-        if args.verbose:
-            print(f"Warning: Solutions file not found, skipping solutions processing")
+        print(f"Warning: Solutions file not found, skipping solutions processing")
         solutions_content = None
 
 if solutions_content:
@@ -374,12 +339,12 @@ if solutions_content:
             
             if solution_main_theme and solution_main_theme in theme_name_to_id:
                 theme_id = theme_name_to_id[solution_main_theme]
-            elif args.verbose and solution_main_theme:
+            elif solution_main_theme:
                 print(f"Warning: Solution theme '{solution_main_theme}' not found in theme map")
             
             if solution_subtheme and solution_subtheme in subtheme_name_to_id:
                 subtheme_id = subtheme_name_to_id[solution_subtheme]
-            elif args.verbose and solution_subtheme:
+            elif solution_subtheme:
                 print(f"Warning: Solution subtheme '{solution_subtheme}' not found in theme map")
             
             # Store theme/subtheme combination

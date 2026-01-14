@@ -1,9 +1,10 @@
-# process_data_v4
+# process_data_v5
 
 import argparse
 import csv
 import io
 import json
+from collections import defaultdict, OrderedDict
 
 current_version = 5
 
@@ -12,102 +13,150 @@ omit_reply_solutions = True
 parser = argparse.ArgumentParser(description="Process votes CSV file and output as JSON.")
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
 # parser.add_argument("-ors", "--omit_reply_solutions", action="store_true", help="Omit solutions that are associated with a reply to a comment")
-parser.add_argument("input_file", nargs="?", default=f"E3_data_v{current_version}.csv", help="Input CSV file (default: E3_data_v4.csv)")
-parser.add_argument("output_file", nargs="?", default=f"E3_data_v{current_version}.json", help="Output JSON file (default: E3_data_v4.json)")
-parser.add_argument("theme_map_file", nargs="?", default=f"E3_theme_map_v{current_version}.csv", help="Theme map CSV file (default: E3_theme_map_v2.csv)")
-parser.add_argument("solutions_file", nargs="?", default="e3_solution_themes_v5.csv", help="Solutions CSV file (default: e3_solution_themes_v4.csv)")
+parser.add_argument("input_file", nargs="?", default=f"E3_data_v{current_version}.csv", help="Input CSV file (default: E3_data_v5.csv)")
+parser.add_argument("output_file", nargs="?", default=f"E3_data_v{current_version}.json", help="Output JSON file (default: E3_data_v5.json)")
+parser.add_argument("solutions_file", nargs="?", default="e3_solution_themes_v5.csv", help="Solutions CSV file (default: e3_solution_themes_v5.csv)")
 args = parser.parse_args()
 
 if args.verbose:
     print(f"Processing CSV file: {args.input_file}")
-    print(f"Using theme map file: {args.theme_map_file}")
     print(f"Using solutions file: {args.solutions_file}")
     print(f"Outputting to JSON file: {args.output_file}")
 
-# Load theme map to create mappings
-theme_name_to_id = {}  # Maps theme name to Main_Theme_ID
-subtheme_name_to_id = {}  # Maps subtheme name to Subtheme_ID
-subtheme_id_to_theme_id = {}  # Maps Subtheme_ID to Main_Theme_ID
-theme_id_to_name = {}  # Maps Main_Theme_ID to theme name
-subtheme_id_to_name = {}  # Maps Subtheme_ID to subtheme name
-
-# Try to detect the encoding of the theme map CSV file
+# Common encodings to try for CSV files
 encodings_to_try = ["cp1252", "utf-8-sig", "latin-1", "utf-8"]
-theme_map_encoding = None
-theme_map_content = None
 
-for encoding in encodings_to_try:
-    try:
-        with open(args.theme_map_file, "r", encoding=encoding) as f:
-            theme_map_content = f.read()
-        if "‚Äô" in theme_map_content or "â€™" in theme_map_content:
-            if args.verbose:
-                print(f"Found mojibake characters with {encoding}, trying next encoding...")
+
+def read_file_with_encoding(filepath, verbose=False):
+    """Try to read a file with various encodings, avoiding mojibake."""
+    content = None
+    encoding_used = None
+    
+    for encoding in encodings_to_try:
+        try:
+            with open(filepath, "r", encoding=encoding) as f:
+                content = f.read()
+            if "‚Äô" in content or "â€™" in content:
+                if verbose:
+                    print(f"Found mojibake characters with {encoding}, trying next encoding...")
+                continue
+            encoding_used = encoding
+            if verbose:
+                print(f"Successfully read {filepath} with encoding: {encoding}")
+            break
+        except (UnicodeDecodeError, UnicodeError):
+            if verbose:
+                print(f"Failed to read {filepath} with {encoding}, trying next encoding...")
             continue
-        theme_map_encoding = encoding
-        if args.verbose:
-            print(f"Successfully read theme map CSV with encoding: {encoding}")
-        break
-    except (UnicodeDecodeError, UnicodeError):
-        if args.verbose:
-            print(f"Failed to read theme map with {encoding}, trying next encoding...")
-        continue
+    
+    if encoding_used is None:
+        encoding_used = "utf-8-sig"
+        if verbose:
+            print(f"Using fallback encoding for {filepath}: {encoding_used}")
+        with open(filepath, "r", encoding=encoding_used) as f:
+            content = f.read()
+    
+    return content
 
-if theme_map_encoding is None:
-    theme_map_encoding = "utf-8-sig"
-    if args.verbose:
-        print(f"Using fallback encoding for theme map: {theme_map_encoding}")
-    with open(args.theme_map_file, "r", encoding=theme_map_encoding) as f:
-        theme_map_content = f.read()
 
-# Parse theme map CSV
-with io.StringIO(theme_map_content) as f:
-    reader = csv.DictReader(f)
-    for row in reader:
-        main_theme = row["Main_theme"].strip()
-        subtheme = row["Subtheme"].strip()
-        main_theme_id = int(row["Main_Theme_ID"])
-        subtheme_id = int(row["Subtheme_ID"])
+def build_theme_mappings_from_solutions(solutions_filepath, verbose=False):
+    """
+    Build theme/subtheme mappings directly from solutions file.
+    
+    Themes are ordered by the number of solutions (descending).
+    Subthemes are ordered by: a) the theme they are associated with, and b) within that theme, the order they appear.
+    
+    Returns:
+        tuple: (theme_name_to_id, subtheme_name_to_id, subtheme_id_to_theme_id, 
+                theme_id_to_name, subtheme_id_to_name)
+    """
+    solutions_content = read_file_with_encoding(solutions_filepath, verbose)
+    
+    # Parse solutions CSV to collect theme/subtheme info
+    theme_solution_counts = defaultdict(set)  # Maps theme to set of solution IDs
+    subthemes_by_theme = defaultdict(OrderedDict)  # Maps theme to OrderedDict of subthemes
+    
+    with io.StringIO(solutions_content) as f:
+        reader = csv.DictReader(f)
+        appearance_order = 0
         
-        # Store mappings
-        theme_name_to_id[main_theme] = main_theme_id
-        subtheme_name_to_id[subtheme] = subtheme_id
-        subtheme_id_to_theme_id[subtheme_id] = main_theme_id
-        theme_id_to_name[main_theme_id] = main_theme
-        subtheme_id_to_name[subtheme_id] = subtheme
+        for row in reader:
+            solution_id = row["SOLUTION_ID"].strip()
+            solution_main_theme = row.get("SOLUTION_MAIN_THEME", "").strip()
+            solution_subtheme = row.get("SOLUTION_SUBTHEME", "").strip()
+            
+            if not solution_main_theme or not solution_subtheme:
+                continue
+            
+            # Count unique solutions per theme
+            theme_solution_counts[solution_main_theme].add(solution_id)
+            
+            # Track subtheme order within theme
+            if solution_main_theme not in subthemes_by_theme:
+                subthemes_by_theme[solution_main_theme] = OrderedDict()
+            
+            if solution_subtheme not in subthemes_by_theme[solution_main_theme]:
+                subthemes_by_theme[solution_main_theme][solution_subtheme] = appearance_order
+                appearance_order += 1
+    
+    # Sort themes by solution count (descending), then alphabetically for tie-breaking
+    sorted_themes = sorted(
+        theme_solution_counts.keys(),
+        key=lambda theme: (-len(theme_solution_counts[theme]), theme)
+    )
+    
+    if verbose:
+        print("Themes ordered by solution count:")
+        for theme in sorted_themes:
+            count = len(theme_solution_counts[theme])
+            print(f"  {theme}: {count} solutions")
+    
+    # Build mappings with IDs assigned in sorted order
+    theme_name_to_id = {}
+    subtheme_name_to_id = {}
+    subtheme_id_to_theme_id = {}
+    theme_id_to_name = {}
+    subtheme_id_to_name = {}
+    
+    main_theme_id = 1
+    subtheme_id = 1
+    
+    for theme in sorted_themes:
+        theme_name_to_id[theme] = main_theme_id
+        theme_id_to_name[main_theme_id] = theme
+        
+        # Get subthemes for this theme, sorted by appearance order
+        subthemes = list(subthemes_by_theme[theme].keys())
+        subthemes_sorted = sorted(
+            subthemes,
+            key=lambda st: subthemes_by_theme[theme][st]
+        )
+        
+        for subtheme in subthemes_sorted:
+            subtheme_name_to_id[subtheme] = subtheme_id
+            subtheme_id_to_name[subtheme_id] = subtheme
+            subtheme_id_to_theme_id[subtheme_id] = main_theme_id
+            subtheme_id += 1
+        
+        main_theme_id += 1
+    
+    if verbose:
+        print(f"Built mappings: {len(theme_name_to_id)} themes, {len(subtheme_name_to_id)} subthemes")
+    
+    return (theme_name_to_id, subtheme_name_to_id, subtheme_id_to_theme_id, 
+            theme_id_to_name, subtheme_id_to_name)
 
-if args.verbose:
-    print(f"Loaded {len(theme_name_to_id)} themes and {len(subtheme_name_to_id)} subthemes")
 
-# Try to detect the encoding of the main CSV file
-csv_encoding = None
-csv_content = None
+# Build theme mappings from solutions file
+(theme_name_to_id, subtheme_name_to_id, subtheme_id_to_theme_id, 
+ theme_id_to_name, subtheme_id_to_name) = build_theme_mappings_from_solutions(
+    args.solutions_file, args.verbose
+)
 
-for encoding in encodings_to_try:
-    try:
-        with open(args.input_file, "r", encoding=encoding) as f:
-            csv_content = f.read()
-        if "‚Äô" in csv_content or "â€™" in csv_content:
-            if args.verbose:
-                print(f"Found mojibake characters with {encoding}, trying next encoding...")
-            continue
-        csv_encoding = encoding
-        if args.verbose:
-            print(f"Successfully read CSV with encoding: {encoding}")
-        break
-    except (UnicodeDecodeError, UnicodeError):
-        if args.verbose:
-            print(f"Failed to read with {encoding}, trying next encoding...")
-        continue
+# Read the main CSV file
+csv_content = read_file_with_encoding(args.input_file, args.verbose)
 
-if csv_encoding is None:
-    csv_encoding = "utf-8-sig"
-    if args.verbose:
-        print(f"Using fallback encoding: {csv_encoding}")
-    with open(args.input_file, "r", encoding=csv_encoding) as f:
-        csv_content = f.read()
-
-# Now parse the CSV content
+# Parse the CSV content
 with io.StringIO(csv_content) as f:
     reader = csv.reader(f)
     headers = next(reader)
@@ -225,84 +274,22 @@ for record in records:
 # Convert unique sets to sorted lists
 unique_questions = sorted(list(unique_questions))
 
-# Count comments per theme
-theme_comment_counts = {}
-for comment in comments:
-    if comment.get("tids"):
-        for theme_id in comment["tids"]:
-            theme_comment_counts[theme_id] = theme_comment_counts.get(theme_id, 0) + 1
-
-# Count unique solutions per theme (early pass through solutions file)
-theme_solution_counts = {}
-solutions_count_content = None
-for encoding in encodings_to_try:
-    try:
-        with open(args.solutions_file, "r", encoding=encoding) as f:
-            solutions_count_content = f.read()
-        if "‚Äô" in solutions_count_content or "â€™" in solutions_count_content:
-            continue
-        break
-    except (UnicodeDecodeError, UnicodeError, FileNotFoundError):
-        continue
-
-if solutions_count_content:
-    with io.StringIO(solutions_count_content) as f:
-        reader = csv.DictReader(f)
-        solutions_seen_per_theme = {}  # Maps theme_id to set of solution_ids
-        for row in reader:
-            solution_id = row["SOLUTION_ID"].strip()
-            solution_main_theme = row.get("SOLUTION_MAIN_THEME", "").strip()
-            if solution_main_theme and solution_main_theme in theme_name_to_id:
-                theme_id = theme_name_to_id[solution_main_theme]
-                if theme_id not in solutions_seen_per_theme:
-                    solutions_seen_per_theme[theme_id] = set()
-                solutions_seen_per_theme[theme_id].add(solution_id)
-        # Convert sets to counts
-        for theme_id, solution_ids in solutions_seen_per_theme.items():
-            theme_solution_counts[theme_id] = len(solution_ids)
-
-# Sort themes by solution count (descending), then by original ID for tie-breaking
-sorted_theme_ids = sorted(
-    theme_id_to_name.keys(),
-    key=lambda tid: (-theme_solution_counts.get(tid, 0), tid)
-)
-
-# Create mapping from old theme ID to new theme ID (1-10)
-old_to_new_theme_id = {}
-for new_id, old_id in enumerate(sorted_theme_ids, start=1):
-    old_to_new_theme_id[old_id] = new_id
-
-if args.verbose:
-    print("Theme reordering by solution count:")
-    for old_id in sorted_theme_ids:
-        solution_count = theme_solution_counts.get(old_id, 0)
-        comment_count = theme_comment_counts.get(old_id, 0)
-        new_id = old_to_new_theme_id[old_id]
-        print(f"  Theme {new_id} (was {old_id}): {theme_id_to_name[old_id]} - {solution_count} solutions, {comment_count} comments")
-
-# Update theme IDs in comments
-for comment in comments:
-    if comment.get("tids"):
-        comment["tids"] = [old_to_new_theme_id[tid] for tid in comment["tids"] if tid in old_to_new_theme_id]
-
-# Build theme metadata with new IDs
+# Build theme metadata (already sorted by solution count from build_theme_mappings_from_solutions)
 themes = []
-for old_id in sorted_theme_ids:
-    new_id = old_to_new_theme_id[old_id]
+for theme_id in sorted(theme_id_to_name.keys()):
     themes.append({
-        "id": new_id,
-        "name": theme_id_to_name[old_id]
+        "id": theme_id,
+        "name": theme_id_to_name[theme_id]
     })
 
-# Build subtheme metadata with updated parent theme IDs
+# Build subtheme metadata
 subthemes = []
 for subtheme_id in sorted(subtheme_id_to_name.keys()):
-    old_parent_theme_id = subtheme_id_to_theme_id[subtheme_id]
-    new_parent_theme_id = old_to_new_theme_id.get(old_parent_theme_id, old_parent_theme_id)
+    parent_theme_id = subtheme_id_to_theme_id[subtheme_id]
     subthemes.append({
         "id": subtheme_id,
         "name": subtheme_id_to_name[subtheme_id],
-        "parent_theme_id": new_parent_theme_id
+        "parent_theme_id": parent_theme_id
     })
 
 # Process solutions CSV file
@@ -310,42 +297,13 @@ solutions = []  # Will contain processed solutions
 solutions_dict = {}  # Maps SOLUTION_ID to solution data
 solution_theme_subtheme_map = {}  # Maps SOLUTION_ID to sets of (theme_id, subtheme_id) tuples
 
-# Try to detect the encoding of the solutions CSV file
-solutions_encoding = None
-solutions_content = None
-
-for encoding in encodings_to_try:
-    try:
-        with open(args.solutions_file, "r", encoding=encoding) as f:
-            solutions_content = f.read()
-        if "‚Äô" in solutions_content or "â€™" in solutions_content:
-            if args.verbose:
-                print(f"Found mojibake characters in solutions file with {encoding}, trying next encoding...")
-            continue
-        solutions_encoding = encoding
-        if args.verbose:
-            print(f"Successfully read solutions CSV with encoding: {encoding}")
-        break
-    except (UnicodeDecodeError, UnicodeError):
-        if args.verbose:
-            print(f"Failed to read solutions file with {encoding}, trying next encoding...")
-        continue
-    except FileNotFoundError:
-        if args.verbose:
-            print(f"Solutions file not found: {args.solutions_file}")
-        break
-
-if solutions_encoding is None and solutions_content is None:
-    try:
-        solutions_encoding = "utf-8-sig"
-        if args.verbose:
-            print(f"Using fallback encoding for solutions file: {solutions_encoding}")
-        with open(args.solutions_file, "r", encoding=solutions_encoding) as f:
-            solutions_content = f.read()
-    except FileNotFoundError:
-        if args.verbose:
-            print(f"Warning: Solutions file not found, skipping solutions processing")
-        solutions_content = None
+# Read solutions file (already read during build_theme_mappings_from_solutions, but we need it again for full processing)
+try:
+    solutions_content = read_file_with_encoding(args.solutions_file, args.verbose)
+except FileNotFoundError:
+    if args.verbose:
+        print(f"Warning: Solutions file not found, skipping solutions processing")
+    solutions_content = None
 
 if solutions_content:
     # Parse solutions CSV
@@ -376,12 +334,12 @@ if solutions_content:
             
             if solution_main_theme and solution_main_theme in theme_name_to_id:
                 theme_id = theme_name_to_id[solution_main_theme]
-            elif args.verbose and solution_main_theme:
+            elif solution_main_theme:
                 print(f"Warning: Solution theme '{solution_main_theme}' not found in theme map")
             
             if solution_subtheme and solution_subtheme in subtheme_name_to_id:
                 subtheme_id = subtheme_name_to_id[solution_subtheme]
-            elif args.verbose and solution_subtheme:
+            elif solution_subtheme:
                 print(f"Warning: Solution subtheme '{solution_subtheme}' not found in theme map")
             
             # Store theme/subtheme combination
@@ -425,8 +383,8 @@ for solution_id in sorted_solution_ids:
         if subtheme_id is not None:
             subtheme_ids.add(subtheme_id)
     
-    # Convert to lists and map theme IDs using old_to_new_theme_id
-    theme_ids_list = sorted([old_to_new_theme_id[tid] for tid in theme_ids if tid in old_to_new_theme_id])
+    # Convert to sorted lists (theme IDs are already in correct order)
+    theme_ids_list = sorted(list(theme_ids))
     subtheme_ids_list = sorted(list(subtheme_ids))
     
     solution_obj = {
