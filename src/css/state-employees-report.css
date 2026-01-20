@@ -75,13 +75,13 @@ section#what-we-heard {
     background-size: 45px 46px;
     padding-bottom: 1rem;
     font-style: italic;
+    font-size: 18px;
     color: #333;
 }
 
 .quote-container {
     padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #d7d7d7;
+    /* border-bottom: 1px solid #d7d7d7; */
 }
 
 /* Themes We Found Section */
