@@ -12,11 +12,12 @@ layout: mmmd-homepage
 ----
 id: hero
 buttonText: 지금 가입하세요
+buttonText_results: 결과 보기
 ----
 
 # 긴급한 문제에 대해 귀하의 의견을 정부에 알려주세요
 
-
+저희의 최근 참여는 주 직원들과 함께였습니다. 그들은 정부 효율성에 대한 아이디어를 공유했습니다.
 
 ----
 id: about
