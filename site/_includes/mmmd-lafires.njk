@@ -18,6 +18,29 @@
   </div>
 </section>
 
+<section id="what-we-heard">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4">
+        <img src="/public/images/whatweheard_adornment.svg" class="what-we-heard-adornment" aria-hidden="true" alt="" />
+      </div>
+      <div class="col-lg-8">
+        <div class="what-we-heard-content">
+          {{ modules.what_we_heard.content | safe }}
+        </div>
+        <div class="what-we-heard-buttons">
+          <a href="{{ "/lafires-recovery/action-plan/" | locale_url }}" data-appearance="button" data-theme="orange" class="what-we-heard-cta">
+            {{ modules.phaseGeneral.resourcesLinkTitle_actionplan }}
+          </a>
+          <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" data-appearance="button" data-theme="orange" class="what-we-heard-cta">
+            {{ modules.phaseGeneral.resourcesLinkTitle_agendasettingfindings }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="overview">
   <div class="container">
     <div class="row">
@@ -68,13 +91,6 @@
       </div>
       <div class="col-lg-4">
         <div class="phase-sidebar">
-          <h3>{{ modules.phaseGeneral.resourcesTitle }}</h3>
-          <a href="{{ "/lafires-recovery/action-plan/" | locale_url }}" data-appearance="button" data-theme="off-white" class="findings-link-icon">
-            {{ modules.phaseGeneral.resourcesLinkTitle_actionplan }}
-          </a>
-          <a href="{{ "/lafires-recovery/agenda-setting-findings/" | locale_url }}" data-appearance="button" data-theme="off-white" class="findings-link-icon">
-            {{ modules.phaseGeneral.resourcesLinkTitle_agendasettingfindings }}
-          </a>
           {{ modules.phaseGeneral.content | safe }}
         </div>
       </div>
