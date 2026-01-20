@@ -6,6 +6,28 @@ section#overview .row {
   --bs-gutter-y: 2rem;
 }
 
+section#what-we-heard {
+    padding: 3rem 0;
+}
+
+section#what-we-heard .row {
+    --bs-gutter-x: 3rem;
+    --bs-gutter-y: 2rem;
+}
+
+.what-we-heard-adornment {
+    display: block;
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.what-we-heard-cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
 div.about-the-process > h3 {
     margin: 0 0 1rem 0;
     font-size: 1.4375rem;
