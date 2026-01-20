@@ -12,6 +12,7 @@ layout: mmmd-homepage
 ----
 id: hero
 buttonText: Đăng ký ngay
+buttonText_actionplan: Xem kế hoạch hành động
 buttonText_results: Xem kết quả
 ----
 
@@ -70,9 +71,11 @@ id: partners
 Chúng tôi thiết kế nền tảng này theo hướng phi đảng phái. Cơ Quan Điều Hành Chính Phủ và Văn Phòng Dữ Liệu Và Đổi Mới của tiểu bang đã phát triển ứng dụng này. Các đối tác và cố vấn khác cho sáng kiến ​​này là:
 
 ----
-id: action_plan
-buttonText: Xem kế hoạch hành động
+id: homepage_engagements
+statusText: Đã kết thúc
+e3_title: Hình thành một chính phủ tiểu bang tốt hơn
+e3_description: Hơn 1,400 nhân viên nhà nước đã đóng góp ý kiến của họ. Ý tưởng của họ sẽ giúp làm cho chính phủ California hiệu quả và hiệu quả hơn.
+lafires_title: Phục hồi sau các đám cháy ở Los Angeles
+lafires_description: Chúng tôi đã làm việc với hơn 900 người bị ảnh hưởng bởi các đám cháy rừng Eaton và Palisades. Ý kiến đóng góp của họ sẽ giúp định hình các kế hoạch phục hồi lâu dài.
 ----
-## LA đồng thuận với kế hoạch phục hồi
-
-Hơn 900 thành viên cộng đồng đã gặp nhau tại các trung tâm hội nghị cho đời sống hiện đại. Họ đã chia sẻ những điều quan trọng nhất cho họ để phục hồi xảy ra.
+## Các hoạt động gắn kết của chúng tôi

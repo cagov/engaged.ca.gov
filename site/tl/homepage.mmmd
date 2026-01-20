@@ -12,6 +12,7 @@ layout: mmmd-homepage
 ----
 id: hero
 buttonText: Magpatala ngayon
+buttonText_actionplan: Tingnan ang plano ng aksyon
 buttonText_results: Tingnan ang mga resulta
 ----
 
@@ -71,9 +72,11 @@ id: partners
 Idinisenyo namin ang plataporma na ito na walang kinikilingan. Binuo ito ng Ahensiya ng mga Operasyon ng Gobyerno at Tanggapan ng Datos at Inobasyon (Government Operations Agency at Office of Data and Innovation) ng estado. Ang iba pang mga kasosyo at tagapayo para sa inisyatiba na ito ay:
 
 ----
-id: action_plan
-buttonText: Tingnan ang plano ng aksyon
+id: homepage_engagements
+statusText: Tapos na
+e3_title: Pagbuo ng mas mahusay na estado ng gobyerno
+e3_description: Higit sa 1,400 na empleyado ng estado ang nagbigay ng kanilang input. Ang kanilang mga ideya ay makakatulong na gawing mas mahusay at epektibo ang gobyerno ng California.
+lafires_title: Pagbawi ng mga sunog sa Los Angeles
+lafires_description: Nakipagtulungan kami sa higit sa 900 na tao na apektado ng mga wildfire sa Eaton at Palisades. Ang kanilang input ay makakatulong na hubugin ang mga plano sa pangmatagalang pagbawi.
 ----
-## Nagkakaisa ang LA sa plano ng pagbawi
-
-Higit sa 900 miyembro ng komunidad ang nagtipon-tipon sa mga town hall para sa makabagong panahon. Ibinahagi nila kung ano ang pinakamahalaga sa kanila upang maisakatuparan ang pagbawi.
+## Ang aming mga pakikipag-ugnayan

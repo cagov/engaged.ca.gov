@@ -12,6 +12,7 @@ layout: mmmd-homepage
 ----
 id: hero
 buttonText: 立即註冊
+buttonText_actionplan: 查看行動計畫
 buttonText_results: 查看結果
 ----
 
@@ -70,9 +71,11 @@ id: partners
 我們設計這個平台旨在保持非黨派性質。該平台由加州政府營運局和數據與創新辦公室開發。此計劃的其他合作夥伴和顧問包括：
 
 ----
-id: action_plan
-buttonText: 查看行动计划
+id: homepage_engagements
+statusText: 已結束
+e3_title: 塑造更好的州政府
+e3_description: 超過1,400名州政府員工提供了他們的意見。他們的想法將有助於使加州政府更加高效和有效。
+lafires_title: 洛杉磯火災恢復
+lafires_description: 我們與超過900名受伊頓和帕利塞茲野火影響的民眾合作。他們的意見將有助於制定長期恢復計劃。
 ----
-## LA達成恢復計畫共識
-
-超過900名社區成員在數字時代的市政廳會議中齊聚一堂。他們分享了對實現恢復最重要的事項。
+## 我們的參與

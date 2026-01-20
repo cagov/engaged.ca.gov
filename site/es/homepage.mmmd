@@ -12,6 +12,7 @@ layout: mmmd-homepage
 ----
 id: hero
 buttonText: Regístrese ahora
+buttonText_actionplan: Ver el plan de acción
 buttonText_results: Ver los resultados
 ----
 
@@ -70,9 +71,11 @@ id: partners
 Diseñamos esta plataforma para que sea no partidista. La Agencia de Operaciones Gubernamentales y la Oficina de Datos e Innovación del estado lo desarrollaron. Otros socios y asesores de esta iniciativa son:
 
 ----
-id: action_plan
-buttonText: Ver el plan de acción
+id: homepage_engagements
+statusText: Cerrado
+e3_title: Formar un mejor gobierno estatal
+e3_description: Más de 1,400 empleados estatales dieron su opinión. Sus ideas ayudarán a hacer que el gobierno de California sea más eficiente y eficaz.
+lafires_title: Recuperación de los incendios de Los Ángeles
+lafires_description: Trabajamos con más de 900 personas afectadas por los incendios forestales de Eaton y Palisades. Su opinión ayudará a dar forma a los planes de recuperación a largo plazo.
 ----
-## Los Ángeles se une en un plan de recuperación
-
-Más de 900 miembros de la comunidad se reunieron en asambleas adaptadas a la era digital. Compartieron lo que es más importante para ellos para lograr la recuperación.
+## Nuestros compromisos
