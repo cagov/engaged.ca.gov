@@ -19,26 +19,23 @@ id: hero
 
 Over a 10-week engagement, more than 1,400 California state employees shared insights on how to make our government more efficient.
 
+All types of employees participated. For example, employees worked for the state for a varying amount of time. Most were not supervisors or managers.
+
 ----
 id: what_we_heard
 ----
 
 ## What state employees said
 
-We heard a clear story. Improving government efficiency involves more than just updating technology or cutting costs. It requires a management culture that empowers employees and fosters innovation.
+We heard a clear story. Improving government efficiency involves more than updating technology or cutting costs. It requires a management culture that empowers employees and fosters innovation.
 
-State employees drive business decisions that deliver exceptional, equitable services. They are subject matter experts on what it takes to operate state government.
+State employees drive excellent services forward. They are subject matter experts on what it takes to operate state government.
 
-They shared great ideas for solutions that deserve our attention.
+They shared great ideas that deserve our attention. For example:
 
-You can explore their ideas and comments below.
-
-Here are just a few examples of the ideas employees shared:
-
- - Mentorship programs for young leaders to improve employee retention 
- - Simplifying how people log in to and access necessary IT systems 
- - Adopting or improving governance to increase compliance
-
+ - Mentorship programs for young leaders to improve employee retention
+ - Improved data sharing between agencies
+ - Better communication between leadership and lower level staff
 
 ----
 id: participation_numbers
@@ -70,7 +67,7 @@ hilite_fill_color: "rgba(197, 145, 218, 0.10)"
 nbr_ideas: 843
 ----
 
-This theme focuses on hiring and keeping good employees. Topics included employee turnover, career growth, and mentorship programs.
+In this theme, employees shared many views about their work and career. They talked about pay, hours, benefits, and fair treatment for all staff. Many asked for better hiring, training, and support, and for clear roles and fair reviews. They also want chances to grow, to learn new skills, and to stay in their jobs.
 
 ----
 id: theme_2
@@ -82,7 +79,7 @@ hilite_fill_color: "rgba(101, 173, 225, 0.10)"
 nbr_ideas: 765
 ----
 
-This theme covers basic government operations. Comments covered approvals, spending, and excessive paperwork.
+In this theme, employees talked about the need to fix how work gets done. They want clearer steps, better records, and proven ways to improve daily tasks. Many said rules, forms, and slow handoffs get in the way and cause delays. They also asked for better tools, less paper, and faster, clearer policy updates.
 
 ----
 id: theme_3
@@ -94,7 +91,7 @@ hilite_fill_color: "rgba(117, 188, 96, 0.10)"
 nbr_ideas: 706
 ----
 
-The comments noted that there are siloed departments and that communication between leadership and staff is poor. Employees also said there’s a need to improve training materials, cross-agency collaboration, and to retain essential knowledge.
+In this theme, employees spoke about the need for better communication at work. They want teams and agencies to share more and work across silos. Many asked for clear records and shared tools, using simple language. They also want better ways to gather staff input and support many languages.
 
 ----
 id: theme_4
@@ -106,7 +103,7 @@ hilite_fill_color: "rgba(108, 128, 67, 0.10)"
 nbr_ideas: 646
 ----
 
-This theme's comments highlight the issues that slow down state services and make them hard to use. 
+In this theme, employees talked about serving the public better. They want the public to access services that are faster and easier to use. Many want the state to listen more to residents and to use research to design better programs. For example, improving transit and public policies that affect daily life.
 
 ----
 id: theme_5
@@ -118,7 +115,7 @@ hilite_fill_color: "rgba(109, 72, 132, 0.10)"
 nbr_ideas: 600
 ----
 
-This theme's comments center on contractor spending and money management.
+In this theme, employees shared ideas about how the state uses money and resources. They talked about buying products, managing contracts, and tracking spending to cut waste. Many asked for simpler fees, faster paybacks, and shared tools or staff to save money. They also noted the need to care for state buildings, roads, and parks.
 
 ----
 id: theme_6
@@ -130,7 +127,7 @@ hilite_fill_color: "rgba(228, 93, 72, 0.10)"
 nbr_ideas: 548
 ----
 
-This theme highlights issues with outdated IT systems. People discussed poor mobile experiences. They also talked about AI, centralized platforms, and digitizing processes.
+In this theme, employees talked about fixing and updating tech at work. They want better tools, shared systems, safe data storage, and smart use of AI. Many asked for easier data sharing and tools that work for people with disabilities. They also shared ideas to improve public websites and online services.
 
 ----
 id: theme_7
@@ -142,7 +139,7 @@ hilite_fill_color: "rgba(238, 153, 48, 0.10)"
 nbr_ideas: 352
 ----
 
-This theme's comments discuss the need for better leadership training and the benefits of varying management approaches.
+In this theme, employees shared thoughts about leadership at work. They want state leaders to be fair, skilled, and held to clear standards. Many asked for better training and support for managers. They also want clear choices and honest, open communication from management.
 
 ----
 id: theme_8
@@ -154,7 +151,7 @@ hilite_fill_color: "rgba(83, 202, 176, 0.10)"
 nbr_ideas: 325
 ----
 
-This theme's comments mainly covered remote work and return-to-office policies. Employees also discussed flexible work options, work-life balance, and related hiring policies.
+In this theme, employees talked about where and how they work. They want flexible schedules, clear remote work rules, and better office spaces. Many asked for easier travel rules and faster paybacks for work costs. They also shared ideas to cut waste and protect the environment.
 
 ----
 id: theme_9
@@ -166,7 +163,7 @@ hilite_fill_color: "rgba(169, 212, 242, 0.10)"
 nbr_ideas: 320
 ----
 
-This theme's comments address issues with management layers, redundant workflows, and decision-making. Employees also discussed ways to build a more inclusive and welcoming workplace culture.
+In this theme, employees shared views on how it feels to work in state jobs. They want a kind, fair culture with trust, respect, and openness. Many asked for less fear of change and more learning and testing of new ideas. They also noted the value of strong ties between staff and better ways to organize teams.
 
 ----
 id: theme_10
@@ -178,7 +175,7 @@ hilite_fill_color: "rgba(242, 195, 199, 0.10)"
 nbr_ideas: 255
 ----
 
-This theme's comments highlight the need for guidelines and policies. People also talked about how to enforce these policies and ensure accountability.
+In this theme, employees talked about how the state makes rules and decisions. They want clearer policy steps and better insight into choices and spending. Many stressed the need to follow the law while also fixing slow or uneven structures. They also noted gaps between written rules and how work happens in real life.
 
 ----
 id: comment_explorer
@@ -192,8 +189,8 @@ theme_fallback: Theme
 search_placeholder: Search
 methods_text: We used both our expertise and AI technology to summarize the ideas employees shared.
 methods_link_text: Learn more about our methods.
-download_button_text: Download all the comments
-download_ideas_text: Download all the ideas
+download_button_text: Download all the original comments
+download_ideas_text: Download the idea data
 comment_count: __N__ ideas
 comments_label: comments
 ideas_label: ideas
@@ -313,39 +310,25 @@ subtheme_65: Policymaking
 id: current_actions
 title: What we're doing
 ----
-We are grateful for the contributions that state employees made to this effort. The responses themselves reflect dedication to their work and their communities.
+We are grateful for the contributions that state employees made to this effort. We want to take action on as many of these ideas as we can. 
 
-A number of employees expressed a positive sentiment related to working for the state and participating in this engagement. 
-
-Employees shared:
-<div class="quote-container style-body-text">
-<div class="quote">“It's nice to be able to share my opinions to broaden my perspectives on what it means to be a public servant.”</div>
-<div class="quote">“I’m proud to be part of something bigger than myself, serving the public through meaningful and often behind-the-scenes work that helps keep essential operations running smoothly.”</div>
-<div class="quote">“I love the relationships that I have built with the hard-working and dedicated state employees that keep the programs in this state available for everyone. I am continuously amazed at our ability to grow and meet the challenges that come at us every day.”</div>
-</div>
-
-We want to shepherd these contributions forward. The practical suggestions can help remove roadblocks caused by too much red tape, old technology, and a leadership style that focuses too much on rank and titles. Our aim is to be organized, open, and effective with our time and resources from the beginning so that all of these good ideas can be considered.
+Here are some of the ways we're currently improving state government.
 
 ### Governor’s Innovation Fellows
 
-As a first step, the state is harnessing innovation in a human-centered, results-driven way.
-
-In July 2025, we launched the [Governor’s Innovation Fellows](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/) program. This program aims to make the government more efficient, effective, and responsive to the public.
-
-The fellows will continue to build on what we’ve already learned from state employees.
+In July 2025, the California Office of Data and Innovation launched the [Governor’s Innovation Fellows program](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/). The Fellows are state employees solving real problems. The program brings them together to improve services for Californians.
 
 ### Results&period;ca&period;gov
 
-There are ongoing efforts across the State to meet the need for efficiencies in government. These wins are showcased on the website, results.ca.gov. Visitors to the site will see measurable accomplishments that are delivering real impacts.
+Many state agencies and departments are already working on efforts to address efficiencies in government. We showcase these wins on the website [results.ca.gov](https://results.ca.gov). Visitors to the site will see measurable accomplishments that are delivering real impacts.
 
 ### Innovation Showcases
 
-The State has innovated a new way to do business: [Innovation Showcases](https://innovation.ca.gov/our-work/innovation-showcase/). This is a new model and approach to bringing the private sector to the table with government staff to co-create at the point of problem definition, resulting in no-cost and low-cost prototypes.
-
+The state has reimagined how we run market research: the [Innovation Showcase](https://innovation.ca.gov/our-work/innovation-showcase/). Showcases bring together the private and public sector to co-create. They give the state direct access to new market insights. They also highlight practical ways we can increase efficiency and impact.
 
 ### Innovation Community of Practice
 
-The Innovation Community of Practice connects state employees who want to try new ways of doing things. It spotlights and amplifies the innovation happening throughout the state. The Community is open to all state employees. Learn more and [sign up](https://innovation.ca.gov/our-work/innovation-community-of-practice/) today.
+The Innovation Community of Practice connects state employees who want to try new ways of doing things. It spotlights and amplifies the innovation happening through the Fellows program, and throughout the state. The Community is open to all state employees. Learn more and [sign up](https://innovation.ca.gov/our-work/innovation-community-of-practice/) today.
 
 ----
 id: methodology
@@ -353,17 +336,15 @@ id: methodology
 
 ### How we did the analysis
 
-We combined human expertise and technology to understand the ideas employees shared. Many people shared more than one idea per comment. We used AI to pull out all specific, actionable solutions from each main comment on the platform. This helped us view, categorize, and act on the complete list of ideas.
+We combined human expertise and technology to understand employees’ thoughts. This hybrid approach allowed us to work at scale. It also enabled us to maintain the context and nuance that decision-makers need.
 
-​We then analyzed the ideas employees shared using a three-step approach.
+In an online platform, employees shared both written comments and responses. Some of the comments had multiple ideas. Some were a simple "+1" on other employees' comments. 
 
-First, our user research team reviewed and sorted a subset of comments. They identified 10 main themes and over 100 subthemes. This process established our initial categories.
+We used AI to pull out all specific, actionable ideas from each main comment on the platform. In total, our analysis identified 2,627 ideas from the 2,477 comments. ​
 
-Our data team then used machine learning to do topic modeling. This helped us spot patterns across all comments. We compared these results with the user research team’s findings to refine and confirm the themes and subthemes. For example, we found that some of the subthemes from our initial review were similar to each other. We also found new or missing themes.
+We then categorized the ideas so that we could better understand them. 
 
-We used AI to apply the themes to all submissions. Then, we refined the subthemes through human review. Our review checked that the AI accurately assigned each theme and subtheme to at least one submission. We also looked for any additional themes missed during the first two steps. The process ultimately resulted in a balanced set of 65 subthemes.
-
-This hybrid approach allowed us to work at scale. We were also able to maintain the context and nuance that decision-makers need.
+We used many approaches, including machine learning, topic modeling, and human review. At the end, we tagged all ideas from a set of 10 themes and 65 subthemes.
 
 You can see the code, AI prompts, and the models we used [to process and analyze data for this engagement on GitHub](https://github.com/cagov/caldata-engaged-california).
 
@@ -371,28 +352,30 @@ You can see the code, AI prompts, and the models we used [to process and analyze
 id: about_the_data
 ----
 
-### About the data
+### About the participants
 
-1,469 participants shared ideas with us during this engagement. These employees opted in and posted at least one comment.
+California state employees are deeply committed to public service. 1,469 of them participated in this engagement. They appreciated the chance to share their knowledge. Their responses show they care about their work and the communities they support. 
 
-The participants were employees with varied tenures<sup>[1](#footnote1)</sup>:
+<div class="quote-container style-body-text">
+<div class="quote">“It's nice to be able to share my opinions to broaden my perspectives on what it means to be a public servant.”</div>
+<div class="quote">“I’m proud to be part of something bigger than myself, serving the public through meaningful and often behind-the-scenes work that helps keep essential operations running smoothly.”</div>
+<div class="quote">“I love the relationships that I have built with the hard-working and dedicated state employees that keep the programs in this state available for everyone. I am continuously amazed at our ability to grow and meet the challenges that come at us every day.”</div>
+</div>
 
-- 45% of respondents reported 10 or more years of state tenure
-- 55% of respondents reported fewer than 10 years of state tenure
+**Tenure**
 
-​Of the employees who participated:
+Most employees self-reported the amount of time they worked at the state. About a third of them didn’t tell us this information. Of those who did::
 
-- 42% said they were not a supervisor or a manager
-- 23% said they were managers or supervisors
+- 45% worked at the state for 10 or more years
+- 55% worked at the state for fewer than 10 years 
+
+**Position Level**
+
+Most employees told us their position level. About a third of them didn’t tell us. Of those who did:
+
 - Less than 1% said they were a director or above
-
-Several participants didn’t respond to the question, opted not to say, or said they weren’t sure which position to select.
-
-The comments provided by employees range from having multiple ideas embedded into one comment to being a simple "+1" on other participants' comments.
-
-In total, our analysis identified 2,627 ideas.
-
-<small id=footnote1><sup>1</sup>482 participants of the total participants didn't tell us how long they've worked for the state.</small>
+- 23% said they were a manager or supervisor
+- 42% said they were not a supervisor or a manager
 
 ----
 id: signup_engaged

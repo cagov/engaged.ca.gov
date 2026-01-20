@@ -34,6 +34,36 @@ section#what-happens-in-each-phase .row {
   --bs-gutter-y: 2rem;
 }
 
+section#what-we-heard {
+  padding: 3rem 0;
+}
+
+section#what-we-heard .row {
+  --bs-gutter-x: 3rem;
+  --bs-gutter-y: 2rem;
+}
+
+.what-we-heard-adornment {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.what-we-heard-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.what-we-heard-cta {
+  display: inline-block;
+  width: auto;
+}
+
 div.about-the-process > h3 {
   margin: 0 0 1rem 0;
   font-size: 1.4375rem;
