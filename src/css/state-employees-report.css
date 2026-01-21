@@ -52,6 +52,11 @@ section#what-we-heard {
     text-align: center;
 }
 
+.participation-stat img {
+    display: block;
+    margin: 0 auto;
+}
+
 .stat-number {
     font-weight: 700;
     font-size: 47px;
@@ -68,6 +73,40 @@ section#what-we-heard {
     color: #666;
     @media (max-width: 720px) {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    section#what-we-heard .col-lg-4 {
+        margin-top: .5rem;
+    }
+    
+    .participation-sidebar {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        justify-content: space-around;
+        padding: 0;
+        margin-top: 0;
+    }
+    
+    .participation-stat {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    
+    .participation-stat img {
+        width: 36px;
+        height: auto;
+        margin-bottom: 0.5rem;
+    }
+    
+    .stat-number {
+        font-size: 24px;
+    }
+    
+    .stat-label {
+        font-size: 16px;
     }
 }
 
@@ -926,8 +965,3 @@ section#stay-informed p {
     }
 }
 
-@media (max-width: 768px) {
-    .participation-sidebar {
-        margin-top: 2rem;
-    }
-}
