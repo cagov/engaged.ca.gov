@@ -1,6 +1,12 @@
 /* state-employees-report.css */
 
-
+h4 {
+    color: #0F152F;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 39px;
+}
 
 section#e3-report-hero {
     background: #1C2745;
