@@ -190,8 +190,7 @@ theme_fallback: موضوع
 search_placeholder: جستجو
 methods_text: ما از تخصص و فناوری هوش مصنوعی خود برای خلاصه کردن ایده‌هایی که کارمندان به اشتراک گذاشتند استفاده کردیم.
 methods_link_text: بیشتر در مورد روش‌های ما بیاموزید.
-download_button_text: دانلود همه نظرات اصلی
-download_ideas_text: دانلود داده‌های ایده
+download_all_text: دانلود همه داده‌ها
 comment_count: __N__ ایده
 comments_label: نظرات
 ideas_label: ایده‌ها

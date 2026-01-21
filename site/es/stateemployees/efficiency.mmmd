@@ -190,8 +190,7 @@ theme_fallback: Tema
 search_placeholder: Buscar
 methods_text: Utilizamos tanto nuestra experiencia como tecnología de IA para resumir las ideas que compartieron los empleados.
 methods_link_text: Obtenga más información sobre nuestros métodos.
-download_button_text: Descargar todos los comentarios originales
-download_ideas_text: Descargar los datos de ideas
+download_all_text: Descargar todos los datos
 comment_count: __N__ ideas
 comments_label: comentarios
 ideas_label: ideas

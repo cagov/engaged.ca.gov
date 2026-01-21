@@ -190,8 +190,7 @@ theme_fallback: Թեմա
 search_placeholder: Որոնում
 methods_text: "Մենք օգտագործեցինք և՛ մեր փորձագիտությունը, և՛ AI տեխնոլոգիան՝ աշխատակիցների կիսած գաղափարները ամփոփելու համար:"
 methods_link_text: "Իմացեք ավելին մեր մեթոդների մասին:"
-download_button_text: Ներբեռնել բոլոր բնօրինակ մեկնաբանությունները
-download_ideas_text: Ներբեռնել գաղափարների տվյալները
+download_all_text: Ներբեռնել բոլոր տվյալները
 comment_count: __N__ գաղափար
 comments_label: մեկնաբանություններ
 ideas_label: գաղափարներ

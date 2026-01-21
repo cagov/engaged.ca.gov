@@ -189,8 +189,7 @@ theme_fallback: Theme
 search_placeholder: Search
 methods_text: We used both our expertise and AI technology to summarize the ideas employees shared.
 methods_link_text: Learn more about our methods.
-download_button_text: Download all the original comments
-download_ideas_text: Download the idea data
+download_all_text: Download all the data
 comment_count: __N__ ideas
 comments_label: comments
 ideas_label: ideas

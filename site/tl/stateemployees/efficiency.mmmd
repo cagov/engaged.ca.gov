@@ -190,8 +190,7 @@ theme_fallback: Tema
 search_placeholder: Maghanap
 methods_text: Ginamit namin ang parehong aming kadalubhasaan at teknolohiya ng AI upang ibuod ang mga ideya na ibinahagi ng mga empleyado.
 methods_link_text: Matuto nang higit pa tungkol sa aming mga pamamaraan.
-download_button_text: I-download ang lahat ng orihinal na komento
-download_ideas_text: I-download ang data ng ideya
+download_all_text: I-download ang lahat ng data
 comment_count: __N__ ideya
 comments_label: mga komento
 ideas_label: mga ideya

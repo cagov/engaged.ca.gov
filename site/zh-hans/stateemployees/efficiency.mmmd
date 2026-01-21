@@ -190,8 +190,7 @@ theme_fallback: 主题
 search_placeholder: 搜索
 methods_text: 我们使用我们的专业知识和 AI 技术来总结员工分享的想法。
 methods_link_text: 了解更多关于我们的方法。
-download_button_text: 下载所有原始评论
-download_ideas_text: 下载想法数据
+download_all_text: 下载所有数据
 comment_count: __N__ 想法
 comments_label: 评论
 ideas_label: 想法

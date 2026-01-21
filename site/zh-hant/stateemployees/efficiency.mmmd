@@ -190,8 +190,7 @@ theme_fallback: 主題
 search_placeholder: 搜索
 methods_text: 我們使用我們的專業知識和 AI 技術來總結員工分享的想法。
 methods_link_text: 了解更多關於我們的方法。
-download_button_text: 下載所有原始評論
-download_ideas_text: 下載想法數據
+download_all_text: 下載所有資料
 comment_count: __N__ 想法
 comments_label: 評論
 ideas_label: 想法

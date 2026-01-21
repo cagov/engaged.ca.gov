@@ -697,24 +697,44 @@ section#comment-explorer {
 }
 
 .download-button {
-    padding: 1rem 3rem;
-    background: #EE9930;
-    color: #0f152f;
+    padding: 1rem 1.5rem;
+    padding-right: 3rem;
+    background-color: #EE9930;
+    background-image: url("/public/images/icon-download.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    color: #0F152F;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33.4px;
+    text-decoration: none;
     border: none;
     border-radius: 8px;
-    font-weight: 500;
-    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.download-comments {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    display: block;
+    clear: both;
 }
 
 .download-button:hover {
-    background: #d88a2a;
+    background-color: #d88a2a;
+    text-decoration: none;
 }
 
-.download-button::after {
-    content: " ↓";
-    margin-left: 0.5rem;
+a.download-button,
+a.download-button:hover,
+a.download-button:focus,
+a.download-button:active,
+a.download-button:visited {
+    text-decoration: none !important;
 }
 
 /* Solution Items */
