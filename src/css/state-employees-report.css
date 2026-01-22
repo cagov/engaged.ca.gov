@@ -317,6 +317,7 @@ section#comment-explorer {
     user-select: none;
     @media (max-width: 720px) {
         font-size: 18px;
+        align-items: flex-start;
     }
 }
 
@@ -334,11 +335,17 @@ section#comment-explorer {
     border-radius: 50%;
     flex-shrink: 0;
     background-color: #5489A3;
+    @media (max-width: 720px) {
+        margin-top: 3px;
+    }
 }
 
 .theme-selector-text {
     flex: 1;
     white-space: nowrap;
+    @media (max-width: 720px) {
+        white-space: normal;
+    }
 }
 
 .theme-selector-arrow {
@@ -348,6 +355,9 @@ section#comment-explorer {
     flex-shrink: 0;
     margin-left: auto;
     padding-left: 0.25rem;
+    @media (max-width: 720px) {
+        margin-top: 8px;
+    }
 }
 
 .theme-selector-arrow svg {
@@ -390,8 +400,15 @@ section#comment-explorer {
     transition: background-color 0.2s ease;
     @media (max-width: 720px) {
         font-size: 18px;
+        align-items: flex-start;
     }
   }
+
+.theme-selector-option .theme-selector-circle {
+    @media (max-width: 720px) {
+        margin-top: 7px;
+    }
+}
 
 .theme-selector-option:hover {
     background-color: #F6F7FA;
