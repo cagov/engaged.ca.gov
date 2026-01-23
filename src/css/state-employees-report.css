@@ -651,7 +651,7 @@ section#comment-explorer {
     border-radius: 4px;
     font-size: 0.875rem;
     color: #333;
-    white-space: nowrap;
+    text-wrap: auto;
 }
 
 .comment-tag-interactive {
