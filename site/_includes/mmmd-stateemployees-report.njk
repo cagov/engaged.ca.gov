@@ -191,8 +191,12 @@
           </div>
         </div>
         <div class="comment-count" data-template="{{ modules.comment_explorer_ui.comment_count }}" aria-live="polite" aria-atomic="true">{{ modules.comment_explorer_ui.loading_text }}</div>
-        <div class="comments-container display-flex-column-gap" aria-live="polite" aria-atomic="false" role="region" aria-label="{{ modules.comment_explorer_ui.ideas_and_comments_aria_label }}">
-          <!-- Comments will be populated here from JSON -->
+        <div class="comments-scroll-wrapper">
+          <div class="scroll-gradient scroll-gradient-top"></div>
+          <div class="comments-container display-flex-column-gap" aria-live="polite" aria-atomic="false" role="region" aria-label="{{ modules.comment_explorer_ui.ideas_and_comments_aria_label }}">
+            <!-- Comments will be populated here from JSON -->
+          </div>
+          <div class="scroll-gradient scroll-gradient-bottom"></div>
         </div>
         <div class="download-comments">
           <a class="download-button" href="/public/data/State_employees_all_data.zip" download>

@@ -572,6 +572,35 @@ section#comment-explorer {
     margin-top: 2rem;
 }
 
+.comments-scroll-wrapper {
+    position: relative;
+}
+
+.scroll-gradient {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1;
+}
+
+.scroll-gradient-top {
+    top: 0;
+    background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.scroll-gradient-bottom {
+    bottom: 0;
+    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.scroll-gradient.visible {
+    opacity: 1;
+}
+
 .comments-container {
     min-height: 300px;
     border-radius: 8px;

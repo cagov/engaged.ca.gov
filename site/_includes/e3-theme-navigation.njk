@@ -286,6 +286,26 @@ function collapseCommentWidget(toggle) {
   }
 }
 
+// Function to update scroll gradient visibility based on scroll position
+function updateScrollGradients() {
+  let container = document.querySelector('.comments-container');
+  let topGradient = document.querySelector('.scroll-gradient-top');
+  let bottomGradient = document.querySelector('.scroll-gradient-bottom');
+  
+  if (!container || !topGradient || !bottomGradient) return;
+  
+  let scrollTop = container.scrollTop;
+  let scrollHeight = container.scrollHeight;
+  let clientHeight = container.clientHeight;
+  let maxScroll = scrollHeight - clientHeight;
+  
+  // Show top gradient if not at top
+  topGradient.classList.toggle('visible', scrollTop > 0);
+  
+  // Show bottom gradient if not at bottom (with small threshold)
+  bottomGradient.classList.toggle('visible', scrollTop < maxScroll - 1);
+}
+
 // Function to populate solutions instead of comments
 function populate_solutions(theme_number_or_all) {
   if (global_comment_data == null) {
@@ -586,6 +606,7 @@ function toggleSubtheme(subthemeId) {
   } else {
     populate_solutions(current_theme_index);
   }
+  updateScrollGradients();
 }
 
 // Function to select a single subtheme (clearing all others)
@@ -636,6 +657,7 @@ function switch_theme(theme_number, should_scroll = false) {
     if (comment_container) {
       comment_container.scrollTop = 0;
     }
+    updateScrollGradients();
     return;
   }
   
@@ -656,6 +678,7 @@ function switch_theme(theme_number, should_scroll = false) {
     if (comment_container) {
       comment_container.scrollTop = 0;
     }
+    updateScrollGradients();
     // Remove 'active' class from all theme content sections
     document.querySelectorAll('.theme-content').forEach(function(content) {
       content.classList.remove('active');
@@ -754,6 +777,7 @@ function switch_theme(theme_number, should_scroll = false) {
   if (comment_container) {
     comment_container.scrollTop = 0;
   }
+  updateScrollGradients();
 }
 
 function update_navigation_widget(theme_number) {
@@ -974,6 +998,9 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
     });
+    
+    // Add scroll listener for gradient visibility
+    commentsContainer.addEventListener('scroll', updateScrollGradients);
     
     // Add keyboard support for interactive comment tags
     commentsContainer.addEventListener('keydown', function(e) {
@@ -1282,6 +1309,9 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Populate solutions for initial theme
       populate_solutions(current_theme_index);
+      
+      // Initialize scroll gradient visibility
+      updateScrollGradients();
     })
     .catch(error => {
       console.error("Error fetching comment data:", error);
@@ -1495,6 +1525,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         current_search_term = search_value;
         populate_solutions('all');
+        updateScrollGradients();
       } else {
         // Clear search and use current theme
         current_search_term = '';
@@ -1507,6 +1538,7 @@ document.addEventListener('DOMContentLoaded', function() {
           switch_theme(1, false);
         } else {
           populate_solutions(current_theme_index);
+          updateScrollGradients();
         }
       }
     });
