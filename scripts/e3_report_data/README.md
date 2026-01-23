@@ -2,7 +2,9 @@
 
 ## Overview
 
-This directory contains scripts for processing E3 (State Employees Efficiency & Effectiveness) engagement data. The main workflow converts CSV data into JSON format for use on the website, with additional analysis and grading tools.
+This directory contains scripts for processing data from the State Employees engagement. The main workflow converts CSV data into JSON format. You can use this on the website along with analysis and grading tools. 
+
+You may see references to E3 in this directory. This is the internal naming convention our team used to refer to the State Employees engagement. It refers to the "efficient, effective, and engaged" language in the Executive Order N-30-25.
 
 ## Python Scripts
 
