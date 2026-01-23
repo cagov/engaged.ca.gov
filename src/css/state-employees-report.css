@@ -6,6 +6,7 @@ h4 {
     font-style: normal;
     font-weight: 700;
     line-height: 39px;
+    margin-top: 1.5rem !important;
 }
 
 section#e3-report-hero {
@@ -122,11 +123,6 @@ section#what-we-heard {
     font-style: italic;
     font-size: 18px;
     color: #333;
-}
-
-.quote-container {
-    padding-bottom: 1rem;
-    /* border-bottom: 1px solid #d7d7d7; */
 }
 
 /* Themes We Found Section */
