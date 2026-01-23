@@ -215,9 +215,11 @@ function buildCommentMarkup(comments) {
     
     let parentCommentId = parentComment.cid || '';
     let repliesContentId = 'replies-content-' + parentCommentId;
+    let expandLabel = '{{ modules.comment_explorer_ui.expand_prefix }}' + replyLabel;
+    let closeLabel = '{{ modules.comment_explorer_ui.close_prefix }}' + replyLabel;
     markup += '<div class="replies-widget">';
-    markup += `<a href="#" class="expand-replies-toggle${shouldAutoExpandReplies ? ' expanded' : ''}" aria-expanded="${shouldAutoExpandReplies}" aria-controls="${repliesContentId}" style="${shouldAutoExpandReplies ? 'display: none;' : ''}">`;
-    markup += `<span class="toggle-text">{{ modules.comment_explorer_ui.expand_prefix }}${replyLabel}</span><span class="toggle-arrow"></span>`;
+    markup += `<a href="#" class="expand-replies-toggle${shouldAutoExpandReplies ? ' expanded' : ''}" aria-expanded="${shouldAutoExpandReplies}" aria-controls="${repliesContentId}" data-expand-label="${expandLabel}" data-close-label="${closeLabel}">`;
+    markup += `<span class="toggle-text">${shouldAutoExpandReplies ? closeLabel : expandLabel}</span><span class="toggle-arrow"></span>`;
     markup += '</a>';
     markup += `<div class="replies-content" id="${repliesContentId}" style="display: ${shouldAutoExpandReplies ? 'block' : 'none'};">`;
     
@@ -226,14 +228,9 @@ function buildCommentMarkup(comments) {
       markup += buildSingleCommentMarkup(reply, true);
     });
     
-    // Add close replies link
-    markup += `<a href="#" class="close-replies-link" aria-label="{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}"><span class="close-text">{{ modules.comment_explorer_ui.close_prefix }}${replyLabel}</span><span class="close-arrow"></span></a>`;
     markup += '</div>';
     markup += '</div>';
   }
-  
-  // Add close comment link at the end
-  markup += '<a href="#" class="close-comment-link" aria-label="{{ modules.comment_explorer_ui.close_comment }}"><span class="close-text">{{ modules.comment_explorer_ui.close_comment }}</span><span class="close-arrow"></span></a>';
   
   return markup;
 }
@@ -266,7 +263,11 @@ function expandCommentWidget(toggle, solutionsArray) {
   contentDiv.style.display = 'block';
   toggle.setAttribute('aria-expanded', 'true');
   toggle.classList.add('expanded');
-  toggle.style.display = 'none';
+  // Transform toggle text to close label
+  let toggleText = toggle.querySelector('.toggle-text');
+  if (toggleText && toggle.dataset.closeLabel) {
+    toggleText.textContent = toggle.dataset.closeLabel;
+  }
 }
 
 // Helper function to collapse a comment widget
@@ -278,7 +279,11 @@ function collapseCommentWidget(toggle) {
   contentDiv.style.display = 'none';
   toggle.setAttribute('aria-expanded', 'false');
   toggle.classList.remove('expanded');
-  toggle.style.display = 'block';
+  // Restore toggle text to expand label
+  let toggleText = toggle.querySelector('.toggle-text');
+  if (toggleText && toggle.dataset.expandLabel) {
+    toggleText.textContent = toggle.dataset.expandLabel;
+  }
 }
 
 // Function to populate solutions instead of comments
@@ -408,9 +413,11 @@ function populate_solutions(theme_number_or_all) {
       // Check if this solution should be auto-expanded (comment matches search)
       let shouldAutoExpand = solution._commentMatchesSearch === true;
       let originalCommentsContentId = 'original-comments-' + commentId;
+      let expandLabel = '{{ modules.comment_explorer_ui.related_comments }}';
+      let closeLabel = '{{ modules.comment_explorer_ui.close_comment }}';
       smarkup += '<div class="original-comments-widget">';
-      smarkup += `<a href="#" class="original-comments-toggle${shouldAutoExpand ? ' expanded' : ''}" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" aria-controls="${originalCommentsContentId}" data-auto-expand="${shouldAutoExpand}">`;
-      smarkup += '<span class="toggle-text">{{ modules.comment_explorer_ui.related_comments }}</span><span class="toggle-arrow"></span>';
+      smarkup += `<a href="#" class="original-comments-toggle${shouldAutoExpand ? ' expanded' : ''}" data-comment-id="${commentId}" aria-expanded="${shouldAutoExpand}" aria-controls="${originalCommentsContentId}" data-auto-expand="${shouldAutoExpand}" data-expand-label="${expandLabel}" data-close-label="${closeLabel}">`;
+      smarkup += `<span class="toggle-text">${shouldAutoExpand ? closeLabel : expandLabel}</span><span class="toggle-arrow"></span>`;
       smarkup += '</a>';
       smarkup += `<div class="original-comments-content" id="${originalCommentsContentId}" style="display: ${shouldAutoExpand ? 'block' : 'none'}"></div>`;
       smarkup += '</div>';
@@ -894,54 +901,75 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      // Handle "Close comment" link clicks
-      let closeLink = e.target.closest('.close-comment-link');
-      if (closeLink) {
-        e.preventDefault();
-        e.stopPropagation();
-        let widget = closeLink.closest('.original-comments-widget');
-        if (widget) {
-          let toggle = widget.querySelector('.original-comments-toggle');
-          if (toggle) {
-            collapseCommentWidget(toggle);
-          }
-        }
-        return;
-      }
-      
-      // Handle "Expand replies" toggle clicks
+      // Handle "Expand/Close replies" toggle clicks (transforms in place)
       let expandRepliesToggle = e.target.closest('.expand-replies-toggle');
       if (expandRepliesToggle) {
         e.preventDefault();
         e.stopPropagation();
+        let isExpanded = expandRepliesToggle.getAttribute('aria-expanded') === 'true';
         let repliesWidget = expandRepliesToggle.closest('.replies-widget');
         let repliesContent = repliesWidget ? repliesWidget.querySelector('.replies-content') : null;
-        if (repliesContent) {
-          repliesContent.style.display = 'block';
+        let toggleText = expandRepliesToggle.querySelector('.toggle-text');
+        
+        if (isExpanded) {
+          // Collapse replies
+          if (repliesContent) {
+            repliesContent.style.display = 'none';
+          }
+          expandRepliesToggle.setAttribute('aria-expanded', 'false');
+          expandRepliesToggle.classList.remove('expanded');
+          if (toggleText && expandRepliesToggle.dataset.expandLabel) {
+            toggleText.textContent = expandRepliesToggle.dataset.expandLabel;
+          }
+        } else {
+          // Expand replies
+          if (repliesContent) {
+            repliesContent.style.display = 'block';
+          }
           expandRepliesToggle.setAttribute('aria-expanded', 'true');
           expandRepliesToggle.classList.add('expanded');
-          expandRepliesToggle.style.display = 'none';
+          if (toggleText && expandRepliesToggle.dataset.closeLabel) {
+            toggleText.textContent = expandRepliesToggle.dataset.closeLabel;
+          }
         }
         return;
       }
       
-      // Handle "Close replies" link clicks
-      let closeRepliesLink = e.target.closest('.close-replies-link');
-      if (closeRepliesLink) {
+      // Handle clicks on reply content to close replies
+      let replyContent = e.target.closest('.replies-content');
+      if (replyContent) {
+        // Don't close if clicking on interactive elements
+        if (e.target.closest('a, button')) {
+          return;
+        }
         e.preventDefault();
-        e.stopPropagation();
-        let repliesWidget = closeRepliesLink.closest('.replies-widget');
-        if (repliesWidget) {
-          let repliesContent = repliesWidget.querySelector('.replies-content');
-          let expandToggle = repliesWidget.querySelector('.expand-replies-toggle');
-          if (repliesContent) {
-            repliesContent.style.display = 'none';
+        let repliesWidget = replyContent.closest('.replies-widget');
+        let expandToggle = repliesWidget ? repliesWidget.querySelector('.expand-replies-toggle') : null;
+        if (expandToggle) {
+          // Collapse replies
+          replyContent.style.display = 'none';
+          expandToggle.setAttribute('aria-expanded', 'false');
+          expandToggle.classList.remove('expanded');
+          let toggleText = expandToggle.querySelector('.toggle-text');
+          if (toggleText && expandToggle.dataset.expandLabel) {
+            toggleText.textContent = expandToggle.dataset.expandLabel;
           }
-          if (expandToggle) {
-            expandToggle.setAttribute('aria-expanded', 'false');
-            expandToggle.classList.remove('expanded');
-            expandToggle.style.display = 'inline-block';
-          }
+        }
+        return;
+      }
+      
+      // Handle clicks on comment content to close comments
+      let commentContent = e.target.closest('.original-comments-content');
+      if (commentContent) {
+        // Don't close if clicking on interactive elements (including replies toggle)
+        if (e.target.closest('a, button, .expand-replies-toggle, .comment-tag-interactive')) {
+          return;
+        }
+        e.preventDefault();
+        let widget = commentContent.closest('.original-comments-widget');
+        let toggle = widget ? widget.querySelector('.original-comments-toggle') : null;
+        if (toggle) {
+          collapseCommentWidget(toggle);
         }
         return;
       }

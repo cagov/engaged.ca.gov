@@ -678,7 +678,7 @@ section#comment-explorer {
 
 .comment-meta {
     margin-top: 0.75rem;
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
     display: flex;
     gap: 1rem;
@@ -804,6 +804,10 @@ a.download-button:visited {
     outline: 2px solid rgba(84, 137, 163, 0.2);
     outline-offset: 2px;
     border-radius: 2px;
+}
+
+.original-comments-toggle .toggle-text {
+    font-size: 16px;
 }
 
 .original-comments-toggle:not(.expanded) .toggle-text {
