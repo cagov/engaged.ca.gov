@@ -316,19 +316,19 @@ Aquí hay algunas de las formas en que actualmente estamos mejorando el gobierno
 
 ### Becarios de Innovación del Gobernador
 
-En julio de 2025, la Oficina de Datos e Innovación de California lanzó el [programa de Becarios de Innovación del Gobernador](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/). Los Becarios son empleados estatales que resuelven problemas reales. El programa los reúne para mejorar los servicios para los californianos.
+En julio de 2025, la Oficina de Datos e Innovación de California lanzó el <a href="https://innovation.ca.gov/our-work/governors-innovation-fellows-program/" target="_blank" rel="noopener noreferrer">programa de Becarios de Innovación del Gobernador</a>. Los Becarios son empleados estatales que resuelven problemas reales. El programa los reúne para mejorar los servicios para los californianos.
 
 ### Results&period;ca&period;gov
 
-Muchas agencias y departamentos estatales ya están trabajando en esfuerzos para abordar las eficiencias en el gobierno. Mostramos estos logros en el sitio web [results.ca.gov](https://results.ca.gov). Los visitantes del sitio verán logros medibles que están generando impactos reales.
+Muchas agencias y departamentos estatales ya están trabajando en esfuerzos para abordar las eficiencias en el gobierno. Mostramos estos logros en el sitio web <a href="https://results.ca.gov" target="_blank" rel="noopener noreferrer">results.ca.gov</a>. Los visitantes del sitio verán logros medibles que están generando impactos reales.
 
 ### Muestras de Innovación
 
-El estado ha reimaginado cómo realizamos la investigación de mercado: la [Muestra de Innovación](https://innovation.ca.gov/our-work/innovation-showcase/). Las muestras reúnen a los sectores privado y público para co-crear. Le dan al estado acceso directo a nuevas perspectivas del mercado. También destacan formas prácticas en que podemos aumentar la eficiencia y el impacto.
+El estado ha reimaginado cómo realizamos la investigación de mercado: la <a href="https://innovation.ca.gov/our-work/innovation-showcase/" target="_blank" rel="noopener noreferrer">Muestra de Innovación</a>. Las muestras reúnen a los sectores privado y público para co-crear. Le dan al estado acceso directo a nuevas perspectivas del mercado. También destacan formas prácticas en que podemos aumentar la eficiencia y el impacto.
 
 ### Comunidad de Práctica de Innovación
 
-La Comunidad de Práctica de Innovación conecta a los empleados estatales que quieren probar nuevas formas de hacer las cosas. Destaca y amplifica la innovación que está ocurriendo a través del programa de Becarios, y en todo el estado. La Comunidad está abierta a todos los empleados estatales. Obtenga más información y [regístrese](https://innovation.ca.gov/our-work/innovation-community-of-practice/) hoy.
+La Comunidad de Práctica de Innovación conecta a los empleados estatales que quieren probar nuevas formas de hacer las cosas. Destaca y amplifica la innovación que está ocurriendo a través del programa de Becarios, y en todo el estado. La Comunidad está abierta a todos los empleados estatales. Obtenga más información y <a href="https://innovation.ca.gov/our-work/innovation-community-of-practice/" target="_blank" rel="noopener noreferrer">regístrese</a> hoy.
 
 ----
 id: methodology
@@ -346,7 +346,7 @@ Luego categorizamos las ideas para poder entenderlas mejor.
 
 Utilizamos muchos enfoques, incluido el aprendizaje automático, el modelado de temas y la revisión humana. Al final, etiquetamos todas las ideas de un conjunto de 10 temas y 65 subtemas.
 
-Puede ver el código, los prompts de IA y los modelos que usamos [para procesar y analizar datos para este compromiso en GitHub](https://github.com/cagov/caldata-engaged-california).
+Puede ver el código, los prompts de IA y los modelos que usamos <a href="https://github.com/cagov/caldata-engaged-california" target="_blank" rel="noopener noreferrer">para procesar y analizar datos para este compromiso en GitHub</a>.
 
 ----
 id: about_the_data

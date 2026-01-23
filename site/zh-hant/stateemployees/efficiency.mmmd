@@ -316,19 +316,19 @@ title: 我們正在做什麼
 
 ### 州長創新研究員
 
-2025 年 7 月，加州數據與創新辦公室啟動了[州長創新研究員計劃](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/)。研究員是解決實際問題的州政府員工。該計劃將他們聚集在一起，以改善為加州人提供的服務。
+2025 年 7 月，加州數據與創新辦公室啟動了<a href="https://innovation.ca.gov/our-work/governors-innovation-fellows-program/" target="_blank" rel="noopener noreferrer">州長創新研究員計劃</a>。研究員是解決實際問題的州政府員工。該計劃將他們聚集在一起，以改善為加州人提供的服務。
 
 ### Results&period;ca&period;gov
 
-許多州機構和部門已經在努力解決政府效率問題。我們在 [results.ca.gov](https://results.ca.gov) 網站上展示這些成果。網站訪問者將看到正在產生實際影響的可衡量成就。
+許多州機構和部門已經在努力解決政府效率問題。我們在 <a href="https://results.ca.gov" target="_blank" rel="noopener noreferrer">results.ca.gov</a> 網站上展示這些成果。網站訪問者將看到正在產生實際影響的可衡量成就。
 
 ### 創新展示
 
-州已經重新設想了我們進行市場研究的方式：[創新展示](https://innovation.ca.gov/our-work/innovation-showcase/)。展示會將私營和公共部門聚集在一起共同創造。它們為州提供了直接訪問新市場洞察的機會。它們還突出了我們可以提高效率和影響力的實用方法。
+州已經重新設想了我們進行市場研究的方式：<a href="https://innovation.ca.gov/our-work/innovation-showcase/" target="_blank" rel="noopener noreferrer">創新展示</a>。展示會將私營和公共部門聚集在一起共同創造。它們為州提供了直接訪問新市場洞察的機會。它們還突出了我們可以提高效率和影響力的實用方法。
 
 ### 創新實踐社區
 
-創新實踐社區連接希望嘗試新工作方式的州政府員工。它突出並放大了通過研究員計劃以及全州正在發生的創新。該社區向所有州政府員工開放。了解更多信息並[立即註冊](https://innovation.ca.gov/our-work/innovation-community-of-practice/)。
+創新實踐社區連接希望嘗試新工作方式的州政府員工。它突出並放大了通過研究員計劃以及全州正在發生的創新。該社區向所有州政府員工開放。了解更多信息並<a href="https://innovation.ca.gov/our-work/innovation-community-of-practice/" target="_blank" rel="noopener noreferrer">立即註冊</a>。
 
 ----
 id: methodology
@@ -346,7 +346,7 @@ id: methodology
 
 我們使用了許多方法，包括機器學習、主題建模和人工審查。最後，我們從 10 個主題和 65 個子主題的集合中標記了所有想法。
 
-您可以在 GitHub 上查看我們用於[處理和分析此參與數據的代碼、AI 提示和模型](https://github.com/cagov/caldata-engaged-california)。
+您可以在 GitHub 上查看我們用於<a href="https://github.com/cagov/caldata-engaged-california" target="_blank" rel="noopener noreferrer">處理和分析此參與數據的代碼、AI 提示和模型</a>。
 
 ----
 id: about_the_data

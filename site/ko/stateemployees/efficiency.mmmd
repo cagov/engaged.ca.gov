@@ -316,19 +316,19 @@ title: 우리가 하고 있는 일
 
 ### 주지사 혁신 펠로우
 
-2025년 7월, 캘리포니아 데이터 및 혁신 사무소가 [주지사 혁신 펠로우 프로그램](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/)을 시작했습니다. 펠로우들은 실제 문제를 해결하는 주 직원입니다. 이 프로그램은 캘리포니아 주민들을 위한 서비스를 개선하기 위해 그들을 한데 모읍니다.
+2025년 7월, 캘리포니아 데이터 및 혁신 사무소가 <a href="https://innovation.ca.gov/our-work/governors-innovation-fellows-program/" target="_blank" rel="noopener noreferrer">주지사 혁신 펠로우 프로그램</a>을 시작했습니다. 펠로우들은 실제 문제를 해결하는 주 직원입니다. 이 프로그램은 캘리포니아 주민들을 위한 서비스를 개선하기 위해 그들을 한데 모읍니다.
 
 ### Results&period;ca&period;gov
 
-많은 주 기관과 부서가 이미 정부의 효율성을 해결하기 위한 노력을 하고 있습니다. 우리는 이러한 성과를 [results.ca.gov](https://results.ca.gov) 웹사이트에 전시합니다. 사이트 방문자는 실제 영향을 제공하는 측정 가능한 성과를 볼 수 있습니다.
+많은 주 기관과 부서가 이미 정부의 효율성을 해결하기 위한 노력을 하고 있습니다. 우리는 이러한 성과를 <a href="https://results.ca.gov" target="_blank" rel="noopener noreferrer">results.ca.gov</a> 웹사이트에 전시합니다. 사이트 방문자는 실제 영향을 제공하는 측정 가능한 성과를 볼 수 있습니다.
 
 ### 혁신 쇼케이스
 
-주는 시장 조사를 수행하는 방식을 재구상했습니다: [혁신 쇼케이스](https://innovation.ca.gov/our-work/innovation-showcase/). 쇼케이스는 민간 및 공공 부문을 함께 모아 공동 창조합니다. 그들은 주에 새로운 시장 통찰에 대한 직접적인 접근을 제공합니다. 그들은 또한 우리가 효율성과 영향을 높일 수 있는 실용적인 방법을 강조합니다.
+주는 시장 조사를 수행하는 방식을 재구상했습니다: <a href="https://innovation.ca.gov/our-work/innovation-showcase/" target="_blank" rel="noopener noreferrer">혁신 쇼케이스</a>. 쇼케이스는 민간 및 공공 부문을 함께 모아 공동 창조합니다. 그들은 주에 새로운 시장 통찰에 대한 직접적인 접근을 제공합니다. 그들은 또한 우리가 효율성과 영향을 높일 수 있는 실용적인 방법을 강조합니다.
 
 ### 혁신 실천 커뮤니티
 
-혁신 실천 커뮤니티는 새로운 방식으로 일을 시도하고 싶은 주 직원들을 연결합니다. 그것은 펠로우 프로그램을 통해, 그리고 주 전역에서 일어나고 있는 혁신을 부각시키고 증폭시킵니다. 커뮤니티는 모든 주 직원에게 열려 있습니다. 오늘 더 알아보고 [가입하세요](https://innovation.ca.gov/our-work/innovation-community-of-practice/).
+혁신 실천 커뮤니티는 새로운 방식으로 일을 시도하고 싶은 주 직원들을 연결합니다. 그것은 펠로우 프로그램을 통해, 그리고 주 전역에서 일어나고 있는 혁신을 부각시키고 증폭시킵니다. 커뮤니티는 모든 주 직원에게 열려 있습니다. 오늘 더 알아보고 <a href="https://innovation.ca.gov/our-work/innovation-community-of-practice/" target="_blank" rel="noopener noreferrer">가입하세요</a>.
 
 ----
 id: methodology
@@ -346,7 +346,7 @@ id: methodology
 
 우리는 기계 학습, 주제 모델링, 인간 검토를 포함한 많은 접근 방식을 사용했습니다. 마지막에 우리는 10개의 주제와 65개의 하위 주제 세트에서 모든 아이디어에 태그를 지정했습니다.
 
-우리가 사용한 코드, AI 프롬프트 및 모델을 [이 참여를 위한 데이터를 처리하고 분석하기 위해 GitHub에서](https://github.com/cagov/caldata-engaged-california) 볼 수 있습니다.
+우리가 사용한 코드, AI 프롬프트 및 모델을 <a href="https://github.com/cagov/caldata-engaged-california" target="_blank" rel="noopener noreferrer">이 참여를 위한 데이터를 처리하고 분석하기 위해 GitHub에서</a> 볼 수 있습니다.
 
 ----
 id: about_the_data

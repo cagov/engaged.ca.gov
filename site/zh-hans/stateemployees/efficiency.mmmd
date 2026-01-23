@@ -316,19 +316,19 @@ title: 我们正在做什么
 
 ### 州长创新研究员
 
-2025 年 7 月，加州数据与创新办公室启动了[州长创新研究员计划](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/)。研究员是解决实际问题的州政府员工。该计划将他们聚集在一起，以改善为加州人提供的服务。
+2025 年 7 月，加州数据与创新办公室启动了<a href="https://innovation.ca.gov/our-work/governors-innovation-fellows-program/" target="_blank" rel="noopener noreferrer">州长创新研究员计划</a>。研究员是解决实际问题的州政府员工。该计划将他们聚集在一起，以改善为加州人提供的服务。
 
 ### Results&period;ca&period;gov
 
-许多州机构和部门已经在努力解决政府效率问题。我们在 [results.ca.gov](https://results.ca.gov) 网站上展示这些成果。网站访问者将看到正在产生实际影响的可衡量成就。
+许多州机构和部门已经在努力解决政府效率问题。我们在 <a href="https://results.ca.gov" target="_blank" rel="noopener noreferrer">results.ca.gov</a> 网站上展示这些成果。网站访问者将看到正在产生实际影响的可衡量成就。
 
 ### 创新展示
 
-州已经重新设想了我们进行市场研究的方式：[创新展示](https://innovation.ca.gov/our-work/innovation-showcase/)。展示会将私营和公共部门聚集在一起共同创造。它们为州提供了直接访问新市场洞察的机会。它们还突出了我们可以提高效率和影响力的实用方法。
+州已经重新设想了我们进行市场研究的方式：<a href="https://innovation.ca.gov/our-work/innovation-showcase/" target="_blank" rel="noopener noreferrer">创新展示</a>。展示会将私营和公共部门聚集在一起共同创造。它们为州提供了直接访问新市场洞察的机会。它们还突出了我们可以提高效率和影响力的实用方法。
 
 ### 创新实践社区
 
-创新实践社区连接希望尝试新工作方式的州政府员工。它突出并放大了通过研究员计划以及全州正在发生的创新。该社区向所有州政府员工开放。了解更多信息并[立即注册](https://innovation.ca.gov/our-work/innovation-community-of-practice/)。
+创新实践社区连接希望尝试新工作方式的州政府员工。它突出并放大了通过研究员计划以及全州正在发生的创新。该社区向所有州政府员工开放。了解更多信息并<a href="https://innovation.ca.gov/our-work/innovation-community-of-practice/" target="_blank" rel="noopener noreferrer">立即注册</a>。
 
 ----
 id: methodology
@@ -346,7 +346,7 @@ id: methodology
 
 我们使用了许多方法，包括机器学习、主题建模和人工审查。最后，我们从 10 个主题和 65 个子主题的集合中标记了所有想法。
 
-您可以在 GitHub 上查看我们用于[处理和分析此参与数据的代码、AI 提示和模型](https://github.com/cagov/caldata-engaged-california)。
+您可以在 GitHub 上查看我们用于<a href="https://github.com/cagov/caldata-engaged-california" target="_blank" rel="noopener noreferrer">处理和分析此参与数据的代码、AI 提示和模型</a>。
 
 ----
 id: about_the_data

@@ -315,19 +315,19 @@ Here are some of the ways we're currently improving state government.
 
 ### Governor’s Innovation Fellows
 
-In July 2025, the California Office of Data and Innovation launched the [Governor’s Innovation Fellows program](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/). The Fellows are state employees solving real problems. The program brings them together to improve services for Californians.
+In July 2025, the California Office of Data and Innovation launched the <a href="https://innovation.ca.gov/our-work/governors-innovation-fellows-program/" target="_blank" rel="noopener noreferrer">Governor's Innovation Fellows program</a>. The Fellows are state employees solving real problems. The program brings them together to improve services for Californians.
 
 ### Results&period;ca&period;gov
 
-Many state agencies and departments are already working on efforts to address efficiencies in government. We showcase these wins on the website [results.ca.gov](https://results.ca.gov). Visitors to the site will see measurable accomplishments that are delivering real impacts.
+Many state agencies and departments are already working on efforts to address efficiencies in government. We showcase these wins on the website <a href="https://results.ca.gov" target="_blank" rel="noopener noreferrer">results.ca.gov</a>. Visitors to the site will see measurable accomplishments that are delivering real impacts.
 
 ### Innovation Showcases
 
-The state has reimagined how we run market research: the [Innovation Showcase](https://innovation.ca.gov/our-work/innovation-showcase/). Showcases bring together the private and public sector to co-create. They give the state direct access to new market insights. They also highlight practical ways we can increase efficiency and impact.
+The state has reimagined how we run market research: the <a href="https://innovation.ca.gov/our-work/innovation-showcase/" target="_blank" rel="noopener noreferrer">Innovation Showcase</a>. Showcases bring together the private and public sector to co-create. They give the state direct access to new market insights. They also highlight practical ways we can increase efficiency and impact.
 
 ### Innovation Community of Practice
 
-The Innovation Community of Practice connects state employees who want to try new ways of doing things. It spotlights and amplifies the innovation happening through the Fellows program, and throughout the state. The Community is open to all state employees. Learn more and [sign up](https://innovation.ca.gov/our-work/innovation-community-of-practice/) today.
+The Innovation Community of Practice connects state employees who want to try new ways of doing things. It spotlights and amplifies the innovation happening through the Fellows program, and throughout the state. The Community is open to all state employees. Learn more and <a href="https://innovation.ca.gov/our-work/innovation-community-of-practice/" target="_blank" rel="noopener noreferrer">sign up</a> today.
 
 ----
 id: methodology
@@ -345,7 +345,7 @@ We then categorized the ideas so that we could better understand them.
 
 We used many approaches, including machine learning, topic modeling, and human review. At the end, we tagged all ideas from a set of 10 themes and 65 subthemes.
 
-You can see the code, AI prompts, and the models we used [to process and analyze data for this engagement on GitHub](https://github.com/cagov/caldata-engaged-california).
+You can see the code, AI prompts, and the models we used <a href="https://github.com/cagov/caldata-engaged-california" target="_blank" rel="noopener noreferrer">to process and analyze data for this engagement on GitHub</a>.
 
 ----
 id: about_the_data

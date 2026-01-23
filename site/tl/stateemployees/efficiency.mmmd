@@ -316,19 +316,19 @@ Narito ang ilan sa mga paraan na kasalukuyan naming pinapabuti ang gobyerno ng e
 
 ### Governor's Innovation Fellows
 
-Noong Hulyo 2025, inilunsad ng California Office of Data and Innovation ang [programa ng Governor's Innovation Fellows](https://innovation.ca.gov/our-work/governors-innovation-fellows-program/). Ang mga Fellows ay mga empleyado ng estado na naglulutas ng mga tunay na problema. Pinagsasama-sama sila ng programa upang mapabuti ang mga serbisyo para sa mga Californian.
+Noong Hulyo 2025, inilunsad ng California Office of Data and Innovation ang <a href="https://innovation.ca.gov/our-work/governors-innovation-fellows-program/" target="_blank" rel="noopener noreferrer">programa ng Governor's Innovation Fellows</a>. Ang mga Fellows ay mga empleyado ng estado na naglulutas ng mga tunay na problema. Pinagsasama-sama sila ng programa upang mapabuti ang mga serbisyo para sa mga Californian.
 
 ### Results&period;ca&period;gov
 
-Maraming mga ahensya at departamento ng estado ang gumagawa na ng mga pagsisikap upang matugunan ang mga kahusayan sa gobyerno. Ipinapakita namin ang mga tagumpay na ito sa website na [results.ca.gov](https://results.ca.gov). Makikita ng mga bisita sa site ang mga nasusukat na tagumpay na naghahatid ng tunay na epekto.
+Maraming mga ahensya at departamento ng estado ang gumagawa na ng mga pagsisikap upang matugunan ang mga kahusayan sa gobyerno. Ipinapakita namin ang mga tagumpay na ito sa website na <a href="https://results.ca.gov" target="_blank" rel="noopener noreferrer">results.ca.gov</a>. Makikita ng mga bisita sa site ang mga nasusukat na tagumpay na naghahatid ng tunay na epekto.
 
 ### Innovation Showcases
 
-Muling naisip ng estado kung paano namin pinapatakbo ang market research: ang [Innovation Showcase](https://innovation.ca.gov/our-work/innovation-showcase/). Pinagsasama-sama ng mga Showcase ang pribadong at pampublikong sektor upang mag-co-create. Binibigyan nila ang estado ng direktang access sa mga bagong insight sa merkado. Binibigyang-diin din nila ang mga praktikal na paraan na maaari naming dagdagan ang kahusayan at epekto.
+Muling naisip ng estado kung paano namin pinapatakbo ang market research: ang <a href="https://innovation.ca.gov/our-work/innovation-showcase/" target="_blank" rel="noopener noreferrer">Innovation Showcase</a>. Pinagsasama-sama ng mga Showcase ang pribadong at pampublikong sektor upang mag-co-create. Binibigyan nila ang estado ng direktang access sa mga bagong insight sa merkado. Binibigyang-diin din nila ang mga praktikal na paraan na maaari naming dagdagan ang kahusayan at epekto.
 
 ### Innovation Community of Practice
 
-Ang Innovation Community of Practice ay nag-uugnay sa mga empleyado ng estado na nais subukan ang mga bagong paraan ng paggawa ng mga bagay. Binibigyang-diin at pinalalakas nito ang pagbabago na nangyayari sa pamamagitan ng programa ng Fellows, at sa buong estado. Bukas ang Community sa lahat ng empleyado ng estado. Matuto nang higit pa at [mag-sign up](https://innovation.ca.gov/our-work/innovation-community-of-practice/) ngayon.
+Ang Innovation Community of Practice ay nag-uugnay sa mga empleyado ng estado na nais subukan ang mga bagong paraan ng paggawa ng mga bagay. Binibigyang-diin at pinalalakas nito ang pagbabago na nangyayari sa pamamagitan ng programa ng Fellows, at sa buong estado. Bukas ang Community sa lahat ng empleyado ng estado. Matuto nang higit pa at <a href="https://innovation.ca.gov/our-work/innovation-community-of-practice/" target="_blank" rel="noopener noreferrer">mag-sign up</a> ngayon.
 
 ----
 id: methodology
@@ -346,7 +346,7 @@ Pagkatapos ay inuri namin ang mga ideya upang mas maunawaan namin ang mga ito.
 
 Gumamit kami ng maraming diskarte, kabilang ang machine learning, topic modeling, at pagsusuri ng tao. Sa huli, nag-tag kami ng lahat ng ideya mula sa isang hanay ng 10 tema at 65 subtema.
 
-Maaari mong makita ang code, AI prompts, at mga modelo na ginamit namin [upang iproseso at suriin ang data para sa pakikipag-ugnayan na ito sa GitHub](https://github.com/cagov/caldata-engaged-california).
+Maaari mong makita ang code, AI prompts, at mga modelo na ginamit namin <a href="https://github.com/cagov/caldata-engaged-california" target="_blank" rel="noopener noreferrer">upang iproseso at suriin ang data para sa pakikipag-ugnayan na ito sa GitHub</a>.
 
 ----
 id: about_the_data
