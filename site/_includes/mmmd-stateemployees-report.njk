@@ -59,51 +59,53 @@
           <h2>{{ modules.themes_we_found.title }}</h2>
           <p class="themes-intro-text">{{ modules.themes_we_found.intro_text }}</p>
         </div>
-        <div id="themes-bubble-chart" class="themes-bubble-chart">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1167 490" role="img" aria-labelledby="bubble-chart-title" aria-describedby="bubble-chart-desc">
-            <title id="bubble-chart-title">{{ modules.comment_explorer_ui.bubble_chart_title }}</title>
-            <desc id="bubble-chart-desc">{{ modules.themes_we_found.intro_text }}</desc>
-            <!-- Background -->
-            <rect width="1167" height="490" fill="#F6F7FA"/>
-            {%- set nbr_themes = modules.themes_we_found.nbr_themes | default(10) -%}
-            {%- set positions = [
-              {"cx": 597, "cy": 124, "r": 120, "fontSize": 20},
-              {"cx": 346, "cy": 154, "r": 114, "fontSize": 20},
-              {"cx": 846, "cy": 150, "r": 110, "fontSize": 17},
-              {"cx": 572, "cy": 370, "r": 105, "fontSize": 16},
-              {"cx": 800, "cy": 380, "r": 101, "fontSize": 16},
-              {"cx": 352, "cy": 387, "r": 97, "fontSize": 16},
-              {"cx": 159, "cy": 353, "r": 78, "fontSize": 14}, 
-              {"cx": 997, "cy": 370, "r": 75, "fontSize": 16},
-              {"cx": 140, "cy": 180, "r": 74, "fontSize": 14},
-              {"cx": 1040, "cy": 210, "r": 66, "fontSize": 16}
-            ] -%}
-            {%- set caption_offset = 26 -%}
-            {%- set caption_font_size = 13 -%}
-            {%- for i in range(1, nbr_themes + 1) -%}
-              {%- set theme_module = "theme_" + i -%}
-              {%- if modules[theme_module] -%}
-                {%- set title = modules[theme_module].theme_circle_title -%}
-                {%- set lines = title.split('<LF>') -%}
-
-                {%- set pos = positions[i - 1] -%}
-                {%- set stroke_color = modules[theme_module].stroke_color | default("#5489A3") -%}
-                {%- set hilite_fill_color = modules[theme_module].hilite_fill_color | default("rgba(84, 137, 163, 0.20)") -%}
-                {%- set lineHeight = pos.fontSize *1.2 -%}
-                {%- set text_adjust = pos.fontSize*0.66 -%}
-                {%- set top_y = pos.cy-((lines.length-1)*lineHeight+caption_offset+caption_font_size)/2+text_adjust -%}
-                <g class="theme-circle" data-theme="{{ i }}" data-hilite-fill="{{ hilite_fill_color }}" data-theme-title="{{ modules[theme_module].theme_title }}">
-                  <circle cx="{{ pos.cx }}" cy="{{ pos.cy }}" r="{{ pos.r }}" fill="#FFFFFF" stroke="{{ stroke_color }}" stroke-width="5"/>
-                  <text class="theme-circle-label" x="{{ pos.cx }}" y="{{ top_y }}" text-anchor="middle" fill="#0f152f" font-size="{{ pos.fontSize }}" font-weight="400" font-family="Noto Sans Display, sans-serif">
-                    {%- for line in lines -%}
-                      <tspan x="{{ pos.cx }}" dy="{% if loop.first %}0{% else %}{{ lineHeight }}{% endif %}">{{ line }}</tspan>
-                    {%- endfor -%}
-                    <tspan x="{{ pos.cx }}" dy="{{ caption_offset }}" font-size="13px">{{ modules[theme_module].nbr_ideas }} {{ modules.comment_explorer_ui.ideas_label }}</tspan>
-                  </text>
-                </g>
+        <div id="themes-bubble-chart" class="themes-bubble-chart" role="group" aria-labelledby="bubble-chart-title" aria-describedby="bubble-chart-desc">
+          <h3 id="bubble-chart-title" class="visually-hidden">{{ modules.comment_explorer_ui.bubble_chart_title }}</h3>
+          <p id="bubble-chart-desc" class="visually-hidden">{{ modules.themes_we_found.intro_text }}</p>
+          {%- set nbr_themes = modules.themes_we_found.nbr_themes | default(10) -%}
+          {%- for i in range(1, nbr_themes + 1) -%}
+            {%- set theme_module = "theme_" + i -%}
+            {%- if modules[theme_module] -%}
+              {%- set title = modules[theme_module].theme_circle_title -%}
+              {%- set lines = title.split('<LF>') -%}
+              {%- set stroke_color = modules[theme_module].stroke_color | default("#5489A3") -%}
+              {%- set hilite_fill_color = modules[theme_module].hilite_fill_color | default("rgba(84, 137, 163, 0.20)") -%}
+              {%- set nbr_ideas = modules[theme_module].nbr_ideas | default(0) -%}
+              {# Calculate circle size based on nbr_ideas: scale from 132px (255 ideas) to 240px (843 ideas) #}
+              {%- set min_ideas = 255 -%}
+              {%- set max_ideas = 843 -%}
+              {%- set min_size = 132 -%}
+              {%- set max_size = 240 -%}
+              {%- set size_range = max_size - min_size -%}
+              {%- set ideas_range = max_ideas - min_ideas -%}
+              {# Clamp nbr_ideas between min_ideas and max_ideas #}
+              {%- if nbr_ideas < min_ideas -%}
+                {%- set clamped_ideas = min_ideas -%}
+              {%- elif nbr_ideas > max_ideas -%}
+                {%- set clamped_ideas = max_ideas -%}
+              {%- else -%}
+                {%- set clamped_ideas = nbr_ideas -%}
               {%- endif -%}
-            {%- endfor -%}
-          </svg>
+              {%- set circle_size = min_size + ((clamped_ideas - min_ideas) / ideas_range * size_range) | round -%}
+              <button class="theme-circle" 
+                      data-theme="{{ i }}" 
+                      data-hilite-fill="{{ hilite_fill_color }}"
+                      data-theme-title="{{ modules[theme_module].theme_title }}"
+                      data-stroke-color="{{ stroke_color }}"
+                      aria-label="{{ modules.comment_explorer_ui.view_theme_prefix }}{{ modules[theme_module].theme_title }}"
+                      aria-controls="theme-{{ i }}-content"
+                      style="--circle-size: {{ circle_size }}px; 
+                             --stroke-color: {{ stroke_color }};
+                             --hilite-fill: {{ hilite_fill_color }};">
+                <span class="theme-circle-label">
+                  {%- for line in lines -%}
+                    {{ line }}{% if not loop.last %}<br>{% endif %}
+                  {%- endfor -%}
+                </span>
+                <span class="theme-circle-count">{{ nbr_ideas }} {{ modules.comment_explorer_ui.ideas_label }}</span>
+              </button>
+            {%- endif -%}
+          {%- endfor -%}
         </div>
       </div>
     </div>

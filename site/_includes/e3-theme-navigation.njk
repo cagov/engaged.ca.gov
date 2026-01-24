@@ -683,17 +683,9 @@ function switch_theme(theme_number, should_scroll = false) {
     document.querySelectorAll('.theme-content').forEach(function(content) {
       content.classList.remove('active');
     });
-    // Reset SVG circle highlighting
-    document.querySelectorAll('.theme-circle').forEach(function(group) {
-      let circle = group.querySelector('circle');
-      if (circle) {
-        if (!circle.dataset.originalStroke) {
-          circle.dataset.originalStroke = circle.getAttribute('stroke') || '';
-        }
-        circle.style.fill = '#FFFFFF';
-        circle.style.stroke = circle.dataset.originalStroke;
-        circle.style.strokeWidth = '5';
-      }
+    // Reset theme circle highlighting - remove selected class from all
+    document.querySelectorAll('.theme-circle').forEach(function(button) {
+      button.classList.remove('selected');
     });
     // Update navigation widget
     update_navigation_widget(null);
@@ -737,32 +729,16 @@ function switch_theme(theme_number, should_scroll = false) {
     }
   }
   
-  // Update SVG circle highlighting - use hilite_fill_color for selected circles
-  document.querySelectorAll('.theme-circle').forEach(function(group) {
-    let circle = group.querySelector('circle');
-    let circle_text = group.querySelector('text');
-    let theme_num = parseInt(group.dataset.theme, 10);
+  // Update theme circle highlighting - toggle 'selected' class on buttons
+  document.querySelectorAll('.theme-circle').forEach(function(button) {
+    let theme_num = parseInt(button.dataset.theme, 10);
     
-    if (circle) {
-      // Store original stroke color if not already stored
-      if (!circle.dataset.originalStroke) {
-        circle.dataset.originalStroke = circle.getAttribute('stroke') || '';
-      }
-      
-      if (theme_num === theme_number) {
-        // Highlight selected circle with hilite_fill_color
-        let hiliteFill = group.dataset.hiliteFill || 'rgba(84, 137, 163, 0.20)';
-        circle.style.fill = hiliteFill;
-        circle.style.stroke = circle.dataset.originalStroke;
-        circle.style.strokeWidth = '5';
-        circle_text.style.fontWeight = 600;
-      } else {
-        // Reset to original state - white fill with original stroke
-        circle.style.fill = '#FFFFFF';
-        circle.style.stroke = circle.dataset.originalStroke;
-        circle.style.strokeWidth = '5';
-        circle_text.style.fontWeight = 400;
-      }
+    if (theme_num === theme_number) {
+      // Add selected class to highlight the circle
+      button.classList.add('selected');
+    } else {
+      // Remove selected class
+      button.classList.remove('selected');
     }
   });
   
@@ -1071,73 +1047,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Use event delegation on the SVG container for better Safari compatibility
-  let svgContainer = document.querySelector('#themes-bubble-chart svg');
-  if (svgContainer) {
-    svgContainer.addEventListener('click', function(e) {
-      let target = e.target;
+  // Use event delegation on the bubble chart container for theme circle clicks
+  let bubbleChartContainer = document.querySelector('#themes-bubble-chart');
+  if (bubbleChartContainer) {
+    bubbleChartContainer.addEventListener('click', function(e) {
+      // Find the clicked theme-circle button
+      let themeButton = e.target.closest('.theme-circle');
       
-      // Traverse up the DOM to find the theme-circle group
-      let current = target;
-      let themeGroup = null;
-      
-      // Check if target itself is a circle or group
-      if (current.classList && current.classList.contains('theme-circle')) {
-        themeGroup = current;
-      } else if (current.tagName === 'circle' && current.parentElement) {
-        themeGroup = current.parentElement;
-      } else {
-        // Traverse up to find parent group
-        while (current && current !== svgContainer) {
-          if (current.classList && current.classList.contains('theme-circle')) {
-            themeGroup = current;
-            break;
-          }
-          current = current.parentElement;
-        }
-      }
-      
-      if (themeGroup && themeGroup.dataset && themeGroup.dataset.theme) {
-        let theme_number = parseInt(themeGroup.dataset.theme, 10);
+      if (themeButton && themeButton.dataset && themeButton.dataset.theme) {
+        let theme_number = parseInt(themeButton.dataset.theme, 10);
         if (theme_number) {
           e.preventDefault();
           e.stopPropagation();
-          // Clear any text selection to prevent blue rectangle
-          if (window.getSelection) {
-            window.getSelection().removeAllRanges();
-          } else if (document.selection) {
-            document.selection.empty();
-          }
           switch_theme(theme_number, false); // Don't scroll when clicking bubble chart
         }
       }
     });
   }
   
-  // Set up event handlers for theme circles in SVG
-  document.querySelectorAll('.theme-circle').forEach(function(circleGroup) {
-    // Make the group focusable for accessibility
-    circleGroup.setAttribute('tabindex', '0');
-    circleGroup.setAttribute('role', 'button');
-    // Use theme_title from data attribute if available, otherwise fall back to collecting all tspans except the last one
-    let themeTitle = circleGroup.dataset.themeTitle;
-    if (!themeTitle) {
-      // Fallback: get all tspans except the last one (which is the idea count) and join with spaces
-      let allTspans = circleGroup.querySelectorAll('text tspan');
-      if (allTspans.length > 1) {
-        let titleTspans = Array.from(allTspans).slice(0, -1);
-        themeTitle = titleTspans.map(tspan => tspan.textContent.trim()).filter(text => text).join(' ');
-      } else if (allTspans.length === 1) {
-        themeTitle = allTspans[0].textContent;
-      } else {
-        themeTitle = '{{ modules.comment_explorer_ui.theme_fallback }} ' + circleGroup.dataset.theme;
-      }
-    }
-    circleGroup.setAttribute('aria-label', '{{ modules.comment_explorer_ui.view_theme_prefix }}' + themeTitle);
-    circleGroup.setAttribute('aria-controls', 'theme-' + circleGroup.dataset.theme + '-content');
-    
-    // Add keyboard support
-    circleGroup.addEventListener('keydown', function(e) {
+  // Set up event handlers for theme circle buttons
+  // Note: Since we're using <button> elements, they are already focusable and have role="button"
+  // The aria-label and aria-controls are already set in the template
+  document.querySelectorAll('.theme-circle').forEach(function(themeButton) {
+    // Add keyboard support (Enter and Space are handled natively by buttons, but we add for consistency)
+    themeButton.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         let theme_number = parseInt(this.dataset.theme, 10);
@@ -1145,32 +1078,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Add hover effect - use hilite_fill_color on hover
-    let circle = circleGroup.querySelector('circle');
-    if (circle) {
-      // Store original stroke color if not already stored
-      if (!circle.dataset.originalStroke) {
-        circle.dataset.originalStroke = circle.getAttribute('stroke') || '';
-      }
-      
-      circleGroup.addEventListener('mouseenter', function() {
-        let hoverCircle = this.querySelector('circle');
-        let theme_num = parseInt(this.dataset.theme, 10);
-        if (hoverCircle && current_theme_index !== theme_num) {
-          // Apply hilite_fill_color on hover
-          let hiliteFill = this.dataset.hiliteFill || 'rgba(84, 137, 163, 0.20)';
-          hoverCircle.style.fill = hiliteFill;
-        }
-      });
-      circleGroup.addEventListener('mouseleave', function() {
-        let hoverCircle = this.querySelector('circle');
-        let theme_num = parseInt(this.dataset.theme, 10);
-        if (hoverCircle && current_theme_index !== theme_num) {
-          // Restore white fill when not selected
-          hoverCircle.style.fill = '#FFFFFF';
-        }
-      });
-    }
+    // Hover effects are handled via CSS :hover pseudo-class
+    // No JavaScript needed for hover effects with the new HTML implementation
   });
   
         // Handle hash navigation (e.g., #theme-3-content) - scroll when hash is present
