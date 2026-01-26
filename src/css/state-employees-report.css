@@ -178,10 +178,6 @@ p.themes-intro-text {
     min-height: 490px;
 }
 
-/* .themes-bubble-chart {
-    background-color: tan;
-} */
-
 /* Theme Circle Button Base Styles */
 .themes-bubble-chart .theme-circle {
     /* Use CSS custom properties for dynamic sizing */
@@ -250,6 +246,7 @@ p.themes-intro-text {
     margin-bottom: 0.25rem;
 }
 
+
 /* Circle Count Text */
 .themes-bubble-chart .theme-circle-count {
     font-size: 13px;
@@ -277,13 +274,13 @@ p.themes-intro-text {
 
 /* Theme 2: Process improvement (765 ideas) - top left-center */
 .themes-bubble-chart .theme-circle:nth-of-type(2) {
-    left: 27.4%;
+    left: 29.4%;
     top: 31.8%;
 }
 
 /* Theme 3: Communication and knowledge sharing (706 ideas) - top right */
 .themes-bubble-chart .theme-circle:nth-of-type(3) {
-    left: 73.9%;
+    left: 71.9%;
     top: 30.8%;
 }
 
@@ -295,45 +292,53 @@ p.themes-intro-text {
 
 /* Theme 5: Budget and resources (600 ideas) - bottom right */
 .themes-bubble-chart .theme-circle:nth-of-type(5) {
-    left: 69.6%;
+    left: 67.6%;
     top: 76.3%;
 }
 
 /* Theme 6: Technology and digital innovation (548 ideas) - bottom left-center */
 .themes-bubble-chart .theme-circle:nth-of-type(6) {
-    left: 28.1%;
+    left: 30.1%;
     top: 77.7%;
 }
 
 /* Theme 7: Management culture and leadership (352 ideas) - bottom far left */
 .themes-bubble-chart .theme-circle:nth-of-type(7) {
-    left: 10.5%;
+    left: 14.5%;
     top: 70.8%;
 }
 
 /* Theme 8: Workplace operations (325 ideas) - top right, overlaps with Theme 1 */
 .themes-bubble-chart .theme-circle:nth-of-type(8) {
-    left: 87.3%;
+    left: 83.3%;
     top: 74.7%;
 }
 
 /* Theme 9: Organizational structure and culture (320 ideas) - top far left */
 .themes-bubble-chart .theme-circle:nth-of-type(9) {
-    left: 8.3%;
+    left: 12.3%;
     top: 37.1%;
 }
 
 /* Theme 10: Governance and oversight (255 ideas) - top far right */
 .themes-bubble-chart .theme-circle:nth-of-type(10) {
-    left: 91.9%;
+    left: 87.9%;
     top: 43.5%;
 }
 
-/* Tablet Layout: Absolute positioning with same arrangement, scaled down */
 @media (max-width: 1200px) {
+    .themes-bubble-chart .theme-circle {
+        --tablet-scale: 0.85;
+        width: calc(var(--circle-size, 150px) * var(--tablet-scale));
+        height: calc(var(--circle-size, 150px) * var(--tablet-scale));
+    }
+}
+
+/* Tablet Layout: Absolute positioning with same arrangement, scaled down */
+@media (max-width: 992px) {
     .themes-bubble-chart {
         position: relative;
-        min-height: calc(0.71 * 100vw);
+        min-height: calc(0.65 * 100vw);
         padding: 1.5rem 1rem;
     }
     
@@ -357,20 +362,40 @@ p.themes-intro-text {
     } */
 
     /* Tablet positions - same layout as desktop */
-    .themes-bubble-chart .theme-circle:nth-of-type(1) { left: 50%; top: 20%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(2) { left: 18%; top: 22%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(3) { left: 82%; top: 22%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(4) { left: 14%; top: 58%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(5) { left: 41%; top: 58%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(6) { left: 67%; top: 58%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(7) { left: 90%; top: 58%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(8) { left: 25%; top: 85%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(9) { left: 50%; top: 85%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(10) { left: 75%; top: 85%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(1) { left: 50%; top: 22%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(2) { left: 18%; top: 24%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(3) { left: 82%; top: 24%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(4) { left: 14%; top: 62%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(5) { left: 41%; top: 61%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(6) { left: 67%; top: 60%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(7) { left: 90%; top: 61%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(8) { left: 28.5%; top: 87%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(9) { left: 54.5%; top: 87%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(10) { left: 80%; top: 85%; }
 }
-
-/* Mobile Layout: Absolute positioning with same arrangement, more scaled down */
 @media (max-width: 768px) {
+    .themes-bubble-chart .theme-circle {
+        --tablet-scale: 0.7;
+        width: calc(var(--circle-size, 150px) * var(--tablet-scale));
+        height: calc(var(--circle-size, 150px) * var(--tablet-scale));
+    }
+    .themes-bubble-chart .theme-circle-label {
+        font-size: clamp(9px, 2.0vw, 14px);
+        line-height: 1.2;
+    }
+    .themes-bubble-chart .theme-circle:nth-of-type(10) .theme-circle-label,
+    .themes-bubble-chart .theme-circle:nth-of-type(9) .theme-circle-label,
+    .themes-bubble-chart .theme-circle:nth-of-type(7) .theme-circle-label {
+        font-size: clamp(9px, 1.5vw, 14px);
+        line-height: 1.2;
+    }
+    .themes-bubble-chart .theme-circle-count {
+        font-size: 9px;
+        line-height: 1.0;
+    }
+}
+/* Mobile Layout: Absolute positioning with same arrangement, more scaled down */
+@media (max-width: 450px) { /* was 768 */
     .themes-bubble-chart {
         position: relative;
         min-height: calc(1.5 * 100vw);
