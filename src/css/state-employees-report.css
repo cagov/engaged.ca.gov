@@ -1250,6 +1250,7 @@ section#stay-informed {
     }
     @media (max-width: 768px) {
         background-size: 140px;
+        background-position: bottom right;
     }
     border-bottom: 0.5px solid #5489A3;
 }
