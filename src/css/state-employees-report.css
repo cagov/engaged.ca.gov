@@ -97,11 +97,23 @@ section#what-we-heard {
     }
     
     .participation-stat img {
-        width: 36px;
+        /* width: 36px; */
         height: auto;
         margin-bottom: 0.5rem;
     }
     
+    /* .stat-number {
+        font-size: 24px;
+    }
+    
+    .stat-label {
+        font-size: 16px;
+    } */
+}
+@media (max-width: 768px) {
+    .participation-stat img {
+        width: 36px;
+    }
     .stat-number {
         font-size: 24px;
     }
