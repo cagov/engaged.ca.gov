@@ -193,6 +193,7 @@ methods_link_text: "Իմացեք ավելին մեր մեթոդների մասի
 download_all_text: Ներբեռնել բոլոր տվյալները
 comment_count: __N__ գաղափար
 comments_label: մեկնաբանություններ
+comment_caveat: "Գաղափարները և մեկնաբանությունները անգլերեն են:"
 ideas_label: գաղափարներ
 search_label: Որոնել ըստ բանալի բառի
 theme_selector_label: Ընտրել թեմա

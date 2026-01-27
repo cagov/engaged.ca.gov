@@ -193,6 +193,7 @@ methods_link_text: 了解更多關於我們的方法。
 download_all_text: 下載所有資料
 comment_count: __N__ 想法
 comments_label: 評論
+comment_caveat: "想法和評論是用英文寫的。"
 ideas_label: 想法
 search_label: 按關鍵詞搜索
 theme_selector_label: 選擇主題

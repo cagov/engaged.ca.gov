@@ -192,6 +192,7 @@ methods_link_text: Learn more about our methods.
 download_all_text: Download all the data
 comment_count: __N__ ideas
 comments_label: comments
+comment_caveat_UNUSED_IN_ENGLISH: "Ideas and comments are in English."
 ideas_label: ideas
 search_label: Search by keyword
 theme_selector_label: Select a theme

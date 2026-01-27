@@ -193,6 +193,7 @@ methods_link_text: Tìm hiểu thêm về phương pháp của chúng tôi.
 download_all_text: Tải xuống tất cả dữ liệu
 comment_count: __N__ ý tưởng
 comments_label: nhận xét
+comment_caveat: "Ý tưởng và nhận xét được viết bằng tiếng Anh."
 ideas_label: ý tưởng
 search_label: Tìm kiếm theo từ khóa
 theme_selector_label: Chọn chủ đề

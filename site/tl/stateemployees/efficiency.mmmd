@@ -193,6 +193,7 @@ methods_link_text: Matuto nang higit pa tungkol sa aming mga pamamaraan.
 download_all_text: I-download ang lahat ng data
 comment_count: __N__ ideya
 comments_label: mga komento
+comment_caveat: "Ang mga ideya at komento ay sa Ingles."
 ideas_label: mga ideya
 search_label: Maghanap ayon sa keyword
 theme_selector_label: Pumili ng tema

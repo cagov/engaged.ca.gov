@@ -176,6 +176,7 @@ p.themes-intro-text {
     border: 0;
 }
 
+
 /* Theme Bubble Chart - Desktop uses absolute positioning for organic layout */
 .themes-bubble-chart {
     width: 100%;
@@ -189,6 +190,12 @@ p.themes-intro-text {
     position: relative;
     min-height: 490px;
 }
+
+/* .themes-bubble-chart {
+    background: orange;
+} KEEP THIS FOR STYLE DEBUGGING */
+
+
 
 /* Theme Circle Button Base Styles */
 .themes-bubble-chart .theme-circle {
@@ -256,6 +263,7 @@ p.themes-intro-text {
     font-weight: 400;
     line-height: 1.25;
     margin-bottom: 0.25rem;
+    text-wrap: balance;
 }
 
 
@@ -386,12 +394,12 @@ p.themes-intro-text {
     .themes-bubble-chart .theme-circle:nth-of-type(9) { left: 54.5%; top: 87%; }
     .themes-bubble-chart .theme-circle:nth-of-type(10) { left: 80%; top: 85%; }
 
-    .themes-bubble-chart .theme-circle:nth-of-type(10) .theme-circle-label,
+    /* .themes-bubble-chart .theme-circle:nth-of-type(10) .theme-circle-label,
     .themes-bubble-chart .theme-circle:nth-of-type(9) .theme-circle-label,
     .themes-bubble-chart .theme-circle:nth-of-type(7) .theme-circle-label {
         font-size: clamp(9px, 1.7vw, 14px);
         line-height: 1.2;
-    }
+    } */
 
 }
 @media (max-width: 768px) {
@@ -405,12 +413,6 @@ p.themes-intro-text {
         font-size: clamp(9px, 2.0vw, 14px);
         line-height: 1.2;
     }
-    .themes-bubble-chart .theme-circle:nth-of-type(10) .theme-circle-label,
-    .themes-bubble-chart .theme-circle:nth-of-type(9) .theme-circle-label,
-    .themes-bubble-chart .theme-circle:nth-of-type(7) .theme-circle-label {
-        font-size: clamp(9px, 1.5vw, 14px);
-        line-height: 1.2;
-    }
     .themes-bubble-chart .theme-circle-count {
         font-size: 9px;
         line-height: 1.0;
@@ -420,49 +422,62 @@ p.themes-intro-text {
 @media (max-width: 450px) { /* was 768 */
     .themes-bubble-chart {
         position: relative;
-        min-height: calc(1.5 * 100vw);
+        min-height: calc(2.15 * 100vw);
         padding: 1rem 0.5rem;
     }
     
     /* Scale down circle sizes for mobile */
     .themes-bubble-chart .theme-circle {
-        --mobile-scale: 0.60;
+        --mobile-scale: 0.80;
         width: calc(var(--circle-size, 210px) * var(--mobile-scale));
         height: calc(var(--circle-size, 210px) * var(--mobile-scale));
         /* Set minimum/maximum size for readability */
         min-width: 70px;
         min-height: 70px;
-        max-width: 125px;
-        max-height: 125px;
-        padding: 0.4rem;
+        max-width: 175px;
+        max-height: 175px;
+        padding: 1.1rem;
         border-width: 3px;
     }
     
+    .themes-bubble-chart .theme-circle:nth-of-type(4) {
+        padding: 0.5rem;
+    }
+
     .themes-bubble-chart .theme-circle:hover {
         transform: translate(-50%, -50%) scale(1.02);
     }
     
     .themes-bubble-chart .theme-circle-label {
-        font-size: clamp(9px, 2.0vw, 14px);
+        font-size: clamp(12px, 4.0vw, 18px);
         line-height: 1.2;
     }
     
     .themes-bubble-chart .theme-circle-count {
-        font-size: 9px;
+        font-size: 12px;
         line-height: 1.0;
     }
-    
+
+    .themes-bubble-chart .theme-circle:nth-of-type(10) .theme-circle-label,
+    .themes-bubble-chart .theme-circle:nth-of-type(9) .theme-circle-label,
+    .themes-bubble-chart .theme-circle:nth-of-type(8) .theme-circle-label,
+    .themes-bubble-chart .theme-circle:nth-of-type(7) .theme-circle-label {
+        font-size: clamp(12px, 3.2vw, 18px);
+        line-height: 1.2;
+    }
+
+
     /* Mobile positions - same layout as desktop */
-    .themes-bubble-chart .theme-circle:nth-of-type(1) { left: 30%; top: 10%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(2) { left: 70%; top: 14%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(3) { left: 32%; top: 32%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(4) { left: 68%; top: 37%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(5) { left: 34%; top: 53.5%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(6) { left: 66%; top: 58%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(7) { left: 35%; top: 72%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(8) { left: 64%; top: 77%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(9) { left: 36%; top: 88%; }
-    .themes-bubble-chart .theme-circle:nth-of-type(10) { left: 62%; top: 92%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(1) { left: 25%; top: 11%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(2) { left: 74.5%; top: 17%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(3) { left: 27%; top: 33%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(4) { left: 73%; top: 40%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(5) { left: 29%; top: 53.5%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(6) { left: 71%; top: 61%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(7) { left: 30%; top: 72%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(8) { left: 69%; top: 78.5%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(9) { left: 31%; top: 88%; }
+    .themes-bubble-chart .theme-circle:nth-of-type(10) { left: 67%; top: 93%; }
 }
 
 /* Themes Deep Dive Section */
@@ -839,6 +854,15 @@ section#comment-explorer {
     font-weight: 600;
     color: #0f152f;
     margin-top: 2rem;
+}
+
+.comment-caveat {
+    color: #444;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%; /* 1.6875rem */
+    margin-top: 0.5rem;
 }
 
 .comments-scroll-wrapper {

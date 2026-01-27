@@ -193,6 +193,7 @@ methods_link_text: 우리의 방법에 대해 자세히 알아보세요.
 download_all_text: 모든 데이터 다운로드
 comment_count: __N__ 아이디어
 comments_label: 의견
+comment_caveat: "아이디어와 의견은 영어로 작성되었습니다."
 ideas_label: 아이디어
 search_label: 키워드로 검색
 theme_selector_label: 주제 선택
