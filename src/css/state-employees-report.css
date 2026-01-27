@@ -890,6 +890,12 @@ section#comment-explorer {
     overflow-x: hidden;
 }
 
+@media (max-width: 992px) {
+    .comment-item-container {
+        padding: 1rem 0.5rem;
+    }
+}
+
 .comment-item-container:not(:has(> .comment-item.indent-reply)) {
     background: #F6F7FA;
 }
@@ -904,9 +910,21 @@ section#comment-explorer {
     border-left: 3px solid #898891;
 }
 
+@media (max-width: 768px) {
+    .comment-item {
+        padding: 1rem 0.5rem;
+    }
+}
+
 .comment-item.indent-reply {
     margin-left: 2rem;
     border-left-color: #BCBBC1;
+}
+
+@media (max-width: 768px) {
+    .comment-item.indent-reply {
+        margin-left: 0.5rem;
+    }
 }
 
 
@@ -988,6 +1006,12 @@ section#comment-explorer {
     color: #444;
 }
 
+@media (max-width: 768px) {
+    .comment-date {
+        width: 66%;
+    }
+}
+
 .comment-likes {
     color: #444;
     display: flex;
@@ -1063,6 +1087,12 @@ a.download-button:visited {
     margin: 0;
     padding: 1rem;
     border-left: 3px solid #898891;
+}
+
+@media (max-width: 768px) {
+    .solution-item-container {
+        padding-right: 0;
+    }
 }
 
 .solution-content {
@@ -1161,6 +1191,12 @@ a.download-button:visited {
 .replies-widget {
     margin-top: 0.75rem;
     margin-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .replies-widget {
+        margin-left: 0.5rem;
+    }
 }
 
 .expand-replies-toggle {
