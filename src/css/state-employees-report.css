@@ -1245,8 +1245,8 @@ section#stay-informed {
     overflow-y: hidden;
     overflow-x: hidden;
     position: relative;
-    @media (max-width: 900px) {
-        background-size: 200px;
+    @media (max-width: 992px) {
+        background-size: 160px;
     }
     @media (max-width: 768px) {
         background-size: 140px;
