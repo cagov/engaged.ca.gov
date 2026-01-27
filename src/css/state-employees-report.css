@@ -592,7 +592,7 @@ section#comment-explorer {
 
 .theme-selector-text {
     flex: 1;
-    white-space: nowrap;
+    white-space: normal;
     @media (max-width: 720px) {
         white-space: normal;
     }
