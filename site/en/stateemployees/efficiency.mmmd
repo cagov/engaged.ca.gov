@@ -60,7 +60,7 @@ nbr_themes: 10
 ----
 id: theme_1
 theme_title: Recruitment, hiring, and retention
-theme_circle_title: "Recruitment,<LF>hiring, and<LF>retention"
+theme_circle_title: "Recruitment, hiring, and retention"
 stroke_color: "rgb(101 173 225)"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
@@ -72,7 +72,7 @@ In this theme, employees shared many views about their work and career. They tal
 ----
 id: theme_2
 theme_title: Process improvement
-theme_circle_title: "Process<LF>improvement"
+theme_circle_title: "Process improvement"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
@@ -84,7 +84,7 @@ In this theme, employees talked about the need to fix how work gets done. They w
 ----
 id: theme_3
 theme_title: Communication and knowledge sharing
-theme_circle_title: "Communication<LF>and<LF>knowledge sharing"
+theme_circle_title: "Communication and knowledge sharing"
 stroke_color: "rgb(101 128 67)"
 light_color: "rgba(101, 128, 67, 0.50)"
 hilite_fill_color: "rgba(101, 128, 67, 0.10)"
@@ -96,7 +96,7 @@ In this theme, employees spoke about the need for better communication at work. 
 ----
 id: theme_4
 theme_title: Public-facing services and resident experience
-theme_circle_title: "Public-facing<LF>services and<LF>resident experience"
+theme_circle_title: "Public-facing services and resident experience"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
@@ -108,7 +108,7 @@ In this theme, employees talked about serving the public better. They want the p
 ----
 id: theme_5
 theme_title: Budget and resources
-theme_circle_title: "Budget and<LF>resources"
+theme_circle_title: "Budget and resources"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
@@ -120,7 +120,7 @@ In this theme, employees shared ideas about how the state uses money and resourc
 ----
 id: theme_6
 theme_title: Technology and digital innovation
-theme_circle_title: "Technology and<LF>digital innovation"
+theme_circle_title: "Technology and digital innovation"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
@@ -132,7 +132,7 @@ In this theme, employees talked about fixing and updating tech at work. They wan
 ----
 id: theme_7
 theme_title: Management culture and leadership
-theme_circle_title: "Management<LF>culture and<LF>leadership"
+theme_circle_title: "Management culture and leadership"
 stroke_color: "rgb(168 212 242)"
 light_color: "rgba(168, 212, 242, 0.50)"
 hilite_fill_color: "rgba(168, 212, 242, 0.10)"
@@ -144,7 +144,7 @@ In this theme, employees shared thoughts about leadership at work. They want sta
 ----
 id: theme_8
 theme_title: Workplace operations
-theme_circle_title: "Workplace<LF>operations"
+theme_circle_title: "Workplace operations"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
@@ -156,7 +156,7 @@ In this theme, employees talked about where and how they work. They want flexibl
 ----
 id: theme_9
 theme_title: Organizational structure and culture
-theme_circle_title: "Organizational<LF>structure and<LF>culture"
+theme_circle_title: "Organizational structure and culture"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
@@ -168,7 +168,7 @@ In this theme, employees shared views on how it feels to work in state jobs. The
 ----
 id: theme_10
 theme_title: Governance and oversight
-theme_circle_title: "Governance<LF>and oversight"
+theme_circle_title: "Governance and oversight"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"

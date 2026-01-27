@@ -61,7 +61,7 @@ nbr_themes: 10
 ----
 id: theme_1
 theme_title: 招聘、僱用和保留
-theme_circle_title: "招聘、<LF>僱用和<LF>保留"
+theme_circle_title: "招聘、 僱用和 保留"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
@@ -73,7 +73,7 @@ nbr_ideas: 843
 ----
 id: theme_2
 theme_title: 流程改進
-theme_circle_title: "流程<LF>改進"
+theme_circle_title: "流程 改進"
 stroke_color: "rgb(101 173 225)"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
@@ -85,7 +85,7 @@ nbr_ideas: 765
 ----
 id: theme_3
 theme_title: 溝通和知識共享
-theme_circle_title: "溝通和<LF>知識共享"
+theme_circle_title: "溝通和 知識共享"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
@@ -97,7 +97,7 @@ nbr_ideas: 706
 ----
 id: theme_4
 theme_title: 面向公眾的服務和居民體驗
-theme_circle_title: "面向公眾的<LF>服務和<LF>居民體驗"
+theme_circle_title: "面向公眾的 服務和 居民體驗"
 stroke_color: "rgb(108 128 67)"
 light_color: "rgba(108, 128, 67, 0.50)"
 hilite_fill_color: "rgba(108, 128, 67, 0.10)"
@@ -109,7 +109,7 @@ nbr_ideas: 646
 ----
 id: theme_5
 theme_title: 預算和資源
-theme_circle_title: "預算和<LF>資源"
+theme_circle_title: "預算和 資源"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
@@ -121,7 +121,7 @@ nbr_ideas: 600
 ----
 id: theme_6
 theme_title: 技術和數字創新
-theme_circle_title: "技術和<LF>數字創新"
+theme_circle_title: "技術和 數字創新"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
@@ -133,7 +133,7 @@ nbr_ideas: 548
 ----
 id: theme_7
 theme_title: 管理文化和領導力
-theme_circle_title: "管理文化<LF>和領導力"
+theme_circle_title: "管理文化 和領導力"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
@@ -145,7 +145,7 @@ nbr_ideas: 352
 ----
 id: theme_8
 theme_title: 工作場所運營
-theme_circle_title: "工作場所<LF>運營"
+theme_circle_title: "工作場所 運營"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
@@ -157,7 +157,7 @@ nbr_ideas: 325
 ----
 id: theme_9
 theme_title: 組織結構和文化
-theme_circle_title: "組織結構<LF>和文化"
+theme_circle_title: "組織結構 和文化"
 stroke_color: "rgb(169 212 242)"
 light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.10)"
@@ -169,7 +169,7 @@ nbr_ideas: 318
 ----
 id: theme_10
 theme_title: 治理和監督
-theme_circle_title: "治理和<LF>監督"
+theme_circle_title: "治理和 監督"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"

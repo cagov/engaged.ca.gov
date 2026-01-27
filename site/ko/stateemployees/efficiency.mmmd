@@ -61,7 +61,7 @@ nbr_themes: 10
 ----
 id: theme_1
 theme_title: 채용, 고용 및 유지
-theme_circle_title: "채용,<LF>고용 및<LF>유지"
+theme_circle_title: "채용, 고용 및 유지"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
@@ -73,7 +73,7 @@ nbr_ideas: 843
 ----
 id: theme_2
 theme_title: 프로세스 개선
-theme_circle_title: "프로세스<LF>개선"
+theme_circle_title: "프로세스 개선"
 stroke_color: "rgb(101 173 225)"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
@@ -85,7 +85,7 @@ nbr_ideas: 765
 ----
 id: theme_3
 theme_title: 커뮤니케이션 및 지식 공유
-theme_circle_title: "커뮤니케이션 및<LF>지식 공유"
+theme_circle_title: "커뮤니케이션 및 지식 공유"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
@@ -97,7 +97,7 @@ nbr_ideas: 706
 ----
 id: theme_4
 theme_title: 공공 서비스 및 주민 경험
-theme_circle_title: "공공 서비스 및<LF>주민 경험"
+theme_circle_title: "공공 서비스 및 주민 경험"
 stroke_color: "rgb(108 128 67)"
 light_color: "rgba(108, 128, 67, 0.50)"
 hilite_fill_color: "rgba(108, 128, 67, 0.10)"
@@ -109,7 +109,7 @@ nbr_ideas: 646
 ----
 id: theme_5
 theme_title: 예산 및 자원
-theme_circle_title: "예산 및<LF>자원"
+theme_circle_title: "예산 및 자원"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
@@ -121,7 +121,7 @@ nbr_ideas: 600
 ----
 id: theme_6
 theme_title: 기술 및 디지털 혁신
-theme_circle_title: "기술 및<LF>디지털 혁신"
+theme_circle_title: "기술 및 디지털 혁신"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
@@ -133,7 +133,7 @@ nbr_ideas: 548
 ----
 id: theme_7
 theme_title: 관리 문화 및 리더십
-theme_circle_title: "관리 문화 및<LF>리더십"
+theme_circle_title: "관리 문화 및 리더십"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
@@ -145,7 +145,7 @@ nbr_ideas: 352
 ----
 id: theme_8
 theme_title: 직장 운영
-theme_circle_title: "직장<LF>운영"
+theme_circle_title: "직장 운영"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
@@ -157,7 +157,7 @@ nbr_ideas: 325
 ----
 id: theme_9
 theme_title: 조직 구조 및 문화
-theme_circle_title: "조직 구조 및<LF>문화"
+theme_circle_title: "조직 구조 및 문화"
 stroke_color: "rgb(169 212 242)"
 light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.10)"
@@ -169,7 +169,7 @@ nbr_ideas: 318
 ----
 id: theme_10
 theme_title: 거버넌스 및 감독
-theme_circle_title: "거버넌스 및<LF>감독"
+theme_circle_title: "거버넌스 및 감독"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"

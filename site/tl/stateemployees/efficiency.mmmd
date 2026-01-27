@@ -61,7 +61,7 @@ nbr_themes: 10
 ----
 id: theme_1
 theme_title: Pag-rekrut, pagkuha, at pagpapanatili
-theme_circle_title: "Pag-rekrut,<LF>pagkuha, at<LF>pagpapanatili"
+theme_circle_title: "Pag-rekrut, pagkuha, at pagpapanatili"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
@@ -73,7 +73,7 @@ Sa temang ito, nagbahagi ang mga empleyado ng maraming pananaw tungkol sa kanila
 ----
 id: theme_2
 theme_title: Pagpapabuti ng proseso
-theme_circle_title: "Pagpapabuti<LF>ng proseso"
+theme_circle_title: "Pagpapabuti ng proseso"
 stroke_color: "rgb(101 173 225)"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
@@ -85,7 +85,7 @@ Sa temang ito, nag-usap ang mga empleyado tungkol sa pangangailangan na ayusin k
 ----
 id: theme_3
 theme_title: Komunikasyon at pagbabahagi ng kaalaman
-theme_circle_title: "Komunikasyon at<LF>pagbabahagi ng<LF>kaalaman"
+theme_circle_title: "Komunikasyon at pagbabahagi ng kaalaman"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
@@ -97,7 +97,7 @@ Sa temang ito, nag-usap ang mga empleyado tungkol sa pangangailangan para sa mas
 ----
 id: theme_4
 theme_title: Mga serbisyong nakaharap sa publiko at karanasan ng residente
-theme_circle_title: "Mga serbisyong<LF>nakaharap sa<LF>publiko at<LF>karanasan ng<LF>residente"
+theme_circle_title: "Mga serbisyong nakaharap sa publiko at karanasan ng residente"
 stroke_color: "rgb(108 128 67)"
 light_color: "rgba(108, 128, 67, 0.50)"
 hilite_fill_color: "rgba(108, 128, 67, 0.10)"
@@ -109,7 +109,7 @@ Sa temang ito, nag-usap ang mga empleyado tungkol sa paglilingkod nang mas mahus
 ----
 id: theme_5
 theme_title: Badyet at mga mapagkukunan
-theme_circle_title: "Badyet at<LF>mga mapagkukunan"
+theme_circle_title: "Badyet at mga mapagkukunan"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
@@ -121,7 +121,7 @@ Sa temang ito, nagbahagi ang mga empleyado ng mga ideya tungkol sa kung paano gi
 ----
 id: theme_6
 theme_title: Teknolohiya at digital na pagbabago
-theme_circle_title: "Teknolohiya at<LF>digital na<LF>pagbabago"
+theme_circle_title: "Teknolohiya at digital na pagbabago"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
@@ -133,7 +133,7 @@ Sa temang ito, nag-usap ang mga empleyado tungkol sa pag-aayos at pag-update ng 
 ----
 id: theme_7
 theme_title: Kultura ng pamamahala at pamumuno
-theme_circle_title: "Kultura ng<LF>pamamahala at<LF>pamumuno"
+theme_circle_title: "Kultura ng pamamahala at pamumuno"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
@@ -145,7 +145,7 @@ Sa temang ito, nagbahagi ang mga empleyado ng mga saloobin tungkol sa pamumuno s
 ----
 id: theme_8
 theme_title: Mga operasyon sa lugar ng trabaho
-theme_circle_title: "Mga operasyon<LF>sa lugar ng<LF>trabaho"
+theme_circle_title: "Mga operasyon sa lugar ng trabaho"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
@@ -157,7 +157,7 @@ Sa temang ito, nag-usap ang mga empleyado tungkol sa kung saan at paano sila nag
 ----
 id: theme_9
 theme_title: Estruktura ng organisasyon at kultura
-theme_circle_title: "Estruktura ng<LF>organisasyon at<LF>kultura"
+theme_circle_title: "Estruktura ng organisasyon at kultura"
 stroke_color: "rgb(169 212 242)"
 light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.10)"
@@ -169,7 +169,7 @@ Sa temang ito, nagbahagi ang mga empleyado ng mga pananaw tungkol sa kung ano an
 ----
 id: theme_10
 theme_title: Pamamahala at pangangasiwa
-theme_circle_title: "Pamamahala at<LF>pangangasiwa"
+theme_circle_title: "Pamamahala at pangangasiwa"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"

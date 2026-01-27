@@ -240,7 +240,7 @@ p.themes-intro-text {
 
 /* Circle Label Text */
 .themes-bubble-chart .theme-circle-label {
-    font-size: clamp(12px, calc(var(--circle-size, 150px) * 0.085), 18px);
+    font-size: clamp(14px, calc(var(--circle-size, 150px) * 0.085), 18px);
     font-weight: 400;
     line-height: 1.25;
     margin-bottom: 0.25rem;
@@ -310,7 +310,7 @@ p.themes-intro-text {
 
 /* Theme 8: Workplace operations (325 ideas) - top right, overlaps with Theme 1 */
 .themes-bubble-chart .theme-circle:nth-of-type(8) {
-    left: 83.3%;
+    left: 84%;
     top: 74.7%;
 }
 
@@ -322,7 +322,7 @@ p.themes-intro-text {
 
 /* Theme 10: Governance and oversight (255 ideas) - top far right */
 .themes-bubble-chart .theme-circle:nth-of-type(10) {
-    left: 87.9%;
+    left: 88.9%;
     top: 43.5%;
 }
 
@@ -347,6 +347,7 @@ p.themes-intro-text {
         --tablet-scale: 0.9;
         width: calc(var(--circle-size, 150px) * var(--tablet-scale));
         height: calc(var(--circle-size, 150px) * var(--tablet-scale));
+        border-width: 4px;
     }
     
     .themes-bubble-chart .theme-circle:hover {
@@ -372,12 +373,21 @@ p.themes-intro-text {
     .themes-bubble-chart .theme-circle:nth-of-type(8) { left: 28.5%; top: 87%; }
     .themes-bubble-chart .theme-circle:nth-of-type(9) { left: 54.5%; top: 87%; }
     .themes-bubble-chart .theme-circle:nth-of-type(10) { left: 80%; top: 85%; }
+
+    .themes-bubble-chart .theme-circle:nth-of-type(10) .theme-circle-label,
+    .themes-bubble-chart .theme-circle:nth-of-type(9) .theme-circle-label,
+    .themes-bubble-chart .theme-circle:nth-of-type(7) .theme-circle-label {
+        font-size: clamp(9px, 1.7vw, 14px);
+        line-height: 1.2;
+    }
+
 }
 @media (max-width: 768px) {
     .themes-bubble-chart .theme-circle {
         --tablet-scale: 0.7;
         width: calc(var(--circle-size, 150px) * var(--tablet-scale));
         height: calc(var(--circle-size, 150px) * var(--tablet-scale));
+        border-width: 3px;
     }
     .themes-bubble-chart .theme-circle-label {
         font-size: clamp(9px, 2.0vw, 14px);
@@ -413,6 +423,7 @@ p.themes-intro-text {
         max-width: 125px;
         max-height: 125px;
         padding: 0.4rem;
+        border-width: 3px;
     }
     
     .themes-bubble-chart .theme-circle:hover {

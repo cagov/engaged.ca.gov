@@ -61,7 +61,7 @@ nbr_themes: 10
 ----
 id: theme_1
 theme_title: Գրավում, աշխատանքի ընդունում և պահպանում
-theme_circle_title: "Գրավում,<LF>աշխատանքի<LF>ընդունում և<LF>պահպանում"
+theme_circle_title: "Գրավում, աշխատանքի ընդունում և պահպանում"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
@@ -73,7 +73,7 @@ nbr_ideas: 843
 ----
 id: theme_2
 theme_title: Գործընթացի բարելավում
-theme_circle_title: "Գործընթացի<LF>բարելավում"
+theme_circle_title: "Գործընթացի բարելավում"
 stroke_color: "rgb(101 173 225)"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
@@ -85,7 +85,7 @@ nbr_ideas: 765
 ----
 id: theme_3
 theme_title: Հաղորդակցություն և գիտելիքների փոխանակում
-theme_circle_title: "Հաղորդակցություն<LF>և<LF>գիտելիքների<LF>փոխանակում"
+theme_circle_title: "Հաղորդակցություն և գիտելիքների փոխանակում"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
@@ -97,7 +97,7 @@ nbr_ideas: 706
 ----
 id: theme_4
 theme_title: Հանրային ծառայություններ և բնակչի փորձառություն
-theme_circle_title: "Հանրային<LF>ծառայություններ և<LF>բնակչի<LF>փորձառություն"
+theme_circle_title: "Հանրային ծառայություններ և բնակչի փորձառություն"
 stroke_color: "rgb(108 128 67)"
 light_color: "rgba(108, 128, 67, 0.50)"
 hilite_fill_color: "rgba(108, 128, 67, 0.10)"
@@ -109,7 +109,7 @@ nbr_ideas: 646
 ----
 id: theme_5
 theme_title: Բյուջե և ռեսուրսներ
-theme_circle_title: "Բյուջե և<LF>ռեսուրսներ"
+theme_circle_title: "Բյուջե և ռեսուրսներ"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
@@ -121,7 +121,7 @@ nbr_ideas: 600
 ----
 id: theme_6
 theme_title: Տեխնոլոգիա և թվային նորարարություն
-theme_circle_title: "Տեխնոլոգիա և<LF>թվային<LF>նորարարություն"
+theme_circle_title: "Տեխնոլոգիա և թվային նորարարություն"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
@@ -133,7 +133,7 @@ nbr_ideas: 548
 ----
 id: theme_7
 theme_title: Կառավարման մշակույթ և ղեկավարություն
-theme_circle_title: "Կառավարման<LF>մշակույթ և<LF>ղեկավարություն"
+theme_circle_title: "Կառավարման մշակույթ և ղեկավարություն"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
@@ -145,7 +145,7 @@ nbr_ideas: 352
 ----
 id: theme_8
 theme_title: Աշխատավայրի գործառնություններ
-theme_circle_title: "Աշխատավայրի<LF>գործառնություններ"
+theme_circle_title: "Աշխատավայրի գործառնություններ"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
@@ -157,7 +157,7 @@ nbr_ideas: 325
 ----
 id: theme_9
 theme_title: Կազմակերպական կառուցվածք և մշակույթ
-theme_circle_title: "Կազմակերպական<LF>կառուցվածք և<LF>մշակույթ"
+theme_circle_title: "Կազմակերպական կառուցվածք և մշակույթ"
 stroke_color: "rgb(169 212 242)"
 light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.10)"
@@ -169,7 +169,7 @@ nbr_ideas: 318
 ----
 id: theme_10
 theme_title: Կառավարում և վերահսկողություն
-theme_circle_title: "Կառավարում և<LF>վերահսկողություն"
+theme_circle_title: "Կառավարում և վերահսկողություն"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"

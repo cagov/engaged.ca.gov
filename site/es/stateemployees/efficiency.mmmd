@@ -61,7 +61,7 @@ nbr_themes: 10
 ----
 id: theme_1
 theme_title: Reclutamiento, contratación y retención
-theme_circle_title: "Reclutamiento,<LF>contratación y<LF>retención"
+theme_circle_title: "Reclutamiento, contratación y retención"
 stroke_color: "rgb(197 145 218)"
 light_color: "rgba(197, 145, 218, 0.50)"
 hilite_fill_color: "rgba(197, 145, 218, 0.10)"
@@ -73,7 +73,7 @@ En este tema, los empleados compartieron muchas opiniones sobre su trabajo y car
 ----
 id: theme_2
 theme_title: Mejora de procesos
-theme_circle_title: "Mejora de<LF>procesos"
+theme_circle_title: "Mejora de procesos"
 stroke_color: "rgb(101 173 225)"
 light_color: "rgba(101, 173, 225, 0.50)"
 hilite_fill_color: "rgba(101, 173, 225, 0.10)"
@@ -85,7 +85,7 @@ En este tema, los empleados hablaron sobre la necesidad de arreglar cómo se hac
 ----
 id: theme_3
 theme_title: Comunicación e intercambio de conocimientos
-theme_circle_title: "Comunicación e<LF>intercambio de<LF>conocimientos"
+theme_circle_title: "Comunicación e intercambio de conocimientos"
 stroke_color: "rgb(117 188 96)"
 light_color: "rgba(117, 188, 96, 0.50)"
 hilite_fill_color: "rgba(117, 188, 96, 0.10)"
@@ -97,7 +97,7 @@ En este tema, los empleados hablaron sobre la necesidad de una mejor comunicaci�
 ----
 id: theme_4
 theme_title: Servicios públicos y experiencia del residente
-theme_circle_title: "Servicios públicos<LF>y experiencia<LF>del residente"
+theme_circle_title: "Servicios públicos y experiencia del residente"
 stroke_color: "rgb(108 128 67)"
 light_color: "rgba(108, 128, 67, 0.50)"
 hilite_fill_color: "rgba(108, 128, 67, 0.10)"
@@ -109,7 +109,7 @@ En este tema, los empleados hablaron sobre servir mejor al público. Quieren que
 ----
 id: theme_5
 theme_title: Presupuesto y recursos
-theme_circle_title: "Presupuesto y<LF>recursos"
+theme_circle_title: "Presupuesto y recursos"
 stroke_color: "rgb(109 72 132)"
 light_color: "rgba(109, 72, 132, 0.50)"
 hilite_fill_color: "rgba(109, 72, 132, 0.10)"
@@ -121,7 +121,7 @@ En este tema, los empleados compartieron ideas sobre cómo el estado usa el dine
 ----
 id: theme_6
 theme_title: Tecnología e innovación digital
-theme_circle_title: "Tecnología e<LF>innovación digital"
+theme_circle_title: "Tecnología e innovación digital"
 stroke_color: "rgb(228 93 72)"
 light_color: "rgba(228, 93, 72, 0.50)"
 hilite_fill_color: "rgba(228, 93, 72, 0.10)"
@@ -133,7 +133,7 @@ En este tema, los empleados hablaron sobre arreglar y actualizar la tecnología 
 ----
 id: theme_7
 theme_title: Cultura de gestión y liderazgo
-theme_circle_title: "Cultura de<LF>gestión y<LF>liderazgo"
+theme_circle_title: "Cultura de gestión y liderazgo"
 stroke_color: "rgb(238 153 48)"
 light_color: "rgba(238, 153, 48, 0.50)"
 hilite_fill_color: "rgba(238, 153, 48, 0.10)"
@@ -145,7 +145,7 @@ En este tema, los empleados compartieron pensamientos sobre el liderazgo en el t
 ----
 id: theme_8
 theme_title: Operaciones del lugar de trabajo
-theme_circle_title: "Operaciones del<LF>lugar de trabajo"
+theme_circle_title: "Operaciones del lugar de trabajo"
 stroke_color: "rgb(83 202 176)"
 light_color: "rgba(83, 202, 176, 0.50)"
 hilite_fill_color: "rgba(83, 202, 176, 0.10)"
@@ -157,7 +157,7 @@ En este tema, los empleados hablaron sobre dónde y cómo trabajan. Quieren hora
 ----
 id: theme_9
 theme_title: Estructura y cultura organizacional
-theme_circle_title: "Estructura y<LF>cultura<LF>organizacional"
+theme_circle_title: "Estructura y cultura organizacional"
 stroke_color: "rgb(169 212 242)"
 light_color: "rgba(169, 212, 242, 0.50)"
 hilite_fill_color: "rgba(169, 212, 242, 0.10)"
@@ -169,7 +169,7 @@ En este tema, los empleados compartieron opiniones sobre cómo se siente trabaja
 ----
 id: theme_10
 theme_title: Gobernanza y supervisión
-theme_circle_title: "Gobernanza y<LF>supervisión"
+theme_circle_title: "Gobernanza y supervisión"
 stroke_color: "rgb(242 195 199)"
 light_color: "rgba(242, 195, 199, 0.50)"
 hilite_fill_color: "rgba(242, 195, 199, 0.10)"
