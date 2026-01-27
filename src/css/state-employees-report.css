@@ -578,7 +578,7 @@ section#comment-explorer {
     font-weight: 700;
     user-select: none;
     @media (max-width: 720px) {
-        font-size: 18px;
+        font-size: 23px;
         align-items: flex-start;
     }
 }
@@ -598,7 +598,7 @@ section#comment-explorer {
     flex-shrink: 0;
     background-color: #5489A3;
     @media (max-width: 720px) {
-        margin-top: 3px;
+        margin-top: 6px;
     }
 }
 
@@ -618,7 +618,7 @@ section#comment-explorer {
     margin-left: auto;
     padding-left: 0.25rem;
     @media (max-width: 720px) {
-        margin-top: 8px;
+        margin-top: 12px;
     }
 }
 
