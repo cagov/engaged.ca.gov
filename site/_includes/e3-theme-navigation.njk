@@ -538,6 +538,7 @@ function populateSubthemeFilter(themeId) {
   // Get theme color
   let themeColorObj = themeColorMap[themeId];
   let themeColor = themeColorObj && themeColorObj.light ? themeColorObj.light : 'rgba(84, 137, 163, 0.50)';
+  let strokeColor = themeColorObj && themeColorObj.stroke ? themeColorObj.stroke : '#5489A3';
   
   // Clear existing tags
   subthemeFilterTags.innerHTML = '';
@@ -551,6 +552,7 @@ function populateSubthemeFilter(themeId) {
     tag.className = 'subtheme-filter-tag';
     tag.dataset.subthemeId = subtheme.id;
     tag.style.backgroundColor = themeColor;
+    tag.style.setProperty('--stroke-color', strokeColor);
     tag.setAttribute('role', 'button');
     tag.setAttribute('tabindex', '0');
     tag.setAttribute('aria-pressed', 'false');
