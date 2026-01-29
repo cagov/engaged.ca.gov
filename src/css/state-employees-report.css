@@ -64,7 +64,7 @@ section#what-we-heard {
     line-height: 1;
     color: #2d3a4a;
     margin-bottom: 0.5rem;
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         font-size: 33px;
     }
 }
@@ -72,12 +72,12 @@ section#what-we-heard {
 .stat-label {
     font-size: 23px;
     color: #666;
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         font-size: 18px;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     section#what-we-heard .col-lg-4 {
         margin-top: .5rem;
     }
@@ -110,7 +110,7 @@ section#what-we-heard {
         font-size: 16px;
     } */
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .participation-stat img {
         width: 36px;
     }
@@ -615,7 +615,7 @@ section#comment-explorer {
     font-size: 30px;
     font-weight: 700;
     user-select: none;
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         font-size: 23px;
         align-items: flex-start;
     }
@@ -635,7 +635,7 @@ section#comment-explorer {
     border-radius: 50%;
     flex-shrink: 0;
     background-color: #5489A3;
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         margin-top: 6px;
     }
 }
@@ -643,7 +643,7 @@ section#comment-explorer {
 .theme-selector-text {
     flex: 1;
     white-space: normal;
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         white-space: normal;
     }
 }
@@ -655,7 +655,7 @@ section#comment-explorer {
     flex-shrink: 0;
     margin-left: auto;
     padding-left: 0.25rem;
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         margin-top: 12px;
     }
 }
@@ -698,14 +698,14 @@ section#comment-explorer {
     gap: 0.75rem;
     font-size: 23px;
     transition: background-color 0.2s ease;
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         font-size: 18px;
         align-items: flex-start;
     }
   }
 
 .theme-selector-option .theme-selector-circle {
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         margin-top: 7px;
     }
 }
@@ -737,7 +737,7 @@ section#comment-explorer {
     line-height: 1.2;
     margin: 0;
     height: 62.5px; /* force to match neighboring containers */
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         font-size: 18px;
     }
 }
@@ -925,7 +925,7 @@ section#comment-explorer {
     margin: 0 0 2rem 0;
     max-height: 800px;
     overflow-y: scroll;
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         margin: 0 0.5rem 1rem 0.5rem;
         max-height: 620px;
     }
@@ -937,7 +937,7 @@ section#comment-explorer {
     overflow-x: hidden;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .comment-item-container {
         padding: 1rem 0.5rem;
     }
@@ -957,7 +957,7 @@ section#comment-explorer {
     border-left: 3px solid #898891;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .comment-item {
         padding: 1rem 0.5rem;
     }
@@ -968,7 +968,7 @@ section#comment-explorer {
     border-left-color: #BCBBC1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .comment-item.indent-reply {
         margin-left: 0.5rem;
     }
@@ -1053,7 +1053,7 @@ section#comment-explorer {
     color: #444;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .comment-date {
         width: 66%;
     }
@@ -1136,7 +1136,7 @@ a.download-button:visited {
     border-left: 3px solid #898891;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .solution-item-container {
         padding-right: 0;
     }
@@ -1240,7 +1240,7 @@ a.download-button:visited {
     margin-left: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .replies-widget {
         margin-left: 0.5rem;
     }
@@ -1328,10 +1328,10 @@ section#stay-informed {
     overflow-y: hidden;
     overflow-x: hidden;
     position: relative;
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
         background-size: 160px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         background-size: 140px;
         background-position: bottom right;
     }
