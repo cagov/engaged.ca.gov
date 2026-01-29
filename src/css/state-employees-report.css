@@ -346,7 +346,7 @@ p.themes-intro-text {
     top: 43.5%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     .themes-bubble-chart .theme-circle {
         --tablet-scale: 0.85;
         width: calc(var(--circle-size, 150px) * var(--tablet-scale));
@@ -369,7 +369,7 @@ p.themes-intro-text {
 }
 
 /* Tablet Layout: Absolute positioning with same arrangement, scaled down */
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .themes-bubble-chart {
         position: relative;
         min-height: calc(0.65 * 100vw);
@@ -416,7 +416,7 @@ p.themes-intro-text {
     } */
 
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .themes-bubble-chart .theme-circle {
         --tablet-scale: 0.6;
         width: clamp(100px, calc(var(--circle-size, 150px) * var(--tablet-scale)), 150px);
