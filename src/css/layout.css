@@ -281,3 +281,54 @@ section h2 {
   margin-bottom: 1.5rem;
   font-weight: 400;
 }
+
+/* generic styles */
+.style-h1, h1 {
+  font-weight: 900;
+  font-size: 47px;
+  @media (max-width: 720px) {
+    font-size: 37px;
+  }
+}
+.style-h2, h2 {
+  font-weight: 900;
+  font-size: 37px;
+  color: #0f152f;
+  @media (max-width: 720px) {
+    font-size: 27px;
+  }
+}
+.style-h3, h3 {
+  font-weight: 700;
+  font-size: 30px;
+  color: #0f152f;
+  @media (max-width: 720px) {
+    font-size: 23px;
+  }
+}
+.style-body-text {
+  font-weight: 400;
+  font-size: 23px;
+  @media (max-width: 720px) {
+    font-size: 18px;
+  }
+}
+.style-strong-body-text,.style-body-text strong {
+  font-weight: 600;
+  font-size: 23px;
+  @media (max-width: 720px) {
+    font-size: 18px;
+  }
+}
+.style-small-body-text {
+  font-weight: 400;
+  font-size: 18px;
+}
+.style-strong-small-body-text,.style-small-body-text strong {
+  font-weight: 600;
+  font-size: 18px;
+}
+.style-callout-text {
+  font-weight: 600;
+  font-size: 20px;
+}

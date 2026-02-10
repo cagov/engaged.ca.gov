@@ -53,8 +53,87 @@ section#partners p {
   margin-block-end: 5.4rem;
 }
 
-section#homepage-action-plan {
+section#homepage-engagements {
   background: #5489A3;
+}
+
+section#homepage-engagements > .container > h2 {
+  color: white;
+}
+
+.engagements-grid {
+  display: grid;
+  gap: 2.4rem;
+  margin-top: 2.4rem;
+}
+
+.engagement-card {
+  background: white;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.engagement-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.engagement-card-body {
+  padding: 1.5rem 1.8rem 1.8rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.engagement-card-body .engagement-status {
+  margin-top: -0.3rem;
+}
+
+.engagement-status {
+  align-self: flex-start;
+  padding: 0.35rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  font-weight: 400;
+  font-size: 18px;
+  background: white;
+}
+
+.engagement-card h3 {
+  margin: 0;
+  color: #0F152F;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 100%;
+  letter-spacing: -0.46px;
+}
+
+.engagement-card p {
+  margin: 0;
+  color: #444;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.engagement-card a[data-appearance="button"] {
+  align-self: flex-start;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 900px) {
+  .engagements-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 engca-partner-flex {
   display: flex;
@@ -91,27 +170,6 @@ engca-partner-flex > span {
   }
 }
 
-
-section#our-first-engagement {
-  padding: 4rem 1rem;
-  background: var(--blue);
-}
-
-div.first-eng-content {
-  background: white;
-  padding: 3rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 1.875rem;
-  text-align: center;
-  gap: 1.75rem;
-}
-
-div.first-eng-content > * {
-  max-width: 65ch;
-  margin: 0;
-}
 
 aside.site-footer {
   background-color: var(--navy);

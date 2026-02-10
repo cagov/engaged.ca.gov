@@ -1,0 +1,387 @@
+---
+title: 效率報告
+description: "Engaged California 要求州政府員工分享想法，以更好地為居民服務。該計劃旨在識別效率障礙和改進方法。"
+layout: mmmd-stateemployees-report
+parentid: stateemployees
+keywords:
+  - California
+  - 州政府員工
+  - 效率
+tags:
+  - 頁面
+---
+
+----
+id: hero
+----
+
+# 州政府員工正在塑造更美好的加利福尼亞
+
+在為期 10 週的參與過程中，超過 1,400 名加利福尼亞州政府員工分享了如何使我們的政府更高效的見解。
+
+所有類型的員工都參與了。例如，員工為州工作的時間長短不一。大多數不是主管或經理。
+
+----
+id: what_we_heard
+----
+
+## 州政府員工說了什麼
+
+我們聽到了一個清晰的故事。提高政府效率不僅僅涉及更新技術或削減成本。它需要一種能夠賦予員工權力並促進創新的管理文化。
+
+州政府員工推動卓越服務向前發展。他們是運營州政府所需知識的主題專家。
+
+他們分享了值得關注的優秀想法。例如：
+
+ - 為年輕領導者提供指導計劃，以提高員工保留率
+ - 改進機構之間的數據共享
+ - 領導層與基層員工之間更好的溝通
+
+
+----
+id: participation_numbers
+participants_count: 1,469
+participants_label: 參與者
+comments_count: 2,477
+comments_label: 評論
+ideas_count: 2,627
+ideas_label: 想法
+staff_icon_alt: 員工圖標
+comments_icon_alt: 評論圖標
+ideas_icon_alt: 想法圖標
+----
+
+----
+id: themes_we_found
+title: 討論主題
+intro_text: "關於某個主題分享的想法越多，圓圈就越大。"
+nbr_themes: 10
+----
+
+----
+id: theme_1
+theme_title: 招聘、僱用和保留
+theme_circle_title: "招聘、 僱用和 保留"
+stroke_color: "rgb(197 145 218)"
+light_color: "rgba(197, 145, 218, 0.50)"
+hilite_fill_color: "rgba(197, 145, 218, 0.10)"
+nbr_ideas: 843
+----
+
+在這個主題中，員工分享了關於工作和職業的許多觀點。他們談到了薪酬、工作時間、福利以及對所有員工的公平待遇。許多人要求更好的招聘、培訓和支持，以及明確的角色和公平的評估。他們還希望有機會成長、學習新技能並留在他們的工作中。
+
+----
+id: theme_2
+theme_title: 流程改進
+theme_circle_title: "流程 改進"
+stroke_color: "rgb(101 173 225)"
+light_color: "rgba(101, 173, 225, 0.50)"
+hilite_fill_color: "rgba(101, 173, 225, 0.10)"
+nbr_ideas: 765
+----
+
+在這個主題中，員工談到了需要修復工作完成方式的問題。他們希望有更清晰的步驟、更好的記錄以及經過驗證的方法來改進日常任務。許多人說規則、表格和緩慢的交接會造成障礙並導致延誤。他們還要求更好的工具、更少的紙張以及更快、更清晰的政策更新。
+
+----
+id: theme_3
+theme_title: 溝通和知識共享
+theme_circle_title: "溝通和 知識共享"
+stroke_color: "rgb(117 188 96)"
+light_color: "rgba(117, 188, 96, 0.50)"
+hilite_fill_color: "rgba(117, 188, 96, 0.10)"
+nbr_ideas: 706
+----
+
+在這個主題中，員工談到了工作場所需要更好的溝通。他們希望團隊和機構能夠更多地分享並跨孤島工作。許多人要求使用簡單語言的清晰記錄和共享工具。他們還希望有更好的方法來收集員工意見並支持多種語言。
+
+----
+id: theme_4
+theme_title: 面向公眾的服務和居民體驗
+theme_circle_title: "面向公眾的 服務和 居民體驗"
+stroke_color: "rgb(108 128 67)"
+light_color: "rgba(108, 128, 67, 0.50)"
+hilite_fill_color: "rgba(108, 128, 67, 0.10)"
+nbr_ideas: 646
+----
+
+在這個主題中，員工談到了更好地為公眾服務。他們希望公眾能夠訪問更快、更容易使用的服務。許多人希望州政府更多地聽取居民的意見，並使用研究來設計更好的項目。例如，改善影響日常生活的交通和公共政策。 
+
+----
+id: theme_5
+theme_title: 預算和資源
+theme_circle_title: "預算和 資源"
+stroke_color: "rgb(109 72 132)"
+light_color: "rgba(109, 72, 132, 0.50)"
+hilite_fill_color: "rgba(109, 72, 132, 0.10)"
+nbr_ideas: 600
+----
+
+在這個主題中，員工分享了關於州如何使用資金和資源的想法。他們談到了購買產品、管理合同以及跟蹤支出以減少浪費。許多人要求更簡單的費用、更快的退款以及共享工具或人員以節省資金。他們還注意到需要維護州建築、道路和公園。
+
+----
+id: theme_6
+theme_title: 技術和數字創新
+theme_circle_title: "技術和 數字創新"
+stroke_color: "rgb(228 93 72)"
+light_color: "rgba(228, 93, 72, 0.50)"
+hilite_fill_color: "rgba(228, 93, 72, 0.10)"
+nbr_ideas: 548
+----
+
+在這個主題中，員工談到了修復和更新工作場所的技術。他們希望有更好的工具、共享系統、安全的數據存儲以及智能使用人工智能。許多人要求更容易的數據共享和為殘疾人工作的工具。他們還分享了改進公共網站和在線服務的想法。
+
+----
+id: theme_7
+theme_title: 管理文化和領導力
+theme_circle_title: "管理文化 和領導力"
+stroke_color: "rgb(238 153 48)"
+light_color: "rgba(238, 153, 48, 0.50)"
+hilite_fill_color: "rgba(238, 153, 48, 0.10)"
+nbr_ideas: 352
+----
+
+在這個主題中，員工分享了關於工作場所領導力的想法。他們希望州領導公平、熟練並遵守明確的標準。許多人要求為管理者提供更好的培訓和支持。他們還希望有明確的選擇以及來自管理層的誠實、開放的溝通。
+
+----
+id: theme_8
+theme_title: 工作場所運營
+theme_circle_title: "工作場所 運營"
+stroke_color: "rgb(83 202 176)"
+light_color: "rgba(83, 202, 176, 0.50)"
+hilite_fill_color: "rgba(83, 202, 176, 0.10)"
+nbr_ideas: 325
+----
+
+在這個主題中，員工談到了他們在哪裡以及如何工作。他們希望有靈活的時間表、明確的遠程工作規則以及更好的辦公空間。許多人要求更容易的差旅規則和更快的工作費用退款。他們還分享了減少浪費和保護環境的想法。
+
+----
+id: theme_9
+theme_title: 組織結構和文化
+theme_circle_title: "組織結構 和文化"
+stroke_color: "rgb(169 212 242)"
+light_color: "rgba(169, 212, 242, 0.50)"
+hilite_fill_color: "rgba(169, 212, 242, 0.10)"
+nbr_ideas: 318
+----
+
+在這個主題中，員工分享了關於在州工作中工作的感受的觀點。他們希望有一個友善、公平的文化，具有信任、尊重和開放。許多人要求減少對變革的恐懼，更多地學習和測試新想法。他們還注意到員工之間牢固聯繫的價值以及組織團隊的更好方法。
+
+----
+id: theme_10
+theme_title: 治理和監督
+theme_circle_title: "治理和 監督"
+stroke_color: "rgb(242 195 199)"
+light_color: "rgba(242, 195, 199, 0.50)"
+hilite_fill_color: "rgba(242, 195, 199, 0.10)"
+nbr_ideas: 255
+----
+
+在這個主題中，員工談到了州如何制定規則和決策。他們希望有更清晰的政策步驟以及更好地了解選擇和支出。許多人強調需要遵守法律，同時也要修復緩慢或不均衡的結構。他們還注意到書面規則與實際生活中工作方式之間的差距。
+
+----
+id: comment_explorer
+title: 探索想法
+----
+
+----
+id: comment_explorer_ui
+all_option: 全部
+theme_fallback: 主題
+search_placeholder: 搜索
+methods_text: 我們使用我們的專業知識和 AI 技術來總結員工分享的想法。
+methods_link_text: 了解更多關於我們的方法。
+download_all_text: 下載所有資料
+comment_count: __N__ 想法
+comments_label: 評論
+comment_caveat: "想法和評論是用英文寫的。"
+ideas_label: 想法
+search_label: 按關鍵詞搜索
+theme_selector_label: 選擇主題
+subtheme_filter_label: 按子主題篩選
+loading_text: 加載中...
+clear_search_label: 清除搜索
+no_comments_found: 未找到評論。
+no_solutions_found: 未找到解決方案。
+likes_label_capital: 點讚
+likes_label_lowercase: 點讚
+reply_count_singular: __N__ 回復
+reply_count_plural: __N__ 回復
+expand_prefix: "展開 "
+close_prefix: "關閉 "
+close_comment: 關閉評論
+related_comments: 相關評論
+date_at_text: 在
+am_pm_am: 上午
+am_pm_pm: 下午
+month_jan: 一月
+month_feb: 二月
+month_mar: 三月
+month_apr: 四月
+month_may: 五月
+month_jun: 六月
+month_jul: 七月
+month_aug: 八月
+month_sep: 九月
+month_oct: 十月
+month_nov: 十一月
+month_dec: 十二月
+solutions_count_template: __N__ 解決方案
+comments_submitted_template: __N__ 評論已提交
+view_theme_prefix: "查看 "
+bubble_chart_title: 討論主題可視化
+subtheme_filters_aria_label: 子主題篩選器
+ideas_and_comments_aria_label: 想法和評論
+filter_by_prefix: "按 "
+subtheme_suffix: " 子主題篩選"
+subtheme_and_switch_text: " 子主題並切換到主題 "
+----
+
+
+----
+id: subthemes
+nbr_subthemes: 65
+subtheme_1: 合格員工
+subtheme_2: 員工培訓
+subtheme_3: 新員工入職
+subtheme_4: 職業發展
+subtheme_5: 員工薪酬和福利
+subtheme_6: 員工績效評估
+subtheme_7: 工作分類
+subtheme_8: 招聘和招募
+subtheme_9: 員工保留
+subtheme_10: 指導計劃
+subtheme_11: 人員不足
+subtheme_12: 有限期職位
+subtheme_13: 流程數字化
+subtheme_14: 流程設計和方法論
+subtheme_15: 流程文檔
+subtheme_16: 流程延遲
+subtheme_17: 官僚主義
+subtheme_18: 政策制定過程
+subtheme_19: 跨機構協作
+subtheme_20: 內部溝通
+subtheme_21: 內部反饋
+subtheme_22: 簡明語言
+subtheme_23: 翻譯
+subtheme_24: 知識管理
+subtheme_25: 全州目錄
+subtheme_26: 公共政策倡議
+subtheme_27: 公共服務提供和響應性
+subtheme_28: 公眾參與
+subtheme_29: HCD（以人為中心的設計）
+subtheme_30: 公共交通
+subtheme_31: 物理基礎設施
+subtheme_32: 採購
+subtheme_33: 合同和供應商
+subtheme_34: 預算和資金
+subtheme_35: 許可證、許可和費用
+subtheme_36: 共享資源
+subtheme_37: 費用報銷
+subtheme_38: 州支出審計
+subtheme_39: 參與式預算
+subtheme_40: 技術和數據現代化
+subtheme_41: 州雲存儲
+subtheme_42: 數字服務
+subtheme_43: 共享數據
+subtheme_44: AI 和 LLM
+subtheme_45: 軟件和工具
+subtheme_46: 可訪問性
+subtheme_47: 管理文化和領導方法
+subtheme_48: 領導力審查和監督
+subtheme_49: 管理者培訓
+subtheme_50: 辦公室管理
+subtheme_51: 環境可持續性
+subtheme_52: 遠程工作和返回辦公室
+subtheme_53: 員工差旅
+subtheme_54: 信任和開放
+subtheme_55: 工作文化
+subtheme_56: 成長型思維
+subtheme_57: 整合政府機構
+subtheme_58: 風險規避
+subtheme_59: 包容性和多樣性
+subtheme_60: 網絡
+subtheme_61: 政策與實施對齊
+subtheme_62: 合規性
+subtheme_63: 組織結構和層級
+subtheme_64: 問責制和透明度
+subtheme_65: 政策制定
+----
+
+----
+id: current_actions
+title: 我們正在做什麼
+----
+我們感謝州政府員工為這項工作所做的貢獻。我們希望盡可能多地採取行動來實施這些想法。 
+
+以下是我們目前改進州政府的一些方法。
+
+### 州長創新研究員
+
+2025 年 7 月，加州數據與創新辦公室啟動了<a href="https://innovation.ca.gov/our-work/governors-innovation-fellows-program/" target="_blank" rel="noopener noreferrer">州長創新研究員計劃</a>。研究員是解決實際問題的州政府員工。該計劃將他們聚集在一起，以改善為加州人提供的服務。
+
+### Results&period;ca&period;gov
+
+許多州機構和部門已經在努力解決政府效率問題。我們在 <a href="https://results.ca.gov" target="_blank" rel="noopener noreferrer">results.ca.gov</a> 網站上展示這些成果。網站訪問者將看到正在產生實際影響的可衡量成就。
+
+### 創新展示
+
+州已經重新設想了我們進行市場研究的方式：<a href="https://innovation.ca.gov/our-work/innovation-showcase/" target="_blank" rel="noopener noreferrer">創新展示</a>。展示會將私營和公共部門聚集在一起共同創造。它們為州提供了直接訪問新市場洞察的機會。它們還突出了我們可以提高效率和影響力的實用方法。
+
+### 創新實踐社區
+
+創新實踐社區連接希望嘗試新工作方式的州政府員工。它突出並放大了通過研究員計劃以及全州正在發生的創新。該社區向所有州政府員工開放。了解更多信息並<a href="https://innovation.ca.gov/our-work/innovation-community-of-practice/" target="_blank" rel="noopener noreferrer">立即註冊</a>。
+
+----
+id: methodology
+----
+
+### 我們如何進行分析
+
+我們結合了人類專業知識和技術來理解員工的想法。這種混合方法使我們能夠大規模工作。它還使我們能夠保持決策者所需的上下文和細微差別。
+
+在在線平台上，員工分享了書面評論和回復。一些評論包含多個想法。一些只是對其他員工評論的簡單 "+1"。 
+
+我們使用 AI 從平台上的每條主要評論中提取所有具體的、可操作的想法。總的來說，我們的分析從 2,477 條評論中識別出了 2,627 個想法。 ​
+
+然後我們對想法進行了分類，以便更好地理解它們。 
+
+我們使用了許多方法，包括機器學習、主題建模和人工審查。最後，我們從 10 個主題和 65 個子主題的集合中標記了所有想法。
+
+您可以在 GitHub 上查看我們用於<a href="https://github.com/cagov/caldata-engaged-california" target="_blank" rel="noopener noreferrer">處理和分析此參與數據的代碼、AI 提示和模型</a>。
+
+----
+id: about_the_data
+----
+
+### 關於參與者
+
+加州州政府員工深深致力於公共服務。其中 1,469 人參與了這次活動。他們感謝有機會分享他們的知識。他們的回應表明他們關心自己的工作以及他們支持的社區。 
+
+<div class="quote-container style-body-text">
+<div class="quote">"能夠分享我的觀點以擴大我對成為公僕意味著什麼的理解，這很好。"</div>
+<div class="quote">"我很自豪能成為比自己更大的事情的一部分，通過有意義且經常是幕後的工作為公眾服務，這些工作有助於保持基本運營順利進行。"</div>
+<div class="quote">"我喜歡與勤奮和敬業的州政府員工建立的關係，他們使這個州的計劃對每個人都可用。我不斷對我們成長和應對每天面臨的挑戰的能力感到驚訝。"</div>
+</div>
+
+<h4>任期</h4>
+
+大多數員工自我報告了他們在州工作的時間。其中約三分之一沒有告訴我們這些信息。在那些報告的人中:
+
+- 45% 在州工作了 10 年或更長時間
+- 55% 在州工作了不到 10 年 
+
+<h4>職位級別</h4>
+
+大多數員工告訴了我們他們的職位級別。其中約三分之一沒有告訴我們。在那些報告的人中: 
+
+- 不到 1% 表示他們是主任或以上
+- 23% 表示他們是經理或主管
+- 42% 表示他們不是主管或經理
+
+----
+id: signup_engaged
+title: 註冊以保持參與
+text: 提供您的電子郵件以了解即將到來的機會。
+button_text: 註冊
+----
+

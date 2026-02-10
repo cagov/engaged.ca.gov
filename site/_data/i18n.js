@@ -1437,15 +1437,15 @@ const translations = {
         "status": "human_translated"
     },
     "status-pill-5": {
-        "en": "This engagement has closed",
-        "es": "Esta participación ha cerrado",
-        "ko": "이 참여가 종료되었습니다",
-        "tl": "Ang engagement na ito ay nagtatapos",
-        "vi": "Sự tham gia này đã kết thúc",
-        "zh-hans": "此参与已结束",
-        "zh-hant": "此參與已結束",
-        "fa": "این همکاری به پایان رسیده است",
-        "hy": "Այս ներգրավվածությունը ավարտվել է",
+        "en": "This conversation is closed",
+        "es": "Esta conversación está cerrada",
+        "ko": "이 대화는 종료되었습니다",
+        "tl": "Ang pag-uusap na ito ay sarado na",
+        "vi": "Cuộc trò chuyện này đã kết thúc",
+        "zh-hans": "此对话已结束",
+        "zh-hant": "此對話已結束",
+        "fa": "این گفتگو بسته شده است",
+        "hy": "Այս զրույցը փակված է",
         "location": "Status",
         "status": "machine_translated"
     }

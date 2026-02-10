@@ -1,0 +1,9 @@
+# Requirements for e3_report_data scripts
+# Install with: pip install -r requirements.txt
+
+# OpenAI client library (used by grade_solution.py, grade_solution_sample.py)
+openai>=1.0.0
+
+# Plotting library (used by plot_solution_comment_counts.py)
+matplotlib>=3.5.0
+

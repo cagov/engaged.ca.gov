@@ -58,6 +58,28 @@
     direction: ltr;
   }
 
+  /* Hero adornment - position on left for RTL */
+  .e3-hero-adornment {
+    right: auto;
+    left: 0;
+    @media (width <= 991px) {
+      right: auto;
+      left: -44px;
+    }
+  }
+
+  /* Stay-informed section background image - position on left for RTL */
+  section#stay-informed {
+    background-position: top left;
+  }
+
+  /* Quote balloon - position on right for RTL */
+  div.quote {
+    padding-left: 0;
+    padding-right: 3.5rem;
+    background-position: top right;
+  }
+
   @media (min-width: 1200px) {
     .engca-hero-person {
       background: var(--navy);

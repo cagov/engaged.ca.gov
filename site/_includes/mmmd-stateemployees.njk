@@ -8,15 +8,33 @@
     <section id="ge-hero" class="engca-hero engca-hero-person">
         <div class="container banner-flex">
             <engca-banner-content>
-                <p class="status-pill">{{ 'status-pill-3' | i18n }}</p>
+                <p class="status-pill">{{ 'status-pill-5' | i18n }}</p>
                 <h1>{{ modules.hero.title  }}</h1>
-                <p><strong>{{ modules.hero.subtitle }}</strong></p>
+                <p>{{ modules.hero.subtitle }}</p>
                 {{ modules.hero.content | safe }}
                 {# <p>
                     <a data-appearance="button" data-theme="orange" href="#sign-up" class="m-t">{{ modules.hero.buttonText }}</a>
                 </p> #}
             </engca-banner-content>
             <img src="/public/images/bubbles-exclamation.png" aria-hidden="true" class="desktop-only" alt=""/>
+        </div>
+    </section>
+
+    <section id="what-we-heard">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <img src="/public/images/whatweheard_adornment.png" class="what-we-heard-adornment" aria-hidden="true" alt="" />
+                </div>
+                <div class="col-lg-8">
+                    <div class="what-we-heard-content">
+                        {{ modules.what_we_heard.content | safe }}
+                    </div>
+                    <a href="{{ "/stateemployees/efficiency/" | locale_url }}" data-appearance="button" data-theme="orange" class="what-we-heard-cta">
+                        {{ modules.what_we_heard.buttonText }}
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
