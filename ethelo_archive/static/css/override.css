@@ -186,6 +186,33 @@
   text-decoration: underline;
 }
 
+/* ── Show native radio/checkbox inputs (Material Design JS not loaded) ── */
+#questions-panel input[type="radio"],
+#questions-panel input[type="checkbox"],
+.survey-question input[type="radio"],
+.survey-question input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.radio input[type="radio"] {
+  position: relative !important;
+  opacity: 1 !important;
+  width: 16px !important;
+  height: 16px !important;
+  overflow: visible !important;
+  margin-right: 6px !important;
+  margin-left: 0 !important;
+  vertical-align: middle;
+  pointer-events: none;
+  -webkit-appearance: auto !important;
+  appearance: auto !important;
+}
+
+.survey-question select.form-control {
+  opacity: 1 !important;
+  -webkit-appearance: menulist !important;
+  appearance: menulist !important;
+  height: auto !important;
+}
+
 /* ── Survey questions (read-only) ────────────────────────────────────── */
 .survey-question {
   margin-bottom: 20px;
