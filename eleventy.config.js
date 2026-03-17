@@ -262,7 +262,8 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     "src/public": "public",
-    "src/root": "/"
+    "src/root": "/",
+    "ethelo_archive": "ethelo_archive"
   });
 
   eleventyConfig.addWatchTarget("./src");
