@@ -319,6 +319,19 @@
   box-shadow: none;
 }
 
+/* Nav nesting indentation */
+a.nesting-1 {
+  padding-left: 16px;
+}
+
+a.nesting-2 {
+  padding-left: 16px;
+}
+
+.collapse > .list-group > .nav-item-container {
+  padding-left: 24px;
+}
+
 /* Nav item active state */
 .nav-item.active {
   background-color: var(--navigation-current-bg, #fff4eb);
