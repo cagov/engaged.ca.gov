@@ -334,11 +334,7 @@
 
 /* ── Fixed left column adjustments ────────────────────────────────────── */
 .fixed-left-column {
-  position: fixed;
-  top: 65px;
-  bottom: 0;
   overflow-y: auto;
-  z-index: 100;
 }
 
 .fixed-left-group {
@@ -445,21 +441,32 @@ a.nesting-2 {
   color: #000;
 }
 
-.navbar-header-flex .archive-notice {
-  flex: 1;
-  min-width: 0;
-  padding: 0 12px;
+/* Push main-content just below the fixed navbar, no extra gap */
+.main-content {
+  margin-top: 82px !important;
+  padding-top: 0 !important;
 }
 
-.navbar-header-flex .archive-notice span {
-  display: inline-block;
-  background: rgba(0,0,0,0.08);
-  color: #555;
-  font-size: 11px;
+.main-content > .navbar {
+  margin-bottom: 0;
+}
+
+.archive-notice-wrapper {
+  background: #f7f7f7;
+  padding: 0.75rem 0;
+}
+
+.archive-notice {
+  border-left: 4px solid #ffc107;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+}
+
+.archive-notice span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
   line-height: 1.4;
-  padding: 6px 12px;
-  border-radius: 6px;
-  max-width: 340px;
 }
 
 .navbar-header-flex .navbar-right-links {
