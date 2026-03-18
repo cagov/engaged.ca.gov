@@ -425,6 +425,59 @@ a.nesting-2 {
   display: inline-block;
 }
 
+/* ── Navbar flex layout ───────────────────────────────────────────────── */
+.navbar-header-flex {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 4px 0;
+}
+
+.navbar-header-flex .navbar-brand {
+  flex-shrink: 0;
+}
+
+.navbar-header-flex .decision-title {
+  font-weight: 600;
+  font-size: 24px;
+  white-space: nowrap;
+  padding: 0 12px;
+  color: #000;
+}
+
+.navbar-header-flex .archive-notice {
+  flex: 1;
+  min-width: 0;
+  padding: 0 12px;
+}
+
+.navbar-header-flex .archive-notice span {
+  display: inline-block;
+  background: rgba(0,0,0,0.08);
+  color: #555;
+  font-size: 11px;
+  line-height: 1.4;
+  padding: 6px 12px;
+  border-radius: 6px;
+  max-width: 340px;
+}
+
+.navbar-header-flex .navbar-right-links {
+  flex-shrink: 0;
+  margin-left: auto;
+  padding-right: 15px;
+}
+
+.navbar-header-flex .navbar-right-links a {
+  color: #999;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.navbar-header-flex .navbar-right-links a:hover {
+  color: #666;
+}
+
 /* ── Right sidebar ────────────────────────────────────────────────────── */
 .right-sidebar {
   padding-top: 20px;

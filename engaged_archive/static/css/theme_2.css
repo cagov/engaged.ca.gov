@@ -435,8 +435,15 @@ h3,
   font-weight: 900;
   line-height: 120%;
 }
-.navbar .navbar-brand  {
+.navbar .navbar-brand {
   color: #1c2745;
+  height: 80px;
+}
+
+.navbar .navbar-brand,
+.custom-logo {
+  height: auto;
+  padding: 0;
 }
 .nav-item.active {
   background-color: #FFCDA4;
