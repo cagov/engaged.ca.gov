@@ -334,7 +334,11 @@
 
 /* ── Fixed left column adjustments ────────────────────────────────────── */
 .fixed-left-column {
+  position: fixed;
+  top: 137px;
+  bottom: 0;
   overflow-y: auto;
+  z-index: 100;
 }
 
 .fixed-left-group {
@@ -441,9 +445,9 @@ a.nesting-2 {
   color: #000;
 }
 
-/* Push main-content just below the fixed navbar, no extra gap */
+/* Push main-content just below the fixed navbar (which now includes the notice) */
 .main-content {
-  margin-top: 82px !important;
+  margin-top: 137px !important;
   padding-top: 0 !important;
 }
 
@@ -452,7 +456,7 @@ a.nesting-2 {
 }
 
 .archive-notice-wrapper {
-  background: #f7f7f7;
+  /* background: #f7f7f7; */
   padding: 0.75rem 0;
 }
 
