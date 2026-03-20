@@ -505,3 +505,13 @@ a.nesting-2 {
   text-decoration: none;
   background-color: #f5f5f5;
 }
+
+/* Read-only archive: links marked .disabled-link — same wrapper on index + inner pages. */
+.main-content a.disabled-link,
+.main-content a.disabled-link:visited {
+  pointer-events: auto;
+  cursor: not-allowed !important;
+  color: #757575 !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+}

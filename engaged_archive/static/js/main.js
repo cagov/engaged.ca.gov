@@ -84,4 +84,16 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.classList.remove('drawer-open');
     });
   }
+
+  document.querySelectorAll('a.disabled-link').forEach(function(el) {
+    el.setAttribute('aria-disabled', 'true');
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+    });
+    el.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+      }
+    });
+  });
 });
