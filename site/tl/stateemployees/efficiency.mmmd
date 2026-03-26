@@ -240,70 +240,70 @@ subtheme_and_switch_text: " subtema at lumipat sa tema "
 ----
 id: subthemes
 nbr_subthemes: 65
-subtheme_1: Kwalipikadong kawani
-subtheme_2: Pagsasanay ng empleyado
-subtheme_3: Onboarding ng mga bagong empleyado
-subtheme_4: Paglago ng karera
-subtheme_5: Sahod at benepisyo ng empleyado
-subtheme_6: Mga pagsusuri sa pagganap ng empleyado
+subtheme_1: Pagpapanatili ng empleyado
+subtheme_2: Sahod at benepisyo ng empleyado
+subtheme_3: Pagsasanay ng empleyado
+subtheme_4: Kakulangan sa tauhan
+subtheme_5: Kwalipikadong kawani
+subtheme_6: Pagkuha at pag-rekrut
 subtheme_7: Pag-uuri ng trabaho
-subtheme_8: Pagkuha at pag-rekrut
-subtheme_9: Pagpapanatili ng empleyado
-subtheme_10: Mga programa ng pagtuturo
-subtheme_11: Kakulangan sa tauhan
+subtheme_8: Onboarding ng mga bagong empleyado
+subtheme_9: Mga pagsusuri sa pagganap ng empleyado
+subtheme_10: Paglago ng karera
+subtheme_11: Mga programa ng pagtuturo
 subtheme_12: Mga posisyon na may limitadong termino
-subtheme_13: I-digitize ang mga proseso
-subtheme_14: Disenyo ng proseso at mga pamamaraan
+subtheme_13: Proseso ng pagbuo ng patakaran
+subtheme_14: I-digitize ang mga proseso
 subtheme_15: Dokumentasyon ng proseso
-subtheme_16: Mga pagkaantala sa proseso
+subtheme_16: Disenyo ng proseso at mga pamamaraan
 subtheme_17: Bureaucracy
-subtheme_18: Proseso ng pagbuo ng patakaran
-subtheme_19: Pakikipagtulungan sa pagitan ng ahensya
-subtheme_20: Panloob na komunikasyon
-subtheme_21: Panloob na feedback
-subtheme_22: Simpleng wika
-subtheme_23: Mga pagsasalin
-subtheme_24: Pamamahala ng kaalaman
+subtheme_18: Mga pagkaantala sa proseso
+subtheme_19: Panloob na feedback
+subtheme_20: Pakikipagtulungan sa pagitan ng ahensya
+subtheme_21: Panloob na komunikasyon
+subtheme_22: Pamamahala ng kaalaman
+subtheme_23: Simpleng wika
+subtheme_24: Mga pagsasalin
 subtheme_25: Direktoryo sa buong estado
-subtheme_26: Mga inisyatiba sa patakaran ng publiko
+subtheme_26: Pakikilahok ng publiko
 subtheme_27: Paghahatid ng serbisyo sa publiko at pagtugon
-subtheme_28: Pakikilahok ng publiko
-subtheme_29: HCD (Human-Centered Design)
-subtheme_30: Pampublikong transportasyon
-subtheme_31: Pisikal na imprastraktura
-subtheme_32: Pagbili
+subtheme_28: Mga inisyatiba sa patakaran ng publiko
+subtheme_29: Pampublikong transportasyon
+subtheme_30: HCD (Human-Centered Design)
+subtheme_31: Mga permit, lisensya, at bayad
+subtheme_32: Mga ibinahaging mapagkukunan
 subtheme_33: Mga kontrata at vendor
 subtheme_34: Pagbubudget at pagpopondo
-subtheme_35: Mga permit, lisensya, at bayad
-subtheme_36: Mga ibinahaging mapagkukunan
-subtheme_37: Reimbursement ng gastos
-subtheme_38: Mga audit ng paggastos ng estado
+subtheme_35: Pagbili
+subtheme_36: Pisikal na imprastraktura
+subtheme_37: Mga audit ng paggastos ng estado
+subtheme_38: Reimbursement ng gastos
 subtheme_39: Participatory budgeting
-subtheme_40: Modernisasyon ng teknolohiya at data
-subtheme_41: Cloud storage ng estado
+subtheme_40: Cloud storage ng estado
+subtheme_41: Ibinahaging data
 subtheme_42: Digital na serbisyo
-subtheme_43: Ibinahaging data
-subtheme_44: AI at LLM
-subtheme_45: Software at mga tool
-subtheme_46: Accessibility
+subtheme_43: Modernisasyon ng teknolohiya at data
+subtheme_44: Software at mga tool
+subtheme_45: Accessibility
+subtheme_46: AI at LLM
 subtheme_47: Kultura ng pamamahala at diskarte sa pamumuno
 subtheme_48: Pagsusuri at pangangasiwa ng pamumuno
 subtheme_49: Pagsasanay ng manager
-subtheme_50: Pamamahala ng opisina
-subtheme_51: Pagpapanatili ng kapaligiran
+subtheme_50: Pagpapanatili ng kapaligiran
+subtheme_51: Pamamahala ng opisina
 subtheme_52: Remote work at pagbabalik sa opisina
 subtheme_53: Paglalakbay ng empleyado
 subtheme_54: Tiwala at pagiging bukas
 subtheme_55: Kultura sa trabaho
-subtheme_56: Growth mindset
-subtheme_57: Pagsasama-sama ng mga ahensya ng gobyerno
-subtheme_58: Pag-iwas sa panganib
-subtheme_59: Pagkakasama at pagkakaiba-iba
+subtheme_56: Pagsasama-sama ng mga ahensya ng gobyerno
+subtheme_57: Pagkakasama at pagkakaiba-iba
+subtheme_58: Growth mindset
+subtheme_59: Pag-iwas sa panganib
 subtheme_60: Networking
-subtheme_61: I-align ang patakaran at pagpapatupad
-subtheme_62: Pagsunod
+subtheme_61: Pananagutan at transparency
+subtheme_62: I-align ang patakaran at pagpapatupad
 subtheme_63: Estruktura ng org at hierarchy
-subtheme_64: Pananagutan at transparency
+subtheme_64: Pagsunod
 subtheme_65: Pagbuo ng patakaran
 ----
 

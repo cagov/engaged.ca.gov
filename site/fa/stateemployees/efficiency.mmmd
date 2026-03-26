@@ -240,70 +240,70 @@ subtheme_and_switch_text: " زیرموضوع و تغییر به موضوع "
 ----
 id: subthemes
 nbr_subthemes: 65
-subtheme_1: کارکنان واجد شرایط
-subtheme_2: آموزش کارمندان
-subtheme_3: راه‌اندازی کارمندان جدید
-subtheme_4: رشد شغلی
-subtheme_5: حقوق و مزایای کارمندان
-subtheme_6: بررسی عملکرد کارمندان
+subtheme_1: حفظ کارمندان
+subtheme_2: حقوق و مزایای کارمندان
+subtheme_3: آموزش کارمندان
+subtheme_4: کمبود نیروی کار
+subtheme_5: کارکنان واجد شرایط
+subtheme_6: استخدام و جذب
 subtheme_7: طبقه‌بندی شغل
-subtheme_8: استخدام و جذب
-subtheme_9: حفظ کارمندان
-subtheme_10: برنامه‌های مربیگری
-subtheme_11: کمبود نیروی کار
+subtheme_8: راه‌اندازی کارمندان جدید
+subtheme_9: بررسی عملکرد کارمندان
+subtheme_10: رشد شغلی
+subtheme_11: برنامه‌های مربیگری
 subtheme_12: موقعیت‌های محدود مدت
-subtheme_13: دیجیتالی‌سازی فرآیندها
-subtheme_14: طراحی فرآیند و روش‌ها
+subtheme_13: فرآیند توسعه سیاست
+subtheme_14: دیجیتالی‌سازی فرآیندها
 subtheme_15: مستندسازی فرآیند
-subtheme_16: تأخیر در فرآیند
+subtheme_16: طراحی فرآیند و روش‌ها
 subtheme_17: بوروکراسی
-subtheme_18: فرآیند توسعه سیاست
-subtheme_19: همکاری بین سازمانی
-subtheme_20: ارتباطات داخلی
-subtheme_21: بازخورد داخلی
-subtheme_22: زبان ساده
-subtheme_23: ترجمه‌ها
-subtheme_24: مدیریت دانش
+subtheme_18: تأخیر در فرآیند
+subtheme_19: بازخورد داخلی
+subtheme_20: همکاری بین سازمانی
+subtheme_21: ارتباطات داخلی
+subtheme_22: مدیریت دانش
+subtheme_23: زبان ساده
+subtheme_24: ترجمه‌ها
 subtheme_25: فهرست سراسری
-subtheme_26: ابتکارات سیاست عمومی
+subtheme_26: مشارکت عمومی
 subtheme_27: ارائه خدمات عمومی و پاسخگویی
-subtheme_28: مشارکت عمومی
-subtheme_29: DCD (طراحی محور انسان)
-subtheme_30: حمل و نقل عمومی
-subtheme_31: زیرساخت فیزیکی
-subtheme_32: تدارکات
+subtheme_28: ابتکارات سیاست عمومی
+subtheme_29: حمل و نقل عمومی
+subtheme_30: DCD (طراحی محور انسان)
+subtheme_31: مجوزها، مجوزها و هزینه‌ها
+subtheme_32: منابع مشترک
 subtheme_33: قراردادها و فروشندگان
 subtheme_34: بودجه‌بندی و تأمین مالی
-subtheme_35: مجوزها، مجوزها و هزینه‌ها
-subtheme_36: منابع مشترک
-subtheme_37: بازپرداخت هزینه
-subtheme_38: حسابرسی هزینه‌های ایالتی
+subtheme_35: تدارکات
+subtheme_36: زیرساخت فیزیکی
+subtheme_37: حسابرسی هزینه‌های ایالتی
+subtheme_38: بازپرداخت هزینه
 subtheme_39: بودجه مشارکتی
-subtheme_40: مدرنیزه‌سازی فناوری و داده
-subtheme_41: ذخیره‌سازی ابری ایالتی
+subtheme_40: ذخیره‌سازی ابری ایالتی
+subtheme_41: داده مشترک
 subtheme_42: خدمات دیجیتال
-subtheme_43: داده مشترک
-subtheme_44: هوش مصنوعی و LLM
-subtheme_45: نرم‌افزار و ابزارها
-subtheme_46: دسترسی
+subtheme_43: مدرنیزه‌سازی فناوری و داده
+subtheme_44: نرم‌افزار و ابزارها
+subtheme_45: دسترسی
+subtheme_46: هوش مصنوعی و LLM
 subtheme_47: فرهنگ مدیریت و رویکرد رهبری
 subtheme_48: بررسی و نظارت رهبری
 subtheme_49: آموزش مدیران
-subtheme_50: مدیریت دفتر
-subtheme_51: پایداری محیط زیست
+subtheme_50: پایداری محیط زیست
+subtheme_51: مدیریت دفتر
 subtheme_52: کار از راه دور و بازگشت به دفتر
 subtheme_53: سفر کارمندان
 subtheme_54: اعتماد و باز بودن
 subtheme_55: فرهنگ کار
-subtheme_56: ذهنیت رشد
-subtheme_57: ادغام سازمان‌های دولتی
-subtheme_58: اجتناب از ریسک
-subtheme_59: شمول و تنوع
+subtheme_56: ادغام سازمان‌های دولتی
+subtheme_57: شمول و تنوع
+subtheme_58: ذهنیت رشد
+subtheme_59: اجتناب از ریسک
 subtheme_60: شبکه‌سازی
-subtheme_61: همسویی سیاست و اجرا
-subtheme_62: انطباق
+subtheme_61: پاسخگویی و شفافیت
+subtheme_62: همسویی سیاست و اجرا
 subtheme_63: ساختار و سلسله مراتب سازمانی
-subtheme_64: پاسخگویی و شفافیت
+subtheme_64: انطباق
 subtheme_65: سیاست‌گذاری
 ----
 
