@@ -240,70 +240,70 @@ subtheme_and_switch_text: " chủ đề phụ và chuyển sang chủ đề "
 ----
 id: subthemes
 nbr_subthemes: 65
-subtheme_1: Nhân viên đủ tiêu chuẩn
-subtheme_2: Đào tạo nhân viên
-subtheme_3: Đào tạo nhân viên mới
-subtheme_4: Tăng trưởng nghề nghiệp
-subtheme_5: Lương và phúc lợi nhân viên
-subtheme_6: Đánh giá hiệu suất nhân viên
+subtheme_1: Giữ chân nhân viên
+subtheme_2: Lương và phúc lợi nhân viên
+subtheme_3: Đào tạo nhân viên
+subtheme_4: Thiếu nhân viên
+subtheme_5: Nhân viên đủ tiêu chuẩn
+subtheme_6: Thuê và tuyển dụng
 subtheme_7: Phân loại công việc
-subtheme_8: Thuê và tuyển dụng
-subtheme_9: Giữ chân nhân viên
-subtheme_10: Chương trình cố vấn
-subtheme_11: Thiếu nhân viên
+subtheme_8: Đào tạo nhân viên mới
+subtheme_9: Đánh giá hiệu suất nhân viên
+subtheme_10: Tăng trưởng nghề nghiệp
+subtheme_11: Chương trình cố vấn
 subtheme_12: Vị trí có thời hạn
-subtheme_13: Số hóa quy trình
-subtheme_14: Thiết kế quy trình và phương pháp
+subtheme_13: Quy trình phát triển chính sách
+subtheme_14: Số hóa quy trình
 subtheme_15: Tài liệu quy trình
-subtheme_16: Trì hoãn quy trình
+subtheme_16: Thiết kế quy trình và phương pháp
 subtheme_17: Quan liêu
-subtheme_18: Quy trình phát triển chính sách
-subtheme_19: Hợp tác giữa các cơ quan
-subtheme_20: Giao tiếp nội bộ
-subtheme_21: Phản hồi nội bộ
-subtheme_22: Ngôn ngữ đơn giản
-subtheme_23: Bản dịch
-subtheme_24: Quản lý kiến thức
+subtheme_18: Trì hoãn quy trình
+subtheme_19: Phản hồi nội bộ
+subtheme_20: Hợp tác giữa các cơ quan
+subtheme_21: Giao tiếp nội bộ
+subtheme_22: Quản lý kiến thức
+subtheme_23: Ngôn ngữ đơn giản
+subtheme_24: Bản dịch
 subtheme_25: Thư mục toàn tiểu bang
-subtheme_26: Sáng kiến chính sách công
+subtheme_26: Tham gia công cộng
 subtheme_27: Cung cấp dịch vụ công và phản ứng
-subtheme_28: Tham gia công cộng
-subtheme_29: HCD (Thiết kế lấy con người làm trung tâm)
-subtheme_30: Giao thông công cộng
-subtheme_31: Hạ tầng vật lý
-subtheme_32: Mua sắm
+subtheme_28: Sáng kiến chính sách công
+subtheme_29: Giao thông công cộng
+subtheme_30: HCD (Thiết kế lấy con người làm trung tâm)
+subtheme_31: Giấy phép, cấp phép và phí
+subtheme_32: Tài nguyên dùng chung
 subtheme_33: Hợp đồng và nhà cung cấp
 subtheme_34: Lập ngân sách và tài trợ
-subtheme_35: Giấy phép, cấp phép và phí
-subtheme_36: Tài nguyên dùng chung
-subtheme_37: Hoàn trả chi phí
-subtheme_38: Kiểm toán chi tiêu nhà nước
+subtheme_35: Mua sắm
+subtheme_36: Hạ tầng vật lý
+subtheme_37: Kiểm toán chi tiêu nhà nước
+subtheme_38: Hoàn trả chi phí
 subtheme_39: Lập ngân sách tham gia
-subtheme_40: Hiện đại hóa công nghệ và dữ liệu
-subtheme_41: Lưu trữ đám mây nhà nước
+subtheme_40: Lưu trữ đám mây nhà nước
+subtheme_41: Dữ liệu dùng chung
 subtheme_42: Dịch vụ kỹ thuật số
-subtheme_43: Dữ liệu dùng chung
-subtheme_44: AI và LLM
-subtheme_45: Phần mềm và công cụ
-subtheme_46: Khả năng tiếp cận
+subtheme_43: Hiện đại hóa công nghệ và dữ liệu
+subtheme_44: Phần mềm và công cụ
+subtheme_45: Khả năng tiếp cận
+subtheme_46: AI và LLM
 subtheme_47: Văn hóa quản lý và cách tiếp cận lãnh đạo
 subtheme_48: Xem xét và giám sát lãnh đạo
 subtheme_49: Đào tạo quản lý
-subtheme_50: Quản lý văn phòng
-subtheme_51: Bền vững môi trường
+subtheme_50: Bền vững môi trường
+subtheme_51: Quản lý văn phòng
 subtheme_52: Làm việc từ xa và quay lại văn phòng
 subtheme_53: Đi công tác nhân viên
 subtheme_54: Tin cậy và cởi mở
 subtheme_55: Văn hóa làm việc
-subtheme_56: Tư duy tăng trưởng
-subtheme_57: Hợp nhất các cơ quan chính phủ
-subtheme_58: Né tránh rủi ro
-subtheme_59: Hòa nhập và đa dạng
+subtheme_56: Hợp nhất các cơ quan chính phủ
+subtheme_57: Hòa nhập và đa dạng
+subtheme_58: Tư duy tăng trưởng
+subtheme_59: Né tránh rủi ro
 subtheme_60: Kết nối mạng
-subtheme_61: Căn chỉnh chính sách và triển khai
-subtheme_62: Tuân thủ
+subtheme_61: Trách nhiệm giải trình và minh bạch
+subtheme_62: Căn chỉnh chính sách và triển khai
 subtheme_63: Cấu trúc tổ chức và hệ thống phân cấp
-subtheme_64: Trách nhiệm giải trình và minh bạch
+subtheme_64: Tuân thủ
 subtheme_65: Hoạch định chính sách
 ----
 

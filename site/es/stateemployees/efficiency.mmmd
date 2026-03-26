@@ -240,70 +240,70 @@ subtheme_and_switch_text: " subtema y cambiar al tema "
 ----
 id: subthemes
 nbr_subthemes: 65
-subtheme_1: Personal calificado
-subtheme_2: Capacitación de empleados
-subtheme_3: Incorporación de nuevos empleados
-subtheme_4: Crecimiento profesional
-subtheme_5: Salario y beneficios de empleados
-subtheme_6: Evaluaciones de desempeño de empleados
+subtheme_1: Retención de empleados
+subtheme_2: Salario y beneficios de empleados
+subtheme_3: Capacitación de empleados
+subtheme_4: Escasez de personal
+subtheme_5: Personal calificado
+subtheme_6: Contratación y reclutamiento
 subtheme_7: Clasificación de trabajos
-subtheme_8: Contratación y reclutamiento
-subtheme_9: Retención de empleados
-subtheme_10: Programas de mentoría
-subtheme_11: Escasez de personal
+subtheme_8: Incorporación de nuevos empleados
+subtheme_9: Evaluaciones de desempeño de empleados
+subtheme_10: Crecimiento profesional
+subtheme_11: Programas de mentoría
 subtheme_12: Puestos de plazo limitado
-subtheme_13: Digitalizar procesos
-subtheme_14: Diseño de procesos y metodologías
+subtheme_13: Proceso de desarrollo de políticas
+subtheme_14: Digitalizar procesos
 subtheme_15: Documentación de procesos
-subtheme_16: Retrasos en procesos
+subtheme_16: Diseño de procesos y metodologías
 subtheme_17: Burocracia
-subtheme_18: Proceso de desarrollo de políticas
-subtheme_19: Colaboración entre agencias
-subtheme_20: Comunicación interna
-subtheme_21: Retroalimentación interna
-subtheme_22: Lenguaje claro
-subtheme_23: Traducciones
-subtheme_24: Gestión del conocimiento
+subtheme_18: Retrasos en procesos
+subtheme_19: Retroalimentación interna
+subtheme_20: Colaboración entre agencias
+subtheme_21: Comunicación interna
+subtheme_22: Gestión del conocimiento
+subtheme_23: Lenguaje claro
+subtheme_24: Traducciones
 subtheme_25: Directorio estatal
-subtheme_26: Iniciativas de política pública
+subtheme_26: Participación pública
 subtheme_27: Prestación de servicios públicos y capacidad de respuesta
-subtheme_28: Participación pública
-subtheme_29: DCD (Diseño Centrado en el Ser Humano)
-subtheme_30: Transporte público
-subtheme_31: Infraestructura física
-subtheme_32: Adquisiciones
+subtheme_28: Iniciativas de política pública
+subtheme_29: Transporte público
+subtheme_30: DCD (Diseño Centrado en el Ser Humano)
+subtheme_31: Permisos, licencias y tarifas
+subtheme_32: Recursos compartidos
 subtheme_33: Contratos y proveedores
 subtheme_34: Presupuestación y financiamiento
-subtheme_35: Permisos, licencias y tarifas
-subtheme_36: Recursos compartidos
-subtheme_37: Reembolso de gastos
-subtheme_38: Auditorías de gasto estatal
+subtheme_35: Adquisiciones
+subtheme_36: Infraestructura física
+subtheme_37: Auditorías de gasto estatal
+subtheme_38: Reembolso de gastos
 subtheme_39: Presupuesto participativo
-subtheme_40: Modernización tecnológica y de datos
-subtheme_41: Almacenamiento en la nube estatal
+subtheme_40: Almacenamiento en la nube estatal
+subtheme_41: Datos compartidos
 subtheme_42: Servicios digitales
-subtheme_43: Datos compartidos
-subtheme_44: IA y LLM
-subtheme_45: Software y herramientas
-subtheme_46: Accesibilidad
+subtheme_43: Modernización tecnológica y de datos
+subtheme_44: Software y herramientas
+subtheme_45: Accesibilidad
+subtheme_46: IA y LLM
 subtheme_47: Cultura de gestión y enfoque de liderazgo
 subtheme_48: Revisión y supervisión del liderazgo
 subtheme_49: Capacitación de gerentes
-subtheme_50: Gestión de oficina
-subtheme_51: Sostenibilidad ambiental
+subtheme_50: Sostenibilidad ambiental
+subtheme_51: Gestión de oficina
 subtheme_52: Trabajo remoto y regreso a la oficina
 subtheme_53: Viajes de empleados
 subtheme_54: Confianza y apertura
 subtheme_55: Cultura laboral
-subtheme_56: Mentalidad de crecimiento
-subtheme_57: Consolidar agencias gubernamentales
-subtheme_58: Aversión al riesgo
-subtheme_59: Inclusión y diversidad
+subtheme_56: Consolidar agencias gubernamentales
+subtheme_57: Inclusión y diversidad
+subtheme_58: Mentalidad de crecimiento
+subtheme_59: Aversión al riesgo
 subtheme_60: Redes
-subtheme_61: Alinear política e implementación
-subtheme_62: Cumplimiento
+subtheme_61: Rendición de cuentas y transparencia
+subtheme_62: Alinear política e implementación
 subtheme_63: Estructura y jerarquía organizacional
-subtheme_64: Rendición de cuentas y transparencia
+subtheme_64: Cumplimiento
 subtheme_65: Formulación de políticas
 ----
 
