@@ -239,70 +239,70 @@ subtheme_and_switch_text: " subtheme and switch to theme "
 ----
 id: subthemes
 nbr_subthemes: 65
-subtheme_1: Qualified staff
-subtheme_2: Employee training
-subtheme_3: Onboarding new employees
-subtheme_4: Career growth
-subtheme_5: Employee pay and benefits
-subtheme_6: Employee performance reviews
+subtheme_1: Employee retention
+subtheme_2: Employee pay and benefits
+subtheme_3: Employee training
+subtheme_4: Understaffing
+subtheme_5: Qualified staff
+subtheme_6: Hiring and recruitment
 subtheme_7: Job classification
-subtheme_8: Hiring and recruitment
-subtheme_9: Employee retention
-subtheme_10: Mentorship programs
-subtheme_11: Understaffing
+subtheme_8: Onboarding new employees
+subtheme_9: Employee performance reviews
+subtheme_10: Career growth
+subtheme_11: Mentorship programs
 subtheme_12: Limited-term positions
-subtheme_13: Digitize processes
-subtheme_14: Process design and methodologies
+subtheme_13: Policy development process
+subtheme_14: Digitize processes
 subtheme_15: Process documentation
-subtheme_16: Process delays
+subtheme_16: Process design and methodologies
 subtheme_17: Bureaucracy
-subtheme_18: Policy development process
-subtheme_19: Cross-agency collaboration
-subtheme_20: Internal communication
-subtheme_21: Internal feedback
-subtheme_22: Plain language
-subtheme_23: Translations
-subtheme_24: Knowledge management
+subtheme_18: Process delays
+subtheme_19: Internal feedback
+subtheme_20: Cross-agency collaboration
+subtheme_21: Internal communication
+subtheme_22: Knowledge management
+subtheme_23: Plain language
+subtheme_24: Translations
 subtheme_25: Statewide directory
-subtheme_26: Public policy initiatives
+subtheme_26: Public participation
 subtheme_27: Public service delivery and responsiveness
-subtheme_28: Public participation
-subtheme_29: Human-centered design
-subtheme_30: Public transportation
-subtheme_31: Physical infrastructure
-subtheme_32: Procurement
+subtheme_28: Public policy initiatives
+subtheme_29: Public transportation
+subtheme_30: Human-centered design
+subtheme_31: Permits, licensing, and fees
+subtheme_32: Shared resources
 subtheme_33: Contracts and vendors
 subtheme_34: Budgeting and funding
-subtheme_35: Permits, licensing, and fees
-subtheme_36: Shared resources
-subtheme_37: Expense reimbursement
-subtheme_38: State-spending audits
+subtheme_35: Procurement
+subtheme_36: Physical infrastructure
+subtheme_37: State-spending audits
+subtheme_38: Expense reimbursement
 subtheme_39: Participatory budgeting
-subtheme_40: Technology and data modernization
-subtheme_41: State cloud storage
+subtheme_40: State cloud storage
+subtheme_41: Shared data
 subtheme_42: Digital services
-subtheme_43: Shared data
-subtheme_44: AI and large language models
-subtheme_45: Software and tools
-subtheme_46: Accessibility
+subtheme_43: Technology and data modernization
+subtheme_44: Software and tools
+subtheme_45: Accessibility
+subtheme_46: AI and large language models
 subtheme_47: Management culture and leadership approach
 subtheme_48: Leadership review and oversight
 subtheme_49: Manager training
-subtheme_50: Office management
-subtheme_51: Environmental sustainability
+subtheme_50: Environmental sustainability
+subtheme_51: Office management
 subtheme_52: Remote work and return to office
 subtheme_53: Employee travel
 subtheme_54: Trust and openness
 subtheme_55: Work culture
-subtheme_56: Growth mindset
-subtheme_57: Consolidate government agencies
-subtheme_58: Risk aversion
-subtheme_59: Inclusion and diversity
+subtheme_56: Consolidate government agencies
+subtheme_57: Inclusion and diversity
+subtheme_58: Growth mindset
+subtheme_59: Risk aversion
 subtheme_60: Networking
-subtheme_61: Align policy and implementation
-subtheme_62: Compliance
+subtheme_61: Accountability and transparency
+subtheme_62: Align policy and implementation
 subtheme_63: Org structure and hierarchy
-subtheme_64: Accountability and transparency
+subtheme_64: Compliance
 subtheme_65: Policymaking
 ----
 

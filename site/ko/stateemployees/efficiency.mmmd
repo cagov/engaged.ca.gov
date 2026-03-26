@@ -240,70 +240,70 @@ subtheme_and_switch_text: " 하위 주제 및 주제로 전환 "
 ----
 id: subthemes
 nbr_subthemes: 65
-subtheme_1: 자격을 갖춘 직원
-subtheme_2: 직원 교육
-subtheme_3: 신입 직원 온보딩
-subtheme_4: 경력 성장
-subtheme_5: 직원 급여 및 혜택
-subtheme_6: 직원 성과 평가
+subtheme_1: 직원 유지
+subtheme_2: 직원 급여 및 혜택
+subtheme_3: 직원 교육
+subtheme_4: 인력 부족
+subtheme_5: 자격을 갖춘 직원
+subtheme_6: 채용 및 모집
 subtheme_7: 직무 분류
-subtheme_8: 채용 및 모집
-subtheme_9: 직원 유지
-subtheme_10: 멘토십 프로그램
-subtheme_11: 인력 부족
+subtheme_8: 신입 직원 온보딩
+subtheme_9: 직원 성과 평가
+subtheme_10: 경력 성장
+subtheme_11: 멘토십 프로그램
 subtheme_12: 제한 기간 직책
-subtheme_13: 프로세스 디지털화
-subtheme_14: 프로세스 설계 및 방법론
+subtheme_13: 정책 개발 프로세스
+subtheme_14: 프로세스 디지털화
 subtheme_15: 프로세스 문서화
-subtheme_16: 프로세스 지연
+subtheme_16: 프로세스 설계 및 방법론
 subtheme_17: 관료제
-subtheme_18: 정책 개발 프로세스
-subtheme_19: 기관 간 협력
-subtheme_20: 내부 커뮤니케이션
-subtheme_21: 내부 피드백
-subtheme_22: 쉬운 언어
-subtheme_23: 번역
-subtheme_24: 지식 관리
+subtheme_18: 프로세스 지연
+subtheme_19: 내부 피드백
+subtheme_20: 기관 간 협력
+subtheme_21: 내부 커뮤니케이션
+subtheme_22: 지식 관리
+subtheme_23: 쉬운 언어
+subtheme_24: 번역
 subtheme_25: 주 전체 디렉토리
-subtheme_26: 공공 정책 이니셔티브
+subtheme_26: 공공 참여
 subtheme_27: 공공 서비스 제공 및 대응성
-subtheme_28: 공공 참여
-subtheme_29: HCD (인간 중심 설계)
-subtheme_30: 대중 교통
-subtheme_31: 물리적 인프라
-subtheme_32: 조달
+subtheme_28: 공공 정책 이니셔티브
+subtheme_29: 대중 교통
+subtheme_30: HCD (인간 중심 설계)
+subtheme_31: 허가, 라이선스 및 수수료
+subtheme_32: 공유 자원
 subtheme_33: 계약 및 공급업체
 subtheme_34: 예산 편성 및 자금 조달
-subtheme_35: 허가, 라이선스 및 수수료
-subtheme_36: 공유 자원
-subtheme_37: 비용 상환
-subtheme_38: 주 지출 감사
+subtheme_35: 조달
+subtheme_36: 물리적 인프라
+subtheme_37: 주 지출 감사
+subtheme_38: 비용 상환
 subtheme_39: 참여형 예산 편성
-subtheme_40: 기술 및 데이터 현대화
-subtheme_41: 주 클라우드 스토리지
+subtheme_40: 주 클라우드 스토리지
+subtheme_41: 공유 데이터
 subtheme_42: 디지털 서비스
-subtheme_43: 공유 데이터
-subtheme_44: AI 및 LLM
-subtheme_45: 소프트웨어 및 도구
-subtheme_46: 접근성
+subtheme_43: 기술 및 데이터 현대화
+subtheme_44: 소프트웨어 및 도구
+subtheme_45: 접근성
+subtheme_46: AI 및 LLM
 subtheme_47: 관리 문화 및 리더십 접근 방식
 subtheme_48: 리더십 검토 및 감독
 subtheme_49: 관리자 교육
-subtheme_50: 사무실 관리
-subtheme_51: 환경 지속 가능성
+subtheme_50: 환경 지속 가능성
+subtheme_51: 사무실 관리
 subtheme_52: 원격 근무 및 사무실 복귀
 subtheme_53: 직원 출장
 subtheme_54: 신뢰와 개방성
 subtheme_55: 직장 문화
-subtheme_56: 성장 마인드셋
-subtheme_57: 정부 기관 통합
-subtheme_58: 위험 회피
-subtheme_59: 포용성과 다양성
+subtheme_56: 정부 기관 통합
+subtheme_57: 포용성과 다양성
+subtheme_58: 성장 마인드셋
+subtheme_59: 위험 회피
 subtheme_60: 네트워킹
-subtheme_61: 정책과 구현 정렬
-subtheme_62: 규정 준수
+subtheme_61: 책임 및 투명성
+subtheme_62: 정책과 구현 정렬
 subtheme_63: 조직 구조 및 계층 구조
-subtheme_64: 책임 및 투명성
+subtheme_64: 규정 준수
 subtheme_65: 정책 수립
 ----
 
