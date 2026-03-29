@@ -24,7 +24,8 @@ jobs:
       - name: Build site
         run: |
           mkdir _dist
-          npm install
+          # using npm ci instead of npm install to reduce threat of installing newer packages than intended
+          npm ci
           npm run build
 
       # Modify when site goes live.
