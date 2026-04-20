@@ -179,6 +179,9 @@
             <li class="nav-item {% if active_page == 'stateemployees' %}active{% endif %}" role="presentation">
               <a class="first-level-link" href="{{ '/stateemployees' | localizedPath(locale) }}">{{ 'state-employees' | i18n }}</a>
             </li>
+            <li class="nav-item {% if active_page == 'ai-impact' %}active{% endif %}" role="presentation">
+              <a class="first-level-link" href="{{ '/ai-mpact' | localizedPath(locale) }}">{{ 'impact-of-AI-on-work' | i18n }}</a>
+            </li>
             {# use this for eventual pull-down when number of links >=4 #}
             {# <li class="nav-item" role="presentation">
               <a class="first-level-link" ">{{ 'engagements' | i18n }}</a>

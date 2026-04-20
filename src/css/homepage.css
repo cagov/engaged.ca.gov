@@ -78,7 +78,7 @@ section#homepage-engagements > .container > h2 {
 
 .engagement-card img {
   width: 100%;
-  height: 240px;
+  height: 175px;
   object-fit: cover;
   display: block;
 }
@@ -132,7 +132,7 @@ section#homepage-engagements > .container > h2 {
 
 @media screen and (min-width: 900px) {
   .engagements-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 engca-partner-flex {
