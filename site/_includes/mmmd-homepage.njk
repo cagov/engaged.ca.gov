@@ -7,7 +7,7 @@
     <engca-banner-content>
       {{ modules.hero.content | safe }}
       <a href="{{ "/stateemployees/efficiency/" | locale_url }}" data-appearance="button" data-theme="orange">
-        {{ modules.hero.buttonText_results }}
+        {{ modules.hero.buttonText_signupnow }}
       </a>
     </engca-banner-content>
     <img src="/public/images/hero-bubbles.png" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header' | i18n }}" />
@@ -29,6 +29,17 @@
   <div class="container">
     {{ modules.homepage_engagements.content | safe }}
     <div class="engagements-grid">
+      <article class="engagement-card">
+        <img src="/public/images/project_ai.jpg" alt="{{ modules.homepage_engagements.ai_title }}" />
+        <div class="engagement-card-body">
+          <span class="engagement-status">{{ modules.homepage_engagements.openText }}</span>
+          <h3>{{ modules.homepage_engagements.ai_title }}</h3>
+          <p>{{ modules.homepage_engagements.ai_description }}</p>
+          <a href="{{ "/ai-impact/" | locale_url }}" data-appearance="button" data-theme="orange">
+            {{ modules.hero.buttonText_learnmore }}
+          </a>
+        </div>
+      </article>
       <article class="engagement-card">
         <img src="/public/images/project_e3.jpg" alt="{{ modules.homepage_engagements.e3_title }}" />
         <div class="engagement-card-body">
