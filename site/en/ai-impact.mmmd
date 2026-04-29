@@ -1,33 +1,21 @@
 ---
-title: Efficient, effective, and, engaged
-description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. Engaged California's first topic is recovery from the Los Angeles wildfires.
+title: Efficient, effective, and engaged
+description: Engaged California is an online platform that makes it easier for Californians to have a voice in government. 
 layout: mmmd-ai-impact
 keywords:
-  - California
+  - California 
 tags:
   - pages
 ---
 
 ----
 id: hero
-title:  Impact of AI on work
+title: Impact of AI on work
 subtitle: Tell us how you think AI could affect the job market and how you do your work.
-pillText: Sign ups open
 buttonText: Share your views
 signupsOpen: Sign ups open
 ----
 
-
-----
-id: what_we_heard
-buttonText: See the results
-----
-
-## What we heard
-
-Over a 10-week engagement, more than 1,400 California state employees shared insights on how to make our government more efficient.
-
- 
 ----
 id: overview
 ----
@@ -65,17 +53,6 @@ box_3_desc: We review your contributions for potential to inform actionable chan
 box_4_label: Inform real change
 box_4_desc: We make action plans based on thoughts shared here
 ----
-
-Content unused
-
-----
-id: form
-emailLabel: Email (work or personal)
-----
-
-### Your experience is essential to improving how California serves its people. 
-
-Sign up with a work or personal email. You’ll receive information about next steps. 
 
 ----
 id: generalInfo
