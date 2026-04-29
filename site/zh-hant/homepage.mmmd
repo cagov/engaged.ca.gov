@@ -14,11 +14,14 @@ id: hero
 buttonText: 立即註冊
 buttonText_actionplan: 查看行動計畫
 buttonText_results: 查看結果
+buttonText_joinus: 加入我們
+buttonText_learnmore: 了解更多
+buttonText_signupnow: 立即註冊
 ----
 
 # 告訴政府您對緊迫問題的想法
 
-我們最近的參與是與州政府員工進行的。他們分享了關於政府效率的想法。
+我們目前的參與活動是關於人工智能對您工作的影響。
 
 ----
 id: about
@@ -73,9 +76,12 @@ id: partners
 ----
 id: homepage_engagements
 statusText: 已結束
+openText: 進行中
 e3_title: 塑造更好的州政府
 e3_description: 超過1,400名州政府員工提供了他們的意見。他們的想法將有助於使加州政府更加高效和有效。
 lafires_title: 洛杉磯火災恢復
 lafires_description: 我們與超過900名受伊頓和帕利塞茲野火影響的民眾合作。他們的意見將有助於制定長期恢復計劃。
+ai_title: 人工智能對工作的影響
+ai_description: 我們想聽取您對人工智能的看法、您在工作中如何使用它，以及您認為它將如何影響未來的就業。
 ----
 ## 我們的參與

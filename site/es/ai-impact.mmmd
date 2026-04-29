@@ -1,6 +1,6 @@
 ---
 title: Eficiencia, eficacia y compromiso
-description: Engaged California es una plataforma en línea que facilita que los californianos tengan voz en el gobierno. El primer tema de Engaged California es la recuperación de los incendios forestales de Los Ángeles.
+description: Engaged California es una plataforma en línea que facilita que los californianos tengan voz en el gobierno.
 layout: mmmd-ai-impact
 keywords:
   - California
@@ -10,77 +10,68 @@ tags:
 
 ----
 id: hero
-title: Ayude  a crear una mejor California
-subtitle: Una oportunidad para que los empleados estatales ayuden a que California sea más eficiente, eficaz y comprometida.
-pillText: Inscripciones abiertas
-buttonText: Regístrese para compartir sus ideas
+title: Impacto de la IA en el trabajo
+subtitle: Cuéntenos cómo cree que la IA podría afectar el mercado laboral y la forma en que realiza su trabajo.
+buttonText: Comparta sus opiniones
+signupsOpen: Inscripciones abiertas
 ----
-
-
-----
-id: what_we_heard
-buttonText: Ver los resultados
-----
-
-## Lo que escuchamos
-
-Durante un período de participación de 10 semanas, más de 1,400 empleados estatales de California compartieron ideas sobre cómo hacer que nuestro gobierno sea más eficiente.
-
 
 ----
 id: overview
 ----
 
-## Un gobierno que funciona mejor comienza con las personas que mejor lo conocen.
+## La política sobre la IA debe ser moldeada por las personas
+La IA está cambiando la forma en que trabajamos en California. Con esos cambios surge una serie de preocupaciones:
 
-Queremos conocer sus ideas, primero y principal, como californiano. Como empleado estatal, usted tiene una perspectiva única y es un experto en la forma en que nuestro gobierno sirve a sus residentes. Valoramos su experiencia tanto como empleado estatal como californiano y usuario de servicios públicos.
+- ¿Desplazará a los trabajadores con educación?
+- ¿Desaparecerán los empleos de nivel inicial?
+- ¿Ampliará la brecha salarial, especialmente para las personas de color?
+- ¿Podemos confiar en el producto del trabajo de la IA?
+- ¿Qué pasa con la ética y la privacidad?
 
-Nuestros objetivos:
-- Identificar las barreras que impiden que el gobierno sea eficiente y efectivo.
-- Descubrir oportunidades para servir mejor a las personas en nuestro estado.
-
+Haya usado o no la IA en el trabajo, queremos conocer sus opiniones. Nos ayudará a orientar políticas que pongan a las personas en primer lugar.
 
 ----
 id: about
 ----
 
-### Acerca del proceso
+### Acerca del programa
 
-Engaged California es más que un buzón de sugerencias. Es una plataforma colaborativa en la que el estado de California puede compartir, refinar y priorizar las ideas que impulsan el cambio.
-
-Este es un modelo de democracia deliberativa, el cual le otorga un papel significativo en la construcción del futuro de los servicios del gobierno en California.
-
-Cuando usted participa, ayuda a crear un sistema que escucha mejor, trabaja de forma más inteligente y ofrece más beneficios a las personas a las que servimos.
+Engaged California es un ejemplo de democracia deliberativa. Le permite involucrarse con su gobierno de una nueva manera. Ofrece un espacio para un diálogo significativo. Esto genera comprensión y da forma a las políticas, antes de que se tomen las decisiones.
 
 [Más información sobre Engaged California](/es/about)
 
-----
-id: form
-emailLabel: Correo electrónico (trabajo o personal)
-----
 
-### Su experiencia es esencial para mejorar la forma en que California sirve a sus residentes. 
-
-Regístrese con un correo electrónico del trabajo o personal. Recibirá información sobre los siguientes pasos. 
+----
+id: flowchart
+box_1_label: Inscríbase y comparta
+box_1_desc: Comparte su experiencia y sus preocupaciones
+box_2_label: Interactúe con otros
+box_2_desc: Escucha lo que otros dicen y encuentra áreas de consenso
+box_3_label: Las ideas avanzan
+box_3_desc: Revisamos sus contribuciones por su potencial para impulsar cambios concretos
+box_4_label: Inspire un cambio real
+box_4_desc: Elaboramos planes de acción basados en las ideas compartidas aquí
+----
 
 ----
 id: generalInfo
 title: Más detalles
 ----
 
-### Participación
+#### Participación
 
-- La participación es voluntaria.
-- No se le pagará por su tiempo.
-- Debe tener 18 años o más para participar.
+- La participación es voluntaria
+- No se le pagará por su tiempo
+- Debe tener 18 años o más para participar
+- Una vez recibidos sus comentarios, invitaremos a algunos participantes a una conversación en vivo
 
 ----
 id: codeConduct
 ----
 
-### Les pedimos a todos que
+#### Pedimos a todos que
 
-- Acepten cumplir un compromiso de civilidad.
-- Estén dispuestos a escuchar y compartir.
-- Se traten mutuamente con respeto en la plataforma y en cualquier conversación de seguimiento.
-- Se comuniquen de manera respetuosa con los demás.
+- Acepten cumplir un compromiso de civilidad
+- Estén dispuestos a escuchar y compartir
+- Se traten mutuamente con respeto

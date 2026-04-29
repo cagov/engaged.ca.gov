@@ -1,6 +1,6 @@
 ---
 title: Hiệu quả, năng suất và gắn kết
-description: Engaged California là một nền tảng trực tuyến giúp người dân California đóng góp ý kiến cho chính quyền dễ dàng hơn. Chủ đề đầu tiên của Engaged California là phục hồi sau các đám cháy rừng ở Los Angeles.
+description: Engaged California là một nền tảng trực tuyến giúp người dân California dễ dàng có tiếng nói trong chính phủ.
 layout: mmmd-ai-impact
 keywords:
   - California
@@ -10,77 +10,68 @@ tags:
 
 ----
 id: hero
-title:  Hỗ trợ định hình một California tốt đẹp hơn
-subtitle: Cơ hội cho nhân viên tiểu bang giúp California hoạt động hiệu quả hơn, năng suất hơn và gắn kết hơn.
-pillText: Mở đăng ký
-buttonText: Đăng ký ngay để chia sẻ ý tưởng của quý vị
+title: Tác động của AI đối với công việc
+subtitle: Hãy cho chúng tôi biết quý vị nghĩ AI có thể ảnh hưởng đến thị trường việc làm và cách quý vị làm việc như thế nào.
+buttonText: Chia sẻ quan điểm của quý vị
+signupsOpen: Đang mở đăng ký
 ----
-
-
-----
-id: what_we_heard
-buttonText: Xem kết quả
-----
-
-## Những gì chúng tôi đã nghe
-
-Trong 10 tuần tham gia, hơn 1.400 nhân viên tiểu bang California đã chia sẻ những ý kiến về cách làm cho chính quyền của chúng ta hiệu quả hơn.
-
 
 ----
 id: overview
 ----
 
-## Một chính quyền hoạt động tốt hơn bắt đầu từ những người hiểu rõ nhất
+## Chính sách về AI cần được định hình bởi người dân
+AI đang thay đổi cách chúng ta làm việc tại California. Đi kèm với những thay đổi đó là hàng loạt mối lo ngại:
 
-Trước hết, chúng tôi muốn quý vị chia sẻ hiểu biết của mình với tư cách là cư dân California. Là một nhân viên tiểu bang, quý vị mang đến một góc nhìn độc đáo và là người hiểu rõ cách chính quyền phục vụ người dân. Chúng tôi đánh giá cao trải nghiệm của quý vị từ cả hai phía: với tư cách là một nhân viên tiểu bang và là một cư dân California sử dụng dịch vụ công.
+- Liệu nó có thay thế những người lao động có trình độ học vấn?
+- Liệu các công việc cấp khởi điểm có biến mất?
+- Liệu nó có làm gia tăng khoảng cách lương, đặc biệt là đối với người da màu?
+- Chúng ta có thể tin tưởng vào sản phẩm công việc do AI tạo ra không?
+- Còn vấn đề đạo đức và quyền riêng tư thì sao?
 
-Mục tiêu của chúng tôi:
-- Xác định các rào cản ngăn cản một chính quyền làm việc hiệu quả và năng suất
-- Khám phá các cơ hội để phục vụ người dân tốt hơn trong tiểu bang của chúng ta
-
+Cho dù quý vị đã sử dụng AI tại nơi làm việc hay chưa, chúng tôi đều muốn biết quan điểm của quý vị. Điều đó sẽ giúp chúng tôi định hình chính sách đặt con người lên hàng đầu.
 
 ----
 id: about
 ----
 
-### Giới thiệu về quy trình
+### Về chương trình
 
-Engaged California không chỉ là một hòm thư góp ý. Đây là nền tảng hợp tác nơi lực lượng lao động của tiểu bang California có thể chia sẻ, điều chỉnh và ưu tiên các ý tưởng thúc đẩy sự thay đổi.
-
-Đây là mô hình dân chủ có cân nhắc khi trao cho quý vị vai trò có ý nghĩa trong việc định hình tương lai của các dịch vụ của chính quyền tại California.
-
-Khi tham gia, quý vị đang góp phần xây dựng một hệ thống lắng nghe tốt hơn, hoạt động thông minh hơn và mang lại nhiều lợi ích hơn cho những người chúng ta phục vụ.
+Engaged California là một ví dụ về dân chủ thảo luận. Nó trao quyền cho quý vị tham gia với chính phủ theo một cách mới. Nó cung cấp một không gian cho cuộc đối thoại có ý nghĩa. Điều này xây dựng sự hiểu biết và định hình chính sách—trước khi các quyết định được đưa ra.
 
 [Tìm hiểu thêm về Engaged California](/vi/about)
 
-----
-id: form
-emailLabel: Email (công việc hoặc cá nhân)
-----
 
-### Trải nghiệm của quý vị rất cần thiết để cải thiện cách California phục vụ người dân. 
-
-Đăng ký bằng email công việc hoặc cá nhân. Quý vị sẽ nhận được thông tin về các bước tiếp theo. 
+----
+id: flowchart
+box_1_label: Tham gia và chia sẻ
+box_1_desc: Quý vị chia sẻ trải nghiệm và mối quan tâm của mình
+box_2_label: Tương tác với người khác
+box_2_desc: Quý vị nghe những gì người khác đang nói và tìm những điểm đồng thuận
+box_3_label: Ý tưởng tiến lên phía trước
+box_3_desc: Chúng tôi xem xét những đóng góp của quý vị về tiềm năng tạo ra thay đổi có thể thực hiện
+box_4_label: Tạo nên thay đổi thực sự
+box_4_desc: Chúng tôi xây dựng kế hoạch hành động dựa trên những suy nghĩ được chia sẻ ở đây
+----
 
 ----
 id: generalInfo
 title: Thông tin chi tiết bổ sung
 ----
 
-### Tham gia
+#### Tham gia
 
-- Quý vị tham gia trên tinh thần tự nguyện
-- Quý vị sẽ không được trả tiền cho thời gian tham gia
-- Quý vị phải từ 18 tuổi trở lên để được tham gia
+- Việc tham gia là tự nguyện
+- Quý vị sẽ không được trả tiền cho thời gian của mình
+- Quý vị phải từ 18 tuổi trở lên để tham gia
+- Sau khi nhận được ý kiến của quý vị, chúng tôi sẽ mời một số người tham gia vào cuộc thảo luận trực tiếp
 
 ----
 id: codeConduct
 ----
 
-### Chúng tôi yêu cầu mọi người
+#### Chúng tôi yêu cầu mọi người
 
-- Đồng ý thực hiện cam kết về văn minh
+- Đồng ý tuân theo cam kết về sự lịch thiệp
 - Cởi mở để lắng nghe và chia sẻ
-- Tôn trọng nhau trên nền tảng và trong bất kỳ hoạt động tiếp theo nào
-- Tương tác với người khác với thái độ tôn trọng
+- Đối xử với nhau bằng sự tôn trọng
