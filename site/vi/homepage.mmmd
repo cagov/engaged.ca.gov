@@ -14,11 +14,14 @@ id: hero
 buttonText: Đăng ký ngay
 buttonText_actionplan: Xem kế hoạch hành động
 buttonText_results: Xem kết quả
+buttonText_joinus: Tham gia với chúng tôi
+buttonText_learnmore: Tìm hiểu thêm
+buttonText_signupnow: Đăng ký ngay
 ----
 
 # Hãy cho chính phủ của quý vị biết cảm nhận của quý vị về những vấn đề cấp bách
 
-Hoạt động gắn kết gần đây nhất của chúng tôi là với nhân viên nhà nước. Họ đã chia sẻ ý tưởng về hiệu quả của chính phủ.
+Hoạt động gắn kết hiện tại của chúng tôi là về tác động của AI đối với công việc của quý vị.
 
 ----
 id: about
@@ -73,9 +76,12 @@ Chúng tôi thiết kế nền tảng này theo hướng phi đảng phái. Cơ 
 ----
 id: homepage_engagements
 statusText: Đã kết thúc
+openText: Đang mở
 e3_title: Hình thành một chính phủ tiểu bang tốt hơn
 e3_description: Hơn 1,400 nhân viên nhà nước đã đóng góp ý kiến của họ. Ý tưởng của họ sẽ giúp làm cho chính phủ California hiệu quả và hiệu quả hơn.
 lafires_title: Phục hồi sau các đám cháy ở Los Angeles
 lafires_description: Chúng tôi đã làm việc với hơn 900 người bị ảnh hưởng bởi các đám cháy rừng Eaton và Palisades. Ý kiến đóng góp của họ sẽ giúp định hình các kế hoạch phục hồi lâu dài.
+ai_title: Tác động của AI đối với công việc
+ai_description: Chúng tôi muốn lắng nghe quan điểm của quý vị về AI, cách quý vị sử dụng nó trong công việc, và quý vị nghĩ nó sẽ ảnh hưởng như thế nào đến tương lai của việc làm.
 ----
 ## Các hoạt động gắn kết của chúng tôi
