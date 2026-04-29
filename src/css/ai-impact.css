@@ -7,6 +7,10 @@ engca-banner-content {
     text-wrap: balance;
 }
 
+engca-banner-content span.external-link-icon {
+    padding-left: 0.5rem;
+}
+
 section#ge-hero img {
     width: 276px;
 }
