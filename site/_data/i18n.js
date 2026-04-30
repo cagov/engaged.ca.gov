@@ -1329,13 +1329,13 @@ const translations = {
     "impact-of-AI-on-work": {
         "en": "Impact of AI on work",
         "es": "Impacto de la IA en el trabajo",
-        "ko": "AI의 작업에 대한 영향",
+        "ko": "AI가 업무에 미치는 영향",
         "tl": "Epekto ng AI sa trabaho",
-        "vi": "Ảnh hưởng của AI đối với công việc",
+        "vi": "Tác động của AI đối với công việc",
         "zh-hans": "人工智能对工作的影响",
         "zh-hant": "人工智能對工作的影響",
-        "fa": "تأثیر AI در کار",
-        "hy": "AI-ի ազդեցություն աշխատանքի վրա",
+        "fa": "تأثیر هوش مصنوعی بر کار",
+        "hy": "Արհեստական բանականության ազդեցությունը աշխատանքի վրա",
         "location": "Government efficiencies",
         "status": "machine_translated"
     },
