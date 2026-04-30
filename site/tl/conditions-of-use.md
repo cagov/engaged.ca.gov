@@ -13,7 +13,7 @@ tags:
 
 Ang website na ito ay isinulat ng Tanggapan ng Datos at Inobasyon (Office of Data and Innovation).
 
-*Na-update: Hunyo 30, 2023*
+*Na-update: Mayo 1, 2026*
 
 Kapag bumisita ka sa website ng Tanggapan ng Datos at Inobasyon (Office of Data and Innovation o ODI), tinatanggap mo ang aming mga kondisyon sa paggamit. Kung hindi ka sumasang-ayon sa mga kundisyon ng paggamit na ito, mangyaring lumabas sa website na ito. Ang mga kondisyon ng paggamit ay maaaring magbago nang walang abiso. Sinasalamin nila ang kasalukuyang mga kasanayan sa negosyo ng ODI.
 
@@ -21,7 +21,7 @@ Kung aalis ka sa website na ito, ang ibang mga website ay magkakaroon ng sarili 
 
 Ibinibigay ng ODI ang website na ito at ang impormasyon nito bilang isang pampublikong serbisyo. Sinusubaybayan namin ang website upang matiyak ang pagpapatakbo nito at ang paggana ng mga tampok nito. Ang sinumang gumagamit ng website na ito ay pumapayag sa naturang pagsubaybay.
 
-Ang mga hindi awtorisadong pagtatangka na baguhin ang anumang impormasyong nakaimbak sa website na ito, upang talunin o iwasan ang mga tampok na panseguridad, o gamitin ang website na ito para sa iba sa mga layunin nito ay ipinagbabawal at maaaring magresulta sa kriminal na pag-uusig.
+Ang mga hindi awtorisadong pagtatangka na baguhin ang anumang impormasyong nakaimbak sa website na ito, upang talunin o iwasan ang mga tampok na panseguridad, o gamitin ang website na ito para sa iba sa mga layunin nito ay ipinagbabawal at maaaring magresulta sa sibil na paglilitis o kriminal na pag-uusig.
 
 Kung mayroon kang anumang mga tanong tungkol sa pagiging pribado, basahin ang aming [patakaran sa pagiging pribado](/tl/privacy).
 
@@ -31,7 +31,7 @@ Maaari naming gamitin ang impormasyong ipinadala mo sa amin upang mapabuti ang a
 
 Maaari naming ipasa ang iyong impormasyon sa ibang mga empleyado ng estado na maaaring mas makakatulong sa iyo. Ang mga empleyadong ito ay maaaring bahagi ng ibang departamento ng estado. Maliban kung kinakailangan ng batas, hindi kami nagbabahagi ng impormasyon sa mga organisasyong hindi pang-estado.
 
-Ibinabahagi lamang namin ang impormasyong ibibigay mo sa amin kung kinakailangan. Kung gagamitin namin ang iyong impormasyon para sa istatistikal na pag-uulat, datos ng kalakaran (trend), o mga pagkilos sa pagsisiyasat, aalisin namin ang anumang impormasyong nagpapakilala.
+Ibinabahagi namin ang impormasyong ibibigay mo sa amin kung kinakailangan lamang. Kung gagamitin namin ang iyong impormasyon para sa istatistikal na pag-uulat, datos ng kalakaran (trend), o mga pagkilos sa pagsisiyasat, aalisin namin ang anumang impormasyong nagpapakilala.
 
 ## Seguridad at pagsubaybay
 
@@ -62,3 +62,14 @@ Sa pangkalahatan, ang impormasyong ipinakita sa website na ito, maliban kung ipi
 Gayunpaman, gumagamit ang ODI ng naka-copyright na datos (halimbawa, mga larawan). Maaaring mangailangan ito ng mga karagdagang pahintulot bago mo gamitin. Dapat kang direktang makakuha ng pahintulot mula sa pagmamay-ari (o may hawak) na mga mapagkukunan upang magamit ang anumang impormasyon sa website na ito na hindi pagmamay-ari o nilikha ng ODI.
 
 Ang ODI ay may walang limitasyong karapatang gamitin para sa anumang layunin, nang walang anumang bayad, ang lahat ng impormasyong isinumite sa pamamagitan ng site na ito maliban sa mga pagsusumite na ginawa sa ilalim ng hiwalay na legal na kontrata. Ang ODI ay malayang gamitin, para sa anumang layunin, ang anumang mga ideya, konsepto, o pamamaraan na nilalaman sa impormasyong ibinigay sa pamamagitan ng site na ito.
+
+## Mga Komunikasyon sa Plataporma
+
+Nais naming maging isang lugar ito para sa bukas at magalang na pag-uusap. Hinihiling namin na pakitunguhan ng mga kalahok ang ibang mga kalahok at mga administrador ng plataporma nang may paggalang.
+
+Maaari naming alisin ang mga komento o post na may kasamang:
+
+* Bastos o nakakasakit na pananalita
+* Mga pananakot sa pisikal na pinsala
+* Sensitibong impormasyon (halimbawa, impormasyong maaaring makompromiso ang pampublikong kaligtasan)
+* Mga komentong wala sa paksa para sa pakikipag-ugnayang sinasalihan mo.
