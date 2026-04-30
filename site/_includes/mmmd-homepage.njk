@@ -97,12 +97,14 @@
     <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
 
 <!-- begin replacement form -->
-<h2>{{ 'join-the-conversation' | i18n }}</h2>
 
-  <p>{{ 'join-the-conversation-form-label' | i18n }}</p>
+{{ modules.sign_up.content | safe }}
+{# <h2>{{ 'join-the-conversation' | i18n }}</h2>
+
+  <p>{{ modules.sign_up'join-the-conversation-form-label' | i18n }}</p> #}
 
   <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
-    {{ "form-submit-button" | i18n }}
+    {{ modules.sign_up.buttonText }}
   </a>
 <!-- end replacement form -->
 

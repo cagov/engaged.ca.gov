@@ -37,12 +37,13 @@
 
 
 <!-- begin replacement form -->
-<h2>{{ 'join-the-conversation' | i18n }}</h2>
+{{ modules.sign_up.content | safe }}
+{# <h2>{{ 'join-the-conversation' | i18n }}</h2>
 
-  <p>{{ 'join-the-conversation-form-label' | i18n }}</p>
+  <p>{{ modules.sign_up'join-the-conversation-form-label' | i18n }}</p> #}
 
   <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
-    {{ "form-submit-button" | i18n }}
+    {{ modules.sign_up.buttonText }}
   </a>
 <!-- end replacement form -->
 
