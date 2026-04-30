@@ -20,7 +20,6 @@ The Office of Data and Innovation (ODI) is committed to protecting the privacy o
 * [California Information Practices Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)
 * [California Public Records Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=)
 * California Government Code sections [11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11015.5.) and [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11019.9.)
-* [Federal Privacy Act of 1974](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
 * California [Statewide Information Management Manual 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
 * All other applicable laws related to information privacy
 
@@ -28,7 +27,7 @@ ODI limits the collection of personal information. We safeguard the privacy of p
 
 This privacy policy only applies to ODI. We may change our privacy policy. When changes are made, we will promptly post those changes and implement them 30 days from that posting date.
 
-If you have any questions about using this website, read our conditions of use.
+If you have any questions about using this website, read our [conditions of use](/conditions-of-use/).
 
 ## A note to parents
 
@@ -81,9 +80,9 @@ If we collect personal information from you for reasons other than communication
 * Your rights to access, review, and correct your personal information
 * Your rights to have your personal information deleted upon request
 
-Your personal information will only be used for the purpose you provided it for. The use of your personal information and data will be limited to and consistent with the purpose provided at collection. ODI will not share or sell electronically collected personal information about you to a third party without your written consent. We may provide or distribute certain lists and statistical reports of regulatory information as provided by law. If we do, all relevant legal protections still apply to your information.
+Your personal information will only be used for the purpose you provided it for. The use of your personal information and data will be limited to and consistent with the purpose provided at collection. ODI will not share electronically collected personal information about you to a third party without your consent ODI will never sell electronically collected personal information about you to a third party. We may provide or distribute certain lists and statistical reports of regulatory information as provided by law. If we do, all relevant legal protections still apply to your information.
 
-You have the right to have your personal information corrected or deleted, without reuse or distribution. Contact our Privacy Officer to have your personal information deleted.
+You have the right to request that ODI correct your personal information without reuse or distribution. Contact our Privacy Officer to request a correction to your personal information.
 
 ## How ODI protects your information
 
@@ -99,7 +98,6 @@ ODI, as developer and manager of this website, has taken steps to safeguard the 
 
 We make every attempt not to collect confidential information. However, some information you provide may be considered confidential. Confidential information is information that:
 
-* Is not required to be disclosed under the Public Records Act;
 * Is protected from disclosure by law; or,
 * Will or could reasonably have an effect on any financial investment or interested in real property
 
@@ -132,7 +130,7 @@ ODI uses outside analytics services to help improve our website. These tools to 
 
 We only use analytics services that remove identifying details from your information. Our analytics do not store information identifying you or your device.
 
-Our outside analytics services may track you. You can block them from tracking you through privacy-focused browser extensions or plugins. This will not impact your ability to use this website.
+Our outside analytics services may monitor your web use. You can block them from tracking you through privacy-focused browser extensions or plugins. This will not impact your ability to use this website.
 
 ## Surveys
 
@@ -140,9 +138,9 @@ If you take a survey on this website, we will collect information from your resp
 
 ## Public disclosure
 
-Laws in California ensure that government is open and the public can access appropriate state records and information. State and federal laws provide exceptions to the public’s right to access public records. These exceptions serve various needs including maintaining the privacy of individuals.
+Laws in California ensure that government is open and the public can access appropriate state records and information.  There are some legal exceptions to the public’s right to access public records. These exceptions serve various needs including maintaining the privacy of individuals.
 
-All information we collect through this website is public record. It may be subject to inspection and copying by the public, unless an exemption in law exists. Electronically collected personal information and personally identifiable information is exempt from requests made under the Public Records Act.
+All information we collect through this website is public record. It may be subject to inspection and copying by the public, unless an exemption exists in law. Electronically collected personal information and personally identifiable information is exempt from disclosure in requests made under the Public Records Act.
 
 If there is a conflict between this policy and the Public Records Act, the Information Practices Act, or other law governing the disclosure of records, the Public Records Act, the Information Practices Act, or other applicable law will control.
 
@@ -155,4 +153,4 @@ Attn: Chief Privacy Officer<br>
 401 I Street<br>
 Ste 200<br>
 Sacramento, CA 95814<br>
-Phone: [916-234-3480](tel:916-234-3480)
+Phone: [916-209-0251](tel:916-209-0251)
