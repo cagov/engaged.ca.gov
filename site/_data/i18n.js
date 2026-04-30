@@ -432,6 +432,19 @@ const translations = {
         "status": "human_translated"
     },
     "form-submit-button": {
+        "en": "Stay informed",
+        "es": "Manténgase informado",
+        "ko": "최신 정보를 받아보세요",
+        "vi": "Cập nhật thông tin mới",
+        "tl": "Manatiling may kaalaman",
+        "zh-hans": "保持关注",
+        "zh-hant": "保持關注",
+        "fa": "در جریان بمانید",
+        "hy": "Տեղեկացված մնացեք",
+        "location": "Home",
+        "status": "machine_translated"
+    },
+    "form-submit-button-old": {
         "en": "Sign up to opt in",
         "es": "Regístrese ahora",
         "ko": "지금 가입하세요",
