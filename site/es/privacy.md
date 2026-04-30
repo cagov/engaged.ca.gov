@@ -12,7 +12,7 @@ tags:
 
 Este sitio web fue creado por la Oficina de Datos e Innovación.
 
-*Vigente a partir del 15 de septiembre de 2024*
+*Vigente a partir del 1 de mayo de 2026*
 
 La Oficina de Datos e Innovación (ODI) se compromete a proteger la privacidad de su información. Nuestras prácticas de gestión de la información se ajustan a los requisitos de:
 
@@ -20,7 +20,6 @@ La Oficina de Datos e Innovación (ODI) se compromete a proteger la privacidad d
 * [Ley de Prácticas de Información de California](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)
 * [Ley de Registros Públicos de California](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=)
 * Secciones [11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV§ionNum=11015.5.) y [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV§ionNum=11019.9.) del Código de Gobierno de California.
-* [Ley Federal de Privacidad de 1974](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
 * California [Manual de Gestión de Información Estatal 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
 * Todas las demás leyes aplicables relacionadas con la privacidad de la información.
 
@@ -28,7 +27,7 @@ ODI limita la recopilación de información personal. Salvaguardamos la privacid
 
 Esta política de privacidad sólo se aplica a ODI. Podemos cambiar nuestra política de privacidad. Cuando se realicen cambios, los publicaremos de inmediato y los implementaremos 30 días después de esa fecha de publicación.
 
-Si tiene alguna pregunta sobre el uso de este sitio web, lea nuestras condiciones de uso.
+Si tiene alguna pregunta sobre el uso de este sitio web, lea nuestras [condiciones de uso](/es/conditions-of-use/).
 
 ## Una nota para los padres
 
@@ -81,9 +80,9 @@ Si recopilamos su información personal por motivos distintos a la comunicación
 * Sus derechos para acceder, revisar y corregir su información personal
 * Sus derechos a que se elimine su información personal si lo solicita
 
-Su información personal sólo se utilizará para el propósito para el que la proporcionó. El uso de su información y datos personales será limitado y consistente con el propósito previsto al momento de su recolección. ODI no compartirá ni venderá información personal sobre usted recopilada electrónicamente a un tercero sin su consentimiento por escrito. Podremos proporcionar o distribuir ciertas listas e informes estadísticos de información regulatoria según lo establezca la ley. Si lo hacemos, todas las protecciones legales pertinentes seguirán aplicándose a su información.
+Su información personal sólo se utilizará para el propósito para el que la proporcionó. El uso de su información y datos personales será limitado y consistente con el propósito previsto al momento de su recolección. ODI no compartirá información personal recopilada electrónicamente sobre usted con un tercero sin su consentimiento. ODI nunca venderá información personal recopilada electrónicamente sobre usted a un tercero. Podremos proporcionar o distribuir ciertas listas e informes estadísticos de información regulatoria según lo establezca la ley. Si lo hacemos, todas las protecciones legales pertinentes seguirán aplicándose a su información.
 
-Tiene derecho a que su información personal sea corregida o eliminada, sin reutilizarla ni distribuirla. Comuníquese con nuestro Responsable de Privacidad para eliminar su información personal.
+Usted tiene derecho a solicitar que ODI corrija su información personal, sin reutilizarla ni distribuirla. Comuníquese con nuestro Responsable de Privacidad para solicitar una corrección de su información personal.
 
 ## Cómo ODI protege su información
 
@@ -99,7 +98,6 @@ ODI, como desarrollador y administrador de este sitio web, ha tomado medidas par
 
 Hacemos todo lo posible para no recopilar información confidencial. Sin embargo, cierta información que usted proporcione puede considerarse confidencial. La información confidencial es información que:
 
-* No es necesario divulgarla según la Ley de Registros Públicos;
 * Está protegido de su divulgación por ley; o,
 * Tendrá o podría razonablemente afectar cualquier inversión financiera o interés en bienes raíces
 
@@ -132,7 +130,7 @@ ODI utiliza servicios de análisis externos para ayudarnos a mejorar nuestro sit
 
 Solo utilizamos servicios de análisis que eliminan los detalles de identificación de su información. Nuestros análisis no almacenan información que lo identifique a usted ni a su dispositivo.
 
-Nuestros servicios de análisis externos podrían rastrearlo. Puede bloquearlos para que no lo rastreen a través de extensiones o complementos del navegador centrados en la privacidad. Esto no afectará su capacidad para utilizar este sitio web.
+Nuestros servicios de análisis externos pueden monitorear su uso de la web. Puede bloquearlos para que no lo rastreen a través de extensiones o complementos del navegador centrados en la privacidad. Esto no afectará su capacidad para utilizar este sitio web.
 
 ## Encuestas
 
@@ -140,9 +138,9 @@ Si realiza una encuesta en este sitio web de ODI, recopilaremos información de 
 
 ## Divulgación pública
 
-Las leyes en California garantizan que el gobierno sea abierto y que el público pueda acceder a la información y los registros estatales adecuados. Las leyes estatales y federales establecen excepciones al derecho del público a acceder a los registros públicos. Estas excepciones atienden diversas necesidades, incluida la de mantener la privacidad de las personas.
+Las leyes en California garantizan que el gobierno sea abierto y que el público pueda acceder a la información y los registros estatales adecuados.  Existen algunas excepciones legales al derecho del público a acceder a los registros públicos. Estas excepciones atienden diversas necesidades, incluida la de mantener la privacidad de las personas.
 
-Toda la información que recopilamos a través de este sitio web es registro público. Podrá estar sujeto a inspección y copia por parte del público, a menos que exista una exención en la ley. La información personal recopilada electrónicamente y la información de identificación personal están exentas de las solicitudes realizadas conforme a la Ley de Registros Públicos.
+Toda la información que recopilamos a través de este sitio web es registro público. Podrá estar sujeto a inspección y copia por parte del público, a menos que exista una exención en la ley. La información personal recopilada electrónicamente y la información de identificación personal están exentas de divulgación en las solicitudes realizadas conforme a la Ley de Registros Públicos.
 
 Si existe un conflicto entre esta política y la Ley de Registros Públicos, la Ley de Prácticas de Información u otra ley que rija la divulgación de registros, prevalecerá la Ley de Registros Públicos, la Ley de Prácticas de Información u otra ley aplicable.
 
@@ -155,4 +153,4 @@ Attn: Chief Privacy Officer<br>
 401 I Street<br>
 Ste 200<br>
 Sacramento, CA 95814<br>
-Teléfono: [916-234-3480](tel:916-234-3480)
+Teléfono: [916-209-0251](tel:916-209-0251)

@@ -12,7 +12,7 @@ tags:
 
 This website was authored by the Office of Data and Innovation.
 
-*Effective September 15, 2024*
+*Effective May 1, 2026*
 
 The Office of Data and Innovation (ODI) is committed to protecting the privacy of your information. Our information management practices conform to the requirements of:
 
@@ -80,7 +80,7 @@ If we collect personal information from you for reasons other than communication
 * Your rights to access, review, and correct your personal information
 * Your rights to have your personal information deleted upon request
 
-Your personal information will only be used for the purpose you provided it for. The use of your personal information and data will be limited to and consistent with the purpose provided at collection. ODI will not share electronically collected personal information about you to a third party without your consent ODI will never sell electronically collected personal information about you to a third party. We may provide or distribute certain lists and statistical reports of regulatory information as provided by law. If we do, all relevant legal protections still apply to your information.
+Your personal information will only be used for the purpose you provided it for. The use of your personal information and data will be limited to and consistent with the purpose provided at collection. ODI will not share electronically collected personal information about you to a third party without your consent. ODI will never sell electronically collected personal information about you to a third party. We may provide or distribute certain lists and statistical reports of regulatory information as provided by law. If we do, all relevant legal protections still apply to your information.
 
 You have the right to request that ODI correct your personal information without reuse or distribution. Contact our Privacy Officer to request a correction to your personal information.
 

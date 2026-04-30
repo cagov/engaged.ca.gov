@@ -13,7 +13,7 @@ tags:
 
 Este sitio web fue creado por la Oficina de Datos e Innovación.
 
-*Actualizado: 30 de junio de 2023*
+*Actualizado: 1 de mayo de 2026*
 
 Cuando visita un sitio web de la Oficina de Datos e Innovación (ODI), acepta nuestras condiciones de uso. Si no está de acuerdo con estas condiciones de uso, abandone este sitio web. Las condiciones de uso están sujetas a cambios sin previo aviso. Reflejan las prácticas comerciales actuales de ODI.
 
@@ -21,7 +21,7 @@ Si abandona este sitio web, otros sitios web tendrán sus propias políticas de 
 
 ODI proporciona este sitio web y su información como un servicio público. Monitoreamos el sitio web para garantizar su funcionamiento y el funcionamiento de sus funciones. Cualquier persona que utilice este sitio web consiente dicha monitorización.
 
-Los intentos no autorizados de modificar cualquier información almacenada en este sitio web, de vencer o eludir las funciones de seguridad o de utilizar este sitio web para fines distintos a los previstos están prohibidos y pueden dar lugar a un proceso penal.
+Los intentos no autorizados de modificar cualquier información almacenada en este sitio web, de vencer o eludir las funciones de seguridad o de utilizar este sitio web para fines distintos a los previstos están prohibidos y pueden dar lugar a procedimientos civiles o a un proceso penal.
 
 Si tiene alguna pregunta sobre privacidad, lea nuestra [política de privacidad](/es/privacy).
 
@@ -31,7 +31,7 @@ Podemos utilizar la información que nos envíe para mejorar nuestros servicios 
 
 Podremos enviar su información a otros empleados estatales que puedan ayudarle mejor. Estos empleados pueden ser parte de un departamento estatal diferente. Salvo que lo requiera la ley, no compartimos información con organizaciones no estatales.
 
-Sólo compartimos la información que usted nos proporciona si es necesario. Si utilizamos su información para informes estadísticos, datos de tendencias o acciones de investigación, eliminaremos cualquier información de identificación.
+Compartimos la información que usted nos proporciona solo si es necesario. Si utilizamos su información para informes estadísticos, datos de tendencias o acciones de investigación, eliminaremos cualquier información de identificación.
 
 ## Seguridad y monitoreo
 
@@ -62,3 +62,14 @@ En general, la información presentada en este sitio web, a menos que se indique
 Sin embargo, ODI utiliza datos con derechos de autor (por ejemplo, imágenes). Es posible que estos requieran permisos adicionales antes de su uso. Debe obtener permiso directamente de las fuentes propietarias (o poseedoras) para utilizar cualquier información de este sitio web que no sea propiedad de ODI ni haya sido creada por ella.
 
 ODI tiene el derecho ilimitado de utilizar para cualquier propósito, sin costo alguno, toda la información enviada a través de este sitio, excepto aquellas presentaciones realizadas bajo un contrato legal separado. ODI es libre de utilizar, para cualquier propósito, cualquier idea, concepto o técnica contenida en la información proporcionada a través de este sitio.
+
+## Comunicaciones en la plataforma
+
+Queremos que este sea un espacio para una conversación abierta y respetuosa. Pedimos que los participantes traten a otros participantes y a los administradores de la plataforma con respeto.
+
+Podemos eliminar comentarios o publicaciones que incluyan:
+
+* Lenguaje obsceno o abusivo
+* Amenazas de daño físico
+* Información sensible (por ejemplo, información que pudiera comprometer la seguridad pública)
+* Comentarios que estén fuera del tema del compromiso en el que está participando.
