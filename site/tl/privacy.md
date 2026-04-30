@@ -12,7 +12,7 @@ tags:
 
 Ang website na ito ay isinulat ng Tanggapan ng Datos at Inobasyon (Office of Data and Innovation).
 
-*Epektibo noong Setyembre 15, 2024*
+*Epektibo noong Mayo 1, 2026*
 
 Ang Tanggapan ng Datos at Inobasyon (Office of Data and Innovation o ODI) ay nakatuon sa pagprotekta sa pagkapribado ng iyong impormasyon. Ang aming mga kasanayan sa pamamahala ng impormasyon ay umaayon sa mga kinakailangan ng:
 
@@ -20,7 +20,6 @@ Ang Tanggapan ng Datos at Inobasyon (Office of Data and Innovation o ODI) ay nak
 * [California Information Practices Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.8.&part=4.&chapter=1.&article=)
 * [California Public Records Act](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=GOV&division=10.&title=1.&part=&chapter=&article=)
 * California Government Code sections [11015.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11015.5.) at [11019.9](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11019.9.)
-* [Federal Privacy Act of 1974](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
 * California [Manwal sa Pamamahala ng Impormasyon sa Buong Estado 5310-A](https://cdt.ca.gov/wp-content/uploads/2018/01/SIMM-5310_A.pdf)
 * Lahat ng iba pang naaangkop na batas na nauugnay sa pagkapribado ng impormasyon
 
@@ -28,7 +27,7 @@ Nililimitahan ng ODI ang pangongolekta ng personal na impormasyon. Pinoprotektah
 
 Nalalapat lang ang patakaran sa pagkapribado na ito sa ODI. Maaari naming baguhin ang aming patakaran sa pagkapribado. Kapag ginawa ang mga pagbabago, agad naming ipapaskil ang mga pagbabagong iyon at ipapatupad ang mga ito 30 araw mula sa petsa ng pagpapaskil na iyon.
 
-Kung mayroon kang anumang mga katanungan tungkol sa paggamit ng website na ito, basahin ang aming mga kondisyon ng paggamit.
+Kung mayroon kang anumang mga katanungan tungkol sa paggamit ng website na ito, basahin ang aming [mga kondisyon ng paggamit](/tl/conditions-of-use/).
 
 ## Isang paalala sa mga magulang
 
@@ -81,9 +80,9 @@ Kung mangolekta kami ng personal na impormasyon mula sa iyo para sa mga dahilan 
 * Ang iyong mga karapatan na i-access, suriin, at itama ang iyong personal na impormasyon
 * Ang iyong mga karapatan na tanggalin ang iyong personal na impormasyon kapag hiniling
 
-Gagamitin lamang ang iyong personal na impormasyon para sa layuning ibinigay mo ito. Ang paggamit ng iyong personal na impormasyon at data ay limitado sa at naaayon sa layuning ibinigay sa pangongolekta. Ang ODI ay hindi magbabahagi o magbebenta ng elektronikong nakolektang personal na impormasyon tungkol sa iyo sa isang ikatlong partido nang wala ang iyong nakasulat na pahintulot. Maaari kaming magbigay o mamahagi ng ilang partikular na listahan at istatistikal na ulat ng impormasyong pangregulasyon ayon sa itinakda ng batas. Kung gagawin namin, lahat ng nauugnay na legal na proteksyon ay nalalapat pa rin sa iyong impormasyon.
+Gagamitin lamang ang iyong personal na impormasyon para sa layuning ibinigay mo ito. Ang paggamit ng iyong personal na impormasyon at data ay limitado sa at naaayon sa layuning ibinigay sa pangongolekta. Ang ODI ay hindi magbabahagi ng elektronikong nakolektang personal na impormasyon tungkol sa iyo sa isang ikatlong partido nang wala ang iyong pahintulot. Hindi kailanman ipagbibili ng ODI ang elektronikong nakolektang personal na impormasyon tungkol sa iyo sa isang ikatlong partido. Maaari kaming magbigay o mamahagi ng ilang partikular na listahan at istatistikal na ulat ng impormasyong pangregulasyon ayon sa itinakda ng batas. Kung gagawin namin, lahat ng nauugnay na legal na proteksyon ay nalalapat pa rin sa iyong impormasyon.
 
-May karapatan kang itama o tanggalin ang iyong personal na impormasyon, nang walang muling paggamit o pamamahagi. Makipag-ugnayan sa aming Opisyal sa Pagkapribado upang matanggal ang iyong personal na impormasyon.
+May karapatan kang humiling na itama ng ODI ang iyong personal na impormasyon nang walang muling paggamit o pamamahagi. Makipag-ugnayan sa aming Opisyal sa Pagkapribado upang humiling ng pagwawasto sa iyong personal na impormasyon.
 
 ## Paano pinoprotektahan ng ODI ang iyong impormasyon
 
@@ -99,7 +98,6 @@ Ang ODI, bilang tagabuo at tagapamahala ng website na ito, ay gumawa ng mga hakb
 
 Ginagawa namin ang bawat pagtatangka na hindi mangolekta ng kumpidensyal na impormasyon. Gayunpaman, ang ilang impormasyong ibibigay mo ay maaaring ituring na kumpidensyal. Ang kumpidensyal na impormasyon ay impormasyon na:
 
-* Hindi kinakailangang ibunyag sa ilalim ng Batas ng Pampublikong mga Rekord (Public Records Act);
 * Pinoprotektahan mula sa pagbubunyag ng batas; o,
 * Ay o maaaring makatwirang magkaroon ng epekto sa anumang pamumuhunan sa pananalapi o interesado sa mga kabayahan or lupaing ari-arian (real property)
 
@@ -132,7 +130,7 @@ Gumagamit ang ODI ng mga serbisyo sa labas ng mga analitiko (analytics) upang ma
 
 Gumagamit lang kami ng mga serbisyo ng mga analitika (analytics) na nag-aalis ng mga detalye ng pagkakakilanlan mula sa iyong impormasyon. Ang aming mga analitika (analytics) ay hindi nag-iimbak ng impormasyong nagpapakilala sa iyo o sa iyong aparato.
 
-Maaaring subaybayan ka ng aming mga serbisyo sa labas ng mga analitika (analytics). Maaari mong harangan sila sa pagsubaybay sa iyo sa pamamagitan ng mga ekstensyon (extension) o plugin ng browser na nakatuon sa pagkapribado. Hindi ito makakaapekto sa iyong kakayahang gamitin ang website na ito.
+Maaaring subaybayan ng aming mga serbisyo sa labas ng mga analitika (analytics) ang iyong paggamit sa web. Maaari mong harangan sila sa pagsubaybay sa iyo sa pamamagitan ng mga ekstensyon (extension) o plugin ng browser na nakatuon sa pagkapribado. Hindi ito makakaapekto sa iyong kakayahang gamitin ang website na ito.
 
 ## Mga survey
 
@@ -140,9 +138,9 @@ Kung kukuha ka ng survey sa website ng ODI na ito, mangongolekta kami ng imporma
 
 ## Pampublikong pagbubunyag
 
-Tinitiyak ng mga batas sa California na bukas ang pamahalaan at maa-access ng publiko ang naaangkop na mga talaan at impormasyon ng estado. Ang mga batas ng estado at pederal ay nagbibigay ng mga pagbubukod sa karapatan ng publiko na ma-access ang mga pampublikong rekord. Ang mga pagbubukod na ito ay nagsisilbi sa iba't ibang pangangailangan kabilang ang pagpapanatili ng pagkapribado ng mga indibidwal.
+Tinitiyak ng mga batas sa California na bukas ang pamahalaan at maa-access ng publiko ang naaangkop na mga talaan at impormasyon ng estado.  May ilang legal na pagbubukod sa karapatan ng publiko na ma-access ang mga pampublikong rekord. Ang mga pagbubukod na ito ay nagsisilbi sa iba't ibang pangangailangan kabilang ang pagpapanatili ng pagkapribado ng mga indibidwal.
 
-Ang lahat ng impormasyong kinokolekta namin sa pamamagitan ng website na ito ay pampublikong tala. Ito ay maaaring sumailalim sa inspeksyon at pagkopya ng publiko, maliban kung may eksempsyon sa batas. Ang personal na impormasyon na kinokolekta ng elektroniko at impormasyong nagbibigay ng personal na pagkakakilanlan ay hindi kasama sa mga kahilingang ginawa sa ilalim ng Batas ng mga Pampublikong mga Rekord (Public Records Act).
+Ang lahat ng impormasyong kinokolekta namin sa pamamagitan ng website na ito ay pampublikong tala. Ito ay maaaring sumailalim sa inspeksyon at pagkopya ng publiko, maliban kung may eksempsyon sa batas. Ang personal na impormasyon na kinokolekta ng elektroniko at impormasyong nagbibigay ng personal na pagkakakilanlan ay hindi kasama sa pagbubunyag sa mga kahilingang ginawa sa ilalim ng Batas ng mga Pampublikong mga Rekord (Public Records Act).
 
 Kung may salungatan sa pagitan ng patakarang ito at ng Pampublikong mga Rekord (Public Records Act), ang Batas ng mga Kasanayan sa Impormasyon (Information Practices Act), o iba pang batas na namamahala sa pagbubunyag ng mga rekord, ang Pampublikong mga Rekord (Public Records Act), ang atas ng mga Kasanayan sa Impormasyon (Information Practices Act), o iba pang naaangkop na batas ang magkokontrol.
 
@@ -155,4 +153,4 @@ Attn: Chief Privacy Officer<br>
 401 I Street<br>
 Ste 200<br>
 Sacramento, CA 95814<br>
-Telepono: [916-234-3480](tel:916-234-3480)
+Telepono: [916-209-0251](tel:916-209-0251)

@@ -13,7 +13,7 @@ tags:
 
 Trang mạng này được biên soạn bởi Văn Phòng Dữ Liệu Và Đổi Mới (ODI).
 
-*Đã cập nhật: Ngày 30 tháng 6 năm 2023*
+*Đã cập nhật: Ngày 1 tháng 5 năm 2026*
 
 Khi quý vị truy cập trang mạng của Văn Phòng Dữ Liệu Và Đổi Mới (Office of Data and Innovation, hoặc ODI), quý vị chấp nhận các điều khoản sử dụng của chúng tôi. Nếu quý vị không đồng ý với các điều kiện sử dụng này, vui lòng thoát khỏi trang mạng này. Điều kiện sử dụng có thể thay đổi mà không cần thông báo trước. Điều kiện sử dụng phản ánh hoạt động kinh doanh hiện tại của ODI.
 
@@ -21,7 +21,7 @@ Nếu quý vị rời khỏi trang mạng này, các trang mạng khác sẽ có
 
 ODI cung cấp trang mạng này và thông tin trong đó như một dịch vụ công cộng. Chúng tôi theo dõi trang mạng để đảm bảo hoạt động và các tính năng của trang mạng. Bất kỳ ai sử dụng trang mạng này đều đồng ý với việc giám sát đó.
 
-Mọi hành vi trái phép nhằm sửa đổi bất kỳ thông tin nào được lưu trữ trên trang mạng này, nhằm vô hiệu hóa hoặc phá vỡ các tính năng bảo mật hoặc sử dụng trang mạng này cho mục đích khác đều bị nghiêm cấm và có thể bị truy tố hình sự.
+Mọi hành vi trái phép nhằm sửa đổi bất kỳ thông tin nào được lưu trữ trên trang mạng này, nhằm vô hiệu hóa hoặc phá vỡ các tính năng bảo mật hoặc sử dụng trang mạng này cho mục đích khác đều bị nghiêm cấm và có thể dẫn đến tố tụng dân sự hoặc bị truy tố hình sự.
 
 Nếu quý vị có bất kỳ câu hỏi nào về quyền riêng tư, hãy đọc [chính sách quyền riêng tư](/vi/privacy) của chúng tôi.
 
@@ -31,7 +31,7 @@ Chúng tôi có thể sử dụng thông tin quý vị gửi để cải thiện
 
 Chúng tôi có thể chuyển tiếp thông tin của quý vị cho những nhân viên tiểu bang khác có thể giúp quý vị tốt hơn. Những nhân viên này có thể là thành viên của một sở ban ngành khác của tiểu bang. Ngoại trừ trường hợp pháp luật yêu cầu, chúng tôi không chia sẻ thông tin với các tổ chức phi chính phủ.
 
-Chúng tôi chỉ chia sẻ thông tin quý vị cung cấp nếu cần thiết. Nếu chúng tôi sử dụng thông tin của quý vị cho mục đích báo cáo thống kê, dữ liệu xu hướng hoặc hành động điều tra, chúng tôi sẽ xóa mọi thông tin nhận dạng.
+Chúng tôi chia sẻ thông tin quý vị cung cấp chỉ khi cần thiết. Nếu chúng tôi sử dụng thông tin của quý vị cho mục đích báo cáo thống kê, dữ liệu xu hướng hoặc hành động điều tra, chúng tôi sẽ xóa mọi thông tin nhận dạng.
 
 ## Bảo mật và giám sát
 
@@ -62,3 +62,14 @@ Nhìn chung, thông tin được trình bày trên trang mạng này, trừ khi 
 Tuy nhiên, ODI sử dụng dữ liệu có bản quyền (ví dụ: hình ảnh). Những quyền này có thể yêu cầu quý vị phải xin thêm quyền trước khi sử dụng. Quý vị phải xin phép trực tiếp từ nguồn sở hữu (hoặc nắm giữ) để sử dụng bất kỳ thông tin nào trên trang mạng này không thuộc quyền sở hữu hoặc không do ODI tạo ra.
 
 ODI có quyền sử dụng không giới hạn cho mọi mục đích, miễn phí, tất cả thông tin được gửi qua trang mạng này, ngoại trừ những thông tin được gửi theo hợp đồng pháp lý riêng biệt. ODI được phép sử dụng miễn phí, cho bất kỳ mục đích nào, bất kỳ ý tưởng, khái niệm hoặc kỹ thuật nào có trong thông tin được cung cấp thông qua trang mạng này.
+
+## Liên lạc trên Nền tảng
+
+Chúng tôi muốn đây là một không gian dành cho cuộc trò chuyện cởi mở và tôn trọng. Chúng tôi đề nghị những người tham gia đối xử tôn trọng với những người tham gia khác và với các quản trị viên nền tảng.
+
+Chúng tôi có thể xóa các bình luận hoặc bài đăng có nội dung:
+
+* Ngôn ngữ tục tĩu hoặc lăng mạ
+* Đe dọa gây tổn hại về thể chất
+* Thông tin nhạy cảm (ví dụ, thông tin có thể gây nguy hại cho an toàn công cộng)
+* Bình luận lạc đề so với hoạt động gắn kết mà quý vị đang tham gia.
