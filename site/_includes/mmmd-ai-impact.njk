@@ -1,37 +1,22 @@
-{% set active_page = 'stateemployees' %}
+{% set active_page = 'ai-impact' %}
 {% extends "layout.njk" %}
 {% block content %}
 {% import 'macros/ge-how-it-works.njk' as gewh %}
 
-<link rel="stylesheet" href="/css/state-employees.css" />
+<link rel="stylesheet" href="/css/ai-impact.css" />
 
-    <section id="ge-hero" class="engca-hero engca-hero-person">
+    <section id="ge-hero" class="engca-hero engca-hero-ai">
         <div class="container banner-flex">
             <engca-banner-content>
-                <p class="status-pill">{{ 'status-pill-5' | i18n }}</p>
+                <p class="status-pill">{{ modules.hero.signupsOpen }}</p>
                 <h1>{{ modules.hero.title  }}</h1>
                 <p>{{ modules.hero.subtitle }}</p>
                 {{ modules.hero.content | safe }}
+                <p>
+                    <a data-appearance="button" data-theme="orange" href="https://join.engaged.ca.gov/ai-impact" class="m-t">{{ modules.hero.buttonText }}</a>
+                </p>
             </engca-banner-content>
-            <img src="/public/images/bubbles-exclamation.png" aria-hidden="true" class="desktop-only" alt=""/>
-        </div>
-    </section>
-
-    <section id="what-we-heard">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <img src="/public/images/whatweheard_adornment.png" class="what-we-heard-adornment" aria-hidden="true" alt="" />
-                </div>
-                <div class="col-lg-8">
-                    <div class="what-we-heard-content">
-                        {{ modules.what_we_heard.content | safe }}
-                    </div>
-                    <a href="{{ "/stateemployees/efficiency/" | locale_url }}" data-appearance="button" data-theme="orange" class="what-we-heard-cta">
-                        {{ modules.what_we_heard.buttonText }}
-                    </a>
-                </div>
-            </div>
+            <img src="/public/images/hero-bubbles-ai.png" aria-hidden="true" class="desktop-only" alt=""/>
         </div>
     </section>
 
@@ -54,10 +39,10 @@
         <div class="container">
             <h2>{{ 'ge-how-it-works-title' | i18n }}</h2>
             <ol class="hiw ge-hiw">
-                {{  gewh.data(1, 'ge-how-it-works-1' | i18n, 'ge-how-it-works-body-1' | i18n, 'how-it-works-alt-1' | i18n, 'public')  }}
-                {{  gewh.data(2, 'ge-how-it-works-2' | i18n, 'ge-how-it-works-body-2' | i18n, 'how-it-works-alt-1' | i18n, 'public')  }}
-                {{  gewh.data(3, 'ge-how-it-works-3' | i18n, 'ge-how-it-works-body-3' | i18n, 'how-it-works-alt-2' | i18n, 'state')  }}
-                {{  gewh.data(4, 'ge-how-it-works-4' | i18n, 'ge-how-it-works-body-4' | i18n, 'how-it-works-alt-2' | i18n, 'state')  }}
+                {{  gewh.data(1, modules.flowchart.box_1_label, modules.flowchart.box_1_desc, 'how-it-works-alt-1' | i18n, 'public')  }}
+                {{  gewh.data(2, modules.flowchart.box_2_label, modules.flowchart.box_2_desc, 'how-it-works-alt-1' | i18n, 'public')  }}
+                {{  gewh.data(3, modules.flowchart.box_3_label, modules.flowchart.box_3_desc, 'how-it-works-alt-2' | i18n, 'state')  }}
+                {{  gewh.data(4, modules.flowchart.box_4_label, modules.flowchart.box_4_desc, 'how-it-works-alt-2' | i18n, 'state')  }}
             </ol>
         </div>
     </section>
@@ -67,7 +52,7 @@
             <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt=""/>
             <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt=""/>
 
-            {% include "form-stateemployees.njk" %}
+            {% include "form-ai-impact.njk" %}
 
         </div>
     </section> #}

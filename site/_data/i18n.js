@@ -432,6 +432,19 @@ const translations = {
         "status": "human_translated"
     },
     "form-submit-button": {
+        "en": "Stay informed",
+        "es": "Manténgase informado",
+        "ko": "최신 정보를 받아보세요",
+        "vi": "Cập nhật thông tin mới",
+        "tl": "Manatiling may kaalaman",
+        "zh-hans": "保持关注",
+        "zh-hant": "保持關注",
+        "fa": "در جریان بمانید",
+        "hy": "Տեղեկացված մնացեք",
+        "location": "Home",
+        "status": "machine_translated"
+    },
+    "form-submit-button-old": {
         "en": "Sign up to opt in",
         "es": "Regístrese ahora",
         "ko": "지금 가입하세요",
@@ -1325,6 +1338,19 @@ const translations = {
         "hy": "Պետական աշխատողներ",
         "location": "Government efficiencies",
         "status": "human_translated"
+    },
+    "impact-of-AI-on-work": {
+        "en": "Impact of AI on work",
+        "es": "Impacto de la IA en el trabajo",
+        "ko": "AI가 업무에 미치는 영향",
+        "tl": "Epekto ng AI sa trabaho",
+        "vi": "Tác động của AI đối với công việc",
+        "zh-hans": "人工智能对工作的影响",
+        "zh-hant": "人工智能對工作的影響",
+        "fa": "تأثیر هوش مصنوعی بر کار",
+        "hy": "Արհեստական բանականության ազդեցությունը աշխատանքի վրա",
+        "location": "Government efficiencies",
+        "status": "machine_translated"
     },
     "engagements": {
         "en": "Engagements",

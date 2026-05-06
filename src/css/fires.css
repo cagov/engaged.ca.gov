@@ -142,3 +142,7 @@ div.phase-sidebar li {
 div.phase-sidebar a {
   padding: 1rem;
 }
+
+div.signup-button .external-link-icon {
+  padding-left: 0.5rem;
+}

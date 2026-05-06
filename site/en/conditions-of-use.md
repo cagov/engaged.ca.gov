@@ -13,7 +13,7 @@ tags:
 
 This website was authored by the Office of Data and Innovation.
 
-*Updated: June 30, 2023*
+*Updated: May 1, 2026*
 
 When you visit an Office of Data and Innovation (ODI) website, you accept our conditions of use. If you do not agree with these conditions of use, please exit this website. The conditions of use are subject to change without notice. They reflect ODI’s current business practices.
 
@@ -21,7 +21,7 @@ If you leave this website, other websites will have their own privacy and use po
 
 ODI provides this website and its information as a public service. We monitor the website to ensure its operation and the functioning of its features. Anyone using this website consents to such monitoring.
 
-Unauthorized attempts to modify any information stored on this website, to defeat or circumvent security features, or to use this website for other than its intended purposes are prohibited and may result in criminal prosecution.
+Unauthorized attempts to modify any information stored on this website, to defeat or circumvent security features, or to use this website for other than its intended purposes are prohibited and may result in civil proceedings or criminal prosecution.
 
 If you have any questions about privacy, read our [privacy policy](/privacy).
 
@@ -31,7 +31,7 @@ We may use information you send us to improve our services or to respond to you.
 
 We may forward your information to other state employees who may be better able to help you. These employees may be part of a different state department. Except as required by law, we do not share information with non-state organizations.
 
-We only share information you give us if necessary. If we use your information for statistical reporting, trend data, or investigative actions, we will remove any identifying information.
+We share information you give us only if necessary. If we use your information for statistical reporting, trend data, or investigative actions, we will remove any identifying information.
 
 ## Security and monitoring
 
@@ -62,3 +62,14 @@ In general, information presented on this website, unless otherwise indicated, i
 However, ODI uses copyrighted data (for example, images). These may require additional permissions before your use. You must get permission directly from the owning (or holding) sources to use any information on this website not owned or created by ODI.
 
 ODI has the unlimited right to use for any purpose, free of any charge, all information submitted via this site except those submissions made under separate legal contract. ODI is free to use, for any purpose, any ideas, concepts, or techniques contained in information provided through this site.
+
+## Platform Communications
+
+We want this to be a space for open, respectful conversation. We ask that participants treat other participants and platform administrators with respect.
+
+We may remove comments or posts that include:
+
+* Profanity or abusive language 
+* Threats of physical harm 
+* Sensitive information (for example, information that could compromise public safety) 
+* Comments that are off-topic for the engagement you're participating in.

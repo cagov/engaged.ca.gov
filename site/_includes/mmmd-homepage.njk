@@ -6,8 +6,8 @@
   <div class="container banner-flex">
     <engca-banner-content>
       {{ modules.hero.content | safe }}
-      <a href="{{ "/stateemployees/efficiency/" | locale_url }}" data-appearance="button" data-theme="orange">
-        {{ modules.hero.buttonText_results }}
+      <a href="https://join.engaged.ca.gov/ai-impact" data-appearance="button" data-theme="orange">
+        {{ modules.hero.buttonText_shareyourviews }}
       </a>
     </engca-banner-content>
     <img src="/public/images/hero-bubbles.png" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header' | i18n }}" />
@@ -29,6 +29,17 @@
   <div class="container">
     {{ modules.homepage_engagements.content | safe }}
     <div class="engagements-grid">
+      <article class="engagement-card">
+        <img src="/public/images/project_ai.jpg" alt="{{ modules.homepage_engagements.ai_title }}" />
+        <div class="engagement-card-body">
+          <span class="engagement-status">{{ modules.homepage_engagements.openText }}</span>
+          <h3>{{ modules.homepage_engagements.ai_title }}</h3>
+          <p>{{ modules.homepage_engagements.ai_description }}</p>
+          <a href="{{ "/ai-impact/" | locale_url }}" data-appearance="button" data-theme="orange">
+            {{ modules.hero.buttonText_learnmore }}
+          </a>
+        </div>
+      </article>
       <article class="engagement-card">
         <img src="/public/images/project_e3.jpg" alt="{{ modules.homepage_engagements.e3_title }}" />
         <div class="engagement-card-body">
@@ -84,7 +95,22 @@
   <div class="container form-flex">
     <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
     <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
-    {% include "form.njk" %}
+
+<!-- begin replacement form -->
+
+{{ modules.sign_up.content | safe }}
+{# <h2>{{ 'join-the-conversation' | i18n }}</h2>
+
+  <p>{{ modules.sign_up'join-the-conversation-form-label' | i18n }}</p> #}
+
+  <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
+    {{ modules.sign_up.buttonText_shareyourviews }}
+  </a>
+<!-- end replacement form -->
+
+
+
+    {# {% include "form.njk" %} #}
   </div>
 </section>
 <section id="partners" class="action-hero">

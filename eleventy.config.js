@@ -36,6 +36,7 @@ async function buildCSS() {
     { src: "src/css/fires.css", dist: "_dist/css/fires.css" },
     { src: "src/css/fires-summary.css", dist: "_dist/css/fires-summary.css" },
     { src: "src/css/state-employees.css", dist: "_dist/css/state-employees.css" },
+    { src: "src/css/ai-impact.css", dist: "_dist/css/ai-impact.css" },
     { src: "src/css/state-employees-report.css", dist: "_dist/css/state-employees-report.css" }
   ];
 

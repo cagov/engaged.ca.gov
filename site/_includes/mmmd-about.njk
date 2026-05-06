@@ -28,11 +28,26 @@
 {{ section(modules.theProcess, false, "/public/images/sticker-about-chat.svg") }}
 {{ section(modules.whatYouCanLearn, true, "/public/images/sticker-about-sparkles.svg") }}
 
+
+
 <section id="sign-up" class="action-form">
   <div class="container form-flex">
     <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
     <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
-    {% include "form.njk" %}
+
+
+<!-- begin replacement form -->
+{{ modules.sign_up.content | safe }}
+{# <h2>{{ 'join-the-conversation' | i18n }}</h2>
+
+  <p>{{ modules.sign_up'join-the-conversation-form-label' | i18n }}</p> #}
+
+  <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
+    {{ modules.sign_up.buttonText_shareyourviews }}
+  </a>
+<!-- end replacement form -->
+
+      {# {% include "form.njk" %} #}
   </div>
 </section>
 

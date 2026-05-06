@@ -14,11 +14,16 @@ id: hero
 buttonText: Sign up now
 buttonText_actionplan: See the action plan
 buttonText_results: See the results
+buttonText_joinus: Join us
+buttonText_learnmore: Learn more
+buttonText_signupnow: Sign up now
+buttonText_getstarted: Get started
+buttonText_shareyourviews: Share your views
 ----
 
 # Tell your government how you feel about pressing issues
 
-Our latest engagement was with state employees. They shared ideas on government efficiency.
+Our current engagement is about the impact of AI on your work.
 
 ----
 id: about
@@ -31,7 +36,7 @@ Would you like to be heard about issues that affect you and your community?
 
 Now there's a new way.
 
-We're using an online platform to let you and other Californians have a voice in government. This helps us shape policy - together.
+We're using an online platform to let you and other Californians have a voice in government. This helps us shape policy — together.
 
 
 ----
@@ -72,9 +77,21 @@ We designed this platform to be non-partisan. The state's Government Operations 
 ----
 id: homepage_engagements
 statusText: Closed
+openText: Open
 e3_title: Shaping a better state government
 e3_description: More than 1,400 state employees gave their input. Their ideas will help make California government more efficient and effective.
 lafires_title: Los Angeles fires recovery
 lafires_description: We worked with over 900 people affected by the Eaton and Palisades wildfires. Their input will help shape long-term recovery plans.
+ai_title: Impact of AI on work
+ai_description: We will hear your views on AI, how you use it in your work, and how you think it will affect the future of jobs.
 ----
 ## Our engagements
+
+----
+id: sign_up
+buttonText: Get started
+buttonText_shareyourviews: Share your views
+----
+## Join the conversation
+
+We're listening to Californians about the impact of AI on work right now.
