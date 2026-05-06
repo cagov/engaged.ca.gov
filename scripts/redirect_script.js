@@ -1,11 +1,15 @@
-// v1.0.3 jbum - fixing some redirect issues which were stripping parameters
+// v1.0.4 jbum - adding /ai redirect to go-vocal site, 2026-05-06
+// v1.0.3 jbum - fixing some redirect issues which were stripping parameters, 2025-08-08
 
 function handler(event) {
   const request = event.request; // use uri to see incoming url
   const uri_lc = request.uri.toLowerCase();
   const querystring = request.querystring;
   let redirect_location = null;
-  if (uri_lc.endsWith('/fires')   || uri_lc.endsWith('/fires/') || 
+  if (uri_lc.endsWith('/ai')   || uri_lc.endsWith('/ai/')) {
+      redirect_location = 'https://join.engaged.ca.gov/en/projects/ai-impact';
+  }
+  else if (uri_lc.endsWith('/fires')   || uri_lc.endsWith('/fires/') || 
       uri_lc.endsWith('/fire')    ||  uri_lc.endsWith('/fire/') ||        
       uri_lc.endsWith('/lafire')  || uri_lc.endsWith('/lafire/') ||        
       uri_lc.endsWith('/lafires') || uri_lc.endsWith('/lafires/')) {
