@@ -18,6 +18,7 @@ buttonText_joinus: Tham gia với chúng tôi
 buttonText_learnmore: Tìm hiểu thêm
 buttonText_signupnow: Đăng ký ngay
 buttonText_getstarted: Bắt đầu
+buttonText_shareyourviews: Chia sẻ quan điểm của quý vị
 ----
 
 # Hãy cho chính phủ của quý vị biết cảm nhận của quý vị về những vấn đề cấp bách
@@ -90,6 +91,7 @@ ai_description: Chúng tôi muốn lắng nghe quan điểm của quý vị về
 ----
 id: sign_up
 buttonText: Bắt đầu
+buttonText_shareyourviews: Chia sẻ quan điểm của quý vị
 ----
 ## Tham gia cuộc trò chuyện
 

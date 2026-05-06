@@ -18,6 +18,7 @@ buttonText_joinus: Join us
 buttonText_learnmore: Learn more
 buttonText_signupnow: Sign up now
 buttonText_getstarted: Get started
+buttonText_shareyourviews: Share your views
 ----
 
 # Tell your government how you feel about pressing issues
@@ -89,6 +90,7 @@ ai_description: We will hear your views on AI, how you use it in your work, and 
 ----
 id: sign_up
 buttonText: Get started
+buttonText_shareyourviews: Share your views
 ----
 ## Join the conversation
 

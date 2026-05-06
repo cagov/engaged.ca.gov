@@ -18,6 +18,7 @@ buttonText_joinus: Sumali sa amin
 buttonText_learnmore: Matuto pa
 buttonText_signupnow: Magpatala ngayon
 buttonText_getstarted: Magsimula
+buttonText_shareyourviews: Ibahagi ang iyong mga pananaw
 ----
 
 # Sabihin sa iyong gobyerno kung ano ang nararamdaman mo tungkol sa mga mahahalagang isyu
@@ -91,6 +92,7 @@ ai_description: Nais naming marinig ang iyong mga pananaw tungkol sa AI, kung pa
 ----
 id: sign_up
 buttonText: Magsimula
+buttonText_shareyourviews: Ibahagi ang iyong mga pananaw
 ----
 ## Sumali sa usapan
 

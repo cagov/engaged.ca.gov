@@ -18,6 +18,7 @@ buttonText_joinus: Únase a nosotros
 buttonText_learnmore: Conozca más
 buttonText_signupnow: Regístrese ahora
 buttonText_getstarted: Comience
+buttonText_shareyourviews: Comparta sus opiniones
 ----
 
 # Dígale a su gobierno cómo se siente acerca de los problemas más urgentes
@@ -90,6 +91,7 @@ ai_description: Queremos escuchar sus opiniones sobre la IA, cómo la usa en su 
 ----
 id: sign_up
 buttonText: Comience
+buttonText_shareyourviews: Comparta sus opiniones
 ----
 ## Únase a la conversación
 
