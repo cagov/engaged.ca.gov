@@ -25,6 +25,8 @@ buttonText_shareyourviews: Comparta sus opiniones
 
 Nuestro compromiso actual trata sobre el impacto de la IA en su trabajo.
 
+Díganos antes del 5 de junio de 2026.
+
 ----
 id: about
 buttonText: Conozca más sobre el programa
@@ -79,6 +81,7 @@ Diseñamos esta plataforma para que sea no partidista. La Agencia de Operaciones
 id: homepage_engagements
 statusText: Cerrado
 openText: Abierto
+closingJune5Text: Cierra el 5 de junio
 e3_title: Formar un mejor gobierno estatal
 e3_description: Más de 1,400 empleados estatales dieron su opinión. Sus ideas ayudarán a hacer que el gobierno de California sea más eficiente y eficaz.
 lafires_title: Recuperación de los incendios de Los Ángeles

@@ -25,6 +25,8 @@ buttonText_shareyourviews: Share your views
 
 Our current engagement is about the impact of AI on your work.
 
+Tell us by June 5, 2026.
+
 ----
 id: about
 buttonText: Learn more about the program
@@ -78,6 +80,7 @@ We designed this platform to be non-partisan. The state's Government Operations 
 id: homepage_engagements
 statusText: Closed
 openText: Open
+closingJune5Text: Closing June 5
 e3_title: Shaping a better state government
 e3_description: More than 1,400 state employees gave their input. Their ideas will help make California government more efficient and effective.
 lafires_title: Los Angeles fires recovery

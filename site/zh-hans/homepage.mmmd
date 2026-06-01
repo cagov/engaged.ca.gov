@@ -25,6 +25,8 @@ buttonText_shareyourviews: 分享您的看法
 
 我们目前的参与活动是关于人工智能对您工作的影响。
 
+请在2026年6月5日前告诉我们。
+
 ----
 id: about
 buttonText: 了解关于该计划的更多信息
@@ -79,6 +81,7 @@ id: partners
 id: homepage_engagements
 statusText: 已结束
 openText: 进行中
+closingJune5Text: 6月5日截止
 e3_title: 塑造更好的州政府
 e3_description: 超过1,400名州政府员工提供了他们的意见。他们的想法将有助于使加州政府更加高效和有效。
 lafires_title: 洛杉矶火灾恢复
