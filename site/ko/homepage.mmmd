@@ -25,6 +25,8 @@ buttonText_shareyourviews: 의견 공유하기
 
 현재 진행 중인 참여는 AI가 귀하의 업무에 미치는 영향에 관한 것입니다.
 
+**2026년 6월 5일까지 의견을 들려주세요.**
+
 ----
 id: about
 buttonText: 프로그램에 대해 더 알아보세요
@@ -79,6 +81,7 @@ id: partners
 id: homepage_engagements
 statusText: 종료
 openText: 진행 중
+closingJune5Text: 6월 5일 마감
 e3_title: 더 나은 주 정부 만들기
 e3_description: 1,400명 이상의 주 직원들이 의견을 제시했습니다. 그들의 아이디어는 캘리포니아 정부를 더 효율적이고 효과적으로 만드는 데 도움이 될 것입니다.
 lafires_title: 로스앤젤레스 화재 복구
