@@ -7,7 +7,6 @@ keywords:
   - Los Angeles
   - fires
   - recovery
-tags:
-  - pages
+eleventyExcludeFromCollections: true
 ---
 
