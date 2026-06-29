@@ -9,6 +9,11 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# Least-privilege GITHUB_TOKEN: only checkout reads repo contents.
+# AWS auth uses static access keys (not OIDC), so no id-token is needed.
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
