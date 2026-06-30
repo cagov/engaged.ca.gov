@@ -1,0 +1,517 @@
+/* ── Hide Ethelo branding ──────────────────────────────────────────────── */
+.powered-by-ethelo,
+.ethelo-branding,
+.copyright[href*="ethelo"],
+.sidebar-footer .ethelo-logo,
+.footer-ethelo,
+.ethelo-powered {
+  display: none !important;
+}
+
+/* ── Read-only: disable interactive voting elements ───────────────────── */
+.slider-container,
+.voting-controls {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* ── Likert scale styling (matches live Ethelo site) ─────────────────── */
+.ethelo-likert-group {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Button containers: column layout with label BELOW button */
+.ethelo-likert-group .ethelo-likert-button-container {
+  flex-direction: column-reverse !important;
+}
+
+/* Labels below buttons */
+.ethelo-likert-group .ethelo-likert-button-container .ethelo-likert-subtext {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+/* Circular buttons */
+.ethelo-likert-group .ethelo-likert-button-container .ethelo-likert-button {
+  width: 44px !important;
+  height: 44px;
+  min-height: 44px;
+  max-width: 44px;
+  border-radius: 50% !important;
+  padding: 0 !important;
+}
+
+/* Override btn-raised grey background so bin colors show */
+.ethelo-likert-group .ethelo-likert-button.btn.btn-raised {
+  background-color: inherit;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Hide interactive-only elements */
+.comment-form,
+.add-comment,
+.login-prompt,
+.sign-up-prompt,
+.join-section,
+.sharing-section {
+  display: none !important;
+}
+
+/* ── Mobile side drawer toggle ────────────────────────────────────────── */
+.drawer-open .side-drawer-underlay {
+  opacity: 0.5 !important;
+  visibility: visible !important;
+}
+
+.drawer-open .side-drawer {
+  margin-left: 0 !important;
+  z-index: 1050;
+}
+
+.side-drawer {
+  transition: margin-left 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.side-drawer-underlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1040;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* ── Comment styling ──────────────────────────────────────────────────── */
+.comment-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.comment-item .row-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-item .comment-likes {
+  font-size: 12px;
+  color: #888;
+  margin-left: 8px;
+}
+
+.list-group-item.comment-item-container {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.show-more-btn {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.show-more-btn:hover {
+  background: #e8e8e8;
+}
+
+/* ── Option comments (under voting options) ──────────────────────────── */
+.option-comments {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+/* ── Reply threading ─────────────────────────────────────────────────── */
+.comment-replies {
+  margin-top: 8px;
+  padding-left: 0;
+}
+
+.comment-reply {
+  border-left: 3px solid #ddd;
+  padding: 8px 12px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  background: #fafafa;
+  border-radius: 0 4px 4px 0;
+}
+
+.comment-reply .comment-meta {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.comment-reply .comment-content {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.comment-reply .comment-likes {
+  font-size: 11px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.show-more-replies-btn {
+  background: none;
+  border: none;
+  color: #5489a3;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 0;
+  margin-top: 4px;
+}
+
+.show-more-replies-btn:hover {
+  text-decoration: underline;
+}
+
+/* ── Show native radio/checkbox inputs (Material Design JS not loaded) ── */
+#questions-panel input[type="radio"],
+#questions-panel input[type="checkbox"],
+.survey-question input[type="radio"],
+.survey-question input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.radio input[type="radio"] {
+  position: relative !important;
+  opacity: 1 !important;
+  width: 16px !important;
+  height: 16px !important;
+  overflow: visible !important;
+  margin-right: 6px !important;
+  margin-left: 0 !important;
+  vertical-align: middle;
+  pointer-events: none;
+  -webkit-appearance: auto !important;
+  appearance: auto !important;
+}
+
+.survey-question select.form-control {
+  opacity: 1 !important;
+  -webkit-appearance: menulist !important;
+  appearance: menulist !important;
+  height: auto !important;
+}
+
+/* ── Survey questions (read-only) ────────────────────────────────────── */
+.survey-question {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.survey-question:last-child {
+  border-bottom: none;
+}
+
+.survey-question .control-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.survey-question .radio,
+.survey-question .checkbox {
+  margin: 4px 0;
+}
+
+.survey-question .radio label,
+.survey-question .checkbox label {
+  font-weight: normal;
+  cursor: default;
+}
+
+.survey-question select.form-control {
+  max-width: 400px;
+}
+
+.survey-question textarea.form-control {
+  resize: none;
+}
+
+.survey-question .help-block {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+/* Comment count badge */
+.comment-count-badge {
+  background: #5489a3;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 11px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ── Voting results ──────────────────────────────────────────────────── */
+.results-list {
+  margin-top: 16px;
+}
+
+.result-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-rank {
+  font-size: 18px;
+  font-weight: 700;
+  color: #5489a3;
+  min-width: 40px;
+  padding-top: 2px;
+}
+
+.result-details {
+  flex: 1;
+}
+
+.result-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.result-metrics {
+  font-size: 13px;
+  color: #666;
+}
+
+.result-bar-container {
+  background: #e9ecef;
+  border-radius: 4px;
+  height: 8px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+
+.result-bar {
+  background: #5489a3;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.result-consensus {
+  font-weight: 600;
+  color: #333;
+}
+
+.result-support,
+.result-approval {
+  margin-left: 12px;
+  color: #888;
+}
+
+/* ── Fixed left column adjustments ────────────────────────────────────── */
+.fixed-left-column {
+  position: fixed;
+  top: 137px;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.fixed-left-group {
+  border: none;
+  box-shadow: none;
+}
+
+/* Nav nesting indentation */
+a.nesting-1 {
+  padding-left: 16px;
+}
+
+a.nesting-2 {
+  padding-left: 16px;
+}
+
+.collapse > .list-group > .nav-item-container {
+  padding-left: 24px;
+}
+
+/* Nav item active state */
+.nav-item.active {
+  background-color: var(--navigation-current-bg, #fff4eb);
+}
+
+.nav-item.active a {
+  font-weight: 600;
+}
+
+/* Navigation group styling */
+.navigation-group a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.navigation-group a:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+/* Footer nav in sidebar */
+.footer-nav {
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.footer-nav .panel-heading {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.footer-nav .panel-body {
+  padding: 0;
+  list-style: none;
+}
+
+/* Collapse expand/less icon behavior */
+.expansion-toggle .expand-less,
+.expansion-toggle.collapsed .expand-more {
+  display: inline-block;
+}
+
+.expansion-toggle .expand-more,
+.expansion-toggle.collapsed .expand-less {
+  display: none;
+}
+
+/* Collapsed default state: show expand_more, hide expand_less */
+[data-toggle="collapse"] .expand-less {
+  display: inline-block;
+}
+[data-toggle="collapse"] .expand-more {
+  display: none;
+}
+[data-toggle="collapse"].collapsed .expand-less {
+  display: none;
+}
+[data-toggle="collapse"].collapsed .expand-more {
+  display: inline-block;
+}
+
+/* ── Navbar flex layout ───────────────────────────────────────────────── */
+.navbar-header-flex {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 4px 0;
+}
+
+.navbar-header-flex .navbar-brand {
+  flex-shrink: 0;
+}
+
+.navbar-header-flex .decision-title {
+  font-weight: 600;
+  font-size: 24px;
+  white-space: nowrap;
+  padding: 0 12px;
+  color: #000;
+}
+
+/* Push main-content just below the fixed navbar (which now includes the notice) */
+.main-content {
+  margin-top: 137px !important;
+  padding-top: 0 !important;
+}
+
+.main-content > .navbar {
+  margin-bottom: 0;
+}
+
+.archive-notice-wrapper {
+  /* background: #f7f7f7; */
+  padding: 0.75rem 0;
+}
+
+.archive-notice {
+  border-left: 4px solid #ffc107;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+}
+
+.archive-notice span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.4;
+}
+
+.navbar-header-flex .navbar-right-links {
+  flex-shrink: 0;
+  margin-left: auto;
+  padding-right: 15px;
+}
+
+.navbar-header-flex .navbar-right-links a {
+  color: #999;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.navbar-header-flex .navbar-right-links a:hover {
+  color: #666;
+}
+
+/* ── Right sidebar ────────────────────────────────────────────────────── */
+.right-sidebar {
+  padding-top: 20px;
+}
+
+/* ── Navigation buttons ───────────────────────────────────────────────── */
+.navigation-button {
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.navigation-button:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+/* Read-only archive: links marked .disabled-link — same wrapper on index + inner pages. */
+.main-content a.disabled-link,
+.main-content a.disabled-link:visited {
+  pointer-events: auto;
+  cursor: not-allowed !important;
+  color: #757575 !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+}
