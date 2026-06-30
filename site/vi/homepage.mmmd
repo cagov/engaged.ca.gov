@@ -19,11 +19,12 @@ buttonText_learnmore: Tìm hiểu thêm
 buttonText_signupnow: Đăng ký ngay
 buttonText_getstarted: Bắt đầu
 buttonText_shareyourviews: Chia sẻ quan điểm của quý vị
+buttonText_getupdates: Nhận thông tin cập nhật
 ----
 
 # Hãy cho chính phủ của quý vị biết cảm nhận của quý vị về những vấn đề cấp bách
 
-Hoạt động gắn kết hiện tại của chúng tôi là về tác động của AI đối với công việc của quý vị.
+Chúng tôi đã hỏi người dân California về tác động của AI đối với công việc của họ.
 
 ----
 id: about
@@ -80,12 +81,14 @@ id: homepage_engagements
 statusText: Đã kết thúc
 openText: Đang mở
 closingText: Kết thúc ngày 8 tháng 6
+hostingText: Đang tổ chức thảo luận
 e3_title: Hình thành một chính phủ tiểu bang tốt hơn
 e3_description: Hơn 1,400 nhân viên nhà nước đã đóng góp ý kiến của họ. Ý tưởng của họ sẽ giúp làm cho chính phủ California hiệu quả và hiệu quả hơn.
 lafires_title: Phục hồi sau các đám cháy ở Los Angeles
 lafires_description: Chúng tôi đã làm việc với hơn 900 người bị ảnh hưởng bởi các đám cháy rừng Eaton và Palisades. Ý kiến đóng góp của họ sẽ giúp định hình các kế hoạch phục hồi lâu dài.
 ai_title: Tác động của AI đối với công việc
 ai_description: Chúng tôi muốn lắng nghe quan điểm của quý vị về AI, cách quý vị sử dụng nó trong công việc, và quý vị nghĩ nó sẽ ảnh hưởng như thế nào đến tương lai của việc làm.
+ai_description_present_tense: Chúng tôi đang lắng nghe quan điểm của quý vị về AI, cách quý vị sử dụng nó trong công việc, và quý vị nghĩ nó sẽ ảnh hưởng như thế nào đến tương lai của việc làm.
 ----
 ## Các hoạt động gắn kết của chúng tôi
 
@@ -93,7 +96,8 @@ ai_description: Chúng tôi muốn lắng nghe quan điểm của quý vị về
 id: sign_up
 buttonText: Bắt đầu
 buttonText_shareyourviews: Chia sẻ quan điểm của quý vị
+buttonText_getupdates: Nhận thông tin cập nhật
 ----
 ## Tham gia cuộc trò chuyện
 
-Hiện tại chúng tôi đang lắng nghe người dân California về tác động của AI đối với công việc.
+Chúng tôi sẽ gửi cho quý vị thông tin cập nhật khi có các chủ đề mới mở ra.
