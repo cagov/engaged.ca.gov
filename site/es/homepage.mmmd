@@ -19,11 +19,12 @@ buttonText_learnmore: Conozca más
 buttonText_signupnow: Regístrese ahora
 buttonText_getstarted: Comience
 buttonText_shareyourviews: Comparta sus opiniones
+buttonText_getupdates: Reciba actualizaciones
 ----
 
 # Dígale a su gobierno cómo se siente acerca de los problemas más urgentes
 
-Nuestro compromiso actual trata sobre el impacto de la IA en su trabajo.
+Les preguntamos a los californianos sobre el impacto de la IA en su trabajo.
 
 ----
 id: about
@@ -80,12 +81,14 @@ id: homepage_engagements
 statusText: Cerrado
 openText: Abierto
 closingText: Cierra el 8 de junio
+hostingText: Organizando debates
 e3_title: Formar un mejor gobierno estatal
 e3_description: Más de 1,400 empleados estatales dieron su opinión. Sus ideas ayudarán a hacer que el gobierno de California sea más eficiente y eficaz.
 lafires_title: Recuperación de los incendios de Los Ángeles
 lafires_description: Trabajamos con más de 900 personas afectadas por los incendios forestales de Eaton y Palisades. Su opinión ayudará a dar forma a los planes de recuperación a largo plazo.
 ai_title: Impacto de la IA en el trabajo
 ai_description: Queremos escuchar sus opiniones sobre la IA, cómo la usa en su trabajo y cómo cree que afectará el futuro del empleo.
+ai_description_present_tense: Estamos escuchando sus opiniones sobre la IA, cómo la usa en su trabajo y cómo cree que afectará el futuro del empleo.
 ----
 ## Nuestros compromisos
 
@@ -93,7 +96,8 @@ ai_description: Queremos escuchar sus opiniones sobre la IA, cómo la usa en su 
 id: sign_up
 buttonText: Comience
 buttonText_shareyourviews: Comparta sus opiniones
+buttonText_getupdates: Reciba actualizaciones
 ----
 ## Únase a la conversación
 
-En este momento estamos escuchando a los californianos sobre el impacto de la IA en el trabajo.
+Le enviaremos actualizaciones cuando se abran nuevos temas.

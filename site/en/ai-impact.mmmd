@@ -13,8 +13,10 @@ id: hero
 title: Impact of AI on work
 buttonText: Share your views
 signupsOpen: Sign ups open
+readingResponses: Reading responses
+buttonText_getupdates: Get updates
 ----
-Tell us how you think AI could affect the job market and how you do your work.
+We asked how you think AI could affect the job market and how you do your work.
 
 ----
 id: overview
@@ -23,13 +25,10 @@ id: overview
 ## AI policy should be shaped by people
 AI is changing how we do work in California. With those changes come a host of concerns:
 
-- Will it displace educated workers? 
-- Will entry-level jobs disappear? 
-- Will it widen the wage gap, especially for people of color? 
-- Can we trust AI work product? 
-- What about ethics and privacy?
-
-Whether you’ve used AI at work or not, we want to know your views. It will help us inform policy that puts people first.
+Knowing your views helps us inform policy that puts people first.
+<br><br>
+## Who we asked
+We asked people how AI is impacting them through surveys and live discussions. We worked to get answers from diverse groups all over the state.
 
 ----
 id: about
@@ -40,6 +39,17 @@ id: about
 Engaged California is an example of deliberative democracy. It empowers you to engage with your government in a new way. It offers a space for meaningful dialogue. This builds understanding and shapes policy—before decisions are made.
 
 [Learn more about Engaged California](/about)
+
+
+----
+id: sign_up
+buttonText: Get started
+buttonText_shareyourviews: Share your views
+buttonText_getupdates: Get updates
+----
+## Stay informed
+
+We’ll send you updates on this topic, and ones to come.
 
 
 ----

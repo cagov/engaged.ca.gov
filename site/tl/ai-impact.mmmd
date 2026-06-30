@@ -13,8 +13,10 @@ id: hero
 title: Epekto ng AI sa trabaho
 buttonText: Ibahagi ang iyong mga pananaw
 signupsOpen: Bukas ang pagpapatala
+readingResponses: Binabasa ang mga tugon
+buttonText_getupdates: Tumanggap ng mga update
 ----
-Sabihin sa amin kung paano sa palagay mo maaaring makaapekto ang AI sa merkado ng trabaho at kung paano mo ginagawa ang iyong trabaho.
+Tinanong namin kung paano sa palagay mo maaaring makaapekto ang AI sa merkado ng trabaho at kung paano mo ginagawa ang iyong trabaho.
 
 ----
 id: overview
@@ -23,13 +25,10 @@ id: overview
 ## Ang patakaran sa AI ay dapat hubugin ng mga tao
 Binabago ng AI ang paraan ng aming pagtatrabaho sa California. Kasama ng mga pagbabagong iyon ang iba't ibang alalahanin:
 
-- Maaalis ba nito sa trabaho ang mga edukadong manggagawa?
-- Mawawala ba ang mga entry-level na trabaho?
-- Mapapalawak ba nito ang agwat sa sahod, lalo na para sa mga taong may kulay?
-- Mapagkakatiwalaan ba natin ang produkto ng trabaho ng AI?
-- Paano naman ang etika at privacy?
-
-Gumamit ka man ng AI sa trabaho o hindi, gusto naming malaman ang iyong mga pananaw. Makakatulong ito sa amin na hubugin ang patakarang nagpapauna sa mga tao.
+Ang pag-alam sa iyong mga pananaw ay tumutulong sa amin na hubugin ang patakarang nagpapauna sa mga tao.
+<br><br>
+## Sino ang aming tinanong
+Tinanong namin ang mga tao kung paano sila naaapektuhan ng AI sa pamamagitan ng mga survey at live na talakayan. Nagsikap kami na makakuha ng mga sagot mula sa iba't ibang grupo sa buong estado.
 
 ----
 id: about
@@ -40,6 +39,17 @@ id: about
 Ang Engaged California ay isang halimbawa ng deliberatibong demokrasya. Binibigyan ka nito ng kapangyarihan na makipag-ugnayan sa iyong gobyerno sa isang bagong paraan. Nag-aalok ito ng espasyo para sa makahulugang pag-uusap. Bumubuo ito ng pang-unawa at humuhubog ng patakaran—bago gawin ang mga pasya.
 
 [Matuto pa tungkol sa Engaged California](/tl/about)
+
+
+----
+id: sign_up
+buttonText: Magsimula
+buttonText_shareyourviews: Ibahagi ang iyong mga pananaw
+buttonText_getupdates: Tumanggap ng mga update
+----
+## Manatiling may kaalaman
+
+Magpapadala kami sa iyo ng mga update tungkol sa paksang ito, at sa mga darating pa.
 
 
 ----
