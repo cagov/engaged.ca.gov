@@ -19,11 +19,12 @@ buttonText_learnmore: Matuto pa
 buttonText_signupnow: Magpatala ngayon
 buttonText_getstarted: Magsimula
 buttonText_shareyourviews: Ibahagi ang iyong mga pananaw
+buttonText_getupdates: Tumanggap ng mga update
 ----
 
 # Sabihin sa iyong gobyerno kung ano ang nararamdaman mo tungkol sa mga mahahalagang isyu
 
-Ang aming kasalukuyang pakikipag-ugnayan ay tungkol sa epekto ng AI sa iyong trabaho.
+Tinanong namin ang mga taga-California tungkol sa epekto ng AI sa kanilang trabaho.
 
 ----
 id: about
@@ -81,12 +82,14 @@ id: homepage_engagements
 statusText: Tapos na
 openText: Bukas
 closingText: Magsasara sa Hunyo 8
+hostingText: Pagho-host ng mga talakayan
 e3_title: Pagbuo ng mas mahusay na estado ng gobyerno
 e3_description: Higit sa 1,400 na empleyado ng estado ang nagbigay ng kanilang input. Ang kanilang mga ideya ay makakatulong na gawing mas mahusay at epektibo ang gobyerno ng California.
 lafires_title: Pagbawi ng mga sunog sa Los Angeles
 lafires_description: Nakipagtulungan kami sa higit sa 900 na tao na apektado ng mga wildfire sa Eaton at Palisades. Ang kanilang input ay makakatulong na hubugin ang mga plano sa pangmatagalang pagbawi.
 ai_title: Epekto ng AI sa trabaho
 ai_description: Nais naming marinig ang iyong mga pananaw tungkol sa AI, kung paano mo ito ginagamit sa iyong trabaho, at kung paano sa palagay mo ito makakaapekto sa kinabukasan ng mga trabaho.
+ai_description_present_tense: Naririnig namin ang iyong mga pananaw tungkol sa AI, kung paano mo ito ginagamit sa iyong trabaho, at kung paano sa palagay mo ito makakaapekto sa kinabukasan ng mga trabaho.
 ----
 ## Ang aming mga pakikipag-ugnayan
 
@@ -94,7 +97,8 @@ ai_description: Nais naming marinig ang iyong mga pananaw tungkol sa AI, kung pa
 id: sign_up
 buttonText: Magsimula
 buttonText_shareyourviews: Ibahagi ang iyong mga pananaw
+buttonText_getupdates: Tumanggap ng mga update
 ----
 ## Sumali sa usapan
 
-Nakikinig kami sa mga taga-California ngayon mismo tungkol sa epekto ng AI sa trabaho.
+Magpapadala kami sa iyo ng mga update kapag may bagong paksang nagbukas.

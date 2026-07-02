@@ -19,11 +19,12 @@ buttonText_learnmore: Learn more
 buttonText_signupnow: Sign up now
 buttonText_getstarted: Get started
 buttonText_shareyourviews: Share your views
+buttonText_getupdates: Get updates
 ----
 
 # Tell your government how you feel about pressing issues
 
-Our current engagement is about the impact of AI on your work.
+We asked Californians about the impact of AI on their work.
 
 ----
 id: about
@@ -79,12 +80,14 @@ id: homepage_engagements
 statusText: Closed
 openText: Open
 closingText: Closing June 8
+hostingText: Hosting discussions
 e3_title: Shaping a better state government
 e3_description: More than 1,400 state employees gave their input. Their ideas will help make California government more efficient and effective.
 lafires_title: Los Angeles fires recovery
 lafires_description: We worked with over 900 people affected by the Eaton and Palisades wildfires. Their input will help shape long-term recovery plans.
 ai_title: Impact of AI on work
 ai_description: We will hear your views on AI, how you use it in your work, and how you think it will affect the future of jobs.
+ai_description_present_tense: We are hearing your views on AI, how you use it in your work, and how you think it will affect the future of jobs.
 ----
 ## Our engagements
 
@@ -92,7 +95,8 @@ ai_description: We will hear your views on AI, how you use it in your work, and 
 id: sign_up
 buttonText: Get started
 buttonText_shareyourviews: Share your views
+buttonText_getupdates: Get updates
 ----
 ## Join the conversation
 
-We're listening to Californians about the impact of AI on work right now.
+We'll send you updates when new topics open.

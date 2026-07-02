@@ -13,8 +13,10 @@ id: hero
 title: Tác động của AI đối với công việc
 buttonText: Chia sẻ quan điểm của quý vị
 signupsOpen: Đang mở đăng ký
+readingResponses: Đang đọc phản hồi
+buttonText_getupdates: Nhận thông tin cập nhật
 ----
-Hãy cho chúng tôi biết quý vị nghĩ AI có thể ảnh hưởng đến thị trường việc làm và cách quý vị làm việc như thế nào.
+Chúng tôi đã hỏi quý vị nghĩ AI có thể ảnh hưởng đến thị trường việc làm và cách quý vị làm việc như thế nào.
 
 ----
 id: overview
@@ -23,13 +25,10 @@ id: overview
 ## Chính sách về AI cần được định hình bởi người dân
 AI đang thay đổi cách chúng ta làm việc tại California. Đi kèm với những thay đổi đó là hàng loạt mối lo ngại:
 
-- Liệu nó có thay thế những người lao động có trình độ học vấn?
-- Liệu các công việc cấp khởi điểm có biến mất?
-- Liệu nó có làm gia tăng khoảng cách lương, đặc biệt là đối với người da màu?
-- Chúng ta có thể tin tưởng vào sản phẩm công việc do AI tạo ra không?
-- Còn vấn đề đạo đức và quyền riêng tư thì sao?
-
-Cho dù quý vị đã sử dụng AI tại nơi làm việc hay chưa, chúng tôi đều muốn biết quan điểm của quý vị. Điều đó sẽ giúp chúng tôi định hình chính sách đặt con người lên hàng đầu.
+Việc hiểu rõ quan điểm của quý vị giúp chúng tôi định hình chính sách đặt con người lên hàng đầu.
+<br><br>
+## Những người chúng tôi đã hỏi
+Chúng tôi đã hỏi mọi người về cách AI đang ảnh hưởng đến họ thông qua các cuộc khảo sát và thảo luận trực tiếp. Chúng tôi đã nỗ lực để có được câu trả lời từ các nhóm đa dạng trên khắp tiểu bang.
 
 ----
 id: about
@@ -40,6 +39,17 @@ id: about
 Engaged California là một ví dụ về dân chủ thảo luận. Nó trao quyền cho quý vị tham gia với chính phủ theo một cách mới. Nó cung cấp một không gian cho cuộc đối thoại có ý nghĩa. Điều này xây dựng sự hiểu biết và định hình chính sách—trước khi các quyết định được đưa ra.
 
 [Tìm hiểu thêm về Engaged California](/vi/about)
+
+
+----
+id: sign_up
+buttonText: Bắt đầu
+buttonText_shareyourviews: Chia sẻ quan điểm của quý vị
+buttonText_getupdates: Nhận thông tin cập nhật
+----
+## Luôn cập nhật thông tin
+
+Chúng tôi sẽ gửi cho quý vị thông tin cập nhật về chủ đề này và những chủ đề sắp tới.
 
 
 ----

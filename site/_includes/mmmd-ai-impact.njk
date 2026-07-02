@@ -8,11 +8,11 @@
     <section id="ge-hero" class="engca-hero engca-hero-ai">
         <div class="container banner-flex">
             <engca-banner-content>
-                <p class="status-pill">{{ modules.hero.signupsOpen }}</p>
+                <p class="status-pill">{{ modules.hero.readingResponses }}</p>
                 <h1>{{ modules.hero.title  }}</h1>
                 {{ modules.hero.content | safe }}
                 <p>
-                    <a data-appearance="button" data-theme="orange" href="https://join.engaged.ca.gov/ai-impact" class="m-t">{{ modules.hero.buttonText }}</a>
+                    <a data-appearance="button" data-theme="orange" href="https://join.engaged.ca.gov/ai-impact" class="m-t">{{ modules.hero.buttonText_getupdates }}</a>
                 </p>
             </engca-banner-content>
             <img src="/public/images/hero-bubbles-ai.png" aria-hidden="true" class="desktop-only" alt=""/>
@@ -33,6 +33,8 @@
             </div>
         </div>
     </section>
+
+
 
     <section id="how-it-works" class="hiw-style-2">
         <div class="container">
@@ -56,7 +58,22 @@
         </div>
     </section> #}
 
-    <section id="overview" class="overview-ge">
+    <section id="sign-up" class="action-form">
+    <div class="container form-flex">
+        <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
+        <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
+
+
+    {{ modules.sign_up.content | safe }}
+
+    <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
+        {{ modules.sign_up.buttonText_getupdates }}
+    </a>
+    </div>
+    </section>
+
+
+    {# <section id="overview" class="overview-ge">
         <div class="container overview-ge-title">
             <div class="row">
                 <h3>{{ modules.generalInfo.title | safe }}</h3>
@@ -70,6 +87,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> #}
 
 {% endblock %}

@@ -9,17 +9,20 @@
 .signup-cluster-1,
 .signup-cluster-2 {
   position: absolute;
-  inline-size: 30vw;
+  inline-size: min(30vw, 350px);
 }
 
+/* Below ~1167px the clusters scale with the viewport (vw). At/above that width
+   the size caps at 350px, so the vw offsets are clamped to their crossover
+   values to keep the crop consistent and stop the icons covering the text. */
 .signup-cluster-1 {
-  bottom: -10vw;
-  left: -12vw;
+  bottom: max(-10vw, -117px);
+  left: max(-12vw, -140px);
 }
 
 .signup-cluster-2 {
-  top: -10vw;
-  right: -12vw;
+  top: max(-10vw, -117px);
+  right: max(-12vw, -140px);
 }
 
 @media screen and (min-width: 1120px) {
