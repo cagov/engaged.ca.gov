@@ -82,6 +82,7 @@ statusText: 종료
 openText: 진행 중
 closingText: 6월 8일 마감
 hostingText: 토론 진행 중
+analText: 결과 분석 중
 e3_title: 더 나은 주 정부 만들기
 e3_description: 1,400명 이상의 주 직원들이 의견을 제시했습니다. 그들의 아이디어는 캘리포니아 정부를 더 효율적이고 효과적으로 만드는 데 도움이 될 것입니다.
 lafires_title: 로스앤젤레스 화재 복구
@@ -89,6 +90,7 @@ lafires_description: 저희는 이튼과 팰리세이즈 산불로 피해를 입
 ai_title: AI가 업무에 미치는 영향
 ai_description: AI에 대한 귀하의 견해, 업무에서 AI를 어떻게 활용하는지, 그리고 미래의 일자리에 어떤 영향을 미칠 것이라고 생각하는지 듣고자 합니다.
 ai_description_present_tense: 저희는 AI에 대한 귀하의 견해, 업무에서 AI를 어떻게 활용하는지, 그리고 미래의 일자리에 어떤 영향을 미칠 것이라고 생각하는지 듣고 있습니다.
+ai_description_past_tense: 저희는 AI에 대한 귀하의 견해, 업무에서 AI를 어떻게 활용하는지, 그리고 미래의 일자리에 어떤 영향을 미칠 것이라고 생각하는지 들었습니다.
 ----
 ## 저희의 업무
 

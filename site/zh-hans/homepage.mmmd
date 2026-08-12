@@ -82,6 +82,7 @@ statusText: 已结束
 openText: 进行中
 closingText: 6月8日截止
 hostingText: 正在举办讨论
+analText: 正在分析结果
 e3_title: 塑造更好的州政府
 e3_description: 超过1,400名州政府员工提供了他们的意见。他们的想法将有助于使加州政府更加高效和有效。
 lafires_title: 洛杉矶火灾恢复
@@ -89,6 +90,7 @@ lafires_description: 我们与超过900名受伊顿和帕利塞兹野火影响�
 ai_title: 人工智能对工作的影响
 ai_description: 我们想听取您对人工智能的看法、您在工作中如何使用它，以及您认为它将如何影响未来的就业。
 ai_description_present_tense: 我们正在听取您对人工智能的看法、您在工作中如何使用它，以及您认为它将如何影响未来的就业。
+ai_description_past_tense: 我们听取了您对人工智能的看法、您在工作中如何使用它，以及您认为它将如何影响未来的就业。
 ----
 ## 我们的参与
 
