@@ -82,6 +82,7 @@ statusText: Cerrado
 openText: Abierto
 closingText: Cierra el 8 de junio
 hostingText: Organizando debates
+analText: Analizando los resultados
 e3_title: Formar un mejor gobierno estatal
 e3_description: Más de 1,400 empleados estatales dieron su opinión. Sus ideas ayudarán a hacer que el gobierno de California sea más eficiente y eficaz.
 lafires_title: Recuperación de los incendios de Los Ángeles
@@ -89,6 +90,7 @@ lafires_description: Trabajamos con más de 900 personas afectadas por los incen
 ai_title: Impacto de la IA en el trabajo
 ai_description: Queremos escuchar sus opiniones sobre la IA, cómo la usa en su trabajo y cómo cree que afectará el futuro del empleo.
 ai_description_present_tense: Estamos escuchando sus opiniones sobre la IA, cómo la usa en su trabajo y cómo cree que afectará el futuro del empleo.
+ai_description_past_tense: Escuchamos sus opiniones sobre la IA, cómo la usa en su trabajo y cómo cree que afectará el futuro del empleo.
 ----
 ## Nuestros compromisos
 

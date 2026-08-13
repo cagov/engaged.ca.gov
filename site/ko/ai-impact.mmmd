@@ -15,9 +15,12 @@ buttonText: 의견 공유하기
 signupsOpen: 가입 신청 진행 중
 readingResponses: 응답 검토 중
 hostingDiscussions: 토론 진행 중
+analyzingResults: 결과 분석 중
 buttonText_getupdates: 업데이트 받기
 ----
 저희는 AI가 노동 시장과 귀하의 업무 방식에 어떤 영향을 미칠 수 있다고 생각하는지 물었습니다.
+
+저희는 현재 귀하의 의견을 보고서로 정리하고 있습니다.
 
 ----
 id: overview

@@ -81,6 +81,7 @@ statusText: Closed
 openText: Open
 closingText: Closing June 8
 hostingText: Hosting discussions
+analText: Analyzing results
 e3_title: Shaping a better state government
 e3_description: More than 1,400 state employees gave their input. Their ideas will help make California government more efficient and effective.
 lafires_title: Los Angeles fires recovery
@@ -88,6 +89,7 @@ lafires_description: We worked with over 900 people affected by the Eaton and Pa
 ai_title: Impact of AI on work
 ai_description: We will hear your views on AI, how you use it in your work, and how you think it will affect the future of jobs.
 ai_description_present_tense: We are hearing your views on AI, how you use it in your work, and how you think it will affect the future of jobs.
+ai_description_past_tense: We heard your views on AI, how you use it in your work, and how you think it will affect the future of jobs.
 ----
 ## Our engagements
 
