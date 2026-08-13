@@ -170,16 +170,16 @@
         <!-- navigation types -->
         <nav id="navigation" class="main-navigation dropdown" aria-label="Main navigation">
           <ul id="nav_list" class="top-level-nav">
-            <li class="nav-item {% if active_page == 'about' %}active{% endif %}" role="presentation">
+            <li class="nav-item {% if active_page == 'about' %}active{% endif %}">
               <a class="first-level-link" href="{{ '/about' | localizedPath(locale) }}">{{ 'about-the-program' | i18n }}</a>
             </li>
-            <li class="nav-item {% if active_page == 'lafires-recovery' %}active{% endif %}" role="presentation">
+            <li class="nav-item {% if active_page == 'lafires-recovery' %}active{% endif %}">
               <a class="first-level-link" href="{{ '/lafires-recovery' | localizedPath(locale) }}">{{ 'los-angeles-fires-recovery' | i18n }}</a>
             </li>
-            <li class="nav-item {% if active_page == 'stateemployees' %}active{% endif %}" role="presentation">
+            <li class="nav-item {% if active_page == 'stateemployees' %}active{% endif %}">
               <a class="first-level-link" href="{{ '/stateemployees' | localizedPath(locale) }}">{{ 'state-employees' | i18n }}</a>
             </li>
-            <li class="nav-item {% if active_page == 'ai-impact' %}active{% endif %}" role="presentation">
+            <li class="nav-item {% if active_page == 'ai-impact' %}active{% endif %}">
               <a class="first-level-link" href="{{ '/ai-impact' | localizedPath(locale) }}">{{ 'impact-of-AI-on-work' | i18n }}</a>
             </li>
             {# use this for eventual pull-down when number of links >=4 #}
