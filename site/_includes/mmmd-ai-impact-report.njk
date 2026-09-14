@@ -1,0 +1,318 @@
+{% set active_page = 'ai-impact' %}
+{% extends "layout.njk" %}
+{% block content %}
+
+{# Page-specific styles and scripts. Only loaded on this report. #}
+<link rel="stylesheet" href="/css/ai-impact-report.css" />
+
+{% set ui = modules.tiers_ui %}
+{% set nbr_tiers = ui.nbr_tiers | default(3) %}
+{% set initial_visible = ui.initial_visible_ideas | default(3) %}
+{% set total_ideas = 0 %}
+{% for t in range(1, nbr_tiers + 1) %}
+  {% set total_ideas = total_ideas + (modules["tier_" + t].nbr_ideas | default(0)) %}
+{% endfor %}
+
+{# Placeholder icons until the real SVGs arrive. Keyed by the tier module's `icon` field. #}
+{% set tier_icons = {
+  "sparkle": "/public/images/ideas-icon.svg",
+  "heart": "/public/images/hand_heart.svg",
+  "speech": "/public/images/comments-icon.svg"
+} %}
+
+<section id="ai-report-hero" class="hero">
+  <div class="container hero-container">
+    <div class="row">
+      <div class="col-lg-8 hero-content">
+        {# Content begins with the H1; the subtitle field is inserted directly after it. #}
+        {{ modules.hero.content | replace("</h1>", "</h1><p class=\"hero-subtitle\">" + modules.hero.subtitle + "</p>") | safe }}
+      </div>
+    </div>
+    <img class="ai-report-hero-adornment" src="/public/images/hero-bubbles-ai.png" aria-hidden="true" alt="" />
+  </div>
+</section>
+
+<section id="public-forum" class="style-body-text section-off-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.public_forum.content | safe }}
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="participation-sidebar">
+          <div class="participation-stat">
+            <img src="/public/images/staff-icon.svg" alt="" aria-hidden="true" />
+            <div class="stat-number">{{ modules.participation_numbers.participants_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.participants_label }}</div>
+          </div>
+          <div class="participation-stat">
+            <img src="/public/images/comments-icon.svg" alt="" aria-hidden="true" />
+            <div class="stat-number">{{ modules.participation_numbers.conversations_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.conversations_label }}</div>
+          </div>
+          <div class="participation-stat">
+            <img src="/public/images/ideas-icon.svg" alt="" aria-hidden="true" />
+            <div class="stat-number">{{ modules.participation_numbers.ideas_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.ideas_label }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="what-we-heard" class="style-body-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.what_we_heard.content | safe }}
+        </div>
+
+        {# Policy idea tiers. Rendered fully expanded; JS applies the collapsed default state. #}
+        <div id="policy-tiers" class="policy-tiers"
+             data-initial-visible="{{ initial_visible }}"
+             data-show-label="{{ ui.show_label }}"
+             data-show-more-label="{{ ui.show_more_label }}"
+             data-close-label="{{ ui.close_label }}"
+             data-show-all-label="{{ ui.show_all_label }}"
+             data-close-all-label="{{ ui.close_all_label }}">
+
+          {% for t in range(1, nbr_tiers + 1) %}
+            {% set tier = modules["tier_" + t] %}
+            {% set nbr_ideas = tier.nbr_ideas | default(0) %}
+            <div class="policy-tier" id="policy-tier-{{ t }}" data-tier="{{ t }}" data-nbr-ideas="{{ nbr_ideas }}">
+              <div class="policy-tier-icon" aria-hidden="true">
+                <img src="{{ tier_icons[tier.icon] | default('/public/images/ideas-icon.svg') }}" alt="" />
+              </div>
+              <div class="policy-tier-header">
+                <div class="policy-tier-heading">
+                  <h3 class="policy-tier-title">{{ tier.title }}</h3>
+                  <p class="policy-tier-subtitle">{{ tier.subtitle }}</p>
+                </div>
+                <p class="policy-tier-count">{{ ui.count_label | replace("{count}", nbr_ideas) }}</p>
+              </div>
+
+              <ul class="policy-ideas" id="policy-tier-{{ t }}-ideas">
+                {% for i in range(1, nbr_ideas + 1) %}
+                  {% set idea = modules["tier_" + t + "_idea_" + i] %}
+                  {% set idea_id = "tier-" + t + "-idea-" + i %}
+                  {% set has_body = idea.content and (idea.content | trim | length > 0) %}
+                  <li class="policy-idea" data-index="{{ i }}">
+                    <h4 class="policy-idea-title">
+                      <button type="button" class="policy-idea-toggle"
+                              aria-expanded="false"
+                              aria-controls="{{ idea_id }}-body"
+                              id="{{ idea_id }}-toggle"
+                              {% if not has_body %}data-empty="true"{% endif %}>
+                        <span class="policy-idea-title-text">{{ idea.title }}</span>
+                        <span class="policy-idea-toggle-icon" aria-hidden="true"></span>
+                      </button>
+                    </h4>
+                    <div class="policy-idea-body" id="{{ idea_id }}-body" role="region" aria-labelledby="{{ idea_id }}-toggle" hidden>
+                      {% if has_body %}
+                        {# Body markdown is: description paragraph(s), then a bullet list of example ideas. #}
+                        {{ idea.content | replace("<ul>", '<p class="policy-idea-examples-label">' + ui.example_ideas_label + '</p><ul class="policy-idea-examples">') | safe }}
+                      {% else %}
+                        {# TODO: description and example ideas for this idea have not been written yet. #}
+                      {% endif %}
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+
+              <div class="policy-tier-footer">
+                <button type="button" class="policy-tier-toggle text-link-button"
+                        aria-expanded="true"
+                        aria-controls="policy-tier-{{ t }}-ideas">
+                  <span class="policy-tier-toggle-text">{{ ui.close_label }}</span>
+                  <span class="chevron" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+          {% endfor %}
+
+          <div class="policy-tiers-footer">
+            <button type="button" id="policy-tiers-toggle-all" class="text-link-button"
+                    aria-expanded="true"
+                    aria-controls="policy-tiers"
+                    data-total-ideas="{{ total_ideas }}">
+              <span class="policy-tiers-toggle-all-text">{{ ui.close_all_label }}</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="how-to-read-tiers style-body-text">
+          {{ modules.how_to_read_tiers.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="who-participated" class="style-body-text section-off-white">
+  <div class="container">
+    <h2>{{ modules.who_participated.title }}</h2>
+    <div class="row phase-row">
+      <div class="col-lg-8">
+        <p class="phase-label">{{ modules.who_participated.phase_label }}</p>
+        <h3 class="phase-title">{{ modules.who_participated.phase_title }}</h3>
+        <p class="phase-subtitle">{{ modules.who_participated.phase_subtitle }}</p>
+      </div>
+      <div class="col-lg-4">
+        <div class="participation-sidebar">
+          <div class="participation-stat">
+            <img src="/public/images/staff-icon.svg" alt="" aria-hidden="true" />
+            <div class="stat-number">{{ modules.who_participated.stat_count }}</div>
+            <div class="stat-label">{{ modules.who_participated.stat_label }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# PLACEHOLDER: this will become an interactive, multi-step dots chart. #}
+    <div id="participants-dots-chart" class="chart-placeholder">
+      <img class="chart-placeholder-image" src="/public/images/ai-report/dots-chart-placeholder.png" alt="{{ modules.who_participated.chart_alt }}" />
+      <div class="chart-controls">
+        <div class="segmented-toggle" role="group">
+          <button type="button" class="segmented-toggle-option" aria-pressed="true" disabled>{{ modules.who_participated.toggle_region }}</button>
+          <button type="button" class="segmented-toggle-option" aria-pressed="false" disabled>{{ modules.who_participated.toggle_field_of_work }}</button>
+        </div>
+        <ul class="chart-legend region-legend" aria-label="{{ modules.who_participated.toggle_region }}">
+          {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
+          {% for r in range(1, nbr_regions + 1) %}
+            <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.who_participated.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="power-of-discussion" class="style-body-text">
+  <div class="container">
+    <h2>{{ modules.power_of_discussion.title }}</h2>
+    <div class="row phase-row">
+      <div class="col-lg-8">
+        <p class="phase-label">{{ modules.power_of_discussion.phase_label }}</p>
+        <h3 class="phase-title">{{ modules.power_of_discussion.phase_title }}</h3>
+        <p class="phase-subtitle">{{ modules.power_of_discussion.phase_subtitle }}</p>
+      </div>
+      <div class="col-lg-4">
+        <div class="participation-sidebar">
+          <div class="participation-stat">
+            <img src="/public/images/comments-icon.svg" alt="" aria-hidden="true" />
+            <div class="stat-number">{{ modules.power_of_discussion.stat_count }}</div>
+            <div class="stat-label">{{ modules.power_of_discussion.stat_label }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# PLACEHOLDER: this will become an interactive conversations ring chart with a pop-out panel. #}
+    <div id="conversations-chart" class="chart-placeholder">
+      <img class="chart-placeholder-image" src="/public/images/ai-report/conversations-chart-placeholder.png" alt="{{ modules.power_of_discussion.chart_alt }}" />
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.power_of_discussion.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process-protagonist" class="style-body-text section-navy">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.process_protagonist.content | safe }}
+        </div>
+      </div>
+    </div>
+
+    {# PLACEHOLDER: this will become an interactive bar chart with a category pull-down. #}
+    <div id="sortition-chart" class="chart-placeholder chart-placeholder-navy">
+      <img class="chart-placeholder-image" src="/public/images/ai-report/sortition-chart-placeholder.png" alt="{{ modules.process_protagonist.chart_alt }}" />
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body process-links">
+          {{ modules.process_links.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download-data" class="style-body-text section-navy">
+  <div class="container download-container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.download_data.content | safe }}
+        </div>
+        <div class="download-button-div">
+          <a data-appearance="button" data-theme="orange" href="/public/data/ai-impact-report.zip" download>{{ modules.download_data.button_text }}</a>
+        </div>
+      </div>
+    </div>
+    <img class="download-adornment" src="/public/images/download-the-data-adornment.svg" aria-hidden="true" alt="" />
+  </div>
+</section>
+
+<section id="analysis" class="style-body-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.analysis.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="what-happens-next" class="style-body-text section-off-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.what_happens_next.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sign-up" class="action-form">
+  <div class="container form-flex">
+    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
+    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
+
+    {{ modules.sign_up.content | safe }}
+
+    <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
+      {{ modules.sign_up.buttonText_getupdates }}
+    </a>
+  </div>
+</section>
+
+<script src="/js/ai-impact-report.js" defer></script>
+
+{% endblock %}

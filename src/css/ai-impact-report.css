@@ -1,0 +1,655 @@
+/* ai-impact-report.css
+ * Styles for /ai-impact/report/. Loaded only by mmmd-ai-impact-report.njk.
+ * Paddings, stat sidebar, and section rhythm mirror state-employees-report.css.
+ */
+
+:root {
+  --report-navy: #1c2745;
+  --report-ink: #0f152f;
+  --report-off-white: #fff4eb;
+  --report-orange: #e79450;
+  --report-orange-light: #f0b07a;
+  --report-link: #1a5a96;
+  --report-rule: #d9dbe0;
+  --report-body: #3b3b3b;
+}
+
+/* ---- Section rhythm ---- */
+
+#ai-report-hero ~ section {
+  padding: 3rem 0;
+}
+
+.section-off-white {
+  background: var(--report-off-white);
+}
+
+.section-navy {
+  background: var(--report-navy);
+  color: var(--report-off-white);
+
+  & h2,
+  & h3,
+  & p,
+  & li,
+  & strong {
+    color: var(--report-off-white);
+  }
+
+  & a {
+    color: var(--report-off-white);
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+  }
+}
+
+.section-body {
+  line-height: 1.75;
+}
+
+.section-body h2,
+section#who-participated > .container > h2,
+section#power-of-discussion > .container > h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Hero ---- */
+
+section#ai-report-hero {
+  background: var(--report-navy);
+  color: var(--report-off-white);
+  padding: 4rem 0;
+  overflow: hidden;
+
+  & h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  & .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+  }
+
+  & .hero-content > p {
+    font-size: 1.25rem;
+  }
+
+  & .hero-content > p.hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  & .hero-content em {
+    font-style: italic;
+  }
+}
+
+.hero-container {
+  position: relative;
+}
+
+.ai-report-hero-adornment {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 247px;
+
+  @media (width <= 991px) {
+    display: none;
+  }
+}
+
+/* ---- Stat sidebar (mirrors state-employees-report.css) ---- */
+
+.participation-sidebar {
+  padding: 0 2rem 0 0;
+}
+
+.participation-stat {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  & img {
+    display: block;
+    margin: 0 auto 0.25rem;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.stat-number {
+  font-weight: 700;
+  font-size: 47px;
+  line-height: 1;
+  color: var(--report-ink);
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 719px) {
+    font-size: 33px;
+  }
+}
+
+.stat-label {
+  font-size: 23px;
+  color: #555;
+
+  @media (max-width: 719px) {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .participation-sidebar {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .participation-stat {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .participation-stat img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+  }
+}
+
+/* ---- Policy tiers ---- */
+
+.policy-tiers {
+  margin: 2rem 0 2.5rem;
+}
+
+.policy-tier {
+  position: relative;
+  border: 2px solid var(--report-orange);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1.25rem 1.25rem 1rem 1.25rem;
+  margin: 0 0 2rem 1.25rem;
+
+  @media (max-width: 575px) {
+    margin-left: 0;
+    padding-top: 3.25rem;
+  }
+}
+
+.policy-tier-icon {
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--report-orange-light), #d9853f);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+    width: 48px;
+    height: 48px;
+  }
+
+  @media (max-width: 575px) {
+    width: 64px;
+    height: 64px;
+    top: -1rem;
+    left: 1rem;
+
+    & img {
+      width: 34px;
+      height: 34px;
+    }
+  }
+}
+
+.policy-tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 0 1rem 4.25rem;
+  border-bottom: 1px solid var(--report-rule);
+
+  @media (max-width: 575px) {
+    padding-left: 0;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+.policy-tier-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.style-body-text .policy-tier-subtitle {
+  font-style: italic;
+  color: var(--report-body);
+  font-size: 1.125rem;
+  margin: 0.25rem 0 0;
+}
+
+.style-body-text .policy-tier-count {
+  white-space: nowrap;
+  color: var(--report-body);
+  font-size: 1rem;
+  margin: 0.4rem 0 0;
+}
+
+.policy-ideas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.policy-idea {
+  border-bottom: 1px solid var(--report-rule);
+}
+
+.policy-idea-title {
+  margin: 0 !important;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+.policy-tiers button.policy-idea-toggle {
+  /* Reset global button styling (selector outranks layout.css `button:not(.nav-header)`). */
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.9rem 0.25rem 0.9rem 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  cursor: pointer;
+  text-align: left;
+
+  &:hover .policy-idea-title-text {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  &[data-empty="true"] {
+    cursor: default;
+
+    & .policy-idea-toggle-icon {
+      opacity: 0.35;
+    }
+  }
+}
+
+.policy-idea-toggle-icon {
+  flex: 0 0 auto;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: var(--report-orange);
+    border-radius: 1px;
+    left: 0;
+    top: 8px;
+    width: 18px;
+    height: 2px;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+    transition: transform 0.15s ease;
+  }
+}
+
+.policy-idea-toggle[aria-expanded="true"] .policy-idea-toggle-icon::after {
+  transform: rotate(0deg);
+}
+
+.style-body-text .policy-idea-body {
+  padding: 0 3rem 1.25rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--report-body);
+
+  & p {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+  }
+
+  & ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
+
+  & li {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+}
+
+.policy-idea-examples-label {
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: var(--report-body);
+}
+
+.policy-tier-footer {
+  padding: 0.75rem 1.25rem 0;
+}
+
+.policy-tiers-footer {
+  border-top: 1px solid var(--report-rule);
+  padding-top: 1rem;
+  margin-left: 1.25rem;
+
+  @media (max-width: 575px) {
+    margin-left: 0;
+  }
+}
+
+/* Link-styled buttons: "Show 7 more", "Close", "Show all 27 ideas". */
+.policy-tiers button.text-link-button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--report-link);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  & .chevron {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-3px) rotate(45deg);
+    transition: transform 0.15s ease;
+  }
+
+  &[aria-expanded="true"] .chevron {
+    transform: translateY(2px) rotate(225deg);
+  }
+}
+
+/* Hide the "Show/Close" controls until JS is ready so the no-JS page reads as a plain list. */
+.policy-tiers:not(.js-enabled) {
+  & .policy-tier-footer,
+  & .policy-tiers-footer {
+    display: none;
+  }
+
+  & .policy-idea-body {
+    display: block !important;
+  }
+}
+
+.style-body-text .how-to-read-tiers {
+  line-height: 1.6;
+  color: var(--report-body);
+
+  & p,
+  & strong {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ---- Phase headers (Who participated / Power of the discussion) ---- */
+
+.phase-row {
+  --bs-gutter-y: 1rem;
+}
+
+.phase-label {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--report-body);
+  margin: 0 0 0.25rem;
+}
+
+.phase-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0 0 1rem;
+  line-height: 1.25;
+}
+
+.phase-subtitle {
+  font-size: 1.375rem;
+  color: var(--report-body);
+  margin: 0 0 1.5rem;
+}
+
+/* ---- Chart placeholders ---- */
+
+.chart-placeholder {
+  margin: 1rem 0 2.5rem;
+}
+
+.chart-placeholder-image {
+  display: block;
+  width: 100%;
+  max-width: 1220px;
+  height: auto;
+}
+
+.chart-placeholder-navy .chart-placeholder-image {
+  border-radius: 4px;
+}
+
+.chart-controls {
+  margin-top: 1.5rem;
+}
+
+/* Segmented toggle (Region / Field of work). Static for now. */
+.segmented-toggle {
+  display: inline-flex;
+  border: 1.5px solid var(--report-navy);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.chart-controls button.segmented-toggle-option {
+  all: unset;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--report-link);
+  background: #fff;
+  cursor: default;
+
+  &[aria-pressed="true"] {
+    background: var(--report-navy);
+    color: #fff;
+  }
+
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+.chart-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--report-ink);
+}
+
+.chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chart-legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--swatch, #999);
+}
+
+/* Region colors read from the Figma export. Approximate until confirmed. */
+.region-legend [data-region="1"] {
+  --swatch: #4cc3a0;
+}
+.region-legend [data-region="2"] {
+  --swatch: #4a90d9;
+}
+.region-legend [data-region="3"] {
+  --swatch: #b57bdb;
+}
+.region-legend [data-region="4"] {
+  --swatch: #f0932b;
+}
+.region-legend [data-region="5"] {
+  --swatch: #7b3fa0;
+}
+.region-legend [data-region="6"] {
+  --swatch: #e8503a;
+}
+.region-legend [data-region="7"] {
+  --swatch: #6e8b2a;
+}
+.region-legend [data-region="8"] {
+  --swatch: #a8d8f0;
+}
+.region-legend [data-region="9"] {
+  --swatch: #bdbdbd;
+}
+
+/* ---- The process is the protagonist ---- */
+
+section#process-protagonist {
+  padding-bottom: 3rem;
+
+  & .section-body > p {
+    font-size: 1.25rem;
+  }
+
+  & .process-links {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  & .process-links p {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  & .process-links ul {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ---- Download the data ---- */
+
+section#download-data {
+  border-top: 1px solid rgb(255 244 235 / 0.25);
+  padding: 4rem 0;
+  overflow: hidden;
+
+  & .section-body p {
+    font-size: 1.25rem;
+  }
+}
+
+.download-container {
+  position: relative;
+}
+
+.download-button-div {
+  margin-top: 1.5rem;
+
+  & a {
+    padding-inline: 1.25rem;
+  }
+}
+
+.download-adornment {
+  position: absolute;
+  right: -1rem;
+  top: -4rem;
+  width: 273px;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+/* ---- Analysis / What happens next ---- */
+
+section#analysis,
+section#what-happens-next {
+  & .section-body p,
+  & .section-body li {
+    font-size: 1.0625rem;
+  }
+}
+
+/* ---- Sign up (mirrors ai-impact page) ---- */
+
+section#sign-up.action-form {
+  padding-block: 4.8rem;
+
+  & .form-flex {
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
