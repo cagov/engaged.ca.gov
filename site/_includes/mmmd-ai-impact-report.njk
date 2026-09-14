@@ -16,11 +16,8 @@
 {# Tier stickers, keyed by the tier module's `icon` field. Stickers include their own orange circle. #}
 {% set tier_stickers = {
   "sparkle": "/public/images/ai-report-tier-most-support.svg",
-  "heart": "/public/images/ai-report-tier-moderate-support.svg"
-} %}
-{# PLACEHOLDER: no sticker yet for "speech" (Some support). A CSS circle wraps this glyph instead. #}
-{% set tier_placeholder_glyphs = {
-  "speech": "/public/images/comments-icon.svg"
+  "heart": "/public/images/ai-report-tier-moderate-support.svg",
+  "speech": "/public/images/ai-report-tier-some-support.svg"
 } %}
 
 <section id="ai-report-hero" class="hero">
@@ -87,13 +84,7 @@
             {% set tier = modules["tier_" + t] %}
             {% set nbr_ideas = tier.nbr_ideas | default(0) %}
             <div class="policy-tier" id="policy-tier-{{ t }}" data-tier="{{ t }}" data-nbr-ideas="{{ nbr_ideas }}">
-              {% if tier_stickers[tier.icon] %}
-                <img class="policy-tier-icon policy-tier-sticker" src="{{ tier_stickers[tier.icon] }}" alt="" aria-hidden="true" />
-              {% else %}
-                <div class="policy-tier-icon policy-tier-icon-placeholder" aria-hidden="true">
-                  <img src="{{ tier_placeholder_glyphs[tier.icon] | default('/public/images/ideas-icon.svg') }}" alt="" />
-                </div>
-              {% endif %}
+              <img class="policy-tier-icon policy-tier-sticker" src="{{ tier_stickers[tier.icon] | default(tier_stickers.sparkle) }}" alt="" aria-hidden="true" />
               <div class="policy-tier-header">
                 <div class="policy-tier-heading">
                   <h3 class="policy-tier-title">{{ tier.title }}</h3>
