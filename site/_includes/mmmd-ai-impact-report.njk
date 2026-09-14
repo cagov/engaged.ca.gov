@@ -13,10 +13,13 @@
   {% set total_ideas = total_ideas + (modules["tier_" + t].nbr_ideas | default(0)) %}
 {% endfor %}
 
-{# Placeholder icons until the real SVGs arrive. Keyed by the tier module's `icon` field. #}
-{% set tier_icons = {
-  "sparkle": "/public/images/ideas-icon.svg",
-  "heart": "/public/images/hand_heart.svg",
+{# Tier stickers, keyed by the tier module's `icon` field. Stickers include their own orange circle. #}
+{% set tier_stickers = {
+  "sparkle": "/public/images/ai-report-tier-most-support.svg",
+  "heart": "/public/images/ai-report-tier-moderate-support.svg"
+} %}
+{# PLACEHOLDER: no sticker yet for "speech" (Some support). A CSS circle wraps this glyph instead. #}
+{% set tier_placeholder_glyphs = {
   "speech": "/public/images/comments-icon.svg"
 } %}
 
@@ -28,7 +31,7 @@
         {{ modules.hero.content | replace("</h1>", "</h1><p class=\"hero-subtitle\">" + modules.hero.subtitle + "</p>") | safe }}
       </div>
     </div>
-    <img class="ai-report-hero-adornment" src="/public/images/hero-bubbles-ai.png" aria-hidden="true" alt="" />
+    <img class="ai-report-hero-adornment" src="/public/images/ai-report-hero-adornment.svg" aria-hidden="true" alt="" />
   </div>
 </section>
 
@@ -84,9 +87,13 @@
             {% set tier = modules["tier_" + t] %}
             {% set nbr_ideas = tier.nbr_ideas | default(0) %}
             <div class="policy-tier" id="policy-tier-{{ t }}" data-tier="{{ t }}" data-nbr-ideas="{{ nbr_ideas }}">
-              <div class="policy-tier-icon" aria-hidden="true">
-                <img src="{{ tier_icons[tier.icon] | default('/public/images/ideas-icon.svg') }}" alt="" />
-              </div>
+              {% if tier_stickers[tier.icon] %}
+                <img class="policy-tier-icon policy-tier-sticker" src="{{ tier_stickers[tier.icon] }}" alt="" aria-hidden="true" />
+              {% else %}
+                <div class="policy-tier-icon policy-tier-icon-placeholder" aria-hidden="true">
+                  <img src="{{ tier_placeholder_glyphs[tier.icon] | default('/public/images/ideas-icon.svg') }}" alt="" />
+                </div>
+              {% endif %}
               <div class="policy-tier-header">
                 <div class="policy-tier-heading">
                   <h3 class="policy-tier-title">{{ tier.title }}</h3>
@@ -175,7 +182,7 @@
 
     {# PLACEHOLDER: this will become an interactive, multi-step dots chart. #}
     <div id="participants-dots-chart" class="chart-placeholder">
-      <img class="chart-placeholder-image" src="/public/images/ai-report/dots-chart-placeholder.png" alt="{{ modules.who_participated.chart_alt }}" />
+      <img class="chart-placeholder-image" src="/public/images/ai-report-dots-chart-placeholder.png" alt="{{ modules.who_participated.chart_alt }}" />
       <div class="chart-controls">
         <div class="segmented-toggle" role="group">
           <button type="button" class="segmented-toggle-option" aria-pressed="true" disabled>{{ modules.who_participated.toggle_region }}</button>
@@ -222,7 +229,7 @@
 
     {# PLACEHOLDER: this will become an interactive conversations ring chart with a pop-out panel. #}
     <div id="conversations-chart" class="chart-placeholder">
-      <img class="chart-placeholder-image" src="/public/images/ai-report/conversations-chart-placeholder.png" alt="{{ modules.power_of_discussion.chart_alt }}" />
+      <img class="chart-placeholder-image" src="/public/images/ai-report-conversations-chart-placeholder.png" alt="{{ modules.power_of_discussion.chart_alt }}" />
     </div>
 
     <div class="row">
@@ -247,7 +254,7 @@
 
     {# PLACEHOLDER: this will become an interactive bar chart with a category pull-down. #}
     <div id="sortition-chart" class="chart-placeholder chart-placeholder-navy">
-      <img class="chart-placeholder-image" src="/public/images/ai-report/sortition-chart-placeholder.png" alt="{{ modules.process_protagonist.chart_alt }}" />
+      <img class="chart-placeholder-image" src="/public/images/ai-report-sortition-chart-placeholder.png" alt="{{ modules.process_protagonist.chart_alt }}" />
     </div>
 
     <div class="row">
@@ -261,7 +268,8 @@
 </section>
 
 <section id="download-data" class="style-body-text section-navy">
-  <div class="container download-container">
+  <img class="download-adornment" src="/public/images/ai-report-download-adornment.svg" aria-hidden="true" alt="" />
+  <div class="container">
     <div class="row">
       <div class="col-lg-8">
         <div class="section-body">
@@ -272,7 +280,6 @@
         </div>
       </div>
     </div>
-    <img class="download-adornment" src="/public/images/download-the-data-adornment.svg" aria-hidden="true" alt="" />
   </div>
 </section>
 

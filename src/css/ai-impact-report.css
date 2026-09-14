@@ -197,6 +197,32 @@ section#ai-report-hero {
   left: -1.5rem;
   width: 90px;
   height: 90px;
+
+  @media (max-width: 575px) {
+    width: 64px;
+    height: 64px;
+    top: -1rem;
+    left: 1rem;
+  }
+}
+
+/* Sticker SVGs are 108x108 with the 90px circle offset inside; scale the box so the circle lands where the CSS circle would. */
+.policy-tier-sticker {
+  width: 108px;
+  height: 108px;
+  top: -2rem;
+  left: -2rem;
+
+  @media (max-width: 575px) {
+    width: 77px;
+    height: 77px;
+    top: -1.4rem;
+    left: 0.6rem;
+  }
+}
+
+/* PLACEHOLDER until the "Some support" sticker arrives. */
+.policy-tier-icon-placeholder {
   border-radius: 50%;
   background: linear-gradient(135deg, var(--report-orange-light), #d9853f);
   box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
@@ -210,11 +236,6 @@ section#ai-report-hero {
   }
 
   @media (max-width: 575px) {
-    width: 64px;
-    height: 64px;
-    top: -1rem;
-    left: 1rem;
-
     & img {
       width: 34px;
       height: 34px;
@@ -600,6 +621,7 @@ section#process-protagonist {
 /* ---- Download the data ---- */
 
 section#download-data {
+  position: relative;
   border-top: 1px solid rgb(255 244 235 / 0.25);
   padding: 4rem 0;
   overflow: hidden;
@@ -607,10 +629,6 @@ section#download-data {
   & .section-body p {
     font-size: 1.25rem;
   }
-}
-
-.download-container {
-  position: relative;
 }
 
 .download-button-div {
@@ -622,9 +640,10 @@ section#download-data {
 }
 
 .download-adornment {
+  /* Anchored to the viewport edge so the blue circle bleeds off the page as in the design. */
   position: absolute;
-  right: -1rem;
-  top: -4rem;
+  right: 0;
+  top: 1rem;
   width: 273px;
 
   @media (max-width: 991px) {
