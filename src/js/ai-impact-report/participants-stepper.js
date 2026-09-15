@@ -7,6 +7,7 @@
  * replace the snapshots but should keep this navigation contract:
  *
  *   .participants-stepper[data-step]      current 1-based step index
+ *   [data-last-step-only]                 shown only on the final step
  *   .participants-step[data-step]         one panel per step, hidden unless active
  *   [data-stepper-prev] / [data-stepper-next]
  *   .segmented-toggle-option[data-variant] "region" | "field"
@@ -54,8 +55,13 @@ export function initParticipantsStepper(root) {
       dot.setAttribute("aria-current", active ? "step" : "false");
     });
 
-    if (prev) prev.disabled = current <= 1;
-    if (next) next.disabled = current >= total;
+    // Arrows disappear at either end rather than greying out, per the design.
+    if (prev) prev.hidden = current <= 1;
+    if (next) next.hidden = current >= total;
+
+    for (const el of scope.querySelectorAll("[data-last-step-only]")) {
+      el.hidden = current !== total;
+    }
     if (counter)
       counter.textContent = fill(counterTemplate, { current, total });
 
@@ -84,9 +90,9 @@ export function initParticipantsStepper(root) {
     if (target === current) return;
     current = target;
     render();
-    // Keep focus on a usable control when the one just pressed becomes disabled.
-    if (delta > 0 && next?.disabled) prev?.focus();
-    if (delta < 0 && prev?.disabled) next?.focus();
+    // Keep focus on a usable control when the one just pressed disappears.
+    if (delta > 0 && next?.hidden) prev?.focus();
+    if (delta < 0 && prev?.hidden) next?.focus();
   }
 
   prev?.addEventListener("click", () => go(-1));

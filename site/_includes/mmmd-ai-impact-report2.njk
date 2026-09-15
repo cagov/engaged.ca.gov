@@ -245,31 +245,23 @@
 {# MOCKUP: horizontal stepper over static snapshots. The real multi-step dots chart
    replaces the images but keeps the navigation contract described in participants-stepper.js.
    Without JS every step renders stacked and the arrows are hidden. #}
-<section id="who-participated" class="style-body-text">
+<section id="who-participated" class="style-body-text section-off-white">
   <div class="container">
     {% set wp = modules.who_participated %}
     {% set nbr_steps = wp.nbr_steps | default(4) %}
     {% set step_icons = ["/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/comments-icon.svg"] %}
 
-    <div class="stepper-heading">
-      <h2>{{ wp.title }}</h2>
-      <div class="stepper-nav" role="group" aria-label="{{ wp.title }}">
-        <button type="button" class="stepper-arrow stepper-arrow-prev" data-stepper-prev aria-label="{{ wp.prev_label }}">
-          <span class="chevron chevron-left" aria-hidden="true"></span>
-        </button>
-        <ol class="stepper-dots">
-          {% for s in range(1, nbr_steps + 1) %}
-            <li><button type="button" class="stepper-dot" aria-label="{{ modules["who_participated_step_" + s].phase_title }}" aria-current="{% if s == 1 %}step{% else %}false{% endif %}"></button></li>
-          {% endfor %}
-        </ol>
-        <span class="stepper-counter" data-stepper-counter aria-live="polite">{{ wp.step_counter | replace("{current}", 1) | replace("{total}", nbr_steps) }}</span>
-        <button type="button" class="stepper-arrow stepper-arrow-next" data-stepper-next aria-label="{{ wp.next_label }}">
-          <span class="chevron chevron-right" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
+    <h2>{{ wp.title }}</h2>
 
     <div id="participants-stepper" class="participants-stepper" data-step="1" data-variant="region" data-step-counter="{{ wp.step_counter }}" tabindex="0">
+      {# Arrows float outside the content margins on wide screens, per the design. Hidden at either end. #}
+      <button type="button" class="stepper-arrow stepper-arrow-prev" data-stepper-prev aria-label="{{ wp.prev_label }}">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M8 3L2.5 9L8 15M3 9H15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="stepper-arrow stepper-arrow-next" data-stepper-next aria-label="{{ wp.next_label }}">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M10 3L15.5 9L10 15M15 9H2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span class="visually-hidden" data-stepper-counter aria-live="polite">{{ wp.step_counter | replace("{current}", 1) | replace("{total}", nbr_steps) }}</span>
       {% for s in range(1, nbr_steps + 1) %}
         {% set step = modules["who_participated_step_" + s] %}
         <div class="participants-step" id="who-participated-step-{{ s }}" data-step="{{ s }}" role="group" aria-roledescription="step" aria-label="{{ step.phase_title }}">
@@ -290,6 +282,10 @@
             <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ wp.toggle_region }}</button>
             <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ wp.toggle_field_of_work }}</button>
           </div>
+          <ul class="chart-legend participant-legend" data-last-step-only hidden>
+            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ wp.legend_participant }}</li>
+            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ wp.legend_facilitator }}</li>
+          </ul>
         </div>
         <ul class="chart-legend region-legend" aria-label="{{ wp.toggle_region }}">
           {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
@@ -303,7 +299,7 @@
 </section>
 
 {# ------------------------------------------------- What happens next #}
-<section id="what-happens-next" class="style-body-text section-off-white">
+<section id="what-happens-next" class="style-body-text">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
