@@ -1,0 +1,459 @@
+---
+title: Keep humans in the loop
+description: "Californians say how AI should be built, governed, and used. Engaged California asked Californians how AI is reshaping work and the economy, and what government should do about it."
+layout: mmmd-ai-impact-report2
+parentid: ai-impact
+keywords:
+  - California
+  - artificial intelligence
+  - AI
+  - work
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: Californians say how AI should be built, governed, and used
+----
+# Keep humans in the loop
+
+We asked Californians some of the hardest questions facing the state:
+
+*How is AI reshaping work and the economy? What should government do about it?*
+
+----
+id: public_forum
+----
+## A public forum on AI
+
+In May 2026, we opened a public forum on the Impact of AI on work. Over many months, a cross-section of the public came together to give us their thoughts. They took polls and joined facilitated group discussions. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas.
+
+One idea came up consistently: **We need humans in the AI policy loop.** Not only in how AI tools are used day-to-day, but in how they are built and governed.
+
+----
+id: participation_numbers
+participants_count: "2,702"
+participants_label: survey participants
+conversations_count: "14"
+conversations_label: conversations
+ideas_count: "27"
+ideas_label: policy ideas
+----
+
+----
+id: what_we_heard
+----
+## What we heard
+
+In the discussions, people proposed a wide range of policy ideas about AI's impact on work and the economy.
+
+----
+id: word_cloud
+chart_alt: "Word cloud of the most common words in poll responses."
+placeholder_label: "Word cloud visualization (placeholder)"
+----
+
+----
+id: ranking
+----
+We grouped these into 27 distinct ideas. Then we ranked them according to:
+
+- How often an idea came up across discussions (frequency), and
+- How much support it drew when it did (how often it was a popular idea).
+
+That ranking sorts the concepts into three tiers:
+
+----
+id: tiers_ui
+translator_note: "{count} is replaced with a number. Keep it in the translation."
+count_label: "{count} policy ideas"
+show_label: Show
+show_more_label: "Show {count} more"
+close_label: Close
+show_all_label: "Show all {count} ideas"
+close_all_label: Close all
+example_ideas_label: "Example ideas:"
+nbr_tiers: 3
+initial_visible_ideas: 3
+----
+
+----
+id: tier_1
+title: Most support
+subtitle: Came up often and with strong support
+icon: sparkle
+nbr_ideas: 10
+----
+
+----
+id: tier_2
+title: Moderate support
+subtitle: Came up either often, or with strong support, but not both
+icon: heart
+nbr_ideas: 7
+----
+
+----
+id: tier_3
+title: Some support
+subtitle: Came up less often and with less support
+icon: speech
+nbr_ideas: 10
+----
+
+----
+id: tier_1_idea_1
+title: Hold AI companies liable for harm they cause
+----
+Participants wanted clear accountability when AI systems cause damage, placing responsibility on the companies that build and deploy them rather than on the people affected.
+
+- Make companies accountable and enact criminal liability for any harm their AI products cause
+- Increase capacity / resources for effective enforcement
+
+----
+id: tier_1_idea_2
+title: Protect people and nature from the resource needs of data centers
+----
+Concern about the physical footprint of AI, its demands on energy, water, and land, and a call to shield communities and the environment from those costs.
+
+- Scrutiny of the impact of data centers/physical systems on environment
+- Specific limits set for the amount of water, water discharge, and energy usage, and other potential local impacts (e.g. noise output) by data centers/companies and should be rigorously tested and reviewed
+
+----
+id: tier_1_idea_3
+title: Set rules for where AI can be used safely
+----
+Set domain-specific rules that keep human judgment in the decisions that most affect people's lives.
+
+- Regulate how AI is used to make decisions that impact lives
+- Automation technologies used in the hiring process should be banned
+
+----
+id: tier_1_idea_4
+title: Set rules around how AI works
+----
+
+----
+id: tier_1_idea_5
+title: Deter layoffs because of AI, reward firms that keep or add workers
+----
+
+----
+id: tier_1_idea_6
+title: Make AI policymaking more open to the public
+----
+
+----
+id: tier_1_idea_7
+title: Make companies follow rules and be open about how they handle personal data
+----
+
+----
+id: tier_1_idea_8
+title: Make companies reskill or give career help to workers who lose their jobs to AI
+----
+
+----
+id: tier_1_idea_9
+title: Set rules for labeling when AI is used
+----
+
+----
+id: tier_1_idea_10
+title: Restrict and tax AI companies’ profits
+----
+
+----
+id: tier_2_idea_1
+title: Hold AI companies liable if they use the work of others without permission
+----
+
+----
+id: tier_2_idea_2
+title: Make people aware of how to use AI ethically
+----
+
+----
+id: tier_2_idea_3
+title: Improve AI education in schools
+----
+
+----
+id: tier_2_idea_4
+title: Allow people to opt out of AI and make that easier
+----
+
+----
+id: tier_2_idea_5
+title: Support independent research on AI's effects
+----
+
+----
+id: tier_2_idea_6
+title: Limit what personal data AI systems can collect, and let users manage their data
+----
+
+----
+id: tier_2_idea_7
+title: Pay workers who lose jobs due to AI while they find new jobs
+----
+
+----
+id: tier_3_idea_1
+title: Support AI training for workers
+----
+
+----
+id: tier_3_idea_2
+title: Make sure privacy is protected
+----
+
+----
+id: tier_3_idea_3
+title: Use AI to improve how government works
+----
+
+----
+id: tier_3_idea_4
+title: Keep humans in the loop as decision-makers, don't rely solely on AI
+----
+
+----
+id: tier_3_idea_5
+title: Strengthen parental controls for AI use
+----
+
+----
+id: tier_3_idea_6
+title: Fund programs for human connection and life outside of AI
+----
+
+----
+id: tier_3_idea_7
+title: Make sure students don't use AI to avoid learning
+----
+
+----
+id: tier_3_idea_8
+title: Keep companies from firing or punishing workers for not using AI
+----
+
+----
+id: tier_3_idea_9
+title: Track and report on job loss due to AI
+----
+
+----
+id: tier_3_idea_10
+title: Use AI for jobs people don’t want to do or can’t do
+----
+
+----
+id: how_to_read_tiers
+----
+**How to read these tiers**
+
+The ranking shows how an idea fared across discussions. It's not a verdict on its merit. An idea in the "Some support" tier may still matter a great deal to many people.
+
+These are the ideas participants voiced. They are separate from what current policy or legislation may already do. Some may align with items already moving through the policy landscape.
+
+----
+id: power_of_discussion
+title: The power of the discussion
+phase_label: Phase 2
+phase_title: Participants shared their thoughts, concerns, and solutions
+phase_subtitle: Look inside the conversations to see how policy ideas took shape
+stat_count: "14"
+stat_label: conversations
+chart_alt: "Ring of 14 small clusters of dots, one per conversation, with one conversation opened to show quotes from participants and the policy concept it produced."
+translator_note_copy: "The paragraphs below are draft copy carried over from an earlier report and will be replaced."
+----
+
+----
+id: region_legend
+nbr_regions: 9
+region_1: Los Angeles
+region_2: Bay Area
+region_3: Southern California
+region_4: Sacramento Valley / Sierra Foothills
+region_5: Central Valley
+region_6: Far North / North Coast
+region_7: Central Coast
+region_8: Sierra Region
+region_9: Not stated
+----
+
+----
+id: download_data
+button_text: Download the full dataset
+----
+## Download the comments
+
+The comments dataset does not contain personally identifying information. We have not edited or modified the comments in any way.
+
+----
+id: who_participated
+title: Who participated
+nbr_steps: 4
+toggle_region: Region
+toggle_field_of_work: Field of work
+legend_participant: Participant
+legend_facilitator: Facilitator
+----
+
+----
+id: who_participated_step_1
+phase_label: Phase 1
+phase_title: Broad listening
+stat_count: "2,700+"
+stat_label: survey respondents
+phase_subtitle: "2,700+ Californians responded to a survey"
+chart_image: /public/images/ai-report-dots-chart-placeholder.png
+chart_alt: "Scatter plot of dots, one per survey respondent, colored by region."
+----
+
+----
+id: who_participated_step_2
+phase_label: Phase 2
+phase_title: Inviting a balanced audience
+stat_count: "1,246"
+stat_label: invited
+phase_subtitle: "We selected a subset of respondents that reflects California"
+chart_image: /public/images/ai-report-dots-chart-placeholder.png
+chart_alt: "Scatter plot of dots, one per invited respondent, colored by region."
+----
+
+----
+id: who_participated_step_3
+phase_label: Phase 2
+phase_title: Joining the conversation
+stat_count: "103"
+stat_label: attended
+phase_subtitle: "These Californians RSVP’d “yes” and joined a discussion"
+chart_image: /public/images/ai-report-dots-chart-placeholder.png
+chart_alt: "Scatter plot of dots, one per discussion attendee, colored by region."
+----
+
+----
+id: who_participated_step_4
+phase_label: Phase 2
+phase_title: The discussion groups
+stat_count: "14"
+stat_label: conversations
+phase_subtitle: "Here are the demographics of each discussion"
+chart_image: /public/images/ai-report-conversation-ring-placeholder.png
+chart_alt: "Ring of 14 small clusters of dots, one per conversation, colored by region."
+----
+
+----
+id: what_happens_next
+translator_note_copy: "Text in parentheses is a placeholder note for the writers, and the remaining paragraphs are draft copy carried over from an earlier report."
+----
+## What happens next
+
+(point to relevant actions and commitments from state gov, etc)
+
+We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics.
+
+AI helped during our analysis. Our team checked all the findings to ensure they were relevant and accurate. We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
+
+**Sample prompts**
+
+“I would like you to analyze a set of qualitative survey responses using extended thinking.”
+
+“Start by doing an initial exploration of the data: First, read through the entire dataset without categorizing or labeling. Note your immediate observations and impressions about what stands out to you. Identify recurring words, phrases, and sentiments that appear across multiple responses. Share what surprised you or caught your attention in this initial review.”
+
+----
+id: how_we_did_this_work
+title: How we did this work
+----
+
+----
+id: balancing_groups
+chart_alt: "Bar chart comparing Phase 1 and Phase 2 participants to demographic targets by region, in percentage points from target."
+----
+### Balancing each group, fairly
+
+Our *Impact of AI on work* engagement had two phases. In Phase 1, any Californian could share their views through an open online survey. For Phase 2, we invited a smaller group of those who responded to live, moderated discussions. We needed a way to decide who to invite that was fair to all respondents.
+
+To choose those participants, we used an approach called sortition, which is similar to how juries are chosen. It is built on two equally important ideas.
+
+The first is **representation**. We set demographic goals based on California population estimates. This would make the final group reflect the diversity of the state across things like age, geography, and field of work.
+
+The second is **randomness**. Within those goals, everyone who fit had an equal chance of being selected.
+
+Together, these principles ensured our deeper conversations weren't shaped only by those who happened to respond first. It let us build a group that was fairly chosen and roughly reflective of Californians as a whole.
+
+----
+id: demographics_chart
+title: Demographics
+pulldown_label: Region
+chart_title: "Phase 1 and Phase 2 – percentage points from target"
+chart_alt: "Bar chart comparing Phase 1 and Phase 2 participants to demographic targets by region, in percentage points from target."
+----
+
+----
+id: process_links
+----
+**Links**
+
+- Our sortition code: [https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
+- Sortition Foundation “Why sortition algorithms” [https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html)
+
+**Sources for each category targets**
+
+- Geography: *Rationale: Every region gets a guaranteed voice (Min 6), with the remaining seats filled proportionally by California's 2026 population density using American Community Survey (ACS) estimates.*
+- Industry: *Rationale: Based on California Employment Development Department’s Industry Employment & Labor Force (CES) statistics (for April 2026).* The memo to the Governor’s Office specifically calls out logistics, healthcare, legal and financial services, creative industries, the public sector, and academia as priority sectors, reflected in categories below. [https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf](https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf) [https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces](https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces)
+- Age: *Rationale: Mirrors 2026 Census/ CA DOF projections.*
+- Gender: *Rationale: Mirrors 2026 Census/ CA DOF projections.*
+- Race / Ethnicity: *Rationale: Mirrors 2026 Census/ CA DOF projections.*
+
+----
+id: analyzing_results
+translator_note_copy: "Text in parentheses is a placeholder note for the writers, and the remaining paragraphs are draft copy carried over from an earlier report."
+----
+### Analyzing results
+
+(high level text based description of our processes for sortition, analysis, etc along with links to other places where we go into these topics in more detail)
+
+For a deeper look, [check out our detailed methodology and comments analysis](#).
+
+We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics.
+
+AI helped during our analysis. Our team checked all the findings to ensure they were relevant and accurate. We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
+
+**Sample prompts**
+
+“I would like you to analyze a set of qualitative survey responses using extended thinking.”
+
+“Start by doing an initial exploration of the data: First, read through the entire dataset without categorizing or labeling. Note your immediate observations and impressions about what stands out to you. Identify recurring words, phrases, and sentiments that appear across multiple responses. Share what surprised you or caught your attention in this initial review.”
+
+----
+id: sign_up
+buttonText_getupdates: Get updates
+----
+## Join the conversation
+
+We’ll send you updates when new topics open.

@@ -518,7 +518,7 @@ section#ai-report-hero {
   }
 }
 
-.chart-legend {
+.style-body-text .chart-legend {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -649,4 +649,109 @@ section#sign-up.action-form {
     text-align: center;
     margin: 0 auto;
   }
+}
+
+/* ---- report2 additions: reordered structure ---- */
+
+/* Empty placeholder box for visualizations that have no design yet (word cloud). */
+.chart-placeholder-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  border: 2px dashed var(--report-rule);
+  border-radius: 8px;
+  background: #f6f7fa;
+  color: #777;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.chart-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.chart-controls-row .segmented-toggle {
+  margin-bottom: 0;
+}
+
+.participant-legend .swatch-participant {
+  background: var(--report-navy);
+}
+
+.participant-legend .swatch-facilitator {
+  background: #fff;
+  border: 3px solid var(--report-navy);
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+}
+
+.participation-step .chart-placeholder-image {
+  max-width: 660px;
+}
+
+.participation-step {
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--report-rule);
+
+  &:first-of-type {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+section#how-we-did-this-work {
+  & h2 {
+    color: var(--report-off-white);
+    margin-bottom: 2rem;
+  }
+
+  & h3 {
+    font-size: 1.75rem;
+    margin: 0 0 1.25rem;
+  }
+
+  & .section-body > p {
+    font-size: 1.25rem;
+  }
+
+  & .process-links,
+  & .analyzing-results {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 2rem;
+  }
+
+  & .process-links p,
+  & .analyzing-results p,
+  & .analyzing-results li {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  & .process-links ul {
+    margin-bottom: 1.5rem;
+  }
+
+  & .analyzing-results h3 {
+    margin-top: 1rem;
+  }
+
+  & .analyzing-results a {
+    color: var(--report-off-white);
+  }
+}
+
+.demographics-title {
+  color: var(--report-off-white);
+  font-size: 1.4375rem;
+  margin: 0 0 1rem !important;
 }
