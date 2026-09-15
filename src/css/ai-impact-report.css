@@ -367,9 +367,7 @@ section#ai-report-hero {
 }
 
 .policy-idea-examples-label {
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  letter-spacing: 0.04em;
+  font-weight: 700;
   color: var(--report-body);
 }
 
@@ -574,30 +572,6 @@ section#ai-report-hero {
   --swatch: #bdbdbd;
 }
 
-/* ---- The process is the protagonist ---- */
-
-section#process-protagonist {
-  padding-bottom: 3rem;
-
-  & .section-body > p {
-    font-size: 1.25rem;
-  }
-
-  & .process-links {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  & .process-links p {
-    font-size: 1.125rem;
-    margin-bottom: 0.75rem;
-  }
-
-  & .process-links ul {
-    margin-bottom: 1.5rem;
-  }
-}
-
 /* ---- Download the comments (inside the discussion band) ---- */
 
 #download-data {
@@ -727,10 +701,6 @@ section#how-we-did-this-work {
   & h3 {
     font-size: 1.75rem;
     margin: 0 0 1.25rem;
-  }
-
-  & .section-body > p {
-    font-size: 1.25rem;
   }
 
   & .process-links {
