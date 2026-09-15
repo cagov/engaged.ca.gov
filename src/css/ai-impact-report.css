@@ -750,6 +750,19 @@ section#how-we-did-this-work {
   }
 }
 
+section#how-we-did-this-work .demographics-intro {
+  margin-bottom: 1.5rem;
+
+  & p,
+  & li {
+    font-size: 1.125rem;
+  }
+
+  & ul {
+    margin-bottom: 0;
+  }
+}
+
 .demographics-title {
   color: var(--report-off-white);
   font-size: 1.4375rem;

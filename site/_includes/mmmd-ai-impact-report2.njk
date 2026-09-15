@@ -234,7 +234,7 @@
           {{ modules.download_data.content | safe }}
         </div>
         <div class="download-button-div">
-          <a data-appearance="button" data-theme="orange" href="/public/data/ai-impact-report.zip" download>{{ modules.download_data.button_text }}</a>
+          <a data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ modules.download_data.button_text }}</a>
         </div>
       </div>
     </div>
@@ -291,7 +291,14 @@
 
     {# PLACEHOLDER: this will become an interactive bar chart with a category pull-down. #}
     <div id="sortition-chart" class="chart-placeholder chart-placeholder-navy">
-      <h4 class="demographics-title">{{ modules.demographics_chart.title }}</h4>
+      <div class="row">
+        <div class="col-lg-8">
+          <h4 class="demographics-title">{{ modules.demographics_chart.title }}</h4>
+          <div class="section-body demographics-intro">
+            {{ modules.demographics_chart.content | safe }}
+          </div>
+        </div>
+      </div>
       <img class="chart-placeholder-image" src="/public/images/ai-report-sortition-chart-placeholder.png" alt="{{ modules.demographics_chart.chart_alt }}" />
     </div>
 
@@ -317,7 +324,7 @@
     {{ modules.sign_up.content | safe }}
 
     <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
-      {{ modules.sign_up.buttonText_getupdates }}
+      {{ modules.sign_up.button_text }}
     </a>
   </div>
 </section>
