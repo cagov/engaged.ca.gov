@@ -673,7 +673,7 @@ section#stay-informed {
   }
 }
 
-/* ---- report2 additions: reordered structure ---- */
+/* ---- Word cloud placeholder, chart controls, methodology ---- */
 
 /* Empty placeholder box for visualizations that have no design yet (word cloud). */
 .chart-placeholder-empty {
@@ -684,9 +684,13 @@ section#stay-informed {
   border: 2px dashed var(--report-rule);
   border-radius: 8px;
   background: #f6f7fa;
-  color: #777;
-  font-size: 1rem;
+  color: #595959;
   font-style: italic;
+
+  & .chart-placeholder-empty-label {
+    font-size: 1rem;
+    margin: 0;
+  }
 }
 
 .chart-controls-row {

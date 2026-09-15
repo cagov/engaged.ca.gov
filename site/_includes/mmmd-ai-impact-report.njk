@@ -2,7 +2,6 @@
 {% extends "layout.njk" %}
 {% block content %}
 
-{# Page-specific styles and scripts. Only loaded on this report. #}
 <link rel="stylesheet" href="/css/ai-impact-report.css" />
 
 {% set ui = modules.tiers_ui %}
@@ -20,6 +19,51 @@
   "speech": "/public/images/ai-report-tier-some-support.svg"
 } %}
 
+{# Reusable: Region / Field of work toggle plus region legend. Static until the charts are built. #}
+{% macro chart_controls(toggle_region, toggle_field_of_work, legend, show_participant_legend, participant_label, facilitator_label) %}
+  <div class="chart-controls">
+    <div class="chart-controls-row">
+      <div class="segmented-toggle" role="group">
+        <button type="button" class="segmented-toggle-option" aria-pressed="true" disabled>{{ toggle_region }}</button>
+        <button type="button" class="segmented-toggle-option" aria-pressed="false" disabled>{{ toggle_field_of_work }}</button>
+      </div>
+      {% if show_participant_legend %}
+        <ul class="chart-legend participant-legend">
+          <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ participant_label }}</li>
+          <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ facilitator_label }}</li>
+        </ul>
+      {% endif %}
+    </div>
+    <ul class="chart-legend region-legend" aria-label="{{ toggle_region }}">
+      {% set nbr_regions = legend.nbr_regions | default(9) %}
+      {% for r in range(1, nbr_regions + 1) %}
+        <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ legend["region_" + r] }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endmacro %}
+
+{# Reusable: Phase label + title + subtitle on the left, one stat on the right. #}
+{% macro phase_header(step, icon) %}
+  <div class="row phase-row">
+    <div class="col-lg-8">
+      <p class="phase-label">{{ step.phase_label }}</p>
+      <h3 class="phase-title">{{ step.phase_title }}</h3>
+      <p class="phase-subtitle">{{ step.phase_subtitle }}</p>
+    </div>
+    <div class="col-lg-4">
+      <div class="participation-sidebar">
+        <div class="participation-stat">
+          <img src="{{ icon }}" alt="" aria-hidden="true" />
+          <div class="stat-number">{{ step.stat_count }}</div>
+          <div class="stat-label">{{ step.stat_label }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{# ---------------------------------------------------------------- Hero #}
 <section id="ai-report-hero" class="hero">
   <div class="container hero-container">
     <div class="row">
@@ -32,6 +76,7 @@
   </div>
 </section>
 
+{# ------------------------------------------------- What: A public forum on AI #}
 <section id="public-forum" class="style-body-text section-off-white">
   <div class="container">
     <div class="row">
@@ -63,12 +108,22 @@
   </div>
 </section>
 
+{# ------------------------------------------------- Results: What we heard #}
 <section id="what-we-heard" class="style-body-text">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
         <div class="section-body">
           {{ modules.what_we_heard.content | safe }}
+        </div>
+
+        {# PLACEHOLDER: word cloud of poll responses. No design yet. #}
+        <div id="word-cloud" class="chart-placeholder chart-placeholder-empty">
+          <p class="chart-placeholder-empty-label">{{ modules.word_cloud.placeholder_label }}</p>
+        </div>
+
+        <div class="section-body">
+          {{ modules.ranking.content | safe }}
         </div>
 
         {# Policy idea tiers. Rendered fully expanded; JS applies the collapsed default state. #}
@@ -151,35 +206,78 @@
   </div>
 </section>
 
-<section id="who-participated" class="style-body-text section-off-white">
+{# ------------------------------- Results, continued: The power of discussion #}
+<section id="power-of-discussion" class="style-body-text section-light">
   <div class="container">
-    <h2>{{ modules.who_participated.title }}</h2>
-    <div class="row phase-row">
+    <h2>{{ modules.power_of_discussion.title }}</h2>
+    {{ phase_header(modules.power_of_discussion, "/public/images/comments-icon.svg") }}
+
+    {# PLACEHOLDER: this will become an interactive conversations ring chart with a pop-out panel. #}
+    <div id="conversations-chart" class="chart-placeholder">
+      <img class="chart-placeholder-image" src="/public/images/ai-report-conversations-chart-placeholder.png" alt="{{ modules.power_of_discussion.chart_alt }}" />
+    </div>
+
+    {# Download the comments: an H3 sub-block of this section, per the writer's outline. #}
+    <div id="download-data" class="row">
       <div class="col-lg-8">
-        <p class="phase-label">{{ modules.who_participated.phase_label }}</p>
-        <h3 class="phase-title">{{ modules.who_participated.phase_title }}</h3>
-        <p class="phase-subtitle">{{ modules.who_participated.phase_subtitle }}</p>
-      </div>
-      <div class="col-lg-4">
-        <div class="participation-sidebar">
-          <div class="participation-stat">
-            <img src="/public/images/staff-icon.svg" alt="" aria-hidden="true" />
-            <div class="stat-number">{{ modules.who_participated.stat_count }}</div>
-            <div class="stat-label">{{ modules.who_participated.stat_label }}</div>
-          </div>
+        <div class="section-body">
+          {{ modules.download_data.content | safe }}
+        </div>
+        <div class="download-button-div">
+          <a class="download-button-link" data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ modules.download_data.button_text }}</a>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    {# PLACEHOLDER: this will become an interactive, multi-step dots chart. #}
-    <div id="participants-dots-chart" class="chart-placeholder">
-      <img class="chart-placeholder-image" src="/public/images/ai-report-dots-chart-placeholder.png" alt="{{ modules.who_participated.chart_alt }}" />
-      <div class="chart-controls">
-        <div class="segmented-toggle" role="group">
-          <button type="button" class="segmented-toggle-option" aria-pressed="true" disabled>{{ modules.who_participated.toggle_region }}</button>
-          <button type="button" class="segmented-toggle-option" aria-pressed="false" disabled>{{ modules.who_participated.toggle_field_of_work }}</button>
+{# ------------------------------------------------- Who participated (4 steps) #}
+{# MOCKUP: horizontal stepper over static snapshots. The real multi-step dots chart
+   replaces the images but keeps the navigation contract described in participants-stepper.js.
+   Without JS every step renders stacked and the arrows are hidden. #}
+<section id="who-participated" class="style-body-text">
+  <div class="container">
+    {% set wp = modules.who_participated %}
+    {% set nbr_steps = wp.nbr_steps | default(4) %}
+    {% set step_icons = ["/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/comments-icon.svg"] %}
+
+    <h2>{{ wp.title }}</h2>
+
+    <div id="participants-stepper" class="participants-stepper" data-step="1" data-variant="region" data-step-counter="{{ wp.step_counter }}" tabindex="0">
+      {# Arrows float outside the content margins on wide screens, per the design. Hidden at either end. #}
+      <button type="button" class="stepper-arrow stepper-arrow-prev" data-stepper-prev aria-label="{{ wp.prev_label }}">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M8 3L2.5 9L8 15M3 9H15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="stepper-arrow stepper-arrow-next" data-stepper-next aria-label="{{ wp.next_label }}">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M10 3L15.5 9L10 15M15 9H2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span class="visually-hidden" data-stepper-counter aria-live="polite">{{ wp.step_counter | replace("{current}", 1) | replace("{total}", nbr_steps) }}</span>
+      {% for s in range(1, nbr_steps + 1) %}
+        {% set step = modules["who_participated_step_" + s] %}
+        <div class="participants-step" id="who-participated-step-{{ s }}" data-step="{{ s }}" role="group" aria-roledescription="step" aria-label="{{ step.phase_title }}">
+          {{ phase_header(step, step_icons[s - 1]) }}
+          <div class="chart-placeholder">
+            <img class="chart-placeholder-image"
+                 src="{{ step.chart_image_region }}"
+                 data-src-region="{{ step.chart_image_region }}"
+                 data-src-field="{{ step.chart_image_field }}"
+                 alt="{{ step.chart_alt }}" />
+          </div>
         </div>
-        <ul class="chart-legend region-legend" aria-label="{{ modules.who_participated.toggle_region }}">
+      {% endfor %}
+
+      <div class="chart-controls">
+        <div class="chart-controls-row">
+          <div class="segmented-toggle" role="group">
+            <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ wp.toggle_region }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ wp.toggle_field_of_work }}</button>
+          </div>
+          <ul class="chart-legend participant-legend" data-last-step-only hidden>
+            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ wp.legend_participant }}</li>
+            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ wp.legend_facilitator }}</li>
+          </ul>
+        </div>
+        <ul class="chart-legend region-legend" aria-label="{{ wp.toggle_region }}">
           {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
           {% for r in range(1, nbr_regions + 1) %}
             <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
@@ -187,105 +285,10 @@
         </ul>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="section-body">
-          {{ modules.who_participated.content | safe }}
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<section id="power-of-discussion" class="style-body-text">
-  <div class="container">
-    <h2>{{ modules.power_of_discussion.title }}</h2>
-    <div class="row phase-row">
-      <div class="col-lg-8">
-        <p class="phase-label">{{ modules.power_of_discussion.phase_label }}</p>
-        <h3 class="phase-title">{{ modules.power_of_discussion.phase_title }}</h3>
-        <p class="phase-subtitle">{{ modules.power_of_discussion.phase_subtitle }}</p>
-      </div>
-      <div class="col-lg-4">
-        <div class="participation-sidebar">
-          <div class="participation-stat">
-            <img src="/public/images/comments-icon.svg" alt="" aria-hidden="true" />
-            <div class="stat-number">{{ modules.power_of_discussion.stat_count }}</div>
-            <div class="stat-label">{{ modules.power_of_discussion.stat_label }}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {# PLACEHOLDER: this will become an interactive conversations ring chart with a pop-out panel. #}
-    <div id="conversations-chart" class="chart-placeholder">
-      <img class="chart-placeholder-image" src="/public/images/ai-report-conversations-chart-placeholder.png" alt="{{ modules.power_of_discussion.chart_alt }}" />
-    </div>
-
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="section-body">
-          {{ modules.power_of_discussion.content | safe }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="process-protagonist" class="style-body-text section-navy">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="section-body">
-          {{ modules.process_protagonist.content | safe }}
-        </div>
-      </div>
-    </div>
-
-    {# PLACEHOLDER: this will become an interactive bar chart with a category pull-down. #}
-    <div id="sortition-chart" class="chart-placeholder chart-placeholder-navy">
-      <img class="chart-placeholder-image" src="/public/images/ai-report-sortition-chart-placeholder.png" alt="{{ modules.process_protagonist.chart_alt }}" />
-    </div>
-
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="section-body process-links">
-          {{ modules.process_links.content | safe }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="download-data" class="style-body-text section-navy">
-  <img class="download-adornment" src="/public/images/ai-report-download-adornment.svg" aria-hidden="true" alt="" />
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="section-body">
-          {{ modules.download_data.content | safe }}
-        </div>
-        <div class="download-button-div">
-          <a data-appearance="button" data-theme="orange" href="/public/data/ai-impact-report.zip" download>{{ modules.download_data.button_text }}</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="analysis" class="style-body-text">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="section-body">
-          {{ modules.analysis.content | safe }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+{# ------------------------------------------------- What happens next #}
 <section id="what-happens-next" class="style-body-text section-off-white">
   <div class="container">
     <div class="row">
@@ -298,16 +301,76 @@
   </div>
 </section>
 
-<section id="sign-up" class="action-form">
-  <div class="container form-flex">
-    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
-    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
+{# ------------------------------------------------- How we did this work #}
+<section id="how-we-did-this-work" class="style-body-text section-navy">
+  <div class="container">
+    <h2>{{ modules.how_we_did_this_work.title }}</h2>
 
-    {{ modules.sign_up.content | safe }}
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.balancing_groups.content | safe }}
+        </div>
+      </div>
+    </div>
 
-    <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
-      {{ modules.sign_up.buttonText_getupdates }}
-    </a>
+    {# PLACEHOLDER: this will become an interactive bar chart with a category pull-down.
+       One "Source for targets" entry shows at a time, matching the selected category. #}
+    <div id="sortition-chart" class="chart-placeholder chart-placeholder-navy">
+      <div class="row">
+        <div class="col-lg-8">
+          <h4 class="demographics-title">{{ modules.demographics_chart.title }}</h4>
+          <div class="section-body demographics-intro">
+            {{ modules.demographics_chart.content | safe }}
+          </div>
+        </div>
+      </div>
+      <img class="chart-placeholder-image" src="/public/images/ai-report-sortition-chart-placeholder.png" alt="{{ modules.demographics_chart.chart_alt }}" />
+      <div class="demographics-source style-small-text" data-source-for="region">
+        <p class="demographics-source-label">{{ modules.demographics_sources.label }}</p>
+        <ul>
+          <li>{{ modules.demographics_sources.source_region | safe }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body process-links">
+          {{ modules.process_links.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="analyzing-results" class="style-body-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.analyzing_results.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ------------------------------------------------- Sign up (left-aligned, as on the efficiency report) #}
+<section id="stay-informed" class="style-body-text section-navy">
+  <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
+  <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="signup-engaged-section">
+          {{ modules.sign_up.content | safe }}
+          <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
+            {{ modules.sign_up.button_text }}
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
