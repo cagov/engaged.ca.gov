@@ -242,24 +242,63 @@
 </section>
 
 {# ------------------------------------------------- Who participated (4 steps) #}
-{# PLACEHOLDER: this will become a single multi-step dots chart with step navigation.
-   For now each step is rendered as its own block so the copy can be reviewed. #}
+{# MOCKUP: horizontal stepper over static snapshots. The real multi-step dots chart
+   replaces the images but keeps the navigation contract described in participants-stepper.js.
+   Without JS every step renders stacked and the arrows are hidden. #}
 <section id="who-participated" class="style-body-text">
   <div class="container">
-    <h2>{{ modules.who_participated.title }}</h2>
     {% set wp = modules.who_participated %}
     {% set nbr_steps = wp.nbr_steps | default(4) %}
     {% set step_icons = ["/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/comments-icon.svg"] %}
-    {% for s in range(1, nbr_steps + 1) %}
-      {% set step = modules["who_participated_step_" + s] %}
-      <div class="participation-step" id="who-participated-step-{{ s }}" data-step="{{ s }}">
-        {{ phase_header(step, step_icons[s - 1]) }}
-        <div class="chart-placeholder">
-          <img class="chart-placeholder-image" src="{{ step.chart_image }}" alt="{{ step.chart_alt }}" />
-          {{ chart_controls(wp.toggle_region, wp.toggle_field_of_work, modules.region_legend, s == nbr_steps, wp.legend_participant, wp.legend_facilitator) }}
-        </div>
+
+    <div class="stepper-heading">
+      <h2>{{ wp.title }}</h2>
+      <div class="stepper-nav" role="group" aria-label="{{ wp.title }}">
+        <button type="button" class="stepper-arrow stepper-arrow-prev" data-stepper-prev aria-label="{{ wp.prev_label }}">
+          <span class="chevron chevron-left" aria-hidden="true"></span>
+        </button>
+        <ol class="stepper-dots">
+          {% for s in range(1, nbr_steps + 1) %}
+            <li><button type="button" class="stepper-dot" aria-label="{{ modules["who_participated_step_" + s].phase_title }}" aria-current="{% if s == 1 %}step{% else %}false{% endif %}"></button></li>
+          {% endfor %}
+        </ol>
+        <span class="stepper-counter" data-stepper-counter aria-live="polite">{{ wp.step_counter | replace("{current}", 1) | replace("{total}", nbr_steps) }}</span>
+        <button type="button" class="stepper-arrow stepper-arrow-next" data-stepper-next aria-label="{{ wp.next_label }}">
+          <span class="chevron chevron-right" aria-hidden="true"></span>
+        </button>
       </div>
-    {% endfor %}
+    </div>
+
+    <div id="participants-stepper" class="participants-stepper" data-step="1" data-variant="region" data-step-counter="{{ wp.step_counter }}" tabindex="0">
+      {% for s in range(1, nbr_steps + 1) %}
+        {% set step = modules["who_participated_step_" + s] %}
+        <div class="participants-step" id="who-participated-step-{{ s }}" data-step="{{ s }}" role="group" aria-roledescription="step" aria-label="{{ step.phase_title }}">
+          {{ phase_header(step, step_icons[s - 1]) }}
+          <div class="chart-placeholder">
+            <img class="chart-placeholder-image"
+                 src="{{ step.chart_image_region }}"
+                 data-src-region="{{ step.chart_image_region }}"
+                 data-src-field="{{ step.chart_image_field }}"
+                 alt="{{ step.chart_alt }}" />
+          </div>
+        </div>
+      {% endfor %}
+
+      <div class="chart-controls">
+        <div class="chart-controls-row">
+          <div class="segmented-toggle" role="group">
+            <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ wp.toggle_region }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ wp.toggle_field_of_work }}</button>
+          </div>
+        </div>
+        <ul class="chart-legend region-legend" aria-label="{{ wp.toggle_region }}">
+          {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
+          {% for r in range(1, nbr_regions + 1) %}
+            <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 

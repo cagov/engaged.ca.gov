@@ -325,6 +325,10 @@ toggle_region: Region
 toggle_field_of_work: Field of work
 legend_participant: Participant
 legend_facilitator: Facilitator
+prev_label: Previous step
+next_label: Next step
+translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
+step_counter: "{current} of {total}"
 ----
 
 ----
@@ -334,7 +338,8 @@ phase_title: Broad listening
 stat_count: "2,700+"
 stat_label: survey respondents
 phase_subtitle: "Californians responded to our open survey on AI"
-chart_image: /public/images/ai-report-dots-chart-placeholder.png
+chart_image_region: /public/images/ai-report-participants-step1-region.png
+chart_image_field: /public/images/ai-report-participants-step1-field.png
 chart_alt: "Scatter plot of dots, one per survey respondent, colored by region."
 ----
 
@@ -345,7 +350,8 @@ phase_title: Inviting a balanced audience
 stat_count: "1,246"
 stat_label: invited
 phase_subtitle: "We selected a subset of respondents that reflects California"
-chart_image: /public/images/ai-report-dots-chart-placeholder.png
+chart_image_region: /public/images/ai-report-participants-step2-region.png
+chart_image_field: /public/images/ai-report-participants-step2-field.png
 chart_alt: "Scatter plot of dots, one per invited respondent, colored by region."
 ----
 
@@ -356,7 +362,8 @@ phase_title: Joining the conversation
 stat_count: "103"
 stat_label: attended
 phase_subtitle: "These Californians RSVP’d “yes” and joined a discussion"
-chart_image: /public/images/ai-report-dots-chart-placeholder.png
+chart_image_region: /public/images/ai-report-participants-step3-region.png
+chart_image_field: /public/images/ai-report-participants-step3-field.png
 chart_alt: "Scatter plot of dots, one per discussion attendee, colored by region."
 ----
 
@@ -367,7 +374,8 @@ phase_title: The discussion groups
 stat_count: "14"
 stat_label: conversations
 phase_subtitle: "Here are the demographics of each discussion"
-chart_image: /public/images/ai-report-conversation-ring-placeholder.png
+chart_image_region: /public/images/ai-report-participants-step4-region.png
+chart_image_field: /public/images/ai-report-participants-step4-field.png
 chart_alt: "Ring of 14 small clusters of dots, one per conversation, colored by region."
 ----
 
