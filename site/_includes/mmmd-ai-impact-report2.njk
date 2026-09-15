@@ -212,7 +212,7 @@
 </section>
 
 {# ------------------------------- Results, continued: The power of discussion #}
-<section id="power-of-discussion" class="style-body-text section-off-white">
+<section id="power-of-discussion" class="style-body-text section-light">
   <div class="container">
     <h2>{{ modules.power_of_discussion.title }}</h2>
     {{ phase_header(modules.power_of_discussion, "/public/images/comments-icon.svg") }}
@@ -221,20 +221,15 @@
     <div id="conversations-chart" class="chart-placeholder">
       <img class="chart-placeholder-image" src="/public/images/ai-report-conversations-chart-placeholder.png" alt="{{ modules.power_of_discussion.chart_alt }}" />
     </div>
-  </div>
-</section>
 
-{# ------------------------------------------------- Download the comments #}
-<section id="download-data" class="style-body-text section-navy">
-  <img class="download-adornment" src="/public/images/ai-report-download-adornment.svg" aria-hidden="true" alt="" />
-  <div class="container">
-    <div class="row">
+    {# Download the comments: an H3 sub-block of this section, per the writer's outline. #}
+    <div id="download-data" class="row">
       <div class="col-lg-8">
         <div class="section-body">
           {{ modules.download_data.content | safe }}
         </div>
         <div class="download-button-div">
-          <a data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ modules.download_data.button_text }}</a>
+          <a class="download-button-link" data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ modules.download_data.button_text }}</a>
         </div>
       </div>
     </div>
@@ -245,7 +240,7 @@
 {# MOCKUP: horizontal stepper over static snapshots. The real multi-step dots chart
    replaces the images but keeps the navigation contract described in participants-stepper.js.
    Without JS every step renders stacked and the arrows are hidden. #}
-<section id="who-participated" class="style-body-text section-off-white">
+<section id="who-participated" class="style-body-text">
   <div class="container">
     {% set wp = modules.who_participated %}
     {% set nbr_steps = wp.nbr_steps | default(4) %}
@@ -299,7 +294,7 @@
 </section>
 
 {# ------------------------------------------------- What happens next #}
-<section id="what-happens-next" class="style-body-text">
+<section id="what-happens-next" class="style-body-text section-off-white">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
@@ -324,7 +319,8 @@
       </div>
     </div>
 
-    {# PLACEHOLDER: this will become an interactive bar chart with a category pull-down. #}
+    {# PLACEHOLDER: this will become an interactive bar chart with a category pull-down.
+       One "Source for targets" entry shows at a time, matching the selected category. #}
     <div id="sortition-chart" class="chart-placeholder chart-placeholder-navy">
       <div class="row">
         <div class="col-lg-8">
@@ -335,6 +331,12 @@
         </div>
       </div>
       <img class="chart-placeholder-image" src="/public/images/ai-report-sortition-chart-placeholder.png" alt="{{ modules.demographics_chart.chart_alt }}" />
+      <div class="demographics-source style-small-text" data-source-for="region">
+        <p class="demographics-source-label">{{ modules.demographics_sources.label }}</p>
+        <ul>
+          <li>{{ modules.demographics_sources.source_region | safe }}</li>
+        </ul>
+      </div>
     </div>
 
     <div class="row">
@@ -342,7 +344,16 @@
         <div class="section-body process-links">
           {{ modules.process_links.content | safe }}
         </div>
-        <div class="section-body analyzing-results">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="analyzing-results" class="style-body-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
           {{ modules.analyzing_results.content | safe }}
         </div>
       </div>
@@ -350,17 +361,21 @@
   </div>
 </section>
 
-{# ------------------------------------------------- Sign up #}
-<section id="sign-up" class="action-form">
-  <div class="container form-flex">
-    <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
-    <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
-
-    {{ modules.sign_up.content | safe }}
-
-    <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
-      {{ modules.sign_up.button_text }}
-    </a>
+{# ------------------------------------------------- Sign up (left-aligned, as on the efficiency report) #}
+<section id="stay-informed" class="style-body-text section-navy">
+  <img src="/public/images/bubble-cluster-1.svg" class="signup-cluster-1" aria-hidden="true" alt="" />
+  <img src="/public/images/bubble-cluster-2.svg" class="signup-cluster-2" aria-hidden="true" alt="" />
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="signup-engaged-section">
+          {{ modules.sign_up.content | safe }}
+          <a href="https://join.engaged.ca.gov/" data-appearance="button" data-theme="orange">
+            {{ modules.sign_up.button_text }}
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

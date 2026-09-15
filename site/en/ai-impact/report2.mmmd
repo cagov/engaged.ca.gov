@@ -261,7 +261,7 @@ title: Use AI for jobs people don’t want to do or can’t do
 ----
 id: how_to_read_tiers
 ----
-**How to read these tiers**
+### How to read these tiers
 
 The ranking shows how an idea fared across discussions. It's not a verdict on its merit. An idea in the "Some support" tier may still matter a great deal to many people.
 
@@ -312,7 +312,7 @@ region_9: Not stated
 id: download_data
 button_text: Download the dataset
 ----
-## Download the comments
+### Download the comments
 
 You can download and read all the comments made in the discussions in a CSV file.
 
@@ -422,22 +422,26 @@ See how close we came to our demographic targets. Click the drop-down menu to se
 - Age
 - Gender
 - Field of work
-- AI sentiment response
+- AI sentiment
+----
+id: demographics_sources
+translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
+label: Source for targets
+source_region: "Geography: Every region gets a guaranteed voice (at least 6). We filled the rest of the seats proportional to California's 2026 population using American Community Survey (ACS) estimates."
+source_field_of_work: "Industry: Based on California Employment Development Department’s [Industry Employment & Labor Force (CES) statistics for April 2026](https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf) and [area selection tables](https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces). The memo to the Governor’s Office specifically calls out logistics, healthcare, legal and financial services, creative industries, the public sector, and academia as priority sectors. We reflected that in these categories."
+source_age: "Age: Mirrors 2026 Census/ CA DOF projections."
+source_gender: "Gender: Mirrors 2026 Census/ CA DOF projections."
+source_race: "Race / ethnicity: Mirrors 2026 Census/ CA DOF projections."
+----
+
 ----
 id: process_links
 ----
-**Source for targets**
-
-- Geography: Every region gets a guaranteed voice (at least 6). We filled the rest of the seats proportional to California's 2026 population using American Community Survey (ACS) estimates.
-- Industry: Based on California Employment Development Department’s [Industry Employment & Labor Force (CES) statistics for April 2026](https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf) and [area selection tables](https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces). The memo to the Governor’s Office specifically calls out logistics, healthcare, legal and financial services, creative industries, the public sector, and academia as priority sectors. We reflected that in these categories.
-- Age: Mirrors 2026 Census/ CA DOF projections.
-- Gender: Mirrors 2026 Census/ CA DOF projections.
-- Race / ethnicity: Mirrors 2026 Census/ CA DOF projections.
-
-**Links**
+#### Links
 
 - [Our sortition code](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
 - Sortition Foundation, [*Why Sortition Algorithms?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html)
+
 ----
 id: analyzing_results
 translator_note_copy: "Text in parentheses is a placeholder note for the writers."

@@ -24,6 +24,10 @@
   background: var(--report-off-white);
 }
 
+.section-light {
+  background: #f6f7fa;
+}
+
 .section-navy {
   background: var(--report-navy);
   color: var(--report-off-white);
@@ -431,14 +435,12 @@ section#ai-report-hero {
   }
 }
 
-.style-body-text .how-to-read-tiers {
-  line-height: 1.6;
-  color: var(--report-body);
+.how-to-read-tiers {
+  line-height: 1.75;
 
-  & p,
-  & strong {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+  & h3 {
+    font-size: 1.4375rem;
+    margin: 0 0 1rem;
   }
 }
 
@@ -596,58 +598,78 @@ section#process-protagonist {
   }
 }
 
-/* ---- Download the data ---- */
+/* ---- Download the comments (inside the discussion band) ---- */
 
-section#download-data {
-  position: relative;
-  border-top: 1px solid rgb(255 244 235 / 0.25);
-  padding: 4rem 0;
-  overflow: hidden;
+#download-data {
+  margin-top: 2rem;
 
-  & .section-body p {
-    font-size: 1.25rem;
+  & h3 {
+    font-size: 1.4375rem;
+    margin: 0 0 1rem;
   }
 }
 
 .download-button-div {
   margin-top: 1.5rem;
+}
 
-  & a {
-    padding-inline: 1.25rem;
+/* Outranks layout.css's [data-theme="orange"] background shorthand so the icon survives. */
+.download-button-div a[data-appearance="button"][data-theme="orange"] {
+  padding-right: 2.6rem;
+  background: var(--report-orange) url("/public/images/icon-download.svg")
+    no-repeat right 0.8rem center;
+
+  &:hover,
+  &:focus {
+    background-color: #e4863a;
   }
 }
 
-.download-adornment {
-  /* Anchored to the viewport edge so the blue circle bleeds off the page as in the design. */
-  position: absolute;
-  right: 0;
-  top: 1rem;
-  width: 273px;
+/* ---- Sign up: left-aligned, mirrors the efficiency report ---- */
+
+section#stay-informed {
+  position: relative;
+  overflow: hidden;
+  padding-block: 4rem;
+
+  & h2 {
+    color: var(--report-off-white);
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+  }
+
+  & p {
+    margin-bottom: 1rem;
+  }
+
+  & .signup-engaged-section a[data-appearance="button"] {
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  & .signup-cluster-1,
+  & .signup-cluster-2 {
+    position: absolute;
+    inline-size: min(22vw, 300px);
+    pointer-events: none;
+  }
+
+  & .signup-cluster-1 {
+    bottom: max(-8vw, -100px);
+    left: max(-10vw, -120px);
+  }
+
+  & .signup-cluster-2 {
+    top: max(-8vw, -100px);
+    right: max(-10vw, -120px);
+  }
 
   @media (max-width: 991px) {
-    display: none;
-  }
-}
-
-/* ---- Analysis / What happens next ---- */
-
-section#analysis,
-section#what-happens-next {
-  & .section-body p,
-  & .section-body li {
-    font-size: 1.0625rem;
-  }
-}
-
-/* ---- Sign up (mirrors ai-impact page) ---- */
-
-section#sign-up.action-form {
-  padding-block: 4.8rem;
-
-  & .form-flex {
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
+    & .signup-cluster-1,
+    & .signup-cluster-2 {
+      display: none;
+    }
   }
 }
 
@@ -707,40 +729,53 @@ section#how-we-did-this-work {
     font-size: 1.25rem;
   }
 
-  & .process-links,
-  & .analyzing-results {
-    font-size: 1rem;
-    line-height: 1.6;
+  & .process-links {
     margin-top: 2rem;
   }
 
-  & .process-links p,
-  & .analyzing-results p,
-  & .analyzing-results li {
-    font-size: 1.125rem;
-    margin-bottom: 0.75rem;
-  }
-
-  & .process-links ul {
-    margin-bottom: 1.5rem;
-  }
-
-  & .analyzing-results h3 {
-    margin-top: 1rem;
-  }
-
-  & .analyzing-results a {
+  & .process-links h4 {
     color: var(--report-off-white);
+    font-size: 1.4375rem;
+    margin: 0 0 1rem !important;
+  }
+}
+
+/* The one place small text is intended: the per-category source note under the bar chart. */
+.style-body-text .demographics-source {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  & .demographics-source-label {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0 0.25rem;
+  }
+
+  & ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  & li {
+    font-size: 1rem;
+  }
+}
+
+section#analyzing-results {
+  & h3 {
+    font-size: 1.75rem;
+    margin: 0 0 1.25rem;
+  }
+
+  & h4 {
+    font-size: 1.4375rem;
+    margin: 1.5rem 0 1rem !important;
   }
 }
 
 section#how-we-did-this-work .demographics-intro {
   margin-bottom: 1.5rem;
-
-  & p,
-  & li {
-    font-size: 1.125rem;
-  }
 
   & ul {
     margin-bottom: 0;
@@ -794,7 +829,7 @@ section#who-participated button.stepper-arrow {
   border-radius: 6px;
   border: 2px solid var(--report-orange);
   color: var(--report-navy);
-  background: var(--report-off-white);
+  background: #fff;
   cursor: pointer;
   z-index: 1;
 
