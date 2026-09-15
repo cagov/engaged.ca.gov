@@ -1,0 +1,8 @@
+{# Redirect for the retired /ai-impact/report2/ preview URL. Relative so it works on preview builds too. #}
+{% block content %}
+<meta http-equiv="refresh" content="0; url=../report/" />
+<script>
+window.location.replace("../report/");
+</script>
+<p><a href="../report/">{{ title }}</a></p>
+{% endblock %}
