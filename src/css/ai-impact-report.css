@@ -518,6 +518,20 @@ section#ai-report-hero {
   }
 }
 
+/* Legends are rebuilt on toggle. Their height is reserved at runtime, and the
+   chart blocks opt out of scroll anchoring so a rebuild cannot hop the page. */
+.participants-stepper,
+.conversations,
+.demographics-chart {
+  overflow-anchor: none;
+}
+
+.region-legend[data-funnel-legend],
+.region-legend[data-ring-legend] {
+  /* min-height is set at runtime to the taller of the two legends. */
+  align-content: start;
+}
+
 .style-body-text .chart-legend {
   list-style: none;
   margin: 0;

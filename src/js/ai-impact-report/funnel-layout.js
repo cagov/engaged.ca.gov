@@ -108,6 +108,7 @@ const NON_ANSWER = new Set([
   "(not stated)",
   "Not stated",
   "I don't want to say",
+  "Non-response",
 ]);
 
 export function isNonAnswer(value) {
@@ -598,4 +599,28 @@ export function stageBands(layout) {
 export function stageYShift(bands, dotTop, dotBottom) {
   const target = (dotTop + dotBottom) / 2;
   return bands.map((b) => target - (b.top + b.bottom) / 2);
+}
+
+// ---- Legend height reservation ------------------------------------------
+
+/**
+ * Renders the legend for every dimension once, measures each, and pins the
+ * element's min-height to the tallest. Toggling dimensions then changes
+ * colors only; nothing below the legend moves. Re-run on resize.
+ *
+ * @param {HTMLElement} legendEl
+ * @param {string[]} dimensions
+ * @param {(dimension: string) => void} renderFor  renders the legend for a dimension
+ * @param {string} current  dimension to leave rendered afterwards
+ */
+export function reserveLegendHeight(legendEl, dimensions, renderFor, current) {
+  if (!legendEl) return;
+  legendEl.style.minHeight = "";
+  let tallest = 0;
+  for (const d of dimensions) {
+    renderFor(d);
+    tallest = Math.max(tallest, legendEl.getBoundingClientRect().height);
+  }
+  renderFor(current);
+  legendEl.style.minHeight = `${Math.ceil(tallest)}px`;
 }

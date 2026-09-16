@@ -93,6 +93,21 @@ export async function initParticipantFunnel(root) {
     renderLegend();
   }
 
+  // Pin the legend to its tallest variant so toggling never shifts layout.
+  function reserveLegend() {
+    const keep = dimension;
+    FL.reserveLegendHeight(
+      legendEl,
+      ["region", "fieldOfWork"],
+      (d) => {
+        dimension = d;
+        recolor();
+      },
+      keep,
+    );
+    dimension = keep;
+  }
+
   function renderLegend() {
     if (!legendEl) return;
     legendEl.textContent = "";
@@ -599,10 +614,14 @@ export async function initParticipantFunnel(root) {
     ).observe(root);
   }
 
-  window.addEventListener("resize", resize);
+  window.addEventListener("resize", () => {
+    resize();
+    reserveLegend();
+  });
 
   // ---- Boot --------------------------------------------------------------
   recolor();
+  reserveLegend();
   resize();
   restart();
   lastTime = performance.now();

@@ -133,6 +133,21 @@ export async function initConversationsRing(root) {
     return colorOf[name] || FL.DATA_VIZ_NEUTRAL_LIGHT;
   }
 
+  // Pin the legend to its tallest variant so toggling never shifts layout.
+  function reserveLegend() {
+    const keep = dimension;
+    FL.reserveLegendHeight(
+      legendEl,
+      ["region", "fieldOfWork"],
+      (d) => {
+        dimension = d;
+        recolor();
+      },
+      keep,
+    );
+    dimension = keep;
+  }
+
   // Per-dot eased colors so the Region / Field of work toggle recolors
   // smoothly instead of snapping.
   const COLOR_TAU_MS = 180;
@@ -495,10 +510,14 @@ export async function initConversationsRing(root) {
       { threshold: 0 },
     ).observe(root);
   }
-  window.addEventListener("resize", resize);
+  window.addEventListener("resize", () => {
+    resize();
+    reserveLegend();
+  });
 
   // ---- Boot --------------------------------------------------------------
   recolor();
+  reserveLegend();
   resize();
   select(selected);
   applyLayoutMode();

@@ -328,7 +328,7 @@ field_2: Information technology
 quote_3: "Sorry, I have a slight disagreement. I think that it should be the responsibility of companies who are selling a product to identify that they are using AI in their advertising and not just the AI itself."
 attribution_3: Unemployed Californian from LA
 region_3: Los Angeles
-field_3: "I don't currently work"
+field_3: "Unemployed, looking"
 ----
 
 ----
@@ -336,7 +336,7 @@ id: conversation_4
 quote_1: "Recently, in my own community, there was the potential of a data center being built, and my own community wasn't notified, wasn't told at all. Making sure that our local governments are responsible to our citizens for the transparency regarding building and construction and implementation of data centers would be a helpful policy."
 attribution_1: Arts/media/entertainment worker from the far north/north coast of California
 region_1: Far North / North Coast
-field_1: Creative
+field_1: "Arts, entertainment, or media"
 quote_2: "I just want to piggyback off that point. I think probably holding town halls, or at least bringing it up in some forum where the community can understand the pros and cons of a data center there."
 attribution_2: Government worker from the Bay Area
 region_2: Bay Area
@@ -348,7 +348,7 @@ id: conversation_8
 quote_1: "AI is not currently subject to existing liability laws, and this is just due to some very outdated technicalities with how the laws are written. For example, there is ambiguity on whether or not AI software or deployed software qualifies as a product. This is because the software does not come packaged in hardware. That is something that the state can very easily just eliminate as an ambiguity by making sure it is defined."
 attribution_1: Arts/entertainment/media worker from LA
 region_1: Los Angeles
-field_1: Creative
+field_1: "Arts, entertainment, or media"
 quote_2: "I appreciate all the homework you've done. That is always cool to see. Love participating. I think that liability is at the top with most votes for a very simple reason. I think that it's kind of a knock-on effect. If AI companies and AI purveyors and AI people who make the algorithms are held liable for everything that's down in that list below liability, I think that the problem kind of solves itself."
 attribution_2: Education worker from Southern California
 region_2: Southern California
@@ -360,7 +360,7 @@ id: conversation_14
 quote_1: "I agree with your point there on data tracking. Another thing I think we should protect is also our natural resources, and a clean environment, because I know people in Texas, where data farms or data centers have moved in, and the water has been polluted, and electric bills go way up, so yeah, protecting our natural resources."
 attribution_1: Arts/entertainment/media worker from Southern California
 region_1: Southern California
-field_1: Creative
+field_1: "Arts, entertainment, or media"
 quote_2: "I think for me, and I know the previous speaker kind of touched on it, is the environmental impacts. I think for me, that's my biggest concern, is just the amount of water and electricity the AI is using. You hear of the data center in Georgia that illegally tapped into some city’s or county's water supply and took millions of gallons from it without anybody realizing."
 attribution_2: Government worker from LA
 region_2: Los Angeles

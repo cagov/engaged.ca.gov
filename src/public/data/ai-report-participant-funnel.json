@@ -1,49 +1,49 @@
 {
  "meta": {
-  "generated": "2026-09-11T19:07:50.387Z",
-  "sampleCaveat": "Self-selected public consultation, not a probability sample. Percentages describe the people who responded, not Californians.",
-  "note": "Sample data from the design-team funnel sketch (2026-09-11). Aggregate counts plus 103 anonymous {region, fieldOfWork} pairs grouped into 14 dated sessions. Replace with the final export; keep this shape."
+  "source": "survey respondent demographics and status 2026-09-04.csv",
+  "attendeeSource": "attendee demographics, 2026-08-18-1424.csv",
+  "note": "Aggregate counts plus one anonymous {region, fieldOfWork} pair per discussion attendee, grouped by session date. Built by scripts/ai_report_data/build_funnel.py."
  },
- "phase1Total": 2678,
+ "phase1Total": 2421,
  "regions": [
   {
    "name": "Los Angeles",
-   "surveyCount": 712,
+   "surveyCount": 661,
    "attendCount": 24
   },
   {
    "name": "Bay Area",
-   "surveyCount": 647,
+   "surveyCount": 592,
    "attendCount": 20
   },
   {
    "name": "Southern California",
-   "surveyCount": 442,
+   "surveyCount": 395,
    "attendCount": 19
   },
   {
    "name": "Sacramento Valley / Sierra Foothills",
-   "surveyCount": 418,
+   "surveyCount": 363,
    "attendCount": 17
   },
   {
-   "name": "Central Valley",
-   "surveyCount": 163,
-   "attendCount": 5
-  },
-  {
    "name": "Far North / North Coast",
-   "surveyCount": 161,
+   "surveyCount": 147,
    "attendCount": 6
   },
   {
+   "name": "Central Valley",
+   "surveyCount": 144,
+   "attendCount": 5
+  },
+  {
    "name": "Central Coast",
-   "surveyCount": 123,
+   "surveyCount": 108,
    "attendCount": 8
   },
   {
    "name": "Sierra Region",
-   "surveyCount": 12,
+   "surveyCount": 11,
    "attendCount": 2
   },
   {
@@ -55,67 +55,67 @@
  "fieldOfWork": [
   {
    "name": "Government",
-   "surveyCount": 424,
+   "surveyCount": 379,
    "attendCount": 25
   },
   {
-   "name": "Other",
-   "surveyCount": 380,
-   "attendCount": 7
-  },
-  {
    "name": "Information technology",
-   "surveyCount": 376,
+   "surveyCount": 356,
    "attendCount": 10
   },
   {
-   "name": "Creative",
-   "surveyCount": 349,
+   "name": "Arts, entertainment, or media",
+   "surveyCount": 337,
    "attendCount": 13
   },
   {
+   "name": "Other",
+   "surveyCount": 329,
+   "attendCount": 7
+  },
+  {
    "name": "Education",
-   "surveyCount": 212,
+   "surveyCount": 191,
    "attendCount": 8
   },
   {
-   "name": "Professional services",
-   "surveyCount": 190,
-   "attendCount": 9
-  },
-  {
    "name": "Healthcare",
-   "surveyCount": 184,
+   "surveyCount": 173,
    "attendCount": 9
   },
   {
-   "name": "I don't currently work",
-   "surveyCount": 165,
+   "name": "Professional services",
+   "surveyCount": 172,
+   "attendCount": 9
+  },
+  {
+   "name": "Unemployed, looking",
+   "surveyCount": 140,
    "attendCount": 3
   },
   {
    "name": "Financial",
-   "surveyCount": 107,
+   "surveyCount": 100,
    "attendCount": 4
   },
   {
    "name": "Goods producing and harvesting",
-   "surveyCount": 98,
+   "surveyCount": 80,
    "attendCount": 5
   },
   {
-   "name": "Retail",
-   "surveyCount": 67,
+   "name": "Retail or wholesale trade",
+   "surveyCount": 64,
    "attendCount": 1
   },
   {
    "name": "Logistics",
-   "surveyCount": 61,
+   "surveyCount": 53,
    "attendCount": 6
   },
   {
    "name": "Hospitality",
-   "surveyCount": 38,
+   "surveyCount": 30,
    "attendCount": 0
   },
   {
@@ -125,7 +125,7 @@
   },
   {
    "name": "I don't want to say",
-   "surveyCount": 27,
+   "surveyCount": 17,
    "attendCount": 0
   }
  ],
@@ -176,7 +176,7 @@
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Bay Area",
@@ -196,11 +196,11 @@
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "I don't currently work"
+     "fieldOfWork": "Unemployed, looking"
     },
     {
      "region": "Far North / North Coast",
-     "fieldOfWork": "Retail"
+     "fieldOfWork": "Retail or wholesale trade"
     },
     {
      "region": "Southern California",
@@ -245,7 +245,7 @@
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Los Angeles",
@@ -266,7 +266,7 @@
    "attendees": [
     {
      "region": "Far North / North Coast",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Bay Area",
@@ -320,7 +320,7 @@
     },
     {
      "region": "Far North / North Coast",
-     "fieldOfWork": "I don't currently work"
+     "fieldOfWork": "Unemployed, looking"
     },
     {
      "region": "Southern California",
@@ -369,7 +369,7 @@
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Bay Area",
@@ -390,7 +390,7 @@
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Southern California",
@@ -398,7 +398,7 @@
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     }
    ]
   },
@@ -407,7 +407,7 @@
    "attendees": [
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
@@ -415,11 +415,11 @@
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Central Coast",
@@ -432,7 +432,7 @@
    "attendees": [
     {
      "region": "Bay Area",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Los Angeles",
@@ -563,7 +563,7 @@
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
@@ -575,7 +575,7 @@
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "I don't currently work"
+     "fieldOfWork": "Unemployed, looking"
     },
     {
      "region": "Southern California",
@@ -592,7 +592,7 @@
    "attendees": [
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
@@ -608,7 +608,7 @@
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Creative"
+     "fieldOfWork": "Arts, entertainment, or media"
     }
    ]
   }
@@ -616,31 +616,31 @@
  "invitedByRegion": [
   {
    "name": "Los Angeles",
-   "count": 245
+   "count": 242
   },
   {
    "name": "Bay Area",
-   "count": 201
+   "count": 199
   },
   {
    "name": "Southern California",
-   "count": 156
+   "count": 155
   },
   {
    "name": "Sacramento Valley / Sierra Foothills",
-   "count": 126
-  },
-  {
-   "name": "Central Valley",
-   "count": 98
+   "count": 125
   },
   {
    "name": "Far North / North Coast",
    "count": 49
   },
   {
+   "name": "Central Valley",
+   "count": 98
+  },
+  {
    "name": "Central Coast",
-   "count": 62
+   "count": 61
   },
   {
    "name": "Sierra Region",
@@ -648,8 +648,8 @@
   },
   {
    "name": "(not stated)",
-   "count": 2
+   "count": 0
   }
  ],
- "invitedTotal": 948
+ "invitedTotal": 938
 }
