@@ -270,8 +270,10 @@ export async function initConversationsRing(root) {
         });
         continue;
       }
+      // One scale for every thumbnail (fit to the largest cluster) so dots
+      // stay the same size and a bigger conversation reads as a wider ring.
       const size = 96;
-      const k = (size / 2 - 6) / cl.rc;
+      const k = (size / 2 - 6) / maxRc;
       const ns = "http://www.w3.org/2000/svg";
       const svg = document.createElementNS(ns, "svg");
       svg.setAttribute("viewBox", `0 0 ${size} ${size}`);
@@ -284,7 +286,7 @@ export async function initConversationsRing(root) {
         const circle = document.createElementNS(ns, "circle");
         circle.setAttribute("cx", String(c + (x - cl.x) * k));
         circle.setAttribute("cy", String(c + (y - cl.y) * k));
-        circle.setAttribute("r", String(Math.max(3, 6 * k)));
+        circle.setAttribute("r", "5");
         circle.setAttribute("fill", colorFor(dot[dimension]));
         circle.setAttribute("data-dot", "");
         svg.appendChild(circle);
