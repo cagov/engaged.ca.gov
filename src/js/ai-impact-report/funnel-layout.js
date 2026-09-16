@@ -226,7 +226,7 @@ function packed(n, cx, cy, radius) {
   return out;
 }
 
-function orbitRings(n) {
+export function orbitRings(n) {
   const single = Math.max(20, (n * SEAT_SPACING) / (2 * Math.PI));
   if (single <= 46) return [{ r: single, count: n, rate: 1 }];
   const inner = Math.max(3, Math.round(n * 0.35));

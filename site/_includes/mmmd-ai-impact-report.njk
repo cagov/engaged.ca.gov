@@ -300,9 +300,89 @@
     <h2>{{ modules.power_of_discussion.title }}</h2>
     {{ phase_header(modules.power_of_discussion, "/public/images/comments-icon.svg") }}
 
-    {# PLACEHOLDER: this will become an interactive conversations ring chart with a pop-out panel. #}
-    <div id="conversations-chart" class="chart-placeholder">
-      <img class="chart-placeholder-image" src="/public/images/ai-report-conversations-chart-placeholder.png" alt="{{ modules.power_of_discussion.chart_alt }}" />
+    {# Conversations ring: 14 clusters from the funnel data, quotes from conversation_N modules.
+       Drawn by conversations-ring.js. On mobile the ring hides and the quote cards stack. #}
+    {% set pd = modules.power_of_discussion %}
+    {% set nbr_conversations = pd.nbr_conversations | default(14) %}
+    <div id="conversations-chart" class="conversations"
+         data-funnel-src="/public/data/ai-report-participant-funnel.json"
+         data-variant="region"
+         data-center-title="{{ pd.chart_center_title }}"
+         data-center-hint="{{ pd.chart_center_hint }}"
+         data-title-template="{{ pd.conversation_title }}"
+         data-meta-template="{{ pd.conversation_meta }}"
+         data-labels='{{ legend_labels_json | replace("'", "&#39;") | safe }}'>
+
+      <div class="conversations-layout">
+        <div class="conversations-ring">
+          <canvas data-ring-canvas width="600" height="600" tabindex="0" role="img" aria-label="{{ pd.chart_alt }}"></canvas>
+          {# No-JS fallback #}
+          <img class="chart-placeholder-image conversations-fallback" src="/public/images/ai-report-conversations-chart-placeholder.png" alt="{{ pd.chart_alt }}" />
+          {# Keyboard / screen-reader selection. #}
+          <ul class="conversations-select visually-hidden-list" aria-label="{{ pd.title }}">
+            {% for n in range(1, nbr_conversations + 1) %}
+              {% if modules["conversation_" + n] %}
+                <li><button type="button" class="conversations-select-button" data-select-session="{{ n }}" aria-pressed="{% if loop.first %}true{% else %}false{% endif %}">{{ pd.conversation_title | replace("{n}", n) }}</button></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="conversations-panel">
+          {% for n in range(1, nbr_conversations + 1) %}
+            {% set conv = modules["conversation_" + n] %}
+            {% if conv %}
+              <article class="conversation-card" data-session="{{ n }}"{% if not loop.first %} hidden{% endif %}>
+                <div class="conversation-card-header">
+                  <span class="conversation-thumb" data-conversation-thumb aria-hidden="true"></span>
+                  <h4 class="conversation-title" data-conversation-title>{{ pd.conversation_title | replace("{n}", n) }}</h4>
+                  <p class="conversation-meta" data-conversation-meta></p>
+                </div>
+                <ul class="conversation-quotes">
+                  {% for q in range(1, 6) %}
+                    {% if conv["quote_" + q] %}
+                      <li class="conversation-quote">
+                        <img class="conversation-quote-icon" src="/public/images/little-dialog-balloon.svg" alt="" aria-hidden="true" />
+                        <blockquote>
+                          <p>“{{ conv["quote_" + q] }}”</p>
+                          <footer class="conversation-attribution" data-region="{{ conv["region_" + q] }}" data-field="{{ conv["field_" + q] }}">
+                            <span class="conversation-attribution-dot" aria-hidden="true"></span>{{ conv["attribution_" + q] }}
+                          </footer>
+                        </blockquote>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+                {% if conv.outcome %}
+                  <div class="conversation-outcome">
+                    <p class="conversation-outcome-label">{{ pd.outcome_label }}</p>
+                    <p class="conversation-outcome-text">{{ conv.outcome }}</p>
+                  </div>
+                {% endif %}
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="chart-controls">
+        <div class="chart-controls-row">
+          <div class="segmented-toggle" role="group">
+            <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ pd.toggle_region }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ pd.toggle_field_of_work }}</button>
+          </div>
+          <ul class="chart-legend participant-legend">
+            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ pd.legend_participant }}</li>
+            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ pd.legend_facilitator }}</li>
+          </ul>
+        </div>
+        <ul class="chart-legend region-legend" data-ring-legend aria-label="{{ pd.toggle_region }}">
+          {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
+          {% for r in range(1, nbr_regions + 1) %}
+            <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
 
     {# Download the comments: an H3 sub-block of this section, per the writer's outline. #}

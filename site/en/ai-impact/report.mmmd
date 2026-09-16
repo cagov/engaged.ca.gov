@@ -282,23 +282,93 @@ phase_title: Participants shared their thoughts, concerns, and solutions
 phase_subtitle: Look inside the conversations
 stat_count: "14"
 stat_label: conversations
-chart_alt: "Ring of 14 small clusters of dots, one per conversation, with one conversation opened to show quotes from participants and the policy concept it produced."
+chart_alt: "Ring of 14 small clusters of dots, one per conversation, each dot a participant colored by region or field of work. Selecting a conversation shows quotes from it."
 chart_center_title: 103 people in 14 conversations
 chart_center_hint: Click one to see an idea they discussed
 legend_participant: Participant
 legend_facilitator: Facilitator
-----
-----
-id: conversation_example
-translator_note: "Sample content for the conversation pop-up. Quotes are verbatim from participants and should be translated faithfully."
-title: Conversation 2
-meta: "11 people - July 16, 2026"
-quote_1: "“AI is not currently subject to existing liability laws, and this is just due to some very outdated technicalities with how the laws are written.”"
-quote_1_attribution: Entertainment worker from LA
-quote_2: "“Liability is at the top with most votes for a very simple reason. I think that it's kind of a knock-on effect.”"
-quote_2_attribution: Education worker from Northern CA
+toggle_region: Region
+toggle_field_of_work: Field of work
+translator_note: "{count}, {date}, and {n} are replaced with values. Keep them in the translation."
+conversation_title: "Conversation {n}"
+conversation_meta: "{count} people · {date}"
+conversation_button: "Conversation {n}, {date}: read quotes"
+conversation_no_quotes: "Conversation {n}, {date}: no quotes selected"
 outcome_label: "This turned into the policy concept:"
-outcome: Hold AI companies liable for the harm they cause
+nbr_conversations: 14
+----
+
+----
+id: conversation_1
+translator_note: "Quotes are verbatim from participants. region and field values are data keys; do not translate them."
+quote_1: "I think that the state of California should make it illegal to fire people to be replaced by AI. And then make the standards very strict and the punishment for doing so severe. Very severe."
+attribution_1: Finance worker from LA
+region_1: Los Angeles
+field_1: Financial
+quote_2: "I'd say within government, just shifting people within the organization to other underserved areas instead of just cutting people wholesale: I think, would be the way to go."
+attribution_2: Healthcare worker from LA
+region_2: Los Angeles
+field_2: Healthcare
+quote_3: "I'm concerned about the thoughts of tightly regulating industries, as far as telling them who they can hire, who they can fire. As a government entity that is something that we should be very careful of: exerting that much control over private industry."
+attribution_3: Government worker from the Sierra region
+region_3: Sierra Region
+field_3: Government
+----
+
+----
+id: conversation_2
+quote_1: "I think the general concern is AI tools right now can be used very easily to deceive. And while, it is one of the grandest freedoms in the United States: you're allowed to be deceptive. But a little watermark on things, just so people can activate their skepticism: Maybe not the worst thing in the world."
+attribution_1: Construction worker in the Sacramento valley / Sierra foothills
+region_1: Sacramento Valley / Sierra Foothills
+field_1: Goods producing and harvesting
+quote_2: "Require AI to identify itself and what it generates."
+attribution_2: IT worker from Southern California
+region_2: Southern California
+field_2: Information technology
+quote_3: "Sorry, I have a slight disagreement. I think that it should be the responsibility of companies who are selling a product to identify that they are using AI in their advertising and not just the AI itself."
+attribution_3: Unemployed Californian from LA
+region_3: Los Angeles
+field_3: "I don't currently work"
+----
+
+----
+id: conversation_4
+quote_1: "Recently, in my own community, there was the potential of a data center being built, and my own community wasn't notified, wasn't told at all. Making sure that our local governments are responsible to our citizens for the transparency regarding building and construction and implementation of data centers would be a helpful policy."
+attribution_1: Arts/media/entertainment worker from the far north/north coast of California
+region_1: Far North / North Coast
+field_1: Creative
+quote_2: "I just want to piggyback off that point. I think probably holding town halls, or at least bringing it up in some forum where the community can understand the pros and cons of a data center there."
+attribution_2: Government worker from the Bay Area
+region_2: Bay Area
+field_2: Government
+----
+
+----
+id: conversation_8
+quote_1: "AI is not currently subject to existing liability laws, and this is just due to some very outdated technicalities with how the laws are written. For example, there is ambiguity on whether or not AI software or deployed software qualifies as a product. This is because the software does not come packaged in hardware. That is something that the state can very easily just eliminate as an ambiguity by making sure it is defined."
+attribution_1: Arts/entertainment/media worker from LA
+region_1: Los Angeles
+field_1: Creative
+quote_2: "I appreciate all the homework you've done. That is always cool to see. Love participating. I think that liability is at the top with most votes for a very simple reason. I think that it's kind of a knock-on effect. If AI companies and AI purveyors and AI people who make the algorithms are held liable for everything that's down in that list below liability, I think that the problem kind of solves itself."
+attribution_2: Education worker from Southern California
+region_2: Southern California
+field_2: Education
+----
+
+----
+id: conversation_14
+quote_1: "I agree with your point there on data tracking. Another thing I think we should protect is also our natural resources, and a clean environment, because I know people in Texas, where data farms or data centers have moved in, and the water has been polluted, and electric bills go way up, so yeah, protecting our natural resources."
+attribution_1: Arts/entertainment/media worker from Southern California
+region_1: Southern California
+field_1: Creative
+quote_2: "I think for me, and I know the previous speaker kind of touched on it, is the environmental impacts. I think for me, that's my biggest concern, is just the amount of water and electricity the AI is using. You hear of the data center in Georgia that illegally tapped into some city’s or county's water supply and took millions of gallons from it without anybody realizing."
+attribution_2: Government worker from LA
+region_2: Los Angeles
+field_2: Government
+quote_3: "I mean, I think that when I think about the state as a physical place, we could set environmental regulations, we could set data privacy requirements for states that operate here. When I look at this list, I get really excited about what floor are we setting for environmental protection when it comes to energy use, space use, etc."
+attribution_3: Government worker from the Bay Area
+region_3: Bay Area
+field_3: Government
 ----
 
 ----
