@@ -104,6 +104,38 @@ const DATA_VIZ_CAT_LIGHTER = [
 /** Non-answers share one neutral instead of spending a hue. */
 export const DATA_VIZ_NEUTRAL_LIGHT = "#bcbbc1";
 
+/** Categories with a fixed meaning get a fixed color regardless of order.
+ * AI response: favorable green through unfavorable red, neutral grey. */
+export const FIXED_CATEGORY_COLORS = {
+  Positive: "#4aa564",
+  Mixed: "#e0a030",
+  Negative: "#d9534f",
+  Neutral: "#9a9aa3",
+};
+
+/** Toggle button variant -> attendee/dot field name. */
+export const DIMENSION_BY_VARIANT = {
+  region: "region",
+  field: "fieldOfWork",
+  age: "age",
+  ai: "aiResponse",
+};
+
+/** Dot field name -> category list key in the data file. */
+export const DATA_KEY_FOR = {
+  region: "regions",
+  fieldOfWork: "fieldOfWork",
+  age: "age",
+  aiResponse: "aiResponse",
+};
+
+/** Dimensions actually present in a data file, in toggle order. */
+export function availableDimensions(data) {
+  return Object.keys(DATA_KEY_FOR).filter((k) =>
+    Array.isArray(data[DATA_KEY_FOR[k]]),
+  );
+}
+
 const NON_ANSWER = new Set([
   "(not stated)",
   "Not stated",
@@ -122,6 +154,7 @@ export function assignCategoryColors(values) {
   let cursor = 0;
   return values.map((value) => {
     if (isNonAnswer(value)) return DATA_VIZ_NEUTRAL_LIGHT;
+    if (FIXED_CATEGORY_COLORS[value]) return FIXED_CATEGORY_COLORS[value];
     const color = ramp[cursor % ramp.length];
     cursor++;
     return color;
@@ -253,22 +286,23 @@ export function buildFunnelCloud(data) {
   const attendCountByRegion = {};
   for (const r of data.regions) attendCountByRegion[r.name] = r.attendCount;
 
-  const droppedRegionCounts = data.regions.map((r) => ({
-    name: r.name,
-    count: r.surveyCount - r.attendCount,
-  }));
-  const droppedFieldOfWorkCounts = data.fieldOfWork.map((f) => ({
-    name: f.name,
-    count: f.surveyCount - f.attendCount,
-  }));
-
+  const dimensions = availableDimensions(data);
   const keptTotal = data.sessions.reduce(
     (sum, s) => sum + s.attendees.length,
     0,
   );
 
-  const droppedRegions = proportionalDraw(droppedRegionCounts, rand);
-  const droppedFieldOfWork = proportionalDraw(droppedFieldOfWorkCounts, rand);
+  // One independent proportional draw per dimension for the dropped dots
+  // (never real individuals), sized to the survey counts left after the
+  // real attendees are subtracted from each category.
+  const droppedDraws = {};
+  for (const key of dimensions) {
+    const counts = data[DATA_KEY_FOR[key]].map((c) => ({
+      name: c.name,
+      count: c.surveyCount - c.attendCount,
+    }));
+    droppedDraws[key] = proportionalDraw(counts, rand);
+  }
 
   // Blobs, jitter and fall targets are assigned uniformly; a dot's category
   // never affects where it sits, only its color.
@@ -296,6 +330,8 @@ export function buildFunnelCloud(data) {
       invited: false,
       region: "",
       fieldOfWork: "",
+      age: "",
+      aiResponse: "",
       group: -1,
       orbit: null,
     });
@@ -309,8 +345,8 @@ export function buildFunnelCloud(data) {
   const keptSet = new Set(keptIndices);
   for (let d = 0; d < data.phase1Total; d++) {
     if (keptSet.has(d)) continue;
-    dots[d].region = droppedRegions[droppedCursor];
-    dots[d].fieldOfWork = droppedFieldOfWork[droppedCursor];
+    for (const key of dimensions)
+      dots[d][key] = droppedDraws[key][droppedCursor];
     droppedCursor++;
   }
 
@@ -356,8 +392,8 @@ export function buildFunnelCloud(data) {
         const attendee = s.attendees[seatCursor];
         const dot = dots[dotIdx];
         dot.kept = true;
-        dot.region = attendee.region;
-        dot.fieldOfWork = attendee.fieldOfWork;
+        for (const key of dimensions)
+          dot[key] = attendee[key] ?? "(not stated)";
         dot.group = g;
         dot.orbit = {
           r: ring.r,

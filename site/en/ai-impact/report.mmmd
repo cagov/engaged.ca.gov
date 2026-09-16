@@ -289,6 +289,8 @@ legend_participant: Participant
 legend_facilitator: Facilitator
 toggle_region: Region
 toggle_field_of_work: Field of work
+toggle_age: Age
+toggle_ai_response: AI response
 translator_note: "{count}, {date}, and {n} are replaced with values. Keep them in the translation."
 conversation_title: "Conversation {n}"
 conversation_meta: "{count} people · {date}"
@@ -393,13 +395,15 @@ button_text: Download the comments
 
 You can download and read all the comments participants made in the discussions. They are in a CSV file.
 
-Participants remain anonymous. We scrubbed this dataset of personally-identifying information. But we did not edit or change the comments in any other way.
+Participants remain anonymous. We scrubbed this dataset of personally-identifying information. But we did not change the comments in any other way.
 ----
 id: who_participated
 title: Who participated
 nbr_steps: 4
 toggle_region: Region
 toggle_field_of_work: Field of work
+toggle_age: Age
+toggle_ai_response: AI response
 legend_participant: Participant
 legend_facilitator: Facilitator
 prev_label: Previous step
@@ -410,7 +414,7 @@ play_label: Play
 pause_label: Pause
 restart_label: Restart
 ring_center_title: 103 people in 14 conversations
-ring_center_hint: Switch between Region and Field of work below
+ring_center_hint: ""
 chart_alt: "Animation of every survey respondent as a dot. Those invited to a discussion brighten, those who attended gather as person figures, then split into one orbiting ring per conversation, colored by region or field of work."
 ----
 
@@ -419,7 +423,7 @@ id: who_participated_step_1
 phase_label: Phase 1
 pill_label: "1 · Phase 1"
 phase_title: Broad listening
-stat_count: "2,700+"
+stat_count: "2,702"
 stat_label: survey respondents
 phase_subtitle: "Californians responded to our open survey on AI"
 chart_image_region: /public/images/ai-report-participants-step1-region.png
@@ -525,11 +529,11 @@ See how close we came to our demographic targets. Click the drop-down menu to se
 id: demographics_sources
 translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
 label: Source for targets
-source_region: "Geography: Every region gets a guaranteed voice (at least 6). We filled the rest of the seats proportional to California's 2026 population using American Community Survey (ACS) estimates."
-source_field_of_work: "Industry: Based on California Employment Development Department’s [Industry Employment & Labor Force (CES) statistics for April 2026](https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf) and [area selection tables](https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces). The memo to the Governor’s Office specifically calls out logistics, healthcare, legal and financial services, creative industries, the public sector, and academia as priority sectors. We reflected that in these categories."
-source_age: "Age: Mirrors 2026 Census/ CA DOF projections."
-source_gender: "Gender: Mirrors 2026 Census/ CA DOF projections."
-source_race: "Race / ethnicity: Mirrors 2026 Census/ CA DOF projections."
+source_region: "Region: Every region gets a guaranteed voice (at least 6). We filled the rest of the seats proportional to California's 2026 population using American Community Survey (ACS) estimates."
+source_field_of_work: "Field of work: Based on California Employment Development Department’s [Industry Employment & Labor Force (CES) statistics for April 2026](https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf) and [area selection tables](https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces). The memo to the Governor’s Office specifically calls out logistics, healthcare, legal and financial services, creative industries, the public sector, and academia as priority sectors. We reflected that in these categories."
+source_age: "Age: Mirrors 2026 Census / CA DOF projections."
+source_gender: "Gender: Mirrors 2026 Census / CA DOF projections."
+source_race: "Race / ethnicity: Mirrors 2026 Census / CA DOF projections."
 source_ai: ""
 ----
 

@@ -15,15 +15,16 @@ aggregate JSON is. It holds counts plus one anonymous
 
 Reads:
   respondents.csv  one row per survey respondent: REGION, FIELD_OF_WORK_ROLLUP,
-                   INVITED_PHASE_2
+                   AGE, AI_RESPONSE_LABEL, INVITED_PHASE_2
   attendees.csv    one row per discussion attendee: SESSION_DATE, REGION,
-                   FIELD_OF_WORK_SORTITION_GROUPING
+                   FIELD_OF_WORK_SORTITION_GROUPING, AGE, AI_RESPONSE_LABEL
 
 Writes:
   ../../src/public/data/ai-report-participant-funnel.json
   Shape (consumed by src/js/ai-impact-report/funnel-layout.js):
     phase1Total, regions[{name, surveyCount, attendCount}],
-    fieldOfWork[{...}], sessions[{date, attendees[{region, fieldOfWork}]}],
+    fieldOfWork[{...}], age[{...}], aiResponse[{...}],
+    sessions[{date, attendees[{region, fieldOfWork, age, aiResponse}]}],
     invitedByRegion[{name, count}], invitedTotal
 """
 
@@ -61,6 +62,33 @@ def field(v):
     return v
 
 
+AGE_ORDER = ["18-24", "25-44", "45-64", "Over 65"]
+AI_ORDER = ["Positive", "Mixed", "Negative", "Neutral"]
+AI_LABELS = {"pos": "Positive", "mix": "Mixed", "neg": "Negative", "neutral": "Neutral"}
+
+
+def age(v):
+    v = v.strip()
+    if not v:
+        return NOT_STATED
+    return v
+
+
+def ai(v):
+    v = v.strip().lower()
+    if not v:
+        return NOT_STATED
+    return AI_LABELS.get(v, v.title())
+
+
+def fixed_order(names, order):
+    """Categories in a given order, then anything unexpected, then non-answers."""
+    real = [n for n in order if n in names]
+    extra = sorted(n for n in names if n not in order and n not in NON_ANSWERS)
+    tail = [n for n in (NOT_STATED, "I don't want to say") if n in names]
+    return real + extra + tail
+
+
 def ordered(names, counts):
     """Substantive categories by survey count (desc), non-answers last."""
     real = sorted((n for n in names if n not in NON_ANSWERS), key=lambda n: (-counts[n], n))
@@ -77,15 +105,23 @@ def build(respondents_path, attendees_path):
     attend_region = Counter(region(a["REGION"]) for a in attendees)
     attend_field = Counter(field(a["FIELD_OF_WORK_SORTITION_GROUPING"]) for a in attendees)
     invited_region = Counter(region(r["REGION"]) for r in respondents if r["INVITED_PHASE_2"].strip().lower() == "yes")
+    survey_age = Counter(age(r["AGE"]) for r in respondents)
+    attend_age = Counter(age(a["AGE"]) for a in attendees)
+    survey_ai = Counter(ai(r["AI_RESPONSE_LABEL"]) for r in respondents)
+    attend_ai = Counter(ai(a["AI_RESPONSE_LABEL"]) for a in attendees)
 
     region_names = ordered(set(survey_region) | set(attend_region), survey_region)
     field_names = ordered(set(survey_field) | set(attend_field), survey_field)
+    age_names = fixed_order(set(survey_age) | set(attend_age), AGE_ORDER)
+    ai_names = fixed_order(set(survey_ai) | set(attend_ai), AI_ORDER)
 
     by_date = defaultdict(list)
     for a in attendees:
         by_date[a["SESSION_DATE"].strip()].append({
             "region": region(a["REGION"]),
             "fieldOfWork": field(a["FIELD_OF_WORK_SORTITION_GROUPING"]),
+            "age": age(a["AGE"]),
+            "aiResponse": ai(a["AI_RESPONSE_LABEL"]),
         })
     sessions = [{"date": d, "attendees": by_date[d]} for d in sorted(by_date)]
 
@@ -98,6 +134,8 @@ def build(respondents_path, attendees_path):
         "phase1Total": len(respondents),
         "regions": [{"name": n, "surveyCount": survey_region[n], "attendCount": attend_region[n]} for n in region_names],
         "fieldOfWork": [{"name": n, "surveyCount": survey_field[n], "attendCount": attend_field[n]} for n in field_names],
+        "age": [{"name": n, "surveyCount": survey_age[n], "attendCount": attend_age[n]} for n in age_names],
+        "aiResponse": [{"name": n, "surveyCount": survey_ai[n], "attendCount": attend_ai[n]} for n in ai_names],
         "sessions": sessions,
         "invitedByRegion": [{"name": n, "count": invited_region[n]} for n in region_names],
         "invitedTotal": sum(invited_region.values()),
@@ -115,6 +153,8 @@ def main():
     print(f"  phase1 {data['phase1Total']}  invited {data['invitedTotal']}  attendees {kept}  sessions {len(data['sessions'])}")
     print("  sizes", [len(s["attendees"]) for s in data["sessions"]])
     print("  fields", [f["name"] for f in data["fieldOfWork"]])
+    print("  age", [(f["name"], f["surveyCount"], f["attendCount"]) for f in data["age"]])
+    print("  ai", [(f["name"], f["surveyCount"], f["attendCount"]) for f in data["aiResponse"]])
 
 
 if __name__ == "__main__":

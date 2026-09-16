@@ -32,8 +32,6 @@
  */
 import * as FL from "./funnel-layout.js";
 
-const DIMENSION_BY_VARIANT = { region: "region", field: "fieldOfWork" };
-
 export async function initParticipantFunnel(root) {
   if (!root) return;
   const canvas = root.querySelector("canvas[data-funnel-canvas]");
@@ -88,8 +86,10 @@ export async function initParticipantFunnel(root) {
   let categoryColors = [];
   let colorOf = {};
 
+  const dimensions = FL.availableDimensions(data);
+
   function recolor() {
-    categories = dimension === "region" ? data.regions : data.fieldOfWork;
+    categories = data[FL.DATA_KEY_FOR[dimension]] || [];
     categoryColors = FL.assignCategoryColors(categories.map((c) => c.name));
     colorOf = {};
     categories.forEach((c, i) => {
@@ -103,7 +103,7 @@ export async function initParticipantFunnel(root) {
     const keep = dimension;
     FL.reserveLegendHeight(
       legendEl,
-      ["region", "fieldOfWork"],
+      dimensions,
       (d) => {
         dimension = d;
         recolor();
@@ -480,11 +480,14 @@ export async function initParticipantFunnel(root) {
     for (const btn of toggleButtons) {
       btn.setAttribute(
         "aria-pressed",
-        String(DIMENSION_BY_VARIANT[btn.dataset.variant] === dimension),
+        String(FL.DIMENSION_BY_VARIANT[btn.dataset.variant] === dimension),
       );
     }
     root.dataset.step = String(stage + 1);
-    root.dataset.variant = dimension === "region" ? "region" : "field";
+    root.dataset.variant =
+      Object.keys(FL.DIMENSION_BY_VARIANT).find(
+        (v) => FL.DIMENSION_BY_VARIANT[v] === dimension,
+      ) || "region";
   }
 
   // ---- Frame loop --------------------------------------------------------
@@ -603,7 +606,7 @@ export async function initParticipantFunnel(root) {
   for (const btn of toggleButtons) {
     btn.disabled = false;
     btn.addEventListener("click", () => {
-      dimension = DIMENSION_BY_VARIANT[btn.dataset.variant] || "region";
+      dimension = FL.DIMENSION_BY_VARIANT[btn.dataset.variant] || "region";
       recolor();
       syncControls();
     });

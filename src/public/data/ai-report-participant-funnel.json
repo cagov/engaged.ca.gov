@@ -129,33 +129,104 @@
    "attendCount": 0
   }
  ],
+ "age": [
+  {
+   "name": "18-24",
+   "surveyCount": 91,
+   "attendCount": 4
+  },
+  {
+   "name": "25-44",
+   "surveyCount": 1136,
+   "attendCount": 30
+  },
+  {
+   "name": "45-64",
+   "surveyCount": 877,
+   "attendCount": 50
+  },
+  {
+   "name": "Over 65",
+   "surveyCount": 280,
+   "attendCount": 13
+  },
+  {
+   "name": "(not stated)",
+   "surveyCount": 0,
+   "attendCount": 3
+  },
+  {
+   "name": "I don't want to say",
+   "surveyCount": 37,
+   "attendCount": 3
+  }
+ ],
+ "aiResponse": [
+  {
+   "name": "Positive",
+   "surveyCount": 381,
+   "attendCount": 20
+  },
+  {
+   "name": "Mixed",
+   "surveyCount": 629,
+   "attendCount": 43
+  },
+  {
+   "name": "Negative",
+   "surveyCount": 1349,
+   "attendCount": 37
+  },
+  {
+   "name": "Neutral",
+   "surveyCount": 62,
+   "attendCount": 0
+  },
+  {
+   "name": "(not stated)",
+   "surveyCount": 0,
+   "attendCount": 3
+  }
+ ],
  "sessions": [
   {
    "date": "2026-07-09",
    "attendees": [
     {
      "region": "Bay Area",
-     "fieldOfWork": "Professional services"
+     "fieldOfWork": "Professional services",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Sierra Region",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "Over 65",
+     "aiResponse": "Positive"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Financial"
+     "fieldOfWork": "Financial",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Healthcare"
+     "fieldOfWork": "Healthcare",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Healthcare"
+     "fieldOfWork": "Healthcare",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     }
    ]
   },
@@ -164,51 +235,75 @@
    "attendees": [
     {
      "region": "Central Coast",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Goods producing and harvesting"
+     "fieldOfWork": "Goods producing and harvesting",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "25-44",
+     "aiResponse": "Positive"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "Over 65",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Healthcare"
+     "fieldOfWork": "Healthcare",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Central Coast",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Other"
+     "fieldOfWork": "Other",
+     "age": "Over 65",
+     "aiResponse": "Positive"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Other"
+     "fieldOfWork": "Other",
+     "age": "Over 65",
+     "aiResponse": "Positive"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Unemployed, looking"
+     "fieldOfWork": "Unemployed, looking",
+     "age": "18-24",
+     "aiResponse": "Negative"
     },
     {
      "region": "Far North / North Coast",
-     "fieldOfWork": "Retail or wholesale trade"
+     "fieldOfWork": "Retail or wholesale trade",
+     "age": "Over 65",
+     "aiResponse": "Negative"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Financial"
+     "fieldOfWork": "Financial",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "(not stated)",
-     "fieldOfWork": "(not stated)"
+     "fieldOfWork": "(not stated)",
+     "age": "(not stated)",
+     "aiResponse": "(not stated)"
     }
    ]
   },
@@ -217,47 +312,69 @@
    "attendees": [
     {
      "region": "Central Coast",
-     "fieldOfWork": "Other"
+     "fieldOfWork": "Other",
+     "age": "Over 65",
+     "aiResponse": "Negative"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Logistics"
+     "fieldOfWork": "Logistics",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Healthcare"
+     "fieldOfWork": "Healthcare",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Professional services"
+     "fieldOfWork": "Professional services",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Logistics"
+     "fieldOfWork": "Logistics",
+     "age": "I don't want to say",
+     "aiResponse": "Negative"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Professional services"
+     "fieldOfWork": "Professional services",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Central Coast",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Other"
+     "fieldOfWork": "Other",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "Over 65",
+     "aiResponse": "Positive"
     },
     {
      "region": "(not stated)",
-     "fieldOfWork": "(not stated)"
+     "fieldOfWork": "(not stated)",
+     "age": "(not stated)",
+     "aiResponse": "(not stated)"
     }
    ]
   },
@@ -266,23 +383,33 @@
    "attendees": [
     {
      "region": "Far North / North Coast",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "18-24",
+     "aiResponse": "Negative"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Professional services"
+     "fieldOfWork": "Professional services",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Far North / North Coast",
-     "fieldOfWork": "Healthcare"
+     "fieldOfWork": "Healthcare",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Goods producing and harvesting"
+     "fieldOfWork": "Goods producing and harvesting",
+     "age": "45-64",
+     "aiResponse": "Positive"
     }
    ]
   },
@@ -291,23 +418,33 @@
    "attendees": [
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "18-24",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "(not stated)"
+     "fieldOfWork": "(not stated)",
+     "age": "(not stated)",
+     "aiResponse": "(not stated)"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Education"
+     "fieldOfWork": "Education",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Other"
+     "fieldOfWork": "Other",
+     "age": "Over 65",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Logistics"
+     "fieldOfWork": "Logistics",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     }
    ]
   },
@@ -316,31 +453,45 @@
    "attendees": [
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "Over 65",
+     "aiResponse": "Positive"
     },
     {
      "region": "Far North / North Coast",
-     "fieldOfWork": "Unemployed, looking"
+     "fieldOfWork": "Unemployed, looking",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Education"
+     "fieldOfWork": "Education",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Healthcare"
+     "fieldOfWork": "Healthcare",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Professional services"
+     "fieldOfWork": "Professional services",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Central Coast",
-     "fieldOfWork": "Healthcare"
+     "fieldOfWork": "Healthcare",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Far North / North Coast",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     }
    ]
   },
@@ -349,31 +500,45 @@
    "attendees": [
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "45-64",
+     "aiResponse": "Positive"
     },
     {
      "region": "Central Coast",
-     "fieldOfWork": "Professional services"
+     "fieldOfWork": "Professional services",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Other"
+     "fieldOfWork": "Other",
+     "age": "Over 65",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Logistics"
+     "fieldOfWork": "Logistics",
+     "age": "Over 65",
+     "aiResponse": "Negative"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "Over 65",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "25-44",
+     "aiResponse": "Negative"
     }
    ]
   },
@@ -382,23 +547,33 @@
    "attendees": [
     {
      "region": "Sierra Region",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "Over 65",
+     "aiResponse": "Positive"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Goods producing and harvesting"
+     "fieldOfWork": "Goods producing and harvesting",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Education"
+     "fieldOfWork": "Education",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "25-44",
+     "aiResponse": "Negative"
     }
    ]
   },
@@ -407,23 +582,33 @@
    "attendees": [
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Goods producing and harvesting"
+     "fieldOfWork": "Goods producing and harvesting",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Central Coast",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Positive"
     }
    ]
   },
@@ -432,51 +617,75 @@
    "attendees": [
     {
      "region": "Bay Area",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Other"
+     "fieldOfWork": "Other",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "I don't want to say",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Healthcare"
+     "fieldOfWork": "Healthcare",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Healthcare"
+     "fieldOfWork": "Healthcare",
+     "age": "25-44",
+     "aiResponse": "Negative"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Financial"
+     "fieldOfWork": "Financial",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "25-44",
+     "aiResponse": "Positive"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Education"
+     "fieldOfWork": "Education",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Goods producing and harvesting"
+     "fieldOfWork": "Goods producing and harvesting",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Education"
+     "fieldOfWork": "Education",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Central Coast",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Professional services"
+     "fieldOfWork": "Professional services",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     }
    ]
   },
@@ -485,35 +694,51 @@
    "attendees": [
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Central Valley",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Positive"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Logistics"
+     "fieldOfWork": "Logistics",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "25-44",
+     "aiResponse": "Positive"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Education"
+     "fieldOfWork": "Education",
+     "age": "18-24",
+     "aiResponse": "Negative"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "25-44",
+     "aiResponse": "Positive"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Professional services"
+     "fieldOfWork": "Professional services",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     }
    ]
   },
@@ -522,35 +747,51 @@
    "attendees": [
     {
      "region": "Central Valley",
-     "fieldOfWork": "Education"
+     "fieldOfWork": "Education",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Central Valley",
-     "fieldOfWork": "Education"
+     "fieldOfWork": "Education",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Positive"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Logistics"
+     "fieldOfWork": "Logistics",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Far North / North Coast",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Positive"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Central Valley",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Negative"
     }
    ]
   },
@@ -559,31 +800,45 @@
    "attendees": [
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Professional services"
+     "fieldOfWork": "Professional services",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "45-64",
+     "aiResponse": "Positive"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "45-64",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Unemployed, looking"
+     "fieldOfWork": "Unemployed, looking",
+     "age": "45-64",
+     "aiResponse": "Negative"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Financial"
+     "fieldOfWork": "Financial",
+     "age": "45-64",
+     "aiResponse": "Positive"
     },
     {
      "region": "Central Valley",
-     "fieldOfWork": "Information technology"
+     "fieldOfWork": "Information technology",
+     "age": "45-64",
+     "aiResponse": "Positive"
     }
    ]
   },
@@ -592,23 +847,33 @@
    "attendees": [
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Sacramento Valley / Sierra Foothills",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "I don't want to say",
+     "aiResponse": "Positive"
     },
     {
      "region": "Los Angeles",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Bay Area",
-     "fieldOfWork": "Government"
+     "fieldOfWork": "Government",
+     "age": "25-44",
+     "aiResponse": "Mixed"
     },
     {
      "region": "Southern California",
-     "fieldOfWork": "Arts, entertainment, or media"
+     "fieldOfWork": "Arts, entertainment, or media",
+     "age": "45-64",
+     "aiResponse": "Negative"
     }
    ]
   }

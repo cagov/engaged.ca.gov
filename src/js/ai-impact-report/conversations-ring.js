@@ -27,7 +27,6 @@
  */
 import * as FL from "./funnel-layout.js";
 
-const DIMENSION_BY_VARIANT = { region: "region", field: "fieldOfWork" };
 const DESKTOP = "(min-width: 992px)";
 const COLORS = {
   ink: "#1c2745",
@@ -117,8 +116,10 @@ export async function initConversationsRing(root) {
   let categories = [];
   let categoryColors = [];
 
+  const dimensions = FL.availableDimensions(data);
+
   function recolor() {
-    categories = dimension === "region" ? data.regions : data.fieldOfWork;
+    categories = data[FL.DATA_KEY_FOR[dimension]] || [];
     categoryColors = FL.assignCategoryColors(categories.map((c) => c.name));
     colorOf = {};
     categories.forEach((c, i) => {
@@ -138,7 +139,7 @@ export async function initConversationsRing(root) {
     const keep = dimension;
     FL.reserveLegendHeight(
       legendEl,
-      ["region", "fieldOfWork"],
+      dimensions,
       (d) => {
         dimension = d;
         recolor();
@@ -194,8 +195,9 @@ export async function initConversationsRing(root) {
 
   function recolorAttributions() {
     for (const att of root.querySelectorAll(".conversation-attribution")) {
-      const key =
-        dimension === "region" ? att.dataset.region : att.dataset.field;
+      // Quotes carry region and field keys only; other dimensions fall back to neutral.
+      const datasetKey = { region: "region", fieldOfWork: "field" }[dimension];
+      const key = datasetKey ? att.dataset[datasetKey] : undefined;
       const dot = att.querySelector(".conversation-attribution-dot");
       if (dot) dot.style.background = colorFor(key);
     }
@@ -495,7 +497,7 @@ export async function initConversationsRing(root) {
   for (const btn of toggleButtons) {
     btn.disabled = false;
     btn.addEventListener("click", () => {
-      dimension = DIMENSION_BY_VARIANT[btn.dataset.variant] || "region";
+      dimension = FL.DIMENSION_BY_VARIANT[btn.dataset.variant] || "region";
       for (const b of toggleButtons) {
         b.setAttribute("aria-pressed", String(b === btn));
       }

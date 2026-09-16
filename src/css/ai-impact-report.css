@@ -303,14 +303,14 @@ section#ai-report-hero {
     outline-offset: 2px;
     border-radius: 4px;
   }
+}
 
-  &[data-empty="true"] {
-    cursor: default;
-
-    & .policy-idea-toggle-icon {
-      opacity: 0.35;
-    }
-  }
+/* Ideas without examples: same rhythm as the buttons, no control. */
+.policy-idea-title-static {
+  padding: 0.9rem 0.25rem 0.9rem 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--report-ink);
 }
 
 .policy-idea-toggle-icon {
@@ -509,6 +509,7 @@ section#ai-report-hero {
 /* Segmented toggle (Region / Field of work). Static for now. */
 .segmented-toggle {
   display: inline-flex;
+  flex-wrap: wrap;
   border: 1.5px solid var(--report-navy);
   border-radius: 6px;
   overflow: hidden;

@@ -154,16 +154,20 @@
                   {% set idea_id = "tier-" + t + "-idea-" + i %}
                   {% set has_body = idea.content and (idea.content | trim | length > 0) %}
                   <li class="policy-idea" data-index="{{ i }}">
+                    {% if has_body %}
                     <h4 class="policy-idea-title">
                       <button type="button" class="policy-idea-toggle"
                               aria-expanded="false"
                               aria-controls="{{ idea_id }}-body"
-                              id="{{ idea_id }}-toggle"
-                              {% if not has_body %}data-empty="true"{% endif %}>
+                              id="{{ idea_id }}-toggle">
                         <span class="policy-idea-title-text">{{ idea.title }}</span>
                         <span class="policy-idea-toggle-icon" aria-hidden="true"></span>
                       </button>
                     </h4>
+                    {% else %}
+                    {# No examples for this idea: a plain heading, no control. #}
+                    <h4 class="policy-idea-title policy-idea-title-static">{{ idea.title }}</h4>
+                    {% endif %}
                     <div class="policy-idea-body" id="{{ idea_id }}-body" role="region" aria-labelledby="{{ idea_id }}-toggle" hidden>
                       {% if has_body %}
                         {# Body markdown is: description paragraph(s), then a bullet list of example ideas. #}
@@ -262,7 +266,7 @@
       {# On narrow screens the ring's center copy is drawn here instead of on the canvas, where it would be unreadable. #}
       <div class="funnel-center-copy" data-funnel-center hidden>
         <p class="funnel-center-title">{{ wp.ring_center_title }}</p>
-        <p class="funnel-center-hint">{{ wp.ring_center_hint }}</p>
+        {% if wp.ring_center_hint %}<p class="funnel-center-hint">{{ wp.ring_center_hint }}</p>{% endif %}
       </div>
 
       <div class="chart-controls">
@@ -270,6 +274,8 @@
           <div class="segmented-toggle" role="group">
             <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ wp.toggle_region }}</button>
             <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ wp.toggle_field_of_work }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="age" aria-pressed="false" disabled>{{ wp.toggle_age }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="ai" aria-pressed="false" disabled>{{ wp.toggle_ai_response }}</button>
           </div>
           <ul class="chart-legend participant-legend" data-last-step-only hidden>
             <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ wp.legend_participant }}</li>
@@ -366,6 +372,8 @@
           <div class="segmented-toggle" role="group">
             <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ pd.toggle_region }}</button>
             <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ pd.toggle_field_of_work }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="age" aria-pressed="false" disabled>{{ pd.toggle_age }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="ai" aria-pressed="false" disabled>{{ pd.toggle_ai_response }}</button>
           </div>
           <ul class="chart-legend participant-legend">
             <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ pd.legend_participant }}</li>
