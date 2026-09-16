@@ -167,7 +167,9 @@
                     <div class="policy-idea-body" id="{{ idea_id }}-body" role="region" aria-labelledby="{{ idea_id }}-toggle" hidden>
                       {% if has_body %}
                         {# Body markdown is: description paragraph(s), then a bullet list of example ideas. #}
-                        {{ idea.content | replace("<ul>", '<p class="policy-idea-examples-label">' + ui.example_ideas_label + '</p><ul class="policy-idea-examples">') | safe }}
+                        {% set nbr_examples = (idea.content.split("<li>") | length) - 1 %}
+                        {% set examples_label = ui.example_idea_label_singular if nbr_examples == 1 else ui.example_ideas_label %}
+                        {{ idea.content | replace("<ul>", '<p class="policy-idea-examples-label">' + examples_label + '</p><ul class="policy-idea-examples">') | safe }}
                       {% else %}
                         {# TODO: description and example ideas for this idea have not been written yet. #}
                       {% endif %}
@@ -206,36 +208,11 @@
   </div>
 </section>
 
-{# ------------------------------- Results, continued: The power of discussion #}
-<section id="power-of-discussion" class="style-body-text section-light">
-  <div class="container">
-    <h2>{{ modules.power_of_discussion.title }}</h2>
-    {{ phase_header(modules.power_of_discussion, "/public/images/comments-icon.svg") }}
-
-    {# PLACEHOLDER: this will become an interactive conversations ring chart with a pop-out panel. #}
-    <div id="conversations-chart" class="chart-placeholder">
-      <img class="chart-placeholder-image" src="/public/images/ai-report-conversations-chart-placeholder.png" alt="{{ modules.power_of_discussion.chart_alt }}" />
-    </div>
-
-    {# Download the comments: an H3 sub-block of this section, per the writer's outline. #}
-    <div id="download-data" class="row">
-      <div class="col-lg-8">
-        <div class="section-body">
-          {{ modules.download_data.content | safe }}
-        </div>
-        <div class="download-button-div">
-          <a class="download-button-link" data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ modules.download_data.button_text }}</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 {# ------------------------------------------------- Who participated (animated funnel) #}
 {# Four-stage canvas animation driven by participant-funnel.js. Stage copy is HTML below
    (one .participants-step per stage) and crossfades with the dots. Without JS the four
    steps stack with their static snapshots and the controls are hidden. #}
-<section id="who-participated" class="style-body-text">
+<section id="who-participated" class="style-body-text section-off-white">
   <div class="container">
     {% set wp = modules.who_participated %}
     {% set nbr_steps = wp.nbr_steps | default(4) %}
@@ -311,6 +288,31 @@
           {% for s in range(1, nbr_steps + 1) %}
             <button type="button" class="funnel-pill" data-funnel-stage="{{ s }}" aria-pressed="{% if s == 1 %}true{% else %}false{% endif %}">{{ modules["who_participated_step_" + s].pill_label }}</button>
           {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ------------------------------------------------- The power of discussion (follows Who participated, per the writer) #}
+<section id="power-of-discussion" class="style-body-text section-light">
+  <div class="container">
+    <h2>{{ modules.power_of_discussion.title }}</h2>
+    {{ phase_header(modules.power_of_discussion, "/public/images/comments-icon.svg") }}
+
+    {# PLACEHOLDER: this will become an interactive conversations ring chart with a pop-out panel. #}
+    <div id="conversations-chart" class="chart-placeholder">
+      <img class="chart-placeholder-image" src="/public/images/ai-report-conversations-chart-placeholder.png" alt="{{ modules.power_of_discussion.chart_alt }}" />
+    </div>
+
+    {# Download the comments: an H3 sub-block of this section, per the writer's outline. #}
+    <div id="download-data" class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.download_data.content | safe }}
+        </div>
+        <div class="download-button-div">
+          <a class="download-button-link" data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ modules.download_data.button_text }}</a>
         </div>
       </div>
     </div>
