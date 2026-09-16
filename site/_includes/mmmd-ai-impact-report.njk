@@ -279,17 +279,6 @@
           {% endfor %}
         </ul>
       </div>
-
-      <div class="funnel-controls">
-        <button type="button" class="funnel-button funnel-button-primary" data-funnel-play aria-pressed="false">{{ wp.pause_label }}</button>
-        <button type="button" class="funnel-button funnel-button-outline" data-funnel-restart>{{ wp.restart_label }}</button>
-        <div class="funnel-controls-spacer"></div>
-        <div class="funnel-pills" role="group" aria-label="{{ wp.title }}">
-          {% for s in range(1, nbr_steps + 1) %}
-            <button type="button" class="funnel-pill" data-funnel-stage="{{ s }}" aria-pressed="{% if s == 1 %}true{% else %}false{% endif %}">{{ modules["who_participated_step_" + s].pill_label }}</button>
-          {% endfor %}
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -335,10 +324,10 @@
               <article class="conversation-card" data-session="{{ n }}"{% if not loop.first %} hidden{% endif %}>
                 <div class="conversation-card-header">
                   <span class="conversation-thumb" data-conversation-thumb aria-hidden="true"></span>
-                  <h4 class="conversation-title" data-conversation-title>{{ pd.conversation_title | replace("{n}", n) }}</h4>
+                  <h4 class="conversation-title" id="conversation-{{ n }}-title" data-conversation-title>{{ pd.conversation_title | replace("{n}", n) }}</h4>
                   <p class="conversation-meta" data-conversation-meta></p>
                 </div>
-                <ul class="conversation-quotes">
+                <ul class="conversation-quotes" role="region" aria-labelledby="conversation-{{ n }}-title">
                   {% for q in range(1, 6) %}
                     {% if conv["quote_" + q] %}
                       <li class="conversation-quote">

@@ -197,9 +197,16 @@ export async function initConversationsRing(root) {
   }
 
   function applyLayoutMode() {
-    // Desktop: only the selected card shows (in the panel). Mobile: all cards stack.
-    for (const [s, card] of cardBySession)
+    // Desktop: only the selected card shows (in the panel) and its quote list
+    // scrolls, so it must be keyboard focusable. Mobile: all cards stack.
+    for (const [s, card] of cardBySession) {
       card.hidden = desktop.matches ? s !== selected : false;
+      const quotes = card.querySelector(".conversation-quotes");
+      if (quotes) {
+        if (desktop.matches) quotes.setAttribute("tabindex", "0");
+        else quotes.removeAttribute("tabindex");
+      }
+    }
   }
   desktop.addEventListener("change", () => {
     applyLayoutMode();

@@ -13,8 +13,9 @@
  *     Region / Field of work toggle changes. Labels can be overridden per
  *     English category name via `data-labels` on the root (for translation).
  *   - Participant / Facilitator key is HTML, shown only on the last stage.
- *   - Controls: Pause/Play, Restart, one pill per stage, plus the section's
- *     left/right margin arrows. Space toggles play; arrow keys step.
+ *   - Controls: the section's left/right margin arrows (auto-advance stops
+ *     once the reader steps manually). Optional Pause/Restart and stage
+ *     pills are supported if present in the markup. Arrow keys step.
  *   - `prefers-reduced-motion` snaps between stages instead of animating.
  *
  * Root element contract (see mmmd-ai-impact-report.njk):
@@ -385,6 +386,8 @@ export async function initParticipantFunnel(root) {
 
   function jumpTo(s) {
     const target = Math.min(LAST_STAGE, Math.max(0, s));
+    // Once the reader steps manually, stop auto-advancing.
+    playing = false;
     goTo(target);
     dwellLeft = dwellFor(stage);
   }
