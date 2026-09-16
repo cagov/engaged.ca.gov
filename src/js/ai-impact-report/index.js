@@ -5,12 +5,14 @@
  * site/_includes/mmmd-ai-impact-report.njk. Add new interactive modules
  * here as they are built (dots chart, conversations chart, sortition chart).
  */
+import { initDemographicsChart } from "./demographics-chart.js";
 import { initParticipantFunnel } from "./participant-funnel.js";
 import { initPolicyTiers } from "./policy-tiers.js";
 
 function init() {
   initPolicyTiers(document.getElementById("policy-tiers"));
   initParticipantFunnel(document.getElementById("participants-stepper"));
+  initDemographicsChart(document.getElementById("demographics-chart"));
 }
 
 if (document.readyState === "loading") {

@@ -1,0 +1,495 @@
+{
+ "meta": {
+  "source": "survey respondent demographics and status 2026-09-04.csv",
+  "targets": "chart_data.csv",
+  "note": "Aggregate shares only. Phase 1 = all survey respondents; Phase 2 = respondents who attended a discussion. Non-answers excluded per dimension.",
+  "phase1Total": 2421,
+  "invitedTotal": 938,
+  "phase2Total": 100
+ },
+ "dimensions": [
+  {
+   "id": "region",
+   "categories": [
+    {
+     "name": "Bay Area",
+     "short": "Bay Area",
+     "target": 16.7,
+     "phase1": 24.5,
+     "phase2": 19.0,
+     "phase1Diff": 7.8,
+     "phase2Diff": 2.3,
+     "phase1Count": 592,
+     "phase2Count": 19
+    },
+    {
+     "name": "Central Coast",
+     "short": "Central Coast",
+     "target": 8.3,
+     "phase1": 4.5,
+     "phase2": 8.0,
+     "phase1Diff": -3.8,
+     "phase2Diff": -0.3,
+     "phase1Count": 108,
+     "phase2Count": 8
+    },
+    {
+     "name": "Central Valley",
+     "short": "Central Valley",
+     "target": 11.7,
+     "phase1": 5.9,
+     "phase2": 5.0,
+     "phase1Diff": -5.8,
+     "phase2Diff": -6.7,
+     "phase1Count": 144,
+     "phase2Count": 5
+    },
+    {
+     "name": "Far North / North Coast",
+     "short": "Far North / North Coast",
+     "target": 6.7,
+     "phase1": 6.1,
+     "phase2": 6.0,
+     "phase1Diff": -0.6,
+     "phase2Diff": -0.7,
+     "phase1Count": 147,
+     "phase2Count": 6
+    },
+    {
+     "name": "Los Angeles",
+     "short": "Los Angeles",
+     "target": 25.0,
+     "phase1": 27.3,
+     "phase2": 24.0,
+     "phase1Diff": 2.3,
+     "phase2Diff": -1.0,
+     "phase1Count": 661,
+     "phase2Count": 24
+    },
+    {
+     "name": "Sacramento Valley / Sierra Foothills",
+     "short": "Sacramento",
+     "target": 8.3,
+     "phase1": 15.0,
+     "phase2": 17.0,
+     "phase1Diff": 6.7,
+     "phase2Diff": 8.7,
+     "phase1Count": 363,
+     "phase2Count": 17
+    },
+    {
+     "name": "Sierra Region",
+     "short": "Sierra Region",
+     "target": 5.0,
+     "phase1": 0.5,
+     "phase2": 2.0,
+     "phase1Diff": -4.5,
+     "phase2Diff": -3.0,
+     "phase1Count": 11,
+     "phase2Count": 2
+    },
+    {
+     "name": "Southern California",
+     "short": "Southern California",
+     "target": 18.3,
+     "phase1": 16.3,
+     "phase2": 19.0,
+     "phase1Diff": -2.0,
+     "phase2Diff": 0.7,
+     "phase1Count": 395,
+     "phase2Count": 19
+    }
+   ],
+   "phase1N": 2421,
+   "phase2N": 100,
+   "phase1Excluded": 0,
+   "phase2Excluded": 0
+  },
+  {
+   "id": "race",
+   "categories": [
+    {
+     "name": "American Indian or Alaska Native",
+     "short": "American Indian / Alaska Native",
+     "target": 0.8,
+     "phase1": 0.9,
+     "phase2": 1.1,
+     "phase1Diff": 0.1,
+     "phase2Diff": 0.3,
+     "phase1Count": 19,
+     "phase2Count": 1
+    },
+    {
+     "name": "Asian",
+     "short": "Asian",
+     "target": 15.8,
+     "phase1": 10.0,
+     "phase2": 19.1,
+     "phase1Diff": -5.8,
+     "phase2Diff": 3.3,
+     "phase1Count": 221,
+     "phase2Count": 17
+    },
+    {
+     "name": "Black or African American",
+     "short": "Black or African American",
+     "target": 5.8,
+     "phase1": 4.2,
+     "phase2": 6.7,
+     "phase1Diff": -1.6,
+     "phase2Diff": 0.9,
+     "phase1Count": 92,
+     "phase2Count": 6
+    },
+    {
+     "name": "Hispanic or Latino",
+     "short": "Hispanic or Latino",
+     "target": 40.0,
+     "phase1": 13.8,
+     "phase2": 21.3,
+     "phase1Diff": -26.2,
+     "phase2Diff": -18.7,
+     "phase1Count": 305,
+     "phase2Count": 19
+    },
+    {
+     "name": "Middle Eastern or North African",
+     "short": "Middle Eastern / North African",
+     "target": 2.5,
+     "phase1": 1.1,
+     "phase2": 2.2,
+     "phase1Diff": -1.4,
+     "phase2Diff": -0.3,
+     "phase1Count": 25,
+     "phase2Count": 2
+    },
+    {
+     "name": "Multiple",
+     "short": "Two or more races",
+     "target": 4.2,
+     "phase1": 6.7,
+     "phase2": 3.4,
+     "phase1Diff": 2.5,
+     "phase2Diff": -0.8,
+     "phase1Count": 149,
+     "phase2Count": 3
+    },
+    {
+     "name": "Native Hawaiian or Pacific Islander",
+     "short": "Native Hawaiian / Pacific Islander",
+     "target": 0.8,
+     "phase1": 0.7,
+     "phase2": 0.0,
+     "phase1Diff": -0.1,
+     "phase2Diff": -0.8,
+     "phase1Count": 16,
+     "phase2Count": 0
+    },
+    {
+     "name": "White",
+     "short": "White",
+     "target": 30.0,
+     "phase1": 62.6,
+     "phase2": 46.1,
+     "phase1Diff": 32.6,
+     "phase2Diff": 16.1,
+     "phase1Count": 1382,
+     "phase2Count": 41
+    }
+   ],
+   "phase1N": 2209,
+   "phase2N": 89,
+   "phase1Excluded": 212,
+   "phase2Excluded": 11
+  },
+  {
+   "id": "age",
+   "categories": [
+    {
+     "name": "18-24",
+     "short": "18-24",
+     "target": 12.5,
+     "phase1": 3.8,
+     "phase2": 4.1,
+     "phase1Diff": -8.7,
+     "phase2Diff": -8.4,
+     "phase1Count": 91,
+     "phase2Count": 4
+    },
+    {
+     "name": "25-44",
+     "short": "25-44",
+     "target": 37.5,
+     "phase1": 47.7,
+     "phase2": 30.9,
+     "phase1Diff": 10.2,
+     "phase2Diff": -6.6,
+     "phase1Count": 1136,
+     "phase2Count": 30
+    },
+    {
+     "name": "45-64",
+     "short": "45-64",
+     "target": 33.3,
+     "phase1": 36.8,
+     "phase2": 51.5,
+     "phase1Diff": 3.5,
+     "phase2Diff": 18.2,
+     "phase1Count": 877,
+     "phase2Count": 50
+    },
+    {
+     "name": "Over 65",
+     "short": "Over 65",
+     "target": 16.7,
+     "phase1": 11.7,
+     "phase2": 13.4,
+     "phase1Diff": -5.0,
+     "phase2Diff": -3.3,
+     "phase1Count": 280,
+     "phase2Count": 13
+    }
+   ],
+   "phase1N": 2384,
+   "phase2N": 97,
+   "phase1Excluded": 37,
+   "phase2Excluded": 3
+  },
+  {
+   "id": "gender",
+   "categories": [
+    {
+     "name": "Woman",
+     "short": "Woman",
+     "target": 50.0,
+     "phase1": 50.1,
+     "phase2": 51.6,
+     "phase1Diff": 0.1,
+     "phase2Diff": 1.6,
+     "phase1Count": 1113,
+     "phase2Count": 47
+    },
+    {
+     "name": "Man",
+     "short": "Man",
+     "target": 47.5,
+     "phase1": 44.5,
+     "phase2": 47.3,
+     "phase1Diff": -3.0,
+     "phase2Diff": -0.2,
+     "phase1Count": 988,
+     "phase2Count": 43
+    },
+    {
+     "name": "Nonbinary / multi / other",
+     "short": "Nonbinary / multi / other",
+     "target": 2.5,
+     "phase1": 5.4,
+     "phase2": 1.1,
+     "phase1Diff": 2.9,
+     "phase2Diff": -1.4,
+     "phase1Count": 121,
+     "phase2Count": 1
+    }
+   ],
+   "phase1N": 2222,
+   "phase2N": 91,
+   "phase1Excluded": 199,
+   "phase2Excluded": 9
+  },
+  {
+   "id": "field",
+   "categories": [
+    {
+     "name": "Arts, entertainment, or media",
+     "short": "Arts & media",
+     "target": 1.8,
+     "phase1": 14.0,
+     "phase2": 13.0,
+     "phase1Diff": 12.2,
+     "phase2Diff": 11.2,
+     "phase1Count": 337,
+     "phase2Count": 13
+    },
+    {
+     "name": "Education",
+     "short": "Education",
+     "target": 2.2,
+     "phase1": 7.9,
+     "phase2": 8.0,
+     "phase1Diff": 5.7,
+     "phase2Diff": 5.8,
+     "phase1Count": 191,
+     "phase2Count": 8
+    },
+    {
+     "name": "Financial",
+     "short": "Financial",
+     "target": 4.0,
+     "phase1": 4.2,
+     "phase2": 4.0,
+     "phase1Diff": 0.2,
+     "phase2Diff": 0.0,
+     "phase1Count": 100,
+     "phase2Count": 4
+    },
+    {
+     "name": "Goods producing and harvesting",
+     "short": "Goods producing",
+     "target": 12.8,
+     "phase1": 3.3,
+     "phase2": 5.0,
+     "phase1Diff": -9.5,
+     "phase2Diff": -7.8,
+     "phase1Count": 80,
+     "phase2Count": 5
+    },
+    {
+     "name": "Government",
+     "short": "Government",
+     "target": 13.6,
+     "phase1": 15.8,
+     "phase2": 25.0,
+     "phase1Diff": 2.2,
+     "phase2Diff": 11.4,
+     "phase1Count": 379,
+     "phase2Count": 25
+    },
+    {
+     "name": "Healthcare",
+     "short": "Healthcare",
+     "target": 16.0,
+     "phase1": 7.2,
+     "phase2": 9.0,
+     "phase1Diff": -8.8,
+     "phase2Diff": -7.0,
+     "phase1Count": 173,
+     "phase2Count": 9
+    },
+    {
+     "name": "Hospitality",
+     "short": "Hospitality",
+     "target": 8.6,
+     "phase1": 1.2,
+     "phase2": 0.0,
+     "phase1Diff": -7.4,
+     "phase2Diff": -8.6,
+     "phase1Count": 30,
+     "phase2Count": 0
+    },
+    {
+     "name": "Information technology",
+     "short": "Info tech",
+     "target": 2.6,
+     "phase1": 14.8,
+     "phase2": 10.0,
+     "phase1Diff": 12.2,
+     "phase2Diff": 7.4,
+     "phase1Count": 356,
+     "phase2Count": 10
+    },
+    {
+     "name": "Logistics",
+     "short": "Logistics",
+     "target": 4.2,
+     "phase1": 2.2,
+     "phase2": 6.0,
+     "phase1Diff": -2.0,
+     "phase2Diff": 1.8,
+     "phase1Count": 53,
+     "phase2Count": 6
+    },
+    {
+     "name": "Other",
+     "short": "Other",
+     "target": 3.6,
+     "phase1": 13.7,
+     "phase2": 7.0,
+     "phase1Diff": 10.1,
+     "phase2Diff": 3.4,
+     "phase1Count": 329,
+     "phase2Count": 7
+    },
+    {
+     "name": "Professional services",
+     "short": "Prof. services",
+     "target": 14.0,
+     "phase1": 7.2,
+     "phase2": 9.0,
+     "phase1Diff": -6.8,
+     "phase2Diff": -5.0,
+     "phase1Count": 172,
+     "phase2Count": 9
+    },
+    {
+     "name": "Retail or wholesale trade",
+     "short": "Retail & wholesale",
+     "target": 11.3,
+     "phase1": 2.7,
+     "phase2": 1.0,
+     "phase1Diff": -8.6,
+     "phase2Diff": -10.3,
+     "phase1Count": 64,
+     "phase2Count": 1
+    },
+    {
+     "name": "Unemployed, looking",
+     "short": "Unemployed",
+     "target": 5.3,
+     "phase1": 5.8,
+     "phase2": 3.0,
+     "phase1Diff": 0.5,
+     "phase2Diff": -2.3,
+     "phase1Count": 140,
+     "phase2Count": 3
+    }
+   ],
+   "phase1N": 2404,
+   "phase2N": 100,
+   "phase1Excluded": 17,
+   "phase2Excluded": 0
+  },
+  {
+   "id": "ai",
+   "categories": [
+    {
+     "name": "Positive",
+     "short": "Positive",
+     "target": 25.0,
+     "phase1": 16.2,
+     "phase2": 32.0,
+     "phase1Diff": -8.8,
+     "phase2Diff": 7.0,
+     "phase1Count": 381,
+     "phase2Count": 32
+    },
+    {
+     "name": "Mixed",
+     "short": "Mixed",
+     "target": 50.0,
+     "phase1": 26.7,
+     "phase2": 37.0,
+     "phase1Diff": -23.3,
+     "phase2Diff": -13.0,
+     "phase1Count": 629,
+     "phase2Count": 37
+    },
+    {
+     "name": "Negative",
+     "short": "Negative",
+     "target": 25.0,
+     "phase1": 57.2,
+     "phase2": 31.0,
+     "phase1Diff": 32.2,
+     "phase2Diff": 6.0,
+     "phase1Count": 1349,
+     "phase2Count": 31
+    }
+   ],
+   "phase1N": 2359,
+   "phase2N": 100,
+   "phase1Excluded": 62,
+   "phase2Excluded": 0
+  }
+ ]
+}

@@ -714,6 +714,96 @@ section#how-we-did-this-work {
   }
 }
 
+/* Demographics chart: pull-down, SVG, and the per-category source note. */
+.demographics-chart {
+  margin: 1rem 0 2.5rem;
+}
+
+.demographics-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.style-body-text .demographics-select-label {
+  font-size: 1rem;
+  color: var(--report-off-white);
+}
+
+.demographics-select-wrap {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0.9rem;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--report-off-white);
+    border-bottom: 2px solid var(--report-off-white);
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+  }
+}
+
+section#how-we-did-this-work select.demographics-select {
+  appearance: none;
+  min-width: 15rem;
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
+  border: 1.5px solid rgb(255 244 235 / 0.5);
+  border-radius: 8px;
+  background: rgb(255 244 235 / 0.08);
+  color: var(--report-off-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--report-off-white);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-orange);
+    outline-offset: 2px;
+  }
+
+  & option {
+    color: var(--report-ink);
+    background: #fff;
+  }
+}
+
+.style-body-text .demographics-chart-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--report-off-white);
+  margin: 0 0 0.25rem;
+}
+
+.demographics-svg-host {
+  width: 100%;
+  max-width: 1040px;
+}
+
+.demographics-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: inherit;
+}
+
+.demographics-bar {
+  transition: opacity 0.15s;
+}
+
+.demographics-svg:hover .demographics-bar:not(:hover) {
+  opacity: 0.75;
+}
+
 /* The one place small text is intended: the per-category source note under the bar chart. */
 .style-body-text .demographics-source {
   margin-top: 1.5rem;

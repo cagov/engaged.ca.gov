@@ -421,9 +421,20 @@ These principles ensured we wouldn’t hear only from those who responded first.
 ----
 id: demographics_chart
 title: Demographics
-pulldown_label: Region
+pulldown_label: "Show participants by"
 chart_title: "Phase 1 and Phase 2 – percentage points from target"
-chart_alt: "Bar chart comparing Phase 1 and Phase 2 participants to demographic targets by region, in percentage points from target."
+chart_alt: "Bar chart comparing Phase 1 and Phase 2 participants to demographic targets, in percentage points from target."
+dim_region: Region
+dim_race: Race/ethnicity
+dim_age: Age
+dim_gender: Gender
+dim_field: Field of work
+dim_ai: AI sentiment
+phase1_label: Phase 1
+phase2_label: Phase 2
+on_target_label: On target
+translator_note: "{dimension} is replaced with the selected drop-down label. Keep it in the translation."
+table_caption: "Participants compared to target, by {dimension}"
 ----
 See how close we came to our demographic targets. Click the drop-down menu to see participant percentages by:
 
@@ -442,6 +453,7 @@ source_field_of_work: "Industry: Based on California Employment Development Depa
 source_age: "Age: Mirrors 2026 Census/ CA DOF projections."
 source_gender: "Gender: Mirrors 2026 Census/ CA DOF projections."
 source_race: "Race / ethnicity: Mirrors 2026 Census/ CA DOF projections."
+source_ai: ""
 ----
 
 ----

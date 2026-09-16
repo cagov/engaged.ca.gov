@@ -290,6 +290,12 @@ export default async function (eleventyConfig) {
       }
     },
   });
+  // Render a one-line string of Markdown (links, emphasis) without a wrapping <p>.
+  // Used for YAML fields in .mmmd modules, which otherwise bypass the Markdown engine.
+  eleventyConfig.addFilter("markdownInline", (text) =>
+    text ? markdownEngine.renderInline(String(text)) : "",
+  );
+
   // Add filter to read file contents
   eleventyConfig.addFilter("getFileContents", (filePath) => {
     try {
