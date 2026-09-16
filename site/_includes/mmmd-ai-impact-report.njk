@@ -259,6 +259,11 @@
       <div class="funnel-stage">
         <canvas data-funnel-canvas width="1040" height="596" role="img" aria-label="{{ wp.chart_alt }}"></canvas>
       </div>
+      {# On narrow screens the ring's center copy is drawn here instead of on the canvas, where it would be unreadable. #}
+      <div class="funnel-center-copy" data-funnel-center hidden>
+        <p class="funnel-center-title">{{ wp.ring_center_title }}</p>
+        <p class="funnel-center-hint">{{ wp.ring_center_hint }}</p>
+      </div>
 
       <div class="chart-controls">
         <div class="chart-controls-row">

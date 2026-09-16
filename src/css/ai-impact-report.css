@@ -919,6 +919,24 @@ section#who-participated h2 {
   display: block;
 }
 
+.funnel-center-copy {
+  text-align: center;
+  margin: 0.25rem 0 1rem;
+}
+
+.style-body-text .funnel-center-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0 0 0.15rem;
+}
+
+.style-body-text .funnel-center-hint {
+  font-size: 0.9375rem;
+  color: var(--report-body);
+  margin: 0;
+}
+
 /* Small orange-bordered square arrows in the page margins, vertically
    centered on the stepper. Hidden at either end. */
 section#who-participated button.stepper-arrow {

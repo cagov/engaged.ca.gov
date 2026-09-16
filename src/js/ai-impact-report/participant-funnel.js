@@ -71,6 +71,11 @@ export async function initParticipantFunnel(root) {
   const pauseLabel = root.dataset.pauseLabel || "Pause";
   const centerTitle = root.dataset.centerTitle || "";
   const centerHint = root.dataset.centerHint || "";
+  const centerCopyEl = root.querySelector("[data-funnel-center]");
+  // Below this canvas scale the ring's center is too small for readable text;
+  // the copy moves to the HTML block under the canvas instead.
+  const MIN_CENTER_TEXT_SCALE = 0.62;
+  let canvasScale = 1;
 
   root.classList.add("js-enabled", "funnel-ready");
 
@@ -311,6 +316,7 @@ export async function initParticipantFunnel(root) {
   }
 
   function centerLabel() {
+    if (canvasScale < MIN_CENTER_TEXT_SCALE) return;
     if (titleK <= 0.01 || (!centerTitle && !centerHint)) return;
     const maxClusterRc = Math.max(0, ...layout.clusters.map((c) => c.rc));
     const freeRadius = Math.max(60, layout.ringRadius - maxClusterRc - 10);
@@ -442,7 +448,17 @@ export async function initParticipantFunnel(root) {
     });
   }
 
+  // HTML center copy shows on the last stage only when the canvas is too
+  // small to draw it legibly.
+  function syncCenterCopy() {
+    if (!centerCopyEl) return;
+    centerCopyEl.hidden = !(
+      canvasScale < MIN_CENTER_TEXT_SCALE && stage === LAST_STAGE
+    );
+  }
+
   function syncControls() {
+    syncCenterCopy();
     if (prevBtn) prevBtn.hidden = stage <= 0;
     if (nextBtn) nextBtn.hidden = stage >= LAST_STAGE;
     if (playBtn) {
@@ -556,6 +572,8 @@ export async function initParticipantFunnel(root) {
   function resize() {
     const cssWidth = canvas.clientWidth || FL.CANVAS.W;
     const scale = cssWidth / FL.CANVAS.W;
+    canvasScale = scale;
+    syncCenterCopy();
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = FL.CANVAS.W * scale * dpr;
     canvas.height = VIEW_H * scale * dpr;
