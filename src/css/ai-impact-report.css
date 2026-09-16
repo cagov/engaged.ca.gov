@@ -1154,6 +1154,10 @@ section#power-of-discussion button.conversations-select-button {
   & svg {
     display: block;
   }
+
+  & circle[data-dot] {
+    transition: fill 0.4s ease;
+  }
 }
 
 .style-body-text .conversation-title {
@@ -1240,6 +1244,7 @@ section#power-of-discussion button.conversations-select-button {
   height: 10px;
   border-radius: 50%;
   background: var(--report-rule);
+  transition: background-color 0.4s ease;
 }
 
 .conversation-outcome {

@@ -142,6 +142,7 @@ export async function initParticipantFunnel(root) {
   const ORBIT_SPEED = 0.2;
   const DRIFT_SPEED = 0.3;
   const TITLE_EASE_MS = 900;
+  const COLOR_TAU_MS = 180; // time constant for color easing (toggle recolor)
 
   let ctx = null;
   let renders = [];
@@ -236,7 +237,7 @@ export async function initParticipantFunnel(root) {
         r: g.r,
         rFrom: g.r,
         cNow: c,
-        cFrom: c,
+        cTarget: c,
         delay: 0,
         person: p,
         pFrom: p,
@@ -265,6 +266,7 @@ export async function initParticipantFunnel(root) {
       r.alpha = g.alpha;
       r.r = g.r;
       r.cNow = colorFor(g.categoryKey);
+      r.cTarget = r.cNow;
       r.person = g.person ? 1 : 0;
     });
   }
@@ -376,7 +378,6 @@ export async function initParticipantFunnel(root) {
       r.from = [r.pos[0], r.pos[1]];
       r.aFrom = r.alpha;
       r.rFrom = r.r;
-      r.cFrom = r.cNow;
       r.pFrom = r.person;
       r.delay = (dot.kept ? 0 : 0.1) + Math.random() * (dot.kept ? 0.22 : 0.3);
     });
@@ -482,7 +483,7 @@ export async function initParticipantFunnel(root) {
           place(r, g, lt);
           r.alpha = lerp(r.aFrom, g.alpha, lt);
           r.r = lerp(r.rFrom, g.r, lt);
-          r.cNow = mixColor(r.cFrom, colorFor(g.categoryKey), lt);
+          r.cTarget = colorFor(g.categoryKey);
           r.person = lerp(r.pFrom, g.person ? 1 : 0, lt);
         });
         if (t >= 1) {
@@ -509,8 +510,28 @@ export async function initParticipantFunnel(root) {
         const g = targetFor(dot, stage);
         renders[i].pos[0] = g.x;
         renders[i].pos[1] = g.y;
-        renders[i].cNow = colorFor(g.categoryKey);
+        renders[i].cTarget = colorFor(g.categoryKey);
       });
+    }
+
+    // Ease every dot's color toward its target. This is what makes the
+    // Region / Field of work toggle read as a recolor rather than a snap,
+    // and it also smooths the grey-out of dropped dots during transitions.
+    if (visible) {
+      const k = reduced ? 1 : 1 - Math.exp(-dt / COLOR_TAU_MS);
+      for (const r of renders) {
+        if (r.cNow !== r.cTarget) {
+          r.cNow = mixColor(r.cNow, r.cTarget, k);
+          if (
+            Math.abs(r.cNow[0] - r.cTarget[0]) +
+              Math.abs(r.cNow[1] - r.cTarget[1]) +
+              Math.abs(r.cNow[2] - r.cTarget[2]) <
+            1.5
+          ) {
+            r.cNow = r.cTarget;
+          }
+        }
+      }
     }
 
     draw();

@@ -133,6 +133,34 @@ export async function initConversationsRing(root) {
     return colorOf[name] || FL.DATA_VIZ_NEUTRAL_LIGHT;
   }
 
+  // Per-dot eased colors so the Region / Field of work toggle recolors
+  // smoothly instead of snapping.
+  const COLOR_TAU_MS = 180;
+  const dotColor = new Map(); // dot -> [r, g, b]
+  function hexToRgb(hex) {
+    return [
+      Number.parseInt(hex.slice(1, 3), 16),
+      Number.parseInt(hex.slice(3, 5), 16),
+      Number.parseInt(hex.slice(5, 7), 16),
+    ];
+  }
+  function easedColor(dot, dt) {
+    const target = hexToRgb(colorFor(dot[dimension]));
+    let cur = dotColor.get(dot);
+    if (!cur || reduced) {
+      cur = target;
+    } else {
+      const k = 1 - Math.exp(-dt / COLOR_TAU_MS);
+      cur = [
+        cur[0] + (target[0] - cur[0]) * k,
+        cur[1] + (target[1] - cur[1]) * k,
+        cur[2] + (target[2] - cur[2]) * k,
+      ];
+    }
+    dotColor.set(dot, cur);
+    return `rgb(${cur[0] | 0},${cur[1] | 0},${cur[2] | 0})`;
+  }
+
   function renderLegend() {
     if (!legendEl) return;
     legendEl.textContent = "";
@@ -219,6 +247,14 @@ export async function initConversationsRing(root) {
       const host = card.querySelector("[data-conversation-thumb]");
       const cl = clusters[session - 1];
       if (!host || !cl) continue;
+      // Already drawn: just update fills so the CSS transition can run.
+      const existing = host.querySelectorAll("circle[data-dot]");
+      if (existing.length === cl.dots.length) {
+        existing.forEach((circle, i) => {
+          circle.setAttribute("fill", colorFor(cl.dots[i][dimension]));
+        });
+        continue;
+      }
       const size = 96;
       const k = (size / 2 - 6) / cl.rc;
       const ns = "http://www.w3.org/2000/svg";
@@ -235,6 +271,7 @@ export async function initConversationsRing(root) {
         circle.setAttribute("cy", String(c + (y - cl.y) * k));
         circle.setAttribute("r", String(Math.max(3, 6 * k)));
         circle.setAttribute("fill", colorFor(dot[dimension]));
+        circle.setAttribute("data-dot", "");
         svg.appendChild(circle);
       }
       for (const [r, f] of [
@@ -281,6 +318,8 @@ export async function initConversationsRing(root) {
     return toCanvas(cl.x, cl.y);
   }
 
+  let frameDt = 16;
+
   function draw() {
     if (!ctx) return;
     ctx.clearRect(0, 0, size, size);
@@ -304,7 +343,7 @@ export async function initConversationsRing(root) {
         const py = cy + (y - cl.y) * k * s;
         ctx.beginPath();
         ctx.arc(px, py, dotR * s, 0, Math.PI * 2);
-        ctx.fillStyle = colorFor(dot[dimension]);
+        ctx.fillStyle = easedColor(dot, frameDt);
         ctx.globalAlpha = cl.hasQuotes || !sessionsWithQuotes.length ? 1 : 0.85;
         ctx.fill();
       }
@@ -367,6 +406,7 @@ export async function initConversationsRing(root) {
   function frame(now) {
     const dt = Math.min(now - lastTime, 50);
     lastTime = now;
+    frameDt = dt;
     if (visible && desktop.matches) {
       if (!reduced) clock += dt / 1000;
       for (const cl of clusters) {
