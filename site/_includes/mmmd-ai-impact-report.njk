@@ -327,7 +327,8 @@
                   <h4 class="conversation-title" id="conversation-{{ n }}-title" data-conversation-title>{{ pd.conversation_title | replace("{n}", n) }}</h4>
                   <p class="conversation-meta" data-conversation-meta></p>
                 </div>
-                <ul class="conversation-quotes" role="region" aria-labelledby="conversation-{{ n }}-title">
+                <div class="conversation-quotes-scroll" role="region" aria-labelledby="conversation-{{ n }}-title">
+                <ul class="conversation-quotes">
                   {% for q in range(1, 6) %}
                     {% if conv["quote_" + q] %}
                       <li class="conversation-quote">
@@ -342,6 +343,7 @@
                     {% endif %}
                   {% endfor %}
                 </ul>
+                </div>
                 {% if conv.outcome %}
                   <div class="conversation-outcome">
                     <p class="conversation-outcome-label">{{ pd.outcome_label }}</p>

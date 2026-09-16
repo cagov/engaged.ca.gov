@@ -1104,12 +1104,18 @@ section#power-of-discussion button.conversations-select-button {
       max-height: 620px;
     }
 
-    & .conversation-quotes {
+    & .conversation-quotes-scroll {
       flex: 1 1 auto;
       min-height: 0;
       overflow-y: auto;
       padding-right: 0.75rem;
       scrollbar-gutter: stable;
+
+      &:focus-visible {
+        outline: 2px solid var(--report-link);
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
     }
   }
 }

@@ -201,7 +201,7 @@ export async function initConversationsRing(root) {
     // scrolls, so it must be keyboard focusable. Mobile: all cards stack.
     for (const [s, card] of cardBySession) {
       card.hidden = desktop.matches ? s !== selected : false;
-      const quotes = card.querySelector(".conversation-quotes");
+      const quotes = card.querySelector(".conversation-quotes-scroll");
       if (quotes) {
         if (desktop.matches) quotes.setAttribute("tabindex", "0");
         else quotes.removeAttribute("tabindex");
