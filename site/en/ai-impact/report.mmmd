@@ -329,11 +329,18 @@ prev_label: Previous step
 next_label: Next step
 translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
 step_counter: "{current} of {total}"
+play_label: Play
+pause_label: Pause
+restart_label: Restart
+ring_center_title: 103 people in 14 conversations
+ring_center_hint: Switch between Region and Field of work below
+chart_alt: "Animation of every survey respondent as a dot. Those invited to a discussion brighten, those who attended gather as person figures, then split into one orbiting ring per conversation, colored by region or field of work."
 ----
 
 ----
 id: who_participated_step_1
 phase_label: Phase 1
+pill_label: "1 · Phase 1"
 phase_title: Broad listening
 stat_count: "2,700+"
 stat_label: survey respondents
@@ -346,6 +353,7 @@ chart_alt: "Scatter plot of dots, one per survey respondent, colored by region."
 ----
 id: who_participated_step_2
 phase_label: Phase 2
+pill_label: "2 · Selected"
 phase_title: Inviting a balanced audience
 stat_count: "1,246"
 stat_label: invited
@@ -358,6 +366,7 @@ chart_alt: "Scatter plot of dots, one per invited respondent, colored by region.
 ----
 id: who_participated_step_3
 phase_label: Phase 2
+pill_label: "3 · Phase 2"
 phase_title: Joining the conversation
 stat_count: "103"
 stat_label: attended
@@ -370,6 +379,7 @@ chart_alt: "Scatter plot of dots, one per discussion attendee, colored by region
 ----
 id: who_participated_step_4
 phase_label: Phase 2
+pill_label: "4 · Conversations"
 phase_title: The discussion groups
 stat_count: "14"
 stat_label: conversations

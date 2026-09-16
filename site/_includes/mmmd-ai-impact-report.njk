@@ -231,20 +231,32 @@
   </div>
 </section>
 
-{# ------------------------------------------------- Who participated (4 steps) #}
-{# MOCKUP: horizontal stepper over static snapshots. The real multi-step dots chart
-   replaces the images but keeps the navigation contract described in participants-stepper.js.
-   Without JS every step renders stacked and the arrows are hidden. #}
+{# ------------------------------------------------- Who participated (animated funnel) #}
+{# Four-stage canvas animation driven by participant-funnel.js. Stage copy is HTML below
+   (one .participants-step per stage) and crossfades with the dots. Without JS the four
+   steps stack with their static snapshots and the controls are hidden. #}
 <section id="who-participated" class="style-body-text">
   <div class="container">
     {% set wp = modules.who_participated %}
     {% set nbr_steps = wp.nbr_steps | default(4) %}
     {% set step_icons = ["/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/comments-icon.svg"] %}
+    {# English category names as they appear in the data, in the same order as region_legend, so the
+       legend can be translated. #}
+    {% set region_keys = ["Los Angeles", "Bay Area", "Southern California", "Sacramento Valley / Sierra Foothills", "Central Valley", "Far North / North Coast", "Central Coast", "Sierra Region", "(not stated)"] %}
+    {% set legend_labels_json %}{ {% for key in region_keys %}{{ key | dump | safe }}: {{ modules.region_legend["region_" + loop.index] | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %} }{% endset %}
 
     <h2>{{ wp.title }}</h2>
 
-    <div id="participants-stepper" class="participants-stepper" data-step="1" data-variant="region" data-step-counter="{{ wp.step_counter }}" tabindex="0">
-      {# Arrows float outside the content margins on wide screens, per the design. Hidden at either end. #}
+    <div id="participants-stepper" class="participants-stepper" tabindex="0"
+         data-funnel-src="/public/data/ai-report-participant-funnel.json"
+         data-step="1" data-variant="region"
+         data-step-counter="{{ wp.step_counter }}"
+         data-play-label="{{ wp.play_label }}"
+         data-pause-label="{{ wp.pause_label }}"
+         data-center-title="{{ wp.ring_center_title }}"
+         data-center-hint="{{ wp.ring_center_hint }}"
+         data-labels='{{ legend_labels_json | replace("'", "&#39;") | safe }}'>
+      {# Margin arrows: kept for now, may go away. Hidden at either end. #}
       <button type="button" class="stepper-arrow stepper-arrow-prev" data-stepper-prev aria-label="{{ wp.prev_label }}">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M8 3L2.5 9L8 15M3 9H15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
@@ -252,19 +264,24 @@
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M10 3L15.5 9L10 15M15 9H2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <span class="visually-hidden" data-stepper-counter aria-live="polite">{{ wp.step_counter | replace("{current}", 1) | replace("{total}", nbr_steps) }}</span>
-      {% for s in range(1, nbr_steps + 1) %}
-        {% set step = modules["who_participated_step_" + s] %}
-        <div class="participants-step" id="who-participated-step-{{ s }}" data-step="{{ s }}" role="group" aria-roledescription="step" aria-label="{{ step.phase_title }}">
-          {{ phase_header(step, step_icons[s - 1]) }}
-          <div class="chart-placeholder">
-            <img class="chart-placeholder-image"
-                 src="{{ step.chart_image_region }}"
-                 data-src-region="{{ step.chart_image_region }}"
-                 data-src-field="{{ step.chart_image_field }}"
-                 alt="{{ step.chart_alt }}" />
+
+      {# Stage copy. JS shows one at a time and crossfades; no-JS shows all four with snapshots. #}
+      <div class="participants-steps">
+        {% for s in range(1, nbr_steps + 1) %}
+          {% set step = modules["who_participated_step_" + s] %}
+          <div class="participants-step" id="who-participated-step-{{ s }}" data-step="{{ s }}" role="group" aria-roledescription="step" aria-label="{{ step.phase_title }}">
+            {{ phase_header(step, step_icons[s - 1]) }}
+            <div class="chart-placeholder funnel-static-fallback">
+              <img class="chart-placeholder-image" src="{{ step.chart_image_region }}" alt="{{ step.chart_alt }}" />
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
+
+      {# The animation. Sized by JS to the 1040-wide canvas space. #}
+      <div class="funnel-stage">
+        <canvas data-funnel-canvas width="1040" height="596" role="img" aria-label="{{ wp.chart_alt }}"></canvas>
+      </div>
 
       <div class="chart-controls">
         <div class="chart-controls-row">
@@ -277,12 +294,24 @@
             <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ wp.legend_facilitator }}</li>
           </ul>
         </div>
-        <ul class="chart-legend region-legend" aria-label="{{ wp.toggle_region }}">
+        {# Filled from the data by JS; the static region list is the no-JS fallback. #}
+        <ul class="chart-legend region-legend" data-funnel-legend aria-label="{{ wp.toggle_region }}">
           {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
           {% for r in range(1, nbr_regions + 1) %}
             <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
           {% endfor %}
         </ul>
+      </div>
+
+      <div class="funnel-controls">
+        <button type="button" class="funnel-button funnel-button-primary" data-funnel-play aria-pressed="false">{{ wp.pause_label }}</button>
+        <button type="button" class="funnel-button funnel-button-outline" data-funnel-restart>{{ wp.restart_label }}</button>
+        <div class="funnel-controls-spacer"></div>
+        <div class="funnel-pills" role="group" aria-label="{{ wp.title }}">
+          {% for s in range(1, nbr_steps + 1) %}
+            <button type="button" class="funnel-pill" data-funnel-stage="{{ s }}" aria-pressed="{% if s == 1 %}true{% else %}false{% endif %}">{{ modules["who_participated_step_" + s].pill_label }}</button>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
