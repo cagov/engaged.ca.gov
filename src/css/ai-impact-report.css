@@ -469,6 +469,22 @@ section#ai-report-hero {
   margin: 0 0 1.5rem;
 }
 
+/* When the stat wraps under the copy, tighten the stack between them. */
+@media (max-width: 991px) {
+  .phase-row {
+    --bs-gutter-y: 0;
+  }
+
+  .phase-row .phase-subtitle {
+    margin-bottom: 0.5rem;
+  }
+
+  .phase-row .participation-sidebar {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
 /* ---- Chart placeholders ---- */
 
 .chart-placeholder {
