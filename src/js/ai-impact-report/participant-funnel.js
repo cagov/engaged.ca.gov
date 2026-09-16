@@ -465,7 +465,10 @@ export async function initParticipantFunnel(root) {
     const titleTarget = stage === LAST_STAGE && ringReady ? 1 : 0;
     titleK += (titleTarget - titleK) * Math.min(1, dt / TITLE_EASE_MS);
 
-    if (playing && visible) {
+    // The clock and any in-flight stage transition always run while the
+    // section is on screen. `playing` only gates the automatic advance to
+    // the next stage, so a manual step still animates.
+    if (visible) {
       clock += dt / 1000;
       if (t < 1) {
         t = Math.min(1, t + dt / TRANSITION_MS);
@@ -486,7 +489,7 @@ export async function initParticipantFunnel(root) {
           dwellLeft = dwellFor(stage);
           if (stage === LAST_STAGE) ringReady = true;
         }
-      } else {
+      } else if (playing) {
         dwellLeft -= dt;
         if (dwellLeft <= 0) {
           if (stage < LAST_STAGE) goTo(stage + 1);
