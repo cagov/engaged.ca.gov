@@ -43,6 +43,23 @@ We asked Californians some of the hardest questions facing the state:
 
 *How is AI reshaping work and the economy? What should government do about it?*
 ----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: On this page
+nbr_items: 5
+item_1_label: A public forum on AI
+item_1_anchor: public-forum
+item_2_label: Ideas we heard
+item_2_anchor: what-we-heard
+item_3_label: Who participated
+item_3_anchor: who-participated
+item_4_label: What happens next
+item_4_anchor: what-happens-next
+item_5_label: How we did this work
+item_5_anchor: how-we-did-this-work
+----
+
+----
 id: public_forum
 ----
 ## A public forum on AI
@@ -75,7 +92,7 @@ placeholder_label: "Word cloud visualization (placeholder)"
 ----
 id: ranking
 ----
-Then we refined those ideas in 2-hour discussions. We grouped what people said in these discussions into 27 distinct ideas. Then we ranked them according to:
+Then we refined AI policy ideas in 2-hour discussions. We grouped what people said in these discussions into 27 distinct ideas. Then we ranked them according to:
 
 - How often an idea came up across discussions (frequency), and
 - How much support it drew when it did (how often it was a popular idea).
@@ -551,23 +568,13 @@ id: process_links
 
 ----
 id: analyzing_results
-translator_note_copy: "Text in parentheses is a placeholder note for the writers."
+translator_note_copy: "Text in parentheses is a placeholder note for the writers. The paragraph that follows is filler text."
 ----
 ### Analyzing results
 
 (high level text based description of our processes for analysis)
 
-For a deeper look, [check out our detailed methodology and comments analysis](#).
-
-We used the Claude 3.5 Sonnet generative AI model to help find themes and trends in the comments. We prompted the model with questions to help us understand what people thought. This was an efficient way to see how people agreed or disagreed on important topics.
-
-But AI only helped our human analysis. Our team checked all the findings to ensure they were relevant and accurate. We tested different ways to write the prompts. We focused on the answers that came up often, regardless of how we asked the questions.
-
-#### Sample prompts
-
-“I would like you to analyze a set of qualitative survey responses using extended thinking.”
-
-“Start by doing an initial exploration of the data: First, read through the entire dataset without categorizing or labeling. Note your immediate observations and impressions about what stands out to you. Identify recurring words, phrases, and sentiments that appear across multiple responses. Share what surprised you or caught your attention in this initial review.”
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ----
 id: sign_up
 button_text: Sign up

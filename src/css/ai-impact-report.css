@@ -90,6 +90,35 @@ section#ai-report-hero {
   }
 }
 
+.hero-nav {
+  margin-top: 1.75rem;
+
+  & ul {
+    list-style: disc;
+    margin: 0;
+    padding-left: 1.4rem;
+  }
+
+  & li {
+    margin-bottom: 0.35rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  & a {
+    color: var(--report-off-white);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgb(255 244 235 / 0.5);
+    text-underline-offset: 3px;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration-color: var(--report-orange);
+    }
+  }
+}
+
 .hero-container {
   position: relative;
 }
