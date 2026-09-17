@@ -290,6 +290,8 @@ legend_facilitator: Facilitator
 toggle_region: Region
 toggle_field_of_work: Field of work
 toggle_age: Age
+toggle_race: Race/ethnicity
+toggle_gender: Gender
 toggle_ai_response: AI response
 translator_note: "{count}, {date}, and {n} are replaced with values. Keep them in the translation."
 conversation_title: "Conversation {n}"
@@ -403,6 +405,8 @@ nbr_steps: 4
 toggle_region: Region
 toggle_field_of_work: Field of work
 toggle_age: Age
+toggle_race: Race/ethnicity
+toggle_gender: Gender
 toggle_ai_response: AI response
 legend_participant: Participant
 legend_facilitator: Facilitator

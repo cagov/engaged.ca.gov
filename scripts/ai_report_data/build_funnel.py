@@ -15,9 +15,11 @@ aggregate JSON is. It holds counts plus one anonymous
 
 Reads:
   respondents.csv  one row per survey respondent: REGION, FIELD_OF_WORK_ROLLUP,
-                   AGE, AI_RESPONSE_LABEL, INVITED_PHASE_2
+                   AGE, AI_RESPONSE_LABEL, RACE_ETHNICITY_CATEGORY, GENDER_CATEGORY,
+                   INVITED_PHASE_2
   attendees.csv    one row per discussion attendee: SESSION_DATE, REGION,
-                   FIELD_OF_WORK_SORTITION_GROUPING, AGE, AI_RESPONSE_LABEL
+                   FIELD_OF_WORK_SORTITION_GROUPING, AGE, AI_RESPONSE_LABEL,
+                   RACE_ETHNICITY_CATEGORY, GENDER_CATEGORY
 
 Writes:
   ../../src/public/data/ai-report-participant-funnel.json
@@ -81,6 +83,28 @@ def ai(v):
     return AI_LABELS.get(v, v.title())
 
 
+GENDER_ORDER = ["Woman", "Man", "Nonbinary / multi / other"]
+
+
+def clean_only(v):
+    return v.replace(" (only)", "").strip()
+
+
+def race(v):
+    v = clean_only(v)
+    return v or NOT_STATED
+
+
+def gender(v):
+    v = clean_only(v)
+    if not v:
+        return NOT_STATED
+    if v in ("Man", "Woman", "I don't want to say"):
+        return v
+    # "Another gender identity (...)" and "Multiple" share one bucket.
+    return "Nonbinary / multi / other"
+
+
 def fixed_order(names, order):
     """Categories in a given order, then anything unexpected, then non-answers."""
     real = [n for n in order if n in names]
@@ -109,11 +133,17 @@ def build(respondents_path, attendees_path):
     attend_age = Counter(age(a["AGE"]) for a in attendees)
     survey_ai = Counter(ai(r["AI_RESPONSE_LABEL"]) for r in respondents)
     attend_ai = Counter(ai(a["AI_RESPONSE_LABEL"]) for a in attendees)
+    survey_race = Counter(race(r["RACE_ETHNICITY_CATEGORY"]) for r in respondents)
+    attend_race = Counter(race(a["RACE_ETHNICITY_CATEGORY"]) for a in attendees)
+    survey_gender = Counter(gender(r["GENDER_CATEGORY"]) for r in respondents)
+    attend_gender = Counter(gender(a["GENDER_CATEGORY"]) for a in attendees)
 
     region_names = ordered(set(survey_region) | set(attend_region), survey_region)
     field_names = ordered(set(survey_field) | set(attend_field), survey_field)
     age_names = fixed_order(set(survey_age) | set(attend_age), AGE_ORDER)
     ai_names = fixed_order(set(survey_ai) | set(attend_ai), AI_ORDER)
+    race_names = ordered(set(survey_race) | set(attend_race), survey_race)
+    gender_names = fixed_order(set(survey_gender) | set(attend_gender), GENDER_ORDER)
 
     by_date = defaultdict(list)
     for a in attendees:
@@ -122,6 +152,8 @@ def build(respondents_path, attendees_path):
             "fieldOfWork": field(a["FIELD_OF_WORK_SORTITION_GROUPING"]),
             "age": age(a["AGE"]),
             "aiResponse": ai(a["AI_RESPONSE_LABEL"]),
+            "race": race(a["RACE_ETHNICITY_CATEGORY"]),
+            "gender": gender(a["GENDER_CATEGORY"]),
         })
     sessions = [{"date": d, "attendees": by_date[d]} for d in sorted(by_date)]
 
@@ -136,6 +168,8 @@ def build(respondents_path, attendees_path):
         "fieldOfWork": [{"name": n, "surveyCount": survey_field[n], "attendCount": attend_field[n]} for n in field_names],
         "age": [{"name": n, "surveyCount": survey_age[n], "attendCount": attend_age[n]} for n in age_names],
         "aiResponse": [{"name": n, "surveyCount": survey_ai[n], "attendCount": attend_ai[n]} for n in ai_names],
+        "race": [{"name": n, "surveyCount": survey_race[n], "attendCount": attend_race[n]} for n in race_names],
+        "gender": [{"name": n, "surveyCount": survey_gender[n], "attendCount": attend_gender[n]} for n in gender_names],
         "sessions": sessions,
         "invitedByRegion": [{"name": n, "count": invited_region[n]} for n in region_names],
         "invitedTotal": sum(invited_region.values()),
@@ -155,6 +189,8 @@ def main():
     print("  fields", [f["name"] for f in data["fieldOfWork"]])
     print("  age", [(f["name"], f["surveyCount"], f["attendCount"]) for f in data["age"]])
     print("  ai", [(f["name"], f["surveyCount"], f["attendCount"]) for f in data["aiResponse"]])
+    print("  race", [(f["name"], f["surveyCount"], f["attendCount"]) for f in data["race"]])
+    print("  gender", [(f["name"], f["surveyCount"], f["attendCount"]) for f in data["gender"]])
 
 
 if __name__ == "__main__":

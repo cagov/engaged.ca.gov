@@ -116,7 +116,13 @@ export async function initConversationsRing(root) {
   let categories = [];
   let categoryColors = [];
 
-  const dimensions = FL.availableDimensions(data);
+  // Dimensions offered by the toggle (the data may carry more, e.g. AI response,
+  // which stays available in code but has no button for now).
+  const dimensions = FL.availableDimensions(data).filter((key) =>
+    toggleButtons.some(
+      (b) => FL.DIMENSION_BY_VARIANT[b.dataset.variant] === key,
+    ),
+  );
 
   function recolor() {
     categories = data[FL.DATA_KEY_FOR[dimension]] || [];

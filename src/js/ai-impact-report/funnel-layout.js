@@ -116,6 +116,19 @@ export const FIXED_CATEGORY_COLORS = {
   "25-44": "#3f9fb5",
   "45-64": "#6b7fd0",
   "Over 65": "#8b4fb0",
+  // Race / ethnicity: cool and neutral hues only, nothing that reads as a skin tone.
+  White: "#65ade1",
+  "Hispanic or Latino": "#53cab0",
+  Asian: "#6d4884",
+  Multiple: "#75bc60",
+  "Black or African American": "#274d7d",
+  "Middle Eastern or North African": "#c591da",
+  "American Indian or Alaska Native": "#6c8043",
+  "Native Hawaiian or Pacific Islander": "#b5338a",
+  // Gender.
+  Woman: "#53cab0",
+  Man: "#ee9930",
+  "Nonbinary / multi / other": "#6d4884",
 };
 
 /** Toggle button variant -> attendee/dot field name. */
@@ -123,6 +136,8 @@ export const DIMENSION_BY_VARIANT = {
   region: "region",
   field: "fieldOfWork",
   age: "age",
+  race: "race",
+  gender: "gender",
   ai: "aiResponse",
 };
 
@@ -131,6 +146,8 @@ export const DATA_KEY_FOR = {
   region: "regions",
   fieldOfWork: "fieldOfWork",
   age: "age",
+  race: "race",
+  gender: "gender",
   aiResponse: "aiResponse",
 };
 
