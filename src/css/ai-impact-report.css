@@ -514,6 +514,38 @@ section#ai-report-hero {
   }
 }
 
+/* ---- Ideas we heard: two-phase word cloud ---- */
+
+.ideas-cloud {
+  position: relative;
+  margin: 1rem 0 2rem;
+  /* Reserve the wide field's aspect until the canvas is sized, so the page
+     does not jump when the chart appears. */
+  min-height: 0;
+
+  & canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1400 / 820;
+  }
+
+  &.ideas-cloud-ready canvas {
+    aspect-ratio: auto;
+  }
+
+  @media (max-width: 699px) {
+    & canvas {
+      aspect-ratio: 800 / 1000;
+    }
+  }
+}
+
+/* No-JS: nothing to draw; hide the empty canvas and its arrows. */
+.ideas-cloud:not(.ideas-cloud-ready) .stepper-arrow {
+  display: none;
+}
+
 /* ---- Chart placeholders ---- */
 
 .chart-placeholder {
@@ -985,7 +1017,8 @@ section#who-participated h2 {
 
 /* Small orange-bordered square arrows in the page margins, vertically
    centered on the stepper. Hidden at either end. */
-section#who-participated button.stepper-arrow {
+section#who-participated button.stepper-arrow,
+.ideas-cloud button.stepper-arrow {
   all: unset;
   box-sizing: border-box;
   position: absolute;
@@ -1017,20 +1050,24 @@ section#who-participated button.stepper-arrow {
   }
 }
 
-section#who-participated button.stepper-arrow-prev {
+section#who-participated button.stepper-arrow-prev,
+.ideas-cloud button.stepper-arrow-prev {
   left: -3.5rem;
 }
 
-section#who-participated button.stepper-arrow-next {
+section#who-participated button.stepper-arrow-next,
+.ideas-cloud button.stepper-arrow-next {
   right: -3.5rem;
 }
 
 @media (max-width: 1259px) {
-  section#who-participated button.stepper-arrow-prev {
+  section#who-participated button.stepper-arrow-prev,
+  .ideas-cloud button.stepper-arrow-prev {
     left: 0.5rem;
   }
 
-  section#who-participated button.stepper-arrow-next {
+  section#who-participated button.stepper-arrow-next,
+  .ideas-cloud button.stepper-arrow-next {
     right: 0.5rem;
   }
 }

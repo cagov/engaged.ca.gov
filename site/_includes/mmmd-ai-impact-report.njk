@@ -127,11 +127,29 @@
           {{ modules.what_we_heard.content | safe }}
         </div>
 
-        {# PLACEHOLDER: word cloud of poll responses. No design yet. #}
-        <div id="word-cloud" class="chart-placeholder chart-placeholder-empty">
-          <p class="chart-placeholder-empty-label">{{ modules.word_cloud.placeholder_label }}</p>
-        </div>
+      </div>
+    </div>
 
+    {# Ideas we heard: two-phase word cloud (poll ideas, then the 27 discussion ideas).
+       Breaks out of the text column to the container width. Drawn by ideas-cloud.js. #}
+    {% set wc = modules.word_cloud %}
+    <div id="ideas-cloud" class="ideas-cloud"
+         data-ideas-cloud data-src="/public/data/ai-report-ideas-cloud.json"
+         data-step-counter="{{ wc.step_counter }}"
+         data-phase-1-alt="{{ wc.phase_1_alt }}"
+         data-phase-2-alt="{{ wc.phase_2_alt }}">
+      <canvas data-ideas-canvas role="img" aria-label="{{ wc.chart_alt }}"></canvas>
+      <button type="button" class="stepper-arrow stepper-arrow-prev" data-cloud-prev aria-label="{{ wc.prev_label }}" hidden>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M8 3L2.5 9L8 15M3 9H15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="stepper-arrow stepper-arrow-next" data-cloud-next aria-label="{{ wc.next_label }}">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M10 3L15.5 9L10 15M15 9H2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span class="visually-hidden" data-cloud-counter aria-live="polite"></span>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
         <div class="section-body">
           {{ modules.ranking.content | safe }}
         </div>
