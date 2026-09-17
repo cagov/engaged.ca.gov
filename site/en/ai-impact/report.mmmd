@@ -423,7 +423,7 @@ id: who_participated_step_1
 phase_label: Phase 1
 pill_label: "1 · Phase 1"
 phase_title: Broad listening
-stat_count: "2,702"
+stat_count: "2,421"
 stat_label: survey respondents
 phase_subtitle: "Californians responded to our open survey on AI"
 chart_image_region: /public/images/ai-report-participants-step1-region.png

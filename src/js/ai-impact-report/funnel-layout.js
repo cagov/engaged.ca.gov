@@ -111,6 +111,11 @@ export const FIXED_CATEGORY_COLORS = {
   Mixed: "#e0a030",
   Negative: "#d9534f",
   Neutral: "#9a9aa3",
+  // Age: green through teal and blue to purple, young to old.
+  "18-24": "#53cab0",
+  "25-44": "#3f9fb5",
+  "45-64": "#6b7fd0",
+  "Over 65": "#8b4fb0",
 };
 
 /** Toggle button variant -> attendee/dot field name. */
