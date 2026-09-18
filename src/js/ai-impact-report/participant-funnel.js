@@ -150,18 +150,20 @@ export async function initParticipantFunnel(root) {
 
   // ---- Viewport ----------------------------------------------------------
   // Header copy and legends are HTML, so the canvas is trimmed to the dot
-  // content. Draw coordinates stay in the original canvas space; resize()
-  // shifts the visible window instead.
-  const TOP_TRIM = 120;
-  const BOTTOM_TRIM = 96;
-  const VIEW_TOP = TOP_TRIM;
-  const VIEW_BOTTOM = FL.CANVAS.H - BOTTOM_TRIM;
-  const VIEW_H = VIEW_BOTTOM - VIEW_TOP;
-  const DOT_TOP = VIEW_TOP + 6;
-  const DOT_BOTTOM = VIEW_BOTTOM - 16;
-
+  // content: exactly as tall as the tallest stage plus a hair for
+  // anti-aliasing, with every stage centred in it. Draw coordinates stay in
+  // the original canvas space; resize() shifts the visible window instead.
   const bands = FL.stageBands(layout);
-  const yShift = FL.stageYShift(bands, DOT_TOP, DOT_BOTTOM);
+  const VIEW_PAD = 2;
+  const tallestBand = Math.max(...bands.map((b) => b.bottom - b.top));
+  const VIEW_H = Math.ceil(tallestBand + 2 * VIEW_PAD);
+  const VIEW_TOP = Math.round(FL.CY - VIEW_H / 2);
+  const VIEW_BOTTOM = VIEW_TOP + VIEW_H;
+  const yShift = FL.stageYShift(
+    bands,
+    VIEW_TOP + VIEW_PAD,
+    VIEW_BOTTOM - VIEW_PAD,
+  );
 
   const DWELL_MS = 1900;
   const TRANSITION_MS = 2600;
