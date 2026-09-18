@@ -1,0 +1,28 @@
+{# Hero for the AI impact report pages. Expects modules.hero (content starts with the H1,
+   `subtitle`, optional `back_link_text` / `back_link_href`) and an optional modules.hero_nav. #}
+<section id="ai-report-hero" class="hero">
+  <div class="container hero-container">
+    <div class="row">
+      <div class="col-lg-8 hero-content">
+        {# Content begins with the H1; the subtitle field is inserted directly after it. #}
+        {{ modules.hero.content | replace("</h1>", "</h1><p class=\"hero-subtitle\">" + modules.hero.subtitle + "</p>") | safe }}
+        {% if modules.hero.back_link_text %}
+          <p class="hero-back-link"><a href="{{ modules.hero.back_link_href | localizedPath(locale) }}">{{ modules.hero.back_link_text }}</a></p>
+        {% endif %}
+        {% set hn = modules.hero_nav %}
+        {% if hn %}
+        <nav class="hero-nav" aria-label="{{ hn.aria_label }}">
+          <ul>
+            {% for i in range(1, (hn.nbr_items | default(5)) + 1) %}
+              <li><a href="#{{ hn["item_" + i + "_anchor"] }}">{{ hn["item_" + i + "_label"] }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+        {% endif %}
+      </div>
+    </div>
+    <img class="ai-report-hero-adornment" src="/public/images/ai-report-hero-adornment.svg" aria-hidden="true" alt="" />
+  </div>
+</section>
+
+{# ------------------------------------------------- What: A public forum on AI #}

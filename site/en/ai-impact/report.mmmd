@@ -508,78 +508,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ----
 id: how_we_did_this_work
 title: How we did this work
+translator_note: "The button links to the page with the full methods."
+button_text: See the details
+button_href: /ai-impact/report-details/
 ----
-
-----
-id: balancing_groups
-----
-### Balancing each group, fairly
-
-Our *Impact of AI on work* engagement had two phases. In Phase 1, any Californian could share their views through an open online survey. In Phase 2, smaller groups of those who responded would be invited to live discussions.
-
-We needed to decide who to invite. And we needed to choose fairly, while creating balanced groups.
-
-So we used an approach called sortition, which is like how courts choose juries. It is built on two equally important ideas:
-
-- **Representation:** We set demographic goals based on California population estimates. This would make the final list of invitees reflect the diversity of the state. Criteria included things like age, geography, and field of work.
-- **Randomness:** Within those goals, everyone who fit had an equal chance of being selected.
-
-These principles ensured we wouldn’t hear only from those who responded first. It let us build a fairly-chosen list that roughly reflected Californians as a whole.
-----
-id: demographics_chart
-title: Demographics
-pulldown_label: "Show participants by"
-chart_title: "Phase 1 and Phase 2 – percentage points from target"
-chart_alt: "Bar chart comparing Phase 1 and Phase 2 participants to demographic targets, in percentage points from target."
-dim_region: Region
-dim_race: Race/ethnicity
-dim_age: Age
-dim_gender: Gender
-dim_field: Field of work
-dim_ai: AI sentiment
-phase1_label: Phase 1
-phase2_label: Phase 2
-on_target_label: On target
-translator_note: "{dimension} is replaced with the selected drop-down label. Keep it in the translation."
-table_caption: "Participants compared to target, by {dimension}"
-----
-See how close we came to our demographic targets. Click the drop-down menu to see participant percentages by:
-
-- Region
-- Race/ethnicity
-- Age
-- Gender
-- Field of work
-- AI sentiment
-----
-id: demographics_sources
-translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
-label: Source for targets
-source_region: "Region: Every region gets a guaranteed voice (at least 6). We filled the rest of the seats proportional to California's 2026 population using American Community Survey (ACS) estimates."
-source_field_of_work: "Field of work: Based on California Employment Development Department’s [Industry Employment & Labor Force (CES) statistics for April 2026](https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf) and [area selection tables](https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces). The memo to the Governor’s Office specifically calls out logistics, healthcare, legal and financial services, creative industries, the public sector, and academia as priority sectors. We reflected that in these categories."
-source_age: "Age: Mirrors 2026 Census / CA DOF projections."
-source_gender: "Gender: Mirrors 2026 Census / CA DOF projections."
-source_race: "Race / ethnicity: Mirrors 2026 Census / CA DOF projections."
-source_ai: ""
-----
-
-----
-id: process_links
-----
-#### Links
-
-- [Our sortition code](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
-- Sortition Foundation, [*Why Sortition Algorithms?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html)
-
-----
-id: analyzing_results
-translator_note_copy: "Text in parentheses is a placeholder note for the writers. The paragraph that follows is filler text."
-----
-### Analyzing results
-
-(high level text based description of our processes for analysis)
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Our engagement had two phases: an open online survey, then live discussions with a smaller group of respondents. We chose that group by sortition, a lottery-style method that balances the invitee list against California’s demographics while giving everyone who qualifies an equal chance. The details page explains how we set those targets, how close each phase came to them, and how we analyzed what people said.
 ----
 id: sign_up
 button_text: Sign up

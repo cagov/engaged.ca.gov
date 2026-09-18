@@ -567,6 +567,31 @@ section#analyzing-results p {
   margin: 0 0 0.75rem;
 }
 
+/* ---- How we did this work: summary + link to the details page ---- */
+
+.methods-summary {
+  padding: 3rem 0;
+
+  & h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.methods-summary-button {
+  margin-top: 1.5rem;
+}
+
+.hero-back-link {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+
+  & a {
+    color: var(--report-off-white);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
 /* ---- Chart placeholders ---- */
 
 .chart-placeholder {
@@ -813,7 +838,8 @@ section#stay-informed {
   height: 12px;
 }
 
-section#how-we-did-this-work {
+/* Navy variant lives on the details page; the report's summary section is white. */
+section#how-we-did-this-work.section-navy {
   & h2 {
     color: var(--report-off-white);
     margin-bottom: 2rem;
