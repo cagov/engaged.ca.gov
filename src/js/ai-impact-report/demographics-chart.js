@@ -30,7 +30,7 @@ const COLORS = {
 
 const W = 1040;
 const H = 460;
-const PAD = { top: 36, right: 24, bottom: 90, left: 72 };
+const PAD = { top: 36, right: 24, bottom: 96, left: 80 };
 
 function el(name, attrs, text) {
   const node = document.createElementNS(SVG_NS, name);
@@ -118,7 +118,8 @@ export async function initDemographicsChart(root) {
     const barW = Math.min(26, groupW * 0.22);
     const gap = Math.min(6, barW * 0.25);
     const dense = cats.length > 10;
-    const valueFont = dense ? 10.5 : 12;
+    // Design asks for nothing under 14px; the SVG renders at or above 1:1 on desktop.
+    const valueFont = dense ? 13 : 14;
 
     const svg = el("svg", {
       viewBox: `0 0 ${W} ${H}`,
@@ -150,7 +151,7 @@ export async function initDemographicsChart(root) {
             y: y + 4,
             "text-anchor": "end",
             fill: tv === 0 ? COLORS.text : COLORS.muted,
-            "font-size": tv === 0 ? 13 : 12,
+            "font-size": 14,
             "font-weight": tv === 0 ? 700 : 400,
           },
           tv === 0 ? labels.onTarget : fmtDiff(tv).replace(".0", ""),
@@ -175,7 +176,7 @@ export async function initDemographicsChart(root) {
     legend.appendChild(
       el(
         "text",
-        { x: 18, y: 2, fill: COLORS.muted, "font-size": 13 },
+        { x: 18, y: 2, fill: COLORS.muted, "font-size": 14 },
         labels.phase1,
       ),
     );
@@ -192,7 +193,7 @@ export async function initDemographicsChart(root) {
     legend.appendChild(
       el(
         "text",
-        { x: 108, y: 2, fill: COLORS.muted, "font-size": 13 },
+        { x: 108, y: 2, fill: COLORS.muted, "font-size": 14 },
         labels.phase2,
       ),
     );
@@ -256,17 +257,17 @@ export async function initDemographicsChart(root) {
       }
 
       // Category label under the group, wrapped to two lines if long.
-      const maxChars = Math.max(10, Math.floor(groupW / 7.2));
+      const maxChars = Math.max(10, Math.floor(groupW / 7.8));
       const lines = splitLabel(c.short || c.name, maxChars);
       const text = el("text", {
         x: cx,
         y: H - PAD.bottom + 34,
         "text-anchor": "middle",
         fill: COLORS.muted,
-        "font-size": 13,
+        "font-size": 14,
       });
       lines.forEach((line, li) => {
-        text.appendChild(el("tspan", { x: cx, dy: li === 0 ? 0 : 16 }, line));
+        text.appendChild(el("tspan", { x: cx, dy: li === 0 ? 0 : 17 }, line));
       });
       svg.appendChild(text);
     });

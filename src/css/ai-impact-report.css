@@ -216,10 +216,10 @@ section#ai-report-hero {
   border-radius: 12px;
   background: #fff;
   padding: 1.25rem 1.25rem 1rem 1.25rem;
-  margin: 0 0 2rem 1.25rem;
+  /* Box edge lines up with the body copy; the sticker spills into the margin. */
+  margin: 0 0 2rem;
 
   @media (max-width: 575px) {
-    margin-left: 0;
     padding-top: 3.25rem;
   }
 }
@@ -303,7 +303,7 @@ section#ai-report-hero {
 
 .policy-idea-title {
   margin: 0 !important;
-  font-size: 1.125rem;
+  font-size: 1.4375rem;
   line-height: 1.4;
 }
 
@@ -337,7 +337,7 @@ section#ai-report-hero {
 /* Ideas without examples: same rhythm as the buttons, no control. */
 .policy-idea-title-static {
   padding: 0.9rem 0.25rem 0.9rem 1.25rem;
-  font-size: 1.125rem;
+  font-size: 1.4375rem;
   font-weight: 700;
   color: var(--report-ink);
 }
@@ -407,10 +407,8 @@ section#ai-report-hero {
 .policy-tiers-footer {
   border-top: 1px solid var(--report-rule);
   padding-top: 1rem;
-  margin-left: 1.25rem;
 
   @media (max-width: 575px) {
-    margin-left: 0;
   }
 }
 
@@ -475,6 +473,12 @@ section#ai-report-hero {
 
 .phase-row {
   --bs-gutter-y: 1rem;
+
+  /* The stat block sets the row's height; drop its trailing margin so the
+     chart sits about half as far below the header (design review 9/17). */
+  & .participation-stat {
+    margin-bottom: 0;
+  }
 }
 
 .phase-label {
@@ -495,7 +499,7 @@ section#ai-report-hero {
 .phase-subtitle {
   font-size: 1.375rem;
   color: var(--report-body);
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.75rem;
 }
 
 /* When the stat wraps under the copy, tighten the stack between them. */
@@ -546,6 +550,23 @@ section#ai-report-hero {
   display: none;
 }
 
+/* ---- Small body copy (18px) where the design asks for it ---- */
+
+.how-to-read-tiers h3,
+.how-to-read-tiers p,
+#download-data p,
+.style-body-text .demographics-intro p,
+.style-body-text .demographics-intro li,
+section#analyzing-results p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.how-to-read-tiers h3 {
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
 /* ---- Chart placeholders ---- */
 
 .chart-placeholder {
@@ -564,7 +585,8 @@ section#ai-report-hero {
 }
 
 .chart-controls {
-  margin-top: 1.5rem;
+  /* Half the earlier gap between the chart and the toggle (design review 9/17). */
+  margin-top: 0.75rem;
 }
 
 /* Segmented toggle (Region / Field of work). Static for now. */
@@ -621,10 +643,12 @@ section#ai-report-hero {
   color: var(--report-ink);
 }
 
+.style-body-text .chart-legend li.chart-legend-item,
 .chart-legend-item {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  font-size: 1.125rem;
 }
 
 .chart-legend-swatch {
@@ -697,6 +721,11 @@ section#stay-informed {
   position: relative;
   overflow: hidden;
   padding-block: 4rem;
+
+  /* Copy stays left-aligned; the column itself is centred in the band. */
+  & .row {
+    justify-content: center;
+  }
 
   & h2 {
     color: var(--report-off-white);
@@ -878,7 +907,6 @@ section#how-we-did-this-work select.demographics-select {
 
 .demographics-svg-host {
   width: 100%;
-  max-width: 1040px;
 }
 
 .demographics-svg {
@@ -1106,7 +1134,7 @@ section#who-participated button.stepper-arrow-next,
 /* ---- The power of discussion: conversations ring + quote cards ---- */
 
 .conversations {
-  margin: 1rem 0 2rem;
+  margin: 0.75rem 0 2rem;
 }
 
 .conversations-layout {
