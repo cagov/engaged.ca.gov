@@ -1,0 +1,71 @@
+name: Redirect a retired PR preview
+
+# Manual tool. Points a retired preview folder (pr/<old>) at a live one by
+# overwriting a few index.html files with a client-side redirect. Nothing else
+# in the old folder is touched. Run from the Actions tab or:
+#   gh workflow run preview_redirect.yml --ref <branch with this file> -f old=... -f new=...
+on:
+  workflow_dispatch:
+    inputs:
+      old:
+        description: URL-safe branch name of the retired preview (folder under pr/)
+        required: true
+        default: ai-impact-report-split-version
+      new:
+        description: URL-safe branch name of the preview to forward to
+        required: true
+        default: ai-impact-report
+      paths:
+        description: Comma-separated page paths to overwrite (each gets index.html)
+        required: true
+        default: "/,/ai-impact/report/,/ai-impact/report-details/"
+
+jobs:
+  redirect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@master
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-1
+
+      - name: Write and upload redirect pages
+        shell: bash
+        env:
+          OLD: ${{ inputs.old }}
+          NEW: ${{ inputs.new }}
+          PATHS: ${{ inputs.paths }}
+        run: |
+          set -euo pipefail
+          IFS=',' read -ra LIST <<< "$PATHS"
+          for p in "${LIST[@]}"; do
+            p="${p#/}"                       # strip leading slash
+            target="https://${NEW}.pr.engaged.ca.gov/${p}"
+            key="pr/${OLD}/${p}index.html"
+            cat > redirect.html <<HTML
+          <!doctype html>
+          <html lang="en">
+          <head>
+          <meta charset="utf-8">
+          <title>This preview has moved</title>
+          <meta name="robots" content="noindex">
+          <meta http-equiv="refresh" content="0; url=${target}">
+          <link rel="canonical" href="${target}">
+          <script>location.replace("${target}");</script>
+          </head>
+          <body>
+          <p>This preview branch was merged. Continue to <a href="${target}">${target}</a>.</p>
+          </body>
+          </html>
+          HTML
+            echo "→ s3://pr.engaged.ca.gov/${key}  =>  ${target}"
+            aws s3api put-object --bucket pr.engaged.ca.gov --key "${key}" --body redirect.html \
+              --content-type "text/html; charset=utf-8" --cache-control "no-cache" > /dev/null
+          done
+
+      - name: Invalidate CloudFront cache
+        run: AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id EJBCVN0CVEA2Z --paths "/pr/${{ inputs.old }}/*"
