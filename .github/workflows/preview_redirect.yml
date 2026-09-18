@@ -5,6 +5,11 @@ name: Redirect a retired PR preview
 # in the old folder is touched. Run from the Actions tab or:
 #   gh workflow run preview_redirect.yml --ref <branch with this file> -f old=... -f new=...
 on:
+  # Runs on push to this branch (workflow_dispatch only works once the file is
+  # on the default branch). Defaults below are used for push runs.
+  push:
+    branches:
+      - pr-preview-redirect
   workflow_dispatch:
     inputs:
       old:
@@ -36,9 +41,9 @@ jobs:
       - name: Write and upload redirect pages
         shell: bash
         env:
-          OLD: ${{ inputs.old }}
-          NEW: ${{ inputs.new }}
-          PATHS: ${{ inputs.paths }}
+          OLD: ${{ inputs.old || 'ai-impact-report-split-version' }}
+          NEW: ${{ inputs.new || 'ai-impact-report' }}
+          PATHS: ${{ inputs.paths || '/,/ai-impact/report/,/ai-impact/report-details/' }}
         run: |
           set -euo pipefail
           IFS=',' read -ra LIST <<< "$PATHS"
@@ -68,4 +73,4 @@ jobs:
           done
 
       - name: Invalidate CloudFront cache
-        run: AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id EJBCVN0CVEA2Z --paths "/pr/${{ inputs.old }}/*"
+        run: AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id EJBCVN0CVEA2Z --paths "/pr/${{ inputs.old || 'ai-impact-report-split-version' }}/*"
