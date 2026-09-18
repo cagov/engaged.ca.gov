@@ -474,10 +474,22 @@ section#ai-report-hero {
 .phase-row {
   --bs-gutter-y: 1rem;
 
-  /* The stat block sets the row's height; drop its trailing margin so the
-     chart sits about half as far below the header (design review 9/17). */
   & .participation-stat {
     margin-bottom: 0;
+  }
+
+  /* Desktop: the stat block floats beside the copy instead of setting the
+     row's height, so the chart's gap is measured from the subtitle, not from
+     the taller stat (design review 9/18). It hangs over the chart's empty
+     top-right corner when it is taller than the copy. */
+  @media (min-width: 992px) {
+    position: relative;
+
+    & > .col-lg-4 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 }
 
@@ -499,7 +511,7 @@ section#ai-report-hero {
 .phase-subtitle {
   font-size: 1.375rem;
   color: var(--report-body);
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
 }
 
 /* When the stat wraps under the copy, tighten the stack between them. */
@@ -610,8 +622,8 @@ section#analyzing-results p {
 }
 
 .chart-controls {
-  /* Half the earlier gap between the chart and the toggle (design review 9/17). */
-  margin-top: 0.75rem;
+  /* Matches the gap between the subtitle and the chart above (design review 9/18). */
+  margin-top: 1rem;
 }
 
 /* Segmented toggle (Region / Field of work). Static for now. */
@@ -1038,7 +1050,8 @@ section#who-participated h2 {
   display: none;
   width: 100%;
   max-width: 1040px;
-  margin: 0 0 0.5rem;
+  /* With chart-controls' top margin this matches the gap above the canvas. */
+  margin: 0 0 0.25rem;
 
   & canvas {
     display: block;
@@ -1160,7 +1173,7 @@ section#who-participated button.stepper-arrow-next,
 /* ---- The power of discussion: conversations ring + quote cards ---- */
 
 .conversations {
-  margin: 0.75rem 0 2rem;
+  margin: 0.5rem 0 2rem;
 }
 
 .conversations-layout {
