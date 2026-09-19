@@ -123,15 +123,20 @@ section#ai-report-hero {
   position: relative;
 }
 
-.ai-report-hero-adornment {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 247px;
+/* Mirrors .participation-sidebar's right padding so the adornment's centre
+   lines up with the stat numbers in the sections below. */
+.hero-adornment-col {
+  padding-right: calc(2rem + var(--bs-gutter-x, 1.5rem) / 2);
+  text-align: center;
 
   @media (width <= 991px) {
     display: none;
   }
+}
+
+.ai-report-hero-adornment {
+  width: 247px;
+  max-width: 100%;
 }
 
 /* ---- Stat sidebar (mirrors state-employees-report.css) ---- */
@@ -374,13 +379,13 @@ section#ai-report-hero {
 
 .style-body-text .policy-idea-body {
   padding: 0 3rem 1.25rem 1.25rem;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.125rem;
+  line-height: 1.5;
   color: var(--report-body);
 
   & p {
-    margin: 0 0 0.75rem;
-    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
   }
 
   & ul {
@@ -390,13 +395,14 @@ section#ai-report-hero {
   }
 
   & li {
-    margin-bottom: 0.25rem;
-    font-size: 1rem;
+    margin-bottom: 0.15rem;
+    font-size: 1.125rem;
+    line-height: 1.45;
   }
 }
 
 .policy-idea-examples-label {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--report-body);
 }
 
