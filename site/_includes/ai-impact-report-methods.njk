@@ -1,0 +1,94 @@
+{# The methods sections (sortition, demographics chart, links, analyzing results).
+   Lives on /ai-impact/report-details/; the main report links to it from a summary. #}
+<section id="how-we-did-this-work" class="style-body-text section-navy">
+  <div class="container">
+    <h2>{{ modules.how_we_did_this_work.title }}</h2>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.balancing_groups.content | safe }}
+        </div>
+      </div>
+    </div>
+
+    {# Demographics chart: Phase 1 / Phase 2 vs statewide target, one dimension at a time.
+       Drawn by demographics-chart.js from /public/data/ai-report-demographics.json. #}
+    {% set dc = modules.demographics_chart %}
+    {% set ds = modules.demographics_sources %}
+    {% set dims = [
+      ["region", dc.dim_region, ds.source_region],
+      ["race", dc.dim_race, ds.source_race],
+      ["age", dc.dim_age, ds.source_age],
+      ["gender", dc.dim_gender, ds.source_gender],
+      ["field", dc.dim_field, ds.source_field_of_work],
+      ["ai", dc.dim_ai, ds.source_ai]
+    ] %}
+    <div id="demographics-chart" class="demographics-chart"
+         data-demographics-chart
+         data-src="/public/data/ai-report-demographics.json"
+         data-dimension="region"
+         data-phase1-label="{{ dc.phase1_label }}"
+         data-phase2-label="{{ dc.phase2_label }}"
+         data-on-target-label="{{ dc.on_target_label }}"
+         data-table-caption="{{ dc.table_caption }}">
+      <div class="row">
+        <div class="col-lg-8">
+          <h4 class="demographics-title">{{ dc.title }}</h4>
+          <div class="section-body demographics-intro">
+            {{ dc.content | safe }}
+          </div>
+        </div>
+      </div>
+
+      <div class="demographics-controls">
+        <label class="demographics-select-label visually-hidden" for="demographics-select">{{ dc.pulldown_label }}</label>
+        <span class="demographics-select-wrap">
+          <select id="demographics-select" class="demographics-select" data-demographics-select disabled>
+            {% for d in dims %}
+              <option value="{{ d[0] }}"{% if loop.first %} selected{% endif %}>{{ d[1] }}</option>
+            {% endfor %}
+          </select>
+        </span>
+      </div>
+
+      <p class="demographics-chart-title">{{ dc.chart_title }}</p>
+      <div class="demographics-svg-host" data-demographics-svg>
+        {# No-JS fallback: the static Region snapshot. #}
+        <img class="chart-placeholder-image" src="/public/images/ai-report-sortition-chart-placeholder.png" alt="{{ dc.chart_alt }}" />
+      </div>
+      <div data-demographics-table></div>
+
+      {% for d in dims %}
+        {% if d[2] %}
+          <div class="demographics-source" data-source-for="{{ d[0] }}"{% if not loop.first %} hidden{% endif %}>
+            <p class="demographics-source-label">{{ ds.label }}</p>
+            <ul>
+              <li>{{ d[2] | markdownInline | safe }}</li>
+            </ul>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body process-links">
+          {{ modules.process_links.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="analyzing-results" class="style-body-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.analyzing_results.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

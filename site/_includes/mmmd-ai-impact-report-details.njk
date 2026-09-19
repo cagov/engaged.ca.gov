@@ -1,0 +1,19 @@
+{% set active_page = 'ai-impact' %}
+{% extends "layout.njk" %}
+{% block content %}
+
+<link rel="stylesheet" href="/css/ai-impact-report.css" />
+
+{# ---------------------------------------------------------------- Hero #}
+{% include "ai-impact-report-hero.njk" %}
+
+{# ------------------------------------------------- How we did this work + Analyzing results #}
+{% include "ai-impact-report-methods.njk" %}
+
+{# ------------------------------------------------- Sign up #}
+{% include "ai-impact-report-sign-up.njk" %}
+
+{# Same bundle as the report; only the demographics chart finds its root here. #}
+<script src="/js/ai-impact-report.js" defer></script>
+
+{% endblock %}

@@ -1,0 +1,522 @@
+---
+title: Humans in the loop
+description: "Californians say how AI should be built, governed, and used. Engaged California asked Californians how AI is reshaping work and the economy, and what government should do about it."
+layout: mmmd-ai-impact-report
+parentid: ai-impact
+keywords:
+  - California
+  - artificial intelligence
+  - AI
+  - work
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: Californians say how AI should be built, used, and governed
+----
+# Humans in the loop
+
+We asked Californians some of the hardest questions facing the state:
+
+*How is AI reshaping work and the economy? What should government do about it?*
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: On this page
+nbr_items: 5
+item_1_label: A public forum on AI
+item_1_anchor: public-forum
+item_2_label: Ideas we heard
+item_2_anchor: what-we-heard
+item_3_label: Who participated
+item_3_anchor: who-participated
+item_4_label: What happens next
+item_4_anchor: what-happens-next
+item_5_label: How we did this work
+item_5_anchor: how-we-did-this-work
+----
+
+----
+id: public_forum
+----
+## A public forum on AI
+
+In May 2026, we opened a public forum on the *Impact of AI on work* to all Californians. In the months to follow, thousands of people across the state gave us their thoughts. They took polls and joined facilitated group discussions. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas.
+
+One idea came up consistently: **We need humans in the AI policy loop.** Not only for how people use AI, but for how companies build it and laws govern it.
+----
+id: participation_numbers
+participants_count: "2,421"
+participants_label: survey participants
+conversations_count: "14"
+conversations_label: conversations
+ideas_count: "27"
+ideas_label: policy ideas
+----
+
+----
+id: what_we_heard
+----
+## Ideas we heard
+
+Our poll asked people what they’d like government to do about the impact of AI. We got a wide range of ideas for policies.
+----
+id: word_cloud
+translator_note: "Labels for the animated word cloud. {current} and {total} are replaced with numbers."
+chart_alt: "Word cloud of policy ideas: the wide range of ideas from the poll, then the 27 ideas that came out of the discussions."
+phase_1_alt: "Word cloud of the policy ideas raised in the poll, sized by how many people raised each one."
+phase_2_alt: "Word cloud of the 27 policy ideas from the discussions, sized by the votes each received."
+prev_label: "Back to the poll ideas"
+next_label: "Show the discussion ideas"
+step_counter: "Phase {current} of {total}"
+----
+
+----
+id: ranking
+----
+Then we refined AI policy ideas in 2-hour discussions. We grouped what people said in these discussions into 27 distinct ideas. Then we ranked them according to:
+
+- How often an idea came up across discussions (frequency), and
+- How much support it drew when it did (how often it was a popular idea).
+
+That ranking sorted the concepts into these three tiers:
+----
+id: tiers_ui
+translator_note: "{count} is replaced with a number. Keep it in the translation."
+count_label: "{count} policy ideas"
+show_label: Show
+show_more_label: "Show {count} more"
+close_label: Close
+show_all_label: "Show all {count} ideas"
+close_all_label: Close all
+example_ideas_label: "Examples:"
+example_idea_label_singular: "Example:"
+nbr_tiers: 3
+initial_visible_ideas: 3
+----
+
+----
+id: tier_1
+title: Most support
+subtitle: Came up often and with strong support
+icon: sparkle
+nbr_ideas: 10
+----
+
+----
+id: tier_2
+title: Moderate support
+subtitle: Came up often, or with strong support, but not both
+icon: heart
+nbr_ideas: 7
+----
+
+----
+id: tier_3
+title: Some support
+subtitle: Came up less often and with less support
+icon: speech
+nbr_ideas: 10
+----
+
+----
+id: tier_1_idea_1
+title: Hold AI companies liable for the harm they cause
+----
+- Enact criminal liability for harm caused by AI
+- Direct more resources for real enforcement
+----
+id: tier_1_idea_2
+title: Protect people and nature from the resource needs of AI
+----
+- Study the impact of data centers on the environment
+- Set limits on data center noise, pollution, and use of water and electricity
+----
+id: tier_1_idea_3
+title: Set rules for where AI can be used safely
+----
+- Limit using AI to make decisions that impact lives
+- Ban automated AI in the hiring process
+----
+id: tier_1_idea_4
+title: Set rules around how AI works
+----
+- Incent companies to align with human standards
+- Set guardrails for AI overuse and addiction
+----
+id: tier_1_idea_5
+title: Deter layoffs because of AI, reward firms that keep or add workers
+----
+- Add penalties for firing workers for AI
+- Create incentives to keep or increase jobs
+----
+id: tier_1_idea_6
+title: Make AI policymaking more open to the public
+----
+- Give affected communities their say
+- Create citizen peer groups that include tech people
+----
+id: tier_1_idea_7
+title: Make rules about how AI handles personal data
+----
+- Set rules for gathering, handling, securing, and deleting
+- Enforce transparency
+----
+id: tier_1_idea_8
+title: Make companies reskill or give career help to workers who lose their jobs to AI
+----
+- Incent them to retrain workers instead of laying them off
+- Shift workers to underserved areas
+----
+id: tier_1_idea_9
+title: Set rules for labeling AI use
+----
+- Mark AI content with common words or watermarks
+- Penalize companies when they don’t disclose AI use
+----
+id: tier_1_idea_10
+title: Restrict and tax AI companies’ profits
+----
+- Close loopholes that let them avoid liability
+- Change tax laws so stock can’t be used to avoid taxation
+----
+id: tier_2_idea_1
+title: Hold AI companies liable if they use the work of others without permission
+----
+- Enforce copyrights, defend IP
+----
+id: tier_2_idea_2
+title: Make people aware of how to use AI ethically
+----
+- Make public service ads on benefits and risks
+----
+id: tier_2_idea_3
+title: Improve AI education in schools
+----
+- Let students work in sandboxes to scale positive effects
+----
+id: tier_2_idea_4
+title: Allow people to opt out of AI and make that easier
+----
+- Require consent, make opt-out the default
+----
+id: tier_2_idea_5
+title: Support independent research on AI's effects
+----
+- Fund studies on how AI use affects critical thinking
+----
+id: tier_2_idea_6
+title: Limit what personal data AI systems can collect, and let users manage their data
+----
+- Make consent text simple
+----
+id: tier_2_idea_7
+title: Pay workers who lose jobs due to AI while they find new jobs
+----
+- Universal basic income, or more unemployment pay if you lost your job to AI
+----
+id: tier_3_idea_1
+title: Support AI training for workers
+----
+
+----
+id: tier_3_idea_2
+title: Enforce privacy protections
+----
+
+----
+id: tier_3_idea_3
+title: Use AI to improve how government works
+----
+
+----
+id: tier_3_idea_4
+title: Keep humans in the loop as decision-makers, don't rely solely on AI
+----
+
+----
+id: tier_3_idea_5
+title: Strengthen parental controls for AI use
+----
+
+----
+id: tier_3_idea_6
+title: Fund programs for human connection and life outside of AI
+----
+
+----
+id: tier_3_idea_7
+title: Make sure students don't use AI to avoid learning
+----
+
+----
+id: tier_3_idea_8
+title: Keep companies from firing or punishing workers for not using AI
+----
+
+----
+id: tier_3_idea_9
+title: Track and report on job loss due to AI
+----
+
+----
+id: tier_3_idea_10
+title: Use AI for jobs people don’t want to do or can’t do
+----
+
+----
+id: how_to_read_tiers
+----
+### How to read these tiers
+
+The ranking shows how an idea fared across discussions. It's not a verdict on its merit. An idea in the "Some support" tier may still matter a great deal to many people.
+
+These are the ideas participants voiced. They are separate from what current policy or legislation may already do. Some may align with items already moving through the policy landscape.
+
+----
+id: power_of_discussion
+title: The power of discussion
+phase_label: Phase 2
+phase_title: Participants shared their thoughts, concerns, and solutions
+phase_subtitle: Look inside the conversations
+stat_count: "14"
+stat_label: conversations
+chart_alt: "Ring of 14 small clusters of dots, one per conversation, each dot a participant colored by region or field of work. Selecting a conversation shows quotes from it."
+chart_center_title: 103 people in 14 conversations
+chart_center_hint: Click one to see an idea they discussed
+legend_participant: Participant
+legend_facilitator: Facilitator
+toggle_region: Region
+toggle_field_of_work: Field of work
+toggle_age: Age
+toggle_race: Race/ethnicity
+toggle_gender: Gender
+toggle_ai_response: AI response
+translator_note: "{count}, {date}, and {n} are replaced with values. Keep them in the translation."
+conversation_title: "Conversation {n}"
+conversation_meta: "{count} people · {date}"
+conversation_button: "Conversation {n}, {date}: read quotes"
+conversation_no_quotes: "Conversation {n}, {date}: no quotes selected"
+outcome_label: "This turned into the policy concept:"
+nbr_conversations: 14
+----
+
+----
+id: conversation_1
+translator_note: "Quotes are verbatim from participants. region and field values are data keys; do not translate them."
+quote_1: "I think that the state of California should make it illegal to fire people to be replaced by AI. And then make the standards very strict and the punishment for doing so severe. Very severe."
+attribution_1: Finance worker from LA
+region_1: Los Angeles
+field_1: Financial
+quote_2: "I'd say within government, just shifting people within the organization to other underserved areas instead of just cutting people wholesale: I think, would be the way to go."
+attribution_2: Healthcare worker from LA
+region_2: Los Angeles
+field_2: Healthcare
+quote_3: "I'm concerned about the thoughts of tightly regulating industries, as far as telling them who they can hire, who they can fire. As a government entity that is something that we should be very careful of: exerting that much control over private industry."
+attribution_3: Government worker from the Sierra region
+region_3: Sierra Region
+field_3: Government
+----
+
+----
+id: conversation_2
+quote_1: "I think the general concern is AI tools right now can be used very easily to deceive. And while, it is one of the grandest freedoms in the United States: you're allowed to be deceptive. But a little watermark on things, just so people can activate their skepticism: Maybe not the worst thing in the world."
+attribution_1: Construction worker in the Sacramento valley / Sierra foothills
+region_1: Sacramento Valley / Sierra Foothills
+field_1: Goods producing and harvesting
+quote_2: "Require AI to identify itself and what it generates."
+attribution_2: IT worker from Southern California
+region_2: Southern California
+field_2: Information technology
+quote_3: "Sorry, I have a slight disagreement. I think that it should be the responsibility of companies who are selling a product to identify that they are using AI in their advertising and not just the AI itself."
+attribution_3: Unemployed Californian from LA
+region_3: Los Angeles
+field_3: "Unemployed, looking"
+----
+
+----
+id: conversation_4
+quote_1: "Recently, in my own community, there was the potential of a data center being built, and my own community wasn't notified, wasn't told at all. Making sure that our local governments are responsible to our citizens for the transparency regarding building and construction and implementation of data centers would be a helpful policy."
+attribution_1: Arts/media/entertainment worker from the far north/north coast of California
+region_1: Far North / North Coast
+field_1: "Arts, entertainment, or media"
+quote_2: "I just want to piggyback off that point. I think probably holding town halls, or at least bringing it up in some forum where the community can understand the pros and cons of a data center there."
+attribution_2: Government worker from the Bay Area
+region_2: Bay Area
+field_2: Government
+----
+
+----
+id: conversation_8
+quote_1: "AI is not currently subject to existing liability laws, and this is just due to some very outdated technicalities with how the laws are written. For example, there is ambiguity on whether or not AI software or deployed software qualifies as a product. This is because the software does not come packaged in hardware. That is something that the state can very easily just eliminate as an ambiguity by making sure it is defined."
+attribution_1: Arts/entertainment/media worker from LA
+region_1: Los Angeles
+field_1: "Arts, entertainment, or media"
+quote_2: "I appreciate all the homework you've done. That is always cool to see. Love participating. I think that liability is at the top with most votes for a very simple reason. I think that it's kind of a knock-on effect. If AI companies and AI purveyors and AI people who make the algorithms are held liable for everything that's down in that list below liability, I think that the problem kind of solves itself."
+attribution_2: Education worker from Southern California
+region_2: Southern California
+field_2: Education
+----
+
+----
+id: conversation_14
+quote_1: "I agree with your point there on data tracking. Another thing I think we should protect is also our natural resources, and a clean environment, because I know people in Texas, where data farms or data centers have moved in, and the water has been polluted, and electric bills go way up, so yeah, protecting our natural resources."
+attribution_1: Arts/entertainment/media worker from Southern California
+region_1: Southern California
+field_1: "Arts, entertainment, or media"
+quote_2: "I think for me, and I know the previous speaker kind of touched on it, is the environmental impacts. I think for me, that's my biggest concern, is just the amount of water and electricity the AI is using. You hear of the data center in Georgia that illegally tapped into some city’s or county's water supply and took millions of gallons from it without anybody realizing."
+attribution_2: Government worker from LA
+region_2: Los Angeles
+field_2: Government
+quote_3: "I mean, I think that when I think about the state as a physical place, we could set environmental regulations, we could set data privacy requirements for states that operate here. When I look at this list, I get really excited about what floor are we setting for environmental protection when it comes to energy use, space use, etc."
+attribution_3: Government worker from the Bay Area
+region_3: Bay Area
+field_3: Government
+----
+
+----
+id: region_legend
+nbr_regions: 9
+region_1: Los Angeles
+region_2: Bay Area
+region_3: Southern California
+region_4: Sacramento Valley / Sierra Foothills
+region_5: Central Valley
+region_6: Far North / North Coast
+region_7: Central Coast
+region_8: Sierra Region
+region_9: Not stated
+----
+
+----
+id: download_data
+button_text: Download the comments
+----
+### Download what people said
+
+You can download and read all the comments participants made in the discussions. They are in a CSV file.
+
+Participants remain anonymous. We scrubbed this dataset of personally-identifying information. But we did not change the comments in any other way.
+----
+id: who_participated
+title: Who participated
+nbr_steps: 4
+toggle_region: Region
+toggle_field_of_work: Field of work
+toggle_age: Age
+toggle_race: Race/ethnicity
+toggle_gender: Gender
+toggle_ai_response: AI response
+legend_participant: Participant
+legend_facilitator: Facilitator
+prev_label: Previous step
+next_label: Next step
+translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
+step_counter: "{current} of {total}"
+play_label: Play
+pause_label: Pause
+restart_label: Restart
+ring_center_title: 103 people in 14 conversations
+ring_center_hint: ""
+chart_alt: "Animation of every survey respondent as a dot. Those invited to a discussion brighten, those who attended gather as person figures, then split into one orbiting ring per conversation, colored by region or field of work."
+----
+
+----
+id: who_participated_step_1
+phase_label: Phase 1
+pill_label: "1 · Phase 1"
+phase_title: Broad listening
+stat_count: "2,421"
+stat_label: survey respondents
+phase_subtitle: "Californians responded to our open survey on AI"
+chart_image_region: /public/images/ai-report-participants-step1-region.png
+chart_image_field: /public/images/ai-report-participants-step1-field.png
+chart_alt: "Scatter plot of dots, one per survey respondent, colored by region."
+----
+
+----
+id: who_participated_step_2
+phase_label: Phase 2
+pill_label: "2 · Selected"
+phase_title: Inviting a balanced audience
+stat_count: "938"
+stat_label: invited
+phase_subtitle: "We selected a subset of respondents that reflects California"
+chart_image_region: /public/images/ai-report-participants-step2-region.png
+chart_image_field: /public/images/ai-report-participants-step2-field.png
+chart_alt: "Scatter plot of dots, one per invited respondent, colored by region."
+----
+
+----
+id: who_participated_step_3
+phase_label: Phase 2
+pill_label: "3 · Phase 2"
+phase_title: Joining the conversation
+stat_count: "103"
+stat_label: attended
+phase_subtitle: "These Californians RSVP’d “yes” and joined a discussion"
+chart_image_region: /public/images/ai-report-participants-step3-region.png
+chart_image_field: /public/images/ai-report-participants-step3-field.png
+chart_alt: "Scatter plot of dots, one per discussion attendee, colored by region."
+----
+
+----
+id: who_participated_step_4
+phase_label: Phase 2
+pill_label: "4 · Conversations"
+phase_title: The discussion groups
+stat_count: "14"
+stat_label: conversations
+phase_subtitle: "Here are the demographics of each discussion"
+chart_image_region: /public/images/ai-report-participants-step4-region.png
+chart_image_field: /public/images/ai-report-participants-step4-field.png
+chart_alt: "Ring of 14 small clusters of dots, one per conversation, colored by region."
+----
+
+----
+id: what_happens_next
+translator_note_copy: "Text in parentheses is a placeholder note for the writers. The paragraph that follows is filler text."
+----
+## What happens next
+
+(point to relevant actions and commitments from state gov, etc)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+----
+id: how_we_did_this_work
+title: How we did this work
+translator_note: "The button links to the page with the full methods."
+button_text: See the details
+button_href: /ai-impact/report-details/
+----
+Our engagement had two phases: an open online survey, then live discussions with a smaller group of respondents. We chose that group by sortition, a lottery-style method that balances the invitee list against California’s demographics while giving everyone who qualifies an equal chance. The details page explains how we set those targets, how close each phase came to them, and how we analyzed what people said.
+----
+id: sign_up
+button_text: Sign up
+----
+## Sign up to stay engaged
+
+Give us your email to learn about upcoming opportunities.

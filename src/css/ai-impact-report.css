@@ -1,0 +1,1456 @@
+/* ai-impact-report.css
+ * Styles for /ai-impact/report/. Loaded only by mmmd-ai-impact-report.njk.
+ * Paddings, stat sidebar, and section rhythm mirror state-employees-report.css.
+ */
+
+:root {
+  --report-navy: #1c2745;
+  --report-ink: #0f152f;
+  --report-off-white: #fff4eb;
+  --report-orange: #e79450;
+  --report-orange-light: #f0b07a;
+  --report-link: #1a5a96;
+  --report-rule: #d9dbe0;
+  --report-body: #3b3b3b;
+}
+
+/* ---- Section rhythm ---- */
+
+#ai-report-hero ~ section {
+  padding: 3rem 0;
+}
+
+.section-off-white {
+  background: var(--report-off-white);
+}
+
+.section-light {
+  background: #f6f7fa;
+}
+
+.section-navy {
+  background: var(--report-navy);
+  color: var(--report-off-white);
+
+  & h2,
+  & h3,
+  & p,
+  & li,
+  & strong {
+    color: var(--report-off-white);
+  }
+
+  & a {
+    color: var(--report-off-white);
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+  }
+}
+
+.section-body {
+  line-height: 1.75;
+}
+
+.section-body h2,
+section#who-participated > .container > h2,
+section#power-of-discussion > .container > h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Hero ---- */
+
+section#ai-report-hero {
+  background: var(--report-navy);
+  color: var(--report-off-white);
+  padding: 4rem 0;
+  overflow: hidden;
+
+  & h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  & .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+  }
+
+  & .hero-content > p {
+    font-size: 1.25rem;
+  }
+
+  & .hero-content > p.hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  & .hero-content em {
+    font-style: italic;
+  }
+}
+
+.hero-nav {
+  margin-top: 1.75rem;
+
+  & ul {
+    list-style: disc;
+    margin: 0;
+    padding-left: 1.4rem;
+  }
+
+  & li {
+    margin-bottom: 0.35rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  & a {
+    color: var(--report-off-white);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgb(255 244 235 / 0.5);
+    text-underline-offset: 3px;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration-color: var(--report-orange);
+    }
+  }
+}
+
+.hero-container {
+  position: relative;
+}
+
+/* Mirrors .participation-sidebar's right padding so the adornment's centre
+   lines up with the stat numbers in the sections below. */
+.hero-adornment-col {
+  padding-right: calc(2rem + var(--bs-gutter-x, 1.5rem) / 2);
+  text-align: center;
+
+  @media (width <= 991px) {
+    display: none;
+  }
+}
+
+.ai-report-hero-adornment {
+  width: 247px;
+  max-width: 100%;
+}
+
+/* ---- Stat sidebar (mirrors state-employees-report.css) ---- */
+
+.participation-sidebar {
+  padding: 0 2rem 0 0;
+}
+
+.participation-stat {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  & img {
+    display: block;
+    margin: 0 auto 0.25rem;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.stat-number {
+  font-weight: 700;
+  font-size: 47px;
+  line-height: 1;
+  color: var(--report-ink);
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 719px) {
+    font-size: 33px;
+  }
+}
+
+.stat-label {
+  font-size: 23px;
+  color: #555;
+
+  @media (max-width: 719px) {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .participation-sidebar {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .participation-stat {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .participation-stat img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+  }
+}
+
+/* ---- Policy tiers ---- */
+
+.policy-tiers {
+  margin: 2rem 0 2.5rem;
+}
+
+.policy-tier {
+  position: relative;
+  border: 2px solid var(--report-orange);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1.25rem 1.25rem 1rem 1.25rem;
+  /* Box edge lines up with the body copy; the sticker spills into the margin. */
+  margin: 0 0 2rem;
+
+  @media (max-width: 575px) {
+    padding-top: 3.25rem;
+  }
+}
+
+.policy-tier-icon {
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  width: 90px;
+  height: 90px;
+
+  @media (max-width: 575px) {
+    width: 64px;
+    height: 64px;
+    top: -1rem;
+    left: 1rem;
+  }
+}
+
+/* Sticker SVGs are 108x108 with the 90px circle offset inside; scale the box so the circle lands where the CSS circle would. */
+.policy-tier-sticker {
+  width: 108px;
+  height: 108px;
+  top: -2rem;
+  left: -2rem;
+
+  @media (max-width: 575px) {
+    width: 77px;
+    height: 77px;
+    top: -1.4rem;
+    left: 0.6rem;
+  }
+}
+
+.policy-tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 0 1rem 4.25rem;
+  border-bottom: 1px solid var(--report-rule);
+
+  @media (max-width: 575px) {
+    padding-left: 0;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+.policy-tier-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.style-body-text .policy-tier-subtitle {
+  font-style: italic;
+  color: var(--report-body);
+  font-size: 1.125rem;
+  margin: 0.25rem 0 0;
+}
+
+.style-body-text .policy-tier-count {
+  white-space: nowrap;
+  color: var(--report-body);
+  font-size: 1rem;
+  margin: 0.4rem 0 0;
+}
+
+.policy-ideas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.policy-idea {
+  border-bottom: 1px solid var(--report-rule);
+}
+
+.policy-idea-title {
+  margin: 0 !important;
+  font-size: 1.4375rem;
+  line-height: 1.4;
+}
+
+.policy-tiers button.policy-idea-toggle {
+  /* Reset global button styling (selector outranks layout.css `button:not(.nav-header)`). */
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.9rem 0.25rem 0.9rem 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  cursor: pointer;
+  text-align: left;
+
+  &:hover .policy-idea-title-text {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* Ideas without examples: same rhythm as the buttons, no control. */
+.policy-idea-title-static {
+  padding: 0.9rem 0.25rem 0.9rem 1.25rem;
+  font-size: 1.4375rem;
+  font-weight: 700;
+  color: var(--report-ink);
+}
+
+.policy-idea-toggle-icon {
+  flex: 0 0 auto;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: var(--report-orange);
+    border-radius: 1px;
+    left: 0;
+    top: 8px;
+    width: 18px;
+    height: 2px;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+    transition: transform 0.15s ease;
+  }
+}
+
+.policy-idea-toggle[aria-expanded="true"] .policy-idea-toggle-icon::after {
+  transform: rotate(0deg);
+}
+
+.style-body-text .policy-idea-body {
+  padding: 0 3rem 1.25rem 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--report-body);
+
+  & p {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+  }
+
+  & ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
+
+  & li {
+    margin-bottom: 0.15rem;
+    font-size: 1.125rem;
+    line-height: 1.45;
+  }
+}
+
+.policy-idea-examples-label {
+  font-weight: 600;
+  color: var(--report-body);
+}
+
+.policy-tier-footer {
+  padding: 0.75rem 1.25rem 0;
+}
+
+.policy-tiers-footer {
+  border-top: 1px solid var(--report-rule);
+  padding-top: 1rem;
+
+  @media (max-width: 575px) {
+  }
+}
+
+/* Link-styled buttons: "Show 7 more", "Close", "Show all 27 ideas". */
+.policy-tiers button.text-link-button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--report-link);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  & .chevron {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-3px) rotate(45deg);
+    transition: transform 0.15s ease;
+  }
+
+  &[aria-expanded="true"] .chevron {
+    transform: translateY(2px) rotate(225deg);
+  }
+}
+
+/* Hide the "Show/Close" controls until JS is ready so the no-JS page reads as a plain list. */
+.policy-tiers:not(.js-enabled) {
+  & .policy-tier-footer,
+  & .policy-tiers-footer {
+    display: none;
+  }
+
+  & .policy-idea-body {
+    display: block !important;
+  }
+}
+
+.how-to-read-tiers {
+  line-height: 1.75;
+
+  & h3 {
+    font-size: 1.4375rem;
+    margin: 0 0 1rem;
+  }
+}
+
+/* ---- Phase headers (Who participated / Power of the discussion) ---- */
+
+.phase-row {
+  --bs-gutter-y: 1rem;
+
+  & .participation-stat {
+    margin-bottom: 0;
+  }
+
+  /* Desktop: the stat block floats beside the copy instead of setting the
+     row's height, so the chart's gap is measured from the subtitle, not from
+     the taller stat (design review 9/18). It hangs over the chart's empty
+     top-right corner when it is taller than the copy. */
+  @media (min-width: 992px) {
+    position: relative;
+
+    & > .col-lg-4 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.phase-label {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--report-body);
+  margin: 0 0 0.25rem;
+}
+
+.phase-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0 0 1rem;
+  line-height: 1.25;
+}
+
+.phase-subtitle {
+  font-size: 1.375rem;
+  color: var(--report-body);
+  margin: 0 0 1rem;
+}
+
+/* When the stat wraps under the copy, tighten the stack between them. */
+@media (max-width: 991px) {
+  .phase-row {
+    --bs-gutter-y: 0;
+  }
+
+  .phase-row .phase-subtitle {
+    margin-bottom: 0.5rem;
+  }
+
+  .phase-row .participation-sidebar {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ---- Ideas we heard: two-phase word cloud ---- */
+
+.ideas-cloud {
+  position: relative;
+  margin: 1rem 0 2rem;
+  /* Reserve the wide field's aspect until the canvas is sized, so the page
+     does not jump when the chart appears. */
+  min-height: 0;
+
+  & canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1400 / 820;
+  }
+
+  &.ideas-cloud-ready canvas {
+    aspect-ratio: auto;
+  }
+
+  @media (max-width: 699px) {
+    & canvas {
+      aspect-ratio: 800 / 1000;
+    }
+  }
+}
+
+/* No-JS: nothing to draw; hide the empty canvas and its arrows. */
+.ideas-cloud:not(.ideas-cloud-ready) .stepper-arrow {
+  display: none;
+}
+
+/* ---- Small body copy (18px) where the design asks for it ---- */
+
+.how-to-read-tiers h3,
+.how-to-read-tiers p,
+#download-data p,
+.style-body-text .demographics-intro p,
+.style-body-text .demographics-intro li,
+section#analyzing-results p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.how-to-read-tiers h3 {
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+/* ---- How we did this work: summary + link to the details page ---- */
+
+.methods-summary {
+  padding: 3rem 0;
+
+  & h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.methods-summary-button {
+  margin-top: 1.5rem;
+}
+
+.hero-back-link {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+
+  & a {
+    color: var(--report-off-white);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+/* ---- Chart placeholders ---- */
+
+.chart-placeholder {
+  margin: 1rem 0 2.5rem;
+}
+
+.chart-placeholder-image {
+  display: block;
+  width: 100%;
+  max-width: 1220px;
+  height: auto;
+}
+
+.chart-placeholder-navy .chart-placeholder-image {
+  border-radius: 4px;
+}
+
+.chart-controls {
+  /* Matches the gap between the subtitle and the chart above (design review 9/18). */
+  margin-top: 1rem;
+}
+
+/* Segmented toggle (Region / Field of work). Static for now. */
+.segmented-toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 1.5px solid var(--report-navy);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.chart-controls button.segmented-toggle-option {
+  all: unset;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--report-link);
+  background: #fff;
+  cursor: default;
+
+  &[aria-pressed="true"] {
+    background: var(--report-navy);
+    color: #fff;
+  }
+
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+/* Legends are rebuilt on toggle. Their height is reserved at runtime, and the
+   chart blocks opt out of scroll anchoring so a rebuild cannot hop the page. */
+.participants-stepper,
+.conversations,
+.demographics-chart {
+  overflow-anchor: none;
+}
+
+.region-legend[data-funnel-legend],
+.region-legend[data-ring-legend] {
+  /* min-height is set at runtime to the taller of the two legends. */
+  align-content: start;
+}
+
+.style-body-text .chart-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--report-ink);
+}
+
+.style-body-text .chart-legend li.chart-legend-item,
+.chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.125rem;
+}
+
+.chart-legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--swatch, #999);
+}
+
+/* Region colors read from the Figma export. Approximate until confirmed. */
+.region-legend [data-region="1"] {
+  --swatch: #4cc3a0;
+}
+.region-legend [data-region="2"] {
+  --swatch: #4a90d9;
+}
+.region-legend [data-region="3"] {
+  --swatch: #b57bdb;
+}
+.region-legend [data-region="4"] {
+  --swatch: #f0932b;
+}
+.region-legend [data-region="5"] {
+  --swatch: #7b3fa0;
+}
+.region-legend [data-region="6"] {
+  --swatch: #e8503a;
+}
+.region-legend [data-region="7"] {
+  --swatch: #6e8b2a;
+}
+.region-legend [data-region="8"] {
+  --swatch: #a8d8f0;
+}
+.region-legend [data-region="9"] {
+  --swatch: #bdbdbd;
+}
+
+/* ---- Download the comments (inside the discussion band) ---- */
+
+#download-data {
+  margin-top: 2rem;
+
+  & h3 {
+    font-size: 1.4375rem;
+    margin: 0 0 1rem;
+  }
+}
+
+.download-button-div {
+  margin-top: 1.5rem;
+}
+
+/* Outranks layout.css's [data-theme="orange"] background shorthand so the icon survives. */
+.download-button-div a[data-appearance="button"][data-theme="orange"] {
+  padding-right: 2.6rem;
+  background: var(--report-orange) url("/public/images/icon-download.svg")
+    no-repeat right 0.8rem center;
+
+  &:hover,
+  &:focus {
+    background-color: #e4863a;
+  }
+}
+
+/* ---- Sign up: left-aligned, mirrors the efficiency report ---- */
+
+section#stay-informed {
+  position: relative;
+  overflow: hidden;
+  padding-block: 4rem;
+
+  /* Copy stays left-aligned; the column itself is centred in the band. */
+  & .row {
+    justify-content: center;
+  }
+
+  & h2 {
+    color: var(--report-off-white);
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+  }
+
+  & p {
+    margin-bottom: 1rem;
+  }
+
+  & .signup-engaged-section a[data-appearance="button"] {
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  & .signup-cluster-1,
+  & .signup-cluster-2 {
+    position: absolute;
+    inline-size: min(22vw, 300px);
+    pointer-events: none;
+  }
+
+  & .signup-cluster-1 {
+    bottom: max(-8vw, -100px);
+    left: max(-10vw, -120px);
+  }
+
+  & .signup-cluster-2 {
+    top: max(-8vw, -100px);
+    right: max(-10vw, -120px);
+  }
+
+  @media (max-width: 991px) {
+    & .signup-cluster-1,
+    & .signup-cluster-2 {
+      display: none;
+    }
+  }
+}
+
+/* ---- Word cloud placeholder, chart controls, methodology ---- */
+
+/* Empty placeholder box for visualizations that have no design yet (word cloud). */
+.chart-placeholder-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  border: 2px dashed var(--report-rule);
+  border-radius: 8px;
+  background: #f6f7fa;
+  color: #595959;
+  font-style: italic;
+
+  & .chart-placeholder-empty-label {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.chart-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.chart-controls-row .segmented-toggle {
+  margin-bottom: 0;
+}
+
+.participant-legend .swatch-participant {
+  background: var(--report-navy);
+}
+
+.participant-legend .swatch-facilitator {
+  background: #fff;
+  border: 3px solid var(--report-navy);
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+}
+
+/* Navy variant lives on the details page; the report's summary section is white. */
+section#how-we-did-this-work.section-navy {
+  & h2 {
+    color: var(--report-off-white);
+    margin-bottom: 2rem;
+  }
+
+  & h3 {
+    font-size: 1.75rem;
+    margin: 0 0 1.25rem;
+  }
+
+  & .process-links {
+    margin-top: 2rem;
+  }
+
+  & .process-links h4 {
+    color: var(--report-off-white);
+    font-size: 1.4375rem;
+    margin: 0 0 1rem !important;
+  }
+}
+
+/* Demographics chart: pull-down, SVG, and the per-category source note. */
+.demographics-chart {
+  margin: 1rem 0 2.5rem;
+}
+
+.demographics-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.style-body-text .demographics-select-label {
+  font-size: 1rem;
+  color: var(--report-off-white);
+}
+
+.demographics-select-wrap {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0.9rem;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--report-off-white);
+    border-bottom: 2px solid var(--report-off-white);
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+  }
+}
+
+section#how-we-did-this-work select.demographics-select {
+  appearance: none;
+  min-width: 15rem;
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
+  border: 1.5px solid rgb(255 244 235 / 0.5);
+  border-radius: 8px;
+  background: rgb(255 244 235 / 0.08);
+  color: var(--report-off-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--report-off-white);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-orange);
+    outline-offset: 2px;
+  }
+
+  & option {
+    color: var(--report-ink);
+    background: #fff;
+  }
+}
+
+.style-body-text .demographics-chart-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--report-off-white);
+  margin: 0 0 0.25rem;
+}
+
+.demographics-svg-host {
+  width: 100%;
+}
+
+.demographics-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: inherit;
+}
+
+.demographics-bar {
+  transition: opacity 0.15s;
+}
+
+.demographics-svg:hover .demographics-bar:not(:hover) {
+  opacity: 0.75;
+}
+
+/* The one place small text is intended: the per-category source note under the bar chart. */
+.style-body-text .demographics-source {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  & .demographics-source-label {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0 0.25rem;
+  }
+
+  & ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  & li {
+    font-size: 1rem;
+  }
+}
+
+section#analyzing-results {
+  & h3 {
+    font-size: 1.75rem;
+    margin: 0 0 1.25rem;
+  }
+
+  & h4 {
+    font-size: 1.4375rem;
+    margin: 1.5rem 0 1rem !important;
+  }
+}
+
+section#how-we-did-this-work .demographics-intro {
+  margin-bottom: 1.5rem;
+
+  & ul {
+    margin-bottom: 0;
+  }
+}
+
+.demographics-title {
+  color: var(--report-off-white);
+  font-size: 1.4375rem;
+  margin: 0 0 1rem !important;
+}
+
+/* ---- Who participated: animated participant funnel ---- */
+
+section#who-participated h2 {
+  margin-bottom: 1.5rem;
+}
+
+.participants-stepper {
+  position: relative;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 6px;
+    border-radius: 8px;
+  }
+}
+
+/* Stage copy blocks stack in the same grid cell so the header height does
+   not jump as they crossfade. */
+.funnel-ready .participants-steps {
+  display: grid;
+
+  & > .participants-step {
+    grid-area: 1 / 1;
+    transition: opacity 120ms linear;
+  }
+}
+
+.funnel-static-fallback {
+  margin: 1rem 0;
+}
+
+.funnel-ready .funnel-static-fallback {
+  display: none;
+}
+
+.funnel-stage {
+  display: none;
+  width: 100%;
+  max-width: 1040px;
+  /* With chart-controls' top margin this matches the gap above the canvas. */
+  margin: 0 0 0.25rem;
+
+  & canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.funnel-ready .funnel-stage {
+  display: block;
+}
+
+.funnel-center-copy {
+  text-align: center;
+  margin: 0.25rem 0 1rem;
+}
+
+.style-body-text .funnel-center-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0 0 0.15rem;
+}
+
+.style-body-text .funnel-center-hint {
+  font-size: 0.9375rem;
+  color: var(--report-body);
+  margin: 0;
+}
+
+/* Small orange-bordered square arrows in the page margins, vertically
+   centered on the stepper. Hidden at either end. */
+section#who-participated button.stepper-arrow,
+.ideas-cloud button.stepper-arrow {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 2px solid var(--report-orange);
+  color: var(--report-navy);
+  background: #fff;
+  cursor: pointer;
+  z-index: 1;
+
+  &:hover {
+    background: var(--report-orange);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+section#who-participated button.stepper-arrow-prev,
+.ideas-cloud button.stepper-arrow-prev {
+  left: -3.5rem;
+}
+
+section#who-participated button.stepper-arrow-next,
+.ideas-cloud button.stepper-arrow-next {
+  right: -3.5rem;
+}
+
+@media (max-width: 1259px) {
+  section#who-participated button.stepper-arrow-prev,
+  .ideas-cloud button.stepper-arrow-prev {
+    left: 0.5rem;
+  }
+
+  section#who-participated button.stepper-arrow-next,
+  .ideas-cloud button.stepper-arrow-next {
+    right: 0.5rem;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* No-JS: stack every step with its snapshot and hide the arrows. */
+.participants-stepper:not(.js-enabled) {
+  & .stepper-arrow {
+    display: none;
+  }
+
+  & .participants-step {
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--report-rule);
+
+    &:first-of-type {
+      border-top: 0;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+}
+
+/* ---- The power of discussion: conversations ring + quote cards ---- */
+
+.conversations {
+  margin: 0.5rem 0 2rem;
+}
+
+.conversations-layout {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+
+  @media (min-width: 992px) {
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 2.5rem;
+    /* Panel matches the ring's height; quotes scroll inside the card. */
+    align-items: stretch;
+  }
+}
+
+.conversations-ring {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+
+  & canvas {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+    &:focus-visible {
+      outline: 2px solid var(--report-link);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.ring-ready .conversations-fallback {
+  display: none;
+}
+
+/* Desktop: live canvas. Mobile: the ring is replaced by the stacked cards. */
+@media (min-width: 992px) {
+  .ring-ready .conversations-ring canvas {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .ring-ready .conversations-ring {
+    display: none;
+  }
+}
+
+.visually-hidden-list {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+  list-style: none;
+
+  &:focus-within {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0.75rem 0 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+section#power-of-discussion button.conversations-select-button {
+  all: unset;
+  padding: 0.25rem 0.75rem;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 1px var(--report-rule);
+  font-size: 0.875rem;
+  color: var(--report-body);
+  cursor: pointer;
+
+  &[aria-pressed="true"] {
+    background: var(--report-navy);
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+  }
+}
+
+.conversations-panel {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 992px) {
+    min-height: 0;
+
+    /* Cards share one cell so the panel height does not jump between selections. */
+    & > .conversation-card {
+      grid-area: 1 / 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      max-height: 620px;
+    }
+
+    & .conversation-quotes-scroll {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      padding-right: 0.75rem;
+      scrollbar-gutter: stable;
+
+      &:focus-visible {
+        outline: 2px solid var(--report-link);
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.conversation-card {
+  background: #fff;
+  border: 2px solid var(--report-orange);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem 1.5rem;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.06);
+}
+
+.conversation-card-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--report-rule);
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr auto;
+
+    & .conversation-thumb {
+      display: none;
+    }
+  }
+}
+
+.conversation-thumb {
+  grid-row: 1 / span 2;
+  width: 96px;
+  height: 96px;
+
+  & svg {
+    display: block;
+  }
+
+  & circle[data-dot] {
+    transition: fill 0.4s ease;
+  }
+}
+
+.style-body-text .conversation-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0 !important;
+}
+
+.style-body-text .conversation-meta {
+  font-size: 0.9375rem;
+  color: var(--report-body);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.conversation-quotes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.conversation-quote {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  column-gap: 0.75rem;
+  align-items: start;
+
+  /* Reset the state template's blockquote treatment (teal quote marks, left rule, dash). */
+  & blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    quotes: none;
+
+    &::before,
+    &::after,
+    & p::before,
+    & p::after,
+    & footer::before {
+      content: none;
+      display: none;
+    }
+  }
+
+  &:nth-child(even) {
+    grid-template-columns: 1fr 34px;
+
+    & .conversation-quote-icon {
+      order: 2;
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.conversation-quote-icon {
+  width: 34px;
+  height: 34px;
+  margin-top: 0.15rem;
+}
+
+.style-body-text .conversation-quote p {
+  font-size: 1rem;
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--report-body);
+  margin: 0 0 0.4rem;
+}
+
+.style-body-text .conversation-attribution {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--report-ink);
+}
+
+.conversation-attribution-dot {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--report-rule);
+  transition: background-color 0.4s ease;
+}
+
+.conversation-outcome {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--report-rule);
+
+  & .conversation-outcome-label {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--report-ink);
+    margin: 0 0 0.25rem;
+  }
+
+  & .conversation-outcome-text {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--report-ink);
+    margin: 0;
+  }
+}
