@@ -406,20 +406,21 @@ export async function initConversationsRing(root) {
       const maxWidth = (layout.ringRadius - maxRc - 10) * k * 1.8;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      const titleLines = FL.wrapLabel(centerTitle, maxWidth, 8.4).slice(0, 2);
-      const hintLines = FL.wrapLabel(centerHint, maxWidth, 7).slice(0, 3);
-      const lh = 20;
+      // 17px / 15px (design review 9/21, up from 15 / 13).
+      const titleLines = FL.wrapLabel(centerTitle, maxWidth, 9.5).slice(0, 2);
+      const hintLines = FL.wrapLabel(centerHint, maxWidth, 8).slice(0, 3);
+      const lh = 23;
       const total = titleLines.length * lh + 6 + hintLines.length * (lh - 2);
       let y = size / 2 - total / 2 + lh / 2;
       ctx.fillStyle = COLORS.ink;
-      ctx.font = `700 15px ${fontFamily}`;
+      ctx.font = `700 17px ${fontFamily}`;
       for (const line of titleLines) {
         ctx.fillText(line, size / 2, y);
         y += lh;
       }
       y += 6;
       ctx.fillStyle = COLORS.muted;
-      ctx.font = `400 13px ${fontFamily}`;
+      ctx.font = `400 15px ${fontFamily}`;
       for (const line of hintLines) {
         ctx.fillText(line, size / 2, y);
         y += lh - 2;
