@@ -75,7 +75,7 @@ In May 2026, we opened a public forum on the *Impact of AI on work* to all Calif
 One idea came up consistently: **We need humans in the AI policy loop.** Not only for how people use AI, but for how companies build it and laws govern it.
 ----
 id: participation_numbers
-participants_count: "2,421"
+participants_count: "2,702"
 participants_label: survey participants
 conversations_count: "14"
 conversations_label: conversations
@@ -450,7 +450,7 @@ id: who_participated_step_1
 phase_label: Survey
 pill_label: "1 · Phase 1"
 phase_title: Broad listening
-stat_count: "2,421"
+stat_count: "2,702"
 stat_label: survey respondents
 phase_subtitle: "People responded to our open survey on AI"
 chart_image_region: /public/images/ai-report-participants-step1-region.png
