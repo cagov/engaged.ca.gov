@@ -51,15 +51,18 @@ We asked people some of the hardest questions facing the state:
 id: hero_nav
 translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
 aria_label: On this page
-nbr_items: 4
+label: "Jump to a section:"
+nbr_items: 5
 item_1_label: A public forum on AI
 item_1_anchor: public-forum
 item_2_label: Ideas we heard
 item_2_anchor: what-we-heard
 item_3_label: Who participated
 item_3_anchor: who-participated
-item_4_label: What happens next
-item_4_anchor: what-happens-next
+item_4_label: The power of discussion
+item_4_anchor: power-of-discussion
+item_5_label: What happens next
+item_5_anchor: what-happens-next
 ----
 
 ----

@@ -49,6 +49,7 @@ This project had two phases. In the first phase, any Californian could share the
 id: hero_nav
 translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
 aria_label: On this page
+label: "Jump to a section:"
 nbr_items: 3
 item_1_label: Balancing each group, fairly
 item_1_anchor: balancing-groups

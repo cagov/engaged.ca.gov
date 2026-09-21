@@ -19,16 +19,6 @@
           {% endif %}
         </div>
         {% endif %}
-        {% set hn = modules.hero_nav %}
-        {% if hn %}
-        <nav class="hero-nav" aria-label="{{ hn.aria_label }}">
-          <ul>
-            {% for i in range(1, (hn.nbr_items | default(5)) + 1) %}
-              <li><a href="#{{ hn["item_" + i + "_anchor"] }}">{{ hn["item_" + i + "_label"] }}</a></li>
-            {% endfor %}
-          </ul>
-        </nav>
-        {% endif %}
       </div>
       {# Adornment sits in the same column, with the same right padding, as the stat
          blocks below, so it centres on the big numbers (design review 9/18). #}
@@ -38,5 +28,19 @@
     </div>
   </div>
 </section>
+{# Jump bar under the hero (design 9/21): a label plus one link per section. #}
+{% set hn = modules.hero_nav %}
+{% if hn %}
+<nav class="hero-jump{% if modules.hero.theme == "light" %} hero-jump-light{% endif %}" aria-label="{{ hn.aria_label }}">
+  <div class="container">
+    <p class="hero-jump-label" id="hero-jump-label">{{ hn.label }}</p>
+    <ul aria-labelledby="hero-jump-label">
+      {% for i in range(1, (hn.nbr_items | default(5)) + 1) %}
+        <li><a href="#{{ hn["item_" + i + "_anchor"] }}">{{ hn["item_" + i + "_label"] }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+{% endif %}
 
 {# ------------------------------------------------- What: A public forum on AI #}

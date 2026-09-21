@@ -90,31 +90,80 @@ section#ai-report-hero {
   }
 }
 
-.hero-nav {
-  margin-top: 1.75rem;
+/* Jump bar under the hero (design 9/21). Muted links, white on hover/focus;
+   no "current" state since the bar scrolls away with the hero. */
+.hero-jump {
+  background: var(--report-navy);
+  border-top: 1px solid rgb(255 244 235 / 0.3);
+  padding: 1.1rem 0;
+
+  & .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 2.25rem;
+  }
+
+  & .hero-jump-label {
+    margin: 0;
+    color: var(--report-off-white);
+    font-size: 1.125rem;
+  }
 
   & ul {
-    list-style: disc;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2.25rem;
+    list-style: none;
     margin: 0;
-    padding-left: 1.4rem;
+    padding: 0;
   }
 
   & li {
-    margin-bottom: 0.35rem;
+    margin: 0;
     font-size: 1.125rem;
-    line-height: 1.5;
   }
 
   & a {
-    color: var(--report-off-white);
-    font-weight: 700;
-    text-decoration: underline;
-    text-decoration-color: rgb(255 244 235 / 0.5);
-    text-underline-offset: 3px;
+    color: rgb(255 244 235 / 0.72);
+    /* cagov.core sets `a { text-decoration: underline !important }`. */
+    text-decoration: none !important;
+    font-weight: 400;
 
     &:hover,
     &:focus-visible {
-      text-decoration-color: var(--report-orange);
+      color: var(--report-off-white);
+      text-decoration: underline !important;
+      text-underline-offset: 0.25em;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--report-orange);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  }
+}
+
+/* On the details page's peach hero the bar inverts: navy text on peach. */
+.hero-jump-light {
+  background: var(--report-off-white);
+  border-top: 1px solid rgb(28 39 69 / 0.25);
+
+  & .hero-jump-label {
+    color: var(--report-navy);
+  }
+
+  & a {
+    color: rgb(28 39 69 / 0.72);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--report-navy);
+    }
+
+    &:focus-visible {
+      outline-color: var(--report-link);
     }
   }
 }
@@ -1467,8 +1516,7 @@ section#ai-report-hero.hero-light {
     color: var(--report-body);
   }
 
-  & .hero-back-link a,
-  & .hero-nav a {
+  & .hero-back-link a {
     color: var(--report-link);
   }
 
