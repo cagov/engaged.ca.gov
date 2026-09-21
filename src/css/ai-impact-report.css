@@ -563,11 +563,6 @@ section#ai-report-hero {
   }
 }
 
-/* No-JS: nothing to draw; hide the empty canvas and its arrows. */
-.ideas-cloud:not(.ideas-cloud-ready) .stepper-arrow {
-  display: none;
-}
-
 /* ---- Small body copy (18px) where the design asks for it ---- */
 
 .how-to-read-tiers h4,

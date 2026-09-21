@@ -90,13 +90,7 @@ id: what_we_heard
 Our survey asked people what they’d like government to do about the impact of AI. We got a wide range of ideas for policies.
 ----
 id: word_cloud
-translator_note: "Labels for the animated word cloud. {current} and {total} are replaced with numbers."
-chart_alt: "Word cloud of policy ideas: the wide range of ideas from the poll, then the 27 ideas that came out of the discussions."
-phase_1_alt: "Word cloud of the policy ideas raised in the poll, sized by how many people raised each one."
-phase_2_alt: "Word cloud of the 27 policy ideas from the discussions, sized by the votes each received."
-prev_label: "Back to the poll ideas"
-next_label: "Show the discussion ideas"
-step_counter: "Phase {current} of {total}"
+chart_alt: "Word cloud of the policy ideas raised in the survey, sized by how many people raised each one."
 ----
 
 ----
