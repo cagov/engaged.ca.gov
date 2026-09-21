@@ -71,8 +71,8 @@ DIMENSIONS = [
 ]
 
 # Long category names that need a shorter x-axis label. Full name stays in the tooltip/table.
+# Region names are never shortened: they must match the legends elsewhere on the page (9/21).
 SHORT_LABELS = {
-    "Sacramento Valley / Sierra Foothills": "Sacramento",
     "American Indian or Alaska Native": "American Indian / Alaska Native",
     "Middle Eastern or North African": "Middle Eastern / North African",
     "Native Hawaiian or Pacific Islander": "Native Hawaiian / Pacific Islander",
