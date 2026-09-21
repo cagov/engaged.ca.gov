@@ -463,7 +463,7 @@ id: who_participated_step_2
 phase_label: Discussions
 pill_label: "2 · Selected"
 phase_title: Inviting a balanced audience
-stat_count: "938"
+stat_count: "937"
 stat_label: invited
 phase_subtitle: "We selected a subset of respondents that reflects California"
 chart_image_region: /public/images/ai-report-participants-step2-region.png
