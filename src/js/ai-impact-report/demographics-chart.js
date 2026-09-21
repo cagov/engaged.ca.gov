@@ -252,14 +252,37 @@ export async function initDemographicsChart(root) {
         );
         bar.appendChild(title);
         svg.appendChild(bar);
-        // Value label outside the bar end.
-        const labelY = s.v >= 0 ? top - 6 : top + height + 14;
+      }
+
+      // Value labels outside the bar ends. When the two bars end at nearly
+      // the same height on the same side, the labels would collide (the pair
+      // is narrower than two labels), so the shorter bar's label steps one
+      // line further out.
+      const labelYFor = (v) => {
+        const yEnd = yFor(v);
+        return v >= 0 ? yEnd - 6 : yEnd + 14;
+      };
+      const [a, b2] = series;
+      const ys = [labelYFor(a.v), labelYFor(b2.v)];
+      const labelWidth = (v) => fmtDiff(v).length * valueFont * 0.6;
+      const collide =
+        a.v >= 0 === b2.v >= 0 &&
+        Math.abs(ys[0] - ys[1]) < valueFont * 1.1 &&
+        gap + barW < (labelWidth(a.v) + labelWidth(b2.v)) / 2;
+      if (collide) {
+        const shorter = Math.abs(a.v) <= Math.abs(b2.v) ? 0 : 1;
+        const taller = 1 - shorter;
+        const outward = series[shorter].v >= 0 ? -1 : 1;
+        // One full line beyond the taller bar's label, whatever the gap was.
+        ys[shorter] = ys[taller] + outward * valueFont * 1.4;
+      }
+      series.forEach((s, si) => {
         svg.appendChild(
           el(
             "text",
             {
               x: s.x + barW / 2,
-              y: labelY,
+              y: ys[si],
               "text-anchor": "middle",
               fill: COLORS.text,
               "font-size": valueFont,
@@ -268,7 +291,7 @@ export async function initDemographicsChart(root) {
             fmtDiff(s.v),
           ),
         );
-      }
+      });
 
       // Category label under the group, wrapped to two lines if long.
       const maxChars = Math.max(10, Math.floor(groupW / 7.8));
