@@ -27,7 +27,7 @@
        whether it was a sortition criterion. Add ["ai", dc.dim_ai, ds.source_ai] to restore. #}
     <div id="demographics-chart" class="demographics-chart"
          data-demographics-chart data-theme="light"
-         data-src="/public/data/ai-report-demographics.json"
+         data-src="{{ "/public/data/ai-report-demographics.json" | assetVersion }}"
          data-dimension="region"
          data-phase1-label="{{ dc.phase1_label }}"
          data-phase2-label="{{ dc.phase2_label }}"

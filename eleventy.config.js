@@ -293,14 +293,18 @@ export default async function (eleventyConfig) {
   });
   // Render a one-line string of Markdown (links, emphasis) without a wrapping <p>.
   // Used for YAML fields in .mmmd modules, which otherwise bypass the Markdown engine.
-  // Cache-busting: appends ?v=<8-char content hash> to a built asset URL
-  // (e.g. "/js/ai-impact-report.js"). Assets are built in eleventy.before, so
+  // Cache-busting: appends ?v=<8-char content hash> to an asset URL
+  // (e.g. "/js/ai-impact-report.js" or "/public/data/x.json"). Assets are built in eleventy.before, so
   // the file exists in _dist by the time templates render. The URL changes
   // only when the file's bytes change, so browsers and the CDN keep serving
   // cached copies until there is a real update. Missing file: URL unchanged.
+  // Passthrough-copied files (/public/...) may not be in _dist yet when
+  // templates render, so those are hashed from their source in src/public.
   const assetVersionCache = new Map();
   eleventyConfig.addFilter("assetVersion", (url) => {
-    const file = path.join("_dist", url);
+    const file = url.startsWith("/public/")
+      ? path.join("src", url)
+      : path.join("_dist", url);
     try {
       const content = readFileSync(file);
       const hash = createHash("sha256")

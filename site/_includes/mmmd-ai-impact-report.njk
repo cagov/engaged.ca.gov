@@ -113,7 +113,7 @@
        Breaks out of the text column to the container width. Drawn by ideas-cloud.js. #}
     {% set wc = modules.word_cloud %}
     <div id="ideas-cloud" class="ideas-cloud"
-         data-ideas-cloud data-src="/public/data/ai-report-ideas-cloud.json">
+         data-ideas-cloud data-src="{{ "/public/data/ai-report-ideas-cloud.json" | assetVersion }}">
       <canvas data-ideas-canvas role="img" aria-label="{{ wc.chart_alt }}"></canvas>
     </div>
 
@@ -226,7 +226,7 @@
     <h2>{{ wp.title }}</h2>
 
     <div id="participants-stepper" class="participants-stepper" tabindex="0"
-         data-funnel-src="/public/data/ai-report-participant-funnel.json"
+         data-funnel-src="{{ "/public/data/ai-report-participant-funnel.json" | assetVersion }}"
          data-step="1" data-variant="region"
          data-step-counter="{{ wp.step_counter }}"
          data-play-label="{{ wp.play_label }}"
@@ -304,7 +304,7 @@
     {% set pd = modules.power_of_discussion %}
     {% set nbr_conversations = pd.nbr_conversations | default(14) %}
     <div id="conversations-chart" class="conversations"
-         data-funnel-src="/public/data/ai-report-participant-funnel.json"
+         data-funnel-src="{{ "/public/data/ai-report-participant-funnel.json" | assetVersion }}"
          data-variant="region"
          data-center-title="{{ pd.chart_center_title }}"
          data-center-hint="{{ pd.chart_center_hint }}"
