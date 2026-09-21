@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-lg-8 hero-content">
         {# Content begins with the H1; the subtitle field is inserted directly after it. #}
-        {{ modules.hero.content | replace("</h1>", "</h1><p class=\"hero-subtitle\">" + modules.hero.subtitle + "</p>") | safe }}
+        {{ modules.hero.content | replace("</h1>", "</h1><p class=\"hero-subtitle\">" + (modules.hero.subtitle | markdownInline) + "</p>") | safe }}
         {% if modules.hero.back_link_text %}
           <p class="hero-back-link"><a href="{{ modules.hero.back_link_href | localizedPath(locale) }}">{{ modules.hero.back_link_text }}</a></p>
         {% endif %}

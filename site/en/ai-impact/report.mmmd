@@ -39,7 +39,7 @@ subtitle: Californians say how AI should be built, used, and governed
 ----
 # Humans in the loop
 
-We asked Californians some of the hardest questions facing the state:
+We asked people some of the hardest questions facing the state:
 
 *How is AI reshaping work and the economy? What should government do about it?*
 ----
@@ -64,7 +64,7 @@ id: public_forum
 ----
 ## A public forum on AI
 
-In May 2026, we opened a public forum on the *Impact of AI on work* to all Californians. In the months to follow, thousands of people across the state gave us their thoughts. They took polls and joined facilitated group discussions. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas.
+In May 2026, we opened a public forum on the *Impact of AI on work* to all Californians. In the months to follow, thousands of people across the state gave us their thoughts. They took our survey and joined facilitated group discussions. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas.
 
 One idea came up consistently: **We need humans in the AI policy loop.** Not only for how people use AI, but for how companies build it and laws govern it.
 ----
@@ -73,7 +73,7 @@ participants_count: "2,421"
 participants_label: survey participants
 conversations_count: "14"
 conversations_label: conversations
-ideas_count: "27"
+ideas_count: "26"
 ideas_label: policy ideas
 ----
 
@@ -82,7 +82,9 @@ id: what_we_heard
 ----
 ## Ideas we heard
 
-Our poll asked people what they’d like government to do about the impact of AI. We got a wide range of ideas for policies.
+### From the survey
+
+Our survey asked people what they’d like government to do about the impact of AI. We got a wide range of ideas for policies.
 ----
 id: word_cloud
 translator_note: "Labels for the animated word cloud. {current} and {total} are replaced with numbers."
@@ -97,16 +99,20 @@ step_counter: "Phase {current} of {total}"
 ----
 id: ranking
 ----
-Then we refined AI policy ideas in 2-hour discussions. We grouped what people said in these discussions into 27 distinct ideas. Then we ranked them according to:
+### From discussions
+
+Then we refined AI policy ideas in 2-hour discussions. We grouped what people said there into 26 distinct themes.
+
+Then we ranked them according to:
 
 - How often an idea came up across discussions (frequency), and
 - How much support it drew when it did (how often it was a popular idea).
 
-That ranking sorted the concepts into these three tiers:
+That ranking sorted the themes into these three tiers:
 ----
 id: tiers_ui
 translator_note: "{count} is replaced with a number. Keep it in the translation."
-count_label: "{count} policy ideas"
+count_label: "{count} policy themes"
 show_label: Show
 show_more_label: "Show {count} more"
 close_label: Close
@@ -139,7 +145,7 @@ id: tier_3
 title: Some support
 subtitle: Came up less often and with less support
 icon: speech
-nbr_ideas: 10
+nbr_ideas: 9
 ----
 
 ----
@@ -162,28 +168,28 @@ title: Set rules for where AI can be used safely
 - Ban automated AI in the hiring process
 ----
 id: tier_1_idea_4
+title: Make rules about how AI handles personal data
+----
+- Set rules for gathering, handling, securing, and deleting
+- Enforce transparency and privacy protections
+----
+id: tier_1_idea_5
 title: Set rules around how AI works
 ----
 - Incent companies to align with human standards
 - Set guardrails for AI overuse and addiction
 ----
-id: tier_1_idea_5
+id: tier_1_idea_6
 title: Deter layoffs because of AI, reward firms that keep or add workers
 ----
 - Add penalties for firing workers for AI
 - Create incentives to keep or increase jobs
 ----
-id: tier_1_idea_6
+id: tier_1_idea_7
 title: Make AI policymaking more open to the public
 ----
 - Give affected communities their say
 - Create citizen peer groups that include tech people
-----
-id: tier_1_idea_7
-title: Make rules about how AI handles personal data
-----
-- Set rules for gathering, handling, securing, and deleting
-- Enforce transparency
 ----
 id: tier_1_idea_8
 title: Make companies reskill or give career help to workers who lose their jobs to AI
@@ -244,62 +250,57 @@ title: Support AI training for workers
 
 ----
 id: tier_3_idea_2
-title: Enforce privacy protections
-----
-
-----
-id: tier_3_idea_3
 title: Use AI to improve how government works
 ----
 
 ----
-id: tier_3_idea_4
+id: tier_3_idea_3
 title: Keep humans in the loop as decision-makers, don't rely solely on AI
 ----
 
 ----
-id: tier_3_idea_5
+id: tier_3_idea_4
 title: Strengthen parental controls for AI use
 ----
 
 ----
-id: tier_3_idea_6
+id: tier_3_idea_5
 title: Fund programs for human connection and life outside of AI
 ----
 
 ----
-id: tier_3_idea_7
+id: tier_3_idea_6
 title: Make sure students don't use AI to avoid learning
 ----
 
 ----
-id: tier_3_idea_8
+id: tier_3_idea_7
 title: Keep companies from firing or punishing workers for not using AI
 ----
 
 ----
-id: tier_3_idea_9
+id: tier_3_idea_8
 title: Track and report on job loss due to AI
 ----
 
 ----
-id: tier_3_idea_10
+id: tier_3_idea_9
 title: Use AI for jobs people don’t want to do or can’t do
 ----
 
 ----
 id: how_to_read_tiers
 ----
-### How to read these tiers
+#### How to read these tiers
 
-The ranking shows how an idea fared across discussions. It's not a verdict on its merit. An idea in the "Some support" tier may still matter a great deal to many people.
+The ranking shows how a theme fared across discussions. It's not a verdict on its merit. A theme in the "Some support" tier may still matter a great deal to many people.
 
-These are the ideas participants voiced. They are separate from what current policy or legislation may already do. Some may align with items already moving through the policy landscape.
+These are the themes participants talked about. They are separate from what current policy or legislation may already do. Some may align with items already moving through the policy landscape.
 
 ----
 id: power_of_discussion
 title: The power of discussion
-phase_label: Phase 2
+phase_label: Discussions
 phase_title: Participants shared their thoughts, concerns, and solutions
 phase_subtitle: Look inside the conversations
 stat_count: "14"
@@ -413,13 +414,13 @@ region_9: Not stated
 
 ----
 id: download_data
-button_text: Download the comments
+button_text: Download the ideas
 ----
-### Download what people said
+### Download the policy ideas
 
-You can download and read all the comments participants made in the discussions. They are in a CSV file.
+You can download and read all the policies people proposed in the discussions. They are in a CSV file.
 
-Participants remain anonymous. We scrubbed this dataset of personally-identifying information. But we did not change the comments in any other way.
+Participants remain anonymous. We scrubbed this dataset of personally-identifying information. But we did not edit the ideas in any other way.
 ----
 id: who_participated
 title: Who participated
@@ -446,12 +447,12 @@ chart_alt: "Animation of every survey respondent as a dot. Those invited to a di
 
 ----
 id: who_participated_step_1
-phase_label: Phase 1
+phase_label: Survey
 pill_label: "1 · Phase 1"
 phase_title: Broad listening
 stat_count: "2,421"
 stat_label: survey respondents
-phase_subtitle: "Californians responded to our open survey on AI"
+phase_subtitle: "People responded to our open survey on AI"
 chart_image_region: /public/images/ai-report-participants-step1-region.png
 chart_image_field: /public/images/ai-report-participants-step1-field.png
 chart_alt: "Scatter plot of dots, one per survey respondent, colored by region."
@@ -459,7 +460,7 @@ chart_alt: "Scatter plot of dots, one per survey respondent, colored by region."
 
 ----
 id: who_participated_step_2
-phase_label: Phase 2
+phase_label: Discussions
 pill_label: "2 · Selected"
 phase_title: Inviting a balanced audience
 stat_count: "938"
@@ -472,7 +473,7 @@ chart_alt: "Scatter plot of dots, one per invited respondent, colored by region.
 
 ----
 id: who_participated_step_3
-phase_label: Phase 2
+phase_label: Discussions
 pill_label: "3 · Phase 2"
 phase_title: Joining the conversation
 stat_count: "103"
@@ -485,7 +486,7 @@ chart_alt: "Scatter plot of dots, one per discussion attendee, colored by region
 
 ----
 id: who_participated_step_4
-phase_label: Phase 2
+phase_label: Discussions
 pill_label: "4 · Conversations"
 phase_title: The discussion groups
 stat_count: "14"
@@ -498,13 +499,21 @@ chart_alt: "Ring of 14 small clusters of dots, one per conversation, colored by 
 
 ----
 id: what_happens_next
-translator_note_copy: "Text in parentheses is a placeholder note for the writers. The paragraph that follows is filler text."
 ----
 ## What happens next
 
-(point to relevant actions and commitments from state gov, etc)
+The ideas Californians shared don't end with this report. They join a fast-moving policy conversation already underway across the state.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+As Engaged California's findings were being finalized, the Newsom Administration took action on AI. Several actions touch on themes that people raised in these discussions, among them the environmental footprint of data centers, transparency about AI-generated content, independent oversight of frontier models, and protections for workers and children.
+
+A few recent examples:
+
+- On September 16, the Governor signed Senate Bill 1050 by Senator Angelique Ashby, [requiring explicit disclosure](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/) when AI-generated performers appear in any video or audio advertisement selling a product or service.
+- On September 18, the Governor issued an Executive Order to accelerate the state’s [AI oversight](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/) efforts, fast-tracking new independent AI auditing laws, convening a panel of experts, and advancing an emergency "kill switch" for frontier AI models.
+- On September 21, the Governor signed a package described as the nation's most comprehensive [data center laws](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/), giving communities more say over water, electricity, and land use.
+- Earlier in September, the Governor signed [child safety laws for chatbots and social media](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/) and a set of [first-in-the-nation AI safeguards](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/).
+
+Our work isn’t done either. Californians raised many ideas that will keep informing government action in the months and years ahead as the administration transitions, the state legislature enters a new session, and the AI landscape keeps evolving.
 ----
 id: how_we_did_this_work
 title: How we did this work

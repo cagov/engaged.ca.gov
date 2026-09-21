@@ -1,8 +1,8 @@
-{# The methods sections (sortition, demographics chart, links, analyzing results).
+{# The methods sections (sortition + demographics chart, ranking, how we used AI).
    Lives on /ai-impact/report-details/; the main report links to it from a summary. #}
-<section id="how-we-did-this-work" class="style-body-text section-navy">
+<section id="balancing-groups" class="style-body-text section-navy">
   <div class="container">
-    <h2>{{ modules.how_we_did_this_work.title }}</h2>
+    <h2>{{ modules.balancing_groups.title }}</h2>
 
     <div class="row">
       <div class="col-lg-8">
@@ -34,7 +34,7 @@
          data-table-caption="{{ dc.table_caption }}">
       <div class="row">
         <div class="col-lg-8">
-          <h4 class="demographics-title">{{ dc.title }}</h4>
+          <h3 class="demographics-title">{{ dc.title }}</h3>
           <div class="section-body demographics-intro">
             {{ dc.content | safe }}
           </div>
@@ -52,7 +52,7 @@
         </span>
       </div>
 
-      <p class="demographics-chart-title">{{ dc.chart_title }}</p>
+      <h4 class="demographics-chart-title">{{ dc.chart_title }}</h4>
       <div class="demographics-svg-host" data-demographics-svg>
         {# No-JS fallback: the static Region snapshot. #}
         <img class="chart-placeholder-image" src="/public/images/ai-report-sortition-chart-placeholder.png" alt="{{ dc.chart_alt }}" />
@@ -81,12 +81,24 @@
   </div>
 </section>
 
-<section id="analyzing-results" class="style-body-text">
+<section id="ranking-policy-themes" class="style-body-text">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
         <div class="section-body">
-          {{ modules.analyzing_results.content | safe }}
+          {{ modules.ranking_policy_themes.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-we-used-ai" class="style-body-text section-off-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.how_we_used_ai.content | safe }}
         </div>
       </div>
     </div>

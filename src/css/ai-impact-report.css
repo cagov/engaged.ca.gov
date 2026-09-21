@@ -570,17 +570,19 @@ section#ai-report-hero {
 
 /* ---- Small body copy (18px) where the design asks for it ---- */
 
-.how-to-read-tiers h3,
+.how-to-read-tiers h4,
 .how-to-read-tiers p,
 #download-data p,
 .style-body-text .demographics-intro p,
 .style-body-text .demographics-intro li,
-section#analyzing-results p {
+section#ranking-policy-themes p,
+section#ranking-policy-themes li,
+section#how-we-used-ai p {
   font-size: 1.125rem;
   line-height: 1.6;
 }
 
-.how-to-read-tiers h3 {
+.how-to-read-tiers h4 {
   font-weight: 700;
   margin: 0 0 0.75rem;
 }
@@ -857,7 +859,7 @@ section#stay-informed {
 }
 
 /* Navy variant lives on the details page; the report's summary section is white. */
-section#how-we-did-this-work.section-navy {
+section#balancing-groups {
   & h2 {
     color: var(--report-off-white);
     margin-bottom: 2rem;
@@ -915,7 +917,7 @@ section#how-we-did-this-work.section-navy {
   }
 }
 
-section#how-we-did-this-work select.demographics-select {
+section#balancing-groups select.demographics-select {
   appearance: none;
   min-width: 15rem;
   padding: 0.6rem 2.5rem 0.6rem 1rem;
@@ -990,7 +992,8 @@ section#how-we-did-this-work select.demographics-select {
   }
 }
 
-section#analyzing-results {
+section#ranking-policy-themes,
+section#how-we-used-ai {
   & h3 {
     font-size: 1.75rem;
     margin: 0 0 1.25rem;
@@ -1002,7 +1005,7 @@ section#analyzing-results {
   }
 }
 
-section#how-we-did-this-work .demographics-intro {
+section#balancing-groups .demographics-intro {
   margin-bottom: 1.5rem;
 
   & ul {
