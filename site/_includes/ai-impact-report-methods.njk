@@ -21,9 +21,10 @@
       ["race", dc.dim_race, ds.source_race],
       ["age", dc.dim_age, ds.source_age],
       ["gender", dc.dim_gender, ds.source_gender],
-      ["field", dc.dim_field, ds.source_field_of_work],
-      ["ai", dc.dim_ai, ds.source_ai]
+      ["field", dc.dim_field, ds.source_field_of_work]
     ] %}
+    {# AI sentiment is in the data (id "ai") but not offered: no source note and unclear
+       whether it was a sortition criterion. Add ["ai", dc.dim_ai, ds.source_ai] to restore. #}
     <div id="demographics-chart" class="demographics-chart"
          data-demographics-chart data-theme="light"
          data-src="/public/data/ai-report-demographics.json"

@@ -96,7 +96,6 @@ See how close we came to our demographic targets. Click the drop-down menu to se
 - Age
 - Gender
 - Field of work
-- AI sentiment
 ----
 id: demographics_sources
 translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
