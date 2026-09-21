@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { promises as fs } from "node:fs";
 import { readFileSync } from "node:fs";
 import path from "node:path";
@@ -292,6 +293,28 @@ export default async function (eleventyConfig) {
   });
   // Render a one-line string of Markdown (links, emphasis) without a wrapping <p>.
   // Used for YAML fields in .mmmd modules, which otherwise bypass the Markdown engine.
+  // Cache-busting: appends ?v=<8-char content hash> to a built asset URL
+  // (e.g. "/js/ai-impact-report.js"). Assets are built in eleventy.before, so
+  // the file exists in _dist by the time templates render. The URL changes
+  // only when the file's bytes change, so browsers and the CDN keep serving
+  // cached copies until there is a real update. Missing file: URL unchanged.
+  const assetVersionCache = new Map();
+  eleventyConfig.addFilter("assetVersion", (url) => {
+    const file = path.join("_dist", url);
+    try {
+      const content = readFileSync(file);
+      const hash = createHash("sha256")
+        .update(content)
+        .digest("hex")
+        .slice(0, 8);
+      assetVersionCache.set(url, hash);
+      return `${url}?v=${hash}`;
+    } catch {
+      const prior = assetVersionCache.get(url);
+      return prior ? `${url}?v=${prior}` : url;
+    }
+  });
+
   eleventyConfig.addFilter("markdownInline", (text) =>
     text ? markdownEngine.renderInline(String(text)) : "",
   );
