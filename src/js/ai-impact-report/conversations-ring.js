@@ -407,8 +407,8 @@ export async function initConversationsRing(root) {
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       // 17px / 15px (design review 9/21, up from 15 / 13).
-      const titleLines = FL.wrapLabel(centerTitle, maxWidth, 9.5).slice(0, 2);
-      const hintLines = FL.wrapLabel(centerHint, maxWidth, 8).slice(0, 3);
+      const titleLines = FL.wrapLabel(centerTitle, maxWidth, 8.9).slice(0, 2);
+      const hintLines = FL.wrapLabel(centerHint, maxWidth, 7.3).slice(0, 3);
       const lh = 23;
       const total = titleLines.length * lh + 6 + hintLines.length * (lh - 2);
       let y = size / 2 - total / 2 + lh / 2;
