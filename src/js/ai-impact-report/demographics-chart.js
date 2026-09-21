@@ -19,14 +19,27 @@
 
 const SVG_NS = "http://www.w3.org/2000/svg";
 
-const COLORS = {
-  phase1: "#7ec3e8",
-  phase2: "#e79450",
-  axis: "rgba(255, 244, 235, 0.85)",
-  grid: "rgba(255, 244, 235, 0.22)",
-  text: "#fff4eb",
-  muted: "rgba(255, 244, 235, 0.75)",
+const PALETTES = {
+  // On the navy band.
+  dark: {
+    phase1: "#7ec3e8",
+    phase2: "#e79450",
+    axis: "rgba(255, 244, 235, 0.85)",
+    grid: "rgba(255, 244, 235, 0.22)",
+    text: "#fff4eb",
+    muted: "rgba(255, 244, 235, 0.75)",
+  },
+  // On white (details page, design 9/21). Root carries data-theme="light".
+  light: {
+    phase1: "#7ec3e8",
+    phase2: "#e79450",
+    axis: "rgba(15, 21, 47, 0.85)",
+    grid: "rgba(15, 21, 47, 0.18)",
+    text: "#0f152f",
+    muted: "rgba(15, 21, 47, 0.7)",
+  },
 };
+let COLORS = PALETTES.dark;
 
 const W = 1040;
 const H = 460;
@@ -95,6 +108,7 @@ export async function initDemographicsChart(root) {
   };
 
   const byId = Object.fromEntries(data.dimensions.map((d) => [d.id, d]));
+  COLORS = PALETTES[root.dataset.theme] || PALETTES.dark;
   root.classList.add("js-enabled");
 
   function render(id) {

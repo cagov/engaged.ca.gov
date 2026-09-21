@@ -1,14 +1,14 @@
 {# Hero for the AI impact report pages. Expects modules.hero (content starts with the H1,
    `subtitle`, optional `back_link_text` / `back_link_href`) and an optional modules.hero_nav. #}
-<section id="ai-report-hero" class="hero">
+<section id="ai-report-hero" class="hero{% if modules.hero.theme == "light" %} hero-light{% endif %}">
   <div class="container hero-container">
     <div class="row">
       <div class="col-lg-8 hero-content">
-        {# Content begins with the H1; the subtitle field is inserted directly after it. #}
-        {{ modules.hero.content | replace("</h1>", "</h1><p class=\"hero-subtitle\">" + (modules.hero.subtitle | markdownInline) + "</p>") | safe }}
         {% if modules.hero.back_link_text %}
           <p class="hero-back-link"><a href="{{ modules.hero.back_link_href | localizedPath(locale) }}">{{ modules.hero.back_link_text }}</a></p>
         {% endif %}
+        {# Content begins with the H1; the subtitle field is inserted directly after it. #}
+        {{ modules.hero.content | replace("</h1>", "</h1><p class=\"hero-subtitle\">" + (modules.hero.subtitle | markdownInline) + "</p>") | safe }}
         {% if modules.hero.button_1_label or modules.hero.button_2_label %}
         <div class="hero-buttons">
           {% if modules.hero.button_1_label %}

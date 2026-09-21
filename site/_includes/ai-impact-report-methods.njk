@@ -1,6 +1,6 @@
 {# The methods sections (sortition + demographics chart, ranking, how we used AI).
    Lives on /ai-impact/report-details/; the main report links to it from a summary. #}
-<section id="balancing-groups" class="style-body-text section-navy">
+<section id="balancing-groups" class="style-body-text methods-light">
   <div class="container">
     <h2>{{ modules.balancing_groups.title }}</h2>
 
@@ -25,7 +25,7 @@
       ["ai", dc.dim_ai, ds.source_ai]
     ] %}
     <div id="demographics-chart" class="demographics-chart"
-         data-demographics-chart
+         data-demographics-chart data-theme="light"
          data-src="/public/data/ai-report-demographics.json"
          data-dimension="region"
          data-phase1-label="{{ dc.phase1_label }}"
@@ -81,7 +81,7 @@
   </div>
 </section>
 
-<section id="ranking-policy-themes" class="style-body-text">
+<section id="ranking-policy-themes" class="style-body-text section-light">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
@@ -93,7 +93,7 @@
   </div>
 </section>
 
-<section id="how-we-used-ai" class="style-body-text section-off-white">
+<section id="how-we-used-ai" class="style-body-text">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">

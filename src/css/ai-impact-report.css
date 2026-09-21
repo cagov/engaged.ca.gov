@@ -596,7 +596,7 @@ section#how-we-used-ai p {
 }
 
 .hero-back-link {
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
   font-size: 1rem;
 
   & a {
@@ -1449,5 +1449,67 @@ section#power-of-discussion button.conversations-select-button {
     font-weight: 700;
     color: var(--report-ink);
     margin: 0;
+  }
+}
+
+/* ---- Details page light theme (design 9/21): peach hero, white methods ---- */
+
+section#ai-report-hero.hero-light {
+  background: var(--report-off-white);
+  color: var(--report-body);
+
+  & h1,
+  & .hero-subtitle {
+    color: var(--report-navy);
+  }
+
+  & .hero-content > p {
+    color: var(--report-body);
+  }
+
+  & .hero-back-link a,
+  & .hero-nav a {
+    color: var(--report-link);
+  }
+
+  & .hero-back-link a::before {
+    content: "\2039\00a0"; /* single left angle quote as a chevron */
+  }
+}
+
+section#balancing-groups.methods-light {
+  & h2,
+  & h3,
+  & .process-links h4,
+  & .demographics-title,
+  & .demographics-chart-title {
+    color: var(--report-navy);
+  }
+
+  & p,
+  & li,
+  & .demographics-source,
+  & .demographics-source-label,
+  & .demographics-source li {
+    color: var(--report-body);
+  }
+
+  & a {
+    color: var(--report-link);
+  }
+
+  & select.demographics-select {
+    background: var(--report-navy);
+    border-color: var(--report-navy);
+    color: #fff;
+
+    &:hover {
+      border-color: var(--report-ink);
+      background: var(--report-ink);
+    }
+
+    &:focus-visible {
+      outline-color: var(--report-link);
+    }
   }
 }

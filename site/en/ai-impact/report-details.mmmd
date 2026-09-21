@@ -38,6 +38,7 @@ example_quoted_text: "this is quoted text:"
 id: hero
 translator_note: "The subtitle contains the report title in italics (single asterisks). Preserve the asterisks."
 subtitle: "The methods behind *Humans in the loop: Californians say how AI should be built, used, and governed*"
+theme: light
 back_link_text: "Back to the report"
 back_link_href: /ai-impact/report/
 ----
