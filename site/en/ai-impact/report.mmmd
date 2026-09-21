@@ -36,6 +36,11 @@ example_quoted_text: "this is quoted text:"
 ----
 id: hero
 subtitle: Californians say how AI should be built, used, and governed
+translator_note: "button_1 scrolls to the first section; button_2 opens the methods page. Do not translate the hrefs."
+button_1_label: Read the report
+button_1_href: "#public-forum"
+button_2_label: Check our methods
+button_2_href: /ai-impact/report-details/
 ----
 # Humans in the loop
 
@@ -46,7 +51,7 @@ We asked people some of the hardest questions facing the state:
 id: hero_nav
 translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
 aria_label: On this page
-nbr_items: 5
+nbr_items: 4
 item_1_label: A public forum on AI
 item_1_anchor: public-forum
 item_2_label: Ideas we heard
@@ -55,8 +60,6 @@ item_3_label: Who participated
 item_3_anchor: who-participated
 item_4_label: What happens next
 item_4_anchor: what-happens-next
-item_5_label: How we did this work
-item_5_anchor: how-we-did-this-work
 ----
 
 ----
@@ -515,13 +518,11 @@ A few recent examples:
 
 Our work isn’t done either. Californians raised many ideas that will keep informing government action in the months and years ahead as the administration transitions, the state legislature enters a new session, and the AI landscape keeps evolving.
 ----
-id: how_we_did_this_work
-title: How we did this work
-translator_note: "The button links to the page with the full methods."
-button_text: See the details
-button_href: /ai-impact/report-details/
+id: methods_button
+translator_note: "Button at the end of What happens next, linking to the methods page. Do not translate the href."
+label: Check our methods
+href: /ai-impact/report-details/
 ----
-Our engagement had two phases: an open online survey, then live discussions with a smaller group of respondents. We chose that group by sortition, a lottery-style method that balances the invitee list against California’s demographics while giving everyone who qualifies an equal chance. The details page explains how we set those targets, how close each phase came to them, and how we analyzed what people said.
 ----
 id: sign_up
 button_text: Sign up

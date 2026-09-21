@@ -9,6 +9,16 @@
         {% if modules.hero.back_link_text %}
           <p class="hero-back-link"><a href="{{ modules.hero.back_link_href | localizedPath(locale) }}">{{ modules.hero.back_link_text }}</a></p>
         {% endif %}
+        {% if modules.hero.button_1_label or modules.hero.button_2_label %}
+        <div class="hero-buttons">
+          {% if modules.hero.button_1_label %}
+            <a href="{{ modules.hero.button_1_href if modules.hero.button_1_href.startsWith("#") else (modules.hero.button_1_href | localizedPath(locale)) }}" data-appearance="button" data-theme="orange">{{ modules.hero.button_1_label }}</a>
+          {% endif %}
+          {% if modules.hero.button_2_label %}
+            <a href="{{ modules.hero.button_2_href if modules.hero.button_2_href.startsWith("#") else (modules.hero.button_2_href | localizedPath(locale)) }}" data-appearance="button" data-theme="orange">{{ modules.hero.button_2_label }}</a>
+          {% endif %}
+        </div>
+        {% endif %}
         {% set hn = modules.hero_nav %}
         {% if hn %}
         <nav class="hero-nav" aria-label="{{ hn.aria_label }}">

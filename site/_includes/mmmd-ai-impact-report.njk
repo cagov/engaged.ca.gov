@@ -422,23 +422,9 @@
         <div class="section-body">
           {{ modules.what_happens_next.content | safe }}
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# ------------------------------------------------- How we did this work (summary; details on their own page) #}
-{% set hs = modules.how_we_did_this_work %}
-<section id="how-we-did-this-work" class="style-body-text methods-summary">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <h2>{{ hs.title }}</h2>
-        <div class="section-body">
-          {{ hs.content | safe }}
-        </div>
-        <div class="methods-summary-button">
-          <a href="{{ hs.button_href | localizedPath(locale) }}" data-appearance="button" data-theme="orange">{{ hs.button_text }}</a>
+        {% set mb = modules.methods_button %}
+        <div class="methods-button">
+          <a href="{{ mb.href | localizedPath(locale) }}" data-appearance="button" data-theme="orange">{{ mb.label }}</a>
         </div>
       </div>
     </div>

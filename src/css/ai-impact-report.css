@@ -587,17 +587,16 @@ section#how-we-used-ai p {
   margin: 0 0 0.75rem;
 }
 
-/* ---- How we did this work: summary + link to the details page ---- */
+/* ---- Buttons: hero pair, and "Check our methods" after What happens next ---- */
 
-.methods-summary {
-  padding: 3rem 0;
-
-  & h2 {
-    margin-bottom: 1rem;
-  }
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin: 1.5rem 0 1.75rem;
 }
 
-.methods-summary-button {
+.methods-button {
   margin-top: 1.5rem;
 }
 
