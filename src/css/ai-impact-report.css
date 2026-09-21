@@ -377,7 +377,7 @@ section#ai-report-hero {
   align-items: flex-start;
   gap: 1rem;
   padding: 0.9rem 0.25rem 0.9rem 1.25rem;
-  font-size: 1.125rem;
+  font-size: inherit; /* the h4 sets body size (23px) */
   font-weight: 700;
   color: var(--report-ink);
   cursor: pointer;
@@ -459,6 +459,7 @@ section#ai-report-hero {
 .policy-idea-examples-label {
   font-weight: 600;
   color: var(--report-body);
+  margin-bottom: 0.3rem !important; /* tighter to the list (design review 9/21) */
 }
 
 .policy-tier-footer {
