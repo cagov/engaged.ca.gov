@@ -1467,14 +1467,19 @@ section#power-of-discussion button.conversations-select-button {
   line-height: 1.55;
   font-style: italic;
   color: var(--report-body);
-  margin: 0 0 0.4rem;
+  margin: 0;
 }
 
 .style-body-text .conversation-attribution {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  /* Sits 3px under the quote (design review 9/21); the state template's
+     blockquote footer gives it a 16px top margin and bold otherwise. */
+  margin: 0;
+  padding-top: 3px;
   font-size: 0.9375rem;
+  font-weight: 600;
   color: var(--report-ink);
 }
 
