@@ -1667,18 +1667,11 @@ section#power-of-discussion button.conversations-select-button {
       text-align: right;
     }
 
-    /* Attribution right-aligned under the quote. Inline so the dot travels
-       with the first word when the name wraps, instead of parking at the
-       far left. */
+    /* Attribution right-aligned under the quote: dot, then the name as its
+       own block so wrapped lines never run under the dot. */
     & .conversation-attribution {
-      display: block;
+      justify-content: flex-end;
       text-align: right;
-
-      & .conversation-attribution-dot {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 0.5rem 0.15rem 0;
-      }
     }
   }
 }
@@ -1708,6 +1701,13 @@ section#power-of-discussion button.conversations-select-button {
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--report-ink);
+}
+
+/* Name is its own block: wrapped lines stay clear of the dot and balance. */
+.conversation-attribution-text {
+  display: inline-block;
+  max-width: 100%;
+  text-wrap: balance;
 }
 
 .conversation-attribution-dot {
