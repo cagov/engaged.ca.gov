@@ -92,12 +92,14 @@ export function initTopThemes(root) {
       connector.innerHTML = "";
       return;
     }
-    const card = root.querySelector(
-      `.top-theme[data-theme="${selected}"] .top-theme-select`,
-    );
-    if (!card) return;
+    // From just outside the selected card's border to just outside the
+    // panel's border near its top, as an S-curve (design 9/22).
+    const card = root.querySelector(`.top-theme[data-theme="${selected}"]`);
+    const title = card?.querySelector(".top-theme-select");
+    if (!card || !title) return;
     const lr = layout.getBoundingClientRect();
     const cr = card.getBoundingClientRect();
+    const tr = title.getBoundingClientRect();
     const pr = panel.getBoundingClientRect();
     // Overlay covers the whole layout so the path can run through the gap.
     connector.setAttribute("viewBox", `0 0 ${lr.width} ${lr.height}`);
@@ -105,15 +107,12 @@ export function initTopThemes(root) {
     connector.style.height = `${lr.height}px`;
     connector.style.left = `${lr.left - pr.left}px`;
     connector.style.top = `${lr.top - pr.top}px`;
-    const x0 = cr.right - lr.left;
-    const y0 = cr.top + cr.height / 2 - lr.top;
-    const x1 = pr.left - lr.left;
-    const y1 = Math.min(
-      Math.max(y0, pr.top - lr.top + 40),
-      pr.bottom - lr.top - 40,
-    );
+    const x0 = cr.right - lr.left + 2;
+    const y0 = tr.top + tr.height / 2 - lr.top; // level with the theme title
+    const x1 = pr.left - lr.left - 2;
+    const y1 = pr.top - lr.top + 44; // enters beside "What people said"
     const mx = (x0 + x1) / 2;
-    connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="2"/>`;
+    connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`;
   }
 
   window.addEventListener("resize", () => {
