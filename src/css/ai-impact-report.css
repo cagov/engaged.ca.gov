@@ -1667,8 +1667,18 @@ section#power-of-discussion button.conversations-select-button {
       text-align: right;
     }
 
+    /* Attribution right-aligned under the quote. Inline so the dot travels
+       with the first word when the name wraps, instead of parking at the
+       far left. */
     & .conversation-attribution {
-      justify-content: flex-end;
+      display: block;
+      text-align: right;
+
+      & .conversation-attribution-dot {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0.5rem 0.15rem 0;
+      }
     }
   }
 }
