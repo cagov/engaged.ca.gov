@@ -123,9 +123,12 @@
           {{ modules.ranking.content | safe }}
         </div>
 
-        {# Top 3 policy ideas: three theme cards (examples fold out) and a "What people said"
-           panel showing the selected theme's quotes. Driven by top-themes.js; without JS every
-           card shows its examples and every quote set is visible. #}
+      </div>
+    </div>
+
+    {# Top 3 policy ideas: full container width (design 9/22). Three theme cards (examples fold
+       out) and a "What people said" panel showing the selected theme's quotes. Driven by
+       top-themes.js; without JS every card shows its examples and every quote set is visible. #}
         {% set tt = modules.top_themes %}
         {% set nbr_top = tt.nbr_themes | default(3) %}
         <div id="top-themes" class="top-themes"
@@ -148,7 +151,6 @@
                           aria-pressed="{{ 'true' if loop.first else 'false' }}"
                           aria-controls="{{ tid }}-quotes"
                           aria-label="{{ tt.select_label | replace('{title}', theme.title) }}">
-                    <span class="top-theme-number" aria-hidden="true">{{ n }}</span>
                     <h4 class="top-theme-title" id="{{ tid }}-title">{{ theme.title }}</h4>
                   </button>
                   {% set has_body = theme.content and (theme.content | trim | length > 0) %}
@@ -194,6 +196,8 @@
           </div>
         </div>
 
+    <div class="row">
+      <div class="col-lg-8">
         {# Other supported ideas: one collapsible list of the remaining themes, titles only. #}
         <div id="policy-tiers" class="policy-tiers"
              data-initial-visible="{{ initial_visible }}"
