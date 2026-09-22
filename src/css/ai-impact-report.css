@@ -643,13 +643,17 @@ section#ai-report-hero {
   margin-top: 0.25rem;
 }
 
-/* Quotes panel reuses the conversation card styles. */
+/* Quotes panel reuses the conversation card styles. On desktop it sticks
+   while the card column scrolls, so the quotes stay beside whichever theme
+   is selected (feedback 9/22). */
 .top-themes-quotes {
   position: relative;
   padding-top: 1rem;
 
   @media (min-width: 992px) {
-    max-height: 560px;
+    position: sticky;
+    top: 1.5rem;
+    max-height: min(560px, calc(100vh - 3rem));
     display: flex;
     flex-direction: column;
 

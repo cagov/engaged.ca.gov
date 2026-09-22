@@ -119,6 +119,21 @@ export function initTopThemes(root) {
     placePanel();
     drawConnector();
   });
+  // The panel is sticky on desktop, so its position relative to the cards
+  // changes as the page scrolls; keep the connector attached.
+  let scrollQueued = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (scrollQueued) return;
+      scrollQueued = true;
+      requestAnimationFrame(() => {
+        scrollQueued = false;
+        drawConnector();
+      });
+    },
+    { passive: true },
+  );
   select(1);
   colorAttributions();
   // Fonts and images can shift the layout after first paint.
