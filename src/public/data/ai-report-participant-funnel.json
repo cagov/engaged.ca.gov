@@ -1165,7 +1165,7 @@
   },
   {
    "name": "Bay Area",
-   "count": 199
+   "count": 198
   },
   {
    "name": "Southern California",
@@ -1173,7 +1173,7 @@
   },
   {
    "name": "Sacramento Valley / Sierra Foothills",
-   "count": 125
+   "count": 124
   },
   {
    "name": "Central Valley",
@@ -1196,5 +1196,5 @@
    "count": 0
   }
  ],
- "invitedTotal": 939
+ "invitedTotal": 937
 }

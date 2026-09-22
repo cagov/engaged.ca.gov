@@ -4,7 +4,7 @@
   "targets": "chart_data.csv",
   "note": "Aggregate shares only. Phase 1 = all survey respondents; Phase 2 = respondents who attended a discussion. Non-answers excluded per dimension.",
   "phase1Total": 2702,
-  "invitedTotal": 939,
+  "invitedTotal": 937,
   "phase2Total": 102
  },
  "dimensions": [

@@ -129,7 +129,7 @@ def build(respondents_path, attendees_path):
     survey_field = Counter(field(r["FIELD_OF_WORK_ROLLUP"]) for r in respondents)
     attend_region = Counter(region(a["REGION"]) for a in attendees)
     attend_field = Counter(field(a["FIELD_OF_WORK_SORTITION_GROUPING"]) for a in attendees)
-    invited_region = Counter(region(r["REGION"]) for r in respondents if r["INVITED_TO_PHASE2"].strip().upper() == "TRUE")
+    invited_region = Counter(region(r["REGION"]) for r in respondents if r["INVITED_TO_PHASE2"].strip().upper() == "TRUE" and r["HAS_INTERNAL_EMAIL"].strip().upper() != "TRUE")  # staff test accounts excluded
     survey_age = Counter(age(r["AGE"]) for r in respondents)
     attend_age = Counter(age(a["AGE"]) for a in attendees)
     survey_ai = Counter(ai(r["AI_RESPONSE_LABEL"]) for r in respondents)

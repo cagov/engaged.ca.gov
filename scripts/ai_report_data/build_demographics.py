@@ -122,7 +122,8 @@ def build(respondents_path, targets_path):
     # The data team's count of survey participants is the PARTICIPATED_IN_PHASE1 filter.
     phase1 = [r for r in rows if yes(r["PARTICIPATED_IN_PHASE1"])]
     phase2 = [r for r in phase1 if yes(r["ATTENDED_PHASE2"])]
-    invited = [r for r in phase1 if yes(r["INVITED_TO_PHASE2"])]
+    # Invitations to staff test accounts do not count (data team, 9/22).
+    invited = [r for r in phase1 if yes(r["INVITED_TO_PHASE2"]) and not yes(r["HAS_INTERNAL_EMAIL"])]
 
     out_dims = []
     for d in DIMENSIONS:
