@@ -32,6 +32,11 @@ export function initTopThemes(root) {
 
   const showLabel = root.dataset.showExamplesLabel || "Show examples";
   const hideLabel = root.dataset.hideExamplesLabel || "Hide examples";
+  const showConv = root.dataset.showConversationLabel || "Show conversation";
+  const hideConv = root.dataset.hideConversationLabel || "Hide conversation";
+  const convToggles = [...root.querySelectorAll("[data-conversation-toggle]")];
+  // Phones: the quotes are folded until "Show conversation" is tapped.
+  let conversationOpen = false;
   root.classList.add("js-enabled");
   let selected = 1;
 
@@ -63,14 +68,37 @@ export function initTopThemes(root) {
         String(Number(b.dataset.themeSelect) === n),
       );
     for (const blk of blocks) blk.hidden = Number(blk.dataset.quotesFor) !== n;
-    for (const li of root.querySelectorAll(".top-theme"))
-      li.classList.toggle("is-selected", Number(li.dataset.theme) === n);
     placePanel();
     drawConnector();
     fitAttributions();
   }
   for (const b of selects)
     b.addEventListener("click", () => select(Number(b.dataset.themeSelect)));
+  for (const t of convToggles) {
+    t.addEventListener("click", () => {
+      const n = Number(t.dataset.conversationToggle);
+      conversationOpen = !(conversationOpen && n === selected);
+      select(n);
+    });
+  }
+  function syncConversationToggles(narrow) {
+    for (const t of convToggles) {
+      const n = Number(t.dataset.conversationToggle);
+      const open = narrow && conversationOpen && n === selected;
+      t.hidden = !narrow;
+      t.setAttribute("aria-expanded", String(open));
+      const text = t.querySelector(".top-theme-conversation-toggle-text");
+      if (text) text.textContent = open ? hideConv : showConv;
+    }
+    // On phones the panel shows only when its card's conversation is open;
+    // on desktop it is always visible beside the cards.
+    panel.hidden = narrow && !conversationOpen;
+    for (const li of root.querySelectorAll(".top-theme"))
+      li.classList.toggle(
+        "is-selected",
+        Number(li.dataset.theme) === selected && (!narrow || conversationOpen),
+      );
+  }
 
   // ---- Panel placement: beside the list on desktop, under the card on mobile
   function placePanel() {
@@ -87,6 +115,7 @@ export function initTopThemes(root) {
       layout.appendChild(panel);
     }
     root.classList.toggle("is-narrow", narrow);
+    syncConversationToggles(narrow);
   }
 
   // ---- Connector line from the selected card's right edge to the panel ----

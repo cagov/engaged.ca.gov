@@ -133,7 +133,9 @@
         {% set nbr_top = tt.nbr_themes | default(3) %}
         <div id="top-themes" class="top-themes"
              data-show-examples-label="{{ tt.show_examples_label }}"
-             data-hide-examples-label="{{ tt.hide_examples_label }}">
+             data-hide-examples-label="{{ tt.hide_examples_label }}"
+             data-show-conversation-label="{{ tt.show_conversation_label }}"
+             data-hide-conversation-label="{{ tt.hide_conversation_label }}">
           <img class="policy-tier-icon policy-tier-sticker" src="{{ tier_stickers[tt.icon] | default(tier_stickers.sparkle) }}" alt="" aria-hidden="true" />
           <div class="policy-tier-header top-themes-header">
             <div class="policy-tier-heading">
@@ -166,6 +168,12 @@
                       <span class="chevron" aria-hidden="true"></span>
                     </button>
                   {% endif %}
+                  {# Phones: the quotes fold out inside the card (design 9/22). Hidden on desktop. #}
+                  <button type="button" class="top-theme-conversation-toggle text-link-button"
+                          data-conversation-toggle="{{ n }}" aria-expanded="false" aria-controls="{{ tid }}-quotes" hidden>
+                    <span class="top-theme-conversation-toggle-text">{{ tt.show_conversation_label }}</span>
+                    <span class="chevron" aria-hidden="true"></span>
+                  </button>
                 </li>
               {% endfor %}
             </ol>

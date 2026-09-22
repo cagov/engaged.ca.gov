@@ -129,6 +129,8 @@ icon: sparkle
 nbr_themes: 3
 show_examples_label: Show examples
 hide_examples_label: Hide examples
+show_conversation_label: Show conversation
+hide_conversation_label: Hide conversation
 quotes_title: "What people said:"
 select_label: "Show what people said about: {title}"
 ----
