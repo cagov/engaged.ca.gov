@@ -48,6 +48,9 @@ export function initTopThemes(root) {
     set(false);
     toggle.addEventListener("click", () => {
       set(toggle.getAttribute("aria-expanded") !== "true");
+      // Engaging with any part of a card selects its theme (feedback 9/22).
+      const li = toggle.closest(".top-theme");
+      if (li) select(Number(li.dataset.theme));
     });
   }
 
