@@ -168,10 +168,11 @@ async function colorAttributions() {
   }
 }
 
-/** Right-aligned (mirrored) attributions: shrink the name block to its
- * longest rendered line so the dot sits right beside the first word rather
- * than at the far left of the card. Greedy wrapping makes the first line
- * the longest, so the dot lands on line one. */
+/** Right-aligned (mirrored) attributions that wrap: pick the word break
+ * that makes the two lines as even as possible while keeping the first
+ * line the longer one, then shrink the name block to that first line so
+ * the dot sits right beside it. Falls back to the browser's own wrapping
+ * when the name needs more than two lines. */
 function fitAttributions() {
   const spans = document.querySelectorAll(
     ".top-themes .conversation-quote:nth-child(even) .conversation-attribution-text",
@@ -179,11 +180,30 @@ function fitAttributions() {
   for (const span of spans) {
     span.style.width = "";
     if (!span.offsetParent) continue; // hidden quote set
+    const available = span.getBoundingClientRect().width;
     const range = document.createRange();
     range.selectNodeContents(span);
-    const rects = [...range.getClientRects()];
-    if (rects.length < 2) continue; // single line: nothing to do
-    const widest = Math.max(...rects.map((r) => r.width));
-    span.style.width = `${Math.ceil(widest) + 1}px`;
+    if (range.getClientRects().length < 2) continue; // fits on one line
+
+    // Measure candidate splits with a nowrap clone in the same font.
+    const words = span.textContent.trim().split(/\s+/);
+    const probe = document.createElement("span");
+    probe.style.cssText =
+      "position:absolute;visibility:hidden;white-space:nowrap;pointer-events:none";
+    span.parentElement.appendChild(probe);
+    const measure = (text) => {
+      probe.textContent = text;
+      return probe.getBoundingClientRect().width;
+    };
+    let best = null;
+    for (let k = 1; k < words.length; k++) {
+      const w1 = measure(words.slice(0, k).join(" "));
+      const w2 = measure(words.slice(k).join(" "));
+      if (w1 > available || w2 > w1) continue;
+      const diff = w1 - w2;
+      if (!best || diff < best.diff) best = { w1, diff };
+    }
+    probe.remove();
+    if (best) span.style.width = `${Math.ceil(best.w1) + 1}px`;
   }
 }
