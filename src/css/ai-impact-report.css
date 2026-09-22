@@ -687,8 +687,9 @@ section#ai-report-hero {
     border: 0;
     box-shadow: none;
     border-radius: 0;
-    padding: 0.25rem 0.25rem 0;
-    margin-top: 0.5rem;
+    background: transparent;
+    padding: 0.5rem 0.25rem 0;
+    margin-top: 0.25rem;
   }
 
   & .top-theme-conversation-toggle {
@@ -700,8 +701,8 @@ section#ai-report-hero {
     margin-top: 0.25rem;
   }
 
-  & .top-theme.is-selected .top-themes-quotes + .top-theme-conversation-toggle,
-  & .top-theme-conversation-toggle:has(+ .top-themes-quotes) {
+  /* Once the quotes are open, the control under them needs no rule above it. */
+  & .top-themes-quotes:not([hidden]) + .top-theme-conversation-toggle {
     border-top: 0;
   }
 }

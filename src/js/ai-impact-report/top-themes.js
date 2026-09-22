@@ -109,8 +109,11 @@ export function initTopThemes(root) {
       else blk.setAttribute("tabindex", "0");
     }
     if (narrow) {
+      // Panel goes above the card's "Show/Hide conversation" control so the
+      // control reads as the fold's footer once open (design 9/22).
       const li = root.querySelector(`.top-theme[data-theme="${selected}"]`);
-      if (li && panel.parentElement !== li) li.appendChild(panel);
+      const toggle = li?.querySelector("[data-conversation-toggle]");
+      if (li && panel.parentElement !== li) li.insertBefore(panel, toggle);
     } else if (panel.parentElement !== layout) {
       layout.appendChild(panel);
     }
