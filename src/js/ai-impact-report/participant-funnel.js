@@ -330,11 +330,12 @@ export async function initParticipantFunnel(root) {
     const maxClusterRc = Math.max(0, ...layout.clusters.map((c) => c.rc));
     const freeRadius = Math.max(60, layout.ringRadius - maxClusterRc - 10);
     const maxWidth = freeRadius * 1.7;
-    const lineHeight = 22;
+    // 20px / 16px (design 9/22, up from 16 / 14).
+    const lineHeight = 27;
     const gap = 6;
 
-    const countLines = FL.wrapLabel(centerTitle, maxWidth, 8.9).slice(0, 2);
-    const promptLines = FL.wrapLabel(centerHint, maxWidth, 7.8).slice(0, 2);
+    const countLines = FL.wrapLabel(centerTitle, maxWidth, 11.1).slice(0, 2);
+    const promptLines = FL.wrapLabel(centerHint, maxWidth, 8.9).slice(0, 2);
     const totalHeight =
       countLines.length * lineHeight + gap + promptLines.length * lineHeight;
 
@@ -344,14 +345,14 @@ export async function initParticipantFunnel(root) {
     let y = ringCenterY - totalHeight / 2 + lineHeight / 2;
 
     ctx.globalAlpha = titleK;
-    ctx.font = `700 16px ${fontFamily}`;
+    ctx.font = `700 20px ${fontFamily}`;
     ctx.fillStyle = tokens.onSurface;
     for (const line of countLines) {
       ctx.fillText(line, FL.CX, y);
       y += lineHeight;
     }
     y += gap;
-    ctx.font = `400 14px ${fontFamily}`;
+    ctx.font = `400 16px ${fontFamily}`;
     ctx.fillStyle = tokens.onSurfaceMuted;
     for (const line of promptLines) {
       ctx.fillText(line, FL.CX, y);
@@ -393,8 +394,11 @@ export async function initParticipantFunnel(root) {
   }
 
   // ---- Stage machine -----------------------------------------------------
+  // The last stage lingers, then the cycle wraps back to the first
+  // (design 9/22). It stops only when the reader picks a stage.
+  const LAST_DWELL_MS = 3600;
   function dwellFor(s) {
-    return s === LAST_STAGE ? Number.POSITIVE_INFINITY : DWELL_MS;
+    return s === LAST_STAGE ? LAST_DWELL_MS : DWELL_MS;
   }
 
   function goTo(nextStage) {
@@ -417,9 +421,8 @@ export async function initParticipantFunnel(root) {
 
   function jumpTo(s) {
     const target = Math.min(LAST_STAGE, Math.max(0, s));
-    // A manual step joins the cycle at that stage; the auto-advance carries
-    // on from there and rests on the last stage as usual (feedback 9/22).
-    playing = true;
+    // Picking a stage stops the cycle there (design 9/22).
+    playing = false;
     goTo(target);
     dwellLeft = dwellFor(stage);
   }
@@ -537,11 +540,7 @@ export async function initParticipantFunnel(root) {
       } else if (playing) {
         dwellLeft -= dt;
         if (dwellLeft <= 0) {
-          if (stage < LAST_STAGE) goTo(stage + 1);
-          else {
-            playing = false;
-            syncControls();
-          }
+          goTo(stage < LAST_STAGE ? stage + 1 : 0);
         }
       }
     }
@@ -550,12 +549,7 @@ export async function initParticipantFunnel(root) {
     const current = pills[stage];
     if (current) {
       const total = dwellFor(stage);
-      const prog =
-        t < 1
-          ? 0
-          : total === Number.POSITIVE_INFINITY
-            ? 1
-            : 1 - dwellLeft / total;
+      const prog = !playing ? 1 : t < 1 ? 0 : 1 - dwellLeft / total;
       current.style.setProperty(
         "--progress",
         String(Math.max(0, Math.min(1, prog))),

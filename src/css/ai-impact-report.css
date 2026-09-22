@@ -745,9 +745,10 @@ section#ai-report-hero {
 .funnel-steps {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 0.5rem;
-  margin: 0 0 0.75rem;
-  padding: 0;
+  margin: 0;
+  padding: 1.25rem 0;
 
   & li {
     flex: 1 1 0;
@@ -1333,6 +1334,32 @@ section#who-participated h2 {
   margin-bottom: 1.5rem;
 }
 
+/* The stat block sits at the frame's far right, level with the section
+   title rather than with the step copy (design 9/22). The stepper and
+   phase row give up their positioning so the container is the anchor. */
+@media (min-width: 992px) {
+  section#who-participated > .container {
+    position: relative;
+  }
+
+  section#who-participated .participants-stepper,
+  section#who-participated .phase-row {
+    position: static;
+  }
+
+  section#who-participated .phase-row > .col-lg-4 {
+    top: 0;
+    right: calc(var(--bs-gutter-x, 1.5rem) / 2);
+    width: auto;
+    margin-top: 0; /* no row gutter: level with the h2 */
+    padding-right: 0; /* flush with the h2's left edge, mirrored */
+  }
+
+  section#who-participated .participation-sidebar {
+    padding-right: 0;
+  }
+}
+
 .participants-stepper {
   position: relative;
   outline: none;
@@ -1367,8 +1394,8 @@ section#who-participated h2 {
   display: none;
   width: 100%;
   max-width: 1040px;
-  /* With chart-controls' top margin this matches the gap above the canvas. */
-  margin: 0 0 0.25rem;
+  /* Centred in the section (design 9/22). */
+  margin: 0 auto;
 
   & canvas {
     display: block;

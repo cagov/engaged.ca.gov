@@ -306,13 +306,8 @@
          data-center-title="{{ wp.ring_center_title }}"
          data-center-hint="{{ wp.ring_center_hint }}"
          data-labels='{{ legend_labels_json | replace("'", "&#39;") | safe }}'>
-      {# Margin arrows: kept for now, may go away. Hidden at either end. #}
-      <button type="button" class="stepper-arrow stepper-arrow-prev" data-stepper-prev aria-label="{{ wp.prev_label }}">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M8 3L2.5 9L8 15M3 9H15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button type="button" class="stepper-arrow stepper-arrow-next" data-stepper-next aria-label="{{ wp.next_label }}">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M10 3L15.5 9L10 15M15 9H2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
+      {# Margin arrows removed 9/22 (design); the progress bars below the canvas and the
+         keyboard arrows step through the stages. #}
       <span class="visually-hidden" data-stepper-counter aria-live="polite">{{ wp.step_counter | replace("{current}", 1) | replace("{total}", nbr_steps) }}</span>
 
       {# Stage copy. JS shows one at a time and crossfades; no-JS shows all four with snapshots. #}
