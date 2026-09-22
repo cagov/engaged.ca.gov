@@ -1707,11 +1707,17 @@ section#power-of-discussion button.conversations-select-button {
   color: var(--report-ink);
 }
 
-/* Name is its own block: wrapped lines stay clear of the dot and balance. */
+/* Name is its own block so wrapped lines stay clear of the dot. */
 .conversation-attribution-text {
   display: inline-block;
   max-width: 100%;
   text-wrap: balance;
+}
+
+/* Mirrored quotes: greedy wrapping (first line as long as possible) and the
+   block shrunk to its longest line by JS, so the dot hugs the first word. */
+.conversation-quote:nth-child(even) .conversation-attribution-text {
+  text-wrap: wrap;
 }
 
 .conversation-attribution-dot {

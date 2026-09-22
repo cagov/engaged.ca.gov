@@ -64,6 +64,7 @@ export function initTopThemes(root) {
       li.classList.toggle("is-selected", Number(li.dataset.theme) === n);
     placePanel();
     drawConnector();
+    fitAttributions();
   }
   for (const b of selects)
     b.addEventListener("click", () => select(Number(b.dataset.themeSelect)));
@@ -118,7 +119,9 @@ export function initTopThemes(root) {
   window.addEventListener("resize", () => {
     placePanel();
     drawConnector();
+    fitAttributions();
   });
+  window.addEventListener("load", fitAttributions);
   // The panel is sticky on desktop, so its position relative to the cards
   // changes as the page scrolls; keep the connector attached.
   let scrollQueued = false;
@@ -162,5 +165,25 @@ async function colorAttributions() {
     const dot = att.querySelector(".conversation-attribution-dot");
     const color = colorOf[att.dataset.region];
     if (dot && color) dot.style.background = color;
+  }
+}
+
+/** Right-aligned (mirrored) attributions: shrink the name block to its
+ * longest rendered line so the dot sits right beside the first word rather
+ * than at the far left of the card. Greedy wrapping makes the first line
+ * the longest, so the dot lands on line one. */
+function fitAttributions() {
+  const spans = document.querySelectorAll(
+    ".top-themes .conversation-quote:nth-child(even) .conversation-attribution-text",
+  );
+  for (const span of spans) {
+    span.style.width = "";
+    if (!span.offsetParent) continue; // hidden quote set
+    const range = document.createRange();
+    range.selectNodeContents(span);
+    const rects = [...range.getClientRects()];
+    if (rects.length < 2) continue; // single line: nothing to do
+    const widest = Math.max(...rects.map((r) => r.width));
+    span.style.width = `${Math.ceil(widest) + 1}px`;
   }
 }
