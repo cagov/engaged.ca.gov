@@ -1654,12 +1654,21 @@ section#power-of-discussion button.conversations-select-button {
     }
   }
 
+  /* Even quotes mirror: balloon on the right, text and attribution right-aligned. */
   &:nth-child(even) {
     grid-template-columns: 1fr 34px;
 
     & .conversation-quote-icon {
       order: 2;
       transform: scaleX(-1);
+    }
+
+    & p {
+      text-align: right;
+    }
+
+    & .conversation-attribution {
+      justify-content: flex-end;
     }
   }
 }
