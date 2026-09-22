@@ -329,13 +329,27 @@ export async function initParticipantFunnel(root) {
     if (titleK <= 0.01 || (!centerTitle && !centerHint)) return;
     const maxClusterRc = Math.max(0, ...layout.clusters.map((c) => c.rc));
     const freeRadius = Math.max(60, layout.ringRadius - maxClusterRc - 10);
-    const maxWidth = freeRadius * 1.7;
-    // 20px / 16px (design 9/22, up from 16 / 14).
+    const maxWidth = freeRadius * 1.9;
+    // 20px / 16px (design 9/22, up from 16 / 14). Wrap on measured widths so
+    // the title stays on one line whenever the ring's centre allows it.
     const lineHeight = 27;
     const gap = 6;
-
-    const countLines = FL.wrapLabel(centerTitle, maxWidth, 11.1).slice(0, 2);
-    const promptLines = FL.wrapLabel(centerHint, maxWidth, 8.9).slice(0, 2);
+    ctx.font = `700 20px ${fontFamily}`;
+    const titleCharW =
+      ctx.measureText(centerTitle || "").width /
+      Math.max(1, (centerTitle || "").length);
+    ctx.font = `400 16px ${fontFamily}`;
+    const hintCharW =
+      ctx.measureText(centerHint || "").width /
+      Math.max(1, (centerHint || "").length);
+    const countLines = FL.wrapLabel(centerTitle, maxWidth, titleCharW).slice(
+      0,
+      2,
+    );
+    const promptLines = FL.wrapLabel(centerHint, maxWidth, hintCharW).slice(
+      0,
+      2,
+    );
     const totalHeight =
       countLines.length * lineHeight + gap + promptLines.length * lineHeight;
 
