@@ -165,8 +165,9 @@ export async function initParticipantFunnel(root) {
     VIEW_BOTTOM - VIEW_PAD,
   );
 
-  const DWELL_MS = 1900;
-  const TRANSITION_MS = 2600;
+  // Faster cycle so it reads as automatic (feedback 9/22).
+  const DWELL_MS = 1400;
+  const TRANSITION_MS = 1800;
   const ORBIT_SPEED = 0.2;
   const DRIFT_SPEED = 0.3;
   const TITLE_EASE_MS = 900;
@@ -416,8 +417,9 @@ export async function initParticipantFunnel(root) {
 
   function jumpTo(s) {
     const target = Math.min(LAST_STAGE, Math.max(0, s));
-    // Once the reader steps manually, stop auto-advancing.
-    playing = false;
+    // A manual step joins the cycle at that stage; the auto-advance carries
+    // on from there and rests on the last stage as usual (feedback 9/22).
+    playing = true;
     goTo(target);
     dwellLeft = dwellFor(stage);
   }
@@ -474,10 +476,10 @@ export async function initParticipantFunnel(root) {
       playBtn.setAttribute("aria-pressed", String(!playing));
     }
     for (const pill of pills) {
-      pill.setAttribute(
-        "aria-pressed",
-        String(Number(pill.dataset.funnelStage) - 1 === stage),
-      );
+      const idx = Number(pill.dataset.funnelStage) - 1;
+      pill.setAttribute("aria-pressed", String(idx === stage));
+      // Passed stages read full, the current one fills during its dwell.
+      pill.style.setProperty("--progress", idx < stage ? "1" : "0");
     }
     for (const el of lastStepOnly) el.hidden = stage !== LAST_STAGE;
     if (counterEl) {
@@ -542,6 +544,22 @@ export async function initParticipantFunnel(root) {
           }
         }
       }
+    }
+
+    // Step marker fill: 0 while the stage animates in, then the dwell's progress.
+    const current = pills[stage];
+    if (current) {
+      const total = dwellFor(stage);
+      const prog =
+        t < 1
+          ? 0
+          : total === Number.POSITIVE_INFINITY
+            ? 1
+            : 1 - dwellLeft / total;
+      current.style.setProperty(
+        "--progress",
+        String(Math.max(0, Math.min(1, prog))),
+      );
     }
 
     // Idle re-read so toggling Region / Field of work recolors immediately

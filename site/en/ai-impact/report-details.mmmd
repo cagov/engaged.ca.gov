@@ -50,13 +50,15 @@ id: hero_nav
 translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
 aria_label: On this page
 label: "Jump to a section:"
-nbr_items: 3
+nbr_items: 4
 item_1_label: Balancing each group, fairly
 item_1_anchor: balancing-groups
 item_2_label: Ranking policy themes
 item_2_anchor: ranking-policy-themes
 item_3_label: How we used AI
 item_3_anchor: how-we-used-ai
+item_4_label: Download the policy ideas
+item_4_anchor: download-data
 ----
 
 ----
@@ -150,6 +152,15 @@ translator_note_copy: "Text in parentheses is a placeholder note for the writers
 ## How we used AI
 
 (Text to come.)
+----
+id: download_data
+button_text: Download the ideas
+----
+## Download the policy ideas
+
+You can download and read all the policies people proposed in the discussions. They are in a CSV file.
+
+Participants remain anonymous. We scrubbed this dataset of personally-identifying information. But we did not edit the ideas in any other way.
 ----
 id: sign_up
 button_text: Sign up

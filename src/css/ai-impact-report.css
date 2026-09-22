@@ -475,7 +475,8 @@ section#ai-report-hero {
 }
 
 /* Link-styled buttons: "Show 7 more", "Close", "Show all 27 ideas". */
-.policy-tiers button.text-link-button {
+.policy-tiers button.text-link-button,
+.top-themes button.text-link-button {
   all: unset;
   display: inline-flex;
   align-items: center;
@@ -529,6 +530,229 @@ section#ai-report-hero {
     font-size: 1.4375rem;
     margin: 0 0 1rem;
   }
+}
+
+/* ---- Top 3 policy ideas: theme cards + "What people said" panel ---- */
+
+.top-themes {
+  position: relative;
+  border: 2px solid var(--report-orange);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1.25rem 1.25rem 1.5rem;
+  margin: 2rem 0;
+
+  @media (max-width: 575px) {
+    padding-top: 3.25rem;
+  }
+}
+
+.top-themes-header {
+  border-bottom: 0;
+  padding-bottom: 0.5rem;
+}
+
+.top-themes-layout {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+    gap: 2.5rem;
+    align-items: start;
+    padding: 0 1.5rem;
+  }
+}
+
+.top-themes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.top-theme {
+  background: var(--report-off-white);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 0.75rem 1rem 0.5rem;
+  transition: border-color 0.2s ease;
+
+  &.is-selected {
+    border-color: var(--report-orange);
+  }
+}
+
+.top-themes button.top-theme-select {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0.5rem 0.25rem 0.75rem;
+  cursor: pointer;
+  text-align: left;
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+.top-theme-number {
+  flex: 0 0 auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--report-navy);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.15rem;
+}
+
+.style-body-text .top-theme-title {
+  font-size: 1.4375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--report-navy);
+  margin: 0 !important;
+}
+
+.top-theme-examples {
+  border-top: 1px solid var(--report-rule);
+  padding: 0.75rem 0.25rem 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--report-body);
+
+  & p {
+    margin: 0 0 0.3rem;
+    font-size: 1.125rem;
+  }
+
+  & ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
+
+  & li {
+    margin-bottom: 0.15rem;
+    font-size: 1.125rem;
+    line-height: 1.45;
+  }
+}
+
+.top-themes button.top-theme-examples-toggle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid var(--report-rule);
+  padding: 0.6rem 0 0.25rem;
+  margin-top: 0.25rem;
+}
+
+/* Quotes panel reuses the conversation card styles. */
+.top-themes-quotes {
+  position: relative;
+  padding-top: 1rem;
+
+  @media (min-width: 992px) {
+    max-height: 560px;
+    display: flex;
+    flex-direction: column;
+
+    & .conversation-quotes-scroll {
+      overflow-y: auto;
+      flex: 1 1 auto;
+      padding-right: 0.75rem;
+    }
+  }
+}
+
+.style-body-text .top-themes-quotes-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--report-body);
+  margin: 0 0 0.75rem;
+}
+
+.top-themes-connector {
+  position: absolute;
+  pointer-events: none;
+  color: var(--report-navy);
+  overflow: visible;
+  z-index: 1;
+}
+
+/* Mobile: the panel sits inside the selected card. */
+.top-themes.is-narrow .top-themes-quotes {
+  margin-top: 0.75rem;
+}
+
+/* No-JS: every card shows its examples; the toggle and connector hide. */
+.top-themes:not(.js-enabled) {
+  & .top-theme-examples-toggle,
+  & .top-themes-connector {
+    display: none;
+  }
+}
+
+/* ---- Who participated: step markers under the canvas ---- */
+
+.funnel-steps {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  padding: 0;
+
+  & li {
+    flex: 1 1 0;
+    max-width: 120px;
+  }
+}
+
+.participants-stepper button.funnel-step {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgb(28 39 69 / 0.15);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  & .funnel-step-fill {
+    position: absolute;
+    inset: 0;
+    background: var(--report-orange);
+    transform-origin: left center;
+    transform: scaleX(var(--progress, 0));
+  }
+
+  &[aria-pressed="true"] {
+    background: rgb(28 39 69 / 0.25);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 3px;
+  }
+}
+
+.participants-stepper:not(.js-enabled) .funnel-steps {
+  display: none;
 }
 
 /* ---- Phase headers (Who participated / Power of the discussion) ---- */
@@ -1473,7 +1697,7 @@ section#power-of-discussion button.conversations-select-button {
 
 .style-body-text .conversation-attribution {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
   /* Sits 3px under the quote (design review 9/21); the state template's
      blockquote footer gives it a 16px top margin and bold otherwise. */
@@ -1488,6 +1712,7 @@ section#power-of-discussion button.conversations-select-button {
   flex: 0 0 auto;
   width: 10px;
   height: 10px;
+  margin-top: 0.45rem;
   border-radius: 50%;
   background: var(--report-rule);
   transition: background-color 0.4s ease;

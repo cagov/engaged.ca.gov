@@ -123,7 +123,78 @@
           {{ modules.ranking.content | safe }}
         </div>
 
-        {# Policy idea tiers. Rendered fully expanded; JS applies the collapsed default state. #}
+        {# Top 3 policy ideas: three theme cards (examples fold out) and a "What people said"
+           panel showing the selected theme's quotes. Driven by top-themes.js; without JS every
+           card shows its examples and every quote set is visible. #}
+        {% set tt = modules.top_themes %}
+        {% set nbr_top = tt.nbr_themes | default(3) %}
+        <div id="top-themes" class="top-themes"
+             data-show-examples-label="{{ tt.show_examples_label }}"
+             data-hide-examples-label="{{ tt.hide_examples_label }}">
+          <img class="policy-tier-icon policy-tier-sticker" src="{{ tier_stickers[tt.icon] | default(tier_stickers.sparkle) }}" alt="" aria-hidden="true" />
+          <div class="policy-tier-header top-themes-header">
+            <div class="policy-tier-heading">
+              <h3 class="policy-tier-title">{{ tt.title }}</h3>
+              <p class="policy-tier-subtitle">{{ tt.subtitle }}</p>
+            </div>
+          </div>
+          <div class="top-themes-layout">
+            <ol class="top-themes-list">
+              {% for n in range(1, nbr_top + 1) %}
+                {% set theme = modules["top_theme_" + n] %}
+                {% set tid = "top-theme-" + n %}
+                <li class="top-theme" data-theme="{{ n }}">
+                  <button type="button" class="top-theme-select" data-theme-select="{{ n }}"
+                          aria-pressed="{{ 'true' if loop.first else 'false' }}"
+                          aria-controls="{{ tid }}-quotes"
+                          aria-label="{{ tt.select_label | replace('{title}', theme.title) }}">
+                    <span class="top-theme-number" aria-hidden="true">{{ n }}</span>
+                    <h4 class="top-theme-title" id="{{ tid }}-title">{{ theme.title }}</h4>
+                  </button>
+                  {% set has_body = theme.content and (theme.content | trim | length > 0) %}
+                  {% if has_body %}
+                    <div class="top-theme-examples" id="{{ tid }}-examples">
+                      {% set nbr_examples = (theme.content.split("<li>") | length) - 1 %}
+                      {% set examples_label = ui.example_idea_label_singular if nbr_examples == 1 else ui.example_ideas_label %}
+                      {{ theme.content | replace("<ul>", '<p class="policy-idea-examples-label">' + examples_label + '</p><ul class="policy-idea-examples">') | safe }}
+                    </div>
+                    <button type="button" class="top-theme-examples-toggle text-link-button"
+                            aria-expanded="true" aria-controls="{{ tid }}-examples">
+                      <span class="top-theme-examples-toggle-text">{{ tt.hide_examples_label }}</span>
+                      <span class="chevron" aria-hidden="true"></span>
+                    </button>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ol>
+            <div class="top-themes-quotes conversation-card" data-quotes-panel>
+              <svg class="top-themes-connector" data-connector aria-hidden="true"></svg>
+              <p class="top-themes-quotes-title">{{ tt.quotes_title }}</p>
+              {% for n in range(1, nbr_top + 1) %}
+                {% set q = modules["top_theme_" + n + "_quotes"] %}
+                <div class="conversation-quotes-scroll" id="top-theme-{{ n }}-quotes" role="region" aria-labelledby="top-theme-{{ n }}-title" data-quotes-for="{{ n }}"{% if not loop.first %} hidden{% endif %}>
+                  <ul class="conversation-quotes">
+                    {% for i in range(1, 6) %}
+                      {% if q["quote_" + i] %}
+                        <li class="conversation-quote">
+                          <img class="conversation-quote-icon" src="/public/images/little-dialog-balloon.svg" alt="" aria-hidden="true" />
+                          <blockquote>
+                            <p>“{{ q["quote_" + i] }}”</p>
+                            <footer class="conversation-attribution" data-region="{{ q["region_" + i] }}" data-field="{{ q["field_" + i] }}">
+                              <span class="conversation-attribution-dot" aria-hidden="true"></span>{{ q["attribution_" + i] }}
+                            </footer>
+                          </blockquote>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        {# Other supported ideas: one collapsible list of the remaining themes, titles only. #}
         <div id="policy-tiers" class="policy-tiers"
              data-initial-visible="{{ initial_visible }}"
              data-show-label="{{ ui.show_label }}"
@@ -165,16 +236,14 @@
                     {# No examples for this idea: a plain heading, no control. #}
                     <h4 class="policy-idea-title policy-idea-title-static">{{ idea.title }}</h4>
                     {% endif %}
+                    {% if has_body %}
                     <div class="policy-idea-body" id="{{ idea_id }}-body" role="region" aria-labelledby="{{ idea_id }}-toggle" hidden>
-                      {% if has_body %}
-                        {# Body markdown is: description paragraph(s), then a bullet list of example ideas. #}
-                        {% set nbr_examples = (idea.content.split("<li>") | length) - 1 %}
-                        {% set examples_label = ui.example_idea_label_singular if nbr_examples == 1 else ui.example_ideas_label %}
-                        {{ idea.content | replace("<ul>", '<p class="policy-idea-examples-label">' + examples_label + '</p><ul class="policy-idea-examples">') | safe }}
-                      {% else %}
-                        {# TODO: description and example ideas for this idea have not been written yet. #}
-                      {% endif %}
+                      {# Body markdown is: description paragraph(s), then a bullet list of example ideas. #}
+                      {% set nbr_examples = (idea.content.split("<li>") | length) - 1 %}
+                      {% set examples_label = ui.example_idea_label_singular if nbr_examples == 1 else ui.example_ideas_label %}
+                      {{ idea.content | replace("<ul>", '<p class="policy-idea-examples-label">' + examples_label + '</p><ul class="policy-idea-examples">') | safe }}
                     </div>
+                    {% endif %}
                   </li>
                 {% endfor %}
               </ul>
@@ -190,15 +259,6 @@
             </div>
           {% endfor %}
 
-          <div class="policy-tiers-footer">
-            <button type="button" id="policy-tiers-toggle-all" class="text-link-button"
-                    aria-expanded="true"
-                    aria-controls="policy-tiers"
-                    data-total-ideas="{{ total_ideas }}">
-              <span class="policy-tiers-toggle-all-text">{{ ui.close_all_label }}</span>
-              <span class="chevron" aria-hidden="true"></span>
-            </button>
-          </div>
         </div>
 
         <div class="how-to-read-tiers style-body-text">
@@ -266,15 +326,22 @@
         {% if wp.ring_center_hint %}<p class="funnel-center-hint">{{ wp.ring_center_hint }}</p>{% endif %}
       </div>
 
+      {# Step markers: show that the stages cycle and where we are. The active one fills as
+         the dwell runs down (--progress, set by JS). Clicking one jumps to that stage. #}
+      <ol class="funnel-steps" data-funnel-steps aria-label="{{ wp.title }}">
+        {% for s in range(1, nbr_steps + 1) %}
+          <li><button type="button" class="funnel-step" data-funnel-stage="{{ s }}" aria-pressed="{{ 'true' if loop.first else 'false' }}" aria-label="{{ wp.step_marker_label | replace('{current}', s) }}"><span class="funnel-step-fill" aria-hidden="true"></span></button></li>
+        {% endfor %}
+      </ol>
+
       <div class="chart-controls">
         <div class="chart-controls-row">
           <div class="segmented-toggle" role="group">
             <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ wp.toggle_region }}</button>
             <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ wp.toggle_field_of_work }}</button>
             {# Age, race/ethnicity, gender and AI response colorings are built but not offered
-               here (too much for this chart, 9/18); The power of discussion still offers them. To
-               restore one, add a button with data-variant="age" | "race" | "gender" | "ai" and the
-               matching wp.toggle_* label. #}
+               (9/18). To restore one, add a button with data-variant="age" | "race" | "gender" |
+               "ai" and the matching wp.toggle_* label. #}
           </div>
           <ul class="chart-legend participant-legend" data-last-step-only hidden>
             <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ wp.legend_participant }}</li>
@@ -288,116 +355,6 @@
             <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
           {% endfor %}
         </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# ------------------------------------------------- The power of discussion (follows Who participated, per the writer) #}
-<section id="power-of-discussion" class="style-body-text section-light">
-  <div class="container">
-    <h2>{{ modules.power_of_discussion.title }}</h2>
-    {{ phase_header(modules.power_of_discussion, "/public/images/comments-icon.svg") }}
-
-    {# Conversations ring: 14 clusters from the funnel data, quotes from conversation_N modules.
-       Drawn by conversations-ring.js. On mobile the ring hides and the quote cards stack. #}
-    {% set pd = modules.power_of_discussion %}
-    {% set nbr_conversations = pd.nbr_conversations | default(14) %}
-    <div id="conversations-chart" class="conversations"
-         data-funnel-src="{{ "/public/data/ai-report-participant-funnel.json" | assetVersion }}"
-         data-variant="region"
-         data-center-title="{{ pd.chart_center_title }}"
-         data-center-hint="{{ pd.chart_center_hint }}"
-         data-title-template="{{ pd.conversation_title }}"
-         data-meta-template="{{ pd.conversation_meta }}"
-         data-labels='{{ legend_labels_json | replace("'", "&#39;") | safe }}'>
-
-      <div class="conversations-layout">
-        <div class="conversations-ring">
-          <canvas data-ring-canvas width="600" height="600" tabindex="0" role="img" aria-label="{{ pd.chart_alt }}"></canvas>
-          {# No-JS fallback #}
-          <img class="chart-placeholder-image conversations-fallback" src="/public/images/ai-report-conversations-chart-placeholder.png" alt="{{ pd.chart_alt }}" />
-          {# Keyboard / screen-reader selection. #}
-          <ul class="conversations-select visually-hidden-list" aria-label="{{ pd.title }}">
-            {% for n in range(1, nbr_conversations + 1) %}
-              {% if modules["conversation_" + n] %}
-                <li><button type="button" class="conversations-select-button" data-select-session="{{ n }}" aria-pressed="{% if loop.first %}true{% else %}false{% endif %}">{{ pd.conversation_title | replace("{n}", n) }}</button></li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-
-        <div class="conversations-panel">
-          {% for n in range(1, nbr_conversations + 1) %}
-            {% set conv = modules["conversation_" + n] %}
-            {% if conv %}
-              <article class="conversation-card" data-session="{{ n }}"{% if not loop.first %} hidden{% endif %}>
-                <div class="conversation-card-header">
-                  <span class="conversation-thumb" data-conversation-thumb aria-hidden="true"></span>
-                  <h4 class="conversation-title" id="conversation-{{ n }}-title" data-conversation-title>{{ pd.conversation_title | replace("{n}", n) }}</h4>
-                  <p class="conversation-meta" data-conversation-meta></p>
-                </div>
-                <div class="conversation-quotes-scroll" role="region" aria-labelledby="conversation-{{ n }}-title">
-                <ul class="conversation-quotes">
-                  {% for q in range(1, 6) %}
-                    {% if conv["quote_" + q] %}
-                      <li class="conversation-quote">
-                        <img class="conversation-quote-icon" src="/public/images/little-dialog-balloon.svg" alt="" aria-hidden="true" />
-                        <blockquote>
-                          <p>“{{ conv["quote_" + q] }}”</p>
-                          <footer class="conversation-attribution" data-region="{{ conv["region_" + q] }}" data-field="{{ conv["field_" + q] }}">
-                            <span class="conversation-attribution-dot" aria-hidden="true"></span>{{ conv["attribution_" + q] }}
-                          </footer>
-                        </blockquote>
-                      </li>
-                    {% endif %}
-                  {% endfor %}
-                </ul>
-                </div>
-                {% if conv.outcome %}
-                  <div class="conversation-outcome">
-                    <p class="conversation-outcome-label">{{ pd.outcome_label }}</p>
-                    <p class="conversation-outcome-text">{{ conv.outcome }}</p>
-                  </div>
-                {% endif %}
-              </article>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-
-      <div class="chart-controls">
-        <div class="chart-controls-row">
-          <div class="segmented-toggle" role="group">
-            <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ pd.toggle_region }}</button>
-            <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ pd.toggle_field_of_work }}</button>
-            {# Age, race/ethnicity, gender and AI response colorings are built but not offered
-               (9/21). To restore one, add a button with data-variant="age" | "race" | "gender" |
-               "ai" and the matching pd.toggle_* label. #}
-          </div>
-          <ul class="chart-legend participant-legend">
-            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ pd.legend_participant }}</li>
-            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ pd.legend_facilitator }}</li>
-          </ul>
-        </div>
-        <ul class="chart-legend region-legend" data-ring-legend aria-label="{{ pd.toggle_region }}">
-          {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
-          {% for r in range(1, nbr_regions + 1) %}
-            <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-
-    {# Download the comments: an H3 sub-block of this section, per the writer's outline. #}
-    <div id="download-data" class="row">
-      <div class="col-lg-8">
-        <div class="section-body">
-          {{ modules.download_data.content | safe }}
-        </div>
-        <div class="download-button-div">
-          <a class="download-button-link" data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ modules.download_data.button_text }}</a>
-        </div>
       </div>
     </div>
   </div>
