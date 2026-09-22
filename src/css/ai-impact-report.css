@@ -892,6 +892,21 @@ section#how-we-used-ai p {
   line-height: 1.6;
 }
 
+/* The state template sizes .style-body-text strong at 23px regardless of
+   its parent; inside 18px copy it should only be bold. */
+.style-body-text section#ranking-policy-themes strong,
+.style-body-text section#how-we-used-ai strong,
+section#ranking-policy-themes.style-body-text strong,
+section#how-we-used-ai.style-body-text strong,
+.how-to-read-tiers.style-body-text strong,
+.style-body-text .demographics-intro strong,
+.style-body-text .top-theme-examples strong,
+.style-body-text .policy-idea-body strong,
+.style-body-text #download-data strong {
+  font-size: inherit;
+  font-weight: 700;
+}
+
 .how-to-read-tiers h4 {
   font-weight: 700;
   margin: 0 0 0.75rem;
