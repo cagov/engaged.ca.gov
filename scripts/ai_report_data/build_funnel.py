@@ -16,7 +16,8 @@ aggregate JSON is. It holds counts plus one anonymous
 Reads:
   respondents.csv  one row per survey respondent: REGION, FIELD_OF_WORK_ROLLUP,
                    AGE, AI_RESPONSE_LABEL, RACE_ETHNICITY_CATEGORY, GENDER_CATEGORY,
-                   INVITED_PHASE_2
+                   PARTICIPATED_IN_PHASE1, INVITED_TO_PHASE2 (2026-09-21 export; only
+                   PARTICIPATED_IN_PHASE1 = TRUE rows count, per the data team)
   attendees.csv    one row per discussion attendee: SESSION_DATE, REGION,
                    FIELD_OF_WORK_SORTITION_GROUPING, AGE, AI_RESPONSE_LABEL,
                    RACE_ETHNICITY_CATEGORY, GENDER_CATEGORY
@@ -38,7 +39,7 @@ from collections import Counter, defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROTOTYPES = os.path.normpath(os.path.join(HERE, "..", "..", "..", "engaged_prototypes"))
-DEFAULT_RESPONDENTS = os.path.join(PROTOTYPES, "survey respondent demographics and status 2026-09-04.csv")
+DEFAULT_RESPONDENTS = os.path.join(PROTOTYPES, "ai_impact_participants_with_demo_data 2026-09-21.csv")
 DEFAULT_ATTENDEES = os.path.join(PROTOTYPES, "attendee demographics, 2026-08-18-1424.csv")
 OUT = os.path.normpath(os.path.join(HERE, "..", "..", "src", "public", "data", "ai-report-participant-funnel.json"))
 
@@ -121,14 +122,14 @@ def ordered(names, counts):
 
 
 def build(respondents_path, attendees_path):
-    respondents = read(respondents_path)
+    respondents = [r for r in read(respondents_path) if r["PARTICIPATED_IN_PHASE1"].strip().upper() == "TRUE"]
     attendees = read(attendees_path)
 
     survey_region = Counter(region(r["REGION"]) for r in respondents)
     survey_field = Counter(field(r["FIELD_OF_WORK_ROLLUP"]) for r in respondents)
     attend_region = Counter(region(a["REGION"]) for a in attendees)
     attend_field = Counter(field(a["FIELD_OF_WORK_SORTITION_GROUPING"]) for a in attendees)
-    invited_region = Counter(region(r["REGION"]) for r in respondents if r["INVITED_PHASE_2"].strip().lower() == "yes")
+    invited_region = Counter(region(r["REGION"]) for r in respondents if r["INVITED_TO_PHASE2"].strip().upper() == "TRUE")
     survey_age = Counter(age(r["AGE"]) for r in respondents)
     attend_age = Counter(age(a["AGE"]) for a in attendees)
     survey_ai = Counter(ai(r["AI_RESPONSE_LABEL"]) for r in respondents)

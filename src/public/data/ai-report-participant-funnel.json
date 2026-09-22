@@ -1,154 +1,122 @@
 {
  "meta": {
-  "source": "survey respondent demographics and status 2026-09-04.csv",
+  "source": "ai_impact_participants_with_demo_data 2026-09-21.csv",
   "attendeeSource": "attendee demographics, 2026-08-18-1424.csv",
   "note": "Aggregate counts plus one anonymous {region, fieldOfWork} pair per discussion attendee, grouped by session date. Built by scripts/ai_report_data/build_funnel.py."
  },
- "phase1Total": 2421,
+ "phase1Total": 2702,
  "regions": [
   {
    "name": "Los Angeles",
-   "surveyCount": 661,
+   "surveyCount": 712,
    "attendCount": 24
   },
   {
    "name": "Bay Area",
-   "surveyCount": 592,
+   "surveyCount": 647,
    "attendCount": 20
   },
   {
    "name": "Southern California",
-   "surveyCount": 395,
+   "surveyCount": 442,
    "attendCount": 19
   },
   {
    "name": "Sacramento Valley / Sierra Foothills",
-   "surveyCount": 363,
+   "surveyCount": 418,
    "attendCount": 17
   },
   {
-   "name": "Far North / North Coast",
-   "surveyCount": 147,
-   "attendCount": 6
-  },
-  {
    "name": "Central Valley",
-   "surveyCount": 144,
+   "surveyCount": 163,
    "attendCount": 5
   },
   {
+   "name": "Far North / North Coast",
+   "surveyCount": 161,
+   "attendCount": 6
+  },
+  {
    "name": "Central Coast",
-   "surveyCount": 108,
+   "surveyCount": 123,
    "attendCount": 8
   },
   {
    "name": "Sierra Region",
-   "surveyCount": 11,
+   "surveyCount": 12,
    "attendCount": 2
   },
   {
    "name": "(not stated)",
-   "surveyCount": 0,
+   "surveyCount": 24,
    "attendCount": 2
   }
  ],
  "fieldOfWork": [
   {
    "name": "Government",
-   "surveyCount": 379,
+   "surveyCount": 426,
    "attendCount": 25
   },
   {
+   "name": "Other",
+   "surveyCount": 384,
+   "attendCount": 7
+  },
+  {
    "name": "Information technology",
-   "surveyCount": 356,
+   "surveyCount": 377,
    "attendCount": 10
   },
   {
    "name": "Arts, entertainment, or media",
-   "surveyCount": 337,
+   "surveyCount": 351,
    "attendCount": 13
   },
   {
-   "name": "Other",
-   "surveyCount": 329,
-   "attendCount": 7
-  },
-  {
    "name": "Education",
-   "surveyCount": 191,
+   "surveyCount": 213,
    "attendCount": 8
   },
   {
-   "name": "Healthcare",
-   "surveyCount": 173,
+   "name": "Professional services",
+   "surveyCount": 190,
    "attendCount": 9
   },
   {
-   "name": "Professional services",
-   "surveyCount": 172,
+   "name": "Healthcare",
+   "surveyCount": 185,
    "attendCount": 9
   },
   {
    "name": "Unemployed, looking",
-   "surveyCount": 140,
+   "surveyCount": 167,
    "attendCount": 3
   },
   {
    "name": "Financial",
-   "surveyCount": 100,
+   "surveyCount": 107,
    "attendCount": 4
   },
   {
    "name": "Goods producing and harvesting",
-   "surveyCount": 80,
+   "surveyCount": 98,
    "attendCount": 5
   },
   {
    "name": "Retail or wholesale trade",
-   "surveyCount": 64,
+   "surveyCount": 67,
    "attendCount": 1
   },
   {
    "name": "Logistics",
-   "surveyCount": 53,
+   "surveyCount": 61,
    "attendCount": 6
   },
   {
    "name": "Hospitality",
-   "surveyCount": 30,
+   "surveyCount": 39,
    "attendCount": 0
-  },
-  {
-   "name": "(not stated)",
-   "surveyCount": 0,
-   "attendCount": 3
-  },
-  {
-   "name": "I don't want to say",
-   "surveyCount": 17,
-   "attendCount": 0
-  }
- ],
- "age": [
-  {
-   "name": "18-24",
-   "surveyCount": 91,
-   "attendCount": 4
-  },
-  {
-   "name": "25-44",
-   "surveyCount": 1136,
-   "attendCount": 30
-  },
-  {
-   "name": "45-64",
-   "surveyCount": 877,
-   "attendCount": 50
-  },
-  {
-   "name": "Over 65",
-   "surveyCount": 280,
-   "attendCount": 13
   },
   {
    "name": "(not stated)",
@@ -158,107 +126,139 @@
   {
    "name": "I don't want to say",
    "surveyCount": 37,
+   "attendCount": 0
+  }
+ ],
+ "age": [
+  {
+   "name": "18-24",
+   "surveyCount": 109,
+   "attendCount": 4
+  },
+  {
+   "name": "25-44",
+   "surveyCount": 1189,
+   "attendCount": 30
+  },
+  {
+   "name": "45-64",
+   "surveyCount": 917,
+   "attendCount": 50
+  },
+  {
+   "name": "Over 65",
+   "surveyCount": 290,
+   "attendCount": 13
+  },
+  {
+   "name": "Under 18",
+   "surveyCount": 10,
+   "attendCount": 0
+  },
+  {
+   "name": "(not stated)",
+   "surveyCount": 145,
+   "attendCount": 3
+  },
+  {
+   "name": "I don't want to say",
+   "surveyCount": 42,
    "attendCount": 3
   }
  ],
  "aiResponse": [
   {
    "name": "Positive",
-   "surveyCount": 381,
+   "surveyCount": 405,
    "attendCount": 20
   },
   {
    "name": "Mixed",
-   "surveyCount": 629,
+   "surveyCount": 721,
    "attendCount": 43
   },
   {
    "name": "Negative",
-   "surveyCount": 1349,
+   "surveyCount": 1406,
    "attendCount": 37
   },
   {
-   "name": "Neutral",
-   "surveyCount": 62,
-   "attendCount": 0
-  },
-  {
    "name": "(not stated)",
-   "surveyCount": 0,
+   "surveyCount": 170,
    "attendCount": 3
   }
  ],
  "race": [
   {
    "name": "White",
-   "surveyCount": 1382,
+   "surveyCount": 1432,
    "attendCount": 41
   },
   {
    "name": "Hispanic or Latino",
-   "surveyCount": 305,
+   "surveyCount": 333,
    "attendCount": 19
   },
   {
    "name": "Asian",
-   "surveyCount": 221,
+   "surveyCount": 243,
    "attendCount": 17
   },
   {
    "name": "Multiple",
-   "surveyCount": 149,
+   "surveyCount": 157,
    "attendCount": 3
   },
   {
    "name": "Black or African American",
-   "surveyCount": 92,
+   "surveyCount": 99,
    "attendCount": 6
   },
   {
    "name": "Middle Eastern or North African",
-   "surveyCount": 25,
+   "surveyCount": 28,
    "attendCount": 2
   },
   {
    "name": "American Indian or Alaska Native",
-   "surveyCount": 19,
+   "surveyCount": 23,
    "attendCount": 1
   },
   {
    "name": "Native Hawaiian or Pacific Islander",
-   "surveyCount": 16,
+   "surveyCount": 18,
    "attendCount": 0
   },
   {
    "name": "(not stated)",
-   "surveyCount": 212,
+   "surveyCount": 369,
    "attendCount": 14
   }
  ],
  "gender": [
   {
    "name": "Woman",
-   "surveyCount": 1113,
+   "surveyCount": 1177,
    "attendCount": 47
   },
   {
    "name": "Man",
-   "surveyCount": 988,
+   "surveyCount": 1038,
    "attendCount": 43
   },
   {
    "name": "Nonbinary / multi / other",
-   "surveyCount": 121,
+   "surveyCount": 124,
    "attendCount": 1
   },
   {
    "name": "(not stated)",
-   "surveyCount": 97,
+   "surveyCount": 248,
    "attendCount": 7
   },
   {
    "name": "I don't want to say",
-   "surveyCount": 102,
+   "surveyCount": 115,
    "attendCount": 5
   }
  ],
@@ -1176,16 +1176,16 @@
    "count": 125
   },
   {
-   "name": "Far North / North Coast",
-   "count": 49
-  },
-  {
    "name": "Central Valley",
    "count": 98
   },
   {
+   "name": "Far North / North Coast",
+   "count": 49
+  },
+  {
    "name": "Central Coast",
-   "count": 61
+   "count": 62
   },
   {
    "name": "Sierra Region",
@@ -1196,5 +1196,5 @@
    "count": 0
   }
  ],
- "invitedTotal": 938
+ "invitedTotal": 939
 }

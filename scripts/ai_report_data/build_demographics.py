@@ -13,14 +13,16 @@ aggregate JSON is.
 
 Reads:
   respondents.csv  one row per survey respondent, with demographic columns
-                   plus INVITED_PHASE_2 / ATTENDED_PHASE_2 flags
+                   plus PARTICIPATED_IN_PHASE1 / INVITED_TO_PHASE2 / ATTENDED_PHASE2 flags
+                   (2026-09-21 export; one row is a Phase 2 walk-in who never took the survey)
   targets.csv      QUESTION, ANSWER, TARGET_PCT (statewide share we aimed for)
 
 Writes:
   ../../src/public/data/ai-report-demographics.json
 
 Method:
-  Phase 1 = every respondent. Phase 2 = respondents with ATTENDED_PHASE_2 = yes.
+  Phase 1 = rows with PARTICIPATED_IN_PHASE1 = TRUE (2,702). Phase 2 = those who also
+  attended a discussion.
   For each dimension, shares are computed over respondents who gave a usable
   answer (blanks, "I don't want to say", "Non-response" are excluded and the
   excluded count is reported). "Points from target" = 100 * (share - target).
@@ -34,7 +36,7 @@ from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROTOTYPES = os.path.normpath(os.path.join(HERE, "..", "..", "..", "engaged_prototypes"))
-DEFAULT_RESPONDENTS = os.path.join(PROTOTYPES, "survey respondent demographics and status 2026-09-04.csv")
+DEFAULT_RESPONDENTS = os.path.join(PROTOTYPES, "ai_impact_participants_with_demo_data 2026-09-21.csv")
 DEFAULT_TARGETS = os.path.join(PROTOTYPES, "chart_data.csv")
 OUT = os.path.normpath(os.path.join(HERE, "..", "..", "src", "public", "data", "ai-report-demographics.json"))
 
@@ -62,7 +64,9 @@ def ai_label(v):
 DIMENSIONS = [
     {"id": "region", "column": "REGION", "question": "REGION", "order": None, "map": lambda v: v.strip()},
     {"id": "race", "column": "RACE_ETHNICITY_CATEGORY", "question": "RACE_ETHNICITY_CATEGORY", "order": None, "map": clean_only},
-    {"id": "age", "column": "AGE", "question": "AGE", "order": ["18-24", "25-44", "45-64", "Over 65"], "map": lambda v: v.strip()},
+    # "Under 18" has no target bucket; it is excluded like a non-answer.
+    {"id": "age", "column": "AGE", "question": "AGE", "order": ["18-24", "25-44", "45-64", "Over 65"],
+     "map": lambda v: v.strip() if v.strip() in ("18-24", "25-44", "45-64", "Over 65") else None},
     {"id": "gender", "column": "GENDER_CATEGORY", "question": "GENDER_CATEGORY",
      "order": ["Woman", "Man", "Nonbinary / multi / other"], "map": gender},
     {"id": "field", "column": "FIELD_OF_WORK_ROLLUP", "question": "FIELD_OF_WORK", "order": None, "map": lambda v: v.strip()},
@@ -113,11 +117,12 @@ def shares(rows, column, mapper):
 
 
 def build(respondents_path, targets_path):
-    respondents = read(respondents_path)
+    rows = read(respondents_path)
     targets = read(targets_path)
-    phase1 = respondents
-    phase2 = [r for r in respondents if yes(r["ATTENDED_PHASE_2"])]
-    invited = [r for r in respondents if yes(r["INVITED_PHASE_2"])]
+    # The data team's count of survey participants is the PARTICIPATED_IN_PHASE1 filter.
+    phase1 = [r for r in rows if yes(r["PARTICIPATED_IN_PHASE1"])]
+    phase2 = [r for r in phase1 if yes(r["ATTENDED_PHASE2"])]
+    invited = [r for r in phase1 if yes(r["INVITED_TO_PHASE2"])]
 
     out_dims = []
     for d in DIMENSIONS:
