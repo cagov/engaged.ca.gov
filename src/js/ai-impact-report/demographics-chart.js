@@ -577,8 +577,10 @@ export async function initDemographicsChart(root) {
 
   function drawTable(dim, id) {
     if (!tableHost) return;
+    // The wrapper is the visually-hidden box: a <table> ignores width and
+    // overflow, so hiding the table itself let it widen the page on phones.
+    tableHost.classList.add("visually-hidden");
     const table = document.createElement("table");
-    table.className = "visually-hidden";
     const caption = document.createElement("caption");
     caption.textContent = labels.tableCaption.replace(
       "{dimension}",
