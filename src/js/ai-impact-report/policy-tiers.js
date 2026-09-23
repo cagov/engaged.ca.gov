@@ -67,7 +67,15 @@ export function initPolicyTiers(root) {
     ideas.forEach((idea, index) => {
       const visible =
         state === "open" || (state === "partial" && index < initialVisible);
-      idea.hidden = !visible;
+      // In the partial view the next idea peeks through a fade so the list
+      // reads as continuing (9/23). It is decorative there: hidden from
+      // assistive tech and not clickable until the list opens.
+      const teaser = state === "partial" && index === initialVisible;
+      idea.hidden = !visible && !teaser;
+      idea.classList.toggle("policy-idea-teaser", teaser);
+      idea.setAttribute("aria-hidden", String(teaser));
+      for (const btn of idea.querySelectorAll("button"))
+        btn.tabIndex = teaser ? -1 : 0;
     });
 
     if (state === "open") {

@@ -399,6 +399,22 @@ section#ai-report-hero {
   }
 }
 
+/* Partial view: the next idea shows its top through a fade to white. */
+.policy-idea.policy-idea-teaser {
+  max-height: 2.9rem;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  mask-image: linear-gradient(to bottom, black 15%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, black 15%, transparent 85%);
+  border-bottom: 0;
+}
+
+/* The rule the teaser fades out returns above the Show control. */
+.policy-tier[data-state="partial"] .policy-tier-footer {
+  border-top: 1px solid var(--report-rule);
+}
+
 /* Ideas without examples: same rhythm as the buttons, no control. */
 .policy-idea-title-static {
   padding: 0.9rem 0.25rem 0.9rem 1.25rem;
