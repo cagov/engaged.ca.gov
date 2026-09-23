@@ -1592,7 +1592,7 @@ section#who-participated h2 {
 /* Play/pause overlay: a translucent grey disc with white glyphs, centred on
    the canvas. Hidden until the pointer moves over the frame (or a tap on
    touch screens), then fades after a few idle seconds or when the pointer
-   leaves. Stays visible while paused and while it has keyboard focus. */
+   leaves. Stays visible only while it has keyboard focus. */
 .participants-stepper button.funnel-play {
   all: unset;
   box-sizing: border-box;
@@ -1655,8 +1655,10 @@ section#who-participated h2 {
   }
 }
 
+/* Visible while the pointer is active over the frame or the button has
+   keyboard focus; otherwise it fades, paused or not, so it rarely sits
+   over the ring's centre caption (9/24). */
 .funnel-stage.is-controls-visible .funnel-play,
-.participants-stepper button.funnel-play[aria-pressed="true"],
 .participants-stepper button.funnel-play:focus-visible {
   opacity: 1;
 }

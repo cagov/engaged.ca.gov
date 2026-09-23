@@ -657,7 +657,7 @@ export async function initParticipantFunnel(root) {
   // Shown while the pointer is over the canvas frame and moving; hidden a
   // few seconds after it goes still or when it leaves. On touch screens a
   // tap on the canvas reveals it (there is no hover), and a second tap on
-  // the canvas hides it again. While paused the button stays up (CSS).
+  // the canvas hides it again. It fades the same way while paused.
   const overlayFrame = section.querySelector("[data-funnel-stage-frame]");
   const CONTROLS_IDLE_MS = 2500;
   let controlsTimer = 0;
@@ -687,8 +687,11 @@ export async function initParticipantFunnel(root) {
         hideControls();
       else showControls();
     });
-    // Keep the button up while it is being used.
-    playBtn?.addEventListener("focus", () => showControls(false));
+    // Keep the button up while it has keyboard focus; a mouse click also
+    // focuses it, but that should still fade on idle.
+    playBtn?.addEventListener("focus", () =>
+      showControls(!playBtn.matches(":focus-visible")),
+    );
     playBtn?.addEventListener("blur", () => showControls());
   }
   restartBtn?.addEventListener("click", restart);
