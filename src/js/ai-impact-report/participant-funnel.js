@@ -122,7 +122,22 @@ export async function initParticipantFunnel(root) {
   function renderLegend() {
     if (!legendEl) return;
     legendEl.textContent = "";
-    categories.forEach((c, i) => {
+    // Region and Field of work list alphabetically by display label, with
+    // the non-answers ("Not stated", "I don't want to say") last (9/23).
+    // Other dimensions keep their data order (age bands, etc.). Colors stay
+    // tied to each category, so the dots and legend still agree.
+    const order = categories.map((c, i) => i);
+    if (dimension === "region" || dimension === "fieldOfWork") {
+      const label = (i) => labels[categories[i].name] || categories[i].name;
+      order.sort((a, b) => {
+        const na = FL.isNonAnswer(categories[a].name);
+        const nb = FL.isNonAnswer(categories[b].name);
+        if (na !== nb) return na ? 1 : -1;
+        return label(a).localeCompare(label(b));
+      });
+    }
+    for (const i of order) {
+      const c = categories[i];
       const li = document.createElement("li");
       li.className = "chart-legend-item";
       const swatch = document.createElement("span");
@@ -132,7 +147,7 @@ export async function initParticipantFunnel(root) {
       li.appendChild(swatch);
       li.appendChild(document.createTextNode(labels[c.name] || c.name));
       legendEl.appendChild(li);
-    });
+    }
   }
 
   // Page colors. The section background is read once so the canvas can be
