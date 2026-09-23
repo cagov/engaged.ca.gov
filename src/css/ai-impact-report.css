@@ -1910,3 +1910,108 @@ section#balancing-groups.methods-light {
     }
   }
 }
+
+/* ---- Demographics drop-down (Figma, 9/23): white field, navy hairline,
+   chevron flips when open, alphabetical list with the current item bold ---- */
+
+.demo-dropdown-host::after {
+  display: none; /* the old CSS chevron; the button draws its own */
+}
+
+.demo-dropdown {
+  position: relative;
+  display: inline-block;
+  min-width: 15rem;
+  font-size: 1.125rem;
+  z-index: 2;
+}
+
+.demo-dropdown button.demo-dropdown-button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--report-navy);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--report-navy);
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    background: #f6f7fa;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+  }
+}
+
+.demo-dropdown-chevron {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  margin-top: -4px;
+  border-right: 2px solid var(--report-navy);
+  border-bottom: 2px solid var(--report-navy);
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.demo-dropdown.is-open .demo-dropdown-chevron {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+.demo-dropdown-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1.5px solid var(--report-navy);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgb(28 39 69 / 0.15);
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+  }
+}
+
+.demo-dropdown-option {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  color: var(--report-navy);
+  font-size: 1.125rem;
+  cursor: pointer;
+
+  &:nth-child(odd) {
+    background: #f6f7fa;
+  }
+
+  &:hover {
+    background: #e9edf5;
+  }
+
+  &.is-selected {
+    font-weight: 700;
+    background: #e3e9f2;
+  }
+}
+
+/* Outrank the section's body-text list rules. */
+.style-body-text .demo-dropdown-list li.demo-dropdown-option {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}

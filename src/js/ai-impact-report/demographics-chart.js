@@ -629,4 +629,140 @@ export async function initDemographicsChart(root) {
   select.disabled = false;
   select.addEventListener("change", () => render(select.value));
   render(select.value in byId ? select.value : data.dimensions[0].id);
+  buildDropdown(select, (id) => {
+    select.value = id;
+    render(id);
+  });
+}
+
+/**
+ * Replaces the native <select> with a styled listbox (design 9/23): white
+ * field with a chevron that flips when open, options listed alphabetically
+ * with the current one in bold. The <select> stays in the DOM, hidden, so
+ * the label and no-JS path keep working. Keyboard: arrows move, Home/End
+ * jump, Enter/Space choose, Escape closes.
+ */
+function buildDropdown(select, onChange) {
+  const wrap = select.parentElement;
+  const label = document.querySelector(`label[for="${select.id}"]`);
+  const options = [...select.options]
+    .map((o) => ({ id: o.value, text: o.textContent.trim() }))
+    .sort((a, b) => a.text.localeCompare(b.text));
+  let current = select.value;
+  let open = false;
+
+  const root = document.createElement("div");
+  root.className = "demo-dropdown";
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "demo-dropdown-button";
+  button.id = `${select.id}-button`;
+  button.setAttribute("aria-haspopup", "listbox");
+  button.setAttribute("aria-expanded", "false");
+  if (label) {
+    label.id = label.id || `${select.id}-label`;
+    button.setAttribute("aria-labelledby", `${label.id} ${button.id}`);
+  }
+  const text = document.createElement("span");
+  text.className = "demo-dropdown-text";
+  const chevron = document.createElement("span");
+  chevron.className = "demo-dropdown-chevron";
+  chevron.setAttribute("aria-hidden", "true");
+  button.append(text, chevron);
+
+  const list = document.createElement("ul");
+  list.className = "demo-dropdown-list";
+  list.id = `${select.id}-listbox`;
+  list.setAttribute("role", "listbox");
+  list.tabIndex = -1;
+  list.hidden = true;
+  if (label) list.setAttribute("aria-labelledby", label.id);
+  button.setAttribute("aria-controls", list.id);
+  const items = options.map((o) => {
+    const li = document.createElement("li");
+    li.className = "demo-dropdown-option";
+    li.id = `${select.id}-option-${o.id}`;
+    li.setAttribute("role", "option");
+    li.dataset.value = o.id;
+    li.textContent = o.text;
+    li.addEventListener("click", () => choose(o.id));
+    list.appendChild(li);
+    return li;
+  });
+
+  root.append(button, list);
+  select.hidden = true;
+  wrap.classList.add("demo-dropdown-host");
+  wrap.appendChild(root);
+
+  function sync() {
+    const cur = options.find((o) => o.id === current) || options[0];
+    text.textContent = cur.text;
+    for (const li of items) {
+      const on = li.dataset.value === current;
+      li.setAttribute("aria-selected", String(on));
+      li.classList.toggle("is-selected", on);
+    }
+    list.setAttribute(
+      "aria-activedescendant",
+      `${select.id}-option-${current}`,
+    );
+  }
+  function setOpen(next) {
+    open = next;
+    list.hidden = !open;
+    button.setAttribute("aria-expanded", String(open));
+    root.classList.toggle("is-open", open);
+    if (open) list.focus();
+  }
+  function choose(id) {
+    if (id !== current) {
+      current = id;
+      sync();
+      onChange(id);
+    }
+    setOpen(false);
+    button.focus();
+  }
+  function move(delta) {
+    const i = options.findIndex((o) => o.id === current);
+    const j = Math.max(0, Math.min(options.length - 1, i + delta));
+    current = options[j].id;
+    sync();
+    onChange(current);
+  }
+
+  button.addEventListener("click", () => setOpen(!open));
+  button.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      if (!open) setOpen(true);
+      else move(e.key === "ArrowDown" ? 1 : -1);
+    }
+  });
+  list.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      move(1);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      move(-1);
+    } else if (e.key === "Home") {
+      e.preventDefault();
+      move(-options.length);
+    } else if (e.key === "End") {
+      e.preventDefault();
+      move(options.length);
+    } else if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      choose(current);
+    } else if (e.key === "Escape" || e.key === "Tab") {
+      setOpen(false);
+      if (e.key === "Escape") button.focus();
+    }
+  });
+  document.addEventListener("click", (e) => {
+    if (open && !root.contains(e.target)) setOpen(false);
+  });
+  sync();
 }
