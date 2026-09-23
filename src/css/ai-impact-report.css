@@ -151,10 +151,15 @@ section#ai-report-hero {
   }
 }
 
-/* On the details page's peach hero the bar inverts: navy text on peach. */
+/* On the details page's peach hero the bar inverts: navy text on peach,
+   and its contents centre (design 9/23). */
 .hero-jump-light {
   background: var(--report-off-white);
   border-top: 1px solid rgb(28 39 69 / 0.25);
+
+  & .container {
+    justify-content: center;
+  }
 
   & .hero-jump-label {
     color: var(--report-navy);
@@ -2032,4 +2037,13 @@ section#balancing-groups.methods-light {
 .style-body-text .demo-dropdown-list li.demo-dropdown-option {
   font-size: 1.125rem;
   line-height: 1.4;
+}
+
+/* Details page intro paragraph, between the jump bar and the first section. */
+.details-intro {
+  padding: 2.5rem 0 0.5rem !important;
+
+  & p:last-child {
+    margin-bottom: 0;
+  }
 }

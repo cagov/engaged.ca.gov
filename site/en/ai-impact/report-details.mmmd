@@ -43,7 +43,9 @@ back_link_text: "Back to the report"
 back_link_href: /ai-impact/report/
 ----
 # How we did this work
-
+----
+id: intro
+----
 This project had two phases. In the first phase, any Californian could share their views through an open online survey. In the second phase, we invited interested survey-takers to live discussions.
 ----
 id: hero_nav
