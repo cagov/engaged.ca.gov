@@ -414,6 +414,9 @@ export async function initParticipantFunnel(root) {
   // The last stage lingers, then the cycle wraps back to the first
   // (design 9/22). It stops only when the reader picks a stage.
   const LAST_DWELL_MS = 3600;
+  // Hold on the first stage after the chart scrolls into view before the
+  // cycle begins (Erica, 9/23: "a couple seconds").
+  const START_HOLD_MS = 2500;
   function dwellFor(s) {
     return s === LAST_STAGE ? LAST_DWELL_MS : DWELL_MS;
   }
@@ -675,7 +678,7 @@ export async function initParticipantFunnel(root) {
       (entries, obs) => {
         if (entries.some((e) => e.intersectionRatio >= 0.6)) {
           engaged = true;
-          dwellLeft = dwellFor(stage);
+          dwellLeft = Math.max(dwellFor(stage), START_HOLD_MS);
           obs.disconnect();
         }
       },
