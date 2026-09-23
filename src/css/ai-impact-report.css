@@ -1869,8 +1869,19 @@ section#ai-report-hero.hero-light {
     color: var(--report-link);
   }
 
-  & .hero-back-link a::before {
-    content: "\2039\00a0"; /* single left angle quote as a chevron */
+  /* Chevron sits outside the link so only the words are underlined. */
+  & .hero-back-link::before {
+    content: "\2039\00a0"; /* single left angle quote */
+    color: var(--report-link);
+  }
+
+  /* Noto Sans Display has no bold italic (only 400 and 900), so the
+     italic title fell back to 900 and read heavier than "The methods".
+     Noto Sans has the full italic range; use it for the whole line. */
+  & .hero-content > p.hero-subtitle,
+  & .hero-content > p.hero-subtitle em {
+    font-family: "Noto Sans", system-ui, sans-serif !important;
+    font-weight: 700;
   }
 }
 
