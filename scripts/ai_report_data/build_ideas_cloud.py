@@ -43,9 +43,10 @@ OUT = os.path.normpath(
     os.path.join(HERE, "..", "..", "src", "public", "data", "ai-report-ideas-cloud.json")
 )
 
-# Agreed 9/17: keep the top 40% of poll ideas (135 of 337). The tail fade is
+# 9/23: ship the top 55% (185 of 337). The cloud is laid out in a field larger than
+# its frame so the faded outer ideas run past the edge; the JS decides how many to draw. The tail fade is
 # a rendering choice and lives in the JS module.
-KEEP_SHARE = 0.4
+KEEP_SHARE = 0.55
 
 # Sentence case: lowercase everything except the first letter, tokens with two
 # or more capitals (AI, UBI, LLMs, TK-12, TSMC's, US-Mexico, PhD ...) and these

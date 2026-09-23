@@ -16,11 +16,13 @@
  */
 import { createLayoutEngine } from "./word-cloud-layout.js";
 
-// Logical fields. Wide is the design's 1400x820; narrow is a portrait field
-// with fewer ideas so labels stay legible on a phone.
+// Logical fields. w/h is the visible frame (wide is the design's 1400x820;
+// narrow is a portrait frame for phones). Words are laid out in the larger
+// lw/lh field centred on the frame, so the faded outer ideas run past the
+// frame's edge and are clipped, reading as "there are more" (9/23).
 const PRESETS = {
-  wide: { w: 1400, h: 820, keep: 135, fade: 45 },
-  narrow: { w: 800, h: 1000, keep: 60, fade: 20 },
+  wide: { w: 1400, h: 820, lw: 1660, lh: 980, keep: 185, fade: 100 },
+  narrow: { w: 800, h: 1000, lw: 940, lh: 1180, keep: 85, fade: 45 },
 };
 const NARROW_BELOW = 700; // CSS px of available width
 const FADE_FLOOR = 0.06; // alpha of the last kept idea
@@ -116,13 +118,14 @@ export async function initIdeasCloud(root) {
           tail: tailAlpha(i, kept.length, preset.fade),
         };
       });
-    const opts = { width: F.w, height: F.h, padding: 2, weight: 400 };
+    const L = { w: preset.lw, h: preset.lh }; // layout field, larger than the frame
+    const opts = { width: L.w, height: L.h, padding: 2, weight: 400 };
 
     // Largest uniform font multiplier (stepping down 4%) at which every label
     // places. Two attempts per step: the spiral direction is random, so one
     // dropped label is often luck rather than a real limit.
     let scale =
-      Math.sqrt((F.w * F.h) / (2307 * 1124 * (kept.length / 337))) * 1.08;
+      Math.sqrt((L.w * L.h) / (2307 * 1124 * (kept.length / 337))) * 1.08;
     let placed = null;
     for (let k = 0; k < 16 && !placed; k++, scale *= 0.96) {
       for (let attempt = 0; attempt < 2 && !placed; attempt++) {
@@ -134,6 +137,8 @@ export async function initIdeasCloud(root) {
     if (!placed) placed = WL.layoutWithD3Cloud(build(scale), opts);
     words = placed;
 
+    // d3-cloud positions are relative to the layout field's centre, which is
+    // also the frame's centre, so the frame simply crops the outer words.
     target = words.map((w) => [w.x + F.w / 2, w.y + F.h / 2]);
     // Arrival scatter: heavier ideas start nearer the middle.
     home = words.map((w) => {

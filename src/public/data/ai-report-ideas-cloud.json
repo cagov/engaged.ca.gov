@@ -709,6 +709,256 @@
    "label": "Strengthen anti-discrimination enforcement",
    "subtheme": 0,
    "count": 1
+  },
+  {
+   "label": "Ban automated messaging via bot scripting programs",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Preempt state regulation of AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Pay people to monitor AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Reward those who volunteer to serve citizens affected by AI's economic impact",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Set up data warehouses and systems for AI customers",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Build the Delta Tunnels and the High Speed Rail",
+   "subtheme": 3,
+   "count": 1
+  },
+  {
+   "label": "Prohibit AI from use in regulation and legal proceedings",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Prohibit the expansion of nuclear power for AI infrastructure",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Establish a non-partisan commission to regulate AI and data use",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Restrict data center construction",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Promote media literacy in schools",
+   "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Heavily regulate large AI labs",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Hire unemployed people to make the disability processing system more efficient",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Restrict AI model usage to select countries",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Break down Citizen United",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Offer rebates to individuals for using AI locally instead of through data centers",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Aggressively tax companies that violate AI ethics",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Artificially inflate AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Mandate additional maternity and paternity leave",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Extend severance and notice requirements to immigrants working in the USA on H1B",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Ensure data centers use renewable water sources",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Create policies promoting worker and community ownership",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Fund manufacturing plants for electronics",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Use AI to create housing opportunities",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Regulate the impact of AI on consumer electronics prices",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Offer AI grants for individuals who want to teach AI but lack certification",
+   "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Acquire success",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Emphasize programs like CalCare",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Assess the impact of AI market collapse on 'tech company' tax revenue",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Tax estates",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Use revenue from taxing AI to fund research on AI",
+   "subtheme": 6,
+   "count": 1
+  },
+  {
+   "label": "Pass a law stating that anything derived from publicly available data belongs to the public",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Federal and state government should provide information on air and noise pollution near data centre sites",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Impose sanctions and controls on AI-generated explicit content and media",
+   "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Ban AI use by police for data gathering, investigation, and surveillance",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Encourage co-operative businesses where every employee has a stake in the success",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Tax non-primary residences more",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Arrest c-level employees and board of directors of non-compliant companies within 90 days",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Make companies absorb the cost of adapting to new technology",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require existing data centers to recycle water",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Regulate quality control of AI-generated software",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Limit legal protection for harms caused by bad or poorly used AI",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Promote in-person interviews",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Create jobs for AI ethical historians",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Invest in solar and wind power for data centers",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Require AI companies to log AI agents",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Imprison those who sell generative AI",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Regulate the venture capital industry",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require an emergency stop button on every AI base code and agent",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Fund national AI compute resources for public-sector modernization",
+   "subtheme": 1,
+   "count": 1
   }
  ],
  "discussion": [
