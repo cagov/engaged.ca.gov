@@ -107,6 +107,7 @@ section#ai-report-hero {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    justify-content: center; /* centred on both pages (9/24) */
     gap: 0.5rem 2.25rem;
   }
 
@@ -156,10 +157,6 @@ section#ai-report-hero {
 .hero-jump-light {
   background: var(--report-off-white);
   border-top: 1px solid rgb(28 39 69 / 0.25);
-
-  & .container {
-    justify-content: center;
-  }
 
   & .hero-jump-label {
     color: var(--report-navy);
