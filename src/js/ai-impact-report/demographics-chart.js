@@ -334,7 +334,7 @@ export async function initDemographicsChart(root) {
         y: H - PAD.bottom + 34,
         "text-anchor": "middle",
         fill: COLORS.muted,
-        "font-size": 14,
+        "font-size": dense ? 12 : 14,
       });
       lines.forEach((line, li) => {
         text.appendChild(el("tspan", { x: cx, dy: li === 0 ? 0 : 17 }, line));
