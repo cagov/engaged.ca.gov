@@ -1291,6 +1291,12 @@ section#balancing-groups select.demographics-select {
   font-family: inherit;
 }
 
+/* Phone layout is drawn at CSS pixel size; do not scale it. */
+.demographics-svg-horizontal {
+  width: 100%;
+  height: auto;
+}
+
 .demographics-bar {
   transition: opacity 0.15s;
 }

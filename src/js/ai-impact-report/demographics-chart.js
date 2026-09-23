@@ -65,6 +65,20 @@ function axisMax(values) {
   return Math.ceil((peak * 1.15) / step) * step;
 }
 
+/** Greedy wrap into as many lines as needed, each at most maxChars. */
+function wrapWords(text, maxChars) {
+  const lines = [];
+  let line = "";
+  for (const word of text.split(" ")) {
+    if (line && `${line} ${word}`.length > maxChars) {
+      lines.push(line);
+      line = word;
+    } else line = line ? `${line} ${word}` : word;
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+
 /** Wrap a label into at most two lines by word count. */
 function splitLabel(label, maxChars) {
   if (label.length <= maxChars) return [label];
@@ -113,13 +127,229 @@ export async function initDemographicsChart(root) {
   COLORS = PALETTES[root.dataset.theme] || PALETTES.dark;
   root.classList.add("js-enabled");
 
+  // Below NARROW_BELOW CSS px the chart turns horizontal: one row per
+  // category, bars left (below target) and right (above) of a centre line,
+  // so labels keep their real size instead of scaling down with the drawing.
+  const NARROW_BELOW = 700;
+  const isNarrow = () => (svgHost.clientWidth || W) < NARROW_BELOW;
+  let lastNarrow = null;
+  let current = null;
+
   function render(id) {
     const dim = byId[id];
     if (!dim) return;
-    drawSvg(dim, id);
+    current = id;
+    lastNarrow = isNarrow();
+    if (lastNarrow) drawSvgHorizontal(dim, id);
+    else drawSvg(dim, id);
     drawTable(dim, id);
     for (const s of sources) s.hidden = s.dataset.sourceFor !== id;
     root.dataset.dimension = id;
+    root.dataset.layout = lastNarrow ? "horizontal" : "vertical";
+  }
+  window.addEventListener("resize", () => {
+    if (current && isNarrow() !== lastNarrow) render(current);
+  });
+
+  /** Phone layout: horizontal bars, real-size text, height grows with rows. */
+  function drawSvgHorizontal(dim, id) {
+    const cats = dim.categories;
+    const values = cats.flatMap((c) => [c.phase1Diff, c.phase2Diff]);
+    const max = axisMax(values);
+    const width = Math.max(300, svgHost.clientWidth || 360);
+    const font = 13;
+    const labelCol = Math.round(Math.min(150, width * 0.36));
+    const pad = { top: 58, right: 12, bottom: 30, left: 8 };
+    const barH = 12;
+    const barGap = 3;
+    const rowGap = 14;
+    const rowH = barH * 2 + barGap + rowGap;
+    const plotL = pad.left + labelCol;
+    const plotW = width - plotL - pad.right;
+    const zeroX = plotL + plotW / 2;
+    const xFor = (v) => zeroX + (v / max) * (plotW / 2);
+    const height = pad.top + cats.length * rowH + pad.bottom;
+
+    const svg = el("svg", {
+      viewBox: `0 0 ${width} ${height}`,
+      width,
+      height,
+      role: "img",
+      "aria-label": `${dimensionLabel(id)}: ${labels.phase1} and ${labels.phase2}, percentage points from target`,
+      class: "demographics-svg demographics-svg-horizontal",
+    });
+
+    // Legend, top left of the plot.
+    const legend = el("g", { transform: `translate(${plotL}, 12)` });
+    legend.appendChild(
+      el("rect", {
+        x: 0,
+        y: -8,
+        width: 11,
+        height: 11,
+        rx: 2,
+        fill: COLORS.phase1,
+      }),
+    );
+    legend.appendChild(
+      el(
+        "text",
+        { x: 16, y: 1, fill: COLORS.muted, "font-size": 12 },
+        labels.phase1,
+      ),
+    );
+    legend.appendChild(
+      el("rect", {
+        x: 78,
+        y: -8,
+        width: 11,
+        height: 11,
+        rx: 2,
+        fill: COLORS.phase2,
+      }),
+    );
+    legend.appendChild(
+      el(
+        "text",
+        { x: 94, y: 1, fill: COLORS.muted, "font-size": 12 },
+        labels.phase2,
+      ),
+    );
+    svg.appendChild(legend);
+
+    // Axis captions: below target at the left end, above at the right.
+    const caption = (text, x, anchor) => {
+      if (!text) return;
+      const words = text.split(" ");
+      const half = Math.ceil(words.length / 2);
+      const lines = [
+        words.slice(0, half).join(" "),
+        words.slice(half).join(" "),
+      ];
+      const t = el("text", {
+        x,
+        y: 36,
+        "text-anchor": anchor,
+        fill: COLORS.text,
+        "font-size": 10,
+        "font-weight": 700,
+      });
+      lines.forEach((ln, i) => {
+        t.appendChild(el("tspan", { x, dy: i === 0 ? 0 : 12 }, ln));
+      });
+      svg.appendChild(t);
+    };
+    caption(labels.axisBelow, plotL, "start");
+    caption(labels.axisAbove, width - pad.right, "end");
+
+    // Gridlines and the zero line, with tick values along the bottom.
+    for (const tv of [-max, -max / 2, 0, max / 2, max]) {
+      const x = xFor(tv);
+      svg.appendChild(
+        el("line", {
+          x1: x,
+          x2: x,
+          y1: pad.top - 4,
+          y2: height - pad.bottom + 4,
+          stroke: tv === 0 ? COLORS.axis : COLORS.grid,
+          "stroke-width": tv === 0 ? 1.5 : 1,
+          "stroke-dasharray": tv === 0 ? "" : "3 4",
+        }),
+      );
+      svg.appendChild(
+        el(
+          "text",
+          {
+            x,
+            y: height - pad.bottom + 18,
+            "text-anchor": "middle",
+            fill: tv === 0 ? COLORS.text : COLORS.muted,
+            "font-size": 11,
+            "font-weight": tv === 0 ? 700 : 400,
+          },
+          tv === 0 ? labels.onTarget : fmtDiff(tv).replace(".0", ""),
+        ),
+      );
+    }
+
+    cats.forEach((c, i) => {
+      const rowTop = pad.top + i * rowH;
+      const series = [
+        {
+          key: "phase1",
+          v: c.phase1Diff,
+          y: rowTop,
+          color: COLORS.phase1,
+          label: labels.phase1,
+        },
+        {
+          key: "phase2",
+          v: c.phase2Diff,
+          y: rowTop + barH + barGap,
+          color: COLORS.phase2,
+          label: labels.phase2,
+        },
+      ];
+      for (const s of series) {
+        const x0 = xFor(0);
+        const x1 = xFor(s.v);
+        const left = Math.min(x0, x1);
+        const w = Math.max(1.5, Math.abs(x1 - x0));
+        const bar = el("rect", {
+          x: left,
+          y: s.y,
+          width: w,
+          height: barH,
+          rx: 2,
+          fill: s.color,
+          class: `demographics-bar demographics-bar-${s.key}`,
+        });
+        bar.appendChild(
+          el(
+            "title",
+            {},
+            `${c.name}, ${s.label}: ${fmtDiff(s.v)} points from target (${c[s.key]}% vs ${c.target}% target)`,
+          ),
+        );
+        svg.appendChild(bar);
+        // Value label just past the bar end, on the bar's side of zero.
+        const outward = s.v >= 0 ? 1 : -1;
+        const lx = x1 + outward * 4;
+        svg.appendChild(
+          el(
+            "text",
+            {
+              x: lx,
+              y: s.y + barH - 2,
+              "text-anchor": s.v >= 0 ? "start" : "end",
+              fill: COLORS.text,
+              "font-size": 11,
+              "font-weight": 700,
+            },
+            fmtDiff(s.v),
+          ),
+        );
+      }
+      // Row label: full category name, wrapped to fit the label column.
+      const maxChars = Math.max(8, Math.floor(labelCol / (font * 0.56)));
+      const lines = wrapWords(c.name, maxChars);
+      const mid = rowTop + (barH * 2 + barGap) / 2;
+      const t = el("text", {
+        x: plotL - 8,
+        y: mid + 4 - ((lines.length - 1) * (font + 2)) / 2,
+        "text-anchor": "end",
+        fill: COLORS.text,
+        "font-size": font,
+      });
+      lines.forEach((ln, li) => {
+        t.appendChild(
+          el("tspan", { x: plotL - 8, dy: li === 0 ? 0 : font + 2 }, ln),
+        );
+      });
+      svg.appendChild(t);
+    });
+
+    svgHost.replaceChildren(svg);
   }
 
   function drawSvg(dim, id) {
