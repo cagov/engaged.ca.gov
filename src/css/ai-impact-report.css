@@ -335,7 +335,7 @@ section#ai-report-hero {
 }
 
 .policy-tier-title {
-  font-size: 1.75rem;
+  font-size: 1.875rem; /* 30px, the page's H3 size */
   font-weight: 700;
   color: var(--report-ink);
   margin: 0;
