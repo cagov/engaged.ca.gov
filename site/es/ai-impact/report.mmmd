@@ -216,72 +216,79 @@ nbr_ideas: 23
 id: tier_1_idea_1
 title: Establecer reglas sobre cómo la IA maneja los datos personales
 ----
-
+- Establecer reglas para recopilar, manejar, proteger y eliminar datos
+- Hacer cumplir la transparencia y las protecciones de privacidad
 ----
 id: tier_1_idea_2
 title: Establecer reglas sobre cómo funciona la IA
 ----
-
+- Incentivar a las empresas a alinearse con estándares humanos
+- Fijar salvaguardas contra el uso excesivo y la adicción a la IA
 ----
 id: tier_1_idea_3
 title: Desalentar los despidos causados por la IA y premiar a las empresas que conservan o suman trabajadores
 ----
-
+- Añadir sanciones por despedir trabajadores a causa de la IA
+- Crear incentivos para conservar o aumentar los empleos
 ----
 id: tier_1_idea_4
 title: Abrir más al público la formulación de políticas sobre IA
 ----
-
+- Dar voz a las comunidades afectadas
+- Crear grupos ciudadanos que incluyan a gente del sector tecnológico
 ----
 id: tier_1_idea_5
 title: Obligar a las empresas a recapacitar u ofrecer orientación profesional a los trabajadores que pierden su empleo por la IA
 ----
-
+- Incentivarlas a recapacitar a los trabajadores en lugar de despedirlos
+- Reubicar trabajadores en áreas desatendidas
 ----
 id: tier_1_idea_6
 title: Establecer reglas para etiquetar el uso de IA
 ----
-
+- Marcar el contenido de IA con términos comunes o marcas de agua
+- Sancionar a las empresas cuando no informen del uso de IA
 ----
 id: tier_1_idea_7
 title: Restringir y gravar las ganancias de las empresas de IA
 ----
-
+- Cerrar los vacíos legales que les permiten eludir responsabilidad
+- Cambiar las leyes fiscales para que las acciones no sirvan para evitar impuestos
 ----
 id: tier_1_idea_8
 title: Responsabilizar a las empresas de IA si usan el trabajo de otros sin permiso
 ----
-
+- Hacer cumplir los derechos de autor, defender la propiedad intelectual
 ----
 id: tier_1_idea_9
 title: Concientizar a las personas sobre cómo usar la IA de forma ética
 ----
-
+- Hacer anuncios de servicio público sobre beneficios y riesgos
 ----
 id: tier_1_idea_10
 title: Mejorar la educación sobre IA en las escuelas
 ----
-
+- Dejar que los estudiantes trabajen en entornos de prueba para ampliar los efectos positivos
 ----
 id: tier_1_idea_11
 title: Permitir que las personas opten por no usar IA y facilitarlo
 ----
-
+- Exigir consentimiento, hacer que la exclusión sea la opción predeterminada
 ----
 id: tier_1_idea_12
 title: Apoyar la investigación independiente sobre los efectos de la IA
 ----
-
+- Financiar estudios sobre cómo el uso de IA afecta el pensamiento crítico
 ----
 id: tier_1_idea_13
 title: Limitar qué datos personales pueden recopilar los sistemas de IA y permitir que los usuarios gestionen sus datos
 ----
-
+- Simplificar los textos de consentimiento
 ----
 id: tier_1_idea_14
 title: Pagar a los trabajadores que pierden su empleo por la IA mientras encuentran uno nuevo
 ----
-
+- Renta básica universal, o más prestación por desempleo si perdió su trabajo por la IA
 ----
 id: tier_1_idea_15
 title: Apoyar la capacitación en IA para trabajadores
