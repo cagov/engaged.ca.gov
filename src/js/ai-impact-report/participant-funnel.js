@@ -80,7 +80,8 @@ export async function initParticipantFunnel(root) {
   // ---- Layout ------------------------------------------------------------
   const layout = FL.buildFunnelCloud(data);
 
-  let dimension = "region";
+  // Default colouring comes from the root's data-variant (Field of work, 9/24).
+  let dimension = FL.DIMENSION_BY_VARIANT[root.dataset.variant] || "region";
   const motion = "orbit";
   let categories = [];
   let categoryColors = [];
@@ -122,6 +123,12 @@ export async function initParticipantFunnel(root) {
   function renderLegend() {
     if (!legendEl) return;
     legendEl.textContent = "";
+    // The legend is named after the active toggle (the static markup names it
+    // after Region, its no-JS content).
+    const active = toggleButtons.find(
+      (b) => FL.DIMENSION_BY_VARIANT[b.dataset.variant] === dimension,
+    );
+    if (active) legendEl.setAttribute("aria-label", active.textContent.trim());
     // Region and Field of work list alphabetically by display label, with
     // the non-answers ("Not stated", "I don't want to say") last (9/23).
     // Other dimensions keep their data order (age bands, etc.). Colors stay

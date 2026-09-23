@@ -283,7 +283,7 @@
 
     <div id="participants-stepper" class="participants-stepper" tabindex="0"
          data-funnel-src="{{ "/public/data/ai-report-participant-funnel.json" | assetVersion }}"
-         data-step="1" data-variant="region"
+         data-step="1" data-variant="field"
          data-step-counter="{{ wp.step_counter }}"
          data-play-label="{{ wp.play_label }}"
          data-pause-label="{{ wp.pause_label }}"
@@ -333,8 +333,9 @@
       <div class="chart-controls">
         <div class="chart-controls-row">
           <div class="segmented-toggle" role="group">
-            <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ wp.toggle_region }}</button>
-            <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ wp.toggle_field_of_work }}</button>
+            {# Field of work is the default colouring (9/24); Region second. #}
+            <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="true" disabled>{{ wp.toggle_field_of_work }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="false" disabled>{{ wp.toggle_region }}</button>
             {# Age, race/ethnicity, gender and AI response colorings are built but not offered
                (9/18). To restore one, add a button with data-variant="age" | "race" | "gender" |
                "ai" and the matching wp.toggle_* label. #}
