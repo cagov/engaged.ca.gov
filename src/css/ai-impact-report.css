@@ -1015,8 +1015,13 @@ section#ai-report-hero {
 
 /* ---- Small body copy (18px) where the design asks for it ---- */
 
-.how-to-read-tiers h4,
+/* Same size as the Download the policy ideas copy above it (9/24). */
 .how-to-read-tiers p {
+  font-size: 1.4375rem;
+  line-height: 1.6;
+}
+
+.how-to-read-tiers h4 {
   font-size: 1.125rem;
   line-height: 1.6;
 }
