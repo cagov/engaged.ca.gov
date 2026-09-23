@@ -185,7 +185,12 @@ export async function initParticipantFunnel(root) {
   const TRANSITION_MS = 1800;
   const ORBIT_SPEED = 0.2;
   const DRIFT_SPEED = 0.3;
-  const TITLE_EASE_MS = 900;
+  const TITLE_EASE_MS = 900; // caption fade-in
+  // The caption fades out faster than it fades in, and starts to go before
+  // the last stage's dwell ends, so it is gone by the time the ring breaks
+  // up on the way back to stage 1 (9/24).
+  const TITLE_FADE_OUT_MS = 250;
+  const TITLE_FADE_OUT_LEAD_MS = 700;
   const COLOR_TAU_MS = 180; // time constant for color easing (toggle recolor)
 
   let ctx = null;
@@ -545,8 +550,16 @@ export async function initParticipantFunnel(root) {
 
     updateHeader();
 
-    const titleTarget = stage === LAST_STAGE && ringReady ? 1 : 0;
-    titleK += (titleTarget - titleK) * Math.min(1, dt / TITLE_EASE_MS);
+    const leavingRing =
+      stage === LAST_STAGE &&
+      playing &&
+      engaged &&
+      t >= 1 &&
+      dwellLeft <= TITLE_FADE_OUT_LEAD_MS;
+    const titleTarget =
+      stage === LAST_STAGE && ringReady && !leavingRing ? 1 : 0;
+    const ease = titleTarget ? TITLE_EASE_MS : TITLE_FADE_OUT_MS;
+    titleK += (titleTarget - titleK) * Math.min(1, dt / ease);
 
     // The clock and any in-flight stage transition always run while the
     // section is on screen. `playing` only gates the automatic advance to
