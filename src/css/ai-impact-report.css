@@ -1894,13 +1894,12 @@ section#ai-report-hero.hero-light {
     color: var(--report-link);
   }
 
-  /* Noto Sans Display has no bold italic (only 400 and 900), so the
-     italic title fell back to 900 and read heavier than "The methods".
-     Noto Sans has the full italic range; use it for the whole line. */
-  & .hero-content > p.hero-subtitle,
+  /* The subtitle's italic title renders in Noto Sans Display bold italic;
+     the templates load that face (the site-wide request has only italic
+     400 and 900, which made the italics fall back to 900). */
   & .hero-content > p.hero-subtitle em {
-    font-family: "Noto Sans", system-ui, sans-serif !important;
     font-weight: 700;
+    font-style: italic;
   }
 }
 
@@ -1970,7 +1969,7 @@ section#balancing-groups.methods-light {
   background: #fff;
   color: var(--report-navy);
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 600; /* a loaded Noto Sans Display face; 500 is not */
   cursor: pointer;
 
   &:hover {
