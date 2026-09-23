@@ -68,7 +68,7 @@ id: public_forum
 ----
 ## A public forum on AI
 
-In May 2026, we opened a public forum on the *Impact of AI on work* to all Californians. In the months to follow, thousands of people across the state gave us their thoughts. They took our survey and joined facilitated group discussions. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas. Along the way, participants raised the tensions themselves. They debated how far to regulate, how proposals would be funded, and how the rules would be enforced.
+In May 2026, we opened a public forum on the *Impact of AI on work* to all Californians. In the months to follow, thousands of people across the state gave us their thoughts. They took our survey and joined facilitated group discussions. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas. Along the way, participants didn’t always agree. They debated how far to regulate, how proposals would be funded, and how the rules would be enforced.
 
 One theme came up consistently: **We need humans in the AI policy loop.** Not only for how people use AI, but for how companies build it and laws govern it.
 ----
@@ -130,9 +130,9 @@ icon: sparkle
 nbr_themes: 3
 show_examples_label: Show examples
 hide_examples_label: Hide examples
-show_conversation_label: Show conversation
-hide_conversation_label: Hide conversation
-quotes_title: "What people said:"
+show_conversation_label: See what people said
+hide_conversation_label: Hide what people said
+quotes_title: "Peek inside the discussion:"
 select_label: "Show what people said about: {title}"
 translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
 quote_open: "“"
@@ -335,6 +335,14 @@ title: Use AI for jobs people don’t want to do or can’t do
 ----
 
 ----
+id: download_data
+translator_note: "Sits under Other supported ideas (writer, 9/23). The same block also appears on the methods page."
+button_text: Download the ideas
+----
+### Download the policy ideas
+
+You can download and read all the policies people proposed in the discussions. They are in a CSV file.
+----
 id: how_to_read_tiers
 ----
 ### How to read this ranking
@@ -342,6 +350,13 @@ id: how_to_read_tiers
 The ranking shows how an idea fared across discussions. It's not a verdict on its merit. An idea that’s not in the top may still matter a great deal to many people.
 
 These are the themes participants talked about. They are separate from what current policy or legislation may already do. Some may align with items already moving through the policy landscape.
+----
+id: ranking_methods_button
+translator_note: "Button after How to read this ranking, linking to the methods page's ranking section. Do not translate the href."
+label: Check our ranking methods
+href: /ai-impact/report-details/#ranking-policy-ideas
+----
+
 ----
 id: region_legend
 nbr_regions: 9
@@ -471,6 +486,13 @@ chart_alt: "Ring of 14 small clusters of dots, one per conversation, colored by 
 ----
 
 ----
+id: demographics_button
+translator_note: "Button at the end of Who participated, linking to the methods page's demographics section. Do not translate the href."
+label: Check the full demographics
+href: /ai-impact/report-details/#balancing-groups
+----
+
+----
 id: what_happens_next
 ----
 ## What happens next
@@ -493,12 +515,6 @@ In September 2026, Governor Newsom signed:
 - [Child safety laws](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/) for chatbots and social media.
 
 We're not done with our work either. Californians raised many ideas that will inform government action in the years ahead. And as the AI landscape keeps evolving, we will keep listening.
-----
-id: methods_button
-translator_note: "Button at the end of What happens next, linking to the methods page. Do not translate the href."
-label: Check our methods
-href: /ai-impact/report-details/
-----
 ----
 id: sign_up
 button_text: Sign up

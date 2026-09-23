@@ -255,9 +255,28 @@
 
         </div>
 
+        {# Download the policy ideas, back under the list (writer, 9/23). #}
+        {% set dl = modules.download_data %}
+        {% if dl %}
+        <div id="download-data" class="download-data">
+          <div class="section-body">
+            {{ dl.content | safe }}
+          </div>
+          <div class="download-button-div">
+            <a class="download-button-link" data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ dl.button_text }}</a>
+          </div>
+        </div>
+        {% endif %}
+
         <div class="how-to-read-tiers style-body-text">
           {{ modules.how_to_read_tiers.content | safe }}
         </div>
+        {% set rmb = modules.ranking_methods_button %}
+        {% if rmb %}
+        <div class="methods-button">
+          <a href="{{ rmb.href | localizedPath(locale) }}" data-appearance="button" data-theme="orange">{{ rmb.label }}</a>
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -354,6 +373,12 @@
         </ul>
       </div>
     </div>
+    {% set db = modules.demographics_button %}
+    {% if db %}
+    <div class="methods-button">
+      <a href="{{ db.href | localizedPath(locale) }}" data-appearance="button" data-theme="orange">{{ db.label }}</a>
+    </div>
+    {% endif %}
   </div>
 </section>
 
@@ -365,10 +390,14 @@
         <div class="section-body">
           {{ modules.what_happens_next.content | safe }}
         </div>
+        {# The writer's 9/23 copy drops the methods button here; the ranking and
+           demographics sections link to the methods page instead. #}
         {% set mb = modules.methods_button %}
+        {% if mb %}
         <div class="methods-button">
           <a href="{{ mb.href | localizedPath(locale) }}" data-appearance="button" data-theme="orange">{{ mb.label }}</a>
         </div>
+        {% endif %}
       </div>
     </div>
   </div>

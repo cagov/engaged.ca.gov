@@ -1029,8 +1029,16 @@ section#ai-report-hero {
   border-top: 1px solid var(--report-rule);
 }
 
+/* On the report page the download block sits between the ideas list and
+   "How to read this ranking" (writer, 9/23); give the latter its own room. */
+.download-data + .how-to-read-tiers {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--report-rule);
+}
+
 /* Outranks the section's 1.75rem h3 rule: a 23px bold line (design 9/22). */
-section#ranking-policy-ideas .download-data h3 {
+.download-data h3 {
   font-size: 1.4375rem;
   font-weight: 700;
   line-height: 1.3;
