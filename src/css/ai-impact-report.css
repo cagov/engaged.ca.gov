@@ -558,10 +558,10 @@ section#ai-report-hero {
   margin-top: 0.75rem;
 
   @media (min-width: 992px) {
-    grid-template-columns: minmax(300px, 0.68fr) minmax(0, 1fr);
-    gap: 6rem;
-    align-items: start;
-    padding: 0.5rem 5rem 0.5rem 5.5rem;
+    grid-template-columns: minmax(300px, 0.62fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: stretch;
+    padding: 0.5rem 3rem 0.5rem 4.5rem;
   }
 }
 
@@ -643,25 +643,24 @@ section#ai-report-hero {
   margin-top: 0.25rem;
 }
 
-/* Quotes panel reuses the conversation card styles. On desktop it sticks
-   while the card column scrolls, so the quotes stay beside whichever theme
-   is selected (feedback 9/22). */
-.top-themes-quotes {
+/* Quotes panel (design 9/23): no card on desktop. A hairline divides the
+   two columns and the quotes centre vertically beside the cards; the
+   trimmed quotes no longer need to scroll. */
+.top-themes-quotes.conversation-card {
   position: relative;
   padding-top: 1rem;
 
   @media (min-width: 992px) {
-    position: sticky;
-    top: 1.5rem;
-    max-height: min(560px, calc(100vh - 3rem));
+    border: 0;
+    border-left: 1.5px solid var(--report-rule);
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 0 0 0 2.5rem;
     display: flex;
     flex-direction: column;
-
-    & .conversation-quotes-scroll {
-      overflow-y: auto;
-      flex: 1 1 auto;
-      padding-right: 0.75rem;
-    }
+    justify-content: center;
+    min-height: 100%;
   }
 }
 
@@ -675,7 +674,7 @@ section#ai-report-hero {
 .top-themes-connector {
   position: absolute;
   pointer-events: none;
-  color: var(--report-navy);
+  color: rgb(28 39 69 / 0.45);
   overflow: visible;
   z-index: 1;
 }

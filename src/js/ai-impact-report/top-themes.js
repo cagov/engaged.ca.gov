@@ -128,11 +128,13 @@ export function initTopThemes(root) {
       connector.innerHTML = "";
       return;
     }
-    // From just outside the selected card's border to just outside the
-    // panel's border near its top, as an S-curve (design 9/22).
+    // From just outside the selected card's border to the "What people
+    // said" title, as an S-curve (design 9/23). The title moves as the
+    // panel re-centres, so this is redrawn on every selection and resize.
     const card = root.querySelector(`.top-theme[data-theme="${selected}"]`);
     const title = card?.querySelector(".top-theme-select");
-    if (!card || !title) return;
+    const heading = panel.querySelector(".top-themes-quotes-title");
+    if (!card || !title || !heading) return;
     const lr = layout.getBoundingClientRect();
     const cr = card.getBoundingClientRect();
     const tr = title.getBoundingClientRect();
@@ -145,10 +147,11 @@ export function initTopThemes(root) {
     connector.style.top = `${lr.top - pr.top}px`;
     const x0 = cr.right - lr.left + 2;
     const y0 = tr.top + tr.height / 2 - lr.top; // level with the theme title
-    const x1 = pr.left - lr.left - 2;
-    const y1 = pr.top - lr.top + 44; // enters beside "What people said"
+    const hr = heading.getBoundingClientRect();
+    const x1 = hr.left - lr.left - 8;
+    const y1 = hr.top + hr.height / 2 - lr.top; // points at "What people said"
     const mx = (x0 + x1) / 2;
-    connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`;
+    connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`;
   }
 
   window.addEventListener("resize", () => {
