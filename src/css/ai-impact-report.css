@@ -1597,18 +1597,13 @@ section#who-participated h2 {
   all: unset;
   box-sizing: border-box;
   position: absolute;
-  top: var(--play-top, 50%);
+  top: 50%;
   left: 50%;
   width: 64px;
   height: 64px;
   margin: -32px 0 0 -32px;
   border-radius: 50%;
   background: rgb(70 70 70 / 0.55);
-
-  /* JS sets --play-top to the edge just under the ring's centre caption. */
-  &.is-below-caption {
-    margin-top: 0;
-  }
   color: #fff;
   display: flex;
   align-items: center;

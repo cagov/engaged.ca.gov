@@ -342,10 +342,9 @@ export async function initParticipantFunnel(root) {
     ctx.globalAlpha = 1;
   }
 
-  /** Wrapped lines and vertical extent of the ring's centre caption, in
-   * canvas coordinates. Shared by the drawing and the play button, which
-   * sits below the caption so the two never overlap. */
-  function centerCaption() {
+  function centerLabel() {
+    if (canvasScale < MIN_CENTER_TEXT_SCALE) return;
+    if (titleK <= 0.01 || (!centerTitle && !centerHint)) return;
     const maxClusterRc = Math.max(0, ...layout.clusters.map((c) => c.rc));
     const freeRadius = Math.max(60, layout.ringRadius - maxClusterRc - 10);
     const maxWidth = freeRadius * 1.9;
@@ -371,24 +370,11 @@ export async function initParticipantFunnel(root) {
     );
     const totalHeight =
       countLines.length * lineHeight + gap + promptLines.length * lineHeight;
-    const ringCenterY = FL.CY + (yShift[LAST_STAGE] || 0);
-    return {
-      countLines,
-      promptLines,
-      lineHeight,
-      gap,
-      top: ringCenterY - totalHeight / 2,
-      bottom: ringCenterY + totalHeight / 2,
-    };
-  }
 
-  function centerLabel() {
-    if (canvasScale < MIN_CENTER_TEXT_SCALE) return;
-    if (titleK <= 0.01 || (!centerTitle && !centerHint)) return;
-    const { countLines, promptLines, lineHeight, gap, top } = centerCaption();
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    let y = top + lineHeight / 2;
+    const ringCenterY = FL.CY + (yShift[LAST_STAGE] || 0);
+    let y = ringCenterY - totalHeight / 2 + lineHeight / 2;
 
     ctx.globalAlpha = titleK;
     ctx.font = `700 20px ${fontFamily}`;
@@ -660,24 +646,6 @@ export async function initParticipantFunnel(root) {
         0,
         -VIEW_TOP * scale * dpr,
       );
-    placePlayButton();
-  }
-
-  // The play/pause button sits 24px below the last stage's centre caption
-  // (9/24) so it never covers it. When the caption moves off the canvas on
-  // small screens the button returns to the centre (CSS default).
-  const PLAY_CLEARANCE_PX = 24;
-  function placePlayButton() {
-    if (!playBtn || !ctx) return;
-    if (canvasScale < MIN_CENTER_TEXT_SCALE || (!centerTitle && !centerHint)) {
-      playBtn.classList.remove("is-below-caption");
-      playBtn.style.removeProperty("--play-top");
-      return;
-    }
-    const { bottom } = centerCaption();
-    const cssTop = (bottom - VIEW_TOP) * canvasScale + PLAY_CLEARANCE_PX;
-    playBtn.classList.add("is-below-caption");
-    playBtn.style.setProperty("--play-top", `${Math.round(cssTop)}px`);
   }
 
   // ---- Wiring ------------------------------------------------------------
