@@ -186,6 +186,9 @@ export async function initParticipantFunnel(root) {
   let titleK = 0;
   let headerStageIndex = -1;
   let visible = true;
+  // The cycle waits on the first stage (dots drifting) until the canvas is
+  // well into view, so readers see it start rather than mid-way (9/23).
+  let engaged = false;
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const PERSON = new Path2D(FL.PERSON_PATH);
@@ -551,7 +554,7 @@ export async function initParticipantFunnel(root) {
           dwellLeft = dwellFor(stage);
           if (stage === LAST_STAGE) ringReady = true;
         }
-      } else if (playing) {
+      } else if (playing && engaged) {
         dwellLeft -= dt;
         if (dwellLeft <= 0) {
           goTo(stage < LAST_STAGE ? stage + 1 : 0);
@@ -667,7 +670,25 @@ export async function initParticipantFunnel(root) {
       },
       { threshold: 0 },
     ).observe(root);
+    // Start the cycle once most of the canvas is on screen; then keep going.
+    const starter = new IntersectionObserver(
+      (entries, obs) => {
+        if (entries.some((e) => e.intersectionRatio >= 0.6)) {
+          engaged = true;
+          dwellLeft = dwellFor(stage);
+          obs.disconnect();
+        }
+      },
+      { threshold: [0.6] },
+    );
+    starter.observe(canvas);
+  } else {
+    engaged = true;
   }
+  // A click on a step marker or a keyboard step counts as engagement too.
+  root.addEventListener("click", () => {
+    engaged = true;
+  });
 
   window.addEventListener("resize", () => {
     resize();
