@@ -22,6 +22,7 @@ const SVG_NS = "http://www.w3.org/2000/svg";
 const PALETTES = {
   // On the navy band.
   dark: {
+    background: "#1c2745",
     phase1: "#7ec3e8",
     phase2: "#e79450",
     axis: "rgba(255, 244, 235, 0.85)",
@@ -31,6 +32,7 @@ const PALETTES = {
   },
   // On white (details page, design 9/21). Root carries data-theme="light".
   light: {
+    background: "#fff",
     phase1: "#7ec3e8",
     phase2: "#e79450",
     axis: "rgba(15, 21, 47, 0.85)",
@@ -151,24 +153,28 @@ export async function initDemographicsChart(root) {
     if (current && isNarrow() !== lastNarrow) render(current);
   });
 
-  /** Phone layout: horizontal bars, real-size text, height grows with rows. */
+  /** Phone layout: horizontal bars, real-size text, height grows with rows.
+   * Each category's name sits above its pair of bars, so the bars get the
+   * full width of the phone instead of sharing it with a label column. */
   function drawSvgHorizontal(dim, id) {
     const cats = dim.categories;
     const values = cats.flatMap((c) => [c.phase1Diff, c.phase2Diff]);
     const max = axisMax(values);
     const width = Math.max(300, svgHost.clientWidth || 360);
-    const font = 13;
-    const labelCol = Math.round(Math.min(150, width * 0.36));
-    const pad = { top: 58, right: 12, bottom: 30, left: 8 };
+    const font = 14;
+    const pad = { top: 62, right: 8, bottom: 30, left: 8 };
     const barH = 12;
     const barGap = 3;
-    const rowGap = 14;
-    const rowH = barH * 2 + barGap + rowGap;
-    const plotL = pad.left + labelCol;
+    const labelH = font + 6; // one line of category name above the bars
+    const rowGap = 16;
+    const rowH = labelH + barH * 2 + barGap + rowGap;
+    const plotL = pad.left;
     const plotW = width - plotL - pad.right;
     const zeroX = plotL + plotW / 2;
     const xFor = (v) => zeroX + (v / max) * (plotW / 2);
     const height = pad.top + cats.length * rowH + pad.bottom;
+    const valueFontM = 11;
+    const valueW = (v) => fmtDiff(v).length * valueFontM * 0.62 + 6;
 
     const svg = el("svg", {
       viewBox: `0 0 ${width} ${height}`,
@@ -179,8 +185,8 @@ export async function initDemographicsChart(root) {
       class: "demographics-svg demographics-svg-horizontal",
     });
 
-    // Legend, top left of the plot.
-    const legend = el("g", { transform: `translate(${plotL}, 12)` });
+    // Legend, centred at the top.
+    const legend = el("g", { transform: `translate(${zeroX - 84}, 12)` });
     legend.appendChild(
       el("rect", {
         x: 0,
@@ -228,7 +234,7 @@ export async function initDemographicsChart(root) {
       ];
       const t = el("text", {
         x,
-        y: 36,
+        y: 38,
         "text-anchor": anchor,
         fill: COLORS.text,
         "font-size": 10,
@@ -262,7 +268,8 @@ export async function initDemographicsChart(root) {
           {
             x,
             y: height - pad.bottom + 18,
-            "text-anchor": "middle",
+            "text-anchor":
+              tv === -max ? "start" : tv === max ? "end" : "middle",
             fill: tv === 0 ? COLORS.text : COLORS.muted,
             "font-size": 11,
             "font-weight": tv === 0 ? 700 : 400,
@@ -274,18 +281,45 @@ export async function initDemographicsChart(root) {
 
     cats.forEach((c, i) => {
       const rowTop = pad.top + i * rowH;
+      // Category name above the bars, full width, on a white strip so it
+      // reads over the gridlines.
+      const name = c.name;
+      const nameW = name.length * font * 0.55 + 8;
+      svg.appendChild(
+        el("rect", {
+          x: plotL,
+          y: rowTop,
+          width: Math.min(nameW, plotW),
+          height: labelH - 2,
+          fill: COLORS.background || "#fff",
+        }),
+      );
+      svg.appendChild(
+        el(
+          "text",
+          {
+            x: plotL + 2,
+            y: rowTop + font,
+            fill: COLORS.text,
+            "font-size": font,
+            "font-weight": 600,
+          },
+          name,
+        ),
+      );
+      const barsTop = rowTop + labelH;
       const series = [
         {
           key: "phase1",
           v: c.phase1Diff,
-          y: rowTop,
+          y: barsTop,
           color: COLORS.phase1,
           label: labels.phase1,
         },
         {
           key: "phase2",
           v: c.phase2Diff,
-          y: rowTop + barH + barGap,
+          y: barsTop + barH + barGap,
           color: COLORS.phase2,
           label: labels.phase2,
         },
@@ -312,41 +346,36 @@ export async function initDemographicsChart(root) {
           ),
         );
         svg.appendChild(bar);
-        // Value label just past the bar end, on the bar's side of zero.
+        // Value label just past the bar end; if it would run off the edge,
+        // it sits inside the bar end instead.
         const outward = s.v >= 0 ? 1 : -1;
-        const lx = x1 + outward * 4;
+        let lx = x1 + outward * 4;
+        let anchor = s.v >= 0 ? "start" : "end";
+        let fill = COLORS.text;
+        const overflows =
+          s.v >= 0
+            ? lx + valueW(s.v) > width - pad.right
+            : lx - valueW(s.v) < plotL;
+        if (overflows && w > valueW(s.v) + 6) {
+          lx = x1 - outward * 4;
+          anchor = s.v >= 0 ? "end" : "start";
+          fill = "#fff";
+        }
         svg.appendChild(
           el(
             "text",
             {
               x: lx,
               y: s.y + barH - 2,
-              "text-anchor": s.v >= 0 ? "start" : "end",
-              fill: COLORS.text,
-              "font-size": 11,
+              "text-anchor": anchor,
+              fill,
+              "font-size": valueFontM,
               "font-weight": 700,
             },
             fmtDiff(s.v),
           ),
         );
       }
-      // Row label: full category name, wrapped to fit the label column.
-      const maxChars = Math.max(8, Math.floor(labelCol / (font * 0.56)));
-      const lines = wrapWords(c.name, maxChars);
-      const mid = rowTop + (barH * 2 + barGap) / 2;
-      const t = el("text", {
-        x: plotL - 8,
-        y: mid + 4 - ((lines.length - 1) * (font + 2)) / 2,
-        "text-anchor": "end",
-        fill: COLORS.text,
-        "font-size": font,
-      });
-      lines.forEach((ln, li) => {
-        t.appendChild(
-          el("tspan", { x: plotL - 8, dy: li === 0 ? 0 : font + 2 }, ln),
-        );
-      });
-      svg.appendChild(t);
     });
 
     svgHost.replaceChildren(svg);
