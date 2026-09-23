@@ -82,7 +82,7 @@ axis_above_label: "Percentage points above target"
 axis_below_label: "Percentage points below target"
 chart_alt: "Bar chart comparing survey and discussion participants to demographic targets, in percentage points from target."
 dim_region: Region
-dim_race: Race/ethnicity
+dim_race: Race / ethnicity
 dim_age: Age
 dim_gender: Gender
 dim_field: Field of work
@@ -96,7 +96,7 @@ table_caption: "Participants compared to target, by {dimension}"
 See how close we came to our demographic targets. Click the drop-down menu to see participant percentages by:
 
 - Region
-- Race/ethnicity
+- Race / ethnicity
 - Age
 - Gender
 - Field of work
