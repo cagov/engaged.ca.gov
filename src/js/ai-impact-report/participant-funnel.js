@@ -510,7 +510,7 @@ export async function initParticipantFunnel(root) {
     if (prevBtn) prevBtn.hidden = stage <= 0;
     if (nextBtn) nextBtn.hidden = stage >= LAST_STAGE;
     if (playBtn) {
-      playBtn.textContent = playing ? pauseLabel : playLabel;
+      playBtn.setAttribute("aria-label", playing ? pauseLabel : playLabel);
       playBtn.setAttribute("aria-pressed", String(!playing));
     }
     for (const pill of pills) {
@@ -652,6 +652,45 @@ export async function initParticipantFunnel(root) {
   prevBtn?.addEventListener("click", () => jumpTo(stage - 1));
   nextBtn?.addEventListener("click", () => jumpTo(stage + 1));
   playBtn?.addEventListener("click", togglePlay);
+
+  // ---- Play/pause overlay visibility -------------------------------------
+  // Shown while the pointer is over the canvas frame and moving; hidden a
+  // few seconds after it goes still or when it leaves. On touch screens a
+  // tap on the canvas reveals it (there is no hover), and a second tap on
+  // the canvas hides it again. While paused the button stays up (CSS).
+  const overlayFrame = section.querySelector("[data-funnel-stage-frame]");
+  const CONTROLS_IDLE_MS = 2500;
+  let controlsTimer = 0;
+  function showControls(autoHide = true) {
+    if (!overlayFrame) return;
+    overlayFrame.classList.add("is-controls-visible");
+    clearTimeout(controlsTimer);
+    if (autoHide) controlsTimer = setTimeout(hideControls, CONTROLS_IDLE_MS);
+  }
+  function hideControls() {
+    clearTimeout(controlsTimer);
+    overlayFrame?.classList.remove("is-controls-visible");
+  }
+  if (overlayFrame) {
+    overlayFrame.addEventListener("pointermove", (e) => {
+      if (e.pointerType === "touch") return;
+      showControls();
+    });
+    overlayFrame.addEventListener("pointerleave", (e) => {
+      if (e.pointerType === "touch") return;
+      hideControls();
+    });
+    canvas.addEventListener("click", (e) => {
+      // Touch (and pen) taps on the canvas toggle the overlay.
+      if (e.pointerType === "mouse") return;
+      if (overlayFrame.classList.contains("is-controls-visible"))
+        hideControls();
+      else showControls();
+    });
+    // Keep the button up while it is being used.
+    playBtn?.addEventListener("focus", () => showControls(false));
+    playBtn?.addEventListener("blur", () => showControls());
+  }
   restartBtn?.addEventListener("click", restart);
   for (const pill of pills) {
     pill.addEventListener("click", () =>

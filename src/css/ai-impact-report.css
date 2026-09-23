@@ -1523,6 +1523,85 @@ section#who-participated h2 {
 
 .funnel-ready .funnel-stage {
   display: block;
+  position: relative;
+}
+
+/* Play/pause overlay: a translucent grey disc with white glyphs, centred on
+   the canvas. Hidden until the pointer moves over the frame (or a tap on
+   touch screens), then fades after a few idle seconds or when the pointer
+   leaves. Stays visible while paused and while it has keyboard focus. */
+.participants-stepper button.funnel-play {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  border-radius: 50%;
+  background: rgb(70 70 70 / 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    background-color 0.2s ease;
+
+  & svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+  }
+
+  /* One glyph at a time: pause while playing, play while paused. */
+  & .funnel-play-icon-play {
+    display: none;
+  }
+
+  &[aria-pressed="true"] .funnel-play-icon-play {
+    display: block;
+  }
+
+  &[aria-pressed="true"] .funnel-play-icon-pause {
+    display: none;
+  }
+
+  &:hover {
+    background: rgb(50 50 50 / 0.75);
+  }
+
+  &:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px var(--report-link);
+  }
+
+  @media (max-width: 575px) {
+    width: 52px;
+    height: 52px;
+    margin: -26px 0 0 -26px;
+
+    & svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.funnel-stage.is-controls-visible .funnel-play,
+.participants-stepper button.funnel-play[aria-pressed="true"],
+.participants-stepper button.funnel-play:focus-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .participants-stepper button.funnel-play {
+    transition: none;
+  }
 }
 
 .funnel-center-copy {

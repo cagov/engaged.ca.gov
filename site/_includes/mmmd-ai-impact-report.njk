@@ -304,8 +304,13 @@
       </div>
 
       {# The animation. Sized by JS to the 1040-wide canvas space. #}
-      <div class="funnel-stage">
+      <div class="funnel-stage" data-funnel-stage-frame>
         <canvas data-funnel-canvas width="1040" height="486" role="img" aria-label="{{ wp.chart_alt }}"></canvas>
+        {# Play/pause overlay (9/24): fades in on hover or touch, stays while paused. #}
+        <button type="button" class="funnel-play" data-funnel-play aria-label="{{ wp.pause_label }}" aria-pressed="false">
+          <svg class="funnel-play-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4.5" height="14" rx="1"/><rect x="13.5" y="5" width="4.5" height="14" rx="1"/></svg>
+          <svg class="funnel-play-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>
+        </button>
       </div>
       {# On narrow screens the ring's center copy is drawn here instead of on the canvas, where it would be unreadable. #}
       <div class="funnel-center-copy" data-funnel-center hidden>
