@@ -1438,6 +1438,16 @@ section#balancing-groups select.demographics-select {
   width: 100%;
 }
 
+/* With JS the static snapshot never shows; a blank box of the chart's
+   height holds the space until the data arrives. */
+.report-js .demographics-svg-host > img {
+  display: none;
+}
+
+.report-js .demographics-chart:not(.js-enabled) .demographics-svg-host {
+  min-height: 460px;
+}
+
 .demographics-svg {
   display: block;
   width: 100%;
@@ -1566,8 +1576,27 @@ section#who-participated h2 {
   margin: 1rem 0;
 }
 
-.funnel-ready .funnel-static-fallback {
+/* With JS the static snapshots never show: the page is flagged .report-js
+   before first paint, and the (still blank) canvas holds the space until
+   the data arrives. Without JS the four snapshots stack as before. */
+.funnel-ready .funnel-static-fallback,
+.report-js .funnel-static-fallback {
   display: none;
+}
+
+.report-js .participants-stepper:not(.funnel-ready) {
+  & .participants-steps {
+    display: grid;
+
+    & > .participants-step {
+      grid-area: 1 / 1;
+    }
+
+    /* Only the first stage's copy while loading; the rest wait for JS. */
+    & > .participants-step:not([data-step="1"]) {
+      visibility: hidden;
+    }
+  }
 }
 
 .funnel-stage {
@@ -1584,7 +1613,8 @@ section#who-participated h2 {
   }
 }
 
-.funnel-ready .funnel-stage {
+.funnel-ready .funnel-stage,
+.report-js .funnel-stage {
   display: block;
   position: relative;
 }

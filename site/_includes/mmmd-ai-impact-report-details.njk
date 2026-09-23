@@ -3,6 +3,10 @@
 {% block content %}
 
 <link rel="stylesheet" href="{{ "/css/ai-impact-report.css" | assetVersion }}" />
+{# Flags JS before first paint so the charts' static fallbacks (peach snapshots) never flash;
+   the bundle below is deferred, so without this they would show until it ran. #}
+<script>document.documentElement.classList.add("report-js");</script>
+
 {# Noto Sans Display bold italic for the hero subtitle; the site-wide request only loads italic 400 and 900. #}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@1,600;1,700&display=swap" />
 
