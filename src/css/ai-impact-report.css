@@ -576,6 +576,9 @@ section#ai-report-hero {
   padding: 0;
   display: grid;
   gap: 1rem;
+  /* When the quotes column is taller, keep the cards their natural height
+     instead of stretching each row to fill the column. */
+  align-content: start;
 }
 
 .top-theme {
