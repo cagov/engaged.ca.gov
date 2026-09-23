@@ -1109,7 +1109,8 @@ section#how-we-used-ai.style-body-text strong,
 section#stay-informed {
   position: relative;
   overflow: hidden;
-  padding-block: 4rem;
+  /* Compact band (Figma 9/23): about 3rem above and below the copy. */
+  padding-block: 3rem;
 
   /* Copy stays left-aligned; the column itself is centred in the band. */
   & .row {
@@ -1132,21 +1133,24 @@ section#stay-informed {
     text-decoration: none;
   }
 
+  /* Adornments (Figma 9/23): the left cluster sits in the bottom-left
+     corner, mostly inside the band and cropped by its bottom edge; the
+     right cluster in the top-right, cropped by the top edge. */
   & .signup-cluster-1,
   & .signup-cluster-2 {
     position: absolute;
-    inline-size: min(22vw, 300px);
+    inline-size: clamp(190px, 21vw, 290px);
     pointer-events: none;
   }
 
   & .signup-cluster-1 {
-    bottom: max(-8vw, -100px);
-    left: max(-10vw, -120px);
+    bottom: clamp(-110px, -8vw, -60px);
+    left: 0;
   }
 
   & .signup-cluster-2 {
-    top: max(-8vw, -100px);
-    right: max(-10vw, -120px);
+    top: clamp(-100px, -7vw, -50px);
+    right: 0.5vw;
   }
 
   @media (max-width: 991px) {
