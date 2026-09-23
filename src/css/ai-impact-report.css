@@ -1002,6 +1002,8 @@ section#how-we-used-ai.style-body-text strong,
 .region-legend[data-ring-legend] {
   /* min-height is set at runtime to the taller of the two legends. */
   align-content: start;
+  /* Wraps sooner than the full container (design review 9/22). */
+  max-width: 1000px;
 }
 
 .style-body-text .chart-legend {
