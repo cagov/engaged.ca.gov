@@ -682,13 +682,14 @@ section#ai-report-hero {
 /* Phones (design 9/22): sticker centred above a centred header; the quotes
    fold out inside the selected card as plain text, no inner card. */
 .top-themes.is-narrow {
+  /* White panel inside the peach card (Figma, 9/23). */
   & .top-themes-quotes {
     border: 0;
     box-shadow: none;
-    border-radius: 0;
-    background: transparent;
-    padding: 0.5rem 0.25rem 0;
-    margin-top: 0.25rem;
+    border-radius: 6px;
+    background: #fff;
+    padding: 1rem 1rem 0.75rem;
+    margin: 0.5rem -0.5rem 0.25rem;
   }
 
   & .top-theme-conversation-toggle {
