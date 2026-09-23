@@ -137,16 +137,31 @@ export function initTopThemes(root) {
     syncConversationToggles(narrow);
   }
 
-  // ---- Connector line from the selected card's right edge to the panel ----
+  // ---- Panel offset: its top lines up with the selected card (design 9/24)
+  function alignPanel() {
+    const list = root.querySelector(".top-themes-list");
+    const card = root.querySelector(`.top-theme[data-theme="${selected}"]`);
+    if (!list || !card || window.innerWidth < NARROW) {
+      panel.style.removeProperty("--panel-offset");
+      return;
+    }
+    const offset =
+      card.getBoundingClientRect().top - list.getBoundingClientRect().top;
+    panel.style.setProperty("--panel-offset", `${Math.max(0, offset)}px`);
+  }
+
+  // ---- Connector line from the selected card's edge to the panel's hairline
   function drawConnector() {
     if (!connector) return;
     if (window.innerWidth < NARROW) {
       connector.innerHTML = "";
       return;
     }
-    // From just outside the selected card's border to the "What people
-    // said" title, as an S-curve (design 9/23). The title moves as the
-    // panel re-centres, so this is redrawn on every selection and resize.
+    alignPanel();
+    // From just outside the selected card's border, level with its title,
+    // to the panel's hairline at the height of the "What people said"
+    // heading, as an S-curve (design 9/24). Redrawn on every selection,
+    // fold and resize because the panel moves with the selection.
     const card = root.querySelector(`.top-theme[data-theme="${selected}"]`);
     const title = card?.querySelector(".top-theme-select");
     const heading = panel.querySelector(".top-themes-quotes-title");
@@ -168,7 +183,8 @@ export function initTopThemes(root) {
     const x0 = rtl ? cr.left - lr.left - 2 : cr.right - lr.left + 2;
     const y0 = tr.top + tr.height / 2 - lr.top; // level with the theme title
     const hr = heading.getBoundingClientRect();
-    const x1 = rtl ? hr.right - lr.left + 8 : hr.left - lr.left - 8;
+    // The hairline is the panel's inline-start border.
+    const x1 = rtl ? pr.right - lr.left : pr.left - lr.left;
     const y1 = hr.top + hr.height / 2 - lr.top; // points at "What people said"
     const mx = (x0 + x1) / 2;
     connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`;

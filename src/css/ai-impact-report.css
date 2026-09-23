@@ -583,7 +583,7 @@ section#ai-report-hero {
   @media (min-width: 992px) {
     grid-template-columns: minmax(300px, 0.62fr) minmax(0, 1fr);
     gap: 3rem;
-    align-items: stretch;
+    align-items: start;
     padding: 0.5rem 3rem 0.5rem 4.5rem;
   }
 }
@@ -669,9 +669,10 @@ section#ai-report-hero {
   margin-top: 0.25rem;
 }
 
-/* Quotes panel (design 9/23): no card on desktop. A hairline divides the
-   two columns and the quotes centre vertically beside the cards; the
-   trimmed quotes no longer need to scroll. */
+/* Quotes panel (design 9/24): no card on desktop. A hairline runs down the
+   panel's own height, and the panel's top lines up with the selected card
+   (top-themes.js sets --panel-offset), so the quotes travel with the
+   selection. The trimmed quotes no longer need to scroll. */
 .top-themes-quotes.conversation-card {
   position: relative;
   padding-top: 1rem;
@@ -682,11 +683,10 @@ section#ai-report-hero {
     border-radius: 0;
     box-shadow: none;
     background: transparent;
-    padding: 0 0 0 2.5rem;
+    padding: 0.35rem 0 0.75rem 2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 100%;
+    margin-top: var(--panel-offset, 0px);
   }
 }
 
@@ -709,27 +709,48 @@ section#ai-report-hero {
    fold out inside the selected card as plain text, no inner card. */
 .top-themes.is-narrow {
   /* White panel inside the peach card (Figma, 9/23). */
+  /* The quotes and the "Show/Hide conversation" control form one white
+     footer that runs edge to edge inside the card's border (9/24): negative
+     margins cancel the card's padding, and the bottom corners follow the
+     card's radius. */
   & .top-themes-quotes {
     border: 0;
     box-shadow: none;
-    border-radius: 6px;
+    border-radius: 0;
     background: #fff;
-    padding: 1rem 1rem 0.75rem;
-    margin: 0.5rem -0.5rem 0.25rem;
+    padding: 1rem 1rem 0.5rem;
+    margin: 0.5rem -1rem 0;
   }
 
   & .top-theme-conversation-toggle {
     display: flex;
     justify-content: center;
-    width: 100%;
-    border-top: 1px solid var(--report-rule);
-    padding: 0.6rem 0 0.25rem;
-    margin-top: 0.25rem;
+    box-sizing: border-box;
+    width: calc(100% + 2rem);
+    margin: 0.5rem -1rem -0.5rem;
+    padding: 0.75rem 0;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
   }
 
-  /* Once the quotes are open, the control under them needs no rule above it. */
   & .top-themes-quotes:not([hidden]) + .top-theme-conversation-toggle {
-    border-top: 0;
+    margin-top: 0;
+  }
+
+  /* Phones: no box around the three cards; each card carries its own
+     border, orange while its conversation is open. */
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding-inline: 0;
+  padding-bottom: 0;
+
+  & .top-theme {
+    border-color: var(--report-rule);
+
+    &.is-selected {
+      border-color: var(--report-orange);
+    }
   }
 }
 
