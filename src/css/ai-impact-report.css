@@ -917,6 +917,26 @@ section#ai-report-hero {
     width: 100%;
     height: auto;
     aspect-ratio: 1400 / 820;
+    /* Soft bezel (9/24): the outer ideas run past the frame and are
+       clipped, so fade the last ~1/4 inch on every side instead of a
+       hard cut. Two gradients, one per axis, intersected. */
+    --cloud-fade: 24px;
+    mask-image:
+      linear-gradient(
+        to right,
+        transparent,
+        #000 var(--cloud-fade),
+        #000 calc(100% - var(--cloud-fade)),
+        transparent
+      ),
+      linear-gradient(
+        to bottom,
+        transparent,
+        #000 var(--cloud-fade),
+        #000 calc(100% - var(--cloud-fade)),
+        transparent
+      );
+    mask-composite: intersect;
   }
 
   &.ideas-cloud-ready canvas {
