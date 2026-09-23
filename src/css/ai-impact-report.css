@@ -99,20 +99,23 @@ section#ai-report-hero {
 /* Jump bar under the hero (design 9/21). Muted links, white on hover/focus;
    no "current" state since the bar scrolls away with the hero. */
 .hero-jump {
+  /* Hover tab colour: the background of the section right below the bar. */
+  --jump-tab: var(--report-off-white);
+  --jump-pad-y: 1.1rem;
   background: var(--report-navy);
   border-top: 1px solid rgb(255 244 235 / 0.3);
-  padding: 1.1rem 0;
 
   & .container {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: stretch;
     justify-content: center; /* centred on both pages (9/24) */
-    gap: 0.5rem 2.25rem;
+    gap: 0 1.25rem;
   }
 
   & .hero-jump-label {
     margin: 0;
+    padding: var(--jump-pad-y) 0;
     color: var(--report-off-white);
     font-size: 1.125rem;
   }
@@ -120,7 +123,7 @@ section#ai-report-hero {
   & ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 2.25rem;
+    gap: 0 0.25rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -131,23 +134,85 @@ section#ai-report-hero {
     font-size: 1.125rem;
   }
 
+  /* Each link is a full-height cell. On hover (design 9/24) the text goes
+     bold and full-strength and a tab in the next section's colour rises
+     from the bar's bottom edge under the whole cell. */
   & a {
+    position: relative;
+    display: block;
+    padding: var(--jump-pad-y) 1rem;
     color: rgb(255 244 235 / 0.72);
     /* cagov.core sets `a { text-decoration: underline !important }`. */
     text-decoration: none !important;
     font-weight: 400;
+    text-align: center;
+
+    /* Reserve the bold width so the row does not shift on hover. */
+    &::after {
+      content: attr(data-label);
+      display: block;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      font-weight: 700;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 8px;
+      background: var(--jump-tab);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.15s ease;
+    }
 
     &:hover,
     &:focus-visible {
       color: var(--report-off-white);
-      text-decoration: underline !important;
-      text-underline-offset: 0.25em;
+      font-weight: 700;
+
+      &::before {
+        transform: scaleY(1);
+      }
     }
 
     &:focus-visible {
       outline: 2px solid var(--report-orange);
-      outline-offset: 3px;
+      outline-offset: -4px;
       border-radius: 2px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    & a::before {
+      transition: none;
+    }
+  }
+
+  /* Phones: the links wrap under the label; centre them and tighten the cells. */
+  @media (max-width: 991px) {
+    --jump-pad-y: 0.75rem;
+
+    & .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    & .hero-jump-label {
+      padding-bottom: 0.25rem;
+    }
+
+    & ul {
+      justify-content: center;
+    }
+
+    & a {
+      padding: 0.5rem 0.75rem;
     }
   }
 }
@@ -155,6 +220,7 @@ section#ai-report-hero {
 /* On the details page's peach hero the bar inverts: navy text on peach,
    and its contents centre (design 9/23). */
 .hero-jump-light {
+  --jump-tab: #fff; /* the intro below it is white */
   background: var(--report-off-white);
   border-top: 1px solid rgb(28 39 69 / 0.25);
 

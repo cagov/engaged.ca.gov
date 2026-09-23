@@ -36,7 +36,8 @@
     <p class="hero-jump-label" id="hero-jump-label">{{ hn.label }}</p>
     <ul aria-labelledby="hero-jump-label">
       {% for i in range(1, (hn.nbr_items | default(5)) + 1) %}
-        <li><a href="#{{ hn["item_" + i + "_anchor"] }}">{{ hn["item_" + i + "_label"] }}</a></li>
+        {# data-label lets the CSS reserve the bold width so hover does not reflow the row. #}
+        <li><a href="#{{ hn["item_" + i + "_anchor"] }}" data-label="{{ hn["item_" + i + "_label"] }}">{{ hn["item_" + i + "_label"] }}</a></li>
       {% endfor %}
     </ul>
   </div>
