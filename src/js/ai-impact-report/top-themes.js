@@ -86,9 +86,10 @@ export function initTopThemes(root) {
     t.addEventListener("click", () => {
       const n = Number(t.dataset.conversationToggle);
       conversationOpen = !(conversationOpen && n === selected);
-      // On phones the conversation control picks the theme without
-      // touching its examples fold.
-      select(n, { examples: examplesOpen(n) });
+      // On phones the conversation control also selects its theme. A new
+      // selection opens that card's examples like any other selection;
+      // re-tapping the current card leaves its examples fold alone.
+      select(n, { examples: n === selected ? examplesOpen(n) : true });
     });
   }
   function examplesOpen(n) {
@@ -194,7 +195,8 @@ export function initTopThemes(root) {
     },
     { passive: true },
   );
-  select(1, { examples: false });
+  // The first theme is pre-selected with its examples open (9/24).
+  select(1);
   colorAttributions();
   // Fonts and images can shift the layout after first paint.
   window.addEventListener("load", drawConnector);
