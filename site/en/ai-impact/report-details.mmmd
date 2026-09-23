@@ -50,15 +50,13 @@ id: hero_nav
 translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
 aria_label: On this page
 label: "Jump to a section:"
-nbr_items: 4
+nbr_items: 3
 item_1_label: Balancing each group, fairly
 item_1_anchor: balancing-groups
-item_2_label: Ranking policy themes
-item_2_anchor: ranking-policy-themes
+item_2_label: Ranking policy ideas
+item_2_anchor: ranking-policy-ideas
 item_3_label: How we used AI
 item_3_anchor: how-we-used-ai
-item_4_label: Download the policy ideas
-item_4_anchor: download-data
 ----
 
 ----
@@ -121,48 +119,53 @@ id: process_links
 - Sortition Foundation, [*Why Sortition Algorithms?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html)
 
 ----
-id: ranking_policy_themes
+id: ranking_policy_ideas
 ----
-## Ranking policy themes
+## Ranking policy ideas
 
 In the discussions, participants proposed policy ideas, then voted on them as a group.
 
-We compiled all ideas that got at least one vote in a discussion. Then we grouped similar ideas together and wrote a summary theme for each group. These became the 26 policy themes. Policy themes covered between 1 and 12 individual policy proposals.
+We compiled all ideas that got at least one vote in a discussion. Then we grouped similar ideas together and wrote a summary for each group. These became the 26 policy ideas. Policy ideas covered between 1 and 12 individual policy proposals.
 
-To rank the policy themes, we evaluated each one based on 2 factors:
+To rank the policy ideas, we evaluated each one based on 2 factors:
 
-- **Frequency:** How often a policy idea from that theme came up in the 14 discussions. Counts ranged from 1 to 8.
-- **Support:** If a policy idea from that theme reached the top of votes in a discussion. To be in the top, it had to gain votes that put it in the top third. Counts ranged from 0 to 5.
+- **Frequency:** How often a policy idea came up in the 14 discussions. Counts ranged from 1 to 8.
+- **Support:** If a policy idea reached the top of votes in a discussion. To be in the top, it had to gain votes that put it in the top third. Counts ranged from 0 to 5.
 
-We sorted the list of policy themes by frequency. Then we split it into roughly two halves and labeled the top half “high frequency.” An idea was “high frequency” if it came up in 5 or more discussions.
+We sorted the list of policy ideas by frequency. Then we split it into roughly two halves and labeled the top half “high frequency.” An idea was “high frequency” if it came up in 5 or more discussions.
 
-Then we sorted the policy themes by support, calling the top half “high support.” We labeled a theme “high support” if 2 or more of its policy ideas were in the top third in their sessions.
+Then we sorted the policy ideas by support. We labeled an idea a “top idea” if its related ideas were in the top 3 of themes across all sessions.
 
-We made 3 tiers that represent the possible combinations of high and low:
-
-1. Both factors scored high (**Most support**)
-2. One scored high and one scored low (**Moderate support**)
-3. Both scored low (**Some support**)
-
-We think these buckets capture real differences without claiming exact precision.
-
-The order of themes within each bucket has some meaning, but is not absolute. For each factor, we calculated the theme's rank compared to all the other themes. We then added these ranks together to give each theme a score. Within each bucket, we put the theme with the highest score at the top. When policy themes tied, we used alphabetical order.
+The order of ideas has some meaning, but is not absolute. For each factor, we calculated the idea's rank compared to all the other ideas. We then added these ranks together to give each idea a score. We put the ideas with the highest score at the top. When policy ideas tied, we used alphabetical order.
 ----
 id: how_we_used_ai
-translator_note_copy: "Text in parentheses is a placeholder note for the writers."
 ----
 ## How we used AI
 
-(Text to come.)
+Our staff used AI to help us review and analyze these discussions.
+
+Examples of AI use include:
+
+- converting discussion audio into transcripts,
+- creating high-level summaries of discussion and survey responses, and
+- tagging parts of conversations with the ideas they covered.
+
+AI did not pick who we invited to discussions. We chose invitees by lottery. We made sure the group of invitees reflected California demographics. This gave us a mix of viewpoints.
+
+We protected what participants shared with us. All AI work ran inside the state's secure data environment. We never shared transcripts or survey responses with AI vendors. No content was used to train AI models.
+
+AI never replaced human judgment, and it never wrote or edited a participant's words. Every quote in this report is what a participant said. We validated them against the transcript and had them reviewed by staff.
+
+Our staff identified the policy ideas and themes we highlight in this report on their own. They reviewed the transcripts and survey responses without help from AI. When AI helped with analysis, we made it give exact citations. Staff checked those statements before relying on them.
+
+In testing, we compared AI summaries against notes taken by human notetakers. We found they covered the same ground without inventing content.
 ----
 id: download_data
 button_text: Download the ideas
 ----
-## Download the policy ideas
+### Download the policy ideas
 
 You can download and read all the policies people proposed in the discussions. They are in a CSV file.
-
-Participants remain anonymous. We scrubbed this dataset of personally-identifying information. But we did not edit the ideas in any other way.
 ----
 id: sign_up
 button_text: Sign up

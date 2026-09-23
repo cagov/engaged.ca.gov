@@ -68,7 +68,7 @@ id: public_forum
 ----
 ## A public forum on AI
 
-In May 2026, we opened a public forum on the *Impact of AI on work* to all Californians. In the months to follow, thousands of people across the state gave us their thoughts. They took our survey and joined facilitated group discussions. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas.
+In May 2026, we opened a public forum on the *Impact of AI on work* to all Californians. In the months to follow, thousands of people across the state gave us their thoughts. They took our survey and joined facilitated group discussions. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas. Along the way, participants raised the tensions themselves. They debated how far to regulate, how proposals would be funded, and how the rules would be enforced.
 
 One theme came up consistently: **We need humans in the AI policy loop.** Not only for how people use AI, but for how companies build it and laws govern it.
 ----
@@ -142,17 +142,17 @@ title: Hold AI companies liable for the harm they cause
 - Direct more resources for real enforcement
 ----
 id: top_theme_1_quotes
-translator_note: "Quotes are verbatim from participants (Sarah, 9/22). region and field values are data keys; do not translate them."
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
 session: 10
-quote_1: "We don't have to start from scratch. We can look at everything that government, both state and national, didn't do with social media and apply it to AI now. With social media, we didn’t hold companies accountable, and it tore down our democracy. I think that the era of saying that companies aren't responsible for how people use tools like this should end, and we should make them responsible, and I bet they would change policy and invest in certain tools to manage better if we ended that lack of accountability."
-attribution_1: Arts, entertainment and media worker from the Bay Area
+quote_1: "With social media, we didn’t hold companies accountable, and it tore down our democracy. I think that the era of saying that companies aren't responsible for how people use tools like this should end. I bet they would change policy and invest in certain tools to manage better if we ended that lack of accountability."
+attribution_1: Arts, entertainment or media worker from the Bay Area
 region_1: Bay Area
 field_1: "Arts, entertainment, or media"
-quote_2: "If I can just follow up on that, the regulatory frameworks don't work nearly as well as structuring incentives so that good behavior becomes the easiest path. I mean, to your point, Section 230 of the CDA made it so that a media company would be actively punished if they tried to police user content, rather than making it something that would align their values to the public good. So, if we're looking at incentive structures holistically, where can we structure the rules so that following the rules works towards the public good, and to the bottom line, rather than creating tension between them?"
+quote_2: "To your point, Section 230 of the CDA made it so that a media company would be actively punished if they tried to police user content, rather than making it something that would align their values to the public good. So, if we're looking at incentive structures holistically: where can we structure the rules so that following the rules works towards the public good and to the bottom line, rather than creating tension between them?"
 attribution_2: Information technology worker from the Central Coast
 region_2: Central Coast
 field_2: "Information technology"
-quote_3: "I think one thing could be who's accountable for the outputs, right? If there's a human evaluation, then the human is accountable, because a human should be the final decision maker, but the way the AI is being used, if the human evaluation is not involved, then who's accountable for the mistakes that AI is making. So that could be a legal framework, right?"
+quote_3: "One thing could be who's accountable for the outputs. If there's a human evaluation, then the human is accountable, because a human should be the final decision maker. But the way AI is being used, if human evaluation is not involved, then who's accountable for the mistakes that AI is making?"
 attribution_3: Finance worker from the Bay Area
 region_3: Bay Area
 field_3: "Financial"
@@ -165,16 +165,16 @@ title: Protect people and nature from the resource needs of AI
 - Set limits on data center noise, pollution, and use of water and electricity
 ----
 id: top_theme_2_quotes
-translator_note: "Quotes are verbatim from participants (Sarah, 9/22). region and field values are data keys; do not translate them."
-quote_1: "I agree with your point there on data tracking. Another thing I think we should protect is also our natural resources, and a clean environment, because I know people in Texas, where data farms or data centers have moved in, and the water has been polluted, and electric bills go way up, so yeah, protecting our natural resources."
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "I think we should protect our natural resources, and a clean environment. Because I know people in Texas where data farms or data centers have moved in, and the water has been polluted, and electric bills go way up."
 attribution_1: Arts/entertainment/media worker from Southern California
 region_1: Southern California
 field_1: "Arts, entertainment, or media"
-quote_2: "I think for me, and I know the previous speaker kind of touched on it, is the environmental impacts. My biggest concern, is the amount of water and electricity the AI is using. You hear of the data center in Georgia that illegally tapped into some city’s or county's water supply and took millions of gallons from it without anybody realizing."
+quote_2: "My biggest concern is the amount of water and electricity AI is using. You hear of the data center in Georgia that illegally tapped into some city’s or county's water supply and took millions of gallons from it without anybody realizing."
 attribution_2: Government worker from LA
 region_2: Los Angeles
 field_2: "Government"
-quote_3: "When I think about the state as a physical place, we could set environmental regulations, we could set data privacy requirements for states that operate here. When I look at this list, I get really excited about what floor we are setting for environmental protection when it comes to energy use, space use, etc."
+quote_3: "When I think about the state as a physical place, we could set environmental regulations, we could set data privacy requirements for states that operate here. I get really excited about what floor we are setting for environmental protection when it comes to energy use, space use, etc."
 attribution_3: Government worker from the Bay Area
 region_3: Bay Area
 field_3: "Government"
@@ -187,7 +187,7 @@ title: Set rules for where AI can be used safely
 - Ban automated AI in the hiring process
 ----
 id: top_theme_3_quotes
-translator_note: "Quotes are verbatim from participants (Sarah, 9/22). region and field values are data keys; do not translate them."
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
 quote_1: "When it comes to employment, it should be a human decision. We should not let technology do that for us."
 attribution_1: Manufacturing worker from the Bay Area
 region_1: Bay Area
@@ -427,18 +427,24 @@ id: what_happens_next
 ----
 ## What happens next
 
-The ideas Californians shared don't end with this report. They join a fast-moving policy conversation already underway across the state.
+This report is not the end of the story. The ideas people shared will join a fast-moving policy conversation already underway.
 
-As Engaged California's findings were being finalized, the Newsom Administration took action on AI. Several actions touch on themes that people raised in these discussions, among them the environmental footprint of data centers, transparency about AI-generated content, independent oversight of frontier models, and protections for workers and children.
+As Engaged California finalized its findings, the Newsom administration acted on AI. Many actions touched on themes that people raised in these discussions:
 
-A few recent examples:
+- The environmental footprint of data centers
+- Transparency about AI-generated content
+- Independent oversight of frontier models
+- Protections for workers and children
 
-- On September 16, the Governor signed Senate Bill 1050 by Senator Angelique Ashby, [requiring explicit disclosure](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/) when AI-generated performers appear in any video or audio advertisement selling a product or service.
-- On September 18, the Governor issued an Executive Order to accelerate the state’s [AI oversight](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/) efforts, fast-tracking new independent AI auditing laws, convening a panel of experts, and advancing an emergency "kill switch" for frontier AI models.
-- On September 21, the Governor signed a package described as the nation's most comprehensive [data center laws](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/), giving communities more say over water, electricity, and land use.
-- Earlier in September, the Governor signed [child safety laws for chatbots and social media](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/) and a set of [first-in-the-nation AI safeguards](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/).
+In September 2026, Governor Newsom signed:
 
-Our work isn’t done either. Californians raised many ideas that will keep informing government action in the months and years ahead as the administration transitions, the state legislature enters a new session, and the AI landscape keeps evolving.
+- One of the nation's broadest [data center laws](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/). This gives communities more say over use of their water, electricity, and land.
+- Senate Bill 1050, which [requires disclosure](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/) when an ad uses AI-generated performers.
+- An Executive Order to speed up the state’s [AI oversight](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/) efforts. This fast-tracks new AI auditing laws and advances a "kill switch" for frontier AI models.
+- A set of [first-in-the-nation AI safeguards](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/).
+- [Child safety laws](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/) for chatbots and social media.
+
+We're not done with our work either. Californians raised many ideas that will inform government action in the years ahead. And as the AI landscape keeps evolving, we will keep listening.
 ----
 id: methods_button
 translator_note: "Button at the end of What happens next, linking to the methods page. Do not translate the href."

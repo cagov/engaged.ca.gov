@@ -84,12 +84,21 @@
   </div>
 </section>
 
-<section id="ranking-policy-themes" class="style-body-text section-light">
+<section id="ranking-policy-ideas" class="style-body-text section-light">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
         <div class="section-body">
-          {{ modules.ranking_policy_themes.content | safe }}
+          {{ modules.ranking_policy_ideas.content | safe }}
+        </div>
+        {# Download the policy ideas lives inside this section (writer, 9/23). #}
+        <div id="download-data" class="download-data">
+          <div class="section-body">
+            {{ modules.download_data.content | safe }}
+          </div>
+          <div class="download-button-div">
+            <a class="download-button-link" data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ modules.download_data.button_text }}</a>
+          </div>
         </div>
       </div>
     </div>

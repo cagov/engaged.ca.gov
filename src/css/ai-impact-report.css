@@ -888,7 +888,14 @@ section#ai-report-hero {
 
 /* Details page: body copy at full size (23px); the download heading is a
    23px bold line rather than a section title (design review 9/22). */
-section#download-data.style-body-text h2 {
+.download-data {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--report-rule);
+}
+
+/* Outranks the section's 1.75rem h3 rule: a 23px bold line (design 9/22). */
+section#ranking-policy-ideas .download-data h3 {
   font-size: 1.4375rem;
   font-weight: 700;
   line-height: 1.3;
@@ -897,9 +904,9 @@ section#download-data.style-body-text h2 {
 
 /* The state template sizes .style-body-text strong at 23px regardless of
    its parent; inside 18px copy it should only be bold. */
-.style-body-text section#ranking-policy-themes strong,
+.style-body-text section#ranking-policy-ideas strong,
 .style-body-text section#how-we-used-ai strong,
-section#ranking-policy-themes.style-body-text strong,
+section#ranking-policy-ideas.style-body-text strong,
 section#how-we-used-ai.style-body-text strong,
 .how-to-read-tiers.style-body-text strong,
 .style-body-text .demographics-intro strong,
@@ -1327,7 +1334,7 @@ section#balancing-groups select.demographics-select {
   }
 }
 
-section#ranking-policy-themes,
+section#ranking-policy-ideas,
 section#how-we-used-ai {
   & h3 {
     font-size: 1.75rem;
