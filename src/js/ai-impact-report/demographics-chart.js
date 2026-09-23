@@ -45,7 +45,9 @@ let COLORS = PALETTES.dark;
 
 const W = 1040;
 const H = 460;
-const PAD = { top: 36, right: 24, bottom: 96, left: 128 };
+// Bottom holds up to three lines of category label (9/24: trimmed so the
+// chart sits closer to its source note).
+const PAD = { top: 36, right: 24, bottom: 80, left: 128 };
 
 function el(name, attrs, text) {
   const node = document.createElementNS(SVG_NS, name);
@@ -634,7 +636,13 @@ export async function initDemographicsChart(root) {
       // Category label under the group, wrapped to up to three lines if long
       // (translations run longer than the English names).
       const maxChars = Math.max(10, Math.floor(groupW / 7.8));
-      const wrapped = wrapWords(nameOf(c), maxChars);
+      // Translated name when the page has one (a label equal to its key is
+      // just the English map); otherwise the data's short English form
+      // ("Info tech") keeps the row of labels compact.
+      const translated = categoryLabels[c.name];
+      const barLabel =
+        translated && translated !== c.name ? translated : c.short || c.name;
+      const wrapped = wrapWords(barLabel, maxChars);
       const lines =
         wrapped.length <= 3
           ? wrapped

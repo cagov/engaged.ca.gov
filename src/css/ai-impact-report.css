@@ -1361,7 +1361,7 @@ section#balancing-groups select.demographics-select {
   font-size: 1.4375rem;
   font-weight: 700;
   color: var(--report-off-white);
-  margin: 0.5rem 0 0.5rem;
+  margin: 0.5rem 0 1.5rem; /* room between the title and the legend (9/24) */
 }
 
 /* The chart is laid out in left-to-right coordinates (text-anchor start/end
@@ -1395,7 +1395,7 @@ section#balancing-groups select.demographics-select {
 
 /* The one place small text is intended: the per-category source note under the bar chart. */
 .style-body-text .demographics-source {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   font-size: 1rem;
   line-height: 1.5;
 
