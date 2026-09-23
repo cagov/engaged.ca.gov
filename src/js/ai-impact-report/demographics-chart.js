@@ -43,7 +43,7 @@ let COLORS = PALETTES.dark;
 
 const W = 1040;
 const H = 460;
-const PAD = { top: 36, right: 24, bottom: 96, left: 80 };
+const PAD = { top: 36, right: 24, bottom: 96, left: 128 };
 
 function el(name, attrs, text) {
   const node = document.createElementNS(SVG_NS, name);
@@ -99,6 +99,8 @@ export async function initDemographicsChart(root) {
     phase1: root.dataset.phase1Label || "Phase 1",
     phase2: root.dataset.phase2Label || "Phase 2",
     onTarget: root.dataset.onTargetLabel || "On target",
+    axisAbove: root.dataset.axisAboveLabel || "",
+    axisBelow: root.dataset.axisBelowLabel || "",
     points: root.dataset.pointsLabel || "{value} points",
     tableCaption: root.dataset.tableCaption || "{dimension}",
   };
@@ -129,7 +131,8 @@ export async function initDemographicsChart(root) {
     const zeroY = PAD.top + plotH / 2;
     const yFor = (v) => zeroY - (v / max) * (plotH / 2);
     const groupW = plotW / cats.length;
-    const barW = Math.min(26, groupW * 0.22);
+    // Wide enough that two value labels usually sit side by side.
+    const barW = Math.min(34, groupW * 0.3);
     const gap = Math.min(6, barW * 0.25);
     const dense = cats.length > 10;
     // Design asks for nothing under 14px; the SVG renders at or above 1:1 on desktop.
@@ -172,6 +175,36 @@ export async function initDemographicsChart(root) {
         ),
       );
     }
+
+    // Axis titles beside the top and bottom ticks: what the numbers are.
+    const axisTitle = (text, y) => {
+      if (!text) return;
+      // Greedy wrap to short lines ("Percentage / points above / target").
+      const lines = [];
+      let line = "";
+      for (const word of text.split(" ")) {
+        if (line && `${line} ${word}`.length > 12) {
+          lines.push(line);
+          line = word;
+        } else line = line ? `${line} ${word}` : word;
+      }
+      if (line) lines.push(line);
+      const x = PAD.left - 42;
+      const t = el("text", {
+        x,
+        y: y - ((lines.length - 1) * 15) / 2 + 4,
+        "text-anchor": "end",
+        fill: COLORS.text,
+        "font-size": 12,
+        "font-weight": 700,
+      });
+      lines.forEach((ln, i) => {
+        t.appendChild(el("tspan", { x, dy: i === 0 ? 0 : 15 }, ln));
+      });
+      svg.appendChild(t);
+    };
+    axisTitle(labels.axisAbove, yFor(max));
+    axisTitle(labels.axisBelow, yFor(-max));
 
     // Legend, centered above the plot.
     const legend = el("g", {
@@ -254,34 +287,34 @@ export async function initDemographicsChart(root) {
         svg.appendChild(bar);
       }
 
-      // Value labels outside the bar ends. When the two bars end at nearly
-      // the same height on the same side, the labels would collide (the pair
-      // is narrower than two labels), so the shorter bar's label steps one
-      // line further out.
+      // Value labels sit right at the bar ends. When two bars end at nearly
+      // the same height on the same side and the pair is narrower than the
+      // two labels, the labels slide apart horizontally (left one left,
+      // right one right) rather than one dropping away from its bar.
       const labelYFor = (v) => {
         const yEnd = yFor(v);
         return v >= 0 ? yEnd - 6 : yEnd + 14;
       };
       const [a, b2] = series;
       const ys = [labelYFor(a.v), labelYFor(b2.v)];
-      const labelWidth = (v) => fmtDiff(v).length * valueFont * 0.6;
+      const xs = series.map((s) => s.x + barW / 2);
+      const labelWidth = (v) => fmtDiff(v).length * valueFont * 0.62;
+      const needed = (labelWidth(a.v) + labelWidth(b2.v)) / 2 + 4;
       const collide =
         a.v >= 0 === b2.v >= 0 &&
-        Math.abs(ys[0] - ys[1]) < valueFont * 1.1 &&
-        gap + barW < (labelWidth(a.v) + labelWidth(b2.v)) / 2;
+        Math.abs(ys[0] - ys[1]) < valueFont * 1.35 &&
+        gap + barW < needed;
       if (collide) {
-        const shorter = Math.abs(a.v) <= Math.abs(b2.v) ? 0 : 1;
-        const taller = 1 - shorter;
-        const outward = series[shorter].v >= 0 ? -1 : 1;
-        // One full line beyond the taller bar's label, whatever the gap was.
-        ys[shorter] = ys[taller] + outward * valueFont * 1.4;
+        const shift = (needed - (gap + barW)) / 2;
+        xs[0] -= shift;
+        xs[1] += shift;
       }
       series.forEach((s, si) => {
         svg.appendChild(
           el(
             "text",
             {
-              x: s.x + barW / 2,
+              x: xs[si],
               y: ys[si],
               "text-anchor": "middle",
               fill: COLORS.text,
