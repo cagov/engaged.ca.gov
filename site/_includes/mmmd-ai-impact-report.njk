@@ -21,30 +21,6 @@
   "speech": "/public/images/ai-report-tier-some-support.svg"
 } %}
 
-{# Reusable: Region / Field of work toggle plus region legend. Static until the charts are built. #}
-{% macro chart_controls(toggle_region, toggle_field_of_work, legend, show_participant_legend, participant_label, facilitator_label) %}
-  <div class="chart-controls">
-    <div class="chart-controls-row">
-      <div class="segmented-toggle" role="group">
-        <button type="button" class="segmented-toggle-option" aria-pressed="true" disabled>{{ toggle_region }}</button>
-        <button type="button" class="segmented-toggle-option" aria-pressed="false" disabled>{{ toggle_field_of_work }}</button>
-      </div>
-      {% if show_participant_legend %}
-        <ul class="chart-legend participant-legend">
-          <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ participant_label }}</li>
-          <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ facilitator_label }}</li>
-        </ul>
-      {% endif %}
-    </div>
-    <ul class="chart-legend region-legend" aria-label="{{ toggle_region }}">
-      {% set nbr_regions = legend.nbr_regions | default(9) %}
-      {% for r in range(1, nbr_regions + 1) %}
-        <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ legend["region_" + r] }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-{% endmacro %}
-
 {# Reusable: Phase label + title + subtitle on the left, one stat on the right. #}
 {% macro phase_header(step, icon) %}
   <div class="row phase-row">
@@ -115,7 +91,7 @@
        Breaks out of the text column to the container width. Drawn by ideas-cloud.js. #}
     {% set wc = modules.word_cloud %}
     <div id="ideas-cloud" class="ideas-cloud"
-         data-ideas-cloud data-src="{{ "/public/data/ai-report-ideas-cloud.json" | assetVersion }}">
+         data-ideas-cloud data-src="{{ (wc.src | default("/public/data/ai-report-ideas-cloud.json")) | assetVersion }}">
       <canvas data-ideas-canvas role="img" aria-label="{{ wc.chart_alt }}"></canvas>
     </div>
 
@@ -191,7 +167,7 @@
                         <li class="conversation-quote">
                           <img class="conversation-quote-icon" src="/public/images/little-dialog-balloon.svg" alt="" aria-hidden="true" />
                           <blockquote>
-                            <p>“{{ q["quote_" + i] }}”</p>
+                            <p>{{ tt.quote_open | default("“") }}{{ q["quote_" + i] }}{{ tt.quote_close | default("”") }}</p>
                             <footer class="conversation-attribution" data-region="{{ q["region_" + i] }}" data-field="{{ q["field_" + i] }}">
                               <span class="conversation-attribution-dot" aria-hidden="true"></span><span class="conversation-attribution-text">{{ q["attribution_" + i] }}</span>
                             </footer>
@@ -295,7 +271,9 @@
     {# English category names as they appear in the data, in the same order as region_legend, so the
        legend can be translated. #}
     {% set region_keys = ["Los Angeles", "Bay Area", "Southern California", "Sacramento Valley / Sierra Foothills", "Central Valley", "Far North / North Coast", "Central Coast", "Sierra Region", "(not stated)"] %}
-    {% set legend_labels_json %}{ {% for key in region_keys %}{{ key | dump | safe }}: {{ modules.region_legend["region_" + loop.index] | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %} }{% endset %}
+    {# Field of work names come from modules.category_labels as key/label pairs (key = English data value). #}
+    {% set cl = modules.category_labels %}
+    {% set legend_labels_json %}{ {% for key in region_keys %}{{ key | dump | safe }}: {{ modules.region_legend["region_" + loop.index] | dump | safe }}, {% endfor %}{% for i in range(1, (cl.nbr_labels | default(0)) + 1) %}{{ cl["key_" + i] | dump | safe }}: {{ cl["label_" + i] | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %} }{% endset %}
 
     <h2>{{ wp.title }}</h2>
 
@@ -316,7 +294,7 @@
       <div class="participants-steps">
         {% for s in range(1, nbr_steps + 1) %}
           {% set step = modules["who_participated_step_" + s] %}
-          <div class="participants-step" id="who-participated-step-{{ s }}" data-step="{{ s }}" role="group" aria-roledescription="step" aria-label="{{ step.phase_title }}">
+          <div class="participants-step" id="who-participated-step-{{ s }}" data-step="{{ s }}" role="group" aria-roledescription="{{ wp.step_role_label | default("step") }}" aria-label="{{ step.phase_title }}">
             {{ phase_header(step, step_icons[s - 1]) }}
             <div class="chart-placeholder funnel-static-fallback">
               <img class="chart-placeholder-image" src="{{ step.chart_image_region }}" alt="{{ step.chart_alt }}" />

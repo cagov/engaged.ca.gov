@@ -1,0 +1,260 @@
+---
+title: Cómo hicimos este trabajo
+description: "Cómo Engaged California eligió a los participantes de los debates sobre el Impacto de la IA en el trabajo, qué tan cerca estuvo cada fase de sus metas demográficas y cómo analizamos lo que dijo la gente."
+layout: mmmd-ai-impact-report-details
+parentid: ai-impact
+keywords:
+  - California
+  - inteligencia artificial
+  - IA
+  - trabajo
+  - sorteo
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+translator_note: "The subtitle contains the report title in italics (single asterisks). Preserve the asterisks."
+subtitle: "Los métodos detrás de *Personas en el circuito: Los californianos dicen cómo se debe crear, usar y gobernar la IA*"
+theme: light
+back_link_text: "Volver al informe"
+back_link_href: /ai-impact/report/
+----
+# Cómo hicimos este trabajo
+----
+id: intro
+----
+Este proyecto tuvo dos fases. En la primera, cualquier californiano podía compartir su opinión a través de una encuesta abierta en línea. En la segunda, invitamos a los encuestados interesados a debates en vivo.
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: En esta página
+label: "Ir a una sección:"
+nbr_items: 3
+item_1_label: Equilibrar cada grupo con justicia
+item_1_anchor: balancing-groups
+item_2_label: Clasificar las ideas de política
+item_2_anchor: ranking-policy-ideas
+item_3_label: Cómo usamos la IA
+item_3_anchor: how-we-used-ai
+----
+
+----
+id: balancing_groups
+title: Equilibrar cada grupo con justicia
+----
+Teníamos que decidir a quién invitar. Y teníamos que elegir con justicia, creando a la vez grupos equilibrados.
+
+Por eso usamos un método llamado sorteo, parecido a la forma en que los tribunales eligen a los jurados. Se basa en dos ideas igual de importantes:
+
+- **Representación:** Fijamos metas demográficas basadas en estimaciones de la población de California. Así, la lista final de invitados reflejaría la diversidad del estado. Los criterios incluían edad, geografía y campo de trabajo, entre otros.
+- **Aleatoriedad:** Dentro de esas metas, todas las personas que cumplían los criterios tenían la misma probabilidad de ser seleccionadas.
+
+Estos principios garantizaron que no escucháramos solo a quienes respondieron primero. Nos permitieron crear una lista elegida con justicia que reflejaba a grandes rasgos a los californianos en su conjunto.
+----
+id: demographics_chart
+title: Datos demográficos
+pulldown_label: "Mostrar participantes por"
+chart_title: "Qué tan cerca estuvimos de las metas demográficas"
+axis_above_label: "Puntos porcentuales por encima de la meta"
+axis_below_label: "Puntos porcentuales por debajo de la meta"
+chart_alt: "Gráfico de barras que compara a los participantes de la encuesta y de los debates con las metas demográficas, en puntos porcentuales respecto de la meta."
+dim_region: Región
+dim_race: Raza / etnia
+dim_age: Edad
+dim_gender: Género
+dim_field: Campo de trabajo
+dim_ai: Opinión sobre la IA
+phase1_label: Encuesta
+phase2_label: Debates
+on_target_label: En la meta
+translator_note: "{dimension} is replaced with the selected drop-down label. Keep it in the translation."
+table_caption: "Participantes comparados con la meta, por {dimension}"
+translator_note_2: "The next four lines are read by screen readers. Keep every {placeholder} in the translation."
+chart_aria_label: "{dimension}: {phase1} y {phase2}, puntos porcentuales respecto de la meta"
+bar_title: "{category}, {phase}: {value} puntos respecto de la meta ({share} % frente a una meta de {target} %)"
+table_target_header: "Meta %"
+table_points_header: "{phase}, puntos respecto de la meta"
+----
+Vea qué tan cerca estuvimos de nuestras metas demográficas. Haga clic en el menú desplegable para ver los porcentajes de participantes por:
+
+- Región
+- Raza / etnia
+- Edad
+- Género
+- Campo de trabajo
+----
+id: demographics_sources
+translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
+label: Fuente de las metas
+source_region: "Región: Cada región tiene voz garantizada (al menos 6). El resto de los lugares se asignó en proporción a la población de California en 2026, según las estimaciones de la Encuesta sobre la Comunidad Estadounidense (ACS)."
+source_field_of_work: "Campo de trabajo: Basado en las [estadísticas de empleo por industria y fuerza laboral (CES) de abril de 2026](https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf) y las [tablas de selección por área](https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces) del Departamento de Desarrollo del Empleo de California. El memorando a la Oficina del Gobernador señala específicamente la logística, la atención médica, los servicios legales y financieros, las industrias creativas, el sector público y el ámbito académico como sectores prioritarios. Lo reflejamos en estas categorías."
+source_age: "Edad: Refleja las proyecciones del Censo de 2026 / Departamento de Finanzas de California."
+source_gender: "Género: Refleja las proyecciones del Censo de 2026 / Departamento de Finanzas de California."
+source_race: "Raza / etnia: Refleja las proyecciones del Censo de 2026 / Departamento de Finanzas de California."
+source_ai: ""
+----
+
+----
+id: category_labels
+translator_note: "Category names as they appear in the demographics chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 36
+key_1: "Bay Area"
+label_1: "Área de la Bahía"
+key_2: "Central Coast"
+label_2: "Costa Central"
+key_3: "Central Valley"
+label_3: "Valle Central"
+key_4: "Far North / North Coast"
+label_4: "Extremo norte / Costa norte"
+key_5: "Los Angeles"
+label_5: "Los Ángeles"
+key_6: "Sacramento Valley / Sierra Foothills"
+label_6: "Valle de Sacramento / Estribaciones de la Sierra"
+key_7: "Sierra Region"
+label_7: "Región de la Sierra"
+key_8: "Southern California"
+label_8: "Sur de California"
+key_9: "American Indian or Alaska Native"
+label_9: "Indígena americano o nativo de Alaska"
+key_10: "Asian"
+label_10: "Asiático"
+key_11: "Black or African American"
+label_11: "Negro o afroamericano"
+key_12: "Hispanic or Latino"
+label_12: "Hispano o latino"
+key_13: "Middle Eastern or North African"
+label_13: "De Medio Oriente o el norte de África"
+key_14: "Multiple"
+label_14: "Varias"
+key_15: "Native Hawaiian or Pacific Islander"
+label_15: "Nativo de Hawái o de las islas del Pacífico"
+key_16: "White"
+label_16: "Blanco"
+key_17: "18-24"
+label_17: "18-24"
+key_18: "25-44"
+label_18: "25-44"
+key_19: "45-64"
+label_19: "45-64"
+key_20: "Over 65"
+label_20: "Más de 65"
+key_21: "Woman"
+label_21: "Mujer"
+key_22: "Man"
+label_22: "Hombre"
+key_23: "Nonbinary / multi / other"
+label_23: "No binario / varios / otro"
+key_24: "Arts, entertainment, or media"
+label_24: "Artes, entretenimiento o medios"
+key_25: "Education"
+label_25: "Educación"
+key_26: "Financial"
+label_26: "Finanzas"
+key_27: "Goods producing and harvesting"
+label_27: "Producción de bienes y cosecha"
+key_28: "Government"
+label_28: "Gobierno"
+key_29: "Healthcare"
+label_29: "Atención médica"
+key_30: "Hospitality"
+label_30: "Hostelería"
+key_31: "Information technology"
+label_31: "Tecnología de la información"
+key_32: "Logistics"
+label_32: "Logística"
+key_33: "Other"
+label_33: "Otro"
+key_34: "Professional services"
+label_34: "Servicios profesionales"
+key_35: "Retail or wholesale trade"
+label_35: "Comercio minorista o mayorista"
+key_36: "Unemployed, looking"
+label_36: "Desempleado, en búsqueda"
+----
+
+----
+id: process_links
+----
+#### Más sobre el sorteo
+
+- [Nuestro código de sorteo](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
+- Sortition Foundation, [*Why Sortition Algorithms?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html) (en inglés)
+
+----
+id: ranking_policy_ideas
+----
+## Clasificar las ideas de política
+
+En los debates, los participantes propusieron ideas de política y luego las votaron en grupo.
+
+Recopilamos todas las ideas que obtuvieron al menos un voto en un debate. Luego agrupamos las ideas similares y escribimos un resumen de cada grupo. Así surgieron las 26 ideas de política. Cada idea de política abarcó entre 1 y 12 propuestas individuales.
+
+Para clasificar las ideas de política, evaluamos cada una según 2 factores:
+
+- **Frecuencia:** Con qué frecuencia surgió una idea de política en los 14 debates. Los conteos fueron de 1 a 8.
+- **Apoyo:** Si una idea de política llegó a las más votadas en un debate. Para estar entre las primeras, tenía que obtener votos que la situaran en el tercio superior. Los conteos fueron de 0 a 5.
+
+Ordenamos la lista de ideas de política por frecuencia. Luego la dividimos en dos mitades aproximadas y etiquetamos la mitad superior como «alta frecuencia». Una idea era de «alta frecuencia» si surgió en 5 o más debates.
+
+Después ordenamos las ideas de política por apoyo. Etiquetamos una idea como «idea principal» si sus ideas relacionadas estuvieron entre los 3 temas principales de todas las sesiones.
+
+El orden de las ideas tiene cierto significado, pero no es absoluto. Para cada factor, calculamos la posición de la idea en comparación con todas las demás. Luego sumamos esas posiciones para dar a cada idea una puntuación. Colocamos las ideas con la puntuación más alta al principio. Cuando hubo empates, usamos el orden alfabético.
+----
+id: how_we_used_ai
+----
+## Cómo usamos la IA
+
+Nuestro personal usó IA para ayudarnos a revisar y analizar estos debates.
+
+Algunos ejemplos del uso de IA:
+
+- convertir el audio de los debates en transcripciones,
+- crear resúmenes generales de los debates y de las respuestas a la encuesta, y
+- etiquetar partes de las conversaciones con las ideas que trataban.
+
+La IA no eligió a quién invitamos a los debates. Elegimos a los invitados por sorteo. Nos aseguramos de que el grupo de invitados reflejara la demografía de California. Esto nos dio una mezcla de puntos de vista.
+
+Protegimos lo que los participantes compartieron con nosotros. Todo el trabajo con IA se realizó dentro del entorno de datos seguro del estado. Nunca compartimos transcripciones ni respuestas a la encuesta con proveedores de IA. Ningún contenido se usó para entrenar modelos de IA.
+
+La IA nunca reemplazó el juicio humano, y nunca escribió ni editó las palabras de un participante. Cada cita de este informe es lo que dijo un participante. Las validamos con la transcripción y las hizo revisar nuestro personal.
+
+Nuestro personal identificó por su cuenta las ideas de política y los temas que destacamos en este informe. Revisó las transcripciones y las respuestas a la encuesta sin ayuda de la IA. Cuando la IA ayudó en el análisis, le exigimos citas exactas. El personal verificó esas afirmaciones antes de basarse en ellas.
+
+En las pruebas, comparamos los resúmenes de la IA con las notas tomadas por personas. Encontramos que cubrían el mismo terreno sin inventar contenido.
+----
+id: download_data
+button_text: Descargar las ideas
+----
+### Descargar las ideas de política
+
+Puede descargar y leer todas las políticas que las personas propusieron en los debates. Están en un archivo CSV.
+----
+id: sign_up
+button_text: Inscríbase
+----
+## Inscríbase para seguir participando
+
+Déjenos su correo electrónico para conocer las próximas oportunidades.

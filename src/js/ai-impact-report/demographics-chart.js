@@ -55,9 +55,28 @@ function el(name, attrs, text) {
   return node;
 }
 
+// Numbers follow the page's language (decimal comma in Spanish, Persian
+// digits in Farsi, ...). Falls back to plain digits on an unknown locale.
+const LANG = document.documentElement.lang || "en";
+function fmtNum(v, digits) {
+  try {
+    return Number(v).toLocaleString(LANG, {
+      minimumFractionDigits: digits,
+      maximumFractionDigits: digits,
+    });
+  } catch {
+    return Number(v).toFixed(digits);
+  }
+}
 function fmtDiff(v) {
   const sign = v > 0 ? "+" : v < 0 ? "−" : "";
-  return `${sign}${Math.abs(v).toFixed(1)}`;
+  return `${sign}${fmtNum(Math.abs(v), 1)}`;
+}
+/** Axis ticks: whole numbers unless the step is fractional (e.g. ±12.5). */
+function fmtTick(v) {
+  const sign = v > 0 ? "+" : v < 0 ? "−" : "";
+  const a = Math.abs(v);
+  return `${sign}${fmtNum(a, Number.isInteger(a) ? 0 : 1)}`;
 }
 
 /** Symmetric axis limit: a round number a little above the largest |value|. */
@@ -79,18 +98,6 @@ function wrapWords(text, maxChars) {
   }
   if (line) lines.push(line);
   return lines;
-}
-
-/** Wrap a label into at most two lines by word count. */
-function splitLabel(label, maxChars) {
-  if (label.length <= maxChars) return [label];
-  const words = label.split(" ");
-  let first = "";
-  while (words.length && `${first} ${words[0]}`.trim().length <= maxChars) {
-    first = `${first} ${words.shift()}`.trim();
-  }
-  if (!first) first = words.shift();
-  return [first, words.join(" ")].filter(Boolean);
 }
 
 export async function initDemographicsChart(root) {
@@ -119,7 +126,26 @@ export async function initDemographicsChart(root) {
     axisBelow: root.dataset.axisBelowLabel || "",
     points: root.dataset.pointsLabel || "{value} points",
     tableCaption: root.dataset.tableCaption || "{dimension}",
+    chartAria:
+      root.dataset.chartAriaLabel ||
+      "{dimension}: {phase1} and {phase2}, percentage points from target",
+    barTitle:
+      root.dataset.barTitle ||
+      "{category}, {phase}: {value} points from target ({share}% vs {target}% target)",
+    targetHeader: root.dataset.tableTargetHeader || "Target %",
+    pointsHeader:
+      root.dataset.tablePointsHeader || "{phase} points from target",
   };
+  // Category names as they appear in the data, mapped to the page's language.
+  let categoryLabels = {};
+  try {
+    categoryLabels = JSON.parse(root.dataset.categoryLabels || "{}") || {};
+  } catch {
+    categoryLabels = {};
+  }
+  const nameOf = (c) => categoryLabels[c.name] || c.name;
+  const tpl = (template, vars) =>
+    template.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? String(vars[k]) : m));
   const dimensionLabel = (id) => {
     const opt = [...select.options].find((o) => o.value === id);
     return opt ? opt.textContent.trim() : id;
@@ -181,7 +207,11 @@ export async function initDemographicsChart(root) {
       width,
       height,
       role: "img",
-      "aria-label": `${dimensionLabel(id)}: ${labels.phase1} and ${labels.phase2}, percentage points from target`,
+      "aria-label": tpl(labels.chartAria, {
+        dimension: dimensionLabel(id),
+        phase1: labels.phase1,
+        phase2: labels.phase2,
+      }),
       class: "demographics-svg demographics-svg-horizontal",
     });
 
@@ -274,7 +304,7 @@ export async function initDemographicsChart(root) {
             "font-size": 11,
             "font-weight": tv === 0 ? 700 : 400,
           },
-          tv === 0 ? labels.onTarget : fmtDiff(tv).replace(".0", ""),
+          tv === 0 ? labels.onTarget : fmtTick(tv),
         ),
       );
     }
@@ -283,7 +313,7 @@ export async function initDemographicsChart(root) {
       const rowTop = pad.top + i * rowH;
       // Category name above the bars, full width, on a white strip so it
       // reads over the gridlines.
-      const name = c.name;
+      const name = nameOf(c);
       const nameW = name.length * font * 0.55 + 8;
       svg.appendChild(
         el("rect", {
@@ -342,7 +372,13 @@ export async function initDemographicsChart(root) {
           el(
             "title",
             {},
-            `${c.name}, ${s.label}: ${fmtDiff(s.v)} points from target (${c[s.key]}% vs ${c.target}% target)`,
+            tpl(labels.barTitle, {
+              category: nameOf(c),
+              phase: s.label,
+              value: fmtDiff(s.v),
+              share: fmtNum(c[s.key], 1),
+              target: fmtNum(c.target, 1),
+            }),
           ),
         );
         svg.appendChild(bar);
@@ -400,7 +436,11 @@ export async function initDemographicsChart(root) {
     const svg = el("svg", {
       viewBox: `0 0 ${W} ${H}`,
       role: "img",
-      "aria-label": `${dimensionLabel(id)}: ${labels.phase1} and ${labels.phase2}, percentage points from target`,
+      "aria-label": tpl(labels.chartAria, {
+        dimension: dimensionLabel(id),
+        phase1: labels.phase1,
+        phase2: labels.phase2,
+      }),
       class: "demographics-svg",
     });
 
@@ -430,7 +470,7 @@ export async function initDemographicsChart(root) {
             "font-size": 14,
             "font-weight": tv === 0 ? 700 : 400,
           },
-          tv === 0 ? labels.onTarget : fmtDiff(tv).replace(".0", ""),
+          tv === 0 ? labels.onTarget : fmtTick(tv),
         ),
       );
     }
@@ -540,7 +580,13 @@ export async function initDemographicsChart(root) {
         const title = el(
           "title",
           {},
-          `${c.name}, ${s.label}: ${fmtDiff(s.v)} points from target (${c[s.key]}% vs ${c.target}% target)`,
+          tpl(labels.barTitle, {
+            category: nameOf(c),
+            phase: s.label,
+            value: fmtDiff(s.v),
+            share: fmtNum(c[s.key], 1),
+            target: fmtNum(c.target, 1),
+          }),
         );
         bar.appendChild(title);
         svg.appendChild(bar);
@@ -585,9 +631,14 @@ export async function initDemographicsChart(root) {
         );
       });
 
-      // Category label under the group, wrapped to two lines if long.
+      // Category label under the group, wrapped to up to three lines if long
+      // (translations run longer than the English names).
       const maxChars = Math.max(10, Math.floor(groupW / 7.8));
-      const lines = splitLabel(c.short || c.name, maxChars);
+      const wrapped = wrapWords(nameOf(c), maxChars);
+      const lines =
+        wrapped.length <= 3
+          ? wrapped
+          : [...wrapped.slice(0, 2), wrapped.slice(2).join(" ")];
       const text = el("text", {
         x: cx,
         y: H - PAD.bottom + 34,
@@ -620,11 +671,11 @@ export async function initDemographicsChart(root) {
     const hr = document.createElement("tr");
     for (const h of [
       dimensionLabel(id),
-      "Target %",
+      labels.targetHeader,
       `${labels.phase1} %`,
       `${labels.phase2} %`,
-      `${labels.phase1} points from target`,
-      `${labels.phase2} points from target`,
+      tpl(labels.pointsHeader, { phase: labels.phase1 }),
+      tpl(labels.pointsHeader, { phase: labels.phase2 }),
     ]) {
       const th = document.createElement("th");
       th.scope = "col";
@@ -638,12 +689,12 @@ export async function initDemographicsChart(root) {
       const tr = document.createElement("tr");
       const th = document.createElement("th");
       th.scope = "row";
-      th.textContent = c.name;
+      th.textContent = nameOf(c);
       tr.appendChild(th);
       for (const v of [
-        c.target,
-        c.phase1,
-        c.phase2,
+        fmtNum(c.target, 1),
+        fmtNum(c.phase1, 1),
+        fmtNum(c.phase2, 1),
         fmtDiff(c.phase1Diff),
         fmtDiff(c.phase2Diff),
       ]) {

@@ -1,0 +1,259 @@
+---
+title: چگونه این کار را انجام دادیم
+description: "چگونه Engaged California شرکت‌کنندگان بحث‌های تأثیر هوش مصنوعی بر کار را برگزید، هر مرحله چقدر به اهداف جمعیتی خود نزدیک شد و ما گفته‌های مردم را چگونه تحلیل کردیم."
+layout: mmmd-ai-impact-report-details
+parentid: ai-impact
+keywords:
+  - کالیفرنیا
+  - هوش مصنوعی
+  - کار
+  - قرعه‌کشی
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+translator_note: "The subtitle contains the report title in italics (single asterisks). Preserve the asterisks."
+subtitle: "روش‌های پشت *انسان در حلقه: کالیفرنیایی‌ها می‌گویند هوش مصنوعی چگونه باید ساخته، استفاده و اداره شود*"
+theme: light
+back_link_text: "بازگشت به گزارش"
+back_link_href: /ai-impact/report/
+----
+# چگونه این کار را انجام دادیم
+----
+id: intro
+----
+این پروژه دو مرحله داشت. در مرحله نخست، هر کالیفرنیایی می‌توانست دیدگاه خود را از طریق یک نظرسنجی آزاد آنلاین در میان بگذارد. در مرحله دوم، از پاسخ‌دهندگان علاقه‌مند به بحث‌های زنده دعوت کردیم.
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: در این صفحه
+label: "رفتن به یک بخش:"
+nbr_items: 3
+item_1_label: توازن منصفانه هر گروه
+item_1_anchor: balancing-groups
+item_2_label: رتبه‌بندی ایده‌های سیاستی
+item_2_anchor: ranking-policy-ideas
+item_3_label: چگونه از هوش مصنوعی استفاده کردیم
+item_3_anchor: how-we-used-ai
+----
+
+----
+id: balancing_groups
+title: توازن منصفانه هر گروه
+----
+باید تصمیم می‌گرفتیم چه کسانی را دعوت کنیم. و باید منصفانه انتخاب می‌کردیم و در همان حال گروه‌هایی متوازن می‌ساختیم.
+
+پس از روشی به نام قرعه‌کشی استفاده کردیم که شبیه شیوه انتخاب هیئت منصفه در دادگاه‌هاست. این روش بر دو ایده به یک اندازه مهم بنا شده است:
+
+- **نمایندگی:** ما اهداف جمعیتی را بر اساس برآوردهای جمعیت کالیفرنیا تعیین کردیم. این کار فهرست نهایی دعوت‌شدگان را بازتاب‌دهنده تنوع ایالت می‌کرد. معیارها شامل مواردی مانند سن، جغرافیا و حوزه کاری بود.
+- **تصادفی بودن:** در چارچوب آن اهداف، هر کسی که شرایط را داشت شانس برابری برای انتخاب شدن داشت.
+
+این اصول تضمین کرد که فقط صدای کسانی را که اول پاسخ دادند نشنویم. به ما امکان داد فهرستی منصفانه بسازیم که تقریباً بازتاب کل کالیفرنیایی‌ها بود.
+----
+id: demographics_chart
+title: ویژگی‌های جمعیتی
+pulldown_label: "نمایش شرکت‌کنندگان بر اساس"
+chart_title: "چقدر به اهداف جمعیتی نزدیک شدیم"
+axis_above_label: "واحد درصد بالاتر از هدف"
+axis_below_label: "واحد درصد پایین‌تر از هدف"
+chart_alt: "نمودار ستونی که شرکت‌کنندگان نظرسنجی و بحث‌ها را با اهداف جمعیتی مقایسه می‌کند، بر حسب واحد درصد فاصله از هدف."
+dim_region: منطقه
+dim_race: نژاد / قومیت
+dim_age: سن
+dim_gender: جنسیت
+dim_field: حوزه کاری
+dim_ai: نگرش به هوش مصنوعی
+phase1_label: نظرسنجی
+phase2_label: بحث‌ها
+on_target_label: روی هدف
+translator_note: "{dimension} is replaced with the selected drop-down label. Keep it in the translation."
+table_caption: "شرکت‌کنندگان در مقایسه با هدف، بر اساس {dimension}"
+translator_note_2: "The next four lines are read by screen readers. Keep every {placeholder} in the translation."
+chart_aria_label: "{dimension}: {phase1} و {phase2}، واحد درصد فاصله از هدف"
+bar_title: "{category}، {phase}: {value} واحد درصد فاصله از هدف ({share}٪ در برابر هدف {target}٪)"
+table_target_header: "هدف ٪"
+table_points_header: "{phase}، واحد درصد فاصله از هدف"
+----
+ببینید چقدر به اهداف جمعیتی خود نزدیک شدیم. روی منوی کشویی کلیک کنید تا درصد شرکت‌کنندگان را بر این اساس ببینید:
+
+- منطقه
+- نژاد / قومیت
+- سن
+- جنسیت
+- حوزه کاری
+----
+id: demographics_sources
+translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
+label: منبع اهداف
+source_region: "منطقه: هر منطقه صدایی تضمین‌شده دارد (دست‌کم ۶ نفر). باقی جایگاه‌ها را متناسب با جمعیت کالیفرنیا در ۲۰۲۶ بر اساس برآوردهای پیمایش جامعه آمریکایی (ACS) پر کردیم."
+source_field_of_work: "حوزه کاری: بر اساس [آمار اشتغال صنعتی و نیروی کار (CES) آوریل ۲۰۲۶](https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf) و [جدول‌های انتخاب منطقه](https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces) اداره توسعه اشتغال کالیفرنیا. یادداشت خطاب به دفتر فرماندار به طور خاص حمل و نقل، بهداشت و درمان، خدمات حقوقی و مالی، صنایع خلاق، بخش عمومی و دانشگاه را بخش‌های اولویت‌دار می‌داند. ما این را در این دسته‌ها بازتاب دادیم."
+source_age: "سن: بازتاب پیش‌بینی‌های سرشماری ۲۰۲۶ / اداره مالی کالیفرنیا."
+source_gender: "جنسیت: بازتاب پیش‌بینی‌های سرشماری ۲۰۲۶ / اداره مالی کالیفرنیا."
+source_race: "نژاد / قومیت: بازتاب پیش‌بینی‌های سرشماری ۲۰۲۶ / اداره مالی کالیفرنیا."
+source_ai: ""
+----
+
+----
+id: category_labels
+translator_note: "Category names as they appear in the demographics chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 36
+key_1: "Bay Area"
+label_1: "منطقه خلیج"
+key_2: "Central Coast"
+label_2: "ساحل مرکزی"
+key_3: "Central Valley"
+label_3: "دره مرکزی"
+key_4: "Far North / North Coast"
+label_4: "شمال دور / ساحل شمالی"
+key_5: "Los Angeles"
+label_5: "لس‌آنجلس"
+key_6: "Sacramento Valley / Sierra Foothills"
+label_6: "دره ساکرامنتو / دامنه‌های سیرا"
+key_7: "Sierra Region"
+label_7: "منطقه سیرا"
+key_8: "Southern California"
+label_8: "جنوب کالیفرنیا"
+key_9: "American Indian or Alaska Native"
+label_9: "سرخ‌پوست آمریکایی یا بومی آلاسکا"
+key_10: "Asian"
+label_10: "آسیایی"
+key_11: "Black or African American"
+label_11: "سیاه‌پوست یا آفریقایی‌آمریکایی"
+key_12: "Hispanic or Latino"
+label_12: "هیسپانیک یا لاتین‌تبار"
+key_13: "Middle Eastern or North African"
+label_13: "خاورمیانه‌ای یا شمال آفریقایی"
+key_14: "Multiple"
+label_14: "چندگانه"
+key_15: "Native Hawaiian or Pacific Islander"
+label_15: "بومی هاوایی یا جزایر اقیانوس آرام"
+key_16: "White"
+label_16: "سفیدپوست"
+key_17: "18-24"
+label_17: "۱۸-۲۴"
+key_18: "25-44"
+label_18: "۲۵-۴۴"
+key_19: "45-64"
+label_19: "۴۵-۶۴"
+key_20: "Over 65"
+label_20: "بالای ۶۵"
+key_21: "Woman"
+label_21: "زن"
+key_22: "Man"
+label_22: "مرد"
+key_23: "Nonbinary / multi / other"
+label_23: "غیردوگانه / چندگانه / دیگر"
+key_24: "Arts, entertainment, or media"
+label_24: "هنر، سرگرمی یا رسانه"
+key_25: "Education"
+label_25: "آموزش"
+key_26: "Financial"
+label_26: "مالی"
+key_27: "Goods producing and harvesting"
+label_27: "تولید کالا و برداشت محصول"
+key_28: "Government"
+label_28: "دولت"
+key_29: "Healthcare"
+label_29: "مراقبت‌های بهداشتی"
+key_30: "Hospitality"
+label_30: "مهمان‌داری و گردشگری"
+key_31: "Information technology"
+label_31: "فناوری اطلاعات"
+key_32: "Logistics"
+label_32: "حمل و نقل و پشتیبانی"
+key_33: "Other"
+label_33: "دیگر"
+key_34: "Professional services"
+label_34: "خدمات تخصصی"
+key_35: "Retail or wholesale trade"
+label_35: "خرده‌فروشی یا عمده‌فروشی"
+key_36: "Unemployed, looking"
+label_36: "بیکار، در جستجوی کار"
+----
+
+----
+id: process_links
+----
+#### بیشتر درباره قرعه‌کشی
+
+- [کد قرعه‌کشی ما](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
+- Sortition Foundation، [*Why Sortition Algorithms?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html) (به انگلیسی)
+
+----
+id: ranking_policy_ideas
+----
+## رتبه‌بندی ایده‌های سیاستی
+
+در بحث‌ها، شرکت‌کنندگان ایده‌های سیاستی را پیشنهاد کردند و سپس به صورت گروهی به آنها رأی دادند.
+
+ما همه ایده‌هایی را که در یک بحث دست‌کم یک رأی گرفتند گردآوری کردیم. سپس ایده‌های مشابه را کنار هم گذاشتیم و برای هر گروه خلاصه‌ای نوشتیم. این‌ها ۲۶ ایده سیاستی شدند. هر ایده سیاستی بین ۱ تا ۱۲ پیشنهاد سیاستی جداگانه را در بر می‌گرفت.
+
+برای رتبه‌بندی ایده‌های سیاستی، هر یک را بر اساس ۲ عامل ارزیابی کردیم:
+
+- **بسامد:** یک ایده سیاستی چند بار در ۱۴ بحث مطرح شد. شمارش‌ها از ۱ تا ۸ بود.
+- **حمایت:** آیا یک ایده سیاستی در یک بحث به بالای فهرست رأی‌ها رسید. برای قرار گرفتن در بالا، باید رأی‌هایی می‌گرفت که آن را در یک‌سوم بالایی قرار دهد. شمارش‌ها از ۰ تا ۵ بود.
+
+فهرست ایده‌های سیاستی را بر اساس بسامد مرتب کردیم. سپس آن را به دو نیمه تقریبی تقسیم کردیم و نیمه بالایی را «پربسامد» نامیدیم. ایده‌ای «پربسامد» بود که در ۵ بحث یا بیشتر مطرح شده باشد.
+
+سپس ایده‌های سیاستی را بر اساس حمایت مرتب کردیم. ایده‌ای را «ایده برتر» نامیدیم که ایده‌های مرتبط با آن در میان ۳ موضوع برتر در همه جلسه‌ها قرار گرفته باشد.
+
+ترتیب ایده‌ها معنایی دارد اما مطلق نیست. برای هر عامل، رتبه هر ایده را در مقایسه با همه ایده‌های دیگر محاسبه کردیم. سپس این رتبه‌ها را جمع کردیم تا به هر ایده امتیازی بدهیم. ایده‌های با بالاترین امتیاز را در بالا گذاشتیم. هنگام برابری امتیاز، ترتیب الفبایی را به کار بردیم.
+----
+id: how_we_used_ai
+----
+## چگونه از هوش مصنوعی استفاده کردیم
+
+کارکنان ما از هوش مصنوعی برای کمک به بازبینی و تحلیل این بحث‌ها استفاده کردند.
+
+نمونه‌های استفاده از هوش مصنوعی:
+
+- تبدیل صدای بحث‌ها به متن،
+- تهیه خلاصه‌های کلی از بحث‌ها و پاسخ‌های نظرسنجی، و
+- برچسب‌گذاری بخش‌هایی از گفتگوها با ایده‌هایی که پوشش می‌دادند.
+
+هوش مصنوعی تعیین نکرد چه کسانی را به بحث‌ها دعوت کنیم. ما دعوت‌شدگان را با قرعه‌کشی برگزیدیم. اطمینان حاصل کردیم که گروه دعوت‌شدگان بازتاب ویژگی‌های جمعیتی کالیفرنیا باشد. این به ما آمیزه‌ای از دیدگاه‌ها داد.
+
+از آنچه شرکت‌کنندگان با ما در میان گذاشتند حفاظت کردیم. همه کار با هوش مصنوعی درون محیط داده امن ایالت انجام شد. ما هرگز متن‌ها یا پاسخ‌های نظرسنجی را با فروشندگان هوش مصنوعی به اشتراک نگذاشتیم. هیچ محتوایی برای آموزش مدل‌های هوش مصنوعی استفاده نشد.
+
+هوش مصنوعی هرگز جای قضاوت انسانی را نگرفت و هرگز سخنان یک شرکت‌کننده را ننوشت یا ویرایش نکرد. هر نقل‌قول در این گزارش همان است که یک شرکت‌کننده گفته است. آنها را با متن پیاده‌شده مطابقت دادیم و کارکنان آنها را بازبینی کردند.
+
+کارکنان ما ایده‌های سیاستی و موضوع‌هایی که در این گزارش برجسته می‌کنیم را خود شناسایی کردند. آنها متن‌ها و پاسخ‌های نظرسنجی را بدون کمک هوش مصنوعی بازبینی کردند. هر جا هوش مصنوعی در تحلیل کمک کرد، از آن ارجاع دقیق خواستیم. کارکنان پیش از تکیه بر آن گزاره‌ها، آنها را بررسی کردند.
+
+در آزمایش‌ها، خلاصه‌های هوش مصنوعی را با یادداشت‌های یادداشت‌برداران انسانی مقایسه کردیم. دیدیم که همان موضوع‌ها را بدون ساختن محتوا پوشش می‌دهند.
+----
+id: download_data
+button_text: دانلود ایده‌ها
+----
+### دانلود ایده‌های سیاستی
+
+می‌توانید همه سیاست‌هایی را که مردم در بحث‌ها پیشنهاد کردند دانلود کنید و بخوانید. آنها در یک فایل CSV هستند.
+----
+id: sign_up
+button_text: ثبت‌نام
+----
+## برای ماندن در جریان ثبت‌نام کنید
+
+ایمیل خود را به ما بدهید تا از فرصت‌های آینده آگاه شوید.

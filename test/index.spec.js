@@ -6,6 +6,10 @@ const pageUrls = [
   "/about/",
   "/ai-impact/report/",
   "/ai-impact/report-details/",
+  "/es/ai-impact/report/",
+  "/es/ai-impact/report-details/",
+  "/fa/ai-impact/report/",
+  "/fa/ai-impact/report-details/",
 ];
 
 for (const pageUrl of pageUrls) {

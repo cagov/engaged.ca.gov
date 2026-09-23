@@ -160,10 +160,14 @@ export function initTopThemes(root) {
     connector.style.height = `${lr.height}px`;
     connector.style.left = `${lr.left - pr.left}px`;
     connector.style.top = `${lr.top - pr.top}px`;
-    const x0 = cr.right - lr.left + 2;
+    // Right-to-left pages mirror the layout: the panel sits to the left of
+    // the cards, so the line leaves the card's left edge for the heading's
+    // right edge.
+    const rtl = getComputedStyle(layout).direction === "rtl";
+    const x0 = rtl ? cr.left - lr.left - 2 : cr.right - lr.left + 2;
     const y0 = tr.top + tr.height / 2 - lr.top; // level with the theme title
     const hr = heading.getBoundingClientRect();
-    const x1 = hr.left - lr.left - 8;
+    const x1 = rtl ? hr.right - lr.left + 8 : hr.left - lr.left - 8;
     const y1 = hr.top + hr.height / 2 - lr.top; // points at "What people said"
     const mx = (x0 + x1) / 2;
     connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`;

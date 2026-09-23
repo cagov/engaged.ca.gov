@@ -91,6 +91,7 @@ id: what_we_heard
 Our survey asked people what they’d like government to do about the impact of AI. We got a wide range of ideas for policies.
 ----
 id: word_cloud
+translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
 chart_alt: "Word cloud of the policy ideas raised in the survey, sized by how many people raised each one."
 ----
 
@@ -133,6 +134,9 @@ show_conversation_label: Show conversation
 hide_conversation_label: Hide conversation
 quotes_title: "What people said:"
 select_label: "Show what people said about: {title}"
+translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
+quote_open: "“"
+quote_close: "”"
 ----
 ----
 id: top_theme_1
@@ -346,6 +350,42 @@ region_9: Not stated
 ----
 
 ----
+id: category_labels
+translator_note: "Field of work names as they appear in the Who participated chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 15
+key_1: "Government"
+label_1: "Government"
+key_2: "Other"
+label_2: "Other"
+key_3: "Information technology"
+label_3: "Information technology"
+key_4: "Arts, entertainment, or media"
+label_4: "Arts, entertainment, or media"
+key_5: "Education"
+label_5: "Education"
+key_6: "Professional services"
+label_6: "Professional services"
+key_7: "Healthcare"
+label_7: "Healthcare"
+key_8: "Unemployed, looking"
+label_8: "Unemployed, looking"
+key_9: "Financial"
+label_9: "Financial"
+key_10: "Goods producing and harvesting"
+label_10: "Goods producing and harvesting"
+key_11: "Retail or wholesale trade"
+label_11: "Retail or wholesale trade"
+key_12: "Logistics"
+label_12: "Logistics"
+key_13: "Hospitality"
+label_13: "Hospitality"
+key_14: "(not stated)"
+label_14: "(not stated)"
+key_15: "I don't want to say"
+label_15: "I don't want to say"
+----
+
+----
 id: who_participated
 title: Who participated
 nbr_steps: 4
@@ -362,6 +402,7 @@ next_label: Next step
 translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
 step_counter: "{current} of {total}"
 step_marker_label: "Go to step {current}"
+step_role_label: step
 play_label: Play
 pause_label: Pause
 restart_label: Restart
