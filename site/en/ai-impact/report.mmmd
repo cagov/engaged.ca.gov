@@ -45,10 +45,10 @@ We asked people some of the hardest questions facing the state:
 *How is AI reshaping work and the economy? What should government do about it?*
 ----
 id: hero_nav
-translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+translator_note: "aria_label is read by screen readers. The anchor values are page ids and the href is a page address; do not translate them."
 aria_label: On this page
 label: "Jump to:"
-nbr_items: 4
+nbr_items: 5
 item_1_label: A public forum on AI
 item_1_anchor: public-forum
 item_2_label: Ideas we heard
@@ -57,6 +57,8 @@ item_3_label: Who participated
 item_3_anchor: who-participated
 item_4_label: What happens next
 item_4_anchor: what-happens-next
+item_5_label: How we did this work
+item_5_href: /ai-impact/report-details/
 ----
 
 ----
