@@ -641,6 +641,7 @@ export async function initDemographicsChart(root) {
           rx: 2,
           fill: s.color,
           class: `demographics-bar demographics-bar-${s.key}`,
+          "data-cat": i,
         });
         const title = el(
           "title",
@@ -716,12 +717,29 @@ export async function initDemographicsChart(root) {
         "text-anchor": "middle",
         fill: COLORS.muted,
         "font-size": dense ? 12 : 14,
+        class: "demographics-cat-label",
+        "data-cat": i,
       });
       lines.forEach((line, li) => {
         text.appendChild(el("tspan", { x: cx, dy: li === 0 ? 0 : 17 }, line));
       });
       svg.appendChild(text);
     });
+
+    // Hover links a category's bars and its label (9/24): pointing at either
+    // bolds the label, lifts its bars and dims the others.
+    const linked = [...svg.querySelectorAll("[data-cat]")];
+    const setHot = (cat) => {
+      for (const node of linked) {
+        const mine = cat !== null && node.dataset.cat === cat;
+        node.classList.toggle("is-hot", mine);
+        node.classList.toggle("is-dim", cat !== null && !mine);
+      }
+    };
+    for (const node of linked) {
+      node.addEventListener("pointerenter", () => setHot(node.dataset.cat));
+      node.addEventListener("pointerleave", () => setHot(null));
+    }
 
     svgHost.replaceChildren(svg);
   }

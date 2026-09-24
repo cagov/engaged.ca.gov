@@ -1487,8 +1487,25 @@ section#balancing-groups select.demographics-select {
   transition: opacity 0.15s;
 }
 
-.demographics-svg:hover .demographics-bar:not(:hover) {
-  opacity: 0.75;
+/* Desktop hover (9/24): the pointed-at category's label goes bold and its
+   bars stay full strength while the rest dim. Set by demographics-chart.js
+   on both the bars and the label, so either can be the hover target. */
+.demographics-bar.is-dim {
+  opacity: 0.35;
+}
+
+.demographics-cat-label {
+  transition: opacity 0.15s;
+  cursor: default;
+}
+
+.demographics-cat-label.is-hot {
+  font-weight: 700;
+  fill: var(--report-ink);
+}
+
+.demographics-cat-label.is-dim {
+  opacity: 0.6;
 }
 
 /* The one place small text is intended: the per-category source note under the bar chart. */
