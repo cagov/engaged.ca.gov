@@ -111,11 +111,11 @@ a[data-appearance="button"], button:not(.nav-header), input[type="submit"] {
 
 :is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"]:focus,
 :is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"]:hover {
-  background: #FBEADB; /* light orange fill */
+  background: #F6F7FA; /* design 9/24 */
 }
 
 :is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"]:active {
-  background: #F5D6B8;
+  background: #E9ECF2;
 }
 
 .findings-link-icon {
