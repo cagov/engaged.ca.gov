@@ -1157,6 +1157,18 @@ section#how-we-used-ai.style-body-text strong,
     color: #fff;
   }
 
+  /* Hover on the option that can be chosen (design 9/24): pale blue-grey
+     with navy text. The pressed option and the no-JS disabled state stay. */
+  &:not(:disabled):not([aria-pressed="true"]) {
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background: #d9e1eb;
+      color: var(--report-navy);
+    }
+  }
+
   &:disabled {
     opacity: 1;
   }
