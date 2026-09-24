@@ -19,12 +19,13 @@
     {# Category names as they appear in the data (key_N, English) mapped to their translations (label_N). #}
     {% set cl = modules.category_labels %}
     {% set category_labels_json %}{ {% for i in range(1, (cl.nbr_labels | default(0)) + 1) %}{{ cl["key_" + i] | dump | safe }}: {{ cl["label_" + i] | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %} }{% endset %}
+    {# Order per design 9/24: Region first, then the rest in reverse alphabetical order. #}
     {% set dims = [
       ["region", dc.dim_region, ds.source_region],
       ["race", dc.dim_race, ds.source_race],
-      ["age", dc.dim_age, ds.source_age],
       ["gender", dc.dim_gender, ds.source_gender],
-      ["field", dc.dim_field, ds.source_field_of_work]
+      ["field", dc.dim_field, ds.source_field_of_work],
+      ["age", dc.dim_age, ds.source_age]
     ] %}
     {# AI sentiment is in the data (id "ai") but not offered: no source note and unclear
        whether it was a sortition criterion. Add ["ai", dc.dim_ai, ds.source_ai] to restore. #}

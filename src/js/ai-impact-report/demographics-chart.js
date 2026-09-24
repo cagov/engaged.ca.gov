@@ -798,7 +798,7 @@ export async function initDemographicsChart(root) {
 
 /**
  * Replaces the native <select> with a styled listbox (design 9/23): white
- * field with a chevron that flips when open, options listed alphabetically
+ * field with a chevron that flips when open, options in the template's order
  * with the current one in bold. The <select> stays in the DOM, hidden, so
  * the label and no-JS path keep working. Keyboard: arrows move, Home/End
  * jump, Enter/Space choose, Escape closes.
@@ -806,9 +806,11 @@ export async function initDemographicsChart(root) {
 function buildDropdown(select, onChange) {
   const wrap = select.parentElement;
   const label = document.querySelector(`label[for="${select.id}"]`);
-  const options = [...select.options]
-    .map((o) => ({ id: o.value, text: o.textContent.trim() }))
-    .sort((a, b) => a.text.localeCompare(b.text));
+  // Options keep the template's order (design 9/24: Region first).
+  const options = [...select.options].map((o) => ({
+    id: o.value,
+    text: o.textContent.trim(),
+  }));
   let current = select.value;
   let open = false;
 
