@@ -218,8 +218,9 @@ export function initTopThemes(root) {
   window.addEventListener("load", drawConnector);
 }
 
-/** Colors each quote's attribution dot by the speaker's region, using the
- * same assignment the Who participated chart makes from the funnel data. */
+/** Colors each quote's attribution dot by the speaker's field of work,
+ * using the same assignment the Who participated chart makes from the
+ * funnel data (its default colouring since 9/24). */
 async function colorAttributions() {
   const src = document.querySelector("[data-funnel-src]")?.dataset.funnelSrc;
   if (!src) return;
@@ -231,14 +232,14 @@ async function colorAttributions() {
   } catch {
     return;
   }
-  const names = data.regions.map((r) => r.name);
+  const names = (data.fieldOfWork || []).map((f) => f.name);
   const colors = assignCategoryColors(names);
   const colorOf = Object.fromEntries(names.map((n, i) => [n, colors[i]]));
   for (const att of document.querySelectorAll(
     ".top-themes .conversation-attribution",
   )) {
     const dot = att.querySelector(".conversation-attribution-dot");
-    const color = colorOf[att.dataset.region];
+    const color = colorOf[att.dataset.field];
     if (dot && color) dot.style.background = color;
   }
 }

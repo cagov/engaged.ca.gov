@@ -89,6 +89,24 @@ function axisMax(values) {
 }
 
 /** Greedy wrap into as many lines as needed, each at most maxChars. */
+/** Wrap into at most two lines, splitting at the word boundary that leaves
+ * the two lines closest in length. Falls back to greedy wrapping when even
+ * the best two-line split is too wide. */
+function balancedWrap(text, maxChars) {
+  if (text.length <= maxChars) return [text];
+  const words = text.split(" ");
+  let best = null;
+  for (let k = 1; k < words.length; k++) {
+    const a = words.slice(0, k).join(" ");
+    const b = words.slice(k).join(" ");
+    const longest = Math.max(a.length, b.length);
+    if (longest > maxChars) continue;
+    const diff = Math.abs(a.length - b.length);
+    if (!best || diff < best.diff) best = { lines: [a, b], diff };
+  }
+  return best ? best.lines : wrapWords(text, maxChars);
+}
+
 function wrapWords(text, maxChars) {
   const lines = [];
   let line = "";
@@ -182,25 +200,34 @@ export async function initDemographicsChart(root) {
   });
 
   /** Phone layout: horizontal bars, real-size text, height grows with rows.
-   * Each category's name sits above its pair of bars, so the bars get the
-   * full width of the phone instead of sharing it with a label column. */
+   * Category names sit in a column on the left, wrapped to a balanced two
+   * lines where needed so the column stays narrow; the bars take the rest
+   * of the width (design 9/24). */
   function drawSvgHorizontal(dim, id) {
     const cats = dim.categories;
     const values = cats.flatMap((c) => [c.phase1Diff, c.phase2Diff]);
     const max = axisMax(values);
     const width = Math.max(300, svgHost.clientWidth || 360);
-    const font = 14;
-    const pad = { top: 62, right: 8, bottom: 30, left: 8 };
+    const font = 13;
+    const lineH = 16;
+    const pad = { top: 62, right: 8, bottom: 30, left: 0 };
     const barH = 12;
     const barGap = 3;
-    const labelH = font + 6; // one line of category name above the bars
-    const rowGap = 16;
-    const rowH = labelH + barH * 2 + barGap + rowGap;
-    const plotL = pad.left;
+    const rowGap = 14;
+    // Label column: about a third of the width, capped so the bars keep room.
+    const labelW = Math.round(Math.min(150, Math.max(104, width * 0.34)));
+    const labelGap = 10;
+    const maxChars = Math.max(8, Math.floor(labelW / (font * 0.5)));
+    const rows = cats.map((c) => balancedWrap(nameOf(c), maxChars));
+    const barsH = barH * 2 + barGap;
+    const rowHeights = rows.map(
+      (lines) => Math.max(barsH, lines.length * lineH) + rowGap,
+    );
+    const plotL = pad.left + labelW + labelGap;
     const plotW = width - plotL - pad.right;
     const zeroX = plotL + plotW / 2;
     const xFor = (v) => zeroX + (v / max) * (plotW / 2);
-    const height = pad.top + cats.length * rowH + pad.bottom;
+    const height = pad.top + rowHeights.reduce((a, b) => a + b, 0) + pad.bottom;
     const valueFontM = 11;
     const valueW = (v) => fmtDiff(v).length * valueFontM * 0.62 + 6;
 
@@ -217,7 +244,7 @@ export async function initDemographicsChart(root) {
       class: "demographics-svg demographics-svg-horizontal",
     });
 
-    // Legend, centred at the top.
+    // Legend, centred over the bars.
     const legend = el("g", { transform: `translate(${zeroX - 84}, 12)` });
     legend.appendChild(
       el("rect", {
@@ -255,7 +282,7 @@ export async function initDemographicsChart(root) {
     );
     svg.appendChild(legend);
 
-    // Axis captions: below target at the left end, above at the right.
+    // Axis captions: below target at the left end of the bars, above at the right.
     const caption = (text, x, anchor) => {
       if (!text) return;
       const words = text.split(" ");
@@ -311,35 +338,30 @@ export async function initDemographicsChart(root) {
       );
     }
 
+    let rowTop = pad.top;
     cats.forEach((c, i) => {
-      const rowTop = pad.top + i * rowH;
-      // Category name above the bars, full width, on a white strip so it
-      // reads over the gridlines.
-      const name = nameOf(c);
-      const nameW = name.length * font * 0.55 + 8;
-      svg.appendChild(
-        el("rect", {
-          x: plotL,
-          y: rowTop,
-          width: Math.min(nameW, plotW),
-          height: labelH - 2,
-          fill: COLORS.background || "#fff",
-        }),
-      );
-      svg.appendChild(
-        el(
-          "text",
-          {
-            x: plotL + 2,
-            y: rowTop + font,
-            fill: COLORS.text,
-            "font-size": font,
-            "font-weight": 600,
-          },
-          name,
-        ),
-      );
-      const barsTop = rowTop + labelH;
+      const lines = rows[i];
+      const rowH = rowHeights[i] - rowGap;
+      // Name in the left column, right-aligned against the bars and
+      // vertically centred on the row.
+      const textH = lines.length * lineH;
+      const textTop = rowTop + (rowH - textH) / 2;
+      const text = el("text", {
+        x: plotL - labelGap,
+        y: textTop + font - 1,
+        "text-anchor": "end",
+        fill: COLORS.text,
+        "font-size": font,
+        "font-weight": 600,
+      });
+      lines.forEach((ln, li) => {
+        text.appendChild(
+          el("tspan", { x: plotL - labelGap, dy: li === 0 ? 0 : lineH }, ln),
+        );
+      });
+      svg.appendChild(text);
+
+      const barsTop = rowTop + (rowH - barsH) / 2;
       const series = [
         {
           key: "phase1",
@@ -414,6 +436,7 @@ export async function initDemographicsChart(root) {
           ),
         );
       }
+      rowTop += rowHeights[i];
     });
 
     svgHost.replaceChildren(svg);
@@ -718,7 +741,15 @@ export async function initDemographicsChart(root) {
 
   select.disabled = false;
   select.addEventListener("change", () => render(select.value));
-  render(select.value in byId ? select.value : data.dimensions[0].id);
+  // Start from the template's dimension, not the select's current value:
+  // browsers restore a select's last choice on reload, which made the chart
+  // reopen on whatever was picked before (9/24).
+  const initial =
+    root.dataset.dimension in byId
+      ? root.dataset.dimension
+      : data.dimensions[0].id;
+  select.value = initial;
+  render(initial);
   buildDropdown(select, (id) => {
     select.value = id;
     render(id);

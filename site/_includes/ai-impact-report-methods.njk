@@ -55,7 +55,7 @@
       <div class="demographics-controls">
         <label class="demographics-select-label visually-hidden" for="demographics-select">{{ dc.pulldown_label }}</label>
         <span class="demographics-select-wrap">
-          <select id="demographics-select" class="demographics-select" data-demographics-select disabled>
+          <select id="demographics-select" class="demographics-select" data-demographics-select autocomplete="off" disabled>
             {% for d in dims %}
               <option value="{{ d[0] }}"{% if loop.first %} selected{% endif %}>{{ d[1] }}</option>
             {% endfor %}
