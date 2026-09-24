@@ -8,7 +8,7 @@
   --report-ink: #0f152f;
   --report-off-white: #fff4eb;
   --report-orange: #e79450;
-  --report-orange-light: #f0b07a;
+  --report-orange-light: #f7d0af; /* designer, 9/24 (was #f0b07a) */
   --report-link: #1a5a96;
   --report-rule: #d9dbe0;
   /* Top 3 connector and the quotes panel's hairline (design 9/24), opaque so
