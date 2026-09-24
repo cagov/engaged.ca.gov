@@ -185,11 +185,12 @@ export function initTopThemes(root) {
     const x0 = rtl ? cr.left - lr.left + 1 : cr.right - lr.left - 1;
     const y0 = tr.top + tr.height / 2 - lr.top; // level with the theme title
     const hr = heading.getBoundingClientRect();
-    // The hairline is the panel's inline-start border.
-    const x1 = rtl ? pr.right - lr.left - 1 : pr.left - lr.left + 1;
+    // The hairline is the panel's 1.5px inline-start border; the curve
+    // ends at its centre with a flat cap, so nothing shows past it.
+    const x1 = rtl ? pr.right - lr.left - 0.75 : pr.left - lr.left + 0.75;
     const y1 = hr.top + hr.height / 2 - lr.top; // points at "What people said"
     const mx = (x0 + x1) / 2;
-    connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`;
+    connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt"/>`;
   }
 
   window.addEventListener("resize", () => {
