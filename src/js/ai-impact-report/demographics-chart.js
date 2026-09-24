@@ -250,13 +250,17 @@ export async function initDemographicsChart(root) {
     const rowHeights = rows.map(
       (lines) => Math.max(barsH, lines.length * lineH) + rowGap,
     );
-    const plotL = pad.left + labelW + labelGap;
-    const plotW = width - plotL - pad.right;
+    // Reserve the widest value label on both sides of the plot so every
+    // value sits outside its bar end; no inside-the-bar fallback (9/24).
+    const valueFontM = 11;
+    const valueFont = `700 ${valueFontM}px ${getComputedStyle(svgHost).fontFamily}`;
+    const valueReserve =
+      Math.max(...values.map((v) => textWidth(fmtDiff(v), valueFont))) + 6;
+    const plotL = pad.left + labelW + labelGap + valueReserve;
+    const plotW = width - plotL - pad.right - valueReserve;
     const zeroX = plotL + plotW / 2;
     const xFor = (v) => zeroX + (v / max) * (plotW / 2);
     const height = pad.top + rowHeights.reduce((a, b) => a + b, 0) + pad.bottom;
-    const valueFontM = 11;
-    const valueW = (v) => fmtDiff(v).length * valueFontM * 0.62 + 6;
 
     const svg = el("svg", {
       viewBox: `0 0 ${width} ${height}`,
@@ -441,29 +445,16 @@ export async function initDemographicsChart(root) {
           ),
         );
         svg.appendChild(bar);
-        // Value label just past the bar end; if it would run off the edge,
-        // it sits inside the bar end instead.
+        // Value label just past the bar end.
         const outward = s.v >= 0 ? 1 : -1;
-        let lx = x1 + outward * 4;
-        let anchor = s.v >= 0 ? "start" : "end";
-        let fill = COLORS.text;
-        const overflows =
-          s.v >= 0
-            ? lx + valueW(s.v) > width - pad.right
-            : lx - valueW(s.v) < plotL;
-        if (overflows && w > valueW(s.v) + 6) {
-          lx = x1 - outward * 4;
-          anchor = s.v >= 0 ? "end" : "start";
-          fill = "#fff";
-        }
         svg.appendChild(
           el(
             "text",
             {
-              x: lx,
+              x: x1 + outward * 4,
               y: s.y + barH - 2,
-              "text-anchor": anchor,
-              fill,
+              "text-anchor": s.v >= 0 ? "start" : "end",
+              fill: COLORS.text,
               "font-size": valueFontM,
               "font-weight": 700,
             },
