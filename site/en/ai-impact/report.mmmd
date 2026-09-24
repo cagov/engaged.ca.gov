@@ -328,14 +328,6 @@ title: Use AI for jobs people don’t want to do or can’t do
 ----
 
 ----
-id: download_data
-translator_note: "Sits under Other supported ideas (writer, 9/23). The same block also appears on the methods page."
-button_text: Download the ideas
-----
-### Download the policy ideas
-
-You can download and read all the policies people proposed in the discussions. They are in a CSV file.
-----
 id: how_to_read_tiers
 ----
 ### How to read this ranking
