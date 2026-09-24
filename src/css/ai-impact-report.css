@@ -675,6 +675,12 @@ section#ai-report-hero {
   padding: 0.75rem 1rem 0.5rem;
   transition: border-color 0.2s ease;
 
+  /* The card is one big select button; a light orange border on hover says
+     so (9/24). The selected card keeps its full orange border. */
+  &:not(.is-selected):has(> .top-theme-select:hover) {
+    border-color: var(--report-orange-light);
+  }
+
   &.is-selected {
     border-color: var(--report-orange);
   }
@@ -887,6 +893,11 @@ section#ai-report-hero {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background: rgb(28 39 69 / 0.35);
+  }
 
   & .funnel-step-fill {
     position: absolute;
@@ -1108,6 +1119,12 @@ section#how-we-used-ai.style-body-text strong,
     color: var(--report-off-white);
     text-decoration: underline;
     text-underline-offset: 0.2em;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--report-orange-light);
+      text-decoration-thickness: 2px;
+    }
   }
 }
 
@@ -2200,6 +2217,11 @@ section#ai-report-hero.hero-light {
 
   & .hero-back-link a {
     color: var(--report-link);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--report-navy);
+    }
   }
 
   /* Chevron sits outside the link so only the words are underlined. */

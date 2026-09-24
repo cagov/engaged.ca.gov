@@ -109,6 +109,15 @@ a[data-appearance="button"], button:not(.nav-header), input[type="submit"] {
   border: 2px solid #E79450;
 }
 
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"]:focus,
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"]:hover {
+  background: #FBEADB; /* light orange fill */
+}
+
+:is(a[data-appearance="button"], button, input[type="submit"])[data-theme="off-white"]:active {
+  background: #F5D6B8;
+}
+
 .findings-link-icon {
   padding-left: 4.5rem !important;
   font-size: 18px !important;
