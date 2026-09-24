@@ -11,6 +11,9 @@
   --report-orange-light: #f0b07a;
   --report-link: #1a5a96;
   --report-rule: #d9dbe0;
+  /* Top 3 connector and the quotes panel's hairline (design 9/24), opaque so
+     the two can overlap without a darker seam. */
+  --report-connector: #191919;
   --report-body: #3b3b3b;
 }
 
@@ -745,7 +748,7 @@ section#ai-report-hero {
 
   @media (min-width: 992px) {
     border: 0;
-    border-inline-start: 1.5px solid var(--report-rule);
+    border-inline-start: 1.5px solid var(--report-connector);
     border-radius: 0;
     box-shadow: none;
     background: transparent;
@@ -769,7 +772,7 @@ section#ai-report-hero {
 .top-themes-connector {
   position: absolute;
   pointer-events: none;
-  color: var(--report-rule);
+  color: var(--report-connector);
   overflow: visible;
   z-index: -1;
 }
