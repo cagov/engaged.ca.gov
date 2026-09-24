@@ -260,6 +260,25 @@ export async function initDemographicsChart(root) {
     const plotW = width - plotL - pad.right - valueReserve;
     const zeroX = plotL + plotW / 2;
     const xFor = (v) => zeroX + (v / max) * (plotW / 2);
+
+    // Axis captions: each may use half of the bar area (plot plus the
+    // value-label reserves), measured in the real font. 12px when both fit
+    // in two lines, else 10px; a third line (very narrow screens) pushes
+    // the plot down rather than being dropped.
+    const captionAreaL = plotL - valueReserve;
+    const captionHalf = (width - pad.right - captionAreaL) / 2 - 2;
+    const captionLines = (text, size) => {
+      const font = `700 ${size}px ${getComputedStyle(svgHost).fontFamily}`;
+      return balancedWrap(text || "", captionHalf, (t) => textWidth(t, font));
+    };
+    const captionDepth = (size) =>
+      Math.max(
+        captionLines(labels.axisBelow, size).length,
+        captionLines(labels.axisAbove, size).length,
+      );
+    const captionFont = captionDepth(12) <= 2 ? 12 : 10;
+    if (captionDepth(captionFont) > 2) pad.top += captionFont + 2;
+
     const height = pad.top + rowHeights.reduce((a, b) => a + b, 0) + pad.bottom;
 
     const svg = el("svg", {
@@ -317,17 +336,9 @@ export async function initDemographicsChart(root) {
     // Captions are 12px when both fit in two lines within half the plot
     // (the usual case), 10px on very narrow screens. "On target" below
     // uses the same size (9/24).
-    const captionFit = (size) => {
-      const maxChars = Math.floor(plotW / 2 / (size * 0.52));
-      const l1 = wrapWords(labels.axisBelow || "", maxChars);
-      const l2 = wrapWords(labels.axisAbove || "", maxChars);
-      return Math.max(l1.length, l2.length) <= 2;
-    };
-    const captionFont = captionFit(12) ? 12 : 10;
     const caption = (text, x, anchor) => {
       if (!text) return;
-      const maxChars = Math.floor(plotW / 2 / (captionFont * 0.52));
-      const lines = wrapWords(text, maxChars).slice(0, 2);
+      const lines = captionLines(text, captionFont);
       const t = el("text", {
         x,
         y: 36,
@@ -343,7 +354,7 @@ export async function initDemographicsChart(root) {
       });
       svg.appendChild(t);
     };
-    caption(labels.axisBelow, plotL, "start");
+    caption(labels.axisBelow, captionAreaL, "start");
     caption(labels.axisAbove, width - pad.right, "end");
 
     // Gridlines and the zero line, with tick values along the bottom.
@@ -360,6 +371,9 @@ export async function initDemographicsChart(root) {
           "stroke-dasharray": tv === 0 ? "" : "3 4",
         }),
       );
+      // Only the ends and the zero are labelled; the half ticks keep their
+      // gridline but their numbers would crowd "On target" on a phone.
+      if (tv !== 0 && Math.abs(tv) !== max) continue;
       svg.appendChild(
         el(
           "text",
