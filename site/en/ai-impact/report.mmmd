@@ -36,11 +36,7 @@ example_quoted_text: "this is quoted text:"
 ----
 id: hero
 subtitle: Californians say how AI should be built, used, and governed
-translator_note: "button_1 scrolls to the first section; button_2 opens the methods page. Do not translate the hrefs."
-button_1_label: Read the report
-button_1_href: "#public-forum"
-button_2_label: Check our methods
-button_2_href: /ai-impact/report-details/
+translator_note: "Optional hero buttons (button_1_label/href, button_2_label/href) are omitted here; the jump bar under the hero covers them (9/24)."
 ----
 # Humans in the loop
 
@@ -216,79 +212,72 @@ nbr_ideas: 23
 id: tier_1_idea_1
 title: Make rules about how AI handles personal data
 ----
-- Set rules for gathering, handling, securing, and deleting
-- Enforce transparency and privacy protections
+
 ----
 id: tier_1_idea_2
 title: Set rules around how AI works
 ----
-- Incent companies to align with human standards
-- Set guardrails for AI overuse and addiction
+
 ----
 id: tier_1_idea_3
 title: Deter layoffs because of AI, reward firms that keep or add workers
 ----
-- Add penalties for firing workers for AI
-- Create incentives to keep or increase jobs
+
 ----
 id: tier_1_idea_4
 title: Make AI policymaking more open to the public
 ----
-- Give affected communities their say
-- Create citizen peer groups that include tech people
+
 ----
 id: tier_1_idea_5
 title: Make companies reskill or give career help to workers who lose their jobs to AI
 ----
-- Incent them to retrain workers instead of laying them off
-- Shift workers to underserved areas
+
 ----
 id: tier_1_idea_6
 title: Set rules for labeling AI use
 ----
-- Mark AI content with common words or watermarks
-- Penalize companies when they don’t disclose AI use
+
 ----
 id: tier_1_idea_7
 title: Restrict and tax AI companies’ profits
 ----
-- Close loopholes that let them avoid liability
-- Change tax laws so stock can’t be used to avoid taxation
+
 ----
 id: tier_1_idea_8
 title: Hold AI companies liable if they use the work of others without permission
 ----
-- Enforce copyrights, defend IP
+
 ----
 id: tier_1_idea_9
 title: Make people aware of how to use AI ethically
 ----
-- Make public service ads on benefits and risks
+
 ----
 id: tier_1_idea_10
 title: Improve AI education in schools
 ----
-- Let students work in sandboxes to scale positive effects
+
 ----
 id: tier_1_idea_11
 title: Allow people to opt out of AI and make that easier
 ----
-- Require consent, make opt-out the default
+
 ----
 id: tier_1_idea_12
 title: Support independent research on AI's effects
 ----
-- Fund studies on how AI use affects critical thinking
+
 ----
 id: tier_1_idea_13
 title: Limit what personal data AI systems can collect, and let users manage their data
 ----
-- Make consent text simple
+
 ----
 id: tier_1_idea_14
 title: Pay workers who lose jobs due to AI while they find new jobs
 ----
-- Universal basic income, or more unemployment pay if you lost your job to AI
+
 ----
 id: tier_1_idea_15
 title: Support AI training for workers
