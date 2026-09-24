@@ -41,8 +41,9 @@ export function initTopThemes(root) {
   let selected = 1;
 
   // ---- Examples fold: collapsed by default -------------------------------
-  // Selection leaves the folds alone (head designer, 9/24, reversing 9/23):
-  // only the "Show examples" control opens or closes a card's examples.
+  // Selecting a theme opens its examples and folds the others (9/23); the
+  // reader can still fold the selected card's examples by hand.
+  const setExamples = new Map(); // theme number -> (open) => void
   for (const toggle of root.querySelectorAll(".top-theme-examples-toggle")) {
     const body = document.getElementById(toggle.getAttribute("aria-controls"));
     const text = toggle.querySelector(".top-theme-examples-toggle-text");
@@ -54,17 +55,21 @@ export function initTopThemes(root) {
       drawConnector();
     };
     set(false);
+    if (li) setExamples.set(Number(li.dataset.theme), set);
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") !== "true";
-      set(open);
-      // Engaging with any part of a card selects its theme (feedback 9/22).
-      if (li) select(Number(li.dataset.theme));
+      // Engaging with any part of a card selects its theme (feedback 9/22),
+      // but a click on this control decides the fold, not the selection.
+      if (li) select(Number(li.dataset.theme), { examples: open });
     });
   }
 
   // ---- Selection -----------------------------------------------------------
-  function select(n) {
+  function select(n, opts = {}) {
     selected = n;
+    // Examples follow the selection unless the caller says otherwise.
+    const openExamples = opts.examples !== undefined ? opts.examples : true;
+    for (const [theme, set] of setExamples) set(theme === n && openExamples);
     for (const b of selects)
       b.setAttribute(
         "aria-pressed",
@@ -81,9 +86,16 @@ export function initTopThemes(root) {
     t.addEventListener("click", () => {
       const n = Number(t.dataset.conversationToggle);
       conversationOpen = !(conversationOpen && n === selected);
-      // On phones the conversation control also selects its theme.
-      select(n);
+      // On phones the conversation control also selects its theme. A new
+      // selection opens that card's examples like any other selection;
+      // re-tapping the current card leaves its examples fold alone.
+      select(n, { examples: n === selected ? examplesOpen(n) : true });
     });
+  }
+  function examplesOpen(n) {
+    const li = root.querySelector(`.top-theme[data-theme="${n}"]`);
+    const t = li?.querySelector(".top-theme-examples-toggle");
+    return !!t && t.getAttribute("aria-expanded") === "true";
   }
   function syncConversationToggles(narrow) {
     for (const t of convToggles) {
@@ -208,7 +220,7 @@ export function initTopThemes(root) {
     },
     { passive: true },
   );
-  // The first theme is pre-selected; its examples stay folded (9/24).
+  // The first theme is pre-selected with its examples open (9/24).
   select(1);
   colorAttributions();
   // Fonts and images can shift the layout after first paint.
