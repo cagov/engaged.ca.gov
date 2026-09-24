@@ -216,117 +216,133 @@ nbr_ideas: 23
 id: tier_1_idea_1
 title: Make rules about how AI handles personal data
 ----
-
+- Set rules for gathering, handling, securing, and deleting
+- Enforce transparency and privacy protections
 ----
 id: tier_1_idea_2
 title: Set rules around how AI works
 ----
-
+- Incent companies to align with human standards
+- Set guardrails for AI overuse and addiction
 ----
 id: tier_1_idea_3
 title: Deter layoffs because of AI, reward firms that keep or add workers
 ----
-
+- Add penalties for firing workers for AI
+- Create incentives to keep or increase jobs
 ----
 id: tier_1_idea_4
 title: Make AI policymaking more open to the public
 ----
-
+- Give affected communities their say
+- Create citizen peer groups that include tech people
 ----
 id: tier_1_idea_5
 title: Make companies reskill or give career help to workers who lose their jobs to AI
 ----
-
+- Incent them to retrain workers instead of laying them off
+- Shift workers to underserved areas
 ----
 id: tier_1_idea_6
 title: Set rules for labeling AI use
 ----
-
+- Mark AI content with common words or watermarks
+- Penalize companies when they don’t disclose AI use
 ----
 id: tier_1_idea_7
 title: Restrict and tax AI companies’ profits
 ----
-
+- Close loopholes that let them avoid liability
+- Change tax laws so stock can’t be used to avoid taxation
 ----
 id: tier_1_idea_8
 title: Hold AI companies liable if they use the work of others without permission
 ----
-
+- Enforce copyrights, defend IP
 ----
 id: tier_1_idea_9
 title: Make people aware of how to use AI ethically
 ----
-
+- Make public service ads on benefits and risks
 ----
 id: tier_1_idea_10
 title: Improve AI education in schools
 ----
-
+- Let students work in sandboxes to scale positive effects
 ----
 id: tier_1_idea_11
 title: Allow people to opt out of AI and make that easier
 ----
-
+- Require consent, make opt-out the default
 ----
 id: tier_1_idea_12
 title: Support independent research on AI's effects
 ----
-
+- Fund studies on how AI use affects critical thinking
 ----
 id: tier_1_idea_13
 title: Limit what personal data AI systems can collect, and let users manage their data
 ----
-
+- Make consent text simple
 ----
 id: tier_1_idea_14
 title: Pay workers who lose jobs due to AI while they find new jobs
 ----
-
+- Universal basic income, or more unemployment pay if you lost your job to AI
 ----
 id: tier_1_idea_15
 title: Support AI training for workers
 ----
-
+- *Placeholder:* Lorem ipsum dolor sit amet, consectetur adipiscing
+- *Placeholder:* Sed do eiusmod tempor incididunt ut labore
 ----
 id: tier_1_idea_16
 title: Use AI to improve how government works
 ----
-
+- *Placeholder:* Lorem ipsum dolor sit amet, consectetur adipiscing
+- *Placeholder:* Sed do eiusmod tempor incididunt ut labore
 ----
 id: tier_1_idea_17
 title: Keep humans in the loop as decision-makers, don't rely solely on AI
 ----
-
+- *Placeholder:* Lorem ipsum dolor sit amet, consectetur adipiscing
+- *Placeholder:* Sed do eiusmod tempor incididunt ut labore
 ----
 id: tier_1_idea_18
 title: Strengthen parental controls for AI use
 ----
-
+- *Placeholder:* Lorem ipsum dolor sit amet, consectetur adipiscing
+- *Placeholder:* Sed do eiusmod tempor incididunt ut labore
 ----
 id: tier_1_idea_19
 title: Fund programs for human connection and life outside of AI
 ----
-
+- *Placeholder:* Lorem ipsum dolor sit amet, consectetur adipiscing
+- *Placeholder:* Sed do eiusmod tempor incididunt ut labore
 ----
 id: tier_1_idea_20
 title: Make sure students don't use AI to avoid learning
 ----
-
+- *Placeholder:* Lorem ipsum dolor sit amet, consectetur adipiscing
+- *Placeholder:* Sed do eiusmod tempor incididunt ut labore
 ----
 id: tier_1_idea_21
 title: Keep companies from firing or punishing workers for not using AI
 ----
-
+- *Placeholder:* Lorem ipsum dolor sit amet, consectetur adipiscing
+- *Placeholder:* Sed do eiusmod tempor incididunt ut labore
 ----
 id: tier_1_idea_22
 title: Track and report on job loss due to AI
 ----
-
+- *Placeholder:* Lorem ipsum dolor sit amet, consectetur adipiscing
+- *Placeholder:* Sed do eiusmod tempor incididunt ut labore
 ----
 id: tier_1_idea_23
 title: Use AI for jobs people don’t want to do or can’t do
 ----
-
+- *Placeholder:* Lorem ipsum dolor sit amet, consectetur adipiscing
+- *Placeholder:* Sed do eiusmod tempor incididunt ut labore
 ----
 id: how_to_read_tiers
 ----
