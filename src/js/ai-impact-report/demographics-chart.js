@@ -236,16 +236,21 @@ export async function initDemographicsChart(root) {
     const barH = 12;
     const barGap = 3;
     const rowGap = 14;
-    // Label column: about a third of the width, capped so the bars keep room.
-    const labelW = Math.round(Math.min(150, Math.max(104, width * 0.36)));
+    // Label column: as wide as the longest label needs once wrapped, up to
+    // about a third of the width. Recomputed per dimension, so short sets
+    // (Age, Gender) hand the room back to the bars (9/24).
+    const labelCap = Math.round(Math.min(150, Math.max(104, width * 0.36)));
     const labelInset = 4; // keep the longest line off the SVG's left edge
     const labelGap = 10;
     const labelFont = `600 ${font}px ${getComputedStyle(svgHost).fontFamily}`;
+    const measure = (t) => textWidth(t, labelFont);
     const rows = cats.map((c) =>
-      balancedWrap(nameOf(c), labelW - labelInset, (t) =>
-        textWidth(t, labelFont),
-      ),
+      balancedWrap(nameOf(c), labelCap - labelInset, measure),
     );
+    const widest = Math.max(
+      ...rows.flatMap((lines) => lines.map((ln) => measure(ln))),
+    );
+    const labelW = Math.min(labelCap, Math.ceil(widest) + labelInset);
     const barsH = barH * 2 + barGap;
     const rowHeights = rows.map(
       (lines) => Math.max(barsH, lines.length * lineH) + rowGap,
