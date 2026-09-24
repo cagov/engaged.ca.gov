@@ -13,7 +13,7 @@
   --report-rule: #d9dbe0;
   /* Top 3 connector and the quotes panel's hairline (design 9/24), opaque so
      the two can overlap without a darker seam. */
-  --report-connector: #191919;
+  --report-connector: #e6e6e6; /* black at 10% on white, flattened */
   --report-body: #3b3b3b;
 }
 
