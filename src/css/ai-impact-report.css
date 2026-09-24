@@ -1,0 +1,2380 @@
+/* ai-impact-report.css
+ * Styles for /ai-impact/report/. Loaded only by mmmd-ai-impact-report.njk.
+ * Paddings, stat sidebar, and section rhythm mirror state-employees-report.css.
+ */
+
+:root {
+  --report-navy: #1c2745;
+  --report-ink: #0f152f;
+  --report-off-white: #fff4eb;
+  --report-orange: #e79450;
+  --report-orange-light: #f7d0af; /* designer, 9/24 (was #f0b07a) */
+  --report-link: #1a5a96;
+  --report-rule: #d9dbe0;
+  /* Top 3 connector and the quotes panel's hairline (design 9/24), opaque so
+     the two can overlap without a darker seam. */
+  --report-connector: #e6e6e6; /* black at 10% on white, flattened */
+  --report-body: #3b3b3b;
+}
+
+/* ---- Section rhythm ---- */
+
+#ai-report-hero ~ section {
+  padding: 3rem 0;
+}
+
+.section-off-white {
+  background: var(--report-off-white);
+}
+
+.section-light {
+  background: #f6f7fa;
+}
+
+.section-navy {
+  background: var(--report-navy);
+  color: var(--report-off-white);
+
+  & h2,
+  & h3,
+  & p,
+  & li,
+  & strong {
+    color: var(--report-off-white);
+  }
+
+  & a {
+    color: var(--report-off-white);
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+  }
+}
+
+.section-body {
+  line-height: 1.75;
+}
+
+.section-body h2,
+section#who-participated > .container > h2,
+section#power-of-discussion > .container > h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Hero ---- */
+
+section#ai-report-hero {
+  background: var(--report-navy);
+  color: var(--report-off-white);
+  /* Bottom is tighter now that the jump bar follows (design review 9/21). */
+  padding: 4rem 0 2.75rem;
+  overflow: hidden;
+
+  /* Whatever ends the copy column, no trailing margin doubles the padding. */
+  & .hero-content > :last-child {
+    margin-bottom: 0;
+  }
+
+  & h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  & .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+  }
+
+  & .hero-content > p {
+    font-size: 1.25rem;
+  }
+
+  & .hero-content > p.hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  & .hero-content em {
+    font-style: italic;
+  }
+}
+
+/* Jump bar under the hero (design 9/21). Muted links, white on hover/focus;
+   no "current" state since the bar scrolls away with the hero. */
+.hero-jump {
+  /* Hover tab colour: the background of the section right below the bar. */
+  --jump-tab: var(--report-off-white);
+  --jump-pad-y: 1.1rem;
+  background: var(--report-navy);
+  border-top: 1px solid rgb(255 244 235 / 0.3);
+
+  & .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start; /* label on the content's left edge (9/24) */
+    gap: 0 1.25rem;
+  }
+
+  & .hero-jump-label {
+    margin: 0;
+    padding: var(--jump-pad-y) 0;
+    color: var(--report-off-white);
+    font-size: 1.125rem;
+  }
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  & li {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+
+  /* Each link is a full-height cell. On hover (design 9/24) the text goes
+     bold and full-strength and a tab in the next section's colour rises
+     from the bar's bottom edge under the whole cell. */
+  & a {
+    position: relative;
+    display: block;
+    padding: var(--jump-pad-y) 1rem;
+    color: rgb(255 244 235 / 0.72);
+    /* cagov.core sets `a { text-decoration: underline !important }`. */
+    text-decoration: none !important;
+    font-weight: 400;
+    text-align: center;
+
+    /* Reserve the bold width so the row does not shift on hover. */
+    &::after {
+      content: attr(data-label);
+      display: block;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      font-weight: 700;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 8px;
+      background: var(--jump-tab);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.15s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--report-off-white);
+      font-weight: 700;
+
+      &::before {
+        transform: scaleY(1);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--report-orange);
+      outline-offset: -4px;
+      border-radius: 2px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    & a::before {
+      transition: none;
+    }
+  }
+
+  /* Phones: the links wrap under the label, all left-aligned; tighter cells. */
+  @media (max-width: 991px) {
+    --jump-pad-y: 0.75rem;
+
+    & .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    & .hero-jump-label {
+      padding-bottom: 0.25rem;
+    }
+
+    & ul {
+      justify-content: flex-start;
+      margin-inline-start: -0.75rem; /* first link's text sits on the label's edge */
+    }
+
+    & a {
+      padding: 0.5rem 0.75rem;
+      text-align: start; /* the cell is bold-width; keep the text on its left edge */
+    }
+  }
+}
+
+/* On the details page's peach hero the bar inverts: navy text on peach,
+   and its contents centre (design 9/23). */
+.hero-jump-light {
+  --jump-tab: #fff; /* the intro below it is white */
+  background: var(--report-off-white);
+  border-top: 1px solid rgb(28 39 69 / 0.25);
+
+  & .hero-jump-label {
+    color: var(--report-navy);
+  }
+
+  & a {
+    color: rgb(28 39 69 / 0.72);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--report-navy);
+    }
+
+    &:focus-visible {
+      outline-color: var(--report-link);
+    }
+  }
+}
+
+.hero-container {
+  position: relative;
+}
+
+/* Mirrors .participation-sidebar's right padding so the adornment's centre
+   lines up with the stat numbers in the sections below. */
+.hero-adornment-col {
+  padding-inline-end: calc(2rem + var(--bs-gutter-x, 1.5rem) / 2);
+  text-align: center;
+
+  @media (width <= 991px) {
+    display: none;
+  }
+}
+
+.ai-report-hero-adornment {
+  width: 247px;
+  max-width: 100%;
+}
+
+/* ---- Stat sidebar (mirrors state-employees-report.css) ---- */
+
+.participation-sidebar {
+  padding: 0 2rem 0 0;
+}
+
+.participation-stat {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  & img {
+    display: block;
+    margin: 0 auto 0.25rem;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.stat-number {
+  font-weight: 700;
+  font-size: 47px;
+  line-height: 1;
+  color: var(--report-ink);
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 719px) {
+    font-size: 33px;
+  }
+}
+
+.stat-label {
+  font-size: 23px;
+  color: #555;
+
+  @media (max-width: 719px) {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .participation-sidebar {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .participation-stat {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .participation-stat img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+  }
+}
+
+/* ---- Policy tiers ---- */
+
+.policy-tiers {
+  margin: 2rem 0 2.5rem;
+}
+
+.policy-tier {
+  position: relative;
+  border: 2px solid var(--report-orange);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1.25rem 1.25rem 1rem 1.25rem;
+  /* Box edge lines up with the body copy; the sticker spills into the margin. */
+  margin: 0 0 2rem;
+
+  @media (max-width: 575px) {
+    padding-top: 3.25rem;
+  }
+}
+
+.policy-tier-icon {
+  position: absolute;
+  top: -1.5rem;
+  inset-inline-start: -1.5rem;
+  width: 90px;
+  height: 90px;
+
+  @media (max-width: 575px) {
+    width: 64px;
+    height: 64px;
+    top: -1rem;
+    inset-inline-start: 1rem;
+  }
+}
+
+/* Sticker SVGs are 108x108 with the 90px circle offset inside; scale the box so the circle lands where the CSS circle would. */
+.policy-tier-sticker {
+  width: 108px;
+  height: 108px;
+  top: -2rem;
+  inset-inline-start: -2rem;
+
+  @media (max-width: 575px) {
+    width: 77px;
+    height: 77px;
+    top: -1.4rem;
+    inset-inline-start: 0.6rem;
+  }
+}
+
+.policy-tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 0 1rem;
+  padding-inline-start: 4.25rem;
+  border-bottom: 1px solid var(--report-rule);
+
+  @media (max-width: 575px) {
+    padding-inline-start: 0;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+.policy-tier-title {
+  font-size: 1.875rem; /* 30px, the page's H3 size */
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.style-body-text .policy-tier-subtitle {
+  font-style: italic;
+  color: var(--report-body);
+  font-size: 1.125rem;
+  margin: 0.25rem 0 0;
+}
+
+.style-body-text .policy-tier-count {
+  white-space: nowrap;
+  color: var(--report-body);
+  font-size: 1rem;
+  margin: 0.4rem 0 0;
+}
+
+.policy-ideas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.policy-idea {
+  border-bottom: 1px solid var(--report-rule);
+}
+
+.policy-idea-title {
+  margin: 0 !important;
+  font-size: 1.4375rem;
+  line-height: 1.4;
+}
+
+.policy-tiers button.policy-idea-toggle {
+  /* Reset global button styling (selector outranks layout.css `button:not(.nav-header)`). */
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  padding-inline: 1.25rem 0.25rem;
+  font-size: inherit; /* the h4 sets body size (23px) */
+  font-weight: 700;
+  color: var(--report-ink);
+  cursor: pointer;
+  text-align: start;
+
+  &:hover .policy-idea-title-text {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* Partial view: the next idea shows its top through a fade to white. */
+.policy-idea.policy-idea-teaser {
+  max-height: 2.9rem;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  mask-image: linear-gradient(to bottom, black 15%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, black 15%, transparent 85%);
+  border-bottom: 0;
+}
+
+/* The rule the teaser fades out returns above the Show control. */
+.policy-tier[data-state="partial"] .policy-tier-footer {
+  border-top: 1px solid var(--report-rule);
+}
+
+/* Ideas without examples: same rhythm as the buttons, no control. */
+.policy-idea-title-static {
+  padding: 0.9rem 0.25rem 0.9rem 1.25rem;
+  font-size: 1.4375rem;
+  font-weight: 700;
+  color: var(--report-ink);
+}
+
+.policy-idea-toggle-icon {
+  flex: 0 0 auto;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.3rem;
+  margin-inline-end: 0.5rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: var(--report-orange);
+    border-radius: 1px;
+    left: 0;
+    top: 8px;
+    width: 18px;
+    height: 2px;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+    transition: transform 0.15s ease;
+  }
+}
+
+.policy-idea-toggle[aria-expanded="true"] .policy-idea-toggle-icon::after {
+  transform: rotate(0deg);
+}
+
+.style-body-text .policy-idea-body {
+  padding: 0 3rem 1.25rem 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--report-body);
+
+  & p {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+  }
+
+  & ul {
+    margin: 0;
+    padding-inline-start: 1.5rem;
+    list-style: disc;
+  }
+
+  & li {
+    margin-bottom: 0.15rem;
+    font-size: 1.125rem;
+    line-height: 1.45;
+  }
+}
+
+.policy-idea-examples-label {
+  font-weight: 600;
+  color: var(--report-body);
+  margin-bottom: 0.3rem !important; /* tighter to the list (design review 9/21) */
+}
+
+.policy-tier-footer {
+  padding: 0.75rem 1.25rem 0;
+}
+
+.policy-tiers-footer {
+  border-top: 1px solid var(--report-rule);
+  padding-top: 1rem;
+
+  @media (max-width: 575px) {
+  }
+}
+
+/* Link-styled buttons: "Show 7 more", "Close", "Show all 27 ideas". */
+.policy-tiers button.text-link-button,
+.top-themes button.text-link-button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--report-link);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  & .chevron {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-3px) rotate(45deg);
+    transition: transform 0.15s ease;
+  }
+
+  &[aria-expanded="true"] .chevron {
+    transform: translateY(2px) rotate(225deg);
+  }
+}
+
+/* Hide the "Show/Close" controls until JS is ready so the no-JS page reads as a plain list. */
+.policy-tiers:not(.js-enabled) {
+  & .policy-tier-footer,
+  & .policy-tiers-footer {
+    display: none;
+  }
+
+  & .policy-idea-body {
+    display: block !important;
+  }
+}
+
+.how-to-read-tiers {
+  line-height: 1.75;
+
+  & h3 {
+    font-size: 1.4375rem;
+    margin: 0 0 1rem;
+  }
+}
+
+/* ---- Top 3 policy ideas: theme cards + "What people said" panel ---- */
+
+.top-themes {
+  position: relative;
+  border: 2px solid var(--report-orange);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1.25rem 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+
+  @media (max-width: 575px) {
+    padding-top: 3.25rem;
+  }
+}
+
+.top-themes-header {
+  border-bottom: 0;
+  padding-bottom: 0.5rem;
+}
+
+.top-themes-layout {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: minmax(300px, 0.62fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+    padding: 0.5rem 3rem 0.5rem 4.5rem;
+    isolation: isolate; /* keeps the connector's z-index: -1 inside the layout */
+  }
+}
+
+.top-themes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  /* When the quotes column is taller, keep the cards their natural height
+     instead of stretching each row to fill the column. */
+  align-content: start;
+}
+
+.top-theme {
+  background: var(--report-off-white);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 0.75rem 1rem 0.5rem;
+  transition: border-color 0.2s ease;
+
+  /* The card is one big select button; a light orange border on hover says
+     so (9/24). The selected card keeps its full orange border. */
+  &:not(.is-selected):has(> .top-theme-select:hover) {
+    border-color: var(--report-orange-light);
+  }
+
+  &.is-selected {
+    border-color: var(--report-orange);
+  }
+}
+
+.top-themes button.top-theme-select {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0.5rem 1rem;
+  cursor: pointer;
+  text-align: center;
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+.style-body-text .top-theme-title {
+  font-size: 1.4375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--report-navy);
+  margin: 0 !important;
+}
+
+.top-theme-examples {
+  border-top: 1px solid var(--report-rule);
+  padding: 0.75rem 0.25rem 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--report-body);
+
+  & p {
+    margin: 0 0 0.3rem;
+    font-size: 1.125rem;
+  }
+
+  & ul {
+    margin: 0;
+    padding-inline-start: 1.5rem;
+    list-style: disc;
+  }
+
+  & li {
+    margin-bottom: 0.15rem;
+    font-size: 1.125rem;
+    line-height: 1.45;
+  }
+}
+
+.top-themes button.top-theme-examples-toggle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid var(--report-rule);
+  padding: 0.6rem 0 0.25rem;
+  margin-top: 0.25rem;
+}
+
+/* Quotes panel (design 9/24): no card on desktop. A hairline runs down the
+   panel's own height, and the panel's top lines up with the selected card
+   (top-themes.js sets --panel-offset), so the quotes travel with the
+   selection. The trimmed quotes no longer need to scroll. */
+.top-themes-quotes.conversation-card {
+  position: relative;
+  padding-top: 1rem;
+
+  @media (min-width: 992px) {
+    border: 0;
+    /* Whole pixels: a 1.5px line antialiases across two rows and reads lighter. */
+    border-inline-start: 2px solid var(--report-connector);
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 0.35rem 0 0.75rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--panel-offset, 0px);
+  }
+}
+
+.style-body-text .top-themes-quotes-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--report-body);
+  margin: 0 0 0.75rem;
+}
+
+/* Same grey as the panel's hairline, and painted beneath the cards and the
+   hairline (negative z-index inside the layout's own stacking context) so
+   its ends can run into both without a visible seam (9/24). */
+.top-themes-connector {
+  position: absolute;
+  pointer-events: none;
+  color: var(--report-connector);
+  overflow: visible;
+  z-index: -1;
+}
+
+/* Phones (design 9/22): sticker centred above a centred header; the quotes
+   fold out inside the selected card as plain text, no inner card. */
+.top-themes.is-narrow {
+  /* White panel inside the peach card (Figma, 9/23). */
+  /* The quotes and the "Show/Hide conversation" control form one white
+     footer that runs edge to edge inside the card's border (9/24): negative
+     margins cancel the card's padding, and the bottom corners follow the
+     card's radius. */
+  & .top-themes-quotes {
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: #fff;
+    padding: 1rem 1rem 0.5rem;
+    margin: 0.5rem -1rem 0;
+  }
+
+  & .top-theme-conversation-toggle {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: calc(100% + 2rem);
+    margin: 0.5rem -1rem -0.5rem;
+    padding: 0.75rem 0;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+  }
+
+  & .top-themes-quotes:not([hidden]) + .top-theme-conversation-toggle {
+    margin-top: 0;
+  }
+
+  /* Phones: no box around the three cards; each card carries its own
+     border, orange while its conversation is open. */
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding-inline: 0;
+  padding-bottom: 0;
+
+  & .top-theme {
+    border-color: var(--report-rule);
+
+    &.is-selected {
+      border-color: var(--report-orange);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .top-themes {
+    padding-top: 3.5rem;
+    margin-top: 3.5rem;
+
+    & .policy-tier-sticker {
+      width: 77px;
+      height: 77px;
+      top: -2.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .top-themes-header {
+    padding-inline-start: 0;
+    text-align: center;
+
+    & .policy-tier-subtitle {
+      text-align: center;
+    }
+  }
+}
+
+/* No-JS: every card shows its examples; the toggle and connector hide. */
+.top-themes:not(.js-enabled) {
+  & .top-theme-examples-toggle,
+  & .top-theme-conversation-toggle,
+  & .top-themes-connector {
+    display: none;
+  }
+}
+
+/* ---- Who participated: step markers under the canvas ---- */
+
+.funnel-steps {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 1.25rem 0;
+
+  & li {
+    flex: 1 1 0;
+    max-width: 120px;
+  }
+}
+
+.participants-stepper button.funnel-step {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgb(28 39 69 / 0.15);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background: rgb(28 39 69 / 0.35);
+  }
+
+  & .funnel-step-fill {
+    position: absolute;
+    inset: 0;
+    background: var(--report-orange);
+    transform-origin: left center;
+    transform: scaleX(var(--progress, 0));
+
+    /* Farsi: the bar fills from the right, the way the page reads. */
+    [dir="rtl"] & {
+      transform-origin: right center;
+    }
+  }
+
+  &[aria-pressed="true"] {
+    background: rgb(28 39 69 / 0.25);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 3px;
+  }
+}
+
+.participants-stepper:not(.js-enabled) .funnel-steps {
+  display: none;
+}
+
+/* ---- Phase headers (Who participated / Power of the discussion) ---- */
+
+.phase-row {
+  --bs-gutter-y: 1rem;
+
+  & .participation-stat {
+    margin-bottom: 0;
+  }
+
+  /* Desktop: the stat block floats beside the copy instead of setting the
+     row's height, so the chart's gap is measured from the subtitle, not from
+     the taller stat (design review 9/18). It hangs over the chart's empty
+     top-right corner when it is taller than the copy. */
+  @media (min-width: 992px) {
+    position: relative;
+
+    & > .col-lg-4 {
+      position: absolute;
+      top: 0;
+      inset-inline-end: 0;
+    }
+  }
+}
+
+.phase-label {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--report-body);
+  margin: 0 0 0.25rem;
+}
+
+.phase-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0 0 1rem;
+  line-height: 1.25;
+}
+
+.phase-subtitle {
+  font-size: 1.375rem;
+  color: var(--report-body);
+  margin: 0 0 1rem;
+}
+
+/* When the stat wraps under the copy, tighten the stack between them. */
+@media (max-width: 991px) {
+  .phase-row {
+    --bs-gutter-y: 0;
+  }
+
+  .phase-row .phase-subtitle {
+    margin-bottom: 0.5rem;
+  }
+
+  .phase-row .participation-sidebar {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ---- Ideas we heard: two-phase word cloud ---- */
+
+.ideas-cloud {
+  position: relative;
+  margin: 1rem 0 2rem;
+  /* Reserve the wide field's aspect until the canvas is sized, so the page
+     does not jump when the chart appears. */
+  min-height: 0;
+
+  & canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1400 / 820;
+    /* Soft bezel (9/24): the outer ideas run past the frame and are
+       clipped, so fade the last ~1/4 inch on every side instead of a
+       hard cut. Two gradients, one per axis, intersected. */
+    --cloud-fade: 24px;
+    mask-image:
+      linear-gradient(
+        to right,
+        transparent,
+        #000 var(--cloud-fade),
+        #000 calc(100% - var(--cloud-fade)),
+        transparent
+      ),
+      linear-gradient(
+        to bottom,
+        transparent,
+        #000 var(--cloud-fade),
+        #000 calc(100% - var(--cloud-fade)),
+        transparent
+      );
+    mask-composite: intersect;
+  }
+
+  &.ideas-cloud-ready canvas {
+    aspect-ratio: auto;
+  }
+
+  @media (max-width: 699px) {
+    & canvas {
+      aspect-ratio: 800 / 1000;
+    }
+  }
+}
+
+/* ---- Small body copy (18px) where the design asks for it ---- */
+
+/* Same size as the Download the policy ideas copy above it (9/24). */
+.how-to-read-tiers p {
+  font-size: 1.4375rem;
+  line-height: 1.6;
+}
+
+.how-to-read-tiers h4 {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Details page: body copy at full size (23px); the download heading is a
+   23px bold line rather than a section title (design review 9/22). */
+.download-data {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--report-rule);
+}
+
+/* Outranks the section's 1.75rem h3 rule: a 23px bold line (design 9/22). */
+.download-data h3 {
+  font-size: 1.4375rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 1rem;
+}
+
+/* The state template sizes .style-body-text strong at 23px regardless of
+   its parent; inside 18px copy it should only be bold. */
+.style-body-text section#ranking-policy-ideas strong,
+.style-body-text section#how-we-used-ai strong,
+section#ranking-policy-ideas.style-body-text strong,
+section#how-we-used-ai.style-body-text strong,
+.how-to-read-tiers.style-body-text strong,
+.style-body-text .demographics-intro strong,
+.style-body-text .top-theme-examples strong,
+.style-body-text .policy-idea-body strong,
+.style-body-text #download-data strong {
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.how-to-read-tiers h4 {
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+/* ---- Buttons: hero pair, and "Check our methods" after What happens next ---- */
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin: 1.5rem 0 0;
+}
+
+.methods-button {
+  margin-top: 1.5rem;
+}
+
+.hero-back-link {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+
+  & a {
+    color: var(--report-off-white);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--report-orange-light);
+      text-decoration-thickness: 2px;
+    }
+  }
+}
+
+/* ---- Chart placeholders ---- */
+
+.chart-placeholder {
+  margin: 1rem 0 2.5rem;
+}
+
+.chart-placeholder-image {
+  display: block;
+  width: 100%;
+  max-width: 1220px;
+  height: auto;
+}
+
+.chart-placeholder-navy .chart-placeholder-image {
+  border-radius: 4px;
+}
+
+.chart-controls {
+  /* Matches the gap between the subtitle and the chart above (design review 9/18). */
+  margin-top: 1rem;
+}
+
+/* Segmented toggle (Region / Field of work). Static for now. */
+.segmented-toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 1.5px solid var(--report-navy);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.chart-controls button.segmented-toggle-option {
+  all: unset;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--report-link);
+  background: #fff;
+  cursor: default;
+
+  &[aria-pressed="true"] {
+    background: var(--report-navy);
+    color: #fff;
+  }
+
+  /* Hover on the option that can be chosen (design 9/24): pale blue-grey
+     with navy text. The pressed option and the no-JS disabled state stay. */
+  &:not(:disabled):not([aria-pressed="true"]) {
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background: #d9e1eb;
+      color: var(--report-navy);
+    }
+  }
+
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+/* Legends are rebuilt on toggle. Their height is reserved at runtime, and the
+   chart blocks opt out of scroll anchoring so a rebuild cannot hop the page. */
+.participants-stepper,
+.conversations,
+.demographics-chart {
+  overflow-anchor: none;
+}
+
+.region-legend[data-funnel-legend],
+.region-legend[data-ring-legend] {
+  /* min-height is set at runtime to the taller of the two legends. */
+  align-content: start;
+  /* Wraps sooner than the full container (design review 9/22). */
+  max-width: 1000px;
+}
+
+.style-body-text .chart-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--report-ink);
+}
+
+.style-body-text .chart-legend li.chart-legend-item,
+.chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.125rem;
+}
+
+.chart-legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--swatch, #999);
+}
+
+/* Region colors read from the Figma export. Approximate until confirmed. */
+.region-legend [data-region="1"] {
+  --swatch: #4cc3a0;
+}
+.region-legend [data-region="2"] {
+  --swatch: #4a90d9;
+}
+.region-legend [data-region="3"] {
+  --swatch: #b57bdb;
+}
+.region-legend [data-region="4"] {
+  --swatch: #f0932b;
+}
+.region-legend [data-region="5"] {
+  --swatch: #7b3fa0;
+}
+.region-legend [data-region="6"] {
+  --swatch: #e8503a;
+}
+.region-legend [data-region="7"] {
+  --swatch: #6e8b2a;
+}
+.region-legend [data-region="8"] {
+  --swatch: #a8d8f0;
+}
+.region-legend [data-region="9"] {
+  --swatch: #bdbdbd;
+}
+
+/* ---- Download the comments (inside the discussion band) ---- */
+
+#download-data {
+  margin-top: 2rem;
+
+  & h3 {
+    font-size: 1.4375rem;
+    margin: 0 0 1rem;
+  }
+}
+
+.download-button-div {
+  margin-top: 1.5rem;
+}
+
+/* Outranks layout.css's [data-theme="orange"] background shorthand so the icon survives. */
+.download-button-div a[data-appearance="button"][data-theme="orange"] {
+  padding-inline-end: 2.6rem;
+  background: var(--report-orange) url("/public/images/icon-download.svg")
+    no-repeat right 0.8rem center;
+
+  [dir="rtl"] & {
+    background-position: left 0.8rem center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #e4863a;
+  }
+}
+
+/* ---- Sign up: left-aligned, mirrors the efficiency report ---- */
+
+section#stay-informed {
+  position: relative;
+  overflow: hidden;
+  /* Compact band (Figma 9/23): about 3rem above and below the copy. */
+  padding-block: 3rem;
+
+  /* Copy stays left-aligned; the column itself is centred in the band. */
+  & .row {
+    justify-content: center;
+  }
+
+  & h2 {
+    color: var(--report-off-white);
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+  }
+
+  & p {
+    margin-bottom: 1rem;
+  }
+
+  & .signup-engaged-section a[data-appearance="button"] {
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  /* Adornments (Figma 9/23): the left cluster sits in the bottom-left
+     corner, mostly inside the band and cropped by its bottom edge; the
+     right cluster in the top-right, cropped by the top edge. */
+  & .signup-cluster-1,
+  & .signup-cluster-2 {
+    position: absolute;
+    inline-size: clamp(190px, 21vw, 290px);
+    pointer-events: none;
+  }
+
+  & .signup-cluster-1 {
+    bottom: clamp(-110px, -8vw, -60px);
+    left: 0;
+  }
+
+  & .signup-cluster-2 {
+    top: clamp(-100px, -7vw, -50px);
+    right: 0.5vw;
+  }
+
+  @media (max-width: 991px) {
+    & .signup-cluster-1,
+    & .signup-cluster-2 {
+      display: none;
+    }
+  }
+}
+
+/* ---- Word cloud placeholder, chart controls, methodology ---- */
+
+/* Empty placeholder box for visualizations that have no design yet (word cloud). */
+.chart-placeholder-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  border: 2px dashed var(--report-rule);
+  border-radius: 8px;
+  background: #f6f7fa;
+  color: #595959;
+  font-style: italic;
+
+  & .chart-placeholder-empty-label {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.chart-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.chart-controls-row .segmented-toggle {
+  margin-bottom: 0;
+}
+
+.participant-legend .swatch-participant {
+  background: var(--report-navy);
+}
+
+.participant-legend .swatch-facilitator {
+  background: #fff;
+  border: 3px solid var(--report-navy);
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+}
+
+/* Navy variant lives on the details page; the report's summary section is white. */
+section#balancing-groups {
+  & h2 {
+    color: var(--report-off-white);
+    margin-bottom: 2rem;
+  }
+
+  & h3 {
+    font-size: 1.75rem;
+    margin: 0 0 1.25rem;
+  }
+
+  & .process-links {
+    margin-top: 2rem;
+  }
+
+  & .process-links h4 {
+    color: var(--report-off-white);
+    font-size: 1.4375rem;
+    margin: 0 0 1rem !important;
+  }
+}
+
+/* Demographics chart: pull-down, SVG, and the per-category source note. */
+.demographics-chart {
+  margin: 1rem 0 2.5rem;
+}
+
+.demographics-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.style-body-text .demographics-select-label {
+  font-size: 1rem;
+  color: var(--report-off-white);
+}
+
+.demographics-select-wrap {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0.9rem;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--report-off-white);
+    border-bottom: 2px solid var(--report-off-white);
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+  }
+}
+
+section#balancing-groups select.demographics-select {
+  appearance: none;
+  min-width: 15rem;
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
+  border: 1.5px solid rgb(255 244 235 / 0.5);
+  border-radius: 8px;
+  background: rgb(255 244 235 / 0.08);
+  color: var(--report-off-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--report-off-white);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-orange);
+    outline-offset: 2px;
+  }
+
+  & option {
+    color: var(--report-ink);
+    background: #fff;
+  }
+}
+
+.style-body-text .demographics-chart-title {
+  font-size: 1.4375rem;
+  font-weight: 700;
+  color: var(--report-off-white);
+  margin: 0.5rem 0 1.5rem; /* room between the title and the legend (9/24) */
+}
+
+/* The chart is laid out in left-to-right coordinates (text-anchor start/end
+   would swap sides under dir="rtl"), so it keeps its own direction. Labels
+   inside it still render right-to-left as text. */
+.demographics-svg-host {
+  direction: ltr;
+  width: 100%;
+}
+
+/* With JS the static snapshot never shows; a blank box of the chart's
+   height holds the space until the data arrives. */
+.report-js .demographics-svg-host > img {
+  display: none;
+}
+
+.report-js .demographics-chart:not(.js-enabled) .demographics-svg-host {
+  min-height: 460px;
+}
+
+.demographics-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: inherit;
+}
+
+/* Phone layout is drawn at CSS pixel size; do not scale it. */
+.demographics-svg-horizontal {
+  width: 100%;
+  height: auto;
+}
+
+.demographics-bar {
+  transition: opacity 0.15s;
+}
+
+/* Desktop hover (9/24): the pointed-at category's label goes bold and its
+   bars stay full strength while the rest dim. Set by demographics-chart.js
+   on both the bars and the label, so either can be the hover target. */
+.demographics-bar.is-dim {
+  opacity: 0.35;
+}
+
+.demographics-cat-label {
+  transition: opacity 0.15s;
+  cursor: default;
+}
+
+.demographics-cat-label.is-hot {
+  font-weight: 700;
+  fill: var(--report-ink);
+}
+
+.demographics-cat-label.is-dim {
+  opacity: 0.6;
+}
+
+/* The one place small text is intended: the per-category source note under the bar chart. */
+.style-body-text .demographics-source {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  & .demographics-source-label {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0 0.25rem;
+  }
+
+  & ul {
+    margin: 0;
+    padding-inline-start: 1.25rem;
+  }
+
+  & li {
+    font-size: 1rem;
+  }
+}
+
+section#ranking-policy-ideas,
+section#how-we-used-ai {
+  & h3 {
+    font-size: 1.75rem;
+    margin: 0 0 1.25rem;
+  }
+
+  & h4 {
+    font-size: 1.4375rem;
+    margin: 1.5rem 0 1rem !important;
+  }
+}
+
+section#balancing-groups .demographics-intro {
+  margin-bottom: 1.5rem;
+
+  & ul {
+    margin-bottom: 0;
+  }
+}
+
+.demographics-title {
+  color: var(--report-off-white);
+  font-size: 1.4375rem;
+  margin: 0 0 1rem !important;
+}
+
+/* ---- Who participated: animated participant funnel ---- */
+
+section#who-participated h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* The stat block sits at the frame's far right, level with the section
+   title rather than with the step copy (design 9/22). The stepper and
+   phase row give up their positioning so the container is the anchor. */
+@media (min-width: 992px) {
+  section#who-participated > .container {
+    position: relative;
+  }
+
+  section#who-participated .participants-stepper,
+  section#who-participated .phase-row {
+    position: static;
+  }
+
+  section#who-participated .phase-row > .col-lg-4 {
+    top: 0;
+    inset-inline-end: calc(var(--bs-gutter-x, 1.5rem) / 2);
+    width: auto;
+    margin-top: 0; /* no row gutter: level with the h2 */
+    padding-inline-end: 0; /* flush with the h2's edge, mirrored */
+  }
+
+  section#who-participated .participation-sidebar {
+    padding-inline-end: 0;
+  }
+}
+
+.participants-stepper {
+  position: relative;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 6px;
+    border-radius: 8px;
+  }
+}
+
+/* Stage copy blocks stack in the same grid cell so the header height does
+   not jump as they crossfade. */
+.funnel-ready .participants-steps {
+  display: grid;
+
+  & > .participants-step {
+    grid-area: 1 / 1;
+    transition: opacity 120ms linear;
+  }
+}
+
+.funnel-static-fallback {
+  margin: 1rem 0;
+}
+
+/* With JS the static snapshots never show: the page is flagged .report-js
+   before first paint, and the (still blank) canvas holds the space until
+   the data arrives. Without JS the four snapshots stack as before. */
+.funnel-ready .funnel-static-fallback,
+.report-js .funnel-static-fallback {
+  display: none;
+}
+
+.report-js .participants-stepper:not(.funnel-ready) {
+  & .participants-steps {
+    display: grid;
+
+    & > .participants-step {
+      grid-area: 1 / 1;
+    }
+
+    /* Only the first stage's copy while loading; the rest wait for JS. */
+    & > .participants-step:not([data-step="1"]) {
+      visibility: hidden;
+    }
+  }
+}
+
+.funnel-stage {
+  display: none;
+  width: 100%;
+  max-width: 1040px;
+  /* Centred in the section (design 9/22). */
+  margin: 0 auto;
+
+  & canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.funnel-ready .funnel-stage,
+.report-js .funnel-stage {
+  display: block;
+  position: relative;
+}
+
+/* Play/pause overlay: a translucent grey disc with white glyphs, centred on
+   the canvas. Hidden until the pointer moves over the frame (or a tap on
+   touch screens), then fades after a few idle seconds or when the pointer
+   leaves. Stays visible only while it has keyboard focus. */
+.participants-stepper button.funnel-play {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  border-radius: 50%;
+  background: rgb(70 70 70 / 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    background-color 0.2s ease;
+
+  & svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+  }
+
+  /* One glyph at a time: pause while playing, play while paused. */
+  & .funnel-play-icon-play {
+    display: none;
+  }
+
+  &[aria-pressed="true"] .funnel-play-icon-play {
+    display: block;
+  }
+
+  &[aria-pressed="true"] .funnel-play-icon-pause {
+    display: none;
+  }
+
+  &:hover {
+    background: rgb(50 50 50 / 0.75);
+  }
+
+  &:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px var(--report-link);
+  }
+
+  @media (max-width: 575px) {
+    width: 52px;
+    height: 52px;
+    margin: -26px 0 0 -26px;
+
+    & svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+/* Visible while the pointer is active over the frame or the button has
+   keyboard focus; otherwise it fades, paused or not, so it rarely sits
+   over the ring's centre caption (9/24). */
+.funnel-stage.is-controls-visible .funnel-play,
+.participants-stepper button.funnel-play:focus-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .participants-stepper button.funnel-play {
+    transition: none;
+  }
+}
+
+.funnel-center-copy {
+  text-align: center;
+  margin: 0.25rem 0 1rem;
+}
+
+.style-body-text .funnel-center-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0 0 0.15rem;
+}
+
+.style-body-text .funnel-center-hint {
+  font-size: 0.9375rem;
+  color: var(--report-body);
+  margin: 0;
+}
+
+/* Small orange-bordered square arrows in the page margins, vertically
+   centered on the stepper. Hidden at either end. */
+section#who-participated button.stepper-arrow,
+.ideas-cloud button.stepper-arrow {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 2px solid var(--report-orange);
+  color: var(--report-navy);
+  background: #fff;
+  cursor: pointer;
+  z-index: 1;
+
+  &:hover {
+    background: var(--report-orange);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+section#who-participated button.stepper-arrow-prev,
+.ideas-cloud button.stepper-arrow-prev {
+  left: -3.5rem;
+}
+
+section#who-participated button.stepper-arrow-next,
+.ideas-cloud button.stepper-arrow-next {
+  right: -3.5rem;
+}
+
+@media (max-width: 1259px) {
+  section#who-participated button.stepper-arrow-prev,
+  .ideas-cloud button.stepper-arrow-prev {
+    left: 0.5rem;
+  }
+
+  section#who-participated button.stepper-arrow-next,
+  .ideas-cloud button.stepper-arrow-next {
+    right: 0.5rem;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* No-JS: stack every step with its snapshot and hide the arrows. */
+.participants-stepper:not(.js-enabled) {
+  & .stepper-arrow {
+    display: none;
+  }
+
+  & .participants-step {
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--report-rule);
+
+    &:first-of-type {
+      border-top: 0;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+}
+
+/* ---- The power of discussion: conversations ring + quote cards ---- */
+
+.conversations {
+  margin: 0.5rem 0 2rem;
+}
+
+.conversations-layout {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+
+  @media (min-width: 992px) {
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 2.5rem;
+    /* Panel matches the ring's height; quotes scroll inside the card. */
+    align-items: stretch;
+  }
+}
+
+.conversations-ring {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+
+  & canvas {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+    &:focus-visible {
+      outline: 2px solid var(--report-link);
+      outline-offset: 4px;
+    }
+  }
+}
+
+.ring-ready .conversations-fallback {
+  display: none;
+}
+
+/* Desktop: live canvas. Mobile: the ring is replaced by the stacked cards. */
+@media (min-width: 992px) {
+  .ring-ready .conversations-ring canvas {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .ring-ready .conversations-ring {
+    display: none;
+  }
+}
+
+.visually-hidden-list {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+  list-style: none;
+
+  &:focus-within {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0.75rem 0 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+section#power-of-discussion button.conversations-select-button {
+  all: unset;
+  padding: 0.25rem 0.75rem;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 1px var(--report-rule);
+  font-size: 0.875rem;
+  color: var(--report-body);
+  cursor: pointer;
+
+  &[aria-pressed="true"] {
+    background: var(--report-navy);
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+  }
+}
+
+.conversations-panel {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 992px) {
+    min-height: 0;
+
+    /* Cards share one cell so the panel height does not jump between selections. */
+    & > .conversation-card {
+      grid-area: 1 / 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      max-height: 620px;
+    }
+
+    & .conversation-quotes-scroll {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      padding-inline-end: 0.75rem;
+      scrollbar-gutter: stable;
+
+      &:focus-visible {
+        outline: 2px solid var(--report-link);
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.conversation-card {
+  background: #fff;
+  border: 2px solid var(--report-orange);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem 1.5rem;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.06);
+}
+
+.conversation-card-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--report-rule);
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr auto;
+
+    & .conversation-thumb {
+      display: none;
+    }
+  }
+}
+
+.conversation-thumb {
+  grid-row: 1 / span 2;
+  width: 96px;
+  height: 96px;
+
+  & svg {
+    display: block;
+  }
+
+  & circle[data-dot] {
+    transition: fill 0.4s ease;
+  }
+}
+
+.style-body-text .conversation-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 0 !important;
+}
+
+.style-body-text .conversation-meta {
+  font-size: 0.9375rem;
+  color: var(--report-body);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.conversation-quotes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.conversation-quote {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  column-gap: 0.75rem;
+  align-items: start;
+
+  /* Reset the state template's blockquote treatment (teal quote marks, left rule, dash). */
+  & blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    quotes: none;
+
+    &::before,
+    &::after,
+    & p::before,
+    & p::after,
+    & footer::before {
+      content: none;
+      display: none;
+    }
+  }
+
+  /* Farsi: the balloon starts on the right, so its tail flips to face the text. */
+  [dir="rtl"] & .conversation-quote-icon {
+    transform: scaleX(-1);
+  }
+
+  /* Even quotes mirror: balloon on the end side, text and attribution end-aligned. */
+  &:nth-child(even) {
+    grid-template-columns: 1fr 34px;
+
+    & .conversation-quote-icon {
+      order: 2;
+      transform: scaleX(-1);
+    }
+
+    [dir="rtl"] & .conversation-quote-icon {
+      transform: none;
+    }
+
+    & p {
+      text-align: end;
+    }
+
+    /* Attribution right-aligned under the quote: dot, then the name as its
+       own block so wrapped lines never run under the dot. */
+    & .conversation-attribution {
+      justify-content: flex-end;
+      text-align: end;
+    }
+  }
+}
+
+.conversation-quote-icon {
+  width: 34px;
+  height: 34px;
+  margin-top: 0.15rem;
+}
+
+.style-body-text .conversation-quote p {
+  font-size: 1rem;
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--report-body);
+  margin: 0;
+}
+
+.style-body-text .conversation-attribution {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  /* Sits 3px under the quote (design review 9/21); the state template's
+     blockquote footer gives it a 16px top margin and bold otherwise. */
+  margin: 0;
+  padding-top: 3px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--report-ink);
+}
+
+/* Name is its own block so wrapped lines stay clear of the dot. */
+.conversation-attribution-text {
+  display: inline-block;
+  max-width: 100%;
+  text-wrap: balance;
+}
+
+/* Mirrored quotes: greedy wrapping (first line as long as possible) and the
+   block shrunk to its longest line by JS, so the dot hugs the first word. */
+.conversation-quote:nth-child(even) .conversation-attribution-text {
+  text-wrap: wrap;
+}
+
+.conversation-attribution-dot {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  margin-top: 0.45rem;
+  border-radius: 50%;
+  background: var(--report-rule);
+  transition: background-color 0.4s ease;
+}
+
+.conversation-outcome {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--report-rule);
+
+  & .conversation-outcome-label {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--report-ink);
+    margin: 0 0 0.25rem;
+  }
+
+  & .conversation-outcome-text {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--report-ink);
+    margin: 0;
+  }
+}
+
+/* ---- Details page light theme (design 9/21): peach hero, white methods ---- */
+
+section#ai-report-hero.hero-light {
+  background: var(--report-off-white);
+  color: var(--report-body);
+
+  & h1,
+  & .hero-subtitle {
+    color: var(--report-navy);
+  }
+
+  & .hero-content > p {
+    color: var(--report-body);
+  }
+
+  & .hero-back-link a {
+    color: var(--report-link);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--report-navy);
+    }
+  }
+
+  /* Chevron sits outside the link so only the words are underlined. */
+  & .hero-back-link::before {
+    content: "\2039\00a0"; /* single left angle quote */
+    color: var(--report-link);
+  }
+
+  [dir="rtl"] & .hero-back-link::before {
+    content: "\203a\00a0"; /* points back the way the page reads */
+  }
+
+  /* The subtitle's italic title renders in Noto Sans Display bold italic;
+     the templates load that face (the site-wide request has only italic
+     400 and 900, which made the italics fall back to 900). */
+  & .hero-content > p.hero-subtitle em {
+    font-weight: 700;
+    font-style: italic;
+  }
+}
+
+section#balancing-groups.methods-light {
+  & h2,
+  & h3,
+  & .process-links h4,
+  & .demographics-title,
+  & .demographics-chart-title {
+    color: var(--report-navy);
+  }
+
+  & p,
+  & li,
+  & .demographics-source,
+  & .demographics-source-label,
+  & .demographics-source li {
+    color: var(--report-body);
+  }
+
+  & a {
+    color: var(--report-link);
+  }
+
+  & select.demographics-select {
+    background: var(--report-navy);
+    border-color: var(--report-navy);
+    color: #fff;
+
+    &:hover {
+      border-color: var(--report-ink);
+      background: var(--report-ink);
+    }
+
+    &:focus-visible {
+      outline-color: var(--report-link);
+    }
+  }
+}
+
+/* ---- Demographics drop-down (Figma, 9/23): white field, navy hairline,
+   chevron flips when open, alphabetical list with the current item bold ---- */
+
+.demo-dropdown-host::after {
+  display: none; /* the old CSS chevron; the button draws its own */
+}
+
+.demo-dropdown {
+  position: relative;
+  display: inline-block;
+  min-width: 15rem;
+  font-size: 1.125rem;
+  z-index: 2;
+}
+
+.demo-dropdown button.demo-dropdown-button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--report-navy);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--report-navy);
+  font-size: 1.125rem;
+  font-weight: 600; /* a loaded Noto Sans Display face; 500 is not */
+  cursor: pointer;
+
+  &:hover {
+    background: #f6f7fa;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+  }
+}
+
+.demo-dropdown-chevron {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  margin-top: -4px;
+  border-right: 2px solid var(--report-navy);
+  border-bottom: 2px solid var(--report-navy);
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.demo-dropdown.is-open .demo-dropdown-chevron {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+.demo-dropdown-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1.5px solid var(--report-navy);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgb(28 39 69 / 0.15);
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+  }
+}
+
+.demo-dropdown-option {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  color: var(--report-navy);
+  font-size: 1.125rem;
+  cursor: pointer;
+
+  &:nth-child(odd) {
+    background: #f6f7fa;
+  }
+
+  &:hover {
+    background: #e9edf5;
+  }
+
+  &.is-selected {
+    font-weight: 700;
+    background: #e3e9f2;
+  }
+}
+
+/* Outrank the section's body-text list rules. */
+.style-body-text .demo-dropdown-list li.demo-dropdown-option {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+/* Details page intro paragraph, between the jump bar and the first section. */
+.details-intro {
+  padding: 2.5rem 0 0.5rem !important;
+
+  & p:last-child {
+    margin-bottom: 0;
+  }
+}

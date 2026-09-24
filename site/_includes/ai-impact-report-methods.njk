@@ -1,0 +1,127 @@
+{# The methods sections (sortition + demographics chart, ranking, how we used AI).
+   Lives on /ai-impact/report-details/; the main report links to it from a summary. #}
+<section id="balancing-groups" class="style-body-text methods-light">
+  <div class="container">
+    <h2>{{ modules.balancing_groups.title }}</h2>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.balancing_groups.content | safe }}
+        </div>
+      </div>
+    </div>
+
+    {# Demographics chart: Phase 1 / Phase 2 vs statewide target, one dimension at a time.
+       Drawn by demographics-chart.js from /public/data/ai-report-demographics.json. #}
+    {% set dc = modules.demographics_chart %}
+    {% set ds = modules.demographics_sources %}
+    {# Category names as they appear in the data (key_N, English) mapped to their translations (label_N). #}
+    {% set cl = modules.category_labels %}
+    {% set category_labels_json %}{ {% for i in range(1, (cl.nbr_labels | default(0)) + 1) %}{{ cl["key_" + i] | dump | safe }}: {{ cl["label_" + i] | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %} }{% endset %}
+    {# Order per design 9/24: Region first, then the rest in reverse alphabetical order. #}
+    {% set dims = [
+      ["region", dc.dim_region, ds.source_region],
+      ["race", dc.dim_race, ds.source_race],
+      ["gender", dc.dim_gender, ds.source_gender],
+      ["field", dc.dim_field, ds.source_field_of_work],
+      ["age", dc.dim_age, ds.source_age]
+    ] %}
+    {# AI sentiment is in the data (id "ai") but not offered: no source note and unclear
+       whether it was a sortition criterion. Add ["ai", dc.dim_ai, ds.source_ai] to restore. #}
+    <div id="demographics-chart" class="demographics-chart"
+         data-demographics-chart data-theme="light"
+         data-src="{{ "/public/data/ai-report-demographics.json" | assetVersion }}"
+         data-dimension="region"
+         data-phase1-label="{{ dc.phase1_label }}"
+         data-phase2-label="{{ dc.phase2_label }}"
+         data-on-target-label="{{ dc.on_target_label }}"
+         data-axis-above-label="{{ dc.axis_above_label }}"
+         data-axis-below-label="{{ dc.axis_below_label }}"
+         data-table-caption="{{ dc.table_caption }}"
+         data-chart-aria-label="{{ dc.chart_aria_label }}"
+         data-bar-title="{{ dc.bar_title }}"
+         data-table-target-header="{{ dc.table_target_header }}"
+         data-table-points-header="{{ dc.table_points_header }}"
+         data-category-labels='{{ category_labels_json | replace("'", "&#39;") | safe }}'>
+      <div class="row">
+        <div class="col-lg-8">
+          <h3 class="demographics-title">{{ dc.title }}</h3>
+          <div class="section-body demographics-intro">
+            {{ dc.content | safe }}
+          </div>
+        </div>
+      </div>
+
+      <div class="demographics-controls">
+        <label class="demographics-select-label visually-hidden" for="demographics-select">{{ dc.pulldown_label }}</label>
+        <span class="demographics-select-wrap">
+          <select id="demographics-select" class="demographics-select" data-demographics-select autocomplete="off" disabled>
+            {% for d in dims %}
+              <option value="{{ d[0] }}"{% if loop.first %} selected{% endif %}>{{ d[1] }}</option>
+            {% endfor %}
+          </select>
+        </span>
+      </div>
+
+      <h4 class="demographics-chart-title">{{ dc.chart_title }}</h4>
+      <div class="demographics-svg-host" data-demographics-svg>
+        {# No-JS fallback: the static Region snapshot. #}
+        <img class="chart-placeholder-image" src="/public/images/ai-report-sortition-chart-placeholder.png" alt="{{ dc.chart_alt }}" />
+      </div>
+      <div data-demographics-table></div>
+
+      {% for d in dims %}
+        {% if d[2] %}
+          <div class="demographics-source" data-source-for="{{ d[0] }}"{% if not loop.first %} hidden{% endif %}>
+            <p class="demographics-source-label">{{ ds.label }}</p>
+            <ul>
+              <li>{{ d[2] | markdownInline | safe }}</li>
+            </ul>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body process-links">
+          {{ modules.process_links.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ranking-policy-ideas" class="style-body-text section-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.ranking_policy_ideas.content | safe }}
+        </div>
+        {# Download the policy ideas lives inside this section (writer, 9/23). #}
+        <div id="download-data" class="download-data">
+          <div class="section-body">
+            {{ modules.download_data.content | safe }}
+          </div>
+          <div class="download-button-div">
+            <a class="download-button-link" data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ modules.download_data.button_text }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-we-used-ai" class="style-body-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.how_we_used_ai.content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

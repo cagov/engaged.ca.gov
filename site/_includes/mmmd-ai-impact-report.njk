@@ -1,0 +1,412 @@
+{% set active_page = 'ai-impact' %}
+{% extends "layout.njk" %}
+{% block content %}
+
+<link rel="stylesheet" href="{{ "/css/ai-impact-report.css" | assetVersion }}" />
+{# Flags JS before first paint so the charts' static fallbacks (peach snapshots) never flash;
+   the bundle below is deferred, so without this they would show until it ran. #}
+<script>document.documentElement.classList.add("report-js");</script>
+
+{# Noto Sans Display bold italic for the hero subtitle; the site-wide request only loads italic 400 and 900. #}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@1,600;1,700&display=swap" />
+
+{% set ui = modules.tiers_ui %}
+{% set nbr_tiers = ui.nbr_tiers | default(3) %}
+{% set initial_visible = ui.initial_visible_ideas | default(3) %}
+{% set total_ideas = 0 %}
+{% for t in range(1, nbr_tiers + 1) %}
+  {% set total_ideas = total_ideas + (modules["tier_" + t].nbr_ideas | default(0)) %}
+{% endfor %}
+
+{# Tier stickers, keyed by the tier module's `icon` field. Stickers include their own orange circle. #}
+{% set tier_stickers = {
+  "sparkle": "/public/images/ai-report-tier-most-support.svg",
+  "heart": "/public/images/ai-report-tier-moderate-support.svg",
+  "speech": "/public/images/ai-report-tier-some-support.svg"
+} %}
+
+{# Reusable: Phase label + title + subtitle on the left, one stat on the right. #}
+{% macro phase_header(step, icon) %}
+  <div class="row phase-row">
+    <div class="col-lg-8">
+      <p class="phase-label">{{ step.phase_label }}</p>
+      <h3 class="phase-title">{{ step.phase_title }}</h3>
+      <p class="phase-subtitle">{{ step.phase_subtitle }}</p>
+    </div>
+    <div class="col-lg-4">
+      <div class="participation-sidebar">
+        <div class="participation-stat">
+          <img src="{{ icon }}" alt="" aria-hidden="true" />
+          <div class="stat-number">{{ step.stat_count }}</div>
+          <div class="stat-label">{{ step.stat_label }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{# ---------------------------------------------------------------- Hero #}
+{% include "ai-impact-report-hero.njk" %}
+
+<section id="public-forum" class="style-body-text section-off-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.public_forum.content | safe }}
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="participation-sidebar">
+          <div class="participation-stat">
+            <img src="/public/images/staff-icon.svg" alt="" aria-hidden="true" />
+            <div class="stat-number">{{ modules.participation_numbers.participants_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.participants_label }}</div>
+          </div>
+          <div class="participation-stat">
+            <img src="/public/images/comments-icon.svg" alt="" aria-hidden="true" />
+            <div class="stat-number">{{ modules.participation_numbers.conversations_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.conversations_label }}</div>
+          </div>
+          <div class="participation-stat">
+            <img src="/public/images/ideas-icon.svg" alt="" aria-hidden="true" />
+            <div class="stat-number">{{ modules.participation_numbers.ideas_count }}</div>
+            <div class="stat-label">{{ modules.participation_numbers.ideas_label }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ------------------------------------------------- Results: What we heard #}
+<section id="what-we-heard" class="style-body-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.what_we_heard.content | safe }}
+        </div>
+
+      </div>
+    </div>
+
+    {# Ideas we heard: word cloud of the poll's policy ideas, flying in once on scroll.
+       Breaks out of the text column to the container width. Drawn by ideas-cloud.js. #}
+    {% set wc = modules.word_cloud %}
+    <div id="ideas-cloud" class="ideas-cloud"
+         data-ideas-cloud data-src="{{ (wc.src | default("/public/data/ai-report-ideas-cloud.json")) | assetVersion }}">
+      <canvas data-ideas-canvas role="img" aria-label="{{ wc.chart_alt }}"></canvas>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.ranking.content | safe }}
+        </div>
+
+      </div>
+    </div>
+
+    {# Top 3 policy ideas: full container width (design 9/22). Three theme cards (examples fold
+       out) and a "What people said" panel showing the selected theme's quotes. Driven by
+       top-themes.js; without JS every card shows its examples and every quote set is visible. #}
+        {% set tt = modules.top_themes %}
+        {% set nbr_top = tt.nbr_themes | default(3) %}
+        <div id="top-themes" class="top-themes"
+             data-show-examples-label="{{ tt.show_examples_label }}"
+             data-hide-examples-label="{{ tt.hide_examples_label }}"
+             data-show-conversation-label="{{ tt.show_conversation_label }}"
+             data-hide-conversation-label="{{ tt.hide_conversation_label }}">
+          <img class="policy-tier-icon policy-tier-sticker" src="{{ tier_stickers[tt.icon] | default(tier_stickers.sparkle) }}" alt="" aria-hidden="true" />
+          <div class="policy-tier-header top-themes-header">
+            <div class="policy-tier-heading">
+              <h3 class="policy-tier-title">{{ tt.title }}</h3>
+              <p class="policy-tier-subtitle">{{ tt.subtitle }}</p>
+            </div>
+          </div>
+          <div class="top-themes-layout">
+            <ol class="top-themes-list">
+              {% for n in range(1, nbr_top + 1) %}
+                {% set theme = modules["top_theme_" + n] %}
+                {% set tid = "top-theme-" + n %}
+                <li class="top-theme" data-theme="{{ n }}">
+                  <button type="button" class="top-theme-select" data-theme-select="{{ n }}"
+                          aria-pressed="{{ 'true' if loop.first else 'false' }}"
+                          aria-controls="{{ tid }}-quotes"
+                          aria-label="{{ tt.select_label | replace('{title}', theme.title) }}">
+                    <h4 class="top-theme-title" id="{{ tid }}-title">{{ theme.title }}</h4>
+                  </button>
+                  {% set has_body = theme.content and (theme.content | trim | length > 0) %}
+                  {% if has_body %}
+                    <div class="top-theme-examples" id="{{ tid }}-examples">
+                      {% set nbr_examples = (theme.content.split("<li>") | length) - 1 %}
+                      {% set examples_label = ui.example_idea_label_singular if nbr_examples == 1 else ui.example_ideas_label %}
+                      {{ theme.content | replace("<ul>", '<p class="policy-idea-examples-label">' + examples_label + '</p><ul class="policy-idea-examples">') | safe }}
+                    </div>
+                    <button type="button" class="top-theme-examples-toggle text-link-button"
+                            aria-expanded="true" aria-controls="{{ tid }}-examples">
+                      <span class="top-theme-examples-toggle-text">{{ tt.hide_examples_label }}</span>
+                      <span class="chevron" aria-hidden="true"></span>
+                    </button>
+                  {% endif %}
+                  {# Phones: the quotes fold out inside the card (design 9/22). Hidden on desktop. #}
+                  <button type="button" class="top-theme-conversation-toggle text-link-button"
+                          data-conversation-toggle="{{ n }}" aria-expanded="false" aria-controls="{{ tid }}-quotes" hidden>
+                    <span class="top-theme-conversation-toggle-text">{{ tt.show_conversation_label }}</span>
+                    <span class="chevron" aria-hidden="true"></span>
+                  </button>
+                </li>
+              {% endfor %}
+            </ol>
+            <div class="top-themes-quotes conversation-card" data-quotes-panel>
+              <svg class="top-themes-connector" data-connector aria-hidden="true"></svg>
+              <p class="top-themes-quotes-title">{{ tt.quotes_title }}</p>
+              {% for n in range(1, nbr_top + 1) %}
+                {% set q = modules["top_theme_" + n + "_quotes"] %}
+                <div class="conversation-quotes-scroll" id="top-theme-{{ n }}-quotes" role="region" aria-labelledby="top-theme-{{ n }}-title" data-quotes-for="{{ n }}"{% if not loop.first %} hidden{% endif %}>
+                  <ul class="conversation-quotes">
+                    {% for i in range(1, 6) %}
+                      {% if q["quote_" + i] %}
+                        <li class="conversation-quote">
+                          <img class="conversation-quote-icon" src="/public/images/little-dialog-balloon.svg" alt="" aria-hidden="true" />
+                          <blockquote>
+                            <p>{{ tt.quote_open | default("“") }}{{ q["quote_" + i] }}{{ tt.quote_close | default("”") }}</p>
+                            <footer class="conversation-attribution" data-region="{{ q["region_" + i] }}" data-field="{{ q["field_" + i] }}">
+                              <span class="conversation-attribution-dot" aria-hidden="true"></span><span class="conversation-attribution-text">{{ q["attribution_" + i] }}</span>
+                            </footer>
+                          </blockquote>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        {# Other supported ideas: one collapsible list of the remaining themes, titles only. #}
+        <div id="policy-tiers" class="policy-tiers"
+             data-initial-visible="{{ initial_visible }}"
+             data-show-label="{{ ui.show_label }}"
+             data-show-more-label="{{ ui.show_more_label }}"
+             data-close-label="{{ ui.close_label }}"
+             data-show-all-label="{{ ui.show_all_label }}"
+             data-close-all-label="{{ ui.close_all_label }}">
+
+          {% for t in range(1, nbr_tiers + 1) %}
+            {% set tier = modules["tier_" + t] %}
+            {% set nbr_ideas = tier.nbr_ideas | default(0) %}
+            <div class="policy-tier" id="policy-tier-{{ t }}" data-tier="{{ t }}" data-nbr-ideas="{{ nbr_ideas }}">
+              <img class="policy-tier-icon policy-tier-sticker" src="{{ tier_stickers[tier.icon] | default(tier_stickers.sparkle) }}" alt="" aria-hidden="true" />
+              <div class="policy-tier-header">
+                <div class="policy-tier-heading">
+                  <h3 class="policy-tier-title">{{ tier.title }}</h3>
+                  <p class="policy-tier-subtitle">{{ tier.subtitle }}</p>
+                </div>
+                <p class="policy-tier-count">{{ ui.count_label | replace("{count}", nbr_ideas) }}</p>
+              </div>
+
+              <ul class="policy-ideas" id="policy-tier-{{ t }}-ideas">
+                {% for i in range(1, nbr_ideas + 1) %}
+                  {% set idea = modules["tier_" + t + "_idea_" + i] %}
+                  {% set idea_id = "tier-" + t + "-idea-" + i %}
+                  {% set has_body = idea.content and (idea.content | trim | length > 0) %}
+                  <li class="policy-idea" data-index="{{ i }}">
+                    {% if has_body %}
+                    <h4 class="policy-idea-title">
+                      <button type="button" class="policy-idea-toggle"
+                              aria-expanded="false"
+                              aria-controls="{{ idea_id }}-body"
+                              id="{{ idea_id }}-toggle">
+                        <span class="policy-idea-title-text">{{ idea.title }}</span>
+                        <span class="policy-idea-toggle-icon" aria-hidden="true"></span>
+                      </button>
+                    </h4>
+                    {% else %}
+                    {# No examples for this idea: a plain heading, no control. #}
+                    <h4 class="policy-idea-title policy-idea-title-static">{{ idea.title }}</h4>
+                    {% endif %}
+                    {% if has_body %}
+                    <div class="policy-idea-body" id="{{ idea_id }}-body" role="region" aria-labelledby="{{ idea_id }}-toggle" hidden>
+                      {# Body markdown is: description paragraph(s), then a bullet list of example ideas. #}
+                      {% set nbr_examples = (idea.content.split("<li>") | length) - 1 %}
+                      {% set examples_label = ui.example_idea_label_singular if nbr_examples == 1 else ui.example_ideas_label %}
+                      {{ idea.content | replace("<ul>", '<p class="policy-idea-examples-label">' + examples_label + '</p><ul class="policy-idea-examples">') | safe }}
+                    </div>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+
+              <div class="policy-tier-footer">
+                <button type="button" class="policy-tier-toggle text-link-button"
+                        aria-expanded="true"
+                        aria-controls="policy-tier-{{ t }}-ideas">
+                  <span class="policy-tier-toggle-text">{{ ui.close_label }}</span>
+                  <span class="chevron" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+
+        {# Download the policy ideas lives on the methods page (9/24); a download_data
+           module here would render it under the list. #}
+        {% set dl = modules.download_data %}
+        {% if dl %}
+        <div id="download-data" class="download-data">
+          <div class="section-body">
+            {{ dl.content | safe }}
+          </div>
+          <div class="download-button-div">
+            <a class="download-button-link" data-appearance="button" data-theme="orange" href="/public/data/ai-impact-comments.csv" download>{{ dl.button_text }}</a>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="how-to-read-tiers style-body-text">
+          {{ modules.how_to_read_tiers.content | safe }}
+        </div>
+        {% set rmb = modules.ranking_methods_button %}
+        {% if rmb %}
+        <div class="methods-button">
+          <a href="{{ rmb.href | localizedPath(locale) }}" data-appearance="button" data-theme="off-white">{{ rmb.label }}</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ------------------------------------------------- Who participated (animated funnel) #}
+{# Four-stage canvas animation driven by participant-funnel.js. Stage copy is HTML below
+   (one .participants-step per stage) and crossfades with the dots. Without JS the four
+   steps stack with their static snapshots and the controls are hidden. #}
+<section id="who-participated" class="style-body-text section-light">
+  <div class="container">
+    {% set wp = modules.who_participated %}
+    {% set nbr_steps = wp.nbr_steps | default(4) %}
+    {% set step_icons = ["/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/staff-icon.svg", "/public/images/ai-report-conversations-icon.svg"] %}
+    {# English category names as they appear in the data, in the same order as region_legend, so the
+       legend can be translated. #}
+    {% set region_keys = ["Los Angeles", "Bay Area", "Southern California", "Sacramento Valley / Sierra Foothills", "Central Valley", "Far North / North Coast", "Central Coast", "Sierra Region", "(not stated)"] %}
+    {# Field of work names come from modules.category_labels as key/label pairs (key = English data value). #}
+    {% set cl = modules.category_labels %}
+    {% set legend_labels_json %}{ {% for key in region_keys %}{{ key | dump | safe }}: {{ modules.region_legend["region_" + loop.index] | dump | safe }}, {% endfor %}{% for i in range(1, (cl.nbr_labels | default(0)) + 1) %}{{ cl["key_" + i] | dump | safe }}: {{ cl["label_" + i] | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %} }{% endset %}
+
+    <h2>{{ wp.title }}</h2>
+
+    <div id="participants-stepper" class="participants-stepper" tabindex="0"
+         data-funnel-src="{{ "/public/data/ai-report-participant-funnel.json" | assetVersion }}"
+         data-step="1" data-variant="field"
+         data-step-counter="{{ wp.step_counter }}"
+         data-play-label="{{ wp.play_label }}"
+         data-pause-label="{{ wp.pause_label }}"
+         data-center-title="{{ wp.ring_center_title }}"
+         data-center-hint="{{ wp.ring_center_hint }}"
+         data-labels='{{ legend_labels_json | replace("'", "&#39;") | safe }}'>
+      {# Margin arrows removed 9/22 (design); the progress bars below the canvas and the
+         keyboard arrows step through the stages. #}
+      <span class="visually-hidden" data-stepper-counter aria-live="polite">{{ wp.step_counter | replace("{current}", 1) | replace("{total}", nbr_steps) }}</span>
+
+      {# Stage copy. JS shows one at a time and crossfades; no-JS shows all four with snapshots. #}
+      <div class="participants-steps">
+        {% for s in range(1, nbr_steps + 1) %}
+          {% set step = modules["who_participated_step_" + s] %}
+          <div class="participants-step" id="who-participated-step-{{ s }}" data-step="{{ s }}" role="group" aria-roledescription="{{ wp.step_role_label | default("step") }}" aria-label="{{ step.phase_title }}">
+            {{ phase_header(step, step_icons[s - 1]) }}
+            <div class="chart-placeholder funnel-static-fallback">
+              <img class="chart-placeholder-image" src="{{ step.chart_image_region }}" alt="{{ step.chart_alt }}" />
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      {# The animation. Sized by JS to the 1040-wide canvas space. #}
+      <div class="funnel-stage" data-funnel-stage-frame>
+        <canvas data-funnel-canvas width="1040" height="486" role="img" aria-label="{{ wp.chart_alt }}"></canvas>
+        {# Play/pause overlay (9/24): fades in on hover or touch, stays while paused. #}
+        <button type="button" class="funnel-play" data-funnel-play aria-label="{{ wp.pause_label }}" aria-pressed="false">
+          <svg class="funnel-play-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4.5" height="14" rx="1"/><rect x="13.5" y="5" width="4.5" height="14" rx="1"/></svg>
+          <svg class="funnel-play-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>
+        </button>
+      </div>
+      {# On narrow screens the ring's center copy is drawn here instead of on the canvas, where it would be unreadable. #}
+      <div class="funnel-center-copy" data-funnel-center hidden>
+        <p class="funnel-center-title">{{ wp.ring_center_title }}</p>
+        {% if wp.ring_center_hint %}<p class="funnel-center-hint">{{ wp.ring_center_hint }}</p>{% endif %}
+      </div>
+
+      {# Step markers: show that the stages cycle and where we are. The active one fills as
+         the dwell runs down (--progress, set by JS). Clicking one jumps to that stage. #}
+      <ol class="funnel-steps" data-funnel-steps aria-label="{{ wp.title }}">
+        {% for s in range(1, nbr_steps + 1) %}
+          <li><button type="button" class="funnel-step" data-funnel-stage="{{ s }}" aria-pressed="{{ 'true' if loop.first else 'false' }}" aria-label="{{ wp.step_marker_label | replace('{current}', s) }}"><span class="funnel-step-fill" aria-hidden="true"></span></button></li>
+        {% endfor %}
+      </ol>
+
+      <div class="chart-controls">
+        <div class="chart-controls-row">
+          <div class="segmented-toggle" role="group">
+            {# Field of work is the default colouring (9/24); Region second. #}
+            <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="true" disabled>{{ wp.toggle_field_of_work }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="false" disabled>{{ wp.toggle_region }}</button>
+            {# Age, race/ethnicity, gender and AI response colorings are built but not offered
+               (9/18). To restore one, add a button with data-variant="age" | "race" | "gender" |
+               "ai" and the matching wp.toggle_* label. #}
+          </div>
+          <ul class="chart-legend participant-legend" data-last-step-only hidden>
+            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ wp.legend_participant }}</li>
+            <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ wp.legend_facilitator }}</li>
+          </ul>
+        </div>
+        {# Filled from the data by JS; the static region list is the no-JS fallback. #}
+        <ul class="chart-legend region-legend" data-funnel-legend aria-label="{{ wp.toggle_region }}">
+          {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
+          {% for r in range(1, nbr_regions + 1) %}
+            <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% set db = modules.demographics_button %}
+    {% if db %}
+    <div class="methods-button">
+      <a href="{{ db.href | localizedPath(locale) }}" data-appearance="button" data-theme="off-white">{{ db.label }}</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{# ------------------------------------------------- What happens next #}
+<section id="what-happens-next" class="style-body-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-body">
+          {{ modules.what_happens_next.content | safe }}
+        </div>
+        {# The writer's 9/23 copy drops the methods button here; the ranking and
+           demographics sections link to the methods page instead. #}
+        {% set mb = modules.methods_button %}
+        {% if mb %}
+        <div class="methods-button">
+          <a href="{{ mb.href | localizedPath(locale) }}" data-appearance="button" data-theme="orange">{{ mb.label }}</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ------------------------------------------------- Sign up #}
+{% include "ai-impact-report-sign-up.njk" %}
+
+<script src="{{ "/js/ai-impact-report.js" | assetVersion }}" defer></script>
+
+{% endblock %}
