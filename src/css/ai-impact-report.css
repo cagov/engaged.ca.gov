@@ -748,7 +748,8 @@ section#ai-report-hero {
 
   @media (min-width: 992px) {
     border: 0;
-    border-inline-start: 1.5px solid var(--report-connector);
+    /* Whole pixels: a 1.5px line antialiases across two rows and reads lighter. */
+    border-inline-start: 2px solid var(--report-connector);
     border-radius: 0;
     box-shadow: none;
     background: transparent;

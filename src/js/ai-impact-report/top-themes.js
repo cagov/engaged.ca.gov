@@ -174,8 +174,14 @@ export function initTopThemes(root) {
     connector.setAttribute("viewBox", `0 0 ${lr.width} ${lr.height}`);
     connector.style.width = `${lr.width}px`;
     connector.style.height = `${lr.height}px`;
-    connector.style.left = `${lr.left - pr.left}px`;
-    connector.style.top = `${lr.top - pr.top}px`;
+    // Absolute offsets are measured from the panel's padding box, which sits
+    // inside its border (the hairline), so subtract the border widths or the
+    // whole drawing shifts by that much.
+    const ps = getComputedStyle(panel);
+    const bl = Number.parseFloat(ps.borderLeftWidth) || 0;
+    const bt = Number.parseFloat(ps.borderTopWidth) || 0;
+    connector.style.left = `${lr.left - pr.left - bl}px`;
+    connector.style.top = `${lr.top - pr.top - bt}px`;
     // Right-to-left pages mirror the layout: the panel sits to the left of
     // the cards, so the line leaves the card's left edge for the heading's
     // right edge.
@@ -185,12 +191,12 @@ export function initTopThemes(root) {
     const x0 = rtl ? cr.left - lr.left + 1 : cr.right - lr.left - 1;
     const y0 = tr.top + tr.height / 2 - lr.top; // level with the theme title
     const hr = heading.getBoundingClientRect();
-    // The hairline is the panel's 1.5px inline-start border; the curve
-    // ends at its centre with a flat cap, so nothing shows past it.
-    const x1 = rtl ? pr.right - lr.left - 0.75 : pr.left - lr.left + 0.75;
+    // The hairline is the panel's 2px inline-start border; the curve ends
+    // at its centre with a flat cap, so nothing shows past it.
+    const x1 = rtl ? pr.right - lr.left - 1 : pr.left - lr.left + 1;
     const y1 = hr.top + hr.height / 2 - lr.top; // points at "What people said"
     const mx = (x0 + x1) / 2;
-    connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt"/>`;
+    connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt"/>`;
   }
 
   window.addEventListener("resize", () => {
