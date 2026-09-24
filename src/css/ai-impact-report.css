@@ -1034,6 +1034,13 @@ section#ai-report-hero {
   border-top: 1px solid var(--report-rule);
 }
 
+/* On the report page the download block follows the ideas box, which is
+   its own edge; no rule above it there (9/24). */
+#what-we-heard .download-data {
+  border-top: 0;
+  padding-top: 0;
+}
+
 /* On the report page the download block sits between the ideas list and
    "How to read this ranking" (writer, 9/23); give the latter its own room. */
 .download-data + .how-to-read-tiers {
