@@ -89,22 +89,44 @@ function axisMax(values) {
 }
 
 /** Greedy wrap into as many lines as needed, each at most maxChars. */
-/** Wrap into at most two lines, splitting at the word boundary that leaves
- * the two lines closest in length. Falls back to greedy wrapping when even
- * the best two-line split is too wide. */
-function balancedWrap(text, maxChars) {
-  if (text.length <= maxChars) return [text];
+/** Wrap into at most two lines that each fit maxWidth (measured with
+ * `width`), splitting at the word boundary that leaves the two lines
+ * closest in width. Falls back to greedy wrapping when even the best
+ * two-line split is too wide. */
+function balancedWrap(text, maxWidth, width) {
+  if (width(text) <= maxWidth) return [text];
   const words = text.split(" ");
   let best = null;
   for (let k = 1; k < words.length; k++) {
     const a = words.slice(0, k).join(" ");
     const b = words.slice(k).join(" ");
-    const longest = Math.max(a.length, b.length);
-    if (longest > maxChars) continue;
-    const diff = Math.abs(a.length - b.length);
+    const wa = width(a);
+    const wb = width(b);
+    if (Math.max(wa, wb) > maxWidth) continue;
+    const diff = Math.abs(wa - wb);
     if (!best || diff < best.diff) best = { lines: [a, b], diff };
   }
-  return best ? best.lines : wrapWords(text, maxChars);
+  if (best) return best.lines;
+  // Greedy, by measured width.
+  const lines = [];
+  let line = "";
+  for (const word of words) {
+    const next = line ? `${line} ${word}` : word;
+    if (line && width(next) > maxWidth) {
+      lines.push(line);
+      line = word;
+    } else line = next;
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+
+/** Text width in CSS px for a given font shorthand, via an offscreen canvas. */
+const measureCtx = document.createElement("canvas").getContext("2d");
+function textWidth(text, font) {
+  if (!measureCtx) return text.length * 7;
+  measureCtx.font = font;
+  return measureCtx.measureText(text).width;
 }
 
 function wrapWords(text, maxChars) {
@@ -215,10 +237,15 @@ export async function initDemographicsChart(root) {
     const barGap = 3;
     const rowGap = 14;
     // Label column: about a third of the width, capped so the bars keep room.
-    const labelW = Math.round(Math.min(150, Math.max(104, width * 0.34)));
+    const labelW = Math.round(Math.min(150, Math.max(104, width * 0.36)));
+    const labelInset = 4; // keep the longest line off the SVG's left edge
     const labelGap = 10;
-    const maxChars = Math.max(8, Math.floor(labelW / (font * 0.5)));
-    const rows = cats.map((c) => balancedWrap(nameOf(c), maxChars));
+    const labelFont = `600 ${font}px ${getComputedStyle(svgHost).fontFamily}`;
+    const rows = cats.map((c) =>
+      balancedWrap(nameOf(c), labelW - labelInset, (t) =>
+        textWidth(t, labelFont),
+      ),
+    );
     const barsH = barH * 2 + barGap;
     const rowHeights = rows.map(
       (lines) => Math.max(barsH, lines.length * lineH) + rowGap,
@@ -283,24 +310,32 @@ export async function initDemographicsChart(root) {
     svg.appendChild(legend);
 
     // Axis captions: below target at the left end of the bars, above at the right.
+    // Captions are 12px when both fit in two lines within half the plot
+    // (the usual case), 10px on very narrow screens. "On target" below
+    // uses the same size (9/24).
+    const captionFit = (size) => {
+      const maxChars = Math.floor(plotW / 2 / (size * 0.52));
+      const l1 = wrapWords(labels.axisBelow || "", maxChars);
+      const l2 = wrapWords(labels.axisAbove || "", maxChars);
+      return Math.max(l1.length, l2.length) <= 2;
+    };
+    const captionFont = captionFit(12) ? 12 : 10;
     const caption = (text, x, anchor) => {
       if (!text) return;
-      const words = text.split(" ");
-      const half = Math.ceil(words.length / 2);
-      const lines = [
-        words.slice(0, half).join(" "),
-        words.slice(half).join(" "),
-      ];
+      const maxChars = Math.floor(plotW / 2 / (captionFont * 0.52));
+      const lines = wrapWords(text, maxChars).slice(0, 2);
       const t = el("text", {
         x,
-        y: 38,
+        y: 36,
         "text-anchor": anchor,
         fill: COLORS.text,
-        "font-size": 10,
+        "font-size": captionFont,
         "font-weight": 700,
       });
       lines.forEach((ln, i) => {
-        t.appendChild(el("tspan", { x, dy: i === 0 ? 0 : 12 }, ln));
+        t.appendChild(
+          el("tspan", { x, dy: i === 0 ? 0 : captionFont + 2 }, ln),
+        );
       });
       svg.appendChild(t);
     };
@@ -330,7 +365,7 @@ export async function initDemographicsChart(root) {
             "text-anchor":
               tv === -max ? "start" : tv === max ? "end" : "middle",
             fill: tv === 0 ? COLORS.text : COLORS.muted,
-            "font-size": 11,
+            "font-size": tv === 0 ? captionFont : 11,
             "font-weight": tv === 0 ? 700 : 400,
           },
           tv === 0 ? labels.onTarget : fmtTick(tv),
@@ -516,14 +551,14 @@ export async function initDemographicsChart(root) {
       const x = PAD.left - 42;
       const t = el("text", {
         x,
-        y: y - ((lines.length - 1) * 15) / 2 + 4,
+        y: y - ((lines.length - 1) * 16) / 2 + 4,
         "text-anchor": "end",
         fill: COLORS.text,
-        "font-size": 12,
+        "font-size": 14, // same as the "On target" tick beside it (9/24)
         "font-weight": 700,
       });
       lines.forEach((ln, i) => {
-        t.appendChild(el("tspan", { x, dy: i === 0 ? 0 : 15 }, ln));
+        t.appendChild(el("tspan", { x, dy: i === 0 ? 0 : 16 }, ln));
       });
       svg.appendChild(t);
     };
