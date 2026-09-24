@@ -650,6 +650,7 @@ section#ai-report-hero {
     gap: 3rem;
     align-items: start;
     padding: 0.5rem 3rem 0.5rem 4.5rem;
+    isolation: isolate; /* keeps the connector's z-index: -1 inside the layout */
   }
 }
 
@@ -762,12 +763,15 @@ section#ai-report-hero {
   margin: 0 0 0.75rem;
 }
 
+/* Same grey as the panel's hairline, and painted beneath the cards and the
+   hairline (negative z-index inside the layout's own stacking context) so
+   its ends can run into both without a visible seam (9/24). */
 .top-themes-connector {
   position: absolute;
   pointer-events: none;
-  color: rgb(28 39 69 / 0.45);
+  color: var(--report-rule);
   overflow: visible;
-  z-index: 1;
+  z-index: -1;
 }
 
 /* Phones (design 9/22): sticker centred above a centred header; the quotes

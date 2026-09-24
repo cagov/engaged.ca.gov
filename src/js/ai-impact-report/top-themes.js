@@ -180,11 +180,13 @@ export function initTopThemes(root) {
     // the cards, so the line leaves the card's left edge for the heading's
     // right edge.
     const rtl = getComputedStyle(layout).direction === "rtl";
-    const x0 = rtl ? cr.left - lr.left - 2 : cr.right - lr.left + 2;
+    // Ends overlap the card's border and the hairline by a pixel; the line
+    // is painted beneath both, so the joins read as continuous.
+    const x0 = rtl ? cr.left - lr.left + 1 : cr.right - lr.left - 1;
     const y0 = tr.top + tr.height / 2 - lr.top; // level with the theme title
     const hr = heading.getBoundingClientRect();
     // The hairline is the panel's inline-start border.
-    const x1 = rtl ? pr.right - lr.left : pr.left - lr.left;
+    const x1 = rtl ? pr.right - lr.left - 1 : pr.left - lr.left + 1;
     const y1 = hr.top + hr.height / 2 - lr.top; // points at "What people said"
     const mx = (x0 + x1) / 2;
     connector.innerHTML = `<path d="M ${x0} ${y0} C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`;
