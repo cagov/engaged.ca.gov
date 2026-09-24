@@ -28,7 +28,7 @@ const NARROW_BELOW = 700; // CSS px of available width
 const FADE_FLOOR = 0.06; // alpha of the last kept idea
 const FADE_CURVE = 1.6; // >1 keeps more of the fade band legible longer
 const SEED = 20260826;
-const ARRIVE_S = 2.6; // fly-in duration
+const ARRIVE_S = 4.5; // fly-in duration (was 2.6; slowed 9/24)
 
 function mulberry32(a) {
   let s = a | 0;
