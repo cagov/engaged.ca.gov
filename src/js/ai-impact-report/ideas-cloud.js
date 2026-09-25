@@ -99,16 +99,36 @@ export async function initIdeasCloud(root) {
     const WL = createLayoutEngine({ rand, measureCtx: ctx });
     const kept = data.poll.slice(0, preset.keep);
 
+    // Color index, not the real subtheme: there's no legend anymore, so
+    // color no longer needs to carry theme meaning, and the real subtheme
+    // distribution is lopsided (one subtheme was ~51% of kept items and
+    // ~59% of their weighted count, which is why one color read as
+    // dominant — 9/25). Greedily assign each idea, in order (already
+    // sorted by count, descending), to whichever color currently has the
+    // least accumulated count — the classic load-balancing heuristic —
+    // so every color ends up with nearly identical total visual weight,
+    // not just an even item count. Reusing `subtheme` as the field name
+    // keeps the layout engine's existing same-color-repulsion working as-is.
+    const colorLoad = new Array(SUBTHEMES.length).fill(0);
+    const colorOf = kept.map((c) => {
+      let lightest = 0;
+      for (let k = 1; k < colorLoad.length; k++) {
+        if (colorLoad[k] < colorLoad[lightest]) lightest = k;
+      }
+      colorLoad[lightest] += c.count;
+      return lightest;
+    });
+
     const build = (scale) =>
       kept.map((c, i) => {
         const fontSize = baseSize(c.count) * scale;
         const lines = WL.wrapTwoLines(c.label, fontSize, 400, fontSize * 9.5);
         const w =
           Math.max(...lines.map((l) => WL.textWidth(l, fontSize, 400))) + 6;
-        const h = lines.length * fontSize * 1.22 + 4;
+        const h = lines.length * fontSize * WL.leadingFor(fontSize) + 4;
         return {
           label: c.label,
-          subtheme: c.subtheme,
+          subtheme: colorOf[i],
           count: c.count,
           fontSize,
           lines,
@@ -119,7 +139,14 @@ export async function initIdeasCloud(root) {
         };
       });
     const L = { w: preset.lw, h: preset.lh }; // layout field, larger than the frame
-    const opts = { width: L.w, height: L.h, padding: 2, weight: 400 };
+    // Bigger words get a bit more breathing room (WL.paddingFor), so the
+    // biggest labels don't read as crowded against their neighbors.
+    const opts = {
+      width: L.w,
+      height: L.h,
+      padding: (d) => WL.paddingFor(d.fontSize),
+      weight: 400,
+    };
 
     // Largest uniform font multiplier (stepping down 4%) at which every label
     // places. Two attempts per step: the spiral direction is random, so one

@@ -29,6 +29,46 @@ const FINALE_LARGE_N = 6;
 const SAME_SUBTHEME_GAP_EM = 2.0;
 const SAME_SUBTHEME_GAP_MIN = 24;
 
+// Leading (line pitch, as a multiple of font size) for a wrapped label. A
+// flat 1.22 leaves a bigger *absolute* gap between lines the larger the
+// font gets, and that gap is genuinely blank in d3-cloud's pixel collision
+// mask — nothing stops the packer from parking an unrelated small label in
+// it (9/25 review: "Reimagine tort law" wedged inside "Set rules for AI /
+// in the workplace"). Tightening leading as fontSize grows shrinks that
+// band; small labels, where the gap was never a problem, keep the old 1.22.
+// Must be applied identically everywhere a line pitch is computed: drawWord()
+// below and the mask rasterizer in vendor/d3-cloud-multiline.cjs (wired up
+// in runCloudLayoutSync via cloud.lineHeight()) — otherwise the drawn glyphs
+// land somewhere the collision mask never reserved.
+// Thresholds are tuned to this chart's actual range (poll fontSizes run
+// roughly 11-41px at the "wide" preset; 1.08 barely nudged the 41px case,
+// which is why the gap was still wide enough for another label — 9/25).
+const LEADING_MAX = 1.22; // at/under LEADING_SMALL_PX, unchanged from before
+const LEADING_MIN = 1.0; // at/over LEADING_LARGE_PX: baseline-to-baseline, no slack
+const LEADING_SMALL_PX = 18;
+const LEADING_LARGE_PX = 38;
+function leadingFor(px) {
+  if (px <= LEADING_SMALL_PX) return LEADING_MAX;
+  if (px >= LEADING_LARGE_PX) return LEADING_MIN;
+  const t = (px - LEADING_SMALL_PX) / (LEADING_LARGE_PX - LEADING_SMALL_PX);
+  return LEADING_MAX + (LEADING_MIN - LEADING_MAX) * t;
+}
+
+// Collision padding (px added around a label's mask on every side, so two
+// labels' visual gap is the sum of both their paddings) — same ramp as
+// leading, over the same size range, but growing instead of shrinking: the
+// big words are the ones that read as crowded, so give them a bit more
+// breathing room. Small labels keep the original 2px so the dense fringe
+// (185 items packed tight already) doesn't start dropping labels.
+const PADDING_MIN = 2; // at/under LEADING_SMALL_PX, unchanged from before
+const PADDING_MAX = 4; // at/over LEADING_LARGE_PX
+function paddingFor(px) {
+  if (px <= LEADING_SMALL_PX) return PADDING_MIN;
+  if (px >= LEADING_LARGE_PX) return PADDING_MAX;
+  const t = (px - LEADING_SMALL_PX) / (LEADING_LARGE_PX - LEADING_SMALL_PX);
+  return PADDING_MIN + (PADDING_MAX - PADDING_MIN) * t;
+}
+
 const clamp01 = (v) => (v < 0 ? 0 : v > 1 ? 1 : v);
 
 export function createLayoutEngine({ rand, measureCtx }) {
@@ -84,6 +124,7 @@ export function createLayoutEngine({ rand, measureCtx }) {
       .font(FONT_FAMILY) // must match fontStr() byte for byte
       .fontWeight(weight)
       .fontSize((d) => d.fontSize)
+      .lineHeight((d) => d.fontSize * leadingFor(d.fontSize))
       .text((d) => d.label)
       .random(rand)
       .on("end", (p) => {
@@ -430,9 +471,9 @@ export function createLayoutEngine({ rand, measureCtx }) {
 
   // ---- drawing ------------------------------------------------------------
   /** Renders at the exact anchor the fork rasterized the collision mask at:
-   * alphabetic baseline, lineHeight = fontSize * 1.22, lines left-aligned to
-   * x - floor(maxLineWidth / 2). Any deviation draws ink the mask never
-   * covered and can produce overlaps. */
+   * alphabetic baseline, lineHeight = fontSize * leadingFor(fontSize), lines
+   * left-aligned to x - floor(maxLineWidth / 2). Any deviation draws ink the
+   * mask never covered and can produce overlaps. */
   function drawWord(ctx, lines, x, y, fontSize, weight, color, alpha, scale) {
     if (alpha <= 0.008) return;
     const k = scale || 1;
@@ -445,7 +486,7 @@ export function createLayoutEngine({ rand, measureCtx }) {
       ...lines.map((l) => ctx.measureText(l).width),
     );
     const anchorX = x - Math.floor(maxLineWidth / 2);
-    const lh = fontSize * k * 1.22;
+    const lh = fontSize * k * leadingFor(fontSize);
     const startY = (-(lines.length - 1) * lh) / 2;
     lines.forEach((line, i) => {
       ctx.fillText(line, anchorX, y + startY + i * lh);
@@ -501,6 +542,8 @@ export function createLayoutEngine({ rand, measureCtx }) {
   return {
     textWidth,
     wrapTwoLines,
+    leadingFor,
+    paddingFor,
     layoutWithD3Cloud,
     layoutFinaleBalanced,
     applySavedFinale,
