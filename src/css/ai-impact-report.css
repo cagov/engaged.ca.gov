@@ -838,21 +838,22 @@ section#ai-report-hero {
     padding-top: 3.5rem;
     margin-top: 3.5rem;
 
+    /* Sticker sits at the start edge above a left-aligned header, like the
+       other section headers on phones (9/25). */
     & .policy-tier-sticker {
       width: 77px;
       height: 77px;
       top: -2.4rem;
-      left: 50%;
-      transform: translateX(-50%);
+      inset-inline-start: 0;
     }
   }
 
   .top-themes-header {
     padding-inline-start: 0;
-    text-align: center;
+    text-align: start;
 
     & .policy-tier-subtitle {
-      text-align: center;
+      text-align: start;
     }
   }
 }
