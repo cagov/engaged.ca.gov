@@ -36,12 +36,12 @@
  "pollTotal": 337,
  "poll": [
   {
-   "label": "Regulate AI in employment",
+   "label": "Set rules for AI in the workplace",
    "subtheme": 2,
    "count": 430
   },
   {
-   "label": "Regulate AI development and use",
+   "label": "Put guardrails on how AI is built and used",
    "subtheme": 1,
    "count": 366
   },
@@ -51,7 +51,7 @@
    "count": 342
   },
   {
-   "label": "Regulate and utilize AI",
+   "label": "Use AI safely",
    "subtheme": 1,
    "count": 340
   },
@@ -66,12 +66,12 @@
    "count": 222
   },
   {
-   "label": "Regulate data centers",
+   "label": "Set standards for data centers",
    "subtheme": 0,
    "count": 210
   },
   {
-   "label": "Regulate AI companies",
+   "label": "Oversee AI companies",
    "subtheme": 1,
    "count": 206
   },
@@ -86,7 +86,7 @@
    "count": 183
   },
   {
-   "label": "Regulate AI data centers",
+   "label": "Oversee AI data centers",
    "subtheme": 0,
    "count": 167
   },
@@ -101,7 +101,7 @@
    "count": 128
   },
   {
-   "label": "Regulate AI copyright",
+   "label": "Enforce copyright rules for AI",
    "subtheme": 1,
    "count": 115
   },
@@ -116,7 +116,7 @@
    "count": 95
   },
   {
-   "label": "Regulate AI data privacy",
+   "label": "Protect personal data from AI",
    "subtheme": 4,
    "count": 84
   },
@@ -156,7 +156,7 @@
    "count": 3
   },
   {
-   "label": "Regulate AI labeling",
+   "label": "Require labels on AI content",
    "subtheme": 5,
    "count": 3
   },
@@ -166,7 +166,7 @@
    "count": 3
   },
   {
-   "label": "Regulate AI in court docs",
+   "label": "Set rules for AI in court filings",
    "subtheme": 1,
    "count": 2
   },
@@ -401,12 +401,12 @@
    "count": 1
   },
   {
-   "label": "Regulate AI to prevent intrusive emails and calls",
+   "label": "Stop intrusive AI calls and emails",
    "subtheme": 4,
    "count": 1
   },
   {
-   "label": "Regulate AI to prevent humanization",
+   "label": "Keep AI from passing as human",
    "subtheme": 1,
    "count": 1
   },
@@ -491,7 +491,7 @@
    "count": 1
   },
   {
-   "label": "Regulate electrical power consumption",
+   "label": "Manage electricity use",
    "subtheme": 0,
    "count": 1
   },
@@ -831,7 +831,7 @@
    "count": 1
   },
   {
-   "label": "Regulate the impact of AI on consumer electronics prices",
+   "label": "Keep AI from driving up electronics prices",
    "subtheme": 1,
    "count": 1
   },
@@ -911,7 +911,7 @@
    "count": 1
   },
   {
-   "label": "Regulate quality control of AI-generated software",
+   "label": "Set quality standards for AI-written software",
    "subtheme": 1,
    "count": 1
   },
@@ -946,7 +946,7 @@
    "count": 1
   },
   {
-   "label": "Regulate the venture capital industry",
+   "label": "Oversee the venture capital industry",
    "subtheme": 1,
    "count": 1
   },

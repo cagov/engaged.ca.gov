@@ -58,6 +58,30 @@ KEEP_PHRASES = [
     "State Library", "State Website",
 ]
 
+# 9/25: too many poll ideas started with "Regulate" (17 of 185, several of the
+# biggest words in the cloud), so it read as "Regulate, Regulate, Regulate".
+# Reworded with varied, neutral verbs while keeping the respondent's meaning.
+# Keyed on the label after sentence_case(); "Regulate AI" itself is left alone
+# as the plain anchor.
+RELABEL = {
+    "Regulate AI in employment": "Set rules for AI in the workplace",
+    "Regulate AI development and use": "Put guardrails on how AI is built and used",
+    "Regulate and utilize AI": "Use AI safely",
+    "Regulate data centers": "Set standards for data centers",
+    "Regulate AI companies": "Oversee AI companies",
+    "Regulate AI data centers": "Oversee AI data centers",
+    "Regulate AI copyright": "Enforce copyright rules for AI",
+    "Regulate AI data privacy": "Protect personal data from AI",
+    "Regulate AI labeling": "Require labels on AI content",
+    "Regulate AI in court docs": "Set rules for AI in court filings",
+    "Regulate AI to prevent intrusive emails and calls": "Stop intrusive AI calls and emails",
+    "Regulate AI to prevent humanization": "Keep AI from passing as human",
+    "Regulate electrical power consumption": "Manage electricity use",
+    "Regulate the impact of AI on consumer electronics prices": "Keep AI from driving up electronics prices",
+    "Regulate quality control of AI-generated software": "Set quality standards for AI-written software",
+    "Regulate the venture capital industry": "Oversee the venture capital industry",
+}
+
 
 def sentence_case(label):
     tokens = label.split(" ")
@@ -86,7 +110,11 @@ def main():
     phase1 = sorted(data["phase1"], key=lambda c: -c["count"])  # stable: keeps file order among ties
     keep = max(1, round(len(phase1) * KEEP_SHARE))
     poll = [
-        {"label": sentence_case(c["label"]), "subtheme": c["subtheme"], "count": c["count"]}
+        {
+            "label": RELABEL.get(sentence_case(c["label"]), sentence_case(c["label"])),
+            "subtheme": c["subtheme"],
+            "count": c["count"],
+        }
         for c in phase1[:keep]
     ]
     discussion = [

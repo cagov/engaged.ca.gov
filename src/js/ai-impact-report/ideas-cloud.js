@@ -105,7 +105,7 @@ export async function initIdeasCloud(root) {
         const lines = WL.wrapTwoLines(c.label, fontSize, 400, fontSize * 9.5);
         const w =
           Math.max(...lines.map((l) => WL.textWidth(l, fontSize, 400))) + 6;
-        const h = lines.length * fontSize * 1.22 + 4;
+        const h = lines.length * fontSize * WL.leadingFor(fontSize) + 4;
         return {
           label: c.label,
           subtheme: c.subtheme,
