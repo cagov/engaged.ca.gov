@@ -241,8 +241,12 @@ async function colorAttributions() {
   } catch {
     return;
   }
-  const names = (data.fieldOfWork || []).map((f) => f.name);
-  const colors = assignCategoryColors(names);
+  const fieldOfWork = data.fieldOfWork || [];
+  const names = fieldOfWork.map((f) => f.name);
+  const colors = assignCategoryColors(
+    fieldOfWork.map((f) => ({ name: f.name, count: f.surveyCount })),
+    "fieldOfWork",
+  );
   const colorOf = Object.fromEntries(names.map((n, i) => [n, colors[i]]));
   for (const att of document.querySelectorAll(
     ".top-themes .conversation-attribution",

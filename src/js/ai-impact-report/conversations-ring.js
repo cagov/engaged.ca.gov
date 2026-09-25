@@ -126,7 +126,10 @@ export async function initConversationsRing(root) {
 
   function recolor() {
     categories = data[FL.DATA_KEY_FOR[dimension]] || [];
-    categoryColors = FL.assignCategoryColors(categories.map((c) => c.name));
+    categoryColors = FL.assignCategoryColors(
+      categories.map((c) => ({ name: c.name, count: c.surveyCount })),
+      dimension,
+    );
     colorOf = {};
     categories.forEach((c, i) => {
       colorOf[c.name] = categoryColors[i];
