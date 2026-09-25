@@ -169,18 +169,70 @@ export function isNonAnswer(value) {
   return NON_ANSWER.has(value);
 }
 
-/** One color per category name, in the given order. Non-answers get the
- * neutral; everything else takes the next hue from the ramp. */
-export function assignCategoryColors(values) {
-  const ramp = DATA_VIZ_CAT.concat(DATA_VIZ_CAT_LIGHTER);
-  let cursor = 0;
-  return values.map((value) => {
-    if (isNonAnswer(value)) return DATA_VIZ_NEUTRAL_LIGHT;
-    if (FIXED_CATEGORY_COLORS[value]) return FIXED_CATEGORY_COLORS[value];
-    const color = ramp[cursor % ramp.length];
-    cursor++;
-    return color;
+/** EXPERIMENTAL (color-by-representation a/b test): the original
+ * DATA_VIZ_CAT + DATA_VIZ_CAT_LIGHTER hues, deduplicated (the source arrays
+ * repeat #75bc60 and #c591da once each) and reordered so the 10 colors that
+ * clear the dataviz skill's chroma floor (OKLCH C >= 0.10 - below it a hue
+ * "reads as gray" and stops doing identity work) come first, darkest to
+ * lightest; the 7 that don't clear it are appended, darkest to lightest.
+ * A reversed (lightest-first) version of the *original* darkest-first list
+ * was tried and rejected: it front-loaded several of the low-chroma pale
+ * blues (#a9d4f2, #98decd, #abccde) together, which read as both
+ * inaccessible and as "not the original palette" (too samey). This ordering
+ * keeps every dimension's highest-count categories - the ones people
+ * actually look at - inside the accessible front half; only the smallest,
+ * least-represented categories reach the low-chroma tail. */
+const DATA_VIZ_ACCESSIBLE_RAMP = [
+  "#6d4884", // C 0.102, L 0.468
+  "#e45d48", // C 0.172, L 0.648
+  "#65ade1", // C 0.105, L 0.721
+  "#75bc60", // C 0.145, L 0.727
+  "#c591da", // C 0.117, L 0.732
+  "#ee9930", // C 0.151, L 0.753
+  "#53cab0", // C 0.114, L 0.764
+  "#ecac67", // C 0.114, L 0.791
+  "#6c8043", // C 0.089 (below floor), L 0.569
+  "#7fa1c2", // C 0.062 (below floor), L 0.696
+  "#a395d5", // C 0.093 (below floor), L 0.706
+  "#eca995", // C 0.085 (below floor), L 0.793
+  "#abccde", // C 0.043 (below floor), L 0.827
+  "#98decd", // C 0.074 (below floor), L 0.849
+  "#a9d4f2", // C 0.062 (below floor), L 0.849
+  "#f2c3c7", // C 0.054 (below floor), L 0.859
+  "#f4cea1", // C 0.073 (below floor), L 0.873
+];
+
+/** EXPERIMENTAL: region starts one slot further into the ramp than every
+ * other dimension, so its highest-count category isn't the exact same
+ * color as (say) field of work's highest-count category - the two toggle
+ * states still read as visibly different without reaching into the ramp's
+ * low-chroma tail. Region only has 8 real categories, so this offset still
+ * keeps 7 of them on the fully-accessible front 8 slots; only its very
+ * smallest category (rank 8) reaches the first (mildly) below-floor color. */
+const RAMP_OFFSET_BY_DIMENSION = { region: 1 };
+
+/** One color per category, ranked by `count` (surveyCount) instead of list
+ * position - the highest-count category gets the ramp's first slot (offset
+ * by RAMP_OFFSET_BY_DIMENSION for its dimension), next gets the next slot,
+ * and so on. Non-answers still get the neutral gray regardless of their
+ * count, so a large "(not stated)" bucket never spends a hue. `categories`
+ * is [{ name, count }] in the caller's display order; the returned array is
+ * colors in that same order. */
+export function assignCategoryColors(categories, dimension) {
+  const ramp = DATA_VIZ_ACCESSIBLE_RAMP;
+  const offset = RAMP_OFFSET_BY_DIMENSION[dimension] || 0;
+  const colors = new Array(categories.length);
+  const ranked = categories
+    .map((c, i) => ({ i, name: c.name, count: c.count }))
+    .filter((c) => !isNonAnswer(c.name))
+    .sort((a, b) => b.count - a.count);
+  ranked.forEach(({ i, name }, rank) => {
+    colors[i] = FIXED_CATEGORY_COLORS[name] || ramp[(rank + offset) % ramp.length];
   });
+  categories.forEach((c, i) => {
+    if (isNonAnswer(c.name)) colors[i] = DATA_VIZ_NEUTRAL_LIGHT;
+  });
+  return colors;
 }
 
 // ---- Cloud layout -------------------------------------------------------
