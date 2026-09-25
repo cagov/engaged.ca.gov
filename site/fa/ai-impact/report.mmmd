@@ -1,0 +1,507 @@
+---
+title: انسان در حلقه
+description: "کالیفرنیایی‌ها می‌گویند هوش مصنوعی چگونه باید ساخته، اداره و استفاده شود. Engaged California از کالیفرنیایی‌ها پرسید هوش مصنوعی چگونه کار و اقتصاد را دگرگون می‌کند و دولت باید در این باره چه کند."
+layout: mmmd-ai-impact-report
+parentid: ai-impact
+keywords:
+  - کالیفرنیا
+  - هوش مصنوعی
+  - کار
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: کالیفرنیایی‌ها می‌گویند هوش مصنوعی چگونه باید ساخته، استفاده و اداره شود
+translator_note: "button_1 scrolls to the first section; button_2 opens the methods page. Do not translate the hrefs."
+button_1_label: گزارش را بخوانید
+button_1_href: "#public-forum"
+button_2_label: روش‌های ما را ببینید
+button_2_href: /ai-impact/report-details/
+----
+# انسان در حلقه
+
+ما از مردم برخی از سخت‌ترین پرسش‌های پیش روی ایالت را پرسیدیم:
+
+*هوش مصنوعی چگونه کار و اقتصاد را دگرگون می‌کند؟ دولت باید در این باره چه کند؟*
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: در این صفحه
+label: "رفتن به یک بخش:"
+nbr_items: 4
+item_1_label: یک گفتگوی عمومی درباره هوش مصنوعی
+item_1_anchor: public-forum
+item_2_label: ایده‌هایی که شنیدیم
+item_2_anchor: what-we-heard
+item_3_label: چه کسانی شرکت کردند
+item_3_anchor: who-participated
+item_4_label: بعد چه می‌شود
+item_4_anchor: what-happens-next
+----
+
+----
+id: public_forum
+----
+## یک گفتگوی عمومی درباره هوش مصنوعی
+
+در مه ۲۰۲۶، ما یک گفتگوی عمومی درباره *تأثیر هوش مصنوعی بر کار* را برای همه کالیفرنیایی‌ها گشودیم. در ماه‌های بعد، هزاران نفر از سراسر ایالت نظرات خود را با ما در میان گذاشتند. آنها در نظرسنجی ما شرکت کردند و به بحث‌های گروهی با تسهیل‌گر پیوستند. تجربه‌های خود را به اشتراک گذاشتند و به همتایان خود گوش دادند. سپس واکنش‌های اولیه را به ایده‌های سیاستی مشخص تبدیل کردند. در این مسیر، شرکت‌کنندگان خود تنش‌ها را مطرح کردند. آنها درباره میزان مقررات‌گذاری، نحوه تأمین مالی پیشنهادها و نحوه اجرای قوانین بحث کردند.
+
+یک موضوع پیوسته تکرار می‌شد: **ما به انسان در حلقه سیاست‌گذاری هوش مصنوعی نیاز داریم.** نه فقط در نحوه استفاده مردم از هوش مصنوعی، بلکه در نحوه ساخت آن توسط شرکت‌ها و اداره آن توسط قوانین.
+----
+id: participation_numbers
+participants_count: "۲٬۷۰۲"
+participants_label: شرکت‌کننده در نظرسنجی
+conversations_count: "۱۴"
+conversations_label: گفتگو
+ideas_count: "۲۶"
+ideas_label: ایده سیاستی
+----
+
+----
+id: what_we_heard
+----
+## ایده‌هایی که شنیدیم
+
+### از نظرسنجی
+
+نظرسنجی ما از مردم پرسید که می‌خواهند دولت درباره تأثیر هوش مصنوعی چه کند. ما طیف گسترده‌ای از ایده‌های سیاستی دریافت کردیم.
+----
+id: word_cloud
+translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+chart_alt: "ابر واژگان ایده‌های سیاستی مطرح‌شده در نظرسنجی، با اندازه‌ای متناسب با تعداد افرادی که هر ایده را مطرح کردند."
+----
+
+----
+id: ranking
+----
+### از بحث‌ها
+
+سپس ایده‌های سیاستی هوش مصنوعی را در بحث‌های ۲ ساعته پالایش کردیم. گفته‌های مردم در آن بحث‌ها را در ۲۶ ایده متمایز دسته‌بندی کردیم.
+
+سپس آنها را بر این اساس رتبه‌بندی کردیم:
+
+- یک ایده چند بار در بحث‌ها مطرح شد (بسامد)، و
+- هنگام مطرح شدن چقدر حمایت جلب کرد (چند بار ایده‌ای محبوب بود).
+----
+id: tiers_ui
+translator_note: "{count} is replaced with a number. Keep it in the translation."
+count_label: "{count} موضوع سیاستی"
+show_label: نمایش
+show_more_label: "نمایش {count} مورد دیگر"
+close_label: بستن
+show_all_label: "نمایش همه"
+close_all_label: بستن همه
+example_ideas_label: "نمونه‌ها:"
+example_idea_label_singular: "نمونه:"
+nbr_tiers: 1
+initial_visible_ideas: 3
+----
+
+----
+id: top_themes
+translator_note: "The Top 3 box. Each theme is a card; selecting one shows its quotes in the panel."
+title: ۳ ایده سیاستی برتر
+subtitle: این موضوع‌ها بیشترین تکرار و قوی‌ترین حمایت را داشتند.
+icon: sparkle
+nbr_themes: 3
+show_examples_label: نمایش نمونه‌ها
+hide_examples_label: پنهان کردن نمونه‌ها
+show_conversation_label: نمایش گفتگو
+hide_conversation_label: پنهان کردن گفتگو
+quotes_title: "مردم چه گفتند:"
+select_label: "نمایش گفته‌های مردم درباره: {title}"
+translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
+quote_open: "«"
+quote_close: "»"
+----
+----
+id: top_theme_1
+title: شرکت‌های هوش مصنوعی را برای آسیب‌هایی که می‌زنند مسئول بدانیم
+----
+- مسئولیت کیفری برای آسیب‌های ناشی از هوش مصنوعی وضع شود
+- منابع بیشتری به اجرای واقعی قانون اختصاص یابد
+----
+id: top_theme_1_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+session: 10
+quote_1: "در مورد شبکه‌های اجتماعی، ما شرکت‌ها را مسئول ندانستیم و این دموکراسی ما را فروپاشاند. فکر می‌کنم دوره‌ای که می‌گفتیم شرکت‌ها مسئول نحوه استفاده مردم از ابزارهایی مثل این نیستند باید به پایان برسد. شرط می‌بندم اگر به این بی‌مسئولیتی پایان دهیم، آنها سیاست‌هایشان را تغییر می‌دهند و در ابزارهایی برای مدیریت بهتر سرمایه‌گذاری می‌کنند."
+attribution_1: کارمند هنر، سرگرمی یا رسانه از منطقه خلیج
+region_1: Bay Area
+field_1: "Arts, entertainment, or media"
+quote_2: "در ادامه نکته شما، بخش ۲۳۰ قانون CDA باعث شد یک شرکت رسانه‌ای اگر بخواهد محتوای کاربران را کنترل کند فعالانه تنبیه شود، به جای اینکه این کار ارزش‌هایش را با منافع عمومی هم‌راستا کند. پس اگر به ساختار انگیزه‌ها به طور کلی نگاه کنیم: کجا می‌توانیم قوانین را به شکلی تنظیم کنیم که پیروی از آنها هم به منافع عمومی و هم به سود شرکت کمک کند، به جای اینکه بین این دو تنش ایجاد کند؟"
+attribution_2: کارمند فناوری اطلاعات از ساحل مرکزی
+region_2: Central Coast
+field_2: "Information technology"
+quote_3: "یک مسئله می‌تواند این باشد که چه کسی مسئول خروجی‌هاست. اگر ارزیابی انسانی وجود داشته باشد، انسان مسئول است، چون انسان باید تصمیم‌گیرنده نهایی باشد. اما با شیوه‌ای که هوش مصنوعی به کار می‌رود، اگر ارزیابی انسانی در میان نباشد، چه کسی مسئول اشتباهات هوش مصنوعی است؟"
+attribution_3: کارمند بخش مالی از منطقه خلیج
+region_3: Bay Area
+field_3: "Financial"
+----
+----
+id: top_theme_2
+title: از مردم و طبیعت در برابر نیازهای منابع هوش مصنوعی حفاظت کنیم
+----
+- تأثیر مراکز داده بر محیط زیست بررسی شود
+- برای سر و صدا، آلودگی و مصرف آب و برق مراکز داده محدودیت تعیین شود
+----
+id: top_theme_2_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "فکر می‌کنم باید از منابع طبیعی و محیط زیست پاک خود حفاظت کنیم. چون کسانی را در تگزاس می‌شناسم که مزارع داده یا مراکز داده به منطقه‌شان آمده‌اند و آب آلوده شده و قبض برق به شدت بالا رفته است."
+attribution_1: کارمند هنر، سرگرمی یا رسانه از جنوب کالیفرنیا
+region_1: Southern California
+field_1: "Arts, entertainment, or media"
+quote_2: "بزرگ‌ترین نگرانی من میزان آب و برقی است که هوش مصنوعی مصرف می‌کند. شنیده‌اید که مرکز داده‌ای در جورجیا به طور غیرقانونی به منبع آب یک شهر یا شهرستان وصل شده و میلیون‌ها گالن آب برداشته بدون اینکه کسی متوجه شود."
+attribution_2: کارمند دولت از لس‌آنجلس
+region_2: Los Angeles
+field_2: "Government"
+quote_3: "وقتی به ایالت به عنوان یک مکان فیزیکی فکر می‌کنم، می‌توانیم مقررات زیست‌محیطی تعیین کنیم، می‌توانیم برای کسانی که اینجا فعالیت می‌کنند الزامات حریم خصوصی داده وضع کنیم. خیلی هیجان‌زده می‌شوم از اینکه چه کفی برای حفاظت از محیط زیست در زمینه مصرف انرژی، استفاده از فضا و غیره تعیین می‌کنیم."
+attribution_3: کارمند دولت از منطقه خلیج
+region_3: Bay Area
+field_3: "Government"
+----
+----
+id: top_theme_3
+title: قواعدی برای جاهایی که هوش مصنوعی می‌تواند ایمن استفاده شود تعیین کنیم
+----
+- استفاده از هوش مصنوعی برای تصمیم‌هایی که بر زندگی افراد اثر می‌گذارد محدود شود
+- هوش مصنوعی خودکار در فرایند استخدام ممنوع شود
+----
+id: top_theme_3_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "در مورد استخدام، این باید تصمیمی انسانی باشد. نباید بگذاریم فناوری این کار را برای ما انجام دهد."
+attribution_1: کارمند تولید از منطقه خلیج
+region_1: Bay Area
+field_1: "Goods producing and harvesting"
+quote_2: "معیارهایی که هوش مصنوعی به کار می‌برد اغلب یک جعبه سیاه است. برای مثال، ممکن است در غربال کردن رزومه‌ها به سود نامزدهای جوان‌تر در برابر نامزدهای مسن‌تر سوگیری داشته باشد."
+attribution_2: کارمند حوزه علوم از منطقه خلیج
+region_2: Bay Area
+field_2: "Professional services"
+quote_3: "شاید یکی از شرایط عرضه عمومی یک مدل هوش مصنوعی این باشد که از آزمون‌های سوگیری سربلند بیرون بیاید؟"
+attribution_3: کارمند تولید از منطقه خلیج
+region_3: Bay Area
+field_3: "Goods producing and harvesting"
+----
+----
+id: tier_1
+title: دیگر ایده‌های مورد حمایت
+subtitle: ""
+icon: heart
+nbr_ideas: 23
+----
+----
+id: tier_1_idea_1
+title: قواعدی برای نحوه برخورد هوش مصنوعی با داده‌های شخصی وضع شود
+----
+- قواعدی برای گردآوری، پردازش، ایمن‌سازی و حذف داده‌ها وضع شود
+- شفافیت و حفاظت از حریم خصوصی اجرا شود
+----
+id: tier_1_idea_2
+title: قواعدی برای نحوه کار هوش مصنوعی وضع شود
+----
+- شرکت‌ها برای هم‌راستایی با معیارهای انسانی تشویق شوند
+- حدودی برای استفاده بیش از حد و اعتیاد به هوش مصنوعی تعیین شود
+----
+id: tier_1_idea_3
+title: از اخراج به دلیل هوش مصنوعی بازداشته شود و شرکت‌هایی که کارگران را نگه می‌دارند یا می‌افزایند پاداش بگیرند
+----
+- برای اخراج کارگران به دلیل هوش مصنوعی جریمه تعیین شود
+- مشوق‌هایی برای نگه داشتن یا افزایش مشاغل ایجاد شود
+----
+id: tier_1_idea_4
+title: سیاست‌گذاری هوش مصنوعی برای عموم شفاف‌تر شود
+----
+- به جامعه‌های آسیب‌دیده حق اظهار نظر داده شود
+- گروه‌های شهروندی شامل افراد فناوری ایجاد شود
+----
+id: tier_1_idea_5
+title: شرکت‌ها ملزم شوند کارگرانی که شغلشان را به هوش مصنوعی می‌بازند را بازآموزی کنند یا به آنها کمک شغلی بدهند
+----
+- تشویق شوند به جای اخراج، کارگران را بازآموزی کنند
+- کارگران به مناطق کم‌برخوردار منتقل شوند
+----
+id: tier_1_idea_6
+title: قواعدی برای برچسب‌گذاری استفاده از هوش مصنوعی وضع شود
+----
+- محتوای هوش مصنوعی با واژه‌های مشترک یا واترمارک نشانه‌گذاری شود
+- شرکت‌ها هنگام افشا نکردن استفاده از هوش مصنوعی جریمه شوند
+----
+id: tier_1_idea_7
+title: سود شرکت‌های هوش مصنوعی محدود و مشمول مالیات شود
+----
+- خلأهای قانونی که به آنها امکان فرار از مسئولیت می‌دهد بسته شود
+- قوانین مالیاتی تغییر کند تا از سهام برای فرار مالیاتی استفاده نشود
+----
+id: tier_1_idea_8
+title: شرکت‌های هوش مصنوعی اگر بدون اجازه از کار دیگران استفاده کنند مسئول شناخته شوند
+----
+- حق نشر اجرا شود، از مالکیت معنوی دفاع شود
+----
+id: tier_1_idea_9
+title: مردم از نحوه استفاده اخلاقی از هوش مصنوعی آگاه شوند
+----
+- آگهی‌های خدمات عمومی درباره فایده‌ها و خطرها ساخته شود
+----
+id: tier_1_idea_10
+title: آموزش هوش مصنوعی در مدارس بهتر شود
+----
+- به دانش‌آموزان اجازه داده شود در محیط‌های آزمایشی کار کنند تا اثرات مثبت گسترش یابد
+----
+id: tier_1_idea_11
+title: به مردم اجازه انصراف از هوش مصنوعی داده شود و این کار آسان‌تر شود
+----
+- رضایت الزامی شود، انصراف گزینه پیش‌فرض باشد
+----
+id: tier_1_idea_12
+title: از پژوهش مستقل درباره اثرات هوش مصنوعی پشتیبانی شود
+----
+- پژوهش‌هایی درباره اثر استفاده از هوش مصنوعی بر تفکر نقادانه تأمین مالی شود
+----
+id: tier_1_idea_13
+title: داده‌های شخصی قابل جمع‌آوری توسط سامانه‌های هوش مصنوعی محدود شود و کاربران بتوانند داده‌هایشان را مدیریت کنند
+----
+- متن رضایت‌نامه ساده شود
+----
+id: tier_1_idea_14
+title: به کارگرانی که شغلشان را به دلیل هوش مصنوعی از دست می‌دهند تا یافتن شغل جدید حقوق پرداخت شود
+----
+- درآمد پایه همگانی، یا بیمه بیکاری بیشتر برای کسانی که شغلشان را به هوش مصنوعی باخته‌اند
+----
+id: tier_1_idea_15
+title: از آموزش هوش مصنوعی برای کارگران پشتیبانی شود
+----
+
+----
+id: tier_1_idea_16
+title: از هوش مصنوعی برای بهبود عملکرد دولت استفاده شود
+----
+
+----
+id: tier_1_idea_17
+title: انسان‌ها به عنوان تصمیم‌گیرنده در حلقه بمانند و تنها به هوش مصنوعی تکیه نشود
+----
+
+----
+id: tier_1_idea_18
+title: کنترل والدین بر استفاده از هوش مصنوعی تقویت شود
+----
+
+----
+id: tier_1_idea_19
+title: برنامه‌هایی برای ارتباط انسانی و زندگی بیرون از هوش مصنوعی تأمین مالی شود
+----
+
+----
+id: tier_1_idea_20
+title: اطمینان حاصل شود دانش‌آموزان از هوش مصنوعی برای فرار از یادگیری استفاده نکنند
+----
+
+----
+id: tier_1_idea_21
+title: شرکت‌ها از اخراج یا تنبیه کارگران به دلیل استفاده نکردن از هوش مصنوعی بازداشته شوند
+----
+
+----
+id: tier_1_idea_22
+title: از دست رفتن مشاغل به دلیل هوش مصنوعی پیگیری و گزارش شود
+----
+
+----
+id: tier_1_idea_23
+title: از هوش مصنوعی برای کارهایی که مردم نمی‌خواهند یا نمی‌توانند انجام دهند استفاده شود
+----
+
+----
+id: how_to_read_tiers
+----
+### چگونه این رتبه‌بندی را بخوانیم
+
+این رتبه‌بندی نشان می‌دهد یک ایده در بحث‌ها چه سرنوشتی داشت. این حکمی درباره ارزش آن نیست. ایده‌ای که در بالای فهرست نیست ممکن است همچنان برای بسیاری از مردم اهمیت زیادی داشته باشد.
+
+این‌ها موضوع‌هایی هستند که شرکت‌کنندگان درباره‌شان صحبت کردند. آنها از آنچه سیاست یا قوانین فعلی ممکن است انجام دهند جدا هستند. برخی ممکن است با مواردی که هم‌اکنون در چشم‌انداز سیاستی در جریان‌اند هم‌راستا باشند.
+----
+id: region_legend
+nbr_regions: 9
+region_1: لس‌آنجلس
+region_2: منطقه خلیج
+region_3: جنوب کالیفرنیا
+region_4: دره ساکرامنتو / دامنه‌های سیرا
+region_5: دره مرکزی
+region_6: شمال دور / ساحل شمالی
+region_7: ساحل مرکزی
+region_8: منطقه سیرا
+region_9: اعلام‌نشده
+----
+
+----
+id: category_labels
+translator_note: "Field of work names as they appear in the Who participated chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 15
+key_1: "Government"
+label_1: "دولت"
+key_2: "Other"
+label_2: "دیگر"
+key_3: "Information technology"
+label_3: "فناوری اطلاعات"
+key_4: "Arts, entertainment, or media"
+label_4: "هنر، سرگرمی یا رسانه"
+key_5: "Education"
+label_5: "آموزش"
+key_6: "Professional services"
+label_6: "خدمات تخصصی"
+key_7: "Healthcare"
+label_7: "مراقبت‌های بهداشتی"
+key_8: "Unemployed, looking"
+label_8: "بیکار، در جستجوی کار"
+key_9: "Financial"
+label_9: "مالی"
+key_10: "Goods producing and harvesting"
+label_10: "تولید کالا و برداشت محصول"
+key_11: "Retail or wholesale trade"
+label_11: "خرده‌فروشی یا عمده‌فروشی"
+key_12: "Logistics"
+label_12: "حمل و نقل و پشتیبانی"
+key_13: "Hospitality"
+label_13: "مهمان‌داری و گردشگری"
+key_14: "(not stated)"
+label_14: "اعلام‌نشده"
+key_15: "I don't want to say"
+label_15: "نمی‌خواهم بگویم"
+----
+
+----
+id: who_participated
+title: چه کسانی شرکت کردند
+nbr_steps: 4
+toggle_region: منطقه
+toggle_field_of_work: حوزه کاری
+toggle_age: سن
+toggle_race: نژاد / قومیت
+toggle_gender: جنسیت
+toggle_ai_response: پاسخ درباره هوش مصنوعی
+legend_participant: شرکت‌کننده
+legend_facilitator: تسهیل‌گر
+prev_label: مرحله قبل
+next_label: مرحله بعد
+translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
+step_counter: "{current} از {total}"
+step_marker_label: "رفتن به مرحله {current}"
+step_role_label: مرحله
+play_label: پخش
+pause_label: توقف
+restart_label: شروع دوباره
+ring_center_title: ۱۰۳ نفر در ۱۴ گفتگو
+ring_center_hint: ""
+chart_alt: "پویانمایی هر پاسخ‌دهنده نظرسنجی به شکل یک نقطه. دعوت‌شدگان به بحث روشن می‌شوند، حاضران به شکل پیکره‌های انسانی گرد می‌آیند و سپس به یک حلقه برای هر گفتگو تقسیم می‌شوند، با رنگ‌بندی بر اساس منطقه یا حوزه کاری."
+----
+
+----
+id: who_participated_step_1
+phase_label: نظرسنجی
+pill_label: "۱ · مرحله ۱"
+phase_title: شنیدن گسترده
+stat_count: "۲٬۷۰۲"
+stat_label: پاسخ‌دهنده نظرسنجی
+phase_subtitle: "مردم به نظرسنجی آزاد ما درباره هوش مصنوعی پاسخ دادند"
+chart_image_region: /public/images/ai-report-participants-step1-region.png
+chart_image_field: /public/images/ai-report-participants-step1-field.png
+chart_alt: "نمودار پراکندگی نقطه‌ها، یک نقطه برای هر پاسخ‌دهنده، با رنگ‌بندی بر اساس منطقه."
+----
+
+----
+id: who_participated_step_2
+phase_label: بحث‌ها
+pill_label: "۲ · برگزیده"
+phase_title: دعوت از مخاطبانی متوازن
+stat_count: "۹۳۷"
+stat_label: دعوت‌شده
+phase_subtitle: "ما زیرمجموعه‌ای از پاسخ‌دهندگان را برگزیدیم که بازتاب کالیفرنیا باشد"
+chart_image_region: /public/images/ai-report-participants-step2-region.png
+chart_image_field: /public/images/ai-report-participants-step2-field.png
+chart_alt: "نمودار پراکندگی نقطه‌ها، یک نقطه برای هر پاسخ‌دهنده دعوت‌شده، با رنگ‌بندی بر اساس منطقه."
+----
+
+----
+id: who_participated_step_3
+phase_label: بحث‌ها
+pill_label: "۳ · مرحله ۲"
+phase_title: پیوستن به گفتگو
+stat_count: "۱۰۳"
+stat_label: حاضر
+phase_subtitle: "این کالیفرنیایی‌ها پاسخ «بله» دادند و به یک بحث پیوستند"
+chart_image_region: /public/images/ai-report-participants-step3-region.png
+chart_image_field: /public/images/ai-report-participants-step3-field.png
+chart_alt: "نمودار پراکندگی نقطه‌ها، یک نقطه برای هر حاضر در بحث، با رنگ‌بندی بر اساس منطقه."
+----
+
+----
+id: who_participated_step_4
+phase_label: بحث‌ها
+pill_label: "۴ · گفتگوها"
+phase_title: گروه‌های بحث
+stat_count: "۱۴"
+stat_label: گفتگو
+phase_subtitle: "این‌ها ویژگی‌های جمعیتی هر بحث است"
+chart_image_region: /public/images/ai-report-participants-step4-region.png
+chart_image_field: /public/images/ai-report-participants-step4-field.png
+chart_alt: "حلقه‌ای از ۱۴ خوشه کوچک نقطه، یک خوشه برای هر گفتگو، با رنگ‌بندی بر اساس منطقه."
+----
+
+----
+id: what_happens_next
+----
+## بعد چه می‌شود
+
+این گزارش پایان داستان نیست. ایده‌هایی که مردم در میان گذاشتند به گفتگوی سیاستی پرشتابی می‌پیوندند که هم‌اکنون در جریان است.
+
+در حالی که Engaged California یافته‌های خود را نهایی می‌کرد، دولت نیوسام در زمینه هوش مصنوعی اقدام کرد. بسیاری از این اقدام‌ها به موضوع‌هایی مربوط بود که مردم در این بحث‌ها مطرح کردند:
+
+- اثر زیست‌محیطی مراکز داده
+- شفافیت درباره محتوای تولیدشده با هوش مصنوعی
+- نظارت مستقل بر مدل‌های پیشرو
+- حفاظت از کارگران و کودکان
+
+در سپتامبر ۲۰۲۶، فرماندار نیوسام این‌ها را امضا کرد:
+
+- یکی از گسترده‌ترین [قوانین مراکز داده](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/) کشور. این قانون به جامعه‌ها در استفاده از آب، برق و زمین‌شان حق نظر بیشتری می‌دهد.
+- لایحه سنا ۱۰۵۰ که [افشا را الزامی می‌کند](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/) هنگامی که یک تبلیغ از بازیگران تولیدشده با هوش مصنوعی استفاده می‌کند.
+- یک فرمان اجرایی برای تسریع تلاش‌های [نظارت بر هوش مصنوعی](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/) ایالت. این فرمان قوانین جدید ممیزی هوش مصنوعی را سرعت می‌بخشد و «کلید خاموشی» برای مدل‌های پیشرو هوش مصنوعی را پیش می‌برد.
+- مجموعه‌ای از [تدابیر حفاظتی هوش مصنوعی، نخستین در کشور](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/).
+- [قوانین ایمنی کودکان](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/) برای چت‌بات‌ها و شبکه‌های اجتماعی.
+
+کار ما هم هنوز تمام نشده است. کالیفرنیایی‌ها ایده‌های بسیاری مطرح کردند که در سال‌های آینده به اقدام دولت جهت خواهد داد. و همچنان که چشم‌انداز هوش مصنوعی تغییر می‌کند، ما به گوش دادن ادامه خواهیم داد.
+----
+id: methods_button
+translator_note: "Button at the end of What happens next, linking to the methods page. Do not translate the href."
+label: روش‌های ما را ببینید
+href: /ai-impact/report-details/
+----
+----
+id: sign_up
+button_text: ثبت‌نام
+----
+## برای ماندن در جریان ثبت‌نام کنید
+
+ایمیل خود را به ما بدهید تا از فرصت‌های آینده آگاه شوید.

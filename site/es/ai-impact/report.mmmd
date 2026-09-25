@@ -1,0 +1,508 @@
+---
+title: Personas en el circuito
+description: "Los californianos dicen cómo se debe crear, gobernar y usar la IA. Engaged California preguntó a los californianos cómo la IA está transformando el trabajo y la economía, y qué debería hacer el gobierno al respecto."
+layout: mmmd-ai-impact-report
+parentid: ai-impact
+keywords:
+  - California
+  - inteligencia artificial
+  - IA
+  - trabajo
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: Los californianos dicen cómo se debe crear, usar y gobernar la IA
+translator_note: "button_1 scrolls to the first section; button_2 opens the methods page. Do not translate the hrefs."
+button_1_label: Leer el informe
+button_1_href: "#public-forum"
+button_2_label: Conozca nuestros métodos
+button_2_href: /ai-impact/report-details/
+----
+# Personas en el circuito
+
+Les hicimos a las personas algunas de las preguntas más difíciles que enfrenta el estado:
+
+*¿Cómo está transformando la IA el trabajo y la economía? ¿Qué debería hacer el gobierno al respecto?*
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: En esta página
+label: "Ir a una sección:"
+nbr_items: 4
+item_1_label: Un foro público sobre la IA
+item_1_anchor: public-forum
+item_2_label: Ideas que escuchamos
+item_2_anchor: what-we-heard
+item_3_label: Quiénes participaron
+item_3_anchor: who-participated
+item_4_label: Qué sigue
+item_4_anchor: what-happens-next
+----
+
+----
+id: public_forum
+----
+## Un foro público sobre la IA
+
+En mayo de 2026, abrimos a todos los californianos un foro público sobre el *Impacto de la IA en el trabajo*. En los meses siguientes, miles de personas de todo el estado nos dieron su opinión. Respondieron nuestra encuesta y participaron en debates grupales facilitados. Compartieron sus propias experiencias y escucharon a sus pares. Luego convirtieron sus reacciones instintivas en ideas concretas de política pública. En el camino, los propios participantes plantearon las tensiones. Debatieron hasta dónde regular, cómo se financiarían las propuestas y cómo se harían cumplir las reglas.
+
+Un tema surgió de manera constante: **Necesitamos personas en el circuito de las políticas sobre IA.** No solo en cómo las personas usan la IA, sino en cómo las empresas la construyen y las leyes la gobiernan.
+----
+id: participation_numbers
+participants_count: "2,702"
+participants_label: participantes de la encuesta
+conversations_count: "14"
+conversations_label: conversaciones
+ideas_count: "26"
+ideas_label: ideas de política
+----
+
+----
+id: what_we_heard
+----
+## Ideas que escuchamos
+
+### De la encuesta
+
+Nuestra encuesta preguntó a las personas qué les gustaría que hiciera el gobierno frente al impacto de la IA. Recibimos una amplia variedad de ideas de política pública.
+----
+id: word_cloud
+translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+chart_alt: "Nube de palabras con las ideas de política planteadas en la encuesta, con un tamaño proporcional a cuántas personas plantearon cada una."
+----
+
+----
+id: ranking
+----
+### De los debates
+
+Luego refinamos las ideas de política sobre IA en debates de 2 horas. Agrupamos lo que la gente dijo allí en 26 ideas distintas.
+
+Después las clasificamos según:
+
+- Con qué frecuencia surgió una idea en los debates (frecuencia), y
+- Cuánto apoyo obtuvo cuando surgió (con qué frecuencia fue una idea popular).
+----
+id: tiers_ui
+translator_note: "{count} is replaced with a number. Keep it in the translation."
+count_label: "{count} temas de política"
+show_label: Mostrar
+show_more_label: "Mostrar {count} más"
+close_label: Cerrar
+show_all_label: "Mostrar todo"
+close_all_label: Cerrar todo
+example_ideas_label: "Ejemplos:"
+example_idea_label_singular: "Ejemplo:"
+nbr_tiers: 1
+initial_visible_ideas: 3
+----
+
+----
+id: top_themes
+translator_note: "The Top 3 box. Each theme is a card; selecting one shows its quotes in the panel."
+title: Las 3 ideas de política principales
+subtitle: Estos temas surgieron con más frecuencia y recibieron el mayor apoyo.
+icon: sparkle
+nbr_themes: 3
+show_examples_label: Mostrar ejemplos
+hide_examples_label: Ocultar ejemplos
+show_conversation_label: Mostrar la conversación
+hide_conversation_label: Ocultar la conversación
+quotes_title: "Lo que dijo la gente:"
+select_label: "Mostrar lo que dijo la gente sobre: {title}"
+translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
+quote_open: "«"
+quote_close: "»"
+----
+----
+id: top_theme_1
+title: Responsabilizar a las empresas de IA por los daños que causan
+----
+- Establecer responsabilidad penal por los daños causados por la IA
+- Destinar más recursos a una aplicación real de la ley
+----
+id: top_theme_1_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+session: 10
+quote_1: "Con las redes sociales no responsabilizamos a las empresas, y eso destruyó nuestra democracia. Creo que la era de decir que las empresas no son responsables de cómo la gente usa herramientas como esta debería terminar. Apuesto a que cambiarían sus políticas e invertirían en ciertas herramientas para gestionar mejor si acabáramos con esa falta de responsabilidad."
+attribution_1: Trabajador de las artes, el entretenimiento o los medios del Área de la Bahía
+region_1: Bay Area
+field_1: "Arts, entertainment, or media"
+quote_2: "Sobre su punto, la Sección 230 de la CDA hizo que una empresa de medios fuera castigada activamente si intentaba vigilar el contenido de los usuarios, en lugar de convertirlo en algo que alineara sus valores con el bien público. Entonces, si miramos las estructuras de incentivos de manera integral: ¿dónde podemos estructurar las reglas para que seguirlas contribuya al bien público y al resultado financiero, en lugar de crear tensión entre ambos?"
+attribution_2: Trabajador de tecnología de la información de la Costa Central
+region_2: Central Coast
+field_2: "Information technology"
+quote_3: "Una cuestión podría ser quién es responsable de los resultados. Si hay una evaluación humana, entonces el humano es responsable, porque un humano debería tomar la decisión final. Pero por la forma en que se está usando la IA, si no interviene una evaluación humana, ¿quién es responsable de los errores que comete la IA?"
+attribution_3: Trabajador del sector financiero del Área de la Bahía
+region_3: Bay Area
+field_3: "Financial"
+----
+----
+id: top_theme_2
+title: Proteger a las personas y la naturaleza de los recursos que consume la IA
+----
+- Estudiar el impacto de los centros de datos en el medio ambiente
+- Fijar límites al ruido, la contaminación y el uso de agua y electricidad de los centros de datos
+----
+id: top_theme_2_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "Creo que deberíamos proteger nuestros recursos naturales y un medio ambiente limpio. Porque conozco a gente en Texas donde se han instalado granjas o centros de datos, y el agua se ha contaminado y las facturas de electricidad se han disparado."
+attribution_1: Trabajador de las artes, el entretenimiento o los medios del sur de California
+region_1: Southern California
+field_1: "Arts, entertainment, or media"
+quote_2: "Mi mayor preocupación es la cantidad de agua y electricidad que está usando la IA. Uno oye del centro de datos en Georgia que se conectó ilegalmente al suministro de agua de alguna ciudad o condado y le sacó millones de galones sin que nadie se diera cuenta."
+attribution_2: Trabajador del gobierno de Los Ángeles
+region_2: Los Angeles
+field_2: "Government"
+quote_3: "Cuando pienso en el estado como un lugar físico, podríamos fijar regulaciones ambientales, podríamos fijar requisitos de privacidad de datos para quienes operan aquí. Me entusiasma mucho pensar qué piso estamos fijando para la protección ambiental en cuanto al uso de energía, el uso del espacio, etc."
+attribution_3: Trabajador del gobierno del Área de la Bahía
+region_3: Bay Area
+field_3: "Government"
+----
+----
+id: top_theme_3
+title: Fijar reglas sobre dónde se puede usar la IA de forma segura
+----
+- Limitar el uso de la IA para tomar decisiones que afectan vidas
+- Prohibir la IA automatizada en los procesos de contratación
+----
+id: top_theme_3_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "Cuando se trata de empleo, debería ser una decisión humana. No deberíamos dejar que la tecnología lo haga por nosotros."
+attribution_1: Trabajador de manufactura del Área de la Bahía
+region_1: Bay Area
+field_1: "Goods producing and harvesting"
+quote_2: "Los criterios que usa la IA suelen ser una caja negra. Por ejemplo, podría estar sesgada a favor de los currículums de candidatos más jóvenes frente a los de mayor edad."
+attribution_2: Trabajador del sector científico del Área de la Bahía
+region_2: Bay Area
+field_2: "Professional services"
+quote_3: "¿Quizás un requisito para lanzar un modelo de IA al público debería ser que pase algunas pruebas de sesgo?"
+attribution_3: Trabajador de manufactura del Área de la Bahía
+region_3: Bay Area
+field_3: "Goods producing and harvesting"
+----
+----
+id: tier_1
+title: Otras ideas con apoyo
+subtitle: ""
+icon: heart
+nbr_ideas: 23
+----
+----
+id: tier_1_idea_1
+title: Establecer reglas sobre cómo la IA maneja los datos personales
+----
+- Establecer reglas para recopilar, manejar, proteger y eliminar datos
+- Hacer cumplir la transparencia y las protecciones de privacidad
+----
+id: tier_1_idea_2
+title: Establecer reglas sobre cómo funciona la IA
+----
+- Incentivar a las empresas a alinearse con estándares humanos
+- Fijar salvaguardas contra el uso excesivo y la adicción a la IA
+----
+id: tier_1_idea_3
+title: Desalentar los despidos causados por la IA y premiar a las empresas que conservan o suman trabajadores
+----
+- Añadir sanciones por despedir trabajadores a causa de la IA
+- Crear incentivos para conservar o aumentar los empleos
+----
+id: tier_1_idea_4
+title: Abrir más al público la formulación de políticas sobre IA
+----
+- Dar voz a las comunidades afectadas
+- Crear grupos ciudadanos que incluyan a gente del sector tecnológico
+----
+id: tier_1_idea_5
+title: Obligar a las empresas a recapacitar u ofrecer orientación profesional a los trabajadores que pierden su empleo por la IA
+----
+- Incentivarlas a recapacitar a los trabajadores en lugar de despedirlos
+- Reubicar trabajadores en áreas desatendidas
+----
+id: tier_1_idea_6
+title: Establecer reglas para etiquetar el uso de IA
+----
+- Marcar el contenido de IA con términos comunes o marcas de agua
+- Sancionar a las empresas cuando no informen del uso de IA
+----
+id: tier_1_idea_7
+title: Restringir y gravar las ganancias de las empresas de IA
+----
+- Cerrar los vacíos legales que les permiten eludir responsabilidad
+- Cambiar las leyes fiscales para que las acciones no sirvan para evitar impuestos
+----
+id: tier_1_idea_8
+title: Responsabilizar a las empresas de IA si usan el trabajo de otros sin permiso
+----
+- Hacer cumplir los derechos de autor, defender la propiedad intelectual
+----
+id: tier_1_idea_9
+title: Concientizar a las personas sobre cómo usar la IA de forma ética
+----
+- Hacer anuncios de servicio público sobre beneficios y riesgos
+----
+id: tier_1_idea_10
+title: Mejorar la educación sobre IA en las escuelas
+----
+- Dejar que los estudiantes trabajen en entornos de prueba para ampliar los efectos positivos
+----
+id: tier_1_idea_11
+title: Permitir que las personas opten por no usar IA y facilitarlo
+----
+- Exigir consentimiento, hacer que la exclusión sea la opción predeterminada
+----
+id: tier_1_idea_12
+title: Apoyar la investigación independiente sobre los efectos de la IA
+----
+- Financiar estudios sobre cómo el uso de IA afecta el pensamiento crítico
+----
+id: tier_1_idea_13
+title: Limitar qué datos personales pueden recopilar los sistemas de IA y permitir que los usuarios gestionen sus datos
+----
+- Simplificar los textos de consentimiento
+----
+id: tier_1_idea_14
+title: Pagar a los trabajadores que pierden su empleo por la IA mientras encuentran uno nuevo
+----
+- Renta básica universal, o más prestación por desempleo si perdió su trabajo por la IA
+----
+id: tier_1_idea_15
+title: Apoyar la capacitación en IA para trabajadores
+----
+
+----
+id: tier_1_idea_16
+title: Usar la IA para mejorar el funcionamiento del gobierno
+----
+
+----
+id: tier_1_idea_17
+title: Mantener a las personas en el circuito como responsables de las decisiones, sin depender solo de la IA
+----
+
+----
+id: tier_1_idea_18
+title: Fortalecer los controles parentales para el uso de IA
+----
+
+----
+id: tier_1_idea_19
+title: Financiar programas de conexión humana y vida fuera de la IA
+----
+
+----
+id: tier_1_idea_20
+title: Asegurar que los estudiantes no usen la IA para evitar aprender
+----
+
+----
+id: tier_1_idea_21
+title: Impedir que las empresas despidan o castiguen a los trabajadores por no usar IA
+----
+
+----
+id: tier_1_idea_22
+title: Rastrear e informar sobre la pérdida de empleos debida a la IA
+----
+
+----
+id: tier_1_idea_23
+title: Usar la IA para trabajos que las personas no quieren o no pueden hacer
+----
+
+----
+id: how_to_read_tiers
+----
+### Cómo leer esta clasificación
+
+La clasificación muestra cómo le fue a una idea en los debates. No es un veredicto sobre su mérito. Una idea que no está entre las primeras puede seguir importando mucho a muchas personas.
+
+Estos son los temas de los que hablaron los participantes. Son independientes de lo que ya puedan hacer las políticas o la legislación vigentes. Algunos pueden coincidir con asuntos que ya avanzan en el panorama de las políticas públicas.
+----
+id: region_legend
+nbr_regions: 9
+region_1: Los Ángeles
+region_2: Área de la Bahía
+region_3: Sur de California
+region_4: Valle de Sacramento / Estribaciones de la Sierra
+region_5: Valle Central
+region_6: Extremo norte / Costa norte
+region_7: Costa Central
+region_8: Región de la Sierra
+region_9: No indicado
+----
+
+----
+id: category_labels
+translator_note: "Field of work names as they appear in the Who participated chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 15
+key_1: "Government"
+label_1: "Gobierno"
+key_2: "Other"
+label_2: "Otro"
+key_3: "Information technology"
+label_3: "Tecnología de la información"
+key_4: "Arts, entertainment, or media"
+label_4: "Artes, entretenimiento o medios"
+key_5: "Education"
+label_5: "Educación"
+key_6: "Professional services"
+label_6: "Servicios profesionales"
+key_7: "Healthcare"
+label_7: "Atención médica"
+key_8: "Unemployed, looking"
+label_8: "Desempleado, en búsqueda"
+key_9: "Financial"
+label_9: "Finanzas"
+key_10: "Goods producing and harvesting"
+label_10: "Producción de bienes y cosecha"
+key_11: "Retail or wholesale trade"
+label_11: "Comercio minorista o mayorista"
+key_12: "Logistics"
+label_12: "Logística"
+key_13: "Hospitality"
+label_13: "Hostelería"
+key_14: "(not stated)"
+label_14: "No indicado"
+key_15: "I don't want to say"
+label_15: "Prefiero no decirlo"
+----
+
+----
+id: who_participated
+title: Quiénes participaron
+nbr_steps: 4
+toggle_region: Región
+toggle_field_of_work: Campo de trabajo
+toggle_age: Edad
+toggle_race: Raza / etnia
+toggle_gender: Género
+toggle_ai_response: Respuesta sobre la IA
+legend_participant: Participante
+legend_facilitator: Facilitador
+prev_label: Paso anterior
+next_label: Paso siguiente
+translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
+step_counter: "{current} de {total}"
+step_marker_label: "Ir al paso {current}"
+step_role_label: paso
+play_label: Reproducir
+pause_label: Pausar
+restart_label: Reiniciar
+ring_center_title: 103 personas en 14 conversaciones
+ring_center_hint: ""
+chart_alt: "Animación de cada encuestado como un punto. Los invitados a un debate se iluminan, los que asistieron se agrupan en figuras de personas y luego se dividen en un anillo por conversación, coloreado por región o campo de trabajo."
+----
+
+----
+id: who_participated_step_1
+phase_label: Encuesta
+pill_label: "1 · Fase 1"
+phase_title: Escucha amplia
+stat_count: "2,702"
+stat_label: encuestados
+phase_subtitle: "Las personas respondieron a nuestra encuesta abierta sobre la IA"
+chart_image_region: /public/images/ai-report-participants-step1-region.png
+chart_image_field: /public/images/ai-report-participants-step1-field.png
+chart_alt: "Gráfico de dispersión con un punto por encuestado, coloreado por región."
+----
+
+----
+id: who_participated_step_2
+phase_label: Debates
+pill_label: "2 · Seleccionados"
+phase_title: Invitar a un público equilibrado
+stat_count: "937"
+stat_label: invitados
+phase_subtitle: "Seleccionamos un subconjunto de encuestados que refleja a California"
+chart_image_region: /public/images/ai-report-participants-step2-region.png
+chart_image_field: /public/images/ai-report-participants-step2-field.png
+chart_alt: "Gráfico de dispersión con un punto por encuestado invitado, coloreado por región."
+----
+
+----
+id: who_participated_step_3
+phase_label: Debates
+pill_label: "3 · Fase 2"
+phase_title: Unirse a la conversación
+stat_count: "103"
+stat_label: asistieron
+phase_subtitle: "Estos californianos confirmaron su asistencia y se unieron a un debate"
+chart_image_region: /public/images/ai-report-participants-step3-region.png
+chart_image_field: /public/images/ai-report-participants-step3-field.png
+chart_alt: "Gráfico de dispersión con un punto por asistente a los debates, coloreado por región."
+----
+
+----
+id: who_participated_step_4
+phase_label: Debates
+pill_label: "4 · Conversaciones"
+phase_title: Los grupos de debate
+stat_count: "14"
+stat_label: conversaciones
+phase_subtitle: "Estos son los datos demográficos de cada debate"
+chart_image_region: /public/images/ai-report-participants-step4-region.png
+chart_image_field: /public/images/ai-report-participants-step4-field.png
+chart_alt: "Anillo de 14 pequeños grupos de puntos, uno por conversación, coloreados por región."
+----
+
+----
+id: what_happens_next
+----
+## Qué sigue
+
+Este informe no es el final de la historia. Las ideas que compartieron las personas se sumarán a una conversación sobre políticas públicas que ya está en marcha y avanza rápido.
+
+Mientras Engaged California terminaba sus conclusiones, la administración Newsom actuó en materia de IA. Muchas acciones tocaron temas que las personas plantearon en estos debates:
+
+- La huella ambiental de los centros de datos
+- La transparencia sobre el contenido generado por IA
+- La supervisión independiente de los modelos de frontera
+- Las protecciones para trabajadores y niños
+
+En septiembre de 2026, el gobernador Newsom firmó:
+
+- Una de las [leyes sobre centros de datos](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/) más amplias del país. Da a las comunidades más voz sobre el uso de su agua, electricidad y suelo.
+- El Proyecto de Ley del Senado 1050, que [exige informar](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/) cuando un anuncio usa intérpretes generados por IA.
+- Una Orden Ejecutiva para acelerar los esfuerzos de [supervisión de la IA](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/) del estado. Agiliza nuevas leyes de auditoría de IA y avanza en un «interruptor de emergencia» para los modelos de IA de frontera.
+- Un conjunto de [salvaguardas de IA pioneras en el país](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/).
+- [Leyes de seguridad infantil](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/) para chatbots y redes sociales.
+
+Nosotros tampoco hemos terminado nuestro trabajo. Los californianos plantearon muchas ideas que orientarán la acción del gobierno en los próximos años. Y a medida que el panorama de la IA siga evolucionando, seguiremos escuchando.
+----
+id: methods_button
+translator_note: "Button at the end of What happens next, linking to the methods page. Do not translate the href."
+label: Conozca nuestros métodos
+href: /ai-impact/report-details/
+----
+----
+id: sign_up
+button_text: Inscríbase
+----
+## Inscríbase para seguir participando
+
+Déjenos su correo electrónico para conocer las próximas oportunidades.

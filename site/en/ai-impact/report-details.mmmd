@@ -1,0 +1,261 @@
+---
+title: How we did this work
+description: "How Engaged California chose participants for the Impact of AI on work discussions, how close each phase came to its demographic targets, and how we analyzed what people said."
+layout: mmmd-ai-impact-report-details
+parentid: ai-impact
+keywords:
+  - California
+  - artificial intelligence
+  - AI
+  - work
+  - sortition
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: "The methods we used to host and analyze conversations about AI"
+theme: light
+back_link_text: "Back to the report"
+back_link_href: /ai-impact/report/
+----
+# How we did this work
+----
+id: intro
+----
+The *Impact of AI on work* project had two phases. In the first phase, any Californian could share their views through an open online survey. In the second phase, we invited interested survey-takers to live discussions.
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: On this page
+label: "Jump to:"
+nbr_items: 3
+item_1_label: Balancing each group, fairly
+item_1_anchor: balancing-groups
+item_2_label: Ranking policy ideas
+item_2_anchor: ranking-policy-ideas
+item_3_label: How we used AI
+item_3_anchor: how-we-used-ai
+----
+
+----
+id: balancing_groups
+title: Balancing each group, fairly
+----
+We needed to decide who to invite. And we needed to choose fairly, while creating balanced groups.
+
+So we used an approach called sortition, which is like how courts choose juries. It is built on two equally important ideas:
+
+- **Representation:** We set demographic goals based on California population estimates. This would make the final list of invitees reflect the diversity of the state. Criteria included things like age, geography, and field of work.
+- **Randomness:** Within those goals, everyone who fit had a fair chance of being selected.
+
+These principles ensured we wouldn’t hear only from those who responded first. It let us build a fairly-chosen list that roughly reflected Californians as a whole.
+----
+id: demographics_chart
+title: Demographics
+pulldown_label: "Show participants by"
+chart_title: "How close we got to demographic targets"
+axis_above_label: "Percentage points above target"
+axis_below_label: "Percentage points below target"
+chart_alt: "Bar chart comparing survey and discussion participants to demographic targets, in percentage points from target."
+dim_region: Region
+dim_race: Race / ethnicity
+dim_age: Age
+dim_gender: Gender
+dim_field: Field of work
+dim_ai: AI sentiment
+phase1_label: Survey
+phase2_label: Discussions
+on_target_label: On target
+translator_note: "{dimension} is replaced with the selected drop-down label. Keep it in the translation."
+table_caption: "Participants compared to target, by {dimension}"
+translator_note_2: "The next four lines are read by screen readers. Keep every {placeholder} in the translation."
+chart_aria_label: "{dimension}: {phase1} and {phase2}, percentage points from target"
+bar_title: "{category}, {phase}: {value} points from target ({share}% vs {target}% target)"
+table_target_header: "Target %"
+table_points_header: "{phase} points from target"
+----
+Sortition brought us closer to balanced demographics in the discussions.
+
+See how close we came to our demographic targets. Click the drop-down menu for measurements by:
+
+- Region
+- Race / ethnicity
+- Gender
+- Field of work
+- Age
+----
+id: demographics_sources
+translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
+label: Source for targets
+source_region: "Region: Every region gets a guaranteed voice (at least 6). We filled the rest of seats proportional to California's 2026 population using American Community Survey (ACS) estimates."
+source_field_of_work: "Field of work: Based on California Employment Development Department’s [Industry Employment & Labor Force (CES) statistics for April 2026](https://labormarketinfo.edd.ca.gov/file/lfmonth/cal$pds.pdf) and [area selection tables](https://labormarketinfo.edd.ca.gov/cgi/dataanalysis/areaselection.asp?tablename=ces). The memo to the Governor’s Office specifically calls out logistics, healthcare, legal and financial services, creative industries, the public sector, and academia as priority sectors. We reflected that in these categories."
+source_age: "Age: Mirrors 2026 Census / CA DOF projections."
+source_gender: "Gender: Mirrors 2026 Census / CA DOF projections."
+source_race: "Race / ethnicity: Mirrors 2026 Census / CA DOF projections."
+source_ai: ""
+----
+
+----
+id: category_labels
+translator_note: "Category names as they appear in the demographics chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 36
+key_1: "Bay Area"
+label_1: "Bay Area"
+key_2: "Central Coast"
+label_2: "Central Coast"
+key_3: "Central Valley"
+label_3: "Central Valley"
+key_4: "Far North / North Coast"
+label_4: "Far North / North Coast"
+key_5: "Los Angeles"
+label_5: "Los Angeles"
+key_6: "Sacramento Valley / Sierra Foothills"
+label_6: "Sacramento Valley / Sierra Foothills"
+key_7: "Sierra Region"
+label_7: "Sierra Region"
+key_8: "Southern California"
+label_8: "Southern California"
+key_9: "American Indian or Alaska Native"
+label_9: "American Indian or Alaska Native"
+key_10: "Asian"
+label_10: "Asian"
+key_11: "Black or African American"
+label_11: "Black or African American"
+key_12: "Hispanic or Latino"
+label_12: "Hispanic or Latino"
+key_13: "Middle Eastern or North African"
+label_13: "Middle Eastern or North African"
+key_14: "Multiple"
+label_14: "Multiple"
+key_15: "Native Hawaiian or Pacific Islander"
+label_15: "Native Hawaiian or Pacific Islander"
+key_16: "White"
+label_16: "White"
+key_17: "18-24"
+label_17: "18-24"
+key_18: "25-44"
+label_18: "25-44"
+key_19: "45-64"
+label_19: "45-64"
+key_20: "Over 65"
+label_20: "Over 65"
+key_21: "Woman"
+label_21: "Woman"
+key_22: "Man"
+label_22: "Man"
+key_23: "Nonbinary / multi / other"
+label_23: "Nonbinary / multi / other"
+key_24: "Arts, entertainment, or media"
+label_24: "Arts, entertainment, or media"
+key_25: "Education"
+label_25: "Education"
+key_26: "Financial"
+label_26: "Financial"
+key_27: "Goods producing and harvesting"
+label_27: "Goods producing and harvesting"
+key_28: "Government"
+label_28: "Government"
+key_29: "Healthcare"
+label_29: "Healthcare"
+key_30: "Hospitality"
+label_30: "Hospitality"
+key_31: "Information technology"
+label_31: "Information technology"
+key_32: "Logistics"
+label_32: "Logistics"
+key_33: "Other"
+label_33: "Other"
+key_34: "Professional services"
+label_34: "Professional services"
+key_35: "Retail or wholesale trade"
+label_35: "Retail or wholesale trade"
+key_36: "Unemployed, looking"
+label_36: "Unemployed, looking"
+----
+
+----
+id: process_links
+----
+#### More about sortition
+
+- [Our sortition code](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
+- Sortition Foundation, [*Why Sortition Algorithms?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html)
+
+----
+id: ranking_policy_ideas
+----
+## Ranking policy ideas
+
+In the discussions, participants proposed policy ideas, then voted on them as a group.
+
+We compiled all ideas that got at least one vote in a discussion. Then we grouped similar ideas together and wrote a summary for each group. These became the 26 policy ideas. Policy ideas covered between 1 and 12 individual policy proposals.
+
+To rank the policy ideas, we evaluated each one based on 2 factors:
+
+- **Frequency:** How often a policy idea came up in the 14 discussions. Counts ranged from 1 to 8.
+- **Support:** If a policy idea reached the top of votes in a discussion. To be in the top, it had to gain votes that put it in the top third. Counts ranged from 0 to 5.
+
+We sorted the list of policy ideas by frequency. Then we split it into roughly two halves and labeled the top half “high frequency.” An idea was “high frequency” if it came up in 5 or more discussions.
+
+Then we sorted the policy ideas by support. We labeled an idea a “top idea” if its related ideas were in the top 3 of themes across all sessions.
+
+The order of ideas has some meaning, but is not absolute. For each factor, we calculated the idea's rank compared to all the other ideas. We then added these ranks together to give each idea a score. We put the ideas with the highest score at the top. When policy ideas tied, we used alphabetical order.
+----
+id: how_we_used_ai
+----
+## How we used AI
+
+Our staff used AI to help us review and analyze these discussions.
+
+Examples of AI use include:
+
+- converting discussion audio into transcripts,
+- creating high-level summaries of discussion and survey responses, and
+- tagging parts of conversations with the ideas they covered.
+
+AI did not pick who we invited to discussions. We chose invitees by lottery. We made sure the group of invitees reflected California demographics. We also used AI to assess respondents’ outlook on AI. This gave us a mix of viewpoints.
+
+We protected what participants shared with us. All AI work ran inside the state's secure data environment. We never shared transcripts or survey responses with AI vendors. No content was used to train AI models.
+
+AI never replaced human judgment, and it never wrote or edited a participant's words. Every quote in this report is what a participant said. We validated them against the transcript and had them reviewed by staff.
+
+Our staff identified the policy ideas and themes we highlight in this report on their own. They reviewed the transcripts and survey responses without help from AI. When AI helped with analysis, we made it give exact citations. Staff checked those statements before relying on them.
+
+In testing, we compared AI summaries against notes taken by human notetakers. We found they covered the same ground without inventing content.
+----
+id: download_data
+button_text: Download all the policy ideas
+----
+### Download the policy ideas
+
+You can download and read all the policies people proposed in the discussions. They are in a CSV file.
+----
+id: sign_up
+button_text: Sign up
+----
+## Sign up to stay engaged
+
+Give us your email to learn about upcoming opportunities.
