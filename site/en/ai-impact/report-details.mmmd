@@ -98,7 +98,9 @@ bar_title: "{category}, {phase}: {value} points from target ({share}% vs {target
 table_target_header: "Target %"
 table_points_header: "{phase} points from target"
 ----
-See how close we came to our demographic targets. Click the drop-down menu to see participant percentages by:
+Sortition brought us closer to balanced demographics in the discussions.
+
+See how close we came to our demographic targets. Click the drop-down menu for measurements by:
 
 - Region
 - Race / ethnicity

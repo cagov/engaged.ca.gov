@@ -66,11 +66,12 @@ id: public_forum
 ----
 ## A public forum on AI
 
-In May 2026, we opened a public forum on the *Impact of AI on work* to all Californians. In the months to follow, thousands of people across the state gave us their thoughts. They took our survey and joined facilitated group discussions. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas. 
+In May 2026, we opened a public forum on the *Impact of AI on work* to all Californians. In the months to follow, thousands of people across the state gave us their thoughts by taking our survey. Some survey respondents later joined facilitated group discussions held on Zoom. They shared their own experiences, and listened to their peers. Then they refined gut reactions into concrete policy ideas.
 
 Along the way, participants didn’t always agree. They debated how far to regulate, how proposals would be funded, and how the rules would be enforced.
 
-But one theme came up consistently: **We need humans in the AI policy loop.** Not only for how people use AI, but for how companies build it and laws govern it.
+One theme came up consistently: *We need humans in the AI policy loop*. Not only for how people use AI, but for how companies build it and laws govern it.
+
 ----
 id: participation_numbers
 participants_count: "2,702"
@@ -86,7 +87,7 @@ id: what_we_heard
 ----
 ## Ideas we heard
 
-### From the survey
+### First, from the survey
 
 Our survey asked people what they’d like government to do about the impact of AI. We got a wide range of ideas for policies.
 ----
@@ -98,11 +99,11 @@ chart_alt: "Word cloud of the policy ideas raised in the survey, sized by how ma
 ----
 id: ranking
 ----
-### From discussions
+### Then from live discussions
 
-We refined AI policy ideas in 2-hour discussions. We grouped what people said there into 26 distinct ideas.
+The AI policy ideas below came from the 2-hour live discussions over Zoom. Participants refined their policy ideas and voted on what was most important.
 
-Then we ranked them according to:
+We grouped what people said there into 26 distinct ideas. Then we ranked them according to:
 
 - How often an idea came up across discussions (frequency), and
 - How much support it drew when it did (how often it was a popular idea).
@@ -132,7 +133,7 @@ show_examples_label: Show examples
 hide_examples_label: Hide examples
 show_conversation_label: See what people said
 hide_conversation_label: Hide what people said
-quotes_title: "Peek inside the discussion:"
+quotes_title: "From one discussion:"
 select_label: "Show what people said about: {title}"
 translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
 quote_open: "“"
@@ -259,36 +260,43 @@ id: tier_1_idea_8
 title: Hold AI companies liable if they use the work of others without permission
 ----
 - Enforce copyrights, defend IP
+- *Placeholder:* One more
 ----
 id: tier_1_idea_9
 title: Make people aware of how to use AI ethically
 ----
 - Make public service ads on benefits and risks
+- *Placeholder:* One more
 ----
 id: tier_1_idea_10
 title: Improve AI education in schools
 ----
 - Let students work in sandboxes to scale positive effects
+- *Placeholder:* One more
 ----
 id: tier_1_idea_11
 title: Allow people to opt out of AI and make that easier
 ----
 - Require consent, make opt-out the default
+- *Placeholder:* One more
 ----
 id: tier_1_idea_12
 title: Support independent research on AI's effects
 ----
 - Fund studies on how AI use affects critical thinking
+- *Placeholder:* One more
 ----
 id: tier_1_idea_13
 title: Limit what personal data AI systems can collect, and let users manage their data
 ----
 - Make consent text simple
+- *Placeholder:* One more
 ----
 id: tier_1_idea_14
 title: Pay workers who lose jobs due to AI while they find new jobs
 ----
-- Universal basic income, or more unemployment pay if you lost your job to AI
+- Universal basic income
+- More unemployment pay if you lost your job to AI
 ----
 id: tier_1_idea_15
 title: Support AI training for workers
@@ -489,7 +497,7 @@ chart_alt: "Ring of 14 small clusters of dots, one per conversation, colored by 
 ----
 id: demographics_button
 translator_note: "Button at the end of Who participated, linking to the methods page's demographics section. Do not translate the href."
-label: Check the full demographics
+label: See the full demographics
 href: /ai-impact/report-details/#balancing-groups
 ----
 
