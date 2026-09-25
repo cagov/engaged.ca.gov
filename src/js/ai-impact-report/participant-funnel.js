@@ -504,9 +504,12 @@ export async function initParticipantFunnel(root) {
     if (active) active.style.opacity = String(cross.opacity);
     if (nextIndex === headerStageIndex) return;
     headerStageIndex = nextIndex;
+    // Inactive blocks stay in the grid (visibility, not display), so the
+    // header keeps the tallest stage's height and the page never jumps as
+    // the stages change (9/25).
     steps.forEach((step, i) => {
       const on = i === headerStageIndex;
-      step.hidden = !on;
+      step.classList.toggle("is-inactive", !on);
       step.setAttribute("aria-hidden", String(!on));
     });
   }
@@ -515,9 +518,11 @@ export async function initParticipantFunnel(root) {
   // small to draw it legibly.
   function syncCenterCopy() {
     if (!centerCopyEl) return;
-    centerCopyEl.hidden = !(
-      canvasScale < MIN_CENTER_TEXT_SCALE && stage === LAST_STAGE
-    );
+    // On narrow screens the copy has a permanent slot under the canvas and
+    // only becomes visible on the last stage, so the section height does
+    // not change between stages (9/25). On wide screens it is never used.
+    centerCopyEl.hidden = canvasScale >= MIN_CENTER_TEXT_SCALE;
+    centerCopyEl.classList.toggle("is-inactive", stage !== LAST_STAGE);
   }
 
   function syncControls() {
@@ -534,7 +539,11 @@ export async function initParticipantFunnel(root) {
       // Passed stages read full, the current one fills during its dwell.
       pill.style.setProperty("--progress", idx < stage ? "1" : "0");
     }
-    for (const el of lastStepOnly) el.hidden = stage !== LAST_STAGE;
+    // Same idea for the Participant / Facilitator legend: keep its space.
+    for (const el of lastStepOnly) {
+      el.hidden = false;
+      el.classList.toggle("is-inactive", stage !== LAST_STAGE);
+    }
     if (counterEl) {
       counterEl.textContent = counterTemplate
         .replace("{current}", String(stage + 1))
@@ -773,7 +782,14 @@ export async function initParticipantFunnel(root) {
     engaged = true;
   });
 
+  // Only a width change needs a re-layout. Phones fire resize continuously
+  // while the browser toolbar collapses during a scroll; redrawing the
+  // canvas and rebuilding the legend on each of those flashed (9/25).
+  let lastWidth = canvas.clientWidth;
   window.addEventListener("resize", () => {
+    const w = canvas.clientWidth;
+    if (w === lastWidth) return;
+    lastWidth = w;
     resize();
     reserveLegend();
   });

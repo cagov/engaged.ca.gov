@@ -1631,7 +1631,22 @@ section#who-participated h2 {
   & > .participants-step {
     grid-area: 1 / 1;
     transition: opacity 120ms linear;
+
+    /* Inactive stages keep their place in the cell so the block's height is
+       the tallest stage's and does not change from stage to stage. */
+    &.is-inactive {
+      visibility: hidden;
+      pointer-events: none;
+    }
   }
+}
+
+/* Ring caption (narrow screens) and the Participant / Facilitator legend
+   keep their space on every stage; they only show on the last one. */
+.funnel-ready .funnel-center-copy.is-inactive,
+.funnel-ready .participant-legend.is-inactive {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .funnel-static-fallback {
