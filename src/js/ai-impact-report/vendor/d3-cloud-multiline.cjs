@@ -1,6 +1,7 @@
 /* Vendored: d3-cloud fork with multi-line labels, from the design team's
  * ideas-we-heard sketches (2026-09-17). Bundles d3-dispatch. Not linted or
- * formatted; see README notes in the sketch folder for the 8 patches. */
+ * formatted; see README notes in the sketch folder for the first 8 patches
+ * (PATCH 9, a configurable per-word line height, was added here 9/25). */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g=(g.d3||(g.d3 = {}));g=(g.layout||(g.layout = {}));g.cloud = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 // Word cloud layout by Jason Davies, https://www.jasondavies.com/wordcloud/
 // Algorithm due to Jonathan Feinberg, https://s3.amazonaws.com/static.mrfeinberg.com/bv_ch03.pdf
@@ -22,6 +23,7 @@ module.exports = function() {
       text = cloudText,
       font = cloudFont,
       fontSize = cloudFontSize,
+      lineHeight = cloudLineHeight,
       fontStyle = cloudFontNormal,
       fontWeight = cloudFontNormal,
       padding = cloudPadding,
@@ -55,6 +57,10 @@ module.exports = function() {
           d.weight = fontWeight.call(this, d, i);
           d.rotate = rotate.call(this, d, i);
           d.size = +fontSize.call(this, d, i); // PATCH 2: keep the fractional size; the mask must be drawn at exactly the size the app draws
+          // PATCH 9 (not upstream d3-cloud): per-word line pitch for multi-line
+          // labels, so a caller can tighten leading for big labels (the mask
+          // must reserve exactly what the caller will later paint).
+          d.lineHeight = +lineHeight.call(this, d, i);
           d.padding = padding.call(this, d, i);
           return d;
         }).sort(function(a, b) { return b.size - a.size; });
@@ -219,6 +225,10 @@ module.exports = function() {
     return arguments.length ? (fontSize = functor(_), cloud) : fontSize;
   };
 
+  cloud.lineHeight = function(_) { // PATCH 9
+    return arguments.length ? (lineHeight = functor(_), cloud) : lineHeight;
+  };
+
   cloud.padding = function(_) {
     return arguments.length ? (padding = functor(_), cloud) : padding;
   };
@@ -249,6 +259,10 @@ function cloudFontNormal() {
 
 function cloudFontSize(d) {
   return Math.sqrt(d.value);
+}
+
+function cloudLineHeight(d) { // PATCH 9: default matches pre-patch behavior
+  return d.size * 1.22;
 }
 
 function cloudPadding() {
@@ -292,7 +306,7 @@ function cloudSprite(contextAndRatio, d, data, di) {
     // font-size-to-height convention (d.size << 1 for one line) scaled
     // per extra line, with the original one-line height as a floor so
     // single-line words render identically to unpatched d3-cloud.
-    var lineHeightInternal = (d.size * 1.22) / ratio;
+    var lineHeightInternal = d.lineHeight / ratio; // PATCH 9: caller-configurable, was a flat d.size * 1.22
     // PATCH 1 (sprite height): the old 1.22em-per-line box left only 0.61em above the
     // first baseline; Noto Sans ascenders reach 0.765em, so the top of every 2-line
     // label was never in the collision mask. Now: one line-height per extra line,
