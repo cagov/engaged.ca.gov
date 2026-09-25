@@ -36,8 +36,7 @@ example_quoted_text: "this is quoted text:"
 
 ----
 id: hero
-translator_note: "The subtitle contains the report title in italics (single asterisks). Preserve the asterisks."
-subtitle: "The methods behind *Humans in the loop: Californians say how AI should be built, used, and governed*"
+subtitle: "The methods we used to host and analyze conversations about AI"
 theme: light
 back_link_text: "Back to the report"
 back_link_href: /ai-impact/report/
@@ -46,7 +45,7 @@ back_link_href: /ai-impact/report/
 ----
 id: intro
 ----
-This project had two phases. In the first phase, any Californian could share their views through an open online survey. In the second phase, we invited interested survey-takers to live discussions.
+The *Impact of AI on work* project had two phases. In the first phase, any Californian could share their views through an open online survey. In the second phase, we invited interested survey-takers to live discussions.
 ----
 id: hero_nav
 translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
