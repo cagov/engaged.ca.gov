@@ -1,7 +1,16 @@
 import { test } from "@playwright/test";
 import { checkA11y, injectAxe } from "axe-playwright";
 
-const pageUrls = ["/", "/about/"];
+const pageUrls = [
+  "/",
+  "/about/",
+  "/ai-impact/report/",
+  "/ai-impact/report-details/",
+  "/es/ai-impact/report/",
+  "/es/ai-impact/report-details/",
+  "/fa/ai-impact/report/",
+  "/fa/ai-impact/report-details/",
+];
 
 for (const pageUrl of pageUrls) {
   test(`a11y page tests ${pageUrl}`, async ({ page }) => {

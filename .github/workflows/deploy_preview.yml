@@ -65,7 +65,16 @@ jobs:
           aws-region: us-west-1
 
       - name: Deploy site to S3
-        run: aws s3 sync --follow-symlinks --delete ./_dist s3://pr.engaged.ca.gov/pr/${URLSAFE_BRANCH_NAME}
+        # Pages revalidate on every visit (no-cache; ETags keep that cheap), so
+        # a fresh deploy shows without a hard reload. Assets may be cached for
+        # an hour; the templates already version JS/CSS/data URLs by content hash.
+        run: |
+          aws s3 sync --follow-symlinks --delete --exclude "*.html" \
+            --cache-control "public, max-age=3600, must-revalidate" \
+            ./_dist s3://pr.engaged.ca.gov/pr/${URLSAFE_BRANCH_NAME}
+          aws s3 sync --follow-symlinks --exclude "*" --include "*.html" \
+            --cache-control "no-cache" \
+            ./_dist s3://pr.engaged.ca.gov/pr/${URLSAFE_BRANCH_NAME}
 
       - name: Invalidate Cloudfront cache
         run: AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id EJBCVN0CVEA2Z --paths "/*"
