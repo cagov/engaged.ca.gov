@@ -111,6 +111,15 @@ export async function initParticipantFunnel(root) {
 
   // Pin the legend to its tallest variant so toggling never shifts layout.
   function reserveLegend() {
+    // In the side column (desktop) the Participant / Facilitator key and
+    // the demographics link hug the legend, so its height is left to its
+    // content and may change with the toggle (design 9/28). On phones the
+    // legend wraps inline above other content, so its height is still
+    // reserved to keep the page from hopping.
+    if (window.matchMedia("(min-width: 992px)").matches) {
+      if (legendEl) legendEl.style.minHeight = "";
+      return;
+    }
     const keep = dimension;
     FL.reserveLegendHeight(
       legendEl,
