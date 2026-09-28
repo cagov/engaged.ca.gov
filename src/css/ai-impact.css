@@ -157,3 +157,9 @@ section.overview-ge h4 {
   height: auto;
   margin-top: 0.5rem;
 }
+
+/* Twice the usual paragraph gap under the "Learn more" link, so it reads
+   apart from the partner thanks that follows (9/28). */
+.about-the-process p:has(> a:only-child) {
+  margin-bottom: 1.5625rem; /* 25px: twice the 12.5px paragraph gap */
+}
