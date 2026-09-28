@@ -1046,9 +1046,12 @@ section#ai-report-hero {
 }
 
 /* Right column: toggle, legend as a list, Participant / Facilitator, link. */
-.funnel-aside {
+.funnel-aside.chart-controls {
   @media (min-width: 992px) {
-    padding-top: 0.75rem;
+    /* Level with the canvas top: no margin or padding above the toggle
+       (outranks .chart-controls' margin-top). */
+    margin-top: 0;
+    padding-top: 0;
 
     & .chart-legend.region-legend {
       flex-direction: column;
