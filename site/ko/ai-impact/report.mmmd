@@ -1,0 +1,552 @@
+---
+title: 인간이 참여하는 AI
+description: "캘리포니아 주민들이 AI를 어떻게 만들고, 관리하고, 사용해야 하는지 말합니다. Engaged California는 캘리포니아 주민들에게 AI가 일과 경제를 어떻게 바꾸고 있는지, 정부는 무엇을 해야 하는지 물었습니다."
+layout: mmmd-ai-impact-report
+parentid: ai-impact
+keywords:
+  - California
+  - 인공지능
+  - AI
+  - 일자리
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: 캘리포니아 주민들이 AI를 어떻게 만들고, 사용하고, 관리해야 하는지 말합니다
+translator_note: "Optional hero buttons (button_1_label/href, button_2_label/href) are omitted here; the jump bar under the hero covers them (9/24)."
+----
+# 인간이 참여하는 AI
+
+저희는 주민들에게 주가 직면한 가장 어려운 질문 몇 가지를 던졌습니다:
+
+*AI는 일과 경제를 어떻게 바꾸고 있습니까? 정부는 이에 대해 무엇을 해야 합니까?*
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids and the href is a page address; do not translate them."
+aria_label: 이 페이지에서
+label: "바로 가기:"
+nbr_items: 5
+item_1_label: AI에 관한 공개 토론
+item_1_anchor: public-forum
+item_2_label: 저희가 들은 아이디어
+item_2_anchor: what-we-heard
+item_3_label: 참여자
+item_3_anchor: who-participated
+item_4_label: 다음 단계
+item_4_anchor: what-happens-next
+item_5_label: 이 작업을 진행한 방법
+item_5_href: /ai-impact/report-details/
+----
+
+----
+id: public_forum
+----
+## AI에 관한 공개 토론
+
+2026년 5월, 저희는 모든 캘리포니아 주민을 대상으로 *AI가 업무에 미치는 영향*에 관한 공개 토론을 열었습니다. 이후 몇 달 동안 주 전역의 수천 명이 설문조사에 참여해 의견을 주었습니다. 일부 설문 응답자는 이후 Zoom에서 진행된 진행자 주도 그룹 토론에 참여했습니다. 그들은 자신의 경험을 나누고 다른 참여자의 이야기를 들었습니다. 그런 다음 직관적인 반응을 구체적인 정책 아이디어로 다듬었습니다.
+
+그 과정에서 참여자들이 항상 의견이 일치한 것은 아니었습니다. 규제를 어디까지 할지, 제안에 필요한 재원을 어떻게 마련할지, 규칙을 어떻게 집행할지를 두고 토론했습니다.
+
+한 가지 주제가 일관되게 제기되었습니다: **AI 정책에는 인간이 참여해야 합니다**. 사람들이 AI를 사용하는 방식뿐 아니라, 기업이 AI를 만들고 법이 AI를 관리하는 방식에도 마찬가지입니다.
+
+----
+id: participation_numbers
+participants_count: "2,702"
+participants_label: 설문 참여자
+conversations_count: "103"
+conversations_label: 토론 참여자
+ideas_count: "26"
+ideas_label: 정책 아이디어
+----
+
+----
+id: what_we_heard
+----
+## 저희가 들은 아이디어
+
+### 먼저, 설문조사에서
+
+설문조사에서는 AI의 영향에 대해 정부가 무엇을 하기를 바라는지 물었습니다. 다양한 정책 아이디어가 나왔습니다.
+----
+id: word_cloud
+translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+chart_alt: "설문조사에서 제기된 정책 아이디어의 워드 클라우드. 각 아이디어를 제기한 사람 수에 따라 크기가 다릅니다."
+----
+
+----
+id: ranking
+----
+### 다음으로, 실시간 토론에서
+
+아래의 AI 정책 아이디어는 Zoom에서 진행된 2시간짜리 실시간 토론에서 나왔습니다. 참여자들은 정책 아이디어를 다듬고 무엇이 가장 중요한지 투표했습니다.
+
+저희는 토론에서 나온 의견을 26개의 서로 다른 아이디어로 묶었습니다. 그런 다음 다음 기준에 따라 순위를 매겼습니다:
+
+- 토론 전반에서 아이디어가 얼마나 자주 나왔는지(빈도), 그리고
+- 나왔을 때 얼마나 많은 지지를 받았는지(얼마나 자주 인기 있는 아이디어였는지).
+----
+id: tiers_ui
+translator_note: "{count} is replaced with a number. Keep it in the translation."
+translator_note_2: "section_title is the heading above the three groups of ideas."
+section_title: 더 많은 정책 아이디어
+count_label: "정책 아이디어 {count}개"
+show_label: 아이디어 보기
+show_more_label: "{count}개 더 보기"
+close_label: 아이디어 숨기기
+show_all_label: "모두 보기"
+close_all_label: 모두 숨기기
+example_ideas_label: "예시:"
+example_idea_label_singular: "예시:"
+nbr_tiers: 3
+initial_visible_ideas: 2
+----
+
+----
+id: top_themes
+translator_note: "The Top 3 box. Each theme is a card; selecting one shows its quotes in the panel."
+title: 상위 3개 정책 아이디어
+subtitle: 가장 자주 나오고 가장 강한 지지를 받은 주제입니다.
+icon: sparkle
+nbr_themes: 3
+show_examples_label: 예시 보기
+hide_examples_label: 예시 숨기기
+show_conversation_label: 참여자 의견 보기
+hide_conversation_label: 참여자 의견 숨기기
+quotes_title: "한 토론에서 나온 의견:"
+select_label: "다음 주제에 대한 참여자 의견 보기: {title}"
+translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
+quote_open: "“"
+quote_close: "”"
+----
+----
+id: top_theme_1
+title: AI 기업이 초래한 피해에 책임을 지게 하기
+----
+- AI로 인한 피해에 대한 형사 책임 강화
+- 실질적인 집행을 위한 자원 확대
+----
+id: top_theme_1_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+session: 10
+quote_1: "소셜 미디어의 경우 우리는 기업에 책임을 묻지 않았고, 그것이 우리 민주주의를 무너뜨렸습니다. 사람들이 이런 도구를 어떻게 사용하든 기업은 책임이 없다고 말하던 시대는 끝나야 한다고 생각합니다. 그 무책임을 끝낸다면 기업들은 정책을 바꾸고 더 잘 관리하기 위한 도구에 투자할 것이라고 확신합니다."
+attribution_1: 베이 에어리어의 예술·엔터테인먼트·미디어 종사자
+region_1: Bay Area
+field_1: "Arts, entertainment, or media"
+quote_2: "말씀하신 대로, 통신품위법(CDA) 230조는 미디어 기업이 사용자 콘텐츠를 단속하려 하면 오히려 적극적으로 처벌받도록 만들었습니다. 기업의 가치를 공익에 맞추는 방향이 아니었죠. 그렇다면 인센티브 구조를 전체적으로 본다면, 규칙을 따르는 것이 공익과 수익 모두에 도움이 되도록, 둘 사이에 긴장을 만들지 않도록 규칙을 어떻게 설계할 수 있을까요?"
+attribution_2: 센트럴 코스트의 정보기술 종사자
+region_2: Central Coast
+field_2: "Information technology"
+quote_3: "한 가지는 결과물에 대해 누가 책임지느냐입니다. 사람이 평가한다면 사람이 책임을 집니다. 최종 결정은 사람이 내려야 하니까요. 하지만 지금 AI가 사용되는 방식에서 사람의 평가가 개입되지 않는다면, AI가 저지르는 실수에 대해 누가 책임을 집니까?"
+attribution_3: 베이 에어리어의 금융 종사자
+region_3: Bay Area
+field_3: "Financial"
+----
+----
+id: top_theme_2
+title: AI의 자원 수요로부터 사람과 환경 보호하기
+----
+- 데이터센터의 소음, 오염, 물과 전기 사용에 한도 설정
+- 데이터센터가 환경에 미치는 영향 연구
+----
+id: top_theme_2_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "우리는 천연자원과 깨끗한 환경을 보호해야 한다고 생각합니다. 텍사스에 데이터 팜이나 데이터센터가 들어선 지역에 사는 사람들을 아는데, 물이 오염되고 전기 요금이 크게 올랐거든요."
+attribution_1: 남부 캘리포니아의 예술·엔터테인먼트·미디어 종사자
+region_1: Southern California
+field_1: "Arts, entertainment, or media"
+quote_2: "제가 가장 우려하는 것은 AI가 사용하는 물과 전기의 양입니다. 조지아주의 한 데이터센터가 어느 시나 카운티의 상수도에 불법으로 연결해 아무도 모르게 수백만 갤런의 물을 끌어다 썼다는 이야기도 있습니다."
+attribution_2: 로스앤젤레스의 공무원
+region_2: Los Angeles
+field_2: "Government"
+quote_3: "주를 하나의 물리적 공간으로 생각하면, 환경 규제를 정할 수 있고 이곳에서 운영하는 이들에게 데이터 프라이버시 요건을 정할 수 있습니다. 에너지 사용, 공간 사용 등에서 환경 보호의 최저 기준을 어떻게 정할지 생각하면 정말 기대가 됩니다."
+attribution_3: 베이 에어리어의 공무원
+region_3: Bay Area
+field_3: "Government"
+----
+----
+id: top_theme_3
+title: AI를 안전하게 사용할 수 있는 영역에 대한 규칙 정하기
+----
+- 삶에 영향을 미치는 결정은 사람이 최종 판단하도록 보장
+- 채용 과정에서 자동화된 AI 사용 금지
+----
+id: top_theme_3_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "고용에 관해서는 사람이 결정해야 합니다. 기술이 우리 대신 그 결정을 내리게 해서는 안 됩니다."
+attribution_1: 베이 에어리어의 제조업 종사자
+region_1: Bay Area
+field_1: "Goods producing and harvesting"
+quote_2: "AI가 사용하는 기준은 종종 블랙박스입니다. 예를 들어 이력서를 심사할 때 나이 많은 지원자보다 젊은 지원자를 선호하는 편향이 있을 수 있습니다."
+attribution_2: 베이 에어리어의 과학 분야 종사자
+region_2: Bay Area
+field_2: "Professional services"
+quote_3: "AI 모델을 대중에 공개하려면 편향 검사를 통과하도록 요건을 두는 것은 어떨까요?"
+attribution_3: 베이 에어리어의 제조업 종사자
+region_3: Bay Area
+field_3: "Goods producing and harvesting"
+----
+----
+id: tier_1
+translator_note: "Three groups of ideas (design 9/28). icon values are keys; do not translate them."
+title: 강한 지지
+subtitle: 자주 나오고 강한 지지를 받음
+icon: megaphone
+nbr_ideas: 7
+----
+----
+id: tier_1_idea_1
+title: AI가 개인정보를 다루는 방식에 대한 규칙 만들기
+----
+- 수집, 처리, 보안, 삭제에 대한 규칙 마련
+- 투명성과 프라이버시 보호 집행
+----
+id: tier_1_idea_2
+title: AI 작동 방식에 대한 규칙 정하기
+----
+- 기업이 인간의 기준에 맞추도록 촉구
+- AI 과다 사용과 중독에 대한 안전장치 마련
+----
+id: tier_1_idea_3
+title: AI로 인한 해고 억제, 인력을 유지하거나 늘리는 기업에 보상
+----
+- AI를 이유로 근로자를 해고할 경우 새로운 부담금 부과
+- 일자리를 유지하거나 늘리는 데 대한 인센티브 마련
+----
+id: tier_1_idea_4
+title: AI 정책 결정을 대중에게 더 개방하기
+----
+- 영향을 받는 지역사회에 발언권 부여
+- 시민 동료 그룹 구성
+----
+id: tier_1_idea_5
+title: AI로 일자리를 잃는 근로자를 기업이 재교육하거나 경력을 지원하게 하기
+----
+- 해고 대신 근로자를 재교육하도록 촉구
+- 근로자를 서비스가 부족한 지역으로 전환 배치
+----
+id: tier_1_idea_6
+title: AI 사용 표시에 대한 규칙 정하기
+----
+- 공통 용어나 워터마크로 AI 콘텐츠 표시
+- AI 사용을 공개하지 않는 기업에 벌칙 부과
+----
+id: tier_1_idea_7
+title: AI 기업의 이익 제한 및 과세
+----
+- 책임을 회피할 수 있게 하는 허점 차단
+- 주식을 이용한 조세 회피가 불가능하도록 세법 개정
+----
+id: tier_2
+title: 중간 지지
+subtitle: 자주 나왔거나 강한 지지를 받았으나 둘 다는 아님
+icon: hand
+nbr_ideas: 7
+----
+----
+id: tier_2_idea_1
+title: 타인의 저작물을 허락 없이 사용한 AI 기업에 책임 부과
+----
+- 저작권 집행, 지식재산권 보호
+- 기업이 학습 데이터 비용을 창작자 기금에 납부
+----
+id: tier_2_idea_2
+title: AI를 윤리적으로 사용하는 방법 알리기
+----
+- 이점과 위험에 관한 공익 광고 제작
+- 프라이버시, 아동 등에 대한 AI의 위험을 주민에게 안내
+----
+id: tier_2_idea_3
+title: 학교의 AI 교육 개선
+----
+- 학생들이 샌드박스에서 실습하며 긍정적 효과를 확대하도록 허용
+- 유치원부터 12학년까지 데이터 리터러시 교육
+----
+id: tier_2_idea_4
+title: 사람들이 AI 사용을 거부할 수 있게 하고 이를 더 쉽게 만들기
+----
+- 동의를 필수로 하고 거부를 기본값으로 설정
+- 자신의 데이터가 AI에 사용되는 것을 거부할 수 있게 허용
+----
+id: tier_2_idea_5
+title: AI의 영향에 관한 독립 연구 지원
+----
+- AI 사용이 비판적 사고에 미치는 영향 연구 지원
+- 피해와 위험에 관한 근거를 더 확보하고 공개
+----
+id: tier_2_idea_6
+title: AI 시스템이 수집할 수 있는 개인정보 제한, 사용자가 자기 데이터를 관리하게 하기
+----
+- 동의 문구를 간단하게
+- 공공장소에서의 데이터 수집을 제한해 AI가 사용할 수 없게 함
+----
+id: tier_2_idea_7
+title: AI로 일자리를 잃은 근로자에게 새 일자리를 찾는 동안 급여 지급
+----
+- 보편적 기본소득
+- AI로 일자리를 잃은 경우 실업급여 확대
+----
+id: tier_3
+title: 약한 지지
+subtitle: 덜 자주 나오고 지지도 적음
+icon: thumbs
+nbr_ideas: 9
+----
+----
+id: tier_3_idea_1
+title: 근로자를 위한 AI 교육 지원
+----
+- 주 공무원에게 무료 AI 교육을 제공하고 일반 대중으로 확대
+- 근로자를 가장 잘 재교육하는 방법을 찾기 위한 연구 프로그램
+----
+id: tier_3_idea_2
+title: 정부 운영 개선에 AI 활용
+----
+- AI로 부정수급을 단속하고 급여가 올바른 수급자에게 가도록 보장
+- 정부가 새로운 AI 모델에 허가 부여
+----
+id: tier_3_idea_3
+title: 의사결정자로서 인간이 계속 참여하고 AI에만 의존하지 않기
+----
+- 인간 의사결정자의 역할 유지
+- 인간 평가에 대한 지침 수립
+----
+id: tier_3_idea_4
+title: AI 사용에 대한 자녀 보호 기능 강화
+----
+- 아동이 접근할 수 있는 도구에 사용하기 쉬운 자녀 보호 기능 의무화.
+- 기술 기업이 학생들을 AI 기술에 노출시키는 방식 감독.
+----
+id: tier_3_idea_5
+title: 인간적 유대와 AI 밖의 삶을 위한 프로그램 지원
+----
+- 지역사회 건강 증진을 위한 제3의 공간과 예술·스포츠 프로그램 지원
+- 교육, 도서관, 정신건강 서비스 같은 양질의 지식·정보 서비스에 충분한 재정 지원
+----
+id: tier_3_idea_6
+title: 학생들이 학습을 피하려고 AI를 사용하지 않도록 하기
+----
+- 학생이 과제에 AI를 사용했음을 밝히도록 함
+- 학생의 AI 사용을 점검하고 제한
+----
+id: tier_3_idea_7
+title: AI를 사용하지 않는다는 이유로 근로자를 해고하거나 불이익을 주지 못하게 하기
+----
+- AI 도구 도입 결정에 직원을 참여시키도록 고용주에게 의무화
+- AI 도구 사용을 원하지 않는 사람을 해고하지 못하도록 제한
+----
+id: tier_3_idea_8
+title: AI로 인한 일자리 감소 추적 및 보고
+----
+- AI가 일자리 감소에 미친 영향에 대한 투명한 보고
+- AI가 경제에 미치는 영향에 대한 지속적인 보고
+----
+id: tier_3_idea_9
+title: 사람들이 원하지 않거나 할 수 없는 일에 AI 활용
+----
+- 사회적으로 유익한 곳에 AI 사용을 맞춤
+- 사람이 할 수 없거나 원하지 않는 일을 AI가 하도록 함
+----
+id: how_to_read_tiers
+----
+### 이 순위를 읽는 방법
+
+이 순위는 아이디어가 토론에서 어떤 평가를 받았는지 보여줍니다. 아이디어의 가치에 대한 판정은 아닙니다.
+
+이는 참여자들이 이야기한 주제입니다. 현재의 정책이나 법률이 이미 하고 있는 일과는 별개입니다. 일부는 이미 정책 논의 과정에서 진행 중인 사안과 겹칠 수 있습니다.
+----
+id: ranking_methods_button
+translator_note: "Button after How to read this ranking, linking to the methods page's ranking section. Do not translate the href."
+label: 순위 산정 방법 확인하기
+href: /ai-impact/report-details/#ranking-policy-ideas
+----
+
+----
+id: region_legend
+nbr_regions: 9
+region_1: 로스앤젤레스
+region_2: 베이 에어리어
+region_3: 남부 캘리포니아
+region_4: 새크라멘토 밸리 / 시에라 산기슭
+region_5: 센트럴 밸리
+region_6: 최북부 / 북부 해안
+region_7: 센트럴 코스트
+region_8: 시에라 지역
+region_9: 응답 안 함 / 주 외 거주
+----
+
+----
+id: category_labels
+translator_note: "Field of work names as they appear in the Who participated chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 15
+key_1: "Government"
+label_1: "정부"
+key_2: "Other"
+label_2: "기타"
+key_3: "Information technology"
+label_3: "정보기술"
+key_4: "Arts, entertainment, or media"
+label_4: "예술, 엔터테인먼트 또는 미디어"
+key_5: "Education"
+label_5: "교육"
+key_6: "Professional services"
+label_6: "전문 서비스"
+key_7: "Healthcare"
+label_7: "의료"
+key_8: "Unemployed, looking"
+label_8: "실업, 구직 중"
+key_9: "Financial"
+label_9: "금융"
+key_10: "Goods producing and harvesting"
+label_10: "재화 생산 및 수확"
+key_11: "Retail or wholesale trade"
+label_11: "소매 또는 도매업"
+key_12: "Logistics"
+label_12: "물류"
+key_13: "Hospitality"
+label_13: "접객업"
+key_14: "(not stated)"
+label_14: "미응답"
+key_15: "I don't want to say"
+label_15: "답하고 싶지 않음"
+----
+
+----
+id: who_participated
+title: 참여자
+nbr_steps: 4
+toggle_region: 지역
+toggle_field_of_work: 직종
+toggle_age: 연령
+toggle_race: 인종 / 민족
+toggle_gender: 성별
+toggle_ai_response: AI에 대한 반응
+legend_participant: 참가자
+legend_facilitator: 진행자
+translator_note_legend: "One legend entry standing in for all the non-answers (Not stated, I don't want to say) when a chart has more than one."
+legend_non_answer: "응답하지 않음"
+prev_label: 이전 단계
+next_label: 다음 단계
+translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
+step_counter: "{total}단계 중 {current}단계"
+step_marker_label: "{current}단계로 이동"
+step_role_label: 단계
+play_label: 재생
+pause_label: 일시정지
+restart_label: 다시 시작
+ring_center_title: 14개 토론에 참여한 103명
+ring_center_hint: ""
+chart_alt: "모든 설문 응답자를 점으로 표현한 애니메이션입니다. 토론에 초대된 사람은 밝아지고, 참석한 사람은 사람 모양으로 모인 뒤 토론별로 하나씩 회전하는 고리로 나뉘며, 지역 또는 직종에 따라 색이 지정됩니다."
+----
+
+----
+id: who_participated_step_1
+phase_label: 설문조사
+pill_label: "1 · 1단계"
+phase_title: 폭넓은 경청
+stat_count: "2,702"
+stat_label: 설문 응답자
+phase_subtitle: "주민들이 AI에 관한 공개 설문조사에 응답했습니다"
+chart_image_region: /public/images/ai-report-participants-step1-region.png
+chart_image_field: /public/images/ai-report-participants-step1-field.png
+chart_alt: "설문 응답자 한 명당 점 하나로 표시한 산점도, 지역별 색상."
+----
+
+----
+id: who_participated_step_2
+phase_label: 토론
+pill_label: "2 · 선정"
+phase_title: 균형 잡힌 참여자 초대
+stat_count: "937"
+stat_label: 초대
+phase_subtitle: "캘리포니아를 반영하는 응답자 일부를 선정했습니다"
+chart_image_region: /public/images/ai-report-participants-step2-region.png
+chart_image_field: /public/images/ai-report-participants-step2-field.png
+chart_alt: "초대된 응답자 한 명당 점 하나로 표시한 산점도, 지역별 색상."
+----
+
+----
+id: who_participated_step_3
+phase_label: 토론
+pill_label: "3 · 2단계"
+phase_title: 대화에 참여
+stat_count: "103"
+stat_label: 참석
+phase_subtitle: "이 캘리포니아 주민들은 참석 의사를 밝히고 토론에 참여했습니다"
+chart_image_region: /public/images/ai-report-participants-step3-region.png
+chart_image_field: /public/images/ai-report-participants-step3-field.png
+chart_alt: "토론 참석자 한 명당 점 하나로 표시한 산점도, 지역별 색상."
+----
+
+----
+id: who_participated_step_4
+phase_label: 토론
+pill_label: "4 · 토론"
+phase_title: 토론 그룹
+stat_count: "14"
+stat_label: 토론
+phase_subtitle: "각 토론의 인구통계입니다"
+chart_image_region: /public/images/ai-report-participants-step4-region.png
+chart_image_field: /public/images/ai-report-participants-step4-field.png
+chart_alt: "토론별로 하나씩, 14개의 작은 점 군집으로 이루어진 고리, 지역별 색상."
+----
+
+----
+id: demographics_button
+translator_note: "Button at the end of Who participated, linking to the methods page's demographics section. Do not translate the href."
+label: 전체 인구통계 보기
+href: /ai-impact/report-details/#balancing-groups
+----
+
+----
+id: what_happens_next
+----
+## 다음 단계
+
+이 보고서가 이야기의 끝은 아닙니다. 주민들이 나눈 아이디어는 이미 빠르게 진행 중인 정책 논의에 합류할 것입니다.
+
+캘리포니아는 오래전부터 AI 감독을 선도해 왔습니다. 2025년 캘리포니아는 SB 53, [프런티어 인공지능 투명성법](https://www.gov.ca.gov/2025/09/29/governor-newsom-signs-sb-53-advancing-californias-world-leading-artificial-intelligence-industry/)을 제정했습니다. 이 법은 첨단 AI 모델의 투명성과 독립적 감독에 대한 요건을 정합니다. Engaged California가 주민들의 의견을 정리하는 동안 Newsom 행정부는 AI에 관한 조치를 취했습니다. 행정부의 조치 중 일부는 캘리포니아 주민들이 이 토론에서 제기한 주제와 맞닿아 있었습니다. 예를 들면:
+
+- 데이터센터의 환경 발자국
+- AI 생성 콘텐츠에 대한 투명성
+- 프런티어 모델에 대한 독립적 감독
+- 근로자와 아동 보호
+
+이러한 조치에는 Newsom 주지사가 2026년 9월에 다음 법안에 서명한 것이 포함됩니다:
+
+- 미국에서 가장 광범위한 [데이터센터 법](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/) 중 하나. 지역사회가 물, 전기, 토지 사용에 대해 더 많은 발언권을 갖게 합니다.
+- 광고에 AI로 생성된 출연자를 사용할 때 [공개를 의무화](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/)하는 상원 법안 1050
+- 주의 [AI 감독](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/) 노력을 가속화하는 행정명령. 새로운 AI 감사 법률을 신속히 추진하고 프런티어 AI 모델을 위한 "킬 스위치"를 진전시킵니다.
+- 미국 최초의 [AI 안전장치](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/) 패키지
+- 챗봇과 소셜 미디어에 대한 [아동 안전법](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/)
+
+저희의 작업도 아직 끝나지 않았습니다. 캘리포니아 주민들은 앞으로 몇 년간 정부의 조치에 참고가 될 많은 아이디어를 제시했습니다. AI 환경이 계속 변화하는 만큼 저희도 계속 귀 기울이겠습니다.
+----
+id: sign_up
+button_text: 가입하기
+----
+## 계속 참여하려면 가입하세요
+
+이메일을 남겨 주시면 앞으로의 참여 기회를 알려 드리겠습니다.

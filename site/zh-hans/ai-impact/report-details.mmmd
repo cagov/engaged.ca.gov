@@ -1,0 +1,261 @@
+---
+title: 我们如何开展这项工作
+description: "Engaged California 如何为“AI 对工作的影响”讨论选择参与者，每个阶段与人口统计目标的接近程度，以及我们如何分析人们所说的内容。"
+layout: mmmd-ai-impact-report-details
+parentid: ai-impact
+keywords:
+  - California
+  - 人工智能
+  - AI
+  - 工作
+  - 抽签
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: "我们用于举办和分析 AI 相关对话的方法"
+theme: light
+back_link_text: "返回报告"
+back_link_href: /ai-impact/report/
+----
+# 我们如何开展这项工作
+----
+id: intro
+----
+*AI 对工作的影响*项目分为两个阶段。在第一阶段，任何加州居民都可以通过一份公开的在线问卷调查分享看法。在第二阶段，我们邀请有兴趣的问卷调查参与者参加现场讨论。
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: 本页内容
+label: "跳转至："
+nbr_items: 3
+item_1_label: 公平地平衡每个群体
+item_1_anchor: balancing-groups
+item_2_label: 政策想法排名
+item_2_anchor: ranking-policy-ideas
+item_3_label: 我们如何使用 AI
+item_3_anchor: how-we-used-ai
+----
+
+----
+id: balancing_groups
+title: 公平地平衡每个群体
+----
+我们需要决定邀请谁。我们需要在公平选择的同时组建具有代表性的小组。
+
+因此，我们采用了一种称为抽签（sortition）的方法，类似于法院挑选陪审团的方式。它基于两个同等重要的理念：
+
+- **代表性：** 我们根据加州人口估计设定了人口统计目标。这使最终的受邀名单能够反映本州的多样性。标准包括年龄、地理位置和工作领域。
+- **随机性：** 在这些目标范围内，每位符合条件的人都有同等的入选机会。
+
+这些原则确保我们不只是听取最早回应者的意见。它们帮助我们建立了一份经公平选择的名单，大致反映了加州居民的整体情况。
+----
+id: demographics_chart
+title: 人口统计
+pulldown_label: "按以下方式显示参与者"
+chart_title: "问卷调查与讨论的人口统计对比"
+translator_note_chart: "chart_note is the one-line note directly under the chart title."
+chart_note: "抽签让我们在讨论中更接近均衡的人口构成。"
+axis_above_label: "高于目标的百分点"
+axis_below_label: "低于目标的百分点"
+chart_alt: "条形图，将问卷调查和讨论参与者与人口统计目标进行比较，以偏离目标的百分点表示。"
+dim_region: 地区
+dim_race: 种族/族裔
+dim_age: 年龄
+dim_gender: 性别
+dim_field: 工作领域
+dim_ai: 对 AI 的看法
+phase1_label: 问卷调查
+phase2_label: 讨论
+on_target_label: 符合目标
+translator_note: "{dimension} is replaced with the selected drop-down label. Keep it in the translation."
+table_caption: "参与者与目标的对比，按{dimension}"
+translator_note_2: "The next four lines are read by screen readers. Keep every {placeholder} in the translation."
+chart_aria_label: "{dimension}：{phase1}和{phase2}，偏离目标的百分点"
+bar_title: "{category}，{phase}：偏离目标 {value} 个百分点（{share}%，目标为 {target}%）"
+table_target_header: "目标 %"
+table_points_header: "{phase}，偏离目标的百分点"
+----
+看看我们与人口统计目标的接近程度。点击下拉菜单查看按以下维度的数据：
+
+- 地区
+- 种族/族裔
+- 性别
+- 工作领域
+- 年龄
+----
+id: demographics_sources
+translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
+label: 目标的来源
+source_region: "地区：每个地区都保证有发言权（至少 6 人）。其余名额我们根据美国社区调查（ACS）的估计，按 2026 年加州人口比例分配。"
+source_field_of_work: "工作领域：基于加州就业发展部的[2026 年 4 月行业就业与劳动力（CES）统计数据]({@0})和[地区选择表]({@1})。提交给州长办公室的备忘录特别将物流、医疗保健、法律和金融服务、创意产业、公共部门和学术界列为优先领域。我们在这些类别中体现了这一点。"
+source_age: "年龄：反映 2026 年人口普查/加州财政部的预测。"
+source_gender: "性别：反映 2026 年人口普查/加州财政部的预测。"
+source_race: "种族/族裔：反映 2026 年人口普查/加州财政部的预测。"
+source_ai: ""
+----
+
+----
+id: category_labels
+translator_note: "Category names as they appear in the demographics chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 36
+key_1: "Bay Area"
+label_1: "湾区"
+key_2: "Central Coast"
+label_2: "中央海岸"
+key_3: "Central Valley"
+label_3: "中央谷地"
+key_4: "Far North / North Coast"
+label_4: "远北/北海岸"
+key_5: "Los Angeles"
+label_5: "洛杉矶"
+key_6: "Sacramento Valley / Sierra Foothills"
+label_6: "萨克拉门托谷地/内华达山麓"
+key_7: "Sierra Region"
+label_7: "内华达山区"
+key_8: "Southern California"
+label_8: "南加州"
+key_9: "American Indian or Alaska Native"
+label_9: "美洲印第安人或阿拉斯加原住民"
+key_10: "Asian"
+label_10: "亚裔"
+key_11: "Black or African American"
+label_11: "黑人或非裔美国人"
+key_12: "Hispanic or Latino"
+label_12: "西班牙裔或拉丁裔"
+key_13: "Middle Eastern or North African"
+label_13: "中东或北非裔"
+key_14: "Multiple"
+label_14: "多种族"
+key_15: "Native Hawaiian or Pacific Islander"
+label_15: "夏威夷原住民或太平洋岛民"
+key_16: "White"
+label_16: "白人"
+key_17: "18-24"
+label_17: "18-24"
+key_18: "25-44"
+label_18: "25-44"
+key_19: "45-64"
+label_19: "45-64"
+key_20: "Over 65"
+label_20: "65 岁以上"
+key_21: "Woman"
+label_21: "女性"
+key_22: "Man"
+label_22: "男性"
+key_23: "Nonbinary / multi / other"
+label_23: "非二元/多重/其他"
+key_24: "Arts, entertainment, or media"
+label_24: "艺术、娱乐或媒体"
+key_25: "Education"
+label_25: "教育"
+key_26: "Financial"
+label_26: "金融"
+key_27: "Goods producing and harvesting"
+label_27: "商品生产与收获"
+key_28: "Government"
+label_28: "政府"
+key_29: "Healthcare"
+label_29: "医疗保健"
+key_30: "Hospitality"
+label_30: "酒店餐饮"
+key_31: "Information technology"
+label_31: "信息技术"
+key_32: "Logistics"
+label_32: "物流"
+key_33: "Other"
+label_33: "其他"
+key_34: "Professional services"
+label_34: "专业服务"
+key_35: "Retail or wholesale trade"
+label_35: "零售或批发贸易"
+key_36: "Unemployed, looking"
+label_36: "失业，正在求职"
+----
+
+----
+id: process_links
+----
+#### 关于抽签的更多信息
+
+- [我们的抽签代码](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
+- Sortition Foundation，[*Why Sortition Algorithms?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html)（英文）
+
+----
+id: ranking_policy_ideas
+----
+## 政策想法排名
+
+在讨论中，参与者提出政策想法，然后以小组形式进行投票。
+
+我们汇集了在讨论中至少获得一票的所有想法。然后，我们将相似的想法归为一组，并为每组撰写摘要。这些就成为 26 个政策想法。每个政策想法涵盖 1 到 12 条具体的政策建议。
+
+为了对政策想法进行排名，我们根据 2 个因素对每个想法进行评估：
+
+- **频率：** 某个政策想法在 14 场讨论中出现的次数。范围为 1 到 8。
+- **支持度：** 某个政策想法是否进入了某场讨论的得票前列。要进入前列，它必须获得足够的票数，位列前三分之一。范围为 0 到 5。
+
+我们按频率对政策想法列表进行排序。然后大致分成两半，将上半部分标记为“高频”。如果某个想法出现在 5 场或更多讨论中，则属于“高频”。
+
+然后，我们按支持度对政策想法进行排序。如果某个想法的相关想法在所有场次中都位列前 3 个主题，我们就将其标记为“热门想法”。
+
+想法的排列顺序有其意义，但并非绝对。对于每个因素，我们计算了该想法相对于所有其他想法的排名。然后将这些排名相加，为每个想法打分。我们将得分最高的想法排在最前面。当政策想法得分相同时，我们按字母顺序排列。
+----
+id: how_we_used_ai
+----
+## 我们如何使用 AI
+
+我们的工作人员使用 AI 来协助审阅和分析这些讨论。
+
+AI 的使用示例包括：
+
+- 将讨论音频转换为文字记录，
+- 生成讨论和问卷调查回应的总体摘要，以及
+- 按所涉及的想法为对话片段添加标签。
+
+AI 没有参与选择我们邀请谁参加讨论。我们通过抽签选择受邀者。我们确保受邀群体反映加州的人口构成。我们还使用 AI 来评估回应者对 AI 的看法。这为我们带来了多元的观点。
+
+我们保护参与者与我们分享的内容。所有涉及 AI 的工作都在本州的安全数据环境中进行。我们从未与 AI 供应商共享文字记录或问卷调查回应。没有任何内容被用于训练 AI 模型。
+
+AI 从未取代人的判断，也从未撰写或编辑参与者的话。本报告中的每一条引言都是参与者说过的话。我们对照文字记录进行了核实，并由工作人员审阅。
+
+本报告中重点介绍的政策想法和主题由我们的工作人员自行确定。他们在没有 AI 协助的情况下审阅了文字记录和问卷调查回应。当 AI 协助分析时，我们要求它提供确切的引文。工作人员在采信这些说法之前对其进行了核实。
+
+在测试中，我们将 AI 的摘要与人工记录员的笔记进行了比较。我们发现二者涵盖的内容相同，且 AI 没有编造内容。
+----
+id: download_data
+button_text: 下载想法
+----
+### 下载所有政策想法
+
+您可以下载并阅读人们在讨论中提出的所有政策。它们以 CSV 文件的形式提供。
+----
+id: sign_up
+button_text: 注册
+----
+## 注册以保持参与
+
+请留下您的电子邮件，以便了解即将到来的参与机会。

@@ -1,0 +1,552 @@
+---
+title: Mga tao sa loop
+description: "Sinasabi ng mga taga-California kung paano dapat gawin, pamahalaan, at gamitin ang AI. Tinanong ng Engaged California ang mga taga-California kung paano binabago ng AI ang trabaho at ekonomiya, at kung ano ang dapat gawin ng gobyerno tungkol dito."
+layout: mmmd-ai-impact-report
+parentid: ai-impact
+keywords:
+  - California
+  - artificial intelligence
+  - AI
+  - trabaho
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: Sinasabi ng mga taga-California kung paano dapat gawin, gamitin, at pamahalaan ang AI
+translator_note: "Optional hero buttons (button_1_label/href, button_2_label/href) are omitted here; the jump bar under the hero covers them (9/24)."
+----
+# Mga tao sa loop
+
+Tinanong namin ang mga tao ng ilan sa pinakamahihirap na tanong na kinakaharap ng estado:
+
+*Paano binabago ng AI ang trabaho at ekonomiya? Ano ang dapat gawin ng gobyerno tungkol dito?*
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids and the href is a page address; do not translate them."
+aria_label: Sa pahinang ito
+label: "Pumunta sa:"
+nbr_items: 5
+item_1_label: Isang pampublikong forum tungkol sa AI
+item_1_anchor: public-forum
+item_2_label: Mga ideyang narinig namin
+item_2_anchor: what-we-heard
+item_3_label: Sino ang lumahok
+item_3_anchor: who-participated
+item_4_label: Ano ang susunod
+item_4_anchor: what-happens-next
+item_5_label: Paano namin ginawa ang gawaing ito
+item_5_href: /ai-impact/report-details/
+----
+
+----
+id: public_forum
+----
+## Isang pampublikong forum tungkol sa AI
+
+Noong Mayo 2026, binuksan namin sa lahat ng taga-California ang isang pampublikong forum tungkol sa *Epekto ng AI sa trabaho*. Sa mga sumunod na buwan, libu-libong tao sa buong estado ang nagbigay ng kanilang mga saloobin sa pamamagitan ng aming survey. Ang ilang sumagot sa survey ay sumali rin kalaunan sa mga pinapatnubayang talakayang grupo sa Zoom. Ibinahagi nila ang sarili nilang mga karanasan at nakinig sa kanilang mga kapwa. Pagkatapos ay ginawa nilang kongkretong mga ideya sa patakaran ang kanilang unang reaksyon.
+
+Sa proseso, hindi laging nagkakasundo ang mga kalahok. Pinagtalunan nila kung hanggang saan dapat ang regulasyon, paano pondohan ang mga panukala, at paano ipatutupad ang mga patakaran.
+
+Isang tema ang paulit-ulit na lumitaw: **Kailangan natin ng mga tao sa loop ng patakaran sa AI**. Hindi lang sa kung paano ginagamit ng mga tao ang AI, kundi pati sa kung paano ito ginagawa ng mga kumpanya at pinamamahalaan ng mga batas.
+
+----
+id: participation_numbers
+participants_count: "2,702"
+participants_label: kalahok sa survey
+conversations_count: "103"
+conversations_label: kalahok sa talakayan
+ideas_count: "26"
+ideas_label: ideya sa patakaran
+----
+
+----
+id: what_we_heard
+----
+## Mga ideyang narinig namin
+
+### Una, mula sa survey
+
+Tinanong ng aming survey ang mga tao kung ano ang gusto nilang gawin ng gobyerno tungkol sa epekto ng AI. Nakatanggap kami ng malawak na hanay ng mga ideya para sa patakaran.
+----
+id: word_cloud
+translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+chart_alt: "Word cloud ng mga ideya sa patakaran na lumitaw sa survey, na ang laki ay batay sa kung ilang tao ang nagbanggit ng bawat isa."
+----
+
+----
+id: ranking
+----
+### Pagkatapos, mula sa mga live na talakayan
+
+Ang mga ideya sa patakaran sa AI sa ibaba ay nagmula sa 2 oras na live na talakayan sa Zoom. Pinino ng mga kalahok ang kanilang mga ideya sa patakaran at bumoto kung alin ang pinakamahalaga.
+
+Pinagsama-sama namin ang mga sinabi ng mga tao roon sa 26 na magkakaibang ideya. Pagkatapos ay niranggo namin ang mga ito ayon sa:
+
+- Kung gaano kadalas lumitaw ang isang ideya sa mga talakayan (dalas), at
+- Kung gaano karaming suporta ang nakuha nito kapag lumitaw (kung gaano kadalas itong naging popular na ideya).
+----
+id: tiers_ui
+translator_note: "{count} is replaced with a number. Keep it in the translation."
+translator_note_2: "section_title is the heading above the three groups of ideas."
+section_title: Higit pang mga ideya sa patakaran
+count_label: "{count} ideya sa patakaran"
+show_label: Tingnan ang mga ideya
+show_more_label: "Magpakita ng {count} pa"
+close_label: Itago ang mga ideya
+show_all_label: "Ipakita lahat"
+close_all_label: Itago lahat
+example_ideas_label: "Mga halimbawa:"
+example_idea_label_singular: "Halimbawa:"
+nbr_tiers: 3
+initial_visible_ideas: 2
+----
+
+----
+id: top_themes
+translator_note: "The Top 3 box. Each theme is a card; selecting one shows its quotes in the panel."
+title: Nangungunang 3 ideya sa patakaran
+subtitle: Ang mga temang ito ang pinakamadalas lumitaw at nakakuha ng pinakamalakas na suporta.
+icon: sparkle
+nbr_themes: 3
+show_examples_label: Ipakita ang mga halimbawa
+hide_examples_label: Itago ang mga halimbawa
+show_conversation_label: Tingnan ang sinabi ng mga tao
+hide_conversation_label: Itago ang sinabi ng mga tao
+quotes_title: "Mula sa isang talakayan:"
+select_label: "Ipakita ang sinabi ng mga tao tungkol sa: {title}"
+translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
+quote_open: "“"
+quote_close: "”"
+----
+----
+id: top_theme_1
+title: Papanagutin ang mga kumpanya ng AI sa pinsalang dulot nila
+----
+- Palakasin ang kriminal na pananagutan para sa pinsalang dulot ng AI
+- Maglaan ng mas maraming mapagkukunan para sa tunay na pagpapatupad
+----
+id: top_theme_1_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+session: 10
+quote_1: "Sa social media, hindi natin pinanagot ang mga kumpanya, at winasak nito ang ating demokrasya. Sa tingin ko, dapat nang matapos ang panahon ng pagsasabing hindi responsable ang mga kumpanya sa kung paano ginagamit ng mga tao ang mga ganitong tool. Sigurado akong magbabago sila ng patakaran at mamumuhunan sa mga tool para mas mapamahalaan ito kung tatapusin natin ang kawalan ng pananagutan na iyon."
+attribution_1: Manggagawa sa sining, libangan at media mula sa Bay Area
+region_1: Bay Area
+field_1: "Arts, entertainment, or media"
+quote_2: "Kaugnay ng punto mo, dahil sa Section 230 ng CDA, aktibong pinaparusahan ang isang kumpanya ng media kung susubukan nitong bantayan ang content ng mga user, sa halip na gawin itong bagay na maghahanay ng kanilang mga pagpapahalaga sa kabutihang panlahat. Kaya kung titingnan natin nang buo ang istruktura ng mga insentibo: saan natin maaayos ang mga patakaran para ang pagsunod sa mga ito ay makabubuti sa publiko at sa kita, sa halip na maglikha ng tensyon sa pagitan ng dalawa?"
+attribution_2: Manggagawa sa information technology mula sa Central Coast
+region_2: Central Coast
+field_2: "Information technology"
+quote_3: "Isang bagay ay kung sino ang mananagot sa mga output. Kung may pagsusuri ng tao, ang tao ang mananagot, dahil ang tao ang dapat maging huling nagpapasya. Pero sa paraan ng paggamit ng AI ngayon, kung walang pagsusuri ng tao, sino ang mananagot sa mga pagkakamali ng AI?"
+attribution_3: Manggagawa sa pananalapi mula sa Bay Area
+region_3: Bay Area
+field_3: "Financial"
+----
+----
+id: top_theme_2
+title: Protektahan ang mga tao at ang kapaligiran mula sa pangangailangan ng AI sa mga mapagkukunan
+----
+- Maglagay ng limitasyon sa ingay, polusyon, at paggamit ng tubig at kuryente ng mga data center
+- Pag-aralan ang epekto ng mga data center sa kapaligiran
+----
+id: top_theme_2_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "Sa tingin ko dapat nating protektahan ang ating likas na yaman at ang malinis na kapaligiran. May kilala akong mga tao sa Texas kung saan pumasok ang mga data farm o data center, at narumihan ang tubig at tumaas nang husto ang bayarin sa kuryente."
+attribution_1: Manggagawa sa sining/libangan/media mula sa Southern California
+region_1: Southern California
+field_1: "Arts, entertainment, or media"
+quote_2: "Ang pinakamalaki kong alalahanin ay ang dami ng tubig at kuryenteng ginagamit ng AI. Naririnig mo ang tungkol sa data center sa Georgia na ilegal na kumabit sa suplay ng tubig ng isang lungsod o county at kumuha ng milyun-milyong galon nang walang nakakaalam."
+attribution_2: Manggagawa sa gobyerno mula sa LA
+region_2: Los Angeles
+field_2: "Government"
+quote_3: "Kapag iniisip ko ang estado bilang isang pisikal na lugar, maaari tayong magtakda ng mga regulasyong pangkapaligiran, maaari tayong magtakda ng mga kinakailangan sa privacy ng data para sa mga nagpapatakbo rito. Talagang nasasabik ako sa kung anong pinakamababang pamantayan ang itinatakda natin para sa proteksyon ng kapaligiran pagdating sa paggamit ng enerhiya, espasyo, at iba pa."
+attribution_3: Manggagawa sa gobyerno mula sa Bay Area
+region_3: Bay Area
+field_3: "Government"
+----
+----
+id: top_theme_3
+title: Magtakda ng mga patakaran kung saan ligtas magamit ang AI
+----
+- Tiyaking tao ang gumagawa ng huling paghatol sa mga desisyong nakakaapekto sa buhay
+- Ipagbawal ang awtomatikong AI sa proseso ng pag-hire
+----
+id: top_theme_3_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "Pagdating sa trabaho, dapat desisyon ito ng tao. Hindi natin dapat hayaang gawin iyon ng teknolohiya para sa atin."
+attribution_1: Manggagawa sa pagmamanupaktura mula sa Bay Area
+region_1: Bay Area
+field_1: "Goods producing and harvesting"
+quote_2: "Ang pamantayang ginagamit ng AI ay madalas na isang black box. Halimbawa, maaaring may kinikilingan ito sa pagsala ng mga resume ng mas batang kandidato kaysa sa mas matatanda."
+attribution_2: Manggagawa sa agham mula sa Bay Area
+region_2: Bay Area
+field_2: "Professional services"
+quote_3: "Siguro dapat maging kinakailangan na pumasa muna sa pagsusuri sa bias ang isang modelo ng AI bago ito ilabas sa publiko?"
+attribution_3: Manggagawa sa pagmamanupaktura mula sa Bay Area
+region_3: Bay Area
+field_3: "Goods producing and harvesting"
+----
+----
+id: tier_1
+translator_note: "Three groups of ideas (design 9/28). icon values are keys; do not translate them."
+title: Malakas na suporta
+subtitle: Madalas lumitaw at may malakas na suporta
+icon: megaphone
+nbr_ideas: 7
+----
+----
+id: tier_1_idea_1
+title: Gumawa ng mga patakaran kung paano hinahawakan ng AI ang personal na data
+----
+- Magtakda ng mga patakaran sa pangongolekta, paghawak, pagsisiguro, at pagbura
+- Ipatupad ang transparency at proteksyon sa privacy
+----
+id: tier_1_idea_2
+title: Magtakda ng mga patakaran kung paano gumagana ang AI
+----
+- Hikayatin ang mga kumpanya na umayon sa mga pamantayan ng tao
+- Maglagay ng mga hangganan laban sa labis na paggamit at pagkalulong sa AI
+----
+id: tier_1_idea_3
+title: Pigilan ang mga tanggalan dahil sa AI, gantimpalaan ang mga kumpanyang nagpapanatili o nagdaragdag ng manggagawa
+----
+- Magdagdag ng bagong bayarin sa pagtatanggal ng mga manggagawa dahil sa AI
+- Lumikha ng mga insentibo para mapanatili o madagdagan ang mga trabaho
+----
+id: tier_1_idea_4
+title: Gawing mas bukas sa publiko ang paggawa ng patakaran sa AI
+----
+- Bigyan ng boses ang mga apektadong komunidad
+- Bumuo ng mga grupo ng mamamayan
+----
+id: tier_1_idea_5
+title: Obligahin ang mga kumpanya na muling sanayin o tulungan sa karera ang mga manggagawang nawalan ng trabaho dahil sa AI
+----
+- Hikayatin silang muling sanayin ang mga manggagawa sa halip na tanggalin
+- Ilipat ang mga manggagawa sa mga lugar na kulang sa serbisyo
+----
+id: tier_1_idea_6
+title: Magtakda ng mga patakaran sa paglalagay ng label sa paggamit ng AI
+----
+- Markahan ang AI content ng mga karaniwang salita o watermark
+- Parusahan ang mga kumpanyang hindi nagsisiwalat ng paggamit ng AI
+----
+id: tier_1_idea_7
+title: Limitahan at buwisan ang kita ng mga kumpanya ng AI
+----
+- Isara ang mga butas na nagpapahintulot sa kanilang iwasan ang pananagutan
+- Baguhin ang mga batas sa buwis para hindi magamit ang stock sa pag-iwas sa buwis
+----
+id: tier_2
+title: Katamtamang suporta
+subtitle: Madalas lumitaw, o may malakas na suporta, pero hindi pareho
+icon: hand
+nbr_ideas: 7
+----
+----
+id: tier_2_idea_1
+title: Papanagutin ang mga kumpanya ng AI kung gagamitin nila ang gawa ng iba nang walang pahintulot
+----
+- Ipatupad ang copyright, ipagtanggol ang IP
+- Magbayad ang mga kumpanya para sa training data sa isang pondo para sa mga tagalikha
+----
+id: tier_2_idea_2
+title: Ipaalam sa mga tao kung paano gamitin ang AI nang etikal
+----
+- Gumawa ng mga public service ad tungkol sa mga benepisyo at panganib
+- Gabayan ang mga residente tungkol sa mga panganib ng AI sa privacy, mga bata, atbp.
+----
+id: tier_2_idea_3
+title: Pagbutihin ang edukasyon sa AI sa mga paaralan
+----
+- Hayaang magtrabaho ang mga estudyante sa mga sandbox para palawakin ang mga positibong epekto
+- Ituro ang data literacy sa mga paaralang K-12
+----
+id: tier_2_idea_4
+title: Payagan ang mga tao na tumanggi sa AI at gawin itong mas madali
+----
+- Kailanganin ang pahintulot, gawing default ang pagtanggi
+- Hayaang tumanggi ang mga tao sa paggamit ng AI sa kanilang data
+----
+id: tier_2_idea_5
+title: Suportahan ang independiyenteng pananaliksik sa mga epekto ng AI
+----
+- Pondohan ang mga pag-aaral kung paano nakakaapekto ang paggamit ng AI sa kritikal na pag-iisip
+- Maghanap at maglathala ng higit pang ebidensya tungkol sa pinsala at mga panganib
+----
+id: tier_2_idea_6
+title: Limitahan kung anong personal na data ang maaaring kolektahin ng mga AI system, at hayaang pamahalaan ng mga user ang kanilang data
+----
+- Gawing simple ang teksto ng pahintulot
+- Limitahan ang pangongolekta ng data sa mga pampublikong lugar para hindi ito magamit ng AI
+----
+id: tier_2_idea_7
+title: Bayaran ang mga manggagawang nawalan ng trabaho dahil sa AI habang naghahanap ng bagong trabaho
+----
+- Universal basic income
+- Mas malaking bayad sa kawalan ng trabaho kung nawalan ka ng trabaho dahil sa AI
+----
+id: tier_3
+title: Kaunting suporta
+subtitle: Hindi gaanong madalas lumitaw at may mas kaunting suporta
+icon: thumbs
+nbr_ideas: 9
+----
+----
+id: tier_3_idea_1
+title: Suportahan ang pagsasanay sa AI para sa mga manggagawa
+----
+- Mag-alok ng libreng pagsasanay sa AI para sa mga empleyado ng estado at palawakin sa publiko
+- Mga programa sa pananaliksik para malaman kung paano pinakamainam na muling sanayin ang mga manggagawa
+----
+id: tier_3_idea_2
+title: Gamitin ang AI para mapabuti ang paggana ng gobyerno
+----
+- Gamitin ang AI para sugpuin ang pandaraya at tiyaking napupunta sa tamang tatanggap ang mga benepisyo
+- Dapat lisensyahan ng gobyerno ang mga bagong modelo ng AI
+----
+id: tier_3_idea_3
+title: Panatilihin ang mga tao sa loop bilang mga nagpapasya, huwag umasa lang sa AI
+----
+- Panatilihin ang papel ng mga taong nagpapasya
+- Magtatag ng mga alituntunin para sa pagsusuri ng tao
+----
+id: tier_3_idea_4
+title: Palakasin ang parental control para sa paggamit ng AI
+----
+- Kailanganin ang madaling gamiting parental control sa mga tool na maaaring ma-access ng mga bata.
+- Bantayan kung paano inilalantad ng mga kumpanya ng teknolohiya ang mga estudyante sa teknolohiyang AI.
+----
+id: tier_3_idea_5
+title: Pondohan ang mga programa para sa ugnayang pantao at buhay sa labas ng AI
+----
+- Pondohan ang mga third space at programa sa sining/isports para itaguyod ang kalusugan ng komunidad
+- Lubusang pondohan ang mga de-kalidad na serbisyo sa kaalaman at impormasyon tulad ng edukasyon, mga aklatan, at pangangalaga sa kalusugang pangkaisipan
+----
+id: tier_3_idea_6
+title: Tiyaking hindi ginagamit ng mga estudyante ang AI para iwasan ang pag-aaral
+----
+- Tiyaking isinisiwalat ng mga estudyante ang paggamit ng AI sa mga gawaing pampaaralan
+- Suriin at limitahan ang paggamit ng AI ng mga estudyante
+----
+id: tier_3_idea_7
+title: Pigilan ang mga kumpanya sa pagtatanggal o pagpaparusa sa mga manggagawang hindi gumagamit ng AI
+----
+- Obligahin ang mga employer na isama ang mga empleyado sa mga desisyon sa pagpapakilala ng mga AI tool
+- Pagbawalan ang mga kumpanya sa pagtatanggal ng mga taong ayaw gumamit ng mga AI tool
+----
+id: tier_3_idea_8
+title: Subaybayan at iulat ang pagkawala ng trabaho dahil sa AI
+----
+- Transparent na pag-uulat sa epekto ng AI sa mga nawalang trabaho
+- Tuluy-tuloy na pag-uulat sa epekto ng AI sa ekonomiya
+----
+id: tier_3_idea_9
+title: Gamitin ang AI para sa mga trabahong ayaw o hindi kayang gawin ng mga tao
+----
+- Itugma ang paggamit ng AI sa mga lugar kung saan ito kapaki-pakinabang sa lipunan
+- Ipagawa sa AI ang mga trabahong hindi kaya o ayaw gawin ng mga tao
+----
+id: how_to_read_tiers
+----
+### Paano basahin ang ranggong ito
+
+Ipinapakita ng ranggo kung paano tinanggap ang isang ideya sa mga talakayan. Hindi ito hatol sa halaga nito.
+
+Ito ang mga temang pinag-usapan ng mga kalahok. Hiwalay ang mga ito sa kung ano na ang ginagawa ng kasalukuyang patakaran o batas. Maaaring tumugma ang ilan sa mga bagay na umuusad na sa larangan ng patakaran.
+----
+id: ranking_methods_button
+translator_note: "Button after How to read this ranking, linking to the methods page's ranking section. Do not translate the href."
+label: Tingnan ang aming paraan ng pagraranggo
+href: /ai-impact/report-details/#ranking-policy-ideas
+----
+
+----
+id: region_legend
+nbr_regions: 9
+region_1: Los Angeles
+region_2: Bay Area
+region_3: Southern California
+region_4: Sacramento Valley / Sierra Foothills
+region_5: Central Valley
+region_6: Far North / North Coast
+region_7: Central Coast
+region_8: Rehiyon ng Sierra
+region_9: Hindi sinabi / labas ng estado
+----
+
+----
+id: category_labels
+translator_note: "Field of work names as they appear in the Who participated chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 15
+key_1: "Government"
+label_1: "Gobyerno"
+key_2: "Other"
+label_2: "Iba pa"
+key_3: "Information technology"
+label_3: "Information technology"
+key_4: "Arts, entertainment, or media"
+label_4: "Sining, libangan, o media"
+key_5: "Education"
+label_5: "Edukasyon"
+key_6: "Professional services"
+label_6: "Mga propesyonal na serbisyo"
+key_7: "Healthcare"
+label_7: "Pangangalagang pangkalusugan"
+key_8: "Unemployed, looking"
+label_8: "Walang trabaho, naghahanap"
+key_9: "Financial"
+label_9: "Pananalapi"
+key_10: "Goods producing and harvesting"
+label_10: "Paggawa at pag-aani ng mga produkto"
+key_11: "Retail or wholesale trade"
+label_11: "Tingi o pakyawang kalakalan"
+key_12: "Logistics"
+label_12: "Logistics"
+key_13: "Hospitality"
+label_13: "Hospitality"
+key_14: "(not stated)"
+label_14: "Hindi sinabi"
+key_15: "I don't want to say"
+label_15: "Ayaw kong sabihin"
+----
+
+----
+id: who_participated
+title: Sino ang lumahok
+nbr_steps: 4
+toggle_region: Rehiyon
+toggle_field_of_work: Larangan ng trabaho
+toggle_age: Edad
+toggle_race: Lahi / etnisidad
+toggle_gender: Kasarian
+toggle_ai_response: Tugon sa AI
+legend_participant: Kalahok
+legend_facilitator: Facilitator
+translator_note_legend: "One legend entry standing in for all the non-answers (Not stated, I don't want to say) when a chart has more than one."
+legend_non_answer: "Hindi sinabi"
+prev_label: Nakaraang hakbang
+next_label: Susunod na hakbang
+translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
+step_counter: "{current} ng {total}"
+step_marker_label: "Pumunta sa hakbang {current}"
+step_role_label: hakbang
+play_label: I-play
+pause_label: I-pause
+restart_label: Simulan muli
+ring_center_title: 103 tao sa 14 na talakayan
+ring_center_hint: ""
+chart_alt: "Animation ng bawat sumagot sa survey bilang isang tuldok. Lumiliwanag ang mga inimbitahan sa talakayan, nagtitipon bilang mga hugis-tao ang mga dumalo, pagkatapos ay nahahati sa isang umiikot na singsing bawat talakayan, na may kulay ayon sa rehiyon o larangan ng trabaho."
+----
+
+----
+id: who_participated_step_1
+phase_label: Survey
+pill_label: "1 · Yugto 1"
+phase_title: Malawak na pakikinig
+stat_count: "2,702"
+stat_label: sumagot sa survey
+phase_subtitle: "Sumagot ang mga tao sa aming bukas na survey tungkol sa AI"
+chart_image_region: /public/images/ai-report-participants-step1-region.png
+chart_image_field: /public/images/ai-report-participants-step1-field.png
+chart_alt: "Scatter plot ng mga tuldok, isa bawat sumagot sa survey, na may kulay ayon sa rehiyon."
+----
+
+----
+id: who_participated_step_2
+phase_label: Mga talakayan
+pill_label: "2 · Napili"
+phase_title: Pag-imbita ng balanseng mga kalahok
+stat_count: "937"
+stat_label: inimbitahan
+phase_subtitle: "Pumili kami ng subset ng mga sumagot na sumasalamin sa California"
+chart_image_region: /public/images/ai-report-participants-step2-region.png
+chart_image_field: /public/images/ai-report-participants-step2-field.png
+chart_alt: "Scatter plot ng mga tuldok, isa bawat inimbitahang sumagot, na may kulay ayon sa rehiyon."
+----
+
+----
+id: who_participated_step_3
+phase_label: Mga talakayan
+pill_label: "3 · Yugto 2"
+phase_title: Pagsali sa usapan
+stat_count: "103"
+stat_label: dumalo
+phase_subtitle: "Nagkumpirma ng pagdalo ang mga taga-California na ito at sumali sa isang talakayan"
+chart_image_region: /public/images/ai-report-participants-step3-region.png
+chart_image_field: /public/images/ai-report-participants-step3-field.png
+chart_alt: "Scatter plot ng mga tuldok, isa bawat dumalo sa talakayan, na may kulay ayon sa rehiyon."
+----
+
+----
+id: who_participated_step_4
+phase_label: Mga talakayan
+pill_label: "4 · Mga talakayan"
+phase_title: Ang mga grupo ng talakayan
+stat_count: "14"
+stat_label: talakayan
+phase_subtitle: "Narito ang mga demograpiko ng bawat talakayan"
+chart_image_region: /public/images/ai-report-participants-step4-region.png
+chart_image_field: /public/images/ai-report-participants-step4-field.png
+chart_alt: "Singsing ng 14 na maliliit na kumpol ng tuldok, isa bawat talakayan, na may kulay ayon sa rehiyon."
+----
+
+----
+id: demographics_button
+translator_note: "Button at the end of Who participated, linking to the methods page's demographics section. Do not translate the href."
+label: Tingnan ang buong demograpiko
+href: /ai-impact/report-details/#balancing-groups
+----
+
+----
+id: what_happens_next
+----
+## Ano ang susunod
+
+Hindi ang ulat na ito ang katapusan ng kuwento. Ang mga ideyang ibinahagi ng mga tao ay sasama sa isang mabilis na umuusad na usapan sa patakaran na nagaganap na.
+
+Matagal nang nangunguna ang California sa pangangasiwa ng AI. Noong 2025, ipinasa ng California ang SB 53, ang [Transparency in Frontier Artificial Intelligence Act](https://www.gov.ca.gov/2025/09/29/governor-newsom-signs-sb-53-advancing-californias-world-leading-artificial-intelligence-industry/). Nagtatakda ito ng mga kinakailangan para sa transparency at independiyenteng pangangasiwa ng mga advanced na modelo ng AI. Habang binubuod ng Engaged California ang sinabi ng mga tao, kumilos ang administrasyong Newsom sa AI. Ang ilan sa mga aksyon ng administrasyon ay tumugon sa mga temang ibinangon ng mga taga-California sa mga talakayang ito, tulad ng:
+
+- Ang epekto ng mga data center sa kapaligiran
+- Transparency tungkol sa content na gawa ng AI
+- Independiyenteng pangangasiwa ng mga frontier model
+- Mga proteksyon para sa mga manggagawa at bata
+
+Kabilang sa mga aksyon ang paglagda ni Gobernador Newsom sa mga sumusunod na panukalang batas noong Setyembre 2026:
+
+- Isa sa pinakamalawak na [batas sa data center](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/) sa bansa. Nagbibigay ito sa mga komunidad ng mas malaking boses sa paggamit ng kanilang tubig, kuryente, at lupa.
+- Senate Bill 1050, na [nag-aatas ng pagsisiwalat](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/) kapag gumagamit ang isang ad ng mga performer na gawa ng AI
+- Isang Executive Order para pabilisin ang mga pagsisikap ng estado sa [pangangasiwa ng AI](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/). Pinabibilis nito ang mga bagong batas sa pag-audit ng AI at isinusulong ang isang "kill switch" para sa mga frontier na modelo ng AI.
+- Isang hanay ng mga [pangangalaga sa AI na kauna-unahan sa bansa](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/)
+- Mga [batas sa kaligtasan ng mga bata](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/) para sa mga chatbot at social media
+
+Hindi pa rin tapos ang aming gawain. Nagbangon ang mga taga-California ng maraming ideya na gagabay sa aksyon ng gobyerno sa mga darating na taon. At habang patuloy na nagbabago ang larangan ng AI, patuloy kaming makikinig.
+----
+id: sign_up
+button_text: Mag-sign up
+----
+## Mag-sign up para manatiling kasali
+
+Ibigay sa amin ang iyong email para malaman ang mga paparating na oportunidad.

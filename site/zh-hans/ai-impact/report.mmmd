@@ -1,0 +1,552 @@
+---
+title: 让人参与其中
+description: "加州居民就 AI 应如何构建、监管和使用发表意见。Engaged California 询问了加州居民 AI 正如何重塑工作和经济，以及政府应对此采取哪些行动。"
+layout: mmmd-ai-impact-report
+parentid: ai-impact
+keywords:
+  - California
+  - 人工智能
+  - AI
+  - 工作
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: 加州居民就 AI 应如何构建、使用和监管发表意见
+translator_note: "Optional hero buttons (button_1_label/href, button_2_label/href) are omitted here; the jump bar under the hero covers them (9/24)."
+----
+# 让人参与其中
+
+我们向人们提出了本州面临的一些最棘手的问题：
+
+*AI 正如何重塑工作和经济？政府应对此采取哪些行动？*
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids and the href is a page address; do not translate them."
+aria_label: 本页内容
+label: "跳转至："
+nbr_items: 5
+item_1_label: 关于 AI 的公众论坛
+item_1_anchor: public-forum
+item_2_label: 我们听到的想法
+item_2_anchor: what-we-heard
+item_3_label: 参与者
+item_3_anchor: who-participated
+item_4_label: 下一步
+item_4_anchor: what-happens-next
+item_5_label: 我们如何开展这项工作
+item_5_href: /ai-impact/report-details/
+----
+
+----
+id: public_forum
+----
+## 关于 AI 的公众论坛
+
+2026 年 5 月，我们面向所有加州居民开设了一个关于*AI 对工作的影响*的公众论坛。在随后的几个月里，全州数千人通过我们的问卷调查分享了他们的想法。部分问卷调查参与者随后还参加了在 Zoom 上举行的有主持人引导的小组讨论。他们分享了各自的经历，并倾听同伴的意见。然后，他们将最初的反应转化为具体的政策想法。
+
+在这一过程中，参与者并非总是意见一致。他们就监管应达到何种程度、如何为提案提供资金以及如何执行规则展开了辩论。
+
+有一个主题贯穿始终：**我们需要让人参与 AI 政策的制定过程**。这不仅涉及人们如何使用 AI，还涉及公司如何构建 AI 以及法律如何监管 AI。
+
+----
+id: participation_numbers
+participants_count: "2,702"
+participants_label: 问卷调查参与者
+conversations_count: "103"
+conversations_label: 讨论参与者
+ideas_count: "26"
+ideas_label: 政策想法
+----
+
+----
+id: what_we_heard
+----
+## 我们听到的想法
+
+### 首先，来自问卷调查
+
+我们的问卷调查询问了人们希望政府就 AI 的影响采取哪些行动。我们收到了各种各样的政策想法。
+----
+id: word_cloud
+translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+chart_alt: "问卷调查中出现的政策想法词云，字号大小取决于提及每个想法的人数。"
+----
+
+----
+id: ranking
+----
+### 然后，来自现场讨论
+
+以下 AI 政策想法来自在 Zoom 上举行的 2 小时现场讨论。参与者完善了他们的政策想法，并就最重要的事项进行了投票。
+
+我们将人们在讨论中所说的内容归纳为 26 个不同的想法。然后，我们按以下标准对其进行排名：
+
+- 某个想法在讨论中出现的频率（频率），以及
+- 该想法出现时获得的支持程度（它成为热门想法的频率）。
+----
+id: tiers_ui
+translator_note: "{count} is replaced with a number. Keep it in the translation."
+translator_note_2: "section_title is the heading above the three groups of ideas."
+section_title: 更多政策想法
+count_label: "{count} 个政策想法"
+show_label: 查看想法
+show_more_label: "再显示 {count} 个"
+close_label: 隐藏想法
+show_all_label: "全部显示"
+close_all_label: 全部隐藏
+example_ideas_label: "示例："
+example_idea_label_singular: "示例："
+nbr_tiers: 3
+initial_visible_ideas: 2
+----
+
+----
+id: top_themes
+translator_note: "The Top 3 box. Each theme is a card; selecting one shows its quotes in the panel."
+title: 排名前 3 的政策想法
+subtitle: 这些主题出现的频率最高，获得的支持也最强。
+icon: sparkle
+nbr_themes: 3
+show_examples_label: 显示示例
+hide_examples_label: 隐藏示例
+show_conversation_label: 看看人们说了什么
+hide_conversation_label: 隐藏人们所说的内容
+quotes_title: "来自一场讨论："
+select_label: "显示人们关于以下主题所说的内容：{title}"
+translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
+quote_open: "“"
+quote_close: "”"
+----
+----
+id: top_theme_1
+title: 让 AI 公司为其造成的伤害负责
+----
+- 加强对 AI 造成的伤害的刑事责任追究
+- 投入更多资源用于切实执法
+----
+id: top_theme_1_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+session: 10
+quote_1: "在社交媒体方面，我们没有让公司承担责任，这已经削弱了我们的民主。我认为，'公司不对人们如何使用这类工具负责'的时代应该结束了。我相信，如果我们结束这种缺乏问责的局面，他们会改变政策，并投资于某些工具来更好地管理这一切。"
+attribution_1: 来自湾区的艺术、娱乐和媒体从业者
+region_1: Bay Area
+field_1: "Arts, entertainment, or media"
+quote_2: "就您提到的这一点而言，《通信规范法》第 230 条实际上会惩罚试图管控用户内容的媒体公司，而不是让这种做法与公共利益的价值观保持一致。所以，如果我们从整体上审视激励结构：我们可以在哪些地方制定规则，使遵守规则既有利于公共利益，也有利于盈利，而不是在两者之间制造紧张？"
+attribution_2: 来自中央海岸的信息技术从业者
+region_2: Central Coast
+field_2: "Information technology"
+quote_3: "一个问题是谁对输出结果负责。如果有人工审核，那么人要负责，因为人应当是最终的决策者。但以目前 AI 的使用方式，如果没有人工审核，谁来为 AI 犯的错误负责？"
+attribution_3: 来自湾区的金融从业者
+region_3: Bay Area
+field_3: "Financial"
+----
+----
+id: top_theme_2
+title: 保护人与环境免受 AI 资源需求的影响
+----
+- 对数据中心的噪音、污染以及水电使用设定限制
+- 研究数据中心对环境的影响
+----
+id: top_theme_2_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "我认为我们应该保护我们的自然资源和清洁的环境。因为我认识德克萨斯州的一些人，数据农场或数据中心进驻后，那里的水被污染了，电费也大幅上涨。"
+attribution_1: 来自南加州的艺术/娱乐/媒体从业者
+region_1: Southern California
+field_1: "Arts, entertainment, or media"
+quote_2: "我最大的担忧是 AI 消耗的水和电的数量。你听说过佐治亚州的那个数据中心，它非法接入了某个城市或县的供水系统，在无人知晓的情况下抽走了数百万加仑的水。"
+attribution_2: 来自洛杉矶的政府部门从业者
+region_2: Los Angeles
+field_2: "Government"
+quote_3: "当我把本州视为一个实际存在的地方时，我们可以制定环境法规，可以对在此运营的企业提出数据隐私要求。在能源使用、空间等方面，我们为环境保护设定了怎样的底线，这让我非常关注。"
+attribution_3: 来自湾区的政府部门从业者
+region_3: Bay Area
+field_3: "Government"
+----
+----
+id: top_theme_3
+title: 制定关于 AI 可以在哪些场合安全使用的规则
+----
+- 确保由人对影响生活的决定做出最终判断
+- 禁止在招聘流程中使用自动化 AI
+----
+id: top_theme_3_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "涉及工作时，应该由人来做决定。我们不应该让技术替我们做决定。"
+attribution_1: 来自湾区的制造业从业者
+region_1: Bay Area
+field_1: "Goods producing and harvesting"
+quote_2: "AI 使用的标准往往是一个黑箱。例如，它在筛选简历时可能偏向年轻求职者而非年长求职者。"
+attribution_2: 来自湾区的科学从业者
+region_2: Bay Area
+field_2: "Professional services"
+quote_3: "也许应该要求 AI 模型在向公众发布之前先通过偏见测试？"
+attribution_3: 来自湾区的制造业从业者
+region_3: Bay Area
+field_3: "Goods producing and harvesting"
+----
+----
+id: tier_1
+translator_note: "Three groups of ideas (design 9/28). icon values are keys; do not translate them."
+title: 强烈支持
+subtitle: 出现频繁且获得强烈支持
+icon: megaphone
+nbr_ideas: 7
+----
+----
+id: tier_1_idea_1
+title: 制定关于 AI 如何处理个人数据的规则
+----
+- 制定数据收集、处理、保护和删除的规则
+- 强制执行透明度和隐私保护
+----
+id: tier_1_idea_2
+title: 制定关于 AI 如何运作的规则
+----
+- 敦促公司遵循以人为本的标准
+- 设置防护措施，防止 AI 的过度使用和成瘾
+----
+id: tier_1_idea_3
+title: 防止因 AI 导致的裁员，奖励留住或增加员工的公司
+----
+- 对因 AI 而裁员的行为征收新费用
+- 创造激励措施以保留或增加工作岗位
+----
+id: tier_1_idea_4
+title: 让 AI 政策制定对公众更加开放
+----
+- 让受影响的社区发声
+- 组建公民同侪小组
+----
+id: tier_1_idea_5
+title: 要求公司为因 AI 失业的员工提供再培训或职业支持
+----
+- 敦促公司对员工进行再培训而非裁员
+- 将员工调往服务不足的地区
+----
+id: tier_1_idea_6
+title: 制定关于标注 AI 使用的规则
+----
+- 用通用语言或水印标注 AI 内容
+- 对未披露 AI 使用情况的公司处以罚款
+----
+id: tier_1_idea_7
+title: 限制 AI 公司的利润并对其征税
+----
+- 堵住让公司逃避责任的漏洞
+- 修改税法，使股票不能被用于避税
+----
+id: tier_2
+title: 中等支持
+subtitle: 出现频繁或获得强烈支持，但并非两者兼备
+icon: hand
+nbr_ideas: 7
+----
+----
+id: tier_2_idea_1
+title: 如果 AI 公司未经许可使用他人作品，应让其承担责任
+----
+- 执行版权法，保护知识产权
+- 公司为训练数据付费，注入面向创作者的基金
+----
+id: tier_2_idea_2
+title: 让人们了解如何合乎道德地使用 AI
+----
+- 制作关于收益和风险的公益广告
+- 就 AI 对隐私、儿童等方面的风险为居民提供指导
+----
+id: tier_2_idea_3
+title: 改进学校中的 AI 教育
+----
+- 让学生在沙盒环境中实践，以扩大积极影响
+- 在 K-12 学校教授数据素养
+----
+id: tier_2_idea_4
+title: 允许人们选择不使用 AI，并让这一选择更容易
+----
+- 要求征得同意，默认选择退出
+- 允许人们拒绝 AI 使用其数据
+----
+id: tier_2_idea_5
+title: 支持关于 AI 影响的独立研究
+----
+- 资助关于 AI 使用如何影响批判性思维的研究
+- 寻找并发布更多关于伤害和风险的证据
+----
+id: tier_2_idea_6
+title: 限制 AI 系统可以收集的个人数据，并让用户管理自己的数据
+----
+- 简化同意书的文字
+- 限制在公共场所收集数据，使 AI 无法使用
+----
+id: tier_2_idea_7
+title: 在因 AI 失业的员工寻找新工作期间为其提供收入
+----
+- 全民基本收入
+- 如果因 AI 失业，提供更高的失业救济金
+----
+id: tier_3
+title: 部分支持
+subtitle: 出现较少且获得的支持较少
+icon: thumbs
+nbr_ideas: 9
+----
+----
+id: tier_3_idea_1
+title: 支持面向员工的 AI 培训
+----
+- 为州政府雇员提供免费 AI 培训，并推广至公众
+- 开展研究项目，找出对员工进行再培训的最佳方式
+----
+id: tier_3_idea_2
+title: 利用 AI 改善政府运作
+----
+- 利用 AI 打击欺诈，确保福利发放给正确的对象
+- 政府应对新的 AI 模型进行许可
+----
+id: tier_3_idea_3
+title: 让人作为决策者参与其中，而不是仅依赖 AI
+----
+- 保留人类决策者的角色
+- 制定人工审核指南
+----
+id: tier_3_idea_4
+title: 加强对 AI 使用的家长控制
+----
+- 要求儿童可能接触的工具提供易于使用的家长控制功能。
+- 监督科技公司如何让学生接触 AI 技术。
+----
+id: tier_3_idea_5
+title: 资助促进人际联系和 AI 之外生活的项目
+----
+- 资助第三空间和艺术/体育项目，以促进社区健康
+- 为教育、图书馆和心理健康护理等高质量知识与信息服务提供充足资金
+----
+id: tier_3_idea_6
+title: 确保学生不利用 AI 逃避学习
+----
+- 确保学生在课业中披露 AI 的使用情况
+- 审核并限制学生对 AI 的使用
+----
+id: tier_3_idea_7
+title: 防止公司因员工不使用 AI 而解雇或惩罚他们
+----
+- 要求雇主在引入 AI 工具的决策中纳入员工意见
+- 限制公司解雇不愿使用 AI 工具的人
+----
+id: tier_3_idea_8
+title: 跟踪并报告 AI 导致的失业
+----
+- 就 AI 对失业岗位的影响进行透明报告
+- 就 AI 对经济的影响进行持续报告
+----
+id: tier_3_idea_9
+title: 将 AI 用于人们不愿或无法从事的工作
+----
+- 让 AI 的使用与其对社会有益的领域相匹配
+- 让 AI 从事人类无法或不愿从事的工作
+----
+id: how_to_read_tiers
+----
+### 如何解读此排名
+
+排名显示的是某个想法在讨论中的受欢迎程度。它不是对该想法价值的评判。
+
+这些是参与者讨论过的主题。它们与现行政策或法律可能已经采取的行动是分开的。其中一些可能与政策领域已在推进的事项重合。
+----
+id: ranking_methods_button
+translator_note: "Button after How to read this ranking, linking to the methods page's ranking section. Do not translate the href."
+label: 查看我们的排名方法
+href: /ai-impact/report-details/#ranking-policy-ideas
+----
+
+----
+id: region_legend
+nbr_regions: 9
+region_1: 洛杉矶
+region_2: 湾区
+region_3: 南加州
+region_4: 萨克拉门托谷地 / 内华达山麓
+region_5: 中央谷地
+region_6: 远北 / 北海岸
+region_7: 中央海岸
+region_8: 内华达山区
+region_9: 未说明 / 州外
+----
+
+----
+id: category_labels
+translator_note: "Field of work names as they appear in the Who participated chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 15
+key_1: "Government"
+label_1: "政府"
+key_2: "Other"
+label_2: "其他"
+key_3: "Information technology"
+label_3: "信息技术"
+key_4: "Arts, entertainment, or media"
+label_4: "艺术、娱乐或媒体"
+key_5: "Education"
+label_5: "教育"
+key_6: "Professional services"
+label_6: "专业服务"
+key_7: "Healthcare"
+label_7: "医疗保健"
+key_8: "Unemployed, looking"
+label_8: "失业，正在求职"
+key_9: "Financial"
+label_9: "金融"
+key_10: "Goods producing and harvesting"
+label_10: "商品生产与收获"
+key_11: "Retail or wholesale trade"
+label_11: "零售或批发贸易"
+key_12: "Logistics"
+label_12: "物流"
+key_13: "Hospitality"
+label_13: "酒店餐饮"
+key_14: "(not stated)"
+label_14: "未说明"
+key_15: "I don't want to say"
+label_15: "我不想说"
+----
+
+----
+id: who_participated
+title: 参与者
+nbr_steps: 4
+toggle_region: 地区
+toggle_field_of_work: 工作领域
+toggle_age: 年龄
+toggle_race: 种族/族裔
+toggle_gender: 性别
+toggle_ai_response: 对 AI 的回应
+legend_participant: 参与者
+legend_facilitator: 主持人
+translator_note_legend: "One legend entry standing in for all the non-answers (Not stated, I don't want to say) when a chart has more than one."
+legend_non_answer: "未说明"
+prev_label: 上一步
+next_label: 下一步
+translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
+step_counter: "第 {current} 步，共 {total} 步"
+step_marker_label: "跳转至第 {current} 步"
+step_role_label: 步
+play_label: 播放
+pause_label: 暂停
+restart_label: 重新开始
+ring_center_title: 14 场讨论，103 人
+ring_center_hint: ""
+chart_alt: "动画中每个问卷调查参与者显示为一个点。受邀参加讨论的人亮起，出席者聚集成人形，然后分散成一个旋转的环，每场讨论一个，按地区或工作领域着色。"
+----
+
+----
+id: who_participated_step_1
+phase_label: 问卷调查
+pill_label: "1 · 第 1 阶段"
+phase_title: 广泛倾听
+stat_count: "2,702"
+stat_label: 问卷调查参与者
+phase_subtitle: "人们回答了我们关于 AI 的公开问卷调查"
+chart_image_region: /public/images/ai-report-participants-step1-region.png
+chart_image_field: /public/images/ai-report-participants-step1-field.png
+chart_alt: "散点图，每个点代表一位问卷调查参与者，按地区着色。"
+----
+
+----
+id: who_participated_step_2
+phase_label: 讨论
+pill_label: "2 · 已选定"
+phase_title: 邀请具有代表性的参与者
+stat_count: "937"
+stat_label: 受邀者
+phase_subtitle: "我们选择了一部分能反映加州人口构成的参与者"
+chart_image_region: /public/images/ai-report-participants-step2-region.png
+chart_image_field: /public/images/ai-report-participants-step2-field.png
+chart_alt: "散点图，每个点代表一位受邀参与者，按地区着色。"
+----
+
+----
+id: who_participated_step_3
+phase_label: 讨论
+pill_label: "3 · 第 2 阶段"
+phase_title: 加入对话
+stat_count: "103"
+stat_label: 出席者
+phase_subtitle: "这些加州居民确认出席并参加了一场讨论"
+chart_image_region: /public/images/ai-report-participants-step3-region.png
+chart_image_field: /public/images/ai-report-participants-step3-field.png
+chart_alt: "散点图，每个点代表一位讨论出席者，按地区着色。"
+----
+
+----
+id: who_participated_step_4
+phase_label: 讨论
+pill_label: "4 · 讨论"
+phase_title: 讨论小组
+stat_count: "14"
+stat_label: 场讨论
+phase_subtitle: "以下是每场讨论的人口统计情况"
+chart_image_region: /public/images/ai-report-participants-step4-region.png
+chart_image_field: /public/images/ai-report-participants-step4-field.png
+chart_alt: "由 14 个小点簇组成的环，每簇代表一场讨论，按地区着色。"
+----
+
+----
+id: demographics_button
+translator_note: "Button at the end of Who participated, linking to the methods page's demographics section. Do not translate the href."
+label: 查看完整的人口统计数据
+href: /ai-impact/report-details/#balancing-groups
+----
+
+----
+id: what_happens_next
+----
+## 下一步
+
+这份报告并不是故事的结尾。人们分享的想法将汇入一场正在快速推进的政策讨论。
+
+加州长期以来在 AI 监管方面处于领先地位。2025 年，加州通过了 SB 53，即[《前沿人工智能透明度法案》](https://www.gov.ca.gov/2025/09/29/governor-newsom-signs-sb-53-advancing-californias-world-leading-artificial-intelligence-industry/)。该法案对先进 AI 模型设定了透明度和独立监督的要求。在 Engaged California 汇总人们意见的同时，纽森政府也在 AI 方面采取了行动。政府的部分行动涉及加州居民在这些讨论中提出的主题，例如：
+
+- 数据中心的环境足迹
+- AI 生成内容的透明度
+- 对前沿模型的独立监督
+- 对劳动者和儿童的保护
+
+这些行动包括纽森州长于 2026 年 9 月签署的以下法案：
+
+- 全国最全面的[数据中心法律](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/)之一。它让社区对其水、电和土地的使用拥有更大的发言权。
+- 参议院第 1050 号法案，[要求在广告使用 AI 生成的表演者时予以披露](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/)
+- 一项行政令，旨在加快本州在 [AI 监督](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/)方面的工作。该行政令加快了新的 AI 审计法律的推进，并推动为前沿 AI 模型设置"紧急停止开关"。
+- 一套[全国首创的 AI 保障措施](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/)
+- 针对聊天机器人和社交媒体的[儿童安全法律](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/)
+
+我们的工作也尚未结束。加州居民提出了许多想法，这些想法将在未来几年指导政府行动。随着 AI 格局不断变化，我们将继续倾听。
+----
+id: sign_up
+button_text: 注册
+----
+## 注册以保持参与
+
+请留下您的电子邮件，以便了解即将到来的参与机会。

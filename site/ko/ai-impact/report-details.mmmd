@@ -1,0 +1,261 @@
+---
+title: 이 작업을 진행한 방법
+description: "Engaged California가 AI가 업무에 미치는 영향 토론의 참여자를 어떻게 선정했는지, 각 단계가 인구통계 목표에 얼마나 근접했는지, 주민들의 의견을 어떻게 분석했는지 설명합니다."
+layout: mmmd-ai-impact-report-details
+parentid: ai-impact
+keywords:
+  - California
+  - 인공지능
+  - AI
+  - 일자리
+  - 추첨
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: "AI에 관한 대화를 진행하고 분석하는 데 사용한 방법"
+theme: light
+back_link_text: "보고서로 돌아가기"
+back_link_href: /ai-impact/report/
+----
+# 이 작업을 진행한 방법
+----
+id: intro
+----
+*AI가 업무에 미치는 영향* 프로젝트는 두 단계로 진행되었습니다. 1단계에서는 모든 캘리포니아 주민이 온라인 공개 설문조사를 통해 의견을 낼 수 있었습니다. 2단계에서는 관심 있는 설문 참여자를 실시간 토론에 초대했습니다.
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: 이 페이지에서
+label: "바로 가기:"
+nbr_items: 3
+item_1_label: 각 그룹을 공정하게 구성하기
+item_1_anchor: balancing-groups
+item_2_label: 정책 아이디어 순위 매기기
+item_2_anchor: ranking-policy-ideas
+item_3_label: AI를 활용한 방법
+item_3_anchor: how-we-used-ai
+----
+
+----
+id: balancing_groups
+title: 각 그룹을 공정하게 구성하기
+----
+누구를 초대할지 정해야 했습니다. 그리고 균형 잡힌 그룹을 만들면서도 공정하게 선택해야 했습니다.
+
+그래서 법원이 배심원을 선정하는 방식과 비슷한 추첨(sortition) 방식을 사용했습니다. 이 방식은 똑같이 중요한 두 가지 원칙에 기반합니다:
+
+- **대표성:** 캘리포니아 인구 추정치를 바탕으로 인구통계 목표를 정했습니다. 이를 통해 최종 초대자 명단이 주의 다양성을 반영하도록 했습니다. 기준에는 연령, 지역, 직종 등이 포함되었습니다.
+- **무작위성:** 그 목표 안에서 조건에 맞는 모든 사람이 공정하게 선정될 기회를 가졌습니다.
+
+이 원칙 덕분에 먼저 응답한 사람들의 의견만 듣는 일을 피할 수 있었습니다. 캘리포니아 주민 전체를 대략적으로 반영하는, 공정하게 선정된 명단을 만들 수 있었습니다.
+----
+id: demographics_chart
+title: 인구통계
+pulldown_label: "참여자 보기 기준"
+chart_title: "설문조사와 토론의 인구통계 비교"
+translator_note_chart: "chart_note is the one-line note directly under the chart title."
+chart_note: "추첨 덕분에 토론의 인구통계가 더 균형에 가까워졌습니다."
+axis_above_label: "목표 대비 퍼센트포인트 초과"
+axis_below_label: "목표 대비 퍼센트포인트 미달"
+chart_alt: "설문조사와 토론 참여자를 인구통계 목표와 비교한 막대그래프, 목표 대비 퍼센트포인트 단위."
+dim_region: 지역
+dim_race: 인종 / 민족
+dim_age: 연령
+dim_gender: 성별
+dim_field: 직종
+dim_ai: AI에 대한 인식
+phase1_label: 설문조사
+phase2_label: 토론
+on_target_label: 목표 달성
+translator_note: "{dimension} is replaced with the selected drop-down label. Keep it in the translation."
+table_caption: "{dimension}별 목표 대비 참여자 비율"
+translator_note_2: "The next four lines are read by screen readers. Keep every {placeholder} in the translation."
+chart_aria_label: "{dimension}: {phase1} 및 {phase2}, 목표 대비 퍼센트포인트"
+bar_title: "{category}, {phase}: 목표 대비 {value}포인트({share}% 대 목표 {target}%)"
+table_target_header: "목표 %"
+table_points_header: "{phase} 목표 대비 포인트"
+----
+인구통계 목표에 얼마나 근접했는지 확인해 보세요. 드롭다운 메뉴를 클릭하면 다음 기준별 측정치를 볼 수 있습니다:
+
+- 지역
+- 인종 / 민족
+- 성별
+- 직종
+- 연령
+----
+id: demographics_sources
+translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
+label: 목표 출처
+source_region: "지역: 모든 지역에 최소 6명의 발언권을 보장했습니다. 나머지 자리는 미국 지역사회 조사(ACS) 추정치를 사용해 2026년 캘리포니아 인구에 비례해 배정했습니다."
+source_field_of_work: "직종: 캘리포니아 고용개발부의 [2026년 4월 산업별 고용 및 노동력(CES) 통계]({@0})와 [지역 선택 표]({@1})를 기반으로 했습니다. 주지사실에 제출된 메모는 물류, 의료, 법률 및 금융 서비스, 창작 산업, 공공 부문, 학계를 우선 분야로 명시하고 있으며, 이를 해당 범주에 반영했습니다."
+source_age: "연령: 2026년 인구조사 / 캘리포니아 재무부 추정치를 반영합니다."
+source_gender: "성별: 2026년 인구조사 / 캘리포니아 재무부 추정치를 반영합니다."
+source_race: "인종 / 민족: 2026년 인구조사 / 캘리포니아 재무부 추정치를 반영합니다."
+source_ai: ""
+----
+
+----
+id: category_labels
+translator_note: "Category names as they appear in the demographics chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 36
+key_1: "Bay Area"
+label_1: "베이 에어리어"
+key_2: "Central Coast"
+label_2: "센트럴 코스트"
+key_3: "Central Valley"
+label_3: "센트럴 밸리"
+key_4: "Far North / North Coast"
+label_4: "파 노스 / 노스 코스트"
+key_5: "Los Angeles"
+label_5: "로스앤젤레스"
+key_6: "Sacramento Valley / Sierra Foothills"
+label_6: "새크라멘토 밸리 / 시에라 산기슭"
+key_7: "Sierra Region"
+label_7: "시에라 지역"
+key_8: "Southern California"
+label_8: "남부 캘리포니아"
+key_9: "American Indian or Alaska Native"
+label_9: "아메리카 원주민 또는 알래스카 원주민"
+key_10: "Asian"
+label_10: "아시아계"
+key_11: "Black or African American"
+label_11: "흑인 또는 아프리카계 미국인"
+key_12: "Hispanic or Latino"
+label_12: "히스패닉 또는 라틴계"
+key_13: "Middle Eastern or North African"
+label_13: "중동 또는 북아프리카계"
+key_14: "Multiple"
+label_14: "복수 인종"
+key_15: "Native Hawaiian or Pacific Islander"
+label_15: "하와이 원주민 또는 태평양 섬 주민"
+key_16: "White"
+label_16: "백인"
+key_17: "18-24"
+label_17: "18-24세"
+key_18: "25-44"
+label_18: "25-44세"
+key_19: "45-64"
+label_19: "45-64세"
+key_20: "Over 65"
+label_20: "65세 이상"
+key_21: "Woman"
+label_21: "여성"
+key_22: "Man"
+label_22: "남성"
+key_23: "Nonbinary / multi / other"
+label_23: "논바이너리 / 복수 / 기타"
+key_24: "Arts, entertainment, or media"
+label_24: "예술, 엔터테인먼트 또는 미디어"
+key_25: "Education"
+label_25: "교육"
+key_26: "Financial"
+label_26: "금융"
+key_27: "Goods producing and harvesting"
+label_27: "재화 생산 및 수확"
+key_28: "Government"
+label_28: "정부"
+key_29: "Healthcare"
+label_29: "의료"
+key_30: "Hospitality"
+label_30: "접객업"
+key_31: "Information technology"
+label_31: "정보기술"
+key_32: "Logistics"
+label_32: "물류"
+key_33: "Other"
+label_33: "기타"
+key_34: "Professional services"
+label_34: "전문 서비스"
+key_35: "Retail or wholesale trade"
+label_35: "소매 또는 도매업"
+key_36: "Unemployed, looking"
+label_36: "실업, 구직 중"
+----
+
+----
+id: process_links
+----
+#### 추첨에 관해 더 알아보기
+
+- [저희의 추첨 코드](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
+- Sortition Foundation, [*Why Sortition Algorithms?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html) (영어)
+
+----
+id: ranking_policy_ideas
+----
+## 정책 아이디어 순위 매기기
+
+토론에서 참여자들은 정책 아이디어를 제안한 뒤 그룹으로 투표했습니다.
+
+토론에서 한 표 이상 받은 아이디어를 모두 모았습니다. 그런 다음 비슷한 아이디어를 묶고 각 그룹에 대한 요약을 작성했습니다. 이것이 26개의 정책 아이디어가 되었습니다. 각 정책 아이디어는 1개에서 12개의 개별 정책 제안을 포함했습니다.
+
+정책 아이디어의 순위를 매기기 위해 두 가지 요소로 각각을 평가했습니다:
+
+- **빈도:** 14개 토론에서 정책 아이디어가 얼마나 자주 나왔는지. 1회에서 8회까지였습니다.
+- **지지:** 정책 아이디어가 토론에서 상위 득표에 들었는지. 상위에 들려면 상위 3분의 1에 드는 표를 얻어야 했습니다. 0회에서 5회까지였습니다.
+
+정책 아이디어 목록을 빈도순으로 정렬했습니다. 그런 다음 대략 절반으로 나누어 상위 절반을 "고빈도"로 표시했습니다. 5회 이상의 토론에서 나온 아이디어가 "고빈도"였습니다.
+
+그다음 정책 아이디어를 지지순으로 정렬했습니다. 관련 아이디어가 모든 세션에서 상위 3개 주제에 들었다면 "최상위 아이디어"로 표시했습니다.
+
+아이디어의 순서에는 어느 정도 의미가 있지만 절대적이지는 않습니다. 각 요소에 대해 다른 모든 아이디어와 비교한 순위를 계산했습니다. 그런 다음 이 순위를 합산해 각 아이디어에 점수를 매겼습니다. 점수가 가장 높은 아이디어를 맨 위에 두었습니다. 정책 아이디어의 점수가 같을 때는 알파벳 순서를 사용했습니다.
+----
+id: how_we_used_ai
+----
+## AI를 활용한 방법
+
+저희 직원들은 이 토론을 검토하고 분석하는 데 AI의 도움을 받았습니다.
+
+AI 활용의 예는 다음과 같습니다:
+
+- 토론 음성을 녹취록으로 변환,
+- 토론과 설문 응답의 개요 요약 작성, 그리고
+- 대화의 각 부분에 해당 아이디어를 태그 지정.
+
+AI가 토론 초대자를 고르지는 않았습니다. 초대자는 추첨으로 선정했습니다. 초대자 그룹이 캘리포니아의 인구통계를 반영하도록 했습니다. 또한 응답자의 AI에 대한 인식을 평가하는 데 AI를 활용했습니다. 이를 통해 다양한 관점을 확보했습니다.
+
+참여자들이 공유한 내용을 보호했습니다. 모든 AI 작업은 주의 보안 데이터 환경 안에서 이루어졌습니다. 녹취록이나 설문 응답을 AI 공급업체와 공유한 적이 없습니다. 어떤 콘텐츠도 AI 모델 학습에 사용되지 않았습니다.
+
+AI는 결코 인간의 판단을 대체하지 않았으며, 참여자의 말을 쓰거나 편집한 적도 없습니다. 이 보고서의 모든 인용문은 참여자가 실제로 한 말입니다. 녹취록과 대조해 검증하고 직원이 검토했습니다.
+
+이 보고서에서 강조한 정책 아이디어와 주제는 저희 직원들이 직접 찾아냈습니다. AI의 도움 없이 녹취록과 설문 응답을 검토했습니다. AI가 분석을 도울 때는 정확한 출처를 제시하게 했습니다. 직원들은 이를 근거로 삼기 전에 해당 진술을 확인했습니다.
+
+테스트에서는 AI 요약을 사람이 작성한 기록과 비교했습니다. 내용을 지어내지 않고 같은 범위를 다루고 있음을 확인했습니다.
+----
+id: download_data
+button_text: 아이디어 다운로드
+----
+### 모든 정책 아이디어 다운로드
+
+토론에서 제안된 모든 정책을 다운로드해 읽어보실 수 있습니다. CSV 파일로 제공됩니다.
+----
+id: sign_up
+button_text: 가입하기
+----
+## 계속 참여하려면 가입하세요
+
+이메일을 남겨 주시면 앞으로의 참여 기회를 알려 드리겠습니다.
