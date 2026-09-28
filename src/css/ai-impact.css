@@ -148,3 +148,12 @@ section.overview-ge h3 {
 section.overview-ge h4 {
     font-size: 23px;
 }
+
+/* Partner logo under the About the program copy (9/28). */
+.about-the-process .partner-logo {
+  display: block;
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  margin-top: 0.5rem;
+}
