@@ -552,7 +552,7 @@ export async function initParticipantFunnel(root) {
   function syncControls() {
     syncCenterCopy();
     if (prevBtn) prevBtn.disabled = stage <= 0;
-    if (nextBtn) nextBtn.disabled = stage >= LAST_STAGE;
+    if (nextBtn) nextBtn.disabled = false; // wraps to stage 1
     if (playBtn) {
       playBtn.setAttribute("aria-label", playing ? pauseLabel : playLabel);
       playBtn.setAttribute("aria-pressed", String(!playing));
@@ -706,7 +706,10 @@ export async function initParticipantFunnel(root) {
 
   // ---- Wiring ------------------------------------------------------------
   prevBtn?.addEventListener("click", () => jumpTo(stage - 1));
-  nextBtn?.addEventListener("click", () => jumpTo(stage + 1));
+  // Forward wraps from the last stage to the first, so the arrows can take
+  // a reader back to the very beginning (9/28); back stops at stage 1.
+  const forward = () => jumpTo(stage >= LAST_STAGE ? 0 : stage + 1);
+  nextBtn?.addEventListener("click", forward);
   playBtn?.addEventListener("click", togglePlay);
 
   // ---- Play/pause overlay visibility -------------------------------------
@@ -771,7 +774,7 @@ export async function initParticipantFunnel(root) {
       togglePlay();
     } else if (event.key === "ArrowRight") {
       event.preventDefault();
-      jumpTo(stage + 1);
+      forward();
     } else if (event.key === "ArrowLeft") {
       event.preventDefault();
       jumpTo(stage - 1);
