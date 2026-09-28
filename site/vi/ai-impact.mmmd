@@ -17,10 +17,12 @@ readingResponses: Đang đọc phản hồi
 hostingDiscussions: Đang tổ chức thảo luận
 analyzingResults: Đang phân tích kết quả
 buttonText_getupdates: Nhận thông tin cập nhật
+conversationClosed: "Cuộc thảo luận này đã kết thúc"
+buttonText_readreport: "Đọc báo cáo"
 ----
-Chúng tôi đã hỏi quý vị nghĩ AI có thể ảnh hưởng đến thị trường việc làm và cách quý vị làm việc như thế nào.
+Chúng tôi đã hỏi người dân California về tác động của AI và chính phủ nên làm gì về vấn đề này.
 
-Chúng tôi hiện đang tổng hợp ý kiến đóng góp của quý vị thành một báo cáo.
+Giờ đây quý vị có thể xem ý kiến của họ.
 
 ----
 id: overview
@@ -36,6 +38,9 @@ Chúng tôi đã hỏi mọi người về cách AI đang ảnh hưởng đến 
 
 ----
 id: about
+translator_note: "partner_logo is an image path; do not translate it. partner_logo_alt is the image's alt text."
+partner_logo: /public/images/pdla-logo.svg
+partner_logo_alt: Public Democracy LA
 ----
 
 ### Về chương trình
@@ -44,6 +49,7 @@ Engaged California là một ví dụ về dân chủ thảo luận. Nó trao qu
 
 [Tìm hiểu thêm về Engaged California](/vi/about)
 
+Chúng tôi xin cảm ơn Public Democracy LA đã hỗ trợ chúng tôi trong công việc này.
 
 ----
 id: sign_up

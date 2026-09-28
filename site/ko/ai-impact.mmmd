@@ -17,10 +17,12 @@ readingResponses: 응답 검토 중
 hostingDiscussions: 토론 진행 중
 analyzingResults: 결과 분석 중
 buttonText_getupdates: 업데이트 받기
+conversationClosed: "이 대화는 종료되었습니다"
+buttonText_readreport: "보고서 읽기"
 ----
-저희는 AI가 노동 시장과 귀하의 업무 방식에 어떤 영향을 미칠 수 있다고 생각하는지 물었습니다.
+저희는 캘리포니아 주민들에게 AI의 영향과 정부가 이에 대해 무엇을 해야 하는지 물었습니다.
 
-저희는 현재 귀하의 의견을 보고서로 정리하고 있습니다.
+이제 주민들의 의견을 확인하실 수 있습니다.
 
 ----
 id: overview
@@ -36,6 +38,9 @@ AI는 캘리포니아에서 우리가 일하는 방식을 변화시키고 있습
 
 ----
 id: about
+translator_note: "partner_logo is an image path; do not translate it. partner_logo_alt is the image's alt text."
+partner_logo: /public/images/pdla-logo.svg
+partner_logo_alt: Public Democracy LA
 ----
 
 ### 프로그램 소개
@@ -44,6 +49,7 @@ Engaged California는 숙의 민주주의의 한 사례입니다. 새로운 방�
 
 [Engaged California에 대해 더 알아보기](/ko/about)
 
+이 작업에 도움을 준 Public Democracy LA에 감사드립니다.
 
 ----
 id: sign_up
