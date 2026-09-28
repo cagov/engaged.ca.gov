@@ -121,21 +121,22 @@ export async function initParticipantFunnel(root) {
     // reserved to keep the page from hopping.
     if (window.matchMedia("(min-width: 992px)").matches) {
       if (legendEl) legendEl.style.minHeight = "";
-      // The legend + key block still reserves the taller legend's height,
-      // so the demographics link after it keeps one position (9/28).
-      const block = section.querySelector("[data-funnel-legend-block]");
-      if (block) {
+      // The key and the demographics link follow the legend, but the side
+      // column reserves the taller legend's overall height so the section
+      // stays the same size whichever dimension is showing (design 9/28).
+      const aside = section.querySelector(".funnel-aside");
+      if (aside) {
         const keep = dimension;
-        block.style.minHeight = "";
+        aside.style.minHeight = "";
         let tallest = 0;
         for (const d of dimensions) {
           dimension = d;
           recolor();
-          tallest = Math.max(tallest, block.getBoundingClientRect().height);
+          tallest = Math.max(tallest, aside.getBoundingClientRect().height);
         }
         dimension = keep;
         recolor();
-        block.style.minHeight = `${Math.ceil(tallest)}px`;
+        aside.style.minHeight = `${Math.ceil(tallest)}px`;
       }
       return;
     }
