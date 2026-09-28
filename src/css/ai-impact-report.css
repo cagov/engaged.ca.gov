@@ -2573,3 +2573,39 @@ section#balancing-groups.methods-light {
     margin-bottom: 0;
   }
 }
+
+/* ---- Phone rhythm (9/28) ----
+   The desktop spacing reads loose on a narrow screen: 3rem above and below
+   every section put 96px of blank between blocks of copy. Sections and the
+   larger in-section breaks close up by about a third. Kept at the end of
+   the file so these outrank the desktop rules of equal specificity. */
+@media (max-width: 991px) {
+  section#ai-report-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  #ai-report-hero ~ section {
+    padding: 2rem 0;
+  }
+
+  section#stay-informed {
+    padding-block: 2rem;
+  }
+
+  .ideas-cloud {
+    margin: 0.5rem 0 1.25rem;
+  }
+
+  .style-body-text .more-ideas-title {
+    margin-top: 2rem;
+  }
+
+  .download-data {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  section#balancing-groups .process-links {
+    margin-top: 1.25rem;
+  }
+}
