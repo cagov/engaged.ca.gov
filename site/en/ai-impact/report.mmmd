@@ -232,14 +232,14 @@ title: Set rules around how AI works
 id: tier_1_idea_3
 title: Deter layoffs because of AI, reward firms that keep or add workers
 ----
-- Add penalties for firing workers for AI
+- Add new fees for firing workers for AI
 - Create incentives to keep or increase jobs
 ----
 id: tier_1_idea_4
 title: Make AI policymaking more open to the public
 ----
 - Give affected communities their say
-- Create citizen peer groups that include tech people
+- Create citizen peer groups
 ----
 id: tier_1_idea_5
 title: Make companies reskill or give career help to workers who lose their jobs to AI
@@ -276,7 +276,7 @@ id: tier_2_idea_2
 title: Make people aware of how to use AI ethically
 ----
 - Make public service ads on benefits and risks
-- Guide residents about risks posed by AI, to privacy, children, etc
+- Guide residents about risks posed by AI, to privacy, children, etc.
 ----
 id: tier_2_idea_3
 title: Improve AI education in schools
@@ -288,19 +288,19 @@ id: tier_2_idea_4
 title: Allow people to opt out of AI and make that easier
 ----
 - Require consent, make opt-out the default
-- Let people opt out of their data being used
+- Let people opt out of AI using their data
 ----
 id: tier_2_idea_5
 title: Support independent research on AI's effects
 ----
 - Fund studies on how AI use affects critical thinking
-- We need more evidence on the harm and risks. From there we would be able to define a strategy for how we would approach regulating people and their interaction with chatbots. Then we should provide that to people to make the decision on whether to engage further.
+- Find and publish more evidence on the harm and risks
 ----
 id: tier_2_idea_6
 title: Limit what personal data AI systems can collect, and let users manage their data
 ----
 - Make consent text simple
-- Limit collection of data in public settings (so it can’t even get into AI)
+- Limit collection of data in public settings, so AI can’t use it
 ----
 id: tier_2_idea_7
 title: Pay workers who lose jobs due to AI while they find new jobs
@@ -324,40 +324,38 @@ title: Support AI training for workers
 id: tier_3_idea_2
 title: Use AI to improve how government works
 ----
-- Legislation to utilize AI with human oversight to root out waste and fraud within the public sector to make sure the money is going to the right people
+- Use AI to crack down on fraud and ensure benefits go to the right recipients
 - Government should license new AI models
 ----
 id: tier_3_idea_3
 title: Keep humans in the loop as decision-makers, don't rely solely on AI
 ----
 - Preserve role of human decision makers
-- Establish guidelines for human evaluation in relevant use cases and encourage accountability to related processes
+- Establish guidelines for human evaluation
 ----
 id: tier_3_idea_4
 title: Strengthen parental controls for AI use
 ----
-- Oversight on how technology companies interact with / provide influence / devices / tech to schoolkids. Require more restrictive, easier to find, easier to use parental controls/administrator guardrails on tech companies that make tools children can access. Ensure kids get AI/tech education in school, including critical thinking about what information they see online.
-- Introduce stronger protections for children, like having informed consent from parents and firewalls against using AI chatbots. Include warnings of harm from AI usage for children. Link child and parent online accounts for supervision.
+- Require easy-to-use parental controls on tools children can access.
+- Oversee how technology companies expose schoolkids to AI tech.
 ----
 id: tier_3_idea_5
 title: Fund programs for human connection and life outside of AI
 ----
-- Go back to in-person learning and testing
-- Fund third-spaces and arts/sports programs to promote community health
-- Fully fund high quality knowledge and information services (such as education, libraries, mental healthcare)
+- Fund third spaces and arts/sports programs to promote community health
+- Fully fund high-quality knowledge and information services like education, libraries, mental healthcare
 ----
 id: tier_3_idea_6
 title: Make sure students don't use AI to avoid learning
 ----
-- Make sure students disclose using AI in schoolwork.
-- Check the usage of AI by students
-- Prohibit AI from most school work
+- Make sure students disclose using AI in schoolwork
+- Check and limit AI use by students
 ----
 id: tier_3_idea_7
 title: Keep companies from firing or punishing workers for not using AI
 ----
-- Require employers to include employees in decisions to introduce AI tools, either for employee use or decisions that affect employees
-- Companies can’t fire people who won’t use AI tools
+- Require employers to include employees in decisions to introduce AI tools
+- Restrict companies from firing people who don’t want to use AI tools
 ----
 id: tier_3_idea_8
 title: Track and report on job loss due to AI
