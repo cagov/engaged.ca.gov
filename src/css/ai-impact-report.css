@@ -350,19 +350,26 @@ section#ai-report-hero {
 .policy-tiers {
   margin: 2rem 0 2.5rem;
 
-  /* Desktop: the three groups side by side, container width. The start
-     padding leaves room for the first sticker, which spills past its box. */
+  /* Desktop: the three groups side by side, container width, the first box
+     flush with the Top 3 box (its sticker hangs into the margin, like the
+     Top 3 sticker). Rows stretch so every box is as tall as the tallest,
+     with the Show control pinned to the bottom. */
   @media (min-width: 992px) {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2.25rem;
-    align-items: start;
-    padding-inline-start: 1.5rem;
+    align-items: stretch;
     margin-top: 3rem;
 
     & .policy-tier {
       margin-bottom: 0;
       padding: 1.25rem 1rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .policy-tier-footer {
+      margin-top: auto;
     }
 
     & .policy-tier-sticker {
