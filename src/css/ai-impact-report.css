@@ -943,8 +943,8 @@ section#ai-report-hero {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  height: 6px;
-  border-radius: 3px;
+  height: 8px;
+  border-radius: 4px;
   background: rgb(28 39 69 / 0.15);
   cursor: pointer;
   position: relative;
@@ -1003,9 +1003,18 @@ section#ai-report-hero {
   justify-content: center;
   gap: 0.75rem;
 
+  /* The list shrink-wraps its bars so the arrows sit close to them. Each
+     bar has a real width (an empty button contributes none), and the list
+     shrinks on narrow screens. */
   & .funnel-steps {
-    flex: 1 1 auto;
-    max-width: 560px;
+    flex: 0 1 auto;
+    min-width: 0;
+
+    & li {
+      flex: 0 1 auto;
+      width: 120px;
+      min-width: 0;
+    }
   }
 }
 
@@ -1759,10 +1768,11 @@ section#who-participated h2 {
 
   section#who-participated .phase-row > .col-lg-4 {
     top: 0;
-    inset-inline-end: calc(var(--bs-gutter-x, 1.5rem) / 2);
-    /* As wide as the legend column below it, so the stat centres over
-       the legend (design 9/28). */
-    width: 300px;
+    /* As wide as the Region / Field of work toggle below it and starting
+       on the same left edge (the 300px legend column's), so the stat
+       centres between the toggle's edges (design 9/28, eyeballed). */
+    width: 234px;
+    inset-inline-end: calc(var(--bs-gutter-x, 1.5rem) / 2 + 300px - 234px);
     margin-top: 0; /* no row gutter: level with the h2 */
     padding-inline: 0;
     text-align: center;
