@@ -76,8 +76,8 @@ One theme came up consistently: **We need humans in the AI policy loop**. Not on
 id: participation_numbers
 participants_count: "2,702"
 participants_label: survey participants
-conversations_count: "14"
-conversations_label: conversations
+conversations_count: "103"
+conversations_label: discussion participants
 ideas_count: "26"
 ideas_label: policy ideas
 ----
@@ -143,9 +143,9 @@ quote_close: "”"
 ----
 ----
 id: top_theme_1
-title: Hold AI companies liable for the harm they cause
+title: Hold AI companies accountable for the harm they cause
 ----
-- Enact criminal liability for harm caused by AI
+- Strengthen criminal liability for harm caused by AI
 - Direct more resources for real enforcement
 ----
 id: top_theme_1_quotes
@@ -166,10 +166,10 @@ field_3: "Financial"
 ----
 ----
 id: top_theme_2
-title: Protect people and nature from the resource needs of AI
+title: Protect people and the environment from the resource needs of AI
 ----
-- Study the impact of data centers on the environment
 - Set limits on data center noise, pollution, and use of water and electricity
+- Study the impact of data centers on the environment
 ----
 id: top_theme_2_quotes
 translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
@@ -190,7 +190,7 @@ field_3: "Government"
 id: top_theme_3
 title: Set rules for where AI can be used safely
 ----
-- Limit using AI to make decisions that impact lives
+- Ensure a human makes the final judgment on decisions that impact lives
 - Ban automated AI in the hiring process
 ----
 id: top_theme_3_quotes
