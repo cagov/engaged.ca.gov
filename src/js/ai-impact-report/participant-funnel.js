@@ -196,6 +196,9 @@ export async function initParticipantFunnel(root) {
   const VIEW_H = Math.ceil(tallestBand + 2 * VIEW_PAD);
   const VIEW_TOP = Math.round(FL.CY - VIEW_H / 2);
   const VIEW_BOTTOM = VIEW_TOP + VIEW_H;
+  // Horizontal window (design 9/28): narrower than the canvas space.
+  const VIEW_W = FL.FIELD_W;
+  const VIEW_LEFT = FL.FIELD_LEFT;
   const yShift = FL.stageYShift(
     bands,
     VIEW_TOP + VIEW_PAD,
@@ -424,7 +427,7 @@ export async function initParticipantFunnel(root) {
 
   function draw() {
     if (!ctx) return;
-    ctx.clearRect(0, VIEW_TOP, FL.CANVAS.W, VIEW_H);
+    ctx.clearRect(VIEW_LEFT, VIEW_TOP, VIEW_W, VIEW_H);
 
     for (let i = 0; i < layout.dots.length; i++) {
       const r = renders[i];
@@ -539,8 +542,8 @@ export async function initParticipantFunnel(root) {
 
   function syncControls() {
     syncCenterCopy();
-    if (prevBtn) prevBtn.hidden = stage <= 0;
-    if (nextBtn) nextBtn.hidden = stage >= LAST_STAGE;
+    if (prevBtn) prevBtn.disabled = stage <= 0;
+    if (nextBtn) nextBtn.disabled = stage >= LAST_STAGE;
     if (playBtn) {
       playBtn.setAttribute("aria-label", playing ? pauseLabel : playLabel);
       playBtn.setAttribute("aria-pressed", String(!playing));
@@ -672,12 +675,12 @@ export async function initParticipantFunnel(root) {
   }
 
   function resize() {
-    const cssWidth = canvas.clientWidth || FL.CANVAS.W;
-    const scale = cssWidth / FL.CANVAS.W;
+    const cssWidth = canvas.clientWidth || VIEW_W;
+    const scale = cssWidth / VIEW_W;
     canvasScale = scale;
     syncCenterCopy();
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = FL.CANVAS.W * scale * dpr;
+    canvas.width = VIEW_W * scale * dpr;
     canvas.height = VIEW_H * scale * dpr;
     canvas.style.height = `${VIEW_H * scale}px`;
     ctx = canvas.getContext("2d");
@@ -687,7 +690,7 @@ export async function initParticipantFunnel(root) {
         0,
         0,
         scale * dpr,
-        0,
+        -VIEW_LEFT * scale * dpr,
         -VIEW_TOP * scale * dpr,
       );
   }
@@ -774,18 +777,29 @@ export async function initParticipantFunnel(root) {
       },
       { threshold: 0 },
     ).observe(root);
-    // Start the cycle once most of the canvas is on screen; then keep going.
-    const starter = new IntersectionObserver(
-      (entries, obs) => {
-        if (entries.some((e) => e.intersectionRatio >= 0.6)) {
+    // Start the cycle once most of the canvas is on screen. Stays armed so
+    // a reset (below) can wait for the reader to come back.
+    new IntersectionObserver(
+      (entries) => {
+        if (!engaged && entries.some((e) => e.intersectionRatio >= 0.6)) {
           engaged = true;
           dwellLeft = Math.max(dwellFor(stage), START_HOLD_MS);
-          obs.disconnect();
         }
       },
       { threshold: [0.6] },
-    );
-    starter.observe(canvas);
+    ).observe(canvas);
+    // Readers who scroll past and come back found the cycle mid-way and
+    // hard to follow (9/28). Once the section is more than 1.5 screens
+    // away it resets to stage 1 and waits for the start hold again.
+    new IntersectionObserver(
+      (entries) => {
+        if (engaged && !entries.some((e) => e.isIntersecting)) {
+          restart();
+          engaged = false;
+        }
+      },
+      { rootMargin: "150% 0px 150% 0px", threshold: 0 },
+    ).observe(root);
   } else {
     engaged = true;
   }

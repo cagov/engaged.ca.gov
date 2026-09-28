@@ -227,7 +227,8 @@ export function assignCategoryColors(categories, dimension) {
     .filter((c) => !isNonAnswer(c.name))
     .sort((a, b) => b.count - a.count);
   ranked.forEach(({ i, name }, rank) => {
-    colors[i] = FIXED_CATEGORY_COLORS[name] || ramp[(rank + offset) % ramp.length];
+    colors[i] =
+      FIXED_CATEGORY_COLORS[name] || ramp[(rank + offset) % ramp.length];
   });
   categories.forEach((c, i) => {
     if (isNonAnswer(c.name)) colors[i] = DATA_VIZ_NEUTRAL_LIGHT;
@@ -283,6 +284,11 @@ function proportionalDraw(counts, rand) {
 
 export const CANVAS = { W: 1040, H: 812 };
 export const CX = CANVAS.W / 2;
+/** Visible window (design 9/28): the canvas keeps its 1040-unit coordinate
+ * space, but only this many units, centred on CX, are shown. The cloud is
+ * laid out to fit inside it; the ring and gather stages already do. */
+export const FIELD_W = 720;
+export const FIELD_LEFT = CX - FIELD_W / 2;
 const CLOUD_Y = 285;
 const GATHER_Y = 505;
 const NECK_Y = 455;
@@ -314,11 +320,13 @@ function buildBlobs(rand) {
   for (let i = 0; i < BLOBS; i++) {
     const a = rand() * Math.PI * 2;
     const rr = Math.sqrt(rand());
+    // Spread to fill the 720-wide window, and taller than before so the
+    // cloud reads as a field rather than a band (design 9/28).
     blobs.push({
-      x: CX + Math.cos(a) * rr * 300,
-      y: CLOUD_Y + Math.sin(a) * rr * 96,
-      sx: 78 + rand() * 118,
-      sy: 36 + rand() * 46,
+      x: CX + Math.cos(a) * rr * 200,
+      y: CLOUD_Y + Math.sin(a) * rr * 128,
+      sx: 56 + rand() * 84,
+      sy: 46 + rand() * 60,
     });
   }
   return blobs;
@@ -384,8 +392,12 @@ export function buildFunnelCloud(data) {
   const dots = [];
   for (let i = 0; i < data.phase1Total; i++) {
     const b = blobs[i % BLOBS];
-    const bx = clamp(b.x + gauss(rand) * b.sx, 70, CANVAS.W - 70);
-    const by = clamp(b.y + gauss(rand) * b.sy, 152, 432);
+    const bx = clamp(
+      b.x + gauss(rand) * b.sx,
+      FIELD_LEFT + 40,
+      FIELD_LEFT + FIELD_W - 40,
+    );
+    const by = clamp(b.y + gauss(rand) * b.sy, 110, 460);
     dots.push({
       cloud: {
         x: bx,
