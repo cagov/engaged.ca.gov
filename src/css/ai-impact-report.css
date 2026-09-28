@@ -555,6 +555,11 @@ section#ai-report-hero {
   height: 18px;
   margin-top: 0.3rem;
   margin-inline-end: 0.5rem;
+  /* Hover disc (9/28): drawn as a box-shadow so the layout does not change. */
+  border-radius: 50%;
+  transition:
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
 
   &::before,
   &::after {
@@ -566,11 +571,27 @@ section#ai-report-hero {
     top: 8px;
     width: 18px;
     height: 2px;
+    transition: background-color 0.15s ease;
   }
 
   &::after {
     transform: rotate(90deg);
-    transition: transform 0.15s ease;
+    transition:
+      transform 0.15s ease,
+      background-color 0.15s ease;
+  }
+}
+
+/* Hovering the row: the title underlines (above) and the plus / minus sits
+   on a pale orange disc with a darker glyph (9/28). */
+.policy-tiers button.policy-idea-toggle:hover .policy-idea-toggle-icon,
+.policy-tiers button.policy-idea-toggle:focus-visible .policy-idea-toggle-icon {
+  background: #fbeadb;
+  box-shadow: 0 0 0 7px #fbeadb;
+
+  &::before,
+  &::after {
+    background: #c9702a;
   }
 }
 
@@ -631,9 +652,17 @@ section#ai-report-hero {
   font-size: 1.0625rem;
   font-weight: 400;
   cursor: pointer;
+  transition: color 0.15s ease;
 
-  &:hover {
-    text-decoration: underline;
+  /* The label is a flex item, so the underline goes on it, not the button. */
+  &:hover,
+  &:focus-visible {
+    color: var(--report-navy);
+
+    & > span:not(.chevron) {
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
   }
 
   &:focus-visible {
