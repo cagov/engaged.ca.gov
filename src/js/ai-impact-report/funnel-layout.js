@@ -637,8 +637,8 @@ export function dotTarget(
       : {
           // Dropped dots fade out where they stand instead of falling away
           // (design 9/28), and fade back in there on the return to stage 1.
-          x: dot.cloud.x,
-          y: dot.cloud.y,
+          x: cloudX,
+          y: cloudY,
           r: DOT_SIZE,
           alpha: 0,
           categoryKey: "__dropped",
@@ -663,8 +663,8 @@ export function dotTarget(
     };
   }
   return {
-    x: dot.cloud.x,
-    y: dot.cloud.y,
+    x: cloudX,
+    y: cloudY,
     r: DOT_SIZE,
     alpha: 0,
     categoryKey: "__dropped",

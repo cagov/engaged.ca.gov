@@ -322,7 +322,10 @@ export async function initParticipantFunnel(root) {
       ORBIT_SPEED,
       motion,
     );
-    const dy = yShift[s] || 0;
+    // Each stage's content is centred in the frame with its own y offset;
+    // dropped dots stay on the cloud's offset so fading in or out never
+    // moves them (9/28).
+    const dy = (g.categoryKey === "__dropped" ? yShift[0] : yShift[s]) || 0;
     if (!dy) return g;
     const shifted = { ...g, y: g.y + dy };
     if (g.viaY !== undefined) shifted.viaY = g.viaY + dy;
@@ -670,7 +673,6 @@ export async function initParticipantFunnel(root) {
     // and the cloud keeps drifting.
     if (t >= 1) {
       layout.dots.forEach((dot, i) => {
-        if (stage === LAST_STAGE && !dot.kept) return;
         const g = targetFor(dot, stage);
         renders[i].pos[0] = g.x;
         renders[i].pos[1] = g.y;
