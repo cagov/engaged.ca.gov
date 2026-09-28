@@ -69,6 +69,7 @@ export async function initParticipantFunnel(root) {
   const pauseLabel = root.dataset.pauseLabel || "Pause";
   const centerTitle = root.dataset.centerTitle || "";
   const centerHint = root.dataset.centerHint || "";
+  const nonAnswerLabel = root.dataset.nonAnswerLabel || "";
   const centerCopyEl = root.querySelector("[data-funnel-center]");
   // Below this canvas scale the ring's center is too small for readable text;
   // the copy moves to the HTML block under the canvas instead.
@@ -146,8 +147,19 @@ export async function initParticipantFunnel(root) {
         return label(a).localeCompare(label(b));
       });
     }
+    // Several non-answer buckets ("Not stated", "I don't want to say") share
+    // one gray and one legend entry (9/28); a lone non-answer keeps its name.
+    const nonAnswers = order.filter((i) => FL.isNonAnswer(categories[i].name));
+    const merge = nonAnswerLabel && nonAnswers.length > 1;
+    let mergedDone = false;
     for (const i of order) {
       const c = categories[i];
+      let text = labels[c.name] || c.name;
+      if (merge && FL.isNonAnswer(c.name)) {
+        if (mergedDone) continue;
+        mergedDone = true;
+        text = nonAnswerLabel;
+      }
       const li = document.createElement("li");
       li.className = "chart-legend-item";
       const swatch = document.createElement("span");
@@ -155,7 +167,7 @@ export async function initParticipantFunnel(root) {
       swatch.setAttribute("aria-hidden", "true");
       swatch.style.background = categoryColors[i];
       li.appendChild(swatch);
-      li.appendChild(document.createTextNode(labels[c.name] || c.name));
+      li.appendChild(document.createTextNode(text));
       legendEl.appendChild(li);
     }
   }

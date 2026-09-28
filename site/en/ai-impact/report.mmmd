@@ -446,6 +446,8 @@ toggle_gender: Gender
 toggle_ai_response: AI response
 legend_participant: Participant
 legend_facilitator: Facilitator
+translator_note_legend: "One legend entry standing in for all the non-answers (Not stated, I don't want to say) when a chart has more than one."
+legend_non_answer: "Didn't say / out of state"
 prev_label: Previous step
 next_label: Next step
 translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
