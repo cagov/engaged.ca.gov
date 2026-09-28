@@ -118,6 +118,22 @@ export async function initParticipantFunnel(root) {
     // reserved to keep the page from hopping.
     if (window.matchMedia("(min-width: 992px)").matches) {
       if (legendEl) legendEl.style.minHeight = "";
+      // The legend + key block still reserves the taller legend's height,
+      // so the demographics link after it keeps one position (9/28).
+      const block = section.querySelector("[data-funnel-legend-block]");
+      if (block) {
+        const keep = dimension;
+        block.style.minHeight = "";
+        let tallest = 0;
+        for (const d of dimensions) {
+          dimension = d;
+          recolor();
+          tallest = Math.max(tallest, block.getBoundingClientRect().height);
+        }
+        dimension = keep;
+        recolor();
+        block.style.minHeight = `${Math.ceil(tallest)}px`;
+      }
       return;
     }
     const keep = dimension;
@@ -834,9 +850,12 @@ export async function initParticipantFunnel(root) {
 
   // ---- Boot --------------------------------------------------------------
   recolor();
-  reserveLegend();
   resize();
   restart();
+  // After restart(): syncControls() has put the Participant / Facilitator
+  // key in flow, so the reserved legend height includes it.
+  reserveLegend();
+  window.addEventListener("load", reserveLegend);
   lastTime = performance.now();
   requestAnimationFrame(frame);
 }

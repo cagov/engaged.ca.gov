@@ -379,6 +379,9 @@
                (9/18). To restore one, add a button with data-variant="age" | "race" | "gender" |
                "ai" and the matching wp.toggle_* label. #}
           </div>
+          {# Legend and key share a block whose height JS reserves at the taller legend's,
+             so the link below never moves when the toggle changes (9/28). #}
+          <div class="funnel-legend-block" data-funnel-legend-block>
           {# Filled from the data by JS; the static region list is the no-JS fallback. #}
           <ul class="chart-legend region-legend" data-funnel-legend aria-label="{{ wp.toggle_region }}">
             {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
@@ -390,6 +393,7 @@
             <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ wp.legend_participant }}</li>
             <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ wp.legend_facilitator }}</li>
           </ul>
+          </div>
           {% set db = modules.demographics_button %}
           {% if db %}
             <a class="funnel-aside-link" href="{{ db.href | localizedPath(locale) }}">{{ db.label }}</a>
