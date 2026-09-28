@@ -58,6 +58,40 @@ KEEP_PHRASES = [
     "State Library", "State Website",
 ]
 
+# 9/25: too many poll ideas started with "Regulate" (17 of 185, several of the
+# biggest words in the cloud), so it read as "Regulate, Regulate, Regulate".
+# Reworded with varied, neutral verbs while keeping the respondent's meaning.
+# Keyed on the label after sentence_case(); "Regulate AI" itself is left alone
+# as the plain anchor.
+RELABEL = {
+    "Regulate AI in employment": "Set rules for AI in the workplace",
+    "Regulate AI development and use": "Put guardrails on how AI is built and used",
+    "Regulate and utilize AI": "Regulate and use AI",
+    "Regulate data centers": "Set standards for data centers",
+    "Regulate AI companies": "Oversee AI companies",
+    "Regulate AI data centers": "Limit AI data centers’ impact",
+    "Regulate AI copyright": "Enforce copyright rules for AI",
+    "Regulate AI data privacy": "Protect personal data from AI",
+    "Regulate AI labeling": "Require labels on AI content",
+    "Regulate AI in court docs": "Set rules for AI in court filings",
+    "Regulate AI to prevent intrusive emails and calls": "Stop intrusive AI calls and emails",
+    "Regulate AI to prevent humanization": "Keep AI from passing as human",
+    "Regulate electrical power consumption": "Manage electricity use",
+    "Regulate the impact of AI on consumer electronics prices": "Keep AI from driving up electronics prices",
+    "Regulate quality control of AI-generated software": "Set quality standards for AI-written software",
+    "Regulate the venture capital industry": "Oversee the venture capital industry",
+}
+
+# 9/25: ambiguous, single-respondent ideas that made the KEEP_SHARE cutoff by
+# count but don't read as a real policy idea even with sentence_case/RELABEL
+# applied — drop them and let the next-ranked idea take the slot instead of
+# just shipping it. ("Acquire Success", rawLabel "Government should acquire
+# Success." — unclear what "Success" refers to.) Keyed on the label after
+# sentence_case(), before RELABEL.
+EXCLUDE = {
+    "Acquire success",
+}
+
 
 def sentence_case(label):
     tokens = label.split(" ")
@@ -83,10 +117,15 @@ def main():
     data = read_js_object(data_path)
     layouts = read_js_object(layout_path) if os.path.exists(layout_path) else {}
 
-    phase1 = sorted(data["phase1"], key=lambda c: -c["count"])  # stable: keeps file order among ties
-    keep = max(1, round(len(phase1) * KEEP_SHARE))
+    phase1_all = sorted(data["phase1"], key=lambda c: -c["count"])  # stable: keeps file order among ties
+    keep = max(1, round(len(phase1_all) * KEEP_SHARE))  # off the true total, so EXCLUDE doesn't shift the cutoff
+    phase1 = [c for c in phase1_all if sentence_case(c["label"]) not in EXCLUDE]
     poll = [
-        {"label": sentence_case(c["label"]), "subtheme": c["subtheme"], "count": c["count"]}
+        {
+            "label": RELABEL.get(sentence_case(c["label"]), sentence_case(c["label"])),
+            "subtheme": c["subtheme"],
+            "count": c["count"],
+        }
         for c in phase1[:keep]
     ]
     discussion = [
@@ -108,7 +147,7 @@ def main():
 
     out = {
         "subthemes": [{"name": s["fullName"], "color": s["color"]} for s in data["subthemes"]],
-        "pollTotal": len(phase1),
+        "pollTotal": len(phase1_all),
         "poll": poll,
         "discussion": discussion,
         "keptLayouts": kept,
@@ -116,7 +155,7 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print(f"wrote {OUT}: {len(poll)} of {len(phase1)} poll ideas, {len(discussion)} discussion ideas, kept layouts {list(kept)}")
+    print(f"wrote {OUT}: {len(poll)} of {len(phase1_all)} poll ideas ({len(phase1_all) - len(phase1)} excluded), {len(discussion)} discussion ideas, kept layouts {list(kept)}")
 
 
 if __name__ == "__main__":
