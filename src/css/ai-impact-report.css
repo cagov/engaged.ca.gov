@@ -1757,9 +1757,12 @@ section#who-participated h2 {
   section#who-participated .phase-row > .col-lg-4 {
     top: 0;
     inset-inline-end: calc(var(--bs-gutter-x, 1.5rem) / 2);
-    width: auto;
+    /* As wide as the legend column below it, so the stat centres over
+       the legend (design 9/28). */
+    width: 300px;
     margin-top: 0; /* no row gutter: level with the h2 */
-    padding-inline-end: 0; /* flush with the h2's edge, mirrored */
+    padding-inline: 0;
+    text-align: center;
   }
 
   section#who-participated .participation-sidebar {
