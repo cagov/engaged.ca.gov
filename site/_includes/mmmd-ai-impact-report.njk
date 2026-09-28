@@ -22,7 +22,10 @@
 {% set tier_stickers = {
   "sparkle": "/public/images/ai-report-tier-most-support.svg",
   "heart": "/public/images/ai-report-tier-moderate-support.svg",
-  "speech": "/public/images/ai-report-tier-some-support.svg"
+  "speech": "/public/images/ai-report-tier-some-support.svg",
+  "megaphone": "/public/images/ai-report-tier-megaphone.svg",
+  "hand": "/public/images/ai-report-tier-hand-wave.svg",
+  "thumbs": "/public/images/ai-report-tier-thumbs-up.svg"
 } %}
 
 {# Reusable: Phase label + title + subtitle on the left, one stat on the right. #}
@@ -186,10 +189,10 @@
           </div>
         </div>
 
-    <div class="row">
-      <div class="col-lg-8">
-        {# Other supported ideas: one collapsible list of the remaining themes, titles only. #}
-        <div id="policy-tiers" class="policy-tiers"
+    {# More policy ideas: three groups side by side on desktop (design 9/28), each
+       showing its first ideas with the next one fading, and a Show control. #}
+    {% if ui.section_title %}<h3 class="more-ideas-title">{{ ui.section_title }}</h3>{% endif %}
+    <div id="policy-tiers" class="policy-tiers"
              data-initial-visible="{{ initial_visible }}"
              data-show-label="{{ ui.show_label }}"
              data-show-more-label="{{ ui.show_more_label }}"
@@ -204,10 +207,10 @@
               <img class="policy-tier-icon policy-tier-sticker" src="{{ tier_stickers[tier.icon] | default(tier_stickers.sparkle) }}" alt="" aria-hidden="true" />
               <div class="policy-tier-header">
                 <div class="policy-tier-heading">
-                  <h3 class="policy-tier-title">{{ tier.title }}</h3>
+                  <h4 class="policy-tier-title">{{ tier.title }}</h4>
                   <p class="policy-tier-subtitle">{{ tier.subtitle }}</p>
+                  <p class="policy-tier-count">{{ ui.count_label | replace("{count}", nbr_ideas) }}</p>
                 </div>
-                <p class="policy-tier-count">{{ ui.count_label | replace("{count}", nbr_ideas) }}</p>
               </div>
 
               <ul class="policy-ideas" id="policy-tier-{{ t }}-ideas">
@@ -253,8 +256,10 @@
             </div>
           {% endfor %}
 
-        </div>
+    </div>
 
+    <div class="row">
+      <div class="col-lg-8">
         {# Download the policy ideas lives on the methods page (9/24); a download_data
            module here would render it under the list. #}
         {% set dl = modules.download_data %}

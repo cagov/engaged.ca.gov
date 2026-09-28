@@ -339,8 +339,62 @@ section#ai-report-hero {
 
 /* ---- Policy tiers ---- */
 
+/* "More policy ideas" heading above the three groups (design 9/28). */
+.style-body-text .more-ideas-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--report-ink);
+  margin: 3rem 0 0;
+}
+
 .policy-tiers {
   margin: 2rem 0 2.5rem;
+
+  /* Desktop: the three groups side by side, container width. The start
+     padding leaves room for the first sticker, which spills past its box. */
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.25rem;
+    align-items: start;
+    padding-inline-start: 1.5rem;
+    margin-top: 3rem;
+
+    & .policy-tier {
+      margin-bottom: 0;
+      padding: 1.25rem 1rem 0.75rem;
+    }
+
+    & .policy-tier-sticker {
+      width: 90px;
+      height: 90px;
+      top: -1.6rem;
+      inset-inline-start: -1.6rem;
+    }
+
+    & .policy-tier-header {
+      padding-inline-start: 3.4rem;
+      padding-bottom: 0.9rem;
+    }
+
+    & .policy-tier-subtitle {
+      font-size: 0.9375rem;
+    }
+
+    & .policy-tier-count {
+      font-size: 0.9375rem;
+    }
+
+    & button.policy-idea-toggle,
+    & .policy-idea-title-static {
+      padding: 0.8rem 0;
+      padding-inline: 0.75rem 0.25rem;
+    }
+
+    & .policy-tier-footer {
+      padding: 0.6rem 0.75rem 0;
+    }
+  }
 }
 
 .policy-tier {
@@ -388,23 +442,17 @@ section#ai-report-hero {
 }
 
 .policy-tier-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
   padding: 0 0 1rem;
   padding-inline-start: 4.25rem;
   border-bottom: 1px solid var(--report-rule);
 
   @media (max-width: 575px) {
     padding-inline-start: 0;
-    flex-direction: column;
-    gap: 0.25rem;
   }
 }
 
 .policy-tier-title {
-  font-size: 1.875rem; /* 30px, the page's H3 size */
+  font-size: 1.4375rem; /* the tiers sit under the "More policy ideas" h3 (9/28) */
   font-weight: 700;
   color: var(--report-ink);
   margin: 0;
@@ -419,10 +467,9 @@ section#ai-report-hero {
 }
 
 .style-body-text .policy-tier-count {
-  white-space: nowrap;
   color: var(--report-body);
   font-size: 1rem;
-  margin: 0.4rem 0 0;
+  margin: 0.5rem 0 0;
 }
 
 .policy-ideas {
@@ -437,8 +484,8 @@ section#ai-report-hero {
 
 .policy-idea-title {
   margin: 0 !important;
-  font-size: 1.4375rem;
-  line-height: 1.4;
+  font-size: 1.125rem;
+  line-height: 1.35;
 }
 
 .policy-tiers button.policy-idea-toggle {
@@ -471,12 +518,12 @@ section#ai-report-hero {
 
 /* Partial view: the next idea shows its top through a fade to white. */
 .policy-idea.policy-idea-teaser {
-  max-height: 2.9rem;
+  max-height: 3.6rem;
   overflow: hidden;
   pointer-events: none;
   user-select: none;
-  mask-image: linear-gradient(to bottom, black 15%, transparent 85%);
-  -webkit-mask-image: linear-gradient(to bottom, black 15%, transparent 85%);
+  mask-image: linear-gradient(to bottom, black 25%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to bottom, black 25%, transparent 90%);
   border-bottom: 0;
 }
 

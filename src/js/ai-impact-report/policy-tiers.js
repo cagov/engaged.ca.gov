@@ -3,10 +3,10 @@
  * expandable policy ideas.
  *
  * The HTML is rendered fully expanded so the page works without JS.
- * On load we collapse to the default state:
- *   - tier 1 open, showing the first N ideas with a "Show X more" control
- *   - other tiers closed, showing only their header and a "Show" control
- *   - a footer "Show all N ideas" control that opens everything
+ * On load we collapse to the default state (design 9/28):
+ *   - every tier partial: its first N ideas, the next one fading, and a
+ *     "Show" control that opens the rest
+ *   - an optional footer "Show all N ideas" control that opens everything
  *
  * All visible labels come from data attributes on the root element so they
  * can be translated in the .mmmd file.
@@ -87,7 +87,7 @@ export function initPolicyTiers(root) {
       list.hidden = false;
       toggle.setAttribute("aria-expanded", "false");
       const remaining = nbrIdeas - initialVisible;
-      text.textContent = fill(labels.showMore, remaining);
+      text.textContent = labels.show;
       toggle.hidden = remaining <= 0;
     } else {
       list.hidden = true;
@@ -99,8 +99,8 @@ export function initPolicyTiers(root) {
     updateToggleAll();
   }
 
-  function tierDefaultState(tier, index) {
-    return index === 0 ? "partial" : "closed";
+  function tierDefaultState() {
+    return "partial";
   }
 
   function allOpen() {
