@@ -3,7 +3,7 @@
 {% block content %}
 {% import 'macros/ge-how-it-works.njk' as gewh %}
 
-<link rel="stylesheet" href="/css/ai-impact.css" />
+<link rel="stylesheet" href="{{ "/css/ai-impact.css" | assetVersion }}" />
 
     <section id="ge-hero" class="engca-hero engca-hero-ai">
         <div class="container banner-flex">
@@ -30,7 +30,8 @@
                     <div class="about-the-process">
                         {{ modules.about.content | safe }}
                         {% if modules.about.partner_logo %}
-                          <img class="partner-logo" src="{{ modules.about.partner_logo }}" alt="{{ modules.about.partner_logo_alt }}" />
+                          {# Intrinsic size attributes keep it small even before the stylesheet arrives. #}
+                          <img class="partner-logo" src="{{ modules.about.partner_logo }}" alt="{{ modules.about.partner_logo_alt }}" width="200" height="24" />
                         {% endif %}
                     </div>
                 </div>
