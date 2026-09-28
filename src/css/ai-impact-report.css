@@ -352,13 +352,14 @@ section#ai-report-hero {
 
   /* Desktop: the three groups side by side, container width, the first box
      flush with the Top 3 box (its sticker hangs into the margin, like the
-     Top 3 sticker). Rows stretch so every box is as tall as the tallest,
-     with the Show control pinned to the bottom. */
+     Top 3 sticker). Closed boxes share the tallest closed height (a
+     min-height set by policy-tiers.js) with the Show control pinned to the
+     bottom; an opened box grows on its own. */
   @media (min-width: 992px) {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2.25rem;
-    align-items: stretch;
+    align-items: start;
     margin-top: 3rem;
 
     & .policy-tier {

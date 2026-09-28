@@ -117,6 +117,40 @@ export function initPolicyTiers(root) {
       : fill(labels.showAll, totalIdeas);
   }
 
+  // Side-by-side layout (desktop): closed boxes share the tallest closed
+  // height so the row reads level; an opened box grows on its own and the
+  // others keep the shared height (design 9/28).
+  const sideBySide = window.matchMedia("(min-width: 992px)");
+  let sharedMinHeight = 0;
+  function measureSharedHeight() {
+    if (!sideBySide.matches) {
+      sharedMinHeight = 0;
+      for (const tier of tiers) tier.style.minHeight = "";
+      return;
+    }
+    const partials = tiers.filter((t) => t.dataset.state === "partial");
+    for (const tier of partials) tier.style.minHeight = "";
+    sharedMinHeight = Math.max(
+      0,
+      ...partials.map((t) => t.getBoundingClientRect().height),
+    );
+    applySharedHeight();
+  }
+  function applySharedHeight() {
+    for (const tier of tiers) {
+      tier.style.minHeight =
+        sharedMinHeight && tier.dataset.state === "partial"
+          ? `${Math.ceil(sharedMinHeight)}px`
+          : "";
+    }
+  }
+  let lastWidth = window.innerWidth;
+  window.addEventListener("resize", () => {
+    if (window.innerWidth === lastWidth) return;
+    lastWidth = window.innerWidth;
+    measureSharedHeight();
+  });
+
   tiers.forEach((tier, index) => {
     const toggle = tier.querySelector(".policy-tier-toggle");
     toggle.addEventListener("click", () => {
@@ -128,9 +162,13 @@ export function initPolicyTiers(root) {
       } else {
         setTierState(tier, "open");
       }
+      applySharedHeight();
     });
     setTierState(tier, tierDefaultState(tier, index));
   });
+  measureSharedHeight();
+  // Fonts can shift the measure after first paint.
+  window.addEventListener("load", measureSharedHeight);
 
   if (toggleAll) {
     toggleAll.addEventListener("click", () => {
