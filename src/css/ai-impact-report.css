@@ -1671,6 +1671,14 @@ section#balancing-groups select.demographics-select {
   margin: 0.5rem 0 1.5rem; /* room between the title and the legend (9/24) */
 }
 
+/* One-line note under the chart title (writer, 9/28). */
+.style-body-text .demographics-chart-note {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--report-body);
+  margin: -1rem 0 1.5rem;
+}
+
 /* The chart is laid out in left-to-right coordinates (text-anchor start/end
    would swap sides under dir="rtl"), so it keeps its own direction. Labels
    inside it still render right-to-left as text. */
