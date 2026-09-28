@@ -36,8 +36,7 @@ example_quoted_text: "this is quoted text:"
 
 ----
 id: hero
-translator_note: "The subtitle contains the report title in italics (single asterisks). Preserve the asterisks."
-subtitle: "Los métodos detrás de *Personas en el circuito: Los californianos dicen cómo se debe crear, usar y gobernar la IA*"
+subtitle: "Los métodos que usamos para organizar y analizar conversaciones sobre la IA"
 theme: light
 back_link_text: "Volver al informe"
 back_link_href: /ai-impact/report/
@@ -46,12 +45,12 @@ back_link_href: /ai-impact/report/
 ----
 id: intro
 ----
-Este proyecto tuvo dos fases. En la primera, cualquier californiano podía compartir su opinión a través de una encuesta abierta en línea. En la segunda, invitamos a los encuestados interesados a debates en vivo.
+El proyecto *Impacto de la IA en el trabajo* tuvo dos fases. En la primera, cualquier californiano podía compartir su opinión a través de una encuesta abierta en línea. En la segunda, invitamos a los encuestados interesados a debates en vivo.
 ----
 id: hero_nav
 translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
 aria_label: En esta página
-label: "Ir a una sección:"
+label: "Ir a:"
 nbr_items: 3
 item_1_label: Equilibrar cada grupo con justicia
 item_1_anchor: balancing-groups
@@ -77,7 +76,9 @@ Estos principios garantizaron que no escucháramos solo a quienes respondieron p
 id: demographics_chart
 title: Datos demográficos
 pulldown_label: "Mostrar participantes por"
-chart_title: "Qué tan cerca estuvimos de las metas demográficas"
+chart_title: "Datos demográficos de la encuesta frente a los debates"
+translator_note_chart: "chart_note is the one-line note directly under the chart title."
+chart_note: "El sorteo nos acercó a una demografía equilibrada en los debates."
 axis_above_label: "Puntos porcentuales por encima de la meta"
 axis_below_label: "Puntos porcentuales por debajo de la meta"
 chart_alt: "Gráfico de barras que compara a los participantes de la encuesta y de los debates con las metas demográficas, en puntos porcentuales respecto de la meta."
@@ -98,13 +99,13 @@ bar_title: "{category}, {phase}: {value} puntos respecto de la meta ({share} % f
 table_target_header: "Meta %"
 table_points_header: "{phase}, puntos respecto de la meta"
 ----
-Vea qué tan cerca estuvimos de nuestras metas demográficas. Haga clic en el menú desplegable para ver los porcentajes de participantes por:
+Vea qué tan cerca estuvimos de nuestras metas demográficas. Haga clic en el menú desplegable para ver las mediciones por:
 
 - Región
 - Raza / etnia
-- Edad
 - Género
 - Campo de trabajo
+- Edad
 ----
 id: demographics_sources
 translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
@@ -235,7 +236,7 @@ Algunos ejemplos del uso de IA:
 - crear resúmenes generales de los debates y de las respuestas a la encuesta, y
 - etiquetar partes de las conversaciones con las ideas que trataban.
 
-La IA no eligió a quién invitamos a los debates. Elegimos a los invitados por sorteo. Nos aseguramos de que el grupo de invitados reflejara la demografía de California. Esto nos dio una mezcla de puntos de vista.
+La IA no eligió a quién invitamos a los debates. Elegimos a los invitados por sorteo. Nos aseguramos de que el grupo de invitados reflejara la demografía de California. También usamos IA para evaluar la actitud de los encuestados hacia la IA. Esto nos dio una mezcla de puntos de vista.
 
 Protegimos lo que los participantes compartieron con nosotros. Todo el trabajo con IA se realizó dentro del entorno de datos seguro del estado. Nunca compartimos transcripciones ni respuestas a la encuesta con proveedores de IA. Ningún contenido se usó para entrenar modelos de IA.
 
@@ -248,7 +249,7 @@ En las pruebas, comparamos los resúmenes de la IA con las notas tomadas por per
 id: download_data
 button_text: Descargar las ideas
 ----
-### Descargar las ideas de política
+### Descargar todas las ideas de política
 
 Puede descargar y leer todas las políticas que las personas propusieron en los debates. Están en un archivo CSV.
 ----

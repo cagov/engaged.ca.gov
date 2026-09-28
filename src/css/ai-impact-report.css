@@ -130,6 +130,10 @@ section#ai-report-hero {
     list-style: none;
     margin: 0;
     padding: 0;
+    /* Shares the row with the label and wraps its own links, instead of
+       dropping whole to a second line when the labels run long (Farsi). */
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   & li {
@@ -1065,6 +1069,11 @@ section#ai-report-hero {
   & svg {
     width: 24px;
     height: 24px;
+  }
+
+  /* Right-to-left pages: "previous" sits on the right and must point right. */
+  [dir="rtl"] & svg {
+    transform: scaleX(-1);
   }
 
   &:hover {
