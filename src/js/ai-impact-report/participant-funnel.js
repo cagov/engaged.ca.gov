@@ -64,7 +64,10 @@ export async function initParticipantFunnel(root) {
   const lastStepOnly = [...section.querySelectorAll("[data-last-step-only]")];
   const counterEl = section.querySelector("[data-stepper-counter]");
   const counterTemplate = root.dataset.stepCounter || "{current} of {total}";
-  const labels = safeJSON(root.dataset.labels) || {};
+  // Display labels keyed by data value, one map per dimension (the two
+  // dimensions share the "(not stated)" key but word it differently).
+  const labelMaps = safeJSON(root.dataset.labels) || {};
+  const labelFor = (name) => (labelMaps[dimension] || {})[name] || name;
   const playLabel = root.dataset.playLabel || "Play";
   const pauseLabel = root.dataset.pauseLabel || "Pause";
   const centerTitle = root.dataset.centerTitle || "";
@@ -164,7 +167,7 @@ export async function initParticipantFunnel(root) {
     // tied to each category, so the dots and legend still agree.
     const order = categories.map((c, i) => i);
     if (dimension === "region" || dimension === "fieldOfWork") {
-      const label = (i) => labels[categories[i].name] || categories[i].name;
+      const label = (i) => labelFor(categories[i].name);
       order.sort((a, b) => {
         const na = FL.isNonAnswer(categories[a].name);
         const nb = FL.isNonAnswer(categories[b].name);
@@ -179,7 +182,7 @@ export async function initParticipantFunnel(root) {
     let mergedDone = false;
     for (const i of order) {
       const c = categories[i];
-      let text = labels[c.name] || c.name;
+      let text = labelFor(c.name);
       if (merge && FL.isNonAnswer(c.name)) {
         if (mergedDone) continue;
         mergedDone = true;

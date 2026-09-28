@@ -302,7 +302,8 @@
     {% set region_keys = ["Los Angeles", "Bay Area", "Southern California", "Sacramento Valley / Sierra Foothills", "Central Valley", "Far North / North Coast", "Central Coast", "Sierra Region", "(not stated)"] %}
     {# Field of work names come from modules.category_labels as key/label pairs (key = English data value). #}
     {% set cl = modules.category_labels %}
-    {% set legend_labels_json %}{ {% for key in region_keys %}{{ key | dump | safe }}: {{ modules.region_legend["region_" + loop.index] | dump | safe }}, {% endfor %}{% for i in range(1, (cl.nbr_labels | default(0)) + 1) %}{{ cl["key_" + i] | dump | safe }}: {{ cl["label_" + i] | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %} }{% endset %}
+    {# One label map per dimension: both share the "(not stated)" data key but word it differently. #}
+    {% set legend_labels_json %}{ "region": { {% for key in region_keys %}{{ key | dump | safe }}: {{ modules.region_legend["region_" + loop.index] | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %} }, "fieldOfWork": { {% for i in range(1, (cl.nbr_labels | default(0)) + 1) %}{{ cl["key_" + i] | dump | safe }}: {{ cl["label_" + i] | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %} } }{% endset %}
 
     <h2>{{ wp.title }}</h2>
 
