@@ -409,7 +409,6 @@ export function buildFunnelCloud(data) {
         px: rand() * Math.PI * 2,
         py: rand() * Math.PI * 2,
       },
-      fall: [bx + gauss(rand) * 60, CANVAS.H + 70 + rand() * 180],
       neck: [CX + gauss(rand) * 16, NECK_Y],
       gather: [0, 0],
       kept: false,
@@ -636,8 +635,10 @@ export function dotTarget(
           person: true,
         }
       : {
-          x: dot.fall[0],
-          y: dot.fall[1],
+          // Dropped dots fade out where they stand instead of falling away
+          // (design 9/28), and fade back in there on the return to stage 1.
+          x: dot.cloud.x,
+          y: dot.cloud.y,
           r: DOT_SIZE,
           alpha: 0,
           categoryKey: "__dropped",
@@ -662,8 +663,8 @@ export function dotTarget(
     };
   }
   return {
-    x: dot.fall[0],
-    y: dot.fall[1],
+    x: dot.cloud.x,
+    y: dot.cloud.y,
     r: DOT_SIZE,
     alpha: 0,
     categoryKey: "__dropped",
