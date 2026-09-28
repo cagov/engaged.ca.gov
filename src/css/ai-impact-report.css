@@ -943,8 +943,8 @@ section#ai-report-hero {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  height: 6px;
-  border-radius: 3px;
+  height: 8px;
+  border-radius: 4px;
   background: rgb(28 39 69 / 0.15);
   cursor: pointer;
   position: relative;
@@ -978,8 +978,120 @@ section#ai-report-hero {
   }
 }
 
-.participants-stepper:not(.js-enabled) .funnel-steps {
-  display: none;
+/* ---- Who participated: two-column layout (design 9/28) ---- */
+
+.funnel-layout {
+  margin-top: 1.5rem;
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 300px);
+    gap: 2rem 3rem;
+    align-items: start;
+  }
+}
+
+.funnel-main .funnel-stage {
+  max-width: none;
+  margin: 0;
+}
+
+/* Arrows either side of the step markers. */
+.funnel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  /* The list shrink-wraps its bars so the arrows sit close to them. Each
+     bar has a real width (an empty button contributes none), and the list
+     shrinks on narrow screens. */
+  & .funnel-steps {
+    flex: 0 1 auto;
+    min-width: 0;
+
+    & li {
+      flex: 0 1 auto;
+      width: 120px;
+      min-width: 0;
+    }
+  }
+}
+
+.participants-stepper button.funnel-arrow {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #111;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    opacity 0.15s ease;
+
+  & svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    background: rgb(28 39 69 / 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--report-link);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+    background: none;
+  }
+}
+
+/* Right column: toggle, legend as a list, Participant / Facilitator, link. */
+.funnel-aside.chart-controls {
+  @media (min-width: 992px) {
+    /* Level with the canvas top: no margin or padding above the toggle
+       (outranks .chart-controls' margin-top). */
+    margin-top: 0;
+    padding-top: 0;
+
+    & .chart-legend.region-legend {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 0.6rem;
+      max-width: none;
+    }
+
+    & .chart-legend-item {
+      font-size: 1rem;
+    }
+  }
+
+  & .participant-legend {
+    margin-top: 1.25rem;
+  }
+}
+
+.style-body-text .funnel-aside-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  color: var(--report-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--report-navy);
+    text-decoration-thickness: 2px;
+  }
 }
 
 /* ---- Phase headers (Who participated / Power of the discussion) ---- */
@@ -1656,10 +1768,14 @@ section#who-participated h2 {
 
   section#who-participated .phase-row > .col-lg-4 {
     top: 0;
-    inset-inline-end: calc(var(--bs-gutter-x, 1.5rem) / 2);
-    width: auto;
+    /* As wide as the Region / Field of work toggle below it and starting
+       on the same left edge (the 300px legend column's), so the stat
+       centres between the toggle's edges (design 9/28, eyeballed). */
+    width: 234px;
+    inset-inline-end: calc(var(--bs-gutter-x, 1.5rem) / 2 + 300px - 234px);
     margin-top: 0; /* no row gutter: level with the h2 */
-    padding-inline-end: 0; /* flush with the h2's edge, mirrored */
+    padding-inline: 0;
+    text-align: center;
   }
 
   section#who-participated .participation-sidebar {
@@ -1851,61 +1967,6 @@ section#who-participated h2 {
 
 /* Small orange-bordered square arrows in the page margins, vertically
    centered on the stepper. Hidden at either end. */
-section#who-participated button.stepper-arrow,
-.ideas-cloud button.stepper-arrow {
-  all: unset;
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 6px;
-  border: 2px solid var(--report-orange);
-  color: var(--report-navy);
-  background: #fff;
-  cursor: pointer;
-  z-index: 1;
-
-  &:hover {
-    background: var(--report-orange);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--report-link);
-    outline-offset: 2px;
-  }
-
-  &[hidden] {
-    display: none;
-  }
-}
-
-section#who-participated button.stepper-arrow-prev,
-.ideas-cloud button.stepper-arrow-prev {
-  left: -3.5rem;
-}
-
-section#who-participated button.stepper-arrow-next,
-.ideas-cloud button.stepper-arrow-next {
-  right: -3.5rem;
-}
-
-@media (max-width: 1259px) {
-  section#who-participated button.stepper-arrow-prev,
-  .ideas-cloud button.stepper-arrow-prev {
-    left: 0.5rem;
-  }
-
-  section#who-participated button.stepper-arrow-next,
-  .ideas-cloud button.stepper-arrow-next {
-    right: 0.5rem;
-  }
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1920,7 +1981,7 @@ section#who-participated button.stepper-arrow-next,
 
 /* No-JS: stack every step with its snapshot and hide the arrows. */
 .participants-stepper:not(.js-enabled) {
-  & .stepper-arrow {
+  & .funnel-nav {
     display: none;
   }
 

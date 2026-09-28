@@ -308,7 +308,7 @@
 
     <div id="participants-stepper" class="participants-stepper" tabindex="0"
          data-funnel-src="{{ "/public/data/ai-report-participant-funnel.json" | assetVersion }}"
-         data-step="1" data-variant="field"
+         data-step="1" data-variant="region"
          data-step-counter="{{ wp.step_counter }}"
          data-play-label="{{ wp.play_label }}"
          data-pause-label="{{ wp.pause_label }}"
@@ -333,59 +333,70 @@
         {% endfor %}
       </div>
 
-      {# The animation. Sized by JS to the 1040-wide canvas space. #}
-      <div class="funnel-stage" data-funnel-stage-frame>
-        <canvas data-funnel-canvas width="1040" height="486" role="img" aria-label="{{ wp.chart_alt }}"></canvas>
-        {# Play/pause overlay (9/24): fades in on hover or touch, stays while paused. #}
-        <button type="button" class="funnel-play" data-funnel-play aria-label="{{ wp.pause_label }}" aria-pressed="false">
-          <svg class="funnel-play-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4.5" height="14" rx="1"/><rect x="13.5" y="5" width="4.5" height="14" rx="1"/></svg>
-          <svg class="funnel-play-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>
-        </button>
-      </div>
-      {# On narrow screens the ring's center copy is drawn here instead of on the canvas, where it would be unreadable. #}
-      <div class="funnel-center-copy" data-funnel-center hidden>
-        <p class="funnel-center-title">{{ wp.ring_center_title }}</p>
-        {% if wp.ring_center_hint %}<p class="funnel-center-hint">{{ wp.ring_center_hint }}</p>{% endif %}
-      </div>
+      {# Two columns on desktop (design 9/28): the animation with its step controls on
+         the left, the toggle, legend and demographics link on the right. Phones stack. #}
+      <div class="funnel-layout">
+        <div class="funnel-main">
+          {# The animation. JS shows a 720-unit-wide window of the canvas space. #}
+          <div class="funnel-stage" data-funnel-stage-frame>
+            <canvas data-funnel-canvas width="720" height="490" role="img" aria-label="{{ wp.chart_alt }}"></canvas>
+            {# Play/pause overlay (9/24): fades in on hover or touch. #}
+            <button type="button" class="funnel-play" data-funnel-play aria-label="{{ wp.pause_label }}" aria-pressed="false">
+              <svg class="funnel-play-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4.5" height="14" rx="1"/><rect x="13.5" y="5" width="4.5" height="14" rx="1"/></svg>
+              <svg class="funnel-play-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>
+            </button>
+          </div>
+          {# On narrow screens the ring's center copy is drawn here instead of on the canvas, where it would be unreadable. #}
+          <div class="funnel-center-copy" data-funnel-center hidden>
+            <p class="funnel-center-title">{{ wp.ring_center_title }}</p>
+            {% if wp.ring_center_hint %}<p class="funnel-center-hint">{{ wp.ring_center_hint }}</p>{% endif %}
+          </div>
 
-      {# Step markers: show that the stages cycle and where we are. The active one fills as
-         the dwell runs down (--progress, set by JS). Clicking one jumps to that stage. #}
-      <ol class="funnel-steps" data-funnel-steps aria-label="{{ wp.title }}">
-        {% for s in range(1, nbr_steps + 1) %}
-          <li><button type="button" class="funnel-step" data-funnel-stage="{{ s }}" aria-pressed="{{ 'true' if loop.first else 'false' }}" aria-label="{{ wp.step_marker_label | replace('{current}', s) }}"><span class="funnel-step-fill" aria-hidden="true"></span></button></li>
-        {% endfor %}
-      </ol>
+          {# Step controls: arrows either side of the markers (design 9/28). The active
+             marker fills as the dwell runs down (--progress, set by JS). #}
+          <div class="funnel-nav">
+            <button type="button" class="funnel-arrow funnel-arrow-prev" data-stepper-prev aria-label="{{ wp.prev_label }}">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ol class="funnel-steps" data-funnel-steps aria-label="{{ wp.title }}">
+              {% for s in range(1, nbr_steps + 1) %}
+                <li><button type="button" class="funnel-step" data-funnel-stage="{{ s }}" aria-pressed="{{ 'true' if loop.first else 'false' }}" aria-label="{{ wp.step_marker_label | replace('{current}', s) }}"><span class="funnel-step-fill" aria-hidden="true"></span></button></li>
+              {% endfor %}
+            </ol>
+            <button type="button" class="funnel-arrow funnel-arrow-next" data-stepper-next aria-label="{{ wp.next_label }}">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
 
-      <div class="chart-controls">
-        <div class="chart-controls-row">
+        <aside class="funnel-aside chart-controls" aria-label="{{ wp.title }}">
           <div class="segmented-toggle" role="group">
-            {# Field of work is the default colouring (9/24); Region second. #}
-            <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="true" disabled>{{ wp.toggle_field_of_work }}</button>
-            <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="false" disabled>{{ wp.toggle_region }}</button>
+            {# Region is the default colouring again (9/28); Field of work second. The
+               Top 3 attribution dots stay keyed to field of work regardless. #}
+            <button type="button" class="segmented-toggle-option" data-variant="region" aria-pressed="true" disabled>{{ wp.toggle_region }}</button>
+            <button type="button" class="segmented-toggle-option" data-variant="field" aria-pressed="false" disabled>{{ wp.toggle_field_of_work }}</button>
             {# Age, race/ethnicity, gender and AI response colorings are built but not offered
                (9/18). To restore one, add a button with data-variant="age" | "race" | "gender" |
                "ai" and the matching wp.toggle_* label. #}
           </div>
+          {# Filled from the data by JS; the static region list is the no-JS fallback. #}
+          <ul class="chart-legend region-legend" data-funnel-legend aria-label="{{ wp.toggle_region }}">
+            {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
+            {% for r in range(1, nbr_regions + 1) %}
+              <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
+            {% endfor %}
+          </ul>
           <ul class="chart-legend participant-legend" data-last-step-only hidden>
             <li class="chart-legend-item"><span class="chart-legend-swatch swatch-participant" aria-hidden="true"></span>{{ wp.legend_participant }}</li>
             <li class="chart-legend-item"><span class="chart-legend-swatch swatch-facilitator" aria-hidden="true"></span>{{ wp.legend_facilitator }}</li>
           </ul>
-        </div>
-        {# Filled from the data by JS; the static region list is the no-JS fallback. #}
-        <ul class="chart-legend region-legend" data-funnel-legend aria-label="{{ wp.toggle_region }}">
-          {% set nbr_regions = modules.region_legend.nbr_regions | default(9) %}
-          {% for r in range(1, nbr_regions + 1) %}
-            <li class="chart-legend-item" data-region="{{ r }}"><span class="chart-legend-swatch" aria-hidden="true"></span>{{ modules.region_legend["region_" + r] }}</li>
-          {% endfor %}
-        </ul>
+          {% set db = modules.demographics_button %}
+          {% if db %}
+            <a class="funnel-aside-link" href="{{ db.href | localizedPath(locale) }}">{{ db.label }}</a>
+          {% endif %}
+        </aside>
       </div>
     </div>
-    {% set db = modules.demographics_button %}
-    {% if db %}
-    <div class="methods-button">
-      <a href="{{ db.href | localizedPath(locale) }}" data-appearance="button" data-theme="off-white">{{ db.label }}</a>
-    </div>
-    {% endif %}
   </div>
 </section>
 
