@@ -113,9 +113,9 @@ translator_note: "{count} is replaced with a number. Keep it in the translation.
 translator_note_2: "section_title is the heading above the three groups of ideas."
 section_title: More policy ideas
 count_label: "{count} policy ideas"
-show_label: See all
+show_label: See ideas
 show_more_label: "Show {count} more"
-close_label: Hide all
+close_label: Hide ideas
 show_all_label: "Show all"
 close_all_label: Hide all
 example_ideas_label: "Examples:"
