@@ -222,6 +222,17 @@ section#ai-report-hero {
     & a {
       padding: 0.5rem 0.75rem;
       text-align: start; /* the cell is bold-width; keep the text on its left edge */
+
+      /* Wrapped links made the rising tab and the bold look odd (9/28):
+         on phones the hover is a colour change only. */
+      &::before {
+        display: none;
+      }
+
+      &:hover,
+      &:focus-visible {
+        font-weight: 400;
+      }
     }
   }
 }
@@ -1721,6 +1732,12 @@ section#balancing-groups select.demographics-select {
 
 .demographics-bar {
   transition: opacity 0.15s;
+  cursor: pointer;
+}
+
+/* Full-height column hover target behind each pair of bars (9/28). */
+.demographics-hit {
+  cursor: pointer;
 }
 
 /* Desktop hover (9/24): the pointed-at category's label goes bold and its
@@ -1732,7 +1749,7 @@ section#balancing-groups select.demographics-select {
 
 .demographics-cat-label {
   transition: opacity 0.15s;
-  cursor: default;
+  cursor: pointer;
 }
 
 .demographics-cat-label.is-hot {

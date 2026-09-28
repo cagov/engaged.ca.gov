@@ -617,6 +617,21 @@ export async function initDemographicsChart(root) {
 
     cats.forEach((c, i) => {
       const cx = PAD.left + groupW * (i + 0.5);
+      // Hover target for the whole column (9/28): a transparent strip the
+      // full plot height, so pointing anywhere above or below a pair of
+      // bars lights them up, not just the bars themselves. Drawn first so
+      // the bars (and their tooltips) stay on top.
+      svg.appendChild(
+        el("rect", {
+          x: PAD.left + groupW * i,
+          y: PAD.top,
+          width: groupW,
+          height: plotH,
+          fill: "transparent",
+          class: "demographics-hit",
+          "data-cat": i,
+        }),
+      );
       const series = [
         {
           key: "phase1",
