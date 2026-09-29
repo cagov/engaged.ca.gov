@@ -59,6 +59,7 @@ KEEP_PHRASES = [
     "No Robo Bosses", "No Spying", "Citizen United", "Climate Corps",
     "State Library", "State Website", "China", "American", "Latino", "Microsoft",
     "Linux", "Apple", "Meta", "Google", "Amazon", "Gen X", "University of California",
+    "Siskiyou County",
 ]
 
 # 9/25: too many poll ideas started with "Regulate" (17 of 185, several of the
@@ -94,16 +95,103 @@ RELABEL = {
     "Regulate AI systems that imitate voices to prevent financial theft": "Stop AI voice imitation used for financial theft",
     "Regulate the use of AI in drafting court documents": "Set rules for AI in court filings",
     "Change the structure of governance to AI-Assisted direct democracy": "Change the structure of governance to AI-assisted direct democracy",
+    "Limit the powers of open AI and anthropic": "Limit the powers of OpenAI and Anthropic",
+    "Regulate AI in social media": "Set rules for AI in social media",
+    "Regulate data centers to have mandatory kill switches that shut off during peak power times": "Require data center kill switches for peak power times",
+    "Regulate the use of venture capital in generative AI": "Oversee venture capital in generative AI",
+    "Regulate AI like it regulates wall street": "Oversee AI like Wall Street",
+    "Regulate AI to require human-created base for AI-generated content": "Require a human-created base for AI-generated content",
+    "Regulate AI and corporations to facilitate public education and awareness": "Oversee AI and corporations to build public awareness",
+    "Regulate the use of LLMs to ensure consumers receive compensation": "Ensure consumers are compensated for LLM use",
+    "Define Human-Generated content": "Define human-generated content",
 }
 
-# 9/25: ambiguous, single-respondent ideas that made the KEEP_SHARE cutoff by
-# count but don't read as a real policy idea even with sentence_case/RELABEL
-# applied — drop them and let the next-ranked idea take the slot instead of
-# just shipping it. ("Acquire Success", rawLabel "Government should acquire
-# Success." — unclear what "Success" refers to.) Keyed on the label after
-# sentence_case(), before RELABEL.
+# 9/29: ideas raised by at least this many people are the cloud's big words
+# and keep their place by count whatever their topic. Below it, AI-related
+# ideas go first and NOT_AI ideas only fill whatever room is left, so the
+# faded tail reads as being about AI. Size always stays the real count.
+BIG_COUNT = 15
+
+# 9/29: small ideas that are about work or the economy but not AI. Ideas
+# about job loss, retraining and job transitions count as AI-related (the
+# project is AI's impact on work), so they aren't listed. Keyed on the
+# displayed label (after sentence_case() and RELABEL).
+NOT_AI = {
+    "Ban job offshoring", "Fund public transportation", "Promote employee ownership",
+    "Prioritize transparency", "Promote renewable energy",
+    "Build the Delta Tunnels and the High Speed Rail", "Implement energy utility gouging protections",
+    "Raise taxes", "Not tax income under $60,000", "Provide affordable workspace",
+    "Improve housing assistance programs for freelancers", "Cap CEO pay",
+    "Improve math education to focus on implementing algorithms",
+    "Stop private equity from buying up housing",
+    "Implement all recommendations with 80% support from the assembly",
+    "Repeal the Taft Hartley Act",
+    "Close loopholes of abuse of worker visas in the tech industry",
+    "Sponsor technology that helps Californians", "Implement student loan forgiveness",
+    "Not issue work visas to individuals without a PhD in AI or fields with enough US citizens",
+    "Stop taxing low earners",
+    "Prohibit companies from using contract work through staff agencies to avoid paying benefits",
+    "Tax loans against equity as income",
+    "Tech companies should reinvest their profits in public goods and social needs",
+    "Replace personal income tax with VAT",
+    "Increase oversight of public universities' spending on new technologies",
+    "Take action against price fixing", "Promote media literacy in schools",
+    "Use revenue from taxing billionaires to fund single payer health care for Californians",
+    "Stop companies from using shell companies to hide money",
+    "Make consequences for violating worker protections personally accountable to responsible individuals",
+    "Implement checks and balances on bias in workplace hiring, including boards",
+    "Clarify the difference in water provision to industry versus households", "Fund manufacturing plants for electronics",
+    "Assess industry input on regulation",
+    "Criminalize wage theft", "Prevent leveraged buyouts",
+    "Not shut down nuclear power facilities without modern replacements",
+    "Oversee prediction markets", "Strengthen anti-discrimination enforcement", "Tax estates",
+    "Oversee the venture capital industry", "Provide free childcare", "Implement a VAT tax",
+    "Implement fire prevention measures in electrical infrastructure",
+    "Prevent stock buybacks",
+    "Increase employee net earnings",
+    "California should investigate Meta, Google, and Amazon for artificially inflating their stock prices", "Implement a land value tax",
+    "Make it easy for California students to attend University of California debt free",
+    "California should raise the living wages for civil servants, nurses, doctors, and teachers",
+    "Companies should keep their headquarters in California", "Regulate PG&E",
+    "Regulate electrical power consumption",
+    "Punish corporations for making people do multiple rounds of interviews for low-wage jobs and then decline them",
+    "Require AI industry to provide free solar home power systems to California residents",
+    "Create jobs that focus on restoring the planet", "Increase transparency in corporate ownership",
+    "Ban dynamic pricing", "Not restrict services for the homeless", "Conserve energy and water",
+    "Ensure elections are fair", "Establish laws to prevent wealthy people from hiding their incomes",
+    "Ban third-party contractors and vendors in the job hiring process", "Build more housing",
+    "Invest in infrastructure repair", "Allow tech companies to write off employee wages as capital expenses",
+    "California should institute a semi-mandatory 2-year work rotation in agriculture or a trade after high school", "Implement a rent freeze",
+    "Tax stock holdings",
+    "Invest in educational programs for nuclear power plants, engineering, electrical, and robotics",
+    "Require universities to consult faculty and students before entering contracts for new technologies",
+    "Establish a commission to oversee the sovereign wealth fund and its redistribution",
+}
+
+# Ideas dropped outright: unclear, off-topic, or inflammatory as a policy
+# idea even after sentence_case/RELABEL ("Acquire success", 9/25: unclear
+# what "Success" means). The next idea in line takes the slot. Keyed on the
+# displayed label (after sentence_case() and RELABEL).
 EXCLUDE = {
-    "Acquire success",
+    "Acquire success", "Restrict job eligibility",
+    "Require proper grammar in all official documentation", "Ban AI in several spaces",
+    "Imprison those who sell generative AI",
+    "State of CA should consider moving from Microsoft products to Linux or Apple platforms",
+    "Create jobs for AI ethical historians", "Stop forcing DEI biases onto AI",
+    "Arrest AI company CEOs and shareholders",
+    "Make generative AI systems inaccessible to capitalist companies",
+    "Make suggestions based on monitoring AI models", "Move decision-makers close to the work itself",
+    "Give the populace a relief check using money from bailing out tech companies",
+    "Require language proficiency tests for government and certain other positions",
+    "Oust the current federal administration",
+    "Prohibit restricting websites that require data collection",
+    "Back-fill the federal program to move food from farms to classrooms",
+    "Increase unemployment rates for Gen X to make it livable while they search for jobs",
+    "Allow funds and resources to be shifted fluidly",
+    "Ban the president from using AI to push harmful propaganda", "Ensure work is done with ethics",
+    "Reduce knowledge worker jobs", "Arrest individuals with over $100 million",
+    "Restrict resource accumulation", "Disallow the branding of AI for language learning models",
+    "Not pay or provide healthcare for robots",
 }
 
 
@@ -115,6 +203,11 @@ def sentence_case(label):
     for phrase in KEEP_PHRASES:
         out = re.sub(rf"\b{re.escape(phrase)}\b", phrase, out, flags=re.IGNORECASE)
     return out[:1].upper() + out[1:]
+
+
+def display_label(raw):
+    s = sentence_case(raw)
+    return RELABEL.get(s, s)
 
 
 def read_js_object(path):
@@ -133,13 +226,16 @@ def main():
 
     phase1_all = sorted(data["phase1"], key=lambda c: -c["count"])  # stable: keeps file order among ties
     keep = max(1, round(len(phase1_all) * KEEP_SHARE))  # off the true total, so EXCLUDE doesn't shift the cutoff
-    phase1 = [c for c in phase1_all if sentence_case(c["label"]) not in EXCLUDE]
+    shown = [dict(c, label=display_label(c["label"])) for c in phase1_all]
+    for name, labels in (("RELABEL", RELABEL.values()), ("NOT_AI", NOT_AI), ("EXCLUDE", EXCLUDE)):
+        missing = set(labels) - {c["label"] for c in shown}
+        if missing:
+            sys.exit(f"{name} names labels not in the data: {sorted(missing)}")
+    phase1 = [c for c in shown if c["label"] not in EXCLUDE]
+    # Stable sort: big ideas by count, then AI-related small ideas, then the rest.
+    phase1.sort(key=lambda c: 0 if c["count"] >= BIG_COUNT else 2 if c["label"] in NOT_AI else 1)
     poll = [
-        {
-            "label": RELABEL.get(sentence_case(c["label"]), sentence_case(c["label"])),
-            "subtheme": c["subtheme"],
-            "count": c["count"],
-        }
+        {"label": c["label"], "subtheme": c["subtheme"], "count": c["count"]}
         for c in phase1[:keep]
     ]
     discussion = [
