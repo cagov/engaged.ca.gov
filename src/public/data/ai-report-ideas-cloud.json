@@ -541,7 +541,7 @@
    "count": 1
   },
   {
-   "label": "Governments should regulate AI hyperscalers",
+   "label": "Oversee AI hyperscalers",
    "subtheme": 1,
    "count": 1
   },
@@ -607,11 +607,6 @@
   },
   {
    "label": "Require companies to provide paid training",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Not intervene to prevent AI from negatively impacting the economy",
    "subtheme": 2,
    "count": 1
   },
@@ -1178,6 +1173,11 @@
   {
    "label": "Oversee AI like Wall Street",
    "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Define human-generated content",
+   "subtheme": 5,
    "count": 1
   }
  ],

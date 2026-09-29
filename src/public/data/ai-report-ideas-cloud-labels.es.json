@@ -100,7 +100,7 @@
   "Support AI companies to stay in CA": "Apoyar a las empresas de IA para que se queden en California",
   "Fund national AI compute resources for climate modeling": "Financiar recursos nacionales de cómputo de IA para modelar el clima",
   "Encode law, policy, preferences, design, and best practices into AI-friendly formats": "Codificar leyes, políticas, preferencias, diseños y buenas prácticas en formatos aptos para la IA",
-  "Governments should regulate AI hyperscalers": "Los gobiernos deberían regular a los hiperescaladores de IA",
+  "Oversee AI hyperscalers": "Supervisar a los hiperescaladores de IA",
   "Ban the use of AI unless it is in certain professional settings": "Prohibir el uso de la IA salvo en ciertos entornos profesionales",
   "Limit the number of AI interactions a person can have in one day": "Limitar el número de interacciones con IA que una persona puede tener en un día",
   "Extend the warning period for layoffs citing AI": "Ampliar el plazo de aviso de los despidos atribuidos a la IA",
@@ -114,7 +114,6 @@
   "CA state government should allow the use of AI in certain parts of CDCR jobs": "El gobierno estatal de California debería permitir el uso de la IA en ciertas partes de los trabajos del CDCR",
   "California should require high-risk AI labs to use stronger containment, tiered access controls, real-time monitoring, human approval gates, independent audits, shutdown procedures, and near-miss reporting": "California debería exigir a los laboratorios de IA de alto riesgo mayor contención, controles de acceso por niveles, monitoreo en tiempo real, aprobación humana, auditorías independientes, procedimientos de apagado y reportes de incidentes evitados",
   "Require companies to provide paid training": "Exigir a las empresas que ofrezcan capacitación pagada",
-  "Not intervene to prevent AI from negatively impacting the economy": "No intervenir para evitar que la IA afecte negativamente a la economía",
   "Create career pathways for Latino workers": "Crear trayectorias profesionales para los trabajadores latinos",
   "Restrict the proportion of jobs related to AI training": "Restringir la proporción de empleos relacionados con el entrenamiento de IA",
   "Help laid off workers with food aid (CalFresh)": "Ayudar a los trabajadores despedidos con asistencia alimentaria (CalFresh)",
@@ -192,5 +191,6 @@
   "Use AI to make money more accessible to people": "Usar la IA para que el dinero sea más accesible para las personas",
   "Shut down AI data centers that harm local residents": "Cerrar los centros de datos de IA que perjudiquen a los residentes locales",
   "Deregulate small businesses to allow individuals to start companies that manage AI agents": "Desregular las pequeñas empresas para que las personas puedan crear compañías que gestionen agentes de IA",
-  "Prohibit AI involvement in voting": "Prohibir la participación de la IA en las votaciones"
+  "Prohibit AI involvement in voting": "Prohibir la participación de la IA en las votaciones",
+  "Require AI companies to invest in the state and its residents": "Exigir a las empresas de IA que inviertan en el estado y sus residentes"
 }

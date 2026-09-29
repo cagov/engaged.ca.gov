@@ -100,7 +100,7 @@
   "Support AI companies to stay in CA": "Hỗ trợ công ty AI ở lại CA",
   "Fund national AI compute resources for climate modeling": "Tài trợ tài nguyên tính toán AI quốc gia cho mô hình hóa khí hậu",
   "Encode law, policy, preferences, design, and best practices into AI-friendly formats": "Mã hóa luật, chính sách, ưu tiên, thiết kế và thực tiễn tốt nhất sang định dạng phù hợp với AI",
-  "Governments should regulate AI hyperscalers": "Chính phủ nên quản lý các tập đoàn AI siêu quy mô",
+  "Oversee AI hyperscalers": "Giám sát các tập đoàn AI siêu quy mô",
   "Ban the use of AI unless it is in certain professional settings": "Cấm dùng AI trừ một số môi trường chuyên môn nhất định",
   "Limit the number of AI interactions a person can have in one day": "Giới hạn số lần một người có thể tương tác với AI trong một ngày",
   "Extend the warning period for layoffs citing AI": "Kéo dài thời gian báo trước khi sa thải với lý do AI",
@@ -114,7 +114,6 @@
   "CA state government should allow the use of AI in certain parts of CDCR jobs": "Chính quyền tiểu bang CA nên cho phép dùng AI trong một số phần công việc của CDCR",
   "California should require high-risk AI labs to use stronger containment, tiered access controls, real-time monitoring, human approval gates, independent audits, shutdown procedures, and near-miss reporting": "California nên yêu cầu phòng thí nghiệm AI rủi ro cao áp dụng biện pháp ngăn chặn mạnh hơn, kiểm soát truy cập theo cấp, giám sát thời gian thực, khâu phê duyệt của con người, kiểm toán độc lập, quy trình tắt hệ thống và báo cáo sự cố suýt xảy ra",
   "Require companies to provide paid training": "Yêu cầu công ty đào tạo có trả lương",
-  "Not intervene to prevent AI from negatively impacting the economy": "Không can thiệp để ngăn AI tác động tiêu cực đến nền kinh tế",
   "Create career pathways for Latino workers": "Tạo lộ trình nghề nghiệp cho người lao động gốc Latino",
   "Restrict the proportion of jobs related to AI training": "Hạn chế tỷ lệ việc làm liên quan đến huấn luyện AI",
   "Help laid off workers with food aid (CalFresh)": "Hỗ trợ lương thực (CalFresh) cho người bị sa thải",
@@ -192,5 +191,6 @@
   "Use AI to make money more accessible to people": "Dùng AI để giúp người dân dễ tiếp cận tài chính hơn",
   "Shut down AI data centers that harm local residents": "Đóng cửa trung tâm dữ liệu AI gây hại cho cư dân địa phương",
   "Deregulate small businesses to allow individuals to start companies that manage AI agents": "Nới lỏng quy định để cá nhân mở doanh nghiệp nhỏ quản lý tác tử AI",
-  "Prohibit AI involvement in voting": "Cấm AI can thiệp vào bầu cử"
+  "Prohibit AI involvement in voting": "Cấm AI can thiệp vào bầu cử",
+  "Require AI companies to invest in the state and its residents": "Yêu cầu các công ty AI đầu tư vào tiểu bang và cư dân"
 }

@@ -100,7 +100,7 @@
   "Support AI companies to stay in CA": "AI 기업의 캘리포니아 잔류 지원",
   "Fund national AI compute resources for climate modeling": "기후 모델링을 위한 국가 AI 컴퓨팅 자원 지원",
   "Encode law, policy, preferences, design, and best practices into AI-friendly formats": "법률, 정책, 선호, 설계, 모범 사례를 AI 친화적 형식으로 체계화",
-  "Governments should regulate AI hyperscalers": "정부의 AI 하이퍼스케일러 규제",
+  "Oversee AI hyperscalers": "AI 하이퍼스케일러 감독",
   "Ban the use of AI unless it is in certain professional settings": "특정 전문 분야 외 AI 사용 금지",
   "Limit the number of AI interactions a person can have in one day": "1인당 하루 AI 이용 횟수 제한",
   "Extend the warning period for layoffs citing AI": "AI를 이유로 한 해고의 사전 통보 기간 연장",
@@ -114,7 +114,6 @@
   "CA state government should allow the use of AI in certain parts of CDCR jobs": "캘리포니아 주정부의 CDCR 업무 일부에 AI 사용 허용",
   "California should require high-risk AI labs to use stronger containment, tiered access controls, real-time monitoring, human approval gates, independent audits, shutdown procedures, and near-miss reporting": "캘리포니아가 고위험 AI 연구소에 더 강력한 격리, 단계별 접근 통제, 실시간 모니터링, 인간 승인 절차, 독립 감사, 가동 중단 절차, 아차사고 보고 의무화",
   "Require companies to provide paid training": "기업에 유급 교육 제공 의무화",
-  "Not intervene to prevent AI from negatively impacting the economy": "AI의 경제적 악영향 방지를 위해 개입하지 않기",
   "Create career pathways for Latino workers": "라틴계 노동자를 위한 경력 경로 마련",
   "Restrict the proportion of jobs related to AI training": "AI 학습 관련 일자리 비율 제한",
   "Help laid off workers with food aid (CalFresh)": "해고 노동자에게 식품 지원(CalFresh) 제공",
@@ -227,5 +226,6 @@
   "Create jobs for AI regulatory professionals": "AI 규제 전문 인력 일자리 창출",
   "Use UBI for all verifiable AI attributed layoffs": "AI로 인한 것으로 확인된 모든 해고에 기본소득(UBI) 적용",
   "Build infrastructure to support long-term unemployment": "장기 실업 지원 기반 구축",
-  "Oversee AI like Wall Street": "월스트리트처럼 AI 감독"
+  "Oversee AI like Wall Street": "월스트리트처럼 AI 감독",
+  "Define human-generated content": "인간 창작 콘텐츠의 정의 마련"
 }

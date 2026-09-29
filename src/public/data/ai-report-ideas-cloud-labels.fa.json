@@ -100,7 +100,7 @@
   "Support AI companies to stay in CA": "حمایت از ماندن شرکت‌های هوش مصنوعی در کالیفرنیا",
   "Fund national AI compute resources for climate modeling": "تأمین بودجه منابع ملی پردازش هوش مصنوعی برای مدل‌سازی اقلیمی",
   "Encode law, policy, preferences, design, and best practices into AI-friendly formats": "تبدیل قانون، سیاست، ترجیحات، طراحی و بهترین شیوه‌ها به قالب‌های سازگار با هوش مصنوعی",
-  "Governments should regulate AI hyperscalers": "قانون‌گذاری دولت‌ها برای غول‌های زیرساخت هوش مصنوعی",
+  "Oversee AI hyperscalers": "نظارت بر غول‌های زیرساخت هوش مصنوعی",
   "Ban the use of AI unless it is in certain professional settings": "ممنوعیت استفاده از هوش مصنوعی جز در برخی محیط‌های حرفه‌ای",
   "Limit the number of AI interactions a person can have in one day": "محدود کردن تعداد تعامل‌های روزانه هر فرد با هوش مصنوعی",
   "Extend the warning period for layoffs citing AI": "تمدید مهلت اطلاع‌رسانی برای اخراج‌هایی که به هوش مصنوعی استناد می‌کنند",
@@ -114,7 +114,6 @@
   "CA state government should allow the use of AI in certain parts of CDCR jobs": "اجازه دولت ایالتی کالیفرنیا برای استفاده از هوش مصنوعی در بخش‌هایی از مشاغل CDCR",
   "California should require high-risk AI labs to use stronger containment, tiered access controls, real-time monitoring, human approval gates, independent audits, shutdown procedures, and near-miss reporting": "الزام آزمایشگاه‌های پرخطر هوش مصنوعی در کالیفرنیا به مهار قوی‌تر، کنترل دسترسی چندسطحی، پایش لحظه‌ای، مراحل تأیید انسانی، ممیزی مستقل، رویه‌های توقف و گزارش رویدادهای نزدیک به حادثه",
   "Require companies to provide paid training": "الزام شرکت‌ها به ارائه آموزش با حقوق",
-  "Not intervene to prevent AI from negatively impacting the economy": "مداخله نکردن برای جلوگیری از اثر منفی هوش مصنوعی بر اقتصاد",
   "Create career pathways for Latino workers": "ایجاد مسیرهای شغلی برای کارگران لاتین‌تبار",
   "Restrict the proportion of jobs related to AI training": "محدود کردن سهم مشاغل مرتبط با آموزش هوش مصنوعی",
   "Help laid off workers with food aid (CalFresh)": "کمک غذایی به کارگران اخراجی (CalFresh)",
@@ -192,5 +191,6 @@
   "Use AI to make money more accessible to people": "استفاده از هوش مصنوعی برای دسترسی‌پذیرتر کردن پول برای مردم",
   "Shut down AI data centers that harm local residents": "تعطیلی مراکز داده هوش مصنوعی که به ساکنان محلی آسیب می‌زنند",
   "Deregulate small businesses to allow individuals to start companies that manage AI agents": "کاهش مقررات کسب‌وکارهای کوچک تا افراد بتوانند شرکت‌های مدیریت عامل‌های هوش مصنوعی راه بیندازند",
-  "Prohibit AI involvement in voting": "ممنوعیت دخالت هوش مصنوعی در رأی‌گیری"
+  "Prohibit AI involvement in voting": "ممنوعیت دخالت هوش مصنوعی در رأی‌گیری",
+  "Require AI companies to invest in the state and its residents": "الزام شرکت‌های هوش مصنوعی به سرمایه‌گذاری در ایالت و ساکنان آن"
 }

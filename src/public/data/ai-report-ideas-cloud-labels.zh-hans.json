@@ -100,7 +100,7 @@
   "Support AI companies to stay in CA": "支持 AI 公司留在加州",
   "Fund national AI compute resources for climate modeling": "资助用于气候建模的国家 AI 算力资源",
   "Encode law, policy, preferences, design, and best practices into AI-friendly formats": "将法律、政策、偏好、设计和最佳实践编码为 AI 友好格式",
-  "Governments should regulate AI hyperscalers": "政府应监管 AI 超大规模运营商",
+  "Oversee AI hyperscalers": "监督 AI 超大规模运营商",
   "Ban the use of AI unless it is in certain professional settings": "除特定专业场合外禁止使用 AI",
   "Limit the number of AI interactions a person can have in one day": "限制每人每天与 AI 的互动次数",
   "Extend the warning period for layoffs citing AI": "延长以 AI 为由裁员的预警期",
@@ -114,7 +114,6 @@
   "CA state government should allow the use of AI in certain parts of CDCR jobs": "加州政府应允许在 CDCR 部分工作中使用 AI",
   "California should require high-risk AI labs to use stronger containment, tiered access controls, real-time monitoring, human approval gates, independent audits, shutdown procedures, and near-miss reporting": "加州应要求高风险 AI 实验室采用更强的隔离措施、分级访问控制、实时监控、人工审批关口、独立审计、关停程序和险情报告",
   "Require companies to provide paid training": "要求公司提供带薪培训",
-  "Not intervene to prevent AI from negatively impacting the economy": "不干预 AI 对经济的负面影响",
   "Create career pathways for Latino workers": "为拉丁裔劳动者开辟职业通道",
   "Restrict the proportion of jobs related to AI training": "限制 AI 训练相关岗位的比例",
   "Help laid off workers with food aid (CalFresh)": "为被裁员工提供食品援助 (CalFresh)",
@@ -227,5 +226,6 @@
   "Create jobs for AI regulatory professionals": "为 AI 监管专业人员创造就业",
   "Use UBI for all verifiable AI attributed layoffs": "对所有可证实由 AI 导致的裁员提供 UBI",
   "Build infrastructure to support long-term unemployment": "建设支持长期失业者的基础设施",
-  "Oversee AI like Wall Street": "像监管华尔街一样监管 AI"
+  "Oversee AI like Wall Street": "像监管华尔街一样监管 AI",
+  "Define human-generated content": "界定人类创作的内容"
 }

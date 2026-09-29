@@ -104,6 +104,7 @@ RELABEL = {
     "Regulate AI and corporations to facilitate public education and awareness": "Oversee AI and corporations to build public awareness",
     "Regulate the use of LLMs to ensure consumers receive compensation": "Ensure consumers are compensated for LLM use",
     "Define Human-Generated content": "Define human-generated content",
+    "Regulate AI hyperscalers": "Oversee AI hyperscalers",
 }
 
 # 9/29: ideas raised by at least this many people are the cloud's big words
@@ -192,7 +193,11 @@ EXCLUDE = {
     "Reduce knowledge worker jobs", "Arrest individuals with over $100 million",
     "Restrict resource accumulation", "Disallow the branding of AI for language learning models",
     "Not pay or provide healthcare for robots",
+    "Not intervene to prevent AI from negatively impacting the economy",
 }
+
+# whirl_data.py strips a leading "Government should"; the plural slips past it.
+GOVERNMENTS_SHOULD = re.compile(r"^Governments should\s+", re.IGNORECASE)
 
 
 def sentence_case(label):
@@ -206,7 +211,7 @@ def sentence_case(label):
 
 
 def display_label(raw):
-    s = sentence_case(raw)
+    s = sentence_case(GOVERNMENTS_SHOULD.sub("", raw))
     return RELABEL.get(s, s)
 
 

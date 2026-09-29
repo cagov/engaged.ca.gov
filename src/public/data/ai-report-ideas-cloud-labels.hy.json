@@ -100,7 +100,7 @@
   "Support AI companies to stay in CA": "Աջակցել ԱԲ ընկերություններին Կալիֆոռնիայում մնալու հարցում",
   "Fund national AI compute resources for climate modeling": "Ֆինանսավորել ազգային ԱԲ հաշվողական ռեսուրսներ կլիմայի մոդելավորման համար",
   "Encode law, policy, preferences, design, and best practices into AI-friendly formats": "Օրենքը, քաղաքականությունը, նախընտրությունները, դիզայնը և լավագույն փորձը վերածել ԱԲ-ի համար հարմար ձևաչափերի",
-  "Governments should regulate AI hyperscalers": "Կառավարությունները պետք է կարգավորեն ԱԲ հիպերսքեյլերներին",
+  "Oversee AI hyperscalers": "Վերահսկել ԱԲ հիպերսքեյլերները",
   "Ban the use of AI unless it is in certain professional settings": "Արգելել ԱԲ-ի օգտագործումը, բացառությամբ որոշ մասնագիտական միջավայրերի",
   "Limit the number of AI interactions a person can have in one day": "Սահմանափակել մեկ օրում անձի ԱԲ-ի հետ փոխազդեցությունների քանակը",
   "Extend the warning period for layoffs citing AI": "Երկարացնել ԱԲ-ով պատճառաբանված կրճատումների նախազգուշացման ժամկետը",
@@ -114,7 +114,6 @@
   "CA state government should allow the use of AI in certain parts of CDCR jobs": "Կալիֆոռնիայի նահանգային կառավարությունը պետք է թույլ տա ԱԲ-ի օգտագործումը CDCR-ի աշխատանքների որոշ մասերում",
   "California should require high-risk AI labs to use stronger containment, tiered access controls, real-time monitoring, human approval gates, independent audits, shutdown procedures, and near-miss reporting": "Կալիֆոռնիան պետք է պահանջի բարձր ռիսկի ԱԲ լաբորատորիաներից կիրառել ավելի ուժեղ զսպում, աստիճանային մուտքի վերահսկում, իրական ժամանակի մոնիթորինգ, մարդկային հաստատման փուլեր, անկախ աուդիտներ, անջատման ընթացակարգեր և վթարին մոտ դեպքերի հաշվետվություն",
   "Require companies to provide paid training": "Պահանջել ընկերություններից տրամադրել վճարովի ուսուցում",
-  "Not intervene to prevent AI from negatively impacting the economy": "Չմիջամտել՝ կանխելու ԱԲ-ի բացասական ազդեցությունը տնտեսության վրա",
   "Create career pathways for Latino workers": "Ստեղծել կարիերայի ուղիներ լատինաամերիկացի աշխատողների համար",
   "Restrict the proportion of jobs related to AI training": "Սահմանափակել ԱԲ-ի ուսուցմանն առնչվող աշխատատեղերի մասնաբաժինը",
   "Help laid off workers with food aid (CalFresh)": "Օգնել կրճատված աշխատողներին սննդային օգնությամբ (CalFresh)",
@@ -192,5 +191,6 @@
   "Use AI to make money more accessible to people": "Օգտագործել ԱԲ-ն՝ ֆինանսներն առավել հասանելի դարձնելու համար",
   "Shut down AI data centers that harm local residents": "Փակել տեղի բնակիչներին վնասող ԱԲ տվյալների կենտրոնները",
   "Deregulate small businesses to allow individuals to start companies that manage AI agents": "Թեթևացնել փոքր բիզնեսի կարգավորումը, որպեսզի մարդիկ կարողանան ԱԲ գործակալներ կառավարող ընկերություններ հիմնել",
-  "Prohibit AI involvement in voting": "Արգելել ԱԲ-ի ներգրավումը քվեարկությունում"
+  "Prohibit AI involvement in voting": "Արգելել ԱԲ-ի ներգրավումը քվեարկությունում",
+  "Require AI companies to invest in the state and its residents": "Պահանջել ԱԲ ընկերություններից ներդրումներ կատարել նահանգում և նրա բնակիչների համար"
 }

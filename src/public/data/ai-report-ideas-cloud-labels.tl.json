@@ -100,7 +100,7 @@
   "Support AI companies to stay in CA": "Suportahan ang mga kumpanya ng AI na manatili sa CA",
   "Fund national AI compute resources for climate modeling": "Pondohan ang pambansang AI compute para sa pagmomodelo ng klima",
   "Encode law, policy, preferences, design, and best practices into AI-friendly formats": "Isalin ang batas, patakaran, kagustuhan, disenyo, at pinakamahusay na kasanayan sa mga format na angkop sa AI",
-  "Governments should regulate AI hyperscalers": "I-regulate ng mga gobyerno ang mga AI hyperscaler",
+  "Oversee AI hyperscalers": "Bantayan ang mga AI hyperscaler",
   "Ban the use of AI unless it is in certain professional settings": "Ipagbawal ang paggamit ng AI maliban sa ilang propesyonal na larangan",
   "Limit the number of AI interactions a person can have in one day": "Limitahan ang bilang ng paggamit ng AI ng isang tao sa isang araw",
   "Extend the warning period for layoffs citing AI": "Pahabain ang panahon ng abiso para sa mga tanggalang dahil sa AI",
@@ -114,7 +114,6 @@
   "CA state government should allow the use of AI in certain parts of CDCR jobs": "Payagan ng gobyerno ng estado ng CA ang paggamit ng AI sa ilang bahagi ng mga trabaho sa CDCR",
   "California should require high-risk AI labs to use stronger containment, tiered access controls, real-time monitoring, human approval gates, independent audits, shutdown procedures, and near-miss reporting": "Atasan ng California ang mga high-risk na AI lab na gumamit ng mas mahigpit na containment, antas-antas na kontrol sa access, real-time na pagbabantay, pag-apruba ng tao, independiyenteng audit, mga pamamaraan sa pag-shutdown, at pag-uulat ng mga near-miss",
   "Require companies to provide paid training": "Atasan ang mga kumpanya na magbigay ng bayad na pagsasanay",
-  "Not intervene to prevent AI from negatively impacting the economy": "Huwag makialam upang pigilan ang negatibong epekto ng AI sa ekonomiya",
   "Create career pathways for Latino workers": "Lumikha ng mga landas sa karera para sa mga manggagawang Latino",
   "Restrict the proportion of jobs related to AI training": "Limitahan ang bahagi ng mga trabahong may kaugnayan sa pagsasanay ng AI",
   "Help laid off workers with food aid (CalFresh)": "Tulungan ang mga natanggal na manggagawa sa pamamagitan ng tulong sa pagkain (CalFresh)",
@@ -192,5 +191,6 @@
   "Use AI to make money more accessible to people": "Gamitin ang AI para gawing mas abot-kaya ang pera sa mga tao",
   "Shut down AI data centers that harm local residents": "Ipasara ang mga AI data center na nakapipinsala sa mga residente",
   "Deregulate small businesses to allow individuals to start companies that manage AI agents": "Luwagan ang regulasyon sa maliliit na negosyo para makapagtayo ng kumpanyang namamahala ng mga AI agent",
-  "Prohibit AI involvement in voting": "Ipagbawal ang pakikialam ng AI sa pagboto"
+  "Prohibit AI involvement in voting": "Ipagbawal ang pakikialam ng AI sa pagboto",
+  "Require AI companies to invest in the state and its residents": "Atasan ang mga kumpanya ng AI na mamuhunan sa estado at sa mga residente nito"
 }
