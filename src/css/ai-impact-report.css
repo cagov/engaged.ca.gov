@@ -2623,3 +2623,20 @@ section#balancing-groups.methods-light {
     margin-top: 1.25rem;
   }
 }
+
+/* ---- Anchor landing (9/29) ----
+   Jump links should put the section title just under the sticky header.
+   The site-wide scroll-padding (8.5rem) suits the desktop header only, and
+   the section's own top padding then pushed the title further down. This
+   stylesheet is loaded by the report pages alone, so the offsets here are
+   the sticky header's visible height (140px desktop, 60px phones) less the
+   section padding, plus a little breathing room. */
+html {
+  scroll-padding-top: calc(140px - 3rem + 8px);
+}
+
+@media (max-width: 991px) {
+  html {
+    scroll-padding-top: calc(60px - 2rem + 8px);
+  }
+}
