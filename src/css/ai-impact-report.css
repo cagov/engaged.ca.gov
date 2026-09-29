@@ -1084,6 +1084,10 @@ section#ai-report-hero {
   justify-content: center;
   width: 36px;
   height: 36px;
+  /* Never squeezed by the step bars beside it: on phones the flex row was
+     shrinking the button to 24px wide, so the hover was an oval (9/29). The
+     bars give up the room instead. */
+  flex: 0 0 36px;
   border-radius: 50%;
   color: #111;
   cursor: pointer;
