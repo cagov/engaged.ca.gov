@@ -1418,6 +1418,13 @@ section#how-we-used-ai.style-body-text strong,
   color: var(--report-link);
   background: #fff;
   cursor: default;
+  /* When the labels are too long for one row (Armenian, Tagalog in the
+     side column) the options wrap; each then fills its own row so the
+     control still reads as stacked buttons, not a half-empty box (9/29).
+     While they fit, the shrink-wrapped box leaves nothing to grow into. */
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  text-align: center;
 
   &[aria-pressed="true"] {
     background: var(--report-navy);
