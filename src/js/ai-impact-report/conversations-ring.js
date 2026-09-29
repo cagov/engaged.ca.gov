@@ -47,7 +47,10 @@ function formatDate(iso, lang) {
   const [y, m, d] = iso.split("-").map(Number);
   const date = new Date(Date.UTC(y, m - 1, d));
   try {
-    return date.toLocaleDateString(lang || "en-US", {
+    // Gregorian month names with Western digits in every language (9/29):
+    // the report's statistics use Western digits throughout, and the
+    // Farsi page would otherwise fall back to the Persian calendar.
+    return date.toLocaleDateString(`${lang || "en-US"}-u-ca-gregory-nu-latn`, {
       month: "long",
       day: "numeric",
       timeZone: "UTC",
