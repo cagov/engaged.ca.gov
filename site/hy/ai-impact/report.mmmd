@@ -140,6 +140,8 @@ select_label: "Ցույց տալ, թե ինչ ասացին մարդիկ այս �
 translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
 quote_open: "“"
 quote_close: "”"
+translator_note_translated: "translated_note is a caption shown under each set of quotes, saying they were translated from English. Leave it empty on the English page."
+translated_note: "Թարգմանված է անգլերեն բնագրից"
 ----
 ----
 id: top_theme_1

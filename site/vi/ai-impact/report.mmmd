@@ -140,6 +140,8 @@ select_label: "Hiện những gì mọi người đã nói về: {title}"
 translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
 quote_open: "“"
 quote_close: "”"
+translator_note_translated: "translated_note is a caption shown under each set of quotes, saying they were translated from English. Leave it empty on the English page."
+translated_note: "Dịch từ bản gốc tiếng Anh"
 ----
 ----
 id: top_theme_1

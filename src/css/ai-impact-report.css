@@ -896,6 +896,15 @@ section#ai-report-hero {
   margin: 0 0 0.75rem;
 }
 
+/* Non-English pages: one caption under each idea's quotes saying they were
+   translated from English (9/29). */
+.style-body-text .conversation-quotes-translated {
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--report-body);
+}
+
 /* Same grey as the panel's hairline, and painted beneath the cards and the
    hairline (negative z-index inside the layout's own stacking context) so
    its ends can run into both without a visible seam (9/24). */
