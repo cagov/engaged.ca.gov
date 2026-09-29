@@ -1029,11 +1029,6 @@ section#ai-report-hero {
     background: var(--report-orange);
     transform-origin: left center;
     transform: scaleX(var(--progress, 0));
-
-    /* Farsi: the bar fills from the right, the way the page reads. */
-    [dir="rtl"] & {
-      transform-origin: right center;
-    }
   }
 
   &[aria-pressed="true"] {
@@ -1084,6 +1079,14 @@ section#ai-report-hero {
       min-width: 0;
     }
   }
+
+  /* Farsi: the step controls run left to right like a media player's
+     progress bar, which is what readers expect from video sites (9/29).
+     Prev stays on the left, next on the right, and the markers fill from
+     the left. Only icons live here, so no text is affected. */
+  [dir="rtl"] & {
+    direction: ltr;
+  }
 }
 
 .participants-stepper button.funnel-arrow {
@@ -1108,11 +1111,6 @@ section#ai-report-hero {
   & svg {
     width: 24px;
     height: 24px;
-  }
-
-  /* Right-to-left pages: "previous" sits on the right and must point right. */
-  [dir="rtl"] & svg {
-    transform: scaleX(-1);
   }
 
   &:hover {
