@@ -169,6 +169,7 @@ export async function initIdeasCloud(root) {
       padding: (d) => WL.paddingFor(d.fontSize),
       weight: 400,
       spiral: keep > preset.keep ? "rectangular" : "archimedean",
+      centerY: true,
     };
 
     // Largest uniform font multiplier (stepping down 4%) at which every label

@@ -131,11 +131,20 @@ export function createLayoutEngine({ rand, measureCtx }) {
   // returns. Mutates items in place (x, y relative to the field centre).
   function runCloudLayoutSync(
     items,
-    { width, height, padding, weight, keepSprites, spiral = "archimedean" },
+    {
+      width,
+      height,
+      padding,
+      weight,
+      keepSprites,
+      spiral = "archimedean",
+      centerY = false,
+    },
   ) {
     let placed = null;
     cloud()
       .spiral(spiral)
+      .centerY(centerY)
       .keepSprites(!!keepSprites)
       .size([width, height])
       .words(items)

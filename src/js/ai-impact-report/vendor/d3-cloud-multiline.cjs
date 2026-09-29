@@ -36,6 +36,7 @@ module.exports = function() {
       rotate = () => (~~(random() * 6) - 3) * 30,
       cloud = {},
       keepSprites = false,
+      centerY = false,
       canvas = cloudCanvas;
 
   cloud.canvas = function(_) {
@@ -92,6 +93,7 @@ module.exports = function() {
         }
       }
       if (i >= n) {
+        if (centerY) centerTags(board, tags);
         cloud.stop();
         event.call("end", cloud, tags, bounds);
       }
@@ -117,6 +119,39 @@ module.exports = function() {
   cloud.keepSprites = function(_) {
     return arguments.length ? (keepSprites = !!_, cloud) : keepSprites;
   };
+
+  // PATCH 10 (not upstream d3-cloud): each word stops at the first free spot
+  // on its spiral, so it often sits flush on the word below with open space
+  // above. After placement, lift each word off the board, measure how far it
+  // can slide up and down before its mask touches another, and settle it
+  // midway. Uses the same masks and collision test as placement, so it can't
+  // create an overlap. Words with nothing above or below within 2em (field
+  // edge or open space) stay put.
+  cloud.centerY = function(_) {
+    return arguments.length ? (centerY = !!_, cloud) : centerY;
+  };
+
+  function centerTags(board, tags) {
+    var hx = size[0] >> 1, hy = size[1] >> 1;
+    for (const t of tags) { t.x += hx; t.y += hy; }
+    for (const t of tags) {
+      paintSprite(board, t, size[0], false);
+      var y = t.y, limit = Math.ceil(2 * t.size), up = -1, down = -1;
+      for (var k = 1; k <= limit; k++) {
+        t.y = y - k;
+        if (t.y + t.y0 < 0) break;
+        if (cloudCollide(t, board, size[0])) { up = k - 1; break; }
+      }
+      for (var k = 1; k <= limit; k++) {
+        t.y = y + k;
+        if (t.y + t.y1 > size[1]) break;
+        if (cloudCollide(t, board, size[0])) { down = k - 1; break; }
+      }
+      t.y = up >= 0 && down >= 0 ? y + Math.trunc((down - up) / 2) : y;
+      paintSprite(board, t, size[0], true);
+    }
+    for (const t of tags) { t.x -= hx; t.y -= hy; }
+  }
 
   function getContext(canvas) {
     const context = canvas.getContext("2d", {willReadFrequently: true});
@@ -400,6 +435,29 @@ function cloudSprite(contextAndRatio, d, data, di) {
 }
 
 // Use mask-based collision detection.
+// PATCH 10: set or clear a placed word's mask bits, computed exactly as
+// place() writes them and cloudCollide() reads them.
+function paintSprite(board, tag, sw, on) {
+  sw >>= 5;
+  var sprite = tag.sprite,
+      w = tag.width >> 5,
+      lx = tag.x - (w << 4),
+      sx = lx & 0x7f,
+      msx = 32 - sx,
+      h = tag.y1 - tag.y0,
+      x = (tag.y + tag.y0) * sw + (lx >> 5),
+      last, v;
+  for (var j = 0; j < h; j++) {
+    last = 0;
+    for (var i = 0; i <= w; i++) {
+      v = (last << msx) | (i < w ? (last = sprite[j * w + i]) >>> sx : 0);
+      if (on) board[x + i] |= v;
+      else board[x + i] &= ~v;
+    }
+    x += sw;
+  }
+}
+
 function cloudCollide(tag, board, sw) {
   sw >>= 5;
   var sprite = tag.sprite,
