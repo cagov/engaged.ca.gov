@@ -385,15 +385,16 @@ href: /ai-impact/report-details/#ranking-policy-ideas
 
 ----
 id: region_legend
+translator_note: "Region names are proper nouns and stay in English on every chart (region_1 to region_8). Translate only region_9, the not-stated / out-of-state entry."
 nbr_regions: 9
-region_1: Los Ángeles
-region_2: Área de la Bahía
-region_3: Sur de California
-region_4: Valle de Sacramento / Estribaciones de la Sierra
-region_5: Valle Central
-region_6: Extremo norte / Costa norte
-region_7: Costa Central
-region_8: Región de la Sierra
+region_1: Los Angeles
+region_2: Bay Area
+region_3: Southern California
+region_4: Sacramento Valley / Sierra Foothills
+region_5: Central Valley
+region_6: Far North / North Coast
+region_7: Central Coast
+region_8: Sierra Region
 region_9: No lo dijo / fuera del estado
 ----
 

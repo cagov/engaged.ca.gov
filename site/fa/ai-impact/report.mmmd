@@ -384,15 +384,16 @@ href: /ai-impact/report-details/#ranking-policy-ideas
 
 ----
 id: region_legend
+translator_note: "Region names are proper nouns and stay in English on every chart (region_1 to region_8). Translate only region_9, the not-stated / out-of-state entry."
 nbr_regions: 9
-region_1: لس‌آنجلس
-region_2: منطقه خلیج
-region_3: جنوب کالیفرنیا
-region_4: دره ساکرامنتو / دامنه‌های سیرا
-region_5: دره مرکزی
-region_6: شمال دور / ساحل شمالی
-region_7: ساحل مرکزی
-region_8: منطقه سیرا
+region_1: Los Angeles
+region_2: Bay Area
+region_3: Southern California
+region_4: Sacramento Valley / Sierra Foothills
+region_5: Central Valley
+region_6: Far North / North Coast
+region_7: Central Coast
+region_8: Sierra Region
 region_9: نگفتند / خارج از ایالت
 ----
 

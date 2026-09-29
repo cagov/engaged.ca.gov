@@ -57,12 +57,12 @@ function el(name, attrs, text) {
   return node;
 }
 
-// Numbers follow the page's language (decimal comma in Spanish, Persian
-// digits in Farsi, ...). Falls back to plain digits on an unknown locale.
-const LANG = document.documentElement.lang || "en";
+// Numbers use Western Arabic digits and a decimal point in every language
+// (9/29): the chart's figures read the same on the Farsi and Chinese pages
+// as on the English one, matching the rest of the report's statistics.
 function fmtNum(v, digits) {
   try {
-    return Number(v).toLocaleString(LANG, {
+    return Number(v).toLocaleString("en-US", {
       minimumFractionDigits: digits,
       maximumFractionDigits: digits,
     });

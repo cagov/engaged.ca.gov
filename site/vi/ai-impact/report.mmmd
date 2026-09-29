@@ -385,15 +385,16 @@ href: /ai-impact/report-details/#ranking-policy-ideas
 
 ----
 id: region_legend
+translator_note: "Region names are proper nouns and stay in English on every chart (region_1 to region_8). Translate only region_9, the not-stated / out-of-state entry."
 nbr_regions: 9
 region_1: Los Angeles
-region_2: Vùng Vịnh
-region_3: Nam California
-region_4: Thung lũng Sacramento / Chân núi Sierra
-region_5: Thung lũng Trung tâm
-region_6: Cực Bắc / Bờ biển Bắc
-region_7: Bờ biển Trung tâm
-region_8: Vùng Sierra
+region_2: Bay Area
+region_3: Southern California
+region_4: Sacramento Valley / Sierra Foothills
+region_5: Central Valley
+region_6: Far North / North Coast
+region_7: Central Coast
+region_8: Sierra Region
 region_9: Không nói / ngoài tiểu bang
 ----
 

@@ -120,7 +120,7 @@ source_ai: ""
 
 ----
 id: category_labels
-translator_note: "Category names as they appear in the demographics chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+translator_note: "Category names as they appear in the demographics chart. Translate only the label_N lines; the key_N lines are data values and must stay in English. Region names (label_1 to label_8) are proper nouns and stay in English too."
 nbr_labels: 36
 key_1: "Bay Area"
 label_1: "Bay Area"

@@ -385,15 +385,16 @@ href: /ai-impact/report-details/#ranking-policy-ideas
 
 ----
 id: region_legend
+translator_note: "Region names are proper nouns and stay in English on every chart (region_1 to region_8). Translate only region_9, the not-stated / out-of-state entry."
 nbr_regions: 9
-region_1: 로스앤젤레스
-region_2: 베이 에어리어
-region_3: 남부 캘리포니아
-region_4: 새크라멘토 밸리 / 시에라 산기슭
-region_5: 센트럴 밸리
-region_6: 최북부 / 북부 해안
-region_7: 센트럴 코스트
-region_8: 시에라 지역
+region_1: Los Angeles
+region_2: Bay Area
+region_3: Southern California
+region_4: Sacramento Valley / Sierra Foothills
+region_5: Central Valley
+region_6: Far North / North Coast
+region_7: Central Coast
+region_8: Sierra Region
 region_9: 응답 안 함 / 주 외 거주
 ----
 
