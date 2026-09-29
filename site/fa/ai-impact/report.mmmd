@@ -91,7 +91,8 @@ id: what_we_heard
 نظرسنجی ما از مردم پرسید که می‌خواهند دولت درباره تأثیر هوش مصنوعی چه کند. ما طیف گسترده‌ای از ایده‌های سیاستی دریافت کردیم.
 ----
 id: word_cloud
-translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+translator_note: "The phrases in the word cloud come from a shared data file (src). labels_src points at this language's translations of those phrases, a JSON map of English phrase to translated phrase; edit that file to change the wording. Leave labels_src out on the English page."
+labels_src: /public/data/ai-report-ideas-cloud-labels.fa.json
 chart_alt: "ابر واژگان ایده‌های سیاستی مطرح‌شده در نظرسنجی، با اندازه‌ای متناسب با تعداد افرادی که هر ایده را مطرح کردند."
 ----
 

@@ -87,16 +87,35 @@ export function createLayoutEngine({ rand, measureCtx }) {
     }
     return w;
   }
-  /** Wraps onto at most two lines at the space that best balances them. */
+  // Chinese labels have no spaces to break at, so a long one splits between
+  // characters instead. A break never lands right after an opening bracket
+  // or right before closing punctuation (9/29).
+  const NO_BREAK_BEFORE = /^[，、。：；！？）」』]/;
+  const NO_BREAK_AFTER = /[（「『]$/;
+  /** Wraps onto at most two lines at the break that best balances them. */
   function wrapTwoLines(text, px, weight, maxW) {
     if (textWidth(text, px, weight) <= maxW) return [text];
     const words = text.split(" ");
-    if (words.length === 1) return [text];
+    const candidates = [];
+    if (words.length > 1) {
+      for (let i = 1; i < words.length; i++) {
+        candidates.push([
+          words.slice(0, i).join(" "),
+          words.slice(i).join(" "),
+        ]);
+      }
+    } else if (!/[A-Za-z]/.test(text) && text.length >= 4) {
+      const chars = [...text];
+      for (let i = 2; i <= chars.length - 2; i++) {
+        const l1 = chars.slice(0, i).join("");
+        const l2 = chars.slice(i).join("");
+        if (NO_BREAK_AFTER.test(l1) || NO_BREAK_BEFORE.test(l2)) continue;
+        candidates.push([l1, l2]);
+      }
+    }
     let best = [text];
     let bestMax = Number.POSITIVE_INFINITY;
-    for (let i = 1; i < words.length; i++) {
-      const l1 = words.slice(0, i).join(" ");
-      const l2 = words.slice(i).join(" ");
+    for (const [l1, l2] of candidates) {
       const w = Math.max(textWidth(l1, px, weight), textWidth(l2, px, weight));
       if (w < bestMax) {
         bestMax = w;
@@ -481,11 +500,17 @@ export function createLayoutEngine({ rand, measureCtx }) {
     ctx.fillStyle = color;
     ctx.font = fontStr(fontSize * k, weight);
     ctx.textBaseline = "alphabetic";
-    ctx.textAlign = "left";
     const maxLineWidth = Math.max(
       ...lines.map((l) => ctx.measureText(l).width),
     );
-    const anchorX = x - Math.floor(maxLineWidth / 2);
+    // Lines of a wrapped label share a start edge: left on LTR pages, right
+    // on RTL ones (Farsi, 9/29). The block stays centred on x either way,
+    // which is what the collision mask assumed.
+    const rtl = document.documentElement.dir === "rtl";
+    ctx.textAlign = rtl ? "right" : "left";
+    const anchorX = rtl
+      ? x + Math.floor(maxLineWidth / 2)
+      : x - Math.floor(maxLineWidth / 2);
     const lh = fontSize * k * leadingFor(fontSize);
     const startY = (-(lines.length - 1) * lh) / 2;
     lines.forEach((line, i) => {

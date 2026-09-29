@@ -98,7 +98,8 @@
        Breaks out of the text column to the container width. Drawn by ideas-cloud.js. #}
     {% set wc = modules.word_cloud %}
     <div id="ideas-cloud" class="ideas-cloud"
-         data-ideas-cloud data-src="{{ (wc.src | default("/public/data/ai-report-ideas-cloud.json")) | assetVersion }}">
+         data-ideas-cloud data-src="{{ (wc.src | default("/public/data/ai-report-ideas-cloud.json")) | assetVersion }}"{% if wc.labels_src %}
+         data-labels-src="{{ wc.labels_src | assetVersion }}"{% endif %}>
       <canvas data-ideas-canvas role="img" aria-label="{{ wc.chart_alt }}"></canvas>
     </div>
 

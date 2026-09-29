@@ -92,7 +92,8 @@ id: what_we_heard
 설문조사에서는 AI의 영향에 대해 정부가 무엇을 하기를 바라는지 물었습니다. 다양한 정책 아이디어가 나왔습니다.
 ----
 id: word_cloud
-translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+translator_note: "The phrases in the word cloud come from a shared data file (src). labels_src points at this language's translations of those phrases, a JSON map of English phrase to translated phrase; edit that file to change the wording. Leave labels_src out on the English page."
+labels_src: /public/data/ai-report-ideas-cloud-labels.ko.json
 chart_alt: "설문조사에서 제기된 정책 아이디어의 워드 클라우드. 각 아이디어를 제기한 사람 수에 따라 크기가 다릅니다."
 ----
 

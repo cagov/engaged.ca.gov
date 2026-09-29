@@ -92,7 +92,8 @@ id: what_we_heard
 Մեր հարցումը մարդկանց հարցնում էր, թե ինչ են ուզում, որ կառավարությունն անի AI-ի ազդեցության առնչությամբ։ Մենք ստացանք քաղաքականության գաղափարների լայն շրջանակ։
 ----
 id: word_cloud
-translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+translator_note: "The phrases in the word cloud come from a shared data file (src). labels_src points at this language's translations of those phrases, a JSON map of English phrase to translated phrase; edit that file to change the wording. Leave labels_src out on the English page."
+labels_src: /public/data/ai-report-ideas-cloud-labels.hy.json
 chart_alt: "Հարցման մեջ հնչած քաղաքականության գաղափարների բառային ամպ, որտեղ չափը կախված է, թե քանի մարդ է նշել յուրաքանչյուր գաղափարը։"
 ----
 

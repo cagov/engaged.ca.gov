@@ -92,7 +92,8 @@ id: what_we_heard
 我们的问卷调查询问了人们希望政府就 AI 的影响采取哪些行动。我们收到了各种各样的政策想法。
 ----
 id: word_cloud
-translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+translator_note: "The phrases in the word cloud come from a shared data file (src). labels_src points at this language's translations of those phrases, a JSON map of English phrase to translated phrase; edit that file to change the wording. Leave labels_src out on the English page."
+labels_src: /public/data/ai-report-ideas-cloud-labels.zh-hans.json
 chart_alt: "问卷调查中出现的政策想法词云，字号大小取决于提及每个想法的人数。"
 ----
 

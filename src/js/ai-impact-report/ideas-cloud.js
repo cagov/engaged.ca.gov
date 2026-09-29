@@ -8,6 +8,8 @@
  *
  * Root contract (see mmmd-ai-impact-report.njk):
  *   [data-ideas-cloud][data-src]     root, JSON URL
+ *   [data-labels-src]                optional JSON map of English label ->
+ *                                    translated label (non-English pages, 9/29)
  *   canvas[data-ideas-canvas]        the drawing surface
  *
  * Layout runs in the browser at load (same font measures and draws, so no
@@ -67,6 +69,19 @@ export async function initIdeasCloud(root) {
     console.error("ideas cloud: could not load data", err);
     return;
   }
+  // Translated labels are a separate per-locale map so the counts stay in
+  // one file. A missing or broken map just leaves the English phrases.
+  let labels = {};
+  if (root.dataset.labelsSrc) {
+    try {
+      const res = await fetch(root.dataset.labelsSrc);
+      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+      labels = await res.json();
+    } catch (err) {
+      console.warn("ideas cloud: could not load translated labels", err);
+    }
+  }
+  const labelOf = (c) => labels[c.label] || c.label;
   await fontsReady();
 
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -122,12 +137,13 @@ export async function initIdeasCloud(root) {
     const build = (scale) =>
       kept.map((c, i) => {
         const fontSize = baseSize(c.count) * scale;
-        const lines = WL.wrapTwoLines(c.label, fontSize, 400, fontSize * 9.5);
+        const label = labelOf(c);
+        const lines = WL.wrapTwoLines(label, fontSize, 400, fontSize * 9.5);
         const w =
           Math.max(...lines.map((l) => WL.textWidth(l, fontSize, 400))) + 6;
         const h = lines.length * fontSize * WL.leadingFor(fontSize) + 4;
         return {
-          label: c.label,
+          label,
           subtheme: colorOf[i],
           count: c.count,
           fontSize,
@@ -163,6 +179,9 @@ export async function initIdeasCloud(root) {
     }
     if (!placed) placed = WL.layoutWithD3Cloud(build(scale), opts);
     words = placed;
+    // Diagnostics for layout checks: how many of the kept ideas found room.
+    root.dataset.placed = String(words.length);
+    root.dataset.kept = String(kept.length);
 
     // d3-cloud positions are relative to the layout field's centre, which is
     // also the frame's centre, so the frame simply crops the outer words.

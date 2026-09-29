@@ -92,7 +92,8 @@ id: what_we_heard
 Tinanong ng aming survey ang mga tao kung ano ang gusto nilang gawin ng gobyerno tungkol sa epekto ng AI. Nakatanggap kami ng malawak na hanay ng mga ideya para sa patakaran.
 ----
 id: word_cloud
-translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+translator_note: "The phrases in the word cloud come from a shared data file (src). labels_src points at this language's translations of those phrases, a JSON map of English phrase to translated phrase; edit that file to change the wording. Leave labels_src out on the English page."
+labels_src: /public/data/ai-report-ideas-cloud-labels.tl.json
 chart_alt: "Word cloud ng mga ideya sa patakaran na lumitaw sa survey, na ang laki ay batay sa kung ilang tao ang nagbanggit ng bawat isa."
 ----
 

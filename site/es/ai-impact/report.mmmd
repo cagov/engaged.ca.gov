@@ -92,7 +92,8 @@ id: what_we_heard
 Nuestra encuesta preguntó a las personas qué les gustaría que hiciera el gobierno frente al impacto de la IA. Recibimos una amplia variedad de ideas de política pública.
 ----
 id: word_cloud
-translator_note: "The phrases in the word cloud come from a data file. To show translated phrases, add a line `src: /public/data/<translated-file>.json` here once the data team has produced one; otherwise the English phrases are shown."
+translator_note: "The phrases in the word cloud come from a shared data file (src). labels_src points at this language's translations of those phrases, a JSON map of English phrase to translated phrase; edit that file to change the wording. Leave labels_src out on the English page."
+labels_src: /public/data/ai-report-ideas-cloud-labels.es.json
 chart_alt: "Nube de palabras con las ideas de política planteadas en la encuesta, con un tamaño proporcional a cuántas personas plantearon cada una."
 ----
 
