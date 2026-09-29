@@ -94,6 +94,7 @@ id: what_we_heard
 id: word_cloud
 translator_note: "The phrases in the word cloud come from a shared data file (src). labels_src points at this language's translations of those phrases, a JSON map of English phrase to translated phrase; edit that file to change the wording. Leave labels_src out on the English page."
 labels_src: /public/data/ai-report-ideas-cloud-labels.zh-hant.json
+keep_wide: 229
 chart_alt: "問卷調查中出現的政策想法文字雲，字體大小取決於提及每個想法的人數。"
 ----
 
