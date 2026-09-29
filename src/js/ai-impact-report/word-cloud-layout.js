@@ -145,6 +145,7 @@ export function createLayoutEngine({ rand, measureCtx }) {
     cloud()
       .spiral(spiral)
       .centerY(centerY)
+      .rtl(document.documentElement.dir === "rtl")
       .keepSprites(!!keepSprites)
       .size([width, height])
       .words(items)
@@ -501,7 +502,8 @@ export function createLayoutEngine({ rand, measureCtx }) {
   // ---- drawing ------------------------------------------------------------
   /** Renders at the exact anchor the fork rasterized the collision mask at:
    * alphabetic baseline, lineHeight = fontSize * leadingFor(fontSize), lines
-   * left-aligned to x - floor(maxLineWidth / 2). Any deviation draws ink the
+   * left-aligned to x - floor(maxLineWidth / 2) (right-aligned to
+   * x + floor(maxLineWidth / 2) on RTL pages). Any deviation draws ink the
    * mask never covered and can produce overlaps. */
   function drawWord(ctx, lines, x, y, fontSize, weight, color, alpha, scale) {
     if (alpha <= 0.008) return;
@@ -517,6 +519,7 @@ export function createLayoutEngine({ rand, measureCtx }) {
     // on RTL ones (Farsi, 9/29). The block stays centred on x either way,
     // which is what the collision mask assumed.
     const rtl = document.documentElement.dir === "rtl";
+    ctx.direction = rtl ? "rtl" : "ltr";
     ctx.textAlign = rtl ? "right" : "left";
     const anchorX = rtl
       ? x + Math.floor(maxLineWidth / 2)

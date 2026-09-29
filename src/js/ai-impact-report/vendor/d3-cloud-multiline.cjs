@@ -37,6 +37,7 @@ module.exports = function() {
       cloud = {},
       keepSprites = false,
       centerY = false,
+      rtl = false,
       canvas = cloudCanvas;
 
   cloud.canvas = function(_) {
@@ -81,7 +82,7 @@ module.exports = function() {
         // d3-cloud's default random point in the central 50% box.
         if (d.seedX != null) { d.x = d.seedX | 0; d.y = d.seedY | 0; }
         else { d.x = (size[0] * (random() + .5)) >> 1; d.y = (size[1] * (random() + .5)) >> 1; }
-        cloudSprite(contextAndRatio, d, data, i);
+        cloudSprite(contextAndRatio, d, data, i, rtl);
         if (d.hasText && place(board, d, bounds)) {
           tags.push(d);
           event.call("word", cloud, d);
@@ -129,6 +130,15 @@ module.exports = function() {
   // edge or open space) stay put.
   cloud.centerY = function(_) {
     return arguments.length ? (centerY = !!_, cloud) : centerY;
+  };
+
+  // PATCH 11 (not upstream d3-cloud): right-to-left pages draw each line
+  // right-aligned on an RTL canvas. The sprite canvas is detached, so it
+  // defaulted to LTR and left-aligned lines: shorter lines of a wrapped label,
+  // and the bidi ordering of mixed Farsi/Latin text, were masked somewhere
+  // other than where they were drawn. Rasterize the mask the same way.
+  cloud.rtl = function(_) {
+    return arguments.length ? (rtl = !!_, cloud) : rtl;
   };
 
   function centerTags(board, tags) {
@@ -306,7 +316,7 @@ function cloudPadding() {
 
 // Fetches a monochrome sprite bitmap for the specified text.
 // Load in batches for speed.
-function cloudSprite(contextAndRatio, d, data, di) {
+function cloudSprite(contextAndRatio, d, data, di, rtl) {
   if (d.sprite) return;
   var c = contextAndRatio.context,
       ratio = contextAndRatio.ratio;
@@ -335,7 +345,9 @@ function cloudSprite(contextAndRatio, d, data, di) {
       var lw = c.measureText(lines[li]).width;
       if (lw > maxLineWidth) maxLineWidth = lw;
     }
-    const anchor = -Math.floor(maxLineWidth / 2);
+    c.direction = rtl ? "rtl" : "ltr"; // PATCH 11
+    c.textAlign = rtl ? "right" : "left";
+    const anchor = rtl ? Math.floor(maxLineWidth / 2) : -Math.floor(maxLineWidth / 2);
     let w = (maxLineWidth + 1 + 2 * (d.padding || 0) + 4) * ratio; // PATCH 3: room for the padding stroke and right-side glyph overhang
     // Internal (pre-ratio) line height, matching this file's own
     // font-size-to-height convention (d.size << 1 for one line) scaled
