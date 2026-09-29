@@ -900,8 +900,6 @@ section#ai-report-hero {
    translated from English (9/29). */
 .style-body-text .conversation-quotes-translated {
   margin: 1rem 0 0;
-  /* Lines up with the quote text, past the balloon column and its gap. */
-  margin-inline-start: calc(34px + 0.75rem);
   font-size: 0.875rem;
   font-style: italic;
   color: var(--report-body);
