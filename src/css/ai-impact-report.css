@@ -1145,10 +1145,6 @@ section#ai-report-hero {
       gap: 0.6rem;
       max-width: none;
     }
-
-    & .chart-legend-item {
-      font-size: 1rem;
-    }
   }
 
   & .participant-legend {
@@ -2662,6 +2658,13 @@ html {
      ends soon after the link instead of a full 2rem below it. */
   .funnel-aside.chart-controls .participant-legend {
     margin-top: 1rem;
+  }
+
+  /* Region and Participant / Facilitator entries drop to 1rem, the size of
+     the stat labels ("conversations") above the funnel. Needs the extra
+     class to outrank the base li.chart-legend-item rule (9/29). */
+  .style-body-text .funnel-aside.chart-controls .chart-legend-item {
+    font-size: 1rem;
   }
 
   .style-body-text .funnel-aside-link {
