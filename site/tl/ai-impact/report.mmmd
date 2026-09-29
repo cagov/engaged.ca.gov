@@ -49,7 +49,7 @@ translator_note: "aria_label is read by screen readers. The anchor values are pa
 aria_label: Sa pahinang ito
 label: "Pumunta sa:"
 nbr_items: 5
-item_1_label: Isang pampublikong forum tungkol sa AI
+item_1_label: Pampublikong forum sa AI
 item_1_anchor: public-forum
 item_2_label: Mga ideyang narinig namin
 item_2_anchor: what-we-heard
@@ -57,7 +57,7 @@ item_3_label: Sino ang lumahok
 item_3_anchor: who-participated
 item_4_label: Ano ang susunod
 item_4_anchor: what-happens-next
-item_5_label: Paano namin ginawa ang gawaing ito
+item_5_label: Paano namin ito ginawa
 item_5_href: /ai-impact/report-details/
 ----
 

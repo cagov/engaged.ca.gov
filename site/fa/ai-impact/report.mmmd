@@ -48,7 +48,7 @@ translator_note: "aria_label is read by screen readers. The anchor values are pa
 aria_label: در این صفحه
 label: "رفتن به:"
 nbr_items: 5
-item_1_label: یک گفتگوی عمومی درباره هوش مصنوعی
+item_1_label: گفتگوی عمومی درباره هوش مصنوعی
 item_1_anchor: public-forum
 item_2_label: ایده‌هایی که شنیدیم
 item_2_anchor: what-we-heard
@@ -56,7 +56,7 @@ item_3_label: چه کسانی شرکت کردند
 item_3_anchor: who-participated
 item_4_label: بعد چه می‌شود
 item_4_anchor: what-happens-next
-item_5_label: چگونه این کار را انجام دادیم
+item_5_label: روش کار ما
 item_5_href: /ai-impact/report-details/
 ----
 

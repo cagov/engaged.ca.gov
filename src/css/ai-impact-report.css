@@ -236,17 +236,34 @@ section#ai-report-hero {
     }
   }
 
-  /* Once the links no longer fit on one row (set by hero-jump.js) they
-     stack one per line, text indented 1rem from the label (9/29). */
-  &.is-stacked {
-    & ul {
-      flex-direction: column;
-      /* Link text sits 1rem in from the label's left edge. */
-      margin-inline-start: 0.25rem;
-    }
+  /* hero-jump.js sets is-stacked when the links no longer fit on one row.
+     Phones: they stack one per line, text indented 1rem from the label
+     (9/29). Desktop: the row simply wraps, in tighter cells so long
+     translations (Tagalog, Armenian, Farsi, Vietnamese) fit on one row
+     where they can (9/29). */
+  @media (max-width: 991px) {
+    &.is-stacked {
+      & ul {
+        flex-direction: column;
+        /* Link text sits 1rem in from the label's left edge. */
+        margin-inline-start: 0.25rem;
+      }
 
-    & a {
-      padding-block: 0.375rem;
+      & a {
+        padding-block: 0.375rem;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    &.is-stacked {
+      & li {
+        font-size: 1rem;
+      }
+
+      & a {
+        padding-inline: 0.75rem;
+      }
     }
   }
 }

@@ -52,9 +52,9 @@ translator_note: "aria_label is read by screen readers. The anchor values are pa
 aria_label: Sa pahinang ito
 label: "Pumunta sa:"
 nbr_items: 3
-item_1_label: Patas na pagbabalanse ng bawat grupo
+item_1_label: Patas na pagbabalanse ng grupo
 item_1_anchor: balancing-groups
-item_2_label: Pagraranggo ng mga ideya sa patakaran
+item_2_label: Pagraranggo ng mga ideya
 item_2_anchor: ranking-policy-ideas
 item_3_label: Paano namin ginamit ang AI
 item_3_anchor: how-we-used-ai

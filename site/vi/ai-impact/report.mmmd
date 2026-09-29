@@ -49,15 +49,15 @@ translator_note: "aria_label is read by screen readers. The anchor values are pa
 aria_label: Trên trang này
 label: "Đi tới:"
 nbr_items: 5
-item_1_label: Một diễn đàn công khai về AI
+item_1_label: Diễn đàn công khai về AI
 item_1_anchor: public-forum
-item_2_label: Những ý tưởng chúng tôi đã nghe
+item_2_label: Những ý tưởng đã nghe
 item_2_anchor: what-we-heard
 item_3_label: Ai đã tham gia
 item_3_anchor: who-participated
-item_4_label: Điều gì xảy ra tiếp theo
+item_4_label: Bước tiếp theo
 item_4_anchor: what-happens-next
-item_5_label: Chúng tôi đã thực hiện công việc này như thế nào
+item_5_label: Cách chúng tôi thực hiện
 item_5_href: /ai-impact/report-details/
 ----
 

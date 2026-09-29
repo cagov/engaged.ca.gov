@@ -52,9 +52,9 @@ translator_note: "aria_label is read by screen readers. The anchor values are pa
 aria_label: Այս էջում
 label: "Անցնել՝"
 nbr_items: 3
-item_1_label: Յուրաքանչյուր խմբի արդար հավասարակշռում
+item_1_label: Խմբերի արդար հավասարակշռում
 item_1_anchor: balancing-groups
-item_2_label: Քաղաքականության գաղափարների դասակարգում
+item_2_label: Գաղափարների դասակարգում
 item_2_anchor: ranking-policy-ideas
 item_3_label: Ինչպես օգտագործեցինք AI-ը
 item_3_anchor: how-we-used-ai

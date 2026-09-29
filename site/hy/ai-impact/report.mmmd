@@ -49,15 +49,15 @@ translator_note: "aria_label is read by screen readers. The anchor values are pa
 aria_label: Այս էջում
 label: "Անցնել՝"
 nbr_items: 5
-item_1_label: Հանրային քննարկում AI-ի մասին
+item_1_label: AI-ի հանրային քննարկում
 item_1_anchor: public-forum
-item_2_label: Գաղափարներ, որոնք լսեցինք
+item_2_label: Լսված գաղափարներ
 item_2_anchor: what-we-heard
 item_3_label: Ովքեր մասնակցեցին
 item_3_anchor: who-participated
 item_4_label: Ինչ է լինելու հետո
 item_4_anchor: what-happens-next
-item_5_label: Ինչպես կատարեցինք այս աշխատանքը
+item_5_label: Ինչպես ենք աշխատել
 item_5_href: /ai-impact/report-details/
 ----
 

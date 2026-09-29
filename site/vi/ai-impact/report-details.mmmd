@@ -52,11 +52,11 @@ translator_note: "aria_label is read by screen readers. The anchor values are pa
 aria_label: Trên trang này
 label: "Đi tới:"
 nbr_items: 3
-item_1_label: Cân bằng từng nhóm một cách công bằng
+item_1_label: Cân bằng công bằng từng nhóm
 item_1_anchor: balancing-groups
-item_2_label: Xếp hạng các ý tưởng chính sách
+item_2_label: Xếp hạng ý tưởng chính sách
 item_2_anchor: ranking-policy-ideas
-item_3_label: Chúng tôi đã sử dụng AI như thế nào
+item_3_label: Cách chúng tôi dùng AI
 item_3_anchor: how-we-used-ai
 ----
 
