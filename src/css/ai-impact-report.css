@@ -442,10 +442,6 @@ section#ai-report-hero {
   padding: 1.25rem 1.25rem 1rem 1.25rem;
   /* Box edge lines up with the body copy; the sticker spills into the margin. */
   margin: 0 0 2rem;
-
-  @media (max-width: 575px) {
-    padding-top: 3.25rem;
-  }
 }
 
 .policy-tier-icon {
@@ -469,12 +465,30 @@ section#ai-report-hero {
   height: 108px;
   top: -2rem;
   inset-inline-start: -2rem;
+}
 
-  @media (max-width: 575px) {
-    width: 77px;
-    height: 77px;
-    top: -1.4rem;
-    inset-inline-start: 0.6rem;
+/* Narrow views (9/29): the three tier boxes stack, and each sticker sits
+   centred on the box's top border (the circle's centre is the SVG's
+   centre). Physical left + translate so RTL pages centre it too. The box
+   pads its top to clear the half of the circle that hangs inside. */
+@media (max-width: 991px) {
+  .policy-tier .policy-tier-sticker {
+    width: 90px;
+    height: 90px;
+    top: -45px;
+    /* Physical sides only: a logical inset-inline-start here would map back
+       onto left in LTR and undo the centring. */
+    left: 50%;
+    right: auto;
+    translate: -50% 0;
+  }
+
+  .policy-tier {
+    padding-top: 3.75rem;
+  }
+
+  .policy-tier-header {
+    padding-inline-start: 0;
   }
 }
 
@@ -482,10 +496,6 @@ section#ai-report-hero {
   padding: 0 0 1rem;
   padding-inline-start: 4.25rem;
   border-bottom: 1px solid var(--report-rule);
-
-  @media (max-width: 575px) {
-    padding-inline-start: 0;
-  }
 }
 
 .policy-tier-title {
@@ -2668,8 +2678,10 @@ html {
     margin-bottom: 0;
   }
 
-  /* The three tier boxes and the "How to read" note that follows. */
+  /* The three tier boxes and the "How to read" note that follows. Above:
+     room for the first box's centred sticker, which rises 45px. */
   .policy-tiers {
+    margin-top: 3.5rem;
     margin-bottom: 1.5rem;
   }
 }
