@@ -194,6 +194,16 @@ export async function initDemographicsChart(root) {
   };
 
   const byId = Object.fromEntries(data.dimensions.map((d) => [d.id, d]));
+  // One axis for every dimension the dropdown offers (9/29): switching
+  // dimensions keeps the scale, so bar lengths compare across them.
+  const sharedMax = axisMax(
+    [...select.options]
+      .map((o) => byId[o.value])
+      .filter(Boolean)
+      .flatMap((d) =>
+        d.categories.flatMap((c) => [c.phase1Diff, c.phase2Diff]),
+      ),
+  );
   COLORS = PALETTES[root.dataset.theme] || PALETTES.dark;
   root.classList.add("js-enabled");
 
@@ -228,7 +238,7 @@ export async function initDemographicsChart(root) {
   function drawSvgHorizontal(dim, id) {
     const cats = dim.categories;
     const values = cats.flatMap((c) => [c.phase1Diff, c.phase2Diff]);
-    const max = axisMax(values);
+    const max = sharedMax;
     const width = Math.max(300, svgHost.clientWidth || 360);
     const font = 13;
     const lineH = 16;
@@ -489,8 +499,7 @@ export async function initDemographicsChart(root) {
 
   function drawSvg(dim, id) {
     const cats = dim.categories;
-    const values = cats.flatMap((c) => [c.phase1Diff, c.phase2Diff]);
-    const max = axisMax(values);
+    const max = sharedMax;
     const plotW = W - PAD.left - PAD.right;
     const plotH = H - PAD.top - PAD.bottom;
     const zeroY = PAD.top + plotH / 2;
