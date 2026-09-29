@@ -172,12 +172,19 @@ export async function initParticipantFunnel(root) {
     const nonAnswers = order.filter((i) => FL.isNonAnswer(categories[i].name));
     const merge = nonAnswerLabel && nonAnswers.length > 1;
     let mergedDone = false;
+    // Only the survey respondents (stage 0) include people from out of
+    // state; invitations went to Californians only. So the region legend's
+    // gray entry reads "Didn't say / out of state" on the first stage and
+    // plain "Didn't say" (legend_non_answer) after it (data team, 9/29).
+    const laterStage = stage > 0 && dimension === "region" && nonAnswerLabel;
     for (const i of order) {
       const c = categories[i];
       let text = labelFor(c.name);
       if (merge && FL.isNonAnswer(c.name)) {
         if (mergedDone) continue;
         mergedDone = true;
+        text = nonAnswerLabel;
+      } else if (laterStage && FL.isNonAnswer(c.name)) {
         text = nonAnswerLabel;
       }
       const li = document.createElement("li");
@@ -493,6 +500,8 @@ export async function initParticipantFunnel(root) {
     if (nextStage === stage && t >= 1) return;
     prevStage = stage;
     stage = nextStage;
+    // The gray region entry is worded differently on the first stage.
+    if ((prevStage === 0) !== (stage === 0)) renderLegend();
     t = reduced ? 1 : 0;
     ringReady = nextStage === LAST_STAGE && reduced;
     layout.dots.forEach((dot, i) => {
@@ -517,7 +526,10 @@ export async function initParticipantFunnel(root) {
 
   function restart() {
     clock = 0;
-    stage = 0;
+    if (stage !== 0) {
+      stage = 0;
+      renderLegend();
+    }
     prevStage = 0;
     t = 1;
     ringReady = false;
