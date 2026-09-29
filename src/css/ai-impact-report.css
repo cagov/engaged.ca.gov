@@ -1417,7 +1417,8 @@ section#how-we-used-ai.style-body-text strong,
 
 .region-legend[data-funnel-legend],
 .region-legend[data-ring-legend] {
-  /* min-height is set at runtime to the taller of the two legends. */
+  /* Desktop: the side column's min-height is set at runtime to the taller
+     legend; on phones the legend takes its content height (9/29). */
   align-content: start;
   /* Wraps sooner than the full container (design review 9/22). */
   max-width: 1000px;
@@ -2638,5 +2639,33 @@ html {
 @media (max-width: 991px) {
   html {
     scroll-padding-top: calc(60px - 2rem + 8px);
+  }
+}
+
+/* ---- Phone rhythm, second pass (9/29) ---- */
+@media (max-width: 991px) {
+  /* Under the funnel: legend, key and link sit 1rem apart, and the section
+     ends soon after the link instead of a full 2rem below it. */
+  .funnel-aside.chart-controls .participant-legend {
+    margin-top: 1rem;
+  }
+
+  .style-body-text .funnel-aside-link {
+    margin-top: 1rem;
+  }
+
+  section#who-participated {
+    padding-bottom: 1.25rem;
+  }
+
+  /* A section's last block keeps no bottom margin of its own; the section
+     padding is the whole gap to the next one. */
+  #ai-report-hero ~ section .section-body > :last-child {
+    margin-bottom: 0;
+  }
+
+  /* The three tier boxes and the "How to read" note that follows. */
+  .policy-tiers {
+    margin-bottom: 1.5rem;
   }
 }

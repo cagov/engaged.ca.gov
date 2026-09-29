@@ -116,9 +116,7 @@ export async function initParticipantFunnel(root) {
   function reserveLegend() {
     // In the side column (desktop) the Participant / Facilitator key and
     // the demographics link hug the legend, so its height is left to its
-    // content and may change with the toggle (design 9/28). On phones the
-    // legend wraps inline above other content, so its height is still
-    // reserved to keep the page from hopping.
+    // content and may change with the toggle (design 9/28).
     if (window.matchMedia("(min-width: 992px)").matches) {
       if (legendEl) legendEl.style.minHeight = "";
       // The key and the demographics link follow the legend, but the side
@@ -140,17 +138,10 @@ export async function initParticipantFunnel(root) {
       }
       return;
     }
-    const keep = dimension;
-    FL.reserveLegendHeight(
-      legendEl,
-      dimensions,
-      (d) => {
-        dimension = d;
-        recolor();
-      },
-      keep,
-    );
-    dimension = keep;
+    // Phones (9/29): the legend sits below the funnel with only the key
+    // and the demographics link after it, so it takes its content height.
+    // Reserving the taller legend left a blank band under the Region list.
+    if (legendEl) legendEl.style.minHeight = "";
   }
 
   function renderLegend() {
