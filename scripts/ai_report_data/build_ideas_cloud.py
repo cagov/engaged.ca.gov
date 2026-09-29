@@ -43,10 +43,12 @@ OUT = os.path.normpath(
     os.path.join(HERE, "..", "..", "src", "public", "data", "ai-report-ideas-cloud.json")
 )
 
-# 9/23: ship the top 55% (185 of 337). The cloud is laid out in a field larger than
-# its frame so the faded outer ideas run past the edge; the JS decides how many to draw. The tail fade is
-# a rendering choice and lives in the JS module.
-KEEP_SHARE = 0.55
+# 9/23: ship the top 55%; 9/29: 65% (229 of 352 with the 9/15 Phase 1 export)
+# so compact scripts (Korean, Chinese) can draw more than English's 194. The
+# cloud is laid out in a field larger than its frame so the faded outer ideas
+# run past the edge; the JS decides how many to draw. The tail fade is a
+# rendering choice and lives in the JS module.
+KEEP_SHARE = 0.65
 
 # Sentence case: lowercase everything except the first letter, tokens with two
 # or more capitals (AI, UBI, LLMs, TK-12, TSMC's, US-Mexico, PhD ...) and these
@@ -55,31 +57,43 @@ KEEP_PHRASES = [
     "California", "Californians", "CalCare", "Ponzi", "Taft Hartley Act", "MAD Act",
     "Delta Tunnels", "High Speed Rail", "Life-First Decision Invariant",
     "No Robo Bosses", "No Spying", "Citizen United", "Climate Corps",
-    "State Library", "State Website",
+    "State Library", "State Website", "China", "American", "Latino", "Microsoft",
+    "Linux", "Apple", "Meta", "Google", "Amazon", "Gen X", "University of California",
 ]
 
 # 9/25: too many poll ideas started with "Regulate" (17 of 185, several of the
 # biggest words in the cloud), so it read as "Regulate, Regulate, Regulate".
 # Reworded with varied, neutral verbs while keeping the respondent's meaning.
-# Keyed on the label after sentence_case(); "Regulate AI" itself is left alone
-# as the plain anchor.
+# Keyed on the label after sentence_case(); "Regulate artificial intelligence"
+# (the 9/15 export's successor to plain "Regulate AI") is left alone as the
+# plain anchor. Re-keyed 9/29 for the 9/15 export's wording (23 of 194).
 RELABEL = {
-    "Regulate AI in employment": "Set rules for AI in the workplace",
     "Regulate AI development and use": "Put guardrails on how AI is built and used",
-    "Regulate and utilize AI": "Regulate and use AI",
+    "Regulate AI in the workplace": "Set rules for AI in the workplace",
     "Regulate data centers": "Set standards for data centers",
+    "Regulate and adopt AI": "Bring AI in with clear oversight",
     "Regulate AI companies": "Oversee AI companies",
+    "Regulate AI to protect creators' rights": "Protect creators’ rights from AI",
     "Regulate AI data centers": "Limit AI data centers’ impact",
-    "Regulate AI copyright": "Enforce copyright rules for AI",
+    "Regulate AI environmental impact": "Limit AI’s environmental impact",
     "Regulate AI data privacy": "Protect personal data from AI",
-    "Regulate AI labeling": "Require labels on AI content",
-    "Regulate AI in court docs": "Set rules for AI in court filings",
-    "Regulate AI to prevent intrusive emails and calls": "Stop intrusive AI calls and emails",
-    "Regulate AI to prevent humanization": "Keep AI from passing as human",
-    "Regulate electrical power consumption": "Manage electricity use",
-    "Regulate the impact of AI on consumer electronics prices": "Keep AI from driving up electronics prices",
-    "Regulate quality control of AI-generated software": "Set quality standards for AI-written software",
+    "Regulate AI strictly": "Tighten the rules on AI",
+    "Regulate AI-related layoffs": "Protect workers from AI-driven layoffs",
+    "Regulate AI in education": "Set rules for AI in schools",
+    "Regulate AI in healthcare": "Set rules for AI in healthcare",
+    "Regulate private equity firms to prevent them from buying all available housing": "Stop private equity from buying up housing",
+    "Regulate noise from data centers": "Limit data center noise",
+    "Regulate AI adoption in corporations by requiring audits of user productivity vs AI productivity cost metrics": "Audit AI’s productivity impact in corporations",
+    "Regulate AI image generation": "Set rules for AI image generation",
+    "Regulate AI so that workers are trained to upskill in AI": "Require AI upskilling for workers",
+    "Regulate AI if there is corruption or unfairness": "Address AI corruption or unfairness",
+    "Regulate AI companies like a16z": "Oversee AI companies like a16z",
+    "Regulate prediction markets": "Oversee prediction markets",
     "Regulate the venture capital industry": "Oversee the venture capital industry",
+    "License High-Risk AI systems": "License high-risk AI systems",
+    "Regulate AI systems that imitate voices to prevent financial theft": "Stop AI voice imitation used for financial theft",
+    "Regulate the use of AI in drafting court documents": "Set rules for AI in court filings",
+    "Change the structure of governance to AI-Assisted direct democracy": "Change the structure of governance to AI-assisted direct democracy",
 }
 
 # 9/25: ambiguous, single-respondent ideas that made the KEEP_SHARE cutoff by
@@ -99,7 +113,7 @@ def sentence_case(label):
         t if len(re.sub(r"[^A-Z]", "", t)) >= 2 else t.lower() for t in tokens
     )
     for phrase in KEEP_PHRASES:
-        out = re.sub(re.escape(phrase), phrase, out, flags=re.IGNORECASE)
+        out = re.sub(rf"\b{re.escape(phrase)}\b", phrase, out, flags=re.IGNORECASE)
     return out[:1].upper() + out[1:]
 
 

@@ -33,180 +33,255 @@
    "color": "#135372"
   }
  ],
- "pollTotal": 337,
+ "pollTotal": 352,
  "poll": [
-  {
-   "label": "Set rules for AI in the workplace",
-   "subtheme": 2,
-   "count": 430
-  },
   {
    "label": "Put guardrails on how AI is built and used",
    "subtheme": 1,
-   "count": 366
+   "count": 480
   },
   {
    "label": "Protect workers' rights",
    "subtheme": 2,
-   "count": 342
+   "count": 266
   },
   {
-   "label": "Regulate and use AI",
-   "subtheme": 1,
-   "count": 340
+   "label": "Mitigate AI's impact on workers",
+   "subtheme": 2,
+   "count": 213
   },
   {
-   "label": "Regulate AI",
-   "subtheme": 1,
-   "count": 309
-  },
-  {
-   "label": "Ban AI",
-   "subtheme": 1,
-   "count": 222
-  },
-  {
-   "label": "Set standards for data centers",
-   "subtheme": 0,
+   "label": "Set rules for AI in the workplace",
+   "subtheme": 2,
    "count": 210
   },
   {
-   "label": "Oversee AI companies",
+   "label": "Limit AI development and use",
    "subtheme": 1,
    "count": 206
   },
   {
-   "label": "Provide AI education & training",
-   "subtheme": 6,
-   "count": 198
+   "label": "Set standards for data centers",
+   "subtheme": 0,
+   "count": 202
   },
   {
-   "label": "Restrict AI development and use",
+   "label": "Provide AI education and training",
+   "subtheme": 6,
+   "count": 190
+  },
+  {
+   "label": "Regulate artificial intelligence",
    "subtheme": 1,
-   "count": 183
+   "count": 190
+  },
+  {
+   "label": "Bring AI in with clear oversight",
+   "subtheme": 1,
+   "count": 189
+  },
+  {
+   "label": "Oversee AI companies",
+   "subtheme": 1,
+   "count": 165
+  },
+  {
+   "label": "Impose AI tax",
+   "subtheme": 1,
+   "count": 145
+  },
+  {
+   "label": "Invest in workforce development and retraining",
+   "subtheme": 6,
+   "count": 136
+  },
+  {
+   "label": "Government ownership of AI",
+   "subtheme": 1,
+   "count": 129
+  },
+  {
+   "label": "Protect creators’ rights from AI",
+   "subtheme": 1,
+   "count": 121
   },
   {
    "label": "Limit AI data centers’ impact",
    "subtheme": 0,
-   "count": 167
+   "count": 104
   },
   {
-   "label": "Invest in education & training",
-   "subtheme": 2,
-   "count": 140
-  },
-  {
-   "label": "Tax AI companies and usage",
-   "subtheme": 1,
-   "count": 128
-  },
-  {
-   "label": "Enforce copyright rules for AI",
-   "subtheme": 1,
-   "count": 115
-  },
-  {
-   "label": "Implement UBI",
-   "subtheme": 2,
-   "count": 115
-  },
-  {
-   "label": "Establish AI guardrails",
-   "subtheme": 1,
-   "count": 95
+   "label": "Limit AI’s environmental impact",
+   "subtheme": 0,
+   "count": 99
   },
   {
    "label": "Protect personal data from AI",
    "subtheme": 4,
-   "count": 84
+   "count": 95
+  },
+  {
+   "label": "Tighten the rules on AI",
+   "subtheme": 1,
+   "count": 92
+  },
+  {
+   "label": "Implement universal basic income",
+   "subtheme": 2,
+   "count": 92
   },
   {
    "label": "Require AI transparency",
    "subtheme": 1,
-   "count": 80
+   "count": 83
   },
   {
-   "label": "Restrict AI in schools",
-   "subtheme": 7,
-   "count": 40
+   "label": "Protect workers from AI-driven layoffs",
+   "subtheme": 2,
+   "count": 78
+  },
+  {
+   "label": "Set rules for AI in schools",
+   "subtheme": 1,
+   "count": 74
+  },
+  {
+   "label": "Establish AI guardrails",
+   "subtheme": 1,
+   "count": 65
+  },
+  {
+   "label": "Expand unemployment benefits",
+   "subtheme": 2,
+   "count": 39
+  },
+  {
+   "label": "Ban artificial intelligence",
+   "subtheme": 1,
+   "count": 38
+  },
+  {
+   "label": "Increase taxes on the wealthy",
+   "subtheme": 1,
+   "count": 38
+  },
+  {
+   "label": "Ban generative AI use",
+   "subtheme": 1,
+   "count": 31
+  },
+  {
+   "label": "Tax AI companies to fund UBI",
+   "subtheme": 1,
+   "count": 27
   },
   {
    "label": "Implement universal healthcare",
    "subtheme": 0,
-   "count": 23
+   "count": 21
   },
   {
-   "label": "Shorten work week",
-   "subtheme": 2,
-   "count": 12
-  },
-  {
-   "label": "Ban AI medical advice",
+   "label": "Set rules for AI in healthcare",
    "subtheme": 1,
-   "count": 5
+   "count": 17
   },
   {
-   "label": "Increase energy production",
-   "subtheme": 0,
-   "count": 4
-  },
-  {
-   "label": "Fund public transit",
-   "subtheme": 1,
-   "count": 3
-  },
-  {
-   "label": "Require labels on AI content",
-   "subtheme": 5,
-   "count": 3
-  },
-  {
-   "label": "Promote trade jobs",
-   "subtheme": 2,
-   "count": 3
-  },
-  {
-   "label": "Set rules for AI in court filings",
-   "subtheme": 1,
-   "count": 2
-  },
-  {
-   "label": "Mandate severance pay",
-   "subtheme": 2,
-   "count": 2
-  },
-  {
-   "label": "Restrict AI exports",
-   "subtheme": 1,
-   "count": 2
-  },
-  {
-   "label": "Provide grants",
-   "subtheme": 2,
-   "count": 2
-  },
-  {
-   "label": "Create Climate Corps",
-   "subtheme": 0,
-   "count": 2
-  },
-  {
-   "label": "Promote data center efficiency",
-   "subtheme": 0,
-   "count": 2
-  },
-  {
-   "label": "Expand digital access",
+   "label": "Support small business AI adoption",
    "subtheme": 6,
+   "count": 15
+  },
+  {
+   "label": "Use clean energy for data centers",
+   "subtheme": 0,
+   "count": 3
+  },
+  {
+   "label": "Involve diverse stakeholders in AI regulation",
+   "subtheme": 3,
+   "count": 3
+  },
+  {
+   "label": "Restrict AI chip exports",
+   "subtheme": 1,
+   "count": 3
+  },
+  {
+   "label": "Restrict business AI use",
+   "subtheme": 1,
+   "count": 3
+  },
+  {
+   "label": "Ban AI in legal proceedings",
+   "subtheme": 1,
    "count": 2
   },
   {
-   "label": "Invest in energy infrastructure",
+   "label": "Restrict job eligibility",
+   "subtheme": 2,
+   "count": 2
+  },
+  {
+   "label": "AI for homeless assistance",
+   "subtheme": 1,
+   "count": 2
+  },
+  {
+   "label": "Prohibit AI-based price adjustment",
+   "subtheme": 1,
+   "count": 2
+  },
+  {
+   "label": "Restrict AI development",
+   "subtheme": 1,
+   "count": 2
+  },
+  {
+   "label": "Ban job offshoring",
+   "subtheme": 2,
+   "count": 2
+  },
+  {
+   "label": "Fund public transportation",
+   "subtheme": 1,
+   "count": 2
+  },
+  {
+   "label": "Restrict AI use",
+   "subtheme": 1,
+   "count": 2
+  },
+  {
+   "label": "Promote employee ownership",
+   "subtheme": 2,
+   "count": 2
+  },
+  {
+   "label": "Collaborate with China on AI",
+   "subtheme": 3,
+   "count": 2
+  },
+  {
+   "label": "Support AI in healthcare",
+   "subtheme": 2,
+   "count": 2
+  },
+  {
+   "label": "Assess and disclose data center information",
    "subtheme": 0,
    "count": 2
   },
   {
-   "label": "Restrict AI ads",
+   "label": "License high-risk AI systems",
+   "subtheme": 1,
+   "count": 2
+  },
+  {
+   "label": "Adopt EU AI regulations",
+   "subtheme": 1,
+   "count": 2
+  },
+  {
+   "label": "Prioritize transparency",
    "subtheme": 1,
    "count": 2
   },
@@ -216,292 +291,12 @@
    "count": 2
   },
   {
-   "label": "Create sovereign wealth fund",
+   "label": "Promote diverse perspectives using AI",
    "subtheme": 1,
    "count": 2
   },
   {
-   "label": "Relax labor rules",
-   "subtheme": 2,
-   "count": 2
-  },
-  {
-   "label": "Limit rent increases",
-   "subtheme": 0,
-   "count": 2
-  },
-  {
-   "label": "Repeal the Taft Hartley Act",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "End TSMC's monopoly on silicon products",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Require employers to hire qualified people for analytical roles",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Ban the use of AI in research and writing related to policies, regulations, and legal documents",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Not grant AI the rights of a person",
-   "subtheme": 5,
-   "count": 1
-  },
-  {
-   "label": "Criminalize wage theft",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Enable many new startups that can scale and displace existing companies",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Scrutinize investments in AI with conflicts of interest",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Ensure elections are fair",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Require AI companies to invest in creating new power generation",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Prevent leveraged buyouts",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Fine companies for illegal practices related to AI data centers",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Impose daily penalties on companies that ignore data center regulations",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Treat AI as a product in the legal system",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Fund audits of AI systems",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Limit the number of AI interactions a person can have in one day",
-   "subtheme": 5,
-   "count": 1
-  },
-  {
-   "label": "Require disclosure of AI-generated content in money transactions",
-   "subtheme": 5,
-   "count": 1
-  },
-  {
-   "label": "Incentivize opt-in data collection from individuals",
-   "subtheme": 4,
-   "count": 1
-  },
-  {
-   "label": "Tax AI tokens to fund a sovereign wealth fund for Californians",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Create a work group to examine the needs of education related to AI",
-   "subtheme": 7,
-   "count": 1
-  },
-  {
-   "label": "Ban the use of AI in critical infrastructure",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Make it easy for California students to attend UC debt-free",
-   "subtheme": 7,
-   "count": 1
-  },
-  {
-   "label": "Support the definition of open protocols with security standards for LLMs",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Require data centers to be built with union labor",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Change how it procures services to account for AI use by vendors",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Reduce knowledge worker jobs",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Require companies to give 5 months notice to contractors",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Pass the No Robo Bosses and No Spying bosses bills",
-   "subtheme": 5,
-   "count": 1
-  },
-  {
-   "label": "Mandate the Life-First Decision Invariant as the mandatory safety kernel for all AI deployment",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Be wary of AI industry spending to shape regulation",
-   "subtheme": 3,
-   "count": 1
-  },
-  {
-   "label": "Appoint a chief technology officer to look out for the people of California",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Increase funding for AI relevant studies by industry",
-   "subtheme": 6,
-   "count": 1
-  },
-  {
-   "label": "Not issue work visas to individuals without a PhD in AI or fields with sufficient US citizens",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Form large citizens assemblies on AI",
-   "subtheme": 3,
-   "count": 1
-  },
-  {
-   "label": "Stop intrusive AI calls and emails",
-   "subtheme": 4,
-   "count": 1
-  },
-  {
-   "label": "Keep AI from passing as human",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Offer AI in all languages with translation",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Permit the immediate removal of bot posts",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Implement citizens assembly recommendations with 80% support",
-   "subtheme": 3,
-   "count": 1
-  },
-  {
-   "label": "Nationalize all technology corporations",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Unemployment office should provide examples of AI tool usage",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "California departmental committees should expedite AI tool approval through CDT",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Employers should help employees develop resources",
-   "subtheme": 6,
-   "count": 1
-  },
-  {
-   "label": "California should pay close attention to AI's impact on the US-Mexico border region",
-   "subtheme": 6,
-   "count": 1
-  },
-  {
-   "label": "Not focus on AI legislation as a political campaigning tool",
-   "subtheme": 3,
-   "count": 1
-  },
-  {
-   "label": "Implement a land value tax",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Manage its affected zones",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Enforce a terminal fault protocol that prevents AI systems from executing decisions that eliminate or permanently degrade the decision-making capacity of life systems",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Require AI industry to develop new renewable sources of water",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Seize assets from AI surveillance and weapons companies and redistribute them",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Impose occupancy taxes on large corporations that use public resources",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Fund national AI compute resources for transportation optimization",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Manage electricity use",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Tax corporations and private entities that consume large amounts of power",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Invest in infrastructure repair",
+   "label": "Build the Delta Tunnels and the High Speed Rail",
    "subtheme": 1,
    "count": 1
   },
@@ -511,78 +306,48 @@
    "count": 1
   },
   {
-   "label": "Assess cost-benefit for proposals to replace government jobs with AI programs",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Consider non-profit organizations as thought leaders in AI procurement opportunities",
+   "label": "Use revenue from AI taxes to fund a single-payer healthcare system",
    "subtheme": 1,
    "count": 1
   },
   {
-   "label": "Not ban AI regulation",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Require AI companies to share models with academic/government programs for risk review",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Require data centers to recycle and reuse all water",
+   "label": "Implement energy utility gouging protections",
    "subtheme": 0,
    "count": 1
   },
   {
-   "label": "Modernize electric grid planning to support AI data centers",
+   "label": "Raise taxes",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require tech companies to share profits with consumers if they sell their data",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Not tax income under $60,000",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Leaders of AI companies should agree to restrictions that protect users",
    "subtheme": 0,
    "count": 1
   },
   {
-   "label": "Pass the MAD Act",
-   "subtheme": 6,
-   "count": 1
-  },
-  {
-   "label": "AI systems should provide local mental health resources when people ask mental health and risk related questions",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Ban Ponzi schemes used to finance AI efforts",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Consider implementing universal basic income (UBI) and healthcare",
+   "label": "Offer a stipend to displaced workers during their training or certification program",
    "subtheme": 2,
    "count": 1
   },
   {
-   "label": "Build infrastructure to support long-term unemployment",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Prohibit the use of LLMs in TK-12 education",
+   "label": "Identify and eliminate AI use that influences market behavior within social media",
    "subtheme": 1,
    "count": 1
   },
   {
-   "label": "Use AI to process planning applications",
+   "label": "Require proper grammar in all official documentation",
    "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Ban general AI",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Measure productivity gains of AI",
-   "subtheme": 6,
    "count": 1
   },
   {
@@ -591,7 +356,552 @@
    "count": 1
   },
   {
-   "label": "Plan for a poorer society due to AI",
+   "label": "Restrict training and inference compute",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Improve housing assistance programs for freelancers",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Cap CEO pay",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Improve math education to focus on implementing algorithms",
+   "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Assess the impact of AI market collapse on 'tech company' tax revenue",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Stop private equity from buying up housing",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require companies that lay off workers for profit to contribute to social security and medicare",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Ban AI use for profit and education",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Evaluation methods should test whether AI models behave differently under observation",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Implement all recommendations with 80% support from the assembly",
+   "subtheme": 3,
+   "count": 1
+  },
+  {
+   "label": "Unemployment office should provide information on jobs available related to AI",
+   "subtheme": 6,
+   "count": 1
+  },
+  {
+   "label": "Repeal the Taft Hartley Act",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Implement a basic income program for artists",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Study AI data centers' and AI usage's impacts on education, literacy, and environmental justice communities",
+   "subtheme": 6,
+   "count": 1
+  },
+  {
+   "label": "Ban AI in several spaces",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Imprison those who sell generative AI",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Create a work group to examine the needs of education related to AI",
+   "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Prohibit landlords from using AI to set rent or determine tenants",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Pass a law stating that anything derived from publicly available data belongs to the public",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require AI industry to prioritize low and median income California residents for free solar home power systems",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Reorganize the workforce towards other industries if AI causes layoffs",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Close loopholes of abuse of worker visas in the tech industry",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Force companies to pay into a global unemployment trust fund for laid-off workers",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Use unemployment insurance to pay for job retraining",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Limit data center noise",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Adopt consumer-regulated electricity reforms to meet AI's energy needs and embed clean energy goals",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Use unemployment insurance to cover healthcare costs",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "AI systems should provide local mental health resources when people ask mental health and risk related questions",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Sponsor technology that helps Californians",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Implement student loan forgiveness",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Establish rules for bias testing in AI systems",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Industry should regulate AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Use AI to improve medical enrollment processes",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "State of CA should consider moving from Microsoft products to Linux or Apple platforms",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Ban AI in rental applications",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Not issue work visas to individuals without a PhD in AI or fields with enough US citizens",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Fund national AI compute resources for disaster prediction",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Ban Ponzi schemes used to finance AI/data centers",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Limit driverless cars on the road",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Insist that companies enact AI-related contingency plans",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "End TSMC's monopoly on silicon products",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Conduct research on how AI can create new jobs",
+   "subtheme": 6,
+   "count": 1
+  },
+  {
+   "label": "Require AI code and data to run locally within government agencies' environments",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Establish public scorecards, outcome-based contracts, and transparent decision logs for AI work",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Audit AI’s productivity impact in corporations",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Stop taxing low earners",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Permit the immediate removal of bot posts",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Prohibit companies from using contract work through staff agencies to avoid paying benefits",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Tax loans against equity as income",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Tech companies should reinvest their profits in public goods and social needs",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Allow public schools to resist public private partnerships that replace human teaching activities with AI",
+   "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Limit AI regulation to non-generative AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require businesses to consider job seekers' trainability when hiring",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Encourage American automakers to develop AI-driven vehicles",
+   "subtheme": 6,
+   "count": 1
+  },
+  {
+   "label": "Not rely solely on universal basic income (UBI) to support workers displaced by AI",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Provide grants for open source AI model creators",
+   "subtheme": 6,
+   "count": 1
+  },
+  {
+   "label": "Monitor data centers monthly for violations",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Set rules for AI image generation",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Collaborate with other governments to establish non-proliferation regimes for AI hardware",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require AI upskilling for workers",
+   "subtheme": 6,
+   "count": 1
+  },
+  {
+   "label": "Provide SSI for life to individuals over 45 who lose their job to AI",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Replace personal income tax with VAT",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Create jobs for AI ethical historians",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Address AI corruption or unfairness",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Reward companies that use AI to improve human impact on Californians",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Support AI companies to stay in CA",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Increase oversight of public universities' spending on new technologies",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Fund national AI compute resources for climate modeling",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Encode law, policy, preferences, design, and best practices into AI-friendly formats",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Take action against price fixing",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Governments should regulate AI hyperscalers",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Promote media literacy in schools",
+   "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Ban the use of AI unless it is in certain professional settings",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Limit the number of AI interactions a person can have in one day",
+   "subtheme": 5,
+   "count": 1
+  },
+  {
+   "label": "Extend the warning period for layoffs citing AI",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Employers should accept job applications that use AI to draft responses",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Stop forcing DEI biases onto AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Use revenue from taxing billionaires to fund single payer health care for Californians",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Keep human engagement and creativity central to arts education",
+   "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Stop companies from using shell companies to hide money",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require employers to provide mandatory severance payment for at least 2 months",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Figure out how taxes will be paid by individuals potentially leaving CA due to AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Arrest AI company CEOs and shareholders",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Make consequences for violating worker protections personally accountable to responsible individuals",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Ban the use of AI in research and writing related to policies, regulations, and legal documents",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Implement checks and balances on bias in workplace hiring, including boards",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Aggressively tax companies that violate AI ethics",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Make generative AI systems inaccessible to capitalist companies",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Not try to protect jobs or limit the implementation of new technology",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "CA state government should allow the use of AI in certain parts of CDCR jobs",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "California should require high-risk AI labs to use stronger containment, tiered access controls, real-time monitoring, human approval gates, independent audits, shutdown procedures, and near-miss reporting",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require companies to provide paid training",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Clarify the difference in water provision to industry versus households",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Not intervene to prevent AI from negatively impacting the economy",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Create career pathways for Latino workers",
+   "subtheme": 6,
+   "count": 1
+  },
+  {
+   "label": "Fund manufacturing plants for electronics",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Assess industry input on regulation",
+   "subtheme": 3,
+   "count": 1
+  },
+  {
+   "label": "Restrict the proportion of jobs related to AI training",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Help laid off workers with food aid (CalFresh)",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Criminalize wage theft",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Make suggestions based on monitoring AI models",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require AI companies to log AI agents",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Help modernize electric grid planning to support AI data centers",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Oversee AI companies like a16z",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Move decision-makers close to the work itself",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Pay people to monitor AI",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Require AI tools to carry insurance for their actions",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Limit AI use to private institutions, specifically science-based endeavors",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Prevent leveraged buyouts",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Help accelerate the replacement of human drivers with AI drivers",
    "subtheme": 2,
    "count": 1
   },
@@ -601,107 +911,62 @@
    "count": 1
   },
   {
-   "label": "Provide training for farmers and their teams to use AI",
-   "subtheme": 6,
-   "count": 1
-  },
-  {
-   "label": "Fund national AI compute resources for climate modeling",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Heavily monitor training data for AI",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Sponsor technology to help Californians",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Hold brokers and realtors accountable for selling property for AI data centers",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Train an AI on diverse materials from State Library, State Website, and state universities",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Remove employees who use AI generators to complete their job",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Reimagine tort law",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Creators of AI should self-police themselves",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Make consequences for violating worker protections personally accountable to responsible individuals",
+   "label": "Require companies to provide education/vocational training in a field chosen by the employee",
    "subtheme": 2,
    "count": 1
   },
   {
-   "label": "Increase transparency in corporate ownership of AI companies",
+   "label": "Not shut down nuclear power facilities without modern replacements",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Restrict AI decision-making",
    "subtheme": 1,
    "count": 1
   },
   {
-   "label": "Fund national AI compute resources for healthcare research",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Help with food",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Ensure AI is used to assist doctors and primary care providers",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Tax human labor hours done digitally",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Set zero taxes for income under $60,000",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Require licenses for high-risk AI systems",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "California government should increase transparency about data collection",
-   "subtheme": 4,
-   "count": 1
-  },
-  {
-   "label": "Provide contractual support to companies that abide by AI ethics",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Reorganize the workforce towards other industries if AI causes layoffs",
+   "label": "Pay community colleges for short courses with evidence of job placement",
    "subtheme": 2,
    "count": 1
   },
   {
-   "label": "Governments should regulate AI hyperscalers",
+   "label": "Oversee prediction markets",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Ban AI in evaluation of insurance claims",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Establish a non-partisan commission to regulate data use",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Improve public data sets to be more AI discoverable and accessible",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Monitor and collect data on air and noise pollution near data centre sites",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Require AI companies to report inference spend on external vs internal",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Close data centers built in 2023 and afterwards",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Manage AI's impact through state budgetary appropriations",
    "subtheme": 1,
    "count": 1
   },
@@ -716,228 +981,8 @@
    "count": 1
   },
   {
-   "label": "Preempt state regulation of AI",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Pay people to monitor AI",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Reward those who volunteer to serve citizens affected by AI's economic impact",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Set up data warehouses and systems for AI customers",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Build the Delta Tunnels and the High Speed Rail",
-   "subtheme": 3,
-   "count": 1
-  },
-  {
-   "label": "Prohibit AI from use in regulation and legal proceedings",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Prohibit the expansion of nuclear power for AI infrastructure",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Establish a non-partisan commission to regulate AI and data use",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Restrict data center construction",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Promote media literacy in schools",
-   "subtheme": 7,
-   "count": 1
-  },
-  {
-   "label": "Heavily regulate large AI labs",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Hire unemployed people to make the disability processing system more efficient",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Restrict AI model usage to select countries",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Break down Citizen United",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Offer rebates to individuals for using AI locally instead of through data centers",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Aggressively tax companies that violate AI ethics",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Artificially inflate AI",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Mandate additional maternity and paternity leave",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Extend severance and notice requirements to immigrants working in the USA on H1B",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Ensure data centers use renewable water sources",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Create policies promoting worker and community ownership",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Fund manufacturing plants for electronics",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Use AI to create housing opportunities",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Keep AI from driving up electronics prices",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Offer AI grants for individuals who want to teach AI but lack certification",
-   "subtheme": 7,
-   "count": 1
-  },
-  {
-   "label": "Emphasize programs like CalCare",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Assess the impact of AI market collapse on 'tech company' tax revenue",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
    "label": "Tax estates",
    "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Use revenue from taxing AI to fund research on AI",
-   "subtheme": 6,
-   "count": 1
-  },
-  {
-   "label": "Pass a law stating that anything derived from publicly available data belongs to the public",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Federal and state government should provide information on air and noise pollution near data centre sites",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Impose sanctions and controls on AI-generated explicit content and media",
-   "subtheme": 7,
-   "count": 1
-  },
-  {
-   "label": "Ban AI use by police for data gathering, investigation, and surveillance",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Encourage co-operative businesses where every employee has a stake in the success",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Tax non-primary residences more",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Arrest c-level employees and board of directors of non-compliant companies within 90 days",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Make companies absorb the cost of adapting to new technology",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Require existing data centers to recycle water",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Set quality standards for AI-written software",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Limit legal protection for harms caused by bad or poorly used AI",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Promote in-person interviews",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Create jobs for AI ethical historians",
-   "subtheme": 2,
-   "count": 1
-  },
-  {
-   "label": "Invest in solar and wind power for data centers",
-   "subtheme": 0,
-   "count": 1
-  },
-  {
-   "label": "Require AI companies to log AI agents",
-   "subtheme": 1,
-   "count": 1
-  },
-  {
-   "label": "Imprison those who sell generative AI",
-   "subtheme": 0,
    "count": 1
   },
   {
@@ -946,7 +991,12 @@
    "count": 1
   },
   {
-   "label": "Require an emergency stop button on every AI base code and agent",
+   "label": "Give the populace a relief check using money from bailing out tech companies",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Outlaw driverless commercial bigrigs",
    "subtheme": 1,
    "count": 1
   },
@@ -956,8 +1006,178 @@
    "count": 1
   },
   {
-   "label": "Fund national AI compute resources for education",
+   "label": "Require language proficiency tests for government and certain other positions",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Provide free childcare",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Lower the social security and medicare eligibility ages for workers who lose their jobs due to no fault of their own",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Run TV ads featuring successful people in service and trade jobs",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Implement a VAT tax",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Fund national AI compute resources for transportation optimization",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Implement fire prevention measures in electrical infrastructure",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Oust the current federal administration",
+   "subtheme": 3,
+   "count": 1
+  },
+  {
+   "label": "Stop AI voice imitation used for financial theft",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require corporations to repay 5 years of subsidies if they lay off workers",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Prevent stock buybacks",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Support fields that are less likely to be impacted by AI",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Prohibit restricting websites that require data collection",
+   "subtheme": 4,
+   "count": 1
+  },
+  {
+   "label": "Include position downsizing when considering unemployment benefits",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Back-fill the federal program to move food from farms to classrooms",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Use existing workforce boards and community colleges to match displaced workers to real job openings",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Increase employee net earnings",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Provide temporary unemployment benefits based on attendance and performance to workers in retraining programs",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Ban AI in loan applications",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "California should investigate Meta, Google, and Amazon for artificially inflating their stock prices",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Limit patent trolling using AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Set rules for AI in court filings",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Restrict data center construction on farmland",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Not increase taxes because of AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Upgrade the statewide job-matching portal",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Require tech companies to disclose their water use",
+   "subtheme": 0,
+   "count": 1
+  },
+  {
+   "label": "Increase unemployment rates for Gen X to make it livable while they search for jobs",
+   "subtheme": 2,
+   "count": 1
+  },
+  {
+   "label": "Change the structure of governance to AI-assisted direct democracy",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Provide AI grants for individuals who want to teach AI but lack certification",
    "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Not suppress speech when regulating AI",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Implement a land value tax",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Make it easy for California students to attend University of California debt free",
+   "subtheme": 7,
+   "count": 1
+  },
+  {
+   "label": "Not permit AI to be used for target determination or war-related attacks",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "Use AI to create housing opportunities and jobs",
+   "subtheme": 1,
+   "count": 1
+  },
+  {
+   "label": "California should raise the living wages for civil servants, nurses, doctors, and teachers",
+   "subtheme": 2,
    "count": 1
   }
  ],
@@ -1104,15 +1324,15 @@
     "w": 1400,
     "h": 820
    },
-   "fontMultiplier": 0.638,
+   "fontMultiplier": 0.342,
    "fontProbe": 902.42,
    "pack": "dense",
    "items": [
     {
      "label": "Hold AI companies liable for harm they cause",
-     "x": -12,
-     "y": -2,
-     "fontSize": 38.1524,
+     "x": 1,
+     "y": -6,
+     "fontSize": 20.451600000000003,
      "lines": [
       "Hold AI companies liable",
       "for harm they cause"
@@ -1121,9 +1341,9 @@
     },
     {
      "label": "Protect people and nature from the resource needs of data centers",
-     "x": -12,
-     "y": -217,
-     "fontSize": 36.74457418324148,
+     "x": -5,
+     "y": -139,
+     "fontSize": 19.696934750264244,
      "lines": [
       "Protect people and nature from",
       "the resource needs of data centers"
@@ -1132,9 +1352,9 @@
     },
     {
      "label": "Set rules for where AI can be used safely",
-     "x": -15,
-     "y": 96,
-     "fontSize": 35.856195299773354,
+     "x": -10,
+     "y": 64,
+     "fontSize": 19.220719110536816,
      "lines": [
       "Set rules for where",
       "AI can be used safely"
@@ -1143,9 +1363,9 @@
     },
     {
      "label": "Set rules around how AI works",
-     "x": -446,
-     "y": 183,
-     "fontSize": 31.48980106871762,
+     "x": -208,
+     "y": 64,
+     "fontSize": 16.88011279859158,
      "lines": [
       "Set rules around",
       "how AI works"
@@ -1155,8 +1375,8 @@
     {
      "label": "Deter layoffs because of AI, reward firms that keep or add workers",
      "x": -8,
-     "y": 197,
-     "fontSize": 35.24321573303614,
+     "y": 130,
+     "fontSize": 18.89213131770903,
      "lines": [
       "Deter layoffs because of AI, reward",
       "firms that keep or add workers"
@@ -1165,9 +1385,9 @@
     },
     {
      "label": "Make AI policymaking more open to the public",
-     "x": -420,
-     "y": 45,
-     "fontSize": 32.94139102438008,
+     "x": -243,
+     "y": 17,
+     "fontSize": 17.658237821846377,
      "lines": [
       "Make AI policymaking",
       "more open to the public"
@@ -1176,9 +1396,9 @@
     },
     {
      "label": "Make companies follow rules and be open about how they handle personal data",
-     "x": -16,
-     "y": -114,
-     "fontSize": 36.45237130667522,
+     "x": -7,
+     "y": -72,
+     "fontSize": 19.540299352481075,
      "lines": [
       "Make companies follow rules and be open",
       "about how they handle personal data"
@@ -1187,9 +1407,9 @@
     },
     {
      "label": "Make companies reskill or give career help to workers who lose their jobs to AI",
-     "x": -315,
-     "y": 365,
-     "fontSize": 30.31605961188338,
+     "x": -67,
+     "y": -185,
+     "fontSize": 16.250928506683568,
      "lines": [
       "Make companies reskill or give career",
       "help to workers who lose their jobs to AI"
@@ -1198,9 +1418,9 @@
     },
     {
      "label": "Set rules for labeling when AI is used",
-     "x": 319,
-     "y": 27,
-     "fontSize": 33.96058079280873,
+     "x": 198,
+     "y": 43,
+     "fontSize": 18.204574656960165,
      "lines": [
       "Set rules for labeling",
       "when AI is used"
@@ -1209,9 +1429,9 @@
     },
     {
      "label": "Restrict and tax AI companies’ profits",
-     "x": 423,
-     "y": -69,
-     "fontSize": 29.48389465064487,
+     "x": -228,
+     "y": -29,
+     "fontSize": 15.804846348778286,
      "lines": [
       "Restrict and tax AI",
       "companies’ profits"
@@ -1220,9 +1440,9 @@
     },
     {
      "label": "Hold AI companies liable if they use the work of others without permission",
-     "x": 95,
-     "y": -303,
-     "fontSize": 30.31605961188338,
+     "x": -58,
+     "y": 219,
+     "fontSize": 16.250928506683568,
      "lines": [
       "Hold AI companies liable if they use",
       "the work of others without permission"
@@ -1231,9 +1451,9 @@
     },
     {
      "label": "Make people aware of how to use AI ethically",
-     "x": -391,
-     "y": 114,
-     "fontSize": 31.107556565167556,
+     "x": -12,
+     "y": 176,
+     "fontSize": 16.675210572550633,
      "lines": [
       "Make people aware of",
       "how to use AI ethically"
@@ -1242,9 +1462,9 @@
     },
     {
      "label": "Improve AI education in schools",
-     "x": 462,
-     "y": -186,
-     "fontSize": 27.667296197161804,
+     "x": -289,
+     "y": 104,
+     "fontSize": 14.831058463055387,
      "lines": [
       "Improve AI",
       "education in schools"
@@ -1253,9 +1473,9 @@
     },
     {
      "label": "Allow people to opt out of AI and make that easier",
-     "x": 12,
-     "y": 307,
-     "fontSize": 29.48389465064487,
+     "x": 256,
+     "y": 154,
+     "fontSize": 15.804846348778286,
      "lines": [
       "Allow people to opt out of",
       "AI and make that easier"
@@ -1264,9 +1484,9 @@
     },
     {
      "label": "Support independent research on AI's effects",
-     "x": 369,
-     "y": 272,
-     "fontSize": 28.143492778254583,
+     "x": -301,
+     "y": -116,
+     "fontSize": 15.086323714989135,
      "lines": [
       "Support independent",
       "research on AI's effects"
@@ -1275,9 +1495,9 @@
     },
     {
      "label": "Limit what personal data AI systems can collect, and let users manage their data",
-     "x": -65,
-     "y": -370,
-     "fontSize": 27.17376647043276,
+     "x": -1,
+     "y": -267,
+     "fontSize": 14.566501775686527,
      "lines": [
       "Limit what personal data AI systems can",
       "collect, and let users manage their data"
@@ -1286,9 +1506,9 @@
     },
     {
      "label": "Pay workers who lose jobs due to AI while they find new jobs",
-     "x": -424,
-     "y": -286,
-     "fontSize": 24.977997649886674,
+     "x": 275,
+     "y": -154,
+     "fontSize": 13.389459555268408,
      "lines": [
       "Pay workers who lose jobs due",
       "to AI while they find new jobs"
@@ -1297,9 +1517,9 @@
     },
     {
      "label": "Support AI training for workers",
-     "x": -373,
-     "y": -37,
-     "fontSize": 26.1261,
+     "x": 300,
+     "y": -67,
+     "fontSize": 14.004900000000003,
      "lines": [
       "Support AI training",
       "for workers"
@@ -1308,9 +1528,9 @@
     },
     {
      "label": "Make sure privacy is protected",
-     "x": 339,
-     "y": 102,
-     "fontSize": 32.2301294164778,
+     "x": 236,
+     "y": -23,
+     "fontSize": 17.27696592544735,
      "lines": [
       "Make sure privacy",
       "is protected"
@@ -1319,9 +1539,9 @@
     },
     {
      "label": "Use AI to improve how government works",
-     "x": -506,
-     "y": -173,
-     "fontSize": 28.143492778254583,
+     "x": 275,
+     "y": 106,
+     "fontSize": 15.086323714989135,
      "lines": [
       "Use AI to improve how",
       "government works"
@@ -1330,9 +1550,9 @@
     },
     {
      "label": "Keep humans in the loop as decision-makers, don't rely solely on AI",
-     "x": 277,
-     "y": 371,
-     "fontSize": 26.660860682920053,
+     "x": 243,
+     "y": -221,
+     "fontSize": 14.291558547897585,
      "lines": [
       "Keep humans in the loop as",
       "decision-makers, don't rely solely on AI"
@@ -1341,9 +1561,9 @@
     },
     {
      "label": "Strengthen parental controls for AI use",
-     "x": -538,
-     "y": -103,
-     "fontSize": 24.35586310042991,
+     "x": -316,
+     "y": -76,
+     "fontSize": 13.055964232518855,
      "lines": [
       "Strengthen parental",
       "controls for AI use"
@@ -1352,9 +1572,9 @@
     },
     {
      "label": "Fund programs for human connection and life outside of AI",
-     "x": -377,
-     "y": 263,
-     "fontSize": 23.693468564735806,
+     "x": -60,
+     "y": -224,
+     "fontSize": 12.700887537836435,
      "lines": [
       "Fund programs for human",
       "connection and life outside of AI"
@@ -1363,9 +1583,9 @@
     },
     {
      "label": "Make sure students don't use AI to avoid learning",
-     "x": 503,
-     "y": 176,
-     "fontSize": 24.977997649886674,
+     "x": -216,
+     "y": 175,
+     "fontSize": 13.389459555268408,
      "lines": [
       "Make sure students don't",
       "use AI to avoid learning"
@@ -1374,9 +1594,9 @@
     },
     {
      "label": "Keep companies from firing or punishing workers for not using AI",
-     "x": 466,
-     "y": -250,
-     "fontSize": 22.981811187788498,
+     "x": 220,
+     "y": 195,
+     "fontSize": 12.319403489378788,
      "lines": [
       "Keep companies from firing or",
       "punishing workers for not using AI"
@@ -1385,9 +1605,9 @@
     },
     {
      "label": "Track and report on job loss due to AI",
-     "x": 495,
-     "y": 120,
-     "fontSize": 20.380330341460027,
+     "x": 263,
+     "y": -111,
+     "fontSize": 10.924879273948793,
      "lines": [
       "Track and report on",
       "job loss due to AI"
@@ -1396,9 +1616,317 @@
     },
     {
      "label": "Use AI for jobs people don’t want to do or can’t do",
-     "x": 533,
-     "y": -133,
-     "fontSize": 19.227831550214955,
+     "x": -284,
+     "y": 138,
+     "fontSize": 10.307082116259428,
+     "lines": [
+      "Use AI for jobs people don’t",
+      "want to do or can’t do"
+     ],
+     "subtheme": 2
+    }
+   ]
+  },
+  "2340x1140": {
+   "field": {
+    "w": 2340,
+    "h": 1140
+   },
+   "fontMultiplier": 0.5716,
+   "fontProbe": 902.42,
+   "pack": "dense",
+   "items": [
+    {
+     "label": "Hold AI companies liable for harm they cause",
+     "x": 2,
+     "y": -10,
+     "fontSize": 34.18168,
+     "lines": [
+      "Hold AI companies liable",
+      "for harm they cause"
+     ],
+     "subtheme": 0
+    },
+    {
+     "label": "Protect people and nature from the resource needs of data centers",
+     "x": -8,
+     "y": -232,
+     "fontSize": 32.92037398611416,
+     "lines": [
+      "Protect people and nature from",
+      "the resource needs of data centers"
+     ],
+     "subtheme": 0
+    },
+    {
+     "label": "Set rules for where AI can be used safely",
+     "x": -17,
+     "y": 107,
+     "fontSize": 32.124453343809485,
+     "lines": [
+      "Set rules for where",
+      "AI can be used safely"
+     ],
+     "subtheme": 1
+    },
+    {
+     "label": "Set rules around how AI works",
+     "x": -348,
+     "y": 107,
+     "fontSize": 28.21249261893259,
+     "lines": [
+      "Set rules around",
+      "how AI works"
+     ],
+     "subtheme": 1
+    },
+    {
+     "label": "Deter layoffs because of AI, reward firms that keep or add workers",
+     "x": -13,
+     "y": 217,
+     "fontSize": 31.575269769597895,
+     "lines": [
+      "Deter layoffs because of AI, reward",
+      "firms that keep or add workers"
+     ],
+     "subtheme": 2
+    },
+    {
+     "label": "Make AI policymaking more open to the public",
+     "x": -406,
+     "y": 28,
+     "fontSize": 29.51300800867657,
+     "lines": [
+      "Make AI policymaking",
+      "more open to the public"
+     ],
+     "subtheme": 3
+    },
+    {
+     "label": "Make companies follow rules and be open about how they handle personal data",
+     "x": -12,
+     "y": -120,
+     "fontSize": 32.65858219262626,
+     "lines": [
+      "Make companies follow rules and be open",
+      "about how they handle personal data"
+     ],
+     "subtheme": 4
+    },
+    {
+     "label": "Make companies reskill or give career help to workers who lose their jobs to AI",
+     "x": -112,
+     "y": -309,
+     "fontSize": 27.160908580176393,
+     "lines": [
+      "Make companies reskill or give career",
+      "help to workers who lose their jobs to AI"
+     ],
+     "subtheme": 2
+    },
+    {
+     "label": "Set rules for labeling when AI is used",
+     "x": 331,
+     "y": 72,
+     "fontSize": 30.426125362334588,
+     "lines": [
+      "Set rules for labeling",
+      "when AI is used"
+     ],
+     "subtheme": 5
+    },
+    {
+     "label": "Restrict and tax AI companies’ profits",
+     "x": -381,
+     "y": -48,
+     "fontSize": 26.41535138292885,
+     "lines": [
+      "Restrict and tax AI",
+      "companies’ profits"
+     ],
+     "subtheme": 1
+    },
+    {
+     "label": "Hold AI companies liable if they use the work of others without permission",
+     "x": -97,
+     "y": 366,
+     "fontSize": 27.160908580176393,
+     "lines": [
+      "Hold AI companies liable if they use",
+      "the work of others without permission"
+     ],
+     "subtheme": 1
+    },
+    {
+     "label": "Make people aware of how to use AI ethically",
+     "x": -20,
+     "y": 294,
+     "fontSize": 27.870030301958895,
+     "lines": [
+      "Make people aware of",
+      "how to use AI ethically"
+     ],
+     "subtheme": 6
+    },
+    {
+     "label": "Improve AI education in schools",
+     "x": -483,
+     "y": 174,
+     "fontSize": 24.787815840591986,
+     "lines": [
+      "Improve AI",
+      "education in schools"
+     ],
+     "subtheme": 7
+    },
+    {
+     "label": "Allow people to opt out of AI and make that easier",
+     "x": 428,
+     "y": 257,
+     "fontSize": 26.41535138292885,
+     "lines": [
+      "Allow people to opt out of",
+      "AI and make that easier"
+     ],
+     "subtheme": 4
+    },
+    {
+     "label": "Support independent research on AI's effects",
+     "x": -503,
+     "y": -194,
+     "fontSize": 25.214452150549093,
+     "lines": [
+      "Support independent",
+      "research on AI's effects"
+     ],
+     "subtheme": 6
+    },
+    {
+     "label": "Limit what personal data AI systems can collect, and let users manage their data",
+     "x": -2,
+     "y": -446,
+     "fontSize": 24.345650336205903,
+     "lines": [
+      "Limit what personal data AI systems can",
+      "collect, and let users manage their data"
+     ],
+     "subtheme": 4
+    },
+    {
+     "label": "Pay workers who lose jobs due to AI while they find new jobs",
+     "x": 460,
+     "y": -257,
+     "fontSize": 22.378406671904738,
+     "lines": [
+      "Pay workers who lose jobs due",
+      "to AI while they find new jobs"
+     ],
+     "subtheme": 2
+    },
+    {
+     "label": "Support AI training for workers",
+     "x": 501,
+     "y": -112,
+     "fontSize": 23.407020000000003,
+     "lines": [
+      "Support AI training",
+      "for workers"
+     ],
+     "subtheme": 6
+    },
+    {
+     "label": "Make sure privacy is protected",
+     "x": 394,
+     "y": -38,
+     "fontSize": 28.87577111984124,
+     "lines": [
+      "Make sure privacy",
+      "is protected"
+     ],
+     "subtheme": 4
+    },
+    {
+     "label": "Use AI to improve how government works",
+     "x": 460,
+     "y": 177,
+     "fontSize": 25.214452150549093,
+     "lines": [
+      "Use AI to improve how",
+      "government works"
+     ],
+     "subtheme": 1
+    },
+    {
+     "label": "Keep humans in the loop as decision-makers, don't rely solely on AI",
+     "x": 406,
+     "y": -369,
+     "fontSize": 23.886125339117715,
+     "lines": [
+      "Keep humans in the loop as",
+      "decision-makers, don't rely solely on AI"
+     ],
+     "subtheme": 5
+    },
+    {
+     "label": "Strengthen parental controls for AI use",
+     "x": -528,
+     "y": -127,
+     "fontSize": 21.821020921952567,
+     "lines": [
+      "Strengthen parental",
+      "controls for AI use"
+     ],
+     "subtheme": 7
+    },
+    {
+     "label": "Fund programs for human connection and life outside of AI",
+     "x": -100,
+     "y": -374,
+     "fontSize": 21.227565253296216,
+     "lines": [
+      "Fund programs for human",
+      "connection and life outside of AI"
+     ],
+     "subtheme": 5
+    },
+    {
+     "label": "Make sure students don't use AI to avoid learning",
+     "x": -361,
+     "y": 293,
+     "fontSize": 22.378406671904738,
+     "lines": [
+      "Make sure students don't",
+      "use AI to avoid learning"
+     ],
+     "subtheme": 7
+    },
+    {
+     "label": "Keep companies from firing or punishing workers for not using AI",
+     "x": 368,
+     "y": 326,
+     "fontSize": 20.589973785172266,
+     "lines": [
+      "Keep companies from firing or",
+      "punishing workers for not using AI"
+     ],
+     "subtheme": 2
+    },
+    {
+     "label": "Track and report on job loss due to AI",
+     "x": 440,
+     "y": -186,
+     "fontSize": 18.25924266955886,
+     "lines": [
+      "Track and report on",
+      "job loss due to AI"
+     ],
+     "subtheme": 2
+    },
+    {
+     "label": "Use AI for jobs people don’t want to do or can’t do",
+     "x": -475,
+     "y": 231,
+     "fontSize": 17.226690460976283,
      "lines": [
       "Use AI for jobs people don’t",
       "want to do or can’t do"

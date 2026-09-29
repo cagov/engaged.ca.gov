@@ -10,6 +10,8 @@
  *   [data-ideas-cloud][data-src]     root, JSON URL
  *   [data-labels-src]                optional JSON map of English label ->
  *                                    translated label (non-English pages, 9/29)
+ *   [data-keep-wide]                 optional: draw more ideas than the wide
+ *                                    preset's keep (compact scripts, 9/29)
  *   canvas[data-ideas-canvas]        the drawing surface
  *
  * Layout runs in the browser at load (same font measures and draws, so no
@@ -23,7 +25,7 @@ import { createLayoutEngine } from "./word-cloud-layout.js";
 // lw/lh field centred on the frame, so the faded outer ideas run past the
 // frame's edge and are clipped, reading as "there are more" (9/23).
 const PRESETS = {
-  wide: { w: 1400, h: 820, lw: 1660, lh: 980, keep: 185, fade: 100 },
+  wide: { w: 1400, h: 820, lw: 1660, lh: 980, keep: 194, fade: 100 },
   narrow: { w: 800, h: 1000, lw: 940, lh: 1180, keep: 85, fade: 45 },
 };
 const NARROW_BELOW = 700; // CSS px of available width
@@ -112,7 +114,11 @@ export async function initIdeasCloud(root) {
     F = { w: preset.w, h: preset.h };
     const rand = mulberry32(SEED);
     const WL = createLayoutEngine({ rand, measureCtx: ctx });
-    const kept = data.poll.slice(0, preset.keep);
+    const keep =
+      name === "wide" && root.dataset.keepWide
+        ? Number(root.dataset.keepWide)
+        : preset.keep;
+    const kept = data.poll.slice(0, keep);
 
     // Color index, not the real subtheme: there's no legend anymore, so
     // color no longer needs to carry theme meaning, and the real subtheme
@@ -162,13 +168,16 @@ export async function initIdeasCloud(root) {
       height: L.h,
       padding: (d) => WL.paddingFor(d.fontSize),
       weight: 400,
+      spiral: keep > preset.keep ? "rectangular" : "archimedean",
     };
 
     // Largest uniform font multiplier (stepping down 4%) at which every label
     // places. Two attempts per step: the spiral direction is random, so one
     // dropped label is often luck rather than a real limit.
+    // Sized off the preset's count, not kept.length, so a locale drawing extra
+    // ideas keeps the same type size unless they genuinely don't fit.
     let scale =
-      Math.sqrt((L.w * L.h) / (2307 * 1124 * (kept.length / 337))) * 1.08;
+      Math.sqrt((L.w * L.h) / (2307 * 1124 * (preset.keep / 337))) * 1.08;
     let placed = null;
     for (let k = 0; k < 16 && !placed; k++, scale *= 0.96) {
       for (let attempt = 0; attempt < 2 && !placed; attempt++) {
