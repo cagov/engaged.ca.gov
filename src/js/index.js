@@ -32,8 +32,7 @@ class JoinConversationForm extends window.HTMLElement {
       const emailIsBlank = emailInput.value.length === 0;
       // Email must be valid and contain at least one period.
       const emailIsValid =
-        emailInput.checkValidity() &&
-        emailInput.value.includes(".");
+        emailInput.checkValidity() && emailInput.value.includes(".");
       if (emailIsBlank || !emailIsValid) {
         emailInput.setAttribute("aria-describedby", "emailError");
         emailInput.setAttribute("aria-invalid", "true");
