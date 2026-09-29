@@ -7,12 +7,14 @@
  * imported: The power of discussion section was removed 9/22.
  */
 import { initDemographicsChart } from "./demographics-chart.js";
+import { initHeroJump } from "./hero-jump.js";
 import { initIdeasCloud } from "./ideas-cloud.js";
 import { initParticipantFunnel } from "./participant-funnel.js";
 import { initPolicyTiers } from "./policy-tiers.js";
 import { initTopThemes } from "./top-themes.js";
 
 function init() {
+  initHeroJump(document.querySelector(".hero-jump"));
   initTopThemes(document.getElementById("top-themes"));
   initPolicyTiers(document.getElementById("policy-tiers"));
   initIdeasCloud(document.getElementById("ideas-cloud"));

@@ -235,6 +235,20 @@ section#ai-report-hero {
       }
     }
   }
+
+  /* Once the links no longer fit on one row (set by hero-jump.js) they
+     stack one per line, text indented 1rem from the label (9/29). */
+  &.is-stacked {
+    & ul {
+      flex-direction: column;
+      /* Link text sits 1rem in from the label's left edge. */
+      margin-inline-start: 0.25rem;
+    }
+
+    & a {
+      padding-block: 0.375rem;
+    }
+  }
 }
 
 /* On the details page's peach hero the bar inverts: navy text on peach,
