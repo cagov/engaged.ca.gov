@@ -217,6 +217,11 @@ section#ai-report-hero {
     & ul {
       justify-content: flex-start;
       margin-inline-start: -0.75rem; /* first link's text sits on the label's edge */
+      /* The container is a column here, so the desktop row's zero flex
+         basis would be a zero height. WebKit takes that literally and,
+         with the stacked column below, wraps every link into its own
+         column, side by side and clipped (9/29). Content height instead. */
+      flex: 0 0 auto;
     }
 
     & a {
@@ -245,6 +250,7 @@ section#ai-report-hero {
     &.is-stacked {
       & ul {
         flex-direction: column;
+        flex-wrap: nowrap;
         /* Link text sits 1rem in from the label's left edge. */
         margin-inline-start: 0.25rem;
       }
