@@ -899,7 +899,10 @@ section#ai-report-hero {
     border-radius: 0;
     box-shadow: none;
     background: transparent;
-    padding: 0.35rem 0 0.75rem 2.5rem;
+    /* Inset from the hairline on the start side, so Farsi gets it on the
+       right like the border (9/29). */
+    padding: 0.35rem 0 0.75rem;
+    padding-inline-start: 2.5rem;
     display: flex;
     flex-direction: column;
     margin-top: var(--panel-offset, 0px);
