@@ -2548,7 +2548,7 @@ section#balancing-groups.methods-light {
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
-  padding: 0.7rem 1rem;
+  padding: 0.45rem 1rem; /* 9/30: shorter field (was 0.7rem) */
   border: 1.5px solid var(--report-navy);
   border-radius: 8px;
   background: #fff;

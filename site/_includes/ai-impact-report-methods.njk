@@ -53,6 +53,10 @@
         </div>
       </div>
 
+      <h4 class="demographics-chart-title">{{ dc.chart_title }}</h4>
+      {% if dc.chart_note %}<p class="demographics-chart-note">{{ dc.chart_note }}</p>{% endif %}
+
+      {# Dropdown sits between the chart note and the chart (design 9/30). #}
       <div class="demographics-controls">
         <label class="demographics-select-label visually-hidden" for="demographics-select">{{ dc.pulldown_label }}</label>
         <span class="demographics-select-wrap">
@@ -64,8 +68,6 @@
         </span>
       </div>
 
-      <h4 class="demographics-chart-title">{{ dc.chart_title }}</h4>
-      {% if dc.chart_note %}<p class="demographics-chart-note">{{ dc.chart_note }}</p>{% endif %}
       <div class="demographics-svg-host" data-demographics-svg>
         {# No-JS fallback: the static Region snapshot. #}
         <img class="chart-placeholder-image" src="/public/images/ai-report-sortition-chart-placeholder.png" alt="{{ dc.chart_alt }}" />
