@@ -1,0 +1,556 @@
+---
+title: Con người trong vòng lặp
+description: "Người dân California nói AI nên được xây dựng, quản lý và sử dụng như thế nào. Engaged California đã hỏi người dân California về cách AI đang định hình lại công việc và nền kinh tế, và chính phủ nên làm gì về điều đó."
+layout: mmmd-ai-impact-report
+parentid: ai-impact
+keywords:
+  - California
+  - trí tuệ nhân tạo
+  - AI
+  - việc làm
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: Người dân California nói AI nên được xây dựng, sử dụng và quản lý như thế nào
+translator_note: "Optional hero buttons (button_1_label/href, button_2_label/href) are omitted here; the jump bar under the hero covers them (9/24)."
+----
+# Con người trong vòng lặp
+
+Chúng tôi đã hỏi mọi người một số câu hỏi khó nhất mà tiểu bang đang đối mặt:
+
+*AI đang định hình lại công việc và nền kinh tế như thế nào? Chính phủ nên làm gì về điều đó?*
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids and the href is a page address; do not translate them."
+aria_label: Trên trang này
+label: "Đi tới:"
+nbr_items: 5
+item_1_label: Diễn đàn công khai về AI
+item_1_anchor: public-forum
+item_2_label: Những ý tưởng đã nghe
+item_2_anchor: what-we-heard
+item_3_label: Ai đã tham gia
+item_3_anchor: who-participated
+item_4_label: Bước tiếp theo
+item_4_anchor: what-happens-next
+item_5_label: Cách chúng tôi thực hiện
+item_5_href: /ai-impact/report-details/
+----
+
+----
+id: public_forum
+----
+## Một diễn đàn công khai về AI
+
+Vào tháng 5 năm 2026, chúng tôi đã mở một diễn đàn công khai về *Tác động của AI đối với công việc* cho tất cả người dân California. Trong những tháng tiếp theo, hàng nghìn người trên khắp tiểu bang đã chia sẻ suy nghĩ của mình qua khảo sát của chúng tôi. Một số người trả lời khảo sát sau đó đã tham gia các buổi thảo luận nhóm có người điều phối trên Zoom. Họ chia sẻ trải nghiệm của mình và lắng nghe những người khác. Sau đó, họ biến những phản ứng ban đầu thành các ý tưởng chính sách cụ thể.
+
+Trong quá trình đó, những người tham gia không phải lúc nào cũng đồng ý với nhau. Họ tranh luận về mức độ quản lý, cách tài trợ cho các đề xuất và cách thực thi các quy định.
+
+Một chủ đề xuất hiện xuyên suốt: **Chúng ta cần con người trong vòng lặp chính sách về AI**. Không chỉ ở cách mọi người sử dụng AI, mà còn ở cách các công ty xây dựng AI và cách luật pháp quản lý AI.
+
+----
+id: participation_numbers
+participants_count: "2,702"
+participants_label: người tham gia khảo sát
+conversations_count: "103"
+conversations_label: người tham gia thảo luận
+ideas_count: "26"
+ideas_label: ý tưởng chính sách
+----
+
+----
+id: what_we_heard
+----
+## Những ý tưởng chúng tôi đã nghe
+
+### Trước hết, từ khảo sát
+
+Khảo sát của chúng tôi hỏi mọi người muốn chính phủ làm gì về tác động của AI. Chúng tôi đã nhận được rất nhiều ý tưởng chính sách khác nhau.
+----
+id: word_cloud
+translator_note: "The phrases in the word cloud come from a shared data file (src). labels_src points at this language's translations of those phrases, a JSON map of English phrase to translated phrase; edit that file to change the wording. Leave labels_src out on the English page."
+labels_src: /public/data/ai-report-ideas-cloud-labels.vi.json
+chart_alt: "Đám mây từ khóa của các ý tưởng chính sách nêu trong khảo sát, kích thước theo số người nêu ra mỗi ý tưởng."
+----
+
+----
+id: ranking
+----
+### Sau đó, từ các buổi thảo luận trực tiếp
+
+Các ý tưởng chính sách về AI dưới đây đến từ các buổi thảo luận trực tiếp kéo dài 2 giờ trên Zoom. Những người tham gia đã hoàn thiện các ý tưởng chính sách của mình và bỏ phiếu cho điều quan trọng nhất.
+
+Chúng tôi đã nhóm những gì mọi người nói ở đó thành 26 ý tưởng riêng biệt. Sau đó, chúng tôi xếp hạng chúng theo:
+
+- Tần suất một ý tưởng xuất hiện trong các buổi thảo luận (tần suất), và
+- Mức độ ủng hộ mà ý tưởng nhận được khi xuất hiện (tần suất nó là một ý tưởng được ưa chuộng).
+----
+id: tiers_ui
+translator_note: "{count} is replaced with a number. Keep it in the translation."
+translator_note_2: "section_title is the heading above the three groups of ideas."
+section_title: Thêm ý tưởng chính sách
+count_label: "{count} ý tưởng chính sách"
+show_label: Xem các ý tưởng
+show_more_label: "Hiện thêm {count}"
+close_label: Ẩn các ý tưởng
+show_all_label: "Hiện tất cả"
+close_all_label: Ẩn tất cả
+example_ideas_label: "Ví dụ:"
+example_idea_label_singular: "Ví dụ:"
+nbr_tiers: 3
+initial_visible_ideas: 2
+----
+
+----
+id: top_themes
+translator_note: "The Top 3 box. Each theme is a card; selecting one shows its quotes in the panel."
+title: 3 ý tưởng chính sách hàng đầu
+subtitle: Những chủ đề này xuất hiện nhiều nhất và nhận được sự ủng hộ mạnh mẽ nhất.
+icon: sparkle
+nbr_themes: 3
+show_examples_label: Hiện ví dụ
+hide_examples_label: Ẩn ví dụ
+show_conversation_label: Xem mọi người đã nói gì
+hide_conversation_label: Ẩn những gì mọi người đã nói
+quotes_title: "Từ một buổi thảo luận:"
+select_label: "Hiện những gì mọi người đã nói về: {title}"
+translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
+quote_open: "“"
+quote_close: "”"
+translator_note_translated: "translated_note is a caption shown under each set of quotes, saying they were translated from English. Leave it empty on the English page."
+translated_note: "Dịch từ bản gốc tiếng Anh"
+----
+----
+id: top_theme_1
+title: Buộc các công ty AI chịu trách nhiệm về tác hại họ gây ra
+----
+- Tăng cường trách nhiệm hình sự đối với tác hại do AI gây ra
+- Dành thêm nguồn lực cho việc thực thi thực sự
+----
+id: top_theme_1_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+session: 10
+quote_1: "Với mạng xã hội, chúng ta đã không buộc các công ty chịu trách nhiệm, và điều đó đã làm suy yếu nền dân chủ của chúng ta. Tôi nghĩ thời kỳ nói rằng các công ty không chịu trách nhiệm về cách mọi người sử dụng những công cụ như thế này nên chấm dứt. Tôi tin rằng họ sẽ thay đổi chính sách và đầu tư vào những công cụ nhất định để quản lý tốt hơn nếu chúng ta chấm dứt tình trạng thiếu trách nhiệm đó."
+attribution_1: Người làm trong lĩnh vực nghệ thuật, giải trí và truyền thông ở Vùng Vịnh
+region_1: Bay Area
+field_1: "Arts, entertainment, or media"
+quote_2: "Về điểm bạn nêu, Mục 230 của Đạo luật CDA khiến một công ty truyền thông sẽ bị trừng phạt nếu họ cố gắng kiểm soát nội dung của người dùng, thay vì biến điều đó thành thứ gắn giá trị của họ với lợi ích công. Vậy nếu nhìn tổng thể vào cấu trúc khuyến khích: chúng ta có thể xây dựng quy định ở đâu để việc tuân thủ vừa phục vụ lợi ích công vừa có lợi cho lợi nhuận, thay vì tạo ra căng thẳng giữa hai bên?"
+attribution_2: Người làm công nghệ thông tin ở Bờ biển Trung tâm
+region_2: Central Coast
+field_2: "Information technology"
+quote_3: "Một điều có thể là ai chịu trách nhiệm về kết quả. Nếu có sự đánh giá của con người thì con người chịu trách nhiệm, vì con người phải là người ra quyết định cuối cùng. Nhưng với cách AI đang được sử dụng, nếu không có sự đánh giá của con người, thì ai chịu trách nhiệm về những sai lầm mà AI gây ra?"
+attribution_3: Người làm tài chính ở Vùng Vịnh
+region_3: Bay Area
+field_3: "Financial"
+----
+----
+id: top_theme_2
+title: Bảo vệ con người và môi trường trước nhu cầu tài nguyên của AI
+----
+- Đặt giới hạn về tiếng ồn, ô nhiễm và việc sử dụng nước, điện của các trung tâm dữ liệu
+- Nghiên cứu tác động của các trung tâm dữ liệu đối với môi trường
+----
+id: top_theme_2_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "Tôi nghĩ chúng ta nên bảo vệ tài nguyên thiên nhiên và một môi trường trong sạch. Vì tôi biết những người ở Texas nơi các trang trại dữ liệu hay trung tâm dữ liệu đã đến, nước bị ô nhiễm và hóa đơn tiền điện tăng vọt."
+attribution_1: Người làm nghệ thuật/giải trí/truyền thông ở Nam California
+region_1: Southern California
+field_1: "Arts, entertainment, or media"
+quote_2: "Mối lo lớn nhất của tôi là lượng nước và điện mà AI đang sử dụng. Bạn nghe nói về trung tâm dữ liệu ở Georgia đã đấu nối trái phép vào nguồn nước của một thành phố hay quận nào đó và lấy đi hàng triệu gallon mà không ai hay biết."
+attribution_2: Người làm việc trong chính quyền ở LA
+region_2: Los Angeles
+field_2: "Government"
+quote_3: "Khi nghĩ về tiểu bang như một nơi chốn vật lý, chúng ta có thể đặt ra các quy định về môi trường, có thể đặt ra yêu cầu về quyền riêng tư dữ liệu cho những ai hoạt động tại đây. Tôi thực sự hào hứng về mức sàn mà chúng ta đang đặt ra cho việc bảo vệ môi trường khi nói đến sử dụng năng lượng, không gian, v.v."
+attribution_3: Người làm việc trong chính quyền ở Vùng Vịnh
+region_3: Bay Area
+field_3: "Government"
+----
+----
+id: top_theme_3
+title: Đặt ra quy định về nơi AI có thể được sử dụng an toàn
+----
+- Đảm bảo con người đưa ra phán quyết cuối cùng đối với các quyết định ảnh hưởng đến cuộc sống
+- Cấm AI tự động trong quy trình tuyển dụng
+----
+id: top_theme_3_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "Khi nói đến việc làm, đó phải là quyết định của con người. Chúng ta không nên để công nghệ làm điều đó thay chúng ta."
+attribution_1: Người làm sản xuất ở Vùng Vịnh
+region_1: Bay Area
+field_1: "Goods producing and harvesting"
+quote_2: "Tiêu chí mà AI sử dụng thường là một hộp đen. Ví dụ, nó có thể thiên vị khi sàng lọc hồ sơ, ưu tiên ứng viên trẻ hơn so với ứng viên lớn tuổi."
+attribution_2: Người làm khoa học ở Vùng Vịnh
+region_2: Bay Area
+field_2: "Professional services"
+quote_3: "Có lẽ nên yêu cầu một mô hình AI phải vượt qua kiểm tra về thiên kiến trước khi được phát hành ra công chúng?"
+attribution_3: Người làm sản xuất ở Vùng Vịnh
+region_3: Bay Area
+field_3: "Goods producing and harvesting"
+----
+----
+id: tier_1
+translator_note: "Three groups of ideas (design 9/28). icon values are keys; do not translate them."
+title: Ủng hộ mạnh
+subtitle: Xuất hiện thường xuyên và được ủng hộ mạnh
+icon: megaphone
+nbr_ideas: 7
+----
+----
+id: tier_1_idea_1
+title: Đặt ra quy định về cách AI xử lý dữ liệu cá nhân
+----
+- Đặt ra quy định về thu thập, xử lý, bảo mật và xóa dữ liệu
+- Thực thi tính minh bạch và bảo vệ quyền riêng tư
+----
+id: tier_1_idea_2
+title: Đặt ra quy định về cách AI hoạt động
+----
+- Thúc giục các công ty tuân theo các tiêu chuẩn của con người
+- Đặt ra rào chắn chống lạm dụng và nghiện AI
+----
+id: tier_1_idea_3
+title: Ngăn chặn sa thải vì AI, khen thưởng các công ty giữ hoặc tuyển thêm nhân viên
+----
+- Thêm các khoản phí mới đối với việc sa thải nhân viên vì AI
+- Tạo động lực để giữ hoặc tăng việc làm
+----
+id: tier_1_idea_4
+title: Làm cho việc hoạch định chính sách AI cởi mở hơn với công chúng
+----
+- Cho các cộng đồng bị ảnh hưởng được lên tiếng
+- Thành lập các nhóm công dân đồng đẳng
+----
+id: tier_1_idea_5
+title: Buộc các công ty đào tạo lại hoặc hỗ trợ nghề nghiệp cho người lao động mất việc vì AI
+----
+- Thúc giục họ đào tạo lại nhân viên thay vì sa thải
+- Chuyển người lao động đến các khu vực còn thiếu dịch vụ
+----
+id: tier_1_idea_6
+title: Đặt ra quy định về việc dán nhãn sử dụng AI
+----
+- Đánh dấu nội dung AI bằng từ ngữ thông dụng hoặc hình mờ
+- Phạt các công ty khi không công bố việc sử dụng AI
+----
+id: tier_1_idea_7
+title: Hạn chế và đánh thuế lợi nhuận của các công ty AI
+----
+- Bịt các kẽ hở cho phép họ tránh trách nhiệm
+- Thay đổi luật thuế để cổ phiếu không thể được dùng để tránh thuế
+----
+id: tier_2
+title: Ủng hộ vừa phải
+subtitle: Xuất hiện thường xuyên hoặc được ủng hộ mạnh, nhưng không phải cả hai
+icon: hand
+nbr_ideas: 7
+----
+----
+id: tier_2_idea_1
+title: Buộc các công ty AI chịu trách nhiệm nếu sử dụng tác phẩm của người khác mà không được phép
+----
+- Thực thi bản quyền, bảo vệ sở hữu trí tuệ
+- Các công ty trả tiền cho dữ liệu huấn luyện vào một quỹ dành cho người sáng tạo
+----
+id: tier_2_idea_2
+title: Nâng cao nhận thức của mọi người về cách sử dụng AI có đạo đức
+----
+- Làm quảng cáo công ích về lợi ích và rủi ro
+- Hướng dẫn người dân về những rủi ro của AI đối với quyền riêng tư, trẻ em, v.v.
+----
+id: tier_2_idea_3
+title: Cải thiện giáo dục về AI trong trường học
+----
+- Cho học sinh thực hành trong môi trường thử nghiệm để nhân rộng tác động tích cực
+- Dạy kiến thức về dữ liệu trong các trường từ mẫu giáo đến lớp 12
+----
+id: tier_2_idea_4
+title: Cho phép mọi người từ chối AI và làm cho việc đó dễ dàng hơn
+----
+- Yêu cầu sự đồng ý, đặt từ chối làm mặc định
+- Cho phép mọi người từ chối việc AI sử dụng dữ liệu của họ
+----
+id: tier_2_idea_5
+title: Hỗ trợ nghiên cứu độc lập về tác động của AI
+----
+- Tài trợ các nghiên cứu về cách việc sử dụng AI ảnh hưởng đến tư duy phản biện
+- Tìm và công bố thêm bằng chứng về tác hại và rủi ro
+----
+id: tier_2_idea_6
+title: Giới hạn dữ liệu cá nhân mà các hệ thống AI có thể thu thập, và cho người dùng quản lý dữ liệu của mình
+----
+- Làm cho văn bản đồng ý đơn giản
+- Hạn chế thu thập dữ liệu ở nơi công cộng để AI không thể sử dụng
+----
+id: tier_2_idea_7
+title: Trả lương cho người lao động mất việc vì AI trong khi họ tìm việc mới
+----
+- Thu nhập cơ bản phổ quát
+- Trợ cấp thất nghiệp cao hơn nếu bạn mất việc vì AI
+----
+id: tier_3
+title: Ít ủng hộ hơn
+subtitle: Xuất hiện ít hơn và được ủng hộ ít hơn
+icon: thumbs
+nbr_ideas: 9
+----
+----
+id: tier_3_idea_1
+title: Hỗ trợ đào tạo AI cho người lao động
+----
+- Cung cấp đào tạo AI miễn phí cho nhân viên tiểu bang và mở rộng ra công chúng
+- Các chương trình nghiên cứu để tìm ra cách tốt nhất đào tạo lại người lao động
+----
+id: tier_3_idea_2
+title: Dùng AI để cải thiện cách chính quyền vận hành
+----
+- Dùng AI để trấn áp gian lận và đảm bảo trợ cấp đến đúng người
+- Chính quyền nên cấp phép cho các mô hình AI mới
+----
+id: tier_3_idea_3
+title: Giữ con người trong vòng lặp với vai trò người ra quyết định, không chỉ dựa vào AI
+----
+- Duy trì vai trò của người ra quyết định là con người
+- Thiết lập hướng dẫn cho việc đánh giá của con người
+----
+id: tier_3_idea_4
+title: Tăng cường kiểm soát của phụ huynh đối với việc sử dụng AI
+----
+- Yêu cầu các công cụ kiểm soát của phụ huynh dễ sử dụng trên những công cụ trẻ em có thể tiếp cận.
+- Giám sát cách các công ty công nghệ đưa công nghệ AI đến với học sinh.
+----
+id: tier_3_idea_5
+title: Tài trợ các chương trình kết nối con người và cuộc sống bên ngoài AI
+----
+- Tài trợ các không gian thứ ba và các chương trình nghệ thuật/thể thao để nâng cao sức khỏe cộng đồng
+- Tài trợ đầy đủ các dịch vụ tri thức và thông tin chất lượng cao như giáo dục, thư viện, chăm sóc sức khỏe tâm thần
+----
+id: tier_3_idea_6
+title: Đảm bảo học sinh không dùng AI để né tránh việc học
+----
+- Đảm bảo học sinh công khai việc sử dụng AI trong bài tập
+- Kiểm tra và hạn chế việc học sinh sử dụng AI
+----
+id: tier_3_idea_7
+title: Ngăn các công ty sa thải hoặc trừng phạt người lao động vì không sử dụng AI
+----
+- Yêu cầu người sử dụng lao động đưa nhân viên vào các quyết định triển khai công cụ AI
+- Hạn chế các công ty sa thải những người không muốn sử dụng công cụ AI
+----
+id: tier_3_idea_8
+title: Theo dõi và báo cáo về mất việc làm do AI
+----
+- Báo cáo minh bạch về tác động của AI đối với số việc làm bị mất
+- Báo cáo liên tục về tác động của AI đối với nền kinh tế
+----
+id: tier_3_idea_9
+title: Dùng AI cho những công việc mọi người không muốn hoặc không thể làm
+----
+- Hướng việc sử dụng AI vào những nơi có lợi cho xã hội
+- Để AI làm những công việc con người không thể hoặc không muốn làm
+----
+id: how_to_read_tiers
+----
+### Cách đọc bảng xếp hạng này
+
+Bảng xếp hạng cho thấy một ý tưởng được đón nhận thế nào trong các buổi thảo luận. Đây không phải là phán quyết về giá trị của ý tưởng đó.
+
+Đây là những chủ đề mà người tham gia đã bàn đến. Chúng tách biệt với những gì chính sách hoặc luật pháp hiện hành có thể đã làm. Một số có thể trùng với những nội dung đang được thúc đẩy trong lĩnh vực chính sách.
+----
+id: ranking_methods_button
+translator_note: "Button after How to read this ranking, linking to the methods page's ranking section. Do not translate the href."
+label: Xem phương pháp xếp hạng của chúng tôi
+href: /ai-impact/report-details/#ranking-policy-ideas
+----
+
+----
+id: region_legend
+translator_note: "Region names are proper nouns and stay in English on every chart (region_1 to region_8). Translate only region_9, the not-stated / out-of-state entry."
+nbr_regions: 9
+region_1: Los Angeles
+region_2: Bay Area
+region_3: Southern California
+region_4: Sacramento Valley / Sierra Foothills
+region_5: Central Valley
+region_6: Far North / North Coast
+region_7: Central Coast
+region_8: Sierra Region
+region_9: Không nói / ngoài tiểu bang
+----
+
+----
+id: category_labels
+translator_note: "Field of work names as they appear in the Who participated chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 15
+key_1: "Government"
+label_1: "Chính quyền"
+key_2: "Other"
+label_2: "Khác"
+key_3: "Information technology"
+label_3: "Công nghệ thông tin"
+key_4: "Arts, entertainment, or media"
+label_4: "Nghệ thuật, giải trí hoặc truyền thông"
+key_5: "Education"
+label_5: "Giáo dục"
+key_6: "Professional services"
+label_6: "Dịch vụ chuyên môn"
+key_7: "Healthcare"
+label_7: "Chăm sóc sức khỏe"
+key_8: "Unemployed, looking"
+label_8: "Thất nghiệp, đang tìm việc"
+key_9: "Financial"
+label_9: "Tài chính"
+key_10: "Goods producing and harvesting"
+label_10: "Sản xuất hàng hóa và thu hoạch"
+key_11: "Retail or wholesale trade"
+label_11: "Bán lẻ hoặc bán buôn"
+key_12: "Logistics"
+label_12: "Hậu cần"
+key_13: "Hospitality"
+label_13: "Khách sạn, nhà hàng"
+key_14: "(not stated)"
+label_14: "Không nêu"
+key_15: "I don't want to say"
+label_15: "Tôi không muốn nói"
+----
+
+----
+id: who_participated
+title: Ai đã tham gia
+nbr_steps: 4
+toggle_region: Khu vực
+toggle_field_of_work: Lĩnh vực làm việc
+toggle_age: Tuổi
+toggle_race: Chủng tộc / sắc tộc
+toggle_gender: Giới tính
+toggle_ai_response: Phản hồi về AI
+legend_participant: Người tham gia
+legend_facilitator: Người điều phối
+translator_note_legend: "One legend entry standing in for all the non-answers (Not stated, I don't want to say) when a chart has more than one."
+legend_non_answer: "Không nói"
+prev_label: Bước trước
+next_label: Bước tiếp theo
+translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
+step_counter: "{current} trên {total}"
+step_marker_label: "Đi tới bước {current}"
+step_role_label: bước
+play_label: Phát
+pause_label: Tạm dừng
+restart_label: Bắt đầu lại
+ring_center_title: 103 người trong 14 buổi thảo luận
+ring_center_hint: ""
+chart_alt: "Hoạt ảnh thể hiện mỗi người trả lời khảo sát là một chấm. Những người được mời thảo luận sáng lên, những người tham dự tụ lại thành hình người, rồi tách thành một vòng quay cho mỗi buổi thảo luận, tô màu theo khu vực hoặc lĩnh vực làm việc."
+----
+
+----
+id: who_participated_step_1
+phase_label: Khảo sát
+pill_label: "1 · Giai đoạn 1"
+phase_title: Lắng nghe rộng rãi
+stat_count: "2,702"
+stat_label: người trả lời khảo sát
+phase_subtitle: "Mọi người đã trả lời khảo sát mở của chúng tôi về AI"
+chart_image_region: /public/images/ai-report-participants-step1-region.png
+chart_image_field: /public/images/ai-report-participants-step1-field.png
+chart_alt: "Biểu đồ phân tán các chấm, mỗi chấm là một người trả lời khảo sát, tô màu theo khu vực."
+----
+
+----
+id: who_participated_step_2
+phase_label: Thảo luận
+pill_label: "2 · Được chọn"
+phase_title: Mời một nhóm cân đối
+stat_count: "937"
+stat_label: được mời
+phase_subtitle: "Chúng tôi đã chọn một nhóm người trả lời phản ánh California"
+chart_image_region: /public/images/ai-report-participants-step2-region.png
+chart_image_field: /public/images/ai-report-participants-step2-field.png
+chart_alt: "Biểu đồ phân tán các chấm, mỗi chấm là một người được mời, tô màu theo khu vực."
+----
+
+----
+id: who_participated_step_3
+phase_label: Thảo luận
+pill_label: "3 · Giai đoạn 2"
+phase_title: Tham gia cuộc trò chuyện
+stat_count: "103"
+stat_label: đã tham dự
+phase_subtitle: "Những người dân California này đã xác nhận tham dự và tham gia một buổi thảo luận"
+chart_image_region: /public/images/ai-report-participants-step3-region.png
+chart_image_field: /public/images/ai-report-participants-step3-field.png
+chart_alt: "Biểu đồ phân tán các chấm, mỗi chấm là một người tham dự thảo luận, tô màu theo khu vực."
+----
+
+----
+id: who_participated_step_4
+phase_label: Thảo luận
+pill_label: "4 · Các buổi thảo luận"
+phase_title: Các nhóm thảo luận
+stat_count: "14"
+stat_label: buổi thảo luận
+phase_subtitle: "Đây là nhân khẩu học của từng buổi thảo luận"
+chart_image_region: /public/images/ai-report-participants-step4-region.png
+chart_image_field: /public/images/ai-report-participants-step4-field.png
+chart_alt: "Vòng gồm 14 cụm chấm nhỏ, mỗi cụm là một buổi thảo luận, tô màu theo khu vực."
+----
+
+----
+id: demographics_button
+translator_note: "Button at the end of Who participated, linking to the methods page's demographics section. Do not translate the href."
+label: Xem toàn bộ nhân khẩu học
+href: /ai-impact/report-details/#balancing-groups
+----
+
+----
+id: what_happens_next
+----
+## Điều gì xảy ra tiếp theo
+
+Báo cáo này không phải là kết thúc câu chuyện. Những ý tưởng mọi người chia sẻ sẽ hòa vào một cuộc thảo luận chính sách đang diễn ra nhanh chóng.
+
+California đã đi đầu trong việc giám sát AI từ lâu. Năm 2025, California ban hành SB 53, [Đạo luật Minh bạch về Trí tuệ Nhân tạo Tiên phong](https://www.gov.ca.gov/2025/09/29/governor-newsom-signs-sb-53-advancing-californias-world-leading-artificial-intelligence-industry/). Đạo luật đặt ra các yêu cầu về minh bạch và giám sát độc lập đối với các mô hình AI tiên tiến. Trong khi Engaged California tổng hợp ý kiến của mọi người, chính quyền Newsom đã hành động về AI. Một số hành động của chính quyền liên quan đến những chủ đề mà người dân California đã nêu trong các buổi thảo luận này, chẳng hạn như:
+
+- Dấu chân môi trường của các trung tâm dữ liệu
+- Minh bạch về nội dung do AI tạo ra
+- Giám sát độc lập các mô hình tiên phong
+- Bảo vệ người lao động và trẻ em
+
+Các hành động bao gồm việc Thống đốc Newsom ký các dự luật sau vào tháng 9 năm 2026:
+
+- Một trong những [luật về trung tâm dữ liệu](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/) toàn diện nhất cả nước. Luật này cho các cộng đồng tiếng nói lớn hơn về việc sử dụng nước, điện và đất của họ.
+- Dự luật Thượng viện 1050, [yêu cầu công bố](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/) khi quảng cáo sử dụng diễn viên do AI tạo ra
+- Một Sắc lệnh Hành pháp nhằm đẩy nhanh các nỗ lực [giám sát AI](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/) của tiểu bang. Sắc lệnh này thúc đẩy các luật kiểm toán AI mới và tiến tới một "công tắc ngắt" cho các mô hình AI tiên phong.
+- Một bộ [biện pháp bảo vệ về AI đầu tiên trong cả nước](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/)
+- [Luật an toàn trẻ em](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/) đối với chatbot và mạng xã hội
+
+Công việc của chúng tôi cũng chưa kết thúc. Người dân California đã nêu nhiều ý tưởng sẽ định hướng hành động của chính quyền trong những năm tới. Và khi bức tranh AI tiếp tục thay đổi, chúng tôi sẽ tiếp tục lắng nghe.
+----
+id: sign_up
+button_text: Đăng ký
+----
+## Đăng ký để tiếp tục tham gia
+
+Cho chúng tôi email của quý vị để biết về các cơ hội sắp tới.

@@ -3,16 +3,17 @@
 {% block content %}
 {% import 'macros/ge-how-it-works.njk' as gewh %}
 
-<link rel="stylesheet" href="/css/ai-impact.css" />
+<link rel="stylesheet" href="{{ "/css/ai-impact.css" | assetVersion }}" />
 
     <section id="ge-hero" class="engca-hero engca-hero-ai">
         <div class="container banner-flex">
             <engca-banner-content>
-                <p class="status-pill">{{ modules.hero.analyzingResults }}</p>
+                {# The engagement is closed and the report is out (9/28). Locales without the new labels fall back. #}
+                <p class="status-pill">{{ modules.hero.conversationClosed | default(modules.hero.analyzingResults) }}</p>
                 <h1>{{ modules.hero.title  }}</h1>
                 {{ modules.hero.content | safe }}
                 <p>
-                    <a data-appearance="button" data-theme="orange" href="https://join.engaged.ca.gov/ai-impact" class="m-t">{{ modules.hero.buttonText_getupdates }}</a>
+                    <a data-appearance="button" data-theme="orange" href="{{ "/ai-impact/report/" | locale_url }}" class="m-t">{{ modules.hero.buttonText_readreport | default(modules.hero.buttonText_getupdates) }}</a>
                 </p>
             </engca-banner-content>
             <img src="/public/images/hero-bubbles-ai.png" aria-hidden="true" class="desktop-only" alt=""/>
@@ -28,6 +29,10 @@
                 <div class="col-lg-4">
                     <div class="about-the-process">
                         {{ modules.about.content | safe }}
+                        {% if modules.about.partner_logo %}
+                          {# Intrinsic size attributes keep it small even before the stylesheet arrives. #}
+                          <img class="partner-logo" src="{{ modules.about.partner_logo }}" alt="{{ modules.about.partner_logo_alt }}" width="290" height="36" />
+                        {% endif %}
                     </div>
                 </div>
             </div>

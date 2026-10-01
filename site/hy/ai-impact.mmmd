@@ -17,10 +17,12 @@ readingResponses: Ուսումնասիրում ենք պատասխանները
 hostingDiscussions: Անցկացվում են քննարկումներ
 analyzingResults: Վերլուծվում են արդյունքները
 buttonText_getupdates: Ստանալ թարմացումներ
+conversationClosed: "Այս քննարկումը փակ է"
+buttonText_readreport: "Կարդալ զեկույցը"
 ----
-Մենք հարցրինք, թե ինչպես եք կարծում՝ ԱԲ-ն կարող է ազդել աշխատաշուկայի և ձեր աշխատելու ձևի վրա:
+Մենք կալիֆոռնիացիներին հարցրինք ԱԲ-ի ազդեցության և այն մասին, թե ինչ պետք է անի կառավարությունը այդ առնչությամբ։
 
-Այժմ մենք ձեր կարծիքները ամփոփում ենք հաշվետվության մեջ:
+Այժմ կարող եք տեսնել, թե ինչ ասացին նրանք։
 
 ----
 id: overview
@@ -36,6 +38,9 @@ id: overview
 
 ----
 id: about
+translator_note: "partner_logo is an image path; do not translate it. partner_logo_alt is the image's alt text."
+partner_logo: /public/images/pdla-logo.svg
+partner_logo_alt: Public Democracy LA
 ----
 
 ### Ծրագրի մասին
@@ -44,6 +49,7 @@ Engaged California-ն մտածողական ժողովրդավարության օ
 
 [Իմացեք ավելին Engaged California-ի մասին](/hy/about)
 
+Շնորհակալություն ենք հայտնում Public Democracy LA-ին, որն օգնեց մեզ այս աշխատանքում։
 
 ----
 id: sign_up

@@ -17,10 +17,12 @@ readingResponses: 正在閱讀回覆
 hostingDiscussions: 舉辦討論
 analyzingResults: 正在分析結果
 buttonText_getupdates: 接收更新通知
+conversationClosed: "本次討論已結束"
+buttonText_readreport: "閱讀報告"
 ----
-我們向您詢問了您認為人工智能將如何影響就業市場以及您的工作方式。
+我們詢問了加州居民對人工智慧影響的看法，以及政府應如何因應。
 
-我們現正將您的回饋整理成一份報告。
+現在您可以看看他們怎麼說。
 
 ----
 id: overview
@@ -36,6 +38,9 @@ id: overview
 
 ----
 id: about
+translator_note: "partner_logo is an image path; do not translate it. partner_logo_alt is the image's alt text."
+partner_logo: /public/images/pdla-logo.svg
+partner_logo_alt: Public Democracy LA
 ----
 
 ### 關於該計劃
@@ -44,6 +49,7 @@ Engaged California 是審議式民主的一個範例。它讓您能夠以全新�
 
 [深入瞭解 Engaged California](/zh-hant/about)
 
+感謝 Public Democracy LA 協助我們完成這項工作。
 
 ----
 id: sign_up

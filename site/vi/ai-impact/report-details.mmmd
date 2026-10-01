@@ -1,0 +1,261 @@
+---
+title: Chúng tôi đã thực hiện công việc này như thế nào
+description: "Cách Engaged California chọn người tham gia các buổi thảo luận về Tác động của AI đối với công việc, mỗi giai đoạn đã tiến gần đến mục tiêu nhân khẩu học ra sao, và cách chúng tôi phân tích những gì mọi người nói."
+layout: mmmd-ai-impact-report-details
+parentid: ai-impact
+keywords:
+  - California
+  - trí tuệ nhân tạo
+  - AI
+  - việc làm
+  - rút thăm
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: "Các phương pháp chúng tôi đã dùng để tổ chức và phân tích các cuộc trò chuyện về AI"
+theme: light
+back_link_text: "Quay lại báo cáo"
+back_link_href: /ai-impact/report/
+----
+# Chúng tôi đã thực hiện công việc này như thế nào
+----
+id: intro
+----
+Dự án *Tác động của AI đối với công việc* có hai giai đoạn. Ở giai đoạn đầu, bất kỳ người dân California nào cũng có thể chia sẻ quan điểm qua một khảo sát mở trực tuyến. Ở giai đoạn hai, chúng tôi mời những người trả lời khảo sát quan tâm tham gia các buổi thảo luận trực tiếp.
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: Trên trang này
+label: "Đi tới:"
+nbr_items: 3
+item_1_label: Cân bằng công bằng từng nhóm
+item_1_anchor: balancing-groups
+item_2_label: Xếp hạng ý tưởng chính sách
+item_2_anchor: ranking-policy-ideas
+item_3_label: Cách chúng tôi dùng AI
+item_3_anchor: how-we-used-ai
+----
+
+----
+id: balancing_groups
+title: Cân bằng từng nhóm một cách công bằng
+----
+Chúng tôi cần quyết định mời ai. Và chúng tôi cần chọn một cách công bằng, đồng thời tạo ra các nhóm cân đối.
+
+Vì vậy, chúng tôi dùng một phương pháp gọi là rút thăm (sortition), tương tự cách tòa án chọn bồi thẩm đoàn. Phương pháp này dựa trên hai ý tưởng quan trọng như nhau:
+
+- **Tính đại diện:** Chúng tôi đặt ra các mục tiêu nhân khẩu học dựa trên ước tính dân số California. Điều này giúp danh sách người được mời cuối cùng phản ánh sự đa dạng của tiểu bang. Các tiêu chí gồm tuổi, địa lý và lĩnh vực làm việc.
+- **Tính ngẫu nhiên:** Trong phạm vi các mục tiêu đó, mọi người đủ điều kiện đều có cơ hội được chọn như nhau.
+
+Những nguyên tắc này đảm bảo chúng tôi không chỉ nghe từ những người trả lời sớm nhất. Chúng giúp chúng tôi xây dựng một danh sách được chọn công bằng, phản ánh gần đúng người dân California nói chung.
+----
+id: demographics_chart
+title: Nhân khẩu học
+pulldown_label: "Hiện người tham gia theo"
+chart_title: "Nhân khẩu học của khảo sát so với thảo luận"
+translator_note_chart: "chart_note is the one-line note directly under the chart title."
+chart_note: "Rút thăm giúp chúng tôi tiến gần hơn đến nhân khẩu học cân đối trong các buổi thảo luận."
+axis_above_label: "Điểm phần trăm trên mục tiêu"
+axis_below_label: "Điểm phần trăm dưới mục tiêu"
+chart_alt: "Biểu đồ cột so sánh người tham gia khảo sát và thảo luận với các mục tiêu nhân khẩu học, tính bằng điểm phần trăm so với mục tiêu."
+dim_region: Khu vực
+dim_race: Chủng tộc / sắc tộc
+dim_age: Tuổi
+dim_gender: Giới tính
+dim_field: Lĩnh vực làm việc
+dim_ai: Thái độ về AI
+phase1_label: Khảo sát
+phase2_label: Thảo luận
+on_target_label: Đúng mục tiêu
+translator_note: "{dimension} is replaced with the selected drop-down label. Keep it in the translation."
+table_caption: "Người tham gia so với mục tiêu, theo {dimension}"
+translator_note_2: "The next four lines are read by screen readers. Keep every {placeholder} in the translation."
+chart_aria_label: "{dimension}: {phase1} và {phase2}, điểm phần trăm so với mục tiêu"
+bar_title: "{category}, {phase}: {value} điểm so với mục tiêu ({share}% so với mục tiêu {target}%)"
+table_target_header: "Mục tiêu %"
+table_points_header: "{phase}, điểm so với mục tiêu"
+----
+Xem chúng tôi đã tiến gần đến các mục tiêu nhân khẩu học đến mức nào. Nhấp vào menu thả xuống để xem số liệu theo:
+
+- Khu vực
+- Chủng tộc / sắc tộc
+- Giới tính
+- Lĩnh vực làm việc
+- Tuổi
+----
+id: demographics_sources
+translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
+label: Nguồn của các mục tiêu
+source_region: "Khu vực: Mỗi khu vực được đảm bảo có tiếng nói (ít nhất 6 người). Chúng tôi phân bổ số chỗ còn lại theo tỷ lệ dân số California năm 2026 dựa trên ước tính của Khảo sát Cộng đồng Hoa Kỳ (ACS)."
+source_field_of_work: "Lĩnh vực làm việc: Dựa trên [thống kê Việc làm theo Ngành và Lực lượng Lao động (CES) tháng 4 năm 2026]({@0}) và [bảng chọn khu vực]({@1}) của Sở Phát triển Việc làm California. Bản ghi nhớ gửi Văn phòng Thống đốc nêu rõ hậu cần, chăm sóc sức khỏe, dịch vụ pháp lý và tài chính, các ngành sáng tạo, khu vực công và học thuật là các lĩnh vực ưu tiên. Chúng tôi đã phản ánh điều đó trong các hạng mục này."
+source_age: "Tuổi: Theo dự báo Điều tra dân số 2026 / Sở Tài chính California."
+source_gender: "Giới tính: Theo dự báo Điều tra dân số 2026 / Sở Tài chính California."
+source_race: "Chủng tộc / sắc tộc: Theo dự báo Điều tra dân số 2026 / Sở Tài chính California."
+source_ai: ""
+----
+
+----
+id: category_labels
+translator_note: "Category names as they appear in the demographics chart. Translate only the label_N lines; the key_N lines are data values and must stay in English. Region names (label_1 to label_8) are proper nouns and stay in English too."
+nbr_labels: 36
+key_1: "Bay Area"
+label_1: "Bay Area"
+key_2: "Central Coast"
+label_2: "Central Coast"
+key_3: "Central Valley"
+label_3: "Central Valley"
+key_4: "Far North / North Coast"
+label_4: "Far North / North Coast"
+key_5: "Los Angeles"
+label_5: "Los Angeles"
+key_6: "Sacramento Valley / Sierra Foothills"
+label_6: "Sacramento Valley / Sierra Foothills"
+key_7: "Sierra Region"
+label_7: "Sierra Region"
+key_8: "Southern California"
+label_8: "Southern California"
+key_9: "American Indian or Alaska Native"
+label_9: "Người da đỏ Mỹ hoặc thổ dân Alaska"
+key_10: "Asian"
+label_10: "Người châu Á"
+key_11: "Black or African American"
+label_11: "Người da đen hoặc người Mỹ gốc Phi"
+key_12: "Hispanic or Latino"
+label_12: "Người gốc Tây Ban Nha hoặc Latinh"
+key_13: "Middle Eastern or North African"
+label_13: "Người Trung Đông hoặc Bắc Phi"
+key_14: "Multiple"
+label_14: "Nhiều chủng tộc"
+key_15: "Native Hawaiian or Pacific Islander"
+label_15: "Thổ dân Hawaii hoặc đảo Thái Bình Dương"
+key_16: "White"
+label_16: "Người da trắng"
+key_17: "18-24"
+label_17: "18-24"
+key_18: "25-44"
+label_18: "25-44"
+key_19: "45-64"
+label_19: "45-64"
+key_20: "Over 65"
+label_20: "Trên 65"
+key_21: "Woman"
+label_21: "Nữ"
+key_22: "Man"
+label_22: "Nam"
+key_23: "Nonbinary / multi / other"
+label_23: "Phi nhị nguyên / nhiều / khác"
+key_24: "Arts, entertainment, or media"
+label_24: "Nghệ thuật, giải trí hoặc truyền thông"
+key_25: "Education"
+label_25: "Giáo dục"
+key_26: "Financial"
+label_26: "Tài chính"
+key_27: "Goods producing and harvesting"
+label_27: "Sản xuất hàng hóa và thu hoạch"
+key_28: "Government"
+label_28: "Chính quyền"
+key_29: "Healthcare"
+label_29: "Chăm sóc sức khỏe"
+key_30: "Hospitality"
+label_30: "Khách sạn, nhà hàng"
+key_31: "Information technology"
+label_31: "Công nghệ thông tin"
+key_32: "Logistics"
+label_32: "Hậu cần"
+key_33: "Other"
+label_33: "Khác"
+key_34: "Professional services"
+label_34: "Dịch vụ chuyên môn"
+key_35: "Retail or wholesale trade"
+label_35: "Bán lẻ hoặc bán buôn"
+key_36: "Unemployed, looking"
+label_36: "Thất nghiệp, đang tìm việc"
+----
+
+----
+id: process_links
+----
+#### Thêm về rút thăm
+
+- [Mã rút thăm của chúng tôi](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
+- Sortition Foundation, [*Tại sao dùng thuật toán rút thăm?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html) (tiếng Anh)
+
+----
+id: ranking_policy_ideas
+----
+## Xếp hạng các ý tưởng chính sách
+
+Trong các buổi thảo luận, người tham gia đề xuất các ý tưởng chính sách, rồi bỏ phiếu theo nhóm.
+
+Chúng tôi tổng hợp tất cả các ý tưởng nhận được ít nhất một phiếu trong một buổi thảo luận. Sau đó, chúng tôi nhóm các ý tưởng tương tự lại và viết tóm tắt cho mỗi nhóm. Đây trở thành 26 ý tưởng chính sách. Mỗi ý tưởng chính sách bao gồm từ 1 đến 12 đề xuất chính sách riêng lẻ.
+
+Để xếp hạng các ý tưởng chính sách, chúng tôi đánh giá từng ý tưởng dựa trên 2 yếu tố:
+
+- **Tần suất:** Một ý tưởng chính sách xuất hiện bao nhiêu lần trong 14 buổi thảo luận. Số lần dao động từ 1 đến 8.
+- **Sự ủng hộ:** Ý tưởng chính sách có lọt vào nhóm được bỏ phiếu cao nhất trong một buổi thảo luận hay không. Để lọt vào nhóm này, ý tưởng phải nhận đủ phiếu để nằm trong một phần ba trên cùng. Số lần dao động từ 0 đến 5.
+
+Chúng tôi sắp xếp danh sách các ý tưởng chính sách theo tần suất. Sau đó chia thành hai nửa gần bằng nhau và gắn nhãn nửa trên là "tần suất cao". Một ý tưởng được coi là "tần suất cao" nếu xuất hiện trong 5 buổi thảo luận trở lên.
+
+Sau đó, chúng tôi sắp xếp các ý tưởng chính sách theo sự ủng hộ. Chúng tôi gắn nhãn một ý tưởng là "ý tưởng hàng đầu" nếu các ý tưởng liên quan của nó nằm trong 3 chủ đề hàng đầu xuyên suốt tất cả các phiên.
+
+Thứ tự các ý tưởng có ý nghĩa nhất định, nhưng không tuyệt đối. Với mỗi yếu tố, chúng tôi tính thứ hạng của ý tưởng so với tất cả các ý tưởng khác. Sau đó cộng các thứ hạng này lại để cho mỗi ý tưởng một điểm số. Chúng tôi đặt các ý tưởng có điểm cao nhất lên đầu. Khi các ý tưởng chính sách bằng điểm, chúng tôi dùng thứ tự bảng chữ cái.
+----
+id: how_we_used_ai
+----
+## Chúng tôi đã sử dụng AI như thế nào
+
+Nhân viên của chúng tôi đã dùng AI để hỗ trợ xem xét và phân tích các buổi thảo luận này.
+
+Ví dụ về việc sử dụng AI gồm:
+
+- chuyển âm thanh buổi thảo luận thành bản ghi,
+- tạo bản tóm tắt tổng quan các phản hồi thảo luận và khảo sát, và
+- gắn thẻ các phần của cuộc trò chuyện với những ý tưởng được đề cập.
+
+AI không chọn người chúng tôi mời tham gia thảo luận. Chúng tôi chọn người được mời bằng cách rút thăm. Chúng tôi đảm bảo nhóm người được mời phản ánh nhân khẩu học California. Chúng tôi cũng dùng AI để đánh giá thái độ của người trả lời về AI. Điều này mang lại cho chúng tôi sự đa dạng quan điểm.
+
+Chúng tôi bảo vệ những gì người tham gia chia sẻ. Toàn bộ công việc với AI diễn ra trong môi trường dữ liệu bảo mật của tiểu bang. Chúng tôi không bao giờ chia sẻ bản ghi hay phản hồi khảo sát với các nhà cung cấp AI. Không có nội dung nào được dùng để huấn luyện các mô hình AI.
+
+AI không bao giờ thay thế phán đoán của con người, và không bao giờ viết hay chỉnh sửa lời của người tham gia. Mọi trích dẫn trong báo cáo này đều là lời người tham gia đã nói. Chúng tôi đối chiếu với bản ghi và để nhân viên xem xét.
+
+Nhân viên của chúng tôi tự xác định các ý tưởng chính sách và chủ đề được nêu bật trong báo cáo này. Họ xem xét các bản ghi và phản hồi khảo sát mà không cần AI hỗ trợ. Khi AI hỗ trợ phân tích, chúng tôi yêu cầu nó đưa ra trích dẫn chính xác. Nhân viên kiểm tra các nhận định đó trước khi dựa vào chúng.
+
+Trong quá trình thử nghiệm, chúng tôi so sánh bản tóm tắt của AI với ghi chép của người ghi chép. Chúng tôi thấy chúng bao quát cùng nội dung mà không bịa đặt.
+----
+id: download_data
+button_text: Tải các ý tưởng
+----
+### Tải tất cả các ý tưởng chính sách
+
+Quý vị có thể tải về và đọc tất cả các chính sách mà mọi người đề xuất trong các buổi thảo luận. Chúng ở dạng tệp CSV.
+----
+id: sign_up
+button_text: Đăng ký
+----
+## Đăng ký để tiếp tục tham gia
+
+Cho chúng tôi email của quý vị để biết về các cơ hội sắp tới.
