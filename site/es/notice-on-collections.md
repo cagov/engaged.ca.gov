@@ -132,4 +132,3 @@ Attn: Chief Privacy Officer<br>
 401 I Street, Suite 200<br>
 Sacramento, CA 95814<br>
 Correo electrónico: [privacy@innovation.ca.gov](mailto:privacy@innovation.ca.gov)<br>
-Teléfono: [916-234-3480](tel:916-234-3480)<br>
