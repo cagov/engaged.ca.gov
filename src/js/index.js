@@ -32,8 +32,7 @@ class JoinConversationForm extends window.HTMLElement {
       const emailIsBlank = emailInput.value.length === 0;
       // Email must be valid and contain at least one period.
       const emailIsValid =
-        emailInput.checkValidity() &&
-        emailInput.value.includes(".");
+        emailInput.checkValidity() && emailInput.value.includes(".");
       if (emailIsBlank || !emailIsValid) {
         emailInput.setAttribute("aria-describedby", "emailError");
         emailInput.setAttribute("aria-invalid", "true");
@@ -89,3 +88,21 @@ class JoinConversationForm extends window.HTMLElement {
 }
 
 customElements.define("engca-join-convo-form", JoinConversationForm);
+
+// The state template's header script hides the utility bar by setting the
+// header's top to minus its height, but only from a scroll event that moves
+// down past 40px, measured against the position it saw at load. Firefox and
+// Safari jump to a URL fragment before that listener exists, so a page opened
+// at #some-section keeps the full-height header sitting over the section
+// title (Chrome re-scrolls to the fragment at load, which trips the listener).
+// Apply the same offset once at load when the page is already scrolled; the
+// template's own handler takes over from the next scroll.
+window.addEventListener("load", () => {
+  const y = window.scrollY || document.documentElement.scrollTop;
+  if (y <= 40) return;
+  const header = document.querySelector("header");
+  const utility = document.querySelector(".utility-header");
+  if (!header || !utility) return;
+  const alert = document.querySelector("header .alert");
+  header.style.top = `-${utility.clientHeight + (alert?.clientHeight || 0)}px`;
+});

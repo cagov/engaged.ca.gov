@@ -17,10 +17,12 @@ readingResponses: Leyendo las respuestas
 hostingDiscussions: Organizando debates
 analyzingResults: Analizando los resultados
 buttonText_getupdates: Reciba actualizaciones
+conversationClosed: "Esta conversación está cerrada"
+buttonText_readreport: "Leer el informe"
 ----
-Les preguntamos cómo cree que la IA podría afectar el mercado laboral y la forma en que realiza su trabajo.
+Preguntamos a los californianos sobre los efectos de la IA y qué debería hacer el gobierno al respecto.
 
-Ahora estamos compilando sus comentarios en un informe.
+Ahora puede ver lo que dijeron.
 
 ----
 id: overview
@@ -36,6 +38,9 @@ Les preguntamos a las personas cómo les está afectando la IA mediante encuesta
 
 ----
 id: about
+translator_note: "partner_logo is an image path; do not translate it. partner_logo_alt is the image's alt text."
+partner_logo: /public/images/pdla-logo.svg
+partner_logo_alt: Public Democracy LA
 ----
 
 ### Acerca del programa
@@ -44,6 +49,7 @@ Engaged California es un ejemplo de democracia deliberativa. Le permite involucr
 
 [Más información sobre Engaged California](/es/about)
 
+Queremos agradecer a Public Democracy LA, que nos ayudó en este trabajo.
 
 ----
 id: sign_up

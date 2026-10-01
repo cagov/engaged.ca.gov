@@ -17,10 +17,12 @@ readingResponses: در حال خواندن پاسخ‌ها
 hostingDiscussions: میزبانی بحث‌ها
 analyzingResults: در حال تحلیل نتایج
 buttonText_getupdates: دریافت به‌روزرسانی‌ها
+conversationClosed: "این گفتگو بسته شده است"
+buttonText_readreport: "گزارش را بخوانید"
 ----
-ما پرسیدیم که فکر می‌کنید هوش مصنوعی چگونه می‌تواند بر بازار کار و نحوه انجام کار شما تأثیر بگذارد.
+ما از کالیفرنیایی‌ها درباره اثرات هوش مصنوعی و اینکه دولت باید در این باره چه کند پرسیدیم.
 
-ما اکنون در حال تدوین بازخورد شما در یک گزارش هستیم.
+اکنون می‌توانید ببینید چه گفتند.
 
 ----
 id: overview
@@ -36,6 +38,9 @@ id: overview
 
 ----
 id: about
+translator_note: "partner_logo is an image path; do not translate it. partner_logo_alt is the image's alt text."
+partner_logo: /public/images/pdla-logo.svg
+partner_logo_alt: Public Democracy LA
 ----
 
 ### درباره برنامه
@@ -44,6 +49,7 @@ Engaged California نمونه‌ای از دموکراسی مشورتی است. 
 
 [درباره Engaged California بیشتر بدانید](/fa/about)
 
+از Public Democracy LA که در این کار به ما کمک کرد سپاسگزاریم.
 
 ----
 id: sign_up

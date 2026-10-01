@@ -17,10 +17,12 @@ readingResponses: Binabasa ang mga tugon
 hostingDiscussions: Pagho-host ng mga talakayan
 analyzingResults: Sinusuri ang mga resulta
 buttonText_getupdates: Tumanggap ng mga update
+conversationClosed: "Sarado na ang usapang ito"
+buttonText_readreport: "Basahin ang ulat"
 ----
-Tinanong namin kung paano sa palagay mo maaaring makaapekto ang AI sa merkado ng trabaho at kung paano mo ginagawa ang iyong trabaho.
+Tinanong namin ang mga taga-California tungkol sa mga epekto ng AI, at kung ano ang dapat gawin ng gobyerno tungkol dito.
 
-Kasalukuyan naming pinagsasama-sama ang iyong feedback sa isang ulat.
+Ngayon ay makikita mo na ang kanilang sinabi.
 
 ----
 id: overview
@@ -36,6 +38,9 @@ Tinanong namin ang mga tao kung paano sila naaapektuhan ng AI sa pamamagitan ng 
 
 ----
 id: about
+translator_note: "partner_logo is an image path; do not translate it. partner_logo_alt is the image's alt text."
+partner_logo: /public/images/pdla-logo.svg
+partner_logo_alt: Public Democracy LA
 ----
 
 ### Tungkol sa programa
@@ -44,6 +49,7 @@ Ang Engaged California ay isang halimbawa ng deliberatibong demokrasya. Binibigy
 
 [Matuto pa tungkol sa Engaged California](/tl/about)
 
+Nais naming pasalamatan ang Public Democracy LA, na tumulong sa amin sa gawaing ito.
 
 ----
 id: sign_up

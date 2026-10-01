@@ -1,0 +1,556 @@
+---
+title: Մարդիկ՝ գործընթացի կենտրոնում
+description: "Կալիֆոռնիացիներն ասում են, թե ինչպես պետք է ստեղծվի, կառավարվի և օգտագործվի AI-ը։ Engaged California-ն կալիֆոռնիացիներին հարցրել է, թե ինչպես է AI-ը վերափոխում աշխատանքն ու տնտեսությունը, և ինչ պետք է անի կառավարությունն այդ առնչությամբ։"
+layout: mmmd-ai-impact-report
+parentid: ai-impact
+keywords:
+  - California
+  - արհեստական բանականություն
+  - AI
+  - աշխատանք
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: Կալիֆոռնիացիներն ասում են, թե ինչպես պետք է ստեղծվի, օգտագործվի և կառավարվի AI-ը
+translator_note: "Optional hero buttons (button_1_label/href, button_2_label/href) are omitted here; the jump bar under the hero covers them (9/24)."
+----
+# Մարդիկ՝ գործընթացի կենտրոնում
+
+Մենք մարդկանց տվեցինք նահանգի առջև ծառացած ամենադժվար հարցերից մի քանիսը.
+
+*Ինչպե՞ս է AI-ը վերափոխում աշխատանքն ու տնտեսությունը։ Ի՞նչ պետք է անի կառավարությունն այդ առնչությամբ։*
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids and the href is a page address; do not translate them."
+aria_label: Այս էջում
+label: "Անցնել՝"
+nbr_items: 5
+item_1_label: AI-ի հանրային քննարկում
+item_1_anchor: public-forum
+item_2_label: Լսված գաղափարներ
+item_2_anchor: what-we-heard
+item_3_label: Ովքեր մասնակցեցին
+item_3_anchor: who-participated
+item_4_label: Ինչ է լինելու հետո
+item_4_anchor: what-happens-next
+item_5_label: Ինչպես ենք աշխատել
+item_5_href: /ai-impact/report-details/
+----
+
+----
+id: public_forum
+----
+## Հանրային քննարկում AI-ի մասին
+
+2026 թվականի մայիսին մենք բոլոր կալիֆոռնիացիների համար բացեցինք հանրային քննարկում *AI-ի ազդեցությունն աշխատանքի վրա* թեմայով։ Հաջորդ ամիսներին նահանգի տարբեր ծայրերից հազարավոր մարդիկ մեր հարցման միջոցով կիսվեցին իրենց մտքերով։ Հարցման որոշ մասնակիցներ այնուհետև միացան Zoom-ով անցկացվող ուղղորդվող խմբային քննարկումներին։ Նրանք կիսվեցին իրենց փորձով և լսեցին միմյանց։ Այնուհետև իրենց առաջին արձագանքները վերածեցին կոնկրետ քաղաքականության գաղափարների։
+
+Այդ ընթացքում մասնակիցները միշտ չէ, որ համաձայն էին միմյանց հետ։ Նրանք վիճեցին, թե որքան հեռու պետք է գնա կարգավորումը, ինչպես ֆինանսավորել առաջարկները և ինչպես կիրառել կանոնները։
+
+Մի թեմա հնչում էր ամբողջ ընթացքում. **AI-ի քաղաքականության մեջ մեզ անհրաժեշտ են մարդիկ՝ գործընթացի կենտրոնում**։ Ոչ միայն այն հարցում, թե ինչպես են մարդիկ օգտագործում AI-ը, այլև թե ինչպես են ընկերությունները ստեղծում այն և ինչպես են օրենքները կառավարում այն։
+
+----
+id: participation_numbers
+participants_count: "2,702"
+participants_label: հարցման մասնակից
+conversations_count: "103"
+conversations_label: քննարկման մասնակից
+ideas_count: "26"
+ideas_label: քաղաքականության գաղափար
+----
+
+----
+id: what_we_heard
+----
+## Գաղափարներ, որոնք լսեցինք
+
+### Նախ՝ հարցումից
+
+Մեր հարցումը մարդկանց հարցնում էր, թե ինչ են ուզում, որ կառավարությունն անի AI-ի ազդեցության առնչությամբ։ Մենք ստացանք քաղաքականության գաղափարների լայն շրջանակ։
+----
+id: word_cloud
+translator_note: "The phrases in the word cloud come from a shared data file (src). labels_src points at this language's translations of those phrases, a JSON map of English phrase to translated phrase; edit that file to change the wording. Leave labels_src out on the English page."
+labels_src: /public/data/ai-report-ideas-cloud-labels.hy.json
+chart_alt: "Հարցման մեջ հնչած քաղաքականության գաղափարների բառային ամպ, որտեղ չափը կախված է, թե քանի մարդ է նշել յուրաքանչյուր գաղափարը։"
+----
+
+----
+id: ranking
+----
+### Այնուհետև՝ ուղիղ քննարկումներից
+
+Ստորև ներկայացված AI-ի քաղաքականության գաղափարները ծագել են Zoom-ով անցկացված 2-ժամյա ուղիղ քննարկումներից։ Մասնակիցները ճշգրտեցին իրենց քաղաքականության գաղափարները և քվեարկեցին, թե որն է ամենակարևորը։
+
+Մենք այնտեղ հնչած մտքերը խմբավորեցինք 26 առանձին գաղափարների մեջ։ Այնուհետև դասակարգեցինք դրանք ըստ՝
+
+- թե որքան հաճախ էր գաղափարը հայտնվում քննարկումներում (հաճախականություն), և
+- թե որքան աջակցություն էր այն ստանում, երբ հայտնվում էր (որքան հաճախ էր այն դառնում հանրաճանաչ գաղափար)։
+----
+id: tiers_ui
+translator_note: "{count} is replaced with a number. Keep it in the translation."
+translator_note_2: "section_title is the heading above the three groups of ideas."
+section_title: Քաղաքականության այլ գաղափարներ
+count_label: "{count} քաղաքականության գաղափար"
+show_label: Տեսնել գաղափարները
+show_more_label: "Ցույց տալ ևս {count}"
+close_label: Թաքցնել գաղափարները
+show_all_label: "Ցույց տալ բոլորը"
+close_all_label: Թաքցնել բոլորը
+example_ideas_label: "Օրինակներ՝"
+example_idea_label_singular: "Օրինակ՝"
+nbr_tiers: 3
+initial_visible_ideas: 2
+----
+
+----
+id: top_themes
+translator_note: "The Top 3 box. Each theme is a card; selecting one shows its quotes in the panel."
+title: Քաղաքականության 3 գլխավոր գաղափարները
+subtitle: Այս թեմաներն ամենահաճախն էին հնչում և ստացան ամենաուժեղ աջակցությունը։
+icon: sparkle
+nbr_themes: 3
+show_examples_label: Ցույց տալ օրինակները
+hide_examples_label: Թաքցնել օրինակները
+show_conversation_label: Տեսնել, թե ինչ ասացին մարդիկ
+hide_conversation_label: Թաքցնել մարդկանց ասածը
+quotes_title: "Քննարկումներից մեկից՝"
+select_label: "Ցույց տալ, թե ինչ ասացին մարդիկ այս մասին՝ {title}"
+translator_note_quotes: "quote_open and quote_close are the quotation marks placed around each quote. Use the marks customary in your language."
+quote_open: "“"
+quote_close: "”"
+translator_note_translated: "translated_note is a caption shown under each set of quotes, saying they were translated from English. Leave it empty on the English page."
+translated_note: "Թարգմանված է անգլերեն բնագրից"
+----
+----
+id: top_theme_1
+title: Պատասխանատվության ենթարկել AI ընկերություններին իրենց պատճառած վնասի համար
+----
+- Ուժեղացնել քրեական պատասխանատվությունը AI-ի պատճառած վնասի համար
+- Ավելի շատ միջոցներ հատկացնել իրական կիրարկման համար
+----
+id: top_theme_1_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+session: 10
+quote_1: "Սոցիալական ցանցերի դեպքում մենք ընկերություններին պատասխանատվության չենթարկեցինք, և դա քայքայեց մեր ժողովրդավարությունը։ Կարծում եմ՝ պետք է վերջ տալ այն ժամանակաշրջանին, երբ ասում էին, թե ընկերությունները պատասխանատու չեն, թե ինչպես են մարդիկ օգտագործում նման գործիքները։ Համոզված եմ, որ նրանք կփոխեն քաղաքականությունը և կներդնեն որոշակի գործիքներում՝ դա ավելի լավ կառավարելու համար, եթե մենք վերջ դնենք այդ անպատասխանատվությանը։"
+attribution_1: Արվեստի, ժամանցի և մեդիայի ոլորտի աշխատող Ծովածոցի շրջանից
+region_1: Bay Area
+field_1: "Arts, entertainment, or media"
+quote_2: "Ձեր նշած կետի առնչությամբ՝ CDA-ի 230-րդ բաժինը փաստացի պատժում է մեդիա ընկերությանը, եթե նա փորձում է վերահսկել օգտատերերի բովանդակությունը, փոխարենը դա դարձնելու մի բան, որը նրանց արժեքները համապատասխանեցնում է հանրային բարիքին։ Ուրեմն, եթե ամբողջական նայենք խթանների կառուցվածքին. որտե՞ղ կարող ենք սահմանել կանոններ այնպես, որ դրանց հետևելը և՛ հանրային բարիքին ծառայի, և՛ շահույթին, փոխարեն երկուսի միջև լարվածություն ստեղծելու։"
+attribution_2: Տեղեկատվական տեխնոլոգիաների ոլորտի աշխատող Կենտրոնական ափից
+region_2: Central Coast
+field_2: "Information technology"
+quote_3: "Հարցերից մեկն այն է, թե ով է պատասխանատու արդյունքների համար։ Եթե կա մարդկային վերանայում, ապա մարդն է պատասխանատու, քանի որ մարդը պետք է լինի վերջնական որոշում կայացնողը։ Բայց այն ձևով, ինչպես այսօր օգտագործվում է AI-ը, եթե չկա մարդկային վերանայում, ո՞վ է պատասխանատու AI-ի թույլ տված սխալների համար։"
+attribution_3: Ֆինանսների ոլորտի աշխատող Ծովածոցի շրջանից
+region_3: Bay Area
+field_3: "Financial"
+----
+----
+id: top_theme_2
+title: Պաշտպանել մարդկանց և շրջակա միջավայրը AI-ի ռեսուրսների պահանջներից
+----
+- Սահմանափակումներ մտցնել տվյալների կենտրոնների աղմուկի, աղտոտման, ջրի և էլեկտրաէներգիայի սպառման վրա
+- Ուսումնասիրել տվյալների կենտրոնների ազդեցությունը շրջակա միջավայրի վրա
+----
+id: top_theme_2_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "Կարծում եմ՝ մենք պետք է պաշտպանենք մեր բնական ռեսուրսները և մաքուր շրջակա միջավայրը։ Որովհետև ես մարդկանց գիտեմ Տեխասում, որտեղ տվյալների ֆերմաներ կամ տվյալների կենտրոններ են եկել, և ջուրն աղտոտվել է, իսկ էլեկտրաէներգիայի վճարները կտրուկ աճել են։"
+attribution_1: Արվեստի/ժամանցի/մեդիայի ոլորտի աշխատող Հարավային Կալիֆոռնիայից
+region_1: Southern California
+field_1: "Arts, entertainment, or media"
+quote_2: "Իմ ամենամեծ մտահոգությունը AI-ի սպառած ջրի և էլեկտրաէներգիայի քանակն է։ Լսում ես Ջորջիայի տվյալների կենտրոնի մասին, որն ապօրինի միացել է ինչ-որ քաղաքի կամ շրջանի ջրամատակարարման համակարգին և միլիոնավոր գալոն ջուր է վերցրել՝ առանց որևէ մեկի իմացության։"
+attribution_2: Պետական ոլորտի աշխատող Լոս Անջելեսից
+region_2: Los Angeles
+field_2: "Government"
+quote_3: "Երբ նահանգը դիտարկում եմ որպես ֆիզիկական վայր, մենք կարող ենք սահմանել բնապահպանական կանոնակարգեր, կարող ենք սահմանել տվյալների գաղտնիության պահանջներ նրանց համար, ովքեր այստեղ են գործում։ Ինձ իսկապես հետաքրքրում է, թե ինչ նվազագույն շեմ ենք սահմանում շրջակա միջավայրի պաշտպանության համար՝ էներգիայի, տարածքի և այլնի օգտագործման հարցում։"
+attribution_3: Պետական ոլորտի աշխատող Ծովածոցի շրջանից
+region_3: Bay Area
+field_3: "Government"
+----
+----
+id: top_theme_3
+title: Սահմանել կանոններ, թե որտեղ կարելի է անվտանգ օգտագործել AI-ը
+----
+- Ապահովել, որ կյանքի վրա ազդող որոշումների վերջնական դատողությունը մարդիկ անեն
+- Արգելել ավտոմատացված AI-ն աշխատանքի ընդունման գործընթացում
+----
+id: top_theme_3_quotes
+translator_note: "Quotes as edited by the writer (9/23). region and field values are data keys; do not translate them."
+quote_1: "Երբ խոսքը աշխատանքի մասին է, դա պետք է լինի մարդու որոշումը։ Մենք չպետք է թույլ տանք, որ տեխնոլոգիան դա անի մեր փոխարեն։"
+attribution_1: Արտադրության ոլորտի աշխատող Ծովածոցի շրջանից
+region_1: Bay Area
+field_1: "Goods producing and harvesting"
+quote_2: "AI-ի օգտագործած չափանիշները հաճախ սև արկղ են։ Օրինակ՝ ռեզյումեները զտելիս այն կարող է կողմնակալ լինել՝ նախապատվությունը տալով երիտասարդ թեկնածուներին, այլ ոչ թե տարեցներին։"
+attribution_2: Գիտության ոլորտի աշխատող Ծովածոցի շրջանից
+region_2: Bay Area
+field_2: "Professional services"
+quote_3: "Գուցե պետք է պահանջ լինի, որ AI մոդելը կողմնակալության թեստ անցնի նախքան հանրությանը հասանելի դառնալը։"
+attribution_3: Արտադրության ոլորտի աշխատող Ծովածոցի շրջանից
+region_3: Bay Area
+field_3: "Goods producing and harvesting"
+----
+----
+id: tier_1
+translator_note: "Three groups of ideas (design 9/28). icon values are keys; do not translate them."
+title: Ուժեղ աջակցություն
+subtitle: Հաճախ էին հնչում և ուժեղ աջակցություն ունեին
+icon: megaphone
+nbr_ideas: 7
+----
+----
+id: tier_1_idea_1
+title: Սահմանել կանոններ, թե ինչպես է AI-ը վարվում անձնական տվյալների հետ
+----
+- Սահմանել կանոններ հավաքման, մշակման, պաշտպանության և ջնջման համար
+- Ապահովել թափանցիկություն և գաղտնիության պաշտպանություն
+----
+id: tier_1_idea_2
+title: Սահմանել կանոններ, թե ինչպես է գործում AI-ը
+----
+- Հորդորել ընկերություններին համապատասխանել մարդկային չափանիշներին
+- Սահմանել պաշտպանիչ շրջանակներ AI-ի չարաշահման և կախվածության դեմ
+----
+id: tier_1_idea_3
+title: Կանխել AI-ի պատճառով կրճատումները, խրախուսել աշխատողներին պահող կամ ավելացնող ընկերություններին
+----
+- Նոր վճարներ սահմանել AI-ի պատճառով աշխատողներին ազատելու համար
+- Ստեղծել խթաններ աշխատատեղերը պահպանելու կամ ավելացնելու համար
+----
+id: tier_1_idea_4
+title: AI-ի քաղաքականության մշակումն ավելի բաց դարձնել հանրության համար
+----
+- Ձայն տալ ազդեցության ենթարկված համայնքներին
+- Ձևավորել քաղաքացիական խմբեր
+----
+id: tier_1_idea_5
+title: Պարտավորեցնել ընկերություններին վերապատրաստել կամ կարիերայի աջակցություն տրամադրել AI-ի պատճառով աշխատանքը կորցրած աշխատողներին
+----
+- Հորդորել նրանց վերապատրաստել աշխատողներին՝ կրճատելու փոխարեն
+- Աշխատողներին ուղղորդել դեպի սպասարկումից զուրկ տարածքներ
+----
+id: tier_1_idea_6
+title: Սահմանել կանոններ AI-ի օգտագործման պիտակավորման համար
+----
+- Նշել AI բովանդակությունը ընդհանուր բառերով կամ ջրանիշով
+- Տուգանել ընկերություններին AI-ի օգտագործումը չբացահայտելու համար
+----
+id: tier_1_idea_7
+title: Սահմանափակել և հարկել AI ընկերությունների շահույթը
+----
+- Փակել այն բացերը, որոնք թույլ են տալիս խուսափել պատասխանատվությունից
+- Փոխել հարկային օրենքները, որպեսզի բաժնետոմսերը չօգտագործվեն հարկերից խուսափելու համար
+----
+id: tier_2
+title: Չափավոր աջակցություն
+subtitle: Հաճախ էին հնչում կամ ուժեղ աջակցություն ունեին, բայց ոչ երկուսը միասին
+icon: hand
+nbr_ideas: 7
+----
+----
+id: tier_2_idea_1
+title: Պատասխանատվության ենթարկել AI ընկերություններին, եթե նրանք առանց թույլտվության օգտագործում են ուրիշների աշխատանքը
+----
+- Կիրառել հեղինակային իրավունքը, պաշտպանել մտավոր սեփականությունը
+- Ընկերությունները վճարեն ուսուցման տվյալների համար՝ ստեղծագործողների հիմնադրամի մեջ
+----
+id: tier_2_idea_2
+title: Տեղեկացնել մարդկանց, թե ինչպես էթիկապես օգտագործել AI-ը
+----
+- Ստեղծել հանրային ծառայության գովազդներ օգուտների և ռիսկերի մասին
+- Ուղղորդել բնակիչներին AI-ի ռիսկերի վերաբերյալ՝ գաղտնիության, երեխաների և այլնի հարցում
+----
+id: tier_2_idea_3
+title: Բարելավել AI կրթությունը դպրոցներում
+----
+- Թույլ տալ աշակերտներին աշխատել փորձնական միջավայրերում՝ դրական ազդեցությունն ընդլայնելու համար
+- Դասավանդել տվյալների գրագիտություն K-12 դպրոցներում
+----
+id: tier_2_idea_4
+title: Թույլ տալ մարդկանց հրաժարվել AI-ից և դա ավելի հեշտացնել
+----
+- Պահանջել համաձայնություն, հրաժարումը դարձնել լռելյայն
+- Թույլ տալ մարդկանց հրաժարվել իրենց տվյալների օգտագործումից AI-ի կողմից
+----
+id: tier_2_idea_5
+title: Աջակցել AI-ի ազդեցության անկախ հետազոտություններին
+----
+- Ֆինանսավորել ուսումնասիրություններ, թե ինչպես է AI-ի օգտագործումն ազդում քննադատական մտածողության վրա
+- Գտնել և հրապարակել ավելի շատ ապացույցներ վնասների և ռիսկերի մասին
+----
+id: tier_2_idea_6
+title: Սահմանափակել, թե ինչ անձնական տվյալներ կարող են հավաքել AI համակարգերը, և թույլ տալ օգտատերերին կառավարել իրենց տվյալները
+----
+- Համաձայնության տեքստը դարձնել պարզ
+- Սահմանափակել տվյալների հավաքումը հանրային վայրերում, որպեսզի AI-ը չկարողանա դրանք օգտագործել
+----
+id: tier_2_idea_7
+title: Վճարել AI-ի պատճառով աշխատանքը կորցրած աշխատողներին, մինչ նրանք նոր աշխատանք են փնտրում
+----
+- Համընդհանուր բազային եկամուտ
+- Ավելի բարձր գործազրկության նպաստ, եթե աշխատանքը կորցրել եք AI-ի պատճառով
+----
+id: tier_3
+title: Որոշ աջակցություն
+subtitle: Ավելի հազվադեպ էին հնչում և ավելի քիչ աջակցություն ունեին
+icon: thumbs
+nbr_ideas: 9
+----
+----
+id: tier_3_idea_1
+title: Աջակցել աշխատողների AI ուսուցմանը
+----
+- Անվճար AI ուսուցում առաջարկել նահանգային աշխատակիցներին և ընդլայնել այն հանրության համար
+- Հետազոտական ծրագրեր՝ պարզելու, թե ինչպես լավագույնս վերապատրաստել աշխատողներին
+----
+id: tier_3_idea_2
+title: Օգտագործել AI-ը կառավարության աշխատանքը բարելավելու համար
+----
+- Օգտագործել AI-ը խարդախության դեմ պայքարելու և նպաստները ճիշտ հասցեատերերին հասցնելու համար
+- Կառավարությունը պետք է լիցենզավորի նոր AI մոդելները
+----
+id: tier_3_idea_3
+title: Պահել մարդկանց որպես որոշում կայացնողներ, ոչ թե հենվել միայն AI-ի վրա
+----
+- Պահպանել մարդ որոշում կայացնողների դերը
+- Սահմանել ուղեցույցներ մարդկային վերանայման համար
+----
+id: tier_3_idea_4
+title: Ուժեղացնել ծնողական վերահսկողությունը AI-ի օգտագործման նկատմամբ
+----
+- Պահանջել հեշտ օգտագործվող ծնողական վերահսկողություն այն գործիքներում, որոնց երեխաները կարող են հասանելիություն ունենալ։
+- Վերահսկել, թե ինչպես են տեխնոլոգիական ընկերությունները աշակերտներին ծանոթացնում AI տեխնոլոգիային։
+----
+id: tier_3_idea_5
+title: Ֆինանսավորել ծրագրեր մարդկային կապի և AI-ից դուրս կյանքի համար
+----
+- Ֆինանսավորել երրորդ տարածքներ և արվեստի/սպորտի ծրագրեր՝ համայնքի առողջությունը խթանելու համար
+- Լիարժեք ֆինանսավորել գիտելիքի և տեղեկատվության բարձրորակ ծառայությունները, ինչպիսիք են կրթությունը, գրադարանները և հոգեկան առողջության խնամքը
+----
+id: tier_3_idea_6
+title: Ապահովել, որ աշակերտները չօգտագործեն AI-ը սովորելուց խուսափելու համար
+----
+- Ապահովել, որ աշակերտները բացահայտեն AI-ի օգտագործումը դպրոցական աշխատանքում
+- Ստուգել և սահմանափակել աշակերտների կողմից AI-ի օգտագործումը
+----
+id: tier_3_idea_7
+title: Թույլ չտալ ընկերություններին ազատել կամ պատժել աշխատողներին AI չօգտագործելու համար
+----
+- Պահանջել, որ գործատուները աշխատողներին ներգրավեն AI գործիքների ներդրման որոշումներում
+- Սահմանափակել ընկերություններին՝ ազատելու այն մարդկանց, ովքեր չեն ցանկանում օգտագործել AI գործիքներ
+----
+id: tier_3_idea_8
+title: Հետևել և հաշվետվություն ներկայացնել AI-ի պատճառով աշխատատեղերի կորստի մասին
+----
+- Թափանցիկ հաշվետվություն AI-ի ազդեցության մասին կորցրած աշխատատեղերի վրա
+- Շարունակական հաշվետվություն AI-ի ազդեցության մասին տնտեսության վրա
+----
+id: tier_3_idea_9
+title: Օգտագործել AI-ը այն աշխատանքների համար, որոնք մարդիկ չեն ուզում կամ չեն կարող անել
+----
+- Համապատասխանեցնել AI-ի օգտագործումն այն ոլորտներին, որտեղ այն օգտակար է հասարակությանը
+- AI-ին հանձնարարել այն աշխատանքները, որոնք մարդիկ չեն կարող կամ չեն ուզում անել
+----
+id: how_to_read_tiers
+----
+### Ինչպես կարդալ այս դասակարգումը
+
+Դասակարգումը ցույց է տալիս, թե ինչպես է գաղափարն ընդունվել քննարկումներում։ Դա նրա արժեքի գնահատական չէ։
+
+Սրանք այն թեմաներն են, որոնք քննարկել են մասնակիցները։ Դրանք առանձին են այն ամենից, ինչ գուցե արդեն արվել է գործող քաղաքականությամբ կամ օրենքով։ Որոշները կարող են համընկնել այն բաների հետ, որոնք արդեն ընթացքի մեջ են քաղաքականության ոլորտում։
+----
+id: ranking_methods_button
+translator_note: "Button after How to read this ranking, linking to the methods page's ranking section. Do not translate the href."
+label: Տեսնել մեր դասակարգման մեթոդները
+href: /ai-impact/report-details/#ranking-policy-ideas
+----
+
+----
+id: region_legend
+translator_note: "Region names are proper nouns and stay in English on every chart (region_1 to region_8). Translate only region_9, the not-stated / out-of-state entry."
+nbr_regions: 9
+region_1: Los Angeles
+region_2: Bay Area
+region_3: Southern California
+region_4: Sacramento Valley / Sierra Foothills
+region_5: Central Valley
+region_6: Far North / North Coast
+region_7: Central Coast
+region_8: Sierra Region
+region_9: Չի նշվել / նահանգից դուրս
+----
+
+----
+id: category_labels
+translator_note: "Field of work names as they appear in the Who participated chart. Translate only the label_N lines; the key_N lines are data values and must stay in English."
+nbr_labels: 15
+key_1: "Government"
+label_1: "Պետական հատված"
+key_2: "Other"
+label_2: "Այլ"
+key_3: "Information technology"
+label_3: "Տեղեկատվական տեխնոլոգիաներ"
+key_4: "Arts, entertainment, or media"
+label_4: "Արվեստ, ժամանց կամ մեդիա"
+key_5: "Education"
+label_5: "Կրթություն"
+key_6: "Professional services"
+label_6: "Մասնագիտական ծառայություններ"
+key_7: "Healthcare"
+label_7: "Առողջապահություն"
+key_8: "Unemployed, looking"
+label_8: "Գործազուրկ, փնտրում է աշխատանք"
+key_9: "Financial"
+label_9: "Ֆինանսներ"
+key_10: "Goods producing and harvesting"
+label_10: "Ապրանքների արտադրություն և բերքահավաք"
+key_11: "Retail or wholesale trade"
+label_11: "Մանրածախ կամ մեծածախ առևտուր"
+key_12: "Logistics"
+label_12: "Լոգիստիկա"
+key_13: "Hospitality"
+label_13: "Հյուրընկալություն"
+key_14: "(not stated)"
+label_14: "Չի նշվել"
+key_15: "I don't want to say"
+label_15: "Նախընտրում եմ չասել"
+----
+
+----
+id: who_participated
+title: Ովքեր մասնակցեցին
+nbr_steps: 4
+toggle_region: Տարածաշրջան
+toggle_field_of_work: Աշխատանքի ոլորտ
+toggle_age: Տարիք
+toggle_race: Ռասա / էթնիկ պատկանելություն
+toggle_gender: Սեռ
+toggle_ai_response: Արձագանք AI-ին
+legend_participant: Մասնակից
+legend_facilitator: Վարող
+translator_note_legend: "One legend entry standing in for all the non-answers (Not stated, I don't want to say) when a chart has more than one."
+legend_non_answer: "Չի նշվել"
+prev_label: Նախորդ քայլ
+next_label: Հաջորդ քայլ
+translator_note: "{current} and {total} are replaced with numbers. Keep them in the translation."
+step_counter: "{current}՝ {total}-ից"
+step_marker_label: "Անցնել քայլ {current}"
+step_role_label: քայլ
+play_label: Նվագարկել
+pause_label: Դադար
+restart_label: Սկսել նորից
+ring_center_title: 103 մարդ 14 քննարկումներում
+ring_center_hint: ""
+chart_alt: "Անիմացիա, որտեղ հարցման յուրաքանչյուր մասնակից պատկերված է որպես կետ։ Քննարկման հրավիրվածները լուսավորվում են, ներկա գտնվողները հավաքվում են մարդկային կերպարանքներով, այնուհետև բաժանվում են պտտվող օղակի՝ յուրաքանչյուր քննարկման համար մեկը, գունավորված ըստ տարածաշրջանի կամ աշխատանքի ոլորտի։"
+----
+
+----
+id: who_participated_step_1
+phase_label: Հարցում
+pill_label: "1 · Փուլ 1"
+phase_title: Լայն լսում
+stat_count: "2,702"
+stat_label: հարցման մասնակից
+phase_subtitle: "Մարդիկ պատասխանեցին AI-ի մասին մեր բաց հարցմանը"
+chart_image_region: /public/images/ai-report-participants-step1-region.png
+chart_image_field: /public/images/ai-report-participants-step1-field.png
+chart_alt: "Կետերի ցրված գծապատկեր՝ մեկ կետ յուրաքանչյուր հարցման մասնակցի համար, գունավորված ըստ տարածաշրջանի։"
+----
+
+----
+id: who_participated_step_2
+phase_label: Քննարկումներ
+pill_label: "2 · Ընտրված"
+phase_title: Հավասարակշռված մասնակիցների հրավեր
+stat_count: "937"
+stat_label: հրավիրված
+phase_subtitle: "Մենք ընտրեցինք մասնակիցների մի խումբ, որն արտացոլում է Կալիֆոռնիան"
+chart_image_region: /public/images/ai-report-participants-step2-region.png
+chart_image_field: /public/images/ai-report-participants-step2-field.png
+chart_alt: "Կետերի ցրված գծապատկեր՝ մեկ կետ յուրաքանչյուր հրավիրված մասնակցի համար, գունավորված ըստ տարածաշրջանի։"
+----
+
+----
+id: who_participated_step_3
+phase_label: Քննարկումներ
+pill_label: "3 · Փուլ 2"
+phase_title: Միանալով զրույցին
+stat_count: "103"
+stat_label: ներկա գտնված
+phase_subtitle: "Այս կալիֆոռնիացիները հաստատեցին իրենց մասնակցությունը և միացան քննարկման"
+chart_image_region: /public/images/ai-report-participants-step3-region.png
+chart_image_field: /public/images/ai-report-participants-step3-field.png
+chart_alt: "Կետերի ցրված գծապատկեր՝ մեկ կետ քննարկման յուրաքանչյուր ներկա մասնակցի համար, գունավորված ըստ տարածաշրջանի։"
+----
+
+----
+id: who_participated_step_4
+phase_label: Քննարկումներ
+pill_label: "4 · Քննարկումներ"
+phase_title: Քննարկման խմբերը
+stat_count: "14"
+stat_label: քննարկում
+phase_subtitle: "Ահա յուրաքանչյուր քննարկման ժողովրդագրական պատկերը"
+chart_image_region: /public/images/ai-report-participants-step4-region.png
+chart_image_field: /public/images/ai-report-participants-step4-field.png
+chart_alt: "14 փոքր կետային կուտակումներից բաղկացած օղակ՝ մեկը յուրաքանչյուր քննարկման համար, գունավորված ըստ տարածաշրջանի։"
+----
+
+----
+id: demographics_button
+translator_note: "Button at the end of Who participated, linking to the methods page's demographics section. Do not translate the href."
+label: Տեսնել ամբողջական ժողովրդագրական տվյալները
+href: /ai-impact/report-details/#balancing-groups
+----
+
+----
+id: what_happens_next
+----
+## Ինչ է լինելու հետո
+
+Այս զեկույցը պատմության ավարտը չէ։ Մարդկանց կիսված գաղափարները կմիանան արագ զարգացող քաղաքականության քննարկմանը, որն արդեն ընթացքի մեջ է։
+
+Կալիֆոռնիան վաղուց առաջատար է AI-ի վերահսկողության հարցում։ 2025 թվականին Կալիֆոռնիան ընդունեց SB 53-ը՝ [Առաջատար արհեստական բանականության թափանցիկության մասին օրենքը](https://www.gov.ca.gov/2025/09/29/governor-newsom-signs-sb-53-advancing-californias-world-leading-artificial-intelligence-industry/)։ Այն սահմանում է թափանցիկության և անկախ վերահսկողության պահանջներ առաջադեմ AI մոդելների համար։ Մինչ Engaged California-ն ամփոփում էր մարդկանց ասածը, Նյուսոմի վարչակազմը գործեց AI-ի հարցում։ Վարչակազմի որոշ գործողություններ վերաբերում էին այն թեմաներին, որոնք կալիֆոռնիացիները բարձրացրել էին այս քննարկումներում, օրինակ՝
+
+- Տվյալների կենտրոնների բնապահպանական հետքը
+- AI-ի ստեղծած բովանդակության թափանցիկությունը
+- Առաջատար մոդելների անկախ վերահսկողությունը
+- Աշխատողների և երեխաների պաշտպանությունը
+
+Գործողությունների թվում է նահանգապետ Նյուսոմի կողմից 2026 թվականի սեպտեմբերին հետևյալ օրինագծերի ստորագրումը՝
+
+- Երկրի ամենահամապարփակ [տվյալների կենտրոնների մասին օրենքներից](https://www.gov.ca.gov/2026/09/21/governor-newsom-signs-most-comprehensive-data-center-laws-in-the-nation-providing-communities-more-control-on-water-electricity-and-land-use/) մեկը։ Այն համայնքներին ավելի մեծ ձայն է տալիս իրենց ջրի, էլեկտրաէներգիայի և հողի օգտագործման հարցում։
+- Սենատի 1050 օրինագիծը, որը [պահանջում է բացահայտում](https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/), երբ գովազդում օգտագործվում են AI-ի ստեղծած կատարողներ
+- Գործադիր հրաման՝ նահանգի [AI-ի վերահսկողության](https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/) ջանքերն արագացնելու համար։ Այն արագացնում է AI-ի աուդիտի նոր օրենքները և առաջ է մղում առաջատար AI մոդելների «անջատման կոճակի» գաղափարը։
+- [Երկրում առաջին AI-ի պաշտպանական միջոցների](https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/) փաթեթ
+- [Երեխաների անվտանգության մասին օրենքներ](https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/) չաթբոտերի և սոցիալական ցանցերի համար
+
+Մեր աշխատանքը նույնպես ավարտված չէ։ Կալիֆոռնիացիները բարձրացրել են բազմաթիվ գաղափարներ, որոնք առաջիկա տարիներին կուղղորդեն կառավարության գործողությունները։ Եվ քանի որ AI-ի դաշտը շարունակում է փոխվել, մենք կշարունակենք լսել։
+----
+id: sign_up
+button_text: Գրանցվել
+----
+## Գրանցվեք՝ ներգրավված մնալու համար
+
+Տվեք մեզ ձեր էլ. հասցեն՝ առաջիկա հնարավորությունների մասին տեղեկանալու համար։
