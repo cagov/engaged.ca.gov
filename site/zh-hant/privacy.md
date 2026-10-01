@@ -152,5 +152,4 @@ Office of Data and Innovation<br>
 Attn: Chief Privacy Officer<br>
 401 I Street<br>
 Ste 200<br>
-Sacramento, CA 95814<br>
-電話：[916-239-8193](tel:916-238-8193)
+Sacramento, CA 95814
