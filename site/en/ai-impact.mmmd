@@ -22,7 +22,14 @@ buttonText_readreport: Read the report
 ----
 We asked Californians about the effects of AI, and what government should do about them.
 
-Now you can see what they said.
+----
+id: what_we_heard
+buttonText: Read the report
+----
+
+## What we heard
+
+Over 2,700 Californians shared how they think AI should be built, used, and governed.
 
 ----
 id: overview

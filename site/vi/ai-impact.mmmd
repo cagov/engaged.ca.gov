@@ -22,7 +22,14 @@ buttonText_readreport: "Đọc báo cáo"
 ----
 Chúng tôi đã hỏi người dân California về tác động của AI và chính phủ nên làm gì về vấn đề này.
 
-Giờ đây quý vị có thể xem ý kiến của họ.
+----
+id: what_we_heard
+buttonText: Đọc báo cáo
+----
+
+## Những gì chúng tôi đã nghe
+
+Hơn 2.700 người dân California đã chia sẻ quan điểm về cách AI nên được xây dựng, sử dụng và quản lý.
 
 ----
 id: overview

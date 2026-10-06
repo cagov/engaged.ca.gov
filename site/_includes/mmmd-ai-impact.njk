@@ -12,11 +12,27 @@
                 <p class="status-pill">{{ modules.hero.conversationClosed | default(modules.hero.analyzingResults) }}</p>
                 <h1>{{ modules.hero.title  }}</h1>
                 {{ modules.hero.content | safe }}
-                <p>
-                    <a data-appearance="button" data-theme="orange" href="{{ "/ai-impact/report/" | locale_url }}" class="m-t">{{ modules.hero.buttonText_readreport | default(modules.hero.buttonText_getupdates) }}</a>
-                </p>
             </engca-banner-content>
             <img src="/public/images/hero-bubbles-ai.png" aria-hidden="true" class="desktop-only" alt=""/>
+        </div>
+    </section>
+
+    {# "Read the report" moved out of the hero into this section (10/6). Same adornment as /stateemployees/. #}
+    <section id="what-we-heard">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <img src="/public/images/whatweheard_adornment.png" class="what-we-heard-adornment" aria-hidden="true" alt="" />
+                </div>
+                <div class="col-lg-8">
+                    <div class="what-we-heard-content">
+                        {{ modules.what_we_heard.content | safe }}
+                    </div>
+                    <a href="{{ "/ai-impact/report/" | locale_url }}" data-appearance="button" data-theme="orange" class="what-we-heard-cta">
+                        {{ modules.what_we_heard.buttonText | default(modules.hero.buttonText_readreport) }}
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 

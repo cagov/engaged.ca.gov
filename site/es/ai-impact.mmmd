@@ -22,7 +22,14 @@ buttonText_readreport: "Leer el informe"
 ----
 Preguntamos a los californianos sobre los efectos de la IA y qué debería hacer el gobierno al respecto.
 
-Ahora puede ver lo que dijeron.
+----
+id: what_we_heard
+buttonText: Leer el informe
+----
+
+## Lo que escuchamos
+
+Más de 2,700 californianos compartieron cómo creen que la IA debería desarrollarse, usarse y regularse.
 
 ----
 id: overview
