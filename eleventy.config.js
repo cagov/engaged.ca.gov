@@ -1,13 +1,14 @@
+import { createHash } from "node:crypto";
+import { promises as fs } from "node:fs";
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import { EleventyI18nPlugin } from "@11ty/eleventy";
+import chalk from "chalk";
 import esbuild from "esbuild";
 import yaml from "js-yaml";
-import { Features as lcssFeatures, bundle as lcssBundle } from "lightningcss";
-import { promises as fs } from "node:fs";
-import path from "node:path";
-import chalk from "chalk";
+import { bundle as lcssBundle, Features as lcssFeatures } from "lightningcss";
 import markdownIt from "markdown-it";
-import translations from './site/_data/i18n.js';
-import { EleventyI18nPlugin } from "@11ty/eleventy";
-import { readFileSync } from 'node:fs';
+import translations from "./site/_data/i18n.js";
 
 /**
  * Log an output from a build process in the 11ty style.
@@ -35,9 +36,19 @@ async function buildCSS() {
     { src: "src/css/lenis.css", dist: "_dist/css/lenis.css" },
     { src: "src/css/fires.css", dist: "_dist/css/fires.css" },
     { src: "src/css/fires-summary.css", dist: "_dist/css/fires-summary.css" },
-    { src: "src/css/state-employees.css", dist: "_dist/css/state-employees.css" },
+    {
+      src: "src/css/state-employees.css",
+      dist: "_dist/css/state-employees.css",
+    },
     { src: "src/css/ai-impact.css", dist: "_dist/css/ai-impact.css" },
-    { src: "src/css/state-employees-report.css", dist: "_dist/css/state-employees-report.css" }
+    {
+      src: "src/css/state-employees-report.css",
+      dist: "_dist/css/state-employees-report.css",
+    },
+    {
+      src: "src/css/ai-impact-report.css",
+      dist: "_dist/css/ai-impact-report.css",
+    },
   ];
 
   for (const file of cssFiles) {
@@ -59,17 +70,25 @@ async function buildCSS() {
  * @returns {Promise<void>}
  */
 async function buildJS() {
-  const srcPath = "src/js/index.js";
-  const distPath = "_dist/js/index.js";
+  const jsFiles = [
+    { src: "src/js/index.js", dist: "_dist/js/index.js" },
+    // Page-specific bundles. Only loaded by the templates that link them.
+    {
+      src: "src/js/ai-impact-report/index.js",
+      dist: "_dist/js/ai-impact-report.js",
+    },
+  ];
 
-  buildLog(srcPath, distPath, "JavaScript");
+  for (const file of jsFiles) {
+    buildLog(file.src, file.dist, "JavaScript");
 
-  await esbuild.build({
-    entryPoints: [srcPath],
-    bundle: true,
-    outfile: distPath,
-    minify: true,
-  });
+    await esbuild.build({
+      entryPoints: [file.src],
+      bundle: true,
+      outfile: file.dist,
+      minify: true,
+    });
+  }
 }
 
 const markdownEngine = markdownIt({
@@ -78,19 +97,19 @@ const markdownEngine = markdownIt({
   linkify: true,
 });
 
-let firstBuild = true;
+const firstBuild = true;
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "en",
-    errorMode: "allow-fallback"
+    errorMode: "allow-fallback",
   });
 
   eleventyConfig.on("eleventy.before", async ({ runMode }) => {
     // Only build all of the bundle files during first run, not on every change.
     // if (firstBuild || runMode !== "serve") {
-      await buildCSS();
-      await buildJS();
+    await buildCSS();
+    await buildJS();
     //   firstBuild = false;
     // }
   });
@@ -103,14 +122,18 @@ export default async function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addFilter('i18n', function (key, localeOverride) {
+  eleventyConfig.addFilter("i18n", function (key, localeOverride) {
     const page = this.page || this.ctx.page;
     const locale = localeOverride || page.lang;
     const contentGroup = translations[key];
 
     // Check if the requested content key exists.
     if (!contentGroup) {
-      console.log(chalk.yellow(`[i18n] Could not find content group for *${key}* in translations table.`));
+      console.log(
+        chalk.yellow(
+          `[i18n] Could not find content group for *${key}* in translations table.`,
+        ),
+      );
       return "";
     }
 
@@ -119,7 +142,11 @@ export default async function (eleventyConfig) {
 
     // English fallback if needed.
     if (!idealContentString) {
-      console.log(chalk.yellow(`[i18n] Could not find *${locale}* content for *${key}* in translations table. Falling back to English.`));
+      console.log(
+        chalk.yellow(
+          `[i18n] Could not find *${locale}* content for *${key}* in translations table. Falling back to English.`,
+        ),
+      );
       return contentGroup.en;
     }
 
@@ -143,20 +170,30 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("pagePath", (page, langPath) => {
     let currentPath = `${page.filePathStem}/`; // Relative to base dir, localized path, with folder + /index.html.
 
-    const languages = ["/en/","/es/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/","/fa/","/hy/"]; // Localized folder paths, '/es/', '/vi', etc.
+    const languages = [
+      "/en/",
+      "/es/",
+      "/ko/",
+      "/tl/",
+      "/vi/",
+      "/zh-hans/",
+      "/zh-hant/",
+      "/fa/",
+      "/hy/",
+    ]; // Localized folder paths, '/es/', '/vi', etc.
 
     languages.map((language) => {
       currentPath = currentPath.replace(language, "/"); // Remove existing localized paths to get root.
     });
 
     // Remove /home/ path slug from filePathStem variable
-    if (currentPath.startsWith('/')) {
+    if (currentPath.startsWith("/")) {
       currentPath = currentPath.slice(1);
     }
     currentPath = langPath + currentPath;
     // Return a path with no localization and index.html
-    currentPath = currentPath.replace('/homepage/', '/');
-    currentPath = currentPath.replace('/en/', '/');
+    currentPath = currentPath.replace("/homepage/", "/");
+    currentPath = currentPath.replace("/en/", "/");
     return currentPath;
   });
 
@@ -164,15 +201,15 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("relativePath", (page, locale) => {
     let currentPath = `${page.filePathStem}/`; // Relative to base dir, localized path, with folder + /index.html.
     // Remove /homepage/ and /en/ from current paths
-    currentPath = currentPath.replace('/homepage/', '/');
-    currentPath = currentPath.replace('/en/', '/');
+    currentPath = currentPath.replace("/homepage/", "/");
+    currentPath = currentPath.replace("/en/", "/");
     // console.log("relativePath fileSlug=", page.fileSlug, " filePathStem=", page.filePathStem, " -->", currentPath);
     // Return a path with localization and index.html
     return currentPath;
   });
 
   eleventyConfig.addFilter("langPathActive", (page, lang, locale) => {
-    if (page.fileSlug.includes('sitemap')) {
+    if (page.fileSlug.includes("sitemap")) {
       return false;
     }
     if (lang === locale) {
@@ -191,11 +228,11 @@ export default async function (eleventyConfig) {
 
     // console.log("localizedPath", path, localeFolder, currentPath);
     // Add a slash only when it is merited
-    if (!currentPath.endsWith("/") && currentPath.indexOf('#') === -1) {
+    if (!currentPath.endsWith("/") && currentPath.indexOf("#") === -1) {
       currentPath += "/";
     }
-    currentPath = currentPath.replace('/homepage/', '/');
-    currentPath = currentPath.replace('/en/', '/');
+    currentPath = currentPath.replace("/homepage/", "/");
+    currentPath = currentPath.replace("/en/", "/");
     // console.log("localizedPath", path, localeFolder, currentPath);
     // Return a path with localization and index.html
     return currentPath;
@@ -205,18 +242,23 @@ export default async function (eleventyConfig) {
   // Allows embedding sub-documents into a Markdown file, including front-matter data.
   eleventyConfig.addTemplateFormats("mmmd");
   eleventyConfig.addExtension("mmmd", {
-		compile: async (inputContent) => {
+    compile: async (inputContent) => {
       // Remove all the modules.
-      const rootMarkdown = inputContent.replaceAll(/----(.+?)----(.*?)(?=----|\s*$)/gs, "");
+      const rootMarkdown = inputContent.replaceAll(
+        /----(.+?)----(.*?)(?=----|\s*$)/gs,
+        "",
+      );
       // Render the base markdown.
       const output = markdownEngine.render(rootMarkdown);
       // Insert into the typical 11ty content flow.
-			return async () => output;
-		},
+      return async () => output;
+    },
     getData: async (inputPath) => {
       try {
         const content = await fs.readFile(inputPath, "utf-8");
-        const matches = [...content.matchAll(/----(.+?)----(.*?)(?=----|\s*$)/gs)];
+        const matches = [
+          ...content.matchAll(/----(.+?)----(.*?)(?=----|\s*$)/gs),
+        ];
 
         // Process mmmd modules for inclusion in 11ty data cascade.
         const modules = matches.reduce((bucket, match) => {
@@ -229,30 +271,62 @@ export default async function (eleventyConfig) {
 
           // The module ID is required.
           if (!moduleId) {
-            console.warn('MMMD module found without ID. Skipping.');
+            console.warn("MMMD module found without ID. Skipping.");
           }
 
           bucket[moduleId] = {
             ...data,
-            content
-          }
+            content,
+          };
 
           return bucket;
         }, {});
 
         return {
-          modules
-        }
+          modules,
+        };
       } catch (e) {
         console.log(`ERROR: ${inputPath}`);
         throw e;
       }
-    }
-	});
-  // Add filter to read file contents
-  eleventyConfig.addFilter('getFileContents', (filePath) => {
+    },
+  });
+  // Render a one-line string of Markdown (links, emphasis) without a wrapping <p>.
+  // Used for YAML fields in .mmmd modules, which otherwise bypass the Markdown engine.
+  // Cache-busting: appends ?v=<8-char content hash> to an asset URL
+  // (e.g. "/js/ai-impact-report.js" or "/public/data/x.json"). Assets are built in eleventy.before, so
+  // the file exists in _dist by the time templates render. The URL changes
+  // only when the file's bytes change, so browsers and the CDN keep serving
+  // cached copies until there is a real update. Missing file: URL unchanged.
+  // Passthrough-copied files (/public/...) may not be in _dist yet when
+  // templates render, so those are hashed from their source in src/public.
+  const assetVersionCache = new Map();
+  eleventyConfig.addFilter("assetVersion", (url) => {
+    const file = url.startsWith("/public/")
+      ? path.join("src", url)
+      : path.join("_dist", url);
     try {
-      return readFileSync(filePath, 'utf8');
+      const content = readFileSync(file);
+      const hash = createHash("sha256")
+        .update(content)
+        .digest("hex")
+        .slice(0, 8);
+      assetVersionCache.set(url, hash);
+      return `${url}?v=${hash}`;
+    } catch {
+      const prior = assetVersionCache.get(url);
+      return prior ? `${url}?v=${prior}` : url;
+    }
+  });
+
+  eleventyConfig.addFilter("markdownInline", (text) =>
+    text ? markdownEngine.renderInline(String(text)) : "",
+  );
+
+  // Add filter to read file contents
+  eleventyConfig.addFilter("getFileContents", (filePath) => {
+    try {
+      return readFileSync(filePath, "utf8");
     } catch (err) {
       console.error(`Error reading file ${filePath}:`, err);
       return `<!-- Error reading SVG file: ${err.message} -->`;
@@ -264,7 +338,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/public": "public",
     "src/root": "/",
-    "engaged_archive": "engaged_archive"
+    engaged_archive: "engaged_archive",
   });
 
   eleventyConfig.addWatchTarget("./src");

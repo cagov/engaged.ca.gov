@@ -3,8 +3,13 @@
     color: var(--off-white);
     background: url("/public/images/bubbles-exclamation.svg") bottom right / 30vw no-repeat, var(--navy);
 }
-engca-banner-content {
+/* Balance the heading only. On the paragraph, balance split a two-line
+   sentence into equal halves, so it wrapped well short of the column. */
+engca-banner-content h1 {
     text-wrap: balance;
+}
+engca-banner-content p {
+    text-wrap: pretty; /* progressive: trims orphans without balancing */
 }
 
 engca-banner-content span.external-link-icon {
@@ -21,6 +26,11 @@ section#ge-hero img {
     }
     .engca-hero-ai {
         background: url("/public/images/ai-hero-background.png") center right / contain no-repeat, var(--navy);
+    }
+    /* The container caps at 1176px and the adornment is 276px, so the
+       shared 44.875rem text column always left ~160px unused. */
+    .engca-hero-ai engca-banner-content {
+        max-width: 51rem;
     }
 }
 
@@ -147,4 +157,19 @@ section.overview-ge h3 {
 
 section.overview-ge h4 {
     font-size: 23px;
+}
+
+/* Partner logo under the About the program copy (9/28). */
+.about-the-process .partner-logo {
+  display: block;
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+/* Twice the usual paragraph gap under the "Learn more" link, so it reads
+   apart from the partner thanks that follows (9/28). */
+.about-the-process p:has(> a:only-child) {
+  margin-bottom: 1.5625rem; /* 25px: twice the 12.5px paragraph gap */
 }

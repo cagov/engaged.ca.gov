@@ -1,0 +1,49 @@
+{# Hero for the AI impact report pages. Expects modules.hero (content starts with the H1,
+   `subtitle`, optional `back_link_text` / `back_link_href`) and an optional modules.hero_nav. #}
+<section id="ai-report-hero" class="hero{% if modules.hero.theme == "light" %} hero-light{% endif %}">
+  <div class="container hero-container">
+    <div class="row">
+      <div class="col-lg-8 hero-content">
+        {% if modules.hero.back_link_text %}
+          <p class="hero-back-link"><a href="{{ modules.hero.back_link_href | localizedPath(locale) }}">{{ modules.hero.back_link_text }}</a></p>
+        {% endif %}
+        {# Content begins with the H1; the subtitle field is inserted directly after it. #}
+        {{ modules.hero.content | replace("</h1>", "</h1><p class=\"hero-subtitle\">" + (modules.hero.subtitle | markdownInline) + "</p>") | safe }}
+        {% if modules.hero.button_1_label or modules.hero.button_2_label %}
+        <div class="hero-buttons">
+          {% if modules.hero.button_1_label %}
+            <a href="{{ modules.hero.button_1_href if modules.hero.button_1_href.startsWith("#") else (modules.hero.button_1_href | localizedPath(locale)) }}" data-appearance="button" data-theme="orange">{{ modules.hero.button_1_label }}</a>
+          {% endif %}
+          {% if modules.hero.button_2_label %}
+            <a href="{{ modules.hero.button_2_href if modules.hero.button_2_href.startsWith("#") else (modules.hero.button_2_href | localizedPath(locale)) }}" data-appearance="button" data-theme="orange">{{ modules.hero.button_2_label }}</a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      {# Adornment sits in the same column, with the same right padding, as the stat
+         blocks below, so it centres on the big numbers (design review 9/18). #}
+      <div class="col-lg-4 hero-adornment-col">
+        <img class="ai-report-hero-adornment" src="/public/images/ai-report-hero-adornment.svg" aria-hidden="true" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+{# Jump bar under the hero (design 9/21): a label plus one link per section. #}
+{% set hn = modules.hero_nav %}
+{% if hn %}
+<nav class="hero-jump{% if modules.hero.theme == "light" %} hero-jump-light{% endif %}" aria-label="{{ hn.aria_label }}">
+  <div class="container">
+    <p class="hero-jump-label" id="hero-jump-label">{{ hn.label }}</p>
+    <ul aria-labelledby="hero-jump-label">
+      {% for i in range(1, (hn.nbr_items | default(5)) + 1) %}
+        {# data-label lets the CSS reserve the bold width so hover does not reflow the row. #}
+        {# An item links to a section on this page (item_N_anchor) or to another page (item_N_href). #}
+        {% set item_href = hn["item_" + i + "_href"] %}
+        <li><a href="{{ (item_href | localizedPath(locale)) if item_href else ("#" + hn["item_" + i + "_anchor"]) }}" data-label="{{ hn["item_" + i + "_label"] }}">{{ hn["item_" + i + "_label"] }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+{% endif %}
+
+{# ------------------------------------------------- What: A public forum on AI #}

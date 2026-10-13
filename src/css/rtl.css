@@ -86,3 +86,11 @@
     }
   }
 }
+
+/* The state template appends an external-link icon with a 3px left margin,
+   which in right-to-left text is the side away from the link. Give the icon
+   air on both sides so it separates from the link and what follows (9/29). */
+[dir="rtl"] .external-link-icon::after {
+  margin-left: 0.2em;
+  margin-right: 0.35em;
+}

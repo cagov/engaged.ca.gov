@@ -1,0 +1,261 @@
+---
+title: Paano namin ginawa ang gawaing ito
+description: "Paano pinili ng Engaged California ang mga kalahok sa mga talakayan tungkol sa Epekto ng AI sa trabaho, gaano kalapit ang bawat yugto sa mga target na demograpiko nito, at paano namin sinuri ang sinabi ng mga tao."
+layout: mmmd-ai-impact-report-details
+parentid: ai-impact
+keywords:
+  - California
+  - artificial intelligence
+  - AI
+  - trabaho
+  - sortition
+tags:
+  - pages
+---
+
+----
+id: translator_instructions
+example_quoted_text: "this is quoted text:"
+----
+(don't translate this section - these are instructions for the translator)
+
+1. NEVER TRANSLATE the labels preceding colons inside the hyphenated blocks, such as "id", "title" etc
+
+2. If a label begins with "translator" it is further instructions for the translator.  Do not translate the instructions.
+
+3. If the text following a label contains a colon anywhere, please use quote marks, as in the example_quoted_text above
+   This is especially important for Armenian, where colons are added as sentence-ending punctuation.
+
+4. When text contains words inside double asterisks, that text is intended to be printed in bold-face.
+   When text contains words inside single asterisks, that text is intended to be printed in italics.
+   In either case, preserve the asterisks.
+
+5. Text preceded by a one-or-more hash symbols (#) are headings.  Preserve the hash-symbols.
+
+6. Text inside curly braces, such as {count}, is a placeholder that will be replaced with a number. Preserve it.
+
+----
+id: hero
+subtitle: "Ang mga pamamaraang ginamit namin sa pagdaraos at pagsusuri ng mga usapan tungkol sa AI"
+theme: light
+back_link_text: "Bumalik sa ulat"
+back_link_href: /ai-impact/report/
+----
+# Paano namin ginawa ang gawaing ito
+----
+id: intro
+----
+May dalawang yugto ang proyektong *Epekto ng AI sa trabaho*. Sa unang yugto, maaaring magbahagi ng pananaw ang sinumang taga-California sa pamamagitan ng isang bukas na online survey. Sa ikalawang yugto, inimbitahan namin sa mga live na talakayan ang mga interesadong sumagot sa survey.
+----
+id: hero_nav
+translator_note: "aria_label is read by screen readers. The anchor values are page ids; do not translate them."
+aria_label: Sa pahinang ito
+label: "Pumunta sa:"
+nbr_items: 3
+item_1_label: Patas na pagbabalanse ng grupo
+item_1_anchor: balancing-groups
+item_2_label: Pagraranggo ng mga ideya
+item_2_anchor: ranking-policy-ideas
+item_3_label: Paano namin ginamit ang AI
+item_3_anchor: how-we-used-ai
+----
+
+----
+id: balancing_groups
+title: Patas na pagbabalanse ng bawat grupo
+----
+Kailangan naming magpasya kung sino ang iimbitahin. At kailangan naming pumili nang patas habang bumubuo ng mga balanseng grupo.
+
+Kaya gumamit kami ng paraang tinatawag na sortition, na katulad ng paraan ng pagpili ng mga korte sa mga hurado. Nakabatay ito sa dalawang pantay na mahalagang ideya:
+
+- **Representasyon:** Nagtakda kami ng mga layuning demograpiko batay sa mga pagtataya ng populasyon ng California. Magiging salamin ng pagkakaiba-iba ng estado ang huling listahan ng mga iimbitahin. Kabilang sa mga pamantayan ang edad, heograpiya, at larangan ng trabaho.
+- **Pagiging random:** Sa loob ng mga layuning iyon, may patas na pagkakataong mapili ang lahat ng pasok sa pamantayan.
+
+Tiniyak ng mga prinsipyong ito na hindi lang ang mga unang sumagot ang aming maririnig. Nakabuo kami ng patas na napiling listahan na humigit-kumulang sumasalamin sa mga taga-California sa kabuuan.
+----
+id: demographics_chart
+title: Mga demograpiko
+pulldown_label: "Ipakita ang mga kalahok ayon sa"
+chart_title: "Mga demograpiko ng survey kumpara sa mga talakayan"
+translator_note_chart: "chart_note is the one-line note directly under the chart title."
+chart_note: "Inilapit kami ng sortition sa balanseng demograpiko sa mga talakayan."
+axis_above_label: "Percentage point na higit sa target"
+axis_below_label: "Percentage point na kulang sa target"
+chart_alt: "Bar chart na naghahambing ng mga kalahok sa survey at talakayan sa mga target na demograpiko, sa percentage point mula sa target."
+dim_region: Rehiyon
+dim_race: Lahi / etnisidad
+dim_age: Edad
+dim_gender: Kasarian
+dim_field: Larangan ng trabaho
+dim_ai: Pananaw sa AI
+phase1_label: Survey
+phase2_label: Mga talakayan
+on_target_label: Nasa target
+translator_note: "{dimension} is replaced with the selected drop-down label. Keep it in the translation."
+table_caption: "Mga kalahok kumpara sa target, ayon sa {dimension}"
+translator_note_2: "The next four lines are read by screen readers. Keep every {placeholder} in the translation."
+chart_aria_label: "{dimension}: {phase1} at {phase2}, percentage point mula sa target"
+bar_title: "{category}, {phase}: {value} puntos mula sa target ({share}% kumpara sa {target}% na target)"
+table_target_header: "Target %"
+table_points_header: "{phase} puntos mula sa target"
+----
+Tingnan kung gaano kami kalapit sa aming mga target na demograpiko. I-click ang drop-down menu para sa mga sukat ayon sa:
+
+- Rehiyon
+- Lahi / etnisidad
+- Kasarian
+- Larangan ng trabaho
+- Edad
+----
+id: demographics_sources
+translator_note: "One source shows at a time, matching the category chosen in the drop-down above the chart."
+label: Pinagmulan ng mga target
+source_region: "Rehiyon: May garantisadong boses ang bawat rehiyon (hindi bababa sa 6). Pinunan namin ang natitirang mga puwesto nang proporsyonal sa populasyon ng California noong 2026 gamit ang mga pagtataya ng American Community Survey (ACS)."
+source_field_of_work: "Larangan ng trabaho: Batay sa [estadistika ng Industry Employment & Labor Force (CES) para sa Abril 2026]({@0}) at [mga talahanayan ng pagpili ng lugar]({@1}) ng California Employment Development Department. Partikular na binanggit ng memo sa Opisina ng Gobernador ang logistics, pangangalagang pangkalusugan, mga serbisyong legal at pinansyal, mga malikhaing industriya, pampublikong sektor, at akademya bilang mga prayoridad na sektor. Isinalamin namin iyon sa mga kategoryang ito."
+source_age: "Edad: Sumasalamin sa mga pagtataya ng 2026 Census / CA DOF."
+source_gender: "Kasarian: Sumasalamin sa mga pagtataya ng 2026 Census / CA DOF."
+source_race: "Lahi / etnisidad: Sumasalamin sa mga pagtataya ng 2026 Census / CA DOF."
+source_ai: ""
+----
+
+----
+id: category_labels
+translator_note: "Category names as they appear in the demographics chart. Translate only the label_N lines; the key_N lines are data values and must stay in English. Region names (label_1 to label_8) are proper nouns and stay in English too."
+nbr_labels: 36
+key_1: "Bay Area"
+label_1: "Bay Area"
+key_2: "Central Coast"
+label_2: "Central Coast"
+key_3: "Central Valley"
+label_3: "Central Valley"
+key_4: "Far North / North Coast"
+label_4: "Far North / North Coast"
+key_5: "Los Angeles"
+label_5: "Los Angeles"
+key_6: "Sacramento Valley / Sierra Foothills"
+label_6: "Sacramento Valley / Sierra Foothills"
+key_7: "Sierra Region"
+label_7: "Sierra Region"
+key_8: "Southern California"
+label_8: "Southern California"
+key_9: "American Indian or Alaska Native"
+label_9: "American Indian o Alaska Native"
+key_10: "Asian"
+label_10: "Asyano"
+key_11: "Black or African American"
+label_11: "Itim o African American"
+key_12: "Hispanic or Latino"
+label_12: "Hispanic o Latino"
+key_13: "Middle Eastern or North African"
+label_13: "Middle Eastern o North African"
+key_14: "Multiple"
+label_14: "Maramihan"
+key_15: "Native Hawaiian or Pacific Islander"
+label_15: "Native Hawaiian o Pacific Islander"
+key_16: "White"
+label_16: "Puti"
+key_17: "18-24"
+label_17: "18-24"
+key_18: "25-44"
+label_18: "25-44"
+key_19: "45-64"
+label_19: "45-64"
+key_20: "Over 65"
+label_20: "Mahigit 65"
+key_21: "Woman"
+label_21: "Babae"
+key_22: "Man"
+label_22: "Lalaki"
+key_23: "Nonbinary / multi / other"
+label_23: "Nonbinary / marami / iba pa"
+key_24: "Arts, entertainment, or media"
+label_24: "Sining, libangan, o media"
+key_25: "Education"
+label_25: "Edukasyon"
+key_26: "Financial"
+label_26: "Pananalapi"
+key_27: "Goods producing and harvesting"
+label_27: "Paggawa at pag-aani ng mga produkto"
+key_28: "Government"
+label_28: "Gobyerno"
+key_29: "Healthcare"
+label_29: "Pangangalagang pangkalusugan"
+key_30: "Hospitality"
+label_30: "Hospitality"
+key_31: "Information technology"
+label_31: "Information technology"
+key_32: "Logistics"
+label_32: "Logistics"
+key_33: "Other"
+label_33: "Iba pa"
+key_34: "Professional services"
+label_34: "Mga propesyonal na serbisyo"
+key_35: "Retail or wholesale trade"
+label_35: "Tingi o pakyawang kalakalan"
+key_36: "Unemployed, looking"
+label_36: "Walang trabaho, naghahanap"
+----
+
+----
+id: process_links
+----
+#### Higit pa tungkol sa sortition
+
+- [Ang aming code sa sortition](https://github.com/cagov/caldata-engaged-california/blob/main/notebooks/AI%20Engagement%20-%20Sortition/ai_engagement_sortition.ipynb)
+- Sortition Foundation, [*Bakit mga algorithm ng sortition?*](https://sortitionfoundation.github.io/sortition-algorithms/animated-intro.html) (sa Ingles)
+
+----
+id: ranking_policy_ideas
+----
+## Pagraranggo ng mga ideya sa patakaran
+
+Sa mga talakayan, nagmungkahi ang mga kalahok ng mga ideya sa patakaran, pagkatapos ay bumoto sila bilang grupo.
+
+Tinipon namin ang lahat ng ideyang nakakuha ng kahit isang boto sa isang talakayan. Pagkatapos ay pinagsama-sama namin ang magkakatulad na ideya at sumulat ng buod para sa bawat grupo. Ito ang naging 26 na ideya sa patakaran. Sumaklaw ang mga ideya sa patakaran sa 1 hanggang 12 indibidwal na panukala sa patakaran.
+
+Para iranggo ang mga ideya sa patakaran, sinuri namin ang bawat isa batay sa 2 salik:
+
+- **Dalas:** Kung gaano kadalas lumitaw ang isang ideya sa patakaran sa 14 na talakayan. Mula 1 hanggang 8 ang bilang.
+- **Suporta:** Kung umabot sa tuktok ng mga boto ang isang ideya sa patakaran sa isang talakayan. Para mapasama sa tuktok, kailangan nitong makakuha ng mga botong naglalagay dito sa pinakamataas na ikatlo. Mula 0 hanggang 5 ang bilang.
+
+Inayos namin ang listahan ng mga ideya sa patakaran ayon sa dalas. Pagkatapos ay hinati namin ito sa humigit-kumulang dalawang bahagi at tinawag na "mataas ang dalas" ang itaas na kalahati. "Mataas ang dalas" ang isang ideya kung lumitaw ito sa 5 o higit pang talakayan.
+
+Pagkatapos ay inayos namin ang mga ideya sa patakaran ayon sa suporta. Tinawag naming "nangungunang ideya" ang isang ideya kung ang mga kaugnay nitong ideya ay nasa nangungunang 3 tema sa lahat ng sesyon.
+
+May kahulugan ang pagkakasunod-sunod ng mga ideya, pero hindi ito absolute. Para sa bawat salik, kinalkula namin ang ranggo ng ideya kumpara sa lahat ng iba pang ideya. Pagkatapos ay pinagsama namin ang mga ranggong ito para bigyan ng iskor ang bawat ideya. Inilagay namin sa itaas ang mga ideyang may pinakamataas na iskor. Kapag magkapareho ang iskor, ginamit namin ang pagkakasunod-sunod ayon sa alpabeto.
+----
+id: how_we_used_ai
+----
+## Paano namin ginamit ang AI
+
+Gumamit ng AI ang aming mga tauhan para tulungan kaming suriin at pag-aralan ang mga talakayang ito.
+
+Kabilang sa mga halimbawa ng paggamit ng AI ang:
+
+- pag-convert ng audio ng talakayan sa mga transcript,
+- paggawa ng mga pangkalahatang buod ng mga tugon sa talakayan at survey, at
+- pag-tag ng mga bahagi ng usapan ayon sa mga ideyang tinalakay ng mga ito.
+
+Hindi AI ang pumili kung sino ang aming iimbitahin sa mga talakayan. Pinili namin ang mga iimbitahin sa pamamagitan ng palabunutan. Tiniyak naming sumasalamin sa mga demograpiko ng California ang grupo ng mga iimbitahin. Gumamit din kami ng AI para suriin ang pananaw ng mga sumagot tungkol sa AI. Nagbigay ito sa amin ng halo ng mga pananaw.
+
+Pinrotektahan namin ang ibinahagi sa amin ng mga kalahok. Ang lahat ng gawaing may AI ay tumakbo sa loob ng secure na data environment ng estado. Hindi namin kailanman ibinahagi ang mga transcript o tugon sa survey sa mga vendor ng AI. Walang content na ginamit para sanayin ang mga modelo ng AI.
+
+Hindi kailanman pinalitan ng AI ang paghatol ng tao, at hindi ito kailanman sumulat o nag-edit ng mga salita ng isang kalahok. Bawat sipi sa ulat na ito ay sinabi ng isang kalahok. Pinatunayan namin ang mga ito laban sa transcript at ipinasuri sa mga tauhan.
+
+Ang aming mga tauhan mismo ang tumukoy sa mga ideya sa patakaran at temang itinatampok namin sa ulat na ito. Sinuri nila ang mga transcript at tugon sa survey nang walang tulong ng AI. Kapag tumulong ang AI sa pagsusuri, pinapagbigay namin ito ng eksaktong mga sanggunian. Sinuri ng mga tauhan ang mga pahayag na iyon bago umasa sa mga ito.
+
+Sa pagsubok, inihambing namin ang mga buod ng AI sa mga tala ng mga taong tagatala. Nalaman naming saklaw nila ang parehong nilalaman nang hindi nag-iimbento ng content.
+----
+id: download_data
+button_text: I-download ang mga ideya
+----
+### I-download ang lahat ng ideya sa patakaran
+
+Maaari mong i-download at basahin ang lahat ng patakarang iminungkahi ng mga tao sa mga talakayan. Nasa isang CSV file ang mga ito.
+----
+id: sign_up
+button_text: Mag-sign up
+----
+## Mag-sign up para manatiling kasali
+
+Ibigay sa amin ang iyong email para malaman ang mga paparating na oportunidad.

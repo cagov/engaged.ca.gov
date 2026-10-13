@@ -6,8 +6,9 @@
   <div class="container banner-flex">
     <engca-banner-content>
       {{ modules.hero.content | safe }}
-      <a href="https://join.engaged.ca.gov/ai-impact" data-appearance="button" data-theme="orange">
-        {{ modules.hero.buttonText_getupdates }}
+      {# Hero button goes to the AI report (9/28). Locales without the new label fall back to the old one. #}
+      <a href="{{ "/ai-impact/report/" | locale_url }}" data-appearance="button" data-theme="orange">
+        {{ modules.hero.buttonText_seewhattheysaid | default(modules.hero.buttonText_getupdates) }}
       </a>
     </engca-banner-content>
     <img src="/public/images/hero-bubbles.png" aria-hidden="true" class="desktop-only" alt="{{ 'home-alt-header' | i18n }}" />
@@ -32,11 +33,12 @@
       <article class="engagement-card">
         <img src="/public/images/project_ai.jpg" alt="{{ modules.homepage_engagements.ai_title }}" />
         <div class="engagement-card-body">
-          <span class="engagement-status">{{ modules.homepage_engagements.analText }}</span>
+          <span class="engagement-status">{{ modules.homepage_engagements.statusText }}</span>
           <h3>{{ modules.homepage_engagements.ai_title }}</h3>
           <p>{{ modules.homepage_engagements.ai_description_past_tense }}</p>
-          <a href="{{ "/ai-impact/" | locale_url }}" data-appearance="button" data-theme="orange">
-            {{ modules.hero.buttonText_learnmore }}
+          {# The AI engagement is closed and its report is out (9/28). #}
+          <a href="{{ "/ai-impact/report/" | locale_url }}" data-appearance="button" data-theme="orange">
+            {{ modules.hero.buttonText_seereport | default(modules.hero.buttonText_learnmore) }}
           </a>
         </div>
       </article>

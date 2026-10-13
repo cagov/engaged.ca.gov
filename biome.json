@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["_site/**/*", "dist/**/*"]
+    "ignore": ["_site/**/*", "dist/**/*", "src/js/ai-impact-report/vendor/**"]
   },
   "formatter": {
     "enabled": true,
