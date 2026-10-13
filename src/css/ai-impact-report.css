@@ -277,7 +277,8 @@ section#ai-report-hero {
 /* On the details page's peach hero the bar inverts: navy text on peach,
    and its contents centre (design 9/23). */
 .hero-jump-light {
-  --jump-tab: #fff; /* the intro below it is white */
+  /* Navy to match the link text, not the white intro below (design 10/13). */
+  --jump-tab: var(--report-navy);
   background: var(--report-off-white);
   border-top: 1px solid rgb(28 39 69 / 0.25);
 
