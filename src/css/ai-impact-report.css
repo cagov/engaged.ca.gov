@@ -534,6 +534,7 @@ section#ai-report-hero {
   font-style: italic;
   color: var(--report-body);
   font-size: 1.125rem;
+  line-height: 1.4; /* tighter than body copy when it wraps (design 10/13) */
   margin: 0.25rem 0 0;
 }
 
