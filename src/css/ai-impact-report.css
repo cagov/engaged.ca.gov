@@ -277,7 +277,8 @@ section#ai-report-hero {
 /* On the details page's peach hero the bar inverts: navy text on peach,
    and its contents centre (design 9/23). */
 .hero-jump-light {
-  --jump-tab: #fff; /* the intro below it is white */
+  /* Navy to match the link text, not the white intro below (design 10/13). */
+  --jump-tab: var(--report-navy);
   background: var(--report-off-white);
   border-top: 1px solid rgb(28 39 69 / 0.25);
 
@@ -533,6 +534,7 @@ section#ai-report-hero {
   font-style: italic;
   color: var(--report-body);
   font-size: 1.125rem;
+  line-height: 1.4; /* tighter than body copy when it wraps (design 10/13) */
   margin: 0.25rem 0 0;
 }
 
@@ -2451,9 +2453,11 @@ section#ai-report-hero.hero-light {
   background: var(--report-off-white);
   color: var(--report-body);
 
+  /* Title and subtitle share one dark slate instead of navy (design
+     10/13). The subtitle selector outranks `.hero-content > p` below. */
   & h1,
-  & .hero-subtitle {
-    color: var(--report-navy);
+  & .hero-content > p.hero-subtitle {
+    color: rgb(59 58 72);
   }
 
   & .hero-content > p {
@@ -2469,14 +2473,24 @@ section#ai-report-hero.hero-light {
     }
   }
 
-  /* Chevron sits outside the link so only the words are underlined. */
+  /* Chevron sits outside the link so only the words are underlined. Same
+     bracket image and size as the LA fires back links, which the text
+     chevron was too small next to (design 10/13). */
   & .hero-back-link::before {
-    content: "\2039\00a0"; /* single left angle quote */
-    color: var(--report-link);
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 13px;
+    margin-right: 0.5rem;
+    vertical-align: -1px;
+    background: url("/public/images/back_bracket_blue.png") center / 8px 13px
+      no-repeat;
   }
 
   [dir="rtl"] & .hero-back-link::before {
-    content: "\203a\00a0"; /* points back the way the page reads */
+    margin-right: 0;
+    margin-left: 0.5rem;
+    transform: rotate(180deg); /* points back the way the page reads */
   }
 
   /* The subtitle's italic title renders in Noto Sans Display bold italic;
