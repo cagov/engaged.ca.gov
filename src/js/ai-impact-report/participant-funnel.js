@@ -513,6 +513,12 @@ export async function initParticipantFunnel(root) {
       r.delay = (dot.kept ? 0 : 0.1) + Math.random() * (dot.kept ? 0.22 : 0.3);
     });
     if (reduced) snapValues();
+    // With reduced motion there is no transition to end, so the dwell has
+    // to be armed here; otherwise the stale timer advances the stage again
+    // on the very next frame and the chart strobes through all four
+    // stages (10/13).
+    dwellLeft = dwellFor(stage);
+    if (stage === LAST_STAGE && reduced) ringReady = true;
     syncControls();
   }
 
