@@ -2453,9 +2453,11 @@ section#ai-report-hero.hero-light {
   background: var(--report-off-white);
   color: var(--report-body);
 
+  /* Title and subtitle share one dark slate instead of navy (design
+     10/13). The subtitle selector outranks `.hero-content > p` below. */
   & h1,
-  & .hero-subtitle {
-    color: var(--report-navy);
+  & .hero-content > p.hero-subtitle {
+    color: rgb(59 58 72);
   }
 
   & .hero-content > p {
