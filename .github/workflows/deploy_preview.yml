@@ -65,15 +65,19 @@ jobs:
           aws-region: us-west-1
 
       - name: Deploy site to S3
-        # Pages revalidate on every visit (no-cache; ETags keep that cheap), so
-        # a fresh deploy shows without a hard reload. Assets may be cached for
-        # an hour; the templates already version JS/CSS/data URLs by content hash.
+        # Browsers revalidate pages on every visit (max-age=0; ETags keep that
+        # cheap), so a fresh deploy shows without a hard reload. CloudFront keeps
+        # pages up to an hour (s-maxage) and the /* invalidation refreshes it on
+        # each deploy; no-cache would make CloudFront ask S3 on every request.
+        # Pages omit must-revalidate so a browser may fall back to its copy if the
+        # site is unreachable. Assets may be cached for an hour; the templates
+        # already version JS/CSS/data URLs by content hash.
         run: |
           aws s3 sync --follow-symlinks --delete --exclude "*.html" \
             --cache-control "public, max-age=3600, must-revalidate" \
             ./_dist s3://pr.engaged.ca.gov/pr/${URLSAFE_BRANCH_NAME}
           aws s3 sync --follow-symlinks --exclude "*" --include "*.html" \
-            --cache-control "no-cache" \
+            --cache-control "public, max-age=0, s-maxage=3600" \
             ./_dist s3://pr.engaged.ca.gov/pr/${URLSAFE_BRANCH_NAME}
 
       - name: Invalidate Cloudfront cache
