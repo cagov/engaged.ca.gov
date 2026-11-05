@@ -4,6 +4,9 @@ import { checkA11y, injectAxe } from "axe-playwright";
 const pageUrls = [
   "/",
   "/about/",
+  "/lafires-recovery/",
+  "/stateemployees/",
+  "/ai-impact/",
   "/ai-impact/report/",
   "/ai-impact/report-details/",
   "/es/ai-impact/report/",
