@@ -124,6 +124,11 @@ section#homepage-engagements > .container > h2 {
   line-height: 150%;
 }
 
+/* Overrides the normal style above for the date line (layout.css). */
+.engagement-card .engagement-dates {
+  font-style: italic;
+}
+
 .engagement-card a[data-appearance="button"] {
   align-self: flex-start;
   font-size: 18px;

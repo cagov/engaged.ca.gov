@@ -11,6 +11,7 @@
                 {# The engagement is closed and the report is out (9/28). Locales without the new labels fall back. #}
                 <p class="status-pill">{{ modules.hero.conversationClosed | default(modules.hero.analyzingResults) }}</p>
                 <h1>{{ modules.hero.title  }}</h1>
+                <p class="engagement-dates">{{ 'engagement-dates-ai' | i18n }}</p>
                 {{ modules.hero.content | safe }}
             </engca-banner-content>
             <img src="/public/images/hero-bubbles-ai.png" aria-hidden="true" class="desktop-only" alt=""/>

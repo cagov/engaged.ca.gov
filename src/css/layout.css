@@ -292,6 +292,11 @@ section h2 {
   font-weight: 400;
 }
 
+/* Engagement date range under the title on homepage cards and engagement heroes */
+.engagement-dates {
+  font-style: italic;
+}
+
 /* generic styles */
 .style-h1, h1 {
   font-weight: 900;

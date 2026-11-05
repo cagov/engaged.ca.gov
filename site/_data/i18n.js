@@ -1474,6 +1474,45 @@ const translations = {
         "hy": "Այս զրույցը փակված է",
         "location": "Status",
         "status": "machine_translated"
+    },
+    "engagement-dates-lafires": {
+        "en": "March 2025 - August 2025",
+        "es": "Marzo de 2025 - agosto de 2025",
+        "ko": "2025년 3월 - 2025년 8월",
+        "tl": "Marso 2025 - Agosto 2025",
+        "vi": "Tháng 3 năm 2025 - tháng 8 năm 2025",
+        "zh-hans": "2025年3月 - 2025年8月",
+        "zh-hant": "2025年3月 - 2025年8月",
+        "fa": "مارس ۲۰۲۵ - اوت ۲۰۲۵",
+        "hy": "2025 թ․ մարտ - 2025 թ․ օգոստոս",
+        "location": "Engagement dates",
+        "status": "machine_translated"
+    },
+    "engagement-dates-stateemployees": {
+        "en": "August 2025 - October 2025",
+        "es": "Agosto de 2025 - octubre de 2025",
+        "ko": "2025년 8월 - 2025년 10월",
+        "tl": "Agosto 2025 - Oktubre 2025",
+        "vi": "Tháng 8 năm 2025 - tháng 10 năm 2025",
+        "zh-hans": "2025年8月 - 2025年10月",
+        "zh-hant": "2025年8月 - 2025年10月",
+        "fa": "اوت ۲۰۲۵ - اکتبر ۲۰۲۵",
+        "hy": "2025 թ․ օգոստոս - 2025 թ․ հոկտեմբեր",
+        "location": "Engagement dates",
+        "status": "machine_translated"
+    },
+    "engagement-dates-ai": {
+        "en": "May 2026 - August 2026",
+        "es": "Mayo de 2026 - agosto de 2026",
+        "ko": "2026년 5월 - 2026년 8월",
+        "tl": "Mayo 2026 - Agosto 2026",
+        "vi": "Tháng 5 năm 2026 - tháng 8 năm 2026",
+        "zh-hans": "2026年5月 - 2026年8月",
+        "zh-hant": "2026年5月 - 2026年8月",
+        "fa": "مه ۲۰۲۶ - اوت ۲۰۲۶",
+        "hy": "2026 թ․ մայիս - 2026 թ․ օգոստոս",
+        "location": "Engagement dates",
+        "status": "machine_translated"
     }
 };
 // add default export
