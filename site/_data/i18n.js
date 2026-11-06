@@ -1477,7 +1477,7 @@ const translations = {
     },
     "engagement-dates-lafires": {
         "en": "March 2025 - August 2025",
-        "es": "Marzo de 2025 - agosto de 2025",
+        "es": "marzo de 2025 - agosto de 2025",
         "ko": "2025년 3월 - 2025년 8월",
         "tl": "Marso 2025 - Agosto 2025",
         "vi": "Tháng 3 năm 2025 - tháng 8 năm 2025",
@@ -1490,7 +1490,7 @@ const translations = {
     },
     "engagement-dates-stateemployees": {
         "en": "August 2025 - October 2025",
-        "es": "Agosto de 2025 - octubre de 2025",
+        "es": "agosto de 2025 - octubre de 2025",
         "ko": "2025년 8월 - 2025년 10월",
         "tl": "Agosto 2025 - Oktubre 2025",
         "vi": "Tháng 8 năm 2025 - tháng 10 năm 2025",
@@ -1503,7 +1503,7 @@ const translations = {
     },
     "engagement-dates-ai": {
         "en": "May 2026 - August 2026",
-        "es": "Mayo de 2026 - agosto de 2026",
+        "es": "mayo de 2026 - agosto de 2026",
         "ko": "2026년 5월 - 2026년 8월",
         "tl": "Mayo 2026 - Agosto 2026",
         "vi": "Tháng 5 năm 2026 - tháng 8 năm 2026",
