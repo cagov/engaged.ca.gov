@@ -292,6 +292,17 @@ section h2 {
   font-weight: 400;
 }
 
+/* Engagement date range under the title on homepage cards and engagement heroes */
+.engagement-dates {
+  font-style: italic;
+  margin-block-end: 1.5625rem; /* 25px to the hero text below (design) */
+}
+
+/* 10px between an engagement hero title and its date (design). */
+section h1:has(+ .engagement-dates) {
+  margin-block-end: 0.625rem;
+}
+
 /* generic styles */
 .style-h1, h1 {
   font-weight: 900;

@@ -35,6 +35,7 @@
         <div class="engagement-card-body">
           <span class="engagement-status">{{ modules.homepage_engagements.statusText }}</span>
           <h3>{{ modules.homepage_engagements.ai_title }}</h3>
+          <p class="engagement-dates">{{ 'engagement-dates-ai' | i18n }}</p>
           <p>{{ modules.homepage_engagements.ai_description_past_tense }}</p>
           {# The AI engagement is closed and its report is out (9/28). #}
           <a href="{{ "/ai-impact/report/" | locale_url }}" data-appearance="button" data-theme="orange">
@@ -47,6 +48,7 @@
         <div class="engagement-card-body">
           <span class="engagement-status">{{ modules.homepage_engagements.statusText }}</span>
           <h3>{{ modules.homepage_engagements.e3_title }}</h3>
+          <p class="engagement-dates">{{ 'engagement-dates-stateemployees' | i18n }}</p>
           <p>{{ modules.homepage_engagements.e3_description }}</p>
           <a href="{{ "/stateemployees/efficiency/" | locale_url }}" data-appearance="button" data-theme="orange">
             {{ modules.hero.buttonText_results }}
@@ -58,6 +60,7 @@
         <div class="engagement-card-body">
           <span class="engagement-status">{{ modules.homepage_engagements.statusText }}</span>
           <h3>{{ modules.homepage_engagements.lafires_title }}</h3>
+          <p class="engagement-dates">{{ 'engagement-dates-lafires' | i18n }}</p>
           <p>{{ modules.homepage_engagements.lafires_description }}</p>
           <a href="{{ "/lafires-recovery/action-plan" | locale_url }}" data-appearance="button" data-theme="orange">
             {{ modules.hero.buttonText_actionplan }}

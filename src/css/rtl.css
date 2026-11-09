@@ -94,3 +94,10 @@
   margin-left: 0.2em;
   margin-right: 0.35em;
 }
+
+/* Persian has no italic face, so the browser slants it synthetically, which
+   clips the first letter and shifts the hyphen in the date range. Keep the
+   engagement dates upright in right-to-left text. */
+[dir="rtl"] .engagement-dates {
+  font-style: normal;
+}
