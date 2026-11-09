@@ -87,7 +87,8 @@ section#homepage-engagements > .container > h2 {
   padding: 1.5rem 1.8rem 1.8rem 1.8rem;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  --card-gap: 1.2rem;
+  gap: var(--card-gap);
 }
 
 .engagement-card-body .engagement-status {
@@ -124,9 +125,12 @@ section#homepage-engagements > .container > h2 {
   line-height: 150%;
 }
 
-/* Overrides the normal style above for the date line (layout.css). */
+/* Overrides the normal style above for the date line (layout.css). The card
+   body gap separates every item, so offset it to get 10px above the date and
+   15px below it, as in the design. */
 .engagement-card .engagement-dates {
   font-style: italic;
+  margin-block: calc(0.625rem - var(--card-gap)) calc(0.9375rem - var(--card-gap));
 }
 
 .engagement-card a[data-appearance="button"] {
